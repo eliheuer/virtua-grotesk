@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="400" maximum="700" default="400">
+      <map input="400" output="400"/>
+      <map input="700" output="700"/>
+    </axis>
+  </axes>
+  <sources>
+    <source filename="virtua-grotesk-regular.ufo" familyname="Virtua Grotesk" stylename="Regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="virtua-grotesk-bold.ufo" familyname="Virtua Grotesk" stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance familyname="Virtua Grotesk" stylename="Regular" filename="../instances/VirtuaGrotesk-Regular.ufo" stylemapfamilyname="Virtua Grotesk" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </instance>
+    <instance familyname="Virtua Grotesk" stylename="Medium" filename="../instances/VirtuaGrotesk-Medium.ufo">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+      </location>
+    </instance>
+    <instance familyname="Virtua Grotesk" stylename="Semi-Bold" filename="../instances/VirtuaGrotesk-SemiBold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+      </location>
+    </instance>
+    <instance familyname="Virtua Grotesk" stylename="Bold" filename="../instances/VirtuaGrotesk-Bold.ufo" stylemapfamilyname="Virtua Grotesk" stylemapstylename="bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>

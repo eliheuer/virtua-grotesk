@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5.0">
+  <axes>
+    <axis tag="wght" name="Weight" minimum="400" maximum="700" default="400"/>
+  </axes>
+  <sources>
+    <source filename="VirtuaGrotesk-Regular.ufo" name="Virtua Grotesk Regular" familyname="Virtua Grotesk" stylename="Regular">
+      <lib copy="1"/>
+      <groups copy="1"/>
+      <features copy="1"/>
+      <info copy="1"/>
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </source>
+    <source filename="VirtuaGrotesk-Bold.ufo" name="Virtua Grotesk Bold" familyname="Virtua Grotesk" stylename="Bold">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance name="Virtua Grotesk Regular" familyname="Virtua Grotesk" stylename="Regular" filename="instance_ufo/VirtuaGrotesk-Regular.ufo" stylemapfamilyname="Virtua Grotesk" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </instance>
+    <instance name="Virtua Grotesk Medium" familyname="Virtua Grotesk" stylename="Medium" filename="instance_ufo/VirtuaGrotesk-Medium.ufo" stylemapfamilyname="Virtua Grotesk Medium" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+      </location>
+    </instance>
+    <instance name="Virtua Grotesk Semi-Bold" familyname="Virtua Grotesk" stylename="Semi-Bold" filename="instance_ufo/VirtuaGrotesk-Semi-Bold.ufo" stylemapfamilyname="Virtua Grotesk Semi-Bold" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+      </location>
+    </instance>
+    <instance name="Virtua Grotesk Bold" familyname="Virtua Grotesk" stylename="Bold" filename="instance_ufo/VirtuaGrotesk-Bold.ufo" stylemapfamilyname="Virtua Grotesk Bold" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>

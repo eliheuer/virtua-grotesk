@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<glyph name="theh-ar.medi" format="2">
+  <advance width="416"/>
+  <anchor x="208" y="-8" name="bottom"/>
+  <anchor x="208" y="0" name="bottomDots"/>
+  <anchor x="208" y="780" name="top"/>
+  <anchor x="208" y="432" name="topDots"/>
+  <outline>
+    <component base="behDotless-ar.medi"/>
+    <component base="threedotsupabove-ar" xOffset="-24" yOffset="-144"/>
+  </outline>
+</glyph>
