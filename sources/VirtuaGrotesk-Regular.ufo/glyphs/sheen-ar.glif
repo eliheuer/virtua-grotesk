@@ -1,9 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="sheen-ar" format="2">
-	<unicode hex="0634"/>
-	<advance width="600"/>
-	<outline>
-		<component base="seen-ar"/>
-		<component base="threedotsupabove-ar"/>
-	</outline>
+  <advance width="864"/>
+  <unicode hex="0634"/>
+  <outline>
+    <component base="seen-ar"/>
+    <component base="threedotsupabove-ar" xOffset="432" yOffset="-144"/>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.schriftgestaltung.Glyphs.lastChange</key>
+      <string>2025-11-29 07:03:48 +0000</string>
+    </dict>
+  </lib>
 </glyph>

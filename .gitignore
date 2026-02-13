@@ -1,6 +1,9 @@
 # Built fonts - keep out of version control
 fonts/
 
+# ugghh
+.DS_Store
+
 # Image files
 *.png
 *.jpg
