@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<designspace format="5">
+  <axes>
+    <axis name="Weight" tag="wght" default="400" minimum="400" maximum="700"/>
+  </axes>
+  <sources>
+    <source familyname="Kinderhugel Grotesk" stylename="Regular" name="Kinderhugel Grotesk Regular" filename="kinderhugel-grotesk-regular.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </source>
+    <source familyname="Kinderhugel Grotesk" stylename="Bold" name="Kinderhugel Grotesk Bold" filename="kinderhugel-grotesk-bold.ufo">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </source>
+  </sources>
+  <instances>
+    <instance familyname="Kinderhugel Grotesk" stylename="Regular" name="Kinderhugel Grotesk Regular" filename="instance_ufo/kinderhugel-grotesk-regular.ufo" stylemapfamilyname="Kinderhugel Grotesk" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+      </location>
+    </instance>
+    <instance familyname="Kinderhugel Grotesk" stylename="Medium" name="Kinderhugel Grotesk Medium" filename="instance_ufo/kinderhugel-grotesk-medium.ufo" stylemapfamilyname="Kinderhugel Grotesk Medium" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="500"/>
+      </location>
+    </instance>
+    <instance familyname="Kinderhugel Grotesk" stylename="Semi-Bold" name="Kinderhugel Grotesk Semi-Bold" filename="instance_ufo/kinderhugel-grotesk-semi-bold.ufo" stylemapfamilyname="Kinderhugel Grotesk Semi-Bold" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="600"/>
+      </location>
+    </instance>
+    <instance familyname="Kinderhugel Grotesk" stylename="Bold" name="Kinderhugel Grotesk Bold" filename="instance_ufo/kinderhugel-grotesk-bold.ufo" stylemapfamilyname="Kinderhugel Grotesk Bold" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+      </location>
+    </instance>
+  </instances>
+</designspace>

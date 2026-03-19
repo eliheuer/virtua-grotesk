@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dieresis" format="2">
+	<unicode hex="00A8"/>
+	<advance width="400"/>
+	<outline>
+		<contour>
+			<point x="24" y="616" type="offcurve"/>
+			<point x="24" y="616" type="offcurve"/>
+			<point x="40" y="616" type="curve"/>
+			<point x="136" y="616" type="line"/>
+			<point x="152" y="616" type="offcurve"/>
+			<point x="152" y="616" type="offcurve"/>
+			<point x="152" y="632" type="curve"/>
+			<point x="152" y="728" type="line"/>
+			<point x="152" y="744" type="offcurve"/>
+			<point x="152" y="744" type="offcurve"/>
+			<point x="136" y="744" type="curve"/>
+			<point x="40" y="744" type="line"/>
+			<point x="24" y="744" type="offcurve"/>
+			<point x="24" y="744" type="offcurve"/>
+			<point x="24" y="728" type="curve"/>
+			<point x="24" y="632" type="line"/>
+		</contour>
+		<contour>
+			<point x="248" y="616" type="offcurve"/>
+			<point x="248" y="616" type="offcurve"/>
+			<point x="264" y="616" type="curve"/>
+			<point x="360" y="616" type="line"/>
+			<point x="376" y="616" type="offcurve"/>
+			<point x="376" y="616" type="offcurve"/>
+			<point x="376" y="632" type="curve"/>
+			<point x="376" y="728" type="line"/>
+			<point x="376" y="744" type="offcurve"/>
+			<point x="376" y="744" type="offcurve"/>
+			<point x="360" y="744" type="curve"/>
+			<point x="264" y="744" type="line"/>
+			<point x="248" y="744" type="offcurve"/>
+			<point x="248" y="744" type="offcurve"/>
+			<point x="248" y="728" type="curve"/>
+			<point x="248" y="632" type="line"/>
+		</contour>
+	</outline>
+</glyph>
