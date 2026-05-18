@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./build.sh)",
+      "Bash(fontc *)",
+      "Bash(fontmake *)",
+      "Bash(designbot *)",
+      "Bash(python proof.py*)",
+      "Bash(python -m fontTools*)",
+      "Bash(python -c *)",
+      "Bash(source ~/Py/venvs/basic-fonts/bin/activate*)",
+      "Bash(ls *)",
+      "Bash(wc *)",
+      "Bash(mkdir *)",
+      "Bash(mv fonts/*)",
+      "Bash(cp fonts/*)"
+    ]
+  }
+}
