@@ -15,7 +15,7 @@ fn main() {
 
     // Load the font
     renderer.load_font(
-        "../fonts/VirtuaGrotesk-Regular.ttf"
+        "fonts/ttf/VirtuaGrotesk-Regular.ttf"
     ).unwrap();
 
     // Calculate grid dimensions
@@ -25,7 +25,7 @@ fn main() {
     let cell_height = grid_height / G;
 
     // Set colors
-    let white = Color::white();
+    let _white = Color::white();
     let light_gray = Color::rgb(50, 50, 50);
 
     // Add Auxiliry text bars
@@ -36,13 +36,13 @@ fn main() {
     // Draw grid vertical lines
     ctx.stroke(light_gray).stroke_width(2.0);
     for i in 0..=G as usize {
-        let x = M + (i as f64 * cell_width);
+        let _x = M + (i as f64 * cell_width);
         //ctx.line(x, M, x, H - M);
     }
 
     // Draw grid horizontal lines
     for i in 0..=G as usize {
-        let y = M + (i as f64 * cell_height);
+        let _y = M + (i as f64 * cell_height);
         //ctx.line(M, y, W - M, y);
     }
 

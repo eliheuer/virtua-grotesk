@@ -25,7 +25,7 @@ File: `sources/VirtuaGrotesk.designspace` (format 5)
 |-------|--------|-----------|
 | Regular | 400 | regular |
 | Medium | 500 | regular |
-| Semi-Bold | 600 | regular |
+| SemiBold | 600 | regular |
 | Bold | 700 | regular |
 
 ## Rules for Editing

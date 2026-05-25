@@ -77,4 +77,4 @@ When drawing a glyph for both masters:
 3. **Proportional stem growth** for straight forms
 4. **Scale chamfers** with weight (Bold chamfers are larger than Regular's 16-unit default)
 5. **Crossbars may shift vertically** — Bold `A` has a lower crossbar than Regular, for optical balance at heavier weight
-6. **Test interpolation** at intermediate weights (Medium=500, Semi-Bold=600) to ensure smooth transitions
+6. **Test interpolation** at intermediate weights (Medium=500, SemiBold=600) to ensure smooth transitions

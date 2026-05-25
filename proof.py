@@ -8,14 +8,24 @@ Generates a multi-page PDF with various proofing layouts.
 Usage:
     python proof.py [font_path] [output_path]
 
-Defaults to fonts/VirtuaGrotesk-Regular.ttf and proof.pdf
+Defaults to fonts/ttf/VirtuaGrotesk-Regular.ttf and proof.pdf
 """
 
-import drawBot as db
 from fontTools.ttLib import TTFont
 from pathlib import Path
 import sys
 from datetime import datetime
+
+try:
+    from drawbot_skia.drawing import Drawing
+except ModuleNotFoundError as error:
+    raise SystemExit(
+        "drawbot_skia is required for proof generation. "
+        "Run this through `make proof` or set PYTHONPATH to "
+        "/Users/eli/GH/repos/drawbot-skia/src."
+    ) from error
+
+db = Drawing()
 
 # Page settings
 PAGE_WIDTH, PAGE_HEIGHT = 612, 792  # US Letter
@@ -462,7 +472,33 @@ def arabic_page(font_path, font_info, cmap):
 
     y = PAGE_HEIGHT - MARGIN - 50
 
-    # Sample Arabic text
+    sample_lines = [
+        ("salaam", "سلام"),
+        ("arabic", "العربية"),
+        ("bismillah", "بسم الله"),
+        ("lam-alef", "لا"),
+    ]
+
+    db.font("Helvetica", 10)
+    db.fill(0.5)
+    db.text("ARABIC SHAPING SAMPLES", (MARGIN, y))
+    y -= 22
+
+    for label, sample in sample_lines:
+        db.font("Helvetica", 8)
+        db.fill(0.45)
+        db.text(label, (MARGIN, y + 8))
+        db.font(font_path, 36)
+        db.fill(0)
+        db.text(sample, (MARGIN + 80, y))
+        y -= 54
+
+    y -= 12
+    db.font("Helvetica", 10)
+    db.fill(0.5)
+    db.text("ARABIC CMAP SAMPLE", (MARGIN, y))
+    y -= 24
+
     samples = [
         "".join(arabic_chars[:28]),
         "".join(arabic_chars[28:56]) if len(arabic_chars) > 28 else "",
@@ -525,6 +561,10 @@ def generate_proof(font_path, output_path):
     db.saveImage(str(output_path))
     db.endDrawing()
 
+    if not output_path.exists() or output_path.stat().st_size == 0:
+        print(f"Error: Proof PDF was not written at {output_path}")
+        return False
+
     print(f"  Saved: {output_path}")
     print(f"  Pages: {total_pages}")
 
@@ -534,7 +574,7 @@ def generate_proof(font_path, output_path):
 if __name__ == "__main__":
     # Default paths
     script_dir = Path(__file__).parent
-    default_font = script_dir / "fonts" / "VirtuaGrotesk-Regular.ttf"
+    default_font = script_dir / "fonts" / "ttf" / "VirtuaGrotesk-Regular.ttf"
     default_output = script_dir / "proof.pdf"
 
     # Parse arguments
