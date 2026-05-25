@@ -148,7 +148,6 @@ Minimum after drawing:
 ```text
 subsets: "arabic"
 subsets: "latin"
-subsets: "latin-ext"
 subsets: "menu"
 primary_script: "Arab"
 ```

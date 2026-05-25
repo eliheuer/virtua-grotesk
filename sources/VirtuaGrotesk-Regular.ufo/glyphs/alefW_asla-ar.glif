@@ -1,5 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="alefWasla-ar" format="2">
-	<unicode hex="0671"/>
-	<advance width="600"/>
+  <advance width="600"/>
+  <unicode hex="0671"/>
+  <outline>
+    <contour>
+      <point x="272" y="112" type="line"/>
+      <point x="328" y="112" type="line"/>
+      <point x="328" y="680" type="line"/>
+      <point x="272" y="680" type="line"/>
+    </contour>
+    <contour>
+      <point x="180" y="760" type="line"/>
+      <point x="208" y="712" type="line"/>
+      <point x="252" y="744" type="line"/>
+      <point x="324" y="744" type="line"/>
+      <point x="380" y="688" type="line"/>
+      <point x="428" y="744" type="line"/>
+      <point x="360" y="816" type="line"/>
+      <point x="260" y="816" type="line"/>
+    </contour>
+  </outline>
 </glyph>

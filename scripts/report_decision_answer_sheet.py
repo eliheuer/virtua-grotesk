@@ -96,7 +96,7 @@ PRIORITY_ORDER = [
     (
         "`avar`",
         "3",
-        "Decides whether the linear weight axis intentionally ships without an avar table.",
+        "Decides whether the linear weight axis intentionally ships with an identity avar table.",
     ),
     (
         "Custom Sample Text",

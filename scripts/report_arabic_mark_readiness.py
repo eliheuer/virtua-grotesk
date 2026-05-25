@@ -88,6 +88,22 @@ def source_anchors(ufo_path: Path) -> dict[str, tuple[str, ...]]:
     return anchors
 
 
+def source_glyphs_by_unicode(ufo_path: Path) -> dict[int, str]:
+    contents_path = ufo_path / "glyphs" / "contents.plist"
+    contents = plistlib.loads(contents_path.read_bytes())
+    glyphs: dict[int, str] = {}
+    for glyph_name, filename in contents.items():
+        glif_path = ufo_path / "glyphs" / filename
+        if not glif_path.exists():
+            continue
+        root = ET.parse(glif_path).getroot()
+        for unicode_node in root.findall("unicode"):
+            hex_value = unicode_node.attrib.get("hex")
+            if hex_value:
+                glyphs[int(hex_value, 16)] = glyph_name
+    return glyphs
+
+
 def source_anchor_row(ufo_path: Path, required_mark_glyphs: set[str]) -> str:
     anchors = source_anchors(ufo_path)
     mark_glyphs_with_anchors = sorted(set(anchors) & required_mark_glyphs)
@@ -99,7 +115,11 @@ def source_anchor_row(ufo_path: Path, required_mark_glyphs: set[str]) -> str:
     )
 
 
-def mark_rows(cmap: dict[int, str], source_anchor_maps: dict[str, dict[str, tuple[str, ...]]]) -> list[str]:
+def mark_rows(
+    cmap: dict[int, str],
+    source_anchor_maps: dict[str, dict[str, tuple[str, ...]]],
+    source_mark_maps: dict[str, dict[int, str]],
+) -> list[str]:
     rows = [
         "| Codepoint | Character | Unicode name | Glyph | Present | Source anchors |",
         "| --- | --- | --- | --- | --- | --- |",
@@ -108,7 +128,8 @@ def mark_rows(cmap: dict[int, str], source_anchor_maps: dict[str, dict[str, tupl
         glyph_name = cmap.get(cp, "")
         anchor_parts = []
         for source_name, anchors in source_anchor_maps.items():
-            names = anchors.get(glyph_name, ())
+            source_glyph_name = source_mark_maps[source_name].get(cp, glyph_name)
+            names = anchors.get(source_glyph_name, ())
             anchor_parts.append(f"{source_name}: {', '.join(names) if names else 'none'}")
         rows.append(
             "| U+{} | {} | {} | `{}` | {} | {} |".format(
@@ -129,7 +150,13 @@ def markdown_report() -> str:
     present_marks = [cp for cp in required_marks if cp in cmap]
     missing_marks = [cp for cp in required_marks if cp not in cmap]
     source_anchor_maps = {ufo_path.name: source_anchors(ufo_path) for ufo_path in UFO_PATHS}
-    required_mark_glyphs = {cmap[cp] for cp in present_marks}
+    source_mark_maps = {ufo_path.name: source_glyphs_by_unicode(ufo_path) for ufo_path in UFO_PATHS}
+    required_mark_glyphs = {
+        source_glyph
+        for source_map in source_mark_maps.values()
+        for cp in present_marks
+        if (source_glyph := source_map.get(cp))
+    }
     dotted_circle_present = 0x25CC in cmap
     has_any_source_anchors = any(source_anchor_maps[ufo.name] for ufo in UFO_PATHS)
     has_mark_positioning = False
@@ -181,7 +208,7 @@ def markdown_report() -> str:
             "",
             "## Required Arabic Marks",
             "",
-            *mark_rows(cmap, source_anchor_maps),
+            *mark_rows(cmap, source_anchor_maps, source_mark_maps),
             "",
         ]
     )

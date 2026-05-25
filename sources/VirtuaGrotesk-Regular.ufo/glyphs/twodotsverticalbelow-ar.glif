@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="twodotsverticalbelow-ar" format="2">
+	<advance width="600" />
+	<outline>
+		<contour>
+			<point x="278" y="-106" type="line" />
+			<point x="322" y="-106" type="line" />
+			<point x="322" y="-62" type="line" />
+			<point x="278" y="-62" type="line" />
+		</contour>
+		<contour>
+			<point x="278" y="-26" type="line" />
+			<point x="322" y="-26" type="line" />
+			<point x="322" y="18" type="line" />
+			<point x="278" y="18" type="line" />
+		</contour>
+	</outline>
 </glyph>

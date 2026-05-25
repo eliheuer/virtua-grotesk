@@ -68,6 +68,14 @@ def contour_source_finding_count(report_text: str) -> tuple[int, int]:
     return len(set(rows)), len(rows)
 
 
+def contour_decision_counts(report_text: str) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for label in ("Pending", "Fix-now", "Fixed", "Accepted", "Deferred"):
+        match = re.search(rf"^- {label}: (\d+)$", report_text, flags=re.MULTILINE)
+        counts[label.lower()] = int(match.group(1)) if match else 0
+    return counts
+
+
 def decision_counts(decisions_text: str) -> tuple[int, int]:
     open_count = len(re.findall(r"^Status: open$", decisions_text, flags=re.MULTILINE))
     decided_count = len(re.findall(r"^Status: decided$", decisions_text, flags=re.MULTILINE))
@@ -120,11 +128,15 @@ def markdown_report() -> str:
     numeric_text = read_text("documentation/numeric-feature-readiness.md")
     pua_text = read_text("documentation/pua-scope.md")
     arabic_source_text = read_text("documentation/arabic-source-work-checklist.md")
+    arabic_manual_edit_targets_text = read_text("documentation/arabic-manual-edit-targets.md")
     arabic_mark_text = read_text("documentation/arabic-mark-readiness.md")
     arabic_shaping_text = read_text("documentation/arabic-shaping-smoke-test.md")
     warnings_text = read_text("documentation/fontspector-warnings.md")
+    metadata_warning_probe_text = read_text("documentation/fontspector-metadata-warning-probe.md")
+    zero_warning_text = read_text("documentation/fontspector-zero-warning-worklist.md")
     fontspector_text = read_text("documentation/fontspector-googlefonts-report.md")
     contour_text = read_text("documentation/fontspector-contour-count.md")
+    contour_decision_text = read_text("documentation/contour-cleanup-decision-log.md")
 
     open_decisions, decided_decisions = decision_counts(decisions_text)
     open_decision_headings = decision_headings(decisions_text)
@@ -317,6 +329,8 @@ def markdown_report() -> str:
     arabic_reuse_checked = first_int(r"Arabic reuse prerequisites checked: (\d+) codepoints", arabic_source_text)
     arabic_reuse_missing = first_int(r"Missing reuse prerequisites across masters: (\d+)", arabic_source_text)
     arabic_dotted_circle_missing = yes_no_from_line(r"U\+25CC dotted circle missing: (yes|no)", arabic_source_text)
+    arabic_edit_targets = first_int(r"Source target references: (\d+)", arabic_manual_edit_targets_text)
+    arabic_edit_targets_missing = first_int(r"Missing source target files: (\d+)", arabic_manual_edit_targets_text)
     mark_missing = first_int(r"Missing from current variable-font cmap: (\d+)", arabic_mark_text)
     dotted_circle = yes_no_from_line(r"U\+25CC dotted circle present: (yes|no)", arabic_mark_text)
     source_anchors = yes_no_from_line(r"Source anchors present: (yes|no)", arabic_mark_text)
@@ -351,8 +365,30 @@ def markdown_report() -> str:
         )
     ]
     decision_warnings = sum(decision_warning_counts)
+    metadata_probe_warnings = sum(
+        int(count)
+        for count in re.findall(r"^\| `[^`]+` \| `[^`]+` \| (\d+) \|", metadata_warning_probe_text, flags=re.MULTILINE)
+    )
+    metadata_probe_unreachable = len(
+        re.findall(r"^- `U\+[0-9A-F]{4,6} ", metadata_warning_probe_text, flags=re.MULTILINE)
+    )
+    metadata_probe_remove_rlm = first_int(r"\| remove U\+200F RLM \| (\d+) \|", metadata_warning_probe_text)
+    metadata_probe_remove_dotted = first_int(r"\| remove U\+25CC dotted circle \| (\d+) \|", metadata_warning_probe_text)
+    metadata_probe_menu_latin = first_int(r"\| menu \+ latin only \| (\d+) \|", metadata_warning_probe_text)
+    metadata_probe_menu_latin_arabic = first_int(r"\| menu \+ latin \+ arabic \| (\d+) \|", metadata_warning_probe_text)
+    zero_warning_possible = text_value(
+        r"(?m)^- Honest zero-warning state possible with current scope: (.+)$",
+        zero_warning_text,
+    )
+    zero_warning_blockers = text_value(
+        r"(?m)^Blockers: (.+)$",
+        zero_warning_text,
+    )
+    arabic_subset_additional = first_int(r"\| `arabic` \| 50% \| \d+ \| \d+ \| \d+ \| [^|]+ \| (\d+) \|", zero_warning_text)
+    latin_ext_subset_additional = first_int(r"\| `latin-ext` \| 20% \| \d+ \| \d+ \| \d+ \| [^|]+ \| (\d+) \|", zero_warning_text)
     fontspector_fails = fontspector_fail_count(fontspector_text)
     contour_source_findings, contour_all_font_rows = contour_source_finding_count(contour_text)
+    contour_decisions = contour_decision_counts(contour_decision_text)
 
     lines = [
         "# Final Submission Blockers",
@@ -398,14 +434,17 @@ def markdown_report() -> str:
         f"| GF Latin Core coverage | {latin_missing} missing codepoints | 0 missing codepoints or reviewer-approved scope change |",
         f"| GF Arabic Core coverage | {arabic_missing} missing codepoints | 0 missing codepoints or reviewer-approved scope change |",
         f"| Arabic source worklist | missing codepoints: {arabic_source_missing}; suggested glyph names: {arabic_suggested_names}; positional forms: {arabic_positional_names}; missing in both masters: {arabic_suggested_missing_both}; reuse prerequisites checked: {arabic_reuse_checked}; missing prerequisites: {arabic_reuse_missing}; dotted circle missing: {arabic_dotted_circle_missing} | Missing Arabic glyphs are drawn from verified source bases in both masters |",
+        f"| Arabic manual edit targets | source target references: {arabic_edit_targets}; missing source target files: {arabic_edit_targets_missing} | Any `fix-needed` Arabic visual-review row can be traced to Regular and Bold GLIF files before editing |",
         f"| Arabic shaping smoke test | fonts: {shaping_font_count}; GSUB arab/dflt: {shaping_arab_gsub}/{shaping_font_count}; GPOS arab/dflt: {shaping_arab_gpos}/{shaping_font_count}; no .notdef: {yes_no(shaping_no_notdef)}; lam-alef rows: {len(shaping_lam_alef_rows)} | Arabic GSUB shaping remains intact, and missing GPOS/mark support is tracked separately |",
         f"| Arabic marks | {mark_missing} missing marks; dotted circle: {dotted_circle}; anchors: {source_anchors}; mark/mkmk: {mark_gpos} | Required marks, dotted circle, anchors, and mark/mkmk ready or explicitly accepted |",
         f"| Numeric feature readiness | digits: {numeric_default_digits}; proportional defaults: {numeric_default_proportional}; `tnum`: {numeric_tnum_feature}; coverage: {numeric_tnum_coverage}; tabular widths: {numeric_tnum_tabular}; ready: {numeric_ready} | Default ASCII digits are proportional and complemented by full tabular `tnum` alternates |",
         f"| PUA/private-use scope | {pua_codepoints} codepoints; Regular matches variable: {pua_regular_matches}; Bold matches variable: {pua_bold_matches} | Private-use glyphs are kept with rationale, made reachable, or deferred before final packaging |",
         f"| Glyph reachability | {reachability_unique} unique unreachable; Arabic helpers: {reachability_arabic_helpers}; mark helpers: {reachability_mark_helpers}; source cleanup: {reachability_source_cleanup} | Arabic helper glyphs are reachable, encoded, decomposed, or deliberately removed before final packaging |",
         f"| Fontspector warning triage | {warnings_total} WARN results; decision-linked warnings: {decision_warnings} | Every warning is reviewed, resolved, or explicitly accepted before final submission |",
+        f"| Fontspector metadata preview probe | preview WARNs: {metadata_probe_warnings}; unreachable codepoints: {metadata_probe_unreachable}; removing U+200F: {metadata_probe_remove_rlm} WARN; removing U+25CC: {metadata_probe_remove_dotted} WARN | Final metadata warning decisions are based on package-visible METADATA.pb, not loose-font noise |",
+        f"| Fontspector zero-warning path | honest zero possible: {zero_warning_possible}; package floor: {metadata_probe_warnings} WARN; menu+latin probe: {metadata_probe_menu_latin} WARN but drops Arabic; menu+latin+arabic probe: {metadata_probe_menu_latin_arabic} WARN; contour findings: {contour_source_findings}; Arabic subset threshold needs: {arabic_subset_additional}; latin-ext threshold needs: {latin_ext_subset_additional}; Latin Core missing: {latin_missing}; blockers: {zero_warning_blockers} | Reduce warnings through real coverage, drawing cleanup, and reviewed subset scope, not by hiding intended Arabic support |",
         f"| Fontspector googlefonts profile | {fontspector_fails} FAIL results | 0 FAIL results or explicit reviewer acceptance |",
-        f"| Contour/no-contour cleanup | {contour_source_findings} source glyph findings, {contour_all_font_rows} all-font rows | 0 unresolved source-outline findings or explicit reviewer acceptance |",
+        f"| Contour/no-contour cleanup | {contour_source_findings} source glyph findings, {contour_all_font_rows} all-font rows; decisions pending: {contour_decisions['pending']}, fix-now: {contour_decisions['fix-now']}, fixed: {contour_decisions['fixed']}, accepted: {contour_decisions['accepted']}, deferred: {contour_decisions['deferred']} | 0 unresolved source-outline findings or explicit reviewer acceptance |",
         "",
         "## Open Maintainer Decisions",
         "",
@@ -462,15 +501,29 @@ def markdown_report() -> str:
             "- `documentation/missing-gf-latin-core.md`",
             "- `documentation/missing-gf-arabic-core.md`",
             "- `documentation/arabic-source-work-checklist.md`",
+            "- `documentation/arabic-current-review-worksheet.md`",
+            "- `documentation/arabic-batch-recorder.md`",
+            "- `documentation/arabic-first-review-batch.md`",
+            "- `documentation/arabic-full-queue-ai-sweep.md`",
+            "- `documentation/arabic-manual-edit-targets.md`",
             "- `documentation/arabic-shaping-smoke-test.md`",
             "- `documentation/arabic-mark-readiness.md`",
             "- `documentation/arabic-review-packet.md`",
+            "- `documentation/arabic-goal-completion-audit.md`",
+            "- `documentation/arabic-next-review-packet.md`",
+            "- `documentation/arabic-visual-review-log.md`",
             "- `documentation/numeric-feature-readiness.md`",
             "- `documentation/pua-scope.md`",
             "- `documentation/glyph-reachability.md`",
             "- `documentation/fontspector-warnings.md`",
+            "- `documentation/fontspector-metadata-warning-probe.md`",
+            "- `documentation/fontspector-zero-warning-worklist.md`",
             "- `documentation/fontspector-googlefonts-report.md`",
             "- `documentation/fontspector-contour-count.md`",
+            "- `documentation/arabic-cleanup-drawing-briefs.md`",
+            "- `documentation/contour-cleanup-batches.md`",
+            "- `documentation/contour-cleanup-ai-triage.md`",
+            "- `documentation/contour-cleanup-decision-log.md`",
             "",
             "Regenerate this report with `make preflight` after drawing work,",
             "metadata decisions, or packaging-source decisions change.",

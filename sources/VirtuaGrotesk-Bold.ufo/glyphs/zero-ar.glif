@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zero-ar" format="2">
-	<unicode hex="0660"/>
-	<advance width="600"/>
+	<unicode hex="0660" />
+	<advance width="600" />
+	<outline>
+		<contour>
+			<point x="262" y="346" type="line" />
+			<point x="338" y="346" type="line" />
+			<point x="338" y="422" type="line" />
+			<point x="262" y="422" type="line" />
+		</contour>
+	</outline>
 </glyph>

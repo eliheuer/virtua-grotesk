@@ -38,9 +38,8 @@ Current local evidence:
 - The local `google/fonts` checkout shows PUA precedent in shipped packages,
   including `ScheherazadeNew` and `Kedebideri` at U+F130/U+F131, but that is
   precedent for explicit rationale, not a blanket approval.
-- `documentation/glyph-reachability.md` reports 19 unique unreachable glyphs;
-  those warnings are mostly Arabic helper/mark glyphs plus one source-cleanup
-  glyph, not the encoded PUA glyphs.
+- `documentation/glyph-reachability.md` reports 17 unique unreachable glyphs;
+  those warnings are Arabic helper/mark glyphs, not the encoded PUA glyphs.
 - If the PUA block ships, the Google Fonts issue/PR should explain why private
   encoded symbols belong in the public catalog package.
 - If the PUA block is deferred, remove or unencode it in both masters and
@@ -74,12 +73,10 @@ Should kerning be completed before the first Google Fonts PR?
 Current guidance/evidence:
 
 Current local evidence:
-- `documentation/kerning-readiness.md` reports source kerning in Bold only:
-  Regular has no `kerning.plist`; Bold has 77 pairs, 46 left groups, and 43
-  right groups.
-- The generated variable font exposes a GPOS `kern` feature.
-- The generated static TTFs do not expose GPOS `kern`.
-- Fontspector currently reports 4 `gpos_kerning_info` warnings.
+- `documentation/kerning-readiness.md` reports source kerning in both masters:
+  Regular and Bold each have 77 pairs, 46 left groups, and 43 right groups.
+- The generated variable font and static TTFs expose GPOS `kern`.
+- Fontspector currently reports 0 `gpos_kerning_info` warnings.
 - `make kerning-proof-check` runs Google Fonts `gftools qa --proof` and the
   latest HTML proof output covers Regular, Medium, SemiBold, and Bold.
 - If kerning is completed now, source kerning needs to be compatible across

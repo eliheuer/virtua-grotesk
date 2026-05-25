@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Virtua Grotesk Arabic Manual Review Dashboard</title>
+<style>
+@font-face {font-family: 'Virtua Review Variable';src: url('../fonts/variable/VirtuaGrotesk[wght].ttf') format('truetype');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'Virtua Review Regular';src: url('../fonts/ttf/VirtuaGrotesk-Regular.ttf') format('truetype');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'Virtua Review Medium';src: url('../fonts/ttf/VirtuaGrotesk-Medium.ttf') format('truetype');font-weight: 500;font-style: normal;}
+@font-face {font-family: 'Virtua Review SemiBold';src: url('../fonts/ttf/VirtuaGrotesk-SemiBold.ttf') format('truetype');font-weight: 600;font-style: normal;}
+@font-face {font-family: 'Virtua Review Bold';src: url('../fonts/ttf/VirtuaGrotesk-Bold.ttf') format('truetype');font-weight: 700;font-style: normal;}
+:root { color-scheme: light; font-family: system-ui, sans-serif; }
+body { margin: 0; padding: 32px; background: #f7f5ef; color: #191714; }
+main { max-width: 1180px; margin: 0 auto; }
+h1 { font-size: 28px; margin: 0 0 8px; }
+h2 { font-size: 18px; margin: 32px 0 12px; }
+p, li { line-height: 1.5; }
+.summary { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0; }
+.pill { border: 1px solid #c9c1b2; padding: 8px 10px; background: #fffdf8; }
+.sample { border-top: 1px solid #d8d0c2; padding: 18px 0; }
+.sample { scroll-margin-top: 12px; }
+.sample h3 { margin: 0 0 10px; font-size: 14px; color: #5d5548; }
+.row { display: grid; grid-template-columns: 110px 1fr; gap: 14px; align-items: baseline; margin: 6px 0; }
+.label { color: #6b6256; font-size: 13px; }
+.arabic { direction: rtl; unicode-bidi: plaintext; font-size: 44px; line-height: 1.35; background: white; padding: 10px 14px; border: 1px solid #ddd4c6; overflow: visible; }
+.small .arabic { font-size: 24px; }
+table { width: 100%; border-collapse: collapse; background: #fffdf8; }
+th, td { text-align: left; vertical-align: top; border: 1px solid #d8d0c2; padding: 8px; font-size: 13px; }
+th { background: #ece5d8; }
+a { color: #125c79; }
+.proofs { columns: 2; }
+.glyph-preview { display: flex; gap: 8px; flex-wrap: wrap; min-width: 260px; }
+.glyph-card { width: 86px; background: white; border: 1px solid #ddd4c6; padding: 6px; }
+.reference-card { border-color: #9f8d6d; background: #fff8e8; }
+.glyph-card svg { display: block; width: 100%; height: 84px; overflow: visible; }
+.glyph-card path { fill: #191714; }
+.glyph-card .metric { stroke: #d6a15b; stroke-width: 8; }
+.glyph-card .sidebearing { stroke: #7ca6b8; stroke-width: 8; stroke-dasharray: 16 16; }
+.preview-label { margin-top: 4px; color: #6b6256; font-size: 11px; }
+.reference-note { color: #7b5b20; font-size: 12px; margin: 0 0 12px; }
+.missing { color: #9a3a2c; font-size: 12px; padding: 32px 0; text-align: center; }
+</style>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const id = decodeURIComponent(window.location.hash.slice(1));
+  if (!id) {
+    return;
+  }
+  for (const section of document.querySelectorAll("section.sample")) {
+    if (section.id !== id) {
+      section.remove();
+    }
+  }
+  const target = document.getElementById(id);
+  if (target) {
+    target.scrollIntoView();
+  }
+});
+</script>
+</head>
+<body>
+<main>
+<h1>Virtua Grotesk Arabic Manual Review Dashboard</h1>
+<p>This generated dashboard embeds the current built fonts and gathers the fastest manual checks for the remaining Arabic drawing review. It is review evidence, not an automatic pass/fail result.</p>
+<div class="summary">
+<div class="pill">Visual review pending: 32</div>
+<div class="pill">Contour decisions pending: 0</div>
+<div class="pill">Visual risk rows: 20</div>
+<div class="pill">GF proof files linked: 16</div>
+</div>
+<h2>Embedded Arabic Samples</h2>
+<section class='sample' id='smoke-salaam'><h3>Smoke: salaam</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">سلام</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">سلام</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">سلام</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">سلام</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">سلام</div></div></section>
+<section class='sample' id='smoke-arabic'><h3>Smoke: arabic</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">العربية</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">العربية</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">العربية</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">العربية</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">العربية</div></div></section>
+<section class='sample' id='smoke-bismillah'><h3>Smoke: bismillah</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">بسم الله</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">بسم الله</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">بسم الله</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">بسم الله</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">بسم الله</div></div></section>
+<section class='sample' id='smoke-lam-alef'><h3>Smoke: lam-alef</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">لا لأ لإ لآ</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">لا لأ لإ لآ</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">لا لأ لإ لآ</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">لا لأ لإ لآ</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">لا لأ لإ لآ</div></div></section>
+<section class='sample'><h3>Letter structures</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">ص ض ط ظ م ه و ؤ</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">ص ض ط ظ م ه و ؤ</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">ص ض ط ظ م ه و ؤ</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">ص ض ط ظ م ه و ؤ</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">ص ض ط ظ م ه و ؤ</div></div></section>
+<section class='sample'><h3>Joining texture</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">بثجحخ سشصض طظ فقكلمنهي</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">بثجحخ سشصض طظ فقكلمنهي</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">بثجحخ سشصض طظ فقكلمنهي</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">بثجحخ سشصض طظ فقكلمنهي</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">بثجحخ سشصض طظ فقكلمنهي</div></div></section>
+<section class='sample' id='class-dot-stack-helpers'><h3>Persian/Urdu letters</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">پ چ ژ گ ک ی ے ں</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">پ چ ژ گ ک ی ے ں</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">پ چ ژ گ ک ی ے ں</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">پ چ ژ گ ک ی ے ں</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">پ چ ژ گ ک ی ے ں</div></div></section>
+<section class='sample'><h3>Arabic marks</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">بَ بُ بِ بّ بْ بً بٌ بٍ بٔ بٕ</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">بَ بُ بِ بّ بْ بً بٌ بٍ بٔ بٕ</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">بَ بُ بِ بّ بْ بً بٌ بٍ بٔ بٕ</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">بَ بُ بِ بّ بْ بً بٌ بٍ بٔ بٕ</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">بَ بُ بِ بّ بْ بً بٌ بٍ بٔ بٕ</div></div></section>
+<section class='sample'><h3>Dotted circle marks</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">◌َ ◌ُ ◌ِ ◌ّ ◌ْ ◌ٔ ◌ٕ</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">◌َ ◌ُ ◌ِ ◌ّ ◌ْ ◌ٔ ◌ٕ</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">◌َ ◌ُ ◌ِ ◌ّ ◌ْ ◌ٔ ◌ٕ</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">◌َ ◌ُ ◌ِ ◌ّ ◌ْ ◌ٔ ◌ٕ</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">◌َ ◌ُ ◌ِ ◌ّ ◌ْ ◌ٔ ◌ٕ</div></div></section>
+<section class='sample' id='class-arabic-farsi-numerals'><h3>Arabic-Indic digits</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">٠١٢٣٤٥٦٧٨٩</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">٠١٢٣٤٥٦٧٨٩</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">٠١٢٣٤٥٦٧٨٩</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">٠١٢٣٤٥٦٧٨٩</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">٠١٢٣٤٥٦٧٨٩</div></div></section>
+<section class='sample'><h3>Eastern Arabic digits</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">۰۱۲۳۴۵۶۷۸۹</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">۰۱۲۳۴۵۶۷۸۹</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">۰۱۲۳۴۵۶۷۸۹</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">۰۱۲۳۴۵۶۷۸۹</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">۰۱۲۳۴۵۶۷۸۹</div></div></section>
+<section class='sample' id='class-arabic-punctuation'><h3>Arabic punctuation</h3><div class='row'><div class='label'>Variable</div><div class='arabic' style="font-family: 'Virtua Review Variable';">، ؛ ؟ ٪ ٫ ٬ ۔</div></div><div class='row'><div class='label'>Regular</div><div class='arabic' style="font-family: 'Virtua Review Regular';">، ؛ ؟ ٪ ٫ ٬ ۔</div></div><div class='row'><div class='label'>Medium</div><div class='arabic' style="font-family: 'Virtua Review Medium';">، ؛ ؟ ٪ ٫ ٬ ۔</div></div><div class='row'><div class='label'>SemiBold</div><div class='arabic' style="font-family: 'Virtua Review SemiBold';">، ؛ ؟ ٪ ٫ ٬ ۔</div></div><div class='row'><div class='label'>Bold</div><div class='arabic' style="font-family: 'Virtua Review Bold';">، ؛ ؟ ٪ ٫ ٬ ۔</div></div></section>
+<h2>Visual Risk Rows</h2>
+<table><thead><tr><th>Font</th><th>Codepoint</th><th>Name</th><th>Risks</th></tr></thead><tbody><tr><td><code>fonts/variable/VirtuaGrotesk[wght].ttf</code></td><td>U+062B</td><td>ARABIC LETTER THEH</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/variable/VirtuaGrotesk[wght].ttf</code></td><td>U+0633</td><td>ARABIC LETTER SEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/variable/VirtuaGrotesk[wght].ttf</code></td><td>U+0634</td><td>ARABIC LETTER SHEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/variable/VirtuaGrotesk[wght].ttf</code></td><td>U+0648</td><td>ARABIC LETTER WAW</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Regular.ttf</code></td><td>U+062B</td><td>ARABIC LETTER THEH</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Regular.ttf</code></td><td>U+0633</td><td>ARABIC LETTER SEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Regular.ttf</code></td><td>U+0634</td><td>ARABIC LETTER SHEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Regular.ttf</code></td><td>U+0648</td><td>ARABIC LETTER WAW</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Medium.ttf</code></td><td>U+062B</td><td>ARABIC LETTER THEH</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Medium.ttf</code></td><td>U+0633</td><td>ARABIC LETTER SEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Medium.ttf</code></td><td>U+0634</td><td>ARABIC LETTER SHEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Medium.ttf</code></td><td>U+0648</td><td>ARABIC LETTER WAW</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</code></td><td>U+062B</td><td>ARABIC LETTER THEH</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</code></td><td>U+0633</td><td>ARABIC LETTER SEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</code></td><td>U+0634</td><td>ARABIC LETTER SHEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</code></td><td>U+0648</td><td>ARABIC LETTER WAW</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Bold.ttf</code></td><td>U+062B</td><td>ARABIC LETTER THEH</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Bold.ttf</code></td><td>U+0633</td><td>ARABIC LETTER SEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Bold.ttf</code></td><td>U+0634</td><td>ARABIC LETTER SHEEN</td><td>large-negative-left-sidebearing</td></tr><tr><td><code>fonts/ttf/VirtuaGrotesk-Bold.ttf</code></td><td>U+0648</td><td>ARABIC LETTER WAW</td><td>large-negative-left-sidebearing</td></tr></tbody></table>
+<h2>Contour Decision Queue</h2>
+<p class="reference-note">Rubik previews are structural references only. Do not copy reference outlines into Virtua Grotesk; use them to understand expected Arabic structure before judging the current Virtua drawing.</p>
+<table><thead><tr><th>Source glyph</th><th>Fontspector glyph</th><th>Preview</th><th>Batch</th><th>Category</th><th>Review step</th><th>Record decision</th></tr></thead><tbody></tbody></table>
+<h2>Google Fonts Proof Links</h2>
+<ul class="proofs"><li><a href='gftools-qa/Proof/Bold-diffbrowsers_glyphs.html'>Bold-diffbrowsers_glyphs.html</a></li><li><a href='gftools-qa/Proof/Bold-diffbrowsers_proofer.html'>Bold-diffbrowsers_proofer.html</a></li><li><a href='gftools-qa/Proof/Bold-diffbrowsers_text.html'>Bold-diffbrowsers_text.html</a></li><li><a href='gftools-qa/Proof/Bold-diffbrowsers_waterfall.html'>Bold-diffbrowsers_waterfall.html</a></li><li><a href='gftools-qa/Proof/Medium-diffbrowsers_glyphs.html'>Medium-diffbrowsers_glyphs.html</a></li><li><a href='gftools-qa/Proof/Medium-diffbrowsers_proofer.html'>Medium-diffbrowsers_proofer.html</a></li><li><a href='gftools-qa/Proof/Medium-diffbrowsers_text.html'>Medium-diffbrowsers_text.html</a></li><li><a href='gftools-qa/Proof/Medium-diffbrowsers_waterfall.html'>Medium-diffbrowsers_waterfall.html</a></li><li><a href='gftools-qa/Proof/Regular-diffbrowsers_glyphs.html'>Regular-diffbrowsers_glyphs.html</a></li><li><a href='gftools-qa/Proof/Regular-diffbrowsers_proofer.html'>Regular-diffbrowsers_proofer.html</a></li><li><a href='gftools-qa/Proof/Regular-diffbrowsers_text.html'>Regular-diffbrowsers_text.html</a></li><li><a href='gftools-qa/Proof/Regular-diffbrowsers_waterfall.html'>Regular-diffbrowsers_waterfall.html</a></li><li><a href='gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html'>SemiBold-diffbrowsers_glyphs.html</a></li><li><a href='gftools-qa/Proof/SemiBold-diffbrowsers_proofer.html'>SemiBold-diffbrowsers_proofer.html</a></li><li><a href='gftools-qa/Proof/SemiBold-diffbrowsers_text.html'>SemiBold-diffbrowsers_text.html</a></li><li><a href='gftools-qa/Proof/SemiBold-diffbrowsers_waterfall.html'>SemiBold-diffbrowsers_waterfall.html</a></li></ul>
+</main>
+</body>
+</html>

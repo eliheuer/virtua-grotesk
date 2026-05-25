@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="smallHighThreeDots-ar" format="2">
+  <unicode hex="06DB" />
+  <advance width="0" />
+  <anchor x="0" y="576" name="_top" />
+  <anchor x="0" y="720" name="top" />
+  <outline>
+    <contour>
+      <point x="-82" y="614" type="line" />
+      <point x="-30" y="614" type="line" />
+      <point x="-30" y="666" type="line" />
+      <point x="-82" y="666" type="line" />
+    </contour>
+    <contour>
+      <point x="30" y="614" type="line" />
+      <point x="82" y="614" type="line" />
+      <point x="82" y="666" type="line" />
+      <point x="30" y="666" type="line" />
+    </contour>
+    <contour>
+      <point x="-26" y="678" type="line" />
+      <point x="26" y="678" type="line" />
+      <point x="26" y="730" type="line" />
+      <point x="-26" y="730" type="line" />
+    </contour>
+  </outline>
+</glyph>

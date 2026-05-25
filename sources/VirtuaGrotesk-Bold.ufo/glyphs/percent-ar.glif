@@ -1,5 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="percent-ar" format="2">
-	<unicode hex="066A"/>
-	<advance width="600"/>
+	<unicode hex="066A" />
+	<advance width="600" />
+	<outline>
+		<contour>
+			<point x="116" y="160" type="line" />
+			<point x="232" y="160" type="line" />
+			<point x="520" y="584" type="line" />
+			<point x="404" y="584" type="line" />
+		</contour>
+		<contour>
+			<point x="128" y="492" type="line" />
+			<point x="200" y="492" type="line" />
+			<point x="200" y="564" type="line" />
+			<point x="128" y="564" type="line" />
+		</contour>
+		<contour>
+			<point x="420" y="196" type="line" />
+			<point x="492" y="196" type="line" />
+			<point x="492" y="268" type="line" />
+			<point x="420" y="268" type="line" />
+		</contour>
+	</outline>
 </glyph>

@@ -46,7 +46,7 @@ cannot be inferred from the source tree.
 ## Approved Add Font Statement
 
 ```text
-The Google Fonts Add Font issue can state that Eli Heuer is the sole copyright author/controller for the project as submitted under the OFL. AI-use disclosure: AI tools were used for engineering, proofing, onboarding, and repository preparation assistance, not for glyph drawing.
+The Google Fonts Add Font issue can state that Eli Heuer is the sole copyright author/controller for the project as submitted under the OFL. AI-use disclosure: AI tools were used for engineering, proofing, onboarding, repository preparation assistance, and rough Arabic candidate drawing scaffolds that still require manual cleanup and final drawing review.
 ```
 
 ## Maintainer Input Checklist

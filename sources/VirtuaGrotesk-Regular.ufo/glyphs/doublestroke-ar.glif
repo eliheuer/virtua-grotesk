@@ -1,3 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="doublestroke-ar" format="2">
+	<advance width="600" />
+	<outline>
+		<contour>
+			<point x="228" y="120" type="line" />
+			<point x="284" y="120" type="line" />
+			<point x="284" y="640" type="line" />
+			<point x="228" y="640" type="line" />
+		</contour>
+		<contour>
+			<point x="324" y="120" type="line" />
+			<point x="380" y="120" type="line" />
+			<point x="380" y="640" type="line" />
+			<point x="324" y="640" type="line" />
+		</contour>
+	</outline>
 </glyph>

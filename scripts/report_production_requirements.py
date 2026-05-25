@@ -48,14 +48,20 @@ def first_int(pattern: str, text: str, default: int = 0) -> int:
 
 def fontspector_counts(report_text: str) -> tuple[int, int, int]:
     match = re.search(
-        r"### Summary\s*\n\s*\|[^\n]*FAIL[^\n]*\|\s*\n\|[^\n]*\|\s*\n"
-        r"\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*\d+\s*\|\s*(\d+)\s*\|\s*\d+\s*\|",
+        r"### Summary\s*\n(?P<header>\|[^\n]*\|)\s*\n\|[^\n]*\|\s*\n(?P<values>\|[^\n]*\|)",
         report_text,
         flags=re.MULTILINE,
     )
     if not match:
         return (0, 0, 0)
-    return tuple(int(value) for value in match.groups())  # type: ignore[return-value]
+    headers = [cell.strip() for cell in match.group("header").strip("|").split("|")]
+    values = [cell.strip() for cell in match.group("values").strip("|").split("|")]
+    counts = dict(zip(headers, values, strict=False))
+    return (
+        int(counts.get("🔥 FAIL", 0)),
+        int(counts.get("⚠️ WARN", 0)),
+        int(counts.get("✅ PASS", 0)),
+    )
 
 
 def decision_counts(decisions_text: str) -> tuple[int, int, list[str]]:

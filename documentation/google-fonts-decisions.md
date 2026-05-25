@@ -105,8 +105,8 @@ Why it matters:
 - `documentation/package-source-files-audit.md` shows the current served
   variable TTF exists locally but is ignored/generated, so default branch fetch
   cannot work until this decision is applied.
-- The same audit currently shows `source.files` as 1/4 tracked and
-  build-from-source inputs as 4/6 tracked; the final strategy must expose the
+- The same audit currently shows `source.files` as 3/4 tracked and
+  build-from-source inputs as 6/6 tracked; the final strategy must expose the
   untracked local inputs before Packager can cite a public branch, release, or
   reproducible source build.
 - Recent merged upstream repos in the local audit expose built fonts in
@@ -205,14 +205,16 @@ Decision:
 - The Google Fonts Add Font issue can state that Eli Heuer is the sole
   copyright author/controller for the project as submitted under the OFL.
 - AI-use disclosure: AI tools were used for engineering, proofing, onboarding,
-  and repository preparation assistance, not for glyph drawing.
+  repository preparation assistance, and rough Arabic candidate drawing
+  scaffolds that still require manual cleanup and final drawing review.
 
 Recorded Add Font issue constraints:
 
 - The issue can state that Eli Heuer is the sole copyright author/controller
   for the project as submitted under the OFL.
 - The issue should disclose that AI tools were used for engineering, proofing,
-  onboarding, and repository preparation assistance, not for glyph drawing.
+  onboarding, repository preparation assistance, and rough Arabic candidate
+  drawing scaffolds that still require manual cleanup and final drawing review.
 - The current Add Font template combines copyright authorship and AI disclosure
   into one checkbox; keep the final issue wording as one maintainer-approved
   statement.
@@ -380,25 +382,27 @@ Status: decided
 
 Decision:
 
-- Ship the current linear `wght` 400-700 axis without an `avar` table for the
-  first Google Fonts submission.
-- Treat Fontspector's `mandatory_avar_table` result as a reviewed warning while
-  the axis remains intentionally linear.
+- Ship the current linear `wght` 400-700 axis with an identity `avar` table for
+  the first Google Fonts submission.
+- Keep interpolation linear while satisfying Fontspector's
+  `mandatory_avar_table` expectation.
 
 Current state:
 
 - The axis is linear from `wght=400` to `wght=700`.
-- No `avar` table is emitted.
+- The generated variable font emits an identity `avar` table.
 
 Why it matters:
 
-- Fontspector reports `mandatory_avar_table`.
-- The warning can be acceptable for a linear axis, but the decision should be
-  explicit before submission.
+- Fontspector's `mandatory_avar_table` warning is removed without changing the
+  design-space pacing.
+- Any future non-linear weight progression should be encoded deliberately rather
+  than inferred from the current identity mapping.
 
 Apply to:
 
-- `sources/VirtuaGrotesk.designspace`, if a non-linear mapping is added
+- `scripts/fix_gf_metadata.py`
+- `sources/VirtuaGrotesk.designspace`, if a non-linear mapping is added later
 - `documentation/google-fonts-submission-handoff.md`
 - `documentation/fontspector-warnings.md`
 

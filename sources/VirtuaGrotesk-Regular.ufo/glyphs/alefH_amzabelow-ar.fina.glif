@@ -1,4 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alefHamzabelow-ar.fina" format="2">
-	<advance width="600"/>
+	<advance width="600" />
+	<outline>
+		<contour>
+			<point x="272" y="112" type="line" />
+			<point x="328" y="112" type="line" />
+			<point x="328" y="680" type="line" />
+			<point x="272" y="680" type="line" />
+		</contour>
+		<contour>
+			<point x="196" y="-132" type="line" />
+			<point x="340" y="-132" type="line" />
+			<point x="356" y="-116" type="line" />
+			<point x="356" y="-84" type="line" />
+			<point x="340" y="-68" type="line" />
+			<point x="292" y="-68" type="line" />
+			<point x="268" y="-68" type="line" />
+			<point x="252" y="-52" type="line" />
+			<point x="252" y="-28" type="line" />
+			<point x="348" y="-28" type="line" />
+			<point x="364" y="-12" type="line" />
+			<point x="364" y="20" type="line" />
+			<point x="348" y="36" type="line" />
+			<point x="228" y="36" type="line" />
+			<point x="180" y="4" type="line" />
+			<point x="180" y="-44" type="line" />
+			<point x="220" y="-76" type="line" />
+			<point x="196" y="-76" type="line" />
+		</contour>
+	</outline>
 </glyph>

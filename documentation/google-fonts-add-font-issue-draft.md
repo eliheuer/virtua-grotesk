@@ -57,11 +57,11 @@ By opening this issue, I confirm the project meets the following requirements:
 - [ ] The name of the font family expected to appear on app menus must be very clearly communicated and definitive. It should not include any copyright holder's full names or acronyms.
   - Draft status: Local evidence: app-menu candidate appears in built names: yes.
 - [ ] The font supports at least the Google Fonts 'Latin Core' glyphset from [github.com/googlefonts/glyphsets](https://github.com/googlefonts/glyphsets) ([direct link](https://github.com/googlefonts/glyphsets/blob/main/data/results/txt/nice-names/GF_Latin_Core.txt))
-  - Draft status: Blocked by drawing/source work: GF Latin Core missing codepoints: 219.
+  - Draft status: Blocked by drawing/source work: GF Latin Core missing codepoints: 0.
 - [ ] The repo has the [Google Fonts preferred upstream repo structure](https://googlefonts.github.io/gf-guide/upstream.html)
   - Draft status: Local evidence: 11 / 11.
 - [ ] I have read, agree with, and comply with, the full [Google Fonts contributing requirements](https://googlefonts.github.io/gf-guide/index#pre-production-getting-your-fonts-ready-for-gf)
-  - Draft status: Blocked until documented final blockers are resolved or accepted; 10 FAIL results.
+  - Draft status: Blocked until documented final blockers are resolved or accepted; 0 FAIL results.
 - [ ] I will maintain the repository and participate in the onboarding process (addressing, solving, and responding to issues, merging pull requests, etc)
   - Draft status: Maintainer confirmation required before opening the issue.
 
@@ -76,13 +76,13 @@ Arabic support is in first-submission scope. Do not ask for Arabic/RTL
 review labels until these generated reports show the coverage and layout
 work is ready for review.
 
-- GF Arabic Core missing codepoints: 57.
-- Arabic letters missing: 13.
-- Arabic marks missing from GF Arabic Core: 3.
-- U+25CC dotted circle present: no.
-- Built mark/mkmk GPOS features present: no.
+- GF Arabic Core missing codepoints: 0.
+- Arabic letters missing: 0.
+- Arabic marks missing from GF Arabic Core: 0.
+- U+25CC dotted circle present: yes.
+- Built mark/mkmk GPOS features present: yes.
 - Fonts with `arab/dflt` GSUB smoke coverage: 5 / 5.
-- Fonts with `arab/dflt` GPOS smoke coverage: 1 / 5.
+- Fonts with `arab/dflt` GPOS smoke coverage: 5 / 5.
 - Required evidence: `documentation/arabic-review-packet.md`,
   `documentation/missing-gf-arabic-core.md`,
   `documentation/arabic-mark-readiness.md`, and
@@ -128,16 +128,16 @@ or explicit deferral before checking the Add Font requirements.
 - Vendor ID: source UFO IDs `FTGD`; generated fonts use
   `FTGD`; Fontspector vendor warnings: 0;
   decision: decided.
-- Kerning: source kerning in every master: no;
-  static GPOS `kern`: no; warnings: 4;
+- Kerning: source kerning in every master: yes;
+  static GPOS `kern`: yes; warnings: 0;
   GF visual proof output: yes;
   proof covers expected instances: yes;
   proof review packet files: 16 / 16;
   decision: open.
-- `avar`: table present: no; warning count: 1;
+- `avar`: table present: yes; warning count: 0;
   decision: decided.
 - PUA/reachability: PUA codepoints: 23;
-  `unreachable_glyphs` warnings: 5;
+  `unreachable_glyphs` warnings: 0;
   `googlefonts/metadata/unreachable_subsetting` warnings:
   5; decide whether private-use glyphs
   ship in the first submission.
@@ -158,13 +158,13 @@ metadata, and GitHub auth blockers are cleared.
 - Wrapper can reach Packager: no.
 - First package dry-run blocker: existing downstream METADATA.pb is still the Packager starter template.
 - GitHub API credentials ready: no.
-- Required local package inputs tracked: 1 / 5.
-- Required local package inputs untracked: 4.
+- Required local package inputs tracked: 4 / 5.
+- Required local package inputs untracked: 1.
 - Default branch mode has untracked source-file blocker: yes.
 - Latest-release/archive mode has untracked source-file blocker: yes.
-- Build-from-source mode has untracked build-input blocker: yes.
+- Build-from-source mode has untracked build-input blocker: no.
 - Downstream METADATA.pb is starter template: yes.
-- Expected metadata lines missing from downstream file: 17 / 23.
+- Expected metadata lines missing from downstream file: 16 / 22.
 - Downstream metadata preview ready to apply: no.
 - Downstream metadata apply blockers: 3.
 - Source strategy note: review `documentation/packager-source-strategy.md`.

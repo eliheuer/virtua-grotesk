@@ -12,8 +12,8 @@ GitHub release/archive source strategy can be checked deliberately.
 - Expected `source.files` entries: 4
 - Missing local files: 0
 - Ignored local files: 1
-- Tracked `source.files`: 1 / 4
-- Untracked local `source.files`: 3
+- Tracked `source.files`: 3 / 4
+- Untracked local `source.files`: 1
 - Destination mapping matches expected downstream layout: yes
 - Unsafe `source.files` paths: 0
 - Duplicate `source.files` paths: 0
@@ -25,7 +25,7 @@ GitHub release/archive source strategy can be checked deliberately.
 - Downstream `static/` destinations planned: 0
 - Static package omission documented in preview: yes
 - Article assets map into `article/`: yes
-- Build-from-source inputs tracked: 4 / 6
+- Build-from-source inputs tracked: 6 / 6
 - Build script uses `gftools builder sources/config.yaml`: yes
 - Build script runs metadata post-processing: yes
 - Builder config outputs to `fonts/`: yes
@@ -40,8 +40,8 @@ GitHub release/archive source strategy can be checked deliberately.
 | --- | --- | --- | --- | --- | --- | --- |
 | `OFL.txt` | `OFL.txt` | license | yes | no | yes | yes |
 | `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | served variable font | yes | yes | no | yes |
-| `documentation/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | article HTML | yes | no | no | yes |
-| `documentation/readme-specimen.png` | `article/readme-specimen.png` | article image | yes | no | no | yes |
+| `documentation/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | article HTML | yes | no | yes | yes |
+| `documentation/readme-specimen.png` | `article/readme-specimen.png` | article image | yes | no | yes | yes |
 
 ## Source Strategy Impact
 
@@ -67,12 +67,12 @@ GitHub release/archive source strategy can be checked deliberately.
 
 | Path | Exists locally | Ignored by git | Tracked by git |
 | --- | --- | --- | --- |
-| `sources/config.yaml` | yes | no | no |
+| `sources/config.yaml` | yes | no | yes |
 | `sources/VirtuaGrotesk.designspace` | yes | no | yes |
 | `sources/VirtuaGrotesk-Regular.ufo` | yes | no | yes |
 | `sources/VirtuaGrotesk-Bold.ufo` | yes | no | yes |
 | `build.sh` | yes | no | yes |
-| `requirements.txt` | yes | no | no |
+| `requirements.txt` | yes | no | yes |
 
 ## Build Command Evidence
 
@@ -84,7 +84,7 @@ GitHub release/archive source strategy can be checked deliberately.
 | `build.sh` invokes `gftools builder sources/config.yaml` | yes |
 | `build.sh` runs `scripts/fix_gf_metadata.py` after build | yes |
 | `sources/config.yaml` exists | yes |
-| `sources/config.yaml` is tracked by git | no |
+| `sources/config.yaml` is tracked by git | yes |
 | `sources/config.yaml` is not ignored | yes |
 | `sources/config.yaml` builds `VirtuaGrotesk.designspace` | yes |
 | `sources/config.yaml` outputs to `../fonts` | yes |

@@ -7,7 +7,11 @@ from pathlib import Path
 import importlib.util
 import plistlib
 import re
+import shutil
+import subprocess
 import sys
+import tempfile
+import json
 
 from fontTools.ttLib import TTFont
 
@@ -82,7 +86,44 @@ def font_kerning_summary(font_path: Path) -> dict[str, str]:
         font.close()
 
 
-def warning_count() -> int:
+def warning_count(font_paths: list[Path]) -> int:
+    if shutil.which("fontspector") is not None:
+        with tempfile.NamedTemporaryFile(suffix=".json") as report:
+            result = subprocess.run(
+                [
+                    "fontspector",
+                    "-p",
+                    "googlefonts",
+                    *[str(ROOT / path) for path in font_paths],
+                    "--exclude-checkid",
+                    "googlefonts/repo/dirname_matches_nameid_1",
+                    "--checkid",
+                    "gpos_kerning_info",
+                    "--json",
+                    report.name,
+                    "--loglevel",
+                    "error",
+                    "--skip-network",
+                ],
+                check=False,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+            if result.returncode in (0, 1):
+                data = json.loads(Path(report.name).read_text())
+                count = 0
+                for family_results in data["results"].values():
+                    for checks in family_results.values():
+                        for check in checks:
+                            if check.get("check_id") != "gpos_kerning_info":
+                                continue
+                            count += sum(
+                                1
+                                for subresult in check.get("subresults", [])
+                                if subresult.get("severity") == "WARN"
+                            )
+                return count
+
     text = read_text("documentation/fontspector-warnings.md")
     match = re.search(r"\| `gpos_kerning_info` \| (\d+) \|", text)
     return int(match.group(1)) if match else 0
@@ -141,7 +182,7 @@ def markdown_report(font_paths: list[Path]) -> str:
         f"- Source kerning exists in every master: {'yes' if all_masters_have_pairs else 'no'}",
         f"- All built fonts expose GPOS `kern`: {'yes' if all_built_gpos_kern else 'no'}",
         f"- All built static fonts expose GPOS `kern`: {'yes' if all_static_gpos_kern else 'no'}",
-        f"- Fontspector `gpos_kerning_info` warnings: {warning_count()}",
+        f"- Fontspector `gpos_kerning_info` warnings: {warning_count(font_paths)}",
         f"- `gftools qa --proof` importable: {qa_status['qa_importable']}",
         f"- Latest `gftools qa --proof` HTML output present: {qa_status['proof_output']}",
         f"- Latest proof HTML file count: {qa_status['proof_html_count']}",

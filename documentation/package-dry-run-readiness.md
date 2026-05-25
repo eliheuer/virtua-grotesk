@@ -9,8 +9,8 @@ This generated report predicts whether the guarded local `make package-dry-run` 
 - Source mode supported by wrapper: yes
 - Local google/fonts fork ready: yes
 - Required local package inputs ready: yes
-- Required local package inputs tracked: 1 / 5
-- Required local package inputs untracked: 4
+- Required local package inputs tracked: 4 / 5
+- Required local package inputs untracked: 1
 - Downstream preview `source.files` inputs: 4
 - Wrapper-only local sanity inputs: `sources/config.yaml`
 - Existing downstream METADATA.pb reusable: no
@@ -30,7 +30,7 @@ This generated report predicts whether the guarded local `make package-dry-run` 
 - Report/wrapper source-mode metadata gates present: yes
 - Report/wrapper final metadata value gates present: yes
 - Report/wrapper release-archive gate present: yes
-- Local release archive verified: yes
+- Local release archive verified: no
 
 ## Google Fonts Checkout
 
@@ -75,9 +75,9 @@ Packager source mode. They are a decision aid; the wrapper still uses
 
 | Source mode | Command | Ready now | Mode-specific blockers |
 | --- | --- | --- | --- |
-| `default` | `make package-dry-run` | no | downstream METADATA.pb is not populated; GitHub API credentials unavailable; preview still has pending/placeholder source fields; public branch must expose ignored/generated source files: `fonts/variable/VirtuaGrotesk[wght].ttf`; public branch must expose untracked source files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png` |
-| `latest-release` | `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run` | no | downstream METADATA.pb is not populated; GitHub API credentials unavailable; preview still has pending/placeholder source fields; release/archive must include untracked local source files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png` |
-| `build-from-source` | `GFT_PACKAGER_SOURCE_MODE=build-from-source make package-dry-run` | no | downstream METADATA.pb is not populated; GitHub API credentials unavailable; preview still has pending/placeholder source fields; keep `source.config_yaml` for build-from-source; build-from-source inputs are missing, ignored, or untracked: `sources/config.yaml`, `requirements.txt` |
+| `default` | `make package-dry-run` | no | downstream METADATA.pb is not populated; GitHub API credentials unavailable; preview still has pending/placeholder source fields; public branch must expose ignored/generated source files: `fonts/variable/VirtuaGrotesk[wght].ttf`; public branch must expose untracked source files: `fonts/variable/VirtuaGrotesk[wght].ttf` |
+| `latest-release` | `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run` | no | downstream METADATA.pb is not populated; GitHub API credentials unavailable; preview still has pending/placeholder source fields; verify local release archive with `make release-archive-build`; release/archive must include untracked local source files: `fonts/variable/VirtuaGrotesk[wght].ttf` |
+| `build-from-source` | `GFT_PACKAGER_SOURCE_MODE=build-from-source make package-dry-run` | no | downstream METADATA.pb is not populated; GitHub API credentials unavailable; preview still has pending/placeholder source fields; keep `source.config_yaml` for build-from-source |
 
 ## GitHub API Credentials
 
@@ -111,9 +111,9 @@ history snippets committed to the repo.
 | --- | --- | --- | --- | --- |
 | `fonts/variable/VirtuaGrotesk[wght].ttf` | downstream source.files | yes | yes | no |
 | `OFL.txt` | downstream source.files | yes | no | yes |
-| `documentation/ARTICLE.en_us.html` | downstream source.files | yes | no | no |
-| `documentation/readme-specimen.png` | downstream source.files | yes | no | no |
-| `sources/config.yaml` | local wrapper sanity input | yes | no | no |
+| `documentation/ARTICLE.en_us.html` | downstream source.files | yes | no | yes |
+| `documentation/readme-specimen.png` | downstream source.files | yes | no | yes |
+| `sources/config.yaml` | local wrapper sanity input | yes | no | yes |
 
 `sources/config.yaml` is checked here as a local build and repo-shape
 sanity input because the wrapper is shared by all source modes. It is

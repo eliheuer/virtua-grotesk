@@ -13,7 +13,7 @@ DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
 OUTPUT_DEFAULT = Path("documentation/google-fonts-language-metadata.md")
 DOWNSTREAM_PREVIEW = Path("documentation/google-fonts-downstream-package-preview.md")
 SCRIPT_ID = "Arab"
-SUBSETS = ("arabic", "latin", "latin-ext", "menu")
+SUBSETS = ("arabic", "latin", "menu")
 CORE_LANGUAGES = ("ar_Arab", "fa_Arab", "ur_Arab")
 RECENT_ARABIC_PACKAGES = (
     "ofl/estedad/METADATA.pb",

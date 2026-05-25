@@ -197,7 +197,14 @@ make kerning-proof-review-check
 make pua-scope-check
 make avar-check
 make warnings-check
+make metadata-warning-check
+make zero-warning-check
 ```
+
+`make warnings-check` now includes the package-context warning floor from the
+intended downstream `METADATA.pb` preview. Use `make metadata-warning-check`
+and `make zero-warning-check` when deciding whether a lower warning count is a
+real fix or just a narrower serving scope.
 
 The canonical human/agent QA checklist is
 `documentation/core-qa-process.md`. It ties together Fontspector, Google Fonts
@@ -299,6 +306,15 @@ default DrawBot runtime is:
 
 The Makefile sets `PYTHONPATH` to `/Users/eli/GH/repos/drawbot-skia/src` for
 proof generation so the fork can be used directly from its checkout.
+The focused Arabic print proof uses the same runtime:
+
+```bash
+make arabic-print-proof
+```
+
+It writes `documentation/arabic-print-proof.pdf` with Arabic shaping, mark,
+numeral, punctuation, and cmap-grid pages for all four static weights, plus
+`documentation/arabic-print-proof-index.md` as the page map.
 
 ### Rendering Instructions
 
@@ -334,6 +350,7 @@ Reusable Google Fonts onboarding knowledge from this pass is captured in
 - `.agents/skills/google-fonts-onboarding/SKILL.md`
 - `.agents/skills/google-fonts-qa/SKILL.md`
 - `.agents/skills/google-fonts-packaging/SKILL.md`
+- `.agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
 
 To run the current local Google Fonts QA target:
 
@@ -486,8 +503,8 @@ blockers:
 make preflight
 ```
 
-This builds, writes the proof from that build, regenerates reports with the
-proof artifact evidence, then runs the local gate.
+This builds, writes the proof and focused Arabic PDF proof from that build,
+regenerates reports with the proof artifact evidence, then runs the local gate.
 
 To run the same preflight path for handoff review:
 
@@ -495,8 +512,9 @@ To run the same preflight path for handoff review:
 make handoff
 ```
 
-This runs one build, writes the proof from that build, regenerates reports with
-the proof artifact evidence, then runs preflight.
+This runs one build, writes the proof and focused Arabic PDF proof from that
+build, regenerates reports with the proof artifact evidence, then runs
+preflight.
 
 To run a local Google Fonts Packager dry run against the configured local
 `google/fonts` fork with the selected release/archive source mode:
@@ -535,6 +553,7 @@ To regenerate the proof PDF:
 
 ```bash
 make proof
+make arabic-print-proof
 ```
 
 ## Changelog

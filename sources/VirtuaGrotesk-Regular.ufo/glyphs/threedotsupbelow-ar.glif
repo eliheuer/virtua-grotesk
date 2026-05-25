@@ -1,3 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="threedotsupbelow-ar" format="2">
+	<advance width="600" />
+	<outline>
+		<contour>
+			<point x="222" y="-106" type="line" />
+			<point x="266" y="-106" type="line" />
+			<point x="266" y="-62" type="line" />
+			<point x="222" y="-62" type="line" />
+		</contour>
+		<contour>
+			<point x="334" y="-106" type="line" />
+			<point x="378" y="-106" type="line" />
+			<point x="378" y="-62" type="line" />
+			<point x="334" y="-62" type="line" />
+		</contour>
+		<contour>
+			<point x="278" y="-34" type="line" />
+			<point x="322" y="-34" type="line" />
+			<point x="322" y="10" type="line" />
+			<point x="278" y="10" type="line" />
+		</contour>
+	</outline>
 </glyph>

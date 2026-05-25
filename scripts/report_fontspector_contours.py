@@ -108,7 +108,7 @@ def markdown_report(font_paths: list[Path]) -> str:
         for subresult in subresults:
             lines.extend(
                 [
-                    f"### {subresult['severity']}: `{subresult['code']}`",
+                    f"### {subresult['severity']}: `{subresult.get('code', '')}`",
                     "",
                     "| Glyph | Codepoint | Actual contours | Expected contours |",
                     "| --- | --- | --- | --- |",

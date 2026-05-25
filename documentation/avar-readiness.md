@@ -1,19 +1,19 @@
 # avar Readiness
 
 This generated report tracks the `avar` decision surface for Google
-Fonts onboarding. The Google Fonts variable-font guide explains that a
-linear interpolation can make `avar` unnecessary, while non-linear
-weight progression should be encoded with an `avar` table.
+Fonts onboarding. Virtua Grotesk keeps a linear `wght` axis and emits
+an identity `avar` table so the explicit axis mapping is present
+without changing interpolation.
 
 ## Summary
 
 - Font: `fonts/variable/VirtuaGrotesk[wght].ttf`
 - Axis: `wght` 400-700, default 400
-- Has `avar`: no
-- Fontspector `mandatory_avar_table` warnings: 1
+- Has `avar`: yes
+- Fontspector `mandatory_avar_table` warnings: 0
 - Current decision: decided
 
-## Current Linear Mapping
+## Current Axis Mapping
 
 | Instance | User coordinate | Normalized coordinate |
 | --- | ---: | ---: |
@@ -22,20 +22,20 @@ weight progression should be encoded with an `avar` table.
 | SemiBold | 600 | 0.6667 |
 | Bold | 700 | 1.0000 |
 
-## Review Options
+## Review Notes
 
-- Keep the axis linear and record that `avar` is intentionally omitted.
-- Add a non-linear `avar` mapping if Medium, SemiBold, or another
-  interpolated style should sit at a different design-space pace than
-  the current linear coordinates.
+- The current mapping is linear: 400 -> 400, 500 -> 500,
+  600 -> 600, and 700 -> 700.
+- The generated variable font should include an identity `avar`
+  table and should not produce Fontspector's `mandatory_avar_table`
+  warning.
+- Add a non-linear `avar` mapping only if Medium, SemiBold, or
+  another interpolated style should sit at a different design-space
+  pace than the current linear coordinates.
 
-## Apply After Maintainer Decision
+## Apply After Mapping Changes
 
-- If keeping the axis linear, record the decision in
-  `documentation/google-fonts-decisions.md` and the downstream issue or
-  PR notes if Fontspector still warns.
-- If adding `avar`, update the source designspace/build config, rebuild,
-  and regenerate `documentation/variable-font-metadata.md`,
+- Rebuild, then regenerate `documentation/variable-font-metadata.md`,
   `documentation/google-fonts-axis-registry-audit.md`, this report, and
   Fontspector reports.
 

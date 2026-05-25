@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="sukun-ar" format="2">
-	<unicode hex="0652"/>
+  <advance width="0" />
+  <unicode hex="0652" />
+  <outline>
+    <contour>
+      <point x="-80" y="0" type="line" />
+      <point x="80" y="0" type="line" />
+      <point x="80" y="160" type="line" />
+      <point x="-80" y="160" type="line" />
+    </contour>
+    <contour>
+      <point x="-32" y="48" type="line" />
+      <point x="32" y="48" type="line" />
+      <point x="32" y="112" type="line" />
+      <point x="-32" y="112" type="line" />
+    </contour>
+  </outline>
+  <anchor x="0" y="576" name="_top" />
+  <anchor x="0" y="720" name="top" />
 </glyph>

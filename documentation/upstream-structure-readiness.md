@@ -67,7 +67,7 @@ complete.
 
 ## Documentation Inventory
 
-- Documentation files: 72
+- Documentation files: 124
 - Article draft present: yes
 - Description draft present: yes
 - Image provenance present: yes

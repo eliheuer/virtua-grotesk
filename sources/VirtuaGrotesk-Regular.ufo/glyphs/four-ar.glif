@@ -1,5 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="four-ar" format="2">
-	<unicode hex="0664"/>
-	<advance width="600"/>
+  <advance width="600"/>
+  <unicode hex="0664"/>
+  <outline>
+    <contour>
+      <point x="388" y="176" type="line"/>
+      <point x="444" y="176" type="line"/>
+      <point x="444" y="316" type="line"/>
+      <point x="520" y="316" type="line"/>
+      <point x="520" y="372" type="line"/>
+      <point x="444" y="372" type="line"/>
+      <point x="452" y="584" type="line"/>
+      <point x="360" y="584" type="line"/>
+      <point x="144" y="372" type="line"/>
+      <point x="112" y="372" type="line"/>
+      <point x="112" y="316" type="line"/>
+      <point x="388" y="316" type="line"/>
+    </contour>
+  </outline>
 </glyph>

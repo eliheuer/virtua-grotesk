@@ -37,7 +37,6 @@ REQUIRED_LINES = (
     'full_name: "Virtua Grotesk Regular"',
     'subsets: "arabic"',
     'subsets: "latin"',
-    'subsets: "latin-ext"',
     'subsets: "menu"',
     'tag: "wght"',
     'min_value: 400.0',

@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="lam_alefMadda-ar" format="2">
-	<advance width="600"/>
+  <advance width="600"/>
+  <outline>
+    <contour>
+      <point x="192" y="112" type="line"/>
+      <point x="472" y="112" type="line"/>
+      <point x="472" y="680" type="line"/>
+      <point x="388" y="680" type="line"/>
+      <point x="388" y="196" type="line"/>
+      <point x="276" y="196" type="line"/>
+      <point x="276" y="680" type="line"/>
+      <point x="192" y="680" type="line"/>
+    </contour>
+    <contour>
+      <point x="220" y="760" type="line"/>
+      <point x="252" y="704" type="line"/>
+      <point x="308" y="744" type="line"/>
+      <point x="404" y="704" type="line"/>
+      <point x="500" y="760" type="line"/>
+      <point x="460" y="824" type="line"/>
+      <point x="404" y="776" type="line"/>
+      <point x="308" y="816" type="line"/>
+    </contour>
+  </outline>
 </glyph>

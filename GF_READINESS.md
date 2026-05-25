@@ -58,8 +58,8 @@ GitHub release/archive with `GFT_PACKAGER_SOURCE_MODE=latest-release`, keep
 `Virtua Grotesk` as the final name with confirmed namecheck/trademark/RFN/CLA
 readiness, use Vendor ID `FTGD` for Font Garden, use Article flow, do not add custom
 `sample_text`, use version `1.000`, tag final upstream source as `v1.000`,
-ship the current linear `wght` axis without `avar`, and defer project-template
-automation for the first submission.
+ship the current linear `wght` axis with an identity `avar` table, and defer
+project-template automation for the first submission.
 
 ## Engineering checklist
 
@@ -90,7 +90,7 @@ automation for the first submission.
 - [x] Add generated variable-font metadata report for `fvar`, `STAT`, and
   `avar` review.
 - [x] Add generated `avar` readiness report for the current linear weight-axis
-  mapping and decided no-`avar` warning review.
+  mapping, identity `avar` table, and resolved warning.
 - [x] Add generated Google Fonts axis-registry audit for `wght` display name,
   default, and fallback label review.
 - [x] Add GF Arabic Core coverage report for the intended Arabic submission scope.
@@ -442,7 +442,6 @@ Remaining warnings:
 - `gpos_kerning_info`: source kerning is asymmetric between masters and the
   static TTFs do not expose GPOS `kern`; track this in
   `documentation/kerning-readiness.md`.
-- `mandatory_avar_table`: variable font has no `avar` table.
 - `unreachable_glyphs` and `googlefonts/metadata/unreachable_subsetting`: some encoded/substitution reachability needs review.
 - `dotted_circle`: U+25CC is required for Arabic mark display and is listed
   in the Arabic Core missing-codepoint report.

@@ -51,13 +51,12 @@ Options:
 Current local evidence:
 
 - `documentation/package-source-files-audit.md` currently reports
-  `source.files` as 1/4 tracked, with 3 untracked local entries.
+  `source.files` as 3/4 tracked, with 1 untracked local entry.
 - The served variable TTF exists locally, but is ignored/generated and not
   tracked by git.
 - `documentation/ARTICLE.en_us.html` and
-  `documentation/readme-specimen.png` exist locally, but are not tracked by git.
-- Build-from-source inputs are 4/6 tracked; `sources/config.yaml` and
-  `requirements.txt` exist locally, but are not tracked by git.
+  `documentation/readme-specimen.png` are tracked by git.
+- Build-from-source inputs are 6/6 tracked.
 - Default branch mode cannot be final until every listed `source_file` is
   available from the public branch/commit recorded in downstream metadata.
 - Build-from-source mode cannot be final until every build input is public and
@@ -92,8 +91,8 @@ Why it matters:
   source strategy.
 - `documentation/package-source-files-audit.md` currently shows that the served
   variable TTF exists locally but is ignored/generated.
-- The same audit currently shows `source.files` as 1/4 tracked and
-  build-from-source inputs as 4/6 tracked, so either final source strategy must
+- The same audit currently shows `source.files` as 3/4 tracked and
+  build-from-source inputs as 6/6 tracked, so either final source strategy must
   commit, publish, or otherwise expose the untracked local inputs before
   packaging.
 - Recent merged upstream repos in `documentation/recent-google-fonts-packages.md`
@@ -168,9 +167,8 @@ Current local evidence:
 - The local `google/fonts` checkout shows PUA precedent in shipped packages,
   including `ScheherazadeNew` and `Kedebideri` at U+F130/U+F131, but that is
   precedent for explicit rationale, not a blanket approval.
-- `documentation/glyph-reachability.md` reports 19 unique unreachable glyphs;
-  those warnings are mostly Arabic helper/mark glyphs plus one source-cleanup
-  glyph, not the encoded PUA glyphs.
+- `documentation/glyph-reachability.md` reports 17 unique unreachable glyphs;
+  those warnings are Arabic helper/mark glyphs, not the encoded PUA glyphs.
 - If the PUA block ships, the Google Fonts issue/PR should explain why private
   encoded symbols belong in the public catalog package.
 - If the PUA block is deferred, remove or unencode it in both masters and
@@ -213,12 +211,10 @@ the deferral explicitly in the Google Fonts issue.
 
 Current local evidence:
 
-- `documentation/kerning-readiness.md` reports source kerning in Bold only:
-  Regular has no `kerning.plist`; Bold has 77 pairs, 46 left groups, and 43
-  right groups.
-- The generated variable font exposes a GPOS `kern` feature.
-- The generated static TTFs do not expose GPOS `kern`.
-- Fontspector currently reports 4 `gpos_kerning_info` warnings.
+- `documentation/kerning-readiness.md` reports source kerning in both masters:
+  Regular and Bold each have 77 pairs, 46 left groups, and 43 right groups.
+- The generated variable font and static TTFs expose GPOS `kern`.
+- Fontspector currently reports 0 `gpos_kerning_info` warnings.
 - `make kerning-proof-check` runs Google Fonts `gftools qa --proof` and the
   latest HTML proof output covers Regular, Medium, SemiBold, and Bold.
 - If kerning is completed now, source kerning needs to be compatible across
@@ -230,11 +226,9 @@ Current local evidence:
 
 Why it matters:
 
-- Fontspector reports `gpos_kerning_info`.
-- The generated variable font exposes GPOS `kern`, but the generated static
-  TTFs do not.
-- The Regular UFO has no source kerning yet, while the Bold UFO has source
-  kerning data.
+- Fontspector no longer reports `gpos_kerning_info`.
+- The generated variable font and static TTFs expose GPOS `kern`.
+- The Regular and Bold UFOs now have matching source kerning data.
 - Google Fonts visual spacing/kerning review is tracked through
   `make kerning-proof-check` and `documentation/kerning-readiness.md`.
 

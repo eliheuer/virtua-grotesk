@@ -110,7 +110,7 @@ explicit source-mode reason for being absent.
 ## Pending Or Placeholder Lines
 
 - `documentation/google-fonts-downstream-package-preview.md:71` `date_added: "Pending final Google Fonts date_added"`
-- `documentation/google-fonts-downstream-package-preview.md:92` `commit: "Pending final release/source commit"`
+- `documentation/google-fonts-downstream-package-preview.md:91` `commit: "Pending final release/source commit"`
 
 ## Apply Before Downstream Packaging
 

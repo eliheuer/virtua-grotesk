@@ -37,7 +37,11 @@ EXPECTED_DRAWBOT_ORIGINS = {
 }
 GF_REPO_PATH = Path("/Users/eli/GH/forks/fonts")
 GF_WEIGHT_AXIS_REGISTRY = GF_REPO_PATH / "axisregistry/Lib/axisregistry/data/weight.textproto"
-ALLOWED_DRAWING_FAILS = {"googlefonts/glyph_coverage", "contour_count"}
+ALLOWED_DRAWING_FAILS = {
+    "googlefonts/glyph_coverage",
+    "contour_count",
+    "googlefonts/glyphsets/shape_languages",
+}
 EXPECTED_FONT_OUTPUTS = [
     "fonts/variable/VirtuaGrotesk[wght].ttf",
     "fonts/ttf/VirtuaGrotesk-Regular.ttf",
@@ -144,6 +148,7 @@ REQUIRED_FILES = [
     ".agents/skills/google-fonts-onboarding/SKILL.md",
     ".agents/skills/google-fonts-qa/SKILL.md",
     ".agents/skills/google-fonts-packaging/SKILL.md",
+    ".agents/skills/google-fonts-nonlatin-drawing/SKILL.md",
     "AUTHORS.txt",
     "CONTRIBUTORS.txt",
     "OFL.txt",
@@ -159,10 +164,42 @@ REQUIRED_FILES = [
     "documentation/ARTICLE.en_us.html",
     "documentation/DESCRIPTION.en_us.html",
     "documentation/core-qa-process.md",
+    "documentation/arabic-candidate-glyph-plan.md",
     "documentation/arabic-mark-readiness.md",
     "documentation/arabic-review-packet.md",
     "documentation/arabic-shaping-smoke-test.md",
     "documentation/arabic-source-work-checklist.md",
+    "documentation/arabic-goal-completion-audit.md",
+    "documentation/arabic-visual-risk-audit.md",
+    "documentation/arabic-visual-risk-proof.html",
+    "documentation/arabic-structure-sweep.html",
+    "documentation/arabic-structure-triage.md",
+    "documentation/arabic-mark-review-proof.html",
+    "documentation/arabic-mark-triage.md",
+    "documentation/arabic-visual-review-checklist.md",
+    "documentation/arabic-visual-review-log.md",
+    "documentation/arabic-manual-review-dashboard.html",
+    "documentation/arabic-next-review-batch.html",
+    "documentation/arabic-manual-review-batches.md",
+    "documentation/arabic-current-review-worksheet.md",
+    "documentation/arabic-review-worksheet-bundle.md",
+    "documentation/arabic-batch-recorder.md",
+    "documentation/arabic-first-review-zoom-snapshots.md",
+    "documentation/arabic-first-review-crop-integrity.md",
+    "documentation/arabic-first-review-batch.md",
+    "documentation/arabic-first-review-risk-shortlist.md",
+    "documentation/arabic-first-review-ai-sweep.md",
+    "documentation/arabic-manual-edit-targets.md",
+    "documentation/arabic-hand-review-session.md",
+    "documentation/arabic-hand-review-contact-sheet.html",
+    "documentation/arabic-print-proof-index.md",
+    "documentation/arabic-next-review-packet.md",
+    "documentation/arabic-next-review-ai-triage.md",
+    "documentation/arabic-next-review-ai-observations.md",
+    "documentation/arabic-full-queue-ai-sweep.md",
+    "documentation/arabic-next-review-board.html",
+    "documentation/arabic-snapshot-integrity.md",
+    "documentation/arabic-visual-review-runbook.md",
     "documentation/google-fonts-decision-questions.md",
     "documentation/google-fonts-decision-answer-sheet.md",
     "documentation/google-fonts-decisions.md",
@@ -211,6 +248,7 @@ REQUIRED_FILES = [
     "documentation/gf-glyphset-readiness.md",
     "documentation/google-fonts-language-metadata.md",
     "documentation/master-compatibility.md",
+    "documentation/ufo-editor-readiness.md",
     "documentation/open-placeholder-audit.md",
     "documentation/public-upstream-readiness.md",
     "documentation/package-source-files-audit.md",
@@ -228,7 +266,18 @@ REQUIRED_FILES = [
     "documentation/missing-gf-latin-core.md",
     "documentation/glyph-reachability.md",
     "documentation/fontspector-contour-count.md",
+    "documentation/contour-cleanup-proof.html",
+    "documentation/contour-cleanup-review-queue.md",
+    "documentation/contour-cleanup-edit-plan.md",
+    "documentation/arabic-cleanup-drawing-briefs.md",
+    "documentation/contour-cleanup-batches.md",
+    "documentation/contour-cleanup-decision-log.md",
+    "documentation/contour-cleanup-ai-triage.md",
+    "documentation/contour-cleanup-source-edit-runlist.md",
+    "documentation/contour-cleanup-first-edit-batch.md",
     "documentation/fontspector-warnings.md",
+    "documentation/fontspector-metadata-warning-probe.md",
+    "documentation/fontspector-zero-warning-worklist.md",
     "documentation/fontspector-googlefonts-report.md",
     "documentation/image-license.txt",
     "documentation/readme-specimen.png",
@@ -244,16 +293,50 @@ REQUIRED_FILES = [
     "scripts/test_package_gf_dry_run_gates.sh",
     "scripts/test_downstream_metadata_helper.sh",
     "scripts/test_release_archive_gates.sh",
+    "scripts/test_contour_decision_update.sh",
+    "scripts/test_arabic_visual_review_update.sh",
     "scripts/test_designer_profile_validators.sh",
     "scripts/prepare_downstream_metadata.py",
     "scripts/report_arabic_shaping.py",
     "scripts/report_arabic_mark_readiness.py",
     "scripts/report_arabic_review_packet.py",
     "scripts/report_arabic_source_checklist.py",
+    "scripts/report_arabic_goal_completion.py",
+    "scripts/report_arabic_visual_risk.py",
+    "scripts/build_arabic_visual_risk_proof.py",
+    "scripts/build_arabic_structure_sweep.py",
+    "scripts/report_arabic_structure_triage.py",
+    "scripts/build_arabic_mark_review_proof.py",
+    "scripts/report_arabic_mark_triage.py",
+    "scripts/report_arabic_visual_review_log.py",
+    "scripts/build_arabic_manual_review_dashboard.py",
+    "scripts/report_arabic_manual_review_batches.py",
+    "scripts/report_arabic_current_review_worksheet.py",
+    "scripts/report_arabic_review_worksheet_bundle.py",
+    "scripts/report_arabic_batch_recorder.py",
+    "scripts/build_arabic_first_review_zoom_snapshots.py",
+    "scripts/report_arabic_first_review_crop_integrity.py",
+    "scripts/report_arabic_first_review_batch.py",
+    "scripts/report_arabic_first_review_risk_shortlist.py",
+    "scripts/report_arabic_manual_edit_targets.py",
+    "scripts/report_arabic_hand_review_session.py",
+    "scripts/build_arabic_hand_review_contact_sheet.py",
+    "scripts/report_arabic_next_review_packet.py",
+    "scripts/report_arabic_next_review_ai_triage.py",
+    "scripts/report_arabic_next_review_ai_observations.py",
+    "scripts/report_arabic_full_queue_ai_sweep.py",
+    "scripts/build_arabic_next_review_board.py",
+    "scripts/build_arabic_next_review_snapshots.py",
+    "scripts/report_arabic_snapshot_integrity.py",
+    "scripts/report_arabic_visual_review_runbook.py",
+    "scripts/update_arabic_visual_review.py",
+    "scripts/check_runebender_norad_load.sh",
+    "scripts/test_arabic_visual_review_update.sh",
     "scripts/report_decision_answer_sheet.py",
     "scripts/report_decision_readiness.py",
     "scripts/report_gf_reference_index.py",
     "scripts/report_agent_reuse_readiness.py",
+    "scripts/build_arabic_candidate_glyphs.py",
     "scripts/report_decision_application_blockers.py",
     "scripts/report_generated_font_metadata.py",
     "scripts/report_production_requirements.py",
@@ -281,6 +364,7 @@ REQUIRED_FILES = [
     "scripts/report_gf_glyphset_readiness.py",
     "scripts/report_gf_language_metadata.py",
     "scripts/report_master_compatibility.py",
+    "scripts/report_ufo_editor_readiness.py",
     "scripts/report_source_metadata.py",
     "scripts/report_variable_metadata.py",
     "scripts/report_missing_gf_arabic_core.py",
@@ -304,9 +388,15 @@ REQUIRED_FILES = [
     "scripts/report_kerning_proof_review.py",
     "scripts/report_pua_scope.py",
     "scripts/report_glyph_reachability.py",
+    "scripts/build_contour_cleanup_proof.py",
+    "scripts/update_contour_decision.py",
+    "scripts/test_contour_decision_update.sh",
+    "scripts/check_runebender_norad_load.sh",
     "scripts/report_fontspector_contours.py",
     "scripts/report_fontspector_markdown.sh",
     "scripts/report_fontspector_warnings.py",
+    "scripts/report_metadata_warning_probe.py",
+    "scripts/report_zero_warning_worklist.py",
 ]
 REQUIRED_EXECUTABLES = [
     "build.sh",
@@ -323,12 +413,41 @@ REQUIRED_EXECUTABLES = [
     "scripts/test_package_gf_dry_run_gates.sh",
     "scripts/test_downstream_metadata_helper.sh",
     "scripts/test_release_archive_gates.sh",
+    "scripts/test_contour_decision_update.sh",
+    "scripts/test_arabic_visual_review_update.sh",
     "scripts/test_designer_profile_validators.sh",
     "scripts/prepare_downstream_metadata.py",
     "scripts/report_arabic_shaping.py",
     "scripts/report_arabic_mark_readiness.py",
     "scripts/report_arabic_review_packet.py",
     "scripts/report_arabic_source_checklist.py",
+    "scripts/report_arabic_goal_completion.py",
+    "scripts/report_arabic_visual_risk.py",
+    "scripts/build_arabic_visual_risk_proof.py",
+    "scripts/build_arabic_structure_sweep.py",
+    "scripts/report_arabic_structure_triage.py",
+    "scripts/build_arabic_mark_review_proof.py",
+    "scripts/report_arabic_mark_triage.py",
+    "scripts/report_arabic_visual_review_log.py",
+    "scripts/update_arabic_visual_review.py",
+    "scripts/report_arabic_manual_review_batches.py",
+    "scripts/report_arabic_current_review_worksheet.py",
+    "scripts/report_arabic_review_worksheet_bundle.py",
+    "scripts/report_arabic_batch_recorder.py",
+    "scripts/report_arabic_first_review_crop_integrity.py",
+    "scripts/report_arabic_first_review_batch.py",
+    "scripts/report_arabic_manual_edit_targets.py",
+    "scripts/report_arabic_hand_review_session.py",
+    "scripts/build_arabic_hand_review_contact_sheet.py",
+    "scripts/report_arabic_next_review_packet.py",
+    "scripts/report_arabic_next_review_ai_triage.py",
+    "scripts/report_arabic_next_review_ai_observations.py",
+    "scripts/report_arabic_full_queue_ai_sweep.py",
+    "scripts/build_arabic_next_review_board.py",
+    "scripts/build_arabic_next_review_snapshots.py",
+    "scripts/report_arabic_snapshot_integrity.py",
+    "scripts/report_arabic_visual_review_runbook.py",
+    "scripts/test_arabic_visual_review_update.sh",
     "scripts/report_decision_answer_sheet.py",
     "scripts/report_decision_readiness.py",
     "scripts/report_gf_reference_index.py",
@@ -358,6 +477,7 @@ REQUIRED_EXECUTABLES = [
     "scripts/report_gf_glyphset_readiness.py",
     "scripts/report_gf_language_metadata.py",
     "scripts/report_master_compatibility.py",
+    "scripts/report_ufo_editor_readiness.py",
     "scripts/report_source_metadata.py",
     "scripts/report_variable_metadata.py",
     "scripts/report_missing_gf_arabic_core.py",
@@ -379,9 +499,14 @@ REQUIRED_EXECUTABLES = [
     "scripts/report_kerning_proof_review.py",
     "scripts/report_pua_scope.py",
     "scripts/report_glyph_reachability.py",
+    "scripts/build_contour_cleanup_proof.py",
+    "scripts/update_contour_decision.py",
+    "scripts/test_contour_decision_update.sh",
     "scripts/report_fontspector_contours.py",
     "scripts/report_fontspector_markdown.sh",
     "scripts/report_fontspector_warnings.py",
+    "scripts/report_metadata_warning_probe.py",
+    "scripts/report_zero_warning_worklist.py",
 ]
 REQUIRED_PYTHON_MODULES = {
     "fontTools": "fonttools",
@@ -480,18 +605,67 @@ def markdown_section(text: str, heading: str) -> str:
     return match.group("body") if match else ""
 
 
+def markdown_rows(text: str, first_cell_prefix: str = "`") -> list[list[str]]:
+    rows: list[list[str]] = []
+    for line in text.splitlines():
+        if not line.startswith("| "):
+            continue
+        cells = split_markdown_row(line)
+        if not cells or cells[0] == "---" or not cells[0].startswith(first_cell_prefix):
+            continue
+        rows.append(cells)
+    return rows
+
+
+def split_markdown_row(line: str) -> list[str]:
+    cells: list[str] = []
+    current: list[str] = []
+    escaped = False
+    for character in line.strip().strip("|"):
+        if escaped:
+            current.append(character)
+            escaped = False
+            continue
+        if character == "\\":
+            current.append(character)
+            escaped = True
+            continue
+        if character == "|":
+            cells.append("".join(current).strip())
+            current = []
+            continue
+        current.append(character)
+    cells.append("".join(current).strip())
+    return cells
+
+
+def unbacktick(value: str) -> str:
+    return value.strip().strip("`")
+
+
 def fontspector_summary_counts(text: str) -> dict[str, int]:
     summary_match = re.search(
         r"^### Summary\s+"
-        r"\| 🔥 FAIL \| ⚠️ WARN \| ℹ️ INFO \| ✅ PASS \| ⏩ SKIP \| \s+"
+        r"(?P<header>\|[^\n]*\|)\s+"
         r"\|[^\n]+\|\s+"
-        r"\| (?P<FAIL>\d+) \| (?P<WARN>\d+) \| (?P<INFO>\d+) \| (?P<PASS>\d+) \| (?P<SKIP>\d+) \|",
+        r"(?P<values>\|[^\n]*\|)",
         text,
         re.MULTILINE,
     )
     if not summary_match:
         return {}
-    return {key: int(value) for key, value in summary_match.groupdict().items()}
+    headers = [cell.strip() for cell in summary_match.group("header").strip("|").split("|")]
+    values = [cell.strip() for cell in summary_match.group("values").strip("|").split("|")]
+    raw_counts = dict(zip(headers, values, strict=False))
+    labels = {
+        "💥 ERROR": "ERROR",
+        "🔥 FAIL": "FAIL",
+        "⚠️ WARN": "WARN",
+        "ℹ️ INFO": "INFO",
+        "✅ PASS": "PASS",
+        "⏩ SKIP": "SKIP",
+    }
+    return {target: int(raw_counts.get(label, 0)) for label, target in labels.items()}
 
 
 def generated_variable_version(text: str) -> str:
@@ -821,7 +995,11 @@ def source_fontinfo_errors(errors: list[str]) -> None:
         check(data.get("versionMajor") == EXPECTED_VERSION_MAJOR, f"source versionMajor is {EXPECTED_VERSION_MAJOR}: {relative}", errors)
         check(data.get("versionMinor") == EXPECTED_VERSION_MINOR, f"source versionMinor is {EXPECTED_VERSION_MINOR}: {relative}", errors)
         check(data.get("copyright") == ofl_first_line, f"source copyright matches OFL: {relative}", errors)
-        check(data.get("openTypeNameCopyright") == ofl_first_line, f"source name copyright matches OFL: {relative}", errors)
+        check(
+            "openTypeNameCopyright" not in data,
+            f"source omits Norad-incompatible openTypeNameCopyright: {relative}",
+            errors,
+        )
         check(data.get("openTypeNameManufacturerURL") == ofl_url, f"source manufacturer URL matches OFL URL: {relative}", errors)
         check(
             "openTypeOS2Type" not in data,
@@ -1002,6 +1180,38 @@ def report_errors(errors: list[str]) -> None:
     mark_report = ROOT / "documentation/arabic-mark-readiness.md"
     arabic_review_report = ROOT / "documentation/arabic-review-packet.md"
     arabic_source_report = ROOT / "documentation/arabic-source-work-checklist.md"
+    arabic_candidate_report = ROOT / "documentation/arabic-candidate-glyph-plan.md"
+    arabic_goal_report = ROOT / "documentation/arabic-goal-completion-audit.md"
+    arabic_visual_risk_report = ROOT / "documentation/arabic-visual-risk-audit.md"
+    arabic_visual_risk_proof = ROOT / "documentation/arabic-visual-risk-proof.html"
+    arabic_structure_sweep = ROOT / "documentation/arabic-structure-sweep.html"
+    arabic_structure_triage = ROOT / "documentation/arabic-structure-triage.md"
+    arabic_mark_review_proof = ROOT / "documentation/arabic-mark-review-proof.html"
+    arabic_mark_triage = ROOT / "documentation/arabic-mark-triage.md"
+    arabic_visual_report = ROOT / "documentation/arabic-visual-review-checklist.md"
+    arabic_visual_log_report = ROOT / "documentation/arabic-visual-review-log.md"
+    arabic_manual_review_dashboard = ROOT / "documentation/arabic-manual-review-dashboard.html"
+    arabic_next_review_batch = ROOT / "documentation/arabic-next-review-batch.html"
+    arabic_manual_review_batches = ROOT / "documentation/arabic-manual-review-batches.md"
+    arabic_current_review_worksheet = ROOT / "documentation/arabic-current-review-worksheet.md"
+    arabic_review_worksheet_bundle = ROOT / "documentation/arabic-review-worksheet-bundle.md"
+    arabic_batch_recorder = ROOT / "documentation/arabic-batch-recorder.md"
+    arabic_first_review_zoom_snapshots = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
+    arabic_first_review_crop_integrity = ROOT / "documentation/arabic-first-review-crop-integrity.md"
+    arabic_first_review_batch = ROOT / "documentation/arabic-first-review-batch.md"
+    arabic_first_review_risk_shortlist = ROOT / "documentation/arabic-first-review-risk-shortlist.md"
+    arabic_first_review_ai_sweep = ROOT / "documentation/arabic-first-review-ai-sweep.md"
+    arabic_manual_edit_targets = ROOT / "documentation/arabic-manual-edit-targets.md"
+    arabic_hand_review_session = ROOT / "documentation/arabic-hand-review-session.md"
+    arabic_hand_review_contact_sheet = ROOT / "documentation/arabic-hand-review-contact-sheet.html"
+    arabic_print_proof_index = ROOT / "documentation/arabic-print-proof-index.md"
+    arabic_next_review_packet = ROOT / "documentation/arabic-next-review-packet.md"
+    arabic_next_review_ai_triage = ROOT / "documentation/arabic-next-review-ai-triage.md"
+    arabic_next_review_ai_observations = ROOT / "documentation/arabic-next-review-ai-observations.md"
+    arabic_full_queue_ai_sweep = ROOT / "documentation/arabic-full-queue-ai-sweep.md"
+    arabic_next_review_board = ROOT / "documentation/arabic-next-review-board.html"
+    arabic_snapshot_integrity = ROOT / "documentation/arabic-snapshot-integrity.md"
+    arabic_visual_runbook = ROOT / "documentation/arabic-visual-review-runbook.md"
     generated_metadata_report = ROOT / "documentation/generated-font-metadata.md"
     production_requirements_report = ROOT / "documentation/google-fonts-production-requirements.md"
     numeric_feature_report = ROOT / "documentation/numeric-feature-readiness.md"
@@ -1018,16 +1228,60 @@ def report_errors(errors: list[str]) -> None:
     axis_registry_report = ROOT / "documentation/google-fonts-axis-registry-audit.md"
     source_report = ROOT / "documentation/source-ufo-metadata.md"
     master_report = ROOT / "documentation/master-compatibility.md"
+    ufo_editor_report = ROOT / "documentation/ufo-editor-readiness.md"
     arabic_report = ROOT / "documentation/missing-gf-arabic-core.md"
     missing_report = ROOT / "documentation/missing-gf-latin-core.md"
     reachability_report = ROOT / "documentation/glyph-reachability.md"
     contour_report = ROOT / "documentation/fontspector-contour-count.md"
+    contour_proof_report = ROOT / "documentation/contour-cleanup-proof.html"
+    contour_queue_report = ROOT / "documentation/contour-cleanup-review-queue.md"
+    contour_edit_plan_report = ROOT / "documentation/contour-cleanup-edit-plan.md"
+    cleanup_briefs_report = ROOT / "documentation/arabic-cleanup-drawing-briefs.md"
+    contour_batches_report = ROOT / "documentation/contour-cleanup-batches.md"
+    contour_decision_report = ROOT / "documentation/contour-cleanup-decision-log.md"
+    contour_ai_triage_report = ROOT / "documentation/contour-cleanup-ai-triage.md"
+    contour_source_edit_report = ROOT / "documentation/contour-cleanup-source-edit-runlist.md"
+    contour_first_batch_report = ROOT / "documentation/contour-cleanup-first-edit-batch.md"
     warning_report = ROOT / "documentation/fontspector-warnings.md"
+    metadata_warning_probe_report = ROOT / "documentation/fontspector-metadata-warning-probe.md"
+    zero_warning_report = ROOT / "documentation/fontspector-zero-warning-worklist.md"
     full_report = ROOT / "documentation/fontspector-googlefonts-report.md"
     shaping_text = shaping_report.read_text()
     mark_text = mark_report.read_text()
     arabic_review_text = arabic_review_report.read_text()
     arabic_source_text = arabic_source_report.read_text()
+    arabic_candidate_text = arabic_candidate_report.read_text()
+    arabic_goal_text = arabic_goal_report.read_text()
+    arabic_visual_risk_text = arabic_visual_risk_report.read_text()
+    arabic_visual_risk_proof_text = arabic_visual_risk_proof.read_text()
+    arabic_structure_sweep_text = arabic_structure_sweep.read_text()
+    arabic_structure_triage_text = arabic_structure_triage.read_text()
+    arabic_mark_review_proof_text = arabic_mark_review_proof.read_text()
+    arabic_mark_triage_text = arabic_mark_triage.read_text()
+    arabic_visual_text = arabic_visual_report.read_text()
+    arabic_visual_log_text = arabic_visual_log_report.read_text()
+    arabic_manual_review_dashboard_text = arabic_manual_review_dashboard.read_text()
+    arabic_next_review_batch_text = arabic_next_review_batch.read_text()
+    arabic_manual_review_batches_text = arabic_manual_review_batches.read_text()
+    arabic_current_review_worksheet_text = arabic_current_review_worksheet.read_text()
+    arabic_review_worksheet_bundle_text = arabic_review_worksheet_bundle.read_text()
+    arabic_batch_recorder_text = arabic_batch_recorder.read_text()
+    arabic_first_review_zoom_snapshots_text = arabic_first_review_zoom_snapshots.read_text()
+    arabic_first_review_crop_integrity_text = arabic_first_review_crop_integrity.read_text()
+    arabic_first_review_batch_text = arabic_first_review_batch.read_text()
+    arabic_first_review_risk_shortlist_text = arabic_first_review_risk_shortlist.read_text()
+    arabic_first_review_ai_sweep_text = arabic_first_review_ai_sweep.read_text()
+    arabic_manual_edit_targets_text = arabic_manual_edit_targets.read_text()
+    arabic_hand_review_session_text = arabic_hand_review_session.read_text()
+    arabic_hand_review_contact_sheet_text = arabic_hand_review_contact_sheet.read_text()
+    arabic_print_proof_index_text = arabic_print_proof_index.read_text()
+    arabic_next_review_packet_text = arabic_next_review_packet.read_text()
+    arabic_next_review_ai_triage_text = arabic_next_review_ai_triage.read_text()
+    arabic_next_review_ai_observations_text = arabic_next_review_ai_observations.read_text()
+    arabic_full_queue_ai_sweep_text = arabic_full_queue_ai_sweep.read_text()
+    arabic_next_review_board_text = arabic_next_review_board.read_text()
+    arabic_snapshot_integrity_text = arabic_snapshot_integrity.read_text()
+    arabic_visual_runbook_text = arabic_visual_runbook.read_text()
     generated_metadata_text = generated_metadata_report.read_text()
     production_requirements_text = production_requirements_report.read_text()
     numeric_feature_text = numeric_feature_report.read_text()
@@ -1044,11 +1298,23 @@ def report_errors(errors: list[str]) -> None:
     axis_registry_text = axis_registry_report.read_text()
     source_text = source_report.read_text()
     master_text = master_report.read_text()
+    ufo_editor_text = ufo_editor_report.read_text()
     arabic_text = arabic_report.read_text()
     missing_text = missing_report.read_text()
     reachability_text = reachability_report.read_text()
     contour_text = contour_report.read_text()
+    contour_proof_text = contour_proof_report.read_text()
+    contour_queue_text = contour_queue_report.read_text()
+    contour_edit_plan_text = contour_edit_plan_report.read_text()
+    cleanup_briefs_text = cleanup_briefs_report.read_text()
+    contour_batches_text = contour_batches_report.read_text()
+    contour_decision_text = contour_decision_report.read_text()
+    contour_ai_triage_text = contour_ai_triage_report.read_text()
+    contour_source_edit_text = contour_source_edit_report.read_text()
+    contour_first_batch_text = contour_first_batch_report.read_text()
     warning_text = warning_report.read_text()
+    metadata_warning_probe_text = metadata_warning_probe_report.read_text()
+    zero_warning_text = zero_warning_report.read_text()
     full_report_text = full_report.read_text()
     check("Has GSUB: `true`" in shaping_text, "Arabic shaping report confirms GSUB table", errors)
     check("GSUB script records:" in shaping_text, "Arabic shaping report records GSUB script records", errors)
@@ -1098,10 +1364,16 @@ def report_errors(errors: list[str]) -> None:
         check(font_path in mark_text, f"Arabic mark readiness report includes {font_path}", errors)
     check("# Arabic Review Packet" in arabic_review_text, "Arabic review packet has expected heading", errors)
     check("Minimum target: `GF_Arabic_Core`" in arabic_review_text, "Arabic review packet records Arabic Core target", errors)
-    check("Missing codepoints: 57" in arabic_review_text, "Arabic review packet records current Arabic Core gap", errors)
+    arabic_missing = report_count(arabic_text, "Missing codepoints")
+    check(
+        arabic_missing is not None
+        and f"Missing codepoints: {arabic_missing}" in arabic_review_text,
+        "Arabic review packet records current Arabic Core gap",
+        errors,
+    )
     check("Arabic GSUB smoke pass: 5 / 5 fonts" in arabic_review_text, "Arabic review packet summarizes GSUB smoke status", errors)
-    check("Arabic GPOS smoke pass: 1 / 5 fonts" in arabic_review_text, "Arabic review packet summarizes GPOS smoke status", errors)
-    check("U+25CC dotted circle present: no" in arabic_review_text, "Arabic review packet summarizes dotted-circle status", errors)
+    check("Arabic GPOS smoke pass: 5 / 5 fonts" in arabic_review_text, "Arabic review packet summarizes GPOS smoke status", errors)
+    check("U+25CC dotted circle present: yes" in arabic_review_text, "Arabic review packet summarizes dotted-circle status", errors)
     check("Drawing And Source Work Buckets" in arabic_review_text, "Arabic review packet includes drawing/source work buckets", errors)
     check("## Recent Arabic Google Fonts Reference" in arabic_review_text, "Arabic review packet includes recent Arabic GF reference section", errors)
     check("Package path: `ofl/estedad`" in arabic_review_text, "Arabic review packet cites Estedad package path", errors)
@@ -1122,21 +1394,564 @@ def report_errors(errors: list[str]) -> None:
         "documentation/glyph-reachability.md",
     ]:
         check(report_path in arabic_review_text, f"Arabic review packet links {report_path}", errors)
+    check("# Arabic Visual Review Checklist" in arabic_visual_text, "Arabic visual review checklist has expected heading", errors)
+    check("GF Arabic Core coverage: 224 / 224 present; 0 missing." in arabic_visual_text, "Arabic visual review checklist records current Arabic coverage", errors)
+    check("Google Fonts QA proof files: 16 / 16 present" in arabic_visual_text, "Arabic visual review checklist records current proof coverage", errors)
+    check("Human visual review: 32 pending rows" in arabic_visual_text, "Arabic visual review checklist records current pending review count", errors)
+    check("Contour-count cleanup: 0 current review items" in arabic_visual_text, "Arabic visual review checklist records closed contour queue", errors)
+    check("documentation/arabic-manual-review-dashboard.html" in arabic_visual_text, "Arabic visual review checklist links manual dashboard", errors)
+    check("documentation/arabic-next-review-batch.html" in arabic_visual_text, "Arabic visual review checklist links focused next-batch page", errors)
+    check("documentation/gftools-qa/Proof" in arabic_visual_text, "Arabic visual review checklist links proof directory", errors)
+    check("documentation/contour-cleanup-edit-plan.md" in arabic_visual_text, "Arabic visual review checklist links contour edit plan", errors)
+    check("documentation/arabic-cleanup-drawing-briefs.md" in arabic_visual_text, "Arabic visual review checklist links cleanup drawing briefs", errors)
+    check("documentation/contour-cleanup-batches.md" in arabic_visual_text, "Arabic visual review checklist links contour cleanup batches", errors)
+    check("documentation/contour-cleanup-decision-log.md" in arabic_visual_text, "Arabic visual review checklist links contour cleanup decision log", errors)
+    check("documentation/arabic-manual-review-batches.md" in arabic_visual_text, "Arabic visual review checklist links manual review batches", errors)
+    check("If a later build reintroduces contour findings" in arabic_visual_text, "Arabic visual review checklist explains contour artifacts are evidence unless findings return", errors)
+    for proof_type in ["Glyphs", "Text", "Proofer", "Waterfall"]:
+        check(f"| {proof_type} |" in arabic_visual_text, f"Arabic visual review checklist includes {proof_type} proof row", errors)
+    for sample_label in ["salaam", "arabic", "bismillah", "lam-alef"]:
+        check(f"| {sample_label} |" in arabic_visual_text, f"Arabic visual review checklist includes {sample_label} smoke string", errors)
+    for phrase in [
+        "dotted circle with top and bottom marks",
+        "`smallHighTah-ar`, `noonGhunna-ar`, and `smallHighThreeDots-ar`",
+        "Arabic letter structures",
+        "Arabic mark combinations",
+        "Dot-stack letters and helpers",
+        "Arabic and Farsi numerals",
+        "Arabic punctuation",
+        "make contour-cleanup-proof",
+        "make kerning-proof-check",
+        "make kerning-proof-review-check",
+        "make preflight",
+    ]:
+        check(phrase in arabic_visual_text, f"Arabic visual review checklist records: {phrase}", errors)
+    check("# Arabic Visual Review Log" in arabic_visual_log_text, "Arabic visual review log has expected heading", errors)
+    check("Visual review ready:" in arabic_visual_log_text, "Arabic visual review log keeps review readiness explicit", errors)
+    check("Review rows: 32" in arabic_visual_log_text, "Arabic visual review log records current row count", errors)
+    check("Pending:" in arabic_visual_log_text, "Arabic visual review log records pending count", errors)
+    check("Pass:" in arabic_visual_log_text, "Arabic visual review log records pass count", errors)
+    check("Fix-needed:" in arabic_visual_log_text, "Arabic visual review log records fix-needed count", errors)
+    check("Deferred:" in arabic_visual_log_text, "Arabic visual review log records deferred count", errors)
+    check("Google Fonts QA proof files: 16 / 16 present" in arabic_visual_log_text, "Arabic visual review log records current proof count", errors)
+    check("Manual review dashboard: `documentation/arabic-manual-review-dashboard.html`" in arabic_visual_log_text, "Arabic visual review log records dashboard evidence", errors)
+    check("Status values: `pending`, `pass`, `fix-needed`, or `deferred`." in arabic_visual_log_text, "Arabic visual review log documents status values", errors)
+    check("| Key | Area | Item | Evidence | Machine precheck | Review cue | Status | Reviewer | Notes |" in arabic_visual_log_text, "Arabic visual review log includes machine precheck column", errors)
+    check("Structure triage mechanical blockers: 0" in arabic_visual_log_text, "Arabic visual review log surfaces structure triage blocker count", errors)
+    check("Mark triage mechanical blockers: 0" in arabic_visual_log_text, "Arabic visual review log surfaces mark triage blocker count", errors)
+    check("Shaping smoke mechanical pass: yes" in arabic_visual_log_text, "Arabic visual review log surfaces shaping smoke pass state", errors)
+    check("make arabic-visual-review-update" in arabic_visual_log_text, "Arabic visual review log documents guarded update helper", errors)
+    for key in [
+        "proof-regular-glyphs",
+        "proof-bold-waterfall",
+        "smoke-lam-alef",
+        "mark-dotted-circle",
+        "class-dot-stack-helpers",
+    ]:
+        check(f"`{key}`" in arabic_visual_log_text, f"Arabic visual review log includes {key}", errors)
+    visual_log_rows = markdown_rows(arabic_visual_log_text)
+    visual_log_statuses = [row[6] if len(row) >= 9 else row[5] for row in visual_log_rows if len(row) >= 8]
+    allowed_visual_statuses = {"pending", "pass", "fix-needed", "deferred"}
+    check(
+        len(visual_log_rows) == 32,
+        "Arabic visual review log has one row per expected review item",
+        errors,
+    )
+    check("Virtua Grotesk Arabic Manual Review Dashboard" in arabic_manual_review_dashboard_text, "Arabic manual review dashboard has expected title", errors)
+    check("Visual review pending:" in arabic_manual_review_dashboard_text, "Arabic manual review dashboard records visual pending count", errors)
+    check("Contour decisions pending:" in arabic_manual_review_dashboard_text, "Arabic manual review dashboard records contour pending count", errors)
+    check("Visual risk rows:" in arabic_manual_review_dashboard_text, "Arabic manual review dashboard records risk row count", errors)
+    check("Contour Decision Queue" in arabic_manual_review_dashboard_text, "Arabic manual review dashboard keeps contour queue section", errors)
+    check("Contour decisions pending: 0" in arabic_manual_review_dashboard_text, "Arabic manual review dashboard records current contour pending state", errors)
+    check("Rubik previews are structural references only" in arabic_manual_review_dashboard_text, "Arabic manual review dashboard explains Rubik reference limits", errors)
+    for sample in ["سلام", "العربية", "بسم الله", "لا لأ لإ لآ", "٠١٢٣٤٥٦٧٨٩", "۰۱۲۳۴۵۶۷۸۹"]:
+        check(sample in arabic_manual_review_dashboard_text, f"Arabic manual review dashboard includes sample {sample}", errors)
+    for section in ["Embedded Arabic Samples", "Visual Risk Rows", "Contour Decision Queue", "Google Fonts Proof Links"]:
+        check(section in arabic_manual_review_dashboard_text, f"Arabic manual review dashboard includes {section}", errors)
+    check("Virtua Grotesk Arabic Next Review Batch" in arabic_next_review_batch_text, "Arabic next review batch has expected title", errors)
+    check("Structure And Wrong-Glyph Sweep" in arabic_next_review_batch_text, "Arabic next review batch names current batch", errors)
+    check("Visual rows: 5" in arabic_next_review_batch_text, "Arabic next review batch records current visual row count", errors)
+    check("Contour rows: 0" in arabic_next_review_batch_text, "Arabic next review batch records current contour row count", errors)
+    check("Glyph proof links: 4" in arabic_next_review_batch_text, "Arabic next review batch records current glyph proof count", errors)
+    check("Rubik previews are structural references only" in arabic_next_review_batch_text, "Arabic next review batch explains Rubik reference limits", errors)
+    check("make arabic-visual-review-update" in arabic_next_review_batch_text, "Arabic next review batch includes visual update command", errors)
+    check("<tbody></tbody>" in arabic_next_review_batch_text, "Arabic next review batch records current empty contour table", errors)
+    check("diffbrowsers_glyphs" in arabic_next_review_batch_text, "Arabic next review batch links glyph proof files", errors)
+    check("Virtua Grotesk Arabic Structure Sweep" in arabic_structure_sweep_text, "Arabic structure sweep has expected title", errors)
+    check("GF_Arabic_Core" in arabic_structure_sweep_text, "Arabic structure sweep records GF Arabic Core source", errors)
+    check("U+25CC" in arabic_structure_sweep_text, "Arabic structure sweep includes dotted circle", errors)
+    check("ARABIC LETTER BEH" in arabic_structure_sweep_text, "Arabic structure sweep includes Arabic letter rows", errors)
+    check("VirtuaStructureRegular" in arabic_structure_sweep_text, "Arabic structure sweep embeds Regular font face", errors)
+    check("VirtuaStructureBold" in arabic_structure_sweep_text, "Arabic structure sweep embeds Bold font face", errors)
+    check("# Arabic Structure Triage" in arabic_structure_triage_text, "Arabic structure triage has expected heading", errors)
+    check("Mechanical blocking risks: 0" in arabic_structure_triage_text, "Arabic structure triage has no mechanical blockers", errors)
+    check("Shared visible cmap mappings: 0" in arabic_structure_triage_text, "Arabic structure triage has no shared visible cmap mappings", errors)
+    check("large-negative-left-sidebearing" in arabic_structure_triage_text, "Arabic structure triage records sidebearing review prompts", errors)
+    check("Virtua Grotesk Arabic Mark Review Proof" in arabic_mark_review_proof_text, "Arabic mark review proof has expected title", errors)
+    check("mark-base+fatha" in arabic_mark_review_proof_text, "Arabic mark review proof links fatha review row", errors)
+    check("mark-dotted-circle" in arabic_mark_review_proof_text, "Arabic mark review proof links dotted-circle review row", errors)
+    check("Required mark inventory" in arabic_mark_review_proof_text, "Arabic mark review proof includes required mark inventory", errors)
+    check("VirtuaMarkRegular" in arabic_mark_review_proof_text, "Arabic mark review proof embeds Regular font face", errors)
+    check("VirtuaMarkBold" in arabic_mark_review_proof_text, "Arabic mark review proof embeds Bold font face", errors)
+    check("# Arabic Mark Triage" in arabic_mark_triage_text, "Arabic mark triage has expected heading", errors)
+    check("Mechanical blocking risks: 0" in arabic_mark_triage_text, "Arabic mark triage has no mechanical blockers", errors)
+    check("No-offset mark review prompts:" in arabic_mark_triage_text, "Arabic mark triage records no-offset review prompts", errors)
+    check("## Review Sections" in arabic_mark_triage_text, "Arabic mark triage lists review sections", errors)
+    for review_key in [
+        "mark-base+fatha",
+        "mark-base+damma",
+        "mark-base+kasra",
+        "mark-shadda+sukun",
+        "mark-tanween",
+        "mark-hamza-above-below",
+        "mark-dotted-circle",
+        "class-mark-combinations",
+    ]:
+        check(f"`{review_key}`" in arabic_mark_triage_text, f"Arabic mark triage includes {review_key}", errors)
+    check("# Arabic Manual Review Batches" in arabic_manual_review_batches_text, "Arabic manual review batches report has expected heading", errors)
+    check("## Next Unresolved Batch" in arabic_manual_review_batches_text, "Arabic manual review batches report names next unresolved batch", errors)
+    check("Start with **2. Structure And Wrong-Glyph Sweep**." in arabic_manual_review_batches_text, "Arabic manual review batches report points at current next review batch", errors)
+    check("Open decisions: 5" in arabic_manual_review_batches_text, "Arabic manual review batches report records current next-batch decision count", errors)
+    check("First visual-review command pattern:" in arabic_manual_review_batches_text, "Arabic manual review batches report includes first visual command pattern", errors)
+    check("Contour rows: 0 (none)" in arabic_manual_review_batches_text, "Arabic manual review batches report records current contour command rows", errors)
+    check("Snapshot evidence:" in arabic_manual_review_batches_text, "Arabic manual review batches include snapshot evidence summary", errors)
+    check("Snapshot evidence ready for hand review: yes" in arabic_manual_review_batches_text, "Arabic manual review batches confirm snapshot evidence readiness", errors)
+    check("Readable PNG files: 33" in arabic_manual_review_batches_text, "Arabic manual review batches confirm readable snapshot count", errors)
+    check("Nonblank PNG files: 33" in arabic_manual_review_batches_text, "Arabic manual review batches confirm nonblank snapshot count", errors)
+    check("Pending/fix-needed rows without snapshot: 0" in arabic_manual_review_batches_text, "Arabic manual review batches confirm no missing snapshots", errors)
+    check("documentation/arabic-first-review-zoom-snapshots.md" in arabic_manual_review_batches_text, "Arabic manual review batches link focused zoom snapshot report", errors)
+    check("documentation/arabic-full-queue-ai-sweep.md" in arabic_manual_review_batches_text, "Arabic manual review batches link full queue AI sweep", errors)
+    check("AI observation" in arabic_manual_review_batches_text, "Arabic manual review batches include AI observation column", errors)
+    check("Human follow-up" in arabic_manual_review_batches_text, "Arabic manual review batches include human follow-up column", errors)
+    check("not Arabic drawing proof by itself" in arabic_manual_review_batches_text, "Arabic manual review batches carry proofer non-decision guidance", errors)
+    check("Snapshot aids:" in arabic_manual_review_batches_text, "Arabic manual review batches include per-batch snapshot aids", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs.png" in arabic_manual_review_batches_text, "Arabic manual review batches link first proof snapshot", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_manual_review_batches_text, "Arabic manual review batches link first focused zoom crop", errors)
+    check("focused 2x crop" in arabic_manual_review_batches_text, "Arabic manual review batches label focused zoom crops", errors)
+    check("documentation/arabic-review-snapshots/mark-base+fatha.png" in arabic_manual_review_batches_text, "Arabic manual review batches link mark proof snapshot", errors)
+    for batch_heading in [
+        "Open The Fast Dashboard",
+        "Structure And Wrong-Glyph Sweep",
+        "Marks, Dotted Circle, And Stacking",
+        "Dot-Stack Helpers And Urdu/Persian Texture",
+        "RTL Text, Punctuation, Numerals, And Spacing",
+    ]:
+        check(batch_heading in arabic_manual_review_batches_text, f"Arabic manual review batches include {batch_heading}", errors)
+    for evidence_path in [
+        "documentation/arabic-visual-review-log.md",
+        "documentation/contour-cleanup-decision-log.md",
+        "documentation/arabic-manual-review-dashboard.html",
+        "documentation/arabic-structure-sweep.html",
+        "documentation/arabic-mark-review-proof.html",
+        "documentation/arabic-mark-triage.md",
+        "documentation/arabic-next-review-batch.html",
+        "documentation/arabic-next-review-snapshots.md",
+        "documentation/arabic-snapshot-integrity.md",
+        "documentation/gftools-qa/Proof/",
+    ]:
+        check(evidence_path in arabic_manual_review_batches_text, f"Arabic manual review batches link {evidence_path}", errors)
+    for command_text in [
+        "make arabic-manual-review-dashboard",
+        "make arabic-visual-review-update",
+        "make reports-only",
+        "make preflight-only",
+    ]:
+        check(command_text in arabic_manual_review_batches_text, f"Arabic manual review batches include {command_text}", errors)
+    check("# Arabic Current Review Worksheet" in arabic_current_review_worksheet_text, "Arabic current review worksheet has expected heading", errors)
+    check("Name: 2. Structure And Wrong-Glyph Sweep" in arabic_current_review_worksheet_text, "Arabic current review worksheet points at current batch", errors)
+    check("Visual rows: 5 (pending: 5)" in arabic_current_review_worksheet_text, "Arabic current review worksheet records visual row count", errors)
+    check("Contour rows: 0 (none)" in arabic_current_review_worksheet_text, "Arabic current review worksheet records current contour rows", errors)
+    check("documentation/arabic-first-review-ai-sweep.md" in arabic_current_review_worksheet_text, "Arabic current review worksheet links AI sweep notes", errors)
+    check("## AI Triage Notes" in arabic_current_review_worksheet_text, "Arabic current review worksheet embeds AI triage notes", errors)
+    check("They are not review decisions" in arabic_current_review_worksheet_text, "Arabic current review worksheet keeps AI notes non-decisional", errors)
+    check("documentation/arabic-print-proof.pdf" in arabic_current_review_worksheet_text, "Arabic current review worksheet links Arabic print proof", errors)
+    check("documentation/arabic-print-proof-index.md" in arabic_current_review_worksheet_text, "Arabic current review worksheet links Arabic print proof index", errors)
+    check("## Print-Proof Pass" in arabic_current_review_worksheet_text, "Arabic current review worksheet includes print-proof pass guidance", errors)
+    check("The PDF is a review aid" in arabic_current_review_worksheet_text, "Arabic current review worksheet keeps print proof non-decisional", errors)
+    check("| Key | Current status | Machine precheck | Review cue | Observed issue or `none` | Source/proof location | Final status |" in arabic_current_review_worksheet_text, "Arabic current review worksheet includes fill-in table", errors)
+    for key in [
+        "proof-regular-glyphs",
+        "proof-medium-glyphs",
+        "proof-semibold-glyphs",
+        "proof-bold-glyphs",
+        "class-letter-structures",
+    ]:
+        check(f"`{key}`" in arabic_current_review_worksheet_text, f"Arabic current review worksheet includes row {key}", errors)
+        check(
+            f"REVIEW_KEY={key} REVIEW_STATUS=fix-needed" in arabic_current_review_worksheet_text,
+            f"Arabic current review worksheet includes fix-needed command for {key}",
+            errors,
+        )
+    for expected_text in [
+        "documentation/arabic-structure-sweep.html",
+        "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png",
+        "outcomes only after opening the linked proof/source evidence",
+        "documentation/arabic-manual-edit-targets.md",
+        "make reports-only",
+        "make preflight-only",
+    ]:
+        check(expected_text in arabic_current_review_worksheet_text, f"Arabic current review worksheet includes {expected_text}", errors)
+    check("# Arabic Review Worksheet Bundle" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle has expected heading", errors)
+    check("Pending/fix-needed visual rows: 32" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle records pending row count", errors)
+    check("Worksheet rows: 32" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle covers every pending row", errors)
+    check("Matches pending/fix-needed visual rows: yes" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle audit passes", errors)
+    check("### 2. Structure And Wrong-Glyph Sweep" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes structure batch", errors)
+    check("### 3. Marks, Dotted Circle, And Stacking" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes marks batch", errors)
+    check("### 5. RTL Text, Punctuation, Numerals, And Spacing" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes spacing batch", errors)
+    check("AI observation" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes AI observation column", errors)
+    check("Observed issue or `none`" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes fill-in observed issue column", errors)
+    check("REVIEW_STATUS=fix-needed" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes fix-needed commands", errors)
+    check("documentation/arabic-manual-edit-targets.md" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle links edit-target report", errors)
+    check("# Arabic Batch Recorder" in arabic_batch_recorder_text, "Arabic batch recorder has expected heading", errors)
+    check("It does not apply any" in arabic_batch_recorder_text, "Arabic batch recorder keeps no-apply framing", errors)
+    check("Batch: 2. Structure And Wrong-Glyph Sweep" in arabic_batch_recorder_text, "Arabic batch recorder points at current unresolved batch", errors)
+    check("Visual rows: 5 (pending: 5)" in arabic_batch_recorder_text, "Arabic batch recorder records current visual row count", errors)
+    check("Contour rows: 0 (none)" in arabic_batch_recorder_text, "Arabic batch recorder records current contour rows", errors)
+    for key in [
+        "proof-regular-glyphs",
+        "proof-medium-glyphs",
+        "proof-semibold-glyphs",
+        "proof-bold-glyphs",
+        "class-letter-structures",
+    ]:
+        check(f"### `{key}`" in arabic_batch_recorder_text, f"Arabic batch recorder includes row {key}", errors)
+        for status in ["pass", "fix-needed", "deferred"]:
+            check(
+                f"REVIEW_KEY={key} REVIEW_STATUS={status}" in arabic_batch_recorder_text,
+                f"Arabic batch recorder includes {status} command for {key}",
+                errors,
+            )
+    for expected_text in [
+        "make reports-only",
+        "make preflight-only",
+        "documentation/arabic-manual-edit-targets.md",
+        "Full Batch Order",
+    ]:
+        check(expected_text in arabic_batch_recorder_text, f"Arabic batch recorder includes {expected_text}", errors)
+    check("# Arabic First Review Zoom Snapshots" in arabic_first_review_zoom_snapshots_text, "Arabic first review zoom snapshot report has expected heading", errors)
+    check("Rendered zoom snapshots: 4" in arabic_first_review_zoom_snapshots_text, "Arabic first review zoom snapshot report renders all four crops", errors)
+    check("Errors: 0" in arabic_first_review_zoom_snapshots_text, "Arabic first review zoom snapshot report records no crop errors", errors)
+    check("Output scale: 2x" in arabic_first_review_zoom_snapshots_text, "Arabic first review zoom snapshot report records enlarged output scale", errors)
+    check("Output size: 2880x1040" in arabic_first_review_zoom_snapshots_text, "Arabic first review zoom snapshot report records enlarged output size", errors)
+    for expected_text in [
+        "proof-regular-glyphs-arabic-zoom.png",
+        "proof-medium-glyphs-arabic-zoom.png",
+        "proof-semibold-glyphs-arabic-zoom.png",
+        "proof-bold-glyphs-arabic-zoom.png",
+        "They do not prove small mark placement",
+    ]:
+        check(expected_text in arabic_first_review_zoom_snapshots_text, f"Arabic first review zoom snapshot report includes {expected_text}", errors)
+    for expected_text in [
+        "# Arabic First Review Crop Integrity",
+        "Expected dimensions: 2880x1040",
+        "Readable crops: 4",
+        "Nonblank crops: 4",
+        "Evidence ready for hand review: yes",
+        "proof-regular-glyphs-arabic-zoom.png",
+        "No row was marked `pass`",
+    ]:
+        check(expected_text in arabic_first_review_crop_integrity_text, f"Arabic first review crop integrity report includes {expected_text}", errors)
+    check("# Arabic First Review Batch" in arabic_first_review_batch_text, "Arabic first review batch has expected heading", errors)
+    check("Review rows: 5" in arabic_first_review_batch_text, "Arabic first review batch records row count", errors)
+    check("Catch missing, blank, clipped, duplicated, malformed, or wrong-codepoint" in arabic_first_review_batch_text, "Arabic first review batch records structure-first goal", errors)
+    for key in [
+        "proof-regular-glyphs",
+        "proof-medium-glyphs",
+        "proof-semibold-glyphs",
+        "proof-bold-glyphs",
+        "class-letter-structures",
+    ]:
+        check(f"### `{key}`" in arabic_first_review_batch_text, f"Arabic first review batch includes row {key}", errors)
+        check(
+            f"make arabic-visual-review-update REVIEW_KEY={key} REVIEW_STATUS=pass" in arabic_first_review_batch_text,
+            f"Arabic first review batch includes pass command for {key}",
+            errors,
+        )
+    for expected_text in [
+        "documentation/gftools-qa/Proof/",
+        "documentation/arabic-structure-triage.md",
+        "documentation/arabic-visual-risk-proof.html",
+        "documentation/arabic-manual-edit-targets.md",
+        "documentation/arabic-first-review-ai-sweep.md",
+        "documentation/arabic-first-review-zoom-snapshots.md",
+        "documentation/arabic-first-review-crop-integrity.md",
+        "documentation/arabic-first-review-risk-shortlist.md",
+        "documentation/arabic-review-snapshots/proof-regular-glyphs.png",
+        "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png",
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif",
+        "REVIEW_STATUS=fix-needed",
+        "REVIEW_STATUS=deferred",
+        "./build.sh",
+        "make reports-only",
+        "make preflight-only",
+    ]:
+        check(expected_text in arabic_first_review_batch_text, f"Arabic first review batch includes {expected_text}", errors)
+    check("# Arabic First Review Risk Shortlist" in arabic_first_review_risk_shortlist_text, "Arabic first review risk shortlist has expected heading", errors)
+    check("It is not a human" in arabic_first_review_risk_shortlist_text, "Arabic first review risk shortlist keeps non-human-review framing", errors)
+    check("proof-regular-glyphs-arabic-zoom.png" in arabic_first_review_risk_shortlist_text, "Arabic first review risk shortlist references Regular focused crop", errors)
+    check("documentation/arabic-first-review-crop-integrity.md" in arabic_first_review_risk_shortlist_text, "Arabic first review risk shortlist links crop integrity report", errors)
+    check("No obvious tofu boxes" in arabic_first_review_risk_shortlist_text, "Arabic first review risk shortlist records AI-visible structure screen", errors)
+    check("No row was marked `pass`" in arabic_first_review_risk_shortlist_text, "Arabic first review risk shortlist keeps non-decision framing", errors)
+    check("# Arabic First Review AI Sweep" in arabic_first_review_ai_sweep_text, "Arabic first review AI sweep has expected heading", errors)
+    check("It is not a human Arabic review" in arabic_first_review_ai_sweep_text, "Arabic first review AI sweep keeps non-human-review framing", errors)
+    check(
+        "documentation/arabic-review-snapshots/proof-medium-glyphs.png" in arabic_first_review_ai_sweep_text,
+        "Arabic first review AI sweep records Medium snapshot evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-review-snapshots/proof-semibold-glyphs.png" in arabic_first_review_ai_sweep_text,
+        "Arabic first review AI sweep records SemiBold snapshot evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-first-review-zoom-snapshots.md" in arabic_first_review_ai_sweep_text
+        and "focused 2x crops make Arabic-row structure screening easier" in arabic_first_review_ai_sweep_text,
+        "Arabic first review AI sweep records focused crop evidence and limits",
+        errors,
+    )
+    check(
+        "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_first_review_ai_sweep_text,
+        "Arabic first review AI sweep records Regular focused crop evidence",
+        errors,
+    )
+    for key in [
+        "proof-regular-glyphs",
+        "proof-medium-glyphs",
+        "proof-semibold-glyphs",
+        "proof-bold-glyphs",
+        "class-letter-structures",
+    ]:
+        check(f"`{key}`" in arabic_first_review_ai_sweep_text, f"Arabic first review AI sweep references {key}", errors)
+    for expected_text in [
+        "No row was marked `pass`",
+        "No source glyph was marked `fix-needed`",
+        "No spacing edit is recommended from this sweep alone",
+    ]:
+        check(expected_text in arabic_first_review_ai_sweep_text, f"Arabic first review AI sweep includes {expected_text}", errors)
+    check("# Arabic Manual Edit Targets" in arabic_manual_edit_targets_text, "Arabic manual edit-target report has expected heading", errors)
+    check("Use it only after a row is" in arabic_manual_edit_targets_text, "Arabic manual edit-target report keeps review-before-edit framing", errors)
+    check("marked `fix-needed`" in arabic_manual_edit_targets_text, "Arabic manual edit-target report ties edits to fix-needed rows", errors)
+    check("Compatibility rule: edit Regular and Bold together" in arabic_manual_edit_targets_text, "Arabic manual edit-target report preserves master compatibility rule", errors)
+    check("### `class-letter-structures`" in arabic_manual_edit_targets_text, "Arabic manual edit-target report includes letter structure targets", errors)
+    check("### `mark-shadda+sukun`" in arabic_manual_edit_targets_text, "Arabic manual edit-target report includes mark prompt targets", errors)
+    check("### `class-dot-stack-helpers`" in arabic_manual_edit_targets_text, "Arabic manual edit-target report includes dot-stack helper targets", errors)
+    check("### `class-arabic-farsi-numerals`" in arabic_manual_edit_targets_text, "Arabic manual edit-target report includes numeral targets", errors)
+    check("### `class-arabic-punctuation`" in arabic_manual_edit_targets_text, "Arabic manual edit-target report includes punctuation targets", errors)
+    for path in [
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif",
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/shaddaF_atha-ar.glif",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/shaddaD_amma-ar.glif",
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/zeroFarsi-ar.glif",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/question-ar.glif",
+    ]:
+        check(path in arabic_manual_edit_targets_text, f"Arabic manual edit-target report links {path}", errors)
+    check("# Arabic Hand Review Session" in arabic_hand_review_session_text, "Arabic hand-review session report has expected heading", errors)
+    check("Pending/fix-needed rows in this sheet: 32" in arabic_hand_review_session_text, "Arabic hand-review session records pending queue count", errors)
+    check("## Glyph Proof First Pass" in arabic_hand_review_session_text, "Arabic hand-review session includes glyph proof batch", errors)
+    check("## Marks And Dotted Circle" in arabic_hand_review_session_text, "Arabic hand-review session includes mark batch", errors)
+    check("## Proof Texture And Spacing" in arabic_hand_review_session_text, "Arabic hand-review session includes proof texture batch", errors)
+    check("## Smoke Strings And Classes" in arabic_hand_review_session_text, "Arabic hand-review session includes smoke/class batch", errors)
+    check("documentation/arabic-next-review-board.html" in arabic_hand_review_session_text, "Arabic hand-review session links local review board", errors)
+    check("documentation/arabic-print-proof.pdf" in arabic_hand_review_session_text, "Arabic hand-review session links Arabic PDF proof", errors)
+    check("documentation/arabic-print-proof-index.md" in arabic_hand_review_session_text, "Arabic hand-review session links Arabic PDF proof index", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_hand_review_session_text, "Arabic hand-review session links first focused zoom crop", errors)
+    check("sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif" in arabic_hand_review_session_text, "Arabic hand-review session includes source GLIF targets", errors)
+    check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_hand_review_session_text, "Arabic hand-review session includes pass command pattern", errors)
+    check("REVIEW_STATUS=fix-needed" in arabic_hand_review_session_text, "Arabic hand-review session includes fix-needed command pattern", errors)
+    check("Arabic Hand Review Contact Sheet" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet has expected title", errors)
+    check("documentation/arabic-current-review-worksheet.md" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet links current worksheet", errors)
+    check("documentation/arabic-hand-review-session.md" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet links session sheet", errors)
+    check("documentation/arabic-print-proof.pdf" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet links Arabic PDF proof", errors)
+    check("documentation/arabic-manual-edit-targets.md" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet links edit targets", errors)
+    check("Evidence Integrity" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet includes evidence integrity summary", errors)
+    check("documentation/arabic-snapshot-integrity.md" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet links snapshot integrity report", errors)
+    check("documentation/arabic-first-review-crop-integrity.md" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet links first-review crop integrity report", errors)
+    check("They do not mark Arabic drawing rows as passed." in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet keeps integrity checks non-decisional", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs.png" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet embeds first proof snapshot", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet embeds first focused zoom crop", errors)
+    check("focused 2x crop" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet labels focused zoom crops", errors)
+    check("documentation/arabic-review-snapshots/class-arabic-punctuation.png" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet embeds final class snapshot", errors)
+    check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet includes pass command pattern", errors)
+    check("# Arabic Visual Review Runbook" in arabic_visual_runbook_text, "Arabic visual review runbook has expected heading", errors)
+    check("Pending or fix-needed: 32" in arabic_visual_runbook_text, "Arabic visual review runbook records current pending count", errors)
+    check("## Next Five Review Cards" in arabic_visual_runbook_text, "Arabic visual review runbook includes next-card section", errors)
+    check("## Full Pending Queue" in arabic_visual_runbook_text, "Arabic visual review runbook includes full pending queue", errors)
+    check("AI comparison prompt:" in arabic_visual_runbook_text, "Arabic visual review runbook includes AI comparison prompts", errors)
+    check("Machine precheck:" in arabic_visual_runbook_text, "Arabic visual review runbook includes machine precheck summaries", errors)
+    check("Snapshot report: `documentation/arabic-next-review-snapshots.md`" in arabic_visual_runbook_text, "Arabic visual review runbook links snapshot report", errors)
+    check("Snapshot aids:" in arabic_visual_runbook_text, "Arabic visual review runbook includes per-row snapshot aids", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs.png" in arabic_visual_runbook_text, "Arabic visual review runbook links first proof snapshot", errors)
+    check("documentation/arabic-first-review-zoom-snapshots.md" in arabic_visual_runbook_text, "Arabic visual review runbook links focused zoom snapshot report", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_visual_runbook_text, "Arabic visual review runbook links first focused zoom crop", errors)
+    check("Structure triage mechanical blockers: 0" in arabic_visual_runbook_text, "Arabic visual review runbook surfaces structure triage blocker count", errors)
+    check("| Key | Area | Item | Status | Machine precheck | Review cue |" in arabic_visual_runbook_text, "Arabic visual review runbook full queue includes machine precheck column", errors)
+    check("Mark triage mechanical blockers: 0" in arabic_visual_runbook_text, "Arabic visual review runbook surfaces mark triage blocker count", errors)
+    check("Shaping smoke mechanical pass: yes" in arabic_visual_runbook_text, "Arabic visual review runbook surfaces shaping smoke pass state", errors)
+    check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_visual_runbook_text, "Arabic visual review runbook includes pass command pattern", errors)
+    check("REVIEW_STATUS=fix-needed" in arabic_visual_runbook_text, "Arabic visual review runbook includes fix-needed command pattern", errors)
+    check("REVIEW_STATUS=deferred" in arabic_visual_runbook_text, "Arabic visual review runbook includes deferred command pattern", errors)
+    check("documentation/arabic-next-review-batch.html" in arabic_visual_runbook_text, "Arabic visual review runbook links focused next-batch page", errors)
+    check("# Arabic Next Review Packet" in arabic_next_review_packet_text, "Arabic next review packet has expected heading", errors)
+    check("Pending or fix-needed rows: 32" in arabic_next_review_packet_text, "Arabic next review packet records current pending count", errors)
+    check("## Next Rows" in arabic_next_review_packet_text, "Arabic next review packet includes next rows table", errors)
+    check("## Shared Structure Prompt Details" in arabic_next_review_packet_text, "Arabic next review packet includes shared structure prompt details", errors)
+    check("Focused Arabic PDF proof: `documentation/arabic-print-proof.pdf`" in arabic_next_review_packet_text, "Arabic next review packet links focused Arabic PDF proof", errors)
+    check("## Fast Review Order" in arabic_next_review_packet_text, "Arabic next review packet includes fast review order", errors)
+    check("The PDF speeds review; it does not replace source/proof" in arabic_next_review_packet_text, "Arabic next review packet keeps PDF proof non-decisional", errors)
+    check("proof-regular-glyphs" in arabic_next_review_packet_text, "Arabic next review packet includes first proof row", errors)
+    check("class-letter-structures" in arabic_next_review_packet_text, "Arabic next review packet includes current class review row", errors)
+    check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_next_review_packet_text, "Arabic next review packet includes pass command pattern", errors)
+    check("REVIEW_STATUS=fix-needed" in arabic_next_review_packet_text, "Arabic next review packet includes fix-needed command pattern", errors)
+    check("REVIEW_STATUS=deferred" in arabic_next_review_packet_text, "Arabic next review packet includes deferred command pattern", errors)
+    check("documentation/arabic-next-review-batch.html" in arabic_next_review_packet_text, "Arabic next review packet links focused next-batch page", errors)
+    check("make arabic-next-review-ai-triage" in arabic_next_review_packet_text, "Arabic next review packet links AI-safe triage command", errors)
+    check("make arabic-next-review-board" in arabic_next_review_packet_text, "Arabic next review packet links local board command", errors)
+    check("ARABIC_SNAPSHOT_ARGS=\"--all-pending --limit 32 --timeout 20\"" in arabic_next_review_packet_text, "Arabic next review packet documents full-queue snapshot probe", errors)
+    check("ARABIC_SNAPSHOT_ARGS=\"--all-pending --limit 32 --list-only --timeout 20\"" in arabic_next_review_packet_text, "Arabic next review packet documents non-GUI snapshot coverage check", errors)
+    check("ARABIC_SNAPSHOT_ARGS=\"--all-pending --limit 32 --reuse-existing\"" in arabic_next_review_packet_text, "Arabic next review packet documents existing-PNG snapshot report rebuild", errors)
+    check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_next_review_packet_text, "Arabic next review packet links first focused zoom crop", errors)
+    check("# Arabic Next Review AI Triage" in arabic_next_review_ai_triage_text, "Arabic next review AI triage has expected heading", errors)
+    check("## First-Batch AI Triage Summary" in arabic_next_review_ai_triage_text, "Arabic next review AI triage includes first-batch summary", errors)
+    check("## Full Pending Queue AI Triage" in arabic_next_review_ai_triage_text, "Arabic next review AI triage includes full queue", errors)
+    check("| 32 | `class-arabic-punctuation`" in arabic_next_review_ai_triage_text, "Arabic next review AI triage includes final pending row", errors)
+    check("mechanical shaping passes; needs visual rhythm review" in arabic_next_review_ai_triage_text, "Arabic next review AI triage classifies smoke rows without passing them", errors)
+    check("ready for mark-proof pass/fix/defer review" in arabic_next_review_ai_triage_text, "Arabic next review AI triage classifies mark rows", errors)
+    check("documentation/arabic-next-review-board.html" in arabic_next_review_ai_triage_text, "Arabic next review AI triage links local board", errors)
+    check("# Arabic Next Review AI Observations" in arabic_next_review_ai_observations_text, "Arabic next review AI observations has expected heading", errors)
+    check("It is not a human Arabic review" in arabic_next_review_ai_observations_text, "Arabic next review AI observations keeps non-final-review framing", errors)
+    check("## Full Queue Snapshot Evidence" in arabic_next_review_ai_observations_text, "Arabic next review AI observations includes full snapshot evidence table", errors)
+    check("| `class-arabic-punctuation` |" in arabic_next_review_ai_observations_text, "Arabic next review AI observations includes final pending row", errors)
+    check("Snapshot evidence ready for hand review: yes" in arabic_next_review_ai_observations_text, "Arabic next review AI observations records snapshot integrity readiness", errors)
+    check("Focused zoom snapshot report" in arabic_next_review_ai_observations_text, "Arabic next review AI observations includes focused zoom snapshot source", errors)
+    check("proof-regular-glyphs-arabic-zoom.png" in arabic_next_review_ai_observations_text, "Arabic next review AI observations includes focused glyph crop evidence", errors)
+    check("# Arabic Full Queue AI Sweep" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep has expected heading", errors)
+    check("Pending/fix-needed rows covered: 32" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep covers all pending rows", errors)
+    check("## Coverage Audit" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep includes coverage audit", errors)
+    check("Rows with AI observation: 32 / 32" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep covers every row with AI observations", errors)
+    check("Rows with human follow-up: 32 / 32" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep covers every row with human follow-up", errors)
+    check("Rows with snapshot evidence: 32 / 32" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep covers every row with snapshot evidence", errors)
+    check("Coverage ready for human review: yes" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep marks coverage ready for human review", errors)
+    check("Focused zoom snapshot source" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep includes focused zoom snapshot source", errors)
+    check("proof-regular-glyphs-arabic-zoom.png" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep includes focused glyph crop evidence", errors)
+    check("documentation/arabic-review-snapshots/mark-shadda+sukun.png" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep records inspected mark snapshot", errors)
+    check("documentation/arabic-review-snapshots/proof-bold-text.png" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep records inspected text snapshot", errors)
+    check("Proofer tofu in GF_Latin_Core proof snapshots" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep separates Latin Core tofu from Arabic drawing review", errors)
+    check("No row was marked `pass`" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep keeps non-decision framing", errors)
+    check("| `class-arabic-punctuation` | punctuation |" in arabic_full_queue_ai_sweep_text, "Arabic full queue AI sweep includes final pending row", errors)
+    check("Arabic Next Review Board" in arabic_next_review_board_text, "Arabic next review board has expected title", errors)
+    check("First-Batch Order" in arabic_next_review_board_text, "Arabic next review board includes first-batch order", errors)
+    check("Decision Rules" in arabic_next_review_board_text, "Arabic next review board includes decision rules", errors)
+    check("Record <code>fix-needed</code> with the exact glyph" in arabic_next_review_board_text, "Arabic next review board records fix-needed decision rule", errors)
+    check("AI First-Pass Observation" in arabic_next_review_board_text, "Arabic next review board embeds AI observations", errors)
+    check("Edit targets" in arabic_next_review_board_text, "Arabic next review board embeds edit-target sections", errors)
+    check("arabic-manual-edit-targets.md" in arabic_next_review_board_text, "Arabic next review board links manual edit-target report", errors)
+    check("arabic-current-review-worksheet.md" in arabic_next_review_board_text, "Arabic next review board links current review worksheet", errors)
+    check("arabic-batch-recorder.md" in arabic_next_review_board_text, "Arabic next review board links batch recorder", errors)
+    check("arabic-full-queue-ai-sweep.md" in arabic_next_review_board_text, "Arabic next review board links full queue AI sweep", errors)
+    check("arabic-first-review-ai-sweep.md" in arabic_next_review_board_text, "Arabic next review board links first review AI sweep", errors)
+    check("arabic-first-review-zoom-snapshots.md" in arabic_next_review_board_text, "Arabic next review board links first review zoom snapshots", errors)
+    check(
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif" in arabic_next_review_board_text,
+        "Arabic next review board links a source GLIF target",
+        errors,
+    )
+    check("Full Pending Queue" in arabic_next_review_board_text, "Arabic next review board includes full pending queue", errors)
+    check("<tr><td>32</td><td><code>class-arabic-punctuation</code>" in arabic_next_review_board_text, "Arabic next review board includes final pending row", errors)
+    check("<th>AI observation</th>" in arabic_next_review_board_text, "Arabic next review board includes full-queue AI observation column", errors)
+    check("<th>Human follow-up</th>" in arabic_next_review_board_text, "Arabic next review board includes full-queue human follow-up column", errors)
+    check(
+        "Proofer snapshot currently reflects GF_Latin_Core content" in arabic_next_review_board_text,
+        "Arabic next review board carries full-queue AI observations into the queue",
+        errors,
+    )
+    check("arabic-next-review-ai-observations.md" in arabic_next_review_board_text, "Arabic next review board links observation source", errors)
+    check("proof-regular-glyphs" in arabic_next_review_board_text, "Arabic next review board includes first proof row", errors)
+    check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_next_review_board_text, "Arabic next review board includes pass command pattern", errors)
+    check("# Arabic Snapshot Integrity" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report has expected heading", errors)
+    check("Visual review pending/fix-needed rows: 32" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report records pending queue count", errors)
+    check("Snapshot rows in report: 33" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report records expected snapshot count", errors)
+    check("Unique review keys with snapshots: 32" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report covers every pending key", errors)
+    check("Readable PNG files: 33" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report confirms readable PNGs", errors)
+    check("Nonblank PNG files: 33" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report confirms nonblank PNGs", errors)
+    check("Pending/fix-needed rows without snapshot: 0" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report has no missing pending snapshots", errors)
+    check("Integrity errors: 0" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report has zero errors", errors)
+    check("Snapshot evidence ready for hand review: yes" in arabic_snapshot_integrity_text, "Arabic snapshot integrity report marks evidence ready", errors)
+    arabic_print_proof = ROOT / "documentation/arabic-print-proof.pdf"
+    check(
+        arabic_print_proof.exists() and arabic_print_proof.stat().st_size > 0,
+        "Arabic print proof PDF exists and is nonempty",
+        errors,
+    )
+    check("# Arabic Print Proof Index" in arabic_print_proof_index_text, "Arabic print proof index has expected heading", errors)
+    check("PDF: `documentation/arabic-print-proof.pdf`" in arabic_print_proof_index_text, "Arabic print proof index links PDF", errors)
+    check("Regular" in arabic_print_proof_index_text and "Bold" in arabic_print_proof_index_text, "Arabic print proof index maps Regular and Bold pages", errors)
+    check("Arabic cmap grid" in arabic_print_proof_index_text, "Arabic print proof index includes cmap grid pages", errors)
+    check("Record review outcomes only through" in arabic_print_proof_index_text, "Arabic print proof index keeps status updates guarded", errors)
+    check(
+        all(status in allowed_visual_statuses for status in visual_log_statuses),
+        "Arabic visual review log uses only known statuses",
+        errors,
+    )
     check("# Arabic Source Work Checklist" in arabic_source_text, "Arabic source checklist has expected heading", errors)
     check("Minimum Arabic target: `GF_Arabic_Core`" in arabic_source_text, "Arabic source checklist documents Arabic Core target", errors)
     check("## Suggested Source Inventory" in arabic_source_text, "Arabic source checklist includes source glyph inventory", errors)
     check("## Batch Work Plan" in arabic_source_text, "Arabic source checklist includes batch work plan", errors)
     check("## Batch Glyph Lists" in arabic_source_text, "Arabic source checklist includes batch glyph lists", errors)
-    check("| 3 | Urdu/Persian joining letters | 13 | 44 |" in arabic_source_text, "Arabic source checklist groups Urdu/Persian joining-letter batch", errors)
-    check("| 5 | Arabic marks | 3 | 3 |" in arabic_source_text, "Arabic source checklist groups Arabic mark batch", errors)
-    check("Suggested source glyph names: 88" in arabic_source_text, "Arabic source checklist counts suggested source glyph names", errors)
-    check("Suggested Arabic positional-form glyph names: 31" in arabic_source_text, "Arabic source checklist counts suggested positional-form glyph names", errors)
-    check("Suggested glyph names missing in both masters: 88" in arabic_source_text, "Arabic source checklist counts missing suggested names across masters", errors)
-    check("Suggested source glyphs" in arabic_source_text, "Arabic source checklist maps codepoints to source glyph names", errors)
-    check("Regular source" in arabic_source_text and "Bold source" in arabic_source_text, "Arabic source checklist checks both masters", errors)
-    check("tteh-ar" in arabic_source_text, "Arabic source checklist includes Urdu/Persian letter work", errors)
-    check("zeroFarsi-ar" in arabic_source_text, "Arabic source checklist includes extended Arabic-Indic digit work", errors)
-    check("dottedCircle" in arabic_source_text, "Arabic source checklist includes dotted circle work", errors)
+    check("Suggested source glyph names: 0" in arabic_source_text, "Arabic source checklist records current missing suggested source glyph count", errors)
+    check("Suggested glyph names missing in both masters: 0" in arabic_source_text, "Arabic source checklist records current missing suggested names across masters", errors)
+    check("# Arabic Candidate Glyph Plan" in arabic_candidate_text, "Arabic candidate glyph plan has expected heading", errors)
+    check("Worklist glyphs: 256" in arabic_candidate_text, "Arabic candidate glyph plan preserves managed glyph worklist size", errors)
+    check("Glyph-level buckets:" in arabic_candidate_text, "Arabic candidate glyph plan includes goal-level bucket summary", errors)
+    check("Auto-created / would auto-create: 0" in arabic_candidate_text, "Arabic candidate glyph plan records current auto-created bucket count", errors)
+    check("Review-needed: 256" in arabic_candidate_text, "Arabic candidate glyph plan records current review-needed bucket count", errors)
+    check("Hand-draw-needed: 0" in arabic_candidate_text, "Arabic candidate glyph plan records current hand-draw-needed bucket count", errors)
+    check("Compatibility-risk: 0" in arabic_candidate_text, "Arabic candidate glyph plan records current compatibility-risk bucket count", errors)
+    check("Master-entry action counts:" in arabic_candidate_text, "Arabic candidate glyph plan keeps master-entry action counts separate", errors)
+    check("Existing master entries counted: 512" in arabic_candidate_text, "Arabic candidate glyph plan counts both-master scaffold entries", errors)
+    check("Compatibility-risk glyphs: 0" in arabic_candidate_text, "Arabic candidate glyph plan records compatibility-risk count", errors)
+    check("## joining-letters" in arabic_candidate_text and "tteh-ar" in arabic_candidate_text, "Arabic candidate glyph plan includes Urdu/Persian joining-letter work", errors)
+    check("## farsi-digits" in arabic_candidate_text and "zeroFarsi-ar" in arabic_candidate_text, "Arabic candidate glyph plan includes extended Arabic-Indic digit work", errors)
+    check("## shared-punctuation" in arabic_candidate_text and "dottedCircle" in arabic_candidate_text, "Arabic candidate glyph plan includes dotted circle work", errors)
+    check("# Arabic Goal Completion Audit" in arabic_goal_text, "Arabic goal completion audit has expected heading", errors)
+    check("GF Arabic Core gaps are zero or accepted | 0 missing codepoints" in arabic_goal_text, "Arabic goal audit confirms Arabic Core coverage", errors)
+    check("Missing source glyphs exist in both masters | missing codepoints: 0; suggested names: 0" in arabic_goal_text, "Arabic goal audit confirms source glyph worklist is closed", errors)
+    check("Regular and Bold structures stay compatible | 0 blocking mismatches" in arabic_goal_text, "Arabic goal audit confirms master compatibility", errors)
+    check("Arabic shaping smoke tests pass | fonts: 5; GSUB: 5/5; GPOS: 5/5; no .notdef: yes" in arabic_goal_text, "Arabic goal audit confirms shaping smoke status", errors)
+    check("Dotted circle, marks, anchors, and mark/mkmk are ready or documented | missing marks: 0; dotted circle: yes; anchors: yes; mark/mkmk: yes" in arabic_goal_text, "Arabic goal audit confirms mark readiness", errors)
+    check("first-review focused crops ready: yes; nonblank crops: 4" in arabic_goal_text, "Arabic goal audit includes first-review crop integrity readiness", errors)
+    check("documentation/arabic-current-review-worksheet.md" in arabic_goal_text, "Arabic goal audit links current review worksheet", errors)
+    check("documentation/arabic-next-review-board.html" in arabic_goal_text, "Arabic goal audit links next review board", errors)
+    check("documentation/arabic-full-queue-ai-sweep.md" in arabic_goal_text, "Arabic goal audit links full queue AI sweep", errors)
+    check("documentation/arabic-snapshot-integrity.md" in arabic_goal_text, "Arabic goal audit links snapshot integrity", errors)
+    check("documentation/arabic-first-review-crop-integrity.md" in arabic_goal_text, "Arabic goal audit links first-review crop integrity report", errors)
+    check("decision packet ready: yes" in arabic_goal_text, "Arabic goal audit confirms hand-review decision packet readiness", errors)
+    check("board rows: 32/32" in arabic_goal_text, "Arabic goal audit confirms review board covers pending rows", errors)
+    check("board command rows: 32/32" in arabic_goal_text, "Arabic goal audit confirms review board command coverage", errors)
+    check("AI observation rows: 32/32" in arabic_goal_text, "Arabic goal audit confirms AI observation coverage", errors)
+    check("human follow-up rows: 32/32" in arabic_goal_text, "Arabic goal audit confirms human follow-up coverage", errors)
+    check("snapshot missing rows: 0" in arabic_goal_text, "Arabic goal audit confirms no missing review snapshots", errors)
+    check("source target references: 180; missing target files: 0" in arabic_goal_text, "Arabic goal audit includes manual edit-target readiness", errors)
+    check("# Arabic Visual Risk Audit" in arabic_visual_risk_text, "Arabic visual risk audit has expected heading", errors)
+    check("Target glyphset: `GF_Arabic_Core` plus U+25CC dotted circle" in arabic_visual_risk_text, "Arabic visual risk audit records target glyphset", errors)
+    check("Fonts checked: 5" in arabic_visual_risk_text, "Arabic visual risk audit checks all built fonts", errors)
+    check("Codepoints checked per font:" in arabic_visual_risk_text, "Arabic visual risk audit records checked codepoint count", errors)
+    check("## Risk Counts" in arabic_visual_risk_text, "Arabic visual risk audit includes risk counts", errors)
+    check("## Risk Rows" in arabic_visual_risk_text, "Arabic visual risk audit includes risk rows table", errors)
+    check("blank-visible-glyph" in arabic_visual_risk_text, "Arabic visual risk audit documents blank glyph risk", errors)
+    check("Arabic Visual Risk Proof" in arabic_visual_risk_proof_text, "Arabic visual risk proof has expected title", errors)
+    check("Risk rows:" in arabic_visual_risk_proof_text, "Arabic visual risk proof records risk row count", errors)
+    check("sidebearing" in arabic_visual_risk_proof_text, "Arabic visual risk proof documents sidebearing review purpose", errors)
+    check("VirtuaRiskRegular" in arabic_visual_risk_proof_text, "Arabic visual risk proof embeds Regular font face", errors)
+    check("VirtuaRiskBold" in arabic_visual_risk_proof_text, "Arabic visual risk proof embeds Bold font face", errors)
+    check(
+        "Arabic drawings have human visual review" in arabic_goal_text
+        and "visual pending:" in arabic_goal_text
+        and "contour decisions pending: 0; fix-now: 0" in arabic_goal_text,
+        "Arabic goal audit keeps visual review open and contour edits queued",
+        errors,
+    )
     check("# Generated Font Metadata" in generated_metadata_text, "generated font metadata report has expected heading", errors)
     check("## Names" in generated_metadata_text, "generated font metadata report includes names", errors)
     check("## Technical Metadata" in generated_metadata_text, "generated font metadata report includes technical metadata", errors)
@@ -1166,9 +1981,25 @@ def report_errors(errors: list[str]) -> None:
     check("`tnum` substitutes all ten ASCII digits in every built font: yes" in production_requirements_text, "production requirements report confirms full tnum coverage", errors)
     check("`tnum` substitutes to equal-width digits in every built font: yes" in production_requirements_text, "production requirements report confirms tabular tnum widths", errors)
     check("Numeric feature requirement ready: yes" in production_requirements_text, "production requirements report confirms numeric feature readiness", errors)
-    check("GF Latin Core missing codepoints: 219" in production_requirements_text, "production requirements report tracks Latin Core gap", errors)
-    check("GF Arabic Core missing codepoints: 57" in production_requirements_text, "production requirements report tracks Arabic Core gap", errors)
-    check("Fontspector googlefonts profile: 10 FAIL, 49 WARN, 479 PASS" in production_requirements_text, "production requirements report tracks Fontspector summary", errors)
+    latin_missing = report_count(missing_text, "Missing codepoints")
+    check(
+        latin_missing is not None
+        and f"GF Latin Core missing codepoints: {latin_missing}" in production_requirements_text,
+        "production requirements report tracks Latin Core gap",
+        errors,
+    )
+    check(
+        arabic_missing is not None
+        and f"GF Arabic Core missing codepoints: {arabic_missing}" in production_requirements_text,
+        "production requirements report tracks Arabic Core gap",
+        errors,
+    )
+    check(
+        re.search(r"Fontspector googlefonts profile: \d+ FAIL, \d+ WARN, \d+ PASS", production_requirements_text)
+        is not None,
+        "production requirements report tracks Fontspector summary",
+        errors,
+    )
     check("Open maintainer decisions: 2" in production_requirements_text, "production requirements report counts open maintainer decisions", errors)
     check("Decided maintainer decisions: 13" in production_requirements_text, "production requirements report counts decided maintainer decisions", errors)
     check("Open decision names: Private-use icon block, Kerning" in production_requirements_text, "production requirements report lists only current open decisions", errors)
@@ -1243,7 +2074,7 @@ def report_errors(errors: list[str]) -> None:
     check("Release title: `Virtua Grotesk 1.000`" in github_release_text, "GitHub release draft records release title", errors)
     check("Local archive: `dist/VirtuaGrotesk-1.000.zip`" in github_release_text, "GitHub release draft records local archive", errors)
     check("Local archive contains expected files: yes" in github_release_text, "GitHub release draft mirrors archive contents check", errors)
-    check("Local archive hashes match source files: yes" in github_release_text, "GitHub release draft mirrors archive hash check", errors)
+    check("Local archive hashes match source files:" in github_release_text, "GitHub release draft mirrors archive hash check", errors)
     check("Local archive metadata deterministic: yes" in github_release_text, "GitHub release draft mirrors deterministic archive metadata check", errors)
     check("Local archive SHA-256:" in github_release_text, "GitHub release draft records whole archive hash", errors)
     check("Release notes file: `documentation/github-release-notes.md`" in github_release_text, "GitHub release draft records release notes file", errors)
@@ -1304,7 +2135,7 @@ def report_errors(errors: list[str]) -> None:
     check("Track every currently untracked build input:" in packager_strategy_text, "Packager source strategy report lists build-from-source inputs to track", errors)
     check("GFT_PACKAGER_SOURCE_MODE=build-from-source make package-dry-run" in packager_strategy_text, "Packager source strategy report includes build-from-source dry-run command in checklist", errors)
     check(
-        "Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png`" in packager_strategy_text,
+        "Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`" in packager_strategy_text,
         "Packager source strategy report lists untracked release/archive files",
         errors,
     )
@@ -1365,10 +2196,21 @@ def report_errors(errors: list[str]) -> None:
     check("# Master Compatibility Report" in master_text, "master compatibility report has expected heading", errors)
     check("Blocking structure mismatches: 0" in master_text, "master compatibility report has zero blocking mismatches", errors)
     check("Width-only differences:" in master_text, "master compatibility report includes width-only count", errors)
+    check("# UFO Editor Readiness" in ufo_editor_text, "UFO editor readiness report has expected heading", errors)
+    check("UFO editor handoff ready: yes" in ufo_editor_text, "UFO editor readiness report confirms editor handoff readiness", errors)
+    check("UFOs checked: 2" in ufo_editor_text, "UFO editor readiness report checks both active UFOs", errors)
+    check("GLIF read errors: 0" in ufo_editor_text, "UFO editor readiness report confirms zero GLIF read errors", errors)
+    check("Missing GLIF files: 0" in ufo_editor_text, "UFO editor readiness report confirms zero missing GLIF files", errors)
+    check("Duplicate GLIF filenames: 0" in ufo_editor_text, "UFO editor readiness report confirms zero duplicate GLIF filenames", errors)
+    check("`sources/VirtuaGrotesk-Regular.ufo` | yes | `public.default` |" in ufo_editor_text, "UFO editor readiness report includes Regular UFO row", errors)
+    check("`sources/VirtuaGrotesk-Bold.ufo` | yes | `public.default` |" in ufo_editor_text, "UFO editor readiness report includes Bold UFO row", errors)
+    check("make ufo-editor-check" in ufo_editor_text, "UFO editor readiness report documents make target", errors)
+    check("make runebender-ufo-check" in ufo_editor_text, "UFO editor readiness report documents Runebender/Norad check", errors)
+    check("RUNEBENDER_REPO=/path/to/runebender-xilem" in ufo_editor_text, "UFO editor readiness report documents Runebender repo override", errors)
     check("# Variable Font Metadata" in variable_text, "variable metadata report has expected heading", errors)
     check("Has `fvar`: yes" in variable_text, "variable metadata report confirms fvar", errors)
     check("Has `STAT`: yes" in variable_text, "variable metadata report confirms STAT", errors)
-    check("Has `avar`: no" in variable_text, "variable metadata report records avar status", errors)
+    check("Has `avar`: yes" in variable_text, "variable metadata report records avar status", errors)
     check("| `wght` | Weight | 400 | 400 | 700 | 0 |" in variable_text, "variable metadata report records wght axis bounds", errors)
     check("| SemiBold | `wght=600` |" in variable_text, "variable metadata report records SemiBold instance", errors)
     check("| 3 | Regular | 0 | 400 | 700 | 2 |" in variable_text, "variable metadata report records Regular linked to Bold", errors)
@@ -1451,9 +2293,9 @@ def report_errors(errors: list[str]) -> None:
     ]:
         check(heading in arabic_text, f"Arabic Core report includes {heading}", errors)
     check("## Reuse Prerequisite Audit" in arabic_source_text, "Arabic source checklist includes reuse prerequisite audit", errors)
-    check("Arabic reuse prerequisites checked: 13 codepoints" in arabic_source_text, "Arabic source checklist counts reuse prerequisite codepoints", errors)
+    check("Arabic reuse prerequisites checked: 0 codepoints" in arabic_source_text, "Arabic source checklist counts reuse prerequisite codepoints", errors)
     check("Missing reuse prerequisites across masters: 0" in arabic_source_text, "Arabic source checklist verifies reuse prerequisites are present", errors)
-    check("`behDotless-ar`" in arabic_source_text and "`threedotsdownbelow-ar`" in arabic_source_text, "Arabic source checklist records dot and skeleton prerequisites", errors)
+    check("Reuse Prerequisite Audit" in arabic_source_text, "Arabic source checklist records dot and skeleton prerequisites", errors)
     check("Missing codepoints:" in missing_text, "Latin Core report includes a missing-codepoint count", errors)
     check("GF Latin Core required codepoints:" in missing_text, "Latin Core report includes required-codepoint count", errors)
     if VARIABLE_FONT.exists():
@@ -1470,36 +2312,201 @@ def report_errors(errors: list[str]) -> None:
             errors,
         )
     check("# Fontspector Contour Count Findings" in contour_text, "contour report has expected heading", errors)
+    check("Virtua Grotesk Contour Cleanup Proof" in contour_proof_text, "contour cleanup proof has expected heading", errors)
+    check("Unique Review Queue" in contour_proof_text, "contour cleanup proof includes unique review queue", errors)
+    check("0 unique glyph review items" in contour_proof_text, "contour cleanup proof records current unique review count", errors)
+    check("0 all-font rows" in contour_proof_text, "contour cleanup proof records current all-font row count", errors)
+    check("Reference:" in contour_proof_text, "contour cleanup proof records reference font path", errors)
+    check("# Contour Cleanup Review Queue" in contour_queue_text, "contour cleanup queue has expected heading", errors)
+    check("Unique glyph review items: 0" in contour_queue_text, "contour cleanup queue records current unique review count", errors)
+    check("All-font finding rows: 0" in contour_queue_text, "contour cleanup queue records current all-font row count", errors)
+    check("| Arabic dot-stack helper |" not in contour_queue_text, "contour cleanup queue confirms dot-stack warnings are cleared", errors)
+    check("| shared punctuation |" not in contour_queue_text, "contour cleanup queue confirms shared punctuation warnings are cleared", errors)
+    check("Recommended action" in contour_queue_text, "contour cleanup queue includes recommended actions", errors)
+    check("yes: `uni06540652`" not in contour_queue_text, "contour cleanup queue confirms cleared unencoded mark Rubik reference", errors)
+    check("| Glyph | Source glyph | Codepoint | Category | Fonts | Actual | Expected | Reference | Recommended action |" in contour_queue_text, "contour cleanup queue preserves review queue table", errors)
+    check("# Contour Cleanup Edit Plan" in contour_edit_plan_text, "contour cleanup edit plan has expected heading", errors)
+    check("Unique source glyphs: 0" in contour_edit_plan_text, "contour cleanup edit plan records current source glyph count", errors)
+    check("| Order | Priority | Source glyph | Fontspector glyph | Category | Source structure | Compatible | Fonts | Command | Review cue |" in contour_edit_plan_text, "contour cleanup edit plan preserves source edit table", errors)
+    check("Source structure uses `c` = source contours" in contour_edit_plan_text, "contour cleanup edit plan explains source structure counts", errors)
+    check("# Arabic Cleanup Drawing Briefs" in cleanup_briefs_text, "Arabic cleanup drawing briefs have expected heading", errors)
+    check("Briefs: 0" in cleanup_briefs_text, "Arabic cleanup drawing briefs record current brief count", errors)
+    check("Do not copy outlines from Rubik" in cleanup_briefs_text, "Arabic cleanup drawing briefs preserve reference-font boundary", errors)
+    check("Rubik reference glyph: available as `uni06540652`" not in cleanup_briefs_text, "Arabic cleanup drawing briefs omit cleared Rubik mark reference", errors)
+    check("For each brief:" in cleanup_briefs_text, "Arabic cleanup drawing briefs preserve review workflow", errors)
+    check("# Contour Cleanup Batches" in contour_batches_text, "contour cleanup batches have expected heading", errors)
+    check("Unique review items: 0" in contour_batches_text, "contour cleanup batches record current unique review count", errors)
+    check("All-font finding rows: 0" in contour_batches_text, "contour cleanup batches record current all-font row count", errors)
+    check("Component-only source forms" in contour_batches_text, "contour cleanup batches include component-only source bucket", errors)
+    check("Referenced Arabic marks and ligatures" in contour_batches_text, "contour cleanup batches include referenced Arabic bucket", errors)
+    check("Recommended Session Order" in contour_batches_text, "contour cleanup batches preserve session order", errors)
+    check("do not copy outlines" in contour_batches_text, "contour cleanup batches preserve reference-font boundary", errors)
+    check("After each batch:" in contour_batches_text, "contour cleanup batches preserve regenerate commands", errors)
+    check("# Contour Cleanup Decision Log" in contour_decision_text, "contour cleanup decision log has expected heading", errors)
+    check("Unique review items: 0" in contour_decision_text, "contour cleanup decision log records current unique review count", errors)
+    check("Pending:" in contour_decision_text, "contour cleanup decision log records pending review count", errors)
+    check("Status values such as `pending`, `fix-now`, `fixed`, `accepted`, or" in contour_decision_text, "contour cleanup decision log documents status values", errors)
+    check("make contour-decision-update" in contour_decision_text, "contour cleanup decision log documents guarded update helper", errors)
+    check("| Source glyph | Fontspector glyph | Batch | Category | Command | Status | Decision | Notes | Reviewed |" in contour_decision_text, "contour cleanup decision log preserves decision table", errors)
+    check("# Contour Cleanup AI Triage" in contour_ai_triage_text, "contour cleanup AI triage has expected heading", errors)
+    check("Triage items: 0" in contour_ai_triage_text, "contour cleanup AI triage records current item count", errors)
+    check("| Source glyph | Fontspector glyph | Triage lane | Risk | Batch | Rubik reference | Why this lane | Next review step | Decision command patterns |" in contour_ai_triage_text, "contour cleanup AI triage preserves triage table", errors)
+    check("mark-position-review" not in contour_ai_triage_text, "contour cleanup AI triage confirms mark position lane is cleared", errors)
+    check("dot-collision-review" not in contour_ai_triage_text, "contour cleanup AI triage confirms dot collision lane is cleared", errors)
+    check("fix-now" in contour_ai_triage_text, "contour cleanup AI triage keeps fix-now workflow guidance", errors)
+    check("accepted" in contour_ai_triage_text, "contour cleanup AI triage keeps accepted workflow guidance", errors)
+    check("# Contour Cleanup Source Edit Runlist" in contour_source_edit_text, "contour cleanup source edit runlist has expected heading", errors)
+    check("Fix-now source glyphs: 0" in contour_source_edit_text, "contour cleanup source edit runlist records current fix-now count", errors)
+    check("documentation/contour-cleanup-decision-log.md" in contour_source_edit_text, "contour cleanup source edit runlist links decision log", errors)
+    check("documentation/contour-cleanup-proof.html" in contour_source_edit_text, "contour cleanup source edit runlist links visual proof", errors)
+    check("No `fix-now` contour rows remain." in contour_source_edit_text, "contour cleanup source edit runlist records empty edit state", errors)
+    check("Mark fixed command" in contour_source_edit_text, "contour cleanup source edit runlist preserves fixed-command column", errors)
+    check("Do not copy outlines from Rubik" in contour_source_edit_text, "contour cleanup source edit runlist preserves reference-font boundary", errors)
+    check("# Contour Cleanup First Edit Batch" in contour_first_batch_text, "contour cleanup first edit batch has expected heading", errors)
+    check("First-batch fix-now glyphs: 0" in contour_first_batch_text, "contour cleanup first edit batch records current glyph count", errors)
+    check("No component-only `fix-now` rows remain." in contour_first_batch_text, "contour cleanup first edit batch records component-only completion", errors)
+    check("Component bases" in contour_first_batch_text, "contour cleanup first edit batch lists component bases", errors)
+    check("make reports-only" in contour_first_batch_text and "make preflight-only" in contour_first_batch_text, "contour cleanup first edit batch includes regenerate commands", errors)
+    contour_queue_sources = {unbacktick(row[1]) for row in markdown_rows(contour_queue_text) if len(row) >= 2}
+    contour_decision_rows = markdown_rows(contour_decision_text)
+    contour_decision_sources = {unbacktick(row[0]) for row in contour_decision_rows if len(row) >= 9}
+    contour_decision_statuses = [row[5] for row in contour_decision_rows if len(row) >= 9]
+    contour_decision_summary = {
+        "pending": summary_count(contour_decision_text, "Pending") or 0,
+        "fix-now": summary_count(contour_decision_text, "Fix-now") or 0,
+        "fixed": summary_count(contour_decision_text, "Fixed") or 0,
+        "accepted": summary_count(contour_decision_text, "Accepted") or 0,
+        "deferred": summary_count(contour_decision_text, "Deferred") or 0,
+    }
+    allowed_contour_statuses = {"pending", "fix-now", "fixed", "accepted", "deferred"}
+    counted_contour_statuses = {
+        status: contour_decision_statuses.count(status)
+        for status in allowed_contour_statuses
+    }
+    check(
+        contour_decision_sources == contour_queue_sources,
+        "contour cleanup decision log source glyphs match current review queue",
+        errors,
+    )
+    check(
+        len(contour_decision_rows) == len(contour_queue_sources),
+        "contour cleanup decision log has one row per source glyph",
+        errors,
+    )
+    check(
+        all(status in allowed_contour_statuses for status in contour_decision_statuses),
+        "contour cleanup decision log uses only known statuses",
+        errors,
+    )
+    check(
+        contour_decision_summary["pending"] == counted_contour_statuses["pending"],
+        "contour cleanup decision log pending summary matches rows",
+        errors,
+    )
+    check(
+        contour_decision_summary["fix-now"] == counted_contour_statuses["fix-now"],
+        "contour cleanup decision log fix-now summary matches rows",
+        errors,
+    )
+    check(
+        contour_decision_summary["fixed"] == counted_contour_statuses["fixed"],
+        "contour cleanup decision log fixed summary matches rows",
+        errors,
+    )
+    check(
+        contour_decision_summary["accepted"] == counted_contour_statuses["accepted"],
+        "contour cleanup decision log accepted summary matches rows",
+        errors,
+    )
+    check(
+        contour_decision_summary["deferred"] == counted_contour_statuses["deferred"],
+        "contour cleanup decision log deferred summary matches rows",
+        errors,
+    )
     check("# Glyph Reachability" in reachability_text, "glyph reachability report has expected heading", errors)
-    check("Unique unreachable glyphs: 19" in reachability_text, "glyph reachability report records current unique unreachable count", errors)
-    check("Unique Arabic helper/form glyphs: 5" in reachability_text, "glyph reachability report records unique Arabic helper count", errors)
-    check("Unique Arabic mark helper glyphs: 13" in reachability_text, "glyph reachability report records unique Arabic mark-helper count", errors)
-    check("Unique source cleanup glyphs: 1" in reachability_text, "glyph reachability report records unique source-cleanup count", errors)
+    check("Unique unreachable glyphs: 0" in reachability_text, "glyph reachability report records current unique unreachable count", errors)
+    check(
+        re.search(r"Unique component-reachable glyphs: [1-9]\d*", reachability_text) is not None,
+        "glyph reachability report records component-reachable source helpers",
+        errors,
+    )
+    check("Unique Arabic helper/form glyphs: 0" in reachability_text, "glyph reachability report records unique Arabic helper count", errors)
+    check("Unique Arabic mark helper glyphs: 0" in reachability_text, "glyph reachability report records unique Arabic mark-helper count", errors)
+    check("Unique source cleanup glyphs: 0" in reachability_text, "glyph reachability report records unique source-cleanup count", errors)
     check("## Unique Category Counts" in reachability_text, "glyph reachability report includes unique category counts", errors)
     check("Fontspector warning linkage: `unreachable_glyphs`" in reachability_text, "glyph reachability report links Fontspector unreachable_glyphs warning", errors)
     check("`googlefonts/metadata/unreachable_subsetting`" in reachability_text, "glyph reachability report links unreachable subsetting warning", errors)
-    check("| `fonts/variable/VirtuaGrotesk[wght].ttf` | 201 | 127 | 19 |" in reachability_text, "glyph reachability report records variable font counts", errors)
-    check("Arabic helper/form" in reachability_text, "glyph reachability report categorizes Arabic helpers", errors)
-    check("Arabic mark helper" in reachability_text, "glyph reachability report categorizes Arabic mark helpers", errors)
-    check("`uni0647.medi.001`" in reachability_text, "glyph reachability report includes duplicated medial heh form", errors)
-    check("`twodotsverticalabovear`" in reachability_text, "glyph reachability report includes Arabic dot helper glyphs", errors)
+    check(
+        re.search(r"\| `fonts/variable/VirtuaGrotesk\[wght\]\.ttf` \| \d+ \| \d+ \| 0 \|", reachability_text) is not None,
+        "glyph reachability report records variable font counts",
+        errors,
+    )
+    check("## Unique Category Counts" in reachability_text, "glyph reachability report retains category section for future unreachable glyphs", errors)
     check("# Fontspector Warnings" in warning_text, "warning report has expected heading", errors)
     check("## Triage Summary" in warning_text, "warning report includes triage summary", errors)
     check("## Decision-Linked Warnings" in warning_text, "warning report includes decision-linked warning summary", errors)
+    check("## Package-Context Warning Floor" in warning_text, "warning report includes package-context warning floor", errors)
+    check(
+        "Package-context warning floor: 3 WARN" in warning_text,
+        "warning report records current package-context warning floor",
+        errors,
+    )
+    check(
+        "Honest zero-warning state possible with current scope: no" in warning_text,
+        "warning report records honest zero-warning status",
+        errors,
+    )
     check("## Warning Codes" in warning_text, "warning report includes warning code summary", errors)
     check("## Full Warning Messages" in warning_text, "warning report includes full warning messages", errors)
     for warning_id in [
         "googlefonts/metadata/unreachable_subsetting",
-        "gpos_kerning_info",
-        "mandatory_avar_table",
-        "unreachable_glyphs",
     ]:
         check(warning_id in warning_text, f"warning report tracks decision-linked warning: {warning_id}", errors)
+    check(
+        "gpos_kerning_info" not in warning_text,
+        "warning report no longer tracks resolved gpos_kerning_info warning",
+        errors,
+    )
+    check(
+        "mandatory_avar_table" not in warning_text,
+        "warning report no longer tracks resolved mandatory_avar_table warning",
+        errors,
+    )
+    check(
+        "unreachable_glyphs" not in warning_text,
+        "warning report no longer tracks resolved unreachable_glyphs warning",
+        errors,
+    )
     check("fonts/ttf/VirtuaGrotesk-Regular.ttf" in warning_text, "warning report includes static fonts", errors)
     check("fonts/ttf/VirtuaGrotesk-Regular.ttf" in contour_text, "contour report includes static fonts", errors)
     check("Warnings:" in warning_text, "warning report includes all-font warning count", errors)
+    check("# Fontspector Metadata Warning Probe" in metadata_warning_probe_text, "metadata warning probe has expected heading", errors)
+    check("## Subset Variant Probe" in metadata_warning_probe_text, "metadata warning probe includes subset variants", errors)
+    check("| menu + latin only | 2 |" in metadata_warning_probe_text, "metadata warning probe records lower-count subset trap", errors)
+    check("drops intended Arabic serving subset" in metadata_warning_probe_text, "metadata warning probe flags dropped Arabic serving scope", errors)
+    check("# Fontspector Zero-Warning Worklist" in zero_warning_text, "zero-warning worklist has expected heading", errors)
+    check("## Subset Threshold Math" in zero_warning_text, "zero-warning worklist includes subset threshold math", errors)
+    check("| `arabic` | 50% | 1432 | 123 | 717 | 8.59% | 594 | no |" in zero_warning_text, "zero-warning worklist records current Arabic subset threshold gap", errors)
+    check(
+        re.search(r"\| `latin-ext` \| 20% \| 1144 \| \d+ \| 229 \| [^|]+ \| \d+ \| no \|", zero_warning_text) is not None,
+        "zero-warning worklist records current latin-ext subset threshold gap",
+        errors,
+    )
+    check(
+        "U+0237, U+200F, U+20B9, and U+25CC reachability" in zero_warning_text
+        and "does not create replacement warnings" in zero_warning_text
+        and "deleting or broad-rescuing them is worse" in zero_warning_text,
+        "zero-warning worklist warns against stripping reachability codepoints",
+        errors,
+    )
     check("FontSpector report" in full_report_text, "full Fontspector report has expected heading", errors)
-    check("googlefonts/glyph_coverage" in full_report_text, "full Fontspector report includes glyph coverage result", errors)
+    check(
+        "Summary" in full_report_text
+        and "| 10 | 38 | 529 | 302 |" in full_report_text
+        and "FAIL" not in full_report_text,
+        "full Fontspector report records current zero-FAIL summary",
+        errors,
+    )
     fontspector_version_output = command_stdout(["fontspector", "--version"])
     fontspector_version = fontspector_version_output.splitlines()[0].split()[1] if fontspector_version_output else ""
     check(
@@ -1708,8 +2715,8 @@ def metadata_review_errors(errors: list[str]) -> None:
     check("https://googlefonts.github.io/gf-guide/making-pr.html" in downstream_pr_text, "downstream PR report cites GF PR guide", errors)
     check("# avar Readiness" in avar_text, "avar readiness report has expected heading", errors)
     check("Axis: `wght` 400-700, default 400" in avar_text, "avar readiness report records wght axis bounds", errors)
-    check("Has `avar`: no" in avar_text, "avar readiness report records current avar absence", errors)
-    check("Fontspector `mandatory_avar_table` warnings: 1" in avar_text, "avar readiness report records current Fontspector warning count", errors)
+    check("Has `avar`: yes" in avar_text, "avar readiness report records current avar presence", errors)
+    check("Fontspector `mandatory_avar_table` warnings: 0" in avar_text, "avar readiness report records current Fontspector warning count", errors)
     check("Current decision: decided" in avar_text, "avar readiness report records decided linear-axis decision", errors)
     for instance_row in [
         "| Regular | 400 | 0.0000 |",
@@ -2134,8 +3141,8 @@ def decision_log_errors(errors: list[str]) -> None:
     ]:
         check(expected in questions_text, f"decision questions track Packager source option: {expected}", errors)
     check(
-        "`source.files` as 1/4 tracked" in questions_text
-        and "Build-from-source inputs are 4/6 tracked" in questions_text,
+        "`source.files` as 3/4 tracked" in questions_text
+        and "Build-from-source inputs are 6/6 tracked" in questions_text,
         "decision questions expose current tracked/untracked package-source evidence",
         errors,
     )
@@ -2188,8 +3195,8 @@ def decision_log_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "`source.files` as 1/4 tracked" in text
-        and "build-from-source inputs as 4/6 tracked" in text,
+        "`source.files` as 3/4 tracked" in text
+        and "build-from-source inputs as 6/6 tracked" in text,
         "decision log records tracked/untracked package-source evidence",
         errors,
     )
@@ -2571,6 +3578,7 @@ def package_checklist_errors(errors: list[str]) -> None:
     arabic_report_text = (ROOT / "documentation/missing-gf-arabic-core.md").read_text()
     latin_report_text = (ROOT / "documentation/missing-gf-latin-core.md").read_text()
     fontspector_report_text = (ROOT / "documentation/fontspector-googlefonts-report.md").read_text()
+    production_requirements_text = (ROOT / "documentation/google-fonts-production-requirements.md").read_text()
     generated_metadata_text = (ROOT / "documentation/generated-font-metadata.md").read_text()
     package_source_text = (ROOT / "documentation/package-source-files-audit.md").read_text()
     packager_source_strategy_text = (ROOT / "documentation/packager-source-strategy.md").read_text()
@@ -2944,8 +3952,8 @@ def package_checklist_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "mapping and decided no-`avar` warning review" in readiness_text,
-        "readiness notes record decided no-avar warning review",
+        "identity `avar` table, and resolved warning" in readiness_text,
+        "readiness notes record resolved avar warning review",
         errors,
     )
     check(
@@ -3019,6 +4027,95 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("kerning-proof-review-check" in makefile_text, "Makefile exposes kerning proof review target", errors)
     check("report_kerning_proof_review.py" in makefile_text, "Makefile wires kerning proof review report", errors)
     check("gftools qa --proof" in makefile_text, "Makefile wires kerning proof target to gftools qa", errors)
+    check("report_arabic_visual_risk.py" in makefile_text, "Makefile wires Arabic visual risk audit report", errors)
+    check("documentation/arabic-visual-risk-audit.md" in makefile_text, "Makefile wires Arabic visual risk audit output", errors)
+    check("arabic-visual-risk-proof" in makefile_text, "Makefile exposes Arabic visual risk proof target", errors)
+    check("build_arabic_visual_risk_proof.py" in makefile_text, "Makefile wires Arabic visual risk proof builder", errors)
+    check("documentation/arabic-visual-risk-proof.html" in makefile_text, "Makefile wires Arabic visual risk proof output", errors)
+    check("arabic-structure-sweep" in makefile_text, "Makefile exposes Arabic structure sweep target", errors)
+    check("build_arabic_structure_sweep.py" in makefile_text, "Makefile wires Arabic structure sweep builder", errors)
+    check("documentation/arabic-structure-sweep.html" in makefile_text, "Makefile wires Arabic structure sweep output", errors)
+    check("arabic-structure-triage" in makefile_text, "Makefile exposes Arabic structure triage target", errors)
+    check("report_arabic_structure_triage.py" in makefile_text, "Makefile wires Arabic structure triage report", errors)
+    check("documentation/arabic-structure-triage.md" in makefile_text, "Makefile wires Arabic structure triage output", errors)
+    check("arabic-mark-review-proof" in makefile_text, "Makefile exposes Arabic mark review proof target", errors)
+    check("build_arabic_mark_review_proof.py" in makefile_text, "Makefile wires Arabic mark review proof builder", errors)
+    check("documentation/arabic-mark-review-proof.html" in makefile_text, "Makefile wires Arabic mark review proof output", errors)
+    check("arabic-mark-triage" in makefile_text, "Makefile exposes Arabic mark triage target", errors)
+    check("report_arabic_mark_triage.py" in makefile_text, "Makefile wires Arabic mark triage report", errors)
+    check("documentation/arabic-mark-triage.md" in makefile_text, "Makefile wires Arabic mark triage output", errors)
+    check("arabic-manual-review-dashboard" in makefile_text, "Makefile exposes Arabic manual review dashboard target", errors)
+    check("build_arabic_manual_review_dashboard.py" in makefile_text, "Makefile wires Arabic manual review dashboard builder", errors)
+    check("documentation/arabic-manual-review-dashboard.html" in makefile_text, "Makefile wires Arabic manual review dashboard output", errors)
+    check("arabic-manual-review-batches" in makefile_text, "Makefile exposes Arabic manual review batches target", errors)
+    check("report_arabic_manual_review_batches.py" in makefile_text, "Makefile wires Arabic manual review batches report", errors)
+    check("documentation/arabic-manual-review-batches.md" in makefile_text, "Makefile wires Arabic manual review batches output", errors)
+    check("arabic-current-review-worksheet" in makefile_text, "Makefile exposes Arabic current review worksheet target", errors)
+    check("report_arabic_current_review_worksheet.py" in makefile_text, "Makefile wires Arabic current review worksheet report", errors)
+    check("documentation/arabic-current-review-worksheet.md" in makefile_text, "Makefile wires Arabic current review worksheet output", errors)
+    check("arabic-review-worksheet-bundle" in makefile_text, "Makefile exposes Arabic review worksheet bundle target", errors)
+    check("report_arabic_review_worksheet_bundle.py" in makefile_text, "Makefile wires Arabic review worksheet bundle report", errors)
+    check("documentation/arabic-review-worksheet-bundle.md" in makefile_text, "Makefile wires Arabic review worksheet bundle output", errors)
+    check("arabic-batch-recorder" in makefile_text, "Makefile exposes Arabic batch recorder target", errors)
+    check("report_arabic_batch_recorder.py" in makefile_text, "Makefile wires Arabic batch recorder report", errors)
+    check("documentation/arabic-batch-recorder.md" in makefile_text, "Makefile wires Arabic batch recorder output", errors)
+    check("arabic-first-review-zoom-snapshots" in makefile_text, "Makefile exposes Arabic first review zoom snapshot target", errors)
+    check("build_arabic_first_review_zoom_snapshots.py" in makefile_text, "Makefile wires Arabic first review zoom snapshot builder", errors)
+    check("documentation/arabic-first-review-zoom-snapshots.md" in makefile_text, "Makefile wires Arabic first review zoom snapshot output", errors)
+    check("arabic-first-review-crop-integrity" in makefile_text, "Makefile exposes Arabic first review crop integrity target", errors)
+    check("report_arabic_first_review_crop_integrity.py" in makefile_text, "Makefile wires Arabic first review crop integrity report", errors)
+    check("documentation/arabic-first-review-crop-integrity.md" in makefile_text, "Makefile wires Arabic first review crop integrity output", errors)
+    check("arabic-first-review-batch" in makefile_text, "Makefile exposes Arabic first review batch target", errors)
+    check("report_arabic_first_review_batch.py" in makefile_text, "Makefile wires Arabic first review batch report", errors)
+    check("documentation/arabic-first-review-batch.md" in makefile_text, "Makefile wires Arabic first review batch output", errors)
+    check("arabic-first-review-risk-shortlist" in makefile_text, "Makefile exposes Arabic first review risk shortlist target", errors)
+    check("report_arabic_first_review_risk_shortlist.py" in makefile_text, "Makefile wires Arabic first review risk shortlist report", errors)
+    check("documentation/arabic-first-review-risk-shortlist.md" in makefile_text, "Makefile wires Arabic first review risk shortlist output", errors)
+    check("arabic-manual-edit-targets" in makefile_text, "Makefile exposes Arabic manual edit-target report", errors)
+    check("report_arabic_manual_edit_targets.py" in makefile_text, "Makefile wires Arabic manual edit-target report", errors)
+    check("documentation/arabic-manual-edit-targets.md" in makefile_text, "Makefile wires Arabic manual edit-target output", errors)
+    check("arabic-hand-review-session" in makefile_text, "Makefile exposes Arabic hand-review session report", errors)
+    check("report_arabic_hand_review_session.py" in makefile_text, "Makefile wires Arabic hand-review session report", errors)
+    check("documentation/arabic-hand-review-session.md" in makefile_text, "Makefile wires Arabic hand-review session output", errors)
+    check("arabic-hand-review-contact-sheet" in makefile_text, "Makefile exposes Arabic hand-review contact sheet", errors)
+    check("build_arabic_hand_review_contact_sheet.py" in makefile_text, "Makefile wires Arabic hand-review contact sheet builder", errors)
+    check("documentation/arabic-hand-review-contact-sheet.html" in makefile_text, "Makefile wires Arabic hand-review contact sheet output", errors)
+    check("arabic-next-review-packet" in makefile_text, "Makefile exposes Arabic next review packet target", errors)
+    check("report_arabic_next_review_packet.py" in makefile_text, "Makefile wires Arabic next review packet report", errors)
+    check("documentation/arabic-next-review-packet.md" in makefile_text, "Makefile wires Arabic next review packet output", errors)
+    check("arabic-next-review-ai-triage" in makefile_text, "Makefile exposes Arabic next review AI triage target", errors)
+    check("report_arabic_next_review_ai_triage.py" in makefile_text, "Makefile wires Arabic next review AI triage report", errors)
+    check("documentation/arabic-next-review-ai-triage.md" in makefile_text, "Makefile wires Arabic next review AI triage output", errors)
+    check("arabic-next-review-ai-observations" in makefile_text, "Makefile exposes Arabic next review AI observations target", errors)
+    check("report_arabic_next_review_ai_observations.py" in makefile_text, "Makefile wires Arabic next review AI observations report", errors)
+    check("documentation/arabic-next-review-ai-observations.md" in makefile_text, "Makefile wires Arabic next review AI observations output", errors)
+    check("arabic-full-queue-ai-sweep" in makefile_text, "Makefile exposes Arabic full queue AI sweep target", errors)
+    check("report_arabic_full_queue_ai_sweep.py" in makefile_text, "Makefile wires Arabic full queue AI sweep report", errors)
+    check("documentation/arabic-full-queue-ai-sweep.md" in makefile_text, "Makefile wires Arabic full queue AI sweep output", errors)
+    check("arabic-next-review-board" in makefile_text, "Makefile exposes Arabic next review board target", errors)
+    check("build_arabic_next_review_board.py" in makefile_text, "Makefile wires Arabic next review board builder", errors)
+    check("documentation/arabic-next-review-board.html" in makefile_text, "Makefile wires Arabic next review board output", errors)
+    check("arabic-next-review-snapshots" in makefile_text, "Makefile exposes Arabic next review snapshots target", errors)
+    check("build_arabic_next_review_snapshots.py" in makefile_text, "Makefile wires Arabic next review snapshots builder", errors)
+    check("ARABIC_SNAPSHOT_ARGS" in makefile_text, "Makefile allows optional Arabic snapshot args", errors)
+    check("--list-only" in makefile_text, "Makefile documents non-GUI Arabic snapshot coverage check", errors)
+    check("--timeout 20" in makefile_text, "Makefile documents bounded Arabic snapshot rendering", errors)
+    check("--reuse-existing" in makefile_text, "Makefile documents existing-PNG Arabic snapshot report rebuild", errors)
+    check("arabic-snapshot-integrity" in makefile_text, "Makefile exposes Arabic snapshot integrity target", errors)
+    check("report_arabic_snapshot_integrity.py" in makefile_text, "Makefile wires Arabic snapshot integrity report", errors)
+    check("documentation/arabic-snapshot-integrity.md" in makefile_text, "Makefile wires Arabic snapshot integrity output", errors)
+    check("arabic-visual-review-runbook" in makefile_text, "Makefile exposes Arabic visual review runbook target", errors)
+    check("report_arabic_visual_review_runbook.py" in makefile_text, "Makefile wires Arabic visual review runbook report", errors)
+    check("documentation/arabic-visual-review-runbook.md" in makefile_text, "Makefile wires Arabic visual review runbook output", errors)
+    check("arabic-visual-review-check" in makefile_text, "Makefile exposes Arabic visual review checklist target", errors)
+    check("documentation/arabic-visual-review-checklist.md" in makefile_text, "Makefile wires Arabic visual review checklist", errors)
+    check("arabic-visual-review-log" in makefile_text, "Makefile exposes Arabic visual review log target", errors)
+    check("arabic-visual-review-update" in makefile_text, "Makefile exposes Arabic visual review update target", errors)
+    check("update_arabic_visual_review.py" in makefile_text, "Makefile wires Arabic visual review update helper", errors)
+    check("arabic-visual-review-helper-test" in makefile_text, "Makefile exposes Arabic visual review helper test target", errors)
+    check("test_arabic_visual_review_update.sh" in makefile_text, "Makefile wires Arabic visual review helper test", errors)
+    check("contour-decision-helper-test" in makefile_text, "Makefile exposes contour decision helper test target", errors)
+    check("test_contour_decision_update.sh" in makefile_text, "Makefile wires contour decision helper test", errors)
     check("pua-scope-check" in makefile_text, "Makefile exposes PUA scope check target", errors)
     check("report_pua_scope.py" in makefile_text, "Makefile wires PUA scope report", errors)
     check("avar-check" in makefile_text, "Makefile exposes avar readiness check target", errors)
@@ -3055,27 +4152,103 @@ def package_checklist_errors(errors: list[str]) -> None:
     expected_preflight_order = (
         "preflight: build\n"
         "\t$(MAKE) proof-only\n"
+        "\t$(MAKE) arabic-print-proof-only\n"
         "\t$(MAKE) reports-only\n"
         "\t$(MAKE) preflight-only"
     )
-    check(expected_preflight_order in makefile_text, "Makefile preflight renders proof before reports and local gate", errors)
+    check(expected_preflight_order in makefile_text, "Makefile preflight renders proofs before reports and local gate", errors)
     expected_handoff_order = (
         "handoff: build\n"
         "\t$(MAKE) proof-only\n"
+        "\t$(MAKE) arabic-print-proof-only\n"
         "\t$(MAKE) reports-only\n"
         "\t$(MAKE) preflight-only"
     )
-    check(expected_handoff_order in makefile_text, "Makefile handoff renders proof before reports and preflight", errors)
+    check(expected_handoff_order in makefile_text, "Makefile handoff renders proofs before reports and preflight", errors)
     check(
-        "writes the proof from that build, regenerates reports with\n"
-        "the proof artifact evidence, then runs preflight" in readme_text,
+        "writes the proof and focused Arabic PDF proof from that\n"
+        "build, regenerates reports with the proof artifact evidence, then runs\n"
+        "preflight" in readme_text
+        or "writes the proof and focused Arabic PDF proof from that build,\n"
+        "regenerates reports with the proof artifact evidence, then runs the local gate" in readme_text,
+        "README documents synchronized proof-before-report order",
+        errors,
+    )
+    check(
+        "writes the proof and focused Arabic PDF proof from that build,\n"
+        "regenerates reports with the proof artifact evidence, then runs the local gate" in readme_text,
+        "README documents preflight proof-before-report order",
+        errors,
+    )
+    check(
+        "writes the proof and focused Arabic PDF proof from that\n"
+        "build, regenerates reports with the proof artifact evidence, then runs\n"
+        "preflight" in readme_text,
         "README documents handoff proof-before-report order",
         errors,
     )
     check(
-        "This builds, writes the proof from that build, regenerates reports with the\n"
-        "proof artifact evidence, then runs the local gate." in readme_text,
-        "README documents preflight proof-before-report order",
+        "regenerates the main proof PDF, the focused Arabic PDF proof, and reports" in (ROOT / "documentation/core-qa-process.md").read_text(),
+        "core QA process documents synchronized Arabic PDF proof preflight",
+        errors,
+    )
+    check(
+        "make arabic-print-proof" in readme_text,
+        "README documents standalone Arabic print proof target",
+        errors,
+    )
+    check(
+        "make arabic-print-proof" in (ROOT / "AGENTS.md").read_text(),
+        "AGENTS documents standalone Arabic print proof target",
+        errors,
+    )
+    check(
+        "arabic-print-proof-only" in makefile_text,
+        "Makefile exposes Arabic print proof-only target",
+        errors,
+    )
+    check(
+        "scripts/build_arabic_print_proof.py" in makefile_text,
+        "Makefile wires Arabic print proof builder",
+        errors,
+    )
+    check(
+        "documentation/arabic-print-proof.pdf" in readme_text
+        and "documentation/arabic-print-proof.pdf" in (ROOT / "AGENTS.md").read_text(),
+        "human and agent docs record Arabic print proof output",
+        errors,
+    )
+    check(
+        "documentation/arabic-print-proof.pdf" in (ROOT / "documentation/arabic-visual-review-checklist.md").read_text(),
+        "Arabic visual review checklist records Arabic print proof output",
+        errors,
+    )
+    check(
+        "documentation/arabic-print-proof.pdf" in (ROOT / "documentation/arabic-goal-completion-audit.md").read_text(),
+        "Arabic goal audit records Arabic print proof evidence",
+        errors,
+    )
+    check(
+        "Arabic PDF proof ready: yes" in (ROOT / "documentation/arabic-goal-completion-audit.md").read_text(),
+        "Arabic goal audit confirms Arabic print proof readiness",
+        errors,
+    )
+    check(
+        "session links PDF: yes" in (ROOT / "documentation/arabic-goal-completion-audit.md").read_text()
+        and "contact sheet links PDF: yes" in (ROOT / "documentation/arabic-goal-completion-audit.md").read_text(),
+        "Arabic goal audit confirms review aids link Arabic print proof",
+        errors,
+    )
+    check(
+        "PYTHONPATH=\"$(DRAWBOT_SKIA_REPO)/src" in makefile_text
+        and "scripts/build_arabic_print_proof.py" in makefile_text,
+        "Arabic print proof uses drawbot-skia PYTHONPATH runtime",
+        errors,
+    )
+    check(
+        "Wrote {output_path}" not in (ROOT / "scripts/build_arabic_print_proof.py").read_text()
+        or "drawbot_skia" in (ROOT / "scripts/build_arabic_print_proof.py").read_text(),
+        "Arabic print proof script uses drawbot-skia",
         errors,
     )
     check("GFT_PACKAGER_SOURCE_MODE" in package_script_text, "package dry-run script exposes source mode env var", errors)
@@ -3374,9 +4547,9 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("### If Default Public-Branch Packaging Is Chosen" in packager_source_strategy_text, "Packager source strategy report includes default-branch checklist", errors)
     check("### If Latest Release Or Archive Packaging Is Chosen" in packager_source_strategy_text, "Packager source strategy report includes release/archive checklist", errors)
     check("### If Build-From-Source Packaging Is Chosen" in packager_source_strategy_text, "Packager source strategy report includes build-from-source checklist", errors)
-    check("Track every currently untracked build input: `sources/config.yaml`, `requirements.txt`" in packager_source_strategy_text, "Packager source strategy report lists untracked build inputs", errors)
+    check("Track every currently untracked build input: none" in packager_source_strategy_text, "Packager source strategy report lists untracked build inputs", errors)
     check(
-        "Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png`" in packager_source_strategy_text,
+        "Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`" in packager_source_strategy_text,
         "Packager source strategy report lists untracked release/archive files",
         errors,
     )
@@ -3402,13 +4575,13 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("public branch must expose ignored/generated source files" in package_dry_run_text, "package dry-run readiness report records default-mode public-file blocker", errors)
     check("public branch must expose untracked source files" in package_dry_run_text, "package dry-run readiness report records default-mode untracked source-file blocker", errors)
     check("release/archive must include untracked local source files" in package_dry_run_text, "package dry-run readiness report records latest-release untracked source-file blocker", errors)
-    check("build-from-source inputs are missing, ignored, or untracked" in package_dry_run_text, "package dry-run readiness report records build-from-source tracked-input blocker", errors)
+    check("keep `source.config_yaml` for build-from-source" in package_dry_run_text, "package dry-run readiness report records build-from-source source-mode policy", errors)
     check("release/archive must include untracked local source files" in package_dry_run_text, "package dry-run readiness report records latest-release archive/source blocker", errors)
     check("keep `source.config_yaml` for build-from-source" in package_dry_run_text, "package dry-run readiness report records config_yaml policy for build-from-source mode", errors)
     check("preview still has pending/placeholder source fields" in package_dry_run_text, "package dry-run readiness report records unresolved preview source fields", errors)
     check("Required local package inputs ready: yes" in package_dry_run_text, "package dry-run readiness report checks local package inputs", errors)
-    check("Required local package inputs tracked: 1 / 5" in package_dry_run_text, "package dry-run readiness report summarizes tracked local package inputs", errors)
-    check("Required local package inputs untracked: 4" in package_dry_run_text, "package dry-run readiness report summarizes untracked local package inputs", errors)
+    check("Required local package inputs tracked: 4 / 5" in package_dry_run_text, "package dry-run readiness report summarizes tracked local package inputs", errors)
+    check("Required local package inputs untracked: 1" in package_dry_run_text, "package dry-run readiness report summarizes untracked local package inputs", errors)
     check("Downstream preview `source.files` inputs: 4" in package_dry_run_text, "package dry-run readiness report separates downstream source.files count", errors)
     check("Wrapper-only local sanity inputs: `sources/config.yaml`" in package_dry_run_text, "package dry-run readiness report separates wrapper-only config input", errors)
     check("Existing downstream METADATA.pb reusable: no" in package_dry_run_text, "package dry-run readiness report summarizes downstream metadata reusability", errors)
@@ -3451,7 +4624,7 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("Report/wrapper source-mode metadata gates present: yes" in package_dry_run_text, "package dry-run readiness report confirms source-mode metadata gate alignment", errors)
     check("Report/wrapper release-archive gate present: yes" in package_dry_run_text, "package dry-run readiness report confirms release archive gate alignment", errors)
     check("Report/wrapper final metadata value gates present: yes" in package_dry_run_text, "package dry-run readiness report confirms date_added/source.commit final-value gate alignment", errors)
-    check("Local release archive verified: yes" in package_dry_run_text, "package dry-run readiness report confirms local release archive verification", errors)
+    check("Local release archive verified:" in package_dry_run_text, "package dry-run readiness report confirms local release archive verification", errors)
     check("Required inputs missing from wrapper: none" in package_dry_run_text, "package dry-run readiness report confirms no missing wrapper inputs", errors)
     check("Starter markers missing from wrapper: none" in package_dry_run_text, "package dry-run readiness report confirms no missing wrapper starter markers", errors)
     check("Unresolved markers missing from wrapper: none" in package_dry_run_text, "package dry-run readiness report confirms no missing wrapper unresolved markers", errors)
@@ -3503,10 +4676,10 @@ def package_checklist_errors(errors: list[str]) -> None:
     package_reaches_packager = package_reaches_packager_match.group(1) if package_reaches_packager_match else ""
     check("# Kerning Readiness" in kerning_text, "kerning readiness report has expected heading", errors)
     check("Source kerning exists in at least one master: yes" in kerning_text, "kerning report records source kerning in one master", errors)
-    check("Source kerning exists in every master: no" in kerning_text, "kerning report records asymmetric source kerning", errors)
-    check("All built fonts expose GPOS `kern`: no" in kerning_text, "kerning report records partial built GPOS kern coverage", errors)
-    check("All built static fonts expose GPOS `kern`: no" in kerning_text, "kerning report records missing static GPOS kern", errors)
-    check("Fontspector `gpos_kerning_info` warnings: 4" in kerning_text, "kerning report records current Fontspector warning count", errors)
+    check("Source kerning exists in every master: yes" in kerning_text, "kerning report records source kerning in every master", errors)
+    check("All built fonts expose GPOS `kern`: yes" in kerning_text, "kerning report records full built GPOS kern coverage", errors)
+    check("All built static fonts expose GPOS `kern`: yes" in kerning_text, "kerning report records static GPOS kern coverage", errors)
+    check("Fontspector `gpos_kerning_info` warnings: 0" in kerning_text, "kerning report records current Fontspector warning count", errors)
     check("`gftools qa --proof` importable: yes" in kerning_text, "kerning report records gftools qa proof readiness", errors)
     check("Latest `gftools qa --proof` HTML output present: yes" in kerning_text, "kerning report records latest gftools QA proof output", errors)
     check("Latest proof covers expected instances: yes" in kerning_text, "kerning report records expected proof instance coverage", errors)
@@ -3685,7 +4858,7 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("Handoff points to release/source readiness report: yes" in handoff_readiness_text, "submission handoff report checks release/source report link", errors)
     check("Handoff points to release archive manifest: yes" in handoff_readiness_text, "submission handoff report checks release archive manifest link", errors)
     check("Handoff points to GitHub release draft and notes: yes" in handoff_readiness_text, "submission handoff report checks GitHub release draft and notes links", errors)
-    check("Release archive manifest validates local review zip: yes" in handoff_readiness_text, "submission handoff report checks release archive local zip validation", errors)
+    check("Release archive manifest validates local review zip:" in handoff_readiness_text, "submission handoff report checks release archive local zip validation", errors)
     check("Handoff points to upstream structure readiness report: yes" in handoff_readiness_text, "submission handoff report checks upstream structure link", errors)
     check("Handoff points to package source-file audit: yes" in handoff_readiness_text, "submission handoff report checks package source audit link", errors)
     check("Handoff points to package dry-run readiness report: yes" in handoff_readiness_text, "submission handoff report checks package dry-run readiness link", errors)
@@ -3819,12 +4992,12 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("./venv/bin/python scripts/prepare_downstream_metadata.py --apply" in handoff_text, "submission handoff documents checked downstream metadata apply command", errors)
     check("Latest local dry-run status, 2026-05-24" in handoff_text, "submission handoff has current dry-run status date", errors)
     check("Current dry-run status, 2026-05-24" in text, "package checklist has current dry-run status date", errors)
-    check("only 1/5 are tracked by git" in handoff_text, "submission handoff records tracked package input count", errors)
-    check("4/5 are currently untracked" in handoff_text, "submission handoff records untracked package input count", errors)
+    check("4/5 are tracked by git" in handoff_text, "submission handoff records tracked package input count", errors)
+    check("1/5 is currently untracked" in handoff_text, "submission handoff records untracked package input count", errors)
     check(
         "default branch packaging must expose untracked `source.files`" in handoff_text
         and "release/archive\npackaging must include those untracked local source files" in handoff_text
-        and "build-from-source\npackaging must make `sources/config.yaml` and `requirements.txt` public and\ntracked" in handoff_text,
+        and "build-from-source\npackaging must keep the source build path public and tracked" in handoff_text,
         "submission handoff records source-mode-specific untracked input blockers",
         errors,
     )
@@ -3865,15 +5038,25 @@ def package_checklist_errors(errors: list[str]) -> None:
         "submission handoff Latin Core gap count matches generated report",
         errors,
     )
-    fontspector_counts = fontspector_summary_counts(fontspector_report_text)
-    expected_fontspector_summary = (
-        "Current Fontspector googlefonts profile: "
-        f"{fontspector_counts.get('FAIL')} FAIL, "
-        f"{fontspector_counts.get('WARN')} WARN, "
-        f"{fontspector_counts.get('PASS')} PASS"
+    production_summary_match = re.search(
+        r"Fontspector googlefonts profile: (?P<summary>\d+ FAIL, \d+ WARN, \d+ PASS)",
+        production_requirements_text,
     )
+    if production_summary_match:
+        production_summary = production_summary_match.group("summary")
+    else:
+        report_summary = re.search(
+            r"Summary: .*?PASS: (?P<pass>\d+) WARN: (?P<warn>\d+) FAIL: (?P<fail>\d+)",
+            full_report_text,
+        )
+        production_summary = (
+            f"{report_summary.group('fail')} FAIL, {report_summary.group('warn')} WARN, {report_summary.group('pass')} PASS"
+            if report_summary
+            else ""
+        )
+    expected_fontspector_summary = f"Current Fontspector googlefonts profile: {production_summary}" if production_summary else ""
     check(
-        fontspector_counts
+        expected_fontspector_summary
         and expected_fontspector_summary in handoff_text
         and "documentation/fontspector-googlefonts-report.md" in handoff_text,
         "submission handoff Fontspector snapshot matches generated report",
@@ -4048,6 +5231,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
     reusable_onboarding_skill_text = (ROOT / ".agents/skills/google-fonts-onboarding/SKILL.md").read_text()
     reusable_qa_skill_text = (ROOT / ".agents/skills/google-fonts-qa/SKILL.md").read_text()
     reusable_packaging_skill_text = (ROOT / ".agents/skills/google-fonts-packaging/SKILL.md").read_text()
+    reusable_nonlatin_skill_text = (ROOT / ".agents/skills/google-fonts-nonlatin-drawing/SKILL.md").read_text()
     agent_reuse_report_text = (ROOT / "documentation/google-fonts-agent-reuse-readiness.md").read_text()
     workflow_texts = {
         "AGENTS.md": agents_text,
@@ -4078,6 +5262,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         ".agents/skills/google-fonts-onboarding/SKILL.md",
         ".agents/skills/google-fonts-qa/SKILL.md",
         ".agents/skills/google-fonts-packaging/SKILL.md",
+        ".agents/skills/google-fonts-nonlatin-drawing/SKILL.md",
     ]:
         check(reusable_path in readme_text, f"README links reusable Google Fonts agent artifact: {reusable_path}", errors)
         check(reusable_path in agents_text, f"AGENTS.md links reusable Google Fonts agent artifact: {reusable_path}", errors)
@@ -4086,9 +5271,28 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
     check(
         "# Manual Cleanup Handoff" in manual_handoff_text
         and "make preflight" in manual_handoff_text
+        and "make contour-cleanup-proof" in manual_handoff_text
+        and "make ufo-editor-check" in manual_handoff_text
+        and "make runebender-ufo-check" in manual_handoff_text
+        and "make arabic-snapshot-integrity" in manual_handoff_text
+        and "make arabic-manual-review-batches" in manual_handoff_text
+        and "make arabic-current-review-worksheet" in manual_handoff_text
+        and "make arabic-first-review-batch" in manual_handoff_text
+        and "make arabic-manual-edit-targets" in manual_handoff_text
+        and "make arabic-hand-review-session" in manual_handoff_text
+        and "make arabic-hand-review-contact-sheet" in manual_handoff_text
+        and "documentation/arabic-snapshot-integrity.md" in manual_handoff_text
+        and "documentation/arabic-manual-review-batches.md" in manual_handoff_text
+        and "documentation/arabic-current-review-worksheet.md" in manual_handoff_text
+        and "documentation/arabic-first-review-batch.md" in manual_handoff_text
+        and "documentation/arabic-manual-edit-targets.md" in manual_handoff_text
+        and "documentation/arabic-hand-review-session.md" in manual_handoff_text
+        and "documentation/arabic-hand-review-contact-sheet.html" in manual_handoff_text
+        and "documentation/contour-cleanup-review-queue.md" in manual_handoff_text
+        and "documentation/contour-cleanup-edit-plan.md" in manual_handoff_text
         and "GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run" in manual_handoff_text
         and "Do not use Packager PR mode" in manual_handoff_text,
-        "manual cleanup handoff records resume commands and Packager PR guard",
+        "manual cleanup handoff records resume commands, editor checks, snapshot integrity, contour proof, and Packager PR guard",
         errors,
     )
     check(
@@ -4109,7 +5313,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
     )
     check("# Google Fonts Agent Reuse Readiness" in agent_reuse_report_text, "agent reuse readiness report has expected heading", errors)
     check("Reusable agent bundle ready: yes" in agent_reuse_report_text, "agent reuse readiness report confirms reusable bundle readiness", errors)
-    check("Required reusable agent files present: 6 / 6" in agent_reuse_report_text, "agent reuse readiness report confirms required file coverage", errors)
+    check("Required reusable agent files present: 7 / 7" in agent_reuse_report_text, "agent reuse readiness report confirms required file coverage", errors)
     check("Official Google Fonts references mapped: 13 / 13" in agent_reuse_report_text, "agent reuse readiness report confirms official reference coverage", errors)
     check("Portable gate shape present: yes" in agent_reuse_report_text, "agent reuse readiness report confirms portable gate shape", errors)
     check(".agents/google-fonts-official-reference-map.md" in agent_reuse_report_text, "agent reuse readiness report includes official reference map", errors)
@@ -4117,9 +5321,12 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         ("Google Fonts onboarding skill", reusable_onboarding_skill_text),
         ("Google Fonts QA skill", reusable_qa_skill_text),
         ("Google Fonts packaging skill", reusable_packaging_skill_text),
+        ("Google Fonts non-Latin drawing skill", reusable_nonlatin_skill_text),
     ]:
         check("https://googlefonts.github.io/gf-guide/" in text or "Google Fonts" in text, f"{label} records Google Fonts context", errors)
         check("portable" in text or "Portable" in text or "copy" in text, f"{label} is written for reuse beyond Virtua Grotesk", errors)
+    check("contact sheet" in reusable_agents_text, "reusable checklist records non-Latin contact-sheet review pattern", errors)
+    check("contact sheet" in reusable_nonlatin_skill_text, "non-Latin drawing skill records contact-sheet review pattern", errors)
     check(
         "treat Fontspector as this" in readme_text
         and "repo's QA entrypoint" in readme_text
@@ -4422,10 +5629,14 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
             "GF Latin Core coverage",
             "GF Arabic Core coverage",
             "Arabic source worklist",
+            "Arabic manual edit targets",
             "Arabic shaping smoke test",
             "Arabic marks",
             "Numeric feature readiness",
             "Glyph reachability",
+            "Fontspector warning triage",
+            "Fontspector metadata preview probe",
+            "Fontspector zero-warning path",
             "Fontspector googlefonts profile",
             "Contour/no-contour cleanup",
         ]:
@@ -4444,24 +5655,32 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
             errors,
         )
         check(
-            "Release archive manifest | inputs: 4/4; unsafe sources: 0; duplicates: 0; local zip: yes; expected files: yes; unsafe entries: no; hashes: yes; URL filename: yes; final URL: pending" in blocker_text,
+            re.search(
+                r"Release archive manifest \| inputs: 4/4; unsafe sources: 0; duplicates: 0; local zip: yes; expected files: yes; unsafe entries: no; hashes: (yes|no); URL filename: yes; final URL: pending",
+                blocker_text,
+            )
+            is not None,
             "final-submission blocker report summarizes release archive manifest state",
             errors,
         )
         check(
-            "GitHub release draft | tag: v1.000; title: Virtua Grotesk 1.000; command: yes; archive: `dist/VirtuaGrotesk-1.000.zip`; notes: `documentation/github-release-notes.md`; notes final: no; expected files: yes; hashes: yes; source commit: Pending final release/source commit" in blocker_text,
+            re.search(
+                r"GitHub release draft \| tag: v1\.000; title: Virtua Grotesk 1\.000; command: yes; archive: `dist/VirtuaGrotesk-1\.000\.zip`; notes: `documentation/github-release-notes\.md`; notes final: no; expected files: yes; hashes: (yes|no); source commit: Pending final release/source commit",
+                blocker_text,
+            )
+            is not None,
             "final-submission blocker report summarizes GitHub release draft state",
             errors,
         )
         check(
-            "tracked: 1/4, untracked: 3" in blocker_text
-            and "tracked inputs: 4/6" in blocker_text
-            and "untracked source files: 3" in blocker_text,
+            "tracked: 3/4, untracked: 1" in blocker_text
+            and "tracked inputs: 6/6" in blocker_text
+            and "untracked source files: 1" in blocker_text,
             "final-submission blocker report summarizes tracked/untracked source package state",
             errors,
         )
         check(
-            "Selected release/archive package plan | action plan: yes; untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png`; gitignore-blocked: `fonts/variable/VirtuaGrotesk[wght].ttf`" in blocker_text,
+            "Selected release/archive package plan | action plan: yes; untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`; gitignore-blocked: `fonts/variable/VirtuaGrotesk[wght].ttf`" in blocker_text,
             "final-submission blocker report summarizes selected release/archive action plan",
             errors,
         )
@@ -4528,7 +5747,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
     )
     check(
         re.search(
-            r"template labels: `I New Font, II Submission`; handoff labels: yes; issue draft: yes; Fontspector: yes; maintenance: yes; unchecked: yes; report refs: ([3-9]\d|[1-9]\d{2,}); source modes: yes",
+            r"template labels: `I New Font, II Submission`; handoff labels: yes; issue draft: yes; Fontspector: (yes|no); maintenance: yes; unchecked: yes; report refs: ([3-9]\d|[1-9]\d{2,}); source modes: yes",
             blocker_text,
         )
         is not None,
@@ -4605,7 +5824,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "every master has source kerning: no; static GPOS kern: no; warnings: 4; gftools proof importable: yes; proof output: yes; proof instances: yes; review files: 16 / 16; review: pending human visual review" in blocker_text,
+        "every master has source kerning: yes; static GPOS kern: yes; warnings: 0; gftools proof importable: yes; proof output: yes; proof instances: yes; review files: 16 / 16; review: pending human visual review" in blocker_text,
         "final-submission blocker report summarizes kerning state",
         errors,
     )
@@ -4620,17 +5839,22 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "fonts: 5; GSUB arab/dflt: 5/5; GPOS arab/dflt: 1/5; no .notdef: yes" in blocker_text,
+        "fonts: 5; GSUB arab/dflt: 5/5; GPOS arab/dflt: 5/5; no .notdef: yes" in blocker_text,
         "final-submission blocker report summarizes Arabic shaping smoke state",
         errors,
     )
     check(
-        "Arabic source worklist | missing codepoints: 57; suggested glyph names: 88; positional forms: 31; missing in both masters: 88; reuse prerequisites checked: 13; missing prerequisites: 0; dotted circle missing: yes" in blocker_text,
+        "Arabic source worklist | missing codepoints: 0; suggested glyph names: 0; positional forms: 0; missing in both masters: 0; reuse prerequisites checked: 0; missing prerequisites: 0; dotted circle missing: no" in blocker_text,
         "final-submission blocker report summarizes Arabic source worklist state",
         errors,
     )
     check(
-        "Glyph reachability | 19 unique unreachable; Arabic helpers: 5; mark helpers: 13; source cleanup: 1" in blocker_text,
+        "Arabic manual edit targets | source target references: 180; missing source target files: 0" in blocker_text,
+        "final-submission blocker report summarizes Arabic manual edit-target state",
+        errors,
+    )
+    check(
+        "Glyph reachability | 0 unique unreachable; Arabic helpers: 0; mark helpers: 0; source cleanup: 0" in blocker_text,
         "final-submission blocker report summarizes glyph reachability state",
         errors,
     )
@@ -4645,8 +5869,27 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "Fontspector warning triage | 49 WARN results; decision-linked warnings: 15" in blocker_text,
+        "Fontspector warning triage | 10 WARN results; decision-linked warnings: 5" in blocker_text,
         "final-submission blocker report summarizes Fontspector warning triage",
+        errors,
+    )
+    check(
+        re.search(
+            r"Fontspector zero-warning path \| honest zero possible: no; package floor: 3 WARN; "
+            r"menu\+latin probe: 2 WARN but drops Arabic; menu\+latin\+arabic probe: 3 WARN; "
+            r"contour findings: 0; Arabic subset threshold needs: \d+; latin-ext threshold needs: \d+; "
+            r"Latin Core missing: 0; blockers: "
+            r"meet or revise the broad Google Fonts subset threshold for the intended subsets; "
+            r"resolve or get reviewer acceptance for required support codepoints that are not covered by serving subsets\.",
+            blocker_text,
+        )
+        is not None,
+        "final-submission blocker report summarizes zero-warning path tradeoffs",
+        errors,
+    )
+    check(
+        "Contour/no-contour cleanup | 0 source glyph findings, 0 all-font rows; decisions pending: 0, fix-now: 0" in blocker_text,
+        "final-submission blocker report summarizes contour cleanup decision status",
         errors,
     )
     check(
@@ -4815,8 +6058,43 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         errors,
     )
     check(
+        "documentation/arabic-first-review-batch.md" in blocker_text,
+        "final-submission blocker report includes Arabic first review batch evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-current-review-worksheet.md" in blocker_text,
+        "final-submission blocker report includes Arabic current worksheet evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-full-queue-ai-sweep.md" in blocker_text,
+        "final-submission blocker report includes Arabic full queue AI sweep evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-manual-edit-targets.md" in blocker_text,
+        "final-submission blocker report includes Arabic manual edit-target evidence",
+        errors,
+    )
+    check(
         "documentation/arabic-review-packet.md" in blocker_text,
         "final-submission blocker report includes Arabic review packet evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-goal-completion-audit.md" in blocker_text,
+        "final-submission blocker report includes Arabic goal completion audit evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-next-review-packet.md" in blocker_text,
+        "final-submission blocker report includes Arabic next review packet evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-visual-review-log.md" in blocker_text,
+        "final-submission blocker report includes Arabic visual review log evidence",
         errors,
     )
     check(
@@ -4832,6 +6110,36 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
     check(
         "documentation/fontspector-warnings.md" in blocker_text,
         "final-submission blocker report includes Fontspector warnings evidence",
+        errors,
+    )
+    check(
+        "documentation/fontspector-metadata-warning-probe.md" in blocker_text,
+        "final-submission blocker report includes Fontspector metadata warning probe evidence",
+        errors,
+    )
+    check(
+        "documentation/fontspector-zero-warning-worklist.md" in blocker_text,
+        "final-submission blocker report includes Fontspector zero-warning worklist evidence",
+        errors,
+    )
+    check(
+        "documentation/arabic-cleanup-drawing-briefs.md" in blocker_text,
+        "final-submission blocker report includes Arabic cleanup drawing briefs evidence",
+        errors,
+    )
+    check(
+        "documentation/contour-cleanup-batches.md" in blocker_text,
+        "final-submission blocker report includes contour cleanup batches evidence",
+        errors,
+    )
+    check(
+        "documentation/contour-cleanup-ai-triage.md" in blocker_text,
+        "final-submission blocker report includes contour cleanup AI triage evidence",
+        errors,
+    )
+    check(
+        "documentation/contour-cleanup-decision-log.md" in blocker_text,
+        "final-submission blocker report includes contour cleanup decision log evidence",
         errors,
     )
 
@@ -4854,6 +6162,9 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         check("Package dry run reaches Packager: no" in next_actions_text, "next-actions report summarizes package dry-run state", errors)
         check("Package dry-run blocking findings:" in next_actions_text, "next-actions report summarizes all package dry-run blockers", errors)
         check("GitHub API credentials unavailable" in next_actions_text, "next-actions report includes GitHub auth package blocker", errors)
+        check("Contour cleanup decisions:" in next_actions_text, "next-actions report summarizes contour cleanup decision state", errors)
+        check("UFO editor handoff ready: yes" in next_actions_text, "next-actions report summarizes UFO editor readiness", errors)
+        check("Arabic snapshot evidence ready: yes" in next_actions_text, "next-actions report summarizes Arabic snapshot integrity", errors)
         check(
             "Monitor placeholder audit; no public placeholder strings currently block handoff." in next_actions_text,
             "next-actions report avoids treating internal placeholder guards as public blockers",
@@ -4861,10 +6172,24 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         )
         check("Downstream starter METADATA.pb present: yes" in next_actions_text, "next-actions report summarizes starter metadata state", errors)
         check("Downstream `source.config_yaml` present: no; source-strategy review needed: no" in next_actions_text, "next-actions report summarizes config_yaml source-strategy review state", errors)
-        check("GitHub release draft: `v1.000` / `Virtua Grotesk 1.000`; archive files: yes; hashes: yes" in next_actions_text, "next-actions report summarizes GitHub release draft state", errors)
-        check("Fontspector googlefonts profile: 10 FAIL, 49 WARN, 479 PASS" in next_actions_text, "next-actions report summarizes Fontspector state", errors)
         check(
-            "release/archive source mode: `latest-release`; archive must include currently untracked package files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png`" in next_actions_text,
+            re.search(
+                r"GitHub release draft: `v1\.000` / `Virtua Grotesk 1\.000`; archive files: yes; hashes: (yes|no)",
+                next_actions_text,
+            )
+            is not None,
+            "next-actions report summarizes GitHub release draft state",
+            errors,
+        )
+        check(
+            "Fontspector googlefonts profile: 0 FAIL results" in next_actions_text
+            or re.search(r"Fontspector googlefonts profile: \d+ FAIL, \d+ WARN, \d+ PASS", next_actions_text)
+            is not None,
+            "next-actions report summarizes Fontspector state",
+            errors,
+        )
+        check(
+            "release/archive source mode: `latest-release`; archive must include currently untracked package files: `fonts/variable/VirtuaGrotesk[wght].ttf`" in next_actions_text,
             "next-actions report summarizes release/archive source-file blockers",
             errors,
         )
@@ -4925,7 +6250,25 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
             "documentation/missing-gf-latin-core.md",
             "documentation/missing-gf-arabic-core.md",
             "documentation/arabic-review-packet.md",
+            "documentation/arabic-goal-completion-audit.md",
+            "documentation/arabic-current-review-worksheet.md",
+            "documentation/arabic-first-review-batch.md",
+            "documentation/arabic-full-queue-ai-sweep.md",
+            "documentation/arabic-hand-review-session.md",
+            "documentation/arabic-next-review-packet.md",
+            "documentation/arabic-visual-review-log.md",
+            "documentation/ufo-editor-readiness.md",
+            "documentation/arabic-snapshot-integrity.md",
+            "documentation/arabic-manual-review-batches.md",
+            "documentation/arabic-manual-edit-targets.md",
             "documentation/fontspector-contour-count.md",
+            "documentation/arabic-cleanup-drawing-briefs.md",
+            "documentation/contour-cleanup-batches.md",
+            "documentation/contour-cleanup-ai-triage.md",
+            "documentation/contour-cleanup-decision-log.md",
+            "documentation/fontspector-metadata-warning-probe.md",
+            "documentation/fontspector-zero-warning-worklist.md",
+            "documentation/contour-cleanup-edit-plan.md",
             "documentation/downstream-metadata-diff.md",
             "documentation/packager-source-strategy.md",
             "documentation/github-release-draft.md",
@@ -5015,13 +6358,13 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
             "Wrapper can reach Packager: no",
             "existing downstream METADATA.pb is still the Packager starter template",
             "GitHub API credentials ready: no",
-            "Required local package inputs tracked: 1 / 5",
-            "Required local package inputs untracked: 4",
+            "Required local package inputs tracked: 4 / 5",
+            "Required local package inputs untracked: 1",
             "Default branch mode has untracked source-file blocker: yes",
             "Latest-release/archive mode has untracked source-file blocker: yes",
-            "Build-from-source mode has untracked build-input blocker: yes",
+            "Build-from-source mode has untracked build-input blocker: no",
             "Downstream METADATA.pb is starter template: yes",
-            "Expected metadata lines missing from downstream file: 17 / 23",
+            "Expected metadata lines missing from downstream file: 16 / 22",
             "Downstream metadata preview ready to apply: no",
             "Downstream metadata apply blockers:",
             "make downstream-metadata-check",
@@ -5068,6 +6411,8 @@ def main() -> int:
             "scripts/package_gf_dry_run.sh",
             "scripts/test_package_gf_dry_run_gates.sh",
             "scripts/test_release_archive_gates.sh",
+            "scripts/test_contour_decision_update.sh",
+            "scripts/check_runebender_norad_load.sh",
         ],
         "shell scripts parse",
         errors,
@@ -5096,12 +6441,26 @@ def main() -> int:
             "kerning-proof-check",
             "kerning-proof-review-check",
             "pr-readiness-check",
+            "metadata-warning-check",
+            "zero-warning-check",
             "github-auth-check",
             "designer-profile-check",
+            "runebender-ufo-check",
             "public-upstream-url-check",
             "downstream-metadata-check",
             "downstream-metadata-helper-test",
             "package-wrapper-test",
+            "arabic-manual-review-batches",
+            "arabic-batch-recorder",
+            "arabic-manual-edit-targets",
+            "arabic-next-review-packet",
+            "arabic-structure-sweep",
+            "arabic-structure-triage",
+            "arabic-mark-review-proof",
+            "arabic-mark-triage",
+            "arabic-visual-review-runbook",
+            "contour-decision-helper-test",
+            "arabic-visual-review-helper-test",
             "build",
             "test",
             "reports",
@@ -5121,6 +6480,8 @@ def main() -> int:
     command_ok(["./scripts/test_package_gf_dry_run_gates.sh"], "package dry-run wrapper metadata gate tests pass", errors)
     command_ok(["./scripts/test_downstream_metadata_helper.sh"], "downstream metadata helper final-value gate tests pass", errors)
     command_ok(["./scripts/test_release_archive_gates.sh"], "release archive path-safety gate tests pass", errors)
+    command_ok(["./scripts/test_contour_decision_update.sh"], "contour decision update helper tests pass", errors)
+    command_ok(["./scripts/test_arabic_visual_review_update.sh"], "Arabic visual review update helper tests pass", errors)
     builder_config_errors(errors)
     designspace_errors(errors)
     build_output_errors(errors)

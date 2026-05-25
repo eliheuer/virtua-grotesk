@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alefbelow-ar" format="2">
-	<unicode hex="0656"/>
+  <advance width="0" />
+  <unicode hex="0656" />
+  <outline>
+    <contour>
+      <point x="-20" y="0" type="line" />
+      <point x="20" y="0" type="line" />
+      <point x="20" y="176" type="line" />
+      <point x="-20" y="176" type="line" />
+    </contour>
+  </outline>
+  <anchor x="0" y="0" name="_bottom" />
+  <anchor x="0" y="-144" name="bottom" />
 </glyph>

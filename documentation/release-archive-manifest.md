@@ -18,10 +18,10 @@ release archive contents.
 - Unsafe `dest_file` paths: 0
 - Duplicate `dest_file` paths: 0
 - Ignored archive inputs: 1
-- Untracked archive inputs: 3
-- Dirty archive inputs: 3
+- Untracked archive inputs: 1
+- Dirty archive inputs: 0
 - Variable font newer than source/build inputs: yes
-- Newest source/build input: `sources/VirtuaGrotesk-Bold.ufo/fontinfo.plist`
+- Newest source/build input: `sources/VirtuaGrotesk-Bold.ufo/glyphs/ogonek.glif`
 - Local release archive: `dist/VirtuaGrotesk-1.000.zip`
 - Preview release archive URL: `https://github.com/eliheuer/virtua-grotesk/releases/download/v1.000/VirtuaGrotesk-1.000.zip`
 - Preview release archive URL is GitHub release download `.zip`: yes
@@ -30,7 +30,7 @@ release archive contents.
 - Local release archive contains expected files: yes
 - Local release archive has extra files: no
 - Local release archive has unsafe paths: no
-- Local release archive hashes match source files: yes
+- Local release archive hashes match source files: no
 - Local release archive metadata deterministic: yes
 - Local release archive SHA-256: `47f70853bcfa606d0c9c8fee8bd4a334c93007fd8a3dc80c8837c9d617233e2a`
 - Suggested final release tag: `v1.000`
@@ -41,10 +41,10 @@ release archive contents.
 
 | Source file | Destination in package | Purpose | Exists | Ignored | Tracked | Dirty | Size bytes | SHA-256 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `OFL.txt` | `OFL.txt` | license | yes | no | yes | yes | 4399 | `98c008294f3e0b098a65f45ca5be5bc119afefcd38b29331874d2193c6cd1236` |
-| `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | served variable font | yes | yes | no | no | 41904 | `c1d82927e9d7f77ac8f131ed53d5d7093b79b2a98c83af8710e142d1a9d8daab` |
-| `documentation/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | article HTML | yes | no | no | yes | 3389 | `492d00133ee66642319b6c64f930e720b8f8d813054d440b69417774548beaff` |
-| `documentation/readme-specimen.png` | `article/readme-specimen.png` | article image | yes | no | no | yes | 434000 | `7b2a4de1a90f5fd5b9f42e5757467a4f5168de2b89b9b29c3a493afd7052429c` |
+| `OFL.txt` | `OFL.txt` | license | yes | no | yes | no | 4399 | `98c008294f3e0b098a65f45ca5be5bc119afefcd38b29331874d2193c6cd1236` |
+| `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | served variable font | yes | yes | no | no | 72984 | `5e46023246dbe4665fa2378001bff4d5facd7de08758a39653b1dab0edc35f1c` |
+| `documentation/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | article HTML | yes | no | yes | no | 3389 | `492d00133ee66642319b6c64f930e720b8f8d813054d440b69417774548beaff` |
+| `documentation/readme-specimen.png` | `article/readme-specimen.png` | article image | yes | no | yes | no | 434000 | `7b2a4de1a90f5fd5b9f42e5757467a4f5168de2b89b9b29c3a493afd7052429c` |
 
 ## Local Release Archive
 
@@ -53,7 +53,7 @@ Run `make release-archive-build` to create `dist/VirtuaGrotesk-1.000.zip` from t
 | Archive entry | Present | Size matches source | SHA-256 matches source | Deterministic metadata |
 | --- | --- | --- | --- | --- |
 | `OFL.txt` | yes | yes | yes | yes |
-| `fonts/variable/VirtuaGrotesk[wght].ttf` | yes | yes | yes | yes |
+| `fonts/variable/VirtuaGrotesk[wght].ttf` | yes | no | no | yes |
 | `documentation/ARTICLE.en_us.html` | yes | yes | yes | yes |
 | `documentation/readme-specimen.png` | yes | yes | yes | yes |
 

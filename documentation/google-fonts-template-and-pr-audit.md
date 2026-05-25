@@ -134,8 +134,9 @@ Virtua Grotesk implications:
   downstream pattern: `source.archive_url` points at a final GitHub release
   download `.zip`, `source.config_yaml` is omitted, and every `source.files`
   entry resolves inside the release archive.
-- Expected subsets remain `arabic`, `latin`, `latin-ext`, and `menu` after
-  coverage is complete.
+- Expected first-submission subsets are `arabic`, `latin`, and `menu` after
+  drawing coverage is complete. Add `latin-ext` only after enough coverage
+  exists to serve that broader subset cleanly.
 - The metadata review needs explicit designer order and designer-profile
   tracking, even for a single-designer project.
 - Treat new-font `tags` as an issue/PR review item, not a `METADATA.pb` field,

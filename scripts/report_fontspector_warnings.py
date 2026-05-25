@@ -42,6 +42,8 @@ DEFAULT_FONT_PATHS = [
     Path("fonts/ttf/VirtuaGrotesk-SemiBold.ttf"),
     Path("fonts/ttf/VirtuaGrotesk-Bold.ttf"),
 ]
+METADATA_WARNING_PROBE = Path("documentation/fontspector-metadata-warning-probe.md")
+ZERO_WARNING_WORKLIST = Path("documentation/fontspector-zero-warning-worklist.md")
 TRIAGE_NOTES = {
     "contour_count": (
         "drawing/source",
@@ -66,7 +68,7 @@ TRIAGE_NOTES = {
     ),
     "mandatory_avar_table": (
         "user decision",
-        "Accept the linear axis without `avar`, or add a non-linear mapping.",
+        "Verify the generated variable font includes the intended identity or non-linear `avar` mapping.",
     ),
     "outline_alignment_miss": (
         "drawing/source",
@@ -117,8 +119,8 @@ DECISION_NOTES = {
     ),
     "mandatory_avar_table": (
         "`avar` strategy",
-        "Accept the intentionally linear `wght` axis without `avar`, or add a "
-        "non-linear axis mapping.",
+        "Verify the generated variable font includes the intended identity or "
+        "non-linear `avar` mapping.",
         "`documentation/google-fonts-decisions.md`",
     ),
     "unreachable_glyphs": (
@@ -233,6 +235,81 @@ def code_summary(records: list[tuple[str, str, str, str]]) -> list[str]:
     return rows
 
 
+def first_line_value(pattern: str, text: str, default: str = "unknown") -> str:
+    match = re.search(pattern, text, flags=re.MULTILINE)
+    return match.group(1).strip() if match else default
+
+
+def package_warning_floor_lines() -> list[str]:
+    probe_path = METADATA_WARNING_PROBE
+    zero_path = ZERO_WARNING_WORKLIST
+    if not probe_path.exists() or not zero_path.exists():
+        return [
+            "## Package-Context Warning Floor",
+            "",
+            (
+                "Package-context warning floor: not available. Run "
+                "`make metadata-warning-check` and `make zero-warning-check` "
+                "after a current build."
+            ),
+            "",
+        ]
+
+    probe_text = probe_path.read_text(encoding="utf-8")
+    zero_text = zero_path.read_text(encoding="utf-8")
+    baseline_rows = re.findall(
+        r"^\| `([^`]+)` \| `([^`]+)` \| (\d+) \|$",
+        probe_text,
+        flags=re.MULTILINE,
+    )
+    floor_count = sum(int(count) for _, _, count in baseline_rows)
+    floor_checks = ", ".join(f"`{check}`: {count}" for check, _, count in baseline_rows) or "none"
+    zero_possible = first_line_value(
+        r"^- Honest zero-warning state possible with current scope: (.+)$",
+        zero_text,
+    )
+    preview_subsets = first_line_value(
+        r"^- Intended package subsets in preview: (.+)$",
+        zero_text,
+    )
+    latin_missing = first_line_value(
+        r"^- GF Latin Core missing codepoints: (.+)$",
+        zero_text,
+    )
+    arabic_missing = first_line_value(
+        r"^- GF Arabic Core missing codepoints: (.+)$",
+        zero_text,
+    )
+    unreachable = re.findall(r"^- `(U\+[0-9A-F]{4,6} [^`]+)`$", probe_text, flags=re.MULTILINE)
+    lines = [
+        "## Package-Context Warning Floor",
+        "",
+        (
+            f"- Package-context warning floor: {floor_count} WARN "
+            f"({floor_checks})"
+        ),
+        f"- Honest zero-warning state possible with current scope: {zero_possible}",
+        f"- Intended package subsets in preview: {preview_subsets}",
+        f"- GF Latin Core missing codepoints: {latin_missing}",
+        f"- GF Arabic Core missing codepoints: {arabic_missing}",
+    ]
+    if unreachable:
+        lines.append(f"- Remaining unreachable support codepoints: {', '.join(f'`{item}`' for item in unreachable)}")
+    lines.extend(
+        [
+            "",
+            (
+                "Use this package-context floor for downstream triage. The loose-font "
+                "count above can repeat the same metadata warning once per generated "
+                "binary, including static fonts that are not planned for the first "
+                "variable-font package."
+            ),
+            "",
+        ]
+    )
+    return lines
+
+
 def decision_rows(records: list[tuple[str, str, str, str]]) -> list[str]:
     by_check: dict[str, list[tuple[str, str, str, str]]] = defaultdict(list)
     for record in records:
@@ -271,7 +348,12 @@ def markdown_report(font_paths: list[Path]) -> str:
         f"Warnings: {len(records)}",
         "",
         "These warnings require design, script-scope, or submission-policy review.",
+        "For subset and reachability warnings, treat this loose-font report as",
+        "directional until the intended downstream `METADATA.pb` is tested in",
+        "package context; see `documentation/fontspector-metadata-warning-probe.md`",
+        "and `documentation/fontspector-zero-warning-worklist.md`.",
         "",
+        *package_warning_floor_lines(),
         "## Triage Summary",
         "",
         *summary_rows(records),
