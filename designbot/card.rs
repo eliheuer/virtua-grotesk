@@ -18,7 +18,7 @@ fn main() {
 
     // Load the font
     renderer.load_font(
-        "../fonts/VirtuaGrotesk-Regular.ttf"
+        "fonts/ttf/VirtuaGrotesk-Regular.ttf"
     ).unwrap();
 
     // Draw grid: 48 cols x 32 rows of 64px squares, covering entire canvas

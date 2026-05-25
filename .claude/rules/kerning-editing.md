@@ -79,4 +79,4 @@ To create Regular kerning from Bold:
 1. Groups must be identical between masters for variable font interpolation
 2. If adding a kern pair to one master, add it to the other too (can be value 0 if no kerning needed)
 3. Don't create circular or conflicting group memberships (one glyph per kern1 group, one per kern2 group)
-4. After editing, verify with `/font-qa --check kerning` or build the font
+4. After editing, run `make preflight` to rebuild, refresh reports, and re-run the local Google Fonts handoff gate

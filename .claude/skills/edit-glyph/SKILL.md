@@ -54,7 +54,7 @@ Multiply all x,y coordinates by a factor. Recalculate advance width.
    - Same number of contours
    - Same number of points per contour
    - Same point types in same order
-3. Suggest: "Run `/build-font variable` to test, or `/font-qa --check masters` to verify compatibility"
+3. Suggest: "Run `make reports-only` to refresh master compatibility, or `make preflight` for a fresh build plus checks"
 
 ## Glyph Name Reference
 Common mappings: `A` → `A_.glif`, `a` → `a.glif`, `period` → `period.glif`, `comma` → `comma.glif`, `space` → `space.glif`, `zero`–`nine` for digits, `exclam`, `question`, `semicolon`, etc.

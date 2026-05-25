@@ -2,12 +2,25 @@
 languagesystem DFLT dflt;
 languagesystem arab dflt;
 
+@GDEF_MARKS = [acutecomb fathatan-ar dammatan-ar kasratan-ar fatha-ar damma-ar kasra-ar shadda-ar sukun-ar madda-ar hamzaabove-ar hamzabelow-ar alefbelow-ar alefabove-ar];
+@FIGURES_PROPORTIONAL = [zero one two three four five six seven eight nine];
+@FIGURES_TABULAR = [zero.tf one.tf two.tf three.tf four.tf five.tf six.tf seven.tf eight.tf nine.tf];
+
+table GDEF {
+	GlyphClassDef , , @GDEF_MARKS, ;
+} GDEF;
+
 feature aalt {
 # automatic
+feature tnum;
 feature init;
 feature medi;
 feature fina;
 } aalt;
+
+feature tnum {
+sub @FIGURES_PROPORTIONAL by @FIGURES_TABULAR;
+} tnum;
 
 feature ccmp {
 # automatic

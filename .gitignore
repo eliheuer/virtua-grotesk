@@ -1,7 +1,20 @@
 # Built fonts - keep out of version control
 fonts/
+dist/
+build/
+documentation/gftools-qa/
+build.ninja
+.ninja_log
+sources/build.ninja
+sources/.ninja_log
+sources/.fontc-build/
+instance_ufo/
+sources/instance_ufos/
+master_ufo/
+venv/
+__pycache__/
+*.py[cod]
 
-# ugghh
 .DS_Store
 
 # Image files
@@ -15,3 +28,8 @@ fonts/
 *.webp
 *.tiff
 *.tif
+!documentation/
+!documentation/*.png
+!documentation/*.jpg
+!documentation/*.jpeg
+!documentation/*.webp

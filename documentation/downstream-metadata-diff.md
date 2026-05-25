@@ -1,0 +1,107 @@
+# Downstream Metadata Diff
+
+This generated report compares the local Packager-created downstream
+`METADATA.pb` with the expected repository preview. It is intentionally
+a review aid only; it does not apply maintainer decisions or edit the
+local `google/fonts` checkout.
+
+## Summary
+
+- Expected preview: `documentation/google-fonts-downstream-package-preview.md`
+- Actual downstream metadata: `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`
+- Actual downstream METADATA.pb present: yes
+- Actual downstream METADATA.pb is starter template: yes
+- Starter-template markers present: 4 / 4
+- Expected metadata lines missing from actual downstream file: 17 / 23
+- Actual downstream `source.config_yaml` present: no
+- Expected preview `source.config_yaml` present: no
+- Expected preview has final `date_added`: no
+- Unexpected starter source mappings: 1
+- Prepare helper source mode: `latest-release`
+- Ready to apply preview via helper: no
+- Prepare helper blocking findings: 3
+- Prepare helper required-line count: 23
+- Diff/helper required-line lists match: yes
+
+## Starter Template Markers
+
+- `designer: "UNKNOWN"`
+- `repository_url: "https://github.com/user/repo"`
+- `fonts/variable/MyFont[wght].ttf`
+- `primary_script: "Deva"`
+
+## Missing Expected Lines
+
+- `filename: "VirtuaGrotesk[wght].ttf"`
+- `post_script_name: "VirtuaGrotesk-Regular"`
+- `full_name: "Virtua Grotesk Regular"`
+- `subsets: "arabic"`
+- `subsets: "latin"`
+- `subsets: "latin-ext"`
+- `tag: "wght"`
+- `min_value: 400.0`
+- `max_value: 700.0`
+- `source_file: "fonts/variable/VirtuaGrotesk[wght].ttf"`
+- `dest_file: "VirtuaGrotesk[wght].ttf"`
+- `source_file: "documentation/ARTICLE.en_us.html"`
+- `dest_file: "article/ARTICLE.en_us.html"`
+- `source_file: "documentation/readme-specimen.png"`
+- `dest_file: "article/readme-specimen.png"`
+- `primary_script: "Arab"`
+- `stroke: "SANS_SERIF"`
+
+## Actual Source Mappings Not In Preview
+
+- `fonts/variable/MyFont[wght].ttf` -> `MyFont[wght].ttf`
+
+## Replacement Readiness Gate
+
+This mirrors the same validation used by `make downstream-metadata-check`.
+It intentionally does not run `--apply` or write to the local
+`google/fonts` checkout.
+
+- Source mode: `latest-release`
+- Ready to apply: no
+- Apply command intentionally not run: yes
+- Check command: `make downstream-metadata-check`
+- Apply command after all blockers clear: `scripts/prepare_downstream_metadata.py --apply`
+
+Blocking findings:
+- blocked marker still present: Pending final
+- required metadata line missing: date_added with final valid "YYYY-MM-DD" Google Fonts date
+- required metadata line missing: source.commit with final 40-character lowercase git hash
+
+## Prepare Helper Alignment
+
+The dry-run/apply helper must reject the same required-line
+regressions this report tracks, otherwise a bad preview could be
+written into the local `google/fonts` fork before the diff report
+flags it.
+
+- Expected lines in diff report: 23
+- Required lines in prepare helper: 23
+- Date-added format validation in prepare helper: yes
+- Source commit hash validation in prepare helper: yes
+- Latest-release archive URL validation in prepare helper: yes
+- Missing from helper: none
+- Extra in helper: none
+- Date-added final requirement: `date_added with final valid "YYYY-MM-DD" Google Fonts date`
+
+## Apply Before Rerunning Packager
+
+- Replace the Packager starter template with the final downstream
+  metadata after the selected release/archive commit, branch,
+  archive, and `date_added` value are settled.
+- First run `make downstream-metadata-check` to validate the preview
+  without writing to the local `google/fonts` checkout.
+- When that dry run reports `Ready to apply: yes`, run
+  `scripts/prepare_downstream_metadata.py --apply` to write
+  `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`.
+- Use `documentation/google-fonts-downstream-package-preview.md` as
+  the expected shape, then rerun `make preflight` so proof evidence
+  and generated reports stay synchronized before
+  `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run`.
+- Keep `source.config_yaml` only when the selected Packager source mode
+  is build-from-source, unless Google Fonts review asks for build metadata.
+- Keep the first rerun as a no-PR dry run until the generated package
+  is reviewed.

@@ -4,6 +4,8 @@
 <dict>
 	<key>A</key>
 	<string>A_.glif</string>
+	<key>Aacute</key>
+	<string>A_acute.glif</string>
 	<key>B</key>
 	<string>B_.glif</string>
 	<key>C</key>
@@ -216,6 +218,8 @@
 	<string>eight.glif</string>
 	<key>eight-ar</key>
 	<string>eight-ar.glif</string>
+	<key>eight.tf</key>
+	<string>eight_tf.glif</string>
 	<key>ellipsis</key>
 	<string>ellipsis.glif</string>
 	<key>emdash</key>
@@ -252,10 +256,14 @@
 	<string>five.glif</string>
 	<key>five-ar</key>
 	<string>five-ar.glif</string>
+	<key>five.tf</key>
+	<string>five_tf.glif</string>
 	<key>four</key>
 	<string>four.glif</string>
 	<key>four-ar</key>
 	<string>four-ar.glif</string>
+	<key>four.tf</key>
+	<string>four_tf.glif</string>
 	<key>g</key>
 	<string>g.glif</string>
 	<key>gafsarkashabove-ar</key>
@@ -396,12 +404,12 @@
 	<string>minus.glif</string>
 	<key>n</key>
 	<string>n.glif</string>
-	<key>newGlyph</key>
-	<string>newG_lyph.glif</string>
 	<key>nine</key>
 	<string>nine.glif</string>
 	<key>nine-ar</key>
 	<string>nine-ar.glif</string>
+	<key>nine.tf</key>
+	<string>nine_tf.glif</string>
 	<key>noon-ar</key>
 	<string>noon-ar.glif</string>
 	<key>noon-ar.fina</key>
@@ -422,6 +430,8 @@
 	<string>one.glif</string>
 	<key>one-ar</key>
 	<string>one-ar.glif</string>
+	<key>one.tf</key>
+	<string>one_tf.glif</string>
 	<key>p</key>
 	<string>p.glif</string>
 	<key>parenleft</key>
@@ -506,6 +516,8 @@
 	<string>seven.glif</string>
 	<key>seven-ar</key>
 	<string>seven-ar.glif</string>
+	<key>seven.tf</key>
+	<string>seven_tf.glif</string>
 	<key>shadda-ar</key>
 	<string>shadda-ar.glif</string>
 	<key>shaddaAlefabove-ar</key>
@@ -534,6 +546,8 @@
 	<string>six.glif</string>
 	<key>six-ar</key>
 	<string>six-ar.glif</string>
+	<key>six.tf</key>
+	<string>six_tf.glif</string>
 	<key>slash</key>
 	<string>slash.glif</string>
 	<key>space</key>
@@ -580,6 +594,8 @@
 	<string>three.glif</string>
 	<key>three-ar</key>
 	<string>three-ar.glif</string>
+	<key>three.tf</key>
+	<string>three_tf.glif</string>
 	<key>threedotsdownabove-ar</key>
 	<string>threedotsdownabove-ar.glif</string>
 	<key>threedotsdownbelow-ar</key>
@@ -594,6 +610,8 @@
 	<string>two.glif</string>
 	<key>two-ar</key>
 	<string>two-ar.glif</string>
+	<key>two.tf</key>
+	<string>two_tf.glif</string>
 	<key>twodotshorizontalabove-ar</key>
 	<string>twodotshorizontalabove-ar.glif</string>
 	<key>twodotshorizontalbelow-ar</key>
@@ -606,6 +624,14 @@
 	<string>u.glif</string>
 	<key>underscore</key>
 	<string>underscore.glif</string>
+	<key>uni00A0</key>
+	<string>uni00A0.glif</string>
+	<key>uni2028</key>
+	<string>uni2028.glif</string>
+	<key>uni2029</key>
+	<string>uni2029.glif</string>
+	<key>uniF000</key>
+	<string>uniF000.glif</string>
 	<key>v</key>
 	<string>v.glif</string>
 	<key>veh-ar</key>
@@ -668,5 +694,7 @@
 	<string>zero.glif</string>
 	<key>zero-ar</key>
 	<string>zero-ar.glif</string>
+	<key>zero.tf</key>
+	<string>zero_tf.glif</string>
 </dict>
 </plist>
