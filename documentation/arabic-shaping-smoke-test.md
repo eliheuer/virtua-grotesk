@@ -7,7 +7,7 @@ This report smoke-tests Arabic layout plumbing in every generated Google Fonts h
 Font: `fonts/variable/VirtuaGrotesk[wght].ttf`
 Has GSUB: `true`
 GSUB features: `aalt, ccmp, fina, init, medi, rlig, tnum`
-GSUB script records: `DFLT: dflt, arab: dflt`
+GSUB script records: `DFLT: dflt, arab: dflt, latn: dflt`
 GSUB has `arab/dflt`: `true`
 GPOS script records: `DFLT: dflt, arab: dflt, latn: dflt`
 GPOS has `arab/dflt`: `true`
@@ -25,10 +25,10 @@ HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 Font: `fonts/ttf/VirtuaGrotesk-Regular.ttf`
 Has GSUB: `true`
 GSUB features: `aalt, ccmp, fina, init, medi, rlig, tnum`
-GSUB script records: `DFLT: dflt, arab: dflt`
+GSUB script records: `DFLT: dflt, arab: dflt, latn: dflt`
 GSUB has `arab/dflt`: `true`
-GPOS script records: `none`
-GPOS has `arab/dflt`: `false`
+GPOS script records: `DFLT: dflt, arab: dflt, latn: dflt`
+GPOS has `arab/dflt`: `true`
 HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 
 | Sample | Text | Shaped glyph sequence | `.notdef` count | Contextual forms expected | Contextual forms present | Lam-alef expected | Lam-alef ligature present |
@@ -43,10 +43,10 @@ HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 Font: `fonts/ttf/VirtuaGrotesk-Medium.ttf`
 Has GSUB: `true`
 GSUB features: `aalt, ccmp, fina, init, medi, rlig, tnum`
-GSUB script records: `DFLT: dflt, arab: dflt`
+GSUB script records: `DFLT: dflt, arab: dflt, latn: dflt`
 GSUB has `arab/dflt`: `true`
-GPOS script records: `none`
-GPOS has `arab/dflt`: `false`
+GPOS script records: `DFLT: dflt, arab: dflt, latn: dflt`
+GPOS has `arab/dflt`: `true`
 HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 
 | Sample | Text | Shaped glyph sequence | `.notdef` count | Contextual forms expected | Contextual forms present | Lam-alef expected | Lam-alef ligature present |
@@ -61,10 +61,10 @@ HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 Font: `fonts/ttf/VirtuaGrotesk-SemiBold.ttf`
 Has GSUB: `true`
 GSUB features: `aalt, ccmp, fina, init, medi, rlig, tnum`
-GSUB script records: `DFLT: dflt, arab: dflt`
+GSUB script records: `DFLT: dflt, arab: dflt, latn: dflt`
 GSUB has `arab/dflt`: `true`
-GPOS script records: `none`
-GPOS has `arab/dflt`: `false`
+GPOS script records: `DFLT: dflt, arab: dflt, latn: dflt`
+GPOS has `arab/dflt`: `true`
 HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 
 | Sample | Text | Shaped glyph sequence | `.notdef` count | Contextual forms expected | Contextual forms present | Lam-alef expected | Lam-alef ligature present |
@@ -79,10 +79,10 @@ HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 Font: `fonts/ttf/VirtuaGrotesk-Bold.ttf`
 Has GSUB: `true`
 GSUB features: `aalt, ccmp, fina, init, medi, rlig, tnum`
-GSUB script records: `DFLT: dflt, arab: dflt`
+GSUB script records: `DFLT: dflt, arab: dflt, latn: dflt`
 GSUB has `arab/dflt`: `true`
-GPOS script records: `none`
-GPOS has `arab/dflt`: `false`
+GPOS script records: `DFLT: dflt, arab: dflt, latn: dflt`
+GPOS has `arab/dflt`: `true`
 HarfBuzz buffer: direction `rtl`, script `Arab`, language `ar`
 
 | Sample | Text | Shaped glyph sequence | `.notdef` count | Contextual forms expected | Contextual forms present | Lam-alef expected | Lam-alef ligature present |

@@ -20,7 +20,8 @@ kept synchronized with that generated draft before pasting into GitHub.
 - Copyright authorship statement: Eli Heuer is the sole copyright
   author/controller for the project as submitted under the OFL
 - AI-use disclosure: AI tools were used for engineering, proofing, onboarding,
-  and repository preparation assistance, not for glyph drawing
+  repository preparation assistance, and rough Arabic candidate drawing
+  scaffolds that still require manual cleanup and final drawing review
 - Version: 1.000
 - Preliminary name check: no obvious conflicting typeface found in quick web search on 2026-05-22; maintainer has confirmed namecheck/trademark/RFN readiness
 - Source format: UFO masters plus `sources/VirtuaGrotesk.designspace`
@@ -28,7 +29,7 @@ kept synchronized with that generated draft before pasting into GitHub.
 - Build command: `make build`
 - Current handoff gate: `make preflight`
 - Final QA gate after drawing: `make test`
-- Current Fontspector googlefonts profile: 10 FAIL, 49 WARN, 479 PASS; see
+- Current Fontspector googlefonts profile: 0 FAIL, 10 WARN, 529 PASS; see
   `documentation/fontspector-googlefonts-report.md`
 - Variable font: `fonts/variable/VirtuaGrotesk[wght].ttf`
 - Static TTFs: `fonts/ttf/`
@@ -76,7 +77,7 @@ monolinear texture.
 
 - [ ] The entire font project is available in a GitHub repository and licensed under the [OFL](https://openfontlicense.org/open-font-license-official-text/).
 - [ ] The source files are available in the repo.
-- [ ] I am the sole copyright author/controller for the project as submitted under the OFL. AI tools were used for engineering, proofing, onboarding, and repository preparation assistance, not for glyph drawing.
+- [ ] I am the sole copyright author/controller for the project as submitted under the OFL. AI tools were used for engineering, proofing, onboarding, repository preparation assistance, and rough Arabic candidate drawing scaffolds that still require manual cleanup and final drawing review.
 - [ ] There are no "Reserved Font Names" in the OFL license information, or in the project documentation of any known upstream projects. If there are RFNs, they are not used in whole or in part in this family name, or this issue should discuss how Google can work with their use.
 - [ ] The family name is unique according to [namecheck.fontdata.com](https://namecheck.fontdata.com/).
 - [ ] The app-menu family name is definitive: `Virtua Grotesk`, and it does not include any copyright holder's full name or acronym.
@@ -132,20 +133,20 @@ First-submission script scope:
 
 Current Arabic Core gaps from the latest generated report:
 
-- Arabic letters: 13
-- Arabic marks: 3
-- Arabic numbers: 10
-- Arabic punctuation and symbols: 3
-- Shared punctuation and symbols: 28
+- Arabic letters: 0
+- Arabic marks: 0
+- Arabic numbers: 0
+- Arabic punctuation and symbols: 0
+- Shared punctuation and symbols: 0
 
 Current Latin Core gap from the latest generated report:
 
-- GF Latin Core missing codepoints: 219
+- GF Latin Core missing codepoints: 0
 
 ## Current blockers before submission
 
-- Complete GF Latin Core coverage.
-- Complete GF Arabic Core coverage.
+- Human-review and clean up the generated Latin Core candidate outlines.
+- Clean the scaffolded Arabic candidate drawings now that GF Arabic Core cmap coverage is present.
 - Resolve Fontspector `contour_count` / `no-contour` findings.
 - Proof Arabic shaping, positional forms, marks, and OpenType layout.
 - Complete Arabic mark positioning readiness: dotted circle, source anchors,
@@ -247,12 +248,11 @@ still the unpopulated Packager starter template. Current generated state:
 `existing downstream METADATA.pb is still the Packager starter template`.
 Current blocking findings:
 `existing downstream METADATA.pb is still the Packager starter template; GitHub API credentials unavailable`.
-Required local package inputs are present, but only 1/5 are tracked by git;
-4/5 are currently untracked. The source-mode dry-run gate also records that
+Required local package inputs are present, and 4/5 are tracked by git;
+1/5 is currently untracked. The source-mode dry-run gate also records that
 default branch packaging must expose untracked `source.files`, release/archive
 packaging must include those untracked local source files, and build-from-source
-packaging must make `sources/config.yaml` and `requirements.txt` public and
-tracked.
+packaging must keep the source build path public and tracked.
 
 Populate that downstream `METADATA.pb` from
 `documentation/google-fonts-downstream-package-preview.md` after the final

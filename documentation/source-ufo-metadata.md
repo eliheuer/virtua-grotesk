@@ -6,8 +6,8 @@ This report records Google Fonts-facing metadata from the active UFO sources. Us
 
 | UFO | Family | Style | Version | Glyphs | features.fea |
 | --- | --- | --- | --- | ---: | --- |
-| `sources/VirtuaGrotesk-Regular.ufo` | Virtua Grotesk | Regular | 1.0 | 347 | yes |
-| `sources/VirtuaGrotesk-Bold.ufo` | Virtua Grotesk | Bold | 1.0 | 347 | yes |
+| `sources/VirtuaGrotesk-Regular.ufo` | Virtua Grotesk | Regular | 1.0 | 682 | yes |
+| `sources/VirtuaGrotesk-Bold.ufo` | Virtua Grotesk | Bold | 1.0 | 682 | yes |
 
 ## Metrics
 

@@ -1,5 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="asterisk-ar" format="2">
-	<unicode hex="066D"/>
-	<advance width="600"/>
+  <advance width="600"/>
+  <unicode hex="066D"/>
+  <outline>
+    <contour>
+      <point x="258" y="232" type="line"/>
+      <point x="342" y="232" type="line"/>
+      <point x="342" y="584" type="line"/>
+      <point x="258" y="584" type="line"/>
+    </contour>
+    <contour>
+      <point x="124" y="342" type="line"/>
+      <point x="476" y="342" type="line"/>
+      <point x="476" y="426" type="line"/>
+      <point x="124" y="426" type="line"/>
+    </contour>
+    <contour>
+      <point x="160" y="244" type="line"/>
+      <point x="212" y="220" type="line"/>
+      <point x="440" y="524" type="line"/>
+      <point x="388" y="548" type="line"/>
+    </contour>
+    <contour>
+      <point x="160" y="524" type="line"/>
+      <point x="388" y="220" type="line"/>
+      <point x="440" y="244" type="line"/>
+      <point x="212" y="548" type="line"/>
+    </contour>
+  </outline>
 </glyph>

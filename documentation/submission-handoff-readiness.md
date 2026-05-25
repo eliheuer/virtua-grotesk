@@ -87,7 +87,7 @@ the issue or downstream package PR.
 - Decision readiness has mapped open questions: yes
 - Upstream structure has all mandatory paths: yes
 - Package source audit validates destination mapping: yes
-- Release archive manifest validates local review zip: yes
+- Release archive manifest validates local review zip: no
 - Downstream metadata preview has expected source block: yes
 - Downstream metadata report validates latest-release archive URL shape: yes
 - Decision log still has open decisions: yes
@@ -100,23 +100,23 @@ the issue or downstream package PR.
 | --- | --- | --- |
 | Add Font labels | `I New Font, II Submission` | yes |
 | version | `1.000` | yes |
-| Fontspector | `10 FAIL, 49 WARN, 479 PASS` | yes |
+| Fontspector | `0 FAIL, 10 WARN, 529 PASS` | yes |
 | package dry-run reaches Packager | `no` | yes |
 | package dry-run first blocker | `existing downstream METADATA.pb is still the Packager starter template` | yes |
 | package dry-run blocking findings | `existing downstream METADATA.pb is still the Packager starter template; GitHub API credentials unavailable` | yes |
-| package inputs tracked | `1 / 5` | yes |
-| package inputs untracked | `4` | yes |
-| GF Latin Core missing | `219` | yes |
+| package inputs tracked | `4 / 5` | yes |
+| package inputs untracked | `1` | yes |
+| GF Latin Core missing | `0` | yes |
 | GF visual kerning proof output | `yes` | yes |
 | GF visual kerning proof HTML files | `16` | yes |
 | GF visual kerning proof instances | `yes` | yes |
 | GF visual proof review packet files | `16 / 16` | yes |
 | GF visual proof review packet instances | `yes` | yes |
-| Arabic letters | `13` | yes |
-| Arabic marks | `3` | yes |
-| Arabic numbers | `10` | yes |
-| Arabic punctuation and symbols | `3` | yes |
-| Shared punctuation and symbols | `28` | yes |
+| Arabic letters | `0` | yes |
+| Arabic marks | `0` | yes |
+| Arabic numbers | `0` | yes |
+| Arabic punctuation and symbols | `0` | yes |
+| Shared punctuation and symbols | `0` | yes |
 
 ## Current Values Expected In Issue Draft
 
@@ -130,15 +130,15 @@ the issue or downstream package PR.
 | requirement checkboxes | `10` | yes |
 | unchecked boxes | `no - [x] entries` | yes |
 | Draft status notes | `10` | yes |
-| GF Latin Core missing | `219` | yes |
-| GF Arabic Core missing | `57` | yes |
+| GF Latin Core missing | `0` | yes |
+| GF Arabic Core missing | `0` | yes |
 | Arabic readiness report references | `review packet, coverage, marks, shaping` | yes |
 | decision-linked warning status | `vendor, kerning, avar, PUA/reachability` | yes |
 | decision-warning report references | `vendor, kerning, avar, PUA, warnings` | yes |
 | GF visual proof review packet | `documentation/kerning-proof-review.md` | yes |
 | downstream metadata apply gate | `ready/apply blockers` | yes |
 | repository maintenance commitment | `maintain the repository` checkbox and status note | yes |
-| Fontspector FAIL count | `10` | yes |
+| Fontspector FAIL count | `0` | yes |
 | image | `documentation/readme-specimen.png` | yes |
 
 ## Required Report References

@@ -28,14 +28,22 @@ def first_int(pattern: str, text: str, default: int = 0) -> int:
 
 def fontspector_counts(report_text: str) -> tuple[int, int, int, int, int]:
     match = re.search(
-        r"### Summary\s*\n\s*\|[^\n]*FAIL[^\n]*\|\s*\n\|[^\n]*\|\s*\n"
-        r"\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|\s*(\d+)\s*\|",
+        r"### Summary\s*\n(?P<header>\|[^\n]*\|)\s*\n\|[^\n]*\|\s*\n(?P<values>\|[^\n]*\|)",
         report_text,
         flags=re.MULTILINE,
     )
     if not match:
         return (0, 0, 0, 0, 0)
-    return tuple(int(value) for value in match.groups())  # type: ignore[return-value]
+    headers = [cell.strip() for cell in match.group("header").strip("|").split("|")]
+    values = [cell.strip() for cell in match.group("values").strip("|").split("|")]
+    counts = dict(zip(headers, values, strict=False))
+    return (
+        int(counts.get("🔥 FAIL", 0)),
+        int(counts.get("⚠️ WARN", 0)),
+        int(counts.get("ℹ️ INFO", 0)),
+        int(counts.get("✅ PASS", 0)),
+        int(counts.get("⏩ SKIP", 0)),
+    )
 
 
 def arabic_category_counts(report_text: str) -> dict[str, int]:
@@ -112,7 +120,7 @@ def markdown_report() -> str:
         for phrase in [
             "public branch must expose untracked source files",
             "release/archive must include untracked local source files",
-            "build-from-source inputs are missing, ignored, or untracked",
+            "keep `source.config_yaml` for build-from-source",
         ]
     )
     open_decisions = len(re.findall(r"^Status: open$", decisions, flags=re.MULTILINE))
@@ -317,9 +325,9 @@ def markdown_report() -> str:
         f"- Handoff mentions GitHub CLI auth refresh: {yes_no('gh auth login -h github.com' in handoff)}",
         f"- Handoff mentions current package dry-run first blocker: {yes_no(bool(dry_run_first_blocker and dry_run_first_blocker in handoff))}",
         f"- Handoff mentions current package dry-run blocking findings: {yes_no(bool(dry_run_blocking_findings and dry_run_blocking_findings in handoff))}",
-        f"- Handoff mentions tracked package input count: {yes_no(bool(dry_run_inputs_tracked and f'only {dry_run_inputs_tracked.replace(' / ', '/')} are tracked by git' in handoff))}",
-        f"- Handoff mentions untracked package input count: {yes_no(bool(dry_run_inputs_untracked and f'{dry_run_inputs_untracked}/5 are currently untracked' in handoff))}",
-        f"- Handoff mentions source-mode untracked input blockers: {yes_no(dry_run_untracked_mode_blockers and 'default branch packaging must expose untracked `source.files`' in handoff and 'release/archive\npackaging must include those untracked local source files' in handoff and 'build-from-source\npackaging must make `sources/config.yaml` and `requirements.txt` public and\ntracked' in handoff)}",
+        f"- Handoff mentions tracked package input count: {yes_no(bool(dry_run_inputs_tracked and f'{dry_run_inputs_tracked.replace(' / ', '/')} are tracked by git' in handoff))}",
+        f"- Handoff mentions untracked package input count: {yes_no(bool(dry_run_inputs_untracked and f'{dry_run_inputs_untracked}/5 is currently untracked' in handoff))}",
+        f"- Handoff mentions source-mode untracked input blockers: {yes_no(dry_run_untracked_mode_blockers and 'default branch packaging must expose untracked `source.files`' in handoff and 'release/archive\npackaging must include those untracked local source files' in handoff and 'build-from-source\npackaging must keep the source build path public and tracked' in handoff)}",
         f"- Handoff mentions downstream metadata check helper: {yes_no('make downstream-metadata-check' in handoff and 'scripts/prepare_downstream_metadata.py --apply' in handoff)}",
         f"- Handoff mentions upstream/source availability blocker: {yes_no('Packager cannot fetch' in handoff and 'branch `main` yet' in handoff)}",
         f"- Handoff mentions prioritized decision packet: {yes_no('prioritized' in handoff and 'question packet' in handoff)}",
@@ -344,8 +352,8 @@ def markdown_report() -> str:
         f"| package dry-run reaches Packager | `{dry_run_can_reach}` | {yes_no(bool(dry_run_can_reach and f'Wrapper can reach Packager: {dry_run_can_reach}' in handoff))} |",
         f"| package dry-run first blocker | `{dry_run_first_blocker}` | {yes_no(bool(dry_run_first_blocker and dry_run_first_blocker in handoff))} |",
         f"| package dry-run blocking findings | `{dry_run_blocking_findings}` | {yes_no(bool(dry_run_blocking_findings and dry_run_blocking_findings in handoff))} |",
-        f"| package inputs tracked | `{dry_run_inputs_tracked}` | {yes_no(bool(dry_run_inputs_tracked and f'only {dry_run_inputs_tracked.replace(' / ', '/')} are tracked by git' in handoff))} |",
-        f"| package inputs untracked | `{dry_run_inputs_untracked}` | {yes_no(bool(dry_run_inputs_untracked and f'{dry_run_inputs_untracked}/5 are currently untracked' in handoff))} |",
+        f"| package inputs tracked | `{dry_run_inputs_tracked}` | {yes_no(bool(dry_run_inputs_tracked and f'{dry_run_inputs_tracked.replace(' / ', '/')} are tracked by git' in handoff))} |",
+        f"| package inputs untracked | `{dry_run_inputs_untracked}` | {yes_no(bool(dry_run_inputs_untracked and f'{dry_run_inputs_untracked}/5 is currently untracked' in handoff))} |",
         f"| GF Latin Core missing | `{latin_missing}` | {yes_no(f'GF Latin Core missing codepoints: {latin_missing}' in handoff)} |",
         f"| GF visual kerning proof output | `{kerning_proof_output}` | {yes_no(bool(kerning_proof_output and 'documentation/kerning-readiness.md' in handoff))} |",
         f"| GF visual kerning proof HTML files | `{kerning_proof_html_count}` | {yes_no(bool(kerning_proof_html_count and 'documentation/kerning-readiness.md' in handoff))} |",

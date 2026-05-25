@@ -18,12 +18,14 @@ AGENT_FILES = [
     ".agents/skills/google-fonts-onboarding/SKILL.md",
     ".agents/skills/google-fonts-qa/SKILL.md",
     ".agents/skills/google-fonts-packaging/SKILL.md",
+    ".agents/skills/google-fonts-nonlatin-drawing/SKILL.md",
 ]
 
 SKILL_FILES = [
     ".agents/skills/google-fonts-onboarding/SKILL.md",
     ".agents/skills/google-fonts-qa/SKILL.md",
     ".agents/skills/google-fonts-packaging/SKILL.md",
+    ".agents/skills/google-fonts-nonlatin-drawing/SKILL.md",
 ]
 
 OFFICIAL_REFERENCE_URLS = [
@@ -146,7 +148,7 @@ def markdown_report() -> str:
             "## Copy Guidance",
             "",
             "- Copy `.agents/README.md`, `.agents/google-fonts-onboarding-checklists.md`,",
-            "  `.agents/google-fonts-official-reference-map.md`, and the three",
+            "  `.agents/google-fonts-official-reference-map.md`, and the",
             "  `.agents/skills/google-fonts-*` skill directories first.",
             "- Replace family names, source paths, axis data, downstream directory,",
             "  designer identity, script scope, and source package strategy before",
@@ -177,4 +179,3 @@ def main(argv: list[str]) -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main(sys.argv))
-

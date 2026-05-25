@@ -9,5 +9,6 @@ For Google Fonts onboarding, start with:
 - `skills/google-fonts-onboarding/SKILL.md`
 - `skills/google-fonts-qa/SKILL.md`
 - `skills/google-fonts-packaging/SKILL.md`
+- `skills/google-fonts-nonlatin-drawing/SKILL.md`
 - `google-fonts-onboarding-checklists.md`
 - `google-fonts-official-reference-map.md`

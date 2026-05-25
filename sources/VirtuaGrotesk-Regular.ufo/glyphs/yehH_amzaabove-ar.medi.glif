@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yehHamzaabove-ar.medi" format="2">
-	<advance width="600"/>
+	<advance width="600" />
+	<outline>
+		<contour>
+			<point x="-24" y="128" type="line" />
+			<point x="624" y="128" type="line" />
+			<point x="624" y="184" type="line" />
+			<point x="-24" y="184" type="line" />
+		</contour>
+		<contour>
+			<point x="96" y="176" type="line" />
+			<point x="176" y="128" type="line" />
+			<point x="416" y="128" type="line" />
+			<point x="496" y="196" type="line" />
+			<point x="456" y="264" type="line" />
+			<point x="208" y="264" type="line" />
+		</contour>
+		<contour>
+			<point x="220" y="536" type="line" />
+			<point x="364" y="536" type="line" />
+			<point x="380" y="552" type="line" />
+			<point x="380" y="584" type="line" />
+			<point x="364" y="600" type="line" />
+			<point x="316" y="600" type="line" />
+			<point x="292" y="600" type="line" />
+			<point x="276" y="616" type="line" />
+			<point x="276" y="640" type="line" />
+			<point x="372" y="640" type="line" />
+			<point x="388" y="656" type="line" />
+			<point x="388" y="688" type="line" />
+			<point x="372" y="704" type="line" />
+			<point x="252" y="704" type="line" />
+			<point x="204" y="672" type="line" />
+			<point x="204" y="624" type="line" />
+			<point x="244" y="592" type="line" />
+			<point x="220" y="592" type="line" />
+		</contour>
+	</outline>
 </glyph>

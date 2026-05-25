@@ -12,7 +12,7 @@ local `google/fonts` checkout.
 - Actual downstream METADATA.pb present: yes
 - Actual downstream METADATA.pb is starter template: yes
 - Starter-template markers present: 4 / 4
-- Expected metadata lines missing from actual downstream file: 17 / 23
+- Expected metadata lines missing from actual downstream file: 16 / 22
 - Actual downstream `source.config_yaml` present: no
 - Expected preview `source.config_yaml` present: no
 - Expected preview has final `date_added`: no
@@ -20,7 +20,7 @@ local `google/fonts` checkout.
 - Prepare helper source mode: `latest-release`
 - Ready to apply preview via helper: no
 - Prepare helper blocking findings: 3
-- Prepare helper required-line count: 23
+- Prepare helper required-line count: 22
 - Diff/helper required-line lists match: yes
 
 ## Starter Template Markers
@@ -37,7 +37,6 @@ local `google/fonts` checkout.
 - `full_name: "Virtua Grotesk Regular"`
 - `subsets: "arabic"`
 - `subsets: "latin"`
-- `subsets: "latin-ext"`
 - `tag: "wght"`
 - `min_value: 400.0`
 - `max_value: 700.0`
@@ -78,8 +77,8 @@ regressions this report tracks, otherwise a bad preview could be
 written into the local `google/fonts` fork before the diff report
 flags it.
 
-- Expected lines in diff report: 23
-- Required lines in prepare helper: 23
+- Expected lines in diff report: 22
+- Required lines in prepare helper: 22
 - Date-added format validation in prepare helper: yes
 - Source commit hash validation in prepare helper: yes
 - Latest-release archive URL validation in prepare helper: yes

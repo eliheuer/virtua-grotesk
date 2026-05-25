@@ -9,24 +9,24 @@ tasks visible in one place.
 
 - Minimum target: `GF_Arabic_Core`
 - Required codepoints: 224
-- Missing codepoints: 57
-- GF Arabic Core coverage row: `167 / 224 present; 57 missing; 68.52% coverage`
-- Missing Arabic letters: 13
-- Missing Arabic marks: 3
-- Missing Arabic numbers: 10
-- Missing Arabic punctuation/symbols: 3
-- Missing shared punctuation/symbols: 28
-- Suggested source glyph names: 88
-- Suggested Arabic source glyph names: 60
-- Suggested shared punctuation/symbol glyph names: 28
-- Suggested Arabic positional-form glyph names: 31
-- Suggested glyph names missing in both masters: 88
-- Required mark glyphs present: 13 / 16
-- U+25CC dotted circle present: no
-- Source anchors present: no
-- Built mark/mkmk GPOS features present: no
+- Missing codepoints: 0
+- GF Arabic Core coverage row: `224 / 224 present; 0 missing; 100.00% coverage`
+- Missing Arabic letters: 0
+- Missing Arabic marks: 0
+- Missing Arabic numbers: 0
+- Missing Arabic punctuation/symbols: 0
+- Missing shared punctuation/symbols: 0
+- Suggested source glyph names: 0
+- Suggested Arabic source glyph names: 0
+- Suggested shared punctuation/symbol glyph names: 0
+- Suggested Arabic positional-form glyph names: 0
+- Suggested glyph names missing in both masters: 0
+- Required mark glyphs present: 16 / 16
+- U+25CC dotted circle present: yes
+- Source anchors present: yes
+- Built mark/mkmk GPOS features present: yes
 - Arabic GSUB smoke pass: 5 / 5 fonts
-- Arabic GPOS smoke pass: 1 / 5 fonts
+- Arabic GPOS smoke pass: 5 / 5 fonts
 - Smoke strings shape without .notdef: yes
 - Lam-alef smoke rows passing: 10
 - Metadata script record present: yes
@@ -38,16 +38,16 @@ tasks visible in one place.
 - Compared examples with `primary_script: "Arab"`: 9 / 9
 - Compared non-Noto Arabic examples omit `languages`: yes
 - Compared non-Noto Arabic examples omit `sample_text`: yes
-- Fontspector dotted_circle warning present: yes
-- Fontspector soft_dotted warning present: yes
-- Unreachable Arabic helper/form glyphs: 5
-- Unreachable Arabic mark helper glyphs: 13
+- Fontspector dotted_circle warning present: no
+- Fontspector soft_dotted warning present: no
+- Unreachable Arabic helper/form glyphs: 0
+- Unreachable Arabic mark helper glyphs: 0
 
 ## Drawing And Source Work Buckets
 
-1. Draw 28 shared punctuation and symbol glyphs also needed by Latin Core.
+1. Draw 0 shared punctuation and symbol glyphs also needed by Latin Core.
 2. Draw Extended Arabic-Indic digits U+06F0-U+06F9.
-3. Draw Urdu/Persian joining letters and 31 required positional-form glyph names.
+3. Draw Urdu/Persian joining letters and 0 required positional-form glyph names.
 4. Add missing Arabic marks and U+25CC dotted circle.
 5. Add source anchors and compile mark/mkmk GPOS features.
 6. Resolve or intentionally remove unreachable Arabic helper and mark helper glyphs.

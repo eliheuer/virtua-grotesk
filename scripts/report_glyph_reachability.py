@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Report glyphs that are not reachable by cmap or GSUB output."""
+"""Report glyphs that are not reachable by cmap, GSUB output, or components."""
 
 from __future__ import annotations
 
@@ -58,14 +58,40 @@ def glyph_category(glyph_name: str) -> str:
     return "source cleanup"
 
 
-def font_reachability(font_path: Path) -> tuple[set[str], set[str], list[str]]:
+def component_closure(font: TTFont, seed_glyphs: set[str]) -> set[str]:
+    if "glyf" not in font:
+        return set()
+    glyph_order = set(font.getGlyphOrder())
+    glyf = font["glyf"]
+    reachable_components: set[str] = set()
+    pending = [glyph for glyph in seed_glyphs if glyph in glyph_order]
+    seen = set(pending)
+
+    while pending:
+        glyph_name = pending.pop()
+        glyph = glyf[glyph_name]
+        if not glyph.isComposite():
+            continue
+        for component in glyph.components:
+            component_name = component.glyphName
+            if component_name in reachable_components:
+                continue
+            reachable_components.add(component_name)
+            if component_name not in seen and component_name in glyph_order:
+                seen.add(component_name)
+                pending.append(component_name)
+    return reachable_components
+
+
+def font_reachability(font_path: Path) -> tuple[set[str], set[str], set[str], list[str]]:
     font = TTFont(font_path)
     try:
         cmap_glyphs = set(font.getBestCmap().values())
         gsub_glyphs = gsub_output_glyphs(font)
-        reachable = cmap_glyphs | gsub_glyphs | {".notdef"}
+        component_glyphs = component_closure(font, cmap_glyphs | gsub_glyphs | {".notdef"})
+        reachable = cmap_glyphs | gsub_glyphs | component_glyphs | {".notdef"}
         unreachable = [glyph for glyph in font.getGlyphOrder() if glyph not in reachable]
-        return cmap_glyphs, gsub_glyphs, unreachable
+        return cmap_glyphs, gsub_glyphs, component_glyphs, unreachable
     finally:
         font.close()
 
@@ -73,13 +99,15 @@ def font_reachability(font_path: Path) -> tuple[set[str], set[str], list[str]]:
 def markdown_report(font_paths: list[Path]) -> str:
     rows: list[str] = []
     all_unreachable: set[str] = set()
+    all_component_glyphs: set[str] = set()
     category_counts: Counter[str] = Counter()
     unique_category_counts: Counter[str] = Counter()
     per_font_counts: dict[str, tuple[int, int, int]] = {}
     glyph_to_fonts: dict[str, list[str]] = defaultdict(list)
 
     for font_path in font_paths:
-        cmap_glyphs, gsub_glyphs, unreachable = font_reachability(font_path)
+        cmap_glyphs, gsub_glyphs, component_glyphs, unreachable = font_reachability(font_path)
+        all_component_glyphs.update(component_glyphs)
         per_font_counts[str(font_path)] = (len(cmap_glyphs), len(gsub_glyphs), len(unreachable))
         for glyph_name in unreachable:
             all_unreachable.add(glyph_name)
@@ -93,8 +121,9 @@ def markdown_report(font_paths: list[Path]) -> str:
         "# Glyph Reachability",
         "",
         "This generated report checks which built glyphs are not reachable from",
-        "Unicode cmap entries or direct GSUB substitution outputs. It complements",
-        "Fontspector's `unreachable_glyphs` and",
+        "Unicode cmap entries, direct GSUB substitution outputs, or component",
+        "references from those glyphs. It complements Fontspector's",
+        "`unreachable_glyphs` and",
         "`googlefonts/metadata/unreachable_subsetting` warnings so Arabic helper",
         "glyphs, private-use glyphs, and final feature coverage can be reviewed",
         "deliberately before downstream packaging.",
@@ -106,6 +135,7 @@ def markdown_report(font_paths: list[Path]) -> str:
         f"- Unique Arabic helper/form glyphs: {unique_category_counts.get('Arabic helper/form', 0)}",
         f"- Unique Arabic mark helper glyphs: {unique_category_counts.get('Arabic mark helper', 0)}",
         f"- Unique source cleanup glyphs: {unique_category_counts.get('source cleanup', 0)}",
+        f"- Unique component-reachable glyphs: {len(all_component_glyphs)}",
         "- Fontspector warning linkage: `unreachable_glyphs`,",
         "  `googlefonts/metadata/unreachable_subsetting`",
         "",

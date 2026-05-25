@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alefabove-ar" format="2">
-	<unicode hex="0670"/>
+  <advance width="0" />
+  <unicode hex="0670" />
+  <outline>
+    <contour>
+      <point x="-20" y="0" type="line" />
+      <point x="20" y="0" type="line" />
+      <point x="20" y="176" type="line" />
+      <point x="-20" y="176" type="line" />
+    </contour>
+  </outline>
+  <anchor x="0" y="576" name="_top" />
+  <anchor x="0" y="720" name="top" />
 </glyph>

@@ -24,9 +24,9 @@ source-feature, and maintainer-decision blockers.
 - `tnum` substitutes all ten ASCII digits in every built font: yes
 - `tnum` substitutes to equal-width digits in every built font: yes
 - Numeric feature requirement ready: yes
-- GF Latin Core missing codepoints: 219
-- GF Arabic Core missing codepoints: 57
-- Fontspector googlefonts profile: 10 FAIL, 49 WARN, 479 PASS
+- GF Latin Core missing codepoints: 0
+- GF Arabic Core missing codepoints: 0
+- Fontspector googlefonts profile: 0 FAIL, 10 WARN, 529 PASS
 - Open maintainer decisions: 2
 - Decided maintainer decisions: 13
 - Open decision names: Private-use icon block, Kerning
@@ -48,7 +48,7 @@ source-feature, and maintainer-decision blockers.
 - Axis tags: `wght`
 - `wght` min/default/max: 400/400/700
 - `fvar` instances: Regular 400, Medium 500, SemiBold 600, Bold 700
-- `avar` present: no
+- `avar` present: yes
 
 ## Outstanding Requirement Buckets
 

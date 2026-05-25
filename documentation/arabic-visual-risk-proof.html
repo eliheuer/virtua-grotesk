@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Virtua Grotesk Arabic Visual Risk Proof</title>
+<style>
+@font-face { font-family: 'VirtuaRiskVariable'; src: url('../fonts/variable/VirtuaGrotesk[wght].ttf') format('truetype'); font-weight: 400 700; font-style: normal; font-display: block;}
+@font-face { font-family: 'VirtuaRiskRegular'; src: url('../fonts/ttf/VirtuaGrotesk-Regular.ttf') format('truetype'); font-weight: 400 700; font-style: normal; font-display: block;}
+@font-face { font-family: 'VirtuaRiskMedium'; src: url('../fonts/ttf/VirtuaGrotesk-Medium.ttf') format('truetype'); font-weight: 400 700; font-style: normal; font-display: block;}
+@font-face { font-family: 'VirtuaRiskSemiBold'; src: url('../fonts/ttf/VirtuaGrotesk-SemiBold.ttf') format('truetype'); font-weight: 400 700; font-style: normal; font-display: block;}
+@font-face { font-family: 'VirtuaRiskBold'; src: url('../fonts/ttf/VirtuaGrotesk-Bold.ttf') format('truetype'); font-weight: 400 700; font-style: normal; font-display: block;}
+:root {
+  color-scheme: light;
+  --ink: #171717;
+  --muted: #666;
+  --line: #d7d7d7;
+  --paper: #fff;
+  --note: #f6f1df;
+}
+body {
+  margin: 0;
+  background: #f3f3f0;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.4;
+}
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+}
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 650;
+}
+.summary {
+  margin: 0 0 24px;
+  max-width: 780px;
+  color: var(--muted);
+}
+.card {
+  margin: 0 0 28px;
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+h4 {
+  margin: 18px 0 8px;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 12px;
+  font-size: 13px;
+}
+th, td {
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  padding: 6px 8px;
+  vertical-align: top;
+}
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+}
+.sample-cell {
+  min-height: 112px;
+  border: 1px solid var(--line);
+  background:
+    linear-gradient(to bottom, transparent 47%, #e2e2dd 47%, #e2e2dd 48%, transparent 48%),
+    var(--paper);
+  overflow: hidden;
+}
+.sample-label {
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+.sample-text {
+  height: 76px;
+  padding: 2px 12px 0;
+  font-size: 56px;
+  line-height: 76px;
+  white-space: nowrap;
+  text-align: center;
+}
+.note {
+  margin: 0 0 22px;
+  padding: 10px 12px;
+  background: var(--note);
+  border: 1px solid #ded5b0;
+  border-radius: 6px;
+  font-size: 14px;
+}
+</style>
+</head>
+<body>
+<main>
+<h1>Arabic Visual Risk Proof</h1>
+<p class="summary">Risk rows: 20. Unique codepoints: 4 (U+062B, U+0633, U+0634, U+0648). Review sidebearings in isolated and shaped RTL contexts before editing.</p>
+<p class="note">This proof is generated from <code>documentation/arabic-visual-risk-audit.md</code>. It is a fast triage aid for sidebearing and spacing review, not a substitute for the full Google Fonts proof or native-reader review.</p>
+<article class='card'><h2>U+062B ARABIC LETTER THEH</h2><table><thead><tr><th>Font</th><th>Glyph</th><th>Advance</th><th>Bounds</th><th>Risk</th></tr></thead><tbody><tr><td>fonts/variable/VirtuaGrotesk[wght].ttf</td><td>uni062B</td><td>600</td><td>-224, 112, 536, 1024</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Regular.ttf</td><td>uni062B</td><td>600</td><td>-224, 112, 536, 1024</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Medium.ttf</td><td>uni062B</td><td>600</td><td>-224, 112, 536, 1024</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</td><td>uni062B</td><td>600</td><td>-224, 112, 536, 1024</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Bold.ttf</td><td>uni062B</td><td>600</td><td>-224, 112, 536, 1024</td><td>`large-negative-left-sidebearing`</td></tr></tbody></table><section class='font-row'><h4>Variable</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">ث</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">ثثث</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">اثا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">بثب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">سثس</div></div></div></section><section class='font-row'><h4>Regular</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">ث</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">ثثث</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">اثا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">بثب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">سثس</div></div></div></section><section class='font-row'><h4>Medium</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">ث</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">ثثث</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">اثا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">بثب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">سثس</div></div></div></section><section class='font-row'><h4>SemiBold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">ث</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">ثثث</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">اثا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">بثب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">سثس</div></div></div></section><section class='font-row'><h4>Bold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">ث</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">ثثث</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">اثا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">بثب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">سثس</div></div></div></section></article>
+<article class='card'><h2>U+0633 ARABIC LETTER SEEN</h2><table><thead><tr><th>Font</th><th>Glyph</th><th>Advance</th><th>Bounds</th><th>Risk</th></tr></thead><tbody><tr><td>fonts/variable/VirtuaGrotesk[wght].ttf</td><td>uni0633</td><td>864</td><td>-368, -296, 768, 432</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Regular.ttf</td><td>uni0633</td><td>864</td><td>-368, -296, 768, 432</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Medium.ttf</td><td>uni0633</td><td>864</td><td>-368, -296, 768, 432</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</td><td>uni0633</td><td>864</td><td>-368, -296, 768, 432</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Bold.ttf</td><td>uni0633</td><td>864</td><td>-368, -296, 768, 432</td><td>`large-negative-left-sidebearing`</td></tr></tbody></table><section class='font-row'><h4>Variable</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">س</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">سسس</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">اسا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">بسب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">سسس</div></div></div></section><section class='font-row'><h4>Regular</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">س</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">سسس</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">اسا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">بسب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">سسس</div></div></div></section><section class='font-row'><h4>Medium</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">س</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">سسس</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">اسا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">بسب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">سسس</div></div></div></section><section class='font-row'><h4>SemiBold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">س</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">سسس</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">اسا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">بسب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">سسس</div></div></div></section><section class='font-row'><h4>Bold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">س</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">سسس</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">اسا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">بسب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">سسس</div></div></div></section></article>
+<article class='card'><h2>U+0634 ARABIC LETTER SHEEN</h2><table><thead><tr><th>Font</th><th>Glyph</th><th>Advance</th><th>Bounds</th><th>Risk</th></tr></thead><tbody><tr><td>fonts/variable/VirtuaGrotesk[wght].ttf</td><td>uni0634</td><td>864</td><td>-368, -296, 768, 880</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Regular.ttf</td><td>uni0634</td><td>864</td><td>-368, -296, 768, 880</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Medium.ttf</td><td>uni0634</td><td>864</td><td>-368, -296, 768, 880</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</td><td>uni0634</td><td>864</td><td>-368, -296, 768, 880</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Bold.ttf</td><td>uni0634</td><td>864</td><td>-368, -296, 768, 880</td><td>`large-negative-left-sidebearing`</td></tr></tbody></table><section class='font-row'><h4>Variable</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">ش</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">ششش</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">اشا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">بشب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">سشس</div></div></div></section><section class='font-row'><h4>Regular</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">ش</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">ششش</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">اشا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">بشب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">سشس</div></div></div></section><section class='font-row'><h4>Medium</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">ش</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">ششش</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">اشا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">بشب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">سشس</div></div></div></section><section class='font-row'><h4>SemiBold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">ش</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">ششش</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">اشا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">بشب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">سشس</div></div></div></section><section class='font-row'><h4>Bold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">ش</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">ششش</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">اشا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">بشب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">سشس</div></div></div></section></article>
+<article class='card'><h2>U+0648 ARABIC LETTER WAW</h2><table><thead><tr><th>Font</th><th>Glyph</th><th>Advance</th><th>Bounds</th><th>Risk</th></tr></thead><tbody><tr><td>fonts/variable/VirtuaGrotesk[wght].ttf</td><td>uni0648</td><td>570</td><td>-128, -256, 538, 408</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Regular.ttf</td><td>uni0648</td><td>570</td><td>-128, -256, 538, 408</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Medium.ttf</td><td>uni0648</td><td>570</td><td>-128, -256, 538, 408</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-SemiBold.ttf</td><td>uni0648</td><td>570</td><td>-128, -256, 538, 408</td><td>`large-negative-left-sidebearing`</td></tr>
+<tr><td>fonts/ttf/VirtuaGrotesk-Bold.ttf</td><td>uni0648</td><td>570</td><td>-128, -256, 538, 408</td><td>`large-negative-left-sidebearing`</td></tr></tbody></table><section class='font-row'><h4>Variable</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">و</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">ووو</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">اوا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">بوب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskVariable'">سوس</div></div></div></section><section class='font-row'><h4>Regular</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">و</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">ووو</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">اوا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">بوب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskRegular'">سوس</div></div></div></section><section class='font-row'><h4>Medium</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">و</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">ووو</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">اوا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">بوب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskMedium'">سوس</div></div></div></section><section class='font-row'><h4>SemiBold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">و</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">ووو</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">اوا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">بوب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskSemiBold'">سوس</div></div></div></section><section class='font-row'><h4>Bold</h4><div class='sample-grid'><div class='sample-cell'><div class='sample-label'>isolated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">و</div></div><div class='sample-cell'><div class='sample-label'>repeated</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">ووو</div></div><div class='sample-cell'><div class='sample-label'>right-join context</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">اوا</div></div><div class='sample-cell'><div class='sample-label'>joining texture</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">بوب</div></div><div class='sample-cell'><div class='sample-label'>word rhythm</div><div class='sample-text' dir='rtl' lang='ar' style="font-family: 'VirtuaRiskBold'">سوس</div></div></div></section></article>
+</main>
+</body>
+</html>

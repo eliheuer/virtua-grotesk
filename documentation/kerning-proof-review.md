@@ -18,21 +18,21 @@ reviewed after `make kerning-proof-check`.
 
 | Instance | Proof type | Present | Size | Review focus |
 | --- | --- | --- | --- | --- |
-| Regular | `glyphs` | yes | 14855 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
+| Regular | `glyphs` | yes | 18051 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
 | Regular | `proofer` | yes | 28518 bytes | tight/loose pairs, sidebearing rhythm, and weight-specific spacing |
-| Regular | `text` | yes | 9480 bytes | texture breaks, script fallback, and awkward repeated patterns |
+| Regular | `text` | yes | 9895 bytes | texture breaks, script fallback, and awkward repeated patterns |
 | Regular | `waterfall` | yes | 9872 bytes | size-specific spacing, weight balance, and interpolation jumps |
-| Medium | `glyphs` | yes | 14852 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
+| Medium | `glyphs` | yes | 18048 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
 | Medium | `proofer` | yes | 28440 bytes | tight/loose pairs, sidebearing rhythm, and weight-specific spacing |
-| Medium | `text` | yes | 9477 bytes | texture breaks, script fallback, and awkward repeated patterns |
+| Medium | `text` | yes | 9892 bytes | texture breaks, script fallback, and awkward repeated patterns |
 | Medium | `waterfall` | yes | 9851 bytes | size-specific spacing, weight balance, and interpolation jumps |
-| SemiBold | `glyphs` | yes | 14858 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
+| SemiBold | `glyphs` | yes | 18054 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
 | SemiBold | `proofer` | yes | 28596 bytes | tight/loose pairs, sidebearing rhythm, and weight-specific spacing |
-| SemiBold | `text` | yes | 9483 bytes | texture breaks, script fallback, and awkward repeated patterns |
+| SemiBold | `text` | yes | 9898 bytes | texture breaks, script fallback, and awkward repeated patterns |
 | SemiBold | `waterfall` | yes | 9893 bytes | size-specific spacing, weight balance, and interpolation jumps |
-| Bold | `glyphs` | yes | 14846 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
+| Bold | `glyphs` | yes | 18042 bytes | missing, blank, malformed, clipped, or wrong-codepoint glyphs |
 | Bold | `proofer` | yes | 28284 bytes | tight/loose pairs, sidebearing rhythm, and weight-specific spacing |
-| Bold | `text` | yes | 9471 bytes | texture breaks, script fallback, and awkward repeated patterns |
+| Bold | `text` | yes | 9886 bytes | texture breaks, script fallback, and awkward repeated patterns |
 | Bold | `waterfall` | yes | 9809 bytes | size-specific spacing, weight balance, and interpolation jumps |
 
 ## Review Checklist

@@ -104,6 +104,8 @@ def markdown_report() -> str:
     packager_strategy = read_text("documentation/packager-source-strategy.md")
     github_release = read_text("documentation/github-release-draft.md")
     arabic_review = read_text("documentation/arabic-review-packet.md")
+    ufo_editor = read_text("documentation/ufo-editor-readiness.md")
+    arabic_snapshot_integrity = read_text("documentation/arabic-snapshot-integrity.md")
     fontspector = read_text("documentation/fontspector-googlefonts-report.md")
     local_workflow = read_text("documentation/local-workflow-readiness.md")
 
@@ -151,6 +153,9 @@ def markdown_report() -> str:
         f"- Downstream `source.config_yaml` present: {config_yaml_present}; source-strategy review needed: {config_yaml_review}",
         f"- GitHub release draft: `{release_tag}` / `{release_title}`; archive files: {release_archive_ready}; hashes: {release_hashes_ready}",
         f"- Fontspector googlefonts profile: {font_qa_state}",
+        f"- UFO editor handoff ready: {summary_value('UFO editor handoff ready', ufo_editor)}",
+        f"- Arabic snapshot evidence ready: {summary_value('Snapshot evidence ready for hand review', arabic_snapshot_integrity)}",
+        f"- Contour cleanup decisions: {table_state('Contour/no-contour cleanup', final_blockers)}",
         f"- GF visual kerning proof: {table_state('Kerning', final_blockers)}",
         "",
         "## Maintainer Decisions",
@@ -182,7 +187,10 @@ def markdown_report() -> str:
         f"| Complete GF Arabic Core coverage. | {table_state('GF Arabic Core coverage', final_blockers)} | `documentation/missing-gf-arabic-core.md` |",
         f"| Plan Arabic source construction batches. | {table_state('Arabic source worklist', final_blockers)} | `documentation/arabic-source-work-checklist.md` |",
         f"| Add Arabic marks, dotted circle, anchors, and mark/mkmk if Arabic remains in scope. | {table_state('Arabic marks', final_blockers)} | `documentation/arabic-review-packet.md` |",
-        f"| Resolve source contour/no-contour findings. | {table_state('Contour/no-contour cleanup', final_blockers)} | `documentation/fontspector-contour-count.md` |",
+        f"| Review the next Arabic visual proof packet and record outcomes. | {table_state('Arabic shaping smoke test', final_blockers)}; {table_state('Arabic marks', final_blockers)} | `documentation/arabic-current-review-worksheet.md`; `documentation/arabic-batch-recorder.md`; `documentation/arabic-first-review-batch.md`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-goal-completion-audit.md`; `documentation/arabic-visual-review-log.md` |",
+        f"| Open the UFOs for hand cleanup only after editor/package checks stay green. | UFO editor: {summary_value('UFO editor handoff ready', ufo_editor)}; snapshot evidence: {summary_value('Snapshot evidence ready for hand review', arabic_snapshot_integrity)} | `documentation/ufo-editor-readiness.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-manual-edit-targets.md` |",
+        f"| Keep source contour/no-contour cleanup closed after drawing edits. | {table_state('Contour/no-contour cleanup', final_blockers)} | `documentation/arabic-manual-review-batches.md`; `documentation/arabic-manual-edit-targets.md`; `documentation/fontspector-contour-count.md`; `documentation/arabic-cleanup-drawing-briefs.md`; `documentation/contour-cleanup-batches.md`; `documentation/contour-cleanup-ai-triage.md`; `documentation/contour-cleanup-decision-log.md` |",
+        f"| Reduce Fontspector warnings without hiding intended serving scope. | {table_state('Fontspector zero-warning path', final_blockers)} | `documentation/fontspector-metadata-warning-probe.md`; `documentation/fontspector-zero-warning-worklist.md`; `documentation/contour-cleanup-edit-plan.md` |",
         f"| Review GF visual spacing/kerning proof. | {table_state('Kerning', final_blockers)} | `documentation/kerning-readiness.md`; `documentation/kerning-proof-review.md` |",
         f"| Resolve or intentionally keep PUA and unreachable helper glyphs. | {table_state('Glyph reachability', final_blockers)} | `documentation/glyph-reachability.md` |",
         "",
@@ -204,15 +212,16 @@ def markdown_report() -> str:
         "1. Record the remaining maintainer decisions in `documentation/google-fonts-decisions.md`.",
         "2. Apply the PUA, kerning, and final release metadata decisions to source and package-preview files.",
         "3. Complete drawing/source blockers, especially GF Latin Core and GF Arabic Core coverage.",
-        "4. Run `make kerning-proof-check`, run `make kerning-proof-review-check`, and review `documentation/gftools-qa/Proof` after kerning changes or explicit deferral.",
-        "5. Create the final `v1.000` release archive with every file listed in downstream `source.files`.",
-        "6. Review `documentation/github-release-draft.md`, then publish the final GitHub release asset after the final tag is pushed.",
-        "7. Prepare the `Eli Heuer` designer-profile link, biography, and square image, or record a profile-request plan.",
-        "8. Align source-repo and `google/fonts` fork Git names, GitHub auth, and API credentials with `documentation/pr-identity-readiness.md` before downstream commits.",
-        "9. Run `make preflight` so the build, proof PDF, generated reports, and local gate stay synchronized.",
-        "10. Run `make downstream-metadata-check`; when it is ready, apply the checked preview to downstream `ofl/virtuagrotesk/METADATA.pb`.",
-        "11. Rerun `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run` without `-p` and review the generated package.",
-        "12. Open or update the Google Fonts issue and downstream PR only after the no-PR package is reviewed.",
+        "4. During Arabic hand review, start with `documentation/arabic-current-review-worksheet.md` for the current five-row fill-in sheet, use `documentation/arabic-first-review-batch.md` for the structure/wrong-glyph packet, then use `documentation/arabic-manual-edit-targets.md` to jump from any `fix-needed` row to the matching Regular and Bold GLIF files.",
+        "5. Run `make kerning-proof-check`, run `make kerning-proof-review-check`, and review `documentation/gftools-qa/Proof` after kerning changes or explicit deferral.",
+        "6. Create the final `v1.000` release archive with every file listed in downstream `source.files`.",
+        "7. Review `documentation/github-release-draft.md`, then publish the final GitHub release asset after the final tag is pushed.",
+        "8. Prepare the `Eli Heuer` designer-profile link, biography, and square image, or record a profile-request plan.",
+        "9. Align source-repo and `google/fonts` fork Git names, GitHub auth, and API credentials with `documentation/pr-identity-readiness.md` before downstream commits.",
+        "10. Run `make preflight` so the build, proof PDF, generated reports, and local gate stay synchronized.",
+        "11. Run `make downstream-metadata-check`; when it is ready, apply the checked preview to downstream `ofl/virtuagrotesk/METADATA.pb`.",
+        "12. Rerun `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run` without `-p` and review the generated package.",
+        "13. Open or update the Google Fonts issue and downstream PR only after the no-PR package is reviewed.",
         "",
         "References:",
         "",

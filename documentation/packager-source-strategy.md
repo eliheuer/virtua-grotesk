@@ -12,9 +12,9 @@ This generated report compares the source modes available for the final Google F
 - Local `source.files` entries: 4
 - Missing local `source.files`: 0
 - Ignored/generated `source.files`: 1
-- Tracked source.files: 1 / 4
-- Untracked local source.files: 3
-- Build-from-source inputs present and tracked: 4 / 6
+- Tracked source.files: 3 / 4
+- Untracked local source.files: 1
+- Build-from-source inputs present and tracked: 6 / 6
 - Build script uses GF builder config: yes
 - Build script runs metadata post-processing: yes
 - Builder config outputs package fonts directory: yes
@@ -34,7 +34,7 @@ This generated report compares the source modes available for the final Google F
 | --- | --- | --- | --- | --- |
 | Default branch `source.files` | `make package-dry-run` | Public branch exposes every listed `source_file`; final `branch` and `commit` recorded | replace pending commit/branch fields<br>served variable TTF is ignored/generated locally<br>commit or otherwise expose untracked source files<br>finish/commit source tree before citing a commit | Best if final public branch commits the served variable TTF or otherwise exposes it at the listed path |
 | Latest release/archive | `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run` | Public GitHub release download `.zip` exposes the expected files; final `archive_url` and tag strategy recorded | create final release tag after source work<br>replace pending commit/branch fields<br>commit or package untracked source files into release archive<br>finish/commit source tree before tagging | Best if generated fonts should stay out of `main` but be published as release assets |
-| Build from source | `GFT_PACKAGER_SOURCE_MODE=build-from-source make package-dry-run` | Public repo build path is reproducible and accepted by Google Fonts; source/build inputs tracked | make every build input public and tracked<br>replace pending commit/branch fields<br>finish/commit source tree before citing a commit | Best if Google Fonts accepts building from `sources/config.yaml` instead of fetching generated font binaries |
+| Build from source | `GFT_PACKAGER_SOURCE_MODE=build-from-source make package-dry-run` | Public repo build path is reproducible and accepted by Google Fonts; source/build inputs tracked | replace pending commit/branch fields<br>finish/commit source tree before citing a commit | Best if Google Fonts accepts building from `sources/config.yaml` instead of fetching generated font binaries |
 
 ## Source Files To Expose
 
@@ -42,8 +42,8 @@ This generated report compares the source modes available for the final Google F
 | --- | --- | --- | --- | --- |
 | `OFL.txt` | `OFL.txt` | yes | no | yes |
 | `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | yes | yes | no |
-| `documentation/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | yes | no | no |
-| `documentation/readme-specimen.png` | `article/readme-specimen.png` | yes | no | no |
+| `documentation/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | yes | no | yes |
+| `documentation/readme-specimen.png` | `article/readme-specimen.png` | yes | no | yes |
 
 ## Selected Latest-Release Action Plan
 
@@ -55,7 +55,7 @@ The maintainer-selected first-submission strategy keeps generated fonts out of t
 4. Keep `source.config_yaml` omitted unless Google Fonts asks for build metadata.
 5. Regenerate reports, run `GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check`, then run a no-PR `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run`.
 
-- Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png`
+- Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`
 - Release archive files currently blocked by `.gitignore`: `fonts/variable/VirtuaGrotesk[wght].ttf`
 - `make package-dry-run` now defaults to `GFT_PACKAGER_SOURCE_MODE=latest-release`; set `GFT_PACKAGER_SOURCE_MODE=default` or `build-from-source` only for fallback review.
 
@@ -67,7 +67,7 @@ These are conditional checklists. Apply only the section that matches the mainta
 
 1. Apply the final public upstream URL everywhere reported by `make public-upstream-url-check`.
 2. Add a narrow `.gitignore` exception for the served variable font only.
-3. Track the current untracked source files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/ARTICLE.en_us.html`, `documentation/readme-specimen.png`.
+3. Track the current untracked source files: `fonts/variable/VirtuaGrotesk[wght].ttf`.
 4. Remove `source.config_yaml` from the downstream metadata preview unless Google Fonts review asks for build metadata.
 5. Regenerate reports, verify `GFT_PACKAGER_SOURCE_MODE=default make downstream-metadata-check`, then run the no-PR `GFT_PACKAGER_SOURCE_MODE=default make package-dry-run`.
 
@@ -82,7 +82,7 @@ These are conditional checklists. Apply only the section that matches the mainta
 ### If Build-From-Source Packaging Is Chosen
 
 1. Keep `source.config_yaml: "sources/config.yaml"` in the downstream metadata preview.
-2. Track every currently untracked build input: `sources/config.yaml`, `requirements.txt`.
+2. Track every currently untracked build input: none.
 3. Keep `build.sh` on `gftools builder sources/config.yaml` followed by `scripts/fix_gf_metadata.py`.
 4. Confirm Google Fonts accepts this family using the reproducible build path before treating the dry run as final.
 5. Run `GFT_PACKAGER_SOURCE_MODE=build-from-source make package-dry-run` without `-p` before opening the downstream PR.

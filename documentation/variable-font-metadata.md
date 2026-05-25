@@ -8,7 +8,7 @@ This report records variable-font axis metadata that matters for Google Fonts pa
 
 - Has `fvar`: yes
 - Has `STAT`: yes
-- Has `avar`: no
+- Has `avar`: yes
 - Axis tags: `wght`
 
 ## fvar Axes
@@ -46,4 +46,4 @@ This report records variable-font axis metadata that matters for Google Fonts pa
 - The current `wght` axis is 400-700 with default 400.
 - The 600 instance is named `SemiBold`, matching Google Fonts style naming.
 - The Regular STAT axis value is linked to Bold.
-- No `avar` table is emitted; keep or change this according to the `avar` decision log entry.
+- An identity `avar` table is emitted so the explicit axis mapping is present while interpolation remains linear.

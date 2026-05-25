@@ -113,7 +113,8 @@ remain open for the final submission.
 | Kerning | `make kerning-proof-check` | n/a | n/a |
 | Kerning | `documentation/kerning-readiness.md` | `documentation/kerning-readiness.md` | 1 / 1 |
 | Kerning | `documentation/fontspector-warnings.md` | `documentation/fontspector-warnings.md` | 1 / 1 |
-| `avar` | `sources/VirtuaGrotesk.designspace`, if a non-linear mapping is added | `sources/VirtuaGrotesk.designspace` | 1 / 1 |
+| `avar` | `scripts/fix_gf_metadata.py` | `scripts/fix_gf_metadata.py` | 1 / 1 |
+| `avar` | `sources/VirtuaGrotesk.designspace`, if a non-linear mapping is added later | `sources/VirtuaGrotesk.designspace` | 1 / 1 |
 | `avar` | `documentation/google-fonts-submission-handoff.md` | `documentation/google-fonts-submission-handoff.md` | 1 / 1 |
 | `avar` | `documentation/fontspector-warnings.md` | `documentation/fontspector-warnings.md` | 1 / 1 |
 | Version strategy | `sources/*/fontinfo.plist` | `sources/*/fontinfo.plist` | 1 / 1 |

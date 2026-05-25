@@ -23,7 +23,7 @@ evidence behind the current Virtua Grotesk downstream metadata target:
 ## Current Virtua Grotesk Target
 
 - `primary_script`: `Arab`
-- Expected downstream subsets after drawing: `arabic`, `latin`, `latin-ext`, `menu`
+- Expected downstream subsets after drawing: `arabic`, `latin`, `menu`
 - Preview `subsets` match target: yes
 - Preview `primary_script` matches target: yes
 - Preview non-Noto `languages` entries absent: yes
@@ -42,7 +42,7 @@ evidence behind the current Virtua Grotesk downstream metadata target:
 
 | Field | Preview value | Target | Aligned |
 | --- | --- | --- | --- |
-| `subsets` | `arabic`, `latin`, `latin-ext`, `menu` | `arabic`, `latin`, `latin-ext`, `menu` | yes |
+| `subsets` | `arabic`, `latin`, `menu` | `arabic`, `latin`, `menu` | yes |
 | `primary_script` | `Arab` | `Arab` | yes |
 | `languages` | absent | absent for non-Noto package | yes |
 | `sample_text` | absent | absent unless reviewer requests override | yes |

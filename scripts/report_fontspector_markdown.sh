@@ -39,6 +39,17 @@ fontspector \
 status=$?
 set -e
 
+python3 - "$OUTPUT_PATH" <<'PY'
+from pathlib import Path
+import sys
+
+path = Path(sys.argv[1])
+path.write_text(
+    "\n".join(line.rstrip() for line in path.read_text(encoding="utf-8").splitlines()) + "\n",
+    encoding="utf-8",
+)
+PY
+
 if [ "$status" -ne 0 ] && [ "$status" -ne 1 ]; then
     exit "$status"
 fi

@@ -7,10 +7,10 @@ the Fontspector warning without changing spacing or drawing data.
 ## Summary
 
 - Source kerning exists in at least one master: yes
-- Source kerning exists in every master: no
-- All built fonts expose GPOS `kern`: no
-- All built static fonts expose GPOS `kern`: no
-- Fontspector `gpos_kerning_info` warnings: 4
+- Source kerning exists in every master: yes
+- All built fonts expose GPOS `kern`: yes
+- All built static fonts expose GPOS `kern`: yes
+- Fontspector `gpos_kerning_info` warnings: 0
 - `gftools qa --proof` importable: yes
 - Latest `gftools qa --proof` HTML output present: yes
 - Latest proof HTML file count: 16
@@ -21,18 +21,18 @@ the Fontspector warning without changing spacing or drawing data.
 
 | UFO | kerning.plist | Pair count | Left groups | Right groups |
 | --- | --- | --- | --- | --- |
-| `sources/VirtuaGrotesk-Regular.ufo` | no | 0 | 0 | 0 |
+| `sources/VirtuaGrotesk-Regular.ufo` | yes | 77 | 46 | 43 |
 | `sources/VirtuaGrotesk-Bold.ufo` | yes | 77 | 46 | 43 |
 
 ## Built Font Kerning
 
 | Font | `kern` table | GPOS `kern` feature | GPOS features |
 | --- | --- | --- | --- |
-| `fonts/variable/VirtuaGrotesk[wght].ttf` | no | yes | `kern` |
-| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | no | no | `none` |
-| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | no | no | `none` |
-| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | no | no | `none` |
-| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | no | no | `none` |
+| `fonts/variable/VirtuaGrotesk[wght].ttf` | no | yes | `kern, mark, mkmk` |
+| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | no | yes | `kern, mark, mkmk` |
+| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | no | yes | `kern, mark, mkmk` |
+| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | no | yes | `kern, mark, mkmk` |
+| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | no | yes | `kern, mark, mkmk` |
 
 ## Google Fonts Visual QA
 

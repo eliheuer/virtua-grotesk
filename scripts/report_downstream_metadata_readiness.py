@@ -208,7 +208,7 @@ def markdown_report() -> str:
         f"- Variable filename/name fields match built font: {yes_no(variable_names_match)}",
         f"- Weight axis min/max match built `fvar`: {yes_no(axis_matches)}",
         f"- Variable font only in preview: {yes_no(not has_static_entries)}",
-        f"- Expected subsets present and sorted: {yes_no(subsets == ['arabic', 'latin', 'latin-ext', 'menu'])}",
+        f"- Expected subsets present and sorted: {yes_no(subsets == ['arabic', 'latin', 'menu'])}",
         f"- `primary_script: \"Arab\"` present: {yes_no('primary_script: \"Arab\"' in preview)}",
         f"- `category: \"SANS_SERIF\"` present: {yes_no('category: \"SANS_SERIF\"' in preview)}",
         f"- `stroke: \"SANS_SERIF\"` present: {yes_no('stroke: \"SANS_SERIF\"' in preview)}",

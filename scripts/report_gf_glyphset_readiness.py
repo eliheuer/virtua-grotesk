@@ -65,7 +65,7 @@ def markdown_report(font_path: Path) -> str:
             "",
             "## Metadata Implications",
             "",
-            "- First-submission subsets should include `menu`, `latin`, `latin-ext`, and `arabic` after drawing work is complete.",
+            "- First-submission subsets should include `menu`, `latin`, and `arabic` after drawing work is complete; add `latin-ext` only after enough coverage exists.",
             "- `primary_script: \"Arab\"` remains the current metadata review target because Arabic is in first-submission scope.",
             "- `GF_Arabic_Core` is the current minimum Arabic target; `GF_Arabic_Plus` is tracked here only to show the cost of expanding scope.",
             "- This report is coverage evidence only; shaping, mark behavior, and visual proofing are tracked separately.",

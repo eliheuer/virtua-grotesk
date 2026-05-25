@@ -56,11 +56,16 @@ def first_int(pattern: str, text: str, default: int = 0) -> int:
 
 def fontspector_fail_count(report_text: str) -> int:
     match = re.search(
-        r"### Summary\s*\n\s*\|[^\n]*FAIL[^\n]*\|\s*\n\|[^\n]*\|\s*\n\|\s*(\d+)\s*\|",
+        r"### Summary\s*\n(?P<header>\|[^\n]*\|)\s*\n\|[^\n]*\|\s*\n(?P<values>\|[^\n]*\|)",
         report_text,
         flags=re.MULTILINE,
     )
-    return int(match.group(1)) if match else 0
+    if not match:
+        return 0
+    headers = [cell.strip() for cell in match.group("header").strip("|").split("|")]
+    values = [cell.strip() for cell in match.group("values").strip("|").split("|")]
+    counts = dict(zip(headers, values, strict=False))
+    return int(counts.get("🔥 FAIL", 0))
 
 
 def arabic_category_counts(report_text: str) -> dict[str, int]:

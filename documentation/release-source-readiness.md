@@ -8,7 +8,7 @@ handoff check for the source state that `METADATA.pb` will claim.
 ## Summary
 
 - Current repo branch: `main`
-- Current repo commit: `26e0236674a98c7700b1ab639deeab2dcec4fff8`
+- Current repo commit: `d80aff9da07e4f97ffdd28dd115abffdbfd91126`
 - Origin URL: `git@github.com:eliheuer/virtua-grotesk.git`
 - Normalized GitHub origin candidate: `https://github.com/eliheuer/virtua-grotesk`
 - Normalized origin differs from placeholder: yes
@@ -41,8 +41,8 @@ handoff check for the source state that `METADATA.pb` will claim.
 | Field | Value |
 | --- | --- |
 | branch | `main` |
-| commit | `26e0236674a98c7700b1ab639deeab2dcec4fff8` |
-| short commit | `26e0236` |
+| commit | `d80aff9da07e4f97ffdd28dd115abffdbfd91126` |
+| short commit | `d80aff9` |
 | origin | `git@github.com:eliheuer/virtua-grotesk.git` |
 | normalized GitHub origin candidate | `https://github.com/eliheuer/virtua-grotesk` |
 | upstream | `origin/main` |
@@ -55,87 +55,87 @@ handoff check for the source state that `METADATA.pb` will claim.
 
 ## Current Dirty State
 
-- `M .claude/rules/design-philosophy.md`
-- ` M .claude/rules/designspace-editing.md`
-- ` M .claude/rules/kerning-editing.md`
-- ` M .claude/rules/ufo-editing.md`
-- ` M .claude/settings.json`
-- ` M .claude/skills/build-font/SKILL.md`
-- ` M .claude/skills/edit-glyph/SKILL.md`
-- ` M .claude/skills/font-qa/SKILL.md`
-- ` M .claude/skills/proof/SKILL.md`
-- ` M .claude/skills/render-specimen/SKILL.md`
-- ` M .gitignore`
-- ` M AUTHORS`
-- ` M CLAUDE.md`
-- ` M OFL.txt`
+- `M .agents/README.md`
+- ` M .agents/google-fonts-onboarding-checklists.md`
+- ` M .agents/skills/google-fonts-qa/SKILL.md`
+- ` M AGENTS.md`
+- ` M GF_READINESS.md`
+- ` M Makefile`
 - ` M README.md`
-- ` M build.sh`
-- ` M designbot/001.rs`
-- ` M designbot/002.rs`
-- ` M designbot/card.rs`
+- ` M documentation/arabic-mark-readiness.md`
+- ` M documentation/arabic-missing-drawings-ai-execution-goal.md`
+- ` M documentation/arabic-review-packet.md`
+- ` M documentation/arabic-shaping-smoke-test.md`
+- ` M documentation/arabic-source-work-checklist.md`
+- ` M documentation/authorship-disclosure-readiness.md`
+- ` M documentation/avar-readiness.md`
+- ` M documentation/core-qa-process.md`
+- ` M documentation/decision-application-blockers.md`
+- ` M documentation/decision-readiness.md`
+- ` M documentation/downstream-metadata-diff.md`
+- ` M documentation/downstream-metadata-readiness.md`
+- ` M documentation/final-submission-blockers.md`
+- ` M documentation/fontspector-contour-count.md`
+- ` M documentation/fontspector-googlefonts-report.md`
+- ` M documentation/fontspector-warnings.md`
+- ` M documentation/gf-glyphset-readiness.md`
+- ` M documentation/github-release-draft.md`
+- ` M documentation/github-release-notes.md`
+- ` M documentation/glyph-reachability.md`
+- ` M documentation/google-fonts-add-font-issue-draft.md`
+- ` M documentation/google-fonts-agent-reuse-readiness.md`
+- ` M documentation/google-fonts-decision-answer-sheet.md`
+- ` M documentation/google-fonts-decision-questions.md`
+- ` M documentation/google-fonts-decisions.md`
+- ` M documentation/google-fonts-downstream-package-preview.md`
+- ` M documentation/google-fonts-language-metadata.md`
+- ` M documentation/google-fonts-metadata-review.md`
+- ` M documentation/google-fonts-package-checklist.md`
+- ` M documentation/google-fonts-production-requirements.md`
+- ` M documentation/google-fonts-submission-handoff.md`
+- ` M documentation/google-fonts-template-and-pr-audit.md`
+- ` M documentation/kerning-proof-review.md`
+- ` M documentation/kerning-readiness.md`
+- ` M documentation/local-workflow-readiness.md`
+- ` M documentation/manual-cleanup-handoff.md`
+- ` M documentation/master-compatibility.md`
+- ` M documentation/missing-gf-arabic-core.md`
+- ` M documentation/missing-gf-latin-core.md`
+- ` M documentation/next-actions.md`
+- ` M documentation/package-dry-run-readiness.md`
+- ` M documentation/package-source-files-audit.md`
+- ` M documentation/packager-source-strategy.md`
+- ` M documentation/release-archive-manifest.md`
+- ` M documentation/release-source-readiness.md`
+- ` M documentation/source-ufo-metadata.md`
+- ` M documentation/submission-handoff-readiness.md`
+- ` M documentation/upstream-structure-readiness.md`
+- ` M documentation/variable-font-metadata.md`
 - ` M proof.pdf`
-- ` M proof.py`
-- ` M sources/VirtuaGrotesk-Bold.ufo/features.fea`
-- ` M sources/VirtuaGrotesk-Bold.ufo/fontinfo.plist`
-- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/aacute.glif`
-- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/contents.plist`
-- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/exclam.glif`
-- ` D sources/VirtuaGrotesk-Bold.ufo/glyphs/newG_lyph.glif`
-- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/quotedblleft.glif`
-- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
-- ` M sources/VirtuaGrotesk-Bold.ufo/lib.plist`
-- ` M sources/VirtuaGrotesk-Regular.ufo/fontinfo.plist`
-- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/aacute.glif`
-- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/contents.plist`
-- ` D sources/VirtuaGrotesk-Regular.ufo/glyphs/newG_lyph.glif`
-- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/quotedblleft.glif`
-- ` M sources/VirtuaGrotesk-Regular.ufo/lib.plist`
-- ` M sources/VirtuaGrotesk.designspace`
-- ` D sources/kinderhugel-grotesk-bold.ufo/features.fea`
-- ` D sources/kinderhugel-grotesk-bold.ufo/fontinfo.plist`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/A_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/B_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/C_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/D_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_000.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_004.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_005.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_006.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_007.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_008.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_009.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_010.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_011.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_012.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_013.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_014.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_015.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_016.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_017.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_018.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_019.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_020.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/E_021.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/F_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/F_001.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/F_002.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/F_003.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/G_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/H_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/I_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/J_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/K_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/L_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/M_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/N_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/O_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/P_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/Q_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/R_.glif`
-- ` D sources/kinderhugel-grotesk-bold.ufo/glyphs/S_.glif`
-- ... 267 more entries omitted
+- ` M scripts/fix_gf_metadata.py`
+- ` M scripts/gf_preflight.py`
+- ` M scripts/prepare_downstream_metadata.py`
+- ` M scripts/report_add_font_issue_draft.py`
+- ` M scripts/report_agent_reuse_readiness.py`
+- ` M scripts/report_arabic_mark_readiness.py`
+- ` M scripts/report_avar_readiness.py`
+- ` M scripts/report_decision_answer_sheet.py`
+- ` M scripts/report_decision_readiness.py`
+- ` M scripts/report_downstream_metadata_diff.py`
+- ` M scripts/report_downstream_metadata_readiness.py`
+- ` M scripts/report_final_submission_blockers.py`
+- ` M scripts/report_fontspector_contours.py`
+- ` M scripts/report_fontspector_markdown.sh`
+- ` M scripts/report_fontspector_warnings.py`
+- ` M scripts/report_gf_glyphset_readiness.py`
+- ` M scripts/report_gf_language_metadata.py`
+- ` M scripts/report_glyph_reachability.py`
+- ` M scripts/report_kerning_readiness.py`
+- ` M scripts/report_next_actions.py`
+- ` M scripts/report_production_requirements.py`
+- ` M scripts/report_submission_handoff_readiness.py`
+- ` M scripts/report_variable_metadata.py`
+- ... 1116 more entries omitted
 
 ## Downstream Source Mapping
 

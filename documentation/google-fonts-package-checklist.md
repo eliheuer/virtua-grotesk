@@ -18,7 +18,8 @@ package checklist.
 - Confirm the exact copyright-author statement required by the current
   `google/fonts` Add Font issue template.
 - Confirm the AI-use disclosure required by the current `google/fonts` Add Font
-  issue template, even if no AI tools were used for glyph design.
+  issue template, including the rough Arabic candidate drawing scaffolds that
+  still require manual cleanup and final drawing review.
 - Confirm the current Add Font issue template's combined copyright-author and
   AI-disclosure checkbox is answered in one maintainer-approved statement.
 - Confirm `README.md` has a short family description, build instructions, and a

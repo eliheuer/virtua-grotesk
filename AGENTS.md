@@ -75,6 +75,7 @@ Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and 
   - `.agents/skills/google-fonts-onboarding/SKILL.md`
   - `.agents/skills/google-fonts-qa/SKILL.md`
   - `.agents/skills/google-fonts-packaging/SKILL.md`
+  - `.agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
 - `make test` is the automated Fontspector `googlefonts` profile gate.
 - `make kerning-proof-check` is part of the core visual QA process, not an
   optional extra. It runs `gftools qa --proof` and writes HTML proof output to
@@ -105,12 +106,16 @@ Specimen scripts are Rust files in `designbot/` that use the DesignBot API. They
 
 ```bash
 python proof.py [font_path] [output_path]
+make arabic-print-proof
 ```
 
 Uses DrawBot-style APIs to generate multi-page PDF proofs. The Makefile
 defaults to the local `eliheuer/drawbot-skia` fork at
 `/Users/eli/GH/repos/drawbot-skia` and renders
 `fonts/ttf/VirtuaGrotesk-Regular.ttf` → `proof.pdf`.
+`make arabic-print-proof` renders the focused Arabic PDF review aid at
+`documentation/arabic-print-proof.pdf` across Regular, Medium, SemiBold, and
+Bold, with `documentation/arabic-print-proof-index.md` as the page map.
 
 ## Source Architecture
 

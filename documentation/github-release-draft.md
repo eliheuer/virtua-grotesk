@@ -8,8 +8,8 @@ not create a tag, push a tag, publish a release, or contact GitHub.
 
 - Upstream URL: `https://github.com/eliheuer/virtua-grotesk`
 - Current branch: `main`
-- Current commit: `26e0236674a98c7700b1ab639deeab2dcec4fff8`
-- Current short commit: `26e0236`
+- Current commit: `d80aff9da07e4f97ffdd28dd115abffdbfd91126`
+- Current short commit: `d80aff9`
 - Source version: `1.000`
 - Release tag: `v1.000`
 - Release title: `Virtua Grotesk 1.000`
@@ -18,7 +18,7 @@ not create a tag, push a tag, publish a release, or contact GitHub.
 - Local archive: `dist/VirtuaGrotesk-1.000.zip`
 - Local archive exists: yes
 - Local archive contains expected files: yes
-- Local archive hashes match source files: yes
+- Local archive hashes match source files: no
 - Local archive metadata deterministic: yes
 - Local archive SHA-256: `47f70853bcfa606d0c9c8fee8bd4a334c93007fd8a3dc80c8837c9d617233e2a`
 - Local archive has unsafe paths: no
@@ -47,7 +47,7 @@ This release archive contains the files referenced by downstream
 `METADATA.pb` `source.files` for the selected latest-release Packager
 path.
 
-Source commit: 26e0236674a98c7700b1ab639deeab2dcec4fff8
+Source commit: d80aff9da07e4f97ffdd28dd115abffdbfd91126
 Google Fonts source mode: latest-release
 
 Archive contents:

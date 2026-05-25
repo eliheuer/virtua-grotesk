@@ -89,6 +89,21 @@ def stat_value_rows(font: TTFont) -> list[str]:
     return rows
 
 
+def review_notes(font: TTFont) -> list[str]:
+    avar_note = (
+        "- An identity `avar` table is emitted so the explicit axis mapping is "
+        "present while interpolation remains linear."
+        if "avar" in font
+        else "- No `avar` table is emitted; keep or change this according to the `avar` decision log entry."
+    )
+    return [
+        "- The current `wght` axis is 400-700 with default 400.",
+        "- The 600 instance is named `SemiBold`, matching Google Fonts style naming.",
+        "- The Regular STAT axis value is linked to Bold.",
+        avar_note,
+    ]
+
+
 def markdown_report(font_path: Path) -> str:
     font = TTFont(font_path)
     lines = [
@@ -127,10 +142,7 @@ def markdown_report(font_path: Path) -> str:
         "",
         "## Review Notes",
         "",
-        "- The current `wght` axis is 400-700 with default 400.",
-        "- The 600 instance is named `SemiBold`, matching Google Fonts style naming.",
-        "- The Regular STAT axis value is linked to Bold.",
-        "- No `avar` table is emitted; keep or change this according to the `avar` decision log entry.",
+        *review_notes(font),
         "",
     ]
     font.close()

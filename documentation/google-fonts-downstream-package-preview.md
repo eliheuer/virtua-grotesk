@@ -80,7 +80,6 @@ fonts {
 }
 subsets: "arabic"
 subsets: "latin"
-subsets: "latin-ext"
 subsets: "menu"
 axes {
   tag: "wght"
@@ -138,8 +137,9 @@ override, not a proofing substitute.
 - Confirm the `axes` min/max values match `documentation/variable-font-metadata.md`.
   The built font's default `wght=400` is reviewed in `fvar`; recent
   `google/fonts` variable metadata examples do not add a `default_value` field.
-- Confirm final subsets after drawing: `arabic`, `latin`, `latin-ext`, and
-  `menu`.
+- Confirm final subsets after drawing: `arabic`, `latin`, and `menu`. Add
+  `latin-ext` only after the font supports enough of that broad Google Fonts
+  subset to avoid an unsupported-subset warning.
 - Confirm `documentation/google-fonts-language-metadata.md` still finds the
   local `google/fonts` Arabic script record, Arabic Core language records, and
   recent Arabic packages using `primary_script: "Arab"`.

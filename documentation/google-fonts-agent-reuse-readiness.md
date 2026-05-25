@@ -7,9 +7,9 @@ enough to copy into the next font repository.
 ## Summary
 
 - Reusable agent bundle ready: yes
-- Required reusable agent files present: 6 / 6
-- Reusable files linked from README: 5 / 5
-- Reusable files linked from AGENTS.md: 5 / 5
+- Required reusable agent files present: 7 / 7
+- Reusable files linked from README: 6 / 6
+- Reusable files linked from AGENTS.md: 6 / 6
 - Official Google Fonts references mapped: 13 / 13
 - Reusable report categories listed: 26
 - Copy checklist sections: 14
@@ -25,6 +25,7 @@ enough to copy into the next font repository.
 - `.agents/skills/google-fonts-onboarding/SKILL.md`: yes
 - `.agents/skills/google-fonts-qa/SKILL.md`: yes
 - `.agents/skills/google-fonts-packaging/SKILL.md`: yes
+- `.agents/skills/google-fonts-nonlatin-drawing/SKILL.md`: yes
 
 ## Official References
 
@@ -74,7 +75,7 @@ enough to copy into the next font repository.
 ## Copy Guidance
 
 - Copy `.agents/README.md`, `.agents/google-fonts-onboarding-checklists.md`,
-  `.agents/google-fonts-official-reference-map.md`, and the three
+  `.agents/google-fonts-official-reference-map.md`, and the
   `.agents/skills/google-fonts-*` skill directories first.
 - Replace family names, source paths, axis data, downstream directory,
   designer identity, script scope, and source package strategy before

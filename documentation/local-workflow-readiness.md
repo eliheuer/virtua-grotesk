@@ -185,7 +185,7 @@ This generated report summarizes whether the local checkout can run the main Goo
 
 - Path: `proof.pdf`
 - Exists: yes
-- Size: 74972 bytes
+- Size: 95905 bytes
 - Page count: 10
 - Render command: `make proof-only`
 

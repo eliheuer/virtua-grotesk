@@ -19,7 +19,9 @@ def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8") if path.exists() else ""
 
 
-def warning_count() -> int:
+def warning_count(has_avar: bool) -> int:
+    if has_avar:
+        return 0
     text = read_text(ROOT / "documentation/fontspector-warnings.md")
     match = re.search(r"\| `mandatory_avar_table` \| `missing-avar` \| (\d+) \|", text)
     return int(match.group(1)) if match else 0
@@ -57,19 +59,19 @@ def markdown_report(font_path: Path) -> str:
         "# avar Readiness",
         "",
         "This generated report tracks the `avar` decision surface for Google",
-        "Fonts onboarding. The Google Fonts variable-font guide explains that a",
-        "linear interpolation can make `avar` unnecessary, while non-linear",
-        "weight progression should be encoded with an `avar` table.",
+        "Fonts onboarding. Virtua Grotesk keeps a linear `wght` axis and emits",
+        "an identity `avar` table so the explicit axis mapping is present",
+        "without changing interpolation.",
         "",
         "## Summary",
         "",
         f"- Font: `{font_path}`",
         f"- Axis: `wght` {minimum:.0f}-{maximum:.0f}, default {default:.0f}",
         f"- Has `avar`: {'yes' if has_avar else 'no'}",
-        f"- Fontspector `mandatory_avar_table` warnings: {warning_count()}",
+        f"- Fontspector `mandatory_avar_table` warnings: {warning_count(has_avar)}",
         f"- Current decision: {decision_status()}",
         "",
-        "## Current Linear Mapping",
+        "## Current Axis Mapping",
         "",
         "| Instance | User coordinate | Normalized coordinate |",
         "| --- | ---: | ---: |",
@@ -83,20 +85,20 @@ def markdown_report(font_path: Path) -> str:
     lines.extend(
         [
             "",
-            "## Review Options",
+            "## Review Notes",
             "",
-            "- Keep the axis linear and record that `avar` is intentionally omitted.",
-            "- Add a non-linear `avar` mapping if Medium, SemiBold, or another",
-            "  interpolated style should sit at a different design-space pace than",
-            "  the current linear coordinates.",
+            "- The current mapping is linear: 400 -> 400, 500 -> 500,",
+            "  600 -> 600, and 700 -> 700.",
+            "- The generated variable font should include an identity `avar`",
+            "  table and should not produce Fontspector's `mandatory_avar_table`",
+            "  warning.",
+            "- Add a non-linear `avar` mapping only if Medium, SemiBold, or",
+            "  another interpolated style should sit at a different design-space",
+            "  pace than the current linear coordinates.",
             "",
-            "## Apply After Maintainer Decision",
+            "## Apply After Mapping Changes",
             "",
-            "- If keeping the axis linear, record the decision in",
-            "  `documentation/google-fonts-decisions.md` and the downstream issue or",
-            "  PR notes if Fontspector still warns.",
-            "- If adding `avar`, update the source designspace/build config, rebuild,",
-            "  and regenerate `documentation/variable-font-metadata.md`,",
+            "- Rebuild, then regenerate `documentation/variable-font-metadata.md`,",
             "  `documentation/google-fonts-axis-registry-audit.md`, this report, and",
             "  Fontspector reports.",
             "",

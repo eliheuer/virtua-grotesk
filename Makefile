@@ -9,7 +9,7 @@ GF_WEIGHT_AXIS_REGISTRY = $(GF_REPO_PATH)/axisregistry/Lib/axisregistry/data/wei
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 STATIC_FONTS = fonts/ttf/VirtuaGrotesk-Regular.ttf fonts/ttf/VirtuaGrotesk-Medium.ttf fonts/ttf/VirtuaGrotesk-SemiBold.ttf fonts/ttf/VirtuaGrotesk-Bold.ttf
 
-.PHONY: help decisions decision-readiness-check decision-application-check reference-index-check agent-reuse-check next-actions blockers issue-draft handoff-readiness-check release-check release-archive-check release-archive-build release-archive-verify release-archive-test release-draft-check source-strategy-check package-readiness-check recent-gf-check family-name-check authorship-check pr-readiness-check vendor-id-check kerning-check kerning-proof-check kerning-proof-review-check pua-scope-check avar-check warnings-check github-auth-check designer-profile-check designer-profile-prepare-check designer-profile-info-check designer-profile-image-check designer-profile-bio-check designer-profile-validator-test public-upstream-url-check downstream-metadata-check downstream-metadata-helper-test package-wrapper-test build test reports reports-only proof proof-only preflight preflight-only handoff package-dry-run clean
+.PHONY: help decisions decision-readiness-check decision-application-check reference-index-check agent-reuse-check next-actions blockers issue-draft handoff-readiness-check release-check release-archive-check release-archive-build release-archive-verify release-archive-test release-draft-check source-strategy-check package-readiness-check recent-gf-check family-name-check authorship-check pr-readiness-check vendor-id-check kerning-check kerning-proof-check kerning-proof-review-check contour-cleanup-proof contour-decision-update contour-decision-helper-test ufo-editor-check runebender-ufo-check pua-scope-check avar-check warnings-check metadata-warning-check zero-warning-check github-auth-check designer-profile-check designer-profile-prepare-check designer-profile-info-check designer-profile-image-check designer-profile-bio-check designer-profile-validator-test public-upstream-url-check downstream-metadata-check downstream-metadata-helper-test package-wrapper-test arabic-visual-review-helper-test arabic-candidate-plan arabic-goal-audit arabic-print-proof arabic-print-proof-only arabic-visual-risk-proof arabic-structure-sweep arabic-structure-triage arabic-mark-review-proof arabic-mark-triage arabic-manual-review-dashboard arabic-manual-review-batches arabic-current-review-worksheet arabic-review-worksheet-bundle arabic-batch-recorder arabic-first-review-zoom-snapshots arabic-first-review-crop-integrity arabic-first-review-batch arabic-first-review-risk-shortlist arabic-manual-edit-targets arabic-hand-review-session arabic-hand-review-contact-sheet arabic-next-review-packet arabic-next-review-ai-triage arabic-next-review-ai-observations arabic-full-queue-ai-sweep arabic-next-review-board arabic-next-review-snapshots arabic-snapshot-integrity arabic-visual-review-runbook arabic-visual-review-check arabic-visual-review-log arabic-visual-review-update build test reports reports-only proof proof-only preflight preflight-only handoff package-dry-run clean
 
 help:
 	@printf '%s\n' \
@@ -39,9 +39,16 @@ help:
 		'  make kerning-check    Show source, built, and GF visual QA kerning readiness' \
 		'  make kerning-proof-check  Run gftools qa HTML proof after QA extras are installed' \
 		'  make kerning-proof-review-check  Show gftools QA proof review packet' \
+		'  make contour-cleanup-proof  Render remaining contour-count findings to HTML' \
+		'  make contour-decision-update GLYPH=dad-ar.fina STATUS=fix-now DECISION="redraw"  Update contour decision log' \
+		'  make contour-decision-helper-test  Test guarded contour decision updater' \
+		'  make ufo-editor-check  Check active UFOs are readable before hand cleanup' \
+		'  make runebender-ufo-check  Check active UFOs with Runebender/Norad loader deps' \
 		'  make pua-scope-check  Show private-use glyph scope readiness' \
 		'  make avar-check       Show variable-axis avar readiness' \
 		'  make warnings-check   Show Fontspector warning triage report' \
+		'  make metadata-warning-check  Probe warning state with preview METADATA.pb' \
+		'  make zero-warning-check  Show concrete worklist to reach zero Fontspector warnings' \
 		'  make github-auth-check  Check GitHub API credentials for Packager' \
 		'  make designer-profile-check  Check Google Fonts designer profile readiness' \
 		'  make designer-profile-prepare-check  Dry-run final designer profile install into google/fonts' \
@@ -54,6 +61,40 @@ help:
 		'      accepts GFT_PACKAGER_SOURCE_MODE=latest-release or build-from-source' \
 		'  make downstream-metadata-helper-test  Test guarded downstream METADATA.pb helper' \
 		'  make package-wrapper-test  Test Packager wrapper metadata gates' \
+		'  make arabic-visual-review-helper-test  Test guarded Arabic visual review updater' \
+		'  make arabic-candidate-plan  Dry-run candidate glyph creation plan for Arabic gaps' \
+		'  make arabic-goal-audit  Show Arabic missing-drawings goal completion audit' \
+		'  make arabic-visual-risk-proof  Build focused proof for visual-risk sidebearing rows' \
+		'  make arabic-structure-sweep  Build GF Arabic Core structure/wrong-glyph sweep' \
+		'  make arabic-structure-triage  Show mechanical triage for structure review' \
+		'  make arabic-mark-review-proof  Build focused Arabic mark attachment proof' \
+		'  make arabic-mark-triage  Show mechanical triage for mark review' \
+		'  make arabic-manual-review-dashboard  Build one-page Arabic manual review dashboard' \
+		'  make arabic-manual-review-batches  Show compact Arabic hand-review batch queue' \
+		'  make arabic-current-review-worksheet  Show fill-in worksheet for current Arabic review batch' \
+		'  make arabic-review-worksheet-bundle  Show fill-in worksheets for all pending Arabic batches' \
+		'  make arabic-batch-recorder  Show guarded commands for the current Arabic review batch' \
+		'  make arabic-first-review-zoom-snapshots  Crop Arabic-row zoom PNGs for the current batch' \
+		'  make arabic-first-review-crop-integrity  Check focused Arabic-row crop PNG integrity' \
+		'  make arabic-first-review-batch  Show one-session worksheet for the next Arabic review batch' \
+		'  make arabic-first-review-risk-shortlist  Show AI-visible risk shortlist for the first review batch' \
+		'  make arabic-manual-edit-targets  Show source GLIF targets for fix-needed Arabic rows' \
+		'  make arabic-hand-review-session  Show compact session sheet for remaining Arabic review' \
+		'  make arabic-hand-review-contact-sheet  Build print-friendly Arabic review snapshot sheet' \
+		'  make arabic-next-review-packet  Show the smallest current Arabic hand-review packet' \
+		'  make arabic-next-review-ai-triage  Show AI-safe triage for the current Arabic hand-review packet' \
+		'  make arabic-next-review-ai-observations  Show AI visual observations for first-batch snapshots' \
+		'  make arabic-full-queue-ai-sweep  Show AI-safe visual observations for all pending Arabic rows' \
+		'  make arabic-next-review-board  Build local HTML board for current Arabic hand-review packet' \
+		'  make arabic-next-review-snapshots  Render PNGs for the current Arabic hand-review packet' \
+		'      accepts ARABIC_SNAPSHOT_ARGS="--all-pending --limit 32 --timeout 20" for full queue' \
+		'      use ARABIC_SNAPSHOT_ARGS="--all-pending --limit 32 --list-only --timeout 20" to verify coverage without Chrome' \
+		'      use ARABIC_SNAPSHOT_ARGS="--all-pending --limit 32 --reuse-existing" to rebuild the contact sheet from existing PNGs' \
+		'  make arabic-snapshot-integrity  Validate Arabic review PNG coverage and nonblank renders' \
+		'  make arabic-visual-review-runbook  Show row-by-row Arabic visual review cards' \
+		'  make arabic-visual-review-check  Show Arabic visual proof review checklist' \
+		'  make arabic-visual-review-log  Show editable Arabic visual review log' \
+		'  make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD"  Update visual review log' \
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make test           Build, then run Fontspector googlefonts profile' \
 		'  make reports        Build, then regenerate all readiness reports' \
@@ -213,6 +254,28 @@ kerning-proof-review-check:
 	@$(PYTHON) scripts/report_kerning_proof_review.py documentation/kerning-proof-review.md
 	@cat documentation/kerning-proof-review.md
 
+contour-cleanup-proof:
+	@$(PYTHON) scripts/build_contour_cleanup_proof.py
+
+GLYPH ?= dad-ar.fina
+STATUS ?= fix-now
+DECISION ?= pending
+NOTES ?=
+REVIEWED ?=
+
+contour-decision-update:
+	@$(PYTHON) scripts/update_contour_decision.py '$(GLYPH)' --status '$(STATUS)' --decision '$(DECISION)' --notes '$(NOTES)' --reviewed '$(REVIEWED)' --apply
+
+contour-decision-helper-test:
+	./scripts/test_contour_decision_update.sh
+
+ufo-editor-check:
+	@$(PYTHON) scripts/report_ufo_editor_readiness.py documentation/ufo-editor-readiness.md
+	@cat documentation/ufo-editor-readiness.md
+
+runebender-ufo-check:
+	./scripts/check_runebender_norad_load.sh
+
 pua-scope-check:
 	@$(PYTHON) scripts/report_pua_scope.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/pua-scope.md
 	@cat documentation/pua-scope.md
@@ -222,8 +285,18 @@ avar-check:
 	@cat documentation/avar-readiness.md
 
 warnings-check:
+	@$(PYTHON) scripts/report_metadata_warning_probe.py documentation/fontspector-metadata-warning-probe.md
+	@$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/fontspector-zero-warning-worklist.md
 	@$(PYTHON) scripts/report_fontspector_warnings.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/fontspector-warnings.md
 	@cat documentation/fontspector-warnings.md
+
+metadata-warning-check:
+	@$(PYTHON) scripts/report_metadata_warning_probe.py documentation/fontspector-metadata-warning-probe.md
+	@cat documentation/fontspector-metadata-warning-probe.md
+
+zero-warning-check:
+	@$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/fontspector-zero-warning-worklist.md
+	@cat documentation/fontspector-zero-warning-worklist.md
 
 github-auth-check:
 	@$(PYTHON) scripts/check_github_api_auth.py
@@ -265,6 +338,126 @@ downstream-metadata-helper-test:
 package-wrapper-test:
 	./scripts/test_package_gf_dry_run_gates.sh
 
+arabic-visual-review-helper-test:
+	./scripts/test_arabic_visual_review_update.sh
+
+arabic-candidate-plan:
+	$(PYTHON) scripts/build_arabic_candidate_glyphs.py --output documentation/arabic-candidate-glyph-plan.md
+	@cat documentation/arabic-candidate-glyph-plan.md
+
+arabic-goal-audit:
+	@$(PYTHON) scripts/report_arabic_goal_completion.py documentation/arabic-goal-completion-audit.md
+	@cat documentation/arabic-goal-completion-audit.md
+
+arabic-visual-risk-proof:
+	@$(PYTHON) scripts/report_arabic_visual_risk.py documentation/arabic-visual-risk-audit.md
+	@$(PYTHON) scripts/build_arabic_visual_risk_proof.py documentation/arabic-visual-risk-proof.html
+
+arabic-structure-sweep:
+	@$(PYTHON) scripts/build_arabic_structure_sweep.py documentation/arabic-structure-sweep.html
+
+arabic-structure-triage:
+	@$(PYTHON) scripts/report_arabic_structure_triage.py documentation/arabic-structure-triage.md
+	@cat documentation/arabic-structure-triage.md
+
+arabic-mark-review-proof:
+	@$(PYTHON) scripts/build_arabic_mark_review_proof.py documentation/arabic-mark-review-proof.html
+
+arabic-mark-triage:
+	@$(PYTHON) scripts/report_arabic_mark_triage.py documentation/arabic-mark-triage.md
+	@cat documentation/arabic-mark-triage.md
+
+arabic-manual-review-dashboard:
+	@$(PYTHON) scripts/build_arabic_manual_review_dashboard.py documentation/arabic-manual-review-dashboard.html
+
+arabic-manual-review-batches:
+	@$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/arabic-manual-review-batches.md
+	@cat documentation/arabic-manual-review-batches.md
+
+arabic-current-review-worksheet:
+	@$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/arabic-current-review-worksheet.md
+	@cat documentation/arabic-current-review-worksheet.md
+
+arabic-review-worksheet-bundle:
+	@$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/arabic-review-worksheet-bundle.md
+	@cat documentation/arabic-review-worksheet-bundle.md
+
+arabic-batch-recorder:
+	@$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/arabic-batch-recorder.md
+	@cat documentation/arabic-batch-recorder.md
+
+arabic-first-review-zoom-snapshots:
+	@$(PYTHON) scripts/build_arabic_first_review_zoom_snapshots.py documentation/arabic-first-review-zoom-snapshots.md
+	@cat documentation/arabic-first-review-zoom-snapshots.md
+
+arabic-first-review-crop-integrity:
+	@$(PYTHON) scripts/report_arabic_first_review_crop_integrity.py documentation/arabic-first-review-crop-integrity.md
+	@cat documentation/arabic-first-review-crop-integrity.md
+
+arabic-first-review-batch:
+	@$(PYTHON) scripts/report_arabic_first_review_batch.py documentation/arabic-first-review-batch.md
+	@cat documentation/arabic-first-review-batch.md
+
+arabic-first-review-risk-shortlist:
+	@$(PYTHON) scripts/report_arabic_first_review_risk_shortlist.py documentation/arabic-first-review-risk-shortlist.md
+	@cat documentation/arabic-first-review-risk-shortlist.md
+
+arabic-manual-edit-targets:
+	@$(PYTHON) scripts/report_arabic_manual_edit_targets.py documentation/arabic-manual-edit-targets.md
+	@cat documentation/arabic-manual-edit-targets.md
+
+arabic-hand-review-session:
+	@$(PYTHON) scripts/report_arabic_hand_review_session.py documentation/arabic-hand-review-session.md
+	@cat documentation/arabic-hand-review-session.md
+
+arabic-hand-review-contact-sheet:
+	@$(PYTHON) scripts/build_arabic_hand_review_contact_sheet.py documentation/arabic-hand-review-contact-sheet.html
+
+arabic-next-review-packet:
+	@$(PYTHON) scripts/report_arabic_next_review_packet.py documentation/arabic-next-review-packet.md
+	@cat documentation/arabic-next-review-packet.md
+
+arabic-next-review-ai-triage:
+	@$(PYTHON) scripts/report_arabic_next_review_ai_triage.py documentation/arabic-next-review-ai-triage.md
+	@cat documentation/arabic-next-review-ai-triage.md
+
+arabic-next-review-ai-observations:
+	@$(PYTHON) scripts/report_arabic_next_review_ai_observations.py documentation/arabic-next-review-ai-observations.md
+	@cat documentation/arabic-next-review-ai-observations.md
+
+arabic-full-queue-ai-sweep:
+	@$(PYTHON) scripts/report_arabic_full_queue_ai_sweep.py documentation/arabic-full-queue-ai-sweep.md
+	@cat documentation/arabic-full-queue-ai-sweep.md
+
+arabic-next-review-board:
+	@$(PYTHON) scripts/build_arabic_next_review_board.py documentation/arabic-next-review-board.html
+
+arabic-next-review-snapshots:
+	@$(PYTHON) scripts/build_arabic_next_review_snapshots.py $(ARABIC_SNAPSHOT_ARGS)
+	@cat documentation/arabic-next-review-snapshots.md
+
+arabic-snapshot-integrity:
+	@$(PYTHON) scripts/report_arabic_snapshot_integrity.py documentation/arabic-snapshot-integrity.md
+	@cat documentation/arabic-snapshot-integrity.md
+
+arabic-visual-review-runbook:
+	@$(PYTHON) scripts/report_arabic_visual_review_runbook.py documentation/arabic-visual-review-runbook.md
+	@cat documentation/arabic-visual-review-runbook.md
+
+arabic-visual-review-check:
+	@cat documentation/arabic-visual-review-checklist.md
+
+arabic-visual-review-log:
+	@$(PYTHON) scripts/report_arabic_visual_review_log.py documentation/arabic-visual-review-log.md
+	@cat documentation/arabic-visual-review-log.md
+
+REVIEW_KEY ?= proof-regular-glyphs
+REVIEW_STATUS ?= pass
+REVIEWER ?=
+
+arabic-visual-review-update:
+	@$(PYTHON) scripts/update_arabic_visual_review.py '$(REVIEW_KEY)' --status '$(REVIEW_STATUS)' --reviewer '$(REVIEWER)' --notes '$(NOTES)' --apply
+
 build:
 	./build.sh
 
@@ -301,9 +494,11 @@ reports-only:
 	$(PYTHON) scripts/report_axis_registry.py '$(VARIABLE_FONT)' '$(GF_WEIGHT_AXIS_REGISTRY)' documentation/google-fonts-axis-registry-audit.md
 	$(PYTHON) scripts/report_gf_glyphset_readiness.py '$(VARIABLE_FONT)' documentation/gf-glyphset-readiness.md
 	$(PYTHON) scripts/report_gf_language_metadata.py documentation/google-fonts-language-metadata.md
+	$(PYTHON) scripts/report_ufo_editor_readiness.py documentation/ufo-editor-readiness.md
 	$(PYTHON) scripts/report_missing_gf_latin_core.py '$(VARIABLE_FONT)' documentation/missing-gf-latin-core.md
 	$(PYTHON) scripts/report_missing_gf_arabic_core.py '$(VARIABLE_FONT)' documentation/missing-gf-arabic-core.md
 	$(PYTHON) scripts/report_arabic_source_checklist.py '$(VARIABLE_FONT)' documentation/arabic-source-work-checklist.md
+	$(PYTHON) scripts/build_arabic_candidate_glyphs.py --output documentation/arabic-candidate-glyph-plan.md
 	$(PYTHON) scripts/report_pua_scope.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/pua-scope.md
 	$(PYTHON) scripts/report_public_upstream_readiness.py documentation/public-upstream-readiness.md
 	$(PYTHON) scripts/report_open_placeholders.py documentation/open-placeholder-audit.md
@@ -317,12 +512,42 @@ reports-only:
 	$(PYTHON) scripts/report_kerning_proof_review.py documentation/kerning-proof-review.md
 	$(PYTHON) scripts/report_arabic_mark_readiness.py documentation/arabic-mark-readiness.md
 	$(PYTHON) scripts/report_arabic_shaping.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/arabic-shaping-smoke-test.md
-	$(PYTHON) scripts/report_arabic_review_packet.py documentation/arabic-review-packet.md
+	$(PYTHON) scripts/report_arabic_visual_risk.py documentation/arabic-visual-risk-audit.md
+	$(PYTHON) scripts/build_arabic_visual_risk_proof.py documentation/arabic-visual-risk-proof.html
+	$(PYTHON) scripts/build_arabic_structure_sweep.py documentation/arabic-structure-sweep.html
+	$(PYTHON) scripts/report_arabic_structure_triage.py documentation/arabic-structure-triage.md
+	$(PYTHON) scripts/build_arabic_mark_review_proof.py documentation/arabic-mark-review-proof.html
+	$(PYTHON) scripts/report_arabic_mark_triage.py documentation/arabic-mark-triage.md
+	$(PYTHON) scripts/report_arabic_visual_review_log.py documentation/arabic-visual-review-log.md
 	$(PYTHON) scripts/report_glyph_reachability.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/glyph-reachability.md
 	$(PYTHON) scripts/report_numeric_feature_readiness.py documentation/numeric-feature-readiness.md
 	$(PYTHON) scripts/report_fontspector_contours.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/fontspector-contour-count.md
+	$(PYTHON) scripts/build_contour_cleanup_proof.py
+	$(PYTHON) scripts/build_arabic_manual_review_dashboard.py documentation/arabic-manual-review-dashboard.html
+	$(PYTHON) scripts/report_arabic_manual_edit_targets.py documentation/arabic-manual-edit-targets.md
+	$(PYTHON) scripts/build_arabic_first_review_zoom_snapshots.py documentation/arabic-first-review-zoom-snapshots.md
+	$(PYTHON) scripts/report_arabic_first_review_crop_integrity.py documentation/arabic-first-review-crop-integrity.md
+	$(PYTHON) scripts/report_arabic_first_review_batch.py documentation/arabic-first-review-batch.md
+	$(PYTHON) scripts/report_arabic_first_review_risk_shortlist.py documentation/arabic-first-review-risk-shortlist.md
+	$(PYTHON) scripts/report_arabic_hand_review_session.py documentation/arabic-hand-review-session.md
+	$(PYTHON) scripts/build_arabic_hand_review_contact_sheet.py documentation/arabic-hand-review-contact-sheet.html
+	$(PYTHON) scripts/report_arabic_next_review_packet.py documentation/arabic-next-review-packet.md
+	$(PYTHON) scripts/report_arabic_next_review_ai_triage.py documentation/arabic-next-review-ai-triage.md
+	$(PYTHON) scripts/report_arabic_next_review_ai_observations.py documentation/arabic-next-review-ai-observations.md
+	$(PYTHON) scripts/report_arabic_full_queue_ai_sweep.py documentation/arabic-full-queue-ai-sweep.md
+	$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/arabic-manual-review-batches.md
+	$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/arabic-current-review-worksheet.md
+	$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/arabic-review-worksheet-bundle.md
+	$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/arabic-batch-recorder.md
+	$(PYTHON) scripts/build_arabic_next_review_board.py documentation/arabic-next-review-board.html
+	$(PYTHON) scripts/report_arabic_snapshot_integrity.py documentation/arabic-snapshot-integrity.md
+	$(PYTHON) scripts/report_arabic_visual_review_runbook.py documentation/arabic-visual-review-runbook.md
+	$(PYTHON) scripts/report_arabic_goal_completion.py documentation/arabic-goal-completion-audit.md
+	$(PYTHON) scripts/report_metadata_warning_probe.py documentation/fontspector-metadata-warning-probe.md
+	$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/fontspector-zero-warning-worklist.md
 	$(PYTHON) scripts/report_fontspector_warnings.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/fontspector-warnings.md
 	./scripts/report_fontspector_markdown.sh documentation/fontspector-googlefonts-report.md
+	$(PYTHON) scripts/report_arabic_review_packet.py documentation/arabic-review-packet.md
 	$(PYTHON) scripts/report_production_requirements.py documentation/google-fonts-production-requirements.md
 	$(PYTHON) scripts/report_recent_gf_packages.py documentation/recent-google-fonts-packages.md
 	$(PYTHON) scripts/report_gf_add_font_template.py documentation/google-fonts-add-font-template-audit.md
@@ -339,8 +564,15 @@ proof: build
 proof-only:
 	PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src$${PYTHONPATH:+:$$PYTHONPATH}" $(DRAWBOT_PYTHON) proof.py fonts/ttf/VirtuaGrotesk-Regular.ttf proof.pdf
 
+arabic-print-proof: build
+	$(MAKE) arabic-print-proof-only
+
+arabic-print-proof-only:
+	PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src$${PYTHONPATH:+:$$PYTHONPATH}" $(DRAWBOT_PYTHON) scripts/build_arabic_print_proof.py
+
 preflight: build
 	$(MAKE) proof-only
+	$(MAKE) arabic-print-proof-only
 	$(MAKE) reports-only
 	$(MAKE) preflight-only
 
@@ -349,6 +581,7 @@ preflight-only:
 
 handoff: build
 	$(MAKE) proof-only
+	$(MAKE) arabic-print-proof-only
 	$(MAKE) reports-only
 	$(MAKE) preflight-only
 
