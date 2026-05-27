@@ -181,8 +181,14 @@ REQUIRED_FILES = [
     "documentation/arabic-manual-review-dashboard.html",
     "documentation/arabic-next-review-batch.html",
     "documentation/arabic-manual-review-batches.md",
+    "documentation/arabic-review-progress.md",
     "documentation/arabic-current-review-worksheet.md",
     "documentation/arabic-review-worksheet-bundle.md",
+    "documentation/arabic-drawing-session-checklist.md",
+    "documentation/arabic-source-edit-diff.md",
+    "documentation/arabic-first-batch-source-checkpoint.md",
+    "documentation/arabic-pending-source-checkpoint.md",
+    "documentation/arabic-visual-review-batch.tsv",
     "documentation/arabic-batch-recorder.md",
     "documentation/arabic-first-review-zoom-snapshots.md",
     "documentation/arabic-first-review-crop-integrity.md",
@@ -311,8 +317,14 @@ REQUIRED_FILES = [
     "scripts/report_arabic_visual_review_log.py",
     "scripts/build_arabic_manual_review_dashboard.py",
     "scripts/report_arabic_manual_review_batches.py",
+    "scripts/report_arabic_review_progress.py",
     "scripts/report_arabic_current_review_worksheet.py",
     "scripts/report_arabic_review_worksheet_bundle.py",
+    "scripts/report_arabic_drawing_session_checklist.py",
+    "scripts/report_arabic_source_edit_diff.py",
+    "scripts/report_arabic_first_batch_source_checkpoint.py",
+    "scripts/report_arabic_pending_source_checkpoint.py",
+    "scripts/report_arabic_visual_review_batch_tsv.py",
     "scripts/report_arabic_batch_recorder.py",
     "scripts/build_arabic_first_review_zoom_snapshots.py",
     "scripts/report_arabic_first_review_crop_integrity.py",
@@ -330,6 +342,7 @@ REQUIRED_FILES = [
     "scripts/report_arabic_snapshot_integrity.py",
     "scripts/report_arabic_visual_review_runbook.py",
     "scripts/update_arabic_visual_review.py",
+    "scripts/update_arabic_visual_review_batch.py",
     "scripts/check_runebender_norad_load.sh",
     "scripts/test_arabic_visual_review_update.sh",
     "scripts/report_decision_answer_sheet.py",
@@ -431,8 +444,13 @@ REQUIRED_EXECUTABLES = [
     "scripts/report_arabic_visual_review_log.py",
     "scripts/update_arabic_visual_review.py",
     "scripts/report_arabic_manual_review_batches.py",
+    "scripts/report_arabic_review_progress.py",
     "scripts/report_arabic_current_review_worksheet.py",
     "scripts/report_arabic_review_worksheet_bundle.py",
+    "scripts/report_arabic_drawing_session_checklist.py",
+    "scripts/report_arabic_source_edit_diff.py",
+    "scripts/report_arabic_first_batch_source_checkpoint.py",
+    "scripts/report_arabic_pending_source_checkpoint.py",
     "scripts/report_arabic_batch_recorder.py",
     "scripts/report_arabic_first_review_crop_integrity.py",
     "scripts/report_arabic_first_review_batch.py",
@@ -597,6 +615,17 @@ def section_missing_count(text: str, heading: str) -> int | None:
 def summary_count(text: str, label: str) -> int | None:
     match = re.search(rf"{re.escape(label)}: (\d+)", text)
     return int(match.group(1)) if match else None
+
+
+def arabic_manual_edit_target_summaries(text: str) -> tuple[str, str]:
+    source_targets = summary_count(text, "Source target references")
+    missing_targets = summary_count(text, "Missing source target files")
+    return (
+        f"source target references: {source_targets}; "
+        f"missing source target files: {missing_targets}",
+        f"source target references: {source_targets}; "
+        f"missing target files: {missing_targets}",
+    )
 
 
 def markdown_section(text: str, heading: str) -> str:
@@ -1193,8 +1222,14 @@ def report_errors(errors: list[str]) -> None:
     arabic_manual_review_dashboard = ROOT / "documentation/arabic-manual-review-dashboard.html"
     arabic_next_review_batch = ROOT / "documentation/arabic-next-review-batch.html"
     arabic_manual_review_batches = ROOT / "documentation/arabic-manual-review-batches.md"
+    arabic_review_progress = ROOT / "documentation/arabic-review-progress.md"
     arabic_current_review_worksheet = ROOT / "documentation/arabic-current-review-worksheet.md"
     arabic_review_worksheet_bundle = ROOT / "documentation/arabic-review-worksheet-bundle.md"
+    arabic_drawing_session_checklist = ROOT / "documentation/arabic-drawing-session-checklist.md"
+    arabic_source_edit_diff = ROOT / "documentation/arabic-source-edit-diff.md"
+    arabic_first_batch_source_checkpoint = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
+    arabic_pending_source_checkpoint = ROOT / "documentation/arabic-pending-source-checkpoint.md"
+    arabic_visual_review_batch_tsv = ROOT / "documentation/arabic-visual-review-batch.tsv"
     arabic_batch_recorder = ROOT / "documentation/arabic-batch-recorder.md"
     arabic_first_review_zoom_snapshots = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
     arabic_first_review_crop_integrity = ROOT / "documentation/arabic-first-review-crop-integrity.md"
@@ -1263,8 +1298,14 @@ def report_errors(errors: list[str]) -> None:
     arabic_manual_review_dashboard_text = arabic_manual_review_dashboard.read_text()
     arabic_next_review_batch_text = arabic_next_review_batch.read_text()
     arabic_manual_review_batches_text = arabic_manual_review_batches.read_text()
+    arabic_review_progress_text = arabic_review_progress.read_text()
     arabic_current_review_worksheet_text = arabic_current_review_worksheet.read_text()
     arabic_review_worksheet_bundle_text = arabic_review_worksheet_bundle.read_text()
+    arabic_drawing_session_checklist_text = arabic_drawing_session_checklist.read_text()
+    arabic_source_edit_diff_text = arabic_source_edit_diff.read_text()
+    arabic_first_batch_source_checkpoint_text = arabic_first_batch_source_checkpoint.read_text()
+    arabic_pending_source_checkpoint_text = arabic_pending_source_checkpoint.read_text()
+    arabic_visual_review_batch_tsv_text = arabic_visual_review_batch_tsv.read_text()
     arabic_batch_recorder_text = arabic_batch_recorder.read_text()
     arabic_first_review_zoom_snapshots_text = arabic_first_review_zoom_snapshots.read_text()
     arabic_first_review_crop_integrity_text = arabic_first_review_crop_integrity.read_text()
@@ -1282,6 +1323,9 @@ def report_errors(errors: list[str]) -> None:
     arabic_next_review_board_text = arabic_next_review_board.read_text()
     arabic_snapshot_integrity_text = arabic_snapshot_integrity.read_text()
     arabic_visual_runbook_text = arabic_visual_runbook.read_text()
+    _arabic_manual_edit_target_summary, arabic_goal_edit_target_summary = (
+        arabic_manual_edit_target_summaries(arabic_manual_edit_targets_text)
+    )
     generated_metadata_text = generated_metadata_report.read_text()
     production_requirements_text = production_requirements_report.read_text()
     numeric_feature_text = numeric_feature_report.read_text()
@@ -1587,6 +1631,9 @@ def report_errors(errors: list[str]) -> None:
         "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png",
         "outcomes only after opening the linked proof/source evidence",
         "documentation/arabic-manual-edit-targets.md",
+        "documentation/arabic-first-batch-source-checkpoint.md",
+        "documentation/arabic-pending-source-checkpoint.md",
+        "Full unresolved-queue checkpoint",
         "make reports-only",
         "make preflight-only",
     ]:
@@ -1598,15 +1645,108 @@ def report_errors(errors: list[str]) -> None:
     check("### 2. Structure And Wrong-Glyph Sweep" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes structure batch", errors)
     check("### 3. Marks, Dotted Circle, And Stacking" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes marks batch", errors)
     check("### 5. RTL Text, Punctuation, Numerals, And Spacing" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes spacing batch", errors)
+    check("Focused Arabic PDF proof: `documentation/arabic-print-proof.pdf`" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle links Arabic print proof", errors)
+    check("Focused Arabic PDF index: `documentation/arabic-print-proof-index.md`" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle links Arabic print proof index", errors)
+    check("Print proof pages" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes print-proof page column", errors)
+    check("p. 3 Regular cmap grid" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle maps Regular glyph page", errors)
+    check("p. 11 Bold punctuation" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle maps Bold punctuation page", errors)
     check("AI observation" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes AI observation column", errors)
     check("Observed issue or `none`" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes fill-in observed issue column", errors)
+    check("Glyph-level drawing punchlist:" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes glyph-level drawing punchlists", errors)
+    check("`seen-ar` | Bold, Regular" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle maps structure batch to source glyphs", errors)
+    check("`dottedCircle` | Bold, Regular" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle maps mark batch to source glyphs", errors)
     check("REVIEW_STATUS=fix-needed" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle includes fix-needed commands", errors)
     check("documentation/arabic-manual-edit-targets.md" in arabic_review_worksheet_bundle_text, "Arabic review worksheet bundle links edit-target report", errors)
+    check("# Arabic Review Progress" in arabic_review_progress_text, "Arabic review progress report has expected heading", errors)
+    check("Visual review ready: no" in arabic_review_progress_text, "Arabic review progress report records open review state", errors)
+    check("Review rows: 32" in arabic_review_progress_text, "Arabic review progress report records row count", errors)
+    check("Pending: 32" in arabic_review_progress_text, "Arabic review progress report records pending count", errors)
+    check("Unresolved rows: 32" in arabic_review_progress_text, "Arabic review progress report records unresolved count", errors)
+    check("First-batch source checkpoint ready: yes" in arabic_review_progress_text, "Arabic review progress report records first-batch checkpoint readiness", errors)
+    check("Pending source checkpoint ready: yes" in arabic_review_progress_text, "Arabic review progress report records pending source checkpoint readiness", errors)
+    check("Pending source glyphs/files: 68 glyphs / 136 files" in arabic_review_progress_text, "Arabic review progress report records pending source glyph/file counts", errors)
+    check("Name: 2. Structure And Wrong-Glyph Sweep" in arabic_review_progress_text, "Arabic review progress report points at current batch", errors)
+    check("REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_review_progress_text, "Arabic review progress report includes next pass command", errors)
+    check("documentation/arabic-current-review-worksheet.md" in arabic_review_progress_text, "Arabic review progress report links current worksheet", errors)
+    check("documentation/arabic-batch-recorder.md" in arabic_review_progress_text, "Arabic review progress report links batch recorder", errors)
+    check("make reports-only" in arabic_review_progress_text, "Arabic review progress report includes report refresh command", errors)
+    check("make preflight-only" in arabic_review_progress_text, "Arabic review progress report includes preflight command", errors)
+    check("# Arabic Drawing Session Checklist" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist has expected heading", errors)
+    check("Pending or fix-needed visual rows: 32" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist records pending row count", errors)
+    check("Name: 2. Structure And Wrong-Glyph Sweep" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist points at current batch", errors)
+    check("Visual rows to decide: 5" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist records current batch row count", errors)
+    check("Compatibility rule: edit Regular and Bold together" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes compatibility rule", errors)
+    check("Style rule: keep Virtua's monoline geometric drawing" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes style rule", errors)
+    check("make ufo-editor-check" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes UFO editor readiness check", errors)
+    check("make runebender-ufo-check" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes Runebender readiness check", errors)
+    check("make arabic-before-drawing-check" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes single before-drawing check command", errors)
+    check("make arabic-source-edit-diff-check" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes source edit diff check", errors)
+    check("make arabic-first-batch-source-checkpoint" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes first-batch source checkpoint", errors)
+    check("make arabic-pending-source-checkpoint" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes pending source checkpoint", errors)
+    check("make arabic-visual-review-batch-tsv" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes batch TSV generator", errors)
+    check("make arabic-visual-review-batch-apply-check" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes batch apply-check command", errors)
+    check("TSV is only an optional temporary input form" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist keeps TSV optional", errors)
+    check("canonical record remains `documentation/arabic-visual-review-log.md`" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist names canonical review log", errors)
+    check("Norad loader" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist explains Runebender loader check", errors)
+    check("make arabic-after-drawing-check" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes single after-drawing check command", errors)
+    check("`./build.sh`, `make reports-only`, and `make preflight-only` in order" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist expands after-drawing check steps", errors)
+    for weight in ["Regular", "Medium", "SemiBold", "Bold"]:
+        proof_path = f"documentation/gftools-qa/Proof/{weight}-diffbrowsers_glyphs.html"
+        check(proof_path in arabic_drawing_session_checklist_text, f"Arabic drawing session checklist links exact {weight} glyph proof", errors)
+    check(
+        "Open: `documentation/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`" in arabic_drawing_session_checklist_text,
+        "Arabic drawing session checklist avoids SemiBold leakage in Bold proof row",
+        errors,
+    )
+    check("Source Files To Touch Only After `fix-needed`" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist protects source edits behind fix-needed status", errors)
+    check("sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes Regular source target", errors)
+    check("sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes Bold source target", errors)
+    check("./build.sh" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes build command", errors)
+    check("make reports-only" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes reports command", errors)
+    check("make preflight-only" in arabic_drawing_session_checklist_text, "Arabic drawing session checklist includes preflight command", errors)
+    check("# Arabic Source Edit Diff" in arabic_source_edit_diff_text, "Arabic source edit diff report has expected heading", errors)
+    check("Changed active source GLIF files:" in arabic_source_edit_diff_text, "Arabic source edit diff report records changed GLIF count", errors)
+    check("Arabic-like Regular/Bold pairing gaps:" in arabic_source_edit_diff_text, "Arabic source edit diff report records pairing gap count", errors)
+    check("Ready for paired-master review:" in arabic_source_edit_diff_text, "Arabic source edit diff report records paired-master readiness", errors)
+    check("Ready for paired-master review: yes" in arabic_source_edit_diff_text, "Arabic source edit diff report has no one-sided Arabic source edits", errors)
+    check("# Arabic First Batch Source Checkpoint" in arabic_first_batch_source_checkpoint_text, "Arabic first-batch source checkpoint has expected heading", errors)
+    check("Glyphs checked: 7" in arabic_first_batch_source_checkpoint_text, "Arabic first-batch source checkpoint covers seven watch glyphs", errors)
+    check("Missing source files: 0" in arabic_first_batch_source_checkpoint_text, "Arabic first-batch source checkpoint has no missing files", errors)
+    check("Regular/Bold structure mismatches: 0" in arabic_first_batch_source_checkpoint_text, "Arabic first-batch source checkpoint has no structure mismatches", errors)
+    check("Ready for paired-master hand review: yes" in arabic_first_batch_source_checkpoint_text, "Arabic first-batch source checkpoint is ready for paired-master review", errors)
+    for glyph_name in ["hamzaabove-ar", "hamzabelow-ar", "madda-ar", "seen-ar", "sheen-ar", "theh-ar", "waw-ar"]:
+        check(f"`{glyph_name}`" in arabic_first_batch_source_checkpoint_text, f"Arabic first-batch source checkpoint includes {glyph_name}", errors)
+    check("# Arabic Pending Source Checkpoint" in arabic_pending_source_checkpoint_text, "Arabic pending source checkpoint has expected heading", errors)
+    check("Pending or fix-needed review rows: 32" in arabic_pending_source_checkpoint_text, "Arabic pending source checkpoint covers unresolved review rows", errors)
+    check("Unique source glyph names checked: 68" in arabic_pending_source_checkpoint_text, "Arabic pending source checkpoint covers all unresolved source glyph names", errors)
+    check("Unique source target files referenced: 136" in arabic_pending_source_checkpoint_text, "Arabic pending source checkpoint covers paired source files", errors)
+    check("Missing source files: 0" in arabic_pending_source_checkpoint_text, "Arabic pending source checkpoint has no missing files", errors)
+    check("Regular/Bold structure mismatches: 0" in arabic_pending_source_checkpoint_text, "Arabic pending source checkpoint has no structure mismatches", errors)
+    check("Ready for paired-master hand review: yes" in arabic_pending_source_checkpoint_text, "Arabic pending source checkpoint is ready for paired-master review", errors)
+    for glyph_name in ["shaddaDamma-ar", "shaddaFatha-ar"]:
+        check(f"`{glyph_name}`" in arabic_pending_source_checkpoint_text, f"Arabic pending source checkpoint includes {glyph_name}", errors)
+    check(arabic_visual_review_batch_tsv_text.startswith("key\tstatus\treviewer\tnotes\n"), "Arabic visual review batch TSV has expected header", errors)
+    check("proof-regular-glyphs\t\t\t" in arabic_visual_review_batch_tsv_text, "Arabic visual review batch TSV includes blank Regular glyph row", errors)
+    check("proof-bold-glyphs\t\t\t" in arabic_visual_review_batch_tsv_text, "Arabic visual review batch TSV includes blank Bold glyph row", errors)
+    check("class-letter-structures\t\t\t" in arabic_visual_review_batch_tsv_text, "Arabic visual review batch TSV includes blank class row", errors)
+    check(len([line for line in arabic_visual_review_batch_tsv_text.splitlines()[1:] if line.strip()]) == 5, "Arabic visual review batch TSV covers current five-row batch", errors)
     check("# Arabic Batch Recorder" in arabic_batch_recorder_text, "Arabic batch recorder has expected heading", errors)
     check("It does not apply any" in arabic_batch_recorder_text, "Arabic batch recorder keeps no-apply framing", errors)
     check("Batch: 2. Structure And Wrong-Glyph Sweep" in arabic_batch_recorder_text, "Arabic batch recorder points at current unresolved batch", errors)
     check("Visual rows: 5 (pending: 5)" in arabic_batch_recorder_text, "Arabic batch recorder records current visual row count", errors)
     check("Contour rows: 0 (none)" in arabic_batch_recorder_text, "Arabic batch recorder records current contour rows", errors)
+    check("Focused Arabic PDF proof: `documentation/arabic-print-proof.pdf`" in arabic_batch_recorder_text, "Arabic batch recorder links Arabic print proof", errors)
+    check("Focused Arabic PDF index: `documentation/arabic-print-proof-index.md`" in arabic_batch_recorder_text, "Arabic batch recorder links Arabic print proof index", errors)
+    check("First-batch source checkpoint: `documentation/arabic-first-batch-source-checkpoint.md`" in arabic_batch_recorder_text, "Arabic batch recorder links first-batch source checkpoint", errors)
+    check("Pending source checkpoint: `documentation/arabic-pending-source-checkpoint.md`" in arabic_batch_recorder_text, "Arabic batch recorder links pending source checkpoint", errors)
+    check("Arabic print proof pages: p. 3 Regular cmap grid" in arabic_batch_recorder_text, "Arabic batch recorder maps Regular glyph page", errors)
+    check("Arabic print proof pages: p. 12 Bold cmap grid" in arabic_batch_recorder_text, "Arabic batch recorder maps Bold glyph page", errors)
+    check("## Optional Batch TSV Form" in arabic_batch_recorder_text, "Arabic batch recorder documents optional batch TSV form", errors)
+    check("The canonical record is `documentation/arabic-visual-review-log.md`" in arabic_batch_recorder_text, "Arabic batch recorder names canonical review log", errors)
+    check("key\tstatus\treviewer\tnotes" in arabic_batch_recorder_text, "Arabic batch recorder includes TSV header", errors)
+    check("make arabic-visual-review-batch-dry-run REVIEW_BATCH=review.tsv" in arabic_batch_recorder_text, "Arabic batch recorder includes batch dry-run command", errors)
+    check("make arabic-visual-review-batch-update REVIEW_BATCH=review.tsv" in arabic_batch_recorder_text, "Arabic batch recorder includes batch apply command", errors)
+    check("make arabic-visual-review-batch-apply-check REVIEW_BATCH=review.tsv" in arabic_batch_recorder_text, "Arabic batch recorder includes batch apply-check command", errors)
     for key in [
         "proof-regular-glyphs",
         "proof-medium-glyphs",
@@ -1625,6 +1765,8 @@ def report_errors(errors: list[str]) -> None:
         "make reports-only",
         "make preflight-only",
         "documentation/arabic-manual-edit-targets.md",
+        "make arabic-first-batch-source-checkpoint",
+        "make arabic-pending-source-checkpoint",
         "Full Batch Order",
     ]:
         check(expected_text in arabic_batch_recorder_text, f"Arabic batch recorder includes {expected_text}", errors)
@@ -1672,6 +1814,8 @@ def report_errors(errors: list[str]) -> None:
         "documentation/arabic-structure-triage.md",
         "documentation/arabic-visual-risk-proof.html",
         "documentation/arabic-manual-edit-targets.md",
+        "documentation/arabic-first-batch-source-checkpoint.md",
+        "documentation/arabic-pending-source-checkpoint.md",
         "documentation/arabic-first-review-ai-sweep.md",
         "documentation/arabic-first-review-zoom-snapshots.md",
         "documentation/arabic-first-review-crop-integrity.md",
@@ -1682,6 +1826,8 @@ def report_errors(errors: list[str]) -> None:
         "REVIEW_STATUS=fix-needed",
         "REVIEW_STATUS=deferred",
         "./build.sh",
+        "make arabic-first-batch-source-checkpoint",
+        "make arabic-pending-source-checkpoint",
         "make reports-only",
         "make preflight-only",
     ]:
@@ -1756,6 +1902,7 @@ def report_errors(errors: list[str]) -> None:
     check("documentation/arabic-next-review-board.html" in arabic_hand_review_session_text, "Arabic hand-review session links local review board", errors)
     check("documentation/arabic-print-proof.pdf" in arabic_hand_review_session_text, "Arabic hand-review session links Arabic PDF proof", errors)
     check("documentation/arabic-print-proof-index.md" in arabic_hand_review_session_text, "Arabic hand-review session links Arabic PDF proof index", errors)
+    check("Arabic print proof pages:" in arabic_hand_review_session_text, "Arabic hand-review session includes row-level print proof pages", errors)
     check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_hand_review_session_text, "Arabic hand-review session links first focused zoom crop", errors)
     check("sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif" in arabic_hand_review_session_text, "Arabic hand-review session includes source GLIF targets", errors)
     check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_hand_review_session_text, "Arabic hand-review session includes pass command pattern", errors)
@@ -1770,7 +1917,12 @@ def report_errors(errors: list[str]) -> None:
     check("documentation/arabic-first-review-crop-integrity.md" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet links first-review crop integrity report", errors)
     check("They do not mark Arabic drawing rows as passed." in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet keeps integrity checks non-decisional", errors)
     check("documentation/arabic-review-snapshots/proof-regular-glyphs.png" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet embeds first proof snapshot", errors)
-    check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet embeds first focused zoom crop", errors)
+    check(
+        "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_hand_review_contact_sheet_text
+        or "arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_hand_review_contact_sheet_text,
+        "Arabic hand-review contact sheet embeds first focused zoom crop",
+        errors,
+    )
     check("focused 2x crop" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet labels focused zoom crops", errors)
     check("documentation/arabic-review-snapshots/class-arabic-punctuation.png" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet embeds final class snapshot", errors)
     check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_hand_review_contact_sheet_text, "Arabic hand-review contact sheet includes pass command pattern", errors)
@@ -1785,6 +1937,9 @@ def report_errors(errors: list[str]) -> None:
     check("documentation/arabic-review-snapshots/proof-regular-glyphs.png" in arabic_visual_runbook_text, "Arabic visual review runbook links first proof snapshot", errors)
     check("documentation/arabic-first-review-zoom-snapshots.md" in arabic_visual_runbook_text, "Arabic visual review runbook links focused zoom snapshot report", errors)
     check("documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png" in arabic_visual_runbook_text, "Arabic visual review runbook links first focused zoom crop", errors)
+    check("Arabic print proof pages:" in arabic_visual_runbook_text, "Arabic visual review runbook includes row-level print proof pages", errors)
+    check("p. 3 Regular cmap grid" in arabic_visual_runbook_text, "Arabic visual review runbook maps Regular glyph review to print proof page", errors)
+    check("p. 6 Medium cmap grid" in arabic_visual_runbook_text, "Arabic visual review runbook maps Medium glyph review to print proof page", errors)
     check("Structure triage mechanical blockers: 0" in arabic_visual_runbook_text, "Arabic visual review runbook surfaces structure triage blocker count", errors)
     check("| Key | Area | Item | Status | Machine precheck | Review cue |" in arabic_visual_runbook_text, "Arabic visual review runbook full queue includes machine precheck column", errors)
     check("Mark triage mechanical blockers: 0" in arabic_visual_runbook_text, "Arabic visual review runbook surfaces mark triage blocker count", errors)
@@ -1801,6 +1956,7 @@ def report_errors(errors: list[str]) -> None:
     check("Focused Arabic PDF index: `documentation/arabic-print-proof-index.md`" in arabic_next_review_packet_text, "Arabic next review packet links focused Arabic PDF index", errors)
     check("## Fast Review Order" in arabic_next_review_packet_text, "Arabic next review packet includes fast review order", errors)
     check("The PDF speeds review; it does not replace source/proof" in arabic_next_review_packet_text, "Arabic next review packet keeps PDF proof non-decisional", errors)
+    check("Arabic print proof pages:" in arabic_next_review_packet_text, "Arabic next review packet includes row-level print proof pages", errors)
     check("proof-regular-glyphs" in arabic_next_review_packet_text, "Arabic next review packet includes first proof row", errors)
     check("class-letter-structures" in arabic_next_review_packet_text, "Arabic next review packet includes current class review row", errors)
     check("make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass" in arabic_next_review_packet_text, "Arabic next review packet includes pass command pattern", errors)
@@ -1844,6 +2000,9 @@ def report_errors(errors: list[str]) -> None:
     check("Arabic Next Review Board" in arabic_next_review_board_text, "Arabic next review board has expected title", errors)
     check("First-Batch Order" in arabic_next_review_board_text, "Arabic next review board includes first-batch order", errors)
     check("Decision Rules" in arabic_next_review_board_text, "Arabic next review board includes decision rules", errors)
+    check("Batch Glyph Punchlists" in arabic_next_review_board_text, "Arabic next review board includes batch glyph punchlists", errors)
+    check("2. Structure And Wrong-Glyph Sweep" in arabic_next_review_board_text and "seen-ar" in arabic_next_review_board_text, "Arabic next review board maps structure batch punchlist glyphs", errors)
+    check("3. Marks, Dotted Circle, And Stacking" in arabic_next_review_board_text and "dottedCircle" in arabic_next_review_board_text, "Arabic next review board maps mark batch punchlist glyphs", errors)
     check("Record <code>fix-needed</code> with the exact glyph" in arabic_next_review_board_text, "Arabic next review board records fix-needed decision rule", errors)
     check("AI First-Pass Observation" in arabic_next_review_board_text, "Arabic next review board embeds AI observations", errors)
     check("Edit targets" in arabic_next_review_board_text, "Arabic next review board embeds edit-target sections", errors)
@@ -1918,10 +2077,19 @@ def report_errors(errors: list[str]) -> None:
     check("# Arabic Goal Completion Audit" in arabic_goal_text, "Arabic goal completion audit has expected heading", errors)
     check("GF Arabic Core gaps are zero or accepted | 0 missing codepoints" in arabic_goal_text, "Arabic goal audit confirms Arabic Core coverage", errors)
     check("Missing source glyphs exist in both masters | missing codepoints: 0; suggested names: 0" in arabic_goal_text, "Arabic goal audit confirms source glyph worklist is closed", errors)
+    check("candidate worklist: 256; candidate auto-create: 0; candidate review-needed: 256; candidate hand-draw-needed: 0; candidate compatibility-risk: 0; candidate existing master entries: 512" in arabic_goal_text, "Arabic goal audit includes current candidate-script dry-run evidence", errors)
     check("Regular and Bold structures stay compatible | 0 blocking mismatches" in arabic_goal_text, "Arabic goal audit confirms master compatibility", errors)
     check("Arabic shaping smoke tests pass | fonts: 5; GSUB: 5/5; GPOS: 5/5; no .notdef: yes" in arabic_goal_text, "Arabic goal audit confirms shaping smoke status", errors)
     check("Dotted circle, marks, anchors, and mark/mkmk are ready or documented | missing marks: 0; dotted circle: yes; anchors: yes; mark/mkmk: yes" in arabic_goal_text, "Arabic goal audit confirms mark readiness", errors)
     check("first-review focused crops ready: yes; nonblank crops: 4" in arabic_goal_text, "Arabic goal audit includes first-review crop integrity readiness", errors)
+    check("first-batch source checkpoint glyphs: 7" in arabic_goal_text, "Arabic goal audit includes first-batch source checkpoint glyph count", errors)
+    check("first-batch Regular/Bold mismatches: 0" in arabic_goal_text, "Arabic goal audit confirms first-batch source compatibility", errors)
+    check("documentation/arabic-first-batch-source-checkpoint.md" in arabic_goal_text, "Arabic goal audit links first-batch source checkpoint", errors)
+    check("pending source checkpoint rows: 32" in arabic_goal_text, "Arabic goal audit includes pending source checkpoint row count", errors)
+    check("pending source glyphs: 68" in arabic_goal_text, "Arabic goal audit includes pending source glyph count", errors)
+    check("pending source files: 136" in arabic_goal_text, "Arabic goal audit includes pending source file count", errors)
+    check("pending source Regular/Bold mismatches: 0" in arabic_goal_text, "Arabic goal audit confirms pending source compatibility", errors)
+    check("documentation/arabic-pending-source-checkpoint.md" in arabic_goal_text, "Arabic goal audit links pending source checkpoint", errors)
     check("documentation/arabic-current-review-worksheet.md" in arabic_goal_text, "Arabic goal audit links current review worksheet", errors)
     check("documentation/arabic-next-review-board.html" in arabic_goal_text, "Arabic goal audit links next review board", errors)
     check("documentation/arabic-full-queue-ai-sweep.md" in arabic_goal_text, "Arabic goal audit links full queue AI sweep", errors)
@@ -1933,7 +2101,12 @@ def report_errors(errors: list[str]) -> None:
     check("AI observation rows: 32/32" in arabic_goal_text, "Arabic goal audit confirms AI observation coverage", errors)
     check("human follow-up rows: 32/32" in arabic_goal_text, "Arabic goal audit confirms human follow-up coverage", errors)
     check("snapshot missing rows: 0" in arabic_goal_text, "Arabic goal audit confirms no missing review snapshots", errors)
-    check("source target references: 180; missing target files: 0" in arabic_goal_text, "Arabic goal audit includes manual edit-target readiness", errors)
+    check(
+        arabic_goal_edit_target_summary in arabic_goal_text,
+        "Arabic goal audit includes manual edit-target readiness",
+        errors,
+    )
+    check("Fontspector FAIL results: 0; WARN results: 10; INFO results: 38; PASS results: 529; SKIP results: 302" in arabic_goal_text, "Arabic goal audit includes current Fontspector summary", errors)
     check("# Arabic Visual Risk Audit" in arabic_visual_risk_text, "Arabic visual risk audit has expected heading", errors)
     check("Target glyphset: `GF_Arabic_Core` plus U+25CC dotted circle" in arabic_visual_risk_text, "Arabic visual risk audit records target glyphset", errors)
     check("Fonts checked: 5" in arabic_visual_risk_text, "Arabic visual risk audit checks all built fonts", errors)
@@ -4051,12 +4224,35 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("arabic-manual-review-batches" in makefile_text, "Makefile exposes Arabic manual review batches target", errors)
     check("report_arabic_manual_review_batches.py" in makefile_text, "Makefile wires Arabic manual review batches report", errors)
     check("documentation/arabic-manual-review-batches.md" in makefile_text, "Makefile wires Arabic manual review batches output", errors)
+    check("arabic-review-progress" in makefile_text, "Makefile exposes Arabic review progress target", errors)
+    check("report_arabic_review_progress.py" in makefile_text, "Makefile wires Arabic review progress report", errors)
+    check("documentation/arabic-review-progress.md" in makefile_text, "Makefile wires Arabic review progress output", errors)
     check("arabic-current-review-worksheet" in makefile_text, "Makefile exposes Arabic current review worksheet target", errors)
     check("report_arabic_current_review_worksheet.py" in makefile_text, "Makefile wires Arabic current review worksheet report", errors)
     check("documentation/arabic-current-review-worksheet.md" in makefile_text, "Makefile wires Arabic current review worksheet output", errors)
     check("arabic-review-worksheet-bundle" in makefile_text, "Makefile exposes Arabic review worksheet bundle target", errors)
     check("report_arabic_review_worksheet_bundle.py" in makefile_text, "Makefile wires Arabic review worksheet bundle report", errors)
     check("documentation/arabic-review-worksheet-bundle.md" in makefile_text, "Makefile wires Arabic review worksheet bundle output", errors)
+    check("arabic-drawing-session-checklist" in makefile_text, "Makefile exposes Arabic drawing session checklist target", errors)
+    check("report_arabic_drawing_session_checklist.py" in makefile_text, "Makefile wires Arabic drawing session checklist report", errors)
+    check("documentation/arabic-drawing-session-checklist.md" in makefile_text, "Makefile wires Arabic drawing session checklist output", errors)
+    check("arabic-source-edit-diff-check" in makefile_text, "Makefile exposes Arabic source edit diff check target", errors)
+    check("report_arabic_source_edit_diff.py" in makefile_text, "Makefile wires Arabic source edit diff report", errors)
+    check("documentation/arabic-source-edit-diff.md" in makefile_text, "Makefile wires Arabic source edit diff output", errors)
+    check("--fail-on-gap" in makefile_text, "Makefile makes Arabic source edit diff fail on one-sided GLIF edits", errors)
+    check("arabic-first-batch-source-checkpoint" in makefile_text, "Makefile exposes Arabic first-batch source checkpoint target", errors)
+    check("report_arabic_first_batch_source_checkpoint.py" in makefile_text, "Makefile wires Arabic first-batch source checkpoint report", errors)
+    check("documentation/arabic-first-batch-source-checkpoint.md" in makefile_text, "Makefile wires Arabic first-batch source checkpoint output", errors)
+    check("arabic-pending-source-checkpoint" in makefile_text, "Makefile exposes Arabic pending source checkpoint target", errors)
+    check("report_arabic_pending_source_checkpoint.py" in makefile_text, "Makefile wires Arabic pending source checkpoint report", errors)
+    check("documentation/arabic-pending-source-checkpoint.md" in makefile_text, "Makefile wires Arabic pending source checkpoint output", errors)
+    check("arabic-before-drawing-check" in makefile_text, "Makefile exposes Arabic before-drawing check target", errors)
+    check("arabic-before-drawing-check: ufo-editor-check runebender-ufo-check" in makefile_text, "Makefile wires Arabic before-drawing check sequence", errors)
+    check("arabic-after-drawing-check" in makefile_text, "Makefile exposes Arabic after-drawing check target", errors)
+    check("arabic-after-drawing-check: ufo-editor-check runebender-ufo-check build reports-only preflight-only" in makefile_text, "Makefile wires Arabic after-drawing check sequence", errors)
+    check("arabic-visual-review-batch-tsv" in makefile_text, "Makefile exposes Arabic visual review batch TSV target", errors)
+    check("report_arabic_visual_review_batch_tsv.py" in makefile_text, "Makefile wires Arabic visual review batch TSV report", errors)
+    check("documentation/arabic-visual-review-batch.tsv" in makefile_text, "Makefile wires Arabic visual review batch TSV output", errors)
     check("arabic-batch-recorder" in makefile_text, "Makefile exposes Arabic batch recorder target", errors)
     check("report_arabic_batch_recorder.py" in makefile_text, "Makefile wires Arabic batch recorder report", errors)
     check("documentation/arabic-batch-recorder.md" in makefile_text, "Makefile wires Arabic batch recorder output", errors)
@@ -4113,6 +4309,13 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("arabic-visual-review-log" in makefile_text, "Makefile exposes Arabic visual review log target", errors)
     check("arabic-visual-review-update" in makefile_text, "Makefile exposes Arabic visual review update target", errors)
     check("update_arabic_visual_review.py" in makefile_text, "Makefile wires Arabic visual review update helper", errors)
+    check("arabic-visual-review-batch-update" in makefile_text, "Makefile exposes Arabic visual review batch update target", errors)
+    check("update_arabic_visual_review_batch.py" in makefile_text, "Makefile wires Arabic visual review batch update helper", errors)
+    check("REVIEW_BATCH ?= documentation/arabic-visual-review-batch.tsv" in makefile_text, "Makefile declares default Arabic visual review batch TSV", errors)
+    check("arabic-visual-review-batch-dry-run" in makefile_text, "Makefile exposes Arabic visual review batch dry-run target", errors)
+    check("scripts/update_arabic_visual_review_batch.py '$(REVIEW_BATCH)'" in makefile_text, "Makefile wires Arabic visual review batch dry-run helper", errors)
+    check("arabic-visual-review-batch-apply-check" in makefile_text, "Makefile exposes Arabic visual review batch apply-check target", errors)
+    check("arabic-visual-review-batch-apply-check: arabic-visual-review-batch-update reports-only preflight-only" in makefile_text, "Makefile wires Arabic visual review batch apply-check sequence", errors)
     check("arabic-visual-review-helper-test" in makefile_text, "Makefile exposes Arabic visual review helper test target", errors)
     check("test_arabic_visual_review_update.sh" in makefile_text, "Makefile wires Arabic visual review helper test", errors)
     check("contour-decision-helper-test" in makefile_text, "Makefile exposes contour decision helper test target", errors)
@@ -5235,6 +5438,12 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
     tooling_text = (ROOT / "documentation/python-tooling-notes.md").read_text()
     article_readiness_text = (ROOT / "documentation/article-readiness.md").read_text()
     article_text = (ROOT / "documentation/ARTICLE.en_us.html").read_text()
+    arabic_manual_edit_targets_text = (
+        ROOT / "documentation/arabic-manual-edit-targets.md"
+    ).read_text()
+    arabic_manual_edit_target_summary, _arabic_goal_edit_target_summary = (
+        arabic_manual_edit_target_summaries(arabic_manual_edit_targets_text)
+    )
     agents_text = (ROOT / "AGENTS.md").read_text()
     claude_text = (ROOT / "CLAUDE.md").read_text()
     manual_handoff_text = (ROOT / "documentation/manual-cleanup-handoff.md").read_text()
@@ -5291,6 +5500,8 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         and "make arabic-current-review-worksheet" in manual_handoff_text
         and "make arabic-first-review-batch" in manual_handoff_text
         and "make arabic-manual-edit-targets" in manual_handoff_text
+        and "make arabic-first-batch-source-checkpoint" in manual_handoff_text
+        and "make arabic-pending-source-checkpoint" in manual_handoff_text
         and "make arabic-hand-review-session" in manual_handoff_text
         and "make arabic-hand-review-contact-sheet" in manual_handoff_text
         and "documentation/arabic-snapshot-integrity.md" in manual_handoff_text
@@ -5298,13 +5509,15 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         and "documentation/arabic-current-review-worksheet.md" in manual_handoff_text
         and "documentation/arabic-first-review-batch.md" in manual_handoff_text
         and "documentation/arabic-manual-edit-targets.md" in manual_handoff_text
+        and "documentation/arabic-first-batch-source-checkpoint.md" in manual_handoff_text
+        and "documentation/arabic-pending-source-checkpoint.md" in manual_handoff_text
         and "documentation/arabic-hand-review-session.md" in manual_handoff_text
         and "documentation/arabic-hand-review-contact-sheet.html" in manual_handoff_text
         and "documentation/contour-cleanup-review-queue.md" in manual_handoff_text
         and "documentation/contour-cleanup-edit-plan.md" in manual_handoff_text
         and "GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run" in manual_handoff_text
         and "Do not use Packager PR mode" in manual_handoff_text,
-        "manual cleanup handoff records resume commands, editor checks, snapshot integrity, contour proof, and Packager PR guard",
+        "manual cleanup handoff records resume commands, editor checks, snapshot integrity, source checkpoints, contour proof, and Packager PR guard",
         errors,
     )
     check(
@@ -5339,6 +5552,45 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         check("portable" in text or "Portable" in text or "copy" in text, f"{label} is written for reuse beyond Virtua Grotesk", errors)
     check("contact sheet" in reusable_agents_text, "reusable checklist records non-Latin contact-sheet review pattern", errors)
     check("contact sheet" in reusable_nonlatin_skill_text, "non-Latin drawing skill records contact-sheet review pattern", errors)
+    for label, text in [
+        ("reusable checklist", reusable_agents_text),
+        ("Google Fonts QA skill", reusable_qa_skill_text),
+        ("Google Fonts non-Latin drawing skill", reusable_nonlatin_skill_text),
+    ]:
+        check(
+            "apply-check" in text
+            and "regenerates reports" in text
+            and "reruns preflight" in text,
+            f"{label} records batch review apply-check workflow",
+            errors,
+        )
+        check(
+            "TSV" in text
+            and "temporary" in text
+            and "canonical" in text
+            and "review log" in text,
+            f"{label} keeps TSV optional and review log canonical",
+            errors,
+        )
+    for label, text in [
+        ("reusable checklist", reusable_agents_text),
+        ("Google Fonts QA skill", reusable_qa_skill_text),
+        ("Google Fonts non-Latin drawing skill", reusable_nonlatin_skill_text),
+    ]:
+        check(
+            "source-edit diff" in text
+            and "one-sided" in text
+            and "GLIF" in text,
+            f"{label} records source-edit diff guard workflow",
+            errors,
+        )
+        check(
+            "source-structure checkpoint" in text
+            and "contents.plist" in text
+            and "structure mismatches" in text,
+            f"{label} records source-structure checkpoint workflow",
+            errors,
+        )
     check(
         "treat Fontspector as this" in readme_text
         and "repo's QA entrypoint" in readme_text
@@ -5861,7 +6113,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "Arabic manual edit targets | source target references: 180; missing source target files: 0" in blocker_text,
+        f"Arabic manual edit targets | {arabic_manual_edit_target_summary}" in blocker_text,
         "final-submission blocker report summarizes Arabic manual edit-target state",
         errors,
     )
@@ -6177,6 +6429,8 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
         check("Contour cleanup decisions:" in next_actions_text, "next-actions report summarizes contour cleanup decision state", errors)
         check("UFO editor handoff ready: yes" in next_actions_text, "next-actions report summarizes UFO editor readiness", errors)
         check("Arabic snapshot evidence ready: yes" in next_actions_text, "next-actions report summarizes Arabic snapshot integrity", errors)
+        check("Arabic first-batch source checkpoint ready: yes" in next_actions_text, "next-actions report summarizes first-batch source checkpoint", errors)
+        check("Arabic pending source checkpoint ready: yes" in next_actions_text, "next-actions report summarizes pending source checkpoint", errors)
         check(
             "Monitor placeholder audit; no public placeholder strings currently block handoff." in next_actions_text,
             "next-actions report avoids treating internal placeholder guards as public blockers",
@@ -6245,6 +6499,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
             errors,
         )
         check("Review `documentation/github-release-draft.md`" in next_actions_text, "next-actions run order includes release draft review", errors)
+        check("start with `documentation/arabic-drawing-session-checklist.md`" in next_actions_text, "next-actions run order starts Arabic hand review with drawing session checklist", errors)
         for expected_action in [
             "PUA Icon Block",
             "Kerning Scope",
@@ -6263,8 +6518,11 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
             "documentation/missing-gf-arabic-core.md",
             "documentation/arabic-review-packet.md",
             "documentation/arabic-goal-completion-audit.md",
+            "documentation/arabic-drawing-session-checklist.md",
             "documentation/arabic-current-review-worksheet.md",
             "documentation/arabic-first-review-batch.md",
+            "documentation/arabic-first-batch-source-checkpoint.md",
+            "documentation/arabic-pending-source-checkpoint.md",
             "documentation/arabic-full-queue-ai-sweep.md",
             "documentation/arabic-hand-review-session.md",
             "documentation/arabic-next-review-packet.md",
@@ -6464,6 +6722,8 @@ def main() -> int:
             "package-wrapper-test",
             "arabic-manual-review-batches",
             "arabic-batch-recorder",
+            "arabic-source-edit-diff-check",
+            "arabic-visual-review-batch-tsv",
             "arabic-manual-edit-targets",
             "arabic-next-review-packet",
             "arabic-structure-sweep",
@@ -6473,6 +6733,9 @@ def main() -> int:
             "arabic-visual-review-runbook",
             "contour-decision-helper-test",
             "arabic-visual-review-helper-test",
+            "arabic-visual-review-batch-update",
+            "arabic-visual-review-batch-dry-run",
+            "arabic-visual-review-batch-apply-check",
             "build",
             "test",
             "reports",

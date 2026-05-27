@@ -41,7 +41,7 @@ final handoff cannot hide behind one green local check.
 | GF Latin Core coverage | 0 missing codepoints | 0 missing codepoints or reviewer-approved scope change |
 | GF Arabic Core coverage | 0 missing codepoints | 0 missing codepoints or reviewer-approved scope change |
 | Arabic source worklist | missing codepoints: 0; suggested glyph names: 0; positional forms: 0; missing in both masters: 0; reuse prerequisites checked: 0; missing prerequisites: 0; dotted circle missing: no | Missing Arabic glyphs are drawn from verified source bases in both masters |
-| Arabic manual edit targets | source target references: 180; missing source target files: 0 | Any `fix-needed` Arabic visual-review row can be traced to Regular and Bold GLIF files before editing |
+| Arabic manual edit targets | source target references: 246; missing source target files: 0 | Any `fix-needed` Arabic visual-review row can be traced to Regular and Bold GLIF files before editing |
 | Arabic shaping smoke test | fonts: 5; GSUB arab/dflt: 5/5; GPOS arab/dflt: 5/5; no .notdef: yes; lam-alef rows: 10 | Arabic GSUB shaping remains intact, and missing GPOS/mark support is tracked separately |
 | Arabic marks | 0 missing marks; dotted circle: yes; anchors: yes; mark/mkmk: yes | Required marks, dotted circle, anchors, and mark/mkmk ready or explicitly accepted |
 | Numeric feature readiness | digits: yes; proportional defaults: yes; `tnum`: yes; coverage: yes; tabular widths: yes; ready: yes | Default ASCII digits are proportional and complemented by full tabular `tnum` alternates |

@@ -106,6 +106,8 @@ def markdown_report() -> str:
     arabic_review = read_text("documentation/arabic-review-packet.md")
     ufo_editor = read_text("documentation/ufo-editor-readiness.md")
     arabic_snapshot_integrity = read_text("documentation/arabic-snapshot-integrity.md")
+    arabic_first_batch_source_checkpoint = read_text("documentation/arabic-first-batch-source-checkpoint.md")
+    arabic_pending_source_checkpoint = read_text("documentation/arabic-pending-source-checkpoint.md")
     fontspector = read_text("documentation/fontspector-googlefonts-report.md")
     local_workflow = read_text("documentation/local-workflow-readiness.md")
 
@@ -127,6 +129,8 @@ def markdown_report() -> str:
     release_archive_ready = summary_value("Local archive contains expected files", github_release)
     release_hashes_ready = summary_value("Local archive hashes match source files", github_release)
     font_qa_state = fontspector_state(fontspector, final_blockers)
+    first_batch_source_ready = summary_value("Ready for paired-master hand review", arabic_first_batch_source_checkpoint)
+    pending_source_ready = summary_value("Ready for paired-master hand review", arabic_pending_source_checkpoint)
     source_mode = summary_value("Source mode", package_dry_run).strip("`")
     open_rows = prioritized_open_rows(decisions)
 
@@ -155,6 +159,8 @@ def markdown_report() -> str:
         f"- Fontspector googlefonts profile: {font_qa_state}",
         f"- UFO editor handoff ready: {summary_value('UFO editor handoff ready', ufo_editor)}",
         f"- Arabic snapshot evidence ready: {summary_value('Snapshot evidence ready for hand review', arabic_snapshot_integrity)}",
+        f"- Arabic first-batch source checkpoint ready: {first_batch_source_ready}",
+        f"- Arabic pending source checkpoint ready: {pending_source_ready}",
         f"- Contour cleanup decisions: {table_state('Contour/no-contour cleanup', final_blockers)}",
         f"- GF visual kerning proof: {table_state('Kerning', final_blockers)}",
         "",
@@ -183,12 +189,12 @@ def markdown_report() -> str:
         "",
         "| Action | Current state | Evidence |",
         "| --- | --- | --- |",
-        f"| Complete GF Latin Core coverage. | {table_state('GF Latin Core coverage', final_blockers)} | `documentation/missing-gf-latin-core.md` |",
-        f"| Complete GF Arabic Core coverage. | {table_state('GF Arabic Core coverage', final_blockers)} | `documentation/missing-gf-arabic-core.md` |",
+        f"| Keep GF Latin Core coverage at zero missing codepoints. | {table_state('GF Latin Core coverage', final_blockers)} | `documentation/missing-gf-latin-core.md` |",
+        f"| Keep GF Arabic Core coverage at zero missing codepoints. | {table_state('GF Arabic Core coverage', final_blockers)} | `documentation/missing-gf-arabic-core.md` |",
         f"| Plan Arabic source construction batches. | {table_state('Arabic source worklist', final_blockers)} | `documentation/arabic-source-work-checklist.md` |",
         f"| Add Arabic marks, dotted circle, anchors, and mark/mkmk if Arabic remains in scope. | {table_state('Arabic marks', final_blockers)} | `documentation/arabic-review-packet.md` |",
-        f"| Review the next Arabic visual proof packet and record outcomes. | {table_state('Arabic shaping smoke test', final_blockers)}; {table_state('Arabic marks', final_blockers)} | `documentation/arabic-current-review-worksheet.md`; `documentation/arabic-batch-recorder.md`; `documentation/arabic-first-review-batch.md`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-goal-completion-audit.md`; `documentation/arabic-visual-review-log.md` |",
-        f"| Open the UFOs for hand cleanup only after editor/package checks stay green. | UFO editor: {summary_value('UFO editor handoff ready', ufo_editor)}; snapshot evidence: {summary_value('Snapshot evidence ready for hand review', arabic_snapshot_integrity)} | `documentation/ufo-editor-readiness.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-manual-edit-targets.md` |",
+        f"| Review the next Arabic visual proof packet and record outcomes. | {table_state('Arabic shaping smoke test', final_blockers)}; {table_state('Arabic marks', final_blockers)} | `documentation/arabic-drawing-session-checklist.md`; `documentation/arabic-current-review-worksheet.md`; `documentation/arabic-batch-recorder.md`; `documentation/arabic-first-review-batch.md`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-goal-completion-audit.md`; `documentation/arabic-visual-review-log.md` |",
+        f"| Open the UFOs for hand cleanup only after editor/package checks stay green. | UFO editor: {summary_value('UFO editor handoff ready', ufo_editor)}; snapshot evidence: {summary_value('Snapshot evidence ready for hand review', arabic_snapshot_integrity)}; first-batch source checkpoint: {first_batch_source_ready}; pending source checkpoint: {pending_source_ready} | `documentation/arabic-drawing-session-checklist.md`; `documentation/ufo-editor-readiness.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-first-batch-source-checkpoint.md`; `documentation/arabic-pending-source-checkpoint.md`; `documentation/arabic-manual-edit-targets.md` |",
         f"| Keep source contour/no-contour cleanup closed after drawing edits. | {table_state('Contour/no-contour cleanup', final_blockers)} | `documentation/arabic-manual-review-batches.md`; `documentation/arabic-manual-edit-targets.md`; `documentation/fontspector-contour-count.md`; `documentation/arabic-cleanup-drawing-briefs.md`; `documentation/contour-cleanup-batches.md`; `documentation/contour-cleanup-ai-triage.md`; `documentation/contour-cleanup-decision-log.md` |",
         f"| Reduce Fontspector warnings without hiding intended serving scope. | {table_state('Fontspector zero-warning path', final_blockers)} | `documentation/fontspector-metadata-warning-probe.md`; `documentation/fontspector-zero-warning-worklist.md`; `documentation/contour-cleanup-edit-plan.md` |",
         f"| Review GF visual spacing/kerning proof. | {table_state('Kerning', final_blockers)} | `documentation/kerning-readiness.md`; `documentation/kerning-proof-review.md` |",
@@ -211,8 +217,8 @@ def markdown_report() -> str:
         "",
         "1. Record the remaining maintainer decisions in `documentation/google-fonts-decisions.md`.",
         "2. Apply the PUA, kerning, and final release metadata decisions to source and package-preview files.",
-        "3. Complete drawing/source blockers, especially GF Latin Core and GF Arabic Core coverage.",
-        "4. During Arabic hand review, start with `documentation/arabic-current-review-worksheet.md` for the current five-row fill-in sheet, use `documentation/arabic-first-review-batch.md` for the structure/wrong-glyph packet, then use `documentation/arabic-manual-edit-targets.md` to jump from any `fix-needed` row to the matching Regular and Bold GLIF files.",
+        "3. Complete the remaining drawing/source blockers by reviewing the Arabic visual packet and recording each row as pass, fix-needed, or deferred.",
+        "4. During Arabic hand review, start with `documentation/arabic-drawing-session-checklist.md`, then use `documentation/arabic-current-review-worksheet.md` for the current five-row fill-in sheet, `documentation/arabic-first-review-batch.md` for the structure/wrong-glyph packet, `documentation/arabic-first-batch-source-checkpoint.md` for the first-batch Regular/Bold source checkpoint, `documentation/arabic-pending-source-checkpoint.md` for all unresolved review-row source targets, and `documentation/arabic-manual-edit-targets.md` to jump from any `fix-needed` row to the matching Regular and Bold GLIF files.",
         "5. Run `make kerning-proof-check`, run `make kerning-proof-review-check`, and review `documentation/gftools-qa/Proof` after kerning changes or explicit deferral.",
         "6. Create the final `v1.000` release archive with every file listed in downstream `source.files`.",
         "7. Review `documentation/github-release-draft.md`, then publish the final GitHub release asset after the final tag is pushed.",

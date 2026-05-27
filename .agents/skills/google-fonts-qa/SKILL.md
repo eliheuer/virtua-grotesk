@@ -143,6 +143,23 @@ instead of scanning every wide table. Each batch should list the source logs,
 related proof/dashboard evidence, current status counts, and exact guarded
 update commands for both visual review rows and contour-decision rows.
 
+When a reviewer is ready to work, generate a one-page drawing-session checklist
+that starts with source/editor readiness checks, then lists the active batch,
+the proof files to open, guarded pass/fix/defer commands, likely Regular and
+Bold source GLIF targets, and the rebuild/report/preflight loop. Add a fast
+source-edit diff report for multi-master source work so one-sided non-Latin
+GLIF edits are visible before the full build or master-compatibility check.
+Add a source-structure checkpoint for unresolved review rows before hand
+editing starts. It should follow the UFO `contents.plist` filename mapping,
+inspect every active master, count contours/components/points, and report
+missing source files plus paired-master structure mismatches.
+Keep the review log as the canonical record. If the reviewer will close
+multiple rows at once, optionally provide a blank TSV template as a temporary
+entry form plus a validating batch updater that dry-runs by default and rejects
+bad statuses or duplicate keys before any write. Pair it with an apply-check
+target that writes the canonical review log, regenerates reports, and reruns preflight
+so recorded review decisions and generated evidence cannot drift.
+
 When Fontspector reports unreachable helper glyphs, do not blindly delete source
 helpers. First classify whether they are reachable through Unicode, GSUB output,
 or component references. If helpers are source-only, either decompose them out of

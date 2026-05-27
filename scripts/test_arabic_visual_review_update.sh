@@ -45,6 +45,61 @@ expect_contains "applied row" '| `proof-regular-glyphs` | GF proof | Regular gly
 expect_contains "restored pending count" "- Pending: 32" "$LOG"
 expect_contains "restored pass count" "- Pass: 0" "$LOG"
 
+BATCH="$TMPDIR/review-batch.tsv"
+cat >"$BATCH" <<'TSV'
+key	status	reviewer	notes
+proof-regular-glyphs	pass	Test 2026-05-25	reviewed regular glyph proof
+proof-medium-glyphs	deferred	Test 2026-05-25	needs Arabic reader
+TSV
+
+before="$(cat "$LOG")"
+"$PYTHON_BIN" "$ROOT/scripts/update_arabic_visual_review_batch.py" "$BATCH" --log "$LOG" >/dev/null
+after="$(cat "$LOG")"
+if [[ "$before" != "$after" ]]; then
+    echo "Batch dry run unexpectedly changed the visual review log"
+    exit 1
+fi
+
+"$PYTHON_BIN" "$ROOT/scripts/update_arabic_visual_review_batch.py" "$BATCH" --log "$LOG" --apply >/dev/null
+expect_contains "batch pending count" "- Pending: 30" "$LOG"
+expect_contains "batch pass count" "- Pass: 1" "$LOG"
+expect_contains "batch deferred count" "- Deferred: 1" "$LOG"
+expect_contains "batch applied pass row" '| `proof-regular-glyphs` | GF proof | Regular glyphs | `documentation/gftools-qa/Proof/*Regular*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | pass | Test 2026-05-25 | reviewed regular glyph proof |' "$LOG"
+expect_contains "batch applied deferred row" '| `proof-medium-glyphs` | GF proof | Medium glyphs | `documentation/gftools-qa/Proof/*Medium*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | deferred | Test 2026-05-25 | needs Arabic reader |' "$LOG"
+
+BAD_BATCH="$TMPDIR/bad-review-batch.tsv"
+cat >"$BAD_BATCH" <<'TSV'
+key	status	reviewer	notes
+proof-bold-glyphs	done	Test 2026-05-25	bad status
+TSV
+if "$PYTHON_BIN" "$ROOT/scripts/update_arabic_visual_review_batch.py" "$BAD_BATCH" --log "$LOG" >/tmp/virtua-arabic-visual-review-batch-test.out 2>&1; then
+    echo "Expected bad batch visual review status to fail"
+    cat /tmp/virtua-arabic-visual-review-batch-test.out
+    exit 1
+fi
+if ! grep -Fq "status must be one of" /tmp/virtua-arabic-visual-review-batch-test.out; then
+    echo "Expected bad batch status error message not found"
+    cat /tmp/virtua-arabic-visual-review-batch-test.out
+    exit 1
+fi
+
+DUPLICATE_BATCH="$TMPDIR/duplicate-review-batch.tsv"
+cat >"$DUPLICATE_BATCH" <<'TSV'
+key	status	reviewer	notes
+proof-bold-glyphs	pass	Test 2026-05-25	first review
+proof-bold-glyphs	deferred	Test 2026-05-25	duplicate review
+TSV
+if "$PYTHON_BIN" "$ROOT/scripts/update_arabic_visual_review_batch.py" "$DUPLICATE_BATCH" --log "$LOG" >/tmp/virtua-arabic-visual-review-batch-test.out 2>&1; then
+    echo "Expected duplicate batch visual review key to fail"
+    cat /tmp/virtua-arabic-visual-review-batch-test.out
+    exit 1
+fi
+if ! grep -Fq 'duplicate key `proof-bold-glyphs`' /tmp/virtua-arabic-visual-review-batch-test.out; then
+    echo "Expected duplicate-key error message not found"
+    cat /tmp/virtua-arabic-visual-review-batch-test.out
+    exit 1
+fi
+
 if "$PYTHON_BIN" "$ROOT/scripts/update_arabic_visual_review.py" missing-key --status pass --log "$LOG" >/tmp/virtua-arabic-visual-review-test.out 2>&1; then
     echo "Expected missing visual review key to fail"
     cat /tmp/virtua-arabic-visual-review-test.out

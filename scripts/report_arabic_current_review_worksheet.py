@@ -6,6 +6,7 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
+import report_arabic_manual_edit_targets as edit_targets
 from report_arabic_manual_review_batches import (
     ROOT,
     batch_evidence_paths,
@@ -26,6 +27,8 @@ DEFAULT_OUTPUT = ROOT / "documentation/arabic-current-review-worksheet.md"
 FIRST_REVIEW_AI_SWEEP = ROOT / "documentation/arabic-first-review-ai-sweep.md"
 ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
 ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
+FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
 
 
 def visual_command(key: str, status: str, notes: str) -> str:
@@ -41,6 +44,35 @@ def machine_precheck(row: list[str]) -> str:
 
 def review_cue(row: list[str]) -> str:
     return row[5] if len(row) >= 9 else row[4]
+
+
+def unique_current_targets(visual_items: list[list[str]]) -> list[edit_targets.EditTarget]:
+    seen: set[tuple[str, str, str]] = set()
+    targets: list[edit_targets.EditTarget] = []
+    for row in visual_items:
+        key = clean(row[0])
+        for target in edit_targets.row_targets(key):
+            path_key = str(target.path.relative_to(ROOT)) if target.path else "missing"
+            target_key = (target.ufo.name, target.glyph_name, path_key)
+            if target_key in seen:
+                continue
+            seen.add(target_key)
+            targets.append(target)
+    return targets
+
+
+def glyph_focus_rows(
+    targets: list[edit_targets.EditTarget],
+) -> list[tuple[str, list[edit_targets.EditTarget], list[str]]]:
+    by_glyph: dict[str, list[edit_targets.EditTarget]] = {}
+    for target in targets:
+        by_glyph.setdefault(target.glyph_name, []).append(target)
+
+    rows: list[tuple[str, list[edit_targets.EditTarget], list[str]]] = []
+    for glyph_name, glyph_targets in sorted(by_glyph.items()):
+        sources = sorted({target.source for target in glyph_targets})
+        rows.append((glyph_name, glyph_targets, sources))
+    return rows
 
 
 def ai_triage_rows() -> dict[str, tuple[str, str]]:
@@ -80,6 +112,7 @@ def markdown_report() -> str:
     snapshots = batch_snapshot_rows(visual_items, snapshot_rows(), zoom_snapshot_rows())
     evidence = batch_evidence_paths(batch, visual_items, contour_items)
     ai_rows = ai_triage_rows()
+    focus_rows = glyph_focus_rows(unique_current_targets(visual_items))
 
     lines.extend(
         [
@@ -91,6 +124,14 @@ def markdown_report() -> str:
             f"- Contour rows: {len(contour_items)} ({status_summary(state['contour_statuses'])})",
             f"- Decision rule: {decision_rule(batch, contour_items)}",
             "",
+            "## Source Structure Guard",
+            "",
+            f"- First-batch checkpoint: `{FIRST_BATCH_SOURCE_CHECKPOINT.relative_to(ROOT)}`",
+            f"- Full unresolved-queue checkpoint: `{PENDING_SOURCE_CHECKPOINT.relative_to(ROOT)}`",
+            "- Use these before source edits to confirm every reviewed `fix-needed`",
+            "  row still maps to paired Regular and Bold GLIF files with no",
+            "  structure mismatches.",
+            "",
             "## Evidence To Open",
             "",
         ]
@@ -101,6 +142,10 @@ def markdown_report() -> str:
         lines.append(f"- `{ARABIC_PRINT_PROOF_INDEX.relative_to(ROOT)}`")
     for path in evidence:
         lines.append(f"- `{path}`")
+    if FIRST_BATCH_SOURCE_CHECKPOINT.exists():
+        lines.append(f"- `{FIRST_BATCH_SOURCE_CHECKPOINT.relative_to(ROOT)}`")
+    if PENDING_SOURCE_CHECKPOINT.exists():
+        lines.append(f"- `{PENDING_SOURCE_CHECKPOINT.relative_to(ROOT)}`")
     if ai_rows:
         lines.append(f"- `{FIRST_REVIEW_AI_SWEEP.relative_to(ROOT)}`")
     lines.extend(["", "## Snapshot Aids", ""])
@@ -147,6 +192,34 @@ def markdown_report() -> str:
                 "`deferred` only after checking the linked source/proof evidence.",
             ]
         )
+
+    if focus_rows:
+        lines.extend(
+            [
+                "",
+                "## Glyph-Level Drawing Punchlist",
+                "",
+                "Use this as the first-pass inspection order for the current",
+                "batch. It is not an edit instruction by itself: edit only after",
+                "a row is marked `fix-needed`, and then keep Regular and Bold",
+                "source files structurally compatible.",
+                "",
+                "| Glyph | Masters | Review prompt source |",
+                "| --- | --- | --- |",
+            ]
+        )
+        for glyph_name, glyph_targets, sources in focus_rows:
+            masters = ", ".join(
+                sorted(
+                    {
+                        target.ufo.name.replace("VirtuaGrotesk-", "").replace(
+                            ".ufo", ""
+                        )
+                        for target in glyph_targets
+                    }
+                )
+            )
+            lines.append(f"| `{glyph_name}` | {masters} | {'; '.join(sources)} |")
 
     lines.extend(
         [

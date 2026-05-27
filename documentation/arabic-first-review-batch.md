@@ -18,6 +18,8 @@ Arabic glyphs before judging spacing, rhythm, marks, or kerning.
 - Structure triage: `documentation/arabic-structure-triage.md`
 - Visual-risk proof: `documentation/arabic-visual-risk-proof.html`
 - Edit-target source: `documentation/arabic-manual-edit-targets.md`
+- First-batch source checkpoint: `documentation/arabic-first-batch-source-checkpoint.md`
+- Pending source checkpoint: `documentation/arabic-pending-source-checkpoint.md`
 - AI visual sweep notes: `documentation/arabic-first-review-ai-sweep.md`
 - Focused zoom crops: `documentation/arabic-first-review-zoom-snapshots.md`
 - Focused crop integrity: `documentation/arabic-first-review-crop-integrity.md`
@@ -215,6 +217,8 @@ If any row becomes `fix-needed`, edit Regular and Bold together, then run:
 
 ```bash
 ./build.sh
+make arabic-first-batch-source-checkpoint
+make arabic-pending-source-checkpoint
 make reports-only
 make preflight-only
 ```

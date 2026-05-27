@@ -126,9 +126,31 @@ Verify evidence, not intent:
 - a batch recorder exists when reviewers are ready to update statuses; it
   should print `pass`, `fix-needed`, and `deferred` commands for the current
   unresolved batch without applying changes.
+- if multiple rows are likely to close in one pass, optionally add a TSV batch
+  template plus a validating updater as a temporary entry form. The canonical
+  record should remain the Markdown or structured review log. The template
+  should be blank by default so applying it unedited fails, and the updater
+  should dry-run by default, reject unknown statuses, reject duplicate keys, and
+  only write on an explicit apply flag. Provide a paired apply-check command
+  that writes the canonical log, regenerates reports, and reruns preflight after
+  the dry run has been reviewed.
 - a compact hand-review session sheet exists for the whole remaining queue,
   grouped into realistic review passes with proof links, GLIF targets, and
   guarded status-update commands.
+- a compact drawing-session checklist exists for the active cleanup session. It
+  should start with source-editor readiness checks, then list the current batch,
+  exact proof files to open, guarded pass/fix/defer commands, likely Regular and
+  Bold GLIF targets, a glyph-level punchlist grouped by source glyph and prompt
+  source, and the rebuild/report/preflight loop.
+- a fast source-edit diff report exists for hand drawing. It should read
+  worktree status, list changed non-Latin GLIF files, and flag one-sided
+  Regular/Bold or otherwise paired-master edits before the full build/preflight
+  loop runs.
+- a source-structure checkpoint exists for unresolved review rows. It should
+  resolve row-to-GLIF targets through the UFO `contents.plist` mapping, inspect
+  every active master, report missing source files, contour/component/point
+  counts, and flag Regular/Bold or otherwise paired-master structure mismatches
+  before hand edits start.
 - a print-friendly contact sheet exists when snapshot evidence is ready, so
   reviewers can scan the full queue visually while keeping proof/source links
   and guarded status commands nearby.
@@ -161,6 +183,22 @@ Use AI for triage and review acceleration:
   separate unrelated coverage blockers from non-Latin drawing prompts;
 - local review boards that put snapshot evidence and guarded update commands in
   one place for faster hand cleanup;
+- compact drawing-session checklists for the current hand-edit pass, especially
+  when the reviewer is moving from proof review into source editing;
+- glyph-level punchlists for the active batch so reviewers can inspect a short
+  source-glyph order before opening outlines, while still requiring a row to be
+  marked `fix-needed` before editing;
+- source-edit diff guards that catch one-sided non-Latin GLIF edits during a
+  drawing session before master compatibility or interpolation failures appear;
+- source-structure checkpoints for the current batch and the full unresolved
+  queue, so reviewers know every `fix-needed` row maps to paired source files
+  before opening the UFOs;
+- optional TSV batch recorder templates and validators for recording multiple
+  human `pass`, `fix-needed`, or `deferred` decisions without hand-editing wide
+  Markdown tables. Treat TSV as a temporary input form only; the canonical
+  review log remains the durable source of truth. Pair the optional form with
+  apply-check targets that immediately refresh generated reports and preflight
+  after those decisions are written;
 - optional screenshot/snapshot generation for those rows, with stale-output
   protection, full-queue mode when useful, and browser failures reported in a
   review report;

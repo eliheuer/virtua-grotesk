@@ -9,6 +9,8 @@ import os
 import re
 import sys
 
+import report_arabic_manual_edit_targets as edit_targets
+from report_arabic_manual_review_batches import BATCHES as REVIEW_BATCHES
 from report_arabic_visual_review_runbook import (
     ROOT,
     command,
@@ -351,6 +353,53 @@ def review_steps(rows: list[dict[str, object]]) -> str:
     return "\n".join(items)
 
 
+def batch_punchlist_html(output_path: Path) -> str:
+    pending_keys = {row.key for row in visual_rows() if row.status in {"pending", "fix-needed"}}
+    sections: list[str] = []
+    for batch in REVIEW_BATCHES:
+        keys = [key for key in batch["visual_keys"] if key in pending_keys]
+        if not keys:
+            continue
+
+        by_glyph: dict[str, dict[str, set[str]]] = {}
+        for key in keys:
+            for target in edit_targets.row_targets(key):
+                entry = by_glyph.setdefault(
+                    target.glyph_name, {"masters": set(), "sources": set()}
+                )
+                entry["masters"].add(
+                    target.ufo.name.replace("VirtuaGrotesk-", "").replace(".ufo", "")
+                )
+                entry["sources"].add(target.source)
+
+        if not by_glyph:
+            continue
+
+        rows: list[str] = []
+        for glyph_name in sorted(by_glyph):
+            entry = by_glyph[glyph_name]
+            rows.append(
+                "<tr>"
+                f"<td><code>{html.escape(glyph_name)}</code></td>"
+                f"<td>{html.escape(', '.join(sorted(entry['masters'])))}</td>"
+                f"<td>{code_to_html('; '.join(sorted(entry['sources'])))}</td>"
+                "</tr>"
+            )
+        sections.append(
+            "<details class='punchlist' open>"
+            f"<summary>{html.escape(str(batch['name']))}</summary>"
+            "<table class='compact-table'>"
+            "<thead><tr><th>Glyph</th><th>Masters</th><th>Review prompt source</th></tr></thead>"
+            f"<tbody>{''.join(rows)}</tbody>"
+            "</table>"
+            "</details>"
+        )
+
+    if not sections:
+        return "<p class='muted'>No pending batch source-glyph punchlists.</p>"
+    return "".join(sections)
+
+
 def row_card(
     row: dict[str, object],
     commands: list[str],
@@ -433,6 +482,7 @@ def html_report(output_path: Path) -> str:
     cards = "\n".join(row_card(row, commands, observations, edit_targets, output_path) for row in rows)
     steps = review_steps(rows)
     queue_rows = full_queue_table(output_path, snapshots, edit_targets, full_queue_ai_rows)
+    batch_punchlists = batch_punchlist_html(output_path)
     prompt_rows = "\n".join(
         f"<tr><td><code>{html.escape(codepoint)}</code></td><td><code>{html.escape(glyphs)}</code></td><td>{code_to_html(prompt)}</td></tr>"
         for codepoint, glyphs, prompt in prompts
@@ -531,6 +581,17 @@ h2 {{
 }}
 .decision-rules li {{
   margin-bottom: 8px;
+}}
+.punchlist {{
+  margin: 0 0 12px;
+}}
+.compact-table {{
+  margin: 12px 0 0;
+}}
+.compact-table th,
+.compact-table td {{
+  font-size: 13px;
+  padding: 7px 9px;
 }}
 dl {{
   display: grid;
@@ -673,6 +734,11 @@ code {{
 <li>Record <code>deferred</code> when the row needs Arabic native-reader or script-specialist judgment rather than more mechanical checks.</li>
 </ul>
 </div>
+</section>
+<section class="panel">
+<h2>Batch Glyph Punchlists</h2>
+<p class="muted">These source-glyph lists are generated from <code>{display_path(EDIT_TARGETS)}</code>. Use them as an overview before editing; only change outlines after a row is marked <code>fix-needed</code>.</p>
+{batch_punchlists}
 </section>
 <div class="grid">
 {cards}

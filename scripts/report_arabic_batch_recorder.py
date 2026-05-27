@@ -16,9 +16,17 @@ from report_arabic_manual_review_batches import (
     visual_rows,
     contour_rows,
 )
+from report_arabic_visual_review_runbook import (
+    print_proof_page_lines,
+    visual_rows as runbook_visual_rows,
+)
 
 
 DEFAULT_OUTPUT = ROOT / "documentation/arabic-batch-recorder.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
+FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
 
 
 def visual_command(key: str, status: str, notes: str) -> str:
@@ -35,8 +43,20 @@ def contour_command(glyph: str, status: str, decision: str) -> str:
     )
 
 
+def print_proof_pages_for_key(key: str, rows_by_key: dict[str, object]) -> str:
+    row = rows_by_key.get(key)
+    if row is None:
+        return ""
+    for line in print_proof_page_lines(row):
+        text = line.strip().removeprefix("- ").strip()
+        if text.startswith("Arabic print proof pages: "):
+            return text.removeprefix("Arabic print proof pages: ")
+    return ""
+
+
 def markdown_report() -> str:
     visual = visual_rows()
+    runbook_rows = {row.key: row for row in runbook_visual_rows()}
     contours = contour_rows()
     next_batch = next_unresolved_batch(visual, contours)
     lines = [
@@ -64,6 +84,10 @@ def markdown_report() -> str:
             f"- Why: {batch['why']}",
             f"- Visual rows: {len(visual_items)} ({status_summary(state['visual_statuses'])})",
             f"- Contour rows: {len(contour_items)} ({status_summary(state['contour_statuses'])})",
+            f"- Focused Arabic PDF proof: `{ARABIC_PRINT_PROOF.relative_to(ROOT)}`",
+            f"- Focused Arabic PDF index: `{ARABIC_PRINT_PROOF_INDEX.relative_to(ROOT)}`",
+            f"- First-batch source checkpoint: `{FIRST_BATCH_SOURCE_CHECKPOINT.relative_to(ROOT)}`",
+            f"- Pending source checkpoint: `{PENDING_SOURCE_CHECKPOINT.relative_to(ROOT)}`",
             "",
             "## Visual Review Commands",
             "",
@@ -77,11 +101,13 @@ def markdown_report() -> str:
         for row in visual_items:
             key = clean(row[0])
             cue = row[5] if len(row) >= 9 else row[4]
+            print_pages = print_proof_pages_for_key(key, runbook_rows)
             lines.extend(
                 [
                     f"### `{key}`",
                     "",
                     f"- Review cue: {cue}",
+                    f"- Arabic print proof pages: {print_pages or 'none mapped'}",
                     "",
                     "```bash",
                     visual_command(key, "pass", "reviewed current proof/source evidence"),
@@ -91,6 +117,38 @@ def markdown_report() -> str:
                     "",
                 ]
             )
+        lines.extend(
+            [
+                "## Optional Batch TSV Form",
+                "",
+                "The canonical record is `documentation/arabic-visual-review-log.md`.",
+                "The per-row commands above are the clearest path. If you prefer",
+                "to record several reviewed rows at once, save a tab-separated",
+                "file with these columns, then dry-run it before applying.",
+                "",
+                "```tsv",
+                "key\tstatus\treviewer\tnotes",
+            ]
+        )
+        for row in visual_items:
+            key = clean(row[0])
+            lines.append(f"{key}\tpass\tName YYYY-MM-DD\treviewed current proof/source evidence")
+        lines.extend(
+            [
+                "```",
+                "",
+                "```bash",
+                "make arabic-visual-review-batch-dry-run REVIEW_BATCH=review.tsv",
+                "make arabic-visual-review-batch-update REVIEW_BATCH=review.tsv",
+                "make arabic-visual-review-batch-apply-check REVIEW_BATCH=review.tsv",
+                "```",
+                "",
+                "Use the dry run first. The update target writes only the",
+                "canonical review log; the apply-check target writes the log,",
+                "regenerates reports, and reruns preflight.",
+                "",
+            ]
+        )
     else:
         lines.extend(["No visual-review rows in this batch.", ""])
 
@@ -123,7 +181,9 @@ def markdown_report() -> str:
             "```",
             "",
             "If any row becomes `fix-needed`, use",
-            "`documentation/arabic-manual-edit-targets.md` before editing so Regular",
+            "`documentation/arabic-manual-edit-targets.md` and rerun",
+            "`make arabic-first-batch-source-checkpoint` plus",
+            "`make arabic-pending-source-checkpoint` before editing so Regular",
             "and Bold stay compatible.",
             "",
             "## Full Batch Order",

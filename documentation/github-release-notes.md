@@ -4,7 +4,7 @@ This release archive contains the files referenced by downstream
 `METADATA.pb` `source.files` for the selected latest-release Packager
 path.
 
-Source commit: d80aff9da07e4f97ffdd28dd115abffdbfd91126
+Source commit: 05706bd4442fe5c556495ad3f9c4dd7a5185b775
 Google Fonts source mode: latest-release
 
 Archive contents:

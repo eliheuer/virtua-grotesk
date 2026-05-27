@@ -77,6 +77,40 @@ ARABIC_PUNCTUATION = [
     "arabicSignSanah",
 ]
 
+MARK_REVIEW_GLYPHS = {
+    "mark-base+fatha": ["beh-ar", "fatha-ar"],
+    "mark-base+damma": ["beh-ar", "damma-ar"],
+    "mark-base+kasra": ["beh-ar", "kasra-ar"],
+    "mark-shadda+sukun": ["beh-ar", "shadda-ar", "sukun-ar"],
+    "mark-tanween": ["beh-ar", "fathatan-ar", "dammatan-ar", "kasratan-ar"],
+    "mark-hamza-above-below": ["beh-ar", "hamzaabove-ar", "hamzabelow-ar"],
+    "mark-dotted-circle": [
+        "dottedCircle",
+        "fatha-ar",
+        "damma-ar",
+        "kasra-ar",
+        "fathatan-ar",
+        "dammatan-ar",
+        "kasratan-ar",
+    ],
+    "class-mark-combinations": [
+        "beh-ar",
+        "dottedCircle",
+        "fatha-ar",
+        "damma-ar",
+        "kasra-ar",
+        "fathatan-ar",
+        "dammatan-ar",
+        "kasratan-ar",
+        "hamzaabove-ar",
+        "hamzabelow-ar",
+        "shadda-ar",
+        "sukun-ar",
+        "shaddaDamma-ar",
+        "shaddaFatha-ar",
+    ],
+}
+
 
 @dataclass(frozen=True)
 class EditTarget:
@@ -212,7 +246,10 @@ def row_targets(review_key: str) -> list[EditTarget]:
     if review_key == "class-letter-structures":
         return unique_targets(structure_prompt_targets() + visual_risk_targets())
     if review_key.startswith("mark-") or review_key == "class-mark-combinations":
-        return unique_targets(mark_targets_for_row(review_key))
+        return unique_targets(
+            targets_for_glyph_names(MARK_REVIEW_GLYPHS.get(review_key, []), review_key)
+            + mark_targets_for_row(review_key)
+        )
     if review_key == "class-dot-stack-helpers":
         return unique_targets(targets_for_glyph_names(DOT_STACK_GLYPHS, review_key))
     if review_key == "class-arabic-farsi-numerals":

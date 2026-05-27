@@ -62,7 +62,12 @@ NUMERAL_SAMPLES = [
 def font_info(font_path: Path) -> dict[str, str | int]:
     font = TTFont(font_path)
     names = font["name"].names
-    info: dict[str, str | int] = {"family": "", "style": "", "glyphs": len(font.getGlyphOrder())}
+    style_from_filename = font_path.stem.removeprefix("VirtuaGrotesk-")
+    info: dict[str, str | int] = {
+        "family": "",
+        "style": style_from_filename,
+        "glyphs": len(font.getGlyphOrder()),
+    }
     for record in names:
         if record.nameID == 1 and not info["family"]:
             info["family"] = record.toUnicode()
