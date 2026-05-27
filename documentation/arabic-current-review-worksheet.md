@@ -12,9 +12,18 @@ outcomes only after opening the linked proof/source evidence.
 - Contour rows: 0 (none)
 - Decision rule: Confirm the contour queue is empty, then record the visual review rows only.
 
+## Source Structure Guard
+
+- First-batch checkpoint: `documentation/arabic-first-batch-source-checkpoint.md`
+- Full unresolved-queue checkpoint: `documentation/arabic-pending-source-checkpoint.md`
+- Use these before source edits to confirm every reviewed `fix-needed`
+  row still maps to paired Regular and Bold GLIF files with no
+  structure mismatches.
+
 ## Evidence To Open
 
 - `documentation/arabic-print-proof.pdf`
+- `documentation/arabic-print-proof-index.md`
 - `documentation/arabic-structure-sweep.html`
 - `documentation/arabic-structure-triage.md`
 - `documentation/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`
@@ -25,6 +34,8 @@ outcomes only after opening the linked proof/source evidence.
 - `documentation/contour-cleanup-decision-log.md`
 - `documentation/arabic-cleanup-drawing-briefs.md`
 - `documentation/arabic-visual-risk-proof.html`
+- `documentation/arabic-first-batch-source-checkpoint.md`
+- `documentation/arabic-pending-source-checkpoint.md`
 - `documentation/arabic-first-review-ai-sweep.md`
 
 ## Snapshot Aids
@@ -58,10 +69,29 @@ without opening the linked proof/source evidence.
 
 Use `documentation/arabic-print-proof.pdf` as the quick paper or PDF
 scan for this batch before opening the heavier HTML proof pages.
+Use `documentation/arabic-print-proof-index.md` to jump to the
+right style and section in the PDF.
 For each row, look for missing glyphs, wrong glyphs, clipping,
 blank cells, malformed joins, and weight-specific rhythm changes.
 The PDF is a review aid: record `pass`, `fix-needed`, or
 `deferred` only after checking the linked source/proof evidence.
+
+## Glyph-Level Drawing Punchlist
+
+Use this as the first-pass inspection order for the current
+batch. It is not an edit instruction by itself: edit only after
+a row is marked `fix-needed`, and then keep Regular and Bold
+source files structurally compatible.
+
+| Glyph | Masters | Review prompt source |
+| --- | --- | --- |
+| `hamzaabove-ar` | Bold, Regular | `U+0654 ARABIC HAMZA ABOVE` structure prompt |
+| `hamzabelow-ar` | Bold, Regular | `U+0655 ARABIC HAMZA BELOW` structure prompt |
+| `madda-ar` | Bold, Regular | `U+0653 ARABIC MADDAH ABOVE` structure prompt |
+| `seen-ar` | Bold, Regular | `U+0633 ARABIC LETTER SEEN` structure prompt |
+| `sheen-ar` | Bold, Regular | `U+0634 ARABIC LETTER SHEEN` structure prompt |
+| `theh-ar` | Bold, Regular | `U+062B ARABIC LETTER THEH` structure prompt |
+| `waw-ar` | Bold, Regular | `U+0648 ARABIC LETTER WAW` structure prompt |
 
 ## Fill-In Review Table
 

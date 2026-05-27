@@ -8,8 +8,8 @@ and it does not replace the visual proof review.
 ## Summary
 
 - Pending/fix-needed review rows: 32
-- Source target references: 180
-- Existing source target files: 180
+- Source target references: 246
+- Existing source target files: 246
 - Missing source target files: 0
 - Compatibility rule: edit Regular and Bold together, preserving contour structure.
 
@@ -154,33 +154,50 @@ and it does not replace the visual proof review.
 
 - Area: Mark attachment
 - Review cue: top mark position clears the base and matches style
-- Source targets: 0 existing, 0 missing
-- Edit target guidance: proof/smoke review row; record the exact glyphs in the visual review log if it becomes `fix-needed`.
+- Source targets: 4 existing, 0 missing
+- mark-base+fatha:
+  - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `fatha-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/fatha-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `fatha-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/fatha-ar.glif`
 
 ### `mark-base+damma`
 
 - Area: Mark attachment
 - Review cue: damma position and scale are readable across weights
-- Source targets: 0 existing, 0 missing
-- Edit target guidance: proof/smoke review row; record the exact glyphs in the visual review log if it becomes `fix-needed`.
+- Source targets: 4 existing, 0 missing
+- mark-base+damma:
+  - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `damma-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/damma-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `damma-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/damma-ar.glif`
 
 ### `mark-base+kasra`
 
 - Area: Mark attachment
 - Review cue: bottom mark position clears descenders and sidebearings
-- Source targets: 0 existing, 0 missing
-- Edit target guidance: proof/smoke review row; record the exact glyphs in the visual review log if it becomes `fix-needed`.
+- Source targets: 4 existing, 0 missing
+- mark-base+kasra:
+  - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `kasra-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/kasra-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `kasra-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/kasra-ar.glif`
 
 ### `mark-shadda+sukun`
 
 - Area: Mark attachment
 - Review cue: stacked top marks remain clear and centered
-- Source targets: 6 existing, 0 missing
+- Source targets: 10 existing, 0 missing
+- mark-shadda+sukun:
+  - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `sukun-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sukun-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `sukun-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sukun-ar.glif`
 - mark-shadda+sukun mark prompt:
   - `VirtuaGrotesk-Regular.ufo` `shaddaFatha-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shaddaF_atha-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `shaddaFatha-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shaddaF_atha-ar.glif`
-  - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
-  - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
   - `VirtuaGrotesk-Regular.ufo` `shaddaDamma-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shaddaD_amma-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `shaddaDamma-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shaddaD_amma-ar.glif`
 
@@ -188,35 +205,85 @@ and it does not replace the visual proof review.
 
 - Area: Mark attachment
 - Review cue: tanween combinations remain clear and aligned
-- Source targets: 0 existing, 0 missing
-- Edit target guidance: proof/smoke review row; record the exact glyphs in the visual review log if it becomes `fix-needed`.
+- Source targets: 8 existing, 0 missing
+- mark-tanween:
+  - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `fathatan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/fathatan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `fathatan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/fathatan-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `dammatan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/dammatan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `dammatan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/dammatan-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `kasratan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/kasratan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `kasratan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/kasratan-ar.glif`
 
 ### `mark-hamza-above-below`
 
 - Area: Mark attachment
 - Review cue: hamza combinations attach cleanly above and below
-- Source targets: 0 existing, 0 missing
-- Edit target guidance: proof/smoke review row; record the exact glyphs in the visual review log if it becomes `fix-needed`.
+- Source targets: 6 existing, 0 missing
+- mark-hamza-above-below:
+  - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `hamzaabove-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hamzaabove-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `hamzabelow-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzabelow-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hamzabelow-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzabelow-ar.glif`
 
 ### `mark-dotted-circle`
 
 - Area: Mark attachment
 - Review cue: dotted circle with top and bottom marks is readable
-- Source targets: 0 existing, 0 missing
-- Edit target guidance: proof/smoke review row; record the exact glyphs in the visual review log if it becomes `fix-needed`.
+- Source targets: 14 existing, 0 missing
+- mark-dotted-circle:
+  - `VirtuaGrotesk-Regular.ufo` `dottedCircle` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/dottedCircle.glif`
+  - `VirtuaGrotesk-Bold.ufo` `dottedCircle` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/dottedCircle.glif`
+  - `VirtuaGrotesk-Regular.ufo` `fatha-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/fatha-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `fatha-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/fatha-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `damma-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/damma-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `damma-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/damma-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `kasra-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/kasra-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `kasra-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/kasra-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `fathatan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/fathatan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `fathatan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/fathatan-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `dammatan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/dammatan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `dammatan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/dammatan-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `kasratan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/kasratan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `kasratan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/kasratan-ar.glif`
 
 ### `class-mark-combinations`
 
 - Area: Glyph class
 - Review cue: shadda, hamza, tanween, sukun, and kasra composites
-- Source targets: 6 existing, 0 missing
-- class-mark-combinations mark prompt:
-  - `VirtuaGrotesk-Regular.ufo` `shaddaFatha-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shaddaF_atha-ar.glif`
-  - `VirtuaGrotesk-Bold.ufo` `shaddaFatha-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shaddaF_atha-ar.glif`
+- Source targets: 28 existing, 0 missing
+- class-mark-combinations:
   - `VirtuaGrotesk-Regular.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `beh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `dottedCircle` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/dottedCircle.glif`
+  - `VirtuaGrotesk-Bold.ufo` `dottedCircle` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/dottedCircle.glif`
+  - `VirtuaGrotesk-Regular.ufo` `fatha-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/fatha-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `fatha-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/fatha-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `damma-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/damma-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `damma-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/damma-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `kasra-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/kasra-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `kasra-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/kasra-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `fathatan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/fathatan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `fathatan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/fathatan-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `dammatan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/dammatan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `dammatan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/dammatan-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `kasratan-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/kasratan-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `kasratan-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/kasratan-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `hamzaabove-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hamzaabove-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `hamzabelow-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzabelow-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hamzabelow-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzabelow-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `sukun-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sukun-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `sukun-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sukun-ar.glif`
   - `VirtuaGrotesk-Regular.ufo` `shaddaDamma-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shaddaD_amma-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `shaddaDamma-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shaddaD_amma-ar.glif`
+  - `VirtuaGrotesk-Regular.ufo` `shaddaFatha-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shaddaF_atha-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shaddaFatha-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shaddaF_atha-ar.glif`
 
 ### `class-dot-stack-helpers`
 

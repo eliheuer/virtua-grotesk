@@ -8,6 +8,7 @@ regenerated after recording outcomes.
 - Full runbook: `documentation/arabic-visual-review-runbook.md`
 - Dashboard: `documentation/arabic-manual-review-dashboard.html`
 - Focused Arabic PDF proof: `documentation/arabic-print-proof.pdf`
+- Focused Arabic PDF index: `documentation/arabic-print-proof-index.md`
 - Focused HTML: `documentation/arabic-next-review-batch.html`
 - AI-safe triage: run `make arabic-next-review-ai-triage`
 - AI visual observations: run `make arabic-next-review-ai-observations`
@@ -21,10 +22,12 @@ regenerated after recording outcomes.
 
 1. Open `documentation/arabic-print-proof.pdf` and scan the current
    five-row batch across Regular, Medium, SemiBold, and Bold.
-2. Use the linked HTML/source evidence below for any row that looks
+2. Use `documentation/arabic-print-proof-index.md` to jump directly
+   to the style and section you are reviewing.
+3. Use the linked HTML/source evidence below for any row that looks
    missing, clipped, malformed, duplicated, wrong-codepoint, or
    stylistically inconsistent.
-3. Record one guarded status command per row only after checking the
+4. Record one guarded status command per row only after checking the
    evidence. The PDF speeds review; it does not replace source/proof
    inspection for final approval.
 
@@ -63,6 +66,8 @@ regenerated after recording outcomes.
 - Item: Regular glyphs
 - Cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*Regular*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 3 Regular cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Regular glyphs: `documentation/arabic-review-snapshots/proof-regular-glyphs.png` from `documentation/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`
   - Regular Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-regular-glyphs.png`
@@ -93,6 +98,8 @@ AI comparison prompt:
 - Item: Medium glyphs
 - Cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*Medium*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 6 Medium cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Medium glyphs: `documentation/arabic-review-snapshots/proof-medium-glyphs.png` from `documentation/gftools-qa/Proof/Medium-diffbrowsers_glyphs.html`
   - Medium Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-medium-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-medium-glyphs.png`
@@ -123,6 +130,8 @@ AI comparison prompt:
 - Item: SemiBold glyphs
 - Cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*SemiBold*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 9 SemiBold cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - SemiBold glyphs: `documentation/arabic-review-snapshots/proof-semibold-glyphs.png` from `documentation/gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html`
   - SemiBold Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-semibold-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-semibold-glyphs.png`
@@ -153,6 +162,8 @@ AI comparison prompt:
 - Item: Bold glyphs
 - Cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*Bold*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 12 Bold cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Bold glyphs: `documentation/arabic-review-snapshots/proof-bold-glyphs.png` from `documentation/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`
   - Bold Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-bold-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-bold-glyphs.png`
@@ -183,6 +194,8 @@ AI comparison prompt:
 - Item: letter-structures
 - Cue: sad, dad, tah, zah, meem, heh, wawHamzaabove, lam-alef forms; review sidebearing-risk glyphs in the focused proof
 - Evidence: `documentation/contour-cleanup-decision-log.md`; `documentation/arabic-cleanup-drawing-briefs.md`; `documentation/arabic-manual-review-dashboard.html`; `documentation/arabic-visual-risk-proof.html`
+- Arabic print proof pages: p. 3 Regular cmap grid; p. 6 Medium cmap grid; p. 9 SemiBold cmap grid; p. 12 Bold cmap grid; p. 1 Regular Arabic samples; p. 4 Medium Arabic samples; p. 7 SemiBold Arabic samples; p. 10 Bold Arabic samples
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Arabic structure sweep: `documentation/arabic-review-snapshots/class-letter-structures.png` from `documentation/arabic-structure-sweep.html`
   - Arabic visual risk proof: `documentation/arabic-review-snapshots/class-letter-structures-2.png` from `documentation/arabic-visual-risk-proof.html`

@@ -23,6 +23,8 @@ FIRST_BATCH_AI_SWEEP = ROOT / "documentation/arabic-first-review-ai-sweep.md"
 ZOOM_SNAPSHOTS = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
 CROP_INTEGRITY = ROOT / "documentation/arabic-first-review-crop-integrity.md"
 RISK_SHORTLIST = ROOT / "documentation/arabic-first-review-risk-shortlist.md"
+FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
 
 FIRST_BATCH_KEYS = [
     "proof-regular-glyphs",
@@ -146,6 +148,8 @@ def markdown_report() -> str:
         f"- Structure triage: `{rel(STRUCTURE_TRIAGE)}`",
         f"- Visual-risk proof: `{rel(VISUAL_RISK)}`",
         f"- Edit-target source: `{rel(EDIT_TARGETS)}`",
+        f"- First-batch source checkpoint: `{rel(FIRST_BATCH_SOURCE_CHECKPOINT)}`",
+        f"- Pending source checkpoint: `{rel(PENDING_SOURCE_CHECKPOINT)}`",
         f"- AI visual sweep notes: `{rel(FIRST_BATCH_AI_SWEEP)}`",
         f"- Focused zoom crops: `{rel(ZOOM_SNAPSHOTS)}`",
         f"- Focused crop integrity: `{rel(CROP_INTEGRITY)}`",
@@ -203,6 +207,8 @@ def markdown_report() -> str:
             "",
             "```bash",
             "./build.sh",
+            "make arabic-first-batch-source-checkpoint",
+            "make arabic-pending-source-checkpoint",
             "make reports-only",
             "make preflight-only",
             "```",

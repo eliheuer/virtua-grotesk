@@ -6,6 +6,7 @@ from __future__ import annotations
 from pathlib import Path
 import sys
 
+import report_arabic_manual_edit_targets as edit_targets
 from report_arabic_manual_review_batches import (
     BATCHES,
     ROOT,
@@ -22,9 +23,15 @@ from report_arabic_manual_review_batches import (
     visual_status,
     zoom_snapshot_rows,
 )
+from report_arabic_visual_review_runbook import (
+    print_proof_page_lines,
+    visual_rows as runbook_visual_rows,
+)
 
 
 DEFAULT_OUTPUT = ROOT / "documentation/arabic-review-worksheet-bundle.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
 
 
 def visual_command(key: str, status: str, notes: str) -> str:
@@ -45,8 +52,60 @@ def command_set(key: str) -> str:
     )
 
 
+def print_proof_pages_for_key(key: str, rows_by_key: dict[str, object]) -> str:
+    row = rows_by_key.get(key)
+    if row is None:
+        return ""
+    for line in print_proof_page_lines(row):
+        text = line.strip().removeprefix("- ").strip()
+        if text.startswith("Arabic print proof pages: "):
+            return text.removeprefix("Arabic print proof pages: ")
+    return ""
+
+
+def batch_edit_targets(visual_items: list[list[str]]) -> list[edit_targets.EditTarget]:
+    targets: list[edit_targets.EditTarget] = []
+    seen: set[tuple[str, str, str]] = set()
+    for row in visual_items:
+        key = clean(row[0])
+        for target in edit_targets.row_targets(key):
+            path_key = str(target.path.relative_to(ROOT)) if target.path else "missing"
+            target_key = (target.ufo.name, target.glyph_name, path_key)
+            if target_key in seen:
+                continue
+            seen.add(target_key)
+            targets.append(target)
+    return targets
+
+
+def glyph_focus_rows(
+    targets: list[edit_targets.EditTarget],
+) -> list[tuple[str, list[edit_targets.EditTarget], list[str]]]:
+    by_glyph: dict[str, list[edit_targets.EditTarget]] = {}
+    for target in targets:
+        by_glyph.setdefault(target.glyph_name, []).append(target)
+
+    rows: list[tuple[str, list[edit_targets.EditTarget], list[str]]] = []
+    for glyph_name, glyph_targets in sorted(by_glyph.items()):
+        sources = sorted({target.source for target in glyph_targets})
+        rows.append((glyph_name, glyph_targets, sources))
+    return rows
+
+
+def master_names(targets: list[edit_targets.EditTarget]) -> str:
+    return ", ".join(
+        sorted(
+            {
+                target.ufo.name.replace("VirtuaGrotesk-", "").replace(".ufo", "")
+                for target in targets
+            }
+        )
+    )
+
+
 def markdown_report() -> str:
     visual = visual_rows()
+    runbook_rows = {row.key: row for row in runbook_visual_rows()}
     snapshots_by_key = snapshot_rows()
     zoom_snapshots_by_key = zoom_snapshot_rows()
     ai_rows = ai_observation_rows()
@@ -66,6 +125,8 @@ def markdown_report() -> str:
         "- Source for AI-safe notes: `documentation/arabic-full-queue-ai-sweep.md`",
         "- Source for snapshots: `documentation/arabic-next-review-snapshots.md`",
         "- Source for official statuses: `documentation/arabic-visual-review-log.md`",
+        f"- Focused Arabic PDF proof: `{ARABIC_PRINT_PROOF.relative_to(ROOT)}`",
+        f"- Focused Arabic PDF index: `{ARABIC_PRINT_PROOF_INDEX.relative_to(ROOT)}`",
         "",
         "## Review Batches",
         "",
@@ -102,18 +163,33 @@ def markdown_report() -> str:
                 f"- `{clean(row[0])}` {row[1]}: `{row[3].strip('`')}` from `{row[2].strip('`')}`"
                 for row in batch_snapshots
             )
+        focus_rows = glyph_focus_rows(batch_edit_targets(visual_items))
+        if focus_rows:
+            lines.extend(
+                [
+                    "",
+                    "Glyph-level drawing punchlist:",
+                    "",
+                    "| Glyph | Masters | Review prompt source |",
+                    "| --- | --- | --- |",
+                ]
+            )
+            for glyph_name, glyph_targets, sources in focus_rows:
+                lines.append(
+                    f"| `{glyph_name}` | {master_names(glyph_targets)} | {'; '.join(sources)} |"
+                )
         lines.extend(
             [
                 "",
-                "| Key | Status | Review cue | AI observation | Human follow-up | Observed issue or `none` | Source/proof location | Final status | Guarded commands |",
-                "| --- | --- | --- | --- | --- | --- | --- | --- | --- |",
+                "| Print proof pages | Key | Status | Review cue | AI observation | Human follow-up | Observed issue or `none` | Source/proof location | Final status | Guarded commands |",
+                "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
             ]
         )
         for row in visual_items:
             key = clean(row[0])
             ai_observation, human_follow_up = ai_rows.get(key, ("", ""))
             lines.append(
-                f"| `{key}` | {visual_status(row)} | {visual_cue(row)} | {ai_observation} | "
+                f"| {print_proof_pages_for_key(key, runbook_rows)} | `{key}` | {visual_status(row)} | {visual_cue(row)} | {ai_observation} | "
                 f"{human_follow_up} |  |  | pass / fix-needed / deferred | {command_set(key)} |"
             )
         lines.append("")

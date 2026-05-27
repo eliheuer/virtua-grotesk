@@ -8,8 +8,8 @@ not create a tag, push a tag, publish a release, or contact GitHub.
 
 - Upstream URL: `https://github.com/eliheuer/virtua-grotesk`
 - Current branch: `main`
-- Current commit: `d80aff9da07e4f97ffdd28dd115abffdbfd91126`
-- Current short commit: `d80aff9`
+- Current commit: `05706bd4442fe5c556495ad3f9c4dd7a5185b775`
+- Current short commit: `05706bd`
 - Source version: `1.000`
 - Release tag: `v1.000`
 - Release title: `Virtua Grotesk 1.000`
@@ -47,7 +47,7 @@ This release archive contains the files referenced by downstream
 `METADATA.pb` `source.files` for the selected latest-release Packager
 path.
 
-Source commit: d80aff9da07e4f97ffdd28dd115abffdbfd91126
+Source commit: 05706bd4442fe5c556495ad3f9c4dd7a5185b775
 Google Fonts source mode: latest-release
 
 Archive contents:

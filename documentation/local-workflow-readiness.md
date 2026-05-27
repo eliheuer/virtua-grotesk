@@ -32,7 +32,7 @@ This generated report summarizes whether the local checkout can run the main Goo
 - gftools QA proof covers expected instances: yes
 - DrawBot fork runtime ready: yes
 - Proof PDF artifact present: yes
-- Proof PDF page count: 10
+- Proof PDF page count: 11
 - Local google/fonts fork ready: yes
 - Local google/fonts branch: `main`
 - Local google/fonts tracking branch: `origin/main`
@@ -185,8 +185,8 @@ This generated report summarizes whether the local checkout can run the main Goo
 
 - Path: `proof.pdf`
 - Exists: yes
-- Size: 95905 bytes
-- Page count: 10
+- Size: 106498 bytes
+- Page count: 11
 - Render command: `make proof-only`
 
 ## Google Fonts QA Proof Artifact

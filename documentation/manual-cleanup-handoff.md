@@ -24,6 +24,12 @@ before the final Google Fonts package pass.
   `documentation/arabic-snapshot-integrity.md` reports 32 pending/fix-needed
   review keys, 33 readable PNG files, 33 nonblank PNG files, zero missing
   snapshot rows, and zero integrity errors.
+- Arabic source-structure checkpoints are ready for hand drawing:
+  `documentation/arabic-first-batch-source-checkpoint.md` covers the current
+  structure/wrong-glyph batch, and
+  `documentation/arabic-pending-source-checkpoint.md` covers all unresolved
+  review-row source targets with 68 unique glyph names, 136 paired source
+  files, zero missing files, and zero Regular/Bold structure mismatches.
 - Reusable Google Fonts onboarding knowledge has been captured in `.agents/`.
 - The generated Add Font issue draft, downstream package preview, release
   archive plan, Packager dry-run gates, and downstream PR readiness reports are
@@ -63,7 +69,10 @@ cleanup pass should focus on:
    risk rows for U+062B, U+0633, U+0634, and U+0648 across weights.
    If a row becomes `fix-needed`, use
    `documentation/arabic-manual-edit-targets.md` to jump to the exact Regular
-   and Bold GLIF files; keep both masters structurally compatible.
+   and Bold GLIF files; use
+   `documentation/arabic-pending-source-checkpoint.md` to confirm the broader
+   unresolved queue still has paired source files, and keep both masters
+   structurally compatible.
 3. Keep source contour/no-contour cleanup closed by regenerating the contour
    proof after any drawing edits; there are currently zero unresolved contour
    review rows.
@@ -204,6 +213,8 @@ make contour-cleanup-proof
 make arabic-next-review-snapshots ARABIC_SNAPSHOT_ARGS="--all-pending --limit 32 --reuse-existing"
 make arabic-snapshot-integrity
 make arabic-manual-edit-targets
+make arabic-first-batch-source-checkpoint
+make arabic-pending-source-checkpoint
 make preflight
 make next-actions
 make blockers

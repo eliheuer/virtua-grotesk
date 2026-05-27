@@ -136,6 +136,29 @@ surfaces. Track at least:
 - Add a batch recorder when the reviewer is ready to close rows. It should
   expand the current unresolved batch into one `pass`, `fix-needed`, and
   `deferred` command per row, plus the regeneration commands to run afterward.
+- Add an optional TSV batch template and validating updater when several rows
+  may close together. Treat TSV as a temporary input form, not the canonical
+  record; the official review log stays the source of truth. Keep the generated
+  template blank in the status/reviewer/notes fields, make the updater dry-run
+  by default, reject bad statuses and duplicate keys, and require an explicit
+  apply flag before writing the review log. Add a one-command apply-check target
+  that applies the TSV, regenerates reports, and reruns preflight so the
+  official review log and derived evidence stay in sync after a batch review
+  pass.
+- Add a compact drawing-session checklist before hand editing starts. It should
+  begin with UFO/editor loader checks, then list the current batch, exact proof
+  files to open, guarded pass/fix/defer commands, likely source GLIF files in
+  every master, a glyph-level punchlist grouped by source glyph and review
+  prompt, and the rebuild/report/preflight commands after edits.
+- Add a fast source-edit diff report for variable or multi-master projects.
+  It should read current worktree status, list changed non-Latin GLIF files,
+  and flag one-sided edits where a Regular/Bold or otherwise paired master edit
+  is missing before the full build/preflight loop runs.
+- Add source-structure checkpoints for the active batch and, when the queue is
+  broad, all unresolved review rows. Resolve GLIF paths through UFO
+  `contents.plist`, not filename guesses; report missing source files,
+  contours, components, points, and paired-master structure mismatches before
+  hand drawing starts.
 - When AI has actually looked at snapshots, keep that as a separate companion
   sweep note. The note should list viewed evidence, concrete observations,
   human follow-ups, and non-decisions; it must not silently update the official

@@ -19,6 +19,8 @@ ZOOM_SNAPSHOTS = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
 SNAPSHOT_INTEGRITY = ROOT / "documentation/arabic-snapshot-integrity.md"
 NEXT_BATCH = ROOT / "documentation/arabic-next-review-batch.html"
 DASHBOARD = ROOT / "documentation/arabic-manual-review-dashboard.html"
+ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
 PROOF_DIR = ROOT / "documentation/gftools-qa/Proof"
 STRUCTURE_TRIAGE = ROOT / "documentation/arabic-structure-triage.md"
 MARK_TRIAGE = ROOT / "documentation/arabic-mark-triage.md"
@@ -33,6 +35,12 @@ PROOF_INSTANCE_NAMES = {
     "medium": "Medium",
     "semibold": "SemiBold",
     "bold": "Bold",
+}
+PRINT_PROOF_PAGES = {
+    "regular": {"samples": 1, "numerals": 2, "cmap": 3},
+    "medium": {"samples": 4, "numerals": 5, "cmap": 6},
+    "semibold": {"samples": 7, "numerals": 8, "cmap": 9},
+    "bold": {"samples": 10, "numerals": 11, "cmap": 12},
 }
 BATCH_REVIEW_ORDER = [
     "proof-regular-glyphs",
@@ -264,6 +272,48 @@ def proof_matches(row: ReviewRow) -> list[Path]:
     return sorted(PROOF_DIR.glob(f"{instance}-diffbrowsers_{proof_type}.html"))
 
 
+def print_proof_page_lines(row: ReviewRow) -> list[str]:
+    if not ARABIC_PRINT_PROOF.exists() or not ARABIC_PRINT_PROOF_INDEX.exists():
+        return []
+
+    pages: list[tuple[str, str]] = []
+    tokens = row.key.split("-")
+    if row.key.startswith("proof-") and len(tokens) >= 3:
+        instance = tokens[1]
+        proof_type = tokens[2]
+        style_pages = PRINT_PROOF_PAGES.get(instance)
+        if style_pages:
+            if proof_type == "glyphs":
+                pages.append((str(style_pages["cmap"]), f"{PROOF_INSTANCE_NAMES.get(instance, instance)} cmap grid"))
+            elif proof_type in {"text", "waterfall"}:
+                pages.append((str(style_pages["samples"]), f"{PROOF_INSTANCE_NAMES.get(instance, instance)} Arabic samples"))
+            elif proof_type == "proofer":
+                pages.append((str(style_pages["samples"]), f"{PROOF_INSTANCE_NAMES.get(instance, instance)} Arabic samples"))
+                pages.append((str(style_pages["numerals"]), f"{PROOF_INSTANCE_NAMES.get(instance, instance)} numerals and punctuation"))
+    elif row.key.startswith("mark-") or row.key in {
+        "class-mark-combinations",
+        "class-dot-stack-helpers",
+    }:
+        pages.extend((str(page_set["samples"]), f"{PROOF_INSTANCE_NAMES[key]} Arabic samples") for key, page_set in PRINT_PROOF_PAGES.items())
+    elif row.key == "class-letter-structures":
+        pages.extend((str(page_set["cmap"]), f"{PROOF_INSTANCE_NAMES[key]} cmap grid") for key, page_set in PRINT_PROOF_PAGES.items())
+        pages.extend((str(page_set["samples"]), f"{PROOF_INSTANCE_NAMES[key]} Arabic samples") for key, page_set in PRINT_PROOF_PAGES.items())
+    elif row.key.startswith("smoke-"):
+        pages.extend((str(page_set["samples"]), f"{PROOF_INSTANCE_NAMES[key]} Arabic samples") for key, page_set in PRINT_PROOF_PAGES.items())
+    elif row.key == "class-arabic-farsi-numerals":
+        pages.extend((str(page_set["numerals"]), f"{PROOF_INSTANCE_NAMES[key]} numerals") for key, page_set in PRINT_PROOF_PAGES.items())
+    elif row.key == "class-arabic-punctuation":
+        pages.extend((str(page_set["numerals"]), f"{PROOF_INSTANCE_NAMES[key]} punctuation") for key, page_set in PRINT_PROOF_PAGES.items())
+
+    if not pages:
+        return []
+    page_text = "; ".join(f"p. {page} {label}" for page, label in pages)
+    return [
+        f"- Arabic print proof pages: {page_text}",
+        f"  - Page map: `{ARABIC_PRINT_PROOF_INDEX.relative_to(ROOT)}`",
+    ]
+
+
 def snapshot_rows_for_key(key: str) -> list[tuple[str, str, str]]:
     rows: list[tuple[str, str, str]] = []
     for path, suffix in [(SNAPSHOTS, ""), (ZOOM_SNAPSHOTS, " focused 2x crop")]:
@@ -302,6 +352,7 @@ def row_priority(row: ReviewRow) -> tuple[int, str]:
 
 def evidence_lines(row: ReviewRow) -> list[str]:
     lines = [f"- Evidence: {row.evidence}"]
+    lines.extend(print_proof_page_lines(row))
     lines.extend(snapshot_lines(row))
     focused = FOCUSED_EVIDENCE_BY_KEY.get(row.key, [])
     existing_focused = [path for path in focused if (ROOT / path).exists()]

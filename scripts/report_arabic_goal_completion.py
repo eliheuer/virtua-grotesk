@@ -73,15 +73,25 @@ def status(done: bool, *, needs_review: bool = False) -> str:
 
 
 def fontspector_fail_count(text: str) -> int | None:
+    counts = fontspector_summary_counts(text)
+    for label, value in counts.items():
+        if "FAIL" in label:
+            return value
+    return 0
+
+
+def fontspector_summary_counts(text: str) -> dict[str, int]:
     summary = re.search(r"### Summary\n\n\| (.+) \|\n\|[-| ]+\|\n\| (.+) \|", text)
     if not summary:
-        return None
+        return {}
     labels = [cell.strip() for cell in summary.group(1).strip("|").split("|")]
     values = [cell.strip() for cell in summary.group(2).strip("|").split("|")]
+    counts: dict[str, int] = {}
     for label, value in zip(labels, values, strict=False):
-        if "FAIL" in label:
-            return int(value)
-    return 0
+        value_match = re.match(r"\d+", value)
+        if value_match:
+            counts[label] = int(value_match.group(0))
+    return counts
 
 
 def table_row(requirement: str, state: str, evidence: str, result: str) -> str:
@@ -91,6 +101,7 @@ def table_row(requirement: str, state: str, evidence: str, result: str) -> str:
 def markdown_report() -> str:
     arabic = read("documentation/missing-gf-arabic-core.md")
     source = read("documentation/arabic-source-work-checklist.md")
+    candidate = read("documentation/arabic-candidate-glyph-plan.md")
     marks = read("documentation/arabic-mark-readiness.md")
     shaping = read("documentation/arabic-shaping-smoke-test.md")
     master = read("documentation/master-compatibility.md")
@@ -101,6 +112,7 @@ def markdown_report() -> str:
     snapshot_integrity = read("documentation/arabic-snapshot-integrity.md")
     hand_review_session = read("documentation/arabic-hand-review-session.md")
     hand_review_contact_sheet = read("documentation/arabic-hand-review-contact-sheet.html")
+    arabic_print_proof_index = read("documentation/arabic-print-proof-index.md")
     full_queue_ai_sweep = read("documentation/arabic-full-queue-ai-sweep.md")
     ai_visual_screen = read("documentation/arabic-ai-visual-screen-batch-2.md")
     mark_ai_visual_screen = read("documentation/arabic-ai-visual-screen-batch-3.md")
@@ -108,6 +120,8 @@ def markdown_report() -> str:
     spacing_ai_visual_screen = read("documentation/arabic-ai-visual-screen-batch-5.md")
     review_board = read("documentation/arabic-next-review-board.html")
     edit_targets = read("documentation/arabic-manual-edit-targets.md")
+    first_batch_source_checkpoint = read("documentation/arabic-first-batch-source-checkpoint.md")
+    pending_source_checkpoint = read("documentation/arabic-pending-source-checkpoint.md")
     blockers = read("documentation/final-submission-blockers.md")
     contours = read("documentation/contour-cleanup-decision-log.md")
     fontspector = read("documentation/fontspector-googlefonts-report.md")
@@ -118,6 +132,12 @@ def markdown_report() -> str:
     positional_forms = first_int(r"Suggested Arabic positional-form glyph names: (\d+)", source)
     missing_both = first_int(r"Suggested glyph names missing in both masters: (\d+)", source)
     dotted_missing = "U+25CC dotted circle missing: no" in source
+    candidate_worklist = first_int(r"Worklist glyphs: (\d+)", candidate)
+    candidate_auto_create = first_int(r"Auto-created / would auto-create: (\d+)", candidate)
+    candidate_review_needed = first_int(r"Review-needed: (\d+)", candidate)
+    candidate_hand_draw = first_int(r"Hand-draw-needed: (\d+)", candidate)
+    candidate_compatibility_risk = first_int(r"Compatibility-risk: (\d+)", candidate)
+    candidate_existing_entries = first_int(r"Existing master entries counted: (\d+)", candidate)
     mark_missing = first_int(r"Missing from current variable-font cmap: (\d+)", marks)
     dotted_present = "U+25CC dotted circle present: yes" in marks
     source_anchors = "Source anchors present: yes" in marks
@@ -141,6 +161,11 @@ def markdown_report() -> str:
     snapshot_missing = first_int(r"Pending/fix-needed rows without snapshot: (\d+)", snapshot_integrity)
     arabic_print_proof = ROOT / "documentation/arabic-print-proof.pdf"
     print_proof_ready = arabic_print_proof.exists() and arabic_print_proof.stat().st_size > 0
+    print_proof_index_ready = (
+        "# Arabic Print Proof Index" in arabic_print_proof_index
+        and "PDF: `documentation/arabic-print-proof.pdf`" in arabic_print_proof_index
+        and "Arabic cmap grid" in arabic_print_proof_index
+    )
     session_links_print_proof = "documentation/arabic-print-proof.pdf" in hand_review_session
     contact_sheet_links_print_proof = "documentation/arabic-print-proof.pdf" in hand_review_contact_sheet
     full_queue_ai = full_queue_ai_rows(full_queue_ai_sweep)
@@ -179,15 +204,50 @@ def markdown_report() -> str:
     )
     source_targets = first_int(r"Source target references: (\d+)", edit_targets)
     missing_target_files = first_int(r"Missing source target files: (\d+)", edit_targets)
+    first_batch_checkpoint_glyphs = first_int(r"^- Glyphs checked: (\d+)$", first_batch_source_checkpoint)
+    first_batch_checkpoint_missing = first_int(r"^- Missing source files: (\d+)$", first_batch_source_checkpoint)
+    first_batch_checkpoint_mismatches = first_int(
+        r"^- Regular/Bold structure mismatches: (\d+)$",
+        first_batch_source_checkpoint,
+    )
+    first_batch_checkpoint_ready = "Ready for paired-master hand review: yes" in first_batch_source_checkpoint
+    pending_checkpoint_rows = first_int(r"^- Pending or fix-needed review rows: (\d+)$", pending_source_checkpoint)
+    pending_checkpoint_glyphs = first_int(r"^- Unique source glyph names checked: (\d+)$", pending_source_checkpoint)
+    pending_checkpoint_files = first_int(r"^- Unique source target files referenced: (\d+)$", pending_source_checkpoint)
+    pending_checkpoint_missing = first_int(r"^- Missing source files: (\d+)$", pending_source_checkpoint)
+    pending_checkpoint_mismatches = first_int(
+        r"^- Regular/Bold structure mismatches: (\d+)$",
+        pending_source_checkpoint,
+    )
+    pending_checkpoint_ready = "Ready for paired-master hand review: yes" in pending_source_checkpoint
     contour_pending = first_int(r"^- Pending: (\d+)$", contours)
     contour_fix_now = first_int(r"^- Fix-now: (\d+)$", contours)
     contour_fixed = first_int(r"^- Fixed: (\d+)$", contours)
     contour_accepted = first_int(r"^- Accepted: (\d+)$", contours)
     contour_deferred = first_int(r"^- Deferred: (\d+)$", contours)
     fontspector_fails = fontspector_fail_count(fontspector)
+    fontspector_counts = fontspector_summary_counts(fontspector)
+    fontspector_warns = fontspector_counts.get("⚠️ WARN", 0)
+    fontspector_infos = fontspector_counts.get("ℹ️ INFO", 0)
+    fontspector_passes = fontspector_counts.get("✅ PASS", 0)
+    fontspector_skips = fontspector_counts.get("⏩ SKIP", 0)
 
     core_done = arabic_missing == 0
-    source_done = source_missing == 0 and suggested_names == 0 and missing_both == 0 and dotted_missing
+    candidate_done = (
+        candidate_worklist == 256
+        and candidate_auto_create == 0
+        and candidate_review_needed == 256
+        and candidate_hand_draw == 0
+        and candidate_compatibility_risk == 0
+        and candidate_existing_entries == 512
+    )
+    source_done = (
+        source_missing == 0
+        and suggested_names == 0
+        and missing_both == 0
+        and dotted_missing
+        and candidate_done
+    )
     compatibility_done = master_mismatches == 0
     marks_done = mark_missing == 0 and dotted_present and source_anchors and mark_gpos
     shaping_done = shaping_fonts == 5 and gsub_ready == 5 and gpos_ready == 5 and no_notdef
@@ -219,8 +279,8 @@ def markdown_report() -> str:
         ),
         table_row(
             "Missing source glyphs exist in both masters",
-            f"missing codepoints: {source_missing}; suggested names: {suggested_names}; positional forms: {positional_forms}; missing in both masters: {missing_both}; dotted circle missing: {yes_no(not dotted_missing)}",
-            "`documentation/arabic-source-work-checklist.md`",
+            f"missing codepoints: {source_missing}; suggested names: {suggested_names}; positional forms: {positional_forms}; missing in both masters: {missing_both}; dotted circle missing: {yes_no(not dotted_missing)}; candidate worklist: {candidate_worklist}; candidate auto-create: {candidate_auto_create}; candidate review-needed: {candidate_review_needed}; candidate hand-draw-needed: {candidate_hand_draw}; candidate compatibility-risk: {candidate_compatibility_risk}; candidate existing master entries: {candidate_existing_entries}",
+            "`documentation/arabic-source-work-checklist.md`; `documentation/arabic-candidate-glyph-plan.md`",
             status(source_done),
         ),
         table_row(
@@ -243,8 +303,8 @@ def markdown_report() -> str:
         ),
         table_row(
             "Arabic drawings have human visual review",
-            f"GF proof files: {proof_files}/16; Arabic PDF proof ready: {yes_no(print_proof_ready)}; session links PDF: {yes_no(session_links_print_proof)}; contact sheet links PDF: {yes_no(contact_sheet_links_print_proof)}; first-review focused crops ready: {yes_no(crop_ready)}; nonblank crops: {crop_nonblank}; visual pending: {visual_pending}; next packet pending: {packet_pending}; visual fix-needed: {visual_fix_needed}; visual deferred: {visual_deferred}; decision packet ready: {yes_no(decision_packet_ready)}; first-batch AI visual screen ready: {yes_no(first_batch_ai_screen)}; mark-batch AI visual screen ready: {yes_no(mark_batch_ai_screen)}; dot-batch AI visual screen ready: {yes_no(dot_batch_ai_screen)}; spacing-batch AI visual screen ready: {yes_no(spacing_batch_ai_screen)}; board rows: {len(board_keys)}/{len(pending_keys)}; board command rows: {board_command_keys}/{len(pending_keys)}; AI observation rows: {ai_observation_keys}/{len(pending_keys)}; human follow-up rows: {ai_follow_up_keys}/{len(pending_keys)}; snapshot missing rows: {snapshot_missing}; source target references: {source_targets}; missing target files: {missing_target_files}; contour decisions pending: {contour_pending}; fix-now: {contour_fix_now}; fixed: {contour_fixed}; accepted: {contour_accepted}; deferred: {contour_deferred}",
-            "`documentation/arabic-current-review-worksheet.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-ai-visual-screen-batch-2.md`; `documentation/arabic-ai-visual-screen-batch-3.md`; `documentation/arabic-ai-visual-screen-batch-4.md`; `documentation/arabic-ai-visual-screen-batch-5.md`; `documentation/arabic-next-review-board.html`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-hand-review-contact-sheet.html`; `documentation/arabic-print-proof.pdf`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-first-review-crop-integrity.md`; `documentation/arabic-visual-review-checklist.md`; `documentation/arabic-visual-review-log.md`; `documentation/arabic-manual-edit-targets.md`; `documentation/contour-cleanup-decision-log.md`",
+            f"GF proof files: {proof_files}/16; Arabic PDF proof ready: {yes_no(print_proof_ready)}; Arabic PDF index ready: {yes_no(print_proof_index_ready)}; session links PDF: {yes_no(session_links_print_proof)}; contact sheet links PDF: {yes_no(contact_sheet_links_print_proof)}; first-review focused crops ready: {yes_no(crop_ready)}; nonblank crops: {crop_nonblank}; first-batch source checkpoint glyphs: {first_batch_checkpoint_glyphs}; first-batch missing source files: {first_batch_checkpoint_missing}; first-batch Regular/Bold mismatches: {first_batch_checkpoint_mismatches}; first-batch checkpoint ready: {yes_no(first_batch_checkpoint_ready)}; pending source checkpoint rows: {pending_checkpoint_rows}; pending source glyphs: {pending_checkpoint_glyphs}; pending source files: {pending_checkpoint_files}; pending source missing files: {pending_checkpoint_missing}; pending source Regular/Bold mismatches: {pending_checkpoint_mismatches}; pending source checkpoint ready: {yes_no(pending_checkpoint_ready)}; visual pending: {visual_pending}; next packet pending: {packet_pending}; visual fix-needed: {visual_fix_needed}; visual deferred: {visual_deferred}; decision packet ready: {yes_no(decision_packet_ready)}; first-batch AI visual screen ready: {yes_no(first_batch_ai_screen)}; mark-batch AI visual screen ready: {yes_no(mark_batch_ai_screen)}; dot-batch AI visual screen ready: {yes_no(dot_batch_ai_screen)}; spacing-batch AI visual screen ready: {yes_no(spacing_batch_ai_screen)}; board rows: {len(board_keys)}/{len(pending_keys)}; board command rows: {board_command_keys}/{len(pending_keys)}; AI observation rows: {ai_observation_keys}/{len(pending_keys)}; human follow-up rows: {ai_follow_up_keys}/{len(pending_keys)}; snapshot missing rows: {snapshot_missing}; source target references: {source_targets}; missing target files: {missing_target_files}; contour decisions pending: {contour_pending}; fix-now: {contour_fix_now}; fixed: {contour_fixed}; accepted: {contour_accepted}; deferred: {contour_deferred}",
+            "`documentation/arabic-current-review-worksheet.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-ai-visual-screen-batch-2.md`; `documentation/arabic-ai-visual-screen-batch-3.md`; `documentation/arabic-ai-visual-screen-batch-4.md`; `documentation/arabic-ai-visual-screen-batch-5.md`; `documentation/arabic-next-review-board.html`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-hand-review-contact-sheet.html`; `documentation/arabic-print-proof.pdf`; `documentation/arabic-print-proof-index.md`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-first-review-crop-integrity.md`; `documentation/arabic-first-batch-source-checkpoint.md`; `documentation/arabic-pending-source-checkpoint.md`; `documentation/arabic-visual-review-checklist.md`; `documentation/arabic-visual-review-log.md`; `documentation/arabic-manual-edit-targets.md`; `documentation/contour-cleanup-decision-log.md`",
             status(visual_review_done and contour_done),
         ),
         table_row(
@@ -255,7 +315,7 @@ def markdown_report() -> str:
         ),
         table_row(
             "`make test` is ready for final Fontspector review",
-            f"Fontspector FAIL results: {fontspector_fails}; contour decisions pending: {contour_pending}",
+            f"Fontspector FAIL results: {fontspector_fails}; WARN results: {fontspector_warns}; INFO results: {fontspector_infos}; PASS results: {fontspector_passes}; SKIP results: {fontspector_skips}; contour decisions pending: {contour_pending}",
             "`documentation/fontspector-googlefonts-report.md`; `documentation/contour-cleanup-decision-log.md`",
             status(final_fontspector_ready),
         ),
@@ -278,6 +338,11 @@ def markdown_report() -> str:
         "   The first glyph-proof crop files are mechanically ready in",
         "   `documentation/arabic-first-review-crop-integrity.md`, but those",
         "   crops are review aids only and do not close any row.",
+        "   Use `documentation/arabic-first-batch-source-checkpoint.md` for",
+        "   the first-batch Regular/Bold source structure, and",
+        "   `documentation/arabic-pending-source-checkpoint.md` to confirm all",
+        "   unresolved review-row source targets stay paired before and after",
+        "   broader cleanup.",
         "   Use `documentation/arabic-manual-review-batches.md` and",
         "   `documentation/arabic-visual-review-runbook.md` when working through",
         "   the full queue. If a row becomes `fix-needed`, use",

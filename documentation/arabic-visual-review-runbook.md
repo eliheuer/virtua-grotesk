@@ -26,6 +26,8 @@ remaining human review faster and easier to record.
 - Current status: pending
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*Regular*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 3 Regular cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Regular glyphs: `documentation/arabic-review-snapshots/proof-regular-glyphs.png` from `documentation/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`
   - Regular Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-regular-glyphs.png`
@@ -73,6 +75,8 @@ AI comparison prompt:
 - Current status: pending
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*Medium*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 6 Medium cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Medium glyphs: `documentation/arabic-review-snapshots/proof-medium-glyphs.png` from `documentation/gftools-qa/Proof/Medium-diffbrowsers_glyphs.html`
   - Medium Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-medium-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-medium-glyphs.png`
@@ -120,6 +124,8 @@ AI comparison prompt:
 - Current status: pending
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*SemiBold*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 9 SemiBold cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - SemiBold glyphs: `documentation/arabic-review-snapshots/proof-semibold-glyphs.png` from `documentation/gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html`
   - SemiBold Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-semibold-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-semibold-glyphs.png`
@@ -167,6 +173,8 @@ AI comparison prompt:
 - Current status: pending
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
 - Evidence: `documentation/gftools-qa/Proof/*Bold*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html`
+- Arabic print proof pages: p. 12 Bold cmap grid
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Bold glyphs: `documentation/arabic-review-snapshots/proof-bold-glyphs.png` from `documentation/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`
   - Bold Arabic glyph rows focused 2x crop: `documentation/arabic-review-snapshots/proof-bold-glyphs-arabic-zoom.png` from `documentation/arabic-review-snapshots/proof-bold-glyphs.png`
@@ -214,6 +222,8 @@ AI comparison prompt:
 - Current status: pending
 - Review cue: sad, dad, tah, zah, meem, heh, wawHamzaabove, lam-alef forms; review sidebearing-risk glyphs in the focused proof
 - Evidence: `documentation/contour-cleanup-decision-log.md`; `documentation/arabic-cleanup-drawing-briefs.md`; `documentation/arabic-manual-review-dashboard.html`; `documentation/arabic-visual-risk-proof.html`
+- Arabic print proof pages: p. 3 Regular cmap grid; p. 6 Medium cmap grid; p. 9 SemiBold cmap grid; p. 12 Bold cmap grid; p. 1 Regular Arabic samples; p. 4 Medium Arabic samples; p. 7 SemiBold Arabic samples; p. 10 Bold Arabic samples
+  - Page map: `documentation/arabic-print-proof-index.md`
 - Snapshot aids:
   - Arabic structure sweep: `documentation/arabic-review-snapshots/class-letter-structures.png` from `documentation/arabic-structure-sweep.html`
   - Arabic visual risk proof: `documentation/arabic-review-snapshots/class-letter-structures-2.png` from `documentation/arabic-visual-risk-proof.html`

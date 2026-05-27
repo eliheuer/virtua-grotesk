@@ -8,7 +8,7 @@ handoff check for the source state that `METADATA.pb` will claim.
 ## Summary
 
 - Current repo branch: `main`
-- Current repo commit: `d80aff9da07e4f97ffdd28dd115abffdbfd91126`
+- Current repo commit: `05706bd4442fe5c556495ad3f9c4dd7a5185b775`
 - Origin URL: `git@github.com:eliheuer/virtua-grotesk.git`
 - Normalized GitHub origin candidate: `https://github.com/eliheuer/virtua-grotesk`
 - Normalized origin differs from placeholder: yes
@@ -41,8 +41,8 @@ handoff check for the source state that `METADATA.pb` will claim.
 | Field | Value |
 | --- | --- |
 | branch | `main` |
-| commit | `d80aff9da07e4f97ffdd28dd115abffdbfd91126` |
-| short commit | `d80aff9` |
+| commit | `05706bd4442fe5c556495ad3f9c4dd7a5185b775` |
+| short commit | `05706bd` |
 | origin | `git@github.com:eliheuer/virtua-grotesk.git` |
 | normalized GitHub origin candidate | `https://github.com/eliheuer/virtua-grotesk` |
 | upstream | `origin/main` |
@@ -55,87 +55,52 @@ handoff check for the source state that `METADATA.pb` will claim.
 
 ## Current Dirty State
 
-- `M .agents/README.md`
-- ` M .agents/google-fonts-onboarding-checklists.md`
+- `M .agents/google-fonts-onboarding-checklists.md`
+- ` M .agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
 - ` M .agents/skills/google-fonts-qa/SKILL.md`
-- ` M AGENTS.md`
-- ` M GF_READINESS.md`
 - ` M Makefile`
-- ` M README.md`
-- ` M documentation/arabic-mark-readiness.md`
-- ` M documentation/arabic-missing-drawings-ai-execution-goal.md`
-- ` M documentation/arabic-review-packet.md`
-- ` M documentation/arabic-shaping-smoke-test.md`
-- ` M documentation/arabic-source-work-checklist.md`
-- ` M documentation/authorship-disclosure-readiness.md`
-- ` M documentation/avar-readiness.md`
-- ` M documentation/core-qa-process.md`
-- ` M documentation/decision-application-blockers.md`
-- ` M documentation/decision-readiness.md`
-- ` M documentation/downstream-metadata-diff.md`
-- ` M documentation/downstream-metadata-readiness.md`
+- ` M documentation/arabic-batch-recorder.md`
+- ` M documentation/arabic-current-review-worksheet.md`
+- ` M documentation/arabic-goal-completion-audit.md`
+- ` M documentation/arabic-hand-review-contact-sheet.html`
+- ` M documentation/arabic-hand-review-session.md`
+- ` M documentation/arabic-manual-edit-targets.md`
+- ` M documentation/arabic-next-review-ai-triage.md`
+- ` M documentation/arabic-next-review-board.html`
+- ` M documentation/arabic-next-review-packet.md`
+- ` M documentation/arabic-print-proof.pdf`
+- ` M documentation/arabic-review-worksheet-bundle.md`
+- ` M documentation/arabic-visual-review-runbook.md`
 - ` M documentation/final-submission-blockers.md`
-- ` M documentation/fontspector-contour-count.md`
 - ` M documentation/fontspector-googlefonts-report.md`
+- ` M documentation/fontspector-metadata-warning-probe.md`
 - ` M documentation/fontspector-warnings.md`
-- ` M documentation/gf-glyphset-readiness.md`
 - ` M documentation/github-release-draft.md`
 - ` M documentation/github-release-notes.md`
-- ` M documentation/glyph-reachability.md`
-- ` M documentation/google-fonts-add-font-issue-draft.md`
-- ` M documentation/google-fonts-agent-reuse-readiness.md`
-- ` M documentation/google-fonts-decision-answer-sheet.md`
-- ` M documentation/google-fonts-decision-questions.md`
-- ` M documentation/google-fonts-decisions.md`
-- ` M documentation/google-fonts-downstream-package-preview.md`
-- ` M documentation/google-fonts-language-metadata.md`
-- ` M documentation/google-fonts-metadata-review.md`
-- ` M documentation/google-fonts-package-checklist.md`
-- ` M documentation/google-fonts-production-requirements.md`
-- ` M documentation/google-fonts-submission-handoff.md`
-- ` M documentation/google-fonts-template-and-pr-audit.md`
-- ` M documentation/kerning-proof-review.md`
-- ` M documentation/kerning-readiness.md`
-- ` M documentation/local-workflow-readiness.md`
-- ` M documentation/manual-cleanup-handoff.md`
-- ` M documentation/master-compatibility.md`
-- ` M documentation/missing-gf-arabic-core.md`
-- ` M documentation/missing-gf-latin-core.md`
 - ` M documentation/next-actions.md`
-- ` M documentation/package-dry-run-readiness.md`
-- ` M documentation/package-source-files-audit.md`
-- ` M documentation/packager-source-strategy.md`
 - ` M documentation/release-archive-manifest.md`
 - ` M documentation/release-source-readiness.md`
-- ` M documentation/source-ufo-metadata.md`
-- ` M documentation/submission-handoff-readiness.md`
 - ` M documentation/upstream-structure-readiness.md`
-- ` M documentation/variable-font-metadata.md`
 - ` M proof.pdf`
-- ` M scripts/fix_gf_metadata.py`
-- ` M scripts/gf_preflight.py`
-- ` M scripts/prepare_downstream_metadata.py`
-- ` M scripts/report_add_font_issue_draft.py`
-- ` M scripts/report_agent_reuse_readiness.py`
-- ` M scripts/report_arabic_mark_readiness.py`
-- ` M scripts/report_avar_readiness.py`
-- ` M scripts/report_decision_answer_sheet.py`
-- ` M scripts/report_decision_readiness.py`
-- ` M scripts/report_downstream_metadata_diff.py`
-- ` M scripts/report_downstream_metadata_readiness.py`
-- ` M scripts/report_final_submission_blockers.py`
-- ` M scripts/report_fontspector_contours.py`
-- ` M scripts/report_fontspector_markdown.sh`
-- ` M scripts/report_fontspector_warnings.py`
-- ` M scripts/report_gf_glyphset_readiness.py`
-- ` M scripts/report_gf_language_metadata.py`
-- ` M scripts/report_glyph_reachability.py`
-- ` M scripts/report_kerning_readiness.py`
+- ` M scripts/build_arabic_next_review_board.py`
+- ` M scripts/build_arabic_print_proof.py`
+- `MM scripts/gf_preflight.py`
+- ` M scripts/report_arabic_batch_recorder.py`
+- ` M scripts/report_arabic_current_review_worksheet.py`
+- ` M scripts/report_arabic_goal_completion.py`
+- ` M scripts/report_arabic_manual_edit_targets.py`
+- ` M scripts/report_arabic_review_worksheet_bundle.py`
+- ` M scripts/report_arabic_visual_review_runbook.py`
 - ` M scripts/report_next_actions.py`
-- ` M scripts/report_production_requirements.py`
-- ` M scripts/report_submission_handoff_readiness.py`
-- ` M scripts/report_variable_metadata.py`
-- ... 1116 more entries omitted
+- ` M scripts/test_arabic_visual_review_update.sh`
+- `?? documentation/arabic-drawing-session-checklist.md`
+- `?? documentation/arabic-print-proof-index.md`
+- `?? documentation/arabic-source-edit-diff.md`
+- `?? documentation/arabic-visual-review-batch.tsv`
+- `?? scripts/report_arabic_drawing_session_checklist.py`
+- `?? scripts/report_arabic_source_edit_diff.py`
+- `?? scripts/report_arabic_visual_review_batch_tsv.py`
+- `?? scripts/update_arabic_visual_review_batch.py`
 
 ## Downstream Source Mapping
 

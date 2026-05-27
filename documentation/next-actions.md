@@ -17,6 +17,8 @@ This generated report condenses the final blocker stack into an owner-grouped qu
 - Fontspector googlefonts profile: 0 FAIL results
 - UFO editor handoff ready: yes
 - Arabic snapshot evidence ready: yes
+- Arabic first-batch source checkpoint ready: yes
+- Arabic pending source checkpoint ready: yes
 - Contour cleanup decisions: 0 source glyph findings, 0 all-font rows; decisions pending: 0, fix-now: 0, fixed: 0, accepted: 0, deferred: 0
 - GF visual kerning proof: every master has source kerning: yes; static GPOS kern: yes; warnings: 0; gftools proof importable: yes; proof output: yes; proof instances: yes; review files: 16 / 16; review: pending human visual review
 
@@ -38,12 +40,12 @@ This generated report condenses the final blocker stack into an owner-grouped qu
 
 | Action | Current state | Evidence |
 | --- | --- | --- |
-| Complete GF Latin Core coverage. | 0 missing codepoints | `documentation/missing-gf-latin-core.md` |
-| Complete GF Arabic Core coverage. | 0 missing codepoints | `documentation/missing-gf-arabic-core.md` |
+| Keep GF Latin Core coverage at zero missing codepoints. | 0 missing codepoints | `documentation/missing-gf-latin-core.md` |
+| Keep GF Arabic Core coverage at zero missing codepoints. | 0 missing codepoints | `documentation/missing-gf-arabic-core.md` |
 | Plan Arabic source construction batches. | missing codepoints: 0; suggested glyph names: 0; positional forms: 0; missing in both masters: 0; reuse prerequisites checked: 0; missing prerequisites: 0; dotted circle missing: no | `documentation/arabic-source-work-checklist.md` |
 | Add Arabic marks, dotted circle, anchors, and mark/mkmk if Arabic remains in scope. | 0 missing marks; dotted circle: yes; anchors: yes; mark/mkmk: yes | `documentation/arabic-review-packet.md` |
-| Review the next Arabic visual proof packet and record outcomes. | fonts: 5; GSUB arab/dflt: 5/5; GPOS arab/dflt: 5/5; no .notdef: yes; lam-alef rows: 10; 0 missing marks; dotted circle: yes; anchors: yes; mark/mkmk: yes | `documentation/arabic-current-review-worksheet.md`; `documentation/arabic-batch-recorder.md`; `documentation/arabic-first-review-batch.md`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-goal-completion-audit.md`; `documentation/arabic-visual-review-log.md` |
-| Open the UFOs for hand cleanup only after editor/package checks stay green. | UFO editor: yes; snapshot evidence: yes | `documentation/ufo-editor-readiness.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-manual-edit-targets.md` |
+| Review the next Arabic visual proof packet and record outcomes. | fonts: 5; GSUB arab/dflt: 5/5; GPOS arab/dflt: 5/5; no .notdef: yes; lam-alef rows: 10; 0 missing marks; dotted circle: yes; anchors: yes; mark/mkmk: yes | `documentation/arabic-drawing-session-checklist.md`; `documentation/arabic-current-review-worksheet.md`; `documentation/arabic-batch-recorder.md`; `documentation/arabic-first-review-batch.md`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-goal-completion-audit.md`; `documentation/arabic-visual-review-log.md` |
+| Open the UFOs for hand cleanup only after editor/package checks stay green. | UFO editor: yes; snapshot evidence: yes; first-batch source checkpoint: yes; pending source checkpoint: yes | `documentation/arabic-drawing-session-checklist.md`; `documentation/ufo-editor-readiness.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-first-batch-source-checkpoint.md`; `documentation/arabic-pending-source-checkpoint.md`; `documentation/arabic-manual-edit-targets.md` |
 | Keep source contour/no-contour cleanup closed after drawing edits. | 0 source glyph findings, 0 all-font rows; decisions pending: 0, fix-now: 0, fixed: 0, accepted: 0, deferred: 0 | `documentation/arabic-manual-review-batches.md`; `documentation/arabic-manual-edit-targets.md`; `documentation/fontspector-contour-count.md`; `documentation/arabic-cleanup-drawing-briefs.md`; `documentation/contour-cleanup-batches.md`; `documentation/contour-cleanup-ai-triage.md`; `documentation/contour-cleanup-decision-log.md` |
 | Reduce Fontspector warnings without hiding intended serving scope. | honest zero possible: no; package floor: 3 WARN; menu+latin probe: 2 WARN but drops Arabic; menu+latin+arabic probe: 3 WARN; contour findings: 0; Arabic subset threshold needs: 594; latin-ext threshold needs: 120; Latin Core missing: 0; blockers: meet or revise the broad Google Fonts subset threshold for the intended subsets; resolve or get reviewer acceptance for required support codepoints that are not covered by serving subsets. | `documentation/fontspector-metadata-warning-probe.md`; `documentation/fontspector-zero-warning-worklist.md`; `documentation/contour-cleanup-edit-plan.md` |
 | Review GF visual spacing/kerning proof. | every master has source kerning: yes; static GPOS kern: yes; warnings: 0; gftools proof importable: yes; proof output: yes; proof instances: yes; review files: 16 / 16; review: pending human visual review | `documentation/kerning-readiness.md`; `documentation/kerning-proof-review.md` |
@@ -66,8 +68,8 @@ This generated report condenses the final blocker stack into an owner-grouped qu
 
 1. Record the remaining maintainer decisions in `documentation/google-fonts-decisions.md`.
 2. Apply the PUA, kerning, and final release metadata decisions to source and package-preview files.
-3. Complete drawing/source blockers, especially GF Latin Core and GF Arabic Core coverage.
-4. During Arabic hand review, start with `documentation/arabic-current-review-worksheet.md` for the current five-row fill-in sheet, use `documentation/arabic-first-review-batch.md` for the structure/wrong-glyph packet, then use `documentation/arabic-manual-edit-targets.md` to jump from any `fix-needed` row to the matching Regular and Bold GLIF files.
+3. Complete the remaining drawing/source blockers by reviewing the Arabic visual packet and recording each row as pass, fix-needed, or deferred.
+4. During Arabic hand review, start with `documentation/arabic-drawing-session-checklist.md`, then use `documentation/arabic-current-review-worksheet.md` for the current five-row fill-in sheet, `documentation/arabic-first-review-batch.md` for the structure/wrong-glyph packet, `documentation/arabic-first-batch-source-checkpoint.md` for the first-batch Regular/Bold source checkpoint, `documentation/arabic-pending-source-checkpoint.md` for all unresolved review-row source targets, and `documentation/arabic-manual-edit-targets.md` to jump from any `fix-needed` row to the matching Regular and Bold GLIF files.
 5. Run `make kerning-proof-check`, run `make kerning-proof-review-check`, and review `documentation/gftools-qa/Proof` after kerning changes or explicit deferral.
 6. Create the final `v1.000` release archive with every file listed in downstream `source.files`.
 7. Review `documentation/github-release-draft.md`, then publish the final GitHub release asset after the final tag is pushed.

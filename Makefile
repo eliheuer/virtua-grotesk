@@ -9,7 +9,7 @@ GF_WEIGHT_AXIS_REGISTRY = $(GF_REPO_PATH)/axisregistry/Lib/axisregistry/data/wei
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 STATIC_FONTS = fonts/ttf/VirtuaGrotesk-Regular.ttf fonts/ttf/VirtuaGrotesk-Medium.ttf fonts/ttf/VirtuaGrotesk-SemiBold.ttf fonts/ttf/VirtuaGrotesk-Bold.ttf
 
-.PHONY: help decisions decision-readiness-check decision-application-check reference-index-check agent-reuse-check next-actions blockers issue-draft handoff-readiness-check release-check release-archive-check release-archive-build release-archive-verify release-archive-test release-draft-check source-strategy-check package-readiness-check recent-gf-check family-name-check authorship-check pr-readiness-check vendor-id-check kerning-check kerning-proof-check kerning-proof-review-check contour-cleanup-proof contour-decision-update contour-decision-helper-test ufo-editor-check runebender-ufo-check pua-scope-check avar-check warnings-check metadata-warning-check zero-warning-check github-auth-check designer-profile-check designer-profile-prepare-check designer-profile-info-check designer-profile-image-check designer-profile-bio-check designer-profile-validator-test public-upstream-url-check downstream-metadata-check downstream-metadata-helper-test package-wrapper-test arabic-visual-review-helper-test arabic-candidate-plan arabic-goal-audit arabic-print-proof arabic-print-proof-only arabic-visual-risk-proof arabic-structure-sweep arabic-structure-triage arabic-mark-review-proof arabic-mark-triage arabic-manual-review-dashboard arabic-manual-review-batches arabic-current-review-worksheet arabic-review-worksheet-bundle arabic-batch-recorder arabic-first-review-zoom-snapshots arabic-first-review-crop-integrity arabic-first-review-batch arabic-first-review-risk-shortlist arabic-manual-edit-targets arabic-hand-review-session arabic-hand-review-contact-sheet arabic-next-review-packet arabic-next-review-ai-triage arabic-next-review-ai-observations arabic-full-queue-ai-sweep arabic-next-review-board arabic-next-review-snapshots arabic-snapshot-integrity arabic-visual-review-runbook arabic-visual-review-check arabic-visual-review-log arabic-visual-review-update build test reports reports-only proof proof-only preflight preflight-only handoff package-dry-run clean
+.PHONY: help decisions decision-readiness-check decision-application-check reference-index-check agent-reuse-check next-actions blockers issue-draft handoff-readiness-check release-check release-archive-check release-archive-build release-archive-verify release-archive-test release-draft-check source-strategy-check package-readiness-check recent-gf-check family-name-check authorship-check pr-readiness-check vendor-id-check kerning-check kerning-proof-check kerning-proof-review-check contour-cleanup-proof contour-decision-update contour-decision-helper-test ufo-editor-check runebender-ufo-check pua-scope-check avar-check warnings-check metadata-warning-check zero-warning-check github-auth-check designer-profile-check designer-profile-prepare-check designer-profile-info-check designer-profile-image-check designer-profile-bio-check designer-profile-validator-test public-upstream-url-check downstream-metadata-check downstream-metadata-helper-test package-wrapper-test arabic-visual-review-helper-test arabic-candidate-plan arabic-goal-audit arabic-print-proof arabic-print-proof-only arabic-visual-risk-proof arabic-structure-sweep arabic-structure-triage arabic-mark-review-proof arabic-mark-triage arabic-manual-review-dashboard arabic-manual-review-batches arabic-review-progress arabic-current-review-worksheet arabic-review-worksheet-bundle arabic-drawing-session-checklist arabic-source-edit-diff-check arabic-first-batch-source-checkpoint arabic-pending-source-checkpoint arabic-before-drawing-check arabic-after-drawing-check arabic-visual-review-batch-tsv arabic-batch-recorder arabic-first-review-zoom-snapshots arabic-first-review-crop-integrity arabic-first-review-batch arabic-first-review-risk-shortlist arabic-manual-edit-targets arabic-hand-review-session arabic-hand-review-contact-sheet arabic-next-review-packet arabic-next-review-ai-triage arabic-next-review-ai-observations arabic-full-queue-ai-sweep arabic-next-review-board arabic-next-review-snapshots arabic-snapshot-integrity arabic-visual-review-runbook arabic-visual-review-check arabic-visual-review-log arabic-visual-review-update arabic-visual-review-batch-dry-run arabic-visual-review-batch-update arabic-visual-review-batch-apply-check build test reports reports-only proof proof-only preflight preflight-only handoff package-dry-run clean
 
 help:
 	@printf '%s\n' \
@@ -71,8 +71,14 @@ help:
 		'  make arabic-mark-triage  Show mechanical triage for mark review' \
 		'  make arabic-manual-review-dashboard  Build one-page Arabic manual review dashboard' \
 		'  make arabic-manual-review-batches  Show compact Arabic hand-review batch queue' \
+		'  make arabic-review-progress  Show concise Arabic visual review progress and next commands' \
 		'  make arabic-current-review-worksheet  Show fill-in worksheet for current Arabic review batch' \
 		'  make arabic-review-worksheet-bundle  Show fill-in worksheets for all pending Arabic batches' \
+		'  make arabic-drawing-session-checklist  Show compact hand-drawing session checklist' \
+		'  make arabic-source-edit-diff-check  Show changed Arabic GLIF pairing status' \
+		'  make arabic-before-drawing-check  Run source-load checks before opening UFOs for drawing' \
+		'  make arabic-after-drawing-check  Run source checks, build, reports, and preflight after Arabic edits' \
+		'  make arabic-visual-review-batch-tsv  Generate TSV template for the current Arabic review batch' \
 		'  make arabic-batch-recorder  Show guarded commands for the current Arabic review batch' \
 		'  make arabic-first-review-zoom-snapshots  Crop Arabic-row zoom PNGs for the current batch' \
 		'  make arabic-first-review-crop-integrity  Check focused Arabic-row crop PNG integrity' \
@@ -95,6 +101,9 @@ help:
 		'  make arabic-visual-review-check  Show Arabic visual proof review checklist' \
 		'  make arabic-visual-review-log  Show editable Arabic visual review log' \
 		'  make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD"  Update visual review log' \
+		'  make arabic-visual-review-batch-dry-run REVIEW_BATCH=review.tsv  Validate visual review TSV without writing' \
+		'  make arabic-visual-review-batch-update REVIEW_BATCH=review.tsv  Update visual review log from TSV' \
+		'  make arabic-visual-review-batch-apply-check REVIEW_BATCH=review.tsv  Apply TSV, regenerate reports, and preflight' \
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make test           Build, then run Fontspector googlefonts profile' \
 		'  make reports        Build, then regenerate all readiness reports' \
@@ -374,6 +383,10 @@ arabic-manual-review-batches:
 	@$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/arabic-manual-review-batches.md
 	@cat documentation/arabic-manual-review-batches.md
 
+arabic-review-progress:
+	@$(PYTHON) scripts/report_arabic_review_progress.py documentation/arabic-review-progress.md
+	@cat documentation/arabic-review-progress.md
+
 arabic-current-review-worksheet:
 	@$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/arabic-current-review-worksheet.md
 	@cat documentation/arabic-current-review-worksheet.md
@@ -381,6 +394,30 @@ arabic-current-review-worksheet:
 arabic-review-worksheet-bundle:
 	@$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/arabic-review-worksheet-bundle.md
 	@cat documentation/arabic-review-worksheet-bundle.md
+
+arabic-drawing-session-checklist:
+	@$(PYTHON) scripts/report_arabic_drawing_session_checklist.py documentation/arabic-drawing-session-checklist.md
+	@cat documentation/arabic-drawing-session-checklist.md
+
+arabic-source-edit-diff-check:
+	@$(PYTHON) scripts/report_arabic_source_edit_diff.py documentation/arabic-source-edit-diff.md --fail-on-gap
+	@cat documentation/arabic-source-edit-diff.md
+
+arabic-first-batch-source-checkpoint:
+	@$(PYTHON) scripts/report_arabic_first_batch_source_checkpoint.py documentation/arabic-first-batch-source-checkpoint.md
+	@cat documentation/arabic-first-batch-source-checkpoint.md
+
+arabic-pending-source-checkpoint:
+	@$(PYTHON) scripts/report_arabic_pending_source_checkpoint.py documentation/arabic-pending-source-checkpoint.md
+	@cat documentation/arabic-pending-source-checkpoint.md
+
+arabic-before-drawing-check: ufo-editor-check runebender-ufo-check
+
+arabic-after-drawing-check: ufo-editor-check runebender-ufo-check build reports-only preflight-only
+
+arabic-visual-review-batch-tsv:
+	@$(PYTHON) scripts/report_arabic_visual_review_batch_tsv.py documentation/arabic-visual-review-batch.tsv
+	@cat documentation/arabic-visual-review-batch.tsv
 
 arabic-batch-recorder:
 	@$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/arabic-batch-recorder.md
@@ -454,9 +491,18 @@ arabic-visual-review-log:
 REVIEW_KEY ?= proof-regular-glyphs
 REVIEW_STATUS ?= pass
 REVIEWER ?=
+REVIEW_BATCH ?= documentation/arabic-visual-review-batch.tsv
 
 arabic-visual-review-update:
 	@$(PYTHON) scripts/update_arabic_visual_review.py '$(REVIEW_KEY)' --status '$(REVIEW_STATUS)' --reviewer '$(REVIEWER)' --notes '$(NOTES)' --apply
+
+arabic-visual-review-batch-dry-run:
+	@$(PYTHON) scripts/update_arabic_visual_review_batch.py '$(REVIEW_BATCH)'
+
+arabic-visual-review-batch-update:
+	@$(PYTHON) scripts/update_arabic_visual_review_batch.py '$(REVIEW_BATCH)' --apply
+
+arabic-visual-review-batch-apply-check: arabic-visual-review-batch-update reports-only preflight-only
 
 build:
 	./build.sh
@@ -536,8 +582,14 @@ reports-only:
 	$(PYTHON) scripts/report_arabic_next_review_ai_observations.py documentation/arabic-next-review-ai-observations.md
 	$(PYTHON) scripts/report_arabic_full_queue_ai_sweep.py documentation/arabic-full-queue-ai-sweep.md
 	$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/arabic-manual-review-batches.md
+	$(PYTHON) scripts/report_arabic_review_progress.py documentation/arabic-review-progress.md
 	$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/arabic-current-review-worksheet.md
 	$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/arabic-review-worksheet-bundle.md
+	$(PYTHON) scripts/report_arabic_drawing_session_checklist.py documentation/arabic-drawing-session-checklist.md
+	$(PYTHON) scripts/report_arabic_source_edit_diff.py documentation/arabic-source-edit-diff.md --fail-on-gap
+	$(PYTHON) scripts/report_arabic_first_batch_source_checkpoint.py documentation/arabic-first-batch-source-checkpoint.md
+	$(PYTHON) scripts/report_arabic_pending_source_checkpoint.py documentation/arabic-pending-source-checkpoint.md
+	$(PYTHON) scripts/report_arabic_visual_review_batch_tsv.py documentation/arabic-visual-review-batch.tsv
 	$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/arabic-batch-recorder.md
 	$(PYTHON) scripts/build_arabic_next_review_board.py documentation/arabic-next-review-board.html
 	$(PYTHON) scripts/report_arabic_snapshot_integrity.py documentation/arabic-snapshot-integrity.md
