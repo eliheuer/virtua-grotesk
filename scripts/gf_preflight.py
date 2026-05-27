@@ -1798,6 +1798,7 @@ def report_errors(errors: list[str]) -> None:
     check("## Next Rows" in arabic_next_review_packet_text, "Arabic next review packet includes next rows table", errors)
     check("## Shared Structure Prompt Details" in arabic_next_review_packet_text, "Arabic next review packet includes shared structure prompt details", errors)
     check("Focused Arabic PDF proof: `documentation/arabic-print-proof.pdf`" in arabic_next_review_packet_text, "Arabic next review packet links focused Arabic PDF proof", errors)
+    check("Focused Arabic PDF index: `documentation/arabic-print-proof-index.md`" in arabic_next_review_packet_text, "Arabic next review packet links focused Arabic PDF index", errors)
     check("## Fast Review Order" in arabic_next_review_packet_text, "Arabic next review packet includes fast review order", errors)
     check("The PDF speeds review; it does not replace source/proof" in arabic_next_review_packet_text, "Arabic next review packet keeps PDF proof non-decisional", errors)
     check("proof-regular-glyphs" in arabic_next_review_packet_text, "Arabic next review packet includes first proof row", errors)
@@ -4219,8 +4220,19 @@ def package_checklist_errors(errors: list[str]) -> None:
         errors,
     )
     check(
+        "documentation/arabic-print-proof-index.md" in readme_text
+        and "documentation/arabic-print-proof-index.md" in (ROOT / "AGENTS.md").read_text(),
+        "human and agent docs record Arabic print proof index output",
+        errors,
+    )
+    check(
         "documentation/arabic-print-proof.pdf" in (ROOT / "documentation/arabic-visual-review-checklist.md").read_text(),
         "Arabic visual review checklist records Arabic print proof output",
+        errors,
+    )
+    check(
+        "documentation/arabic-print-proof-index.md" in (ROOT / "documentation/arabic-visual-review-checklist.md").read_text(),
+        "Arabic visual review checklist records Arabic print proof index output",
         errors,
     )
     check(
