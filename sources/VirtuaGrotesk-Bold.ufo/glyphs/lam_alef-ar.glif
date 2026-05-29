@@ -1,24 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alef-ar" format="2">
-	<advance width="600" />
+	<advance width="600"/>
 	<outline>
 		<contour>
-			<point x="192" y="112" type="line" />
-			<point x="276" y="112" type="line" />
-			<point x="276" y="680" type="line" />
-			<point x="192" y="680" type="line" />
+			<point x="192" y="112" type="line"/>
+			<point x="276" y="112" type="line"/>
+			<point x="276" y="680" type="line"/>
+			<point x="192" y="680" type="line"/>
 		</contour>
 		<contour>
-			<point x="388" y="112" type="line" />
-			<point x="472" y="112" type="line" />
-			<point x="472" y="680" type="line" />
-			<point x="388" y="680" type="line" />
+			<point x="388" y="112" type="line"/>
+			<point x="472" y="112" type="line"/>
+			<point x="472" y="680" type="line"/>
+			<point x="388" y="680" type="line"/>
 		</contour>
 		<contour>
-			<point x="192" y="112" type="line" />
-			<point x="472" y="112" type="line" />
-			<point x="472" y="196" type="line" />
-			<point x="192" y="196" type="line" />
+			<point x="192" y="112" type="line"/>
+			<point x="472" y="112" type="line"/>
+			<point x="472" y="196" type="line"/>
+			<point x="192" y="196" type="line"/>
 		</contour>
 	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
 </glyph>

@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noonghunna-ar.fina" format="2">
-	<advance width="600" />
+	<advance width="600"/>
 	<outline>
 		<contour>
-			<point x="88" y="192" type="line" />
-			<point x="132" y="128" type="line" />
-			<point x="452" y="128" type="line" />
-			<point x="520" y="192" type="line" />
-			<point x="520" y="332" type="line" />
-			<point x="440" y="252" type="line" />
-			<point x="176" y="252" type="line" />
-			<point x="88" y="332" type="line" />
+			<point x="88" y="192" type="line"/>
+			<point x="132" y="128" type="line"/>
+			<point x="452" y="128" type="line"/>
+			<point x="520" y="192" type="line"/>
+			<point x="520" y="332" type="line"/>
+			<point x="440" y="252" type="line"/>
+			<point x="176" y="252" type="line"/>
+			<point x="88" y="332" type="line"/>
 		</contour>
 	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
 </glyph>
