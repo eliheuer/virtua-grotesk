@@ -1,0 +1,13 @@
+# Glyphs listed here are preserved from the target source when generating
+# donor-based Arabic candidates.
+#
+# Add one glyph name per line, for example:
+# seen-ar
+# sheen-ar
+#
+# Then run:
+# ./venv/bin/python scripts/build_donor_glyph_candidates.py \
+#   --glyphs pending-review \
+#   --exclude-glyphs documentation/arabic-donor-preserve-glyphs.txt \
+#   --output build/arabic-donor-candidates/rubik-to-virtua-pending-review \
+#   --write --force
