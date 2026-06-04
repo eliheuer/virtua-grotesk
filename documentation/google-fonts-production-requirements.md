@@ -26,7 +26,7 @@ source-feature, and maintainer-decision blockers.
 - Numeric feature requirement ready: yes
 - GF Latin Core missing codepoints: 0
 - GF Arabic Core missing codepoints: 0
-- Fontspector googlefonts profile: 0 FAIL, 10 WARN, 529 PASS
+- Fontspector googlefonts profile: 10 FAIL, 20 WARN, 517 PASS
 - Open maintainer decisions: 2
 - Decided maintainer decisions: 13
 - Open decision names: Private-use icon block, Kerning

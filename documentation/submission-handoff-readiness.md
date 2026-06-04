@@ -33,7 +33,7 @@ the issue or downstream package PR.
 - Issue draft points to specimen image: yes
 - Handoff points to generated Add Font issue draft: yes
 - Handoff includes current version `1.000`: yes
-- Handoff includes current Fontspector summary: yes
+- Handoff includes current Fontspector summary: no
 - Handoff includes current Latin Core gap: yes
 - Handoff includes current Arabic category gaps: yes
 - Handoff records decided Vendor ID state: yes
@@ -100,7 +100,7 @@ the issue or downstream package PR.
 | --- | --- | --- |
 | Add Font labels | `I New Font, II Submission` | yes |
 | version | `1.000` | yes |
-| Fontspector | `0 FAIL, 10 WARN, 529 PASS` | yes |
+| Fontspector | `10 FAIL, 20 WARN, 517 PASS` | no |
 | package dry-run reaches Packager | `no` | yes |
 | package dry-run first blocker | `existing downstream METADATA.pb is still the Packager starter template` | yes |
 | package dry-run blocking findings | `existing downstream METADATA.pb is still the Packager starter template; GitHub API credentials unavailable` | yes |
@@ -138,7 +138,7 @@ the issue or downstream package PR.
 | GF visual proof review packet | `documentation/kerning-proof-review.md` | yes |
 | downstream metadata apply gate | `ready/apply blockers` | yes |
 | repository maintenance commitment | `maintain the repository` checkbox and status note | yes |
-| Fontspector FAIL count | `0` | yes |
+| Fontspector FAIL count | `10` | yes |
 | image | `documentation/readme-specimen.png` | yes |
 
 ## Required Report References

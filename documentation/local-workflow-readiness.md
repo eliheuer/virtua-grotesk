@@ -115,7 +115,7 @@ This generated report summarizes whether the local checkout can run the main Goo
 | downstream metadata apply remains explicit | yes | Use `scripts/prepare_downstream_metadata.py --apply` only after review. |
 | downstream metadata helper final-value gates have a local test | yes | `make downstream-metadata-helper-test` checks final date and source commit validation. |
 | Packager source mode is surfaced | yes | `GFT_PACKAGER_SOURCE_MODE` is shared by metadata preview and Packager dry run. |
-| proof target uses eliheuer/drawbot-skia fork | yes | `make proof-only` runs the fork venv with the fork source on `PYTHONPATH`. |
+| proof target uses eliheuer/drawbot-skia fork | yes | `make proof-only` runs the project venv with the fork source on `PYTHONPATH`. |
 
 ## External Commands
 
@@ -208,7 +208,7 @@ This generated report summarizes whether the local checkout can run the main Goo
 - Package report inputs ready: yes
 - Package report auth ready: no
 - drawbot-skia path: `/Users/eli/GH/repos/drawbot-skia`
-- drawbot-skia python exists: yes
+- project venv Python for DrawBot exists: yes
 - drawbot-skia src exists: yes
 
 ## Next Actions

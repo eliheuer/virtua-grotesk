@@ -9,9 +9,9 @@ not a recommendation to hide intended Arabic support.
 ## Current Warning Floor
 
 - Honest zero-warning state possible with current scope: no
-- Package-context warning checks: `googlefonts/glyphsets/shape_languages`: 1, `googlefonts/metadata/subsets_correct`: 1, `googlefonts/metadata/unreachable_subsetting`: 1
+- Package-context warning checks: `contour_count`: 1, `googlefonts/glyphsets/shape_languages`: 1, `googlefonts/metadata/subsets_correct`: 1, `googlefonts/metadata/unreachable_subsetting`: 1, `outline_alignment_miss`: 1, `outline_direction`: 1
 - Intended package subsets in preview: `arabic`, `latin`, `menu`
-- Contour decision state: unique review items: 0; pending: 0; fix-now: 0; fixed: 0; accepted: 0; deferred: 0
+- Contour decision state: unique review items: 4; pending: 4; fix-now: 0; fixed: 0; accepted: 0; deferred: 0
 - GF Latin Core missing codepoints: 0
 - GF Arabic Core missing codepoints: 0
 
@@ -19,7 +19,7 @@ not a recommendation to hide intended Arabic support.
 
 True zero is not possible with the current intended scope without changing coverage, metadata scope, or reviewer policy.
 
-Blockers: meet or revise the broad Google Fonts subset threshold for the intended subsets; resolve or get reviewer acceptance for required support codepoints that are not covered by serving subsets.
+Blockers: meet or revise the broad Google Fonts subset threshold for the intended subsets; resolve or get reviewer acceptance for required support codepoints that are not covered by serving subsets; clean up package-context contour-count warnings.
 
 Do not spend the Arabic hand-review pass trying to force these warnings
 to zero by deleting U+200F, U+25CC, dotless forms, rupee support, or
@@ -29,9 +29,11 @@ Fontspector results, or misrepresent the first-submission scope.
 
 ## Current Honest Minimum
 
-The package-context probe currently bottoms out at 3 warnings
+The package-context probe currently bottoms out at 6 warnings
 without hiding intended script scope or removing shaping support:
 
+- 1 contour-count warning(s): require source drawing cleanup or
+  explicit reviewed acceptance.
 - 1 subset-threshold warning(s): require broader `arabic`
   coverage, narrower final subset declarations, or reviewer
   acceptance for the first-submission scope.
@@ -39,8 +41,6 @@ without hiding intended script scope or removing shaping support:
   do not strip these codepoints just to reduce warnings; the
   metadata probe shows that removal or broad rescue subsets can
   keep the warning floor unchanged or create worse warnings.
-- Contour-count cleanup is currently closed in both package-context
-  and loose-font QA reports.
 
 ## Subset Threshold Math
 
@@ -49,7 +49,7 @@ Google Fonts `subsets_correct` warnings use broad serving subsets, not just
 
 | Subset | Threshold | Subset codepoints | Present | Present needed | Coverage | Additional needed | Threshold met |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |
-| `arabic` | 50% | 1432 | 123 | 717 | 8.59% | 594 | no |
+| `arabic` | 50% | 1432 | 126 | 717 | 8.80% | 591 | no |
 | `latin-ext` | 20% | 1144 | 109 | 229 | 9.53% | 120 | no |
 
 ## Practical Zero-Warning Paths

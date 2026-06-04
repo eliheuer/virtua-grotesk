@@ -14,7 +14,8 @@ Why:
 
 - UFO/designspace donor sources already provide editable vectors.
 - Rubik Arabic is local, OFL, Google-Fonts-proven, and geometric enough
-  to be a strong first donor.
+  to be a strong first donor for Virtua, but the workflow is generic: pass any
+  appropriate OFL donor source with `--donor`.
 - Variable-font compatibility can be checked immediately.
 - Current font-generation models are more useful as visual advisors than
   as reliable UFO producers for Arabic contextual forms.
@@ -38,6 +39,17 @@ Default donor:
 
 ```text
 /Users/eli/GH/repos/rubik/sources/designspace/Rubik.designspace
+```
+
+Override the donor for another family:
+
+```bash
+./venv/bin/python scripts/build_donor_glyph_candidates.py \
+  --donor /path/to/OtherOFLDonor.designspace \
+  --glyphs mark:red \
+  --arabic-only \
+  --output build/arabic-donor-candidates/other-donor-red-marked \
+  --write --force
 ```
 
 Default output:
@@ -189,3 +201,30 @@ least painful batch marker for "replace this placeholder."
 This leaves every unmarked glyph alone in the scratch copy. Existing
 hand-drawn Arabic can stay unmarked or can be protected explicitly with
 `--exclude-glyphs`.
+
+## Agent Source Apply
+
+Use ComfyUI or Runebender as the visual dry run, not necessarily as the final
+writer. After the scratch candidate is reviewed, an agent can apply the chosen
+candidate glyphs back to production sources without opening the GUI:
+
+```bash
+./venv/bin/python scripts/apply_donor_glyph_candidates.py \
+  --report build/arabic-donor-candidates/red-marked-arabic/glyph-candidate-report.json \
+  --glyphs report \
+  --arabic-only
+```
+
+If the dry run reports only `would-apply`, write the same batch:
+
+```bash
+./venv/bin/python scripts/apply_donor_glyph_candidates.py \
+  --report build/arabic-donor-candidates/red-marked-arabic/glyph-candidate-report.json \
+  --glyphs report \
+  --arabic-only \
+  --write
+```
+
+This copies only matching `.glif` files listed as `status == candidate` in the
+candidate report. It preserves the target mark colors by default, so red review
+labels remain until the human clears them.

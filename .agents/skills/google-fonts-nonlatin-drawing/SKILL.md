@@ -46,11 +46,14 @@ Default: `all`
 
 ## Candidate Generation
 
-Write the candidate script so it is safe to run repeatedly:
+Write or use a candidate script so it is safe to run repeatedly. It should
+accept a target source, a donor/reference source, a glyph selection, and an
+output path. Do not hard-code one donor family; Rubik, Noto, or another OFL
+source may be useful depending on the target design.
 
 ```bash
-python scripts/build_nonlatin_candidate_glyphs.py --dry-run
-python scripts/build_nonlatin_candidate_glyphs.py --write
+python scripts/build_nonlatin_candidate_glyphs.py --donor path/to/Donor.designspace --dry-run
+python scripts/build_nonlatin_candidate_glyphs.py --donor path/to/Donor.designspace --write
 ```
 
 Requirements:
@@ -65,6 +68,51 @@ Requirements:
   buckets;
 - after write, rerun dry-run and expect no remaining creation or compatibility
   risks.
+
+### Review-Then-Apply Workflow
+
+For replacement batches, prefer this split:
+
+1. Human marks glyphs needing replacement in the editor, usually with red
+   `public.markColor`.
+2. Agent builds a scratch candidate from those marks and an explicit donor
+   source. This can be previewed in ComfyUI/Runebender or with generated proofs.
+3. Human reviews the scratch result.
+4. Agent applies only the approved candidate glyphs back to production sources
+   with a surgical `.glif` copy. Do not save/rewrite whole UFOs just to copy
+   outlines.
+
+For this repo the concrete commands are:
+
+```bash
+./venv/bin/python scripts/build_donor_glyph_candidates.py \
+  --donor /path/to/Donor.designspace \
+  --glyphs mark:red \
+  --arabic-only \
+  --output build/arabic-donor-candidates/red-marked-arabic \
+  --write --force
+
+./venv/bin/python scripts/apply_donor_glyph_candidates.py \
+  --report build/arabic-donor-candidates/red-marked-arabic/glyph-candidate-report.json \
+  --glyphs report \
+  --arabic-only
+
+./venv/bin/python scripts/apply_donor_glyph_candidates.py \
+  --report build/arabic-donor-candidates/red-marked-arabic/glyph-candidate-report.json \
+  --glyphs report \
+  --arabic-only \
+  --write
+```
+
+Guardrails for the apply step:
+
+- dry-run first; require `would-apply` for every selected master/glyph pair;
+- preserve existing mark colors by default so the human can approve/clear them;
+- select `status == candidate` from the candidate report, not every red glyph;
+- keep hand-drawn or approved glyphs unmarked or listed in an exclude file;
+- after write, check `git diff --name-only sources` and confirm only intended
+  `.glif` files changed and no untracked glyph files appeared;
+- open both source UFOs with the repo venv, rebuild, and rerun reports.
 
 ## Reference Fonts
 

@@ -14,7 +14,7 @@ Default font: `fonts/ttf/VirtuaGrotesk-Regular.ttf`
    make proof
    ```
    The Makefile uses the local `eliheuer/drawbot-skia` fork at
-   `/Users/eli/GH/repos/drawbot-skia`.
+   `/Users/eli/GH/repos/drawbot-skia` from the project virtualenv.
 
 2. Check that the font file exists:
    - If no argument given, check `fonts/ttf/VirtuaGrotesk-Regular.ttf`
@@ -23,7 +23,7 @@ Default font: `fonts/ttf/VirtuaGrotesk-Regular.ttf`
 3. Run the proof generator:
    ```bash
    PYTHONPATH="/Users/eli/GH/repos/drawbot-skia/src${PYTHONPATH:+:$PYTHONPATH}" \
-     /Users/eli/GH/repos/drawbot-skia/.venv/bin/python proof.py [font-path] [output-path]
+     ./venv/bin/python proof.py [font-path] [output-path]
    ```
    Default output: `proof.pdf`
 

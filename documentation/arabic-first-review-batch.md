@@ -46,23 +46,37 @@ Additional structure-triage prompts:
 - Area/item: GF proof / Regular glyphs
 - Current status: `pending`
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 35
-- Source targets: 14 existing, 0 missing
+- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 66
+- Source targets: 28 existing, 0 missing
 - Snapshot aids:
   - Regular glyphs: `documentation/arabic-review-snapshots/proof-regular-glyphs.png` from `documentation/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`
 - Focused Arabic-row crop: `documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png`
 - First source files to inspect if `fix-needed`:
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
@@ -80,23 +94,37 @@ make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=d
 - Area/item: GF proof / Medium glyphs
 - Current status: `pending`
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 35
-- Source targets: 14 existing, 0 missing
+- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 66
+- Source targets: 28 existing, 0 missing
 - Snapshot aids:
   - Medium glyphs: `documentation/arabic-review-snapshots/proof-medium-glyphs.png` from `documentation/gftools-qa/Proof/Medium-diffbrowsers_glyphs.html`
 - Focused Arabic-row crop: `documentation/arabic-review-snapshots/proof-medium-glyphs-arabic-zoom.png`
 - First source files to inspect if `fix-needed`:
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
@@ -114,23 +142,37 @@ make arabic-visual-review-update REVIEW_KEY=proof-medium-glyphs REVIEW_STATUS=de
 - Area/item: GF proof / SemiBold glyphs
 - Current status: `pending`
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 35
-- Source targets: 14 existing, 0 missing
+- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 66
+- Source targets: 28 existing, 0 missing
 - Snapshot aids:
   - SemiBold glyphs: `documentation/arabic-review-snapshots/proof-semibold-glyphs.png` from `documentation/gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html`
 - Focused Arabic-row crop: `documentation/arabic-review-snapshots/proof-semibold-glyphs-arabic-zoom.png`
 - First source files to inspect if `fix-needed`:
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
@@ -148,23 +190,37 @@ make arabic-visual-review-update REVIEW_KEY=proof-semibold-glyphs REVIEW_STATUS=
 - Area/item: GF proof / Bold glyphs
 - Current status: `pending`
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 35
-- Source targets: 14 existing, 0 missing
+- Machine precheck: Structure triage mechanical blockers: 0; structure review prompts: 66
+- Source targets: 28 existing, 0 missing
 - Snapshot aids:
   - Bold glyphs: `documentation/arabic-review-snapshots/proof-bold-glyphs.png` from `documentation/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`
 - Focused Arabic-row crop: `documentation/arabic-review-snapshots/proof-bold-glyphs-arabic-zoom.png`
 - First source files to inspect if `fix-needed`:
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
@@ -183,22 +239,36 @@ make arabic-visual-review-update REVIEW_KEY=proof-bold-glyphs REVIEW_STATUS=defe
 - Current status: `pending`
 - Review cue: sad, dad, tah, zah, meem, heh, wawHamzaabove, lam-alef forms; review sidebearing-risk glyphs in the focused proof
 - Machine precheck: Contour decisions pending: 0; fix-now: 0
-- Source targets: 14 existing, 0 missing
+- Source targets: 28 existing, 0 missing
 - Snapshot aids:
   - Arabic structure sweep: `documentation/arabic-review-snapshots/class-letter-structures.png` from `documentation/arabic-structure-sweep.html`
   - Arabic visual risk proof: `documentation/arabic-review-snapshots/class-letter-structures-2.png` from `documentation/arabic-visual-risk-proof.html`
 - First source files to inspect if `fix-needed`:
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzabelow-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`

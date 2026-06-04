@@ -492,9 +492,9 @@ Fixed during this pass:
   downstream PR readiness with the selected `GFT_PACKAGER_SOURCE_MODE`.
 - Downstream metadata check: added source-mode-aware validation for
   `source.config_yaml` before writing into the local `google/fonts` fork.
-- Proof generation: use `/Users/eli/GH/repos/drawbot-skia/.venv/bin/python`
-  with `PYTHONPATH=/Users/eli/GH/repos/drawbot-skia/src` so proofing runs
-  against the `eliheuer/drawbot-skia` fork.
+- Proof generation: use this repo's `./venv/bin/python` with
+  `PYTHONPATH=/Users/eli/GH/repos/drawbot-skia/src` so proofing runs against
+  the `eliheuer/drawbot-skia` fork from the Virtua Grotesk virtualenv.
 - Submission handoff: drafted `documentation/google-fonts-submission-handoff.md` for the eventual Google Fonts issue/packaging step.
 - Packaging checklist: drafted `documentation/google-fonts-package-checklist.md` so the final downstream PR step follows `gftools packager` rather than manual copying.
 - Metadata review: drafted `documentation/google-fonts-metadata-review.md` for downstream `METADATA.pb` review.

@@ -1,6 +1,6 @@
 PYTHON ?= ./venv/bin/python
 DRAWBOT_SKIA_REPO ?= /Users/eli/GH/repos/drawbot-skia
-DRAWBOT_PYTHON ?= $(DRAWBOT_SKIA_REPO)/.venv/bin/python
+DRAWBOT_PYTHON ?= $(PYTHON)
 GF_REPO_PATH ?= /Users/eli/GH/forks/fonts
 GFT_PACKAGER_SOURCE_MODE ?= latest-release
 DESIGNER_PROFILE_NAME ?= Eli Heuer
@@ -9,7 +9,7 @@ GF_WEIGHT_AXIS_REGISTRY = $(GF_REPO_PATH)/axisregistry/Lib/axisregistry/data/wei
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 STATIC_FONTS = fonts/ttf/VirtuaGrotesk-Regular.ttf fonts/ttf/VirtuaGrotesk-Medium.ttf fonts/ttf/VirtuaGrotesk-SemiBold.ttf fonts/ttf/VirtuaGrotesk-Bold.ttf
 
-.PHONY: help decisions decision-readiness-check decision-application-check reference-index-check agent-reuse-check next-actions blockers issue-draft handoff-readiness-check release-check release-archive-check release-archive-build release-archive-verify release-archive-test release-draft-check source-strategy-check package-readiness-check recent-gf-check family-name-check authorship-check pr-readiness-check vendor-id-check kerning-check kerning-proof-check kerning-proof-review-check contour-cleanup-proof contour-decision-update contour-decision-helper-test ufo-editor-check runebender-ufo-check pua-scope-check avar-check warnings-check metadata-warning-check zero-warning-check github-auth-check designer-profile-check designer-profile-prepare-check designer-profile-info-check designer-profile-image-check designer-profile-bio-check designer-profile-validator-test public-upstream-url-check downstream-metadata-check downstream-metadata-helper-test package-wrapper-test arabic-visual-review-helper-test arabic-candidate-plan arabic-goal-audit arabic-print-proof arabic-print-proof-only arabic-visual-risk-proof arabic-structure-sweep arabic-structure-triage arabic-mark-review-proof arabic-mark-triage arabic-manual-review-dashboard arabic-manual-review-batches arabic-review-progress arabic-current-review-worksheet arabic-review-worksheet-bundle arabic-drawing-session-checklist arabic-source-edit-diff-check arabic-first-batch-source-checkpoint arabic-pending-source-checkpoint arabic-before-drawing-check arabic-after-drawing-check arabic-visual-review-batch-tsv arabic-batch-recorder arabic-first-review-zoom-snapshots arabic-first-review-crop-integrity arabic-first-review-batch arabic-first-review-risk-shortlist arabic-manual-edit-targets arabic-hand-review-session arabic-hand-review-contact-sheet arabic-next-review-packet arabic-next-review-ai-triage arabic-next-review-ai-observations arabic-full-queue-ai-sweep arabic-next-review-board arabic-next-review-snapshots arabic-snapshot-integrity arabic-visual-review-runbook arabic-visual-review-check arabic-visual-review-log arabic-visual-review-update arabic-visual-review-batch-dry-run arabic-visual-review-batch-update arabic-visual-review-batch-apply-check build test reports reports-only proof proof-only preflight preflight-only handoff package-dry-run clean
+.PHONY: help decisions decision-readiness-check decision-application-check reference-index-check agent-reuse-check next-actions blockers issue-draft handoff-readiness-check release-check release-archive-check release-archive-build release-archive-verify release-archive-test release-draft-check source-strategy-check package-readiness-check recent-gf-check family-name-check authorship-check pr-readiness-check vendor-id-check kerning-check kerning-proof-check kerning-proof-review-check contour-cleanup-proof contour-decision-update contour-decision-helper-test ufo-editor-check runebender-ufo-check pua-scope-check avar-check warnings-check metadata-warning-check zero-warning-check github-auth-check designer-profile-check designer-profile-prepare-check designer-profile-info-check designer-profile-image-check designer-profile-bio-check designer-profile-validator-test public-upstream-url-check downstream-metadata-check downstream-metadata-helper-test package-wrapper-test arabic-visual-review-helper-test arabic-candidate-plan arabic-goal-audit print-spacing-specimen print-spacing-specimen-only arabic-print-proof arabic-print-proof-only arabic-visual-risk-proof arabic-structure-sweep arabic-structure-triage arabic-mark-review-proof arabic-mark-triage arabic-manual-review-dashboard arabic-manual-review-batches arabic-review-progress arabic-current-review-worksheet arabic-review-worksheet-bundle arabic-drawing-session-checklist arabic-source-edit-diff-check arabic-first-batch-source-checkpoint arabic-pending-source-checkpoint arabic-before-drawing-check arabic-after-drawing-check arabic-visual-review-batch-tsv arabic-batch-recorder arabic-first-review-zoom-snapshots arabic-first-review-crop-integrity arabic-first-review-batch arabic-first-review-risk-shortlist arabic-manual-edit-targets arabic-hand-review-session arabic-hand-review-contact-sheet arabic-next-review-packet arabic-next-review-ai-triage arabic-next-review-ai-observations arabic-full-queue-ai-sweep arabic-next-review-board arabic-next-review-snapshots arabic-snapshot-integrity arabic-visual-review-runbook arabic-visual-review-check arabic-visual-review-log arabic-visual-review-update arabic-visual-review-batch-dry-run arabic-visual-review-batch-update arabic-visual-review-batch-apply-check build test reports reports-only proof proof-only preflight preflight-only handoff package-dry-run clean
 
 help:
 	@printf '%s\n' \
@@ -64,6 +64,7 @@ help:
 		'  make arabic-visual-review-helper-test  Test guarded Arabic visual review updater' \
 		'  make arabic-candidate-plan  Dry-run candidate glyph creation plan for Arabic gaps' \
 		'  make arabic-goal-audit  Show Arabic missing-drawings goal completion audit' \
+		'  make print-spacing-specimen  Build landscape PDF specimen for print weight/spacing review' \
 		'  make arabic-visual-risk-proof  Build focused proof for visual-risk sidebearing rows' \
 		'  make arabic-structure-sweep  Build GF Arabic Core structure/wrong-glyph sweep' \
 		'  make arabic-structure-triage  Show mechanical triage for structure review' \
@@ -615,6 +616,12 @@ proof: build
 
 proof-only:
 	PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src$${PYTHONPATH:+:$$PYTHONPATH}" $(DRAWBOT_PYTHON) proof.py fonts/ttf/VirtuaGrotesk-Regular.ttf proof.pdf
+
+print-spacing-specimen: build
+	$(MAKE) print-spacing-specimen-only
+
+print-spacing-specimen-only:
+	PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src$${PYTHONPATH:+:$$PYTHONPATH}" $(DRAWBOT_PYTHON) scripts/build_print_spacing_specimen.py
 
 arabic-print-proof: build
 	$(MAKE) arabic-print-proof-only

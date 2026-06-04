@@ -1,21 +1,82 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="ain-ar" format="2">
-	<unicode hex="0639"/>
-	<advance width="600"/>
-	<outline>
-		<contour>
-			<point x="112" y="180" type="line" />
-			<point x="188" y="112" type="line" />
-			<point x="456" y="112" type="line" />
-			<point x="560" y="204" type="line" />
-			<point x="520" y="300" type="line" />
-			<point x="384" y="336" type="line" />
-			<point x="272" y="320" type="line" />
-			<point x="204" y="260" type="line" />
-			<point x="268" y="220" type="line" />
-			<point x="420" y="224" type="line" />
-			<point x="456" y="200" type="line" />
-			<point x="416" y="172" type="line" />
-		</contour>
-	</outline>
+  <advance width="600"/>
+  <unicode hex="0639"/>
+  <anchor x="226" y="-354" name="bottom"/>
+  <anchor x="318" y="680" name="top"/>
+  <anchor x="320" y="652" name="topDots"/>
+  <outline>
+    <contour>
+      <point x="316" y="-438" type="curve" smooth="yes"/>
+      <point x="554" y="-438" type="line" smooth="yes"/>
+      <point x="570" y="-438"/>
+      <point x="580" y="-428"/>
+      <point x="580" y="-408" type="curve" smooth="yes"/>
+      <point x="580" y="-218" type="line" smooth="yes"/>
+      <point x="580" y="-198"/>
+      <point x="570" y="-188"/>
+      <point x="554" y="-188" type="curve" smooth="yes"/>
+      <point x="376" y="-188" type="line" smooth="yes"/>
+      <point x="270" y="-188"/>
+      <point x="202" y="-158"/>
+      <point x="202" y="-86" type="curve" smooth="yes"/>
+      <point x="202" y="-14"/>
+      <point x="302" y="32"/>
+      <point x="412" y="62" type="curve" smooth="yes"/>
+      <point x="488" y="84" type="line" smooth="yes"/>
+      <point x="514" y="90"/>
+      <point x="516" y="106"/>
+      <point x="520" y="128" type="curve" smooth="yes"/>
+      <point x="544" y="312" type="line" smooth="yes"/>
+      <point x="546" y="332"/>
+      <point x="532" y="342"/>
+      <point x="518" y="338" type="curve" smooth="yes"/>
+      <point x="446" y="320"/>
+      <point x="362" y="302"/>
+      <point x="330" y="302" type="curve" smooth="yes"/>
+      <point x="270" y="302"/>
+      <point x="234" y="320"/>
+      <point x="234" y="356" type="curve" smooth="yes"/>
+      <point x="234" y="394"/>
+      <point x="268" y="420"/>
+      <point x="326" y="420" type="curve" smooth="yes"/>
+      <point x="360" y="420"/>
+      <point x="404" y="410"/>
+      <point x="426" y="400" type="curve"/>
+      <point x="450" y="392"/>
+      <point x="458" y="402"/>
+      <point x="462" y="434" type="curve" smooth="yes"/>
+      <point x="488" y="584" type="line" smooth="yes"/>
+      <point x="490" y="602"/>
+      <point x="480" y="614"/>
+      <point x="468" y="620" type="curve"/>
+      <point x="416" y="642"/>
+      <point x="366" y="652"/>
+      <point x="320" y="652" type="curve" smooth="yes"/>
+      <point x="174" y="652"/>
+      <point x="64" y="542"/>
+      <point x="64" y="384" type="curve" smooth="yes"/>
+      <point x="64" y="290"/>
+      <point x="124" y="198"/>
+      <point x="192" y="158" type="curve"/>
+      <point x="88" y="106"/>
+      <point x="20" y="2"/>
+      <point x="20" y="-120" type="curve" smooth="yes"/>
+      <point x="20" y="-320"/>
+      <point x="148" y="-438"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.runebenderComfy.donorCandidate</key>
+      <dict>
+        <key>donorGlyph</key>
+        <string>ain-ar</string>
+        <key>xScale</key>
+        <real>0.98361</real>
+        <key>yScale</key>
+        <real>1.10769</real>
+      </dict>
+    </dict>
+  </lib>
 </glyph>

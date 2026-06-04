@@ -15,7 +15,7 @@ deliberately before downstream packaging.
 - Unique Arabic helper/form glyphs: 0
 - Unique Arabic mark helper glyphs: 0
 - Unique source cleanup glyphs: 0
-- Unique component-reachable glyphs: 101
+- Unique component-reachable glyphs: 100
 - Fontspector warning linkage: `unreachable_glyphs`,
   `googlefonts/metadata/unreachable_subsetting`
 
@@ -23,11 +23,11 @@ deliberately before downstream packaging.
 
 | Font | cmap glyphs | GSUB output glyphs | Unreachable glyphs |
 | --- | ---: | ---: | ---: |
-| `fonts/variable/VirtuaGrotesk[wght].ttf` | 471 | 194 | 0 |
-| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | 471 | 194 | 0 |
-| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | 471 | 194 | 0 |
-| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | 471 | 194 | 0 |
-| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | 471 | 194 | 0 |
+| `fonts/variable/VirtuaGrotesk[wght].ttf` | 474 | 194 | 0 |
+| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | 474 | 194 | 0 |
+| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | 474 | 194 | 0 |
+| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | 474 | 194 | 0 |
+| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | 474 | 194 | 0 |
 
 ## Unique Category Counts
 

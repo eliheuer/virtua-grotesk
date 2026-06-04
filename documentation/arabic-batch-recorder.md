@@ -10,7 +10,7 @@ proof/source inspection.
 - Batch: 2. Structure And Wrong-Glyph Sweep
 - Why: Catch missing, blank, clipped, duplicated, malformed, or wrong-codepoint glyphs before judging spacing.
 - Visual rows: 5 (pending: 5)
-- Contour rows: 0 (none)
+- Contour rows: 4 (pending: 4)
 - Focused Arabic PDF proof: `documentation/arabic-print-proof.pdf`
 - Focused Arabic PDF index: `documentation/arabic-print-proof-index.md`
 - First-batch source checkpoint: `documentation/arabic-first-batch-source-checkpoint.md`
@@ -104,7 +104,37 @@ regenerates reports, and reruns preflight.
 
 ## Contour Decision Commands
 
-No contour-decision rows in this batch.
+### `dad-ar.init`
+
+```bash
+make contour-decision-update GLYPH=dad-ar.init STATUS=fix-now DECISION="source edit needed" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=dad-ar.init STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=dad-ar.init STATUS=deferred DECISION="needs later drawing review" REVIEWED="Name YYYY-MM-DD"
+```
+
+### `hah-ar.fina`
+
+```bash
+make contour-decision-update GLYPH=hah-ar.fina STATUS=fix-now DECISION="source edit needed" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=hah-ar.fina STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=hah-ar.fina STATUS=deferred DECISION="needs later drawing review" REVIEWED="Name YYYY-MM-DD"
+```
+
+### `jeem-ar.fina`
+
+```bash
+make contour-decision-update GLYPH=jeem-ar.fina STATUS=fix-now DECISION="source edit needed" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=jeem-ar.fina STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=jeem-ar.fina STATUS=deferred DECISION="needs later drawing review" REVIEWED="Name YYYY-MM-DD"
+```
+
+### `sad-ar.init`
+
+```bash
+make contour-decision-update GLYPH=sad-ar.init STATUS=fix-now DECISION="source edit needed" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=sad-ar.init STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=sad-ar.init STATUS=deferred DECISION="needs later drawing review" REVIEWED="Name YYYY-MM-DD"
+```
 
 ## After Recording Outcomes
 
@@ -122,7 +152,7 @@ and Bold stay compatible.
 ## Full Batch Order
 
 - 1. Open The Fast Dashboard: visual none; contour none
-- 2. Structure And Wrong-Glyph Sweep: visual pending: 5; contour none
+- 2. Structure And Wrong-Glyph Sweep: visual pending: 5; contour pending: 4
 - 3. Marks, Dotted Circle, And Stacking: visual pending: 8; contour none
 - 4. Dot-Stack Helpers And Urdu/Persian Texture: visual pending: 1; contour none
 - 5. RTL Text, Punctuation, Numerals, And Spacing: visual pending: 18; contour none

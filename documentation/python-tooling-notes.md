@@ -38,8 +38,8 @@ snapshot, then rerun `make preflight`.
   final handoff, especially when kerning changes or is explicitly deferred.
 - DesignBot is installed outside pip with Cargo for specimen rendering.
 - DrawBot proof generation is supplied by the local `eliheuer/drawbot-skia`
-  fork at `/Users/eli/GH/repos/drawbot-skia`. The Makefile uses that checkout's
-  `.venv/bin/python` and prepends its `src/` directory to `PYTHONPATH`.
+  fork at `/Users/eli/GH/repos/drawbot-skia`. The Makefile uses this repo's
+  `./venv/bin/python` and prepends the fork's `src/` directory to `PYTHONPATH`.
 - `fontc` is optional and only used by the fallback variable-font build path.
 
 Some transitive packages in the local virtual environment may include older

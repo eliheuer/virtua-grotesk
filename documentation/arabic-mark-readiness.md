@@ -26,8 +26,8 @@ This report tracks the non-drawing setup needed for Arabic combining marks in th
 
 | UFO | Glyphs with anchors | Required Arabic mark glyphs with anchors | Required mark glyph names |
 | --- | ---: | ---: | --- |
-| `sources/VirtuaGrotesk-Regular.ufo` | 20 | 16 | `alefabove-ar, alefbelow-ar, damma-ar, dammatan-ar, fatha-ar, fathatan-ar, hamzaabove-ar, hamzabelow-ar, kasra-ar, kasratan-ar, madda-ar, noonGhunna-ar, shadda-ar, smallHighTah-ar, smallHighThreeDots-ar, sukun-ar` |
-| `sources/VirtuaGrotesk-Bold.ufo` | 20 | 16 | `alefabove-ar, alefbelow-ar, damma-ar, dammatan-ar, fatha-ar, fathatan-ar, hamzaabove-ar, hamzabelow-ar, kasra-ar, kasratan-ar, madda-ar, noonGhunna-ar, shadda-ar, smallHighTah-ar, smallHighThreeDots-ar, sukun-ar` |
+| `sources/VirtuaGrotesk-Regular.ufo` | 61 | 16 | `alefabove-ar, alefbelow-ar, damma-ar, dammatan-ar, fatha-ar, fathatan-ar, hamzaabove-ar, hamzabelow-ar, kasra-ar, kasratan-ar, madda-ar, noonGhunna-ar, shadda-ar, smallHighTah-ar, smallHighThreeDots-ar, sukun-ar` |
+| `sources/VirtuaGrotesk-Bold.ufo` | 61 | 16 | `alefabove-ar, alefbelow-ar, damma-ar, dammatan-ar, fatha-ar, fathatan-ar, hamzaabove-ar, hamzabelow-ar, kasra-ar, kasratan-ar, madda-ar, noonGhunna-ar, shadda-ar, smallHighTah-ar, smallHighThreeDots-ar, sukun-ar` |
 
 ## Required Arabic Marks
 
