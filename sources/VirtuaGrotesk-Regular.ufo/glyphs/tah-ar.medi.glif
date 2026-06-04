@@ -1,31 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="tah-ar.medi" format="2">
-	<advance width="600"/>
-	<outline>
-		<contour>
-			<point x="-24" y="128" type="line"/>
-			<point x="624" y="128" type="line"/>
-			<point x="624" y="184" type="line"/>
-			<point x="-24" y="184" type="line"/>
-		</contour>
-		<contour>
-			<point x="132" y="168" type="line"/>
-			<point x="188" y="168" type="line"/>
-			<point x="188" y="580" type="line"/>
-			<point x="132" y="580" type="line"/>
-		</contour>
-		<contour>
-			<point x="104" y="176" type="line"/>
-			<point x="504" y="152" type="line"/>
-			<point x="540" y="200" type="line"/>
-			<point x="476" y="256" type="line"/>
-			<point x="208" y="256" type="line"/>
-		</contour>
-	</outline>
-	<lib>
-		<dict>
-			<key>public.markColor</key>
-			<string>1,0.3,0.3,1</string>
-		</dict>
-	</lib>
+  <advance width="600"/>
+  <anchor x="290" y="0" name="bottom"/>
+  <anchor x="314" y="576" name="top"/>
+  <anchor x="332" y="392" name="topDots"/>
+  <outline>
+    <contour>
+      <point x="596" y="0" type="curve" smooth="yes"/>
+      <point x="612" y="0"/>
+      <point x="620" y="12"/>
+      <point x="620" y="34" type="curve" smooth="yes"/>
+      <point x="620" y="56" type="line" smooth="yes"/>
+      <point x="620" y="66"/>
+      <point x="616" y="72"/>
+      <point x="608" y="72" type="curve" smooth="yes"/>
+      <point x="538" y="72"/>
+      <point x="506" y="78"/>
+      <point x="472" y="94" type="curve"/>
+      <point x="420" y="40" type="line"/>
+      <point x="466" y="14"/>
+      <point x="514" y="0"/>
+    </contour>
+    <contour>
+      <point x="-4" y="0" type="curve" smooth="yes"/>
+      <point x="284" y="0" type="line" smooth="yes"/>
+      <point x="422" y="0"/>
+      <point x="520" y="56"/>
+      <point x="520" y="222" type="curve" smooth="yes"/>
+      <point x="520" y="322"/>
+      <point x="468" y="406"/>
+      <point x="376" y="406" type="curve" smooth="yes"/>
+      <point x="268" y="406"/>
+      <point x="162" y="302"/>
+      <point x="102" y="72" type="curve"/>
+      <point x="-4" y="72" type="line" smooth="yes"/>
+      <point x="-10" y="72"/>
+      <point x="-16" y="64"/>
+      <point x="-16" y="56" type="curve" smooth="yes"/>
+      <point x="-16" y="16" type="line" smooth="yes"/>
+      <point x="-16" y="8"/>
+      <point x="-10" y="0"/>
+    </contour>
+    <contour>
+      <point x="144" y="72" type="line"/>
+      <point x="192" y="226"/>
+      <point x="268" y="338"/>
+      <point x="364" y="338" type="curve" smooth="yes"/>
+      <point x="434" y="338"/>
+      <point x="470" y="280"/>
+      <point x="470" y="210" type="curve" smooth="yes"/>
+      <point x="470" y="120"/>
+      <point x="406" y="72"/>
+      <point x="296" y="72" type="curve" smooth="yes"/>
+    </contour>
+    <contour>
+      <point x="100" y="54" type="line"/>
+      <point x="146" y="120" type="line"/>
+      <point x="150" y="190"/>
+      <point x="150" y="262"/>
+      <point x="150" y="332" type="curve" smooth="yes"/>
+      <point x="150" y="806" type="line" smooth="yes"/>
+      <point x="150" y="820"/>
+      <point x="142" y="830"/>
+      <point x="130" y="830" type="curve" smooth="yes"/>
+      <point x="120" y="830" type="line" smooth="yes"/>
+      <point x="110" y="830"/>
+      <point x="100" y="820"/>
+      <point x="100" y="806" type="curve" smooth="yes"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>com.runebenderComfy.donorCandidate</key>
+      <dict>
+        <key>donorGlyph</key>
+        <string>tah-ar.medi</string>
+        <key>xScale</key>
+        <real>0.80754</real>
+        <key>yScale</key>
+        <real>1.10769</real>
+      </dict>
+      <key>public.markColor</key>
+      <string>1,0.3,0.3,1</string>
+    </dict>
+  </lib>
 </glyph>

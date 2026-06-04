@@ -88,6 +88,11 @@ surfaces. Track at least:
 - Keep candidate generation dry-run-first and idempotent; after a write pass, a
   clean dry run should show no remaining candidate creation or compatibility
   risks.
+- For donor-derived placeholder replacement, split the work into a visual dry
+  run and a guarded source apply. Use any appropriate OFL donor source, not a
+  hard-coded family. Apply only reviewed `status == candidate` glyphs with a
+  surgical `.glif` copy, preserve mark colors by default, and verify the source
+  diff before rebuilding.
 - Use `.agents/skills/google-fonts-nonlatin-drawing/SKILL.md` as the portable
   rescue workflow when a future family has missing Arabic or other non-Latin
   drawings.

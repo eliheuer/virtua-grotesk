@@ -29,10 +29,10 @@ Snapshot evidence:
 Start with **2. Structure And Wrong-Glyph Sweep**.
 
 - Why: Catch missing, blank, clipped, duplicated, malformed, or wrong-codepoint glyphs before judging spacing.
-- Open decisions: 5
+- Open decisions: 9
 - Visual rows: 5 (pending: 5)
-- Contour rows: 0 (none)
-- Decision rule: Confirm the contour queue is empty, then record the visual review rows only.
+- Contour rows: 4 (pending: 4)
+- Decision rule: Mark contour rows `fix-now` for source edits, or `accepted` only after comparing source and rendered proof.
 
 Evidence to open:
 
@@ -66,6 +66,13 @@ First visual-review command pattern:
 make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"
 ```
 
+First contour-decision command patterns:
+
+```bash
+make contour-decision-update GLYPH=dad-ar.init STATUS=fix-now DECISION="needs source edit" REVIEWED="Name YYYY-MM-DD"
+make contour-decision-update GLYPH=dad-ar.init STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"
+```
+
 ## Batch Queue
 
 ### 1. Open The Fast Dashboard
@@ -93,8 +100,8 @@ open documentation/arabic-next-review-batch.html
 Catch missing, blank, clipped, duplicated, malformed, or wrong-codepoint glyphs before judging spacing.
 
 - Visual rows: 5 (pending: 5)
-- Contour rows: 0 (none)
-- Decision rule: Confirm the contour queue is empty, then record the visual review rows only.
+- Contour rows: 4 (pending: 4)
+- Decision rule: Mark contour rows `fix-now` for source edits, or `accepted` only after comparing source and rendered proof.
 
 Evidence to open:
 
@@ -126,11 +133,20 @@ Visual review rows:
 
 | Key | Area | Item | Machine precheck | Review cue | AI observation | Human follow-up | Status | Record command |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `proof-regular-glyphs` | GF proof | Regular glyphs | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
-| `proof-medium-glyphs` | GF proof | Medium glyphs | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-medium-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
-| `proof-semibold-glyphs` | GF proof | SemiBold glyphs | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-semibold-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
-| `proof-bold-glyphs` | GF proof | Bold glyphs | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-bold-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
+| `proof-regular-glyphs` | GF proof | Regular glyphs | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
+| `proof-medium-glyphs` | GF proof | Medium glyphs | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-medium-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
+| `proof-semibold-glyphs` | GF proof | SemiBold glyphs | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-semibold-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
+| `proof-bold-glyphs` | GF proof | Bold glyphs | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | Full snapshot and focused 2x Arabic-row crop are nonblank. Use the crop to screen structure faster, then open the full glyph proof for missing, blank, clipped, duplicated, malformed, or wrong-codepoint Arabic glyphs. | Open the matching gftools glyph proof at zoom. | pending | `make arabic-visual-review-update REVIEW_KEY=proof-bold-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
 | `class-letter-structures` | Glyph class | letter-structures | Contour decisions pending: 0; fix-now: 0 | sad, dad, tah, zah, meem, heh, wawHamzaabove, lam-alef forms; review sidebearing-risk glyphs in the focused proof | Structure/risk snapshots show the expected high-risk overhang families. The overhangs need shaped-context judgment, not automatic sidebearing edits. | Open `documentation/arabic-manual-review-dashboard.html` and linked reports. | pending | `make arabic-visual-review-update REVIEW_KEY=class-letter-structures REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed"` |
+
+Contour decision rows:
+
+| Source glyph | Fontspector glyph | Category | Status | Fix command | Accept command |
+| --- | --- | --- | --- | --- | --- |
+| `dad-ar.init` | `uni0636.init` | source outline review | pending | `make contour-decision-update GLYPH=dad-ar.init STATUS=fix-now DECISION="needs source edit" REVIEWED="Name YYYY-MM-DD"` | `make contour-decision-update GLYPH=dad-ar.init STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"` |
+| `hah-ar.fina` | `uni062D.fina` | source outline review | pending | `make contour-decision-update GLYPH=hah-ar.fina STATUS=fix-now DECISION="needs source edit" REVIEWED="Name YYYY-MM-DD"` | `make contour-decision-update GLYPH=hah-ar.fina STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"` |
+| `jeem-ar.fina` | `uni062C.fina` | source outline review | pending | `make contour-decision-update GLYPH=jeem-ar.fina STATUS=fix-now DECISION="needs source edit" REVIEWED="Name YYYY-MM-DD"` | `make contour-decision-update GLYPH=jeem-ar.fina STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"` |
+| `sad-ar.init` | `uni0635.init` | source outline review | pending | `make contour-decision-update GLYPH=sad-ar.init STATUS=fix-now DECISION="needs source edit" REVIEWED="Name YYYY-MM-DD"` | `make contour-decision-update GLYPH=sad-ar.init STATUS=accepted DECISION="reviewed style divergence" REVIEWED="Name YYYY-MM-DD"` |
 
 ### 3. Marks, Dotted Circle, And Stacking
 

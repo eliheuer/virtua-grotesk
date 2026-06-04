@@ -15,7 +15,8 @@ This generated report records the proof-generation runtime. Virtua Grotesk proof
 - Local drawbot-skia branch: `master`
 - Local drawbot-skia HEAD: `ac56b2a`
 - Local drawbot-skia worktree clean: yes
-- drawbot-skia Python exists: yes
+- Project venv Python exists: yes
+- Project venv Python: `/Users/eli/GH/repos/virtua-grotesk/venv/bin/python`
 - drawbot-skia src exists: yes
 - Drawing API importable: yes
 - Import status: `import ok with fork src on PYTHONPATH`
@@ -23,7 +24,7 @@ This generated report records the proof-generation runtime. Virtua Grotesk proof
 ## Repository Wiring
 
 - Makefile sets `DRAWBOT_SKIA_REPO`: yes
-- Makefile uses fork venv Python: yes
+- Makefile uses project venv Python for DrawBot proofs: yes
 - Makefile prepends fork `src` to `PYTHONPATH`: yes
 - `proof.py` supports `drawbot_skia.drawing.Drawing`: yes
 - `proof.py` requires eliheuer/drawbot-skia instead of generic DrawBot: yes

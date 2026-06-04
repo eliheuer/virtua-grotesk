@@ -233,7 +233,7 @@ def command_safety_rows(makefile_text: str) -> list[tuple[str, bool, str]]:
         (
             "proof target uses eliheuer/drawbot-skia fork",
             "$(DRAWBOT_SKIA_REPO)/src" in proof_recipe and "$(DRAWBOT_PYTHON)" in proof_recipe,
-            "`make proof-only` runs the fork venv with the fork source on `PYTHONPATH`.",
+            "`make proof-only` runs the project venv with the fork source on `PYTHONPATH`.",
         ),
     ]
 
@@ -396,7 +396,7 @@ def main() -> int:
 
     gh_ready, gh_detail = gh_auth_ready()
     package_auth_ready = package_report_auth_ready == "yes"
-    drawbot_python = DRAWBOT_SKIA_REPO / ".venv/bin/python"
+    drawbot_python = ROOT / "venv/bin/python"
     drawbot_src = DRAWBOT_SKIA_REPO / "src"
     drawbot_ready = DRAWBOT_SKIA_REPO.exists() and drawbot_python.exists() and drawbot_src.exists()
     proof_pdf_exists = PROOF_PDF.exists()
@@ -592,7 +592,7 @@ def main() -> int:
             f"- Package report inputs ready: {package_report_inputs_ready}",
             f"- Package report auth ready: {package_report_auth_ready}",
             f"- drawbot-skia path: `{DRAWBOT_SKIA_REPO}`",
-            f"- drawbot-skia python exists: {yes_no(drawbot_python.exists())}",
+            f"- project venv Python for DrawBot exists: {yes_no(drawbot_python.exists())}",
             f"- drawbot-skia src exists: {yes_no(drawbot_src.exists())}",
             "",
             "## Next Actions",

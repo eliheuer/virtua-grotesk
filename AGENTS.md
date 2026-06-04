@@ -12,6 +12,7 @@ Virtua Grotesk is an open-source variable font (OFL v1.1 licensed) with a Weight
 /build-font              # Build all fonts (variable + static)
 /render-specimen 001     # Render character set specimen
 /proof                   # Generate PDF proof document
+make print-spacing-specimen # Generate landscape print spacing specimen
 make preflight           # Run current Google Fonts handoff gate
 make test                # Build, then run Fontspector googlefonts profile
 make kerning-proof-check # Generate gftools QA HTML proof for spacing/kerning review
@@ -106,13 +107,18 @@ Specimen scripts are Rust files in `designbot/` that use the DesignBot API. They
 
 ```bash
 python proof.py [font_path] [output_path]
+make print-spacing-specimen
 make arabic-print-proof
 ```
 
 Uses DrawBot-style APIs to generate multi-page PDF proofs. The Makefile
 defaults to the local `eliheuer/drawbot-skia` fork at
-`/Users/eli/GH/repos/drawbot-skia` and renders
-`fonts/ttf/VirtuaGrotesk-Regular.ttf` → `proof.pdf`.
+`/Users/eli/GH/repos/drawbot-skia`, runs this repo's virtualenv Python at
+`./venv/bin/python`, prepends the fork's `src` directory to `PYTHONPATH`, and
+renders `fonts/ttf/VirtuaGrotesk-Regular.ttf` → `proof.pdf`.
+`make print-spacing-specimen` renders the landscape print review PDF at
+`documentation/print-spacing-specimen.pdf` across Regular, Medium, SemiBold,
+and Bold, with `documentation/print-spacing-specimen-index.md` as the page map.
 `make arabic-print-proof` renders the focused Arabic PDF review aid at
 `documentation/arabic-print-proof.pdf` across Regular, Medium, SemiBold, and
 Bold, with `documentation/arabic-print-proof-index.md` as the page map.

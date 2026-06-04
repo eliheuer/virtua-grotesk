@@ -8,8 +8,8 @@ review rows. It is a drawing-session guardrail, not visual approval.
 
 - Pending or fix-needed review rows: 32
 - Rows with source targets: 16
-- Unique source glyph names checked: 68
-- Unique source target files referenced: 136
+- Unique source glyph names checked: 74
+- Unique source target files referenced: 148
 - Missing source files: 0
 - Regular/Bold structure mismatches: 0
 - Ready for paired-master hand review: yes
@@ -18,11 +18,11 @@ review rows. It is a drawing-session guardrail, not visual approval.
 
 | Review key | Source targets |
 | --- | ---: |
-| `proof-regular-glyphs` | 14 |
-| `proof-medium-glyphs` | 14 |
-| `proof-semibold-glyphs` | 14 |
-| `proof-bold-glyphs` | 14 |
-| `class-letter-structures` | 14 |
+| `proof-regular-glyphs` | 28 |
+| `proof-medium-glyphs` | 28 |
+| `proof-semibold-glyphs` | 28 |
+| `proof-bold-glyphs` | 28 |
+| `class-letter-structures` | 28 |
 | `mark-base+fatha` | 4 |
 | `mark-base+damma` | 4 |
 | `mark-base+kasra` | 4 |
@@ -55,6 +55,7 @@ review rows. It is a drawing-session guardrail, not visual approval.
 
 | Glyph | Referenced by rows | Regular | Bold | Structure match | Components |
 | --- | --- | --- | --- | --- | --- |
+| `ain-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 600; unicode 0639; contours 1; components 0; points 57; bbox `22,-376,554,554` | width 600; unicode 0639; contours 1; components 0; points 57; bbox `20,-438,580,652` | yes | - |
 | `arabicFootnoteMarker` | `class-arabic-punctuation` | width 0; unicode 0602; contours 1; components 0; points 8; bbox `-168,508,168,684` | width 0; unicode 0602; contours 1; components 0; points 8; bbox `-168,508,168,684` | yes | - |
 | `arabicNumberSign` | `class-arabic-punctuation` | width 0; unicode 0600; contours 1; components 0; points 6; bbox `-168,540,168,652` | width 0; unicode 0600; contours 1; components 0; points 6; bbox `-168,540,168,652` | yes | - |
 | `arabicSignSafha` | `class-arabic-punctuation` | width 0; unicode 0603; contours 1; components 0; points 6; bbox `-156,540,156,700` | width 0; unicode 0603; contours 1; components 0; points 6; bbox `-156,540,156,700` | yes | - |
@@ -68,22 +69,27 @@ review rows. It is a drawing-session guardrail, not visual approval.
 | `decimalseparator-ar` | `class-arabic-punctuation` | width 280; unicode 066B; contours 1; components 0; points 4; bbox `118,98,162,142` | width 280; unicode 066B; contours 1; components 0; points 4; bbox `112,92,168,148` | yes | - |
 | `dotcenter-ar` | `class-dot-stack-helpers` | width 600; unicode -; contours 1; components 0; points 4; bbox `276,332,324,380` | width 600; unicode -; contours 1; components 0; points 4; bbox `268,324,332,388` | yes | - |
 | `dottedCircle` | `mark-dotted-circle`, `class-mark-combinations` | width 600; unicode 25CC; contours 8; components 0; points 32; bbox `60,184,540,680` | width 600; unicode 25CC; contours 8; components 0; points 32; bbox `52,176,548,688` | yes | - |
-| `eight-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0668; contours 1; components 0; points 7; bbox `92,232,508,584` | width 600; unicode 0668; contours 1; components 0; points 7; bbox `92,232,508,584` | yes | - |
-| `eightFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F8; contours 1; components 0; points 7; bbox `92,232,508,584` | width 600; unicode 06F8; contours 1; components 0; points 7; bbox `92,232,508,584` | yes | - |
+| `eight-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0668; contours 1; components 0; points 25; bbox `74,-18,526,674` | width 600; unicode 0668; contours 1; components 0; points 25; bbox `42,-18,558,668` | yes | - |
+| `eightFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F8; contours 1; components 0; points 25; bbox `74,-18,526,674` | width 600; unicode 06F8; contours 1; components 0; points 25; bbox `42,-18,558,668` | yes | - |
 | `fatha-ar` | `mark-base+fatha`, `mark-dotted-circle`, `class-mark-combinations` | width 0; unicode 064E; contours 1; components 0; points 4; bbox `-72,0,72,40` | width 0; unicode 064E; contours 1; components 0; points 4; bbox `-84,0,84,56` | yes | - |
 | `fathatan-ar` | `mark-tanween`, `mark-dotted-circle`, `class-mark-combinations` | width 0; unicode 064B; contours 2; components 0; points 8; bbox `-72,0,72,88` | width 0; unicode 064B; contours 2; components 0; points 8; bbox `-84,0,84,112` | yes | - |
-| `five-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0665; contours 2; components 0; points 18; bbox `88,232,512,584` | width 600; unicode 0665; contours 2; components 0; points 18; bbox `88,232,512,584` | yes | - |
-| `fiveFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F5; contours 2; components 0; points 18; bbox `88,232,512,584` | width 600; unicode 06F5; contours 2; components 0; points 18; bbox `88,232,512,584` | yes | - |
-| `four-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0664; contours 1; components 0; points 12; bbox `112,176,520,584` | width 600; unicode 0664; contours 1; components 0; points 12; bbox `112,176,520,584` | yes | - |
-| `fourFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F4; contours 1; components 0; points 16; bbox `116,232,500,584` | width 600; unicode 06F4; contours 1; components 0; points 16; bbox `116,232,500,584` | yes | - |
+| `five-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0665; contours 2; components 0; points 26; bbox `84,-12,516,506` | width 600; unicode 0665; contours 2; components 0; points 26; bbox `62,-16,540,528` | yes | - |
+| `fiveFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F5; contours 2; components 0; points 45; bbox `88,-6,514,586` | width 600; unicode 06F5; contours 2; components 0; points 45; bbox `54,-6,546,614` | yes | - |
+| `four-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0664; contours 1; components 0; points 53; bbox `100,-16,532,694` | width 600; unicode 0664; contours 1; components 0; points 53; bbox `64,-24,538,696` | yes | - |
+| `fourFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F4; contours 2; components 0; points 52; bbox `86,-6,532,678` | width 600; unicode 06F4; contours 2; components 0; points 52; bbox `48,-6,540,692` | yes | - |
 | `fullStop-ar` | `class-arabic-punctuation` | width 240; unicode 06D4; contours 1; components 0; points 8; bbox `56,0,184,128` | width 240; unicode 06D4; contours 1; components 0; points 8; bbox `56,0,184,128` | yes | - |
+| `ghain-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 600; unicode 063A; contours 0; components 2; points 0; bbox `none` | width 600; unicode 063A; contours 0; components 2; points 0; bbox `none` | yes | `ain-ar`<br>`dotabove-ar` |
+| `hah-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 600; unicode 062D; contours 2; components 0; points 51; bbox `64,-376,576,448` | width 600; unicode 062D; contours 2; components 0; points 51; bbox `24,-424,572,586` | yes | - |
 | `hamzaabove-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures`, `mark-hamza-above-below`, `class-mark-combinations` | width 0; unicode 0654; contours 1; components 0; points 31; bbox `0,832,224,1024` | width 0; unicode 0654; contours 1; components 0; points 31; bbox `0,832,224,1024` | yes | - |
 | `hamzabelow-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures`, `mark-hamza-above-below`, `class-mark-combinations` | width 0; unicode 0655; contours 1; components 0; points 31; bbox `0,-256,224,-64` | width 0; unicode 0655; contours 1; components 0; points 31; bbox `0,-256,224,-64` | yes | - |
+| `jeem-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 600; unicode 062C; contours 3; components 0; points 67; bbox `64,-376,576,448` | width 600; unicode 062C; contours 3; components 0; points 67; bbox `24,-424,572,586` | yes | - |
 | `kasra-ar` | `mark-base+kasra`, `mark-dotted-circle`, `class-mark-combinations` | width 0; unicode 0650; contours 1; components 0; points 4; bbox `-72,0,72,40` | width 0; unicode 0650; contours 1; components 0; points 4; bbox `-84,0,84,56` | yes | - |
 | `kasratan-ar` | `mark-tanween`, `mark-dotted-circle`, `class-mark-combinations` | width 0; unicode 064D; contours 2; components 0; points 8; bbox `-72,0,72,88` | width 0; unicode 064D; contours 2; components 0; points 8; bbox `-84,0,84,112` | yes | - |
+| `khah-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 600; unicode 062E; contours 0; components 2; points 0; bbox `none` | width 600; unicode 062E; contours 0; components 2; points 0; bbox `none` | yes | `hah-ar`<br>`dotabove-ar` |
 | `madda-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 0; unicode 0653; contours 1; components 0; points 10; bbox `-144,4,144,152` | width 0; unicode 0653; contours 1; components 0; points 10; bbox `-144,4,144,152` | yes | - |
-| `nine-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0669; contours 1; components 0; points 12; bbox `140,176,492,584` | width 600; unicode 0669; contours 1; components 0; points 12; bbox `140,176,492,584` | yes | - |
-| `nineFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F9; contours 2; components 0; points 19; bbox `148,232,500,584` | width 600; unicode 06F9; contours 2; components 0; points 19; bbox `148,232,500,584` | yes | - |
+| `meem-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 600; unicode 0645; contours 2; components 0; points 37; bbox `54,-328,540,354` | width 600; unicode 0645; contours 2; components 0; points 37; bbox `54,-376,576,548` | yes | - |
+| `nine-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0669; contours 2; components 0; points 36; bbox `68,-6,506,700` | width 600; unicode 0669; contours 2; components 0; points 36; bbox `40,-6,554,700` | yes | - |
+| `nineFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F9; contours 2; components 0; points 36; bbox `68,-6,506,700` | width 600; unicode 06F9; contours 2; components 0; points 36; bbox `40,-6,554,700` | yes | - |
 | `one-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0661; contours 1; components 0; points 12; bbox `268,176,380,584` | width 600; unicode 0661; contours 1; components 0; points 12; bbox `258,176,380,584` | yes | - |
 | `oneFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F1; contours 1; components 0; points 12; bbox `252,176,364,584` | width 600; unicode 06F1; contours 1; components 0; points 12; bbox `250,176,364,584` | yes | - |
 | `parenleft-ar` | `class-arabic-punctuation` | width 600; unicode FD3E; contours 1; components 0; points 10; bbox `320,-96,540,800` | width 600; unicode FD3E; contours 1; components 0; points 10; bbox `320,-96,540,800` | yes | - |
@@ -99,7 +105,7 @@ review rows. It is a drawing-session guardrail, not visual approval.
 | `semicolon-ar` | `class-arabic-punctuation` | width 280; unicode 061B; contours 2; components 0; points 8; bbox `76,-56,188,378` | width 280; unicode 061B; contours 2; components 0; points 8; bbox `76,-56,188,384` | yes | - |
 | `seven-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0667; contours 1; components 0; points 8; bbox `100,176,500,584` | width 600; unicode 0667; contours 1; components 0; points 8; bbox `100,176,500,584` | yes | - |
 | `sevenFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F7; contours 1; components 0; points 7; bbox `92,232,508,584` | width 600; unicode 06F7; contours 1; components 0; points 7; bbox `92,232,508,584` | yes | - |
-| `shadda-ar` | `mark-shadda+sukun`, `class-mark-combinations` | width 0; unicode 0651; contours 1; components 0; points 10; bbox `-120,0,120,132` | width 0; unicode 0651; contours 1; components 0; points 10; bbox `-120,0,120,132` | yes | - |
+| `shadda-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures`, `mark-shadda+sukun`, `class-mark-combinations` | width 0; unicode 0651; contours 1; components 0; points 51; bbox `84,672,326,846` | width 0; unicode 0651; contours 1; components 0; points 51; bbox `82,670,328,876` | yes | - |
 | `shaddaDamma-ar` | `mark-shadda+sukun`, `class-mark-combinations` | width 0; unicode -; contours 2; components 0; points 11; bbox `180,612,449,796` | width 0; unicode -; contours 2; components 0; points 11; bbox `180,612,454,796` | yes | - |
 | `shaddaFatha-ar` | `mark-shadda+sukun`, `class-mark-combinations` | width 0; unicode -; contours 2; components 0; points 11; bbox `180,612,552,836` | width 0; unicode -; contours 2; components 0; points 11; bbox `180,612,552,850` | yes | - |
 | `sheen-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 864; unicode 0634; contours 0; components 2; points 0; bbox `none` | width 864; unicode 0634; contours 0; components 2; points 0; bbox `none` | yes | `seen-ar`<br>`threedotsupabove-ar` (xOffset=432, yOffset=-144) |
@@ -109,8 +115,8 @@ review rows. It is a drawing-session guardrail, not visual approval.
 | `sukun-ar` | `mark-shadda+sukun`, `class-mark-combinations` | width 0; unicode 0652; contours 2; components 0; points 8; bbox `-80,0,80,160` | width 0; unicode 0652; contours 2; components 0; points 8; bbox `-80,0,80,160` | yes | - |
 | `theh-ar` | `proof-regular-glyphs`, `proof-medium-glyphs`, `proof-semibold-glyphs`, `proof-bold-glyphs`, `class-letter-structures` | width 600; unicode 062B; contours 0; components 2; points 0; bbox `none` | width 600; unicode 062B; contours 0; components 2; points 0; bbox `none` | yes | `behDotless-ar`<br>`threedotsupabove-ar` |
 | `thousandseparator-ar` | `class-arabic-punctuation` | width 280; unicode 066C; contours 1; components 0; points 4; bbox `118,450,162,494` | width 280; unicode 066C; contours 1; components 0; points 4; bbox `112,444,168,500` | yes | - |
-| `three-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0663; contours 1; components 0; points 18; bbox `108,176,496,584` | width 600; unicode 0663; contours 1; components 0; points 18; bbox `108,176,496,584` | yes | - |
-| `threeFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F3; contours 1; components 0; points 15; bbox `96,232,500,532` | width 600; unicode 06F3; contours 1; components 0; points 15; bbox `96,232,500,532` | yes | - |
+| `three-ar` | `class-arabic-farsi-numerals` | width 600; unicode 0663; contours 1; components 0; points 59; bbox `74,-6,524,676` | width 600; unicode 0663; contours 1; components 0; points 59; bbox `42,-6,556,682` | yes | - |
+| `threeFarsi-ar` | `class-arabic-farsi-numerals` | width 600; unicode 06F3; contours 1; components 0; points 59; bbox `74,-6,524,676` | width 600; unicode 06F3; contours 1; components 0; points 59; bbox `42,-6,556,682` | yes | - |
 | `threedotsdownabove-ar` | `class-dot-stack-helpers` | width 600; unicode -; contours 3; components 0; points 12; bbox `222,590,378,706` | width 600; unicode -; contours 3; components 0; points 12; bbox `216,584,384,712` | yes | - |
 | `threedotsdownbelow-ar` | `class-dot-stack-helpers` | width 600; unicode -; contours 3; components 0; points 12; bbox `222,-106,378,10` | width 600; unicode -; contours 3; components 0; points 12; bbox `216,-112,384,16` | yes | - |
 | `threedotsdowncenter-ar` | `class-dot-stack-helpers` | width 600; unicode -; contours 3; components 0; points 12; bbox `222,-106,378,10` | width 600; unicode -; contours 3; components 0; points 12; bbox `216,-112,384,16` | yes | - |

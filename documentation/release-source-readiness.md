@@ -8,7 +8,7 @@ handoff check for the source state that `METADATA.pb` will claim.
 ## Summary
 
 - Current repo branch: `main`
-- Current repo commit: `05706bd4442fe5c556495ad3f9c4dd7a5185b775`
+- Current repo commit: `e30fc2fdfc541b2832ac6de68902eae8478fedcf`
 - Origin URL: `git@github.com:eliheuer/virtua-grotesk.git`
 - Normalized GitHub origin candidate: `https://github.com/eliheuer/virtua-grotesk`
 - Normalized origin differs from placeholder: yes
@@ -18,8 +18,8 @@ handoff check for the source state that `METADATA.pb` will claim.
 - Suggested tag exists locally: no
 - Working tree clean: no
 - Branch upstream: `origin/main`
-- Ahead/behind branch upstream: `0	0`
-- Ahead/behind origin branch: `0	0`
+- Ahead/behind branch upstream: `2	0`
+- Ahead/behind origin branch: `2	0`
 - Placeholder upstream URL still present: no
 - Pending source fields in downstream preview: 1
 - Downstream `source.files` entries: 4
@@ -41,13 +41,13 @@ handoff check for the source state that `METADATA.pb` will claim.
 | Field | Value |
 | --- | --- |
 | branch | `main` |
-| commit | `05706bd4442fe5c556495ad3f9c4dd7a5185b775` |
-| short commit | `05706bd` |
+| commit | `e30fc2fdfc541b2832ac6de68902eae8478fedcf` |
+| short commit | `e30fc2f` |
 | origin | `git@github.com:eliheuer/virtua-grotesk.git` |
 | normalized GitHub origin candidate | `https://github.com/eliheuer/virtua-grotesk` |
 | upstream | `origin/main` |
-| upstream ahead/behind | `0	0` |
-| origin ahead/behind | `0	0` |
+| upstream ahead/behind | `2	0` |
+| origin ahead/behind | `2	0` |
 | source version | `1.000` |
 | suggested tag | `v1.000` |
 | suggested tag matches source version | yes |
@@ -55,52 +55,87 @@ handoff check for the source state that `METADATA.pb` will claim.
 
 ## Current Dirty State
 
-- `M .agents/google-fonts-onboarding-checklists.md`
-- ` M .agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
-- ` M .agents/skills/google-fonts-qa/SKILL.md`
-- ` M Makefile`
-- ` M documentation/arabic-batch-recorder.md`
-- ` M documentation/arabic-current-review-worksheet.md`
-- ` M documentation/arabic-goal-completion-audit.md`
-- ` M documentation/arabic-hand-review-contact-sheet.html`
-- ` M documentation/arabic-hand-review-session.md`
-- ` M documentation/arabic-manual-edit-targets.md`
-- ` M documentation/arabic-next-review-ai-triage.md`
-- ` M documentation/arabic-next-review-board.html`
-- ` M documentation/arabic-next-review-packet.md`
-- ` M documentation/arabic-print-proof.pdf`
-- ` M documentation/arabic-review-worksheet-bundle.md`
-- ` M documentation/arabic-visual-review-runbook.md`
-- ` M documentation/final-submission-blockers.md`
+- `M documentation/arabic-mark-readiness.md`
+- ` M documentation/arabic-pending-source-checkpoint.md`
+- ` M documentation/arabic-source-edit-diff.md`
+- ` M documentation/fontspector-contour-count.md`
 - ` M documentation/fontspector-googlefonts-report.md`
 - ` M documentation/fontspector-metadata-warning-probe.md`
 - ` M documentation/fontspector-warnings.md`
 - ` M documentation/github-release-draft.md`
 - ` M documentation/github-release-notes.md`
-- ` M documentation/next-actions.md`
 - ` M documentation/release-archive-manifest.md`
 - ` M documentation/release-source-readiness.md`
 - ` M documentation/upstream-structure-readiness.md`
-- ` M proof.pdf`
-- ` M scripts/build_arabic_next_review_board.py`
-- ` M scripts/build_arabic_print_proof.py`
-- `MM scripts/gf_preflight.py`
-- ` M scripts/report_arabic_batch_recorder.py`
-- ` M scripts/report_arabic_current_review_worksheet.py`
-- ` M scripts/report_arabic_goal_completion.py`
-- ` M scripts/report_arabic_manual_edit_targets.py`
-- ` M scripts/report_arabic_review_worksheet_bundle.py`
-- ` M scripts/report_arabic_visual_review_runbook.py`
-- ` M scripts/report_next_actions.py`
-- ` M scripts/test_arabic_visual_review_update.sh`
-- `?? documentation/arabic-drawing-session-checklist.md`
-- `?? documentation/arabic-print-proof-index.md`
-- `?? documentation/arabic-source-edit-diff.md`
-- `?? documentation/arabic-visual-review-batch.tsv`
-- `?? scripts/report_arabic_drawing_session_checklist.py`
-- `?? scripts/report_arabic_source_edit_diff.py`
-- `?? scripts/report_arabic_visual_review_batch_tsv.py`
-- `?? scripts/update_arabic_visual_review_batch.py`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/alefM_aksura-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/alefM_aksura-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/behD_otless-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/behD_otless-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/eight-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/eightFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/farsiYeh-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/five-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/fiveFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/four-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/fourFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.medi.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/heh-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.init.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.medi.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/keheh-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/keheh-ar.init.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/keheh-ar.medi.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/lam_alef-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.init.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.medi.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/nine-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/nineFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/noonghunna-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/noonghunna-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/qafD_otless-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/qafD_otless-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/reh-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/sad-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/sad-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/sad-ar.init.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/sad-ar.medi.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.medi.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/tah-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/tah-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/tah-ar.init.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/tah-ar.medi.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/three-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/threeFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/alefM_aksura-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/alefM_aksura-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/behD_otless-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/behD_otless-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/eight-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/eightFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/farsiYeh-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/fehD_otless-ar.fina.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/fehD_otless-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/five-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/fiveFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/four-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/fourFarsi-ar.glif`
+- ` M sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.fina.glif`
+- ... 36 more entries omitted
 
 ## Downstream Source Mapping
 

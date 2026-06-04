@@ -33,7 +33,7 @@ review log; it points to the next rows and commands.
 - Name: 2. Structure And Wrong-Glyph Sweep
 - Why: Catch missing, blank, clipped, duplicated, malformed, or wrong-codepoint glyphs before judging spacing.
 - Visual rows: 5 (pending: 5)
-- Contour rows: 0 (none)
+- Contour rows: 4 (pending: 4)
 
 | Key | Area / item | Status | Review cue |
 | --- | --- | --- | --- |

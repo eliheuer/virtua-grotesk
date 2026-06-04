@@ -43,13 +43,13 @@ proof HTML; it is not a substitute for human proof/source inspection.
   - `documentation/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
-- Edit targets: Source targets: 14 existing, 0 missing
+  - Structure triage review prompts: 66
+- Edit targets: Source targets: 28 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
-  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
-  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
-  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 10
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 24
 
 ```bash
 make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed current proof"
@@ -75,13 +75,13 @@ make arabic-visual-review-update REVIEW_KEY=proof-regular-glyphs REVIEW_STATUS=d
   - `documentation/gftools-qa/Proof/Medium-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
-- Edit targets: Source targets: 14 existing, 0 missing
+  - Structure triage review prompts: 66
+- Edit targets: Source targets: 28 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
-  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
-  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
-  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 10
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 24
 
 ```bash
 make arabic-visual-review-update REVIEW_KEY=proof-medium-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed current proof"
@@ -107,13 +107,13 @@ make arabic-visual-review-update REVIEW_KEY=proof-medium-glyphs REVIEW_STATUS=de
   - `documentation/gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
-- Edit targets: Source targets: 14 existing, 0 missing
+  - Structure triage review prompts: 66
+- Edit targets: Source targets: 28 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
-  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
-  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
-  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 10
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 24
 
 ```bash
 make arabic-visual-review-update REVIEW_KEY=proof-semibold-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed current proof"
@@ -139,13 +139,13 @@ make arabic-visual-review-update REVIEW_KEY=proof-semibold-glyphs REVIEW_STATUS=
   - `documentation/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
-- Edit targets: Source targets: 14 existing, 0 missing
+  - Structure triage review prompts: 66
+- Edit targets: Source targets: 28 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
-  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
-  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
-  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 10
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 24
 
 ```bash
 make arabic-visual-review-update REVIEW_KEY=proof-bold-glyphs REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed current proof"
@@ -169,14 +169,14 @@ make arabic-visual-review-update REVIEW_KEY=proof-bold-glyphs REVIEW_STATUS=defe
   - `documentation/arabic-structure-triage.md`
 - Dashboard: `documentation/arabic-manual-review-dashboard.html`
 - Machine precheck:
-  - Contour decisions pending: 0
+  - Contour decisions pending: 4
   - Contour decisions marked fix-now: 0
-- Edit targets: Source targets: 14 existing, 0 missing
+- Edit targets: Source targets: 28 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
-  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
-  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
-  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 10
+  - `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - Additional GLIF targets in `documentation/arabic-manual-edit-targets.md`: 24
 
 ```bash
 make arabic-visual-review-update REVIEW_KEY=class-letter-structures REVIEW_STATUS=pass REVIEWER="Name YYYY-MM-DD" NOTES="reviewed current proof"
@@ -428,7 +428,7 @@ make arabic-visual-review-update REVIEW_KEY=class-mark-combinations REVIEW_STATU
   - Arabic manual dashboard: `documentation/arabic-review-snapshots/class-dot-stack-helpers.png` from `documentation/arabic-manual-review-dashboard.html`
 - Dashboard: `documentation/arabic-manual-review-dashboard.html`
 - Machine precheck:
-  - Contour decisions pending: 0
+  - Contour decisions pending: 4
   - Contour decisions marked fix-now: 0
 - Edit targets: Source targets: 26 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/dotcenter-ar.glif`
@@ -835,7 +835,7 @@ make arabic-visual-review-update REVIEW_KEY=smoke-lam-alef REVIEW_STATUS=deferre
   - Arabic manual dashboard: `documentation/arabic-review-snapshots/class-arabic-farsi-numerals.png` from `documentation/arabic-manual-review-dashboard.html`
 - Dashboard: `documentation/arabic-manual-review-dashboard.html`
 - Machine precheck:
-  - Contour decisions pending: 0
+  - Contour decisions pending: 4
   - Contour decisions marked fix-now: 0
 - Edit targets: Source targets: 40 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/zero-ar.glif`
@@ -862,7 +862,7 @@ make arabic-visual-review-update REVIEW_KEY=class-arabic-farsi-numerals REVIEW_S
   - Arabic manual dashboard: `documentation/arabic-review-snapshots/class-arabic-punctuation.png` from `documentation/arabic-manual-review-dashboard.html`
 - Dashboard: `documentation/arabic-manual-review-dashboard.html`
 - Machine precheck:
-  - Contour decisions pending: 0
+  - Contour decisions pending: 4
   - Contour decisions marked fix-now: 0
 - Edit targets: Source targets: 32 existing, 0 missing
   - `sources/VirtuaGrotesk-Regular.ufo/glyphs/comma-ar.glif`

@@ -47,12 +47,26 @@ regenerated after recording outcomes.
   - Use these collapsed codepoint questions before recording an outcome; they are not automatic approval.
   - `U+062B ARABIC LETTER THEH` / `uni062B`: Check dot stack height and left overhang in glyph proofs before spacing edits.
     - Source edit targets: `VirtuaGrotesk-Regular.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`; `VirtuaGrotesk-Bold.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
+  - `U+062C ARABIC LETTER JEEM` / `uni062C`: Inspect in structure sweep and glyph proofs; edit only if the rendered drawing is wrong.
+    - Source edit targets: `VirtuaGrotesk-Regular.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`; `VirtuaGrotesk-Bold.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+  - `U+062D ARABIC LETTER HAH` / `uni062D`: Inspect in structure sweep and glyph proofs; edit only if the rendered drawing is wrong.
+    - Source edit targets: `VirtuaGrotesk-Regular.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`; `VirtuaGrotesk-Bold.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+  - `U+062E ARABIC LETTER KHAH` / `uni062E`: Inspect in structure sweep and glyph proofs; edit only if the rendered drawing is wrong.
+    - Source edit targets: `VirtuaGrotesk-Regular.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`; `VirtuaGrotesk-Bold.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
   - `U+0633 ARABIC LETTER SEEN` / `uni0633`: Check whether the left overhang is intentional joining-script rhythm across all weights.
     - Source edit targets: `VirtuaGrotesk-Regular.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`; `VirtuaGrotesk-Bold.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
   - `U+0634 ARABIC LETTER SHEEN` / `uni0634`: Check whether the left overhang is intentional joining-script rhythm across all weights.
     - Source edit targets: `VirtuaGrotesk-Regular.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`; `VirtuaGrotesk-Bold.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
+  - `U+0639 ARABIC LETTER AIN` / `uni0639`: Inspect in structure sweep and glyph proofs; edit only if the rendered drawing is wrong.
+    - Source edit targets: `VirtuaGrotesk-Regular.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`; `VirtuaGrotesk-Bold.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+  - `U+063A ARABIC LETTER GHAIN` / `uni063A`: Inspect in structure sweep and glyph proofs; edit only if the rendered drawing is wrong.
+    - Source edit targets: `VirtuaGrotesk-Regular.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`; `VirtuaGrotesk-Bold.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+  - `U+0645 ARABIC LETTER MEEM` / `uni0645`: Inspect in structure sweep and glyph proofs; edit only if the rendered drawing is wrong.
+    - Source edit targets: `VirtuaGrotesk-Regular.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`; `VirtuaGrotesk-Bold.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
   - `U+0648 ARABIC LETTER WAW` / `uni0648`: Check descending bowl and left overhang against adjacent text samples.
     - Source edit targets: `VirtuaGrotesk-Regular.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`; `VirtuaGrotesk-Bold.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+  - `U+0651 ARABIC SHADDA` / `uni0651`: Expected zero-advance mark overhang; inspect attachment and dotted-circle clarity, not sidebearing alone.
+    - Source edit targets: `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`; `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
   - `U+0653 ARABIC MADDAH ABOVE` / `uni0653`: Expected zero-advance mark overhang; inspect attachment and dotted-circle clarity, not sidebearing alone.
     - Source edit targets: `VirtuaGrotesk-Regular.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`; `VirtuaGrotesk-Bold.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
   - `U+0654 ARABIC HAMZA ABOVE` / `uni0654`: Expected zero-advance mark overhang; inspect attachment and dotted-circle clarity, not sidebearing alone.
@@ -78,7 +92,7 @@ regenerated after recording outcomes.
   - `documentation/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
+  - Structure triage review prompts: 66
 
 Record the review result:
 
@@ -110,7 +124,7 @@ AI comparison prompt:
   - `documentation/gftools-qa/Proof/Medium-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
+  - Structure triage review prompts: 66
 
 Record the review result:
 
@@ -142,7 +156,7 @@ AI comparison prompt:
   - `documentation/gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
+  - Structure triage review prompts: 66
 
 Record the review result:
 
@@ -174,7 +188,7 @@ AI comparison prompt:
   - `documentation/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`
 - Machine precheck:
   - Structure triage mechanical blockers: 0
-  - Structure triage review prompts: 35
+  - Structure triage review prompts: 66
 
 Record the review result:
 
@@ -204,7 +218,7 @@ AI comparison prompt:
   - `documentation/arabic-structure-triage.md`
 - Dashboard: `documentation/arabic-manual-review-dashboard.html`
 - Machine precheck:
-  - Contour decisions pending: 0
+  - Contour decisions pending: 4
   - Contour decisions marked fix-now: 0
 
 Record the review result:

@@ -20,14 +20,18 @@ Source structure uses `c` = source contours, `p` = source points, and
 matching counts before editing; it is a quick triage signal, not a
 substitute for `documentation/master-compatibility.md`.
 
-- Unique source glyphs: 0
-- Unique Fontspector glyph items: 0
-- All-font finding rows: 0
+- Unique source glyphs: 4
+- Unique Fontspector glyph items: 4
+- All-font finding rows: 4
 
 ## Source Glyph Command Queue
 
 | Order | Priority | Source glyph | Fontspector glyph | Category | Source structure | Compatible | Fonts | Command | Review cue |
 | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | P1 source-structure check | `dad-ar.init` | `uni0636.init` | source outline review | Regular: `c0/p0/comp2`<br>Bold: `c0/p0/comp2` | yes | `VirtuaGrotesk[wght].ttf` | `/edit-glyph dad-ar.init --master both` | Inspect source outline structure and compare the rendered proof before editing. |
+| 2 | P1 source-structure check | `hah-ar.fina` | `uni062D.fina` | source outline review | Regular: `c3/p67/comp0`<br>Bold: `c3/p67/comp0` | yes | `VirtuaGrotesk[wght].ttf` | `/edit-glyph hah-ar.fina --master both` | Inspect source outline structure and compare the rendered proof before editing. |
+| 3 | P1 source-structure check | `jeem-ar.fina` | `uni062C.fina` | source outline review | Regular: `c4/p83/comp0`<br>Bold: `c4/p83/comp0` | yes | `VirtuaGrotesk[wght].ttf` | `/edit-glyph jeem-ar.fina --master both` | Inspect source outline structure and compare the rendered proof before editing. |
+| 4 | P1 source-structure check | `sad-ar.init` | `uni0635.init` | source outline review | Regular: `c1/p49/comp0`<br>Bold: `c1/p49/comp0` | yes | `VirtuaGrotesk[wght].ttf` | `/edit-glyph sad-ar.init --master both` | Inspect source outline structure and compare the rendered proof before editing. |
 
 ## Batch Commands
 

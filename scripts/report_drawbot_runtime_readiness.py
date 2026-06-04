@@ -12,7 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/drawbot-runtime-readiness.md")
 DRAWBOT_SKIA_REPO = Path("/Users/eli/GH/repos/drawbot-skia")
-DRAWBOT_SKIA_PYTHON = DRAWBOT_SKIA_REPO / ".venv/bin/python"
+PROJECT_PYTHON = ROOT / "venv/bin/python"
 DRAWBOT_SKIA_SRC = DRAWBOT_SKIA_REPO / "src"
 EXPECTED_ORIGINS = {
     "git@github.com:eliheuer/drawbot-skia.git",
@@ -53,11 +53,11 @@ def git_value(command: list[str]) -> str:
 
 
 def import_status() -> tuple[bool, str]:
-    if not DRAWBOT_SKIA_PYTHON.exists() or not DRAWBOT_SKIA_SRC.exists():
-        return False, "drawbot-skia Python or src directory missing"
+    if not PROJECT_PYTHON.exists() or not DRAWBOT_SKIA_SRC.exists():
+        return False, "project venv Python or drawbot-skia src directory missing"
     returncode, output = run(
         [
-            str(DRAWBOT_SKIA_PYTHON),
+            str(PROJECT_PYTHON),
             "-c",
             (
                 "from drawbot_skia.drawing import Drawing; "
@@ -71,7 +71,7 @@ def import_status() -> tuple[bool, str]:
     env["PYTHONPATH"] = str(DRAWBOT_SKIA_SRC)
     result = subprocess.run(
         [
-            str(DRAWBOT_SKIA_PYTHON),
+            str(PROJECT_PYTHON),
             "-c",
             (
                 "from drawbot_skia.drawing import Drawing; "
@@ -97,7 +97,7 @@ def markdown_report() -> str:
     readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
     tooling_text = (ROOT / "documentation/python-tooling-notes.md").read_text(encoding="utf-8")
     makefile_repo = "DRAWBOT_SKIA_REPO ?= /Users/eli/GH/repos/drawbot-skia" in makefile_text
-    makefile_python = "DRAWBOT_PYTHON ?= $(DRAWBOT_SKIA_REPO)/.venv/bin/python" in makefile_text
+    makefile_python = "DRAWBOT_PYTHON ?= $(PYTHON)" in makefile_text
     makefile_pythonpath = 'PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src' in makefile_text
     origin = git_remote("origin")
     upstream = git_remote("upstream")
@@ -133,7 +133,8 @@ def markdown_report() -> str:
         f"- Local drawbot-skia branch: `{branch}`",
         f"- Local drawbot-skia HEAD: `{short_head}`",
         f"- Local drawbot-skia worktree clean: {yes_no(status == 'missing' or status == '')}",
-        f"- drawbot-skia Python exists: {yes_no(DRAWBOT_SKIA_PYTHON.exists())}",
+        f"- Project venv Python exists: {yes_no(PROJECT_PYTHON.exists())}",
+        f"- Project venv Python: `{PROJECT_PYTHON}`",
         f"- drawbot-skia src exists: {yes_no(DRAWBOT_SKIA_SRC.exists())}",
         f"- Drawing API importable: {yes_no(import_ok)}",
         f"- Import status: `{import_summary or 'no output'}`",
@@ -141,7 +142,7 @@ def markdown_report() -> str:
         "## Repository Wiring",
         "",
         f"- Makefile sets `DRAWBOT_SKIA_REPO`: {yes_no(makefile_repo)}",
-        f"- Makefile uses fork venv Python: {yes_no(makefile_python)}",
+        f"- Makefile uses project venv Python for DrawBot proofs: {yes_no(makefile_python)}",
         f"- Makefile prepends fork `src` to `PYTHONPATH`: {yes_no(makefile_pythonpath)}",
         f"- `proof.py` supports `drawbot_skia.drawing.Drawing`: {yes_no('from drawbot_skia.drawing import Drawing' in proof_text)}",
         f"- `proof.py` requires eliheuer/drawbot-skia instead of generic DrawBot: {yes_no(proof_requires_fork)}",

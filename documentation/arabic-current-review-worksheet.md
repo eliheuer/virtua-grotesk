@@ -9,8 +9,8 @@ outcomes only after opening the linked proof/source evidence.
 - Name: 2. Structure And Wrong-Glyph Sweep
 - Why: Catch missing, blank, clipped, duplicated, malformed, or wrong-codepoint glyphs before judging spacing.
 - Visual rows: 5 (pending: 5)
-- Contour rows: 0 (none)
-- Decision rule: Confirm the contour queue is empty, then record the visual review rows only.
+- Contour rows: 4 (pending: 4)
+- Decision rule: Mark contour rows `fix-now` for source edits, or `accepted` only after comparing source and rendered proof.
 
 ## Source Structure Guard
 
@@ -85,10 +85,17 @@ source files structurally compatible.
 
 | Glyph | Masters | Review prompt source |
 | --- | --- | --- |
+| `ain-ar` | Bold, Regular | `U+0639 ARABIC LETTER AIN` structure prompt |
+| `ghain-ar` | Bold, Regular | `U+063A ARABIC LETTER GHAIN` structure prompt |
+| `hah-ar` | Bold, Regular | `U+062D ARABIC LETTER HAH` structure prompt |
 | `hamzaabove-ar` | Bold, Regular | `U+0654 ARABIC HAMZA ABOVE` structure prompt |
 | `hamzabelow-ar` | Bold, Regular | `U+0655 ARABIC HAMZA BELOW` structure prompt |
+| `jeem-ar` | Bold, Regular | `U+062C ARABIC LETTER JEEM` structure prompt |
+| `khah-ar` | Bold, Regular | `U+062E ARABIC LETTER KHAH` structure prompt |
 | `madda-ar` | Bold, Regular | `U+0653 ARABIC MADDAH ABOVE` structure prompt |
+| `meem-ar` | Bold, Regular | `U+0645 ARABIC LETTER MEEM` structure prompt |
 | `seen-ar` | Bold, Regular | `U+0633 ARABIC LETTER SEEN` structure prompt |
+| `shadda-ar` | Bold, Regular | `U+0651 ARABIC SHADDA` structure prompt |
 | `sheen-ar` | Bold, Regular | `U+0634 ARABIC LETTER SHEEN` structure prompt |
 | `theh-ar` | Bold, Regular | `U+062B ARABIC LETTER THEH` structure prompt |
 | `waw-ar` | Bold, Regular | `U+0648 ARABIC LETTER WAW` structure prompt |
@@ -97,10 +104,10 @@ source files structurally compatible.
 
 | Key | Current status | Machine precheck | Review cue | Observed issue or `none` | Source/proof location | Final status |
 | --- | --- | --- | --- | --- | --- | --- |
-| `proof-regular-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
-| `proof-medium-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
-| `proof-semibold-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
-| `proof-bold-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
+| `proof-regular-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
+| `proof-medium-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
+| `proof-semibold-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
+| `proof-bold-glyphs` | pending | Structure triage mechanical blockers: 0; structure review prompts: 66 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs |  |  | pass / fix-needed / deferred |
 | `class-letter-structures` | pending | Contour decisions pending: 0; fix-now: 0 | sad, dad, tah, zah, meem, heh, wawHamzaabove, lam-alef forms; review sidebearing-risk glyphs in the focused proof |  |  | pass / fix-needed / deferred |
 
 ## Recording Commands

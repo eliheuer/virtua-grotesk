@@ -21,7 +21,7 @@ release archive contents.
 - Untracked archive inputs: 1
 - Dirty archive inputs: 0
 - Variable font newer than source/build inputs: yes
-- Newest source/build input: `sources/VirtuaGrotesk-Bold.ufo/glyphs/ogonek.glif`
+- Newest source/build input: `sources/VirtuaGrotesk-Regular.ufo/metainfo.plist`
 - Local release archive: `dist/VirtuaGrotesk-1.000.zip`
 - Preview release archive URL: `https://github.com/eliheuer/virtua-grotesk/releases/download/v1.000/VirtuaGrotesk-1.000.zip`
 - Preview release archive URL is GitHub release download `.zip`: yes
@@ -42,7 +42,7 @@ release archive contents.
 | Source file | Destination in package | Purpose | Exists | Ignored | Tracked | Dirty | Size bytes | SHA-256 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | `OFL.txt` | `OFL.txt` | license | yes | no | yes | no | 4399 | `98c008294f3e0b098a65f45ca5be5bc119afefcd38b29331874d2193c6cd1236` |
-| `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | served variable font | yes | yes | no | no | 72984 | `e42f9de0d05750839281ab165ea1158b41677b0390631c97708a9d33cba92623` |
+| `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | served variable font | yes | yes | no | no | 85952 | `dc72e50470ffe0034dfef7f796459b8019a1696e372bd1870985b11d7f6d4ad5` |
 | `documentation/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | article HTML | yes | no | yes | no | 3389 | `492d00133ee66642319b6c64f930e720b8f8d813054d440b69417774548beaff` |
 | `documentation/readme-specimen.png` | `article/readme-specimen.png` | article image | yes | no | yes | no | 434000 | `7b2a4de1a90f5fd5b9f42e5757467a4f5168de2b89b9b29c3a493afd7052429c` |
 

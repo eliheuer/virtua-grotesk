@@ -297,11 +297,11 @@ Install DesignBot:
 cargo install designbot
 ```
 
-Proof PDFs use the local `eliheuer/drawbot-skia` fork. On this machine the
-default DrawBot runtime is:
+Proof PDFs use the project virtualenv plus the local `eliheuer/drawbot-skia`
+fork. On this machine the default DrawBot runtime is:
 
 ```bash
-/Users/eli/GH/repos/drawbot-skia/.venv/bin/python
+./venv/bin/python
 ```
 
 The Makefile sets `PYTHONPATH` to `/Users/eli/GH/repos/drawbot-skia/src` for

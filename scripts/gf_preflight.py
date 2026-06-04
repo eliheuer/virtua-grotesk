@@ -28,7 +28,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 VARIABLE_FONT = ROOT / "fonts" / "variable" / "VirtuaGrotesk[wght].ttf"
 DRAWBOT_SKIA_REPO = Path("/Users/eli/GH/repos/drawbot-skia")
-DRAWBOT_SKIA_PYTHON = DRAWBOT_SKIA_REPO / ".venv/bin/python"
+PROJECT_PYTHON = ROOT / "venv/bin/python"
 DRAWBOT_SKIA_SRC = DRAWBOT_SKIA_REPO / "src"
 EXPECTED_DRAWBOT_ORIGINS = {
     "git@github.com:eliheuer/drawbot-skia.git",
@@ -5325,8 +5325,8 @@ def proof_runtime_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "DRAWBOT_PYTHON ?= $(DRAWBOT_SKIA_REPO)/.venv/bin/python" in makefile_text,
-        "Makefile uses drawbot-skia venv for proof generation",
+        "DRAWBOT_PYTHON ?= $(PYTHON)" in makefile_text,
+        "Makefile uses project venv for proof generation",
         errors,
     )
     check(
@@ -5375,8 +5375,8 @@ def proof_runtime_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "drawbot-skia/.venv/bin/python proof.py" in claude_settings_text,
-        "Claude settings allow drawbot-skia proof command",
+        "./venv/bin/python proof.py" in claude_settings_text,
+        "Claude settings allow project-venv proof command",
         errors,
     )
     check(
@@ -5415,12 +5415,12 @@ def proof_runtime_errors(errors: list[str]) -> None:
             "local drawbot-skia origin is eliheuer/drawbot-skia",
             errors,
         )
-    check(DRAWBOT_SKIA_PYTHON.exists(), "local drawbot-skia Python exists", errors)
+    check(PROJECT_PYTHON.exists(), "project venv Python exists", errors)
     check(DRAWBOT_SKIA_SRC.exists(), "local drawbot-skia src directory exists", errors)
-    if DRAWBOT_SKIA_PYTHON.exists() and DRAWBOT_SKIA_SRC.exists():
+    if PROJECT_PYTHON.exists() and DRAWBOT_SKIA_SRC.exists():
         result = subprocess.run(
             [
-                str(DRAWBOT_SKIA_PYTHON),
+                str(PROJECT_PYTHON),
                 "-c",
                 "from drawbot_skia.drawing import Drawing; db = Drawing(); assert hasattr(db, 'saveImage')",
             ],

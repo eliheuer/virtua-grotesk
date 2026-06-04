@@ -51,10 +51,17 @@ Glyph-level drawing punchlist:
 
 | Glyph | Masters | Review prompt source |
 | --- | --- | --- |
+| `ain-ar` | Bold, Regular | `U+0639 ARABIC LETTER AIN` structure prompt |
+| `ghain-ar` | Bold, Regular | `U+063A ARABIC LETTER GHAIN` structure prompt |
+| `hah-ar` | Bold, Regular | `U+062D ARABIC LETTER HAH` structure prompt |
 | `hamzaabove-ar` | Bold, Regular | `U+0654 ARABIC HAMZA ABOVE` structure prompt |
 | `hamzabelow-ar` | Bold, Regular | `U+0655 ARABIC HAMZA BELOW` structure prompt |
+| `jeem-ar` | Bold, Regular | `U+062C ARABIC LETTER JEEM` structure prompt |
+| `khah-ar` | Bold, Regular | `U+062E ARABIC LETTER KHAH` structure prompt |
 | `madda-ar` | Bold, Regular | `U+0653 ARABIC MADDAH ABOVE` structure prompt |
+| `meem-ar` | Bold, Regular | `U+0645 ARABIC LETTER MEEM` structure prompt |
 | `seen-ar` | Bold, Regular | `U+0633 ARABIC LETTER SEEN` structure prompt |
+| `shadda-ar` | Bold, Regular | `U+0651 ARABIC SHADDA` structure prompt |
 | `sheen-ar` | Bold, Regular | `U+0634 ARABIC LETTER SHEEN` structure prompt |
 | `theh-ar` | Bold, Regular | `U+062B ARABIC LETTER THEH` structure prompt |
 | `waw-ar` | Bold, Regular | `U+0648 ARABIC LETTER WAW` structure prompt |

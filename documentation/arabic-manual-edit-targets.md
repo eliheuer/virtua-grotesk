@@ -8,8 +8,8 @@ and it does not replace the visual proof review.
 ## Summary
 
 - Pending/fix-needed review rows: 32
-- Source target references: 246
-- Existing source target files: 246
+- Source target references: 316
+- Existing source target files: 316
 - Missing source target files: 0
 - Compatibility rule: edit Regular and Bold together, preserving contour structure.
 
@@ -19,19 +19,40 @@ and it does not replace the visual proof review.
 
 - Area: GF proof
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Source targets: 14 existing, 0 missing
+- Source targets: 28 existing, 0 missing
 - `U+062B ARABIC LETTER THEH` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
+- `U+062C ARABIC LETTER JEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+- `U+062D ARABIC LETTER HAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+- `U+062E ARABIC LETTER KHAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
 - `U+0633 ARABIC LETTER SEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
 - `U+0634 ARABIC LETTER SHEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
+- `U+0639 ARABIC LETTER AIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+- `U+063A ARABIC LETTER GHAIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+- `U+0645 ARABIC LETTER MEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
 - `U+0648 ARABIC LETTER WAW` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+- `U+0651 ARABIC SHADDA` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
 - `U+0653 ARABIC MADDAH ABOVE` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
@@ -46,19 +67,40 @@ and it does not replace the visual proof review.
 
 - Area: GF proof
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Source targets: 14 existing, 0 missing
+- Source targets: 28 existing, 0 missing
 - `U+062B ARABIC LETTER THEH` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
+- `U+062C ARABIC LETTER JEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+- `U+062D ARABIC LETTER HAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+- `U+062E ARABIC LETTER KHAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
 - `U+0633 ARABIC LETTER SEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
 - `U+0634 ARABIC LETTER SHEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
+- `U+0639 ARABIC LETTER AIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+- `U+063A ARABIC LETTER GHAIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+- `U+0645 ARABIC LETTER MEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
 - `U+0648 ARABIC LETTER WAW` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+- `U+0651 ARABIC SHADDA` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
 - `U+0653 ARABIC MADDAH ABOVE` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
@@ -73,19 +115,40 @@ and it does not replace the visual proof review.
 
 - Area: GF proof
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Source targets: 14 existing, 0 missing
+- Source targets: 28 existing, 0 missing
 - `U+062B ARABIC LETTER THEH` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
+- `U+062C ARABIC LETTER JEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+- `U+062D ARABIC LETTER HAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+- `U+062E ARABIC LETTER KHAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
 - `U+0633 ARABIC LETTER SEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
 - `U+0634 ARABIC LETTER SHEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
+- `U+0639 ARABIC LETTER AIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+- `U+063A ARABIC LETTER GHAIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+- `U+0645 ARABIC LETTER MEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
 - `U+0648 ARABIC LETTER WAW` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+- `U+0651 ARABIC SHADDA` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
 - `U+0653 ARABIC MADDAH ABOVE` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
@@ -100,19 +163,40 @@ and it does not replace the visual proof review.
 
 - Area: GF proof
 - Review cue: Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs
-- Source targets: 14 existing, 0 missing
+- Source targets: 28 existing, 0 missing
 - `U+062B ARABIC LETTER THEH` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
+- `U+062C ARABIC LETTER JEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+- `U+062D ARABIC LETTER HAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+- `U+062E ARABIC LETTER KHAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
 - `U+0633 ARABIC LETTER SEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
 - `U+0634 ARABIC LETTER SHEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
+- `U+0639 ARABIC LETTER AIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+- `U+063A ARABIC LETTER GHAIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+- `U+0645 ARABIC LETTER MEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
 - `U+0648 ARABIC LETTER WAW` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+- `U+0651 ARABIC SHADDA` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
 - `U+0653 ARABIC MADDAH ABOVE` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
@@ -127,19 +211,40 @@ and it does not replace the visual proof review.
 
 - Area: Glyph class
 - Review cue: sad, dad, tah, zah, meem, heh, wawHamzaabove, lam-alef forms; review sidebearing-risk glyphs in the focused proof
-- Source targets: 14 existing, 0 missing
+- Source targets: 28 existing, 0 missing
 - `U+062B ARABIC LETTER THEH` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
+- `U+062C ARABIC LETTER JEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+- `U+062D ARABIC LETTER HAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+- `U+062E ARABIC LETTER KHAH` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
 - `U+0633 ARABIC LETTER SEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
 - `U+0634 ARABIC LETTER SHEEN` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
+- `U+0639 ARABIC LETTER AIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+- `U+063A ARABIC LETTER GHAIN` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+- `U+0645 ARABIC LETTER MEEM` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
 - `U+0648 ARABIC LETTER WAW` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+- `U+0651 ARABIC SHADDA` structure prompt:
+  - `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+  - `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
 - `U+0653 ARABIC MADDAH ABOVE` structure prompt:
   - `VirtuaGrotesk-Regular.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
   - `VirtuaGrotesk-Bold.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`

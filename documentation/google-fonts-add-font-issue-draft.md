@@ -61,7 +61,7 @@ By opening this issue, I confirm the project meets the following requirements:
 - [ ] The repo has the [Google Fonts preferred upstream repo structure](https://googlefonts.github.io/gf-guide/upstream.html)
   - Draft status: Local evidence: 11 / 11.
 - [ ] I have read, agree with, and comply with, the full [Google Fonts contributing requirements](https://googlefonts.github.io/gf-guide/index#pre-production-getting-your-fonts-ready-for-gf)
-  - Draft status: Blocked until documented final blockers are resolved or accepted; 0 FAIL results.
+  - Draft status: Blocked until documented final blockers are resolved or accepted; 10 FAIL results.
 - [ ] I will maintain the repository and participate in the onboarding process (addressing, solving, and responding to issues, merging pull requests, etc)
   - Draft status: Maintainer confirmation required before opening the issue.
 

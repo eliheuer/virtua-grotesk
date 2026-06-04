@@ -41,7 +41,7 @@ Editor checks for this session:
 - Name: 2. Structure And Wrong-Glyph Sweep
 - Why: Catch missing, blank, clipped, duplicated, malformed, or wrong-codepoint glyphs before judging spacing.
 - Visual rows to decide: 5
-- Source targets if fixes are needed: 14 existing, 0 missing
+- Source targets if fixes are needed: 28 existing, 0 missing
 
 ### Review Rows
 
@@ -80,12 +80,26 @@ Editor checks for this session:
 
 - `VirtuaGrotesk-Regular.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/theh-ar.glif`
 - `VirtuaGrotesk-Bold.ufo` `theh-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/theh-ar.glif`
+- `VirtuaGrotesk-Regular.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/jeem-ar.glif`
+- `VirtuaGrotesk-Bold.ufo` `jeem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/jeem-ar.glif`
+- `VirtuaGrotesk-Regular.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hah-ar.glif`
+- `VirtuaGrotesk-Bold.ufo` `hah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/hah-ar.glif`
+- `VirtuaGrotesk-Regular.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/khah-ar.glif`
+- `VirtuaGrotesk-Bold.ufo` `khah-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/khah-ar.glif`
 - `VirtuaGrotesk-Regular.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif`
 - `VirtuaGrotesk-Bold.ufo` `seen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif`
 - `VirtuaGrotesk-Regular.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/sheen-ar.glif`
 - `VirtuaGrotesk-Bold.ufo` `sheen-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/sheen-ar.glif`
+- `VirtuaGrotesk-Regular.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ain-ar.glif`
+- `VirtuaGrotesk-Bold.ufo` `ain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ain-ar.glif`
+- `VirtuaGrotesk-Regular.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/ghain-ar.glif`
+- `VirtuaGrotesk-Bold.ufo` `ghain-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/ghain-ar.glif`
+- `VirtuaGrotesk-Regular.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/meem-ar.glif`
+- `VirtuaGrotesk-Bold.ufo` `meem-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/meem-ar.glif`
 - `VirtuaGrotesk-Regular.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/waw-ar.glif`
 - `VirtuaGrotesk-Bold.ufo` `waw-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif`
+- `VirtuaGrotesk-Regular.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/shadda-ar.glif`
+- `VirtuaGrotesk-Bold.ufo` `shadda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/shadda-ar.glif`
 - `VirtuaGrotesk-Regular.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/madda-ar.glif`
 - `VirtuaGrotesk-Bold.ufo` `madda-ar` -> `sources/VirtuaGrotesk-Bold.ufo/glyphs/madda-ar.glif`
 - `VirtuaGrotesk-Regular.ufo` `hamzaabove-ar` -> `sources/VirtuaGrotesk-Regular.ufo/glyphs/hamzaabove-ar.glif`
@@ -101,10 +115,17 @@ source files as a pair, then run the edit-loop checks below.
 
 | Glyph | Masters | Review prompt source |
 | --- | --- | --- |
+| `ain-ar` | Bold, Regular | `U+0639 ARABIC LETTER AIN` structure prompt |
+| `ghain-ar` | Bold, Regular | `U+063A ARABIC LETTER GHAIN` structure prompt |
+| `hah-ar` | Bold, Regular | `U+062D ARABIC LETTER HAH` structure prompt |
 | `hamzaabove-ar` | Bold, Regular | `U+0654 ARABIC HAMZA ABOVE` structure prompt |
 | `hamzabelow-ar` | Bold, Regular | `U+0655 ARABIC HAMZA BELOW` structure prompt |
+| `jeem-ar` | Bold, Regular | `U+062C ARABIC LETTER JEEM` structure prompt |
+| `khah-ar` | Bold, Regular | `U+062E ARABIC LETTER KHAH` structure prompt |
 | `madda-ar` | Bold, Regular | `U+0653 ARABIC MADDAH ABOVE` structure prompt |
+| `meem-ar` | Bold, Regular | `U+0645 ARABIC LETTER MEEM` structure prompt |
 | `seen-ar` | Bold, Regular | `U+0633 ARABIC LETTER SEEN` structure prompt |
+| `shadda-ar` | Bold, Regular | `U+0651 ARABIC SHADDA` structure prompt |
 | `sheen-ar` | Bold, Regular | `U+0634 ARABIC LETTER SHEEN` structure prompt |
 | `theh-ar` | Bold, Regular | `U+062B ARABIC LETTER THEH` structure prompt |
 | `waw-ar` | Bold, Regular | `U+0648 ARABIC LETTER WAW` structure prompt |
