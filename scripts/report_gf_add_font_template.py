@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -11,7 +12,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 TEMPLATE_RELATIVE = Path(".github/ISSUE_TEMPLATE/1_add-font.md")
 OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-add-font-template-audit.md")
 
@@ -163,7 +164,7 @@ def markdown_report(gf_repo: Path) -> str:
             "- Keep the Google Fonts issue labels as `I New Font, II Submission` at creation, then request Arabic/RTL labeling when Arabic support is ready for review.",
             "- The copyright-authorship and AI-use statement is one combined checkbox in the current template; do not split it into unrelated issue answers.",
             "- The final issue must confirm source files are available in the public repo and that the app-menu family name is definitive.",
-            "- Regenerate this report with `make reports-only` after updating `/Users/eli/GH/forks/fonts`.",
+            "- Regenerate this report with `make reports-only` after updating `$GF_REPO_PATH`.",
             "",
         ]
     )

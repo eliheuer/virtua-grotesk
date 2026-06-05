@@ -3,9 +3,8 @@ set -euo pipefail
 
 if [[ -z "${GF_REPO_PATH:-}" ]]; then
     echo "Set GF_REPO_PATH to a local google/fonts checkout."
-    echo "The Makefile defaults to /Users/eli/GH/forks/fonts when you run:"
     echo "GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run"
-    echo "Override example: GF_REPO_PATH=/path/to/fonts GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run"
+    echo "Example: GF_REPO_PATH=/path/to/google/fonts GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run"
     echo "Fallback review: GFT_PACKAGER_SOURCE_MODE=default or build-from-source"
     exit 2
 fi
@@ -160,7 +159,7 @@ if [[ -f "$metadata_path" ]]; then
         if grep -qF "$marker" "$metadata_path"; then
             echo "Existing downstream METADATA.pb is still the Packager starter template:"
             echo "$marker"
-            echo "Populate /Users/eli/GH/forks/fonts/$package_dir/METADATA.pb before rerunning Packager from METADATA.pb."
+            echo "Populate \$GF_REPO_PATH/$package_dir/METADATA.pb before rerunning Packager from METADATA.pb."
             echo "Use documentation/google-fonts/google-fonts-downstream-package-preview.md as the current local preview."
             exit 2
         fi
@@ -207,7 +206,7 @@ if [[ -f "$metadata_path" ]]; then
         exit 2
     fi
     metadata_date_added="$(grep -E '^[[:space:]]*date_added:[[:space:]]*"[^"]+"' "$metadata_path" | head -n 1 | sed -E 's/.*"([^"]+)".*/\1/' || true)"
-    if [[ ! "$metadata_date_added" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] || ! ./venv/bin/python -c 'from datetime import datetime; import sys; datetime.strptime(sys.argv[1], "%Y-%m-%d")' "$metadata_date_added" 2>/dev/null; then
+    if [[ ! "$metadata_date_added" =~ ^20[0-9]{2}-[0-9]{2}-[0-9]{2}$ ]] || ! ./.venv/bin/python -c 'from datetime import datetime; import sys; datetime.strptime(sys.argv[1], "%Y-%m-%d")' "$metadata_date_added" 2>/dev/null; then
         echo 'Existing downstream METADATA.pb is missing a final valid date_added value.'
         echo 'Expected: date_added: "YYYY-MM-DD"'
         exit 2
@@ -219,7 +218,7 @@ if [[ -f "$metadata_path" ]]; then
         exit 2
     fi
     if [[ "$source_mode" == "latest-release" ]]; then
-        if ! ./venv/bin/python scripts/verify_release_archive.py --quiet; then
+        if ! ./.venv/bin/python scripts/verify_release_archive.py --quiet; then
             echo "Local release archive is not ready for latest-release mode."
             echo "Run: make release-archive-build"
             echo "Then rerun: GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run"
@@ -252,7 +251,7 @@ case "${GFT_PACKAGER_SOURCE_MODE:-default}" in
         ;;
 esac
 
-./venv/bin/gftools packager "${packager_args[@]}"
+./.venv/bin/gftools packager "${packager_args[@]}"
 
 echo ""
 echo "Packager dry run finished. Review $GF_REPO_PATH/$package_dir before using -p."

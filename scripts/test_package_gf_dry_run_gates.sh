@@ -2,7 +2,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-PYTHON_BIN="${PYTHON:-$ROOT/venv/bin/python}"
+PYTHON_BIN="${PYTHON:-$ROOT/.venv/bin/python}"
 TMPDIR="$(mktemp -d "${TMPDIR:-/tmp}/virtua-packager-gates.XXXXXX")"
 trap 'rm -rf "$TMPDIR"' EXIT
 

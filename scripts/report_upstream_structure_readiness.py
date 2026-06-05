@@ -35,7 +35,6 @@ SOURCE_INPUTS = [
 ]
 GENERATED_SOURCE_DIRS = [
     "sources/instance_ufos",
-    "sources/.fontc-build",
     "sources/build.ninja",
     "sources/.ninja_log",
 ]
@@ -130,7 +129,7 @@ def markdown_report() -> str:
         f"- Expected generated font outputs present: {sum(item.exists for item in fonts)} / {len(fonts)}",
         f"- Generated font outputs ignored by git: {yes_no(all(item.ignored for item in fonts))}",
         f"- Generated source/build outputs ignored by git: {yes_no(all(item.ignored for item in generated if item.exists))}",
-        f"- Local venv ignored by git: {yes_no(git_check_ignored('venv'))}",
+        f"- Local .venv ignored by git: {yes_no(git_check_ignored('.venv'))}",
         f"- Active source root UFOs: `{', '.join(source_root_ufos) if source_root_ufos else 'none'}`",
         f"- Active source root designspaces: `{', '.join(source_root_designspaces) if source_root_designspaces else 'none'}`",
         "",
@@ -194,7 +193,7 @@ def markdown_report() -> str:
             "",
         ]
     )
-    assert "venv" in gitignore
+    assert ".venv" in gitignore
     return "\n".join(lines)
 
 

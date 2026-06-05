@@ -29,7 +29,7 @@ the source tree.
 
 ## Authorship And App-Menu Name Check
 
-- AUTHORS.txt entries: `Eli Heuer`
+- AUTHORS.txt entries: `Eli Heuer <elih@protonmail.com>`
 - CONTRIBUTORS.txt entries: `Eli Heuer`
 - Built family names include copyright-author full name: no
 - Current definitive app-menu family name candidate: `Virtua Grotesk`

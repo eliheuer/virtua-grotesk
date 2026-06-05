@@ -21,9 +21,9 @@ Outputs:
 - Built with the local `eliheuer/drawbot-skia` runtime, matching the other
   repo-local DrawBot proof commands.
 - The Makefile uses this repo's virtualenv by default:
-  `./venv/bin/python`.
-- The Makefile prepends `/Users/eli/GH/repos/drawbot-skia/src` to `PYTHONPATH`
-  so the scripts import the checked-out fork, not a global DrawBot install.
+  `./.venv/bin/python`.
+- Set `DRAWBOT_SKIA_REPO=/path/to/drawbot-skia` or use ignored `local.mk`
+  when proofing directly from a checked-out fork.
 
 ## Review Coverage
 

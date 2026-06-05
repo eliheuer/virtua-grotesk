@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
 from pathlib import Path
 import re
 import sys
@@ -12,9 +13,7 @@ from fontTools.ttLib import TTFont
 
 
 DEFAULT_FONT_PATH = Path("fonts/variable/VirtuaGrotesk[wght].ttf")
-DEFAULT_REGISTRY_PATH = Path(
-    "/Users/eli/GH/forks/fonts/axisregistry/Lib/axisregistry/data/weight.textproto"
-)
+DEFAULT_REGISTRY_PATH = Path(os.environ["GF_WEIGHT_AXIS_REGISTRY"]) if os.environ.get("GF_WEIGHT_AXIS_REGISTRY") else None
 
 
 @dataclass(frozen=True)
@@ -88,7 +87,29 @@ def stat_value_map(font: TTFont) -> dict[int, str]:
     return values
 
 
-def markdown_report(font_path: Path, registry_path: Path) -> str:
+def unavailable_report(font_path: Path, registry_path: Path | None) -> str:
+    registry_label = str(registry_path) if registry_path else "not configured"
+    return "\n".join(
+        [
+            "# Google Fonts Axis Registry Audit",
+            "",
+            f"Font: `{font_path}`",
+            f"Registry source: `{registry_label}`",
+            "",
+            "The local Google Fonts axis registry checkout is not configured.",
+            "",
+            "## Summary",
+            "",
+            "- Registry available: no",
+            "- Set `GF_REPO_PATH=/path/to/google/fonts` or `GF_WEIGHT_AXIS_REGISTRY=/path/to/weight.textproto` when this audit is needed.",
+            "",
+        ]
+    )
+
+
+def markdown_report(font_path: Path, registry_path: Path | None) -> str:
+    if registry_path is None or str(registry_path) == "" or not registry_path.exists():
+        return unavailable_report(font_path, registry_path)
     registry = parse_registry(registry_path)
     font = TTFont(font_path)
     fvar_axis = next(axis for axis in font["fvar"].axes if axis.axisTag == "wght")
@@ -168,7 +189,7 @@ def markdown_report(font_path: Path, registry_path: Path) -> str:
 
 def main(argv: list[str]) -> int:
     font_path = Path(argv[1]) if len(argv) > 1 else DEFAULT_FONT_PATH
-    registry_path = Path(argv[2]) if len(argv) > 2 else DEFAULT_REGISTRY_PATH
+    registry_path = Path(argv[2]) if len(argv) > 2 and argv[2] else DEFAULT_REGISTRY_PATH
     output_path = Path(argv[3]) if len(argv) > 3 else None
     try:
         report = markdown_report(font_path, registry_path)

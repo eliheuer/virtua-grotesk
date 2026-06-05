@@ -237,7 +237,7 @@ def markdown_report(context: dict[str, str | list[str] | bool]) -> str:
             f"gh release download {context['tag']} --repo eliheuer/virtua-grotesk --pattern {LOCAL_ARCHIVE.name} --dir /tmp/virtua-grotesk-release-check",
             f"shasum -a 256 /tmp/virtua-grotesk-release-check/{LOCAL_ARCHIVE.name}",
             f"unzip -l /tmp/virtua-grotesk-release-check/{LOCAL_ARCHIVE.name}",
-            f"./venv/bin/python scripts/verify_release_archive.py --archive /tmp/virtua-grotesk-release-check/{LOCAL_ARCHIVE.name} --expected-sha256 {context['archive_sha256']}",
+            f"./.venv/bin/python scripts/verify_release_archive.py --archive /tmp/virtua-grotesk-release-check/{LOCAL_ARCHIVE.name} --expected-sha256 {context['archive_sha256']}",
             "GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check",
             "GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run",
             "```",

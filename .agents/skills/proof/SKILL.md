@@ -9,7 +9,7 @@ Default font: `fonts/ttf/VirtuaGrotesk-Regular.ttf`
 
 ## Instructions
 
-1. Use the project Python environment at `./venv/bin/python`.
+1. Use the project Python environment at `./.venv/bin/python`.
 
 2. Check that the font file exists:
    - If no argument given, check `fonts/ttf/VirtuaGrotesk-Regular.ttf`
@@ -17,7 +17,7 @@ Default font: `fonts/ttf/VirtuaGrotesk-Regular.ttf`
 
 3. Run the proof generator:
    ```bash
-   make proof-only
+   make proof
    ```
    Default output: `documentation/proofs/proof.pdf`
 
@@ -28,7 +28,7 @@ Default font: `fonts/ttf/VirtuaGrotesk-Regular.ttf`
 5. Report the output path so the user can open it for detailed review
 
 ## Notes
-- Proof generation uses the local `eliheuer/drawbot-skia` fork at `/Users/eli/GH/repos/drawbot-skia` via `PYTHONPATH`
+- Proof generation uses `drawbot-skia`; set `DRAWBOT_SKIA_REPO=/path/to/drawbot-skia` or copy `local.mk.example` to ignored `local.mk` when using a local fork checkout
 - The proof includes: title page, alphabet display, numerals & punctuation, size waterfall, spacing proof, paragraph setting, kerning pairs, full character set grid
 - For variable font proofs, pass `fonts/variable/VirtuaGrotesk[wght].ttf` to `scripts/build_general_proof.py`
 - Output defaults to `documentation/proofs/proof.pdf`

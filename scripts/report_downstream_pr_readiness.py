@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -11,7 +12,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/google-fonts/downstream-pr-readiness.md")
-GF_REPO_PATH = Path("/Users/eli/GH/forks/fonts")
+GF_REPO_PATH = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 FAMILY_PATH = Path("ofl/virtuagrotesk")
 EXPECTED_BRANCH = "gftools_packager_ofl_virtuagrotesk"
 EXPECTED_PR_TITLE = "Virtua Grotesk : 1.000 added"
@@ -273,10 +274,10 @@ def markdown_report() -> str:
             "```bash",
             "gh auth status -h github.com",
             "make github-auth-check",
-            "git -C /Users/eli/GH/forks/fonts config user.name \"Eli Heuer\"",
-            "git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk",
+            "git -C $GF_REPO_PATH config user.name \"Eli Heuer\"",
+            "git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk",
             "GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check",
-            "./venv/bin/python scripts/prepare_downstream_metadata.py --apply",
+            "./.venv/bin/python scripts/prepare_downstream_metadata.py --apply",
             "GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run",
             "```",
             "",

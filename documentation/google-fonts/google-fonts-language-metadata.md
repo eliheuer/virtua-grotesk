@@ -6,19 +6,19 @@ evidence behind the current Virtua Grotesk downstream metadata target:
 
 ## Local Google Fonts Lang Data
 
-- Checkout: `/Users/eli/GH/forks/fonts`
+- Checkout: `GF_REPO_PATH_NOT_CONFIGURED`
 - Script record: `lang/Lib/gflanguages/data/scripts/Arab.textproto`
-- Script record exists: yes
-- Script id: `Arab`
-- Script name: `Arabic`
+- Script record exists: no
+- Script id: `missing`
+- Script name: `missing`
 
 ## Arabic Core Language Records
 
 | Language code | Exists | Script | Name |
 | --- | --- | --- | --- |
-| `ar_Arab` | yes | `Arab` | `Arabic` |
-| `fa_Arab` | yes | `Arab` | `Persian` |
-| `ur_Arab` | yes | `Arab` | `Urdu` |
+| `ar_Arab` | no | `missing` | `missing` |
+| `fa_Arab` | no | `missing` | `missing` |
+| `ur_Arab` | no | `missing` | `missing` |
 
 ## Current Virtua Grotesk Target
 
@@ -28,9 +28,9 @@ evidence behind the current Virtua Grotesk downstream metadata target:
 - Preview `primary_script` matches target: yes
 - Preview non-Noto `languages` entries absent: yes
 - Preview custom `sample_text` absent: yes
-- Compared Arabic package examples present: 9 / 9
-- Compared examples with `arabic` subset: 9 / 9
-- Compared examples with `primary_script: "Arab"`: 9 / 9
+- Compared Arabic package examples present: 0 / 9
+- Compared examples with `arabic` subset: 0 / 0
+- Compared examples with `primary_script: "Arab"`: 0 / 0
 - Compared non-Noto Arabic examples omit `languages`: yes
 - Compared non-Noto Arabic examples omit `sample_text`: yes
 - Do not add `languages` entries for this non-Noto family unless Google
@@ -56,15 +56,15 @@ This table reads current `METADATA.pb` files from the local synced
 
 | Package | Family | Exists | Fonts | Variable | primary_script | Has arabic subset | Languages | sample_text | config_yaml | Subsets |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `ofl/estedad/METADATA.pb` | `Estedad` | yes | 1 | yes | `Arab` | yes | 0 | 0 | `sources/config.yaml` | `arabic`, `latin`, `latin-ext`, `menu`, `vietnamese` |
-| `ofl/scheherazadenew/METADATA.pb` | `Scheherazade New` | yes | 4 | no | `Arab` | yes | 0 | 0 | `none` | `arabic`, `latin`, `latin-ext`, `menu` |
-| `ofl/playpensansarabic/METADATA.pb` | `Playpen Sans Arabic` | yes | 1 | yes | `Arab` | yes | 0 | 0 | `sources/config-Arabic.yaml` | `arabic`, `emoji`, `latin`, `latin-ext`, `math`, `menu` |
-| `ofl/readexpro/METADATA.pb` | `Readex Pro` | yes | 1 | yes | `Arab` | yes | 0 | 0 | `sources/config.yaml` | `arabic`, `latin`, `latin-ext`, `menu`, `vietnamese` |
-| `ofl/cairo/METADATA.pb` | `Cairo` | yes | 1 | yes | `Arab` | yes | 0 | 0 | `sources/cairo.yaml` | `arabic`, `latin`, `latin-ext`, `menu` |
-| `ofl/amiri/METADATA.pb` | `Amiri` | yes | 4 | no | `Arab` | yes | 0 | 0 | `none` | `arabic`, `latin`, `latin-ext`, `menu` |
-| `ofl/notosansarabic/METADATA.pb` | `Noto Sans Arabic` | yes | 1 | yes | `Arab` | yes | 81 | 0 | `sources/config-sans-arabic.yaml` | `arabic`, `latin`, `latin-ext`, `math`, `menu`, `symbols` |
-| `ofl/notonaskharabic/METADATA.pb` | `Noto Naskh Arabic` | yes | 1 | yes | `Arab` | yes | 80 | 0 | `sources/config-naskh-arabic.yaml` | `arabic`, `latin`, `latin-ext`, `math`, `menu`, `symbols` |
-| `ofl/notokufiarabic/METADATA.pb` | `Noto Kufi Arabic` | yes | 1 | yes | `Arab` | yes | 81 | 0 | `none` | `arabic`, `latin`, `latin-ext`, `math`, `menu`, `symbols` |
+| `ofl/estedad/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/scheherazadenew/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/playpensansarabic/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/readexpro/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/cairo/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/amiri/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/notosansarabic/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/notonaskharabic/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
+| `ofl/notokufiarabic/METADATA.pb` | `missing` | no | 0 | no | `none` | no | 0 | 0 | `none` | missing |
 
 References:
 

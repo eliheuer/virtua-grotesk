@@ -233,11 +233,11 @@ project-template automation for the first submission.
 - `build.sh` removes stale builder intermediates before each build so source
   edits do not reuse old generated instance UFOs.
 - Static instance generation currently drops the copyright string and turns UFO `openTypeOS2Type` bit data into fsType restrictions; `scripts/fix_gf_metadata.py` patches generated TTFs after build.
-- The Bold UFO has kerning groups that do not resolve cleanly in `fontc`; the GF builder path does not use `fontc`.
+- The Google Fonts builder path is the only supported build path in this repo.
 - `gftools packager` requires `GitPython`; this is listed in `requirements.txt`.
-- `make package-dry-run` defaults to the selected `latest-release` source mode
-  and the clean local `google/fonts` fork at `/Users/eli/GH/forks/fonts`;
-  override `GF_REPO_PATH` to test another checkout.
+- `make package-dry-run` defaults to the selected `latest-release` source mode.
+  Set `GF_REPO_PATH=/path/to/google/fonts` or use ignored `local.mk` for the
+  local `google/fonts` checkout.
 - The package dry-run wrapper now requires that checkout to be on `main`, with
   `main` aligned to cached `upstream/main` and `origin/main` when present.
 - The package dry-run wrapper refuses to rerun from an existing downstream
@@ -358,12 +358,12 @@ automation is not yet adopted, and what recent merged `google/fonts` PRs imply
 for the final package.
 The current generated recent-package audit is in
 `documentation/google-fonts/recent-google-fonts-packages.md`. It reads selected merged
-families from `/Users/eli/GH/forks/fonts` so local package patterns such as
+families from the configured `GF_REPO_PATH` checkout so local package patterns such as
 Article use, `primary_script`, `upstream.yaml`/`upstream_info.md`, and
 `METADATA.pb` fields can be refreshed.
 The current generated Add Font issue-template audit is in
 `documentation/google-fonts/google-fonts-add-font-template-audit.md`. It reads the template
-from `/Users/eli/GH/forks/fonts` so labels, prompts, and requirement checkboxes
+from the configured `GF_REPO_PATH` checkout so labels, prompts, and requirement checkboxes
 can be refreshed before opening the final issue.
 The current generated project-template automation readiness report is in
 `documentation/google-fonts/project-template-automation-readiness.md`. It separates
@@ -421,8 +421,8 @@ issue text against the current template labels, requirement checkbox count,
 version, Fontspector summary, Latin/Arabic gap counts, and handoff report links.
 The current Python tooling notes are in
 `documentation/python-tooling-notes.md`. They separate direct Python
-dependencies from external tools such as Fontspector, DesignBot, DrawBot, and
-optional `fontc`.
+dependencies from external tools such as Fontspector and DrawBot-skia, and
+the local proof tools.
 The current warning report is in `documentation/google-fonts/fontspector-warnings.md`.
 It starts with a triage summary by check ID, category, affected fonts, and
 recommended next action, then keeps the full warning messages for audit.
@@ -473,7 +473,7 @@ Fixed during this pass:
   `documentation/python-tooling-notes.md` so the direct dependency list is
   clear, the install snapshot is reproducible, and Fontspector remains the
   documented QA entrypoint.
-- README image: rendered `documentation/assets/readme-specimen.png` with DesignBot from the current build.
+- README image: `documentation/assets/readme-specimen.png` is retained as the current README and Article image asset.
 - README guide alignment: added GF-recommended changelog, credits, and license
   sections to the root README.
 - Article image readiness: reused the generated README specimen image in the
@@ -485,16 +485,16 @@ Fixed during this pass:
   `sample_text` unless Google Fonts review requests it or Arabic specimen text
   needs an explicit override.
 - Packager dry run: added `make package-dry-run` as the guarded local command
-  for the final no-PR `gftools packager` pass, defaulting to the local fork at
-  `/Users/eli/GH/forks/fonts`.
+  for the final no-PR `gftools packager` pass against the configured
+  `GF_REPO_PATH` checkout.
 - Package readiness check: added `make package-readiness-check` to print
   source strategy, dry-run readiness, downstream metadata readiness/diff, and
   downstream PR readiness with the selected `GFT_PACKAGER_SOURCE_MODE`.
 - Downstream metadata check: added source-mode-aware validation for
   `source.config_yaml` before writing into the local `google/fonts` fork.
-- Proof generation: use this repo's `./venv/bin/python` with
-  `PYTHONPATH=/Users/eli/GH/repos/drawbot-skia/src` so proofing runs against
-  the `eliheuer/drawbot-skia` fork from the Virtua Grotesk virtualenv.
+- Proof generation: use this repo's `./.venv/bin/python`; set
+  `DRAWBOT_SKIA_REPO=/path/to/drawbot-skia` or ignored `local.mk` to proof
+  against the `eliheuer/drawbot-skia` fork checkout.
 - Submission handoff: drafted `documentation/google-fonts/google-fonts-submission-handoff.md` for the eventual Google Fonts issue/packaging step.
 - Packaging checklist: drafted `documentation/google-fonts/google-fonts-package-checklist.md` so the final downstream PR step follows `gftools packager` rather than manual copying.
 - Metadata review: drafted `documentation/google-fonts/google-fonts-metadata-review.md` for downstream `METADATA.pb` review.

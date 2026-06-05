@@ -172,7 +172,7 @@ def markdown_report() -> str:
         "```",
         "",
         "Set `RUNEBENDER_REPO=/path/to/runebender-xilem` if the sibling repo",
-        "is not at `/Users/eli/GH/repos/runebender-xilem`.",
+        "is not at `/path/to/runebender-xilem`.",
         "",
         "If this report is not ready, fix the UFO package before drawing work.",
         "If it is ready but an editor still fails to open the source, compare",

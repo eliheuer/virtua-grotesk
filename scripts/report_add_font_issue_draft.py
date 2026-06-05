@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -10,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 TEMPLATE_RELATIVE = Path(".github/ISSUE_TEMPLATE/1_add-font.md")
 OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-add-font-issue-draft.md")
 
@@ -140,6 +141,18 @@ def issue_requirement_note(requirement: str, reports: dict[str, str]) -> str:
 
 def markdown_report(gf_repo: Path) -> str:
     template_path = gf_repo / TEMPLATE_RELATIVE
+    if not template_path.exists():
+        return "\n".join(
+            [
+                "# Google Fonts Add Font Issue Draft",
+                "",
+                f"- Template path: `{template_path}`",
+                "- Template available: no",
+                "",
+                "Set `GF_REPO_PATH=/path/to/google/fonts` or add it to ignored `local.mk` to render the issue draft from the current Google Fonts template.",
+                "",
+            ]
+        )
     template_text = template_path.read_text(encoding="utf-8")
     title_pattern = frontmatter_value("title", template_text)
     labels = frontmatter_value("labels", template_text)

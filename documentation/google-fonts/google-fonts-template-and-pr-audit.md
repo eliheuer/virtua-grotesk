@@ -41,7 +41,7 @@ minimum upstream requirements.
 
 Virtua Grotesk now has each required artifact. The repo does not copy the
 template wholesale because this project already has UFO/designspace sources,
-DrawBot proofing, DesignBot specimens, and local readiness reports that need a
+DrawBot-skia proofing and local readiness reports that need a
 more specific workflow.
 The canonical builder config now lives at `sources/config.yaml`, matching the
 template convention where source paths are relative to the `sources/`
@@ -85,7 +85,7 @@ Current local equivalent:
 
 The detailed package evidence is generated from the local `google/fonts`
 checkout in `documentation/google-fonts/recent-google-fonts-packages.md`. Refresh that
-report with `make reports-only` after syncing `/Users/eli/GH/forks/fonts`.
+report with `make reports-only` after syncing `$GF_REPO_PATH`.
 
 Recent merged new-font examples:
 

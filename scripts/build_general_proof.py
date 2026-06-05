@@ -21,8 +21,8 @@ try:
 except ModuleNotFoundError as error:
     raise SystemExit(
         "drawbot_skia is required for proof generation. "
-        "Run this through `make proof` or set PYTHONPATH to "
-        "/Users/eli/GH/repos/drawbot-skia/src."
+        "Run this through `make proof` after setting "
+        "DRAWBOT_SKIA_REPO=/path/to/drawbot-skia, or install drawbot_skia in .venv."
     ) from error
 
 db = Drawing()

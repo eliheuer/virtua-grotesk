@@ -7,27 +7,27 @@ PRs.
 
 ## Local Checkout
 
-- Path: `/Users/eli/GH/forks/fonts`
-- Exists: yes
-- Current commit: `c5b52261e`
-- Status: `## main...origin/main`
-- Dirty paths: 1
-- Dirty `ofl/virtuagrotesk` paths: 1
-- Alignment with `upstream/main`: `0 ahead, 0 behind`
-- Alignment with `origin/main`: `0 ahead, 0 behind`
-- Sample package directories present: 4 / 4
+- Path: `GF_REPO_PATH_NOT_CONFIGURED`
+- Exists: no
+- Current commit: `unknown`
+- Status: `unknown`
+- Dirty paths: 0
+- Dirty `ofl/virtuagrotesk` paths: 0
+- Alignment with `upstream/main`: `unknown`
+- Alignment with `origin/main`: `unknown`
+- Sample package directories present: 0 / 4
 - Newest selected package example: google/fonts#10546 (Pliant, 2026-05-22)
-- Newest Packager merge found locally: google/fonts#10546 (2026-05-22)
+- Newest Packager merge found locally: none (none)
 - Packager merges newer than selected examples: 0
 
 ## Package Examples
 
 | PR | Family | Merged | Path | Present | Fonts | Article | upstream.yaml | upstream_info.md | primary_script | Subsets | Axes | Source repo | Source commit | archive_url | Source branch | config_yaml | tags field |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| google/fonts#10546 | Pliant | 2026-05-22 | `ofl/pliant` | yes | `Pliant-Italic[wdth,wght].ttf`, `Pliant[wdth,wght].ttf` | yes | no | no | none | `cyrillic`, `cyrillic-ext`, `greek`, `greek-ext`, `latin`, `latin-ext`, `menu` | `wdth`, `wght` | `https://github.com/TheJonassss/Pliant` | `dc119b45f0b60597305af387b97b2f5a94b2e1e4` | none | `main` | none | no |
-| google/fonts#10455 | Scheherazade New | 2026-05-01 | `ofl/scheherazadenew` | yes | `ScheherazadeNew-Bold.ttf`, `ScheherazadeNew-Medium.ttf`, `ScheherazadeNew-Regular.ttf`, `ScheherazadeNew-SemiBold.ttf` | no | no | yes | `Arab` | `arabic`, `latin`, `latin-ext`, `menu` | missing | `https://github.com/silnrsi/font-scheherazade` | `60e64560db425905f52149398403298747f5f684` | `https://github.com/silnrsi/font-scheherazade/releases/download/v4.500/ScheherazadeNew-4.500.zip` | `master` | none | no |
-| google/fonts#10468 | Akt | 2026-04-29 | `ofl/akt` | yes | `Akt[wght].ttf` | yes | no | no | none | `cyrillic`, `cyrillic-ext`, `greek`, `greek-ext`, `latin`, `latin-ext`, `menu`, `vietnamese` | `wght` | `https://github.com/dimgrenev/akt` | `b3935082b52ae393aef02a679505c028a5256c72` | none | `main` | none | no |
-| google/fonts#10401 | Estedad | 2026-04-16 | `ofl/estedad` | yes | `Estedad[wght].ttf` | yes | no | yes | `Arab` | `arabic`, `latin`, `latin-ext`, `menu`, `vietnamese` | `wght` | `https://github.com/aminabedi68/Estedad` | `69e879f78a4a1c7c4594baf7da13ba1c9f65ffd3` | none | `master` | `sources/config.yaml` | no |
+| google/fonts#10546 | Pliant | 2026-05-22 | `ofl/pliant` | no | missing | no | no | no | none | missing | missing | missing | missing | none | missing | none | no |
+| google/fonts#10455 | Scheherazade New | 2026-05-01 | `ofl/scheherazadenew` | no | missing | no | no | no | none | missing | missing | missing | missing | none | missing | none | no |
+| google/fonts#10468 | Akt | 2026-04-29 | `ofl/akt` | no | missing | no | no | no | none | missing | missing | missing | missing | none | missing | none | no |
+| google/fonts#10401 | Estedad | 2026-04-16 | `ofl/estedad` | no | missing | no | no | no | none | missing | missing | missing | missing | none | missing | none | no |
 
 ## Recent Packager Merges
 
@@ -37,14 +37,7 @@ examples above remain the detailed comparison set.
 
 | PR | Merged | Path | Commit | Merge subject |
 | --- | --- | --- | --- | --- |
-| google/fonts#10546 | 2026-05-22 | `ofl/pliant` | `440b8e455` | Merge pull request #10546 from google/gftools_packager_ofl_pliant |
-| google/fonts#10455 | 2026-05-01 | `ofl/scheherazadenew` | `df5c4a17b` | Merge pull request #10455 from google/gftools_packager_ofl_scheherazadenew |
-| google/fonts#10491 | 2026-05-01 | `ofl/alienblock` | `4dee5a124` | Merge pull request #10491 from google/gftools_packager_ofl_alienblock |
-| google/fonts#10454 | 2026-04-29 | `ofl/finlandicaheadline` | `41b8dbd33` | Merge pull request #10454 from google/gftools_packager_ofl_finlandicaheadline |
-| google/fonts#10443 | 2026-04-29 | `ofl/finlandicatext` | `0d2798e6c` | Merge pull request #10443 from google/gftools_packager_ofl_finlandicatext |
-| google/fonts#10456 | 2026-04-29 | `ofl/ramsina` | `9e334b484` | Merge pull request #10456 from google/gftools_packager_ofl_ramsina |
-| google/fonts#10457 | 2026-04-29 | `ofl/idiqlat` | `6ed1657f1` | Merge pull request #10457 from google/gftools_packager_ofl_idiqlat |
-| google/fonts#10468 | 2026-04-29 | `ofl/akt` | `f9bd5eaf8` | Merge pull request #10468 from google/gftools_packager_ofl_akt |
+| missing | missing | missing | missing | missing |
 
 ## Upstream Repo Comparison
 

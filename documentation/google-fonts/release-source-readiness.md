@@ -8,7 +8,7 @@ handoff check for the source state that `METADATA.pb` will claim.
 ## Summary
 
 - Current repo branch: `main`
-- Current repo commit: `1af3f0594b03d9dfe534f8d4803016a27f5a7754`
+- Current repo commit: `fe21c5349deff07ac6eac638281a54b4c09ec7d6`
 - Origin URL: `git@github.com:eliheuer/virtua-grotesk.git`
 - Normalized GitHub origin candidate: `https://github.com/eliheuer/virtua-grotesk`
 - Normalized origin differs from placeholder: yes
@@ -18,8 +18,8 @@ handoff check for the source state that `METADATA.pb` will claim.
 - Suggested tag exists locally: no
 - Working tree clean: no
 - Branch upstream: `origin/main`
-- Ahead/behind branch upstream: `0	0`
-- Ahead/behind origin branch: `0	0`
+- Ahead/behind branch upstream: `1	0`
+- Ahead/behind origin branch: `1	0`
 - Placeholder upstream URL still present: no
 - Pending source fields in downstream preview: 1
 - Downstream `source.files` entries: 4
@@ -28,26 +28,26 @@ handoff check for the source state that `METADATA.pb` will claim.
 - Missing local `source.files`: 0
 - Ignored/generated `source.files`: 2
 - Expected Packager branch: `gftools_packager_ofl_virtuagrotesk`
-- Local google/fonts fork exists: yes
-- Local google/fonts branch: `main`
-- Local google/fonts main vs upstream/main: `0	0`
-- Local google/fonts worktree clean: no
-- Local google/fonts dirty paths inside `ofl/virtuagrotesk`: 1
+- Local google/fonts fork exists: no
+- Local google/fonts branch: `missing`
+- Local google/fonts main vs upstream/main: `missing`
+- Local google/fonts worktree clean: yes
+- Local google/fonts dirty paths inside `ofl/virtuagrotesk`: 0
 - Local google/fonts dirty paths outside `ofl/virtuagrotesk`: 0
-- Local google/fonts dirty state isolated to `ofl/virtuagrotesk`: yes
+- Local google/fonts dirty state isolated to `ofl/virtuagrotesk`: no
 
 ## Current Repo Git State
 
 | Field | Value |
 | --- | --- |
 | branch | `main` |
-| commit | `1af3f0594b03d9dfe534f8d4803016a27f5a7754` |
-| short commit | `1af3f05` |
+| commit | `fe21c5349deff07ac6eac638281a54b4c09ec7d6` |
+| short commit | `fe21c53` |
 | origin | `git@github.com:eliheuer/virtua-grotesk.git` |
 | normalized GitHub origin candidate | `https://github.com/eliheuer/virtua-grotesk` |
 | upstream | `origin/main` |
-| upstream ahead/behind | `0	0` |
-| origin ahead/behind | `0	0` |
+| upstream ahead/behind | `1	0` |
+| origin ahead/behind | `1	0` |
 | source version | `1.000` |
 | suggested tag | `v1.000` |
 | suggested tag matches source version | yes |
@@ -55,87 +55,87 @@ handoff check for the source state that `METADATA.pb` will claim.
 
 ## Current Dirty State
 
-- `M .agents/google-fonts-official-reference-map.md`
-- ` M .agents/skills/build-font/SKILL.md`
+- `M .agents/skills/build-font/SKILL.md`
+- ` M .agents/skills/compare-reference/SKILL.md`
+- ` M .agents/skills/draw-outline/SKILL.md`
 - ` M .agents/skills/edit-glyph/SKILL.md`
-- ` M .agents/skills/font-qa/SKILL.md`
+- ` M .agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
+- ` M .agents/skills/kerning/SKILL.md`
 - ` M .agents/skills/proof/SKILL.md`
 - ` M .agents/skills/render-specimen/SKILL.md`
-- ` D .claude/rules/design-philosophy.md`
-- ` D .claude/rules/designspace-editing.md`
-- ` D .claude/rules/kerning-editing.md`
-- ` D .claude/rules/ufo-editing.md`
-- ` D .claude/settings.json`
-- ` D .claude/skills/build-font/SKILL.md`
-- ` D .claude/skills/compare-reference/SKILL.md`
-- ` D .claude/skills/draw-outline/SKILL.md`
-- ` D .claude/skills/edit-glyph/SKILL.md`
-- ` D .claude/skills/font-qa/SKILL.md`
-- ` D .claude/skills/kerning/SKILL.md`
-- ` D .claude/skills/proof/SKILL.md`
-- ` D .claude/skills/render-specimen/SKILL.md`
 - ` M .gitignore`
+- ` M .ignore`
 - ` M AGENTS.md`
-- ` D CLAUDE.md`
-- ` D GF_READINESS.md`
 - ` M Makefile`
 - ` M README.md`
-- ` D arabic_expansion_autoresearch_goal.md`
 - ` M build.sh`
-- ` D context/curve-quality-workplan.md`
-- ` D context/eval-loop.md`
-- ` D context/img2bez-architecture.md`
-- ` D context/img2bez-pipeline.md`
-- ` D documentation/ARTICLE.en_us.html`
-- ` D documentation/DESCRIPTION.en_us.html`
-- ` D documentation/arabic-ai-visual-screen-batch-2.md`
-- ` D documentation/arabic-ai-visual-screen-batch-3.md`
-- ` D documentation/arabic-ai-visual-screen-batch-4.md`
-- ` D documentation/arabic-ai-visual-screen-batch-5.md`
-- ` D documentation/arabic-batch-recorder.md`
-- ` D documentation/arabic-candidate-glyph-plan.md`
-- ` D documentation/arabic-cleanup-drawing-briefs.md`
-- ` D documentation/arabic-current-review-worksheet.md`
-- ` D documentation/arabic-donor-preserve-glyphs.txt`
-- ` D documentation/arabic-drawing-session-checklist.md`
-- ` D documentation/arabic-expansion-from-latin-style.md`
-- ` D documentation/arabic-first-batch-source-checkpoint.md`
-- ` D documentation/arabic-first-review-ai-sweep.md`
-- ` D documentation/arabic-first-review-batch.md`
-- ` D documentation/arabic-first-review-crop-integrity.md`
-- ` D documentation/arabic-first-review-risk-shortlist.md`
-- ` D documentation/arabic-first-review-zoom-snapshots.md`
-- ` D documentation/arabic-full-queue-ai-sweep.md`
-- ` D documentation/arabic-goal-completion-audit.md`
-- ` D documentation/arabic-hand-review-contact-sheet.html`
-- ` D documentation/arabic-hand-review-session.md`
-- ` D documentation/arabic-manual-edit-targets.md`
-- ` D documentation/arabic-manual-review-batches.md`
-- ` D documentation/arabic-manual-review-dashboard.html`
-- ` D documentation/arabic-mark-readiness.md`
-- ` D documentation/arabic-mark-review-proof.html`
-- ` D documentation/arabic-mark-triage.md`
-- ` D documentation/arabic-missing-drawings-ai-execution-goal.md`
-- ` D documentation/arabic-next-review-ai-observations.md`
-- ` D documentation/arabic-next-review-ai-triage.md`
-- ` D documentation/arabic-next-review-batch.html`
-- ` D documentation/arabic-next-review-board.html`
-- ` D documentation/arabic-next-review-packet.md`
-- ` D documentation/arabic-next-review-snapshots.md`
-- ` D documentation/arabic-pending-source-checkpoint.md`
-- ` D documentation/arabic-print-proof-index.md`
-- ` D documentation/arabic-print-proof.pdf`
-- ` D documentation/arabic-review-packet.md`
-- ` D documentation/arabic-review-progress.md`
-- ` D documentation/arabic-review-worksheet-bundle.md`
-- ` D documentation/arabic-shaping-smoke-test.md`
-- ` D documentation/arabic-snapshot-integrity.md`
-- ` D documentation/arabic-source-edit-diff.md`
-- ` D documentation/arabic-source-work-checklist.md`
-- ` D documentation/arabic-structure-sweep.html`
-- ` D documentation/arabic-structure-triage.md`
-- ` D documentation/arabic-visual-review-batch.tsv`
-- ... 198 more entries omitted
+- ` D designbot/001.rs`
+- ` D designbot/002.rs`
+- ` D designbot/card.rs`
+- ` M documentation/assets/image-license.txt`
+- ` M documentation/glyph-review/arabic-cleanup-drawing-briefs.md`
+- ` M documentation/glyph-review/arabic-donor-preserve-glyphs.txt`
+- ` M documentation/glyph-review/arabic-expansion-from-latin-style.md`
+- ` M documentation/glyph-review/arabic-manual-review-dashboard.html`
+- ` M documentation/glyph-review/arabic-missing-drawings-ai-execution-goal.md`
+- ` M documentation/glyph-review/arabic-next-review-batch.html`
+- ` M documentation/glyph-review/arabic-review-packet.md`
+- ` M documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`
+- ` M documentation/glyph-review/contour-cleanup/contour-cleanup-review-queue.md`
+- ` M documentation/google-fonts/article-readiness.md`
+- ` M documentation/google-fonts/authorship-disclosure-readiness.md`
+- ` M documentation/google-fonts/decision-application-blockers.md`
+- ` M documentation/google-fonts/designer-profile-package-draft.md`
+- ` M documentation/google-fonts/designer-profile-readiness.md`
+- ` M documentation/google-fonts/downstream-metadata-diff.md`
+- ` M documentation/google-fonts/downstream-pr-readiness.md`
+- ` M documentation/google-fonts/drawbot-runtime-readiness.md`
+- ` M documentation/google-fonts/family-name-readiness.md`
+- ` M documentation/google-fonts/final-submission-blockers.md`
+- ` M documentation/google-fonts/fontspector-contour-count.md`
+- ` M documentation/google-fonts/fontspector-googlefonts-report.md`
+- ` M documentation/google-fonts/fontspector-metadata-warning-probe.md`
+- ` M documentation/google-fonts/fontspector-warnings.md`
+- ` M documentation/google-fonts/github-release-draft.md`
+- ` M documentation/google-fonts/github-release-notes.md`
+- ` M documentation/google-fonts/google-fonts-add-font-issue-draft.md`
+- ` M documentation/google-fonts/google-fonts-add-font-template-audit.md`
+- ` M documentation/google-fonts/google-fonts-axis-registry-audit.md`
+- ` M documentation/google-fonts/google-fonts-decisions.md`
+- ` M documentation/google-fonts/google-fonts-downstream-package-preview.md`
+- ` M documentation/google-fonts/google-fonts-language-metadata.md`
+- ` M documentation/google-fonts/google-fonts-package-checklist.md`
+- ` M documentation/google-fonts/google-fonts-readiness.md`
+- ` M documentation/google-fonts/google-fonts-reference-index.md`
+- ` M documentation/google-fonts/google-fonts-submission-handoff.md`
+- ` M documentation/google-fonts/google-fonts-template-and-pr-audit.md`
+- ` M documentation/google-fonts/google-fonts-upstream-audit.md`
+- ` M documentation/google-fonts/kerning-readiness.md`
+- ` M documentation/google-fonts/local-workflow-readiness.md`
+- ` M documentation/google-fonts/next-actions.md`
+- ` M documentation/google-fonts/open-placeholder-audit.md`
+- ` M documentation/google-fonts/package-dry-run-readiness.md`
+- ` M documentation/google-fonts/package-source-files-audit.md`
+- ` M documentation/google-fonts/packager-source-strategy.md`
+- ` M documentation/google-fonts/pr-identity-readiness.md`
+- ` M documentation/google-fonts/project-template-automation-readiness.md`
+- ` M documentation/google-fonts/pua-scope.md`
+- ` M documentation/google-fonts/public-upstream-readiness.md`
+- ` M documentation/google-fonts/recent-google-fonts-packages.md`
+- ` M documentation/google-fonts/release-archive-manifest.md`
+- ` M documentation/google-fonts/release-source-readiness.md`
+- ` M documentation/google-fonts/submission-handoff-readiness.md`
+- ` M documentation/google-fonts/upstream-structure-readiness.md`
+- ` M documentation/proofs/print-spacing-specimen.pdf`
+- ` M documentation/proofs/print-specimen-setup.md`
+- ` M documentation/proofs/proof.pdf`
+- ` M documentation/python-tooling-notes.md`
+- ` M documentation/source-guides/ufo-editing.md`
+- ` M documentation/source/ufo-editor-readiness.md`
+- ` M requirements.in`
+- ` M scripts/build_arabic_manual_review_dashboard.py`
+- ` M scripts/build_arabic_print_proof.py`
+- ... 40 more entries omitted
 
 ## Downstream Source Mapping
 
@@ -154,16 +154,16 @@ handoff check for the source state that `METADATA.pb` will claim.
 
 | Field | Value |
 | --- | --- |
-| path | `/Users/eli/GH/forks/fonts` |
-| exists | yes |
-| branch | `main` |
-| origin | `git@github.com:eliheuer/fonts.git` |
-| upstream | `https://github.com/google/fonts.git` |
-| main vs upstream/main | `0	0` |
-| dirty entries | 1 |
-| dirty inside `ofl/virtuagrotesk` | 1 |
+| path | `GF_REPO_PATH_NOT_CONFIGURED` |
+| exists | no |
+| branch | `missing` |
+| origin | `missing` |
+| upstream | `missing` |
+| main vs upstream/main | `missing` |
+| dirty entries | 0 |
+| dirty inside `ofl/virtuagrotesk` | 0 |
 | dirty outside `ofl/virtuagrotesk` | 0 |
-| dirty isolated to `ofl/virtuagrotesk` | yes |
+| dirty isolated to `ofl/virtuagrotesk` | no |
 
 ## Apply Before Final Packager Run
 

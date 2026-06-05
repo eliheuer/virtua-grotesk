@@ -7,11 +7,11 @@ build.ninja
 .ninja_log
 sources/build.ninja
 sources/.ninja_log
-sources/.fontc-build/
 instance_ufo/
 sources/instance_ufos/
 master_ufo/
-venv/
+.venv/
+local.mk
 __pycache__/
 *.py[cod]
 

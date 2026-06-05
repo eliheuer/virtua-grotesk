@@ -29,13 +29,13 @@ tasks visible in one place.
 - Arabic GPOS smoke pass: 5 / 5 fonts
 - Smoke strings shape without .notdef: yes
 - Lam-alef smoke rows passing: 10
-- Metadata script record present: yes
-- Metadata primary script: `Arab`
+- Metadata script record present: no
+- Metadata primary script: `missing`
 - Downstream preview subsets match target: yes
 - Downstream preview primary_script matches target: yes
-- Compared Arabic package examples present: 9 / 9
-- Compared examples with `arabic` subset: 9 / 9
-- Compared examples with `primary_script: "Arab"`: 9 / 9
+- Compared Arabic package examples present: 0 / 9
+- Compared examples with `arabic` subset: 0 / 0
+- Compared examples with `primary_script: "Arab"`: 0 / 0
 - Compared non-Noto Arabic examples omit `languages`: yes
 - Compared non-Noto Arabic examples omit `sample_text`: yes
 - Fontspector dotted_circle warning present: no
@@ -69,7 +69,7 @@ metadata evidence, not a drawing model for Virtua Grotesk.
 - Subsets: `arabic, latin, latin-ext, menu, vietnamese`
 - Variable source file under `fonts/variable/`: yes
 - `source.config_yaml`: `sources/config.yaml`
-- Downstream `upstream_info.md`: yes
+- Downstream `upstream_info.md`: unknown
 
 Implications for Virtua Grotesk:
 

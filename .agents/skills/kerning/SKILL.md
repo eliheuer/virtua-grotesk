@@ -27,17 +27,11 @@ Add or update a kerning pair:
 Group name shorthand: if the user says `kern1.A` interpret as `public.kern1.A`.
 
 ### `test`
-Build and render a kerning test:
-1. Build the font: `./build.sh`
-2. Create a temporary designbot script that renders common kerning test strings:
-   - `AV AW AT AY VA WA TA YA`
-   - `To Te Ta Tr Tu Ty Tw`
-   - `Vo Va Ve Vu Vy`
-   - `ff fi fl ffi ffl`
-   - `oo oc oe og oq`
-   - `"A" 'A' "T" 'T'`
-3. Render and read the PNG to evaluate kerning quality
-4. Report findings
+Build and render kerning/spacing review proofs:
+1. Run `make preflight`
+2. Review `documentation/proofs/proof.pdf` and `documentation/proofs/print-spacing-specimen.pdf`
+3. Review generated readiness reports under `documentation/google-fonts/`
+4. Report spacing or kerning findings
 
 ### `init-regular`
 Create kerning for the Regular master based on Bold:

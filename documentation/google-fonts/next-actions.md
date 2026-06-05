@@ -8,12 +8,12 @@ This generated report condenses the final blocker stack into an owner-grouped qu
 - Decision answer packet ready: yes
 - Local workflow preflight ready: yes
 - Package dry run reaches Packager: no
-- Package dry-run first blocker: existing downstream METADATA.pb is still the Packager starter template
-- Package dry-run blocking findings: existing downstream METADATA.pb is still the Packager starter template; GitHub API credentials unavailable
+- Package dry-run first blocker: local google/fonts fork is not ready
+- Package dry-run blocking findings: local google/fonts fork is not ready; GitHub API credentials unavailable
 - Selected Packager source mode: `latest-release`
-- Downstream starter METADATA.pb present: yes
+- Downstream starter METADATA.pb present: no
 - Downstream `source.config_yaml` present: no; source-strategy review needed: no
-- GitHub release draft: `v1.000` / `Virtua Grotesk 1.000`; archive files: yes; hashes: yes
+- GitHub release draft: `v1.000` / `Virtua Grotesk 1.000`; archive files: no; hashes: no
 - Fontspector googlefonts profile: 10 FAIL, 20 WARN, 517 PASS
 - UFO editor handoff ready: yes
 - Arabic snapshot evidence ready: yes
@@ -56,13 +56,13 @@ This generated report condenses the final blocker stack into an owner-grouped qu
 | Action | Current state | Evidence |
 | --- | --- | --- |
 | Monitor placeholder audit; no public placeholder strings currently block handoff. | public blockers: 0 URLs, 0 pending markers; generated echoes: 0; internal/total URL echoes: 0 | `documentation/google-fonts/open-placeholder-audit.md` |
-| Replace the Packager starter `METADATA.pb` with final downstream metadata and restore API auth. | reaches Packager: no; first blocker: existing downstream METADATA.pb is still the Packager starter template; blockers: existing downstream METADATA.pb is still the Packager starter template; GitHub API credentials unavailable; auth: no; inputs: yes | `documentation/google-fonts/downstream-metadata-diff.md` |
-| Align Git/GitHub identity before downstream commits. | source identity: yes; google/fonts identity: yes; downstream name matches CLA: yes; final commit identity: yes; gh auth: invalid token; API auth: no; source: unavailable; CLA: confirmed by maintainer for the copyright holder | `documentation/google-fonts/pr-identity-readiness.md`; `documentation/google-fonts/downstream-pr-readiness.md` |
-| Create the final release/archive source package for Packager. | 0 missing locally, 2 ignored/generated, tracked: 1/4, untracked: 3; release/archive source mode: `latest-release`; archive must include currently untracked package files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/google-fonts/ARTICLE.en_us.html`, `documentation/assets/readme-specimen.png`; `source.config_yaml` review: no | `documentation/google-fonts/packager-source-strategy.md` |
-| Publish the final GitHub release asset after the final source commit and tag. | tag: v1.000; title: Virtua Grotesk 1.000; command: yes; archive: `dist/VirtuaGrotesk-1.000.zip`; notes: `documentation/google-fonts/github-release-notes.md`; notes final: no; expected files: yes; hashes: yes; source commit: Pending final release/source commit | `documentation/google-fonts/github-release-draft.md` |
+| Replace the Packager starter `METADATA.pb` with final downstream metadata and restore API auth. | reaches Packager: no; first blocker: local google/fonts fork is not ready; blockers: local google/fonts fork is not ready; GitHub API credentials unavailable; auth: no; inputs: yes | `documentation/google-fonts/downstream-metadata-diff.md` |
+| Align Git/GitHub identity before downstream commits. | source identity: yes; google/fonts identity: no; downstream name matches CLA: no; final commit identity: no; gh auth: invalid token; API auth: no; source: unavailable; CLA: confirmed by maintainer for the copyright holder | `documentation/google-fonts/pr-identity-readiness.md`; `documentation/google-fonts/downstream-pr-readiness.md` |
+| Create the final release/archive source package for Packager. | 0 missing locally, 2 ignored/generated, tracked: 2/4, untracked: 2; release/archive source mode: `latest-release`; archive must include currently untracked package files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/assets/readme-specimen.png`; `source.config_yaml` review: no | `documentation/google-fonts/packager-source-strategy.md` |
+| Publish the final GitHub release asset after the final source commit and tag. | tag: v1.000; title: Virtua Grotesk 1.000; command: yes; archive: `dist/VirtuaGrotesk-1.000.zip`; notes: `documentation/google-fonts/github-release-notes.md`; notes final: no; expected files: no; hashes: no; source commit: Pending final release/source commit | `documentation/google-fonts/github-release-draft.md` |
 | Prepare the Google Fonts designer profile request for `Eli Heuer`. | author candidates: 1; contributor-only: 0; missing profiles: 1; metadata placeholders: 0; draft inputs: 3; path collision: no | `documentation/google-fonts/designer-profile-package-draft.md` |
-| Clean or review the local `google/fonts` fork before the final package pass. | origin: eliheuer/fonts; upstream: google/fonts; topology: yes; exists: yes; branch: main; upstream/main: 0/0; clean: no; dirty outside package: 0 | `documentation/google-fonts/package-dry-run-readiness.md` |
-| Keep Add Font issue and submission handoff synchronized with generated evidence. | template labels: `I New Font, II Submission`; handoff labels: yes; issue draft: yes; Fontspector: no; maintenance: yes; unchecked: yes; report refs: 40; source modes: yes | `documentation/google-fonts/submission-handoff-readiness.md` |
+| Clean or review the local `google/fonts` fork before the final package pass. | origin: unknown; upstream: unknown; topology: no; exists: no; branch: missing; upstream/main: missing; clean: yes; dirty outside package: 0 | `documentation/google-fonts/package-dry-run-readiness.md` |
+| Keep Add Font issue and submission handoff synchronized with generated evidence. | template labels: `missing`; handoff labels: yes; issue draft: no; Fontspector: no; maintenance: no; unchecked: yes; report refs: 40; source modes: yes | `documentation/google-fonts/submission-handoff-readiness.md` |
 
 ## Run Order
 

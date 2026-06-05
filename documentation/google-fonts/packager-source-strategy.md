@@ -12,8 +12,8 @@ This generated report compares the source modes available for the final Google F
 - Local `source.files` entries: 4
 - Missing local `source.files`: 0
 - Ignored/generated `source.files`: 2
-- Tracked source.files: 1 / 4
-- Untracked local source.files: 3
+- Tracked source.files: 2 / 4
+- Untracked local source.files: 2
 - Build-from-source inputs present and tracked: 6 / 6
 - Build script uses GF builder config: yes
 - Build script runs metadata post-processing: yes
@@ -23,10 +23,10 @@ This generated report compares the source modes available for the final Google F
 - Downstream preview includes release `archive_url`: yes
 - Downstream preview `archive_url` is GitHub release download `.zip`: yes
 - Selected first-submission source mode: `latest-release`
-- Local google/fonts fork topology ready: yes
-- Local google/fonts checkout clean: no
+- Local google/fonts fork topology ready: no
+- Local google/fonts checkout clean: yes
 - Dirty paths outside `ofl/virtuagrotesk`: 0
-- Downstream METADATA.pb starter template present: yes
+- Downstream METADATA.pb starter template present: no
 
 ## Strategy Matrix
 
@@ -42,7 +42,7 @@ This generated report compares the source modes available for the final Google F
 | --- | --- | --- | --- | --- |
 | `OFL.txt` | `OFL.txt` | yes | no | yes |
 | `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | yes | yes | no |
-| `documentation/google-fonts/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | yes | no | no |
+| `documentation/google-fonts/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | yes | no | yes |
 | `documentation/assets/readme-specimen.png` | `article/readme-specimen.png` | yes | yes | no |
 
 ## Selected Latest-Release Action Plan
@@ -55,7 +55,7 @@ The maintainer-selected first-submission strategy keeps generated fonts out of t
 4. Keep `source.config_yaml` omitted unless Google Fonts asks for build metadata.
 5. Regenerate reports, run `GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check`, then run a no-PR `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run`.
 
-- Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/google-fonts/ARTICLE.en_us.html`, `documentation/assets/readme-specimen.png`
+- Release archive files currently present but untracked: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/assets/readme-specimen.png`
 - Release archive files currently blocked by `.gitignore`: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/assets/readme-specimen.png`
 - `make package-dry-run` now defaults to `GFT_PACKAGER_SOURCE_MODE=latest-release`; set `GFT_PACKAGER_SOURCE_MODE=default` or `build-from-source` only for fallback review.
 
@@ -67,7 +67,7 @@ These are conditional checklists. Apply only the section that matches the mainta
 
 1. Apply the final public upstream URL everywhere reported by `make public-upstream-url-check`.
 2. Add a narrow `.gitignore` exception for the served variable font only.
-3. Track the current untracked source files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/google-fonts/ARTICLE.en_us.html`, `documentation/assets/readme-specimen.png`.
+3. Track the current untracked source files: `fonts/variable/VirtuaGrotesk[wght].ttf`, `documentation/assets/readme-specimen.png`.
 4. Remove `source.config_yaml` from the downstream metadata preview unless Google Fonts review asks for build metadata.
 5. Regenerate reports, verify `GFT_PACKAGER_SOURCE_MODE=default make downstream-metadata-check`, then run the no-PR `GFT_PACKAGER_SOURCE_MODE=default make package-dry-run`.
 
@@ -90,7 +90,7 @@ These are conditional checklists. Apply only the section that matches the mainta
 ## Decision Notes
 
 - Do not run Packager with `-p` until the Google Fonts issue exists, final QA is reviewed, and the selected release/archive source is public.
-- Keep the local no-PR dry run on `/Users/eli/GH/forks/fonts` before opening or updating a downstream PR.
+- Keep the local no-PR dry run on `$GF_REPO_PATH` before opening or updating a downstream PR.
 - The local dry-run wrapper accepts an explicit `GH_TOKEN` or exports one from a valid `gh auth token` before invoking Packager.
 - Keep `source.config_yaml` only for the build-from-source path. Recent `google/fonts` commits removed non-buildable or misleading `config_yaml` fields, so default branch or release/archive packaging should omit it unless Google Fonts specifically asks for build metadata.
 - Latest-release packaging must add the final GitHub release download `.zip` `archive_url` to the downstream metadata preview before `make downstream-metadata-check` can be ready.

@@ -142,16 +142,15 @@ After each batch:
 
 ```bash
 ./build.sh
-make reports-only
-make preflight-only
+make reports
+make preflight
 ```
 
 After shaping-sensitive work:
 
 ```bash
 make preflight
-make kerning-proof-check
-make kerning-proof-review-check
+make specimen
 ```
 
 Verify evidence, not intent:

@@ -135,7 +135,7 @@ REFERENCES = [
             "documentation/google-fonts/local-workflow-readiness.md",
             "documentation/core-qa-process.md",
         ],
-        "use": "documents the local venv, gftools, Fontspector, gftools QA, and reproducible command assumptions",
+        "use": "documents the local .venv, gftools, Fontspector, gftools QA, and reproducible command assumptions",
     },
     {
         "source": "Onboarder workflow guide",

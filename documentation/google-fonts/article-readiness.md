@@ -11,7 +11,7 @@ It does not replace copy review by Google Fonts.
 - Text length: 413 words
 - More than 100 text characters: yes
 - Around 500 words target met: yes
-- Primary script target from metadata: `Arab`
+- Primary script target from metadata: `missing`
 - Localized Arabic text present: yes
 - Upstream repository link present: yes
 - Placeholder upstream URL still present: no

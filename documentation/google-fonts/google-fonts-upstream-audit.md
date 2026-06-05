@@ -37,11 +37,11 @@ does not claim that drawing, spacing, kerning, or script coverage is complete.
   report, and packaging workflow.
 - `requirements.in` and `documentation/python-tooling-notes.md` document direct
   Python dependencies separately from external tools such as Fontspector,
-  DesignBot, DrawBot, and optional `fontc`.
+  DrawBot-skia.
 - `sources/config.yaml` is the preferred `gftools builder` configuration.
-- `build.sh` builds all generated fonts in one command, prefers
-  `gftools builder sources/config.yaml`, and keeps the fallback output layout aligned
-  with `fonts/variable/` and `fonts/ttf/`.
+- `build.sh` builds all generated fonts in one command through
+  `gftools builder sources/config.yaml` and writes the expected
+  `fonts/variable/` and `fonts/ttf/` outputs.
 - `.gitignore` excludes the local virtual environment, generated build files,
   and generated fonts unless the built-fonts decision changes.
 - `.ignore` excludes generated build files from ordinary repo-wide source

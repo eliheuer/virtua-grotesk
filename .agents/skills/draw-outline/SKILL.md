@@ -28,7 +28,7 @@ Write the `.glif` XML following all rules below. Then do the same for the second
 ### Step 3: Register & Validate
 1. Add the glyph to `glyphs/contents.plist` in both masters if it's new
 2. Verify both masters have identical structure (contour count, point count, point types)
-3. Suggest `/build-font variable` to test and `/render-specimen --text "..."` to preview
+3. Suggest `/build-font` to test and `/proof` or `make print-spacing-specimen` to preview
 
 ---
 

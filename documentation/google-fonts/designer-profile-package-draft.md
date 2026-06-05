@@ -23,8 +23,8 @@ the biography text and square image are approved.
 - Downstream directory: `catalog/designers/eliheuer`
 - Avatar filename matches slug: yes
 - Profile PR scope: one designer profile only
-- Local google/fonts checkout: `/Users/eli/GH/forks/fonts`
-- Local designers directory exists: yes
+- Local google/fonts checkout: `GF_REPO_PATH_NOT_CONFIGURED`
+- Local designers directory exists: no
 - `gftools add-designer` available: yes
 - Candidate info.pb validator present: yes
 - Candidate info.pb draft exists: yes
@@ -43,7 +43,7 @@ the biography text and square image are approved.
 - Designer profile prepare helper dry-run ready: no
 - Designer profile prepare helper blocking findings: 2
 - Prepare blocker is missing approved image input: yes
-- Prepare blocker is downstream checkout cleanliness: yes
+- Prepare blocker is downstream checkout cleanliness: no
 - Approved profile inputs ready to apply: no
 - Downstream profile checkout ready to apply: no
 - Target profile directory already exists: no
@@ -87,7 +87,7 @@ checks the local `google/fonts` checkout, and writes files only when
 
 ```bash
 make designer-profile-prepare-check
-./venv/bin/python scripts/prepare_designer_profile.py --image path/to/eliheuer.png --apply
+./.venv/bin/python scripts/prepare_designer_profile.py --image path/to/eliheuer.png --apply
 ```
 
 - Default info candidate: `documentation/google-fonts/designer-profile-candidate/info.pb`
@@ -98,12 +98,12 @@ make designer-profile-prepare-check
 - Current dry-run ready: no
 - Current dry-run blocking findings: 2
 - Missing approved image input blocks prepare helper: yes
-- Downstream checkout cleanliness blocks prepare helper: yes
+- Downstream checkout cleanliness blocks prepare helper: no
 - Approved profile inputs ready to apply: no
 - Downstream profile checkout ready to apply: no
 - Current dry-run blocker details:
-  - image file does not exist: /Users/eli/GH/repos/virtua-grotesk/documentation/google-fonts/designer-profile-candidate/eliheuer.png
-  - google/fonts checkout has dirty paths outside the designer profile path: ofl/virtuagrotesk/
+  - image file does not exist: ./documentation/google-fonts/designer-profile-candidate/eliheuer.png
+  - google/fonts checkout does not exist: GF_REPO_PATH_NOT_CONFIGURED
 
 ## Exact Downstream Worktree Plan
 
@@ -112,7 +112,7 @@ Keep this work separate from the family package branch unless a
 Google Fonts reviewer explicitly asks for a combined patch.
 
 ```bash
-cd /Users/eli/GH/forks/fonts
+cd GF_REPO_PATH_NOT_CONFIGURED
 git switch main
 git pull --ff-only upstream main
 git switch -c designer/eli-heuer-profile
@@ -123,27 +123,27 @@ profile path is still absent and the worktree is clean outside any
 intentional profile files:
 
 ```bash
-test ! -e /Users/eli/GH/forks/fonts/catalog/designers/eliheuer
-git -C /Users/eli/GH/forks/fonts status --short -- catalog/designers/eliheuer
-git -C /Users/eli/GH/forks/fonts status --short
+test ! -e GF_REPO_PATH_NOT_CONFIGURED/catalog/designers/eliheuer
+git -C GF_REPO_PATH_NOT_CONFIGURED status --short -- catalog/designers/eliheuer
+git -C GF_REPO_PATH_NOT_CONFIGURED status --short
 ```
 
 Create the profile with `gftools add-designer`, then hand-edit
 `info.pb` and `bio.html` to match the approved profile text:
 
 ```bash
-/Users/eli/GH/repos/virtua-grotesk/venv/bin/gftools add-designer /Users/eli/GH/forks/fonts/catalog/designers "Eli Heuer" --img_path path/to/eliheuer.png
+./.venv/bin/gftools add-designer GF_REPO_PATH_NOT_CONFIGURED/catalog/designers "Eli Heuer" --img_path path/to/eliheuer.png
 ```
 
 Validate the profile inputs from this repo before committing the
 downstream profile files:
 
 ```bash
-cd /Users/eli/GH/repos/virtua-grotesk
-make designer-profile-info-check INFO=/Users/eli/GH/forks/fonts/catalog/designers/eliheuer/info.pb
-make designer-profile-image-check IMAGE=/Users/eli/GH/forks/fonts/catalog/designers/eliheuer/eliheuer.png
-make designer-profile-bio-check BIO=/Users/eli/GH/forks/fonts/catalog/designers/eliheuer/bio.html
-make designer-profile-check
+cd /path/to/virtua-grotesk
+./.venv/bin/python scripts/validate_designer_profile_info.py GF_REPO_PATH_NOT_CONFIGURED/catalog/designers/eliheuer/info.pb "Eli Heuer" eliheuer.png
+./.venv/bin/python scripts/validate_designer_profile_image.py GF_REPO_PATH_NOT_CONFIGURED/catalog/designers/eliheuer/eliheuer.png eliheuer.png
+./.venv/bin/python scripts/validate_designer_profile_bio.py GF_REPO_PATH_NOT_CONFIGURED/catalog/designers/eliheuer/bio.html
+make reports
 ```
 
 Expected downstream commit scope:
@@ -168,10 +168,10 @@ Decision-safe default:
   downstream metadata designer string and the only current AUTHORS
   catalog-credit candidate.
 - Keep this as a separate designer-profile draft; do not create files in
-  `/Users/eli/GH/forks/fonts/catalog/designers` until the biography and
+  `$GF_REPO_PATH/catalog/designers` until the biography and
   image are approved.
 - If the family package has intentional dirty files under
-  `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk`, either commit, stash,
+  `$GF_REPO_PATH/ofl/virtuagrotesk`, either commit, stash,
   or review that work before applying a separate designer-profile branch.
 
 ## Candidate `bio.html`
@@ -230,7 +230,7 @@ Validate the final candidate `info.pb` before committing the designer
 profile:
 
 ```bash
-make designer-profile-info-check INFO=/Users/eli/GH/forks/fonts/catalog/designers/eliheuer/info.pb
+./.venv/bin/python scripts/validate_designer_profile_info.py GF_REPO_PATH_NOT_CONFIGURED/catalog/designers/eliheuer/info.pb "Eli Heuer" eliheuer.png
 ```
 
 ## `bio.html` Requirements
@@ -288,7 +288,7 @@ directory once the final image is available, then hand-edit
 `bio.html` as needed:
 
 ```bash
-/Users/eli/GH/repos/virtua-grotesk/venv/bin/gftools add-designer /Users/eli/GH/forks/fonts/catalog/designers "Eli Heuer" --img_path path/to/eliheuer.png
+./.venv/bin/gftools add-designer GF_REPO_PATH_NOT_CONFIGURED/catalog/designers "Eli Heuer" --img_path path/to/eliheuer.png
 ```
 
 ## Relationship To Family Package

@@ -14,7 +14,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/google-fonts/downstream-metadata-diff.md")
-GF_REPO_PATH = Path(os.environ.get("GF_REPO_PATH", "/Users/eli/GH/forks/fonts"))
+GF_REPO_PATH = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 DOWNSTREAM_METADATA = GF_REPO_PATH / "ofl/virtuagrotesk/METADATA.pb"
 PREVIEW = ROOT / "documentation/google-fonts/google-fonts-downstream-package-preview.md"
 PREPARE_HELPER = ROOT / "scripts/prepare_downstream_metadata.py"
@@ -257,7 +257,7 @@ def markdown_report() -> str:
             "  without writing to the local `google/fonts` checkout.",
             "- When that dry run reports `Ready to apply: yes`, run",
             "  `scripts/prepare_downstream_metadata.py --apply` to write",
-            "  `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`.",
+            "  `$GF_REPO_PATH/ofl/virtuagrotesk/METADATA.pb`.",
             "- Use `documentation/google-fonts/google-fonts-downstream-package-preview.md` as",
             "  the expected shape, then rerun `make preflight` so proof evidence",
             "  and generated reports stay synchronized before",

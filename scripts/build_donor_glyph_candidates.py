@@ -12,6 +12,7 @@ import argparse
 from dataclasses import dataclass
 import html
 import json
+import os
 import shutil
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -26,8 +27,12 @@ import ufoLib2
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TARGET = ROOT / "sources/VirtuaGrotesk.designspace"
-DEFAULT_DONOR = Path("/Users/eli/GH/repos/rubik/sources/designspace/Rubik.designspace")
-DEFAULT_OUTPUT = ROOT / "build/arabic-donor-candidates/rubik-to-virtua"
+DEFAULT_DONOR = (
+    Path(os.environ["DONOR_DESIGNSPACE"])
+    if os.environ.get("DONOR_DESIGNSPACE")
+    else None
+)
+DEFAULT_OUTPUT = ROOT / "build/arabic-donor-candidates/donor-to-virtua"
 PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-pending-source-checkpoint.md"
 
 SAMPLE_GLYPHS = [
@@ -485,6 +490,8 @@ def main() -> int:
     args = parser.parse_args()
 
     target = args.target.expanduser().resolve()
+    if args.donor is None:
+        raise SystemExit("Set --donor /path/to/reference.designspace or DONOR_DESIGNSPACE=/path/to/reference.designspace.")
     donor = args.donor.expanduser().resolve()
     output = args.output.expanduser().resolve()
     glyphs = parse_glyphs(args.glyphs, target)

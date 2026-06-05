@@ -29,8 +29,9 @@ SOURCE_UFOS = [
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",
 ]
 REFERENCE_CANDIDATES = [
-    Path("/Users/eli/GH/forks/fonts/ofl/rubik/Rubik[wght].ttf"),
-    Path("/Users/eli/GH/repos/google-fonts/ofl/rubik/Rubik[wght].ttf"),
+    Path(os.environ["ARABIC_REFERENCE_FONT"])
+    if os.environ.get("ARABIC_REFERENCE_FONT")
+    else None,
 ]
 
 FONTS = [
@@ -142,6 +143,8 @@ def read_text(path: Path) -> str:
 
 def reference_path() -> Path | None:
     for path in REFERENCE_CANDIDATES:
+        if path is None:
+            continue
         if path.exists():
             return path
     return None

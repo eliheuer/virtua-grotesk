@@ -22,7 +22,7 @@ complete.
 - Expected generated font outputs present: 5 / 5
 - Generated font outputs ignored by git: yes
 - Generated source/build outputs ignored by git: yes
-- Local venv ignored by git: yes
+- Local .venv ignored by git: yes
 - Active source root UFOs: `VirtuaGrotesk-Bold.ufo, VirtuaGrotesk-Regular.ufo`
 - Active source root designspaces: `VirtuaGrotesk.designspace`
 
@@ -61,7 +61,6 @@ complete.
 | `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | yes | yes |
 | `fonts/ttf/VirtuaGrotesk-Bold.ttf` | yes | yes |
 | `sources/instance_ufos` | yes | yes |
-| `sources/.fontc-build` | yes | yes |
 | `sources/build.ninja` | yes | yes |
 | `sources/.ninja_log` | yes | yes |
 

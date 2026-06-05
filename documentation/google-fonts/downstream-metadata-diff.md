@@ -8,38 +8,41 @@ local `google/fonts` checkout.
 ## Summary
 
 - Expected preview: `documentation/google-fonts/google-fonts-downstream-package-preview.md`
-- Actual downstream metadata: `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`
-- Actual downstream METADATA.pb present: yes
-- Actual downstream METADATA.pb is starter template: yes
-- Starter-template markers present: 4 / 4
-- Expected metadata lines missing from actual downstream file: 16 / 22
+- Actual downstream metadata: `GF_REPO_PATH_NOT_CONFIGURED/ofl/virtuagrotesk/METADATA.pb`
+- Actual downstream METADATA.pb present: no
+- Actual downstream METADATA.pb is starter template: no
+- Starter-template markers present: 0 / 4
+- Expected metadata lines missing from actual downstream file: 22 / 22
 - Actual downstream `source.config_yaml` present: no
 - Expected preview `source.config_yaml` present: no
 - Expected preview has final `date_added`: no
-- Unexpected starter source mappings: 1
+- Unexpected starter source mappings: 0
 - Prepare helper source mode: `latest-release`
 - Ready to apply preview via helper: no
-- Prepare helper blocking findings: 3
+- Prepare helper blocking findings: 4
 - Prepare helper required-line count: 22
 - Diff/helper required-line lists match: yes
 
 ## Starter Template Markers
 
-- `designer: "UNKNOWN"`
-- `repository_url: "https://github.com/user/repo"`
-- `fonts/variable/MyFont[wght].ttf`
-- `primary_script: "Deva"`
+- None
 
 ## Missing Expected Lines
 
+- `name: "Virtua Grotesk"`
+- `license: "OFL"`
+- `category: "SANS_SERIF"`
 - `filename: "VirtuaGrotesk[wght].ttf"`
 - `post_script_name: "VirtuaGrotesk-Regular"`
 - `full_name: "Virtua Grotesk Regular"`
 - `subsets: "arabic"`
 - `subsets: "latin"`
+- `subsets: "menu"`
 - `tag: "wght"`
 - `min_value: 400.0`
 - `max_value: 700.0`
+- `source_file: "OFL.txt"`
+- `dest_file: "OFL.txt"`
 - `source_file: "fonts/variable/VirtuaGrotesk[wght].ttf"`
 - `dest_file: "VirtuaGrotesk[wght].ttf"`
 - `source_file: "documentation/google-fonts/ARTICLE.en_us.html"`
@@ -51,7 +54,7 @@ local `google/fonts` checkout.
 
 ## Actual Source Mappings Not In Preview
 
-- `fonts/variable/MyFont[wght].ttf` -> `MyFont[wght].ttf`
+- None
 
 ## Replacement Readiness Gate
 
@@ -69,6 +72,7 @@ Blocking findings:
 - blocked marker still present: Pending final
 - required metadata line missing: date_added with final valid "YYYY-MM-DD" Google Fonts date
 - required metadata line missing: source.commit with final 40-character lowercase git hash
+- google/fonts checkout does not exist: GF_REPO_PATH_NOT_CONFIGURED
 
 ## Prepare Helper Alignment
 
@@ -95,7 +99,7 @@ flags it.
   without writing to the local `google/fonts` checkout.
 - When that dry run reports `Ready to apply: yes`, run
   `scripts/prepare_downstream_metadata.py --apply` to write
-  `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`.
+  `$GF_REPO_PATH/ofl/virtuagrotesk/METADATA.pb`.
 - Use `documentation/google-fonts/google-fonts-downstream-package-preview.md` as
   the expected shape, then rerun `make preflight` so proof evidence
   and generated reports stay synchronized before

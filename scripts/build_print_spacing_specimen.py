@@ -14,7 +14,7 @@ try:
 except ModuleNotFoundError as error:
     raise SystemExit(
         "drawbot_skia is required. Run through `make print-spacing-specimen` "
-        "or set PYTHONPATH to /Users/eli/GH/repos/drawbot-skia/src."
+        "after setting DRAWBOT_SKIA_REPO=/path/to/drawbot-skia, or install drawbot_skia in .venv."
     ) from error
 
 

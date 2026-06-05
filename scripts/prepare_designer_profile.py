@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 from html.parser import HTMLParser
+import os
 from pathlib import Path
 import re
 import shutil
@@ -17,7 +18,7 @@ from validate_designer_profile_info import validation_errors as info_errors
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 DEFAULT_INFO = Path("documentation/google-fonts/designer-profile-candidate/info.pb")
 DEFAULT_BIO = Path("documentation/google-fonts/designer-profile-candidate/bio.html")
 DEFAULT_IMAGE = Path("documentation/google-fonts/designer-profile-candidate/eliheuer.png")

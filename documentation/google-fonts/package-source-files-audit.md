@@ -12,8 +12,8 @@ GitHub release/archive source strategy can be checked deliberately.
 - Expected `source.files` entries: 4
 - Missing local files: 0
 - Ignored local files: 2
-- Tracked `source.files`: 1 / 4
-- Untracked local `source.files`: 3
+- Tracked `source.files`: 2 / 4
+- Untracked local `source.files`: 2
 - Destination mapping matches expected downstream layout: yes
 - Unsafe `source.files` paths: 0
 - Duplicate `source.files` paths: 0
@@ -40,7 +40,7 @@ GitHub release/archive source strategy can be checked deliberately.
 | --- | --- | --- | --- | --- | --- | --- |
 | `OFL.txt` | `OFL.txt` | license | yes | no | yes | yes |
 | `fonts/variable/VirtuaGrotesk[wght].ttf` | `VirtuaGrotesk[wght].ttf` | served variable font | yes | yes | no | yes |
-| `documentation/google-fonts/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | article HTML | yes | no | no | yes |
+| `documentation/google-fonts/ARTICLE.en_us.html` | `article/ARTICLE.en_us.html` | article HTML | yes | no | yes | yes |
 | `documentation/assets/readme-specimen.png` | `article/readme-specimen.png` | article image | yes | yes | no | yes |
 
 ## Source Strategy Impact

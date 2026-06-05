@@ -100,7 +100,7 @@ Both masters (Regular and Bold) MUST have identical glyph structure:
 1. **Always read before write** — never edit a .glif file without reading it first
 2. **Edit both masters** when changing structure (adding/removing points or contours)
 3. **Only edit one master** when adjusting coordinates for weight differences
-4. **Verify after edit** — suggest running `make reports-only` to refresh `documentation/source/master-compatibility.md`, or `make preflight` for a fresh build plus checks
+4. **Verify after edit** — suggest running `make reports` to refresh `documentation/source/master-compatibility.md`, or `make preflight` for a fresh build plus checks
 5. **Preserve XML declaration** — keep `<?xml version="1.0" encoding="UTF-8"?>` and `format="2"`
 6. **Don't reorder points** — point order matters for interpolation
 7. **Back up before bulk edits** — for changes affecting many glyphs, suggest a git commit first

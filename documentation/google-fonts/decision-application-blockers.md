@@ -15,7 +15,7 @@ applying them to metadata, source, or downstream package files.
 - Downstream preview pending field lines listed: 0
 - Actionable pending decision markers: 0
 - Package dry run reaches Packager: no
-- Package dry-run first blocker: existing downstream METADATA.pb is still the Packager starter template
+- Package dry-run first blocker: local google/fonts fork is not ready
 - GitHub API credentials ready: no
 - Final GitHub release archive URL recorded: pending
 
