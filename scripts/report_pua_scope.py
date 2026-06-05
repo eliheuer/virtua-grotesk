@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import plistlib
 import sys
@@ -11,7 +12,7 @@ import xml.etree.ElementTree as ET
 from fontTools.ttLib import TTFont
 
 
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 DEFAULT_FONT_PATHS = [
     Path("fonts/variable/VirtuaGrotesk[wght].ttf"),
     Path("fonts/ttf/VirtuaGrotesk-Regular.ttf"),

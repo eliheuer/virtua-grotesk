@@ -7,9 +7,9 @@ cannot be inferred from the source tree.
 
 ## Summary
 
-- AUTHORS.txt entries: `Eli Heuer`
+- AUTHORS.txt entries: `Eli Heuer <elih@protonmail.com>`
 - CONTRIBUTORS.txt entries: `Eli Heuer`
-- AUTHORS.txt contact-formatted entries: 0 / 1
+- AUTHORS.txt contact-formatted entries: 1 / 1
 - CONTRIBUTORS.txt contact-formatted entries: 0 / 1
 - Contact-formatted credit lines absent by current decision: yes
 - OFL copyright line: `Copyright 2025 The Virtua Grotesk Project Authors (https://github.com/eliheuer/virtua-grotesk)`
@@ -55,7 +55,7 @@ The Google Fonts Add Font issue can state that Eli Heuer is the sole copyright a
 | --- | --- | --- |
 | Copyright-author authority | `Eli Heuer` sole copyright author/controller statement recorded | Keep synchronized with Add Font issue text. |
 | AI-use disclosure | Recorded | Keep synchronized with Add Font issue text. |
-| Email/contact-formatted credit lines | AUTHORS.txt: 0 / 1; CONTRIBUTORS.txt: 0 / 1 | Keep current display-only names unless Google Fonts asks for contact-formatted lines. |
+| Email/contact-formatted credit lines | AUTHORS.txt: 1 / 1; CONTRIBUTORS.txt: 0 / 1 | Keep current display-only names unless Google Fonts asks for contact-formatted lines. |
 | OFL copyright holder | `Copyright 2025 The Virtua Grotesk Project Authors (https://github.com/eliheuer/virtua-grotesk)` | Keep current project-author wording unless the copyright-holder model changes. |
 | Add Font checkbox wording | Combined copyright-authorship and AI-use checkbox is present in current template | Use the approved statement above in the Google Fonts Add Font issue. |
 

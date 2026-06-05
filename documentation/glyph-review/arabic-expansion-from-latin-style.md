@@ -25,8 +25,8 @@ Why:
 Script:
 
 ```bash
-./venv/bin/python scripts/build_donor_glyph_candidates.py --glyphs sample
-./venv/bin/python scripts/build_donor_glyph_candidates.py --glyphs sample --write --force
+./.venv/bin/python scripts/build_donor_glyph_candidates.py --glyphs sample
+./.venv/bin/python scripts/build_donor_glyph_candidates.py --glyphs sample --write --force
 ```
 
 Default target:
@@ -38,13 +38,13 @@ sources/VirtuaGrotesk.designspace
 Default donor:
 
 ```text
-/Users/eli/GH/repos/rubik/sources/designspace/Rubik.designspace
+$DONOR_DESIGNSPACE
 ```
 
 Override the donor for another family:
 
 ```bash
-./venv/bin/python scripts/build_donor_glyph_candidates.py \
+./.venv/bin/python scripts/build_donor_glyph_candidates.py \
   --donor /path/to/OtherOFLDonor.designspace \
   --glyphs mark:red \
   --arabic-only \
@@ -80,12 +80,12 @@ peh-ar, keheh-ar, gaf-ar, farsiYeh-ar
 Verification:
 
 ```bash
-./venv/bin/python scripts/report_master_compatibility.py \
+./.venv/bin/python scripts/report_master_compatibility.py \
   build/arabic-donor-candidates/rubik-to-virtua/VirtuaGrotesk-Regular.ufo \
   build/arabic-donor-candidates/rubik-to-virtua/VirtuaGrotesk-Bold.ufo \
   build/arabic-donor-candidates/rubik-to-virtua/master-compatibility.md
 
-./venv/bin/fontmake \
+./.venv/bin/fontmake \
   -m build/arabic-donor-candidates/rubik-to-virtua/VirtuaGrotesk.designspace \
   -o variable \
   --output-path 'build/arabic-donor-candidates/rubik-to-virtua/VirtuaGroteskArabicCandidate[wght].ttf'
@@ -151,7 +151,7 @@ Do not replace all Arabic drawings blindly. The script accepts any
 comma-separated glyph list or text file:
 
 ```bash
-./venv/bin/python scripts/build_donor_glyph_candidates.py \
+./.venv/bin/python scripts/build_donor_glyph_candidates.py \
   --glyphs beh-ar,theh-ar,peh-ar \
   --write --force
 ```
@@ -159,7 +159,7 @@ comma-separated glyph list or text file:
 For the current unresolved Arabic review set:
 
 ```bash
-./venv/bin/python scripts/build_donor_glyph_candidates.py \
+./.venv/bin/python scripts/build_donor_glyph_candidates.py \
   --glyphs pending-review \
   --write --force
 ```
@@ -173,7 +173,7 @@ documentation/glyph-review/arabic-donor-preserve-glyphs.txt
 Then run:
 
 ```bash
-./venv/bin/python scripts/build_donor_glyph_candidates.py \
+./.venv/bin/python scripts/build_donor_glyph_candidates.py \
   --glyphs pending-review \
   --exclude-glyphs documentation/glyph-review/arabic-donor-preserve-glyphs.txt \
   --output build/arabic-donor-candidates/rubik-to-virtua-pending-review \
@@ -191,7 +191,7 @@ least painful batch marker for "replace this placeholder."
 3. Generate a scratch donor candidate from only those red Arabic marks:
 
 ```bash
-./venv/bin/python scripts/build_donor_glyph_candidates.py \
+./.venv/bin/python scripts/build_donor_glyph_candidates.py \
   --glyphs mark:red \
   --arabic-only \
   --output build/arabic-donor-candidates/red-marked-arabic \
@@ -209,7 +209,7 @@ writer. After the scratch candidate is reviewed, an agent can apply the chosen
 candidate glyphs back to production sources without opening the GUI:
 
 ```bash
-./venv/bin/python scripts/apply_donor_glyph_candidates.py \
+./.venv/bin/python scripts/apply_donor_glyph_candidates.py \
   --report build/arabic-donor-candidates/red-marked-arabic/glyph-candidate-report.json \
   --glyphs report \
   --arabic-only
@@ -218,7 +218,7 @@ candidate glyphs back to production sources without opening the GUI:
 If the dry run reports only `would-apply`, write the same batch:
 
 ```bash
-./venv/bin/python scripts/apply_donor_glyph_candidates.py \
+./.venv/bin/python scripts/apply_donor_glyph_candidates.py \
   --report build/arabic-donor-candidates/red-marked-arabic/glyph-candidate-report.json \
   --glyphs report \
   --arabic-only \

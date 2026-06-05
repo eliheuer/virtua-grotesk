@@ -13,7 +13,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/google-fonts/package-dry-run-readiness.md")
-GF_REPO_PATH = Path(os.environ.get("GF_REPO_PATH", "/Users/eli/GH/forks/fonts"))
+GF_REPO_PATH = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 PACKAGE_DIR = Path("ofl/virtuagrotesk")
 METADATA_PATH = GF_REPO_PATH / PACKAGE_DIR / "METADATA.pb"
 PLACEHOLDER_UPSTREAM_URL = "https://github.com/fontgarden/virtua-grotesk"
@@ -236,7 +236,7 @@ def wrapper_has_release_archive_gate() -> bool:
 def release_archive_ready() -> bool:
     if not RELEASE_ARCHIVE_VERIFIER.exists():
         return False
-    returncode, _ = run(["./venv/bin/python", str(RELEASE_ARCHIVE_VERIFIER.relative_to(ROOT)), "--quiet"])
+    returncode, _ = run(["./.venv/bin/python", str(RELEASE_ARCHIVE_VERIFIER.relative_to(ROOT)), "--quiet"])
     return returncode == 0
 
 
@@ -623,7 +623,7 @@ def markdown_report() -> str:
         f"- Starter template quarantined to `{PACKAGE_DIR}`: {yes_no(starter_template_quarantined)}",
         "- Replacement source of truth: `documentation/google-fonts/google-fonts-downstream-package-preview.md`",
         "- Replacement gate: `GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check`",
-        "- Replacement command after blockers clear: `./venv/bin/python scripts/prepare_downstream_metadata.py --apply`",
+        "- Replacement command after blockers clear: `./.venv/bin/python scripts/prepare_downstream_metadata.py --apply`",
         "",
         "## Source Mode Gate",
         "",
@@ -730,11 +730,11 @@ def markdown_report() -> str:
             "```bash",
             "gh auth status -h github.com",
             "make github-auth-check",
-            "git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk",
-            "git -C /Users/eli/GH/forks/fonts status --short",
+            "git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk",
+            "git -C $GF_REPO_PATH status --short",
             "GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check",
-            "./venv/bin/python scripts/prepare_downstream_metadata.py --apply",
-            "git -C /Users/eli/GH/forks/fonts diff -- ofl/virtuagrotesk/METADATA.pb",
+            "./.venv/bin/python scripts/prepare_downstream_metadata.py --apply",
+            "git -C $GF_REPO_PATH diff -- ofl/virtuagrotesk/METADATA.pb",
             "GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run",
             "```",
             "",

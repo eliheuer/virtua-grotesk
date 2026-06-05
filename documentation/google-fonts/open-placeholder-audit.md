@@ -29,12 +29,12 @@ These strings intentionally retain old placeholder values to reject stale genera
 
 | Kind | File | Line | Text |
 | --- | --- | ---: | --- |
-| stale placeholder guard | `scripts/package_gf_dry_run.sh` | 100 | `stale_placeholder_upstream_url="https://github.com/fontgarden/virtua-grotesk"` |
-| metadata pending guard | `scripts/package_gf_dry_run.sh` | 107 | `unresolved_metadata_markers=(` |
-| metadata pending guard | `scripts/package_gf_dry_run.sh` | 108 | `"Pending decision"` |
-| metadata pending guard | `scripts/package_gf_dry_run.sh` | 109 | `"Pending:"` |
-| metadata pending guard | `scripts/package_gf_dry_run.sh` | 110 | `"Pending final"` |
-| metadata pending guard | `scripts/package_gf_dry_run.sh` | 150 | `for marker in "${unresolved_metadata_markers[@]}"; do` |
+| stale placeholder guard | `scripts/package_gf_dry_run.sh` | 99 | `stale_placeholder_upstream_url="https://github.com/fontgarden/virtua-grotesk"` |
+| metadata pending guard | `scripts/package_gf_dry_run.sh` | 106 | `unresolved_metadata_markers=(` |
+| metadata pending guard | `scripts/package_gf_dry_run.sh` | 107 | `"Pending decision"` |
+| metadata pending guard | `scripts/package_gf_dry_run.sh` | 108 | `"Pending:"` |
+| metadata pending guard | `scripts/package_gf_dry_run.sh` | 109 | `"Pending final"` |
+| metadata pending guard | `scripts/package_gf_dry_run.sh` | 149 | `for marker in "${unresolved_metadata_markers[@]}"; do` |
 
 ## Generated Evidence Echoes
 

@@ -504,7 +504,7 @@ Decision:
   onboarding workflow until the public URL, source strategy, and Arabic drawing
   work are settled.
 - If CI is added later, adapt it deliberately around this repo's Fontspector,
-  DrawBot, DesignBot, and readiness-report workflow.
+  DrawBot-skia proofing and readiness-report workflow.
 
 Current state:
 
@@ -521,7 +521,7 @@ Why it matters:
 
 - The upstream guide says template scripts and actions are useful but not
   mandatory.
-- This repo has project-specific UFO/designspace, DrawBot, DesignBot, and
+- This repo has project-specific UFO/designspace, DrawBot-skia proofing, and
   report-generation workflows that need a deliberate CI adaptation.
 - Any adopted CI should call the same Fontspector-based checks used locally.
 - Public GitHub Pages or release automation should not expose stale proofs or

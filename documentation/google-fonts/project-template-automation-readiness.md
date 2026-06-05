@@ -11,10 +11,10 @@ adopted yet.
 
 - Decision log status: decided
 - Optional template automation present: 0 / 6
-- Local equivalent Make targets present: 6 / 6
+- Local equivalent Make targets present: 4 / 6
 - Local QA target uses Fontspector: yes
 - Local Makefile references FontBakery: no
-- Local google/fonts workflows use Fontspector: yes
+- Local google/fonts workflows use Fontspector: no
 - Local google/fonts workflows reference FontBakery: no
 - Official QA guide says FontBakery was previous and Fontspector is current: yes
 - Current project-template README still describes `make test` as
@@ -43,8 +43,8 @@ adopted yet.
 | Run Fontspector | `test` | yes |
 | Regenerate reports | `reports` | yes |
 | Run synchronized preflight | `preflight` | yes |
-| Render proof PDF only | `proof-only` | yes |
-| Full local handoff | `handoff` | yes |
+| Render proof PDF only | `proof-only` | no |
+| Full local handoff | `handoff` | no |
 
 ## Apply Before Final Submission
 

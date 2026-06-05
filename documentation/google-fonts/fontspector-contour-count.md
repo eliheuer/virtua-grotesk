@@ -10,6 +10,13 @@ Fonts:
 
 These are source/drawing issues reported by Fontspector's `contour_count` check.
 
+## `fonts/ttf/VirtuaGrotesk-Medium.ttf`
+
+### PASS: ``
+
+| Glyph | Codepoint | Actual contours | Expected contours |
+| --- | --- | --- | --- |
+
 ## `fonts/ttf/VirtuaGrotesk-Regular.ttf`
 
 ### PASS: ``
@@ -17,7 +24,14 @@ These are source/drawing issues reported by Fontspector's `contour_count` check.
 | Glyph | Codepoint | Actual contours | Expected contours |
 | --- | --- | --- | --- |
 
-## `fonts/ttf/VirtuaGrotesk-Medium.ttf`
+## `fonts/ttf/VirtuaGrotesk-SemiBold.ttf`
+
+### PASS: ``
+
+| Glyph | Codepoint | Actual contours | Expected contours |
+| --- | --- | --- | --- |
+
+## `fonts/ttf/VirtuaGrotesk-Bold.ttf`
 
 ### PASS: ``
 
@@ -34,17 +48,3 @@ These are source/drawing issues reported by Fontspector's `contour_count` check.
 | `uni062D.fina` | unencoded | 3 | 1, 2 |
 | `uni0635.init` | unencoded | 1 | 2 |
 | `uni0636.init` | unencoded | 2 | 3, 5 |
-
-## `fonts/ttf/VirtuaGrotesk-SemiBold.ttf`
-
-### PASS: ``
-
-| Glyph | Codepoint | Actual contours | Expected contours |
-| --- | --- | --- | --- |
-
-## `fonts/ttf/VirtuaGrotesk-Bold.ttf`
-
-### PASS: ``
-
-| Glyph | Codepoint | Actual contours | Expected contours |
-| --- | --- | --- | --- |

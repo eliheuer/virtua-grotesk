@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from html import escape
+import os
 from pathlib import Path
 import plistlib
 import re
@@ -28,10 +29,11 @@ DEFAULT_DECISION_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/con
 DEFAULT_TRIAGE_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-ai-triage.md"
 DEFAULT_SOURCE_EDIT_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md"
 DEFAULT_FIRST_BATCH_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-first-edit-batch.md"
-DEFAULT_REFERENCE_CANDIDATES = [
-    Path("/Users/eli/GH/forks/fonts/ofl/rubik/Rubik[wght].ttf"),
-    Path("/Users/eli/GH/repos/google-fonts/ofl/rubik/Rubik[wght].ttf"),
-]
+DEFAULT_REFERENCE_CANDIDATES = (
+    [Path(os.environ["ARABIC_REFERENCE_FONT"])]
+    if os.environ.get("ARABIC_REFERENCE_FONT")
+    else []
+)
 SOURCE_UFOS = [
     ROOT / "sources/VirtuaGrotesk-Regular.ufo",
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",

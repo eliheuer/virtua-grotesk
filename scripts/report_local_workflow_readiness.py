@@ -14,8 +14,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = ROOT / "documentation/google-fonts/local-workflow-readiness.md"
-GF_REPO_PATH = Path(os.environ.get("GF_REPO_PATH", "/Users/eli/GH/forks/fonts"))
-DRAWBOT_SKIA_REPO = Path("/Users/eli/GH/repos/drawbot-skia")
+GF_REPO_PATH = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else None
+DRAWBOT_SKIA_REPO = Path(os.environ["DRAWBOT_SKIA_REPO"]) if os.environ.get("DRAWBOT_SKIA_REPO") else None
 FONTSPECTOR_HOME = Path.home() / ".fontspector"
 PROOF_PDF = ROOT / "documentation/proofs/proof.pdf"
 GFT_QA_OUTPUT = ROOT / "documentation/google-fonts/gftools-qa/Proof"
@@ -27,52 +27,17 @@ EXPECTED_FONTS = [
     ROOT / "fonts/ttf/VirtuaGrotesk-Bold.ttf",
 ]
 EXPECTED_TARGETS = [
-    "decisions",
-    "decision-readiness-check",
-    "next-actions",
-    "blockers",
-    "issue-draft",
-    "handoff-readiness-check",
-    "release-check",
-    "release-archive-check",
-    "release-archive-build",
-    "release-archive-verify",
-    "release-archive-test",
-    "release-draft-check",
-    "source-strategy-check",
-    "package-readiness-check",
-    "recent-gf-check",
-    "family-name-check",
-    "authorship-check",
-    "pr-readiness-check",
-    "vendor-id-check",
-    "kerning-check",
-    "kerning-proof-check",
-    "kerning-proof-review-check",
-    "pua-scope-check",
-    "avar-check",
-    "warnings-check",
-    "github-auth-check",
-    "designer-profile-check",
-    "designer-profile-prepare-check",
-    "designer-profile-info-check",
-    "designer-profile-image-check",
-    "designer-profile-bio-check",
-    "designer-profile-validator-test",
-    "public-upstream-url-check",
-    "downstream-metadata-check",
-    "downstream-metadata-helper-test",
-    "package-wrapper-test",
+    "setup",
     "build",
     "test",
+    "qa",
     "reports",
-    "reports-only",
     "preflight",
-    "preflight-only",
     "proof",
-    "proof-only",
-    "handoff",
-    "package-dry-run",
+    "specimen",
+    "drawing-check",
+    "release-check",
+    "package-check",
     "clean",
 ]
 EXPECTED_REPORTS = [
@@ -112,12 +77,29 @@ def yes_no(value: bool) -> str:
     return "yes" if value else "no"
 
 
+def display_path(path: str | Path | None) -> str:
+    if path is None:
+        return "not configured"
+    path = Path(path)
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        pass
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except (OSError, ValueError):
+        return str(path)
+
+
 def run(command: list[str], cwd: Path = ROOT) -> subprocess.CompletedProcess[str]:
     return subprocess.run(command, cwd=cwd, text=True, capture_output=True, check=False)
 
 
 def importable(name: str) -> bool:
-    return importlib.util.find_spec(name) is not None
+    try:
+        return importlib.util.find_spec(name) is not None
+    except ModuleNotFoundError:
+        return False
 
 
 def requirement_name(line: str) -> str:
@@ -162,78 +144,29 @@ def make_target_recipe(makefile_text: str, target: str) -> str:
 
 
 def command_safety_rows(makefile_text: str) -> list[tuple[str, bool, str]]:
-    package_recipe = make_target_recipe(makefile_text, "package-dry-run")
-    package_test_recipe = make_target_recipe(makefile_text, "package-wrapper-test")
-    designer_profile_test_recipe = make_target_recipe(makefile_text, "designer-profile-validator-test")
-    release_archive_test_recipe = make_target_recipe(makefile_text, "release-archive-test")
-    metadata_recipe = make_target_recipe(makefile_text, "downstream-metadata-check")
-    metadata_test_recipe = make_target_recipe(makefile_text, "downstream-metadata-helper-test")
-    proof_recipe = make_target_recipe(makefile_text, "proof-only")
-    package_script = (ROOT / "scripts/package_gf_dry_run.sh").read_text()
-    metadata_helper = (ROOT / "scripts/prepare_downstream_metadata.py").read_text()
+    reports_recipe = make_target_recipe(makefile_text, "reports")
+    package_recipe = make_target_recipe(makefile_text, "package-check")
+    proof_recipe = make_target_recipe(makefile_text, "proof")
     return [
         (
-            "GF_REPO_PATH defaults to local google/fonts fork",
-            "GF_REPO_PATH ?= /Users/eli/GH/forks/fonts" in makefile_text,
-            "`GF_REPO_PATH ?= /Users/eli/GH/forks/fonts`",
+            "GF_REPO_PATH has no machine-specific default",
+            "GF_REPO_PATH ?=" in makefile_text and "/Users/" not in makefile_text,
+            "Set `GF_REPO_PATH=/path/to/google/fonts` in the environment or ignored `local.mk`.",
         ),
         (
-            "package-dry-run target invokes local wrapper",
-            "scripts/package_gf_dry_run.sh" in package_recipe,
-            "`make package-dry-run` -> `scripts/package_gf_dry_run.sh`",
+            "reports target uses Python orchestration",
+            "scripts/run_reports.py" in reports_recipe,
+            "`make reports` keeps the long report sequence out of Makefile.",
         ),
         (
-            "package-dry-run target omits PR creation flags",
+            "package check target omits PR creation flags",
             "-p" not in package_recipe and "--pr" not in package_recipe,
-            "Make target does not pass `-p` or `--pr`.",
+            "`make package-check` only regenerates readiness reports.",
         ),
         (
-            "package-dry-run wrapper does not add PR creation flags",
-            'packager_args+=("-p")' not in package_script
-            and 'packager_args+=("--pr")' not in package_script,
-            "Wrapper builds Packager args without PR flags.",
-        ),
-        (
-            "package wrapper metadata gates have a local test",
-            "scripts/test_package_gf_dry_run_gates.sh" in package_test_recipe,
-            "`make package-wrapper-test` exercises source-mode metadata blockers.",
-        ),
-        (
-            "designer profile validators and prepare helper have a local test",
-            "scripts/test_designer_profile_validators.sh" in designer_profile_test_recipe,
-            "`make designer-profile-validator-test` exercises info.pb, image, bio, and guarded prepare-helper blockers.",
-        ),
-        (
-            "release archive path-safety gates have a local test",
-            "scripts/test_release_archive_gates.sh" in release_archive_test_recipe,
-            "`make release-archive-test` exercises unsafe source/destination paths, duplicate source/destination mappings, deterministic metadata, and SHA mismatch blockers.",
-        ),
-        (
-            "downstream-metadata-check target is preview-only",
-            "--apply" not in metadata_recipe,
-            "`make downstream-metadata-check` does not pass `--apply`.",
-        ),
-        (
-            "downstream metadata apply remains explicit",
-            "--apply" in metadata_helper and "Dry run only" in metadata_helper,
-            "Use `scripts/prepare_downstream_metadata.py --apply` only after review.",
-        ),
-        (
-            "downstream metadata helper final-value gates have a local test",
-            "scripts/test_downstream_metadata_helper.sh" in metadata_test_recipe,
-            "`make downstream-metadata-helper-test` checks final date and source commit validation.",
-        ),
-        (
-            "Packager source mode is surfaced",
-            "GFT_PACKAGER_SOURCE_MODE" in makefile_text
-            and "GFT_PACKAGER_SOURCE_MODE" in package_script
-            and "GFT_PACKAGER_SOURCE_MODE" in metadata_helper,
-            "`GFT_PACKAGER_SOURCE_MODE` is shared by metadata preview and Packager dry run.",
-        ),
-        (
-            "proof target uses eliheuer/drawbot-skia fork",
-            "$(DRAWBOT_SKIA_REPO)/src" in proof_recipe and "$(DRAWBOT_PYTHON)" in proof_recipe,
-            "`make proof-only` runs the project venv with the fork source on `PYTHONPATH`.",
+            "proof target supports optional eliheuer/drawbot-skia fork",
+            "DRAWBOT_PYTHONPATH" in proof_recipe and "$(DRAWBOT_PYTHON)" in proof_recipe,
+            "`make proof` runs the project .venv and prepends `DRAWBOT_SKIA_REPO/src` only when configured.",
         ),
     ]
 
@@ -380,40 +313,44 @@ def main() -> int:
     )
 
     fontspector = shutil.which("fontspector")
+    fontspector_display = Path(fontspector).name if fontspector else "missing"
     fontspector_version = command_output([fontspector, "--version"]) if fontspector else "missing"
     fontspector_templates = FONTSPECTOR_HOME / "templates"
     fontspector_templates_ready = (
         (fontspector_templates / "markdown/main.markdown").exists()
         and (fontspector_templates / "html/main.html").exists()
     )
-    designbot = shutil.which("designbot")
     gftools_builder = importable("gftools.builder")
     gftools_packager = importable("gftools.packager")
-    gftools_qa_ready = importable("diffenator2") and (ROOT / "venv/bin/gftools").exists()
+    gftools_qa_ready = importable("diffenator2") and (ROOT / ".venv/bin/gftools").exists()
     gftools_proof_count = gftools_proof_html_count()
     gftools_proof_output = gftools_proof_count > 0
     gftools_proof_instances = gftools_proof_covers_expected_instances()
 
     gh_ready, gh_detail = gh_auth_ready()
     package_auth_ready = package_report_auth_ready == "yes"
-    drawbot_python = ROOT / "venv/bin/python"
-    drawbot_src = DRAWBOT_SKIA_REPO / "src"
-    drawbot_ready = DRAWBOT_SKIA_REPO.exists() and drawbot_python.exists() and drawbot_src.exists()
+    drawbot_python = ROOT / ".venv/bin/python"
+    drawbot_src = DRAWBOT_SKIA_REPO / "src" if DRAWBOT_SKIA_REPO else None
+    drawbot_ready = drawbot_python.exists() and (
+        (drawbot_src.exists() if drawbot_src else False)
+        or importable("drawbot_skia.drawing")
+    )
     proof_pdf_exists = PROOF_PDF.exists()
     proof_pdf_size = PROOF_PDF.stat().st_size if proof_pdf_exists else 0
     proof_pdf_pages = pdf_page_count(PROOF_PDF)
-    gf_branch = git_value(GF_REPO_PATH, ["rev-parse", "--abbrev-ref", "HEAD"])
-    gf_tracking = git_value(GF_REPO_PATH, ["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"])
-    gf_origin_ahead, gf_origin_behind = git_ahead_behind(GF_REPO_PATH, "main", "origin/main")
-    gf_upstream_ahead, gf_upstream_behind = git_ahead_behind(GF_REPO_PATH, "main", "upstream/main")
-    gf_status = git_value(GF_REPO_PATH, ["status", "--porcelain"])
+    gf_branch = git_value(GF_REPO_PATH, ["rev-parse", "--abbrev-ref", "HEAD"]) if GF_REPO_PATH else "not configured"
+    gf_tracking = git_value(GF_REPO_PATH, ["rev-parse", "--abbrev-ref", "--symbolic-full-name", "@{u}"]) if GF_REPO_PATH else "not configured"
+    gf_origin_ahead, gf_origin_behind = git_ahead_behind(GF_REPO_PATH, "main", "origin/main") if GF_REPO_PATH else ("not configured", "not configured")
+    gf_upstream_ahead, gf_upstream_behind = git_ahead_behind(GF_REPO_PATH, "main", "upstream/main") if GF_REPO_PATH else ("not configured", "not configured")
+    gf_status = git_value(GF_REPO_PATH, ["status", "--porcelain"]) if GF_REPO_PATH else ""
     gf_dirty_outside_family = [
         line
         for line in gf_status.splitlines()
         if len(line) > 3 and not line[3:].startswith("ofl/virtuagrotesk/")
     ]
     gf_ready = (
-        (GF_REPO_PATH / ".git").exists()
+        GF_REPO_PATH is not None
+        and (GF_REPO_PATH / ".git").exists()
         and git_value(GF_REPO_PATH, ["remote", "get-url", "upstream"]) == "https://github.com/google/fonts.git"
         and gf_branch == "main"
         and gf_tracking == "origin/main"
@@ -444,8 +381,8 @@ def main() -> int:
         "",
         "## Summary",
         "",
-        f"- Python executable: `{sys.executable}`",
-        f"- Expected project venv: `{ROOT / 'venv/bin/python'}`",
+        f"- Python executable: `{display_path(sys.executable)}`",
+        f"- Expected project .venv: `{display_path(ROOT / '.venv/bin/python')}`",
         f"- Main Make targets present: {yes_no(not missing_targets)}",
         f"- Built font outputs present: {yes_no(not missing_fonts)}",
         f"- Required generated reports present: {yes_no(not missing_reports)}",
@@ -460,7 +397,7 @@ def main() -> int:
         f"- requirements.txt includes FontBakery transitively: {yes_no(fontbakery_transitive_only)}",
         f"- Automated QA entrypoint remains Fontspector: {yes_no(bool(fontspector) and not direct_requirements_include_fontbakery)}",
         f"- Fontspector command available: {yes_no(bool(fontspector))}",
-        f"- Fontspector command path: `{fontspector or 'missing'}`",
+        f"- Fontspector command path: `{fontspector_display}`",
         f"- Fontspector version: `{fontspector_version}`",
         f"- Fontspector home exists: {yes_no(FONTSPECTOR_HOME.exists())}",
         f"- Fontspector local templates ready: {yes_no(fontspector_templates_ready)}",
@@ -509,13 +446,12 @@ def main() -> int:
         "",
         "## External Commands",
             "",
-            f"- `fontspector`: `{fontspector or 'missing'}`",
+            f"- `fontspector`: `{fontspector_display}`",
             f"- `fontspector --version`: `{fontspector_version}`",
-            f"- `~/.fontspector`: `{FONTSPECTOR_HOME}`",
+            f"- `~/.fontspector`: `~/.fontspector`",
             f"- Fontspector templates directory exists: {yes_no(fontspector_templates.exists())}",
             f"- Fontspector markdown template exists: {yes_no((fontspector_templates / 'markdown/main.markdown').exists())}",
             f"- Fontspector HTML template exists: {yes_no((fontspector_templates / 'html/main.html').exists())}",
-            f"- `designbot`: `{designbot or 'missing'}`",
             f"- GitHub auth detail: `{gh_detail}`",
             f"- Package report GitHub API credentials ready: {package_report_auth_ready}",
             "",
@@ -532,7 +468,7 @@ def main() -> int:
             f"- Direct FontBakery dependency: {yes_no(direct_requirements_include_fontbakery)}",
             f"- Transitive FontBakery pin from `gftools[qa]`: {yes_no(fontbakery_transitive_only)}",
             "- FontBakery appears in the pinned snapshot only because current `gftools[qa]` depends on it; local automated QA still runs Fontspector.",
-            "- Refresh command: `./venv/bin/python -m pip freeze --all > requirements.txt`",
+            "- Refresh command: `./.venv/bin/python -m pip freeze --all > requirements.txt`",
             "",
             "| Direct requirement | Present in pinned snapshot |",
             "| --- | --- |",
@@ -584,16 +520,16 @@ def main() -> int:
             "",
             "## Local Repository Dependencies",
             "",
-            f"- google/fonts path: `{GF_REPO_PATH}`",
-            f"- google/fonts origin: `{git_value(GF_REPO_PATH, ['remote', 'get-url', 'origin'])}`",
-            f"- google/fonts upstream: `{git_value(GF_REPO_PATH, ['remote', 'get-url', 'upstream'])}`",
-            f"- google/fonts branch: `{git_value(GF_REPO_PATH, ['rev-parse', '--abbrev-ref', 'HEAD'])}`",
+            f"- google/fonts path: `{GF_REPO_PATH or 'not configured'}`",
+            f"- google/fonts origin: `{git_value(GF_REPO_PATH, ['remote', 'get-url', 'origin']) if GF_REPO_PATH else 'not configured'}`",
+            f"- google/fonts upstream: `{git_value(GF_REPO_PATH, ['remote', 'get-url', 'upstream']) if GF_REPO_PATH else 'not configured'}`",
+            f"- google/fonts branch: `{git_value(GF_REPO_PATH, ['rev-parse', '--abbrev-ref', 'HEAD']) if GF_REPO_PATH else 'not configured'}`",
             f"- Package report google/fonts ready: {package_report_gf_ready}",
             f"- Package report inputs ready: {package_report_inputs_ready}",
             f"- Package report auth ready: {package_report_auth_ready}",
-            f"- drawbot-skia path: `{DRAWBOT_SKIA_REPO}`",
-            f"- project venv Python for DrawBot exists: {yes_no(drawbot_python.exists())}",
-            f"- drawbot-skia src exists: {yes_no(drawbot_src.exists())}",
+            f"- drawbot-skia path: `{DRAWBOT_SKIA_REPO or 'not configured'}`",
+            f"- project .venv Python for DrawBot exists: {yes_no(drawbot_python.exists())}",
+            f"- drawbot-skia src exists: {yes_no(bool(drawbot_src and drawbot_src.exists()))}",
             "",
             "## Next Actions",
             "",
@@ -604,7 +540,7 @@ def main() -> int:
     if not requirements_ready:
         lines.append("- Refresh and review `requirements.txt`, then rerun `make preflight-only`.")
     if not proof_ready:
-        lines.append("- Restore `/Users/eli/GH/repos/drawbot-skia` and its `.venv` before running `make proof` or `make handoff`.")
+        lines.append("- Configure `DRAWBOT_SKIA_REPO=/path/to/drawbot-skia` or install `drawbot-skia` in `.venv` before running `make proof` or `make handoff`.")
     if not package_ready:
         if package_report_first_blocker != "unknown":
             lines.append(f"- Resolve package dry-run first blocker: {package_report_first_blocker}.")

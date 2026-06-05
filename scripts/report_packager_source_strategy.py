@@ -298,7 +298,7 @@ def markdown_report() -> str:
             "## Decision Notes",
             "",
             "- Do not run Packager with `-p` until the Google Fonts issue exists, final QA is reviewed, and the selected release/archive source is public.",
-            "- Keep the local no-PR dry run on `/Users/eli/GH/forks/fonts` before opening or updating a downstream PR.",
+            "- Keep the local no-PR dry run on `$GF_REPO_PATH` before opening or updating a downstream PR.",
             "- The local dry-run wrapper accepts an explicit `GH_TOKEN` or exports one from a valid `gh auth token` before invoking Packager.",
             "- Keep `source.config_yaml` only for the build-from-source path. Recent `google/fonts` commits removed non-buildable or misleading `config_yaml` fields, so default branch or release/archive packaging should omit it unless Google Fonts specifically asks for build metadata.",
             "- Latest-release packaging must add the final GitHub release download `.zip` `archive_url` to the downstream metadata preview before `make downstream-metadata-check` can be ready.",

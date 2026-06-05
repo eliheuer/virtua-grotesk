@@ -4,11 +4,11 @@ build.ninja
 .ninja_log
 sources/build.ninja
 sources/.ninja_log
-sources/.fontc-build/
 fonts/
 sources/instance_ufos/
 
 # Local environment/cache files
-venv/
+.venv/
+local.mk
 __pycache__/
 *.pyc

@@ -45,7 +45,7 @@ exposed through `gftools qa --proof`.
 
 | Tool or dependency | Ready |
 | --- | --- |
-| `venv/bin/gftools` | yes |
+| `.venv/bin/gftools` | yes |
 | `diffenator2` Python package | yes |
 | `diff3proof` Python package | no |
 | `gftools qa` importable | yes |
@@ -58,7 +58,7 @@ Core proof command:
 make kerning-proof-check
 ```
 
-The Make target runs `gftools qa --proof` with `venv/bin` on `PATH`
+The Make target runs `gftools qa --proof` with `.venv/bin` on `PATH`
 so the Diffenator helper scripts installed by `gftools[qa]` can be
 found by the generated Ninja proof steps.
 

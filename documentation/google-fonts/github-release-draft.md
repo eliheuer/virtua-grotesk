@@ -8,19 +8,19 @@ not create a tag, push a tag, publish a release, or contact GitHub.
 
 - Upstream URL: `https://github.com/eliheuer/virtua-grotesk`
 - Current branch: `main`
-- Current commit: `1af3f0594b03d9dfe534f8d4803016a27f5a7754`
-- Current short commit: `1af3f05`
+- Current commit: `fe21c5349deff07ac6eac638281a54b4c09ec7d6`
+- Current short commit: `fe21c53`
 - Source version: `1.000`
 - Release tag: `v1.000`
 - Release title: `Virtua Grotesk 1.000`
 - Local tag already exists: no
 - Working tree clean: no
 - Local archive: `dist/VirtuaGrotesk-1.000.zip`
-- Local archive exists: yes
-- Local archive contains expected files: yes
-- Local archive hashes match source files: yes
-- Local archive metadata deterministic: yes
-- Local archive SHA-256: `7e174e10693f6ea4371720f0487a7cee67352f954ccd615b6abd8ecb5b252777`
+- Local archive exists: no
+- Local archive contains expected files: no
+- Local archive hashes match source files: no
+- Local archive metadata deterministic: no
+- Local archive SHA-256: `missing`
 - Local archive has unsafe paths: no
 - Preview archive filename matches local archive: yes
 - Release notes file: `documentation/google-fonts/github-release-notes.md`
@@ -47,7 +47,7 @@ This release archive contains the files referenced by downstream
 `METADATA.pb` `source.files` for the selected latest-release Packager
 path.
 
-Source commit: 1af3f0594b03d9dfe534f8d4803016a27f5a7754
+Source commit: fe21c5349deff07ac6eac638281a54b4c09ec7d6
 Google Fonts source mode: latest-release
 
 Archive contents:
@@ -85,12 +85,12 @@ gh release view v1.000 --repo eliheuer/virtua-grotesk
 gh release download v1.000 --repo eliheuer/virtua-grotesk --pattern VirtuaGrotesk-1.000.zip --dir /tmp/virtua-grotesk-release-check
 shasum -a 256 /tmp/virtua-grotesk-release-check/VirtuaGrotesk-1.000.zip
 unzip -l /tmp/virtua-grotesk-release-check/VirtuaGrotesk-1.000.zip
-./venv/bin/python scripts/verify_release_archive.py --archive /tmp/virtua-grotesk-release-check/VirtuaGrotesk-1.000.zip --expected-sha256 7e174e10693f6ea4371720f0487a7cee67352f954ccd615b6abd8ecb5b252777
+./.venv/bin/python scripts/verify_release_archive.py --archive /tmp/virtua-grotesk-release-check/VirtuaGrotesk-1.000.zip --expected-sha256 missing
 GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check
 GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run
 ```
 
-Expected SHA-256: `7e174e10693f6ea4371720f0487a7cee67352f954ccd615b6abd8ecb5b252777`
+Expected SHA-256: `missing`
 
 The downloaded archive must contain exactly the `source.files` paths
 listed in the Release Asset Contract above, and the downstream

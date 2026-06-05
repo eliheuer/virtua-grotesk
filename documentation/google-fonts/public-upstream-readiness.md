@@ -58,7 +58,7 @@ final canonical URL.
 
 | File | Line | Guard text |
 | --- | ---: | --- |
-| `scripts/package_gf_dry_run.sh` | 100 | `stale_placeholder_upstream_url="https://github.com/fontgarden/virtua-grotesk"` |
+| `scripts/package_gf_dry_run.sh` | 99 | `stale_placeholder_upstream_url="https://github.com/fontgarden/virtua-grotesk"` |
 
 ## Apply Before Final Packaging
 

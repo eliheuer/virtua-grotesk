@@ -149,7 +149,7 @@ def qa_dependency_status() -> dict[str, str]:
         for html in (ROOT / GFT_QA_OUTPUT).glob("*-diffbrowsers_proofer.html")
     }
     return {
-        "gftools": "yes" if command_exists(Path("venv/bin/gftools")) else "no",
+        "gftools": "yes" if command_exists(Path(".venv/bin/gftools")) else "no",
         "diffenator2": "yes" if diffenator2_available else "no",
         "diff3proof": "yes" if diff3proof_available else "no",
         "qa_importable": "yes" if diffenator2_available else "no",
@@ -230,7 +230,7 @@ def markdown_report(font_paths: list[Path]) -> str:
             "",
             "| Tool or dependency | Ready |",
             "| --- | --- |",
-            f"| `venv/bin/gftools` | {qa_status['gftools']} |",
+            f"| `.venv/bin/gftools` | {qa_status['gftools']} |",
             f"| `diffenator2` Python package | {qa_status['diffenator2']} |",
             f"| `diff3proof` Python package | {qa_status['diff3proof']} |",
             f"| `gftools qa` importable | {qa_status['qa_importable']} |",
@@ -243,7 +243,7 @@ def markdown_report(font_paths: list[Path]) -> str:
             "make kerning-proof-check",
             "```",
             "",
-            "The Make target runs `gftools qa --proof` with `venv/bin` on `PATH`",
+            "The Make target runs `gftools qa --proof` with `.venv/bin` on `PATH`",
             "so the Diffenator helper scripts installed by `gftools[qa]` can be",
             "found by the generated Ninja proof steps.",
             "",

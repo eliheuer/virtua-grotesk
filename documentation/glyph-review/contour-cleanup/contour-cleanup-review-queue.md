@@ -6,7 +6,7 @@ checking repeated built-font rows in `documentation/glyph-review/contour-cleanup
 
 - Unique glyph review items: 4
 - All-font finding rows: 4
-- Reference font: `/Users/eli/GH/forks/fonts/ofl/rubik/Rubik[wght].ttf`
+- Reference font: `none`
 
 ## Category Counts
 

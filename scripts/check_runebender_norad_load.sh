@@ -2,7 +2,11 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-RUNEBENDER_REPO="${RUNEBENDER_REPO:-/Users/eli/GH/repos/runebender-xilem}"
+RUNEBENDER_REPO="${RUNEBENDER_REPO:-}"
+if [[ -z "$RUNEBENDER_REPO" ]]; then
+  echo "Set RUNEBENDER_REPO=/path/to/runebender-xilem." >&2
+  exit 2
+fi
 DEPS_DIR="$RUNEBENDER_REPO/target/release/deps"
 
 if [[ ! -d "$DEPS_DIR" ]]; then

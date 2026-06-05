@@ -14,7 +14,7 @@ from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 DEFAULT_PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 PACKAGE_DIR = Path("ofl/virtuagrotesk")
 SUPPORTED_SOURCE_MODES = ("default", "latest-release", "build-from-source")

@@ -102,8 +102,8 @@ Sources are UFO masters with a designspace:
 Build:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 make build
 ```
@@ -186,10 +186,10 @@ prepared before opening the issue.
 Google Fonts packaging should happen only after a `google/fonts` issue exists
 and after `make test` is green, or after any remaining FAILs are explicitly
 accepted by a Google Fonts reviewer. The local `gftools packager` entrypoint is
-importable in the project venv:
+importable in the project .venv:
 
 ```bash
-./venv/bin/gftools packager --help
+./.venv/bin/gftools packager --help
 ```
 
 The packager requires a checkout of `google/fonts` as its `repo_path`.
@@ -240,9 +240,9 @@ gh auth login -h github.com
 ```
 
 Latest local dry-run status, 2026-05-24: the fork checkout at
-`/Users/eli/GH/forks/fonts` is synced to `google/fonts` `main`, but GitHub API
+`$GF_REPO_PATH` is synced to `google/fonts` `main`, but GitHub API
 credentials are not currently usable. The first no-PR Packager pass
-created `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`, which is
+created `$GF_REPO_PATH/ofl/virtuagrotesk/METADATA.pb`, which is
 still the unpopulated Packager starter template. Current generated state:
 `Wrapper can reach Packager: no`; first blocker:
 `existing downstream METADATA.pb is still the Packager starter template`.
@@ -264,9 +264,9 @@ repository or tag URL.
 Use the checked local sequence, and keep the first Packager rerun as no-PR:
 
 ```bash
-git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk
+git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk
 GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check
-./venv/bin/python scripts/prepare_downstream_metadata.py --apply
+./.venv/bin/python scripts/prepare_downstream_metadata.py --apply
 GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run
 ```
 
@@ -291,7 +291,7 @@ source mode. In `latest-release` mode, `source.archive_url` must resolve to the
 final GitHub release download `.zip` asset.
 After the preview is final, use `scripts/prepare_downstream_metadata.py --apply`
 to write the checked metadata into
-`/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`.
+`$GF_REPO_PATH/ofl/virtuagrotesk/METADATA.pb`.
 
 See `documentation/google-fonts/google-fonts-package-checklist.md` for the final upstream
 and downstream review checklist. Use

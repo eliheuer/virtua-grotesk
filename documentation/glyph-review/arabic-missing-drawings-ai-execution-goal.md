@@ -4,7 +4,7 @@ Finish Virtua Grotesk's Arabic drawings for Google Fonts submission with the fas
 
 ## Current State
 
-Repo: `/Users/eli/GH/repos/virtua-grotesk`
+Repo: `.`
 
 Candidate glyphs have been scaffolded in both masters and GF Arabic Core
 coverage is now zero-missing by cmap. The candidate script is idempotent in
@@ -47,8 +47,8 @@ Training or finetuning a glyph model is likely slower than deterministic generat
 
 ```bash
 make arabic-candidate-plan
-./venv/bin/python scripts/build_arabic_candidate_glyphs.py --dry-run
-./venv/bin/python scripts/build_arabic_candidate_glyphs.py --write
+./.venv/bin/python scripts/build_arabic_candidate_glyphs.py --dry-run
+./.venv/bin/python scripts/build_arabic_candidate_glyphs.py --write
 ./build.sh
 make reports-only
 make preflight-only

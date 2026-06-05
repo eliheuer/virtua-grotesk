@@ -10,7 +10,7 @@ any other reference font into Virtua Grotesk.
 - Edit plan: `documentation/glyph-review/contour-cleanup/contour-cleanup-edit-plan.md`
 - Source edit runlist: `documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md`
 - First edit batch: `documentation/glyph-review/contour-cleanup/contour-cleanup-first-edit-batch.md`
-- Reference font availability: `/Users/eli/GH/forks/fonts/ofl/rubik/Rubik[wght].ttf`
+- Reference font availability: `none`
 - Briefs: 4
 
 ## How To Use

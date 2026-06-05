@@ -12,7 +12,18 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/google-fonts/pr-identity-readiness.md")
-GF_REPO_PATH = Path("/Users/eli/GH/forks/fonts")
+GF_REPO_PATH = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
+
+
+def display_path(path: Path) -> str:
+    if path == ROOT:
+        return "."
+    if path == GF_REPO_PATH and path != Path("GF_REPO_PATH_NOT_CONFIGURED"):
+        return "$GF_REPO_PATH"
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
 
 
 def run(command: list[str], cwd: Path = ROOT) -> tuple[int, str]:
@@ -110,7 +121,7 @@ def identity_lines(repo_label: str, repo_path: Path, expected_name: str) -> tupl
     lines = [
         f"### {repo_label}",
         "",
-        f"- Repo path: `{repo_path}`",
+        f"- Repo path: `{display_path(repo_path)}`",
         f"- Git checkout present: {yes_no(repo_exists)}",
         f"- git user.name configured: {yes_no(bool(git_name))}",
         f"- git user.email configured: {yes_no(bool(git_email))}",

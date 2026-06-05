@@ -9,16 +9,15 @@ Virtua Grotesk is an open-source variable font (OFL v1.1 licensed) with a Weight
 ## Quick Start
 
 ```bash
-/build-font              # Build all fonts (variable + static)
-/render-specimen 001     # Render character set specimen
-/proof                   # Generate PDF proof document
-make print-spacing-specimen # Generate landscape print spacing specimen
-make preflight           # Run current Google Fonts handoff gate
-make test                # Build, then run Fontspector googlefonts profile
-make kerning-proof-check # Generate gftools QA HTML proof for spacing/kerning review
-/edit-glyph A            # Inspect/edit a glyph
-/kerning list            # View current kerning pairs
-/compare-reference img   # Compare font to a reference image
+/build-font             # Build all fonts (variable + static)
+/proof                  # Generate PDF proof document
+make specimen           # Generate landscape print spacing specimen
+make reports            # Regenerate readiness/review reports
+make preflight          # Build, proof, specimen, reports, then check artifacts
+make test               # Build, then run Fontspector googlefonts profile
+/edit-glyph A           # Inspect/edit a glyph
+/kerning list           # View current kerning pairs
+/compare-reference img  # Compare font to a reference image
 ```
 
 ## Font Metrics
@@ -34,32 +33,16 @@ make kerning-proof-check # Generate gftools QA HTML proof for spacing/kerning re
 
 ## Build Commands
 
-**Prerequisites:** Python venv with `pip install -r requirements.txt`; optional `cargo install fontc` for fallback variable-font builds.
+**Prerequisites:** Python virtual environment at `.venv/` with `pip install -r requirements.txt`.
 
 ```bash
-# Build all fonts (variable + static instances)
-./build.sh
-
-# Run local Google Fonts readiness preflight from a fresh build
-make preflight
-
-# Run local preflight against the current generated fonts/reports
-make preflight-only
-
-# Build, then run Fontspector's Google Fonts profile
-make test
-
-# Run Fontspector's Google Fonts profile directly
-./scripts/check_gf_fonts.sh
-
-# Run the Google Fonts visual proof used for spacing/kerning review
-make kerning-proof-check
-
-# Generate the visual proof review checklist
-make kerning-proof-review-check
-
-# Dry-run final designer-profile install into local google/fonts fork
-make designer-profile-prepare-check
+make setup      # Create .venv and install requirements
+make build      # Build variable and static TTFs into fonts/
+make proof      # Build documentation/proofs/proof.pdf
+make specimen   # Build documentation/proofs/print-spacing-specimen.pdf
+make reports    # Regenerate generated readiness/review reports
+make preflight  # Run the full local handoff gate
+make test       # Build, then run Fontspector's googlefonts profile
 ```
 
 Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and `sources/instance_ufos/` are generated build outputs.
@@ -78,50 +61,37 @@ Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and 
   - `.agents/skills/google-fonts-packaging/SKILL.md`
   - `.agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
 - `make test` is the automated Fontspector `googlefonts` profile gate.
-- `make kerning-proof-check` is part of the core visual QA process, not an
-  optional extra. It runs `gftools qa --proof` and writes HTML proof output to
-  `documentation/google-fonts/gftools-qa/` for human spacing and kerning review.
-- `make kerning-proof-review-check` generates
-  `documentation/google-fonts/kerning-proof-review.md`, which enumerates the expected proof
-  HTML by weight and proof type for human and agent review.
-- Agents should regenerate or re-review that proof after any spacing, kerning,
-  build-output, or kerning-scope decision change, then rerun `make preflight`.
-- Run `make kerning-check` before and after kerning edits to verify source
-  kerning symmetry, built GPOS `kern` coverage, Fontspector warnings, and
-  `gftools qa` proof readiness.
+- `make proof` renders the main DrawBot-skia PDF proof.
+- `make specimen` renders the landscape print spacing specimen at
+  `documentation/proofs/print-spacing-specimen.pdf`.
+- `make reports` refreshes generated readiness/review Markdown.
+- `make preflight` is the normal local gate: build, proof, specimen, reports,
+  then verify expected artifacts exist.
+- Use `make drawing-check` during drawing sessions, `make release-check` for
+  source/release blockers, and `make package-check` for downstream package
+  readiness reports.
+- Agents should regenerate or re-review proofs after spacing, kerning,
+  build-output, or kerning-scope changes, then rerun `make preflight`.
 - Do not treat kerning as final until the source kerning decision is recorded,
   the generated fonts expose the expected kerning behavior, and the
   `gftools qa --proof` output has been reviewed.
-
-## Rendering Specimens
-
-**Prerequisite:** `cargo install designbot`
-
-```bash
-designbot --render designbot/001.rs --output designbot/001.png
-```
-
-Specimen scripts are Rust files in `designbot/` that use the DesignBot API. They load built fonts from `fonts/ttf/` relative to the repository root.
 
 ## Proof Generation
 
 ```bash
 python scripts/build_general_proof.py [font_path] [output_path]
-make print-spacing-specimen
-make arabic-print-proof
+make proof
+make specimen
 ```
 
-Uses DrawBot-style APIs to generate multi-page PDF proofs. The Makefile
-defaults to the local `eliheuer/drawbot-skia` fork at
-`/Users/eli/GH/repos/drawbot-skia`, runs this repo's virtualenv Python at
-`./venv/bin/python`, prepends the fork's `src` directory to `PYTHONPATH`, and
-renders `fonts/ttf/VirtuaGrotesk-Regular.ttf` → `documentation/proofs/proof.pdf`.
-`make print-spacing-specimen` renders the landscape print review PDF at
+Uses DrawBot-style APIs to generate multi-page PDF proofs. The Makefile runs
+this repo's virtualenv Python at `./.venv/bin/python`. If `DRAWBOT_SKIA_REPO`
+is set in the environment or ignored `local.mk`, it prepends that checkout's
+`src` directory to `PYTHONPATH`; otherwise `drawbot_skia` must be importable
+from `.venv`.
+`make specimen` renders the landscape print review PDF at
 `documentation/proofs/print-spacing-specimen.pdf` across Regular, Medium, SemiBold,
 and Bold, with `documentation/proofs/print-spacing-specimen-index.md` as the page map.
-`make arabic-print-proof` renders the focused Arabic PDF review aid at
-`documentation/glyph-review/arabic-print-proof.pdf` across Regular, Medium, SemiBold, and
-Bold, with `documentation/glyph-review/arabic-print-proof-index.md` as the page map.
 
 ## Source Architecture
 
@@ -147,7 +117,7 @@ Latin uppercase (A–Z), lowercase (a–z), numerals (0–9), punctuation, accen
 
 The core workflow for type design with Codex:
 
-1. **Render** — `/render-specimen` or `/proof` to see the current state
+1. **Render** — `/proof`, `make proof`, or `make specimen` to see the current state
 2. **Compare** — `/compare-reference <image>` to compare against a target
 3. **Edit** — `/edit-glyph <name>` to make changes based on the comparison
 4. **Build** — `/build-font` to compile the edited sources
@@ -159,4 +129,4 @@ Virtua Grotesk is a geometric grotesk defined by its **16-unit chamfered corners
 
 ## Master Compatibility Warning
 
-Both masters (Regular and Bold) **must** have identical glyph structure: same contours, same point counts, same point types. Only coordinates and advance widths may differ. Structural changes to one master must be mirrored in the other. Incompatible masters will cause the variable font build to fail. Run `make reports-only` and review `documentation/source/master-compatibility.md` to verify.
+Both masters (Regular and Bold) **must** have identical glyph structure: same contours, same point counts, same point types. Only coordinates and advance widths may differ. Structural changes to one master must be mirrored in the other. Incompatible masters will cause the variable font build to fail. Run `make reports` and review `documentation/source/master-compatibility.md` to verify.

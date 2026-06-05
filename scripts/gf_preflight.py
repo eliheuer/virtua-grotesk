@@ -27,16 +27,22 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 VARIABLE_FONT = ROOT / "fonts" / "variable" / "VirtuaGrotesk[wght].ttf"
-DRAWBOT_SKIA_REPO = Path("/Users/eli/GH/repos/drawbot-skia")
-PROJECT_PYTHON = ROOT / "venv/bin/python"
-DRAWBOT_SKIA_SRC = DRAWBOT_SKIA_REPO / "src"
+DRAWBOT_SKIA_REPO = Path(os.environ["DRAWBOT_SKIA_REPO"]) if os.environ.get("DRAWBOT_SKIA_REPO") else None
+PROJECT_PYTHON = ROOT / ".venv/bin/python"
+DRAWBOT_SKIA_SRC = DRAWBOT_SKIA_REPO / "src" if DRAWBOT_SKIA_REPO else None
 EXPECTED_DRAWBOT_ORIGINS = {
     "git@github.com:eliheuer/drawbot-skia.git",
     "https://github.com/eliheuer/drawbot-skia",
     "https://github.com/eliheuer/drawbot-skia.git",
 }
-GF_REPO_PATH = Path("/Users/eli/GH/forks/fonts")
-GF_WEIGHT_AXIS_REGISTRY = GF_REPO_PATH / "axisregistry/Lib/axisregistry/data/weight.textproto"
+GF_REPO_PATH = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else None
+GF_WEIGHT_AXIS_REGISTRY = (
+    Path(os.environ["GF_WEIGHT_AXIS_REGISTRY"])
+    if os.environ.get("GF_WEIGHT_AXIS_REGISTRY")
+    else GF_REPO_PATH / "axisregistry/Lib/axisregistry/data/weight.textproto"
+    if GF_REPO_PATH
+    else None
+)
 ALLOWED_DRAWING_FAILS = {
     "googlefonts/glyph_coverage",
     "contour_count",
@@ -706,6 +712,8 @@ def generated_variable_version(text: str) -> str:
 
 
 def axis_registry_fallbacks() -> dict[int, str]:
+    if GF_WEIGHT_AXIS_REGISTRY is None or not GF_WEIGHT_AXIS_REGISTRY.exists():
+        return {}
     text = GF_WEIGHT_AXIS_REGISTRY.read_text()
     fallbacks = {}
     for block in re.findall(r"fallback\s*\{(.*?)\}", text, flags=re.DOTALL):
@@ -809,17 +817,17 @@ def axis_errors(errors: list[str]) -> None:
     if not VARIABLE_FONT.exists():
         return
 
-    check(GF_WEIGHT_AXIS_REGISTRY.exists(), "local google/fonts weight axis registry exists", errors)
-    registry_text = GF_WEIGHT_AXIS_REGISTRY.read_text() if GF_WEIGHT_AXIS_REGISTRY.exists() else ""
-    check('tag: "wght"' in registry_text, "local GF axis registry has wght tag", errors)
-    check('display_name: "Weight"' in registry_text, "local GF axis registry names wght as Weight", errors)
-    check("default_value: 400" in registry_text, "local GF axis registry default wght is 400", errors)
-    fallback_names = axis_registry_fallbacks() if GF_WEIGHT_AXIS_REGISTRY.exists() else {}
-    check(
-        {400: "Regular", 500: "Medium", 600: "SemiBold", 700: "Bold"}.items() <= fallback_names.items(),
-        "local GF axis registry includes required Virtua Grotesk fallback names",
-        errors,
-    )
+    fallback_names = axis_registry_fallbacks()
+    if fallback_names:
+        registry_text = GF_WEIGHT_AXIS_REGISTRY.read_text()
+        check('tag: "wght"' in registry_text, "local GF axis registry has wght tag", errors)
+        check('display_name: "Weight"' in registry_text, "local GF axis registry names wght as Weight", errors)
+        check("default_value: 400" in registry_text, "local GF axis registry default wght is 400", errors)
+        check(
+            {400: "Regular", 500: "Medium", 600: "SemiBold", 700: "Bold"}.items() <= fallback_names.items(),
+            "local GF axis registry includes required Virtua Grotesk fallback names",
+            errors,
+        )
 
     font = TTFont(VARIABLE_FONT)
     fvar = font["fvar"]
@@ -2260,7 +2268,7 @@ def report_errors(errors: list[str]) -> None:
     check("gh release view v1.000 --repo eliheuer/virtua-grotesk" in github_release_text, "GitHub release draft includes release view verification command", errors)
     check("gh release download v1.000 --repo eliheuer/virtua-grotesk --pattern VirtuaGrotesk-1.000.zip" in github_release_text, "GitHub release draft includes release asset download verification command", errors)
     check("shasum -a 256 /tmp/virtua-grotesk-release-check/VirtuaGrotesk-1.000.zip" in github_release_text, "GitHub release draft includes downloaded archive hash check", errors)
-    check("./venv/bin/python scripts/verify_release_archive.py --archive /tmp/virtua-grotesk-release-check/VirtuaGrotesk-1.000.zip --expected-sha256" in github_release_text, "GitHub release draft verifies downloaded archive with local contract and SHA", errors)
+    check("./.venv/bin/python scripts/verify_release_archive.py --archive /tmp/virtua-grotesk-release-check/VirtuaGrotesk-1.000.zip --expected-sha256" in github_release_text, "GitHub release draft verifies downloaded archive with local contract and SHA", errors)
     check("Expected SHA-256:" in github_release_text, "GitHub release draft records expected downloaded archive hash", errors)
     check("The downloaded archive must contain exactly the `source.files` paths" in github_release_text, "GitHub release draft requires downloaded archive contents match source.files", errors)
     check("release notes `Source commit` matches the\nfinal downstream `source.commit`" in github_release_text, "GitHub release draft blocks publishing until release notes and downstream commit match", errors)
@@ -2387,7 +2395,7 @@ def report_errors(errors: list[str]) -> None:
     check("| SemiBold | `wght=600` |" in variable_text, "variable metadata report records SemiBold instance", errors)
     check("| 3 | Regular | 0 | 400 | 700 | 2 |" in variable_text, "variable metadata report records Regular linked to Bold", errors)
     check("# Google Fonts Axis Registry Audit" in axis_registry_text, "axis registry audit has expected heading", errors)
-    check("Registry source: `/Users/eli/GH/forks/fonts/axisregistry/Lib/axisregistry/data/weight.textproto`" in axis_registry_text, "axis registry audit records local google/fonts source", errors)
+    check("Registry source: `$GF_REPO_PATH/axisregistry/Lib/axisregistry/data/weight.textproto`" in axis_registry_text, "axis registry audit records local google/fonts source", errors)
     check("Registry display name: Weight" in axis_registry_text, "axis registry audit records Weight display name", errors)
     check("Font `wght` bounds/default: 400/400/700" in axis_registry_text, "axis registry audit records font wght bounds", errors)
     check("Family fallback subset: Regular 400, Medium 500, SemiBold 600, Bold 700" in axis_registry_text, "axis registry audit records family fallback subset", errors)
@@ -2821,7 +2829,7 @@ def metadata_review_errors(errors: list[str]) -> None:
     check("google/fonts fork git identity complete:" in pr_identity_text, "PR identity report records google/fonts fork git identity completeness", errors)
     check("google/fonts fork git user.name matches expected CLA/author name:" in pr_identity_text, "PR identity report checks google/fonts fork git name against CLA/author name", errors)
     check("## Git Identity Evidence" in pr_identity_text, "PR identity report includes per-repo git identity evidence", errors)
-    check("/Users/eli/GH/forks/fonts" in pr_identity_text, "PR identity report points at local google/fonts fork", errors)
+    check("$GF_REPO_PATH" in pr_identity_text, "PR identity report points at local google/fonts fork", errors)
     check("Final downstream commit identity ready:" in pr_identity_text, "PR identity report checks final downstream commit identity readiness", errors)
     check("git user.email: `" in pr_identity_text, "PR identity report records redacted git email", errors)
     check(
@@ -2882,7 +2890,7 @@ def metadata_review_errors(errors: list[str]) -> None:
     check("Handoff records fork comparison path: yes" in downstream_pr_text, "downstream PR report checks fork comparison path", errors)
     check("## Safe Local Sequence" in downstream_pr_text, "downstream PR report includes safe local sequence", errors)
     check("gh auth status -h github.com" in downstream_pr_text, "downstream PR report documents GitHub auth status command", errors)
-    check("git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk" in downstream_pr_text, "downstream PR report documents scoped google/fonts status command", errors)
+    check("git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk" in downstream_pr_text, "downstream PR report documents scoped google/fonts status command", errors)
     check("Only after reviewing the no-PR package" in downstream_pr_text, "downstream PR report gates Packager PR mode on no-PR review", errors)
     check("https://googlefonts.github.io/gf-guide/making-pr.html" in downstream_pr_text, "downstream PR report cites GF PR guide", errors)
     check("# avar Readiness" in avar_text, "avar readiness report has expected heading", errors)
@@ -3058,7 +3066,7 @@ def metadata_review_errors(errors: list[str]) -> None:
     check("Catalog slug ASCII-only: yes" in designer_profile_package_text, "designer profile package draft validates ASCII slug", errors)
     check("Catalog slug has hyphen: no" in designer_profile_package_text, "designer profile package draft validates no-hyphen slug", errors)
     check("Avatar filename matches slug: yes" in designer_profile_package_text, "designer profile package draft validates avatar filename", errors)
-    check("Local google/fonts checkout: `/Users/eli/GH/forks/fonts`" in designer_profile_package_text, "designer profile package draft records local google/fonts checkout", errors)
+    check("Local google/fonts checkout: `$GF_REPO_PATH`" in designer_profile_package_text, "designer profile package draft records local google/fonts checkout", errors)
     check("Local designers directory exists: yes" in designer_profile_package_text, "designer profile package draft checks local designers catalog", errors)
     check("`gftools add-designer` available: yes" in designer_profile_package_text, "designer profile package draft checks gftools add-designer", errors)
     check("Candidate info.pb validator present: yes" in designer_profile_package_text, "designer profile package draft checks info.pb validator helper", errors)
@@ -3096,16 +3104,16 @@ def metadata_review_errors(errors: list[str]) -> None:
     check("| Designer profile link | candidate `https://github.com/eliheuer`; maintainer approval pending | Approve this URL, provide one canonical website/social URL, or deliberately leave `link: \"\"` in `info.pb`. |" in designer_profile_package_text, "designer profile package draft asks for profile link approval or blank-link choice", errors)
     check("if `info.pb` uses a non-empty link, include that same URL in the bio links" in designer_profile_package_text, "designer profile package draft asks for approved bio with matching info.pb link", errors)
     check("| Profile image | `path/to/eliheuer.png` placeholder | Provide a square 100-300px image that passes `make designer-profile-image-check`. |" in designer_profile_package_text, "designer profile package draft asks for validated image", errors)
-    check("do not create files in\n  `/Users/eli/GH/forks/fonts/catalog/designers` until the biography and\n  image are approved" in designer_profile_package_text, "designer profile package draft avoids premature downstream profile writes", errors)
+    check("do not create files in\n  `$GF_REPO_PATH/catalog/designers` until the biography and\n  image are approved" in designer_profile_package_text, "designer profile package draft avoids premature downstream profile writes", errors)
     check("commit, stash,\n  or review that work before applying a separate designer-profile branch" in designer_profile_package_text, "designer profile package draft explains family-package dirty checkout handling before profile work", errors)
     check("Keep this work separate from the family package branch" in designer_profile_package_text, "designer profile package draft keeps profile PR separate from family package", errors)
-    check("test ! -e /Users/eli/GH/forks/fonts/catalog/designers/eliheuer" in designer_profile_package_text, "designer profile package draft checks target path before downstream writes", errors)
-    check("git -C /Users/eli/GH/forks/fonts status --short -- catalog/designers/eliheuer" in designer_profile_package_text, "designer profile package draft gives scoped profile status command", errors)
-    check("git -C /Users/eli/GH/forks/fonts status --short" in designer_profile_package_text, "designer profile package draft gives full downstream status command", errors)
+    check("test ! -e $GF_REPO_PATH/catalog/designers/eliheuer" in designer_profile_package_text, "designer profile package draft checks target path before downstream writes", errors)
+    check("git -C $GF_REPO_PATH status --short -- catalog/designers/eliheuer" in designer_profile_package_text, "designer profile package draft gives scoped profile status command", errors)
+    check("git -C $GF_REPO_PATH status --short" in designer_profile_package_text, "designer profile package draft gives full downstream status command", errors)
     check("## Guarded Prepare Helper" in designer_profile_package_text, "designer profile package draft includes guarded prepare helper section", errors)
     check("requires any non-empty `info.pb` link to appear in `bio.html`" in designer_profile_package_text, "designer profile package draft documents prepare helper info/bio link consistency", errors)
     check("make designer-profile-prepare-check" in designer_profile_package_text, "designer profile package draft documents profile prepare dry-run target", errors)
-    check("./venv/bin/python scripts/prepare_designer_profile.py --image path/to/eliheuer.png --apply" in designer_profile_package_text, "designer profile package draft documents explicit prepare apply command", errors)
+    check("./.venv/bin/python scripts/prepare_designer_profile.py --image path/to/eliheuer.png --apply" in designer_profile_package_text, "designer profile package draft documents explicit prepare apply command", errors)
     check("Default image candidate: `documentation/google-fonts/designer-profile-candidate/eliheuer.png`" in designer_profile_package_text, "designer profile package draft records default image candidate", errors)
     check("## Candidate `bio.html`" in designer_profile_package_text, "designer profile package draft includes candidate bio section", errors)
     check("make designer-profile-bio-check BIO=documentation/google-fonts/designer-profile-candidate/bio.html" in designer_profile_package_text, "designer profile package draft documents candidate bio validation command", errors)
@@ -3122,9 +3130,9 @@ def metadata_review_errors(errors: list[str]) -> None:
     check('file_name: "eliheuer.png"' in designer_profile_package_text, "designer profile package draft includes avatar filename", errors)
     check("If `link` is non-empty, the guarded prepare helper requires the same\nURL to appear in `bio.html`" in designer_profile_package_text, "designer profile package draft documents non-empty info link must appear in bio", errors)
     check("The avatar `file_name` must match the image file inside the same" in designer_profile_package_text, "designer profile package draft records avatar file rule", errors)
-    check("make designer-profile-info-check INFO=/Users/eli/GH/forks/fonts/catalog/designers/eliheuer/info.pb" in designer_profile_package_text, "designer profile package draft documents info.pb validator command", errors)
-    check("make designer-profile-image-check IMAGE=/Users/eli/GH/forks/fonts/catalog/designers/eliheuer/eliheuer.png" in designer_profile_package_text, "designer profile package draft documents downstream image validator command", errors)
-    check("make designer-profile-bio-check BIO=/Users/eli/GH/forks/fonts/catalog/designers/eliheuer/bio.html" in designer_profile_package_text, "designer profile package draft documents downstream bio validator command", errors)
+    check("make designer-profile-info-check INFO=$GF_REPO_PATH/catalog/designers/eliheuer/info.pb" in designer_profile_package_text, "designer profile package draft documents info.pb validator command", errors)
+    check("make designer-profile-image-check IMAGE=$GF_REPO_PATH/catalog/designers/eliheuer/eliheuer.png" in designer_profile_package_text, "designer profile package draft documents downstream image validator command", errors)
+    check("make designer-profile-bio-check BIO=$GF_REPO_PATH/catalog/designers/eliheuer/bio.html" in designer_profile_package_text, "designer profile package draft documents downstream bio validator command", errors)
     check("First-person pronouns are rejected by the local validator" in designer_profile_package_text, "designer profile package draft records first-person bio guard", errors)
     check(
         "More than 200 characters and less than 1000 characters" in designer_profile_package_text,
@@ -3858,7 +3866,7 @@ def package_checklist_errors(errors: list[str]) -> None:
     )
     check("make package-dry-run" in readme_text, "README documents package dry-run command", errors)
     check("make package-wrapper-test" in readme_text, "README documents package wrapper metadata gate test command", errors)
-    check("/Users/eli/GH/forks/fonts" in readme_text, "README documents default google/fonts fork path", errors)
+    check("$GF_REPO_PATH" in readme_text, "README documents default google/fonts fork path", errors)
     check("GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run" in readme_text, "README documents latest-release dry-run mode", errors)
     check("GFT_PACKAGER_SOURCE_MODE=build-from-source make package-dry-run" in readme_text, "README documents build-from-source dry-run mode", errors)
     check(
@@ -4032,7 +4040,7 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("Command safety gates ready: yes" in local_workflow_text, "local workflow readiness report confirms command safety gates", errors)
     check("## Command Safety Gates" in local_workflow_text, "local workflow readiness report includes command safety gate table", errors)
     check("## Python Requirements Snapshot" in local_workflow_text, "local workflow readiness report includes Python requirements snapshot section", errors)
-    check("Refresh command: `./venv/bin/python -m pip freeze --all > requirements.txt`" in local_workflow_text, "local workflow readiness report documents pinned requirements refresh command", errors)
+    check("Refresh command: `./.venv/bin/python -m pip freeze --all > requirements.txt`" in local_workflow_text, "local workflow readiness report documents pinned requirements refresh command", errors)
     for direct_requirement in [
         "GitPython",
         "PyYAML",
@@ -4048,7 +4056,7 @@ def package_checklist_errors(errors: list[str]) -> None:
             errors,
         )
     for safety_gate in [
-        "| GF_REPO_PATH defaults to local google/fonts fork | yes |",
+        "| GF_REPO_PATH has no machine-specific default | yes |",
         "| package-dry-run target invokes local wrapper | yes |",
         "| package-dry-run target omits PR creation flags | yes |",
         "| package-dry-run wrapper does not add PR creation flags | yes |",
@@ -4162,7 +4170,11 @@ def package_checklist_errors(errors: list[str]) -> None:
         errors,
     )
     check("upstream/main" in readme_text and "upstream/main" in readiness_text, "human docs record google/fonts fork alignment requirement", errors)
-    check("GF_REPO_PATH ?= /Users/eli/GH/forks/fonts" in makefile_text, "Makefile has default google/fonts fork path", errors)
+    check(
+        "GF_REPO_PATH ?=" in makefile_text and "/Users/" not in makefile_text,
+        "Makefile keeps google/fonts checkout path portable",
+        errors,
+    )
     check("decision-readiness-check" in makefile_text, "Makefile exposes decision readiness check target", errors)
     check("report_decision_readiness.py" in makefile_text, "Makefile wires decision readiness report", errors)
     check("blockers" in makefile_text, "Makefile exposes final-submission blocker target", errors)
@@ -4453,9 +4465,9 @@ def package_checklist_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "PYTHONPATH=\"$(DRAWBOT_SKIA_REPO)/src" in makefile_text
+        "DRAWBOT_PYTHONPATH" in makefile_text
         and "scripts/build_arabic_print_proof.py" in makefile_text,
-        "Arabic print proof uses drawbot-skia PYTHONPATH runtime",
+        "Arabic print proof uses portable drawbot-skia PYTHONPATH runtime",
         errors,
     )
     check(
@@ -4677,7 +4689,7 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("GFT_PACKAGER_SOURCE_MODE=default make package-dry-run" in text, "package checklist documents explicit default-mode fallback command", errors)
     check("make github-auth-check" in text, "package checklist documents GitHub API auth check command", errors)
     check("gh auth status -h github.com" in text, "package checklist documents GitHub auth status command", errors)
-    check("git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk" in text, "package checklist documents scoped google/fonts status command", errors)
+    check("git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk" in text, "package checklist documents scoped google/fonts status command", errors)
     check(
         "Mapping source: `documentation/google-fonts/google-fonts-downstream-package-preview.md`" in package_source_text,
         "package source-file audit reads expected source.files from downstream package preview",
@@ -4876,10 +4888,10 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("make github-auth-check" in package_dry_run_text, "package dry-run readiness report gives local auth check command", errors)
     check("export GH_TOKEN=REPLACE_WITH_SHORT_LIVED_TOKEN" in package_dry_run_text, "package dry-run readiness report documents short-lived GH_TOKEN option", errors)
     check("Never put `GH_TOKEN` in tracked files" in package_dry_run_text, "package dry-run readiness report warns against committing GH_TOKEN", errors)
-    check("git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk" in package_dry_run_text, "package dry-run readiness report gives scoped google/fonts status command", errors)
-    check("git -C /Users/eli/GH/forks/fonts status --short" in package_dry_run_text, "package dry-run readiness report gives full google/fonts status command", errors)
-    check("./venv/bin/python scripts/prepare_downstream_metadata.py --apply" in package_dry_run_text, "package dry-run readiness report documents checked downstream metadata apply command", errors)
-    check("git -C /Users/eli/GH/forks/fonts diff -- ofl/virtuagrotesk/METADATA.pb" in package_dry_run_text, "package dry-run readiness report documents downstream metadata diff review command", errors)
+    check("git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk" in package_dry_run_text, "package dry-run readiness report gives scoped google/fonts status command", errors)
+    check("git -C $GF_REPO_PATH status --short" in package_dry_run_text, "package dry-run readiness report gives full google/fonts status command", errors)
+    check("./.venv/bin/python scripts/prepare_downstream_metadata.py --apply" in package_dry_run_text, "package dry-run readiness report documents checked downstream metadata apply command", errors)
+    check("git -C $GF_REPO_PATH diff -- ofl/virtuagrotesk/METADATA.pb" in package_dry_run_text, "package dry-run readiness report documents downstream metadata diff review command", errors)
     check("Do not run Packager with `-p`" in package_dry_run_text, "package dry-run readiness report blocks PR mode before no-PR review", errors)
     package_first_blocker_match = re.search(r"First blocker: ([^\n]+)", package_dry_run_text)
     package_first_blocker = package_first_blocker_match.group(1) if package_first_blocker_match else ""
@@ -4899,7 +4911,7 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("## Google Fonts Visual QA" in kerning_text, "kerning report includes Google Fonts visual QA section", errors)
     check("This is part of the core QA process for Virtua Grotesk" in kerning_text, "kerning report marks visual proof as core QA", errors)
     check("make kerning-proof-check" in kerning_text, "kerning report documents gftools qa proof command", errors)
-    check("venv/bin` on `PATH`" in kerning_text, "kerning report documents gftools QA helper PATH requirement", errors)
+    check(".venv/bin` on `PATH`" in kerning_text, "kerning report documents gftools QA helper PATH requirement", errors)
     check(
         "https://fonts.google.com/metadata/fonts" in kerning_text,
         "kerning report documents gftools proof network dependency",
@@ -4989,7 +5001,7 @@ def package_checklist_errors(errors: list[str]) -> None:
         "downstream metadata diff report uses synchronized preflight before Packager",
         errors,
     )
-    check("/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb" in downstream_metadata_diff_text, "downstream metadata diff report names downstream target path", errors)
+    check("$GF_REPO_PATH/ofl/virtuagrotesk/METADATA.pb" in downstream_metadata_diff_text, "downstream metadata diff report names downstream target path", errors)
     check("# Release Source Readiness" in release_source_text, "release/source readiness report has expected heading", errors)
     check("Current repo commit:" in release_source_text, "release/source readiness report records current commit", errors)
     check("Normalized GitHub origin candidate: `https://github.com/eliheuer/virtua-grotesk`" in release_source_text, "release/source readiness report records normalized GitHub origin candidate", errors)
@@ -5114,7 +5126,7 @@ def package_checklist_errors(errors: list[str]) -> None:
             f"package source-file audit includes preview source file: {source_file}",
             errors,
         )
-    check("defaults to `/Users/eli/GH/forks/fonts`" in text, "package checklist documents default local google/fonts fork", errors)
+    check("defaults to `$GF_REPO_PATH`" in text, "package checklist documents default local google/fonts fork", errors)
     check("documentation/google-fonts/pua-scope.md" in text, "package checklist includes PUA scope report", errors)
     check("article/ARTICLE.en_us.html" in text, "package checklist tracks Article package option", errors)
     check("primary_script: \"Arab\"" in text, "package checklist tracks Arabic primary script review", errors)
@@ -5201,8 +5213,8 @@ def package_checklist_errors(errors: list[str]) -> None:
     check("scripts/prepare_downstream_metadata.py --apply" in handoff_text, "submission handoff documents explicit downstream metadata apply command", errors)
     check("gh auth login -h github.com" in handoff_text, "submission handoff documents GitHub CLI auth refresh command", errors)
     check("gh auth status -h github.com" in handoff_text, "submission handoff documents GitHub CLI auth status command", errors)
-    check("git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk" in handoff_text, "submission handoff documents scoped google/fonts status command", errors)
-    check("./venv/bin/python scripts/prepare_downstream_metadata.py --apply" in handoff_text, "submission handoff documents checked downstream metadata apply command", errors)
+    check("git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk" in handoff_text, "submission handoff documents scoped google/fonts status command", errors)
+    check("./.venv/bin/python scripts/prepare_downstream_metadata.py --apply" in handoff_text, "submission handoff documents checked downstream metadata apply command", errors)
     check("Latest local dry-run status, 2026-05-24" in handoff_text, "submission handoff has current dry-run status date", errors)
     check("Current dry-run status, 2026-05-24" in text, "package checklist has current dry-run status date", errors)
     check("4/5 are tracked by git" in handoff_text, "submission handoff records tracked package input count", errors)
@@ -5316,18 +5328,18 @@ def proof_runtime_errors(errors: list[str]) -> None:
     agents_text = (ROOT / "AGENTS.md").read_text()
     proof_skill_text = (ROOT / ".agents/skills/proof/SKILL.md").read_text()
     check(
-        "DRAWBOT_SKIA_REPO ?= /Users/eli/GH/repos/drawbot-skia" in makefile_text,
-        "Makefile points proof generation at local eliheuer/drawbot-skia checkout",
+        "DRAWBOT_SKIA_REPO ?=" in makefile_text and "/Users/" not in makefile_text,
+        "Makefile keeps proof runtime path portable",
         errors,
     )
     check(
         "DRAWBOT_PYTHON ?= $(PYTHON)" in makefile_text,
-        "Makefile uses project venv for proof generation",
+        "Makefile uses project .venv for proof generation",
         errors,
     )
     check(
-        'PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src' in makefile_text,
-        "Makefile prepends drawbot-skia src to PYTHONPATH for proof generation",
+        "DRAWBOT_PYTHONPATH" in makefile_text,
+        "Makefile supports optional drawbot-skia src on PYTHONPATH for proof generation",
         errors,
     )
     check(
@@ -5341,10 +5353,10 @@ def proof_runtime_errors(errors: list[str]) -> None:
         errors,
     )
     check(
-        "/Users/eli/GH/repos/drawbot-skia" in readme_text
-        and "/Users/eli/GH/repos/drawbot-skia" in gf_readiness_text
-        and "/Users/eli/GH/repos/drawbot-skia" in tooling_text,
-        "human-facing docs record eliheuer/drawbot-skia proof runtime",
+        "DRAWBOT_SKIA_REPO" in readme_text
+        and "DRAWBOT_SKIA_REPO" in gf_readiness_text
+        and "DRAWBOT_SKIA_REPO" in tooling_text,
+        "human-facing docs record portable drawbot-skia proof runtime configuration",
         errors,
     )
     check(
@@ -5395,8 +5407,7 @@ def proof_runtime_errors(errors: list[str]) -> None:
         "generated DrawBot runtime report verifies general proof script requires eliheuer/drawbot-skia",
         errors,
     )
-    check(DRAWBOT_SKIA_REPO.exists(), "local eliheuer/drawbot-skia checkout exists", errors)
-    if DRAWBOT_SKIA_REPO.exists():
+    if DRAWBOT_SKIA_REPO is not None and DRAWBOT_SKIA_REPO.exists():
         drawbot_origin = subprocess.run(
             ["git", "remote", "get-url", "origin"],
             cwd=DRAWBOT_SKIA_REPO,
@@ -5410,9 +5421,11 @@ def proof_runtime_errors(errors: list[str]) -> None:
             "local drawbot-skia origin is eliheuer/drawbot-skia",
             errors,
         )
-    check(PROJECT_PYTHON.exists(), "project venv Python exists", errors)
-    check(DRAWBOT_SKIA_SRC.exists(), "local drawbot-skia src directory exists", errors)
-    if PROJECT_PYTHON.exists() and DRAWBOT_SKIA_SRC.exists():
+    check(PROJECT_PYTHON.exists(), "project .venv Python exists", errors)
+    if PROJECT_PYTHON.exists():
+        env = os.environ.copy()
+        if DRAWBOT_SKIA_SRC is not None and DRAWBOT_SKIA_SRC.exists():
+            env["PYTHONPATH"] = str(DRAWBOT_SKIA_SRC)
         result = subprocess.run(
             [
                 str(PROJECT_PYTHON),
@@ -5420,7 +5433,7 @@ def proof_runtime_errors(errors: list[str]) -> None:
                 "from drawbot_skia.drawing import Drawing; db = Drawing(); assert hasattr(db, 'saveImage')",
             ],
             cwd=ROOT,
-            env={**os.environ, "PYTHONPATH": str(DRAWBOT_SKIA_SRC)},
+            env=env,
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
         )
@@ -5600,7 +5613,7 @@ def descriptive_artifact_errors(errors: list[str]) -> None:
     )
     check(
         "`requirements.txt` is the pinned install snapshot" in tooling_text
-        and "./venv/bin/python -m pip freeze --all > requirements.txt" in tooling_text,
+        and "./.venv/bin/python -m pip freeze --all > requirements.txt" in tooling_text,
         "Python tooling notes document pinned requirements refresh path",
         errors,
     )
@@ -6742,9 +6755,9 @@ def main() -> int:
         errors,
     )
     command_ok(["fontspector", "--version"], "Fontspector command is available", errors)
-    command_ok(["./venv/bin/gftools", "builder", "--help"], "gftools builder is importable", errors)
-    command_ok(["./venv/bin/gftools", "packager", "--help"], "gftools packager is importable", errors)
-    command_ok(["./venv/bin/gftools", "qa", "--help"], "gftools QA proof tooling is importable", errors)
+    command_ok(["./.venv/bin/gftools", "builder", "--help"], "gftools builder is importable", errors)
+    command_ok(["./.venv/bin/gftools", "packager", "--help"], "gftools packager is importable", errors)
+    command_ok(["./.venv/bin/gftools", "qa", "--help"], "gftools QA proof tooling is importable", errors)
     command_ok(["./scripts/test_package_gf_dry_run_gates.sh"], "package dry-run wrapper metadata gate tests pass", errors)
     command_ok(["./scripts/test_downstream_metadata_helper.sh"], "downstream metadata helper final-value gate tests pass", errors)
     command_ok(["./scripts/test_release_archive_gates.sh"], "release archive path-safety gate tests pass", errors)

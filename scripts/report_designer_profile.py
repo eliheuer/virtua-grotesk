@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
 from pathlib import Path
 import re
 import sys
@@ -11,7 +12,7 @@ import unicodedata
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 OUTPUT_DEFAULT = Path("documentation/google-fonts/designer-profile-readiness.md")
 
 

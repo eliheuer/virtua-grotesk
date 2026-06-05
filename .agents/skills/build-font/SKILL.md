@@ -15,22 +15,14 @@ Run: `source venv/bin/activate`
 ### Based on the argument:
 
 **`all` (default):**
-Run `./build.sh` from the project root. This prefers `gftools builder sources/config.yaml`, then falls back to the local fontc/fontmake path.
+Run `./build.sh` from the project root. This is the canonical build entrypoint
+and wraps `gftools builder sources/config.yaml`.
 
 **`variable`:**
-Run:
-```bash
-mkdir -p fonts
-fontc sources/VirtuaGrotesk.designspace
-mv build/font.ttf 'fonts/variable/VirtuaGrotesk[wght].ttf'
-```
+Run `./build.sh`, then inspect `fonts/variable/VirtuaGrotesk[wght].ttf`.
 
 **`static`:**
-Run:
-```bash
-mkdir -p fonts
-fontmake -m sources/VirtuaGrotesk.designspace -i -o ttf --output-dir fonts/ttf
-```
+Run `./build.sh`, then inspect `fonts/ttf/*.ttf`.
 
 ### After building:
 1. List the built fonts with file sizes: `ls -lh fonts/variable/*.ttf fonts/ttf/*.ttf`

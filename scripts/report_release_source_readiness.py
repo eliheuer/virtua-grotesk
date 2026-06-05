@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -12,7 +13,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/google-fonts/release-source-readiness.md")
-GF_REPO_DEFAULT = Path("/Users/eli/GH/forks/fonts")
+GF_REPO_DEFAULT = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 PACKAGE_AUDIT = Path("documentation/google-fonts/package-source-files-audit.md")
 PUBLIC_UPSTREAM = Path("documentation/google-fonts/public-upstream-readiness.md")

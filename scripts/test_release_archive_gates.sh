@@ -5,7 +5,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 TMPDIR="$(mktemp -d "${TMPDIR:-/tmp}/virtua-release-archive-gates.XXXXXX")"
 trap 'rm -rf "$TMPDIR"' EXIT
 
-PYTHON="$ROOT/venv/bin/python"
+PYTHON="$ROOT/.venv/bin/python"
 if [[ ! -x "$PYTHON" ]]; then
     PYTHON="python3"
 fi

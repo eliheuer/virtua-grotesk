@@ -7,10 +7,10 @@ This generated report records local Git and GitHub CLI identity state for the fu
 - Expected CLA/author name: `Eli Heuer`
 - Source repo git identity complete: yes
 - Source repo git user.name matches expected CLA/author name: yes
-- google/fonts fork git checkout present: yes
-- google/fonts fork git identity complete: yes
-- google/fonts fork git user.name matches expected CLA/author name: yes
-- Final downstream commit identity ready: yes
+- google/fonts fork git checkout present: no
+- google/fonts fork git identity complete: no
+- google/fonts fork git user.name matches expected CLA/author name: no
+- Final downstream commit identity ready: no
 - GitHub CLI auth status: `invalid token`
 - GitHub CLI account: `eliheuer`
 - GitHub API credentials ready: no
@@ -21,7 +21,7 @@ This generated report records local Git and GitHub CLI identity state for the fu
 
 ### Source repo identity
 
-- Repo path: `/Users/eli/GH/repos/virtua-grotesk`
+- Repo path: `.`
 - Git checkout present: yes
 - git user.name configured: yes
 - git user.email configured: yes
@@ -32,14 +32,14 @@ This generated report records local Git and GitHub CLI identity state for the fu
 
 ### google/fonts fork identity
 
-- Repo path: `/Users/eli/GH/forks/fonts`
-- Git checkout present: yes
-- git user.name configured: yes
-- git user.email configured: yes
-- git identity complete: yes
-- git user.name matches expected CLA/author name: yes
-- git user.name: `Eli Heuer`
-- git user.email: `e***@protonmail.com`
+- Repo path: `GF_REPO_PATH_NOT_CONFIGURED`
+- Git checkout present: no
+- git user.name configured: no
+- git user.email configured: no
+- git identity complete: no
+- git user.name matches expected CLA/author name: no
+- git user.name: `missing`
+- git user.email: `missing`
 
 ## GitHub CLI Evidence
 
@@ -53,7 +53,7 @@ This generated report records local Git and GitHub CLI identity state for the fu
 - The same guide asks contributors to configure Git commits with the
   name and email that match the signed CLA identity.
 - The downstream Google Fonts commit will be made from the local
-  `/Users/eli/GH/forks/fonts` checkout, so that repo's git identity is the final
+  `GF_REPO_PATH_NOT_CONFIGURED` checkout, so that repo's git identity is the final
   commit-identity gate.
 - The local Packager dry run needs GitHub API access through `GH_TOKEN`
   or equivalent authenticated GitHub CLI credentials.
@@ -70,7 +70,7 @@ This generated report records local Git and GitHub CLI identity state for the fu
 
 ```bash
 git config user.name "Eli Heuer"
-git -C /Users/eli/GH/forks/fonts config user.name "Eli Heuer"
+git -C GF_REPO_PATH_NOT_CONFIGURED config user.name "Eli Heuer"
 ```
 
 - Refresh GitHub CLI authentication before using `gh auth token` or

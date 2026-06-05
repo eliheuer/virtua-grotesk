@@ -9,28 +9,28 @@ the issue or downstream package PR.
 
 - Handoff file: `documentation/google-fonts/google-fonts-submission-handoff.md`
 - Template default labels match handoff: yes
-- Template requirement checkbox count: 10
+- Template requirement checkbox count: 1
 - Handoff requirement checkbox count: 10
-- Issue draft requirement checkbox count: 10
-- Issue draft title is current: yes
-- Issue draft labels are current: yes
-- Issue draft template checkout status is current: yes
-- Issue draft template is aligned with upstream/main: yes
-- Issue draft template is aligned with origin/main: yes
-- Issue draft includes current public URL: yes
+- Issue draft requirement checkbox count: 0
+- Issue draft title is current: no
+- Issue draft labels are current: no
+- Issue draft template checkout status is current: no
+- Issue draft template is aligned with upstream/main: no
+- Issue draft template is aligned with origin/main: no
+- Issue draft includes current public URL: no
 - Issue draft leaves boxes unchecked: yes
-- Issue draft status notes match checkbox count: yes
-- Issue draft includes current Latin Core gap: yes
-- Issue draft includes current Arabic Core gap: yes
-- Issue draft references Arabic readiness reports: yes
-- Issue draft includes decision-linked warning status: yes
-- Issue draft references decision-warning reports: yes
-- Issue draft includes downstream metadata apply gate: yes
-- Issue draft includes current Fontspector FAIL count: yes
-- Issue draft includes GF visual kerning proof status: yes
-- Issue draft references GF visual proof review packet: yes
-- Issue draft tracks repository maintenance commitment: yes
-- Issue draft points to specimen image: yes
+- Issue draft status notes match checkbox count: no
+- Issue draft includes current Latin Core gap: no
+- Issue draft includes current Arabic Core gap: no
+- Issue draft references Arabic readiness reports: no
+- Issue draft includes decision-linked warning status: no
+- Issue draft references decision-warning reports: no
+- Issue draft includes downstream metadata apply gate: no
+- Issue draft includes current Fontspector FAIL count: no
+- Issue draft includes GF visual kerning proof status: no
+- Issue draft references GF visual proof review packet: no
+- Issue draft tracks repository maintenance commitment: no
+- Issue draft points to specimen image: no
 - Handoff points to generated Add Font issue draft: yes
 - Handoff includes current version `1.000`: yes
 - Handoff includes current Fontspector summary: no
@@ -75,8 +75,8 @@ the issue or downstream package PR.
 - Handoff mentions Packager source-mode options: yes
 - Handoff mentions latest-release archive URL shape: yes
 - Handoff mentions GitHub CLI auth refresh: yes
-- Handoff mentions current package dry-run first blocker: yes
-- Handoff mentions current package dry-run blocking findings: yes
+- Handoff mentions current package dry-run first blocker: no
+- Handoff mentions current package dry-run blocking findings: no
 - Handoff mentions tracked package input count: no
 - Handoff mentions untracked package input count: no
 - Handoff mentions source-mode untracked input blockers: yes
@@ -87,7 +87,7 @@ the issue or downstream package PR.
 - Decision readiness has mapped open questions: yes
 - Upstream structure has all mandatory paths: yes
 - Package source audit validates destination mapping: yes
-- Release archive manifest validates local review zip: yes
+- Release archive manifest validates local review zip: no
 - Downstream metadata preview has expected source block: yes
 - Downstream metadata report validates latest-release archive URL shape: yes
 - Decision log still has open decisions: yes
@@ -98,14 +98,14 @@ the issue or downstream package PR.
 
 | Field | Current value | Present in handoff |
 | --- | --- | --- |
-| Add Font labels | `I New Font, II Submission` | yes |
+| Add Font labels | `missing` | yes |
 | version | `1.000` | yes |
 | Fontspector | `10 FAIL, 20 WARN, 517 PASS` | no |
 | package dry-run reaches Packager | `no` | yes |
-| package dry-run first blocker | `existing downstream METADATA.pb is still the Packager starter template` | yes |
-| package dry-run blocking findings | `existing downstream METADATA.pb is still the Packager starter template; GitHub API credentials unavailable` | yes |
-| package inputs tracked | `2 / 5` | no |
-| package inputs untracked | `3` | no |
+| package dry-run first blocker | `local google/fonts fork is not ready` | no |
+| package dry-run blocking findings | `local google/fonts fork is not ready; GitHub API credentials unavailable` | no |
+| package inputs tracked | `3 / 5` | no |
+| package inputs untracked | `2` | no |
 | GF Latin Core missing | `0` | yes |
 | GF visual kerning proof output | `yes` | yes |
 | GF visual kerning proof HTML files | `16` | yes |
@@ -122,24 +122,24 @@ the issue or downstream package PR.
 
 | Field | Expected value | Present in issue draft |
 | --- | --- | --- |
-| title | `Add Virtua Grotesk` | yes |
-| labels | `I New Font, II Submission` | yes |
-| template checkout status | `## main...origin/main` | yes |
-| upstream/main alignment | `0 ahead, 0 behind` | yes |
-| origin/main alignment | `0 ahead, 0 behind` | yes |
-| requirement checkboxes | `10` | yes |
+| title | `Add Virtua Grotesk` | no |
+| labels | `missing` | no |
+| template checkout status | `## main...origin/main` | no |
+| upstream/main alignment | `0 ahead, 0 behind` | no |
+| origin/main alignment | `0 ahead, 0 behind` | no |
+| requirement checkboxes | `1` | no |
 | unchecked boxes | `no - [x] entries` | yes |
-| Draft status notes | `10` | yes |
-| GF Latin Core missing | `0` | yes |
-| GF Arabic Core missing | `0` | yes |
-| Arabic readiness report references | `review packet, coverage, marks, shaping` | yes |
-| decision-linked warning status | `vendor, kerning, avar, PUA/reachability` | yes |
-| decision-warning report references | `vendor, kerning, avar, PUA, warnings` | yes |
-| GF visual proof review packet | `documentation/google-fonts/kerning-proof-review.md` | yes |
-| downstream metadata apply gate | `ready/apply blockers` | yes |
-| repository maintenance commitment | `maintain the repository` checkbox and status note | yes |
-| Fontspector FAIL count | `10` | yes |
-| image | `documentation/assets/readme-specimen.png` | yes |
+| Draft status notes | `1` | no |
+| GF Latin Core missing | `0` | no |
+| GF Arabic Core missing | `0` | no |
+| Arabic readiness report references | `review packet, coverage, marks, shaping` | no |
+| decision-linked warning status | `vendor, kerning, avar, PUA/reachability` | no |
+| decision-warning report references | `vendor, kerning, avar, PUA, warnings` | no |
+| GF visual proof review packet | `documentation/google-fonts/kerning-proof-review.md` | no |
+| downstream metadata apply gate | `ready/apply blockers` | no |
+| repository maintenance commitment | `maintain the repository` checkbox and status note | no |
+| Fontspector FAIL count | `10` | no |
+| image | `documentation/assets/readme-specimen.png` | no |
 
 ## Required Report References
 

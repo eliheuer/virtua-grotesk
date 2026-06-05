@@ -20,10 +20,10 @@ only to frame the maintainer decision and any issue/PR rationale.
 
 | Google Fonts package font | PUA codepoints | Min | Max |
 | --- | ---: | --- | --- |
-| `ofl/scheherazadenew/ScheherazadeNew-Regular.ttf` | 2 | U+F130 | U+F131 |
-| `ofl/kedebideri/Kedebideri-Regular.ttf` | 2 | U+F130 | U+F131 |
-| `ofl/inika/Inika-Regular.ttf` | 15 | U+E000 | U+E00E |
-| `ofl/signikanegative/SignikaNegative[wght].ttf` | 251 | U+E000 | U+E12F |
+| `ofl/scheherazadenew/ScheherazadeNew-Regular.ttf` | 0 | missing | missing |
+| `ofl/kedebideri/Kedebideri-Regular.ttf` | 0 | missing | missing |
+| `ofl/inika/Inika-Regular.ttf` | 0 | missing | missing |
+| `ofl/signikanegative/SignikaNegative[wght].ttf` | 0 | missing | missing |
 
 ## Source Coverage Summary
 

@@ -8,34 +8,34 @@ local `google/fonts` checkout.
 ## Summary
 
 - Google Fonts issue pending: yes
-- Issue draft current: yes
-- Issue labels current: yes
+- Issue draft current: no
+- Issue labels current: no
 - Issue requirement boxes still unchecked: yes
 - Expected downstream family path: `ofl/virtuagrotesk`
-- Downstream family directory exists locally: yes
-- Downstream METADATA.pb exists locally: yes
-- Downstream METADATA.pb still starter template: yes
+- Downstream family directory exists locally: no
+- Downstream METADATA.pb exists locally: no
+- Downstream METADATA.pb still starter template: no
 - Downstream metadata preview ready to apply: no
-- Downstream metadata apply blockers: 3
+- Downstream metadata apply blockers: 4
 - Expected Packager branch: `gftools_packager_ofl_virtuagrotesk`
-- Current google/fonts branch: `main`
-- google/fonts tracking branch: `origin/main`
-- google/fonts main vs origin/main: 0 ahead, 0 behind
-- google/fonts main vs upstream/main: 0 ahead, 0 behind
-- google/fonts fork base ready for downstream branch: yes
-- Dirty google/fonts paths inside family dir: 1
+- Current google/fonts branch: `missing`
+- google/fonts tracking branch: `missing`
+- google/fonts main vs origin/main: missing ahead, missing behind
+- google/fonts main vs upstream/main: missing ahead, missing behind
+- google/fonts fork base ready for downstream branch: no
+- Dirty google/fonts paths inside family dir: 0
 - Dirty google/fonts paths outside family dir: 0
-- Current downstream family file count: 1
-- Current downstream family files starter-only: yes
+- Current downstream family file count: 0
+- Current downstream family files starter-only: no
 - Package dry run reaches Packager: no
-- Package dry-run first blocker: existing downstream METADATA.pb is still the Packager starter template
+- Package dry-run first blocker: local google/fonts fork is not ready
 - GitHub API credentials ready: no
 - GitHub CLI auth status: `invalid token`
 - Source repo git identity complete: yes
 - Source repo git name matches CLA/author name: yes
-- google/fonts fork git identity complete: yes
-- google/fonts fork git name matches CLA/author name: yes
-- Final downstream commit identity ready: yes
+- google/fonts fork git identity complete: no
+- google/fonts fork git name matches CLA/author name: no
+- Final downstream commit identity ready: no
 - Google CLA status: confirmed by maintainer for the copyright holder
 - Public upstream URL still pending in issue draft: no
 - Release tag exists locally: no
@@ -63,17 +63,17 @@ local `google/fonts` checkout.
 
 ## google/fonts Fork Evidence
 
-- Fork path: `/Users/eli/GH/forks/fonts`
-- Origin: `git@github.com:eliheuer/fonts.git`
-- Upstream: `https://github.com/google/fonts.git`
-- Tracking branch: `origin/main`
-- Alignment with `origin/main`: `0 ahead, 0 behind`
-- Alignment with `upstream/main`: `0 ahead, 0 behind`
-- Safe to branch after removing or replacing only `ofl/virtuagrotesk`: yes
+- Fork path: `GF_REPO_PATH_NOT_CONFIGURED`
+- Origin: `missing`
+- Upstream: `missing`
+- Tracking branch: `missing`
+- Alignment with `origin/main`: `missing ahead, missing behind`
+- Alignment with `upstream/main`: `missing ahead, missing behind`
+- Safe to branch after removing or replacing only `ofl/virtuagrotesk`: no
 
 Dirty paths inside family dir:
 
-- `?? ofl/virtuagrotesk/`
+- None
 
 Dirty paths outside family dir:
 
@@ -81,7 +81,7 @@ Dirty paths outside family dir:
 
 Current files inside downstream family dir:
 
-- `ofl/virtuagrotesk/METADATA.pb`
+- None
 
 ## Apply Before Opening Downstream PR
 
@@ -112,10 +112,10 @@ so the generated package can be reviewed before any PR update.
 ```bash
 gh auth status -h github.com
 make github-auth-check
-git -C /Users/eli/GH/forks/fonts config user.name "Eli Heuer"
-git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk
+git -C $GF_REPO_PATH config user.name "Eli Heuer"
+git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk
 GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check
-./venv/bin/python scripts/prepare_downstream_metadata.py --apply
+./.venv/bin/python scripts/prepare_downstream_metadata.py --apply
 GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run
 ```
 

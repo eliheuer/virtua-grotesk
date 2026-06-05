@@ -1,33 +1,27 @@
 # /render-specimen
 
-Render a font specimen image using DesignBot.
+Render font specimen/proof output using the DrawBot-skia workflow.
 
 ## Usage
-`/render-specimen [001|002|--text "custom text"]`
+`/render-specimen [proof|spacing]`
 
-Default: `001`
+Default: `proof`
 
 ## Instructions
 
-### For numbered scripts (001, 002, etc.):
+### For `proof` or default:
 1. Check that the font exists: `ls fonts/ttf/VirtuaGrotesk-Regular.ttf`
-   - If missing, tell the user to run `/build-font` first
-2. Run: `designbot --render designbot/NNN.rs --output designbot/NNN.png`
-3. Read the rendered PNG file to describe what you see
-4. Report the result to the user
+   - If missing, run `/build-font` first
+2. Run `make proof`
+3. Report `documentation/proofs/proof.pdf`
 
-### For custom text (`--text "..."`)
-1. Read `designbot/001.rs` as a template
-2. Create a temporary script at `designbot/tmp_specimen.rs` that:
-   - Uses the same canvas setup (2048x2048, dark background)
-   - Loads `../fonts/ttf/VirtuaGrotesk-Regular.ttf`
-   - Renders the user's custom text at a readable size, centered
-3. Run: `designbot --render designbot/tmp_specimen.rs --output designbot/tmp_specimen.png`
-4. Read the rendered PNG to describe it
-5. Clean up: delete `designbot/tmp_specimen.rs` (keep the PNG for the user to view)
+### For `spacing`:
+1. Check that static fonts exist under `fonts/ttf/`
+2. Run `make specimen`
+3. Report `documentation/proofs/print-spacing-specimen.pdf`
 
 ### Image description guidelines
-When reading the rendered PNG, describe:
+When reviewing the rendered PDF, describe:
 - Overall layout and composition
 - Character rendering quality (clean outlines, proper spacing)
 - Any visible issues (overlapping glyphs, missing characters, spacing problems)

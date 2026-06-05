@@ -45,8 +45,8 @@ package checklist.
 Run from this repo:
 
 ```bash
-python3 -m venv venv
-source venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 make handoff
 make test
@@ -167,7 +167,7 @@ GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run
 
 `make package-dry-run` defaults to `latest-release` in this repo, but keep the
 environment variable in copied commands so the selected release/archive source
-mode is explicit. It defaults to `/Users/eli/GH/forks/fonts`. Override
+mode is explicit. It defaults to `$GF_REPO_PATH`. Override
 `GF_REPO_PATH` to test a different clean `google/fonts` checkout, or a clean
 fork checkout with an `upstream` remote pointing at
 `https://github.com/google/fonts.git`. It also requires the checkout to be on
@@ -219,9 +219,9 @@ GH_TOKEN="$(gh auth token)" GFT_PACKAGER_SOURCE_MODE=latest-release make package
 ```
 
 Current dry-run status, 2026-05-24: the local `google/fonts` fork checkout is
-ready at `/Users/eli/GH/forks/fonts`, but GitHub API credentials are not
+ready at `$GF_REPO_PATH`, but GitHub API credentials are not
 currently usable. The first no-PR Packager pass created
-`/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`, which is still the
+`$GF_REPO_PATH/ofl/virtuagrotesk/METADATA.pb`, which is still the
 unpopulated Packager starter template. The current generated state is
 `Wrapper can reach Packager: no` and first blocker:
 `existing downstream METADATA.pb is still the Packager starter template`.
@@ -235,9 +235,9 @@ CLI/API auth with `gh auth login -h github.com` before rerunning the dry run.
 Use the checked local sequence, and keep the first Packager rerun as no-PR:
 
 ```bash
-git -C /Users/eli/GH/forks/fonts status --short -- ofl/virtuagrotesk
+git -C $GF_REPO_PATH status --short -- ofl/virtuagrotesk
 GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check
-./venv/bin/python scripts/prepare_downstream_metadata.py --apply
+./.venv/bin/python scripts/prepare_downstream_metadata.py --apply
 GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run
 ```
 
@@ -263,7 +263,7 @@ make downstream-metadata-check
 It reports whether the preview still contains pending placeholders. Once the
 metadata is final, run `scripts/prepare_downstream_metadata.py --apply` to write
 the checked preview to
-`/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`, then rerun
+`$GF_REPO_PATH/ofl/virtuagrotesk/METADATA.pb`, then rerun
 `make package-dry-run`.
 Use the same source mode for the metadata check and Packager dry run. For
 default branch or latest-release packaging, remove `source.config_yaml` from

@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -12,7 +13,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/google-fonts/designer-profile-package-draft.md")
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 GF_PROFILE_GUIDE = "https://googlefonts.github.io/gf-guide/profile.html"
 GF_METADATA_GUIDE = "https://googlefonts.github.io/gf-guide/metadata.html"
 GF_DESIGNERS_TREE = "https://github.com/google/fonts/tree/main/catalog/designers"
@@ -26,6 +27,16 @@ BIO_CANDIDATE = Path("documentation/google-fonts/designer-profile-candidate/bio.
 INFO_CANDIDATE = Path("documentation/google-fonts/designer-profile-candidate/info.pb")
 IMAGE_CANDIDATE = Path("documentation/google-fonts/designer-profile-candidate/eliheuer.png")
 TEMPORARY_PROFILE_LINK = "https://github.com/eliheuer"
+
+
+def gf_repo_display() -> str:
+    return "$GF_REPO_PATH" if DEFAULT_GF_REPO != Path("GF_REPO_PATH_NOT_CONFIGURED") else "GF_REPO_PATH_NOT_CONFIGURED"
+
+
+def display_line(text: str, gf_repo: str) -> str:
+    text = text.replace(str(ROOT), ".")
+    text = text.replace(str(DEFAULT_GF_REPO), gf_repo)
+    return text
 
 
 def read_text(path: Path) -> str:
@@ -136,6 +147,7 @@ def markdown_report() -> str:
     profile_dir = f"catalog/designers/{slug}"
     gf_profile_dir = DEFAULT_GF_REPO / profile_dir
     designers_dir = DEFAULT_GF_REPO / "catalog/designers"
+    gf_repo = gf_repo_display()
     profile_exists = gf_profile_dir.exists()
     author_decision_status = decision_status("Author/contact lines")
     pending_lines = metadata_pending_lines()
@@ -144,7 +156,7 @@ def markdown_report() -> str:
     slug_is_ascii = slug.isascii()
     slug_has_hyphen = "-" in slug
     slug_matches_image = image_name.startswith(slug)
-    add_designer_available = command_available(["./venv/bin/gftools", "add-designer", "--help"])
+    add_designer_available = command_available(["./.venv/bin/gftools", "add-designer", "--help"])
     image_validator_exists = (ROOT / IMAGE_VALIDATOR).exists()
     bio_validator_exists = (ROOT / BIO_VALIDATOR).exists()
     info_validator_exists = (ROOT / INFO_VALIDATOR).exists()
@@ -153,13 +165,13 @@ def markdown_report() -> str:
     bio_candidate = ROOT / BIO_CANDIDATE
     bio_candidate_exists = bio_candidate.exists()
     bio_candidate_valid = bio_candidate_exists and command_success(
-        ["./venv/bin/python", str(BIO_VALIDATOR), str(BIO_CANDIDATE)]
+        ["./.venv/bin/python", str(BIO_VALIDATOR), str(BIO_CANDIDATE)]
     )
     info_candidate = ROOT / INFO_CANDIDATE
     info_candidate_exists = info_candidate.exists()
     info_candidate_valid = info_candidate_exists and command_success(
         [
-            "./venv/bin/python",
+            "./.venv/bin/python",
             str(INFO_VALIDATOR),
             str(INFO_CANDIDATE),
             designer,
@@ -177,9 +189,12 @@ def markdown_report() -> str:
         gf_profile_dir / "bio.html",
         gf_profile_dir / image_name,
     ]
-    prepare_output = command_output(["./venv/bin/python", str(PREPARE_HELPER)])
+    prepare_output = command_output(["./.venv/bin/python", str(PREPARE_HELPER)])
     prepare_ready = yes_no_from_output(r"Ready to apply: (yes|no)", prepare_output)
-    prepare_blocker_lines = blocker_lines(prepare_output)
+    prepare_blocker_lines = [
+        display_line(line, gf_repo)
+        for line in blocker_lines(prepare_output)
+    ]
     prepare_blockers = len(prepare_blocker_lines)
     prepare_missing_image = blocker_contains(prepare_blocker_lines, "image file does not exist:")
     prepare_dirty_checkout = blocker_contains(
@@ -232,7 +247,7 @@ def markdown_report() -> str:
         f"- Downstream directory: `{profile_dir}`",
         f"- Avatar filename matches slug: {'yes' if slug_matches_image else 'no'}",
         "- Profile PR scope: one designer profile only",
-        f"- Local google/fonts checkout: `{DEFAULT_GF_REPO}`",
+        f"- Local google/fonts checkout: `{gf_repo}`",
         f"- Local designers directory exists: {'yes' if designers_dir.exists() else 'no'}",
         f"- `gftools add-designer` available: {'yes' if add_designer_available else 'no'}",
         f"- Candidate info.pb validator present: {'yes' if info_validator_exists else 'no'}",
@@ -301,7 +316,7 @@ def markdown_report() -> str:
             "",
             "```bash",
             "make designer-profile-prepare-check",
-            f"./venv/bin/python {PREPARE_HELPER} --image path/to/{image_name} --apply",
+            f"./.venv/bin/python {PREPARE_HELPER} --image path/to/{image_name} --apply",
             "```",
             "",
             f"- Default info candidate: `{INFO_CANDIDATE}`",
@@ -329,7 +344,7 @@ def markdown_report() -> str:
             "Google Fonts reviewer explicitly asks for a combined patch.",
             "",
             "```bash",
-            f"cd {DEFAULT_GF_REPO}",
+            f"cd {gf_repo}",
             "git switch main",
             "git pull --ff-only upstream main",
             f"git switch -c {downstream_branch}",
@@ -340,27 +355,27 @@ def markdown_report() -> str:
             "intentional profile files:",
             "",
             "```bash",
-            f"test ! -e {DEFAULT_GF_REPO}/{profile_dir}",
-            f"git -C {DEFAULT_GF_REPO} status --short -- catalog/designers/{slug}",
-            f"git -C {DEFAULT_GF_REPO} status --short",
+            f"test ! -e {gf_repo}/{profile_dir}",
+            f"git -C {gf_repo} status --short -- catalog/designers/{slug}",
+            f"git -C {gf_repo} status --short",
             "```",
             "",
             "Create the profile with `gftools add-designer`, then hand-edit",
             "`info.pb` and `bio.html` to match the approved profile text:",
             "",
             "```bash",
-            f"{ROOT}/venv/bin/gftools add-designer {DEFAULT_GF_REPO}/catalog/designers \"{designer}\" --img_path path/to/{image_name}",
+            f"./.venv/bin/gftools add-designer {gf_repo}/catalog/designers \"{designer}\" --img_path path/to/{image_name}",
             "```",
             "",
             "Validate the profile inputs from this repo before committing the",
             "downstream profile files:",
             "",
             "```bash",
-            f"cd {ROOT}",
-            f"make designer-profile-info-check INFO={DEFAULT_GF_REPO}/{profile_dir}/info.pb",
-            f"make designer-profile-image-check IMAGE={DEFAULT_GF_REPO}/{profile_dir}/{image_name}",
-            f"make designer-profile-bio-check BIO={DEFAULT_GF_REPO}/{profile_dir}/bio.html",
-            "make designer-profile-check",
+            "cd /path/to/virtua-grotesk",
+            f"./.venv/bin/python scripts/validate_designer_profile_info.py {gf_repo}/{profile_dir}/info.pb \"{designer}\" {image_name}",
+            f"./.venv/bin/python scripts/validate_designer_profile_image.py {gf_repo}/{profile_dir}/{image_name} {image_name}",
+            f"./.venv/bin/python scripts/validate_designer_profile_bio.py {gf_repo}/{profile_dir}/bio.html",
+            "make reports",
             "```",
             "",
             "Expected downstream commit scope:",
@@ -385,10 +400,10 @@ def markdown_report() -> str:
         "  downstream metadata designer string and the only current AUTHORS",
         "  catalog-credit candidate.",
         "- Keep this as a separate designer-profile draft; do not create files in",
-        "  `/Users/eli/GH/forks/fonts/catalog/designers` until the biography and",
+        "  `$GF_REPO_PATH/catalog/designers` until the biography and",
         "  image are approved.",
         "- If the family package has intentional dirty files under",
-        "  `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk`, either commit, stash,",
+        "  `$GF_REPO_PATH/ofl/virtuagrotesk`, either commit, stash,",
         "  or review that work before applying a separate designer-profile branch.",
         "",
         "## Candidate `bio.html`",
@@ -447,7 +462,7 @@ def markdown_report() -> str:
         "profile:",
         "",
         "```bash",
-        f"make designer-profile-info-check INFO={DEFAULT_GF_REPO}/{profile_dir}/info.pb",
+        f"./.venv/bin/python scripts/validate_designer_profile_info.py {gf_repo}/{profile_dir}/info.pb \"{designer}\" {image_name}",
         "```",
         "",
         "## `bio.html` Requirements",
@@ -505,7 +520,7 @@ def markdown_report() -> str:
         "`bio.html` as needed:",
         "",
         "```bash",
-        f"{ROOT}/venv/bin/gftools add-designer {DEFAULT_GF_REPO}/catalog/designers \"{designer}\" --img_path path/to/{image_name}",
+        f"./.venv/bin/gftools add-designer {gf_repo}/catalog/designers \"{designer}\" --img_path path/to/{image_name}",
         "```",
         "",
         "## Relationship To Family Package",

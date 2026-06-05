@@ -20,12 +20,12 @@ Read the reference image file at the provided path. Describe in detail:
 
 ### Phase 2: Build & Render Matching Specimen
 1. Determine what text is shown in the reference image
-2. If a matching designbot script exists, use it. Otherwise create a temporary script (see `/render-specimen` for the pattern) that renders the same text at a comparable size
-3. Build the font if needed: `./build.sh`
-4. Render: `designbot --render <script> --output designbot/compare_current.png`
+2. Build the font if needed: `./build.sh`
+3. Render the closest current proof: `make proof` for a general PDF or `make specimen` for spacing/weight review
+4. Use the generated PDF pages in `documentation/proofs/` as the current rendering
 
 ### Phase 3: Read Current Rendering
-Read `designbot/compare_current.png` and describe the same attributes as Phase 1.
+Read the generated proof/specimen output and describe the same attributes as Phase 1.
 
 ### Phase 4: Compare
 Create a detailed comparison covering:

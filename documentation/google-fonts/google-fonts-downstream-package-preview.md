@@ -6,7 +6,7 @@ and should not replace a `gftools packager` run; it is the review target for
 the first local packaging pass.
 
 Current dry-run status, 2026-05-24: Packager has been wired to the local fork at
-`/Users/eli/GH/forks/fonts`, but cannot complete the download/copy pass until
+`$GF_REPO_PATH`, but cannot complete the download/copy pass until
 the final GitHub release archive exposes the files listed in `source.files`,
 especially the served variable font. The chosen source strategy is
 release/archive packaging; the local wrapper should use
@@ -34,7 +34,7 @@ Include static TTFs only if Google Fonts asks for them in the downstream
 package. The upstream build still generates static TTFs for local QA, proofs,
 and release review.
 
-The Article image is generated from `designbot/card.rs` and documented in
+The Article image is stored at `documentation/assets/readme-specimen.png` and documented in
 `documentation/assets/image-license.txt`. Copy it alongside `ARTICLE.en_us.html` if
 the final package uses the Article flow.
 

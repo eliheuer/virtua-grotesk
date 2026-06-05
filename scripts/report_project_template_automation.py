@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import re
 import sys
@@ -10,7 +11,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DEFAULT = Path("documentation/google-fonts/project-template-automation-readiness.md")
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 
 
 OPTIONAL_TEMPLATE_FEATURES = [

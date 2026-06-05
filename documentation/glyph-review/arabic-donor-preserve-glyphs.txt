@@ -6,7 +6,7 @@
 # sheen-ar
 #
 # Then run:
-# ./venv/bin/python scripts/build_donor_glyph_candidates.py \
+# ./.venv/bin/python scripts/build_donor_glyph_candidates.py \
 #   --glyphs pending-review \
 #   --exclude-glyphs documentation/glyph-review/arabic-donor-preserve-glyphs.txt \
 #   --output build/arabic-donor-candidates/rubik-to-virtua-pending-review \

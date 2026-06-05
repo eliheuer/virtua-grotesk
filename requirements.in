@@ -1,6 +1,6 @@
 # Top-level Python packages for the local Google Fonts build, report, and
 # package-review workflow. Keep this list small; requirements.txt is the
-# pinned install snapshot generated from the active local venv.
+# pinned install snapshot generated from the active local .venv.
 fontmake
 fonttools
 gftools[qa]

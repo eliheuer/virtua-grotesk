@@ -9,9 +9,9 @@ designer string.
 
 ## Local Google Fonts Checkout
 
-- Path: `/Users/eli/GH/forks/fonts`
-- Designer catalog exists: yes
-- Designer profiles read: 494
+- Path: `GF_REPO_PATH_NOT_CONFIGURED`
+- Designer catalog exists: no
+- Designer profiles read: 0
 - AUTHORS catalog-credit candidates: 1
 - Contributor-only candidates: 0
 - Candidate profiles missing: 1

@@ -3,13 +3,14 @@
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 import re
 import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
+DEFAULT_GF_REPO = Path(os.environ["GF_REPO_PATH"]) if os.environ.get("GF_REPO_PATH") else Path("GF_REPO_PATH_NOT_CONFIGURED")
 OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-language-metadata.md")
 DOWNSTREAM_PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 SCRIPT_ID = "Arab"
