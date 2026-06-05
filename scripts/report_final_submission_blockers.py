@@ -9,7 +9,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/final-submission-blockers.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/final-submission-blockers.md")
 
 
 def read_text(relative_path: str) -> str:
@@ -94,49 +94,49 @@ def decision_headings(decisions_text: str) -> list[str]:
 
 
 def markdown_report() -> str:
-    decisions_text = read_text("documentation/google-fonts-decisions.md")
-    decision_readiness_text = read_text("documentation/decision-readiness.md")
-    placeholder_text = read_text("documentation/open-placeholder-audit.md")
-    package_source_text = read_text("documentation/package-source-files-audit.md")
-    packager_source_strategy_text = read_text("documentation/packager-source-strategy.md")
-    downstream_metadata_text = read_text("documentation/downstream-metadata-readiness.md")
-    article_text = read_text("documentation/article-readiness.md")
-    kerning_text = read_text("documentation/kerning-readiness.md")
-    kerning_proof_review_text = read_text("documentation/kerning-proof-review.md")
-    vendor_text = read_text("documentation/vendor-id-readiness.md")
-    release_metadata_text = read_text("documentation/release-metadata.md")
-    release_source_text = read_text("documentation/release-source-readiness.md")
-    release_archive_text = read_text("documentation/release-archive-manifest.md")
-    github_release_text = read_text("documentation/github-release-draft.md")
-    package_dry_run_text = read_text("documentation/package-dry-run-readiness.md")
-    upstream_structure_text = read_text("documentation/upstream-structure-readiness.md")
-    template_pr_text = read_text("documentation/google-fonts-template-and-pr-audit.md")
-    recent_packages_text = read_text("documentation/recent-google-fonts-packages.md")
-    add_font_template_text = read_text("documentation/google-fonts-add-font-template-audit.md")
-    template_automation_text = read_text("documentation/project-template-automation-readiness.md")
-    handoff_readiness_text = read_text("documentation/submission-handoff-readiness.md")
-    designer_profile_text = read_text("documentation/designer-profile-readiness.md")
-    authorship_text = read_text("documentation/authorship-disclosure-readiness.md")
-    pr_identity_text = read_text("documentation/pr-identity-readiness.md")
-    downstream_pr_text = read_text("documentation/downstream-pr-readiness.md")
-    drawbot_runtime_text = read_text("documentation/drawbot-runtime-readiness.md")
-    local_workflow_text = read_text("documentation/local-workflow-readiness.md")
-    family_name_text = read_text("documentation/family-name-readiness.md")
-    glyphset_text = read_text("documentation/gf-glyphset-readiness.md")
-    language_metadata_text = read_text("documentation/google-fonts-language-metadata.md")
-    reachability_text = read_text("documentation/glyph-reachability.md")
-    numeric_text = read_text("documentation/numeric-feature-readiness.md")
-    pua_text = read_text("documentation/pua-scope.md")
-    arabic_source_text = read_text("documentation/arabic-source-work-checklist.md")
-    arabic_manual_edit_targets_text = read_text("documentation/arabic-manual-edit-targets.md")
-    arabic_mark_text = read_text("documentation/arabic-mark-readiness.md")
-    arabic_shaping_text = read_text("documentation/arabic-shaping-smoke-test.md")
-    warnings_text = read_text("documentation/fontspector-warnings.md")
-    metadata_warning_probe_text = read_text("documentation/fontspector-metadata-warning-probe.md")
-    zero_warning_text = read_text("documentation/fontspector-zero-warning-worklist.md")
-    fontspector_text = read_text("documentation/fontspector-googlefonts-report.md")
-    contour_text = read_text("documentation/fontspector-contour-count.md")
-    contour_decision_text = read_text("documentation/contour-cleanup-decision-log.md")
+    decisions_text = read_text("documentation/google-fonts/google-fonts-decisions.md")
+    decision_readiness_text = read_text("documentation/google-fonts/decision-readiness.md")
+    placeholder_text = read_text("documentation/google-fonts/open-placeholder-audit.md")
+    package_source_text = read_text("documentation/google-fonts/package-source-files-audit.md")
+    packager_source_strategy_text = read_text("documentation/google-fonts/packager-source-strategy.md")
+    downstream_metadata_text = read_text("documentation/google-fonts/downstream-metadata-readiness.md")
+    article_text = read_text("documentation/google-fonts/article-readiness.md")
+    kerning_text = read_text("documentation/google-fonts/kerning-readiness.md")
+    kerning_proof_review_text = read_text("documentation/google-fonts/kerning-proof-review.md")
+    vendor_text = read_text("documentation/google-fonts/vendor-id-readiness.md")
+    release_metadata_text = read_text("documentation/google-fonts/release-metadata.md")
+    release_source_text = read_text("documentation/google-fonts/release-source-readiness.md")
+    release_archive_text = read_text("documentation/google-fonts/release-archive-manifest.md")
+    github_release_text = read_text("documentation/google-fonts/github-release-draft.md")
+    package_dry_run_text = read_text("documentation/google-fonts/package-dry-run-readiness.md")
+    upstream_structure_text = read_text("documentation/google-fonts/upstream-structure-readiness.md")
+    template_pr_text = read_text("documentation/google-fonts/google-fonts-template-and-pr-audit.md")
+    recent_packages_text = read_text("documentation/google-fonts/recent-google-fonts-packages.md")
+    add_font_template_text = read_text("documentation/google-fonts/google-fonts-add-font-template-audit.md")
+    template_automation_text = read_text("documentation/google-fonts/project-template-automation-readiness.md")
+    handoff_readiness_text = read_text("documentation/google-fonts/submission-handoff-readiness.md")
+    designer_profile_text = read_text("documentation/google-fonts/designer-profile-readiness.md")
+    authorship_text = read_text("documentation/google-fonts/authorship-disclosure-readiness.md")
+    pr_identity_text = read_text("documentation/google-fonts/pr-identity-readiness.md")
+    downstream_pr_text = read_text("documentation/google-fonts/downstream-pr-readiness.md")
+    drawbot_runtime_text = read_text("documentation/google-fonts/drawbot-runtime-readiness.md")
+    local_workflow_text = read_text("documentation/google-fonts/local-workflow-readiness.md")
+    family_name_text = read_text("documentation/google-fonts/family-name-readiness.md")
+    glyphset_text = read_text("documentation/google-fonts/gf-glyphset-readiness.md")
+    language_metadata_text = read_text("documentation/google-fonts/google-fonts-language-metadata.md")
+    reachability_text = read_text("documentation/google-fonts/glyph-reachability.md")
+    numeric_text = read_text("documentation/google-fonts/numeric-feature-readiness.md")
+    pua_text = read_text("documentation/google-fonts/pua-scope.md")
+    arabic_source_text = read_text("documentation/glyph-review/arabic-source-work-checklist.md")
+    arabic_manual_edit_targets_text = read_text("documentation/glyph-review/arabic-manual-edit-targets.md")
+    arabic_mark_text = read_text("documentation/glyph-review/arabic-mark-readiness.md")
+    arabic_shaping_text = read_text("documentation/glyph-review/arabic-shaping-smoke-test.md")
+    warnings_text = read_text("documentation/google-fonts/fontspector-warnings.md")
+    metadata_warning_probe_text = read_text("documentation/google-fonts/fontspector-metadata-warning-probe.md")
+    zero_warning_text = read_text("documentation/google-fonts/fontspector-zero-warning-worklist.md")
+    fontspector_text = read_text("documentation/google-fonts/fontspector-googlefonts-report.md")
+    contour_text = read_text("documentation/google-fonts/fontspector-contour-count.md")
+    contour_decision_text = read_text("documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md")
 
     open_decisions, decided_decisions = decision_counts(decisions_text)
     open_decision_headings = decision_headings(decisions_text)
@@ -277,7 +277,7 @@ def markdown_report() -> str:
     designer_contributor_only_candidates = first_int(r"Contributor-only candidates: (\d+)", designer_profile_text)
     designer_missing = len(missing_designer_profile_names(designer_profile_text))
     designer_metadata_pending = first_int(r"Pending metadata designer placeholders: (\d+)", designer_profile_text)
-    designer_profile_package_text = read_text("documentation/designer-profile-package-draft.md")
+    designer_profile_package_text = read_text("documentation/google-fonts/designer-profile-package-draft.md")
     designer_draft_placeholders = first_int(r"Draft placeholders still unresolved: (\d+)", designer_profile_package_text)
     designer_profile_collision = yes_no_from_line(r"Profile path collision risk: (yes|no)", designer_profile_package_text)
     ai_disclosure = yes_no_from_line(r"AI-use disclosure recorded: (yes|no)", authorship_text)
@@ -460,70 +460,70 @@ def markdown_report() -> str:
             "",
             "## Evidence Reports",
             "",
-            "- `documentation/google-fonts-decisions.md`",
-            "- `documentation/google-fonts-decision-answer-sheet.md`",
-            "- `documentation/decision-readiness.md`",
-            "- `documentation/decision-application-blockers.md`",
-            "- `documentation/open-placeholder-audit.md`",
-            "- `documentation/public-upstream-readiness.md`",
-            "- `documentation/package-source-files-audit.md`",
-            "- `documentation/packager-source-strategy.md`",
-            "- `documentation/package-dry-run-readiness.md`",
-            "- `documentation/downstream-metadata-readiness.md`",
-            "- `documentation/downstream-metadata-diff.md`",
-            "- `documentation/article-readiness.md`",
-            "- `documentation/kerning-readiness.md`",
-            "- `documentation/kerning-proof-review.md`",
-            "- `documentation/family-name-readiness.md`",
-            "- `documentation/authorship-disclosure-readiness.md`",
-            "- `documentation/pr-identity-readiness.md`",
-            "- `documentation/downstream-pr-readiness.md`",
-            "- `documentation/drawbot-runtime-readiness.md`",
-            "- `documentation/local-workflow-readiness.md`",
-            "- `documentation/vendor-id-readiness.md`",
-            "- `documentation/avar-readiness.md`",
-            "- `documentation/release-metadata.md`",
-            "- `documentation/release-source-readiness.md`",
-            "- `documentation/release-archive-manifest.md`",
-            "- `documentation/github-release-draft.md`",
-            "- `documentation/github-release-notes.md`",
-            "- `documentation/upstream-structure-readiness.md`",
-            "- `documentation/google-fonts-template-and-pr-audit.md`",
-            "- `documentation/recent-google-fonts-packages.md`",
-            "- `documentation/google-fonts-add-font-template-audit.md`",
-            "- `documentation/google-fonts-add-font-issue-draft.md`",
-            "- `documentation/project-template-automation-readiness.md`",
-            "- `documentation/submission-handoff-readiness.md`",
-            "- `documentation/designer-profile-readiness.md`",
-            "- `documentation/designer-profile-package-draft.md`",
-            "- `documentation/gf-glyphset-readiness.md`",
-            "- `documentation/google-fonts-language-metadata.md`",
-            "- `documentation/missing-gf-latin-core.md`",
-            "- `documentation/missing-gf-arabic-core.md`",
-            "- `documentation/arabic-source-work-checklist.md`",
-            "- `documentation/arabic-current-review-worksheet.md`",
-            "- `documentation/arabic-batch-recorder.md`",
-            "- `documentation/arabic-first-review-batch.md`",
-            "- `documentation/arabic-full-queue-ai-sweep.md`",
-            "- `documentation/arabic-manual-edit-targets.md`",
-            "- `documentation/arabic-shaping-smoke-test.md`",
-            "- `documentation/arabic-mark-readiness.md`",
-            "- `documentation/arabic-review-packet.md`",
-            "- `documentation/arabic-goal-completion-audit.md`",
-            "- `documentation/arabic-next-review-packet.md`",
-            "- `documentation/arabic-visual-review-log.md`",
-            "- `documentation/numeric-feature-readiness.md`",
-            "- `documentation/pua-scope.md`",
-            "- `documentation/glyph-reachability.md`",
-            "- `documentation/fontspector-warnings.md`",
-            "- `documentation/fontspector-metadata-warning-probe.md`",
-            "- `documentation/fontspector-zero-warning-worklist.md`",
-            "- `documentation/fontspector-googlefonts-report.md`",
-            "- `documentation/fontspector-contour-count.md`",
-            "- `documentation/arabic-cleanup-drawing-briefs.md`",
-            "- `documentation/contour-cleanup-batches.md`",
-            "- `documentation/contour-cleanup-ai-triage.md`",
-            "- `documentation/contour-cleanup-decision-log.md`",
+            "- `documentation/google-fonts/google-fonts-decisions.md`",
+            "- `documentation/google-fonts/google-fonts-decision-answer-sheet.md`",
+            "- `documentation/google-fonts/decision-readiness.md`",
+            "- `documentation/google-fonts/decision-application-blockers.md`",
+            "- `documentation/google-fonts/open-placeholder-audit.md`",
+            "- `documentation/google-fonts/public-upstream-readiness.md`",
+            "- `documentation/google-fonts/package-source-files-audit.md`",
+            "- `documentation/google-fonts/packager-source-strategy.md`",
+            "- `documentation/google-fonts/package-dry-run-readiness.md`",
+            "- `documentation/google-fonts/downstream-metadata-readiness.md`",
+            "- `documentation/google-fonts/downstream-metadata-diff.md`",
+            "- `documentation/google-fonts/article-readiness.md`",
+            "- `documentation/google-fonts/kerning-readiness.md`",
+            "- `documentation/google-fonts/kerning-proof-review.md`",
+            "- `documentation/google-fonts/family-name-readiness.md`",
+            "- `documentation/google-fonts/authorship-disclosure-readiness.md`",
+            "- `documentation/google-fonts/pr-identity-readiness.md`",
+            "- `documentation/google-fonts/downstream-pr-readiness.md`",
+            "- `documentation/google-fonts/drawbot-runtime-readiness.md`",
+            "- `documentation/google-fonts/local-workflow-readiness.md`",
+            "- `documentation/google-fonts/vendor-id-readiness.md`",
+            "- `documentation/google-fonts/avar-readiness.md`",
+            "- `documentation/google-fonts/release-metadata.md`",
+            "- `documentation/google-fonts/release-source-readiness.md`",
+            "- `documentation/google-fonts/release-archive-manifest.md`",
+            "- `documentation/google-fonts/github-release-draft.md`",
+            "- `documentation/google-fonts/github-release-notes.md`",
+            "- `documentation/google-fonts/upstream-structure-readiness.md`",
+            "- `documentation/google-fonts/google-fonts-template-and-pr-audit.md`",
+            "- `documentation/google-fonts/recent-google-fonts-packages.md`",
+            "- `documentation/google-fonts/google-fonts-add-font-template-audit.md`",
+            "- `documentation/google-fonts/google-fonts-add-font-issue-draft.md`",
+            "- `documentation/google-fonts/project-template-automation-readiness.md`",
+            "- `documentation/google-fonts/submission-handoff-readiness.md`",
+            "- `documentation/google-fonts/designer-profile-readiness.md`",
+            "- `documentation/google-fonts/designer-profile-package-draft.md`",
+            "- `documentation/google-fonts/gf-glyphset-readiness.md`",
+            "- `documentation/google-fonts/google-fonts-language-metadata.md`",
+            "- `documentation/google-fonts/missing-gf-latin-core.md`",
+            "- `documentation/google-fonts/missing-gf-arabic-core.md`",
+            "- `documentation/glyph-review/arabic-source-work-checklist.md`",
+            "- `documentation/glyph-review/arabic-current-review-worksheet.md`",
+            "- `documentation/glyph-review/arabic-batch-recorder.md`",
+            "- `documentation/glyph-review/arabic-first-review-batch.md`",
+            "- `documentation/glyph-review/arabic-full-queue-ai-sweep.md`",
+            "- `documentation/glyph-review/arabic-manual-edit-targets.md`",
+            "- `documentation/glyph-review/arabic-shaping-smoke-test.md`",
+            "- `documentation/glyph-review/arabic-mark-readiness.md`",
+            "- `documentation/glyph-review/arabic-review-packet.md`",
+            "- `documentation/glyph-review/arabic-goal-completion-audit.md`",
+            "- `documentation/glyph-review/arabic-next-review-packet.md`",
+            "- `documentation/glyph-review/arabic-visual-review-log.md`",
+            "- `documentation/google-fonts/numeric-feature-readiness.md`",
+            "- `documentation/google-fonts/pua-scope.md`",
+            "- `documentation/google-fonts/glyph-reachability.md`",
+            "- `documentation/google-fonts/fontspector-warnings.md`",
+            "- `documentation/google-fonts/fontspector-metadata-warning-probe.md`",
+            "- `documentation/google-fonts/fontspector-zero-warning-worklist.md`",
+            "- `documentation/google-fonts/fontspector-googlefonts-report.md`",
+            "- `documentation/google-fonts/fontspector-contour-count.md`",
+            "- `documentation/glyph-review/arabic-cleanup-drawing-briefs.md`",
+            "- `documentation/glyph-review/contour-cleanup/contour-cleanup-batches.md`",
+            "- `documentation/glyph-review/contour-cleanup/contour-cleanup-ai-triage.md`",
+            "- `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`",
             "",
             "Regenerate this report with `make preflight` after drawing work,",
             "metadata decisions, or packaging-source decisions change.",

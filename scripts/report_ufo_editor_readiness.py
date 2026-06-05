@@ -13,7 +13,7 @@ from fontTools.ufoLib.glifLib import GlyphSet
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/ufo-editor-readiness.md"
+DEFAULT_OUTPUT = ROOT / "documentation/source/ufo-editor-readiness.md"
 SOURCE_UFOS = [
     ROOT / "sources/VirtuaGrotesk-Regular.ufo",
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",

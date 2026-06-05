@@ -16,7 +16,7 @@ from report_arabic_manual_review_batches import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-visual-review-batch.tsv"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-visual-review-batch.tsv"
 
 
 def tsv_cell(value: str) -> str:

@@ -10,7 +10,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/downstream-pr-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/downstream-pr-readiness.md")
 GF_REPO_PATH = Path("/Users/eli/GH/forks/fonts")
 FAMILY_PATH = Path("ofl/virtuagrotesk")
 EXPECTED_BRANCH = "gftools_packager_ofl_virtuagrotesk"
@@ -76,13 +76,13 @@ def path_from_status(line: str) -> str:
 
 
 def markdown_report() -> str:
-    handoff = read_text("documentation/google-fonts-submission-handoff.md")
-    handoff_readiness = read_text("documentation/submission-handoff-readiness.md")
-    package_dry_run = read_text("documentation/package-dry-run-readiness.md")
-    pr_identity = read_text("documentation/pr-identity-readiness.md")
-    downstream_diff = read_text("documentation/downstream-metadata-diff.md")
-    add_font_issue = read_text("documentation/google-fonts-add-font-issue-draft.md")
-    release_source = read_text("documentation/release-source-readiness.md")
+    handoff = read_text("documentation/google-fonts/google-fonts-submission-handoff.md")
+    handoff_readiness = read_text("documentation/google-fonts/submission-handoff-readiness.md")
+    package_dry_run = read_text("documentation/google-fonts/package-dry-run-readiness.md")
+    pr_identity = read_text("documentation/google-fonts/pr-identity-readiness.md")
+    downstream_diff = read_text("documentation/google-fonts/downstream-metadata-diff.md")
+    add_font_issue = read_text("documentation/google-fonts/google-fonts-add-font-issue-draft.md")
+    release_source = read_text("documentation/google-fonts/release-source-readiness.md")
 
     gf_exists = (GF_REPO_PATH / ".git").exists()
     gf_branch = git_output(GF_REPO_PATH, ["rev-parse", "--abbrev-ref", "HEAD"]) if gf_exists else "missing"

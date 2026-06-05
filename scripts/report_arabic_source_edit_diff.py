@@ -11,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-source-edit-diff.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-source-edit-diff.md"
 MASTER_DIRS = {
     "Regular": ROOT / "sources/VirtuaGrotesk-Regular.ufo/glyphs",
     "Bold": ROOT / "sources/VirtuaGrotesk-Bold.ufo/glyphs",

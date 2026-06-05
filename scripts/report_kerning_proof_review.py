@@ -8,8 +8,8 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/kerning-proof-review.md")
-GFT_QA_PROOF_DIR = Path("documentation/gftools-qa/Proof")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/kerning-proof-review.md")
+GFT_QA_PROOF_DIR = Path("documentation/google-fonts/gftools-qa/Proof")
 EXPECTED_INSTANCES = ["Regular", "Medium", "SemiBold", "Bold"]
 EXPECTED_PROOF_TYPES = ["glyphs", "proofer", "text", "waterfall"]
 GF_ONBOARDER_WORKFLOW = "https://googlefonts.github.io/gf-guide/onboarder-workflow.html"

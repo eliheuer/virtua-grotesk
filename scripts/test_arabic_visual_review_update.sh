@@ -39,7 +39,7 @@ fi
 "$PYTHON_BIN" "$ROOT/scripts/update_arabic_visual_review.py" proof-regular-glyphs --status pass --reviewer "Test 2026-05-25" --notes "reviewed glyph proof" --log "$LOG" --apply >/dev/null
 expect_contains "applied pending count" "- Pending: 31" "$LOG"
 expect_contains "applied pass count" "- Pass: 1" "$LOG"
-expect_contains "applied row" '| `proof-regular-glyphs` | GF proof | Regular glyphs | `documentation/gftools-qa/Proof/*Regular*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | pass | Test 2026-05-25 | reviewed glyph proof |' "$LOG"
+expect_contains "applied row" '| `proof-regular-glyphs` | GF proof | Regular glyphs | `documentation/google-fonts/gftools-qa/Proof/*Regular*-diffbrowsers_glyphs.html`; `documentation/glyph-review/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | pass | Test 2026-05-25 | reviewed glyph proof |' "$LOG"
 
 "$PYTHON_BIN" "$ROOT/scripts/update_arabic_visual_review.py" proof-regular-glyphs --status pending --reviewer "" --notes "" --log "$LOG" --apply >/dev/null
 expect_contains "restored pending count" "- Pending: 32" "$LOG"
@@ -64,8 +64,8 @@ fi
 expect_contains "batch pending count" "- Pending: 30" "$LOG"
 expect_contains "batch pass count" "- Pass: 1" "$LOG"
 expect_contains "batch deferred count" "- Deferred: 1" "$LOG"
-expect_contains "batch applied pass row" '| `proof-regular-glyphs` | GF proof | Regular glyphs | `documentation/gftools-qa/Proof/*Regular*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | pass | Test 2026-05-25 | reviewed regular glyph proof |' "$LOG"
-expect_contains "batch applied deferred row" '| `proof-medium-glyphs` | GF proof | Medium glyphs | `documentation/gftools-qa/Proof/*Medium*-diffbrowsers_glyphs.html`; `documentation/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | deferred | Test 2026-05-25 | needs Arabic reader |' "$LOG"
+expect_contains "batch applied pass row" '| `proof-regular-glyphs` | GF proof | Regular glyphs | `documentation/google-fonts/gftools-qa/Proof/*Regular*-diffbrowsers_glyphs.html`; `documentation/glyph-review/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | pass | Test 2026-05-25 | reviewed regular glyph proof |' "$LOG"
+expect_contains "batch applied deferred row" '| `proof-medium-glyphs` | GF proof | Medium glyphs | `documentation/google-fonts/gftools-qa/Proof/*Medium*-diffbrowsers_glyphs.html`; `documentation/glyph-review/arabic-manual-review-dashboard.html` | Structure triage mechanical blockers: 0; structure review prompts: 35 | Glyphs proof: missing, clipped, blank, malformed, duplicated, or wrong-codepoint Arabic glyphs | deferred | Test 2026-05-25 | needs Arabic reader |' "$LOG"
 
 BAD_BATCH="$TMPDIR/bad-review-batch.tsv"
 cat >"$BAD_BATCH" <<'TSV'

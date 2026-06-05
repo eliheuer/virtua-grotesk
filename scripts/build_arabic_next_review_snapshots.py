@@ -19,9 +19,9 @@ from report_arabic_visual_review_runbook import row_priority, visual_rows
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PACKET = ROOT / "documentation/arabic-next-review-packet.md"
-OUTPUT_DIR = ROOT / "documentation/arabic-review-snapshots"
-OUTPUT_REPORT = ROOT / "documentation/arabic-next-review-snapshots.md"
+PACKET = ROOT / "documentation/glyph-review/arabic-next-review-packet.md"
+OUTPUT_DIR = ROOT / "documentation/glyph-review/review-snapshots"
+OUTPUT_REPORT = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
 DEFAULT_CHROME_CANDIDATES = (
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     "/Applications/Chromium.app/Contents/MacOS/Chromium",
@@ -79,25 +79,25 @@ def html_sources_for_key(key: str) -> list[tuple[str, Path]]:
             "semibold": "SemiBold",
             "bold": "Bold",
         }[instance]
-        path = ROOT / f"documentation/gftools-qa/Proof/{instance_name}-diffbrowsers_{proof_type}.html"
+        path = ROOT / f"documentation/google-fonts/gftools-qa/Proof/{instance_name}-diffbrowsers_{proof_type}.html"
         return [(f"{instance_name} {proof_type}", path)]
     if key == "class-letter-structures":
         return [
-            ("Arabic structure sweep", ROOT / "documentation/arabic-structure-sweep.html"),
-            ("Arabic visual risk proof", ROOT / "documentation/arabic-visual-risk-proof.html"),
+            ("Arabic structure sweep", ROOT / "documentation/glyph-review/arabic-structure-sweep.html"),
+            ("Arabic visual risk proof", ROOT / "documentation/glyph-review/arabic-visual-risk-proof.html"),
         ]
     if key == "class-mark-combinations":
-        return [("Arabic mark proof", ROOT / "documentation/arabic-mark-review-proof.html")]
+        return [("Arabic mark proof", ROOT / "documentation/glyph-review/arabic-mark-review-proof.html")]
     if key.startswith("mark-"):
-        return [("Arabic mark proof", ROOT / "documentation/arabic-mark-review-proof.html")]
+        return [("Arabic mark proof", ROOT / "documentation/glyph-review/arabic-mark-review-proof.html")]
     if key.startswith("smoke-"):
-        return [("Arabic manual dashboard", ROOT / "documentation/arabic-manual-review-dashboard.html")]
+        return [("Arabic manual dashboard", ROOT / "documentation/glyph-review/arabic-manual-review-dashboard.html")]
     if key in {
         "class-dot-stack-helpers",
         "class-arabic-farsi-numerals",
         "class-arabic-punctuation",
     }:
-        return [("Arabic manual dashboard", ROOT / "documentation/arabic-manual-review-dashboard.html")]
+        return [("Arabic manual dashboard", ROOT / "documentation/glyph-review/arabic-manual-review-dashboard.html")]
     return []
 
 

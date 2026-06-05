@@ -80,9 +80,9 @@ Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and 
 - `make test` is the automated Fontspector `googlefonts` profile gate.
 - `make kerning-proof-check` is part of the core visual QA process, not an
   optional extra. It runs `gftools qa --proof` and writes HTML proof output to
-  `documentation/gftools-qa/` for human spacing and kerning review.
+  `documentation/google-fonts/gftools-qa/` for human spacing and kerning review.
 - `make kerning-proof-review-check` generates
-  `documentation/kerning-proof-review.md`, which enumerates the expected proof
+  `documentation/google-fonts/kerning-proof-review.md`, which enumerates the expected proof
   HTML by weight and proof type for human and agent review.
 - Agents should regenerate or re-review that proof after any spacing, kerning,
   build-output, or kerning-scope decision change, then rerun `make preflight`.
@@ -106,7 +106,7 @@ Specimen scripts are Rust files in `designbot/` that use the DesignBot API. They
 ## Proof Generation
 
 ```bash
-python proof.py [font_path] [output_path]
+python scripts/build_general_proof.py [font_path] [output_path]
 make print-spacing-specimen
 make arabic-print-proof
 ```
@@ -115,13 +115,13 @@ Uses DrawBot-style APIs to generate multi-page PDF proofs. The Makefile
 defaults to the local `eliheuer/drawbot-skia` fork at
 `/Users/eli/GH/repos/drawbot-skia`, runs this repo's virtualenv Python at
 `./venv/bin/python`, prepends the fork's `src` directory to `PYTHONPATH`, and
-renders `fonts/ttf/VirtuaGrotesk-Regular.ttf` → `proof.pdf`.
+renders `fonts/ttf/VirtuaGrotesk-Regular.ttf` → `documentation/proofs/proof.pdf`.
 `make print-spacing-specimen` renders the landscape print review PDF at
-`documentation/print-spacing-specimen.pdf` across Regular, Medium, SemiBold,
-and Bold, with `documentation/print-spacing-specimen-index.md` as the page map.
+`documentation/proofs/print-spacing-specimen.pdf` across Regular, Medium, SemiBold,
+and Bold, with `documentation/proofs/print-spacing-specimen-index.md` as the page map.
 `make arabic-print-proof` renders the focused Arabic PDF review aid at
-`documentation/arabic-print-proof.pdf` across Regular, Medium, SemiBold, and
-Bold, with `documentation/arabic-print-proof-index.md` as the page map.
+`documentation/glyph-review/arabic-print-proof.pdf` across Regular, Medium, SemiBold, and
+Bold, with `documentation/glyph-review/arabic-print-proof-index.md` as the page map.
 
 ## Source Architecture
 
@@ -155,8 +155,8 @@ The core workflow for type design with Codex:
 
 ## Design Philosophy
 
-Virtua Grotesk is a geometric grotesk defined by its **16-unit chamfered corners** — every sharp junction gets a 45-degree bevel. Strokes are monolinear (no thick/thin contrast). Round forms use smooth cubic Bezier curves with generous counters. Weight gain across the axis works by **counter reduction** — outer contours often stay identical between Regular and Bold while the inner counter shrinks inward. See `.claude/rules/design-philosophy.md` for full outline drawing conventions.
+Virtua Grotesk is a geometric grotesk defined by its **16-unit chamfered corners** — every sharp junction gets a 45-degree bevel. Strokes are monolinear (no thick/thin contrast). Round forms use smooth cubic Bezier curves with generous counters. Weight gain across the axis works by **counter reduction** — outer contours often stay identical between Regular and Bold while the inner counter shrinks inward. See `documentation/source-guides/design-philosophy.md` for full outline drawing conventions.
 
 ## Master Compatibility Warning
 
-Both masters (Regular and Bold) **must** have identical glyph structure: same contours, same point counts, same point types. Only coordinates and advance widths may differ. Structural changes to one master must be mirrored in the other. Incompatible masters will cause the variable font build to fail. Run `make reports-only` and review `documentation/master-compatibility.md` to verify.
+Both masters (Regular and Bold) **must** have identical glyph structure: same contours, same point counts, same point types. Only coordinates and advance widths may differ. Structural changes to one master must be mirrored in the other. Incompatible masters will cause the variable font build to fail. Run `make reports-only` and review `documentation/source/master-compatibility.md` to verify.

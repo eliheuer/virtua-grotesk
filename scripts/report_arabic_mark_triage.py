@@ -16,7 +16,7 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-mark-triage.md"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-mark-triage.md"
 SOURCE_UFOS = [
     ROOT / "sources/VirtuaGrotesk-Regular.ufo",
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",
@@ -268,7 +268,7 @@ def markdown_report() -> str:
         "",
         "This generated report supports visual-review batch 3:",
         "`Marks, Dotted Circle, And Stacking`. It shapes the same samples used",
-        "by `documentation/arabic-mark-review-proof.html` and records mechanical",
+        "by `documentation/glyph-review/arabic-mark-review-proof.html` and records mechanical",
         "risks that AI can pre-triage before hand review.",
         "",
         "It does not approve mark placement. Zero-position offsets can be valid",
@@ -380,12 +380,12 @@ def markdown_report() -> str:
             "",
             "Open these together for the mark review batch:",
             "",
-            "- `documentation/arabic-mark-review-proof.html`",
-            "- `documentation/arabic-mark-readiness.md`",
-            "- `documentation/arabic-manual-review-dashboard.html`",
+            "- `documentation/glyph-review/arabic-mark-review-proof.html`",
+            "- `documentation/glyph-review/arabic-mark-readiness.md`",
+            "- `documentation/glyph-review/arabic-manual-review-dashboard.html`",
             "",
             "Record the eight batch-3 rows in",
-            "`documentation/arabic-visual-review-log.md` after hand inspection.",
+            "`documentation/glyph-review/arabic-visual-review-log.md` after hand inspection.",
             "",
         ]
     )

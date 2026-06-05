@@ -15,11 +15,11 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-next-review-ai-observations.md"
-SNAPSHOTS = ROOT / "documentation/arabic-next-review-snapshots.md"
-ZOOM_SNAPSHOTS = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
-SNAPSHOT_INTEGRITY = ROOT / "documentation/arabic-snapshot-integrity.md"
-VISUAL_LOG = ROOT / "documentation/arabic-visual-review-log.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-next-review-ai-observations.md"
+SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+ZOOM_SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-first-review-zoom-snapshots.md"
+SNAPSHOT_INTEGRITY = ROOT / "documentation/glyph-review/arabic-snapshot-integrity.md"
+VISUAL_LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
 
 
 def read(path: Path) -> str:
@@ -153,12 +153,12 @@ def suggested_action(row) -> str:
         )
     if row.key.startswith("mark-") or row.key == "class-mark-combinations":
         return (
-            "Open `documentation/arabic-mark-review-proof.html`; compare mark "
+            "Open `documentation/glyph-review/arabic-mark-review-proof.html`; compare mark "
             "placement across weights before recording pass/fix/defer."
         )
     if row.key.startswith("smoke-"):
         return (
-            "Open `documentation/arabic-shaping-smoke-test.md` and the dashboard; "
+            "Open `documentation/glyph-review/arabic-shaping-smoke-test.md` and the dashboard; "
             "confirm joins and spacing visually before passing."
         )
     if row.key.startswith("proof-"):
@@ -188,7 +188,7 @@ def markdown_report() -> str:
         "",
         "This generated note records AI-safe first-pass observations over the",
         "current Arabic review snapshot set. It is not a human Arabic review and",
-        "does not mark any row in `documentation/arabic-visual-review-log.md` as",
+        "does not mark any row in `documentation/glyph-review/arabic-visual-review-log.md` as",
         "passed.",
         "",
         "## Snapshot Inputs",

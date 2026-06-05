@@ -11,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_LOG = ROOT / "documentation/arabic-visual-review-log.md"
+DEFAULT_LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
 ALLOWED_STATUSES = ("pending", "pass", "fix-needed", "deferred")
 SUMMARY_LABELS = {
     "pending": "Pending",

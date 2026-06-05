@@ -14,7 +14,7 @@ import glyphsets
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-structure-sweep.html"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-structure-sweep.html"
 GLYPHSET_NAME = "GF_Arabic_Core"
 EXTRA_CODEPOINTS = {0x25CC}
 FONTS = [
@@ -217,7 +217,7 @@ Generated from <code>{GLYPHSET_NAME}</code> plus U+25CC dotted circle.
 Use this for the batch-2 structure and wrong-glyph sweep before broader spacing review.
 Each cell shows the current rendered sample and cmap glyph name for that font.
 Mark <code>fix-needed</code> only for specific source issues; otherwise record pass/defer in
-<code>documentation/arabic-visual-review-log.md</code>.
+<code>documentation/glyph-review/arabic-visual-review-log.md</code>.
 </p>
 <table>
 <thead><tr><th>Codepoint</th><th>Name</th>{headings}</tr></thead>

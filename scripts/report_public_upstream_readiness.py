@@ -11,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/public-upstream-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/public-upstream-readiness.md")
 PLACEHOLDER_URL = "https://github.com/fontgarden/virtua-grotesk"
 PLACEHOLDER_DISPLAY_URL = "github.com/fontgarden/virtua-grotesk"
 
@@ -20,13 +20,13 @@ SEARCH_PATHS = [
     "sources/VirtuaGrotesk-Regular.ufo/fontinfo.plist",
     "sources/VirtuaGrotesk-Bold.ufo/fontinfo.plist",
     "scripts/fix_gf_metadata.py",
-    "documentation/ARTICLE.en_us.html",
-    "documentation/google-fonts-decision-questions.md",
-    "documentation/google-fonts-decisions.md",
-    "documentation/google-fonts-downstream-package-preview.md",
-    "documentation/google-fonts-metadata-review.md",
-    "documentation/google-fonts-package-checklist.md",
-    "documentation/google-fonts-submission-handoff.md",
+    "documentation/google-fonts/ARTICLE.en_us.html",
+    "documentation/google-fonts/google-fonts-decision-questions.md",
+    "documentation/google-fonts/google-fonts-decisions.md",
+    "documentation/google-fonts/google-fonts-downstream-package-preview.md",
+    "documentation/google-fonts/google-fonts-metadata-review.md",
+    "documentation/google-fonts/google-fonts-package-checklist.md",
+    "documentation/google-fonts/google-fonts-submission-handoff.md",
 ]
 STALE_GUARD_PATHS = [
     "scripts/package_gf_dry_run.sh",

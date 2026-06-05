@@ -10,12 +10,12 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-visual-review-log.md"
-PROOF_DIR = ROOT / "documentation/gftools-qa/Proof"
-STRUCTURE_TRIAGE = ROOT / "documentation/arabic-structure-triage.md"
-MARK_TRIAGE = ROOT / "documentation/arabic-mark-triage.md"
-SHAPING_SMOKE = ROOT / "documentation/arabic-shaping-smoke-test.md"
-CONTOUR_DECISIONS = ROOT / "documentation/contour-cleanup-decision-log.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
+PROOF_DIR = ROOT / "documentation/google-fonts/gftools-qa/Proof"
+STRUCTURE_TRIAGE = ROOT / "documentation/glyph-review/arabic-structure-triage.md"
+MARK_TRIAGE = ROOT / "documentation/glyph-review/arabic-mark-triage.md"
+SHAPING_SMOKE = ROOT / "documentation/glyph-review/arabic-shaping-smoke-test.md"
+CONTOUR_DECISIONS = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md"
 ALLOWED_STATUSES = ("pending", "pass", "fix-needed", "deferred")
 PROOF_INSTANCES = ("Regular", "Medium", "SemiBold", "Bold")
 PROOF_TYPES = (
@@ -187,8 +187,8 @@ def rows() -> list[ReviewRow]:
         for proof_type, cue in PROOF_TYPES:
             key = f"proof-{instance.lower()}-{proof_type}"
             pattern = (
-                f"`documentation/gftools-qa/Proof/*{instance}*-diffbrowsers_{proof_type}.html`; "
-                "`documentation/arabic-manual-review-dashboard.html`"
+                f"`documentation/google-fonts/gftools-qa/Proof/*{instance}*-diffbrowsers_{proof_type}.html`; "
+                "`documentation/glyph-review/arabic-manual-review-dashboard.html`"
             )
             output.append(
                 ReviewRow(
@@ -206,7 +206,7 @@ def rows() -> list[ReviewRow]:
                 f"smoke-{label}",
                 "Smoke string",
                 label,
-                "`documentation/arabic-shaping-smoke-test.md`; `documentation/arabic-manual-review-dashboard.html`",
+                "`documentation/glyph-review/arabic-shaping-smoke-test.md`; `documentation/glyph-review/arabic-manual-review-dashboard.html`",
                 machine_precheck(f"smoke-{label}"),
                 cue,
             )
@@ -217,19 +217,19 @@ def rows() -> list[ReviewRow]:
                 f"mark-{label}",
                 "Mark attachment",
                 label,
-                "`documentation/arabic-mark-readiness.md`; `documentation/arabic-manual-review-dashboard.html`; `documentation/gftools-qa/Proof`",
+                "`documentation/glyph-review/arabic-mark-readiness.md`; `documentation/glyph-review/arabic-manual-review-dashboard.html`; `documentation/google-fonts/gftools-qa/Proof`",
                 machine_precheck(f"mark-{label}"),
                 cue,
             )
         )
     for label, cue in CLASS_ROWS:
         evidence = (
-            "`documentation/contour-cleanup-decision-log.md`; "
-            "`documentation/arabic-cleanup-drawing-briefs.md`; "
-            "`documentation/arabic-manual-review-dashboard.html`"
+            "`documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`; "
+            "`documentation/glyph-review/arabic-cleanup-drawing-briefs.md`; "
+            "`documentation/glyph-review/arabic-manual-review-dashboard.html`"
         )
         if label == "letter-structures":
-            evidence += "; `documentation/arabic-visual-risk-proof.html`"
+            evidence += "; `documentation/glyph-review/arabic-visual-risk-proof.html`"
         output.append(
             ReviewRow(
                 f"class-{label}",
@@ -285,7 +285,7 @@ def markdown_report(output_path: Path) -> str:
         f"- Fix-needed: {counts['fix-needed']}",
         f"- Deferred: {counts['deferred']}",
         f"- Google Fonts QA proof files: {proof_files} / 16 present",
-        "- Manual review dashboard: `documentation/arabic-manual-review-dashboard.html`",
+        "- Manual review dashboard: `documentation/glyph-review/arabic-manual-review-dashboard.html`",
         "",
         "Status values: `pending`, `pass`, `fix-needed`, or `deferred`.",
         "",

@@ -10,10 +10,10 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/github-release-draft.md")
-RELEASE_NOTES_DEFAULT = Path("documentation/github-release-notes.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/github-release-draft.md")
+RELEASE_NOTES_DEFAULT = Path("documentation/google-fonts/github-release-notes.md")
 LOCAL_ARCHIVE = Path("dist/VirtuaGrotesk-1.000.zip")
-DOWNSTREAM_PREVIEW = Path("documentation/google-fonts-downstream-package-preview.md")
+DOWNSTREAM_PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 
 
 def read_text(path: Path) -> str:
@@ -56,9 +56,9 @@ def archive_source_files(preview_text: str) -> list[str]:
 
 
 def release_context() -> dict[str, str | list[str] | bool]:
-    release_metadata = read_text(Path("documentation/release-metadata.md"))
-    release_source = read_text(Path("documentation/release-source-readiness.md"))
-    release_archive = read_text(Path("documentation/release-archive-manifest.md"))
+    release_metadata = read_text(Path("documentation/google-fonts/release-metadata.md"))
+    release_source = read_text(Path("documentation/google-fonts/release-source-readiness.md"))
+    release_archive = read_text(Path("documentation/google-fonts/release-archive-manifest.md"))
     preview_text = read_text(DOWNSTREAM_PREVIEW)
     version = text_value(r"Source version: `([^`]+)`", release_metadata, "1.000")
     tag = text_value(r"Suggested first-submission tag: `([^`]+)`", release_metadata, f"v{version}")

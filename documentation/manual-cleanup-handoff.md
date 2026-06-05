@@ -18,16 +18,16 @@ before the final Google Fonts package pass.
   GLIF files, and zero duplicate GLIF filenames; `make runebender-ufo-check`
   also validates both active UFOs through Runebender/Norad loader dependencies.
 - `make kerning-proof-check` has regenerated the Google Fonts QA proof output
-  under `documentation/gftools-qa/Proof`; `make kerning-proof-review-check`
+  under `documentation/google-fonts/gftools-qa/Proof`; `make kerning-proof-review-check`
   confirms all 16 expected HTML proof files are present.
 - Arabic PNG snapshot evidence is complete enough for hand review navigation:
-  `documentation/arabic-snapshot-integrity.md` reports 32 pending/fix-needed
+  `documentation/glyph-review/arabic-snapshot-integrity.md` reports 32 pending/fix-needed
   review keys, 33 readable PNG files, 33 nonblank PNG files, zero missing
   snapshot rows, and zero integrity errors.
 - Arabic source-structure checkpoints are ready for hand drawing:
-  `documentation/arabic-first-batch-source-checkpoint.md` covers the current
+  `documentation/glyph-review/arabic-first-batch-source-checkpoint.md` covers the current
   structure/wrong-glyph batch, and
-  `documentation/arabic-pending-source-checkpoint.md` covers all unresolved
+  `documentation/glyph-review/arabic-pending-source-checkpoint.md` covers all unresolved
   review-row source targets with 68 unique glyph names, 136 paired source
   files, zero missing files, and zero Regular/Bold structure mismatches.
 - Reusable Google Fonts onboarding knowledge has been captured in `.agents/`.
@@ -40,37 +40,37 @@ before the final Google Fonts package pass.
 
 ## Finish By Hand
 
-Use `documentation/next-actions.md` as the main queue. The drawing/source
+Use `documentation/google-fonts/next-actions.md` as the main queue. The drawing/source
 cleanup pass should focus on:
 
 1. GF Latin Core coverage.
 2. Human visual review of Arabic drawing quality, spacing, mark placement, and
    shaping behavior. Start with
-   `documentation/arabic-manual-review-dashboard.html`, then use
-   `documentation/gftools-qa/Proof`; use
-   `documentation/arabic-current-review-worksheet.md` as the current fill-in
+   `documentation/glyph-review/arabic-manual-review-dashboard.html`, then use
+   `documentation/google-fonts/gftools-qa/Proof`; use
+   `documentation/glyph-review/arabic-current-review-worksheet.md` as the current fill-in
    sheet for observations and final status decisions, use
-   `documentation/arabic-first-review-batch.md` as the shortest one-session
+   `documentation/glyph-review/arabic-first-review-batch.md` as the shortest one-session
    structure/wrong-glyph worksheet, pair it with
-   `documentation/arabic-first-review-ai-sweep.md` for AI snapshot observations
+   `documentation/glyph-review/arabic-first-review-ai-sweep.md` for AI snapshot observations
    that are not review decisions, use
-   `documentation/arabic-full-queue-ai-sweep.md` when you want the same
+   `documentation/glyph-review/arabic-full-queue-ai-sweep.md` when you want the same
    non-decision framing across all pending rows, use
-   `documentation/arabic-hand-review-session.md` as the compact current
+   `documentation/glyph-review/arabic-hand-review-session.md` as the compact current
    session checklist, use
-   `documentation/arabic-hand-review-contact-sheet.html` for a snapshot-first
+   `documentation/glyph-review/arabic-hand-review-contact-sheet.html` for a snapshot-first
    scan of the full queue, then use
-   `documentation/arabic-visual-review-checklist.md` as the targeted Arabic
-   review packet. Use `documentation/arabic-next-review-board.html` and
-   `documentation/arabic-snapshot-integrity.md` for fast navigation, but open
+   `documentation/glyph-review/arabic-visual-review-checklist.md` as the targeted Arabic
+   review packet. Use `documentation/glyph-review/arabic-next-review-board.html` and
+   `documentation/glyph-review/arabic-snapshot-integrity.md` for fast navigation, but open
    the linked proof/source HTML before recording a row outcome. Start the
    sidebearing pass with
-   `documentation/arabic-visual-risk-proof.html`, which isolates the current
+   `documentation/glyph-review/arabic-visual-risk-proof.html`, which isolates the current
    risk rows for U+062B, U+0633, U+0634, and U+0648 across weights.
    If a row becomes `fix-needed`, use
-   `documentation/arabic-manual-edit-targets.md` to jump to the exact Regular
+   `documentation/glyph-review/arabic-manual-edit-targets.md` to jump to the exact Regular
    and Bold GLIF files; use
-   `documentation/arabic-pending-source-checkpoint.md` to confirm the broader
+   `documentation/glyph-review/arabic-pending-source-checkpoint.md` to confirm the broader
    unresolved queue still has paired source files, and keep both masters
    structurally compatible.
 3. Keep source contour/no-contour cleanup closed by regenerating the contour
@@ -82,18 +82,18 @@ cleanup pass should focus on:
 
 ## Current Contour Cleanup Map
 
-Use `documentation/fontspector-contour-count.md` as the generated source of
+Use `documentation/google-fonts/fontspector-contour-count.md` as the generated source of
 truth. The current contour queue is closed: there are zero source glyph
 findings, zero all-font rows, zero pending decisions, and zero `fix-now`
 decisions. Treat the contour proof as a regression check after new drawing
 edits, not as the current Arabic cleanup queue.
 
-Regenerate `documentation/contour-cleanup-proof.html`,
-`documentation/contour-cleanup-review-queue.md`, and
-`documentation/contour-cleanup-edit-plan.md` plus
-`documentation/arabic-cleanup-drawing-briefs.md` and
-`documentation/contour-cleanup-batches.md` plus
-`documentation/contour-cleanup-decision-log.md` with:
+Regenerate `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`,
+`documentation/glyph-review/contour-cleanup/contour-cleanup-review-queue.md`, and
+`documentation/glyph-review/contour-cleanup/contour-cleanup-edit-plan.md` plus
+`documentation/glyph-review/arabic-cleanup-drawing-briefs.md` and
+`documentation/glyph-review/contour-cleanup/contour-cleanup-batches.md` plus
+`documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md` with:
 
 ```bash
 make contour-cleanup-proof
@@ -109,9 +109,9 @@ while editing, and use the edit plan for source glyph names plus
 AI/manual prompt cards: they restate the flagged contour mismatch, source
 structure, Rubik reference availability, and acceptance criteria without
 allowing reference-outline copying. Use
-`documentation/contour-cleanup-batches.md` when you want a shorter Runebender
+`documentation/glyph-review/contour-cleanup/contour-cleanup-batches.md` when you want a shorter Runebender
 session plan grouped by practical cleanup type. Use
-`documentation/contour-cleanup-decision-log.md` to preserve per-glyph
+`documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md` to preserve per-glyph
 `pending`, `fix-now`, `fixed`, `accepted`, or `deferred` decisions between
 regenerations.
 
@@ -129,38 +129,38 @@ make arabic-hand-review-session
 make arabic-hand-review-contact-sheet
 ```
 
-Review `documentation/arabic-visual-risk-proof.html` before editing Arabic
+Review `documentation/glyph-review/arabic-visual-risk-proof.html` before editing Arabic
 overhangs. The current rows are review prompts, not automatic failures, so
 record whether they are intentional joining-script spacing, need a source edit,
 or should be deferred for native-reader review.
-Then use `documentation/arabic-manual-review-dashboard.html` for the compact
+Then use `documentation/glyph-review/arabic-manual-review-dashboard.html` for the compact
 cross-weight smoke, mark, numeral, punctuation, risk-row, and contour-queue
 pass before opening the full Google Fonts proof files.
-Use `documentation/arabic-manual-review-batches.md` as the shortest hand-cleanup
+Use `documentation/glyph-review/arabic-manual-review-batches.md` as the shortest hand-cleanup
 queue; it groups visual proof rows with related contour decisions and gives
 guarded update commands.
-Use `documentation/arabic-current-review-worksheet.md` as the current fill-in
+Use `documentation/glyph-review/arabic-current-review-worksheet.md` as the current fill-in
 sheet for observed issues, source/proof locations, and final status before
 running any guarded status command.
-Use `documentation/arabic-batch-recorder.md` when you are ready to record the
+Use `documentation/glyph-review/arabic-batch-recorder.md` when you are ready to record the
 current batch; it expands every unresolved row into `pass`, `fix-needed`, and
 `deferred` commands without applying any status change.
-Use `documentation/arabic-first-review-batch.md` when you want just the next
+Use `documentation/glyph-review/arabic-first-review-batch.md` when you want just the next
 structure/wrong-glyph pass with proof links, snapshot links, source GLIF
 targets, and guarded outcome commands in one short file.
-Use `documentation/arabic-first-review-ai-sweep.md` as a companion snapshot
+Use `documentation/glyph-review/arabic-first-review-ai-sweep.md` as a companion snapshot
 triage note only; it can speed the pass but it cannot approve rows or recommend
 source edits by itself.
-Use `documentation/arabic-full-queue-ai-sweep.md` for a queue-wide AI snapshot
+Use `documentation/glyph-review/arabic-full-queue-ai-sweep.md` for a queue-wide AI snapshot
 summary that separates structure, mark, proof, smoke, numeral, and punctuation
 prompts without updating the official review log.
-Use `documentation/arabic-hand-review-session.md` when you are ready to work the
+Use `documentation/glyph-review/arabic-hand-review-session.md` when you are ready to work the
 whole remaining queue in review passes; it groups the rows by glyph proofs,
 marks, proof texture/spacing, smoke strings, and class reviews.
-Use `documentation/arabic-hand-review-contact-sheet.html` when you want the
+Use `documentation/glyph-review/arabic-hand-review-contact-sheet.html` when you want the
 same queue as a print-friendly snapshot sheet with proof links and guarded
 update commands.
-Use `documentation/arabic-manual-edit-targets.md` only after review marks a row
+Use `documentation/glyph-review/arabic-manual-edit-targets.md` only after review marks a row
 `fix-needed`; it maps review rows to the current source GLIF paths in both
 masters and is not automatic approval to change drawings.
 

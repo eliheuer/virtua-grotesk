@@ -11,7 +11,7 @@ import unicodedata
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/designer-profile-package-draft.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/designer-profile-package-draft.md")
 DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
 GF_PROFILE_GUIDE = "https://googlefonts.github.io/gf-guide/profile.html"
 GF_METADATA_GUIDE = "https://googlefonts.github.io/gf-guide/metadata.html"
@@ -22,9 +22,9 @@ IMAGE_VALIDATOR = Path("scripts/validate_designer_profile_image.py")
 BIO_VALIDATOR = Path("scripts/validate_designer_profile_bio.py")
 INFO_VALIDATOR = Path("scripts/validate_designer_profile_info.py")
 PREPARE_HELPER = Path("scripts/prepare_designer_profile.py")
-BIO_CANDIDATE = Path("documentation/designer-profile-candidate/bio.html")
-INFO_CANDIDATE = Path("documentation/designer-profile-candidate/info.pb")
-IMAGE_CANDIDATE = Path("documentation/designer-profile-candidate/eliheuer.png")
+BIO_CANDIDATE = Path("documentation/google-fonts/designer-profile-candidate/bio.html")
+INFO_CANDIDATE = Path("documentation/google-fonts/designer-profile-candidate/info.pb")
+IMAGE_CANDIDATE = Path("documentation/google-fonts/designer-profile-candidate/eliheuer.png")
 TEMPORARY_PROFILE_LINK = "https://github.com/eliheuer"
 
 
@@ -43,7 +43,7 @@ def person_lines(path: Path) -> list[str]:
 
 
 def decision_status(decision_name: str) -> str:
-    text = read_text(ROOT / "documentation/google-fonts-decisions.md")
+    text = read_text(ROOT / "documentation/google-fonts/google-fonts-decisions.md")
     pattern = rf"^## {re.escape(decision_name)}\n(?P<body>.*?)(?=^## |\Z)"
     match = re.search(pattern, text, flags=re.MULTILINE | re.DOTALL)
     if not match:
@@ -54,9 +54,9 @@ def decision_status(decision_name: str) -> str:
 
 def metadata_pending_lines() -> list[str]:
     texts = [
-        read_text(ROOT / "documentation/google-fonts-metadata-review.md"),
-        read_text(ROOT / "documentation/google-fonts-downstream-package-preview.md"),
-        read_text(ROOT / "documentation/downstream-metadata-readiness.md"),
+        read_text(ROOT / "documentation/google-fonts/google-fonts-metadata-review.md"),
+        read_text(ROOT / "documentation/google-fonts/google-fonts-downstream-package-preview.md"),
+        read_text(ROOT / "documentation/google-fonts/downstream-metadata-readiness.md"),
     ]
     pending: list[str] = []
     for text in texts:

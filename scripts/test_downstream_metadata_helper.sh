@@ -64,11 +64,11 @@ source {
     dest_file: "VirtuaGrotesk[wght].ttf"
   }
   files {
-    source_file: "documentation/ARTICLE.en_us.html"
+    source_file: "documentation/google-fonts/ARTICLE.en_us.html"
     dest_file: "article/ARTICLE.en_us.html"
   }
   files {
-    source_file: "documentation/readme-specimen.png"
+    source_file: "documentation/assets/readme-specimen.png"
     dest_file: "article/readme-specimen.png"
   }
   branch: "main"

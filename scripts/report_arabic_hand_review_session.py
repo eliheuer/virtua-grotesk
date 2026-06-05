@@ -17,12 +17,12 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-hand-review-session.md"
-EDIT_TARGETS = ROOT / "documentation/arabic-manual-edit-targets.md"
-BOARD = ROOT / "documentation/arabic-next-review-board.html"
-LOG = ROOT / "documentation/arabic-visual-review-log.md"
-ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
-ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-hand-review-session.md"
+EDIT_TARGETS = ROOT / "documentation/glyph-review/arabic-manual-edit-targets.md"
+BOARD = ROOT / "documentation/glyph-review/arabic-next-review-board.html"
+LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/glyph-review/arabic-print-proof-index.md"
 
 SESSION_GROUPS = [
     (

@@ -11,12 +11,12 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/release-source-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/release-source-readiness.md")
 GF_REPO_DEFAULT = Path("/Users/eli/GH/forks/fonts")
-PREVIEW = Path("documentation/google-fonts-downstream-package-preview.md")
-PACKAGE_AUDIT = Path("documentation/package-source-files-audit.md")
-PUBLIC_UPSTREAM = Path("documentation/public-upstream-readiness.md")
-RELEASE_METADATA = Path("documentation/release-metadata.md")
+PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
+PACKAGE_AUDIT = Path("documentation/google-fonts/package-source-files-audit.md")
+PUBLIC_UPSTREAM = Path("documentation/google-fonts/public-upstream-readiness.md")
+RELEASE_METADATA = Path("documentation/google-fonts/release-metadata.md")
 PLACEHOLDER_URL = "https://github.com/fontgarden/virtua-grotesk"
 PACKAGE_DIR = Path("ofl/virtuagrotesk")
 
@@ -306,7 +306,7 @@ def markdown_report() -> str:
             "- Create or update the final upstream tag only after drawing/source",
             "  work and maintainer decisions are complete.",
             "- Record the final repository URL, commit, branch, GitHub release download `.zip` URL, and source mode in",
-            "  `documentation/google-fonts-downstream-package-preview.md`.",
+            "  `documentation/google-fonts/google-fonts-downstream-package-preview.md`.",
             "- Rerun `make preflight` so proof evidence and generated reports",
             "  stay synchronized, then run",
             "  `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run` from",

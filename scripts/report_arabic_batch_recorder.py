@@ -22,11 +22,11 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-batch-recorder.md"
-ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
-ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
-FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
-PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-batch-recorder.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/glyph-review/arabic-print-proof-index.md"
+FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-first-batch-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-pending-source-checkpoint.md"
 
 
 def visual_command(key: str, status: str, notes: str) -> str:
@@ -121,7 +121,7 @@ def markdown_report() -> str:
             [
                 "## Optional Batch TSV Form",
                 "",
-                "The canonical record is `documentation/arabic-visual-review-log.md`.",
+                "The canonical record is `documentation/glyph-review/arabic-visual-review-log.md`.",
                 "The per-row commands above are the clearest path. If you prefer",
                 "to record several reviewed rows at once, save a tab-separated",
                 "file with these columns, then dry-run it before applying.",
@@ -181,7 +181,7 @@ def markdown_report() -> str:
             "```",
             "",
             "If any row becomes `fix-needed`, use",
-            "`documentation/arabic-manual-edit-targets.md` and rerun",
+            "`documentation/glyph-review/arabic-manual-edit-targets.md` and rerun",
             "`make arabic-first-batch-source-checkpoint` plus",
             "`make arabic-pending-source-checkpoint` before editing so Regular",
             "and Bold stay compatible.",

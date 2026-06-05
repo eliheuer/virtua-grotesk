@@ -11,7 +11,7 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/google-fonts-production-requirements.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-production-requirements.md")
 VARIABLE_FONT = Path("fonts/variable/VirtuaGrotesk[wght].ttf")
 STATIC_FONTS = [
     Path("fonts/ttf/VirtuaGrotesk-Regular.ttf"),
@@ -164,13 +164,13 @@ def variable_checks() -> dict[str, object]:
 def markdown_report() -> str:
     rows = font_rows()
     variable = variable_checks()
-    latin_text = read_text("documentation/missing-gf-latin-core.md")
-    arabic_text = read_text("documentation/missing-gf-arabic-core.md")
-    fontspector_text = read_text("documentation/fontspector-googlefonts-report.md")
-    numeric_text = read_text("documentation/numeric-feature-readiness.md")
-    source_text = read_text("documentation/source-ufo-metadata.md")
-    upstream_text = read_text("documentation/upstream-structure-readiness.md")
-    decisions_text = read_text("documentation/google-fonts-decisions.md")
+    latin_text = read_text("documentation/google-fonts/missing-gf-latin-core.md")
+    arabic_text = read_text("documentation/google-fonts/missing-gf-arabic-core.md")
+    fontspector_text = read_text("documentation/google-fonts/fontspector-googlefonts-report.md")
+    numeric_text = read_text("documentation/google-fonts/numeric-feature-readiness.md")
+    source_text = read_text("documentation/source/source-ufo-metadata.md")
+    upstream_text = read_text("documentation/google-fonts/upstream-structure-readiness.md")
+    decisions_text = read_text("documentation/google-fonts/google-fonts-decisions.md")
 
     latin_missing = first_int(r"Missing codepoints: (\d+)", latin_text)
     arabic_missing = first_int(r"Missing codepoints: (\d+)", arabic_text)
@@ -284,15 +284,15 @@ def markdown_report() -> str:
             "",
             "## Evidence Reports",
             "",
-            "- `documentation/upstream-structure-readiness.md`",
-            "- `documentation/source-ufo-metadata.md`",
-            "- `documentation/generated-font-metadata.md`",
-            "- `documentation/variable-font-metadata.md`",
-            "- `documentation/numeric-feature-readiness.md`",
-            "- `documentation/google-fonts-axis-registry-audit.md`",
-            "- `documentation/missing-gf-latin-core.md`",
-            "- `documentation/missing-gf-arabic-core.md`",
-            "- `documentation/fontspector-googlefonts-report.md`",
+            "- `documentation/google-fonts/upstream-structure-readiness.md`",
+            "- `documentation/source/source-ufo-metadata.md`",
+            "- `documentation/google-fonts/generated-font-metadata.md`",
+            "- `documentation/google-fonts/variable-font-metadata.md`",
+            "- `documentation/google-fonts/numeric-feature-readiness.md`",
+            "- `documentation/google-fonts/google-fonts-axis-registry-audit.md`",
+            "- `documentation/google-fonts/missing-gf-latin-core.md`",
+            "- `documentation/google-fonts/missing-gf-arabic-core.md`",
+            "- `documentation/google-fonts/fontspector-googlefonts-report.md`",
             "",
             "References:",
             "",

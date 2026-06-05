@@ -17,11 +17,11 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-next-review-ai-triage.md"
-PACKET = ROOT / "documentation/arabic-next-review-packet.md"
-SNAPSHOTS = ROOT / "documentation/arabic-next-review-snapshots.md"
-STRUCTURE_TRIAGE = ROOT / "documentation/arabic-structure-triage.md"
-VISUAL_RISK = ROOT / "documentation/arabic-visual-risk-audit.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-next-review-ai-triage.md"
+PACKET = ROOT / "documentation/glyph-review/arabic-next-review-packet.md"
+SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+STRUCTURE_TRIAGE = ROOT / "documentation/glyph-review/arabic-structure-triage.md"
+VISUAL_RISK = ROOT / "documentation/glyph-review/arabic-visual-risk-audit.md"
 
 
 def read(path: Path) -> str:
@@ -249,7 +249,7 @@ def markdown_report() -> str:
             "",
             "## Recommended Review Order",
             "",
-            "1. Open the first-batch cards in `documentation/arabic-next-review-board.html`.",
+            "1. Open the first-batch cards in `documentation/glyph-review/arabic-next-review-board.html`.",
             "2. If the glyph pages show no missing, blank, clipped, duplicated, or",
             "   wrong-codepoint Arabic glyphs, record those proof rows as `pass`.",
             "3. Open the structure sweep and visual-risk proof for the prompt glyphs.",

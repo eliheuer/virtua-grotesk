@@ -12,7 +12,7 @@ import unicodedata
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
-OUTPUT_DEFAULT = Path("documentation/designer-profile-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/designer-profile-readiness.md")
 
 
 @dataclass(frozen=True)
@@ -37,8 +37,8 @@ def person_lines(path: Path) -> list[str]:
 
 def metadata_designer_strings() -> list[str]:
     texts = [
-        read_text(ROOT / "documentation/google-fonts-metadata-review.md"),
-        read_text(ROOT / "documentation/google-fonts-downstream-package-preview.md"),
+        read_text(ROOT / "documentation/google-fonts/google-fonts-metadata-review.md"),
+        read_text(ROOT / "documentation/google-fonts/google-fonts-downstream-package-preview.md"),
     ]
     values: list[str] = []
     for text in texts:

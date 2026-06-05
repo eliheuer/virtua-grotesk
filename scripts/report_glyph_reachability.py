@@ -17,7 +17,7 @@ DEFAULT_FONT_PATHS = [
     Path("fonts/ttf/VirtuaGrotesk-SemiBold.ttf"),
     Path("fonts/ttf/VirtuaGrotesk-Bold.ttf"),
 ]
-OUTPUT_DEFAULT = Path("documentation/glyph-reachability.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/glyph-reachability.md")
 
 
 def gsub_output_glyphs(font: TTFont) -> set[str]:
@@ -201,7 +201,7 @@ def markdown_report(font_paths: list[Path]) -> str:
             "  through GSUB, encoded, decomposed into reachable outlines, or removed.",
             "- Revisit this report after final Arabic features, PUA scope, and mark",
             "  handling decisions are applied.",
-            "- Regenerate `documentation/fontspector-warnings.md` and this report",
+            "- Regenerate `documentation/google-fonts/fontspector-warnings.md` and this report",
             "  after source or feature changes.",
             "",
         ]

@@ -12,7 +12,7 @@ from fontTools.ttLib import TTFont
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_FONT_PATH = Path("fonts/variable/VirtuaGrotesk[wght].ttf")
-OUTPUT_DEFAULT = Path("documentation/avar-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/avar-readiness.md")
 
 
 def read_text(path: Path) -> str:
@@ -22,13 +22,13 @@ def read_text(path: Path) -> str:
 def warning_count(has_avar: bool) -> int:
     if has_avar:
         return 0
-    text = read_text(ROOT / "documentation/fontspector-warnings.md")
+    text = read_text(ROOT / "documentation/google-fonts/fontspector-warnings.md")
     match = re.search(r"\| `mandatory_avar_table` \| `missing-avar` \| (\d+) \|", text)
     return int(match.group(1)) if match else 0
 
 
 def decision_status() -> str:
-    decisions = read_text(ROOT / "documentation/google-fonts-decisions.md")
+    decisions = read_text(ROOT / "documentation/google-fonts/google-fonts-decisions.md")
     match = re.search(r"## `avar`\s*\n\s*Status: ([a-z]+)", decisions)
     return match.group(1) if match else "unknown"
 
@@ -98,8 +98,8 @@ def markdown_report(font_path: Path) -> str:
             "",
             "## Apply After Mapping Changes",
             "",
-            "- Rebuild, then regenerate `documentation/variable-font-metadata.md`,",
-            "  `documentation/google-fonts-axis-registry-audit.md`, this report, and",
+            "- Rebuild, then regenerate `documentation/google-fonts/variable-font-metadata.md`,",
+            "  `documentation/google-fonts/google-fonts-axis-registry-audit.md`, this report, and",
             "  Fontspector reports.",
             "",
             "References:",

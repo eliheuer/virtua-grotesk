@@ -14,17 +14,17 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-first-review-batch.md"
-SNAPSHOTS = ROOT / "documentation/arabic-next-review-snapshots.md"
-EDIT_TARGETS = ROOT / "documentation/arabic-manual-edit-targets.md"
-STRUCTURE_TRIAGE = ROOT / "documentation/arabic-structure-triage.md"
-VISUAL_RISK = ROOT / "documentation/arabic-visual-risk-proof.html"
-FIRST_BATCH_AI_SWEEP = ROOT / "documentation/arabic-first-review-ai-sweep.md"
-ZOOM_SNAPSHOTS = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
-CROP_INTEGRITY = ROOT / "documentation/arabic-first-review-crop-integrity.md"
-RISK_SHORTLIST = ROOT / "documentation/arabic-first-review-risk-shortlist.md"
-FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
-PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-first-review-batch.md"
+SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+EDIT_TARGETS = ROOT / "documentation/glyph-review/arabic-manual-edit-targets.md"
+STRUCTURE_TRIAGE = ROOT / "documentation/glyph-review/arabic-structure-triage.md"
+VISUAL_RISK = ROOT / "documentation/glyph-review/arabic-visual-risk-proof.html"
+FIRST_BATCH_AI_SWEEP = ROOT / "documentation/glyph-review/arabic-first-review-ai-sweep.md"
+ZOOM_SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-first-review-zoom-snapshots.md"
+CROP_INTEGRITY = ROOT / "documentation/glyph-review/arabic-first-review-crop-integrity.md"
+RISK_SHORTLIST = ROOT / "documentation/glyph-review/arabic-first-review-risk-shortlist.md"
+FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-first-batch-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-pending-source-checkpoint.md"
 
 FIRST_BATCH_KEYS = [
     "proof-regular-glyphs",
@@ -35,10 +35,10 @@ FIRST_BATCH_KEYS = [
 ]
 
 ZOOM_SNAPSHOT_BY_KEY = {
-    "proof-regular-glyphs": "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png",
-    "proof-medium-glyphs": "documentation/arabic-review-snapshots/proof-medium-glyphs-arabic-zoom.png",
-    "proof-semibold-glyphs": "documentation/arabic-review-snapshots/proof-semibold-glyphs-arabic-zoom.png",
-    "proof-bold-glyphs": "documentation/arabic-review-snapshots/proof-bold-glyphs-arabic-zoom.png",
+    "proof-regular-glyphs": "documentation/glyph-review/review-snapshots/proof-regular-glyphs-arabic-zoom.png",
+    "proof-medium-glyphs": "documentation/glyph-review/review-snapshots/proof-medium-glyphs-arabic-zoom.png",
+    "proof-semibold-glyphs": "documentation/glyph-review/review-snapshots/proof-semibold-glyphs-arabic-zoom.png",
+    "proof-bold-glyphs": "documentation/glyph-review/review-snapshots/proof-bold-glyphs-arabic-zoom.png",
 }
 
 
@@ -144,7 +144,7 @@ def markdown_report() -> str:
         "",
         f"- Review rows: {len(FIRST_BATCH_KEYS)}",
         f"- Status counts: {status_counts(rows_by_key)}",
-        f"- Main proof directory: `documentation/gftools-qa/Proof/`",
+        f"- Main proof directory: `documentation/google-fonts/gftools-qa/Proof/`",
         f"- Structure triage: `{rel(STRUCTURE_TRIAGE)}`",
         f"- Visual-risk proof: `{rel(VISUAL_RISK)}`",
         f"- Edit-target source: `{rel(EDIT_TARGETS)}`",

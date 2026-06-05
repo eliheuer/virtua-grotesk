@@ -13,7 +13,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
 TEMPLATE_RELATIVE = Path(".github/ISSUE_TEMPLATE/1_add-font.md")
-OUTPUT_DEFAULT = Path("documentation/google-fonts-add-font-template-audit.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-add-font-template-audit.md")
 
 EXPECTED_REQUIREMENT_SNIPPETS = [
     "entire font project is available",

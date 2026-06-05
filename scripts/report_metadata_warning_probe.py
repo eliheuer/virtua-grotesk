@@ -16,10 +16,10 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PREVIEW = ROOT / "documentation/google-fonts-downstream-package-preview.md"
+PREVIEW = ROOT / "documentation/google-fonts/google-fonts-downstream-package-preview.md"
 VARIABLE_FONT = ROOT / "fonts/variable/VirtuaGrotesk[wght].ttf"
 LICENSE = ROOT / "OFL.txt"
-OUTPUT_DEFAULT = ROOT / "documentation/fontspector-metadata-warning-probe.md"
+OUTPUT_DEFAULT = ROOT / "documentation/google-fonts/fontspector-metadata-warning-probe.md"
 PLACEHOLDER_COMMIT = "0123456789abcdef0123456789abcdef01234567"
 PLACEHOLDER_DATE = "2026-05-25"
 PROBE_CODEPOINTS = {
@@ -281,7 +281,7 @@ def markdown_report() -> str:
         "This report runs Fontspector against a temporary Google Fonts-style",
         "package containing the built variable font and the downstream",
         "`METADATA.pb` preview from",
-        "`documentation/google-fonts-downstream-package-preview.md`.",
+        "`documentation/google-fonts/google-fonts-downstream-package-preview.md`.",
         "",
         "It exists to separate loose-font warning noise from warnings that remain",
         "after the intended package metadata is visible to Fontspector. The",

@@ -14,7 +14,7 @@ import glyphsets
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/arabic-visual-risk-audit.md")
+OUTPUT_DEFAULT = Path("documentation/glyph-review/arabic-visual-risk-audit.md")
 GLYPHSET_NAME = "GF_Arabic_Core"
 FONT_PATHS = [
     ROOT / "fonts/variable/VirtuaGrotesk[wght].ttf",
@@ -207,7 +207,7 @@ def markdown_report(font_paths: list[Path]) -> str:
             "- `blank-visible-glyph` and `maps-to-notdef` are likely source/build bugs.",
             "- `nonmark-zero-advance` is a spacing risk for letters, numbers, or punctuation.",
             "- Vertical-bound and sidebearing rows are review prompts, not automatic failures.",
-            "- If this report is clean, continue with `documentation/arabic-visual-review-log.md`",
+            "- If this report is clean, continue with `documentation/glyph-review/arabic-visual-review-log.md`",
             "  and the GF proof HTML; it does not prove the drawings are culturally or",
             "  stylistically correct.",
             "",

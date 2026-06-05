@@ -11,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/upstream-structure-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/upstream-structure-readiness.md")
 
 
 MANDATORY_PATHS = [
@@ -121,8 +121,8 @@ def markdown_report() -> str:
         f"- OFL first line has copyright: {yes_no(ofl.startswith('Copyright '))}",
         f"- README has short description: {yes_no('Virtua Grotesk is' in readme)}",
         f"- README has build instructions: {yes_no('make build' in readme or './build.sh' in readme)}",
-        f"- README references an image: {yes_no('documentation/readme-specimen.png' in readme)}",
-        f"- documentation/image-license.txt present: {yes_no((ROOT / 'documentation/image-license.txt').exists())}",
+        f"- README references an image: {yes_no('documentation/assets/readme-specimen.png' in readme)}",
+        f"- documentation/assets/image-license.txt present: {yes_no((ROOT / 'documentation/assets/image-license.txt').exists())}",
         f"- Active source inputs present: {sum(item.exists for item in sources)} / {len(sources)}",
         f"- One-command build entrypoint present: {yes_no((ROOT / 'build.sh').exists() or (ROOT / 'sources/config.yaml').exists())}",
         f"- `sources/config.yaml` uses gftools builder shape: {yes_no('sources:' in config and 'familyName:' in config)}",

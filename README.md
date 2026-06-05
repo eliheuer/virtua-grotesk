@@ -4,7 +4,7 @@ Virtua Grotesk is an open-source variable geometric grotesk with a Weight axis
 from Regular to Bold. The design uses monolinear strokes and chamfered corners
 as a defining construction detail.
 
-![Virtua Grotesk specimen](documentation/readme-specimen.png)
+![Virtua Grotesk specimen](documentation/assets/readme-specimen.png)
 
 ## About
 
@@ -81,10 +81,10 @@ make decisions
 ```
 
 This prints the generated priority-sorted maintainer answer sheet at
-`documentation/google-fonts-decision-answer-sheet.md`. The canonical long-form
-question list remains `documentation/google-fonts-decision-questions.md`, and
+`documentation/google-fonts/google-fonts-decision-answer-sheet.md`. The canonical long-form
+question list remains `documentation/google-fonts/google-fonts-decision-questions.md`, and
 accepted answers should be recorded in
-`documentation/google-fonts-decisions.md` before source or package metadata is
+`documentation/google-fonts/google-fonts-decisions.md` before source or package metadata is
 changed.
 
 To regenerate the answer sheet and inspect whether the open questions are wired
@@ -209,7 +209,7 @@ real fix or just a narrower serving scope.
 The canonical human/agent QA checklist is
 `documentation/core-qa-process.md`. It ties together Fontspector, Google Fonts
 `gftools qa --proof` visual review, the generated
-`documentation/kerning-proof-review.md` review packet, DrawBot proofing,
+`documentation/google-fonts/kerning-proof-review.md` review packet, DrawBot proofing,
 generated readiness reports, and Packager dry-run gates.
 
 `make kerning-proof-check` runs the Google Fonts `gftools qa --proof`
@@ -217,8 +217,8 @@ HTML proof used for visual spacing and kerning review. It needs the
 `gftools` QA extras installed in the local venv.
 
 Treat this as a core QA step, not an optional artifact generator. Review the
-HTML proof in `documentation/gftools-qa/` and the generated
-`documentation/kerning-proof-review.md` checklist before considering kerning,
+HTML proof in `documentation/google-fonts/gftools-qa/` and the generated
+`documentation/google-fonts/kerning-proof-review.md` checklist before considering kerning,
 spacing, or a kerning deferral final for Google Fonts handoff.
 
 To check whether local GitHub API credentials are ready for Packager:
@@ -312,9 +312,9 @@ The focused Arabic print proof uses the same runtime:
 make arabic-print-proof
 ```
 
-It writes `documentation/arabic-print-proof.pdf` with Arabic shaping, mark,
+It writes `documentation/glyph-review/arabic-print-proof.pdf` with Arabic shaping, mark,
 numeral, punctuation, and cmap-grid pages for all four static weights, plus
-`documentation/arabic-print-proof-index.md` as the page map.
+`documentation/glyph-review/arabic-print-proof-index.md` as the page map.
 
 ### Rendering Instructions
 
@@ -327,16 +327,17 @@ The rendered specimen images will be saved in the `designbot/` directory.
 The README image is generated from `designbot/card.rs`:
 
 ```bash
-designbot --render designbot/card.rs --output documentation/readme-specimen.png
+designbot --render designbot/card.rs --output documentation/assets/readme-specimen.png
 ```
 
 ## Google Fonts Readiness
 
-See `GF_READINESS.md` for the current onboarding checklist, open decisions, and
-known engineering blockers. The final downstream packaging checklist is in
-`documentation/google-fonts-package-checklist.md`. The shortest place to answer
+See `documentation/google-fonts/google-fonts-readiness.md` for the current onboarding
+checklist, open decisions, and known engineering blockers. The final downstream
+packaging checklist is in
+`documentation/google-fonts/google-fonts-package-checklist.md`. The shortest place to answer
 remaining policy and metadata decisions is
-`documentation/google-fonts-decision-questions.md`.
+`documentation/google-fonts/google-fonts-decision-questions.md`.
 
 If pausing for hand cleanup or drawing work, use
 `documentation/manual-cleanup-handoff.md` as the checkpoint before resuming the
@@ -523,11 +524,11 @@ To run a local Google Fonts Packager dry run against the configured local
 GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run
 ```
 
-Review `documentation/package-dry-run-readiness.md` first. It checks the local
+Review `documentation/google-fonts/package-dry-run-readiness.md` first. It checks the local
 `google/fonts` fork, source mode, required inputs, downstream placeholder state,
 and GitHub API credentials without invoking Packager or writing into the fork.
 For a broader local command snapshot, review
-`documentation/local-workflow-readiness.md`.
+`documentation/google-fonts/local-workflow-readiness.md`.
 
 This runs `gftools packager` without `-p`; review the generated
 `ofl/virtuagrotesk` package before opening or updating a pull request. The

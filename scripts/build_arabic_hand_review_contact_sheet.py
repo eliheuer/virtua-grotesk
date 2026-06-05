@@ -20,15 +20,15 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-SNAPSHOTS = ROOT / "documentation/arabic-next-review-snapshots.md"
-ZOOM_SNAPSHOTS = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
-SNAPSHOT_INTEGRITY = ROOT / "documentation/arabic-snapshot-integrity.md"
-CROP_INTEGRITY = ROOT / "documentation/arabic-first-review-crop-integrity.md"
-SESSION = ROOT / "documentation/arabic-hand-review-session.md"
-BOARD = ROOT / "documentation/arabic-next-review-board.html"
-CURRENT_WORKSHEET = ROOT / "documentation/arabic-current-review-worksheet.md"
-ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-hand-review-contact-sheet.html"
+SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+ZOOM_SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-first-review-zoom-snapshots.md"
+SNAPSHOT_INTEGRITY = ROOT / "documentation/glyph-review/arabic-snapshot-integrity.md"
+CROP_INTEGRITY = ROOT / "documentation/glyph-review/arabic-first-review-crop-integrity.md"
+SESSION = ROOT / "documentation/glyph-review/arabic-hand-review-session.md"
+BOARD = ROOT / "documentation/glyph-review/arabic-next-review-board.html"
+CURRENT_WORKSHEET = ROOT / "documentation/glyph-review/arabic-current-review-worksheet.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-hand-review-contact-sheet.html"
 
 
 def read_text(path: Path) -> str:

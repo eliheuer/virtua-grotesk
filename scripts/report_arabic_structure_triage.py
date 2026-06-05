@@ -15,7 +15,7 @@ import glyphsets
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-structure-triage.md"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-structure-triage.md"
 GLYPHSET_NAME = "GF_Arabic_Core"
 EXTRA_CODEPOINTS = {0x25CC}
 FONTS = [
@@ -338,15 +338,15 @@ def markdown_report() -> str:
             "",
             "Open these together for the active structure review batch:",
             "",
-            "- `documentation/arabic-structure-sweep.html`",
-            "- `documentation/arabic-visual-risk-proof.html`",
-            "- `documentation/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`",
-            "- `documentation/gftools-qa/Proof/Medium-diffbrowsers_glyphs.html`",
-            "- `documentation/gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html`",
-            "- `documentation/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`",
+            "- `documentation/glyph-review/arabic-structure-sweep.html`",
+            "- `documentation/glyph-review/arabic-visual-risk-proof.html`",
+            "- `documentation/google-fonts/gftools-qa/Proof/Regular-diffbrowsers_glyphs.html`",
+            "- `documentation/google-fonts/gftools-qa/Proof/Medium-diffbrowsers_glyphs.html`",
+            "- `documentation/google-fonts/gftools-qa/Proof/SemiBold-diffbrowsers_glyphs.html`",
+            "- `documentation/google-fonts/gftools-qa/Proof/Bold-diffbrowsers_glyphs.html`",
             "",
             "Record the five batch-2 rows in",
-            "`documentation/arabic-visual-review-log.md` after hand inspection.",
+            "`documentation/glyph-review/arabic-visual-review-log.md` after hand inspection.",
             "",
         ]
     )

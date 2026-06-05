@@ -11,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_LOG = ROOT / "documentation/contour-cleanup-decision-log.md"
+DEFAULT_LOG = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md"
 ALLOWED_STATUSES = ("pending", "fix-now", "fixed", "accepted", "deferred")
 SUMMARY_LABELS = {
     "pending": "Pending",

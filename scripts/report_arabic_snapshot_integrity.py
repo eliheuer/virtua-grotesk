@@ -12,9 +12,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SNAPSHOT_REPORT = ROOT / "documentation/arabic-next-review-snapshots.md"
-VISUAL_LOG = ROOT / "documentation/arabic-visual-review-log.md"
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-snapshot-integrity.md"
+SNAPSHOT_REPORT = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+VISUAL_LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-snapshot-integrity.md"
 
 
 @dataclass(frozen=True)
@@ -237,9 +237,9 @@ def report() -> tuple[str, bool]:
             "",
             "## Review Use",
             "",
-            "If this report is clean, use `documentation/arabic-next-review-board.html`",
+            "If this report is clean, use `documentation/glyph-review/arabic-next-review-board.html`",
             "for navigation and open the linked proof/source HTML before recording",
-            "any row status in `documentation/arabic-visual-review-log.md`.",
+            "any row status in `documentation/glyph-review/arabic-visual-review-log.md`.",
             "",
         ]
     )

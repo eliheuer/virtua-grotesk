@@ -21,16 +21,16 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-TRIAGE = ROOT / "documentation/arabic-next-review-ai-triage.md"
-OBSERVATIONS = ROOT / "documentation/arabic-next-review-ai-observations.md"
-SNAPSHOTS = ROOT / "documentation/arabic-next-review-snapshots.md"
-EDIT_TARGETS = ROOT / "documentation/arabic-manual-edit-targets.md"
-CURRENT_WORKSHEET = ROOT / "documentation/arabic-current-review-worksheet.md"
-BATCH_RECORDER = ROOT / "documentation/arabic-batch-recorder.md"
-FULL_QUEUE_SWEEP = ROOT / "documentation/arabic-full-queue-ai-sweep.md"
-FIRST_REVIEW_SWEEP = ROOT / "documentation/arabic-first-review-ai-sweep.md"
-FIRST_REVIEW_ZOOM = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-next-review-board.html"
+TRIAGE = ROOT / "documentation/glyph-review/arabic-next-review-ai-triage.md"
+OBSERVATIONS = ROOT / "documentation/glyph-review/arabic-next-review-ai-observations.md"
+SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+EDIT_TARGETS = ROOT / "documentation/glyph-review/arabic-manual-edit-targets.md"
+CURRENT_WORKSHEET = ROOT / "documentation/glyph-review/arabic-current-review-worksheet.md"
+BATCH_RECORDER = ROOT / "documentation/glyph-review/arabic-batch-recorder.md"
+FULL_QUEUE_SWEEP = ROOT / "documentation/glyph-review/arabic-full-queue-ai-sweep.md"
+FIRST_REVIEW_SWEEP = ROOT / "documentation/glyph-review/arabic-first-review-ai-sweep.md"
+FIRST_REVIEW_ZOOM = ROOT / "documentation/glyph-review/arabic-first-review-zoom-snapshots.md"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-next-review-board.html"
 
 
 def read(path: Path) -> str:
@@ -751,7 +751,7 @@ code {{
 </tbody>
 </table>
 <h2>Full Pending Queue</h2>
-<p>This queue comes from <code>documentation/arabic-visual-review-log.md</code> and the PNG coverage report. Use the first-batch cards above for the fastest current pass, then continue through this table without regenerating context.</p>
+<p>This queue comes from <code>documentation/glyph-review/arabic-visual-review-log.md</code> and the PNG coverage report. Use the first-batch cards above for the fastest current pass, then continue through this table without regenerating context.</p>
 <table>
 <thead><tr><th>#</th><th>Key</th><th>Area</th><th>Item</th><th>Status</th><th>Snapshot</th><th>Review cue</th><th>AI observation</th><th>Human follow-up</th><th>Links and commands</th></tr></thead>
 <tbody>

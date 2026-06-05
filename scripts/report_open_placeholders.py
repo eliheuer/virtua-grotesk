@@ -11,14 +11,14 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 PLACEHOLDER_URL = "https://github.com/fontgarden/virtua-grotesk"
-OUTPUT_DEFAULT = Path("documentation/open-placeholder-audit.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/open-placeholder-audit.md")
 
 INCLUDE_FILES = [
     Path("OFL.txt"),
     Path("AUTHORS.txt"),
     Path("CONTRIBUTORS.txt"),
     Path("README.md"),
-    Path("GF_READINESS.md"),
+    Path("documentation/google-fonts/google-fonts-readiness.md"),
     Path("Makefile"),
     Path("sources/config.yaml"),
     Path("sources/VirtuaGrotesk.designspace"),
@@ -33,16 +33,16 @@ INCLUDE_GLOBS = [
 ]
 EXCLUDE_FILES = {
     OUTPUT_DEFAULT,
-    Path("documentation/generated-font-metadata.md"),
-    Path("documentation/source-ufo-metadata.md"),
+    Path("documentation/google-fonts/generated-font-metadata.md"),
+    Path("documentation/source/source-ufo-metadata.md"),
 }
 GENERATED_EVIDENCE_FILES = {
-    Path("documentation/article-readiness.md"),
-    Path("documentation/authorship-disclosure-readiness.md"),
-    Path("documentation/decision-application-blockers.md"),
-    Path("documentation/designer-profile-readiness.md"),
-    Path("documentation/downstream-metadata-readiness.md"),
-    Path("documentation/public-upstream-readiness.md"),
+    Path("documentation/google-fonts/article-readiness.md"),
+    Path("documentation/google-fonts/authorship-disclosure-readiness.md"),
+    Path("documentation/google-fonts/decision-application-blockers.md"),
+    Path("documentation/google-fonts/designer-profile-readiness.md"),
+    Path("documentation/google-fonts/downstream-metadata-readiness.md"),
+    Path("documentation/google-fonts/public-upstream-readiness.md"),
 }
 INTERNAL_GUARD_FILES = {
     Path("scripts/package_gf_dry_run.sh"),

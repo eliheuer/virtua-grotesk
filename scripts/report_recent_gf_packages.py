@@ -12,7 +12,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
-OUTPUT_DEFAULT = Path("documentation/recent-google-fonts-packages.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/recent-google-fonts-packages.md")
 
 RECENT_FAMILIES = [
     ("Pliant", "ofl/pliant", "google/fonts#10546", "2026-05-22"),
@@ -238,8 +238,8 @@ def virtua_snapshot() -> dict[str, object]:
         "root_authors": root_has("AUTHORS.txt"),
         "root_contributors": root_has("CONTRIBUTORS.txt"),
         "root_description": False,
-        "documentation_description": root_has("documentation/DESCRIPTION.en_us.html"),
-        "article": root_has("documentation/ARTICLE.en_us.html"),
+        "documentation_description": root_has("documentation/google-fonts/DESCRIPTION.en_us.html"),
+        "article": root_has("documentation/google-fonts/ARTICLE.en_us.html"),
         "fonts_variable": any_path(ROOT / "fonts/variable", "*.ttf"),
         "fonts_ttf": any_path(ROOT / "fonts/ttf", "*.ttf"),
         "fonts_webfonts": any_path(ROOT / "fonts/webfonts", "*.woff2"),
@@ -468,7 +468,7 @@ def markdown_report(gf_repo: Path) -> str:
             "- Pliant, Akt, and Estedad include `sources/config.yaml`; Virtua Grotesk already matches that shape with `sources/config.yaml` and `gftools builder`.",
             "- Estedad is the closest Arabic-script comparison: its downstream package keeps `primary_script: \"Arab\"` and records `source.config_yaml`. That supports keeping Virtua's `source.config_yaml` only if the final source strategy is build-from-source.",
             "- Scheherazade New is the closest recent Arabic package for Virtua's selected release/archive path: its downstream `source.archive_url` points to a GitHub release download `.zip`, and its `source.files` map release-archive members directly into the family directory.",
-            "- Akt shows that some recent upstream repos use an `article/` path upstream, while Pliant and Estedad keep images/descriptions under `documentation/`. Virtua's downstream preview can still map `documentation/ARTICLE.en_us.html` into downstream `article/ARTICLE.en_us.html` through `source.files`.",
+            "- Akt shows that some recent upstream repos use an `article/` path upstream, while Pliant and Estedad keep images/descriptions under `documentation/`. Virtua's downstream preview can still map `documentation/google-fonts/ARTICLE.en_us.html` into downstream `article/ARTICLE.en_us.html` through `source.files`.",
             "",
             "## Virtua Grotesk Implications",
             "",

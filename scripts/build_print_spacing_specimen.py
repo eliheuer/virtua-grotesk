@@ -25,8 +25,8 @@ DEFAULT_FONTS = [
     ROOT / "fonts/ttf/VirtuaGrotesk-SemiBold.ttf",
     ROOT / "fonts/ttf/VirtuaGrotesk-Bold.ttf",
 ]
-DEFAULT_OUTPUT = ROOT / "documentation/print-spacing-specimen.pdf"
-DEFAULT_INDEX_OUTPUT = ROOT / "documentation/print-spacing-specimen-index.md"
+DEFAULT_OUTPUT = ROOT / "documentation/proofs/print-spacing-specimen.pdf"
+DEFAULT_INDEX_OUTPUT = ROOT / "documentation/proofs/print-spacing-specimen-index.md"
 
 PAGE_WIDTH = 792
 PAGE_HEIGHT = 612

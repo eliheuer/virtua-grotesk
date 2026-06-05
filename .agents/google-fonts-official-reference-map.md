@@ -34,32 +34,32 @@ Fonts docs, templates, and tooling expectations can change.
 For a new font repo, recreate these as generated or manually maintained reports.
 Names can change, but the evidence categories should remain visible:
 
-- `documentation/google-fonts-reference-index.md`
-- `documentation/google-fonts-production-requirements.md`
-- `documentation/google-fonts-decisions.md`
-- `documentation/decision-readiness.md`
-- `documentation/final-submission-blockers.md`
-- `documentation/next-actions.md`
-- `documentation/generated-font-metadata.md`
-- `documentation/variable-font-metadata.md`
-- `documentation/gf-glyphset-readiness.md`
-- `documentation/google-fonts-language-metadata.md`
-- `documentation/fontspector-googlefonts-report.md`
-- `documentation/fontspector-warnings.md`
-- `documentation/kerning-readiness.md`
-- `documentation/kerning-proof-review.md`
-- `documentation/package-source-files-audit.md`
-- `documentation/packager-source-strategy.md`
-- `documentation/release-source-readiness.md`
-- `documentation/release-archive-manifest.md`
-- `documentation/downstream-metadata-readiness.md`
-- `documentation/downstream-metadata-diff.md`
-- `documentation/package-dry-run-readiness.md`
-- `documentation/google-fonts-add-font-template-audit.md`
-- `documentation/google-fonts-add-font-issue-draft.md`
-- `documentation/pr-identity-readiness.md`
-- `documentation/downstream-pr-readiness.md`
-- `documentation/designer-profile-readiness.md`
+- `documentation/google-fonts/google-fonts-reference-index.md`
+- `documentation/google-fonts/google-fonts-production-requirements.md`
+- `documentation/google-fonts/google-fonts-decisions.md`
+- `documentation/google-fonts/decision-readiness.md`
+- `documentation/google-fonts/final-submission-blockers.md`
+- `documentation/google-fonts/next-actions.md`
+- `documentation/google-fonts/generated-font-metadata.md`
+- `documentation/google-fonts/variable-font-metadata.md`
+- `documentation/google-fonts/gf-glyphset-readiness.md`
+- `documentation/google-fonts/google-fonts-language-metadata.md`
+- `documentation/google-fonts/fontspector-googlefonts-report.md`
+- `documentation/google-fonts/fontspector-warnings.md`
+- `documentation/google-fonts/kerning-readiness.md`
+- `documentation/google-fonts/kerning-proof-review.md`
+- `documentation/google-fonts/package-source-files-audit.md`
+- `documentation/google-fonts/packager-source-strategy.md`
+- `documentation/google-fonts/release-source-readiness.md`
+- `documentation/google-fonts/release-archive-manifest.md`
+- `documentation/google-fonts/downstream-metadata-readiness.md`
+- `documentation/google-fonts/downstream-metadata-diff.md`
+- `documentation/google-fonts/package-dry-run-readiness.md`
+- `documentation/google-fonts/google-fonts-add-font-template-audit.md`
+- `documentation/google-fonts/google-fonts-add-font-issue-draft.md`
+- `documentation/google-fonts/pr-identity-readiness.md`
+- `documentation/google-fonts/downstream-pr-readiness.md`
+- `documentation/google-fonts/designer-profile-readiness.md`
 
 ## Portable Gate Shape
 
@@ -82,4 +82,3 @@ make preflight
 
 In a future font repo, keep the command name if practical. The important part is
 that agents and humans have one handoff gate to run before issue or PR work.
-

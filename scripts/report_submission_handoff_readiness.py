@@ -9,8 +9,8 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/submission-handoff-readiness.md")
-HANDOFF = Path("documentation/google-fonts-submission-handoff.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/submission-handoff-readiness.md")
+HANDOFF = Path("documentation/google-fonts/google-fonts-submission-handoff.md")
 
 
 def read_text(relative: Path | str) -> str:
@@ -62,28 +62,28 @@ def arabic_category_counts(report_text: str) -> dict[str, int]:
 
 def markdown_report() -> str:
     handoff = read_text(HANDOFF)
-    template = read_text("documentation/google-fonts-add-font-template-audit.md")
-    issue_draft = read_text("documentation/google-fonts-add-font-issue-draft.md")
-    generated = read_text("documentation/generated-font-metadata.md")
-    fontspector = read_text("documentation/fontspector-googlefonts-report.md")
-    latin = read_text("documentation/missing-gf-latin-core.md")
-    arabic = read_text("documentation/missing-gf-arabic-core.md")
-    arabic_review = read_text("documentation/arabic-review-packet.md")
-    decisions = read_text("documentation/google-fonts-decisions.md")
-    release = read_text("documentation/release-metadata.md")
-    release_source = read_text("documentation/release-source-readiness.md")
-    release_archive = read_text("documentation/release-archive-manifest.md")
-    github_release_draft = read_text("documentation/github-release-draft.md")
-    github_release_notes = read_text("documentation/github-release-notes.md")
-    decision_readiness = read_text("documentation/decision-readiness.md")
-    upstream_structure = read_text("documentation/upstream-structure-readiness.md")
-    package_source = read_text("documentation/package-source-files-audit.md")
-    package_dry_run = read_text("documentation/package-dry-run-readiness.md")
-    downstream_metadata = read_text("documentation/downstream-metadata-readiness.md")
-    article = read_text("documentation/article-readiness.md")
-    recent_packages = read_text("documentation/recent-google-fonts-packages.md")
-    kerning = read_text("documentation/kerning-readiness.md")
-    kerning_proof_review = read_text("documentation/kerning-proof-review.md")
+    template = read_text("documentation/google-fonts/google-fonts-add-font-template-audit.md")
+    issue_draft = read_text("documentation/google-fonts/google-fonts-add-font-issue-draft.md")
+    generated = read_text("documentation/google-fonts/generated-font-metadata.md")
+    fontspector = read_text("documentation/google-fonts/fontspector-googlefonts-report.md")
+    latin = read_text("documentation/google-fonts/missing-gf-latin-core.md")
+    arabic = read_text("documentation/google-fonts/missing-gf-arabic-core.md")
+    arabic_review = read_text("documentation/glyph-review/arabic-review-packet.md")
+    decisions = read_text("documentation/google-fonts/google-fonts-decisions.md")
+    release = read_text("documentation/google-fonts/release-metadata.md")
+    release_source = read_text("documentation/google-fonts/release-source-readiness.md")
+    release_archive = read_text("documentation/google-fonts/release-archive-manifest.md")
+    github_release_draft = read_text("documentation/google-fonts/github-release-draft.md")
+    github_release_notes = read_text("documentation/google-fonts/github-release-notes.md")
+    decision_readiness = read_text("documentation/google-fonts/decision-readiness.md")
+    upstream_structure = read_text("documentation/google-fonts/upstream-structure-readiness.md")
+    package_source = read_text("documentation/google-fonts/package-source-files-audit.md")
+    package_dry_run = read_text("documentation/google-fonts/package-dry-run-readiness.md")
+    downstream_metadata = read_text("documentation/google-fonts/downstream-metadata-readiness.md")
+    article = read_text("documentation/google-fonts/article-readiness.md")
+    recent_packages = read_text("documentation/google-fonts/recent-google-fonts-packages.md")
+    kerning = read_text("documentation/google-fonts/kerning-readiness.md")
+    kerning_proof_review = read_text("documentation/google-fonts/kerning-proof-review.md")
 
     fail, warn, info, pass_count, skip = fontspector_counts(fontspector)
     latin_missing = first_int(r"Missing codepoints: (\d+)", latin)
@@ -141,32 +141,32 @@ def markdown_report() -> str:
         "latin_gap": f"GF Latin Core missing codepoints: {latin_missing}" in issue_draft,
         "arabic_gap": f"GF Arabic Core missing codepoints: {arabic_missing_total}" in issue_draft,
         "arabic_refs": (
-            "documentation/arabic-review-packet.md" in issue_draft
+            "documentation/glyph-review/arabic-review-packet.md" in issue_draft
             and
-            "documentation/missing-gf-arabic-core.md" in issue_draft
-            and "documentation/arabic-mark-readiness.md" in issue_draft
-            and "documentation/arabic-shaping-smoke-test.md" in issue_draft
+            "documentation/google-fonts/missing-gf-arabic-core.md" in issue_draft
+            and "documentation/glyph-review/arabic-mark-readiness.md" in issue_draft
+            and "documentation/glyph-review/arabic-shaping-smoke-test.md" in issue_draft
         ),
         "decision_warning_status": "## Decision-Linked Warning Status" in issue_draft,
         "decision_warning_refs": (
-            "documentation/vendor-id-readiness.md" in issue_draft
-            and "documentation/kerning-readiness.md" in issue_draft
-            and "documentation/avar-readiness.md" in issue_draft
-            and "documentation/pua-scope.md" in issue_draft
-            and "documentation/fontspector-warnings.md" in issue_draft
+            "documentation/google-fonts/vendor-id-readiness.md" in issue_draft
+            and "documentation/google-fonts/kerning-readiness.md" in issue_draft
+            and "documentation/google-fonts/avar-readiness.md" in issue_draft
+            and "documentation/google-fonts/pua-scope.md" in issue_draft
+            and "documentation/google-fonts/fontspector-warnings.md" in issue_draft
         ),
         "metadata_apply_gate": (
             "Downstream metadata preview ready to apply:" in issue_draft
             and "Downstream metadata apply blockers:" in issue_draft
-            and "documentation/downstream-metadata-diff.md" in issue_draft
+            and "documentation/google-fonts/downstream-metadata-diff.md" in issue_draft
         ),
         "fontspector": f"{fail} FAIL results" in issue_draft,
-        "image": "documentation/readme-specimen.png" in issue_draft,
+        "image": "documentation/assets/readme-specimen.png" in issue_draft,
         "kerning_proof": (
             "GF visual proof output:" in issue_draft
             and "proof covers expected instances:" in issue_draft
         ),
-        "kerning_proof_review": "documentation/kerning-proof-review.md" in issue_draft,
+        "kerning_proof_review": "documentation/google-fonts/kerning-proof-review.md" in issue_draft,
         "maintenance_commitment": (
             "maintain the repository and participate in the onboarding process" in issue_draft
             and "Maintainer confirmation required before opening the issue." in issue_draft
@@ -175,18 +175,18 @@ def markdown_report() -> str:
     decided_handoff_checks = {
         "vendor_id": (
             "Vendor ID is decided as `FTGD` for Font Garden" in handoff
-            and "documentation/vendor-id-readiness.md" in handoff
+            and "documentation/google-fonts/vendor-id-readiness.md" in handoff
         ),
         "authorship_name_url": (
             "Author/contact display, copyright-authorship statement, AI-use disclosure,\n"
             "  namecheck result, and public upstream URL are decided" in handoff
-            and "documentation/authorship-disclosure-readiness.md" in handoff
-            and "documentation/family-name-readiness.md" in handoff
-            and "documentation/public-upstream-readiness.md" in handoff
+            and "documentation/google-fonts/authorship-disclosure-readiness.md" in handoff
+            and "documentation/google-fonts/family-name-readiness.md" in handoff
+            and "documentation/google-fonts/public-upstream-readiness.md" in handoff
         ),
         "article_flow": (
             "Keep the decided Article flow in the downstream package" in handoff
-            and "documentation/article-readiness.md" in handoff
+            and "documentation/google-fonts/article-readiness.md" in handoff
         ),
         "stale_vendor_id": "Confirm vendor ID." not in handoff,
         "stale_authorship_url": "Confirm author/contact lines" not in handoff,
@@ -203,46 +203,46 @@ def markdown_report() -> str:
         for heading, count in arabic_counts.items()
     }
     required_refs = [
-        "documentation/google-fonts-decisions.md",
-        "documentation/decision-readiness.md",
-        "documentation/google-fonts-add-font-template-audit.md",
-        "documentation/google-fonts-add-font-issue-draft.md",
-        "documentation/fontspector-googlefonts-report.md",
-        "documentation/arabic-review-packet.md",
-        "documentation/missing-gf-arabic-core.md",
-        "documentation/missing-gf-latin-core.md",
-        "documentation/release-source-readiness.md",
-        "documentation/release-archive-manifest.md",
-        "documentation/github-release-draft.md",
-        "documentation/github-release-notes.md",
-        "documentation/upstream-structure-readiness.md",
-        "documentation/google-fonts-package-checklist.md",
-        "documentation/package-source-files-audit.md",
-        "documentation/package-dry-run-readiness.md",
-        "documentation/google-fonts-metadata-review.md",
-        "documentation/downstream-metadata-readiness.md",
-        "documentation/downstream-metadata-diff.md",
-        "documentation/downstream-pr-readiness.md",
-        "documentation/google-fonts-language-metadata.md",
-        "documentation/google-fonts-downstream-package-preview.md",
-        "documentation/article-readiness.md",
-        "documentation/authorship-disclosure-readiness.md",
-        "documentation/pr-identity-readiness.md",
-        "documentation/designer-profile-readiness.md",
-        "documentation/designer-profile-package-draft.md",
-        "documentation/drawbot-runtime-readiness.md",
-        "documentation/local-workflow-readiness.md",
-        "documentation/recent-google-fonts-packages.md",
-        "documentation/vendor-id-readiness.md",
-        "documentation/kerning-readiness.md",
-        "documentation/kerning-proof-review.md",
-        "documentation/avar-readiness.md",
-        "documentation/pua-scope.md",
-        "documentation/glyph-reachability.md",
-        "documentation/numeric-feature-readiness.md",
-        "documentation/fontspector-warnings.md",
-        "documentation/final-submission-blockers.md",
-        "documentation/next-actions.md",
+        "documentation/google-fonts/google-fonts-decisions.md",
+        "documentation/google-fonts/decision-readiness.md",
+        "documentation/google-fonts/google-fonts-add-font-template-audit.md",
+        "documentation/google-fonts/google-fonts-add-font-issue-draft.md",
+        "documentation/google-fonts/fontspector-googlefonts-report.md",
+        "documentation/glyph-review/arabic-review-packet.md",
+        "documentation/google-fonts/missing-gf-arabic-core.md",
+        "documentation/google-fonts/missing-gf-latin-core.md",
+        "documentation/google-fonts/release-source-readiness.md",
+        "documentation/google-fonts/release-archive-manifest.md",
+        "documentation/google-fonts/github-release-draft.md",
+        "documentation/google-fonts/github-release-notes.md",
+        "documentation/google-fonts/upstream-structure-readiness.md",
+        "documentation/google-fonts/google-fonts-package-checklist.md",
+        "documentation/google-fonts/package-source-files-audit.md",
+        "documentation/google-fonts/package-dry-run-readiness.md",
+        "documentation/google-fonts/google-fonts-metadata-review.md",
+        "documentation/google-fonts/downstream-metadata-readiness.md",
+        "documentation/google-fonts/downstream-metadata-diff.md",
+        "documentation/google-fonts/downstream-pr-readiness.md",
+        "documentation/google-fonts/google-fonts-language-metadata.md",
+        "documentation/google-fonts/google-fonts-downstream-package-preview.md",
+        "documentation/google-fonts/article-readiness.md",
+        "documentation/google-fonts/authorship-disclosure-readiness.md",
+        "documentation/google-fonts/pr-identity-readiness.md",
+        "documentation/google-fonts/designer-profile-readiness.md",
+        "documentation/google-fonts/designer-profile-package-draft.md",
+        "documentation/google-fonts/drawbot-runtime-readiness.md",
+        "documentation/google-fonts/local-workflow-readiness.md",
+        "documentation/google-fonts/recent-google-fonts-packages.md",
+        "documentation/google-fonts/vendor-id-readiness.md",
+        "documentation/google-fonts/kerning-readiness.md",
+        "documentation/google-fonts/kerning-proof-review.md",
+        "documentation/google-fonts/avar-readiness.md",
+        "documentation/google-fonts/pua-scope.md",
+        "documentation/google-fonts/glyph-reachability.md",
+        "documentation/google-fonts/numeric-feature-readiness.md",
+        "documentation/google-fonts/fontspector-warnings.md",
+        "documentation/google-fonts/final-submission-blockers.md",
+        "documentation/google-fonts/next-actions.md",
     ]
 
     lines = [
@@ -279,7 +279,7 @@ def markdown_report() -> str:
         f"- Issue draft references GF visual proof review packet: {yes_no(issue_draft_checks['kerning_proof_review'])}",
         f"- Issue draft tracks repository maintenance commitment: {yes_no(issue_draft_checks['maintenance_commitment'])}",
         f"- Issue draft points to specimen image: {yes_no(issue_draft_checks['image'])}",
-        f"- Handoff points to generated Add Font issue draft: {yes_no('documentation/google-fonts-add-font-issue-draft.md' in handoff)}",
+        f"- Handoff points to generated Add Font issue draft: {yes_no('documentation/google-fonts/google-fonts-add-font-issue-draft.md' in handoff)}",
         f"- Handoff includes current version `{version}`: {yes_no(bool(version and version in handoff))}",
         f"- Handoff includes current Fontspector summary: {yes_no(handoff_expected_fontspector in handoff)}",
         f"- Handoff includes current Latin Core gap: {yes_no(f'GF Latin Core missing codepoints: {latin_missing}' in handoff)}",
@@ -293,31 +293,31 @@ def markdown_report() -> str:
         f"- Template includes repository maintenance checkbox: {yes_no(maintenance_checks['template_requirement'])}",
         f"- Handoff includes repository maintenance checkbox: {yes_no(maintenance_checks['handoff_checkbox'])}",
         f"- Repository maintenance confirmation remains unchecked until issue opening: {yes_no(maintenance_checks['unchecked'])}",
-        f"- Handoff points to Arabic review packet: {yes_no('documentation/arabic-review-packet.md' in handoff)}",
-        f"- Handoff points to decision readiness report: {yes_no('documentation/decision-readiness.md' in handoff)}",
-        f"- Handoff points to release/source readiness report: {yes_no('documentation/release-source-readiness.md' in handoff)}",
-        f"- Handoff points to release archive manifest: {yes_no('documentation/release-archive-manifest.md' in handoff)}",
-        f"- Handoff points to GitHub release draft and notes: {yes_no('documentation/github-release-draft.md' in handoff and 'documentation/github-release-notes.md' in handoff)}",
-        f"- Handoff points to upstream structure readiness report: {yes_no('documentation/upstream-structure-readiness.md' in handoff)}",
-        f"- Handoff points to package source-file audit: {yes_no('documentation/package-source-files-audit.md' in handoff)}",
-        f"- Handoff points to package dry-run readiness report: {yes_no('documentation/package-dry-run-readiness.md' in handoff)}",
-        f"- Handoff points to downstream metadata readiness report: {yes_no('documentation/downstream-metadata-readiness.md' in handoff)}",
-        f"- Handoff points to Article readiness report: {yes_no('documentation/article-readiness.md' in handoff)}",
-        f"- Handoff points to authorship and AI disclosure report: {yes_no('documentation/authorship-disclosure-readiness.md' in handoff)}",
-        f"- Handoff points to PR identity readiness report: {yes_no('documentation/pr-identity-readiness.md' in handoff)}",
-        f"- Handoff points to designer profile reports: {yes_no('documentation/designer-profile-readiness.md' in handoff and 'documentation/designer-profile-package-draft.md' in handoff)}",
-        f"- Handoff points to DrawBot fork runtime report: {yes_no('documentation/drawbot-runtime-readiness.md' in handoff)}",
-        f"- Handoff points to local workflow readiness report: {yes_no('documentation/local-workflow-readiness.md' in handoff)}",
-        f"- Handoff points to recent-package audit: {yes_no('documentation/recent-google-fonts-packages.md' in handoff)}",
+        f"- Handoff points to Arabic review packet: {yes_no('documentation/glyph-review/arabic-review-packet.md' in handoff)}",
+        f"- Handoff points to decision readiness report: {yes_no('documentation/google-fonts/decision-readiness.md' in handoff)}",
+        f"- Handoff points to release/source readiness report: {yes_no('documentation/google-fonts/release-source-readiness.md' in handoff)}",
+        f"- Handoff points to release archive manifest: {yes_no('documentation/google-fonts/release-archive-manifest.md' in handoff)}",
+        f"- Handoff points to GitHub release draft and notes: {yes_no('documentation/google-fonts/github-release-draft.md' in handoff and 'documentation/google-fonts/github-release-notes.md' in handoff)}",
+        f"- Handoff points to upstream structure readiness report: {yes_no('documentation/google-fonts/upstream-structure-readiness.md' in handoff)}",
+        f"- Handoff points to package source-file audit: {yes_no('documentation/google-fonts/package-source-files-audit.md' in handoff)}",
+        f"- Handoff points to package dry-run readiness report: {yes_no('documentation/google-fonts/package-dry-run-readiness.md' in handoff)}",
+        f"- Handoff points to downstream metadata readiness report: {yes_no('documentation/google-fonts/downstream-metadata-readiness.md' in handoff)}",
+        f"- Handoff points to Article readiness report: {yes_no('documentation/google-fonts/article-readiness.md' in handoff)}",
+        f"- Handoff points to authorship and AI disclosure report: {yes_no('documentation/google-fonts/authorship-disclosure-readiness.md' in handoff)}",
+        f"- Handoff points to PR identity readiness report: {yes_no('documentation/google-fonts/pr-identity-readiness.md' in handoff)}",
+        f"- Handoff points to designer profile reports: {yes_no('documentation/google-fonts/designer-profile-readiness.md' in handoff and 'documentation/google-fonts/designer-profile-package-draft.md' in handoff)}",
+        f"- Handoff points to DrawBot fork runtime report: {yes_no('documentation/google-fonts/drawbot-runtime-readiness.md' in handoff)}",
+        f"- Handoff points to local workflow readiness report: {yes_no('documentation/google-fonts/local-workflow-readiness.md' in handoff)}",
+        f"- Handoff points to recent-package audit: {yes_no('documentation/google-fonts/recent-google-fonts-packages.md' in handoff)}",
         f"- Recent-package audit includes generated Packager merge evidence: {yes_no('## Recent Packager Merges' in recent_packages and 'gftools_packager_ofl_' in recent_packages)}",
-        f"- Handoff points to decision-linked warning reports: {yes_no(all(ref in handoff for ref in ['documentation/vendor-id-readiness.md', 'documentation/kerning-readiness.md', 'documentation/kerning-proof-review.md', 'documentation/avar-readiness.md', 'documentation/pua-scope.md', 'documentation/glyph-reachability.md', 'documentation/numeric-feature-readiness.md', 'documentation/fontspector-warnings.md']))}",
-        f"- Handoff points to GF visual proof review packet: {yes_no('documentation/kerning-proof-review.md' in handoff)}",
+        f"- Handoff points to decision-linked warning reports: {yes_no(all(ref in handoff for ref in ['documentation/google-fonts/vendor-id-readiness.md', 'documentation/google-fonts/kerning-readiness.md', 'documentation/google-fonts/kerning-proof-review.md', 'documentation/google-fonts/avar-readiness.md', 'documentation/google-fonts/pua-scope.md', 'documentation/google-fonts/glyph-reachability.md', 'documentation/google-fonts/numeric-feature-readiness.md', 'documentation/google-fonts/fontspector-warnings.md']))}",
+        f"- Handoff points to GF visual proof review packet: {yes_no('documentation/google-fonts/kerning-proof-review.md' in handoff)}",
         f"- Handoff mentions decision-linked warning buckets: {yes_no('decision-linked warning buckets' in handoff and 'vendor ID, kerning, `avar`' in handoff and 'PUA/reachability' in handoff)}",
         f"- Kerning report has current GF visual proof output: {kerning_proof_output}",
         f"- Kerning report proof covers expected instances: {kerning_proof_instances}",
         f"- Kerning proof review packet has expected proof files: {kerning_proof_review_expected}",
         f"- Kerning proof review packet covers expected instances: {kerning_proof_review_instances}",
-        f"- Handoff points to final blocker summary: {yes_no('documentation/final-submission-blockers.md' in handoff)}",
+        f"- Handoff points to final blocker summary: {yes_no('documentation/google-fonts/final-submission-blockers.md' in handoff)}",
         f"- Handoff mentions expected Packager branch: {yes_no('gftools_packager_ofl_virtuagrotesk' in handoff)}",
         f"- Handoff mentions downstream PR title/body/scope: {yes_no('Virtua Grotesk : 1.000 added' in handoff and 'Taken from the upstream repo <repo-url> at commit <commit-url>.' in handoff and 'one changed directory' in handoff and 'compare across forks' in handoff)}",
         f"- Handoff mentions Packager source-mode options: {yes_no('GFT_PACKAGER_SOURCE_MODE=latest-release' in handoff and 'GFT_PACKAGER_SOURCE_MODE=build-from-source' in handoff)}",
@@ -355,11 +355,11 @@ def markdown_report() -> str:
         f"| package inputs tracked | `{dry_run_inputs_tracked}` | {yes_no(bool(dry_run_inputs_tracked and f'{dry_run_inputs_tracked.replace(' / ', '/')} are tracked by git' in handoff))} |",
         f"| package inputs untracked | `{dry_run_inputs_untracked}` | {yes_no(bool(dry_run_inputs_untracked and f'{dry_run_inputs_untracked}/5 is currently untracked' in handoff))} |",
         f"| GF Latin Core missing | `{latin_missing}` | {yes_no(f'GF Latin Core missing codepoints: {latin_missing}' in handoff)} |",
-        f"| GF visual kerning proof output | `{kerning_proof_output}` | {yes_no(bool(kerning_proof_output and 'documentation/kerning-readiness.md' in handoff))} |",
-        f"| GF visual kerning proof HTML files | `{kerning_proof_html_count}` | {yes_no(bool(kerning_proof_html_count and 'documentation/kerning-readiness.md' in handoff))} |",
-        f"| GF visual kerning proof instances | `{kerning_proof_instances}` | {yes_no(bool(kerning_proof_instances and 'documentation/kerning-readiness.md' in handoff))} |",
-        f"| GF visual proof review packet files | `{kerning_proof_review_expected}` | {yes_no(bool(kerning_proof_review_expected and 'documentation/kerning-proof-review.md' in handoff))} |",
-        f"| GF visual proof review packet instances | `{kerning_proof_review_instances}` | {yes_no(bool(kerning_proof_review_instances and 'documentation/kerning-proof-review.md' in handoff))} |",
+        f"| GF visual kerning proof output | `{kerning_proof_output}` | {yes_no(bool(kerning_proof_output and 'documentation/google-fonts/kerning-readiness.md' in handoff))} |",
+        f"| GF visual kerning proof HTML files | `{kerning_proof_html_count}` | {yes_no(bool(kerning_proof_html_count and 'documentation/google-fonts/kerning-readiness.md' in handoff))} |",
+        f"| GF visual kerning proof instances | `{kerning_proof_instances}` | {yes_no(bool(kerning_proof_instances and 'documentation/google-fonts/kerning-readiness.md' in handoff))} |",
+        f"| GF visual proof review packet files | `{kerning_proof_review_expected}` | {yes_no(bool(kerning_proof_review_expected and 'documentation/google-fonts/kerning-proof-review.md' in handoff))} |",
+        f"| GF visual proof review packet instances | `{kerning_proof_review_instances}` | {yes_no(bool(kerning_proof_review_instances and 'documentation/google-fonts/kerning-proof-review.md' in handoff))} |",
     ]
     for heading, count in arabic_counts.items():
         lines.append(f"| {heading} | `{count}` | {yes_no(arabic_matches[heading])} |")
@@ -384,11 +384,11 @@ def markdown_report() -> str:
             f"| Arabic readiness report references | `review packet, coverage, marks, shaping` | {yes_no(issue_draft_checks['arabic_refs'])} |",
             f"| decision-linked warning status | `vendor, kerning, avar, PUA/reachability` | {yes_no(issue_draft_checks['decision_warning_status'])} |",
             f"| decision-warning report references | `vendor, kerning, avar, PUA, warnings` | {yes_no(issue_draft_checks['decision_warning_refs'])} |",
-            f"| GF visual proof review packet | `documentation/kerning-proof-review.md` | {yes_no(issue_draft_checks['kerning_proof_review'])} |",
+            f"| GF visual proof review packet | `documentation/google-fonts/kerning-proof-review.md` | {yes_no(issue_draft_checks['kerning_proof_review'])} |",
             f"| downstream metadata apply gate | `ready/apply blockers` | {yes_no(issue_draft_checks['metadata_apply_gate'])} |",
             f"| repository maintenance commitment | `maintain the repository` checkbox and status note | {yes_no(issue_draft_checks['maintenance_commitment'])} |",
             f"| Fontspector FAIL count | `{fail}` | {yes_no(issue_draft_checks['fontspector'])} |",
-            "| image | `documentation/readme-specimen.png` | "
+            "| image | `documentation/assets/readme-specimen.png` | "
             f"{yes_no(issue_draft_checks['image'])} |",
         ]
     )
@@ -412,9 +412,9 @@ def markdown_report() -> str:
             "",
             "- Regenerate this report with `make preflight` after any drawing,",
             "  metadata, issue-template, or packaging-source change.",
-            "- Update `documentation/google-fonts-submission-handoff.md` until all",
+            "- Update `documentation/google-fonts/google-fonts-submission-handoff.md` until all",
             "  current values and report references match.",
-            "- Regenerate `documentation/google-fonts-add-font-issue-draft.md` from",
+            "- Regenerate `documentation/google-fonts/google-fonts-add-font-issue-draft.md` from",
             "  the current local `google/fonts` Add Font template before opening",
             "  the issue.",
             "- Do not check the Add Font requirement boxes until maintainer decisions",

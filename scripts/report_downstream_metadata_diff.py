@@ -13,10 +13,10 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/downstream-metadata-diff.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/downstream-metadata-diff.md")
 GF_REPO_PATH = Path(os.environ.get("GF_REPO_PATH", "/Users/eli/GH/forks/fonts"))
 DOWNSTREAM_METADATA = GF_REPO_PATH / "ofl/virtuagrotesk/METADATA.pb"
-PREVIEW = ROOT / "documentation/google-fonts-downstream-package-preview.md"
+PREVIEW = ROOT / "documentation/google-fonts/google-fonts-downstream-package-preview.md"
 PREPARE_HELPER = ROOT / "scripts/prepare_downstream_metadata.py"
 STARTER_TEMPLATE_MARKERS = [
     'designer: "UNKNOWN"',
@@ -41,9 +41,9 @@ EXPECTED_LINES = [
     'dest_file: "OFL.txt"',
     'source_file: "fonts/variable/VirtuaGrotesk[wght].ttf"',
     'dest_file: "VirtuaGrotesk[wght].ttf"',
-    'source_file: "documentation/ARTICLE.en_us.html"',
+    'source_file: "documentation/google-fonts/ARTICLE.en_us.html"',
     'dest_file: "article/ARTICLE.en_us.html"',
-    'source_file: "documentation/readme-specimen.png"',
+    'source_file: "documentation/assets/readme-specimen.png"',
     'dest_file: "article/readme-specimen.png"',
     'primary_script: "Arab"',
     'stroke: "SANS_SERIF"',
@@ -170,7 +170,7 @@ def markdown_report() -> str:
         "",
         "## Summary",
         "",
-        "- Expected preview: `documentation/google-fonts-downstream-package-preview.md`",
+        "- Expected preview: `documentation/google-fonts/google-fonts-downstream-package-preview.md`",
         f"- Actual downstream metadata: `{DOWNSTREAM_METADATA}`",
         f"- Actual downstream METADATA.pb present: {yes_no(actual_exists)}",
         f"- Actual downstream METADATA.pb is starter template: {yes_no(starter_template)}",
@@ -258,7 +258,7 @@ def markdown_report() -> str:
             "- When that dry run reports `Ready to apply: yes`, run",
             "  `scripts/prepare_downstream_metadata.py --apply` to write",
             "  `/Users/eli/GH/forks/fonts/ofl/virtuagrotesk/METADATA.pb`.",
-            "- Use `documentation/google-fonts-downstream-package-preview.md` as",
+            "- Use `documentation/google-fonts/google-fonts-downstream-package-preview.md` as",
             "  the expected shape, then rerun `make preflight` so proof evidence",
             "  and generated reports stay synchronized before",
             "  `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run`.",

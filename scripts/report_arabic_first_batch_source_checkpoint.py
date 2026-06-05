@@ -11,7 +11,7 @@ import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-first-batch-source-checkpoint.md"
 MASTERS = {
     "Regular": ROOT / "sources/VirtuaGrotesk-Regular.ufo/glyphs",
     "Bold": ROOT / "sources/VirtuaGrotesk-Bold.ufo/glyphs",
@@ -219,7 +219,7 @@ def markdown_report() -> str:
             "  deliberate mirrored structural change is required.",
             "- Rerun `make arabic-first-batch-source-checkpoint` after source edits",
             "  and before `make arabic-after-drawing-check`.",
-            "- Keep visual decisions in `documentation/arabic-visual-review-log.md`;",
+            "- Keep visual decisions in `documentation/glyph-review/arabic-visual-review-log.md`;",
             "  this file is only a source-structure checkpoint.",
             "",
         ]

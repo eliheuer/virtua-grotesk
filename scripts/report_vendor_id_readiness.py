@@ -12,7 +12,7 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/vendor-id-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/vendor-id-readiness.md")
 SOURCE_UFOS = (
     Path("sources/VirtuaGrotesk-Regular.ufo"),
     Path("sources/VirtuaGrotesk-Bold.ufo"),
@@ -64,13 +64,13 @@ def font_vendor_id(font_path: Path) -> str:
 
 
 def warning_count() -> int:
-    text = read_text(ROOT / "documentation/fontspector-warnings.md")
+    text = read_text(ROOT / "documentation/google-fonts/fontspector-warnings.md")
     match = re.search(r"\| `googlefonts/vendor_id` \| `unknown` \| (\d+) \|", text)
     return int(match.group(1)) if match else 0
 
 
 def decision_status() -> str:
-    text = read_text(ROOT / "documentation/google-fonts-decisions.md")
+    text = read_text(ROOT / "documentation/google-fonts/google-fonts-decisions.md")
     match = re.search(r"## Vendor ID\s+Status: ([a-z]+)", text)
     return match.group(1) if match else "unknown"
 

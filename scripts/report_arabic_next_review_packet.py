@@ -21,9 +21,9 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-next-review-packet.md"
-ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
-ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-next-review-packet.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/glyph-review/arabic-print-proof-index.md"
 
 
 def compact_bullets(lines: list[str]) -> list[str]:
@@ -86,15 +86,15 @@ def packet() -> str:
         "# Arabic Next Review Packet",
         "",
         "This generated packet is the smallest current hand-review batch. It is",
-        "derived from `documentation/arabic-visual-review-log.md` and should be",
+        "derived from `documentation/glyph-review/arabic-visual-review-log.md` and should be",
         "regenerated after recording outcomes.",
         "",
         f"- Pending or fix-needed rows: {len(rows)}",
-        "- Full runbook: `documentation/arabic-visual-review-runbook.md`",
-        "- Dashboard: `documentation/arabic-manual-review-dashboard.html`",
-        "- Focused Arabic PDF proof: `documentation/arabic-print-proof.pdf`",
-        "- Focused Arabic PDF index: `documentation/arabic-print-proof-index.md`",
-        "- Focused HTML: `documentation/arabic-next-review-batch.html`",
+        "- Full runbook: `documentation/glyph-review/arabic-visual-review-runbook.md`",
+        "- Dashboard: `documentation/glyph-review/arabic-manual-review-dashboard.html`",
+        "- Focused Arabic PDF proof: `documentation/glyph-review/arabic-print-proof.pdf`",
+        "- Focused Arabic PDF index: `documentation/glyph-review/arabic-print-proof-index.md`",
+        "- Focused HTML: `documentation/glyph-review/arabic-next-review-batch.html`",
         "- AI-safe triage: run `make arabic-next-review-ai-triage`",
         "- AI visual observations: run `make arabic-next-review-ai-observations`",
         "- Local review board: run `make arabic-next-review-board`",
@@ -114,9 +114,9 @@ def packet() -> str:
             [
                 "## Fast Review Order",
                 "",
-                "1. Open `documentation/arabic-print-proof.pdf` and scan the current",
+                "1. Open `documentation/glyph-review/arabic-print-proof.pdf` and scan the current",
                 "   five-row batch across Regular, Medium, SemiBold, and Bold.",
-                "2. Use `documentation/arabic-print-proof-index.md` to jump directly",
+                "2. Use `documentation/glyph-review/arabic-print-proof-index.md` to jump directly",
                 "   to the style and section you are reviewing.",
                 "3. Use the linked HTML/source evidence below for any row that looks",
                 "   missing, clipped, malformed, duplicated, wrong-codepoint, or",

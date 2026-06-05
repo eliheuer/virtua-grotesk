@@ -15,10 +15,10 @@ from gfsubsets import CodepointsInSubset
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_FONT = ROOT / "fonts/variable/VirtuaGrotesk[wght].ttf"
-DEFAULT_OUTPUT = ROOT / "documentation/fontspector-zero-warning-worklist.md"
-METADATA_PROBE = ROOT / "documentation/fontspector-metadata-warning-probe.md"
-CONTOUR_DECISIONS = ROOT / "documentation/contour-cleanup-decision-log.md"
-GF_GLYPHSET_REPORT = ROOT / "documentation/gf-glyphset-readiness.md"
+DEFAULT_OUTPUT = ROOT / "documentation/google-fonts/fontspector-zero-warning-worklist.md"
+METADATA_PROBE = ROOT / "documentation/google-fonts/fontspector-metadata-warning-probe.md"
+CONTOUR_DECISIONS = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md"
+GF_GLYPHSET_REPORT = ROOT / "documentation/google-fonts/gf-glyphset-readiness.md"
 SUBSET_THRESHOLDS = {
     "arabic": 50,
     "latin-ext": 20,
@@ -108,7 +108,7 @@ def metadata_probe_counts(text: str) -> dict[str, int]:
 
 
 def metadata_preview_subsets() -> tuple[str, ...]:
-    preview = (ROOT / "documentation/google-fonts-downstream-package-preview.md").read_text(encoding="utf-8")
+    preview = (ROOT / "documentation/google-fonts/google-fonts-downstream-package-preview.md").read_text(encoding="utf-8")
     match = re.search(
         r"## Expected METADATA\.pb shape\s*```text\n(?P<body>.*?)\n```",
         preview,

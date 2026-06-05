@@ -12,7 +12,7 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/release-metadata.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/release-metadata.md")
 SOURCE_FONTINFO = [
     Path("sources/VirtuaGrotesk-Regular.ufo/fontinfo.plist"),
     Path("sources/VirtuaGrotesk-Bold.ufo/fontinfo.plist"),
@@ -124,8 +124,8 @@ def markdown_report() -> str:
             "",
             "## Before Tagging",
             "",
-            "- Confirm the version strategy decision in `documentation/google-fonts-decisions.md`.",
-            "- Confirm the final upstream tag and commit in `documentation/google-fonts-release-checklist.md`.",
+            "- Confirm the version strategy decision in `documentation/google-fonts/google-fonts-decisions.md`.",
+            "- Confirm the final upstream tag and commit in `documentation/google-fonts/google-fonts-release-checklist.md`.",
             "- Regenerate this report with `make preflight` after changing source or build versions.",
             "",
         ]
