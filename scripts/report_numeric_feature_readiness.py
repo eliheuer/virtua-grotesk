@@ -11,7 +11,7 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/numeric-feature-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/numeric-feature-readiness.md")
 VARIABLE_FONT = Path("fonts/variable/VirtuaGrotesk[wght].ttf")
 STATIC_FONTS = [
     Path("fonts/ttf/VirtuaGrotesk-Regular.ttf"),

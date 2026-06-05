@@ -10,8 +10,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
-OUTPUT_DEFAULT = Path("documentation/google-fonts-language-metadata.md")
-DOWNSTREAM_PREVIEW = Path("documentation/google-fonts-downstream-package-preview.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-language-metadata.md")
+DOWNSTREAM_PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 SCRIPT_ID = "Arab"
 SUBSETS = ("arabic", "latin", "menu")
 CORE_LANGUAGES = ("ar_Arab", "fa_Arab", "ur_Arab")

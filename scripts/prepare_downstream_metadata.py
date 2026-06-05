@@ -15,7 +15,7 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
-DEFAULT_PREVIEW = Path("documentation/google-fonts-downstream-package-preview.md")
+DEFAULT_PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 PACKAGE_DIR = Path("ofl/virtuagrotesk")
 SUPPORTED_SOURCE_MODES = ("default", "latest-release", "build-from-source")
 BLOCKED_MARKERS = (
@@ -45,9 +45,9 @@ REQUIRED_LINES = (
     'dest_file: "OFL.txt"',
     'source_file: "fonts/variable/VirtuaGrotesk[wght].ttf"',
     'dest_file: "VirtuaGrotesk[wght].ttf"',
-    'source_file: "documentation/ARTICLE.en_us.html"',
+    'source_file: "documentation/google-fonts/ARTICLE.en_us.html"',
     'dest_file: "article/ARTICLE.en_us.html"',
-    'source_file: "documentation/readme-specimen.png"',
+    'source_file: "documentation/assets/readme-specimen.png"',
     'dest_file: "article/readme-specimen.png"',
     'primary_script: "Arab"',
     'stroke: "SANS_SERIF"',

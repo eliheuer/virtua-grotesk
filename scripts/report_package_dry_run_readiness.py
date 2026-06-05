@@ -12,7 +12,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/package-dry-run-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/package-dry-run-readiness.md")
 GF_REPO_PATH = Path(os.environ.get("GF_REPO_PATH", "/Users/eli/GH/forks/fonts"))
 PACKAGE_DIR = Path("ofl/virtuagrotesk")
 METADATA_PATH = GF_REPO_PATH / PACKAGE_DIR / "METADATA.pb"
@@ -47,12 +47,12 @@ EXPECTED_SOURCE_MODES = {"default", "latest-release", "build-from-source", ""}
 REQUIRED_PACKAGE_INPUTS = [
     "fonts/variable/VirtuaGrotesk[wght].ttf",
     "OFL.txt",
-    "documentation/ARTICLE.en_us.html",
-    "documentation/readme-specimen.png",
+    "documentation/google-fonts/ARTICLE.en_us.html",
+    "documentation/assets/readme-specimen.png",
     "sources/config.yaml",
 ]
 PACKAGE_WRAPPER = ROOT / "scripts/package_gf_dry_run.sh"
-DOWNSTREAM_PREVIEW = ROOT / "documentation/google-fonts-downstream-package-preview.md"
+DOWNSTREAM_PREVIEW = ROOT / "documentation/google-fonts/google-fonts-downstream-package-preview.md"
 RELEASE_ARCHIVE_VERIFIER = ROOT / "scripts/verify_release_archive.py"
 
 
@@ -621,7 +621,7 @@ def markdown_report() -> str:
         "",
         f"- Starter template present: {yes_no(metadata_starter_template)}",
         f"- Starter template quarantined to `{PACKAGE_DIR}`: {yes_no(starter_template_quarantined)}",
-        "- Replacement source of truth: `documentation/google-fonts-downstream-package-preview.md`",
+        "- Replacement source of truth: `documentation/google-fonts/google-fonts-downstream-package-preview.md`",
         "- Replacement gate: `GFT_PACKAGER_SOURCE_MODE=latest-release make downstream-metadata-check`",
         "- Replacement command after blockers clear: `./venv/bin/python scripts/prepare_downstream_metadata.py --apply`",
         "",

@@ -23,12 +23,12 @@ from report_arabic_manual_review_batches import (
 from report_arabic_visual_review_runbook import split_markdown_row
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-current-review-worksheet.md"
-FIRST_REVIEW_AI_SWEEP = ROOT / "documentation/arabic-first-review-ai-sweep.md"
-ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
-ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
-FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
-PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-current-review-worksheet.md"
+FIRST_REVIEW_AI_SWEEP = ROOT / "documentation/glyph-review/arabic-first-review-ai-sweep.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/glyph-review/arabic-print-proof-index.md"
+FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-first-batch-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-pending-source-checkpoint.md"
 
 
 def visual_command(key: str, status: str, notes: str) -> str:
@@ -162,7 +162,7 @@ def markdown_report() -> str:
                 "",
                 "## AI Triage Notes",
                 "",
-                "These notes come from `documentation/arabic-first-review-ai-sweep.md`.",
+                "These notes come from `documentation/glyph-review/arabic-first-review-ai-sweep.md`.",
                 "They are not review decisions and do not justify recording `pass`",
                 "without opening the linked proof/source evidence.",
                 "",
@@ -182,9 +182,9 @@ def markdown_report() -> str:
                 "",
                 "## Print-Proof Pass",
                 "",
-                "Use `documentation/arabic-print-proof.pdf` as the quick paper or PDF",
+                "Use `documentation/glyph-review/arabic-print-proof.pdf` as the quick paper or PDF",
                 "scan for this batch before opening the heavier HTML proof pages.",
-                "Use `documentation/arabic-print-proof-index.md` to jump to the",
+                "Use `documentation/glyph-review/arabic-print-proof-index.md` to jump to the",
                 "right style and section in the PDF.",
                 "For each row, look for missing glyphs, wrong glyphs, clipping,",
                 "blank cells, malformed joins, and weight-specific rhythm changes.",
@@ -272,7 +272,7 @@ def markdown_report() -> str:
             "```",
             "",
             "If any row becomes `fix-needed`, open",
-            "`documentation/arabic-manual-edit-targets.md` before editing so",
+            "`documentation/glyph-review/arabic-manual-edit-targets.md` before editing so",
             "Regular and Bold stay compatible.",
             "",
         ]

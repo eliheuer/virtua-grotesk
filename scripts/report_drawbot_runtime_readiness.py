@@ -10,7 +10,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/drawbot-runtime-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/drawbot-runtime-readiness.md")
 DRAWBOT_SKIA_REPO = Path("/Users/eli/GH/repos/drawbot-skia")
 PROJECT_PYTHON = ROOT / "venv/bin/python"
 DRAWBOT_SKIA_SRC = DRAWBOT_SKIA_REPO / "src"
@@ -93,7 +93,7 @@ def import_status() -> tuple[bool, str]:
 
 def markdown_report() -> str:
     makefile_text = (ROOT / "Makefile").read_text(encoding="utf-8")
-    proof_text = (ROOT / "proof.py").read_text(encoding="utf-8")
+    proof_text = (ROOT / "scripts/build_general_proof.py").read_text(encoding="utf-8")
     readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
     tooling_text = (ROOT / "documentation/python-tooling-notes.md").read_text(encoding="utf-8")
     makefile_repo = "DRAWBOT_SKIA_REPO ?= /Users/eli/GH/repos/drawbot-skia" in makefile_text
@@ -144,8 +144,8 @@ def markdown_report() -> str:
         f"- Makefile sets `DRAWBOT_SKIA_REPO`: {yes_no(makefile_repo)}",
         f"- Makefile uses project venv Python for DrawBot proofs: {yes_no(makefile_python)}",
         f"- Makefile prepends fork `src` to `PYTHONPATH`: {yes_no(makefile_pythonpath)}",
-        f"- `proof.py` supports `drawbot_skia.drawing.Drawing`: {yes_no('from drawbot_skia.drawing import Drawing' in proof_text)}",
-        f"- `proof.py` requires eliheuer/drawbot-skia instead of generic DrawBot: {yes_no(proof_requires_fork)}",
+        f"- `scripts/build_general_proof.py` supports `drawbot_skia.drawing.Drawing`: {yes_no('from drawbot_skia.drawing import Drawing' in proof_text)}",
+        f"- `scripts/build_general_proof.py` requires eliheuer/drawbot-skia instead of generic DrawBot: {yes_no(proof_requires_fork)}",
         f"- README documents the fork runtime: {yes_no('eliheuer/drawbot-skia' in readme_text)}",
         f"- Python tooling notes document the fork runtime: {yes_no('eliheuer/drawbot-skia' in tooling_text)}",
         "",
@@ -156,7 +156,7 @@ def markdown_report() -> str:
         "- Regenerate this report with `make preflight` after changing the",
         "  DrawBot runtime, proof script, or local drawbot-skia checkout.",
         "- Use `make proof-only` after a successful font build to regenerate",
-        "  `proof.pdf` for final visual review.",
+        "  `documentation/proofs/proof.pdf` for final visual review.",
         "",
         "References:",
         "",

@@ -19,13 +19,13 @@ TARGET_FILES = [
     "sources/VirtuaGrotesk-Regular.ufo/fontinfo.plist",
     "sources/VirtuaGrotesk-Bold.ufo/fontinfo.plist",
     "scripts/fix_gf_metadata.py",
-    "documentation/ARTICLE.en_us.html",
-    "documentation/google-fonts-decision-questions.md",
-    "documentation/google-fonts-decisions.md",
-    "documentation/google-fonts-downstream-package-preview.md",
-    "documentation/google-fonts-metadata-review.md",
-    "documentation/google-fonts-package-checklist.md",
-    "documentation/google-fonts-submission-handoff.md",
+    "documentation/google-fonts/ARTICLE.en_us.html",
+    "documentation/google-fonts/google-fonts-decision-questions.md",
+    "documentation/google-fonts/google-fonts-decisions.md",
+    "documentation/google-fonts/google-fonts-downstream-package-preview.md",
+    "documentation/google-fonts/google-fonts-metadata-review.md",
+    "documentation/google-fonts/google-fonts-package-checklist.md",
+    "documentation/google-fonts/google-fonts-submission-handoff.md",
 ]
 
 

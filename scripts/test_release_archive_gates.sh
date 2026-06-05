@@ -66,7 +66,7 @@ SAFE_ARCHIVE="$TMPDIR/safe.zip"
 UNSAFE_ARCHIVE="$TMPDIR/unsafe.zip"
 NONDETERMINISTIC_ARCHIVE="$TMPDIR/nondeterministic.zip"
 
-write_preview "$SAFE_PREVIEW" "OFL.txt" "documentation/ARTICLE.en_us.html"
+write_preview "$SAFE_PREVIEW" "OFL.txt" "documentation/google-fonts/ARTICLE.en_us.html"
 printf '# Empty package preview\n' >"$EMPTY_PREVIEW"
 write_preview "$UNSAFE_PREVIEW" "../evil.txt"
 write_preview "$DUPLICATE_PREVIEW" "OFL.txt" "OFL.txt"
@@ -78,7 +78,7 @@ write_preview_pair "$UNSAFE_DEST_PREVIEW" "OFL.txt" "../evil.txt"
     printf '    dest_file: "duplicate.txt"\n'
     printf '  }\n'
     printf '  files {\n'
-    printf '    source_file: "documentation/ARTICLE.en_us.html"\n'
+    printf '    source_file: "documentation/google-fonts/ARTICLE.en_us.html"\n'
     printf '    dest_file: "duplicate.txt"\n'
     printf '  }\n'
 } >"$DUPLICATE_DEST_PREVIEW"
@@ -150,7 +150,7 @@ expect_blocked \
     "archive contains unsafe path" \
     "$PYTHON" "$ROOT/scripts/verify_release_archive.py" --preview "$SAFE_PREVIEW" --archive "$UNSAFE_ARCHIVE"
 
-"$PYTHON" -c 'import sys, zipfile; z = zipfile.ZipFile(sys.argv[1], "w"); z.write(sys.argv[2], arcname="OFL.txt"); z.write(sys.argv[3], arcname="documentation/ARTICLE.en_us.html"); z.close()' "$NONDETERMINISTIC_ARCHIVE" "$ROOT/OFL.txt" "$ROOT/documentation/ARTICLE.en_us.html"
+"$PYTHON" -c 'import sys, zipfile; z = zipfile.ZipFile(sys.argv[1], "w"); z.write(sys.argv[2], arcname="OFL.txt"); z.write(sys.argv[3], arcname="documentation/google-fonts/ARTICLE.en_us.html"); z.close()' "$NONDETERMINISTIC_ARCHIVE" "$ROOT/OFL.txt" "$ROOT/documentation/google-fonts/ARTICLE.en_us.html"
 
 expect_blocked \
     "verifier rejects nondeterministic archive metadata" \

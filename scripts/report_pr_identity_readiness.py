@@ -11,7 +11,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/pr-identity-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/pr-identity-readiness.md")
 GF_REPO_PATH = Path("/Users/eli/GH/forks/fonts")
 
 
@@ -74,7 +74,7 @@ def yes_no(value: bool) -> str:
 
 
 def cla_status() -> str:
-    decisions = (ROOT / "documentation/google-fonts-decisions.md").read_text(encoding="utf-8")
+    decisions = (ROOT / "documentation/google-fonts/google-fonts-decisions.md").read_text(encoding="utf-8")
     match = re.search(
         r"## Family name, namecheck, trademarks, and CLA\s+Status: ([a-z]+)",
         decisions,
@@ -85,7 +85,7 @@ def cla_status() -> str:
 
 
 def expected_cla_name() -> str:
-    decisions = (ROOT / "documentation/google-fonts-decisions.md").read_text(encoding="utf-8")
+    decisions = (ROOT / "documentation/google-fonts/google-fonts-decisions.md").read_text(encoding="utf-8")
     match = re.search(
         r"## Author/contact lines\s+Status: decided\s+Decision:\s+```text\s+([^`]+?)\s+```",
         decisions,

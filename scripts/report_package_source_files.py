@@ -11,20 +11,20 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/package-source-files-audit.md")
-PREVIEW_PATH = Path("documentation/google-fonts-downstream-package-preview.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/package-source-files-audit.md")
+PREVIEW_PATH = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 
 SOURCE_FILE_PURPOSES = {
     "OFL.txt": "license",
     "fonts/variable/VirtuaGrotesk[wght].ttf": "served variable font",
-    "documentation/ARTICLE.en_us.html": "article HTML",
-    "documentation/readme-specimen.png": "article image",
+    "documentation/google-fonts/ARTICLE.en_us.html": "article HTML",
+    "documentation/assets/readme-specimen.png": "article image",
 }
 EXPECTED_DEST_FILES = {
     "OFL.txt": "OFL.txt",
     "fonts/variable/VirtuaGrotesk[wght].ttf": "VirtuaGrotesk[wght].ttf",
-    "documentation/ARTICLE.en_us.html": "article/ARTICLE.en_us.html",
-    "documentation/readme-specimen.png": "article/readme-specimen.png",
+    "documentation/google-fonts/ARTICLE.en_us.html": "article/ARTICLE.en_us.html",
+    "documentation/assets/readme-specimen.png": "article/readme-specimen.png",
 }
 BUILD_FROM_SOURCE_FILES = [
     "sources/config.yaml",
@@ -178,7 +178,7 @@ def markdown_report() -> str:
     has_static_source_files = any(path.startswith("fonts/ttf/") for path in source_paths)
     static_outputs_present = [(path, (ROOT / path).exists(), git_check_ignored(path)) for path in STATIC_FONT_OUTPUTS]
     static_destinations = [path for path in dest_paths if path.startswith("static/")]
-    article_sources = [path for path in source_paths if path.startswith("documentation/") and path != "documentation/ARTICLE.en_us.html"]
+    article_sources = [path for path in source_paths if path.startswith("documentation/") and path != "documentation/google-fonts/ARTICLE.en_us.html"]
     article_destinations = [path for path in dest_paths if path.startswith("article/")]
     branch_values = text_values(preview, "branch")
     archive_values = text_values(preview, "archive_url")
@@ -298,12 +298,12 @@ def markdown_report() -> str:
             "## Before Final Dry Run",
             "",
             "- Keep the selected release/archive source strategy synchronized",
-            "  with `documentation/google-fonts-downstream-package-preview.md`.",
+            "  with `documentation/google-fonts/google-fonts-downstream-package-preview.md`.",
             "- Confirm the final GitHub release/archive contains every",
             "  `source.files` entry above at the same path.",
             "- Confirm `source.archive_url` is the final GitHub release download",
             "  URL ending in `.zip`.",
-            "- Confirm `documentation/google-fonts-downstream-package-preview.md` matches the final `source.files` mapping.",
+            "- Confirm `documentation/google-fonts/google-fonts-downstream-package-preview.md` matches the final `source.files` mapping.",
             "- Confirm no `source_file` or `dest_file` path is absolute, parent-relative, or duplicated.",
             "- Regenerate this report with `make preflight` after changing the source strategy.",
             "",

@@ -13,12 +13,12 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = ROOT / "documentation/local-workflow-readiness.md"
+OUTPUT_DEFAULT = ROOT / "documentation/google-fonts/local-workflow-readiness.md"
 GF_REPO_PATH = Path(os.environ.get("GF_REPO_PATH", "/Users/eli/GH/forks/fonts"))
 DRAWBOT_SKIA_REPO = Path("/Users/eli/GH/repos/drawbot-skia")
 FONTSPECTOR_HOME = Path.home() / ".fontspector"
-PROOF_PDF = ROOT / "proof.pdf"
-GFT_QA_OUTPUT = ROOT / "documentation/gftools-qa/Proof"
+PROOF_PDF = ROOT / "documentation/proofs/proof.pdf"
+GFT_QA_OUTPUT = ROOT / "documentation/google-fonts/gftools-qa/Proof"
 EXPECTED_FONTS = [
     ROOT / "fonts/variable/VirtuaGrotesk[wght].ttf",
     ROOT / "fonts/ttf/VirtuaGrotesk-Regular.ttf",
@@ -76,18 +76,18 @@ EXPECTED_TARGETS = [
     "clean",
 ]
 EXPECTED_REPORTS = [
-    "documentation/final-submission-blockers.md",
-    "documentation/next-actions.md",
-    "documentation/package-dry-run-readiness.md",
-    "documentation/drawbot-runtime-readiness.md",
-    "documentation/submission-handoff-readiness.md",
-    "documentation/release-archive-manifest.md",
-    "documentation/github-release-draft.md",
-    "documentation/github-release-notes.md",
-    "documentation/missing-gf-arabic-core.md",
-    "documentation/arabic-mark-readiness.md",
-    "documentation/arabic-shaping-smoke-test.md",
-    "documentation/fontspector-googlefonts-report.md",
+    "documentation/google-fonts/final-submission-blockers.md",
+    "documentation/google-fonts/next-actions.md",
+    "documentation/google-fonts/package-dry-run-readiness.md",
+    "documentation/google-fonts/drawbot-runtime-readiness.md",
+    "documentation/google-fonts/submission-handoff-readiness.md",
+    "documentation/google-fonts/release-archive-manifest.md",
+    "documentation/google-fonts/github-release-draft.md",
+    "documentation/google-fonts/github-release-notes.md",
+    "documentation/google-fonts/missing-gf-arabic-core.md",
+    "documentation/glyph-review/arabic-mark-readiness.md",
+    "documentation/glyph-review/arabic-shaping-smoke-test.md",
+    "documentation/google-fonts/fontspector-googlefonts-report.md",
 ]
 PYTHON_PACKAGES = [
     "diffenator2",
@@ -353,7 +353,7 @@ def main() -> int:
         and pinned_requirements_include_transitives
         and pinned_requirements_include_direct
     )
-    package_dry_run_text = read_existing_report("documentation/package-dry-run-readiness.md")
+    package_dry_run_text = read_existing_report("documentation/google-fonts/package-dry-run-readiness.md")
     package_report_reaches_packager = report_value(
         r"Wrapper can reach Packager: (yes|no)",
         package_dry_run_text,
@@ -610,7 +610,7 @@ def main() -> int:
             lines.append(f"- Resolve package dry-run first blocker: {package_report_first_blocker}.")
         if package_report_blocking_findings not in {"unknown", "none"}:
             lines.append(f"- Resolve all package dry-run blockers: {package_report_blocking_findings}.")
-        lines.append("- Review `documentation/package-dry-run-readiness.md` before running `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run`.")
+        lines.append("- Review `documentation/google-fonts/package-dry-run-readiness.md` before running `GFT_PACKAGER_SOURCE_MODE=latest-release make package-dry-run`.")
     if preflight_ready and proof_ready and package_ready:
         lines.append("- Local command prerequisites are ready; run `make preflight` after drawing, source, or metadata changes.")
 

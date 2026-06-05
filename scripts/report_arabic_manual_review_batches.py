@@ -11,13 +11,13 @@ from report_arabic_visual_review_runbook import split_markdown_row
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-manual-review-batches.md"
-VISUAL_LOG = ROOT / "documentation/arabic-visual-review-log.md"
-CONTOUR_LOG = ROOT / "documentation/contour-cleanup-decision-log.md"
-SNAPSHOT_REPORT = ROOT / "documentation/arabic-next-review-snapshots.md"
-SNAPSHOT_INTEGRITY = ROOT / "documentation/arabic-snapshot-integrity.md"
-ZOOM_SNAPSHOT_REPORT = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
-FULL_QUEUE_AI_SWEEP = ROOT / "documentation/arabic-full-queue-ai-sweep.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-manual-review-batches.md"
+VISUAL_LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
+CONTOUR_LOG = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md"
+SNAPSHOT_REPORT = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+SNAPSHOT_INTEGRITY = ROOT / "documentation/glyph-review/arabic-snapshot-integrity.md"
+ZOOM_SNAPSHOT_REPORT = ROOT / "documentation/glyph-review/arabic-first-review-zoom-snapshots.md"
+FULL_QUEUE_AI_SWEEP = ROOT / "documentation/glyph-review/arabic-full-queue-ai-sweep.md"
 
 
 BATCHES = [
@@ -28,8 +28,8 @@ BATCHES = [
         "contour_categories": [],
         "commands": [
             "make arabic-manual-review-dashboard",
-            "open documentation/arabic-manual-review-dashboard.html",
-            "open documentation/arabic-next-review-batch.html",
+            "open documentation/glyph-review/arabic-manual-review-dashboard.html",
+            "open documentation/glyph-review/arabic-next-review-batch.html",
         ],
         "decision": "Use this only to orient the review; record pass/fix decisions in the logs below.",
     },
@@ -45,8 +45,8 @@ BATCHES = [
         ],
         "contour_categories": ["source outline review", "Arabic letter or positional form"],
         "extra_evidence": [
-            "documentation/arabic-structure-sweep.html",
-            "documentation/arabic-structure-triage.md",
+            "documentation/glyph-review/arabic-structure-sweep.html",
+            "documentation/glyph-review/arabic-structure-triage.md",
         ],
         "decision": "Mark contour rows `fix-now` for source edits, or `accepted` only after comparing source and rendered proof.",
     },
@@ -65,8 +65,8 @@ BATCHES = [
         ],
         "contour_categories": ["Arabic mark or mark combination"],
         "extra_evidence": [
-            "documentation/arabic-mark-review-proof.html",
-            "documentation/arabic-mark-triage.md",
+            "documentation/glyph-review/arabic-mark-review-proof.html",
+            "documentation/glyph-review/arabic-mark-triage.md",
         ],
         "decision": "Review real-base attachment and dotted-circle behavior before accepting or editing mark composites.",
     },
@@ -335,17 +335,17 @@ def markdown_report() -> str:
         "",
         "Authoritative logs:",
         "",
-        "- `documentation/arabic-visual-review-log.md`",
-        "- `documentation/contour-cleanup-decision-log.md`",
-        "- `documentation/contour-cleanup-source-edit-runlist.md`",
-        "- `documentation/contour-cleanup-first-edit-batch.md`",
-        "- `documentation/arabic-manual-review-dashboard.html`",
-        "- `documentation/arabic-next-review-batch.html`",
-        "- `documentation/arabic-next-review-snapshots.md`",
-        "- `documentation/arabic-first-review-zoom-snapshots.md`",
-        "- `documentation/arabic-snapshot-integrity.md`",
-        "- `documentation/arabic-full-queue-ai-sweep.md`",
-        "- `documentation/gftools-qa/Proof/`",
+        "- `documentation/glyph-review/arabic-visual-review-log.md`",
+        "- `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`",
+        "- `documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md`",
+        "- `documentation/glyph-review/contour-cleanup/contour-cleanup-first-edit-batch.md`",
+        "- `documentation/glyph-review/arabic-manual-review-dashboard.html`",
+        "- `documentation/glyph-review/arabic-next-review-batch.html`",
+        "- `documentation/glyph-review/arabic-next-review-snapshots.md`",
+        "- `documentation/glyph-review/arabic-first-review-zoom-snapshots.md`",
+        "- `documentation/glyph-review/arabic-snapshot-integrity.md`",
+        "- `documentation/glyph-review/arabic-full-queue-ai-sweep.md`",
+        "- `documentation/google-fonts/gftools-qa/Proof/`",
         "",
         "Snapshot evidence:",
         "",
@@ -353,7 +353,7 @@ def markdown_report() -> str:
         f"- Readable PNG files: {summary_value('Readable PNG files', snapshot_integrity_text)}",
         f"- Nonblank PNG files: {summary_value('Nonblank PNG files', snapshot_integrity_text)}",
         f"- Pending/fix-needed rows without snapshot: {summary_value('Pending/fix-needed rows without snapshot', snapshot_integrity_text)}",
-        "- Focused first-batch zoom crops: `documentation/arabic-first-review-zoom-snapshots.md`",
+        "- Focused first-batch zoom crops: `documentation/glyph-review/arabic-first-review-zoom-snapshots.md`",
         "",
         "## Next Unresolved Batch",
         "",

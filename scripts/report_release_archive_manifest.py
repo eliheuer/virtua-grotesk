@@ -15,16 +15,16 @@ import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/release-archive-manifest.md")
-PREVIEW_PATH = Path("documentation/google-fonts-downstream-package-preview.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/release-archive-manifest.md")
+PREVIEW_PATH = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 LOCAL_ARCHIVE_PATH = Path("dist/VirtuaGrotesk-1.000.zip")
 ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
 ZIP_FILE_MODE = 0o644 << 16
 SOURCE_PURPOSES = {
     "OFL.txt": "license",
     "fonts/variable/VirtuaGrotesk[wght].ttf": "served variable font",
-    "documentation/ARTICLE.en_us.html": "article HTML",
-    "documentation/readme-specimen.png": "article image",
+    "documentation/google-fonts/ARTICLE.en_us.html": "article HTML",
+    "documentation/assets/readme-specimen.png": "article image",
 }
 BUILD_INPUT_ROOTS = [
     Path("sources/VirtuaGrotesk.designspace"),
@@ -115,7 +115,7 @@ def preview_archive_url() -> str | None:
 
 
 def release_tag() -> str:
-    release_metadata = (ROOT / "documentation/release-metadata.md").read_text(encoding="utf-8")
+    release_metadata = (ROOT / "documentation/google-fonts/release-metadata.md").read_text(encoding="utf-8")
     match = re.search(r"Suggested first-submission tag: `([^`]+)`", release_metadata)
     return match.group(1) if match else "v1.000"
 

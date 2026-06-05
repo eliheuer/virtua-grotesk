@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-OUTPUT_PATH="${1:-documentation/fontspector-googlefonts-report.md}"
+OUTPUT_PATH="${1:-documentation/google-fonts/fontspector-googlefonts-report.md}"
 FONT_PATHS=(
     'fonts/variable/VirtuaGrotesk[wght].ttf'
     'fonts/ttf/VirtuaGrotesk-Regular.ttf'

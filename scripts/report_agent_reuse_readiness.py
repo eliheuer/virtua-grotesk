@@ -9,7 +9,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/google-fonts-agent-reuse-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-agent-reuse-readiness.md")
 
 AGENT_FILES = [
     ".agents/README.md",

@@ -42,12 +42,12 @@ DEFAULT_FONT_PATHS = [
     Path("fonts/ttf/VirtuaGrotesk-SemiBold.ttf"),
     Path("fonts/ttf/VirtuaGrotesk-Bold.ttf"),
 ]
-METADATA_WARNING_PROBE = Path("documentation/fontspector-metadata-warning-probe.md")
-ZERO_WARNING_WORKLIST = Path("documentation/fontspector-zero-warning-worklist.md")
+METADATA_WARNING_PROBE = Path("documentation/google-fonts/fontspector-metadata-warning-probe.md")
+ZERO_WARNING_WORKLIST = Path("documentation/google-fonts/fontspector-zero-warning-worklist.md")
 TRIAGE_NOTES = {
     "contour_count": (
         "drawing/source",
-        "Review alongside `documentation/fontspector-contour-count.md`; this is "
+        "Review alongside `documentation/google-fonts/fontspector-contour-count.md`; this is "
         "expected to move as outlines and Arabic forms are completed.",
     ),
     "dotted_circle": (
@@ -104,30 +104,30 @@ DECISION_NOTES = {
         "Downstream metadata review",
         "After Packager generates `METADATA.pb`, confirm Arabic, Latin, menu, "
         "and any PUA/private glyph scope match the final submission.",
-        "`documentation/google-fonts-metadata-review.md`",
+        "`documentation/google-fonts/google-fonts-metadata-review.md`",
     ),
     "googlefonts/vendor_id": (
         "Vendor ID",
         "Choose a registered four-character vendor ID, or explicitly defer with "
         "`NONE` for the first submission.",
-        "`documentation/google-fonts-decisions.md`",
+        "`documentation/google-fonts/google-fonts-decisions.md`",
     ),
     "gpos_kerning_info": (
         "Kerning scope",
         "Decide whether GPOS kerning is required before the first Google Fonts PR.",
-        "`documentation/google-fonts-decisions.md`",
+        "`documentation/google-fonts/google-fonts-decisions.md`",
     ),
     "mandatory_avar_table": (
         "`avar` strategy",
         "Verify the generated variable font includes the intended identity or "
         "non-linear `avar` mapping.",
-        "`documentation/google-fonts-decisions.md`",
+        "`documentation/google-fonts/google-fonts-decisions.md`",
     ),
     "unreachable_glyphs": (
         "Reachability and PUA scope",
         "Review Arabic helper glyphs and private-use glyphs after the final "
         "glyphset and feature decisions are made.",
-        "`documentation/google-fonts-decisions.md`",
+        "`documentation/google-fonts/google-fonts-decisions.md`",
     ),
 }
 
@@ -350,8 +350,8 @@ def markdown_report(font_paths: list[Path]) -> str:
         "These warnings require design, script-scope, or submission-policy review.",
         "For subset and reachability warnings, treat this loose-font report as",
         "directional until the intended downstream `METADATA.pb` is tested in",
-        "package context; see `documentation/fontspector-metadata-warning-probe.md`",
-        "and `documentation/fontspector-zero-warning-worklist.md`.",
+        "package context; see `documentation/google-fonts/fontspector-metadata-warning-probe.md`",
+        "and `documentation/google-fonts/fontspector-zero-warning-worklist.md`.",
         "",
         *package_warning_floor_lines(),
         "## Triage Summary",

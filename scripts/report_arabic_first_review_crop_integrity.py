@@ -12,7 +12,7 @@ from PIL import Image, ImageChops
 from report_arabic_visual_review_runbook import ROOT
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-first-review-crop-integrity.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-first-review-crop-integrity.md"
 EXPECTED_WIDTH = 2880
 EXPECTED_HEIGHT = 1040
 NONWHITE_THRESHOLD = 245
@@ -29,22 +29,22 @@ CROPS = [
     Crop(
         "proof-regular-glyphs",
         "Regular",
-        ROOT / "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png",
+        ROOT / "documentation/glyph-review/review-snapshots/proof-regular-glyphs-arabic-zoom.png",
     ),
     Crop(
         "proof-medium-glyphs",
         "Medium",
-        ROOT / "documentation/arabic-review-snapshots/proof-medium-glyphs-arabic-zoom.png",
+        ROOT / "documentation/glyph-review/review-snapshots/proof-medium-glyphs-arabic-zoom.png",
     ),
     Crop(
         "proof-semibold-glyphs",
         "SemiBold",
-        ROOT / "documentation/arabic-review-snapshots/proof-semibold-glyphs-arabic-zoom.png",
+        ROOT / "documentation/glyph-review/review-snapshots/proof-semibold-glyphs-arabic-zoom.png",
     ),
     Crop(
         "proof-bold-glyphs",
         "Bold",
-        ROOT / "documentation/arabic-review-snapshots/proof-bold-glyphs-arabic-zoom.png",
+        ROOT / "documentation/glyph-review/review-snapshots/proof-bold-glyphs-arabic-zoom.png",
     ),
 ]
 

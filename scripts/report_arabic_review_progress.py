@@ -18,14 +18,14 @@ from report_arabic_manual_review_batches import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-review-progress.md"
-VISUAL_LOG = ROOT / "documentation/arabic-visual-review-log.md"
-CURRENT_WORKSHEET = ROOT / "documentation/arabic-current-review-worksheet.md"
-BATCH_RECORDER = ROOT / "documentation/arabic-batch-recorder.md"
-FIRST_REVIEW_BATCH = ROOT / "documentation/arabic-first-review-batch.md"
-FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-first-batch-source-checkpoint.md"
-PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
-GOAL_AUDIT = ROOT / "documentation/arabic-goal-completion-audit.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-review-progress.md"
+VISUAL_LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
+CURRENT_WORKSHEET = ROOT / "documentation/glyph-review/arabic-current-review-worksheet.md"
+BATCH_RECORDER = ROOT / "documentation/glyph-review/arabic-batch-recorder.md"
+FIRST_REVIEW_BATCH = ROOT / "documentation/glyph-review/arabic-first-review-batch.md"
+FIRST_BATCH_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-first-batch-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-pending-source-checkpoint.md"
+GOAL_AUDIT = ROOT / "documentation/glyph-review/arabic-goal-completion-audit.md"
 
 
 def visual_status(row: list[str]) -> str:

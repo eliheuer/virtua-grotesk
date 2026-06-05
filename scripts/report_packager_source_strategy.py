@@ -9,12 +9,12 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/packager-source-strategy.md")
-PACKAGE_AUDIT = Path("documentation/package-source-files-audit.md")
-RELEASE_SOURCE = Path("documentation/release-source-readiness.md")
-PREVIEW = Path("documentation/google-fonts-downstream-package-preview.md")
-PUBLIC_UPSTREAM = Path("documentation/public-upstream-readiness.md")
-PACKAGE_DRY_RUN = Path("documentation/package-dry-run-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/packager-source-strategy.md")
+PACKAGE_AUDIT = Path("documentation/google-fonts/package-source-files-audit.md")
+RELEASE_SOURCE = Path("documentation/google-fonts/release-source-readiness.md")
+PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
+PUBLIC_UPSTREAM = Path("documentation/google-fonts/public-upstream-readiness.md")
+PACKAGE_DRY_RUN = Path("documentation/google-fonts/package-dry-run-readiness.md")
 LATEST_RELEASE_ARCHIVE_URL_PATTERN = re.compile(
     r'archive_url:\s*"https://github\.com/[^/"]+/[^/"]+/releases/download/[^/"]+/[^"]+\.zip"'
 )
@@ -302,7 +302,7 @@ def markdown_report() -> str:
             "- The local dry-run wrapper accepts an explicit `GH_TOKEN` or exports one from a valid `gh auth token` before invoking Packager.",
             "- Keep `source.config_yaml` only for the build-from-source path. Recent `google/fonts` commits removed non-buildable or misleading `config_yaml` fields, so default branch or release/archive packaging should omit it unless Google Fonts specifically asks for build metadata.",
             "- Latest-release packaging must add the final GitHub release download `.zip` `archive_url` to the downstream metadata preview before `make downstream-metadata-check` can be ready.",
-            "- If the strategy changes, update `documentation/google-fonts-downstream-package-preview.md` first, then regenerate reports.",
+            "- If the strategy changes, update `documentation/google-fonts/google-fonts-downstream-package-preview.md` first, then regenerate reports.",
             "- If `upstream.yaml` is emitted, review it against the selected source mode before opening the PR.",
             "",
             "## References",

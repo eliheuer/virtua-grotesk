@@ -11,10 +11,10 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/article-readiness.md")
-ARTICLE = Path("documentation/ARTICLE.en_us.html")
-IMAGE_LICENSE = Path("documentation/image-license.txt")
-LANGUAGE_METADATA = Path("documentation/google-fonts-language-metadata.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/article-readiness.md")
+ARTICLE = Path("documentation/google-fonts/ARTICLE.en_us.html")
+IMAGE_LICENSE = Path("documentation/assets/image-license.txt")
+LANGUAGE_METADATA = Path("documentation/google-fonts/google-fonts-language-metadata.md")
 PLACEHOLDER_URL = "https://github.com/fontgarden/virtua-grotesk"
 MAX_RASTER_IMAGE_BYTES = 1_750_000
 RECOMMENDED_IMAGE_WIDTH = 1000
@@ -104,7 +104,7 @@ def language_primary_script() -> str:
 def image_statuses(images: list[str], image_license_text: str) -> list[dict[str, str | int | None]]:
     rows = []
     for src in images:
-        path = ARTICLE.parent / src
+        path = ROOT / "documentation" / "assets" / Path(src).name
         width = height = None
         if path.exists() and path.suffix.lower() == ".png":
             width, height = png_dimensions(path)
@@ -214,7 +214,7 @@ def markdown_report() -> str:
             "- Replace the placeholder upstream repository URL after the public URL",
             "  decision is confirmed.",
             "- Keep Article images in the downstream `article/` directory and keep",
-            "  `documentation/image-license.txt` current for provenance review.",
+            "  `documentation/assets/image-license.txt` current for provenance review.",
             "- Confirm whether Google Fonts wants additional Arabic/localized",
             "  Article text for the `Arab` primary script before final packaging.",
             "- If the package uses Article content, do not also ship a duplicate",

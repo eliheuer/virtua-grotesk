@@ -127,8 +127,8 @@ fi
 for required_path in \
     "fonts/variable/VirtuaGrotesk[wght].ttf" \
     "OFL.txt" \
-    "documentation/ARTICLE.en_us.html" \
-    "documentation/readme-specimen.png" \
+    "documentation/google-fonts/ARTICLE.en_us.html" \
+    "documentation/assets/readme-specimen.png" \
     "sources/config.yaml"
 do
     if [[ ! -e "$required_path" ]]; then
@@ -144,7 +144,7 @@ if [[ -f "$metadata_path" ]]; then
         echo "Existing downstream METADATA.pb still uses the stale placeholder upstream URL:"
         echo "$stale_placeholder_upstream_url"
         echo "Replace it with the decided public upstream URL before rerunning Packager from METADATA.pb."
-        echo "See documentation/google-fonts-decisions.md and documentation/open-placeholder-audit.md."
+        echo "See documentation/google-fonts/google-fonts-decisions.md and documentation/google-fonts/open-placeholder-audit.md."
         exit 2
     fi
     for marker in "${unresolved_metadata_markers[@]}"; do
@@ -161,7 +161,7 @@ if [[ -f "$metadata_path" ]]; then
             echo "Existing downstream METADATA.pb is still the Packager starter template:"
             echo "$marker"
             echo "Populate /Users/eli/GH/forks/fonts/$package_dir/METADATA.pb before rerunning Packager from METADATA.pb."
-            echo "Use documentation/google-fonts-downstream-package-preview.md as the current local preview."
+            echo "Use documentation/google-fonts/google-fonts-downstream-package-preview.md as the current local preview."
             exit 2
         fi
     done

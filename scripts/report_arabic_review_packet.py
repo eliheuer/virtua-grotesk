@@ -10,7 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 GOOGLE_FONTS_CHECKOUT = ROOT.parents[1] / "forks/fonts"
-OUTPUT_DEFAULT = Path("documentation/arabic-review-packet.md")
+OUTPUT_DEFAULT = Path("documentation/glyph-review/arabic-review-packet.md")
 
 
 def read_text(relative_path: str) -> str:
@@ -43,15 +43,15 @@ def missing_category_count(heading: str, text: str) -> int:
 
 
 def markdown_report() -> str:
-    missing_text = read_text("documentation/missing-gf-arabic-core.md")
-    checklist_text = read_text("documentation/arabic-source-work-checklist.md")
-    mark_text = read_text("documentation/arabic-mark-readiness.md")
-    shaping_text = read_text("documentation/arabic-shaping-smoke-test.md")
-    language_text = read_text("documentation/google-fonts-language-metadata.md")
-    warnings_text = read_text("documentation/fontspector-warnings.md")
-    glyphset_text = read_text("documentation/gf-glyphset-readiness.md")
-    reachability_text = read_text("documentation/glyph-reachability.md")
-    recent_text = read_text("documentation/recent-google-fonts-packages.md")
+    missing_text = read_text("documentation/google-fonts/missing-gf-arabic-core.md")
+    checklist_text = read_text("documentation/glyph-review/arabic-source-work-checklist.md")
+    mark_text = read_text("documentation/glyph-review/arabic-mark-readiness.md")
+    shaping_text = read_text("documentation/glyph-review/arabic-shaping-smoke-test.md")
+    language_text = read_text("documentation/google-fonts/google-fonts-language-metadata.md")
+    warnings_text = read_text("documentation/google-fonts/fontspector-warnings.md")
+    glyphset_text = read_text("documentation/google-fonts/gf-glyphset-readiness.md")
+    reachability_text = read_text("documentation/google-fonts/glyph-reachability.md")
+    recent_text = read_text("documentation/google-fonts/recent-google-fonts-packages.md")
     estedad_metadata_path = GOOGLE_FONTS_CHECKOUT / "ofl/estedad/METADATA.pb"
     estedad_metadata = (
         estedad_metadata_path.read_text(encoding="utf-8")
@@ -187,7 +187,7 @@ def markdown_report() -> str:
         "",
         "## Recent Arabic Google Fonts Reference",
         "",
-        "`documentation/google-fonts-language-metadata.md` compares the current",
+        "`documentation/google-fonts/google-fonts-language-metadata.md` compares the current",
         "Virtua metadata target against several Arabic `METADATA.pb` files in",
         "the synced local `google/fonts` checkout. Estedad remains the closest",
         "recent new-family package in that set; the broader table is package",
@@ -212,19 +212,19 @@ def markdown_report() -> str:
         "  build.",
         "- Estedad exposes its served variable font from `fonts/variable/`; Virtua's",
         "  generated-font policy still needs the separate Packager source-strategy",
-        "  decision recorded in `documentation/google-fonts-decisions.md`.",
+        "  decision recorded in `documentation/google-fonts/google-fonts-decisions.md`.",
         "",
         "## Evidence Reports",
         "",
-        "- `documentation/missing-gf-arabic-core.md`",
-        "- `documentation/arabic-source-work-checklist.md`",
-        "- `documentation/arabic-mark-readiness.md`",
-        "- `documentation/arabic-shaping-smoke-test.md`",
-        "- `documentation/google-fonts-language-metadata.md`",
-        "- `documentation/gf-glyphset-readiness.md`",
-        "- `documentation/recent-google-fonts-packages.md`",
-        "- `documentation/glyph-reachability.md`",
-        "- `documentation/fontspector-warnings.md`",
+        "- `documentation/google-fonts/missing-gf-arabic-core.md`",
+        "- `documentation/glyph-review/arabic-source-work-checklist.md`",
+        "- `documentation/glyph-review/arabic-mark-readiness.md`",
+        "- `documentation/glyph-review/arabic-shaping-smoke-test.md`",
+        "- `documentation/google-fonts/google-fonts-language-metadata.md`",
+        "- `documentation/google-fonts/gf-glyphset-readiness.md`",
+        "- `documentation/google-fonts/recent-google-fonts-packages.md`",
+        "- `documentation/google-fonts/glyph-reachability.md`",
+        "- `documentation/google-fonts/fontspector-warnings.md`",
         "",
         "## References",
         "",
@@ -237,7 +237,7 @@ def markdown_report() -> str:
         lines.extend(
             [
                 "The source glyph worklist is intentionally kept in",
-                "`documentation/arabic-source-work-checklist.md` so drawing work can",
+                "`documentation/glyph-review/arabic-source-work-checklist.md` so drawing work can",
                 "use the per-codepoint UFO/master status table directly.",
                 "",
             ]

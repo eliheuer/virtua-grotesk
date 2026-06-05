@@ -111,79 +111,79 @@ help:
 		'  make reports-only   Regenerate reports from the current build' \
 		'  make preflight      Build, proof, regenerate reports, run local handoff gate' \
 		'  make preflight-only Run local handoff gate from current files' \
-		'  make proof          Build, then regenerate proof.pdf' \
+		'  make proof          Build, then regenerate documentation/proofs/proof.pdf' \
 		'  make handoff        Build once, proof, regenerate reports, preflight' \
 		'  make package-dry-run Run gftools packager into local google/fonts fork without -p' \
 		'      defaults to GFT_PACKAGER_SOURCE_MODE=latest-release; override with default or build-from-source' \
 		'  make clean          Remove generated build outputs'
 
 decisions:
-	@$(PYTHON) scripts/report_decision_answer_sheet.py documentation/google-fonts-decision-answer-sheet.md
-	@cat documentation/google-fonts-decision-answer-sheet.md
+	@$(PYTHON) scripts/report_decision_answer_sheet.py documentation/google-fonts/google-fonts-decision-answer-sheet.md
+	@cat documentation/google-fonts/google-fonts-decision-answer-sheet.md
 
 decision-readiness-check:
-	@$(PYTHON) scripts/report_decision_answer_sheet.py documentation/google-fonts-decision-answer-sheet.md
-	@$(PYTHON) scripts/report_decision_readiness.py documentation/decision-readiness.md
-	@$(PYTHON) scripts/report_decision_application_blockers.py documentation/decision-application-blockers.md
-	@cat documentation/google-fonts-decision-answer-sheet.md
+	@$(PYTHON) scripts/report_decision_answer_sheet.py documentation/google-fonts/google-fonts-decision-answer-sheet.md
+	@$(PYTHON) scripts/report_decision_readiness.py documentation/google-fonts/decision-readiness.md
+	@$(PYTHON) scripts/report_decision_application_blockers.py documentation/google-fonts/decision-application-blockers.md
+	@cat documentation/google-fonts/google-fonts-decision-answer-sheet.md
 	@printf '\n'
-	@cat documentation/decision-readiness.md
+	@cat documentation/google-fonts/decision-readiness.md
 	@printf '\n'
-	@cat documentation/decision-application-blockers.md
+	@cat documentation/google-fonts/decision-application-blockers.md
 
 decision-application-check:
-	@$(PYTHON) scripts/report_decision_application_blockers.py documentation/decision-application-blockers.md
-	@cat documentation/decision-application-blockers.md
+	@$(PYTHON) scripts/report_decision_application_blockers.py documentation/google-fonts/decision-application-blockers.md
+	@cat documentation/google-fonts/decision-application-blockers.md
 
 reference-index-check:
-	@$(PYTHON) scripts/report_gf_reference_index.py documentation/google-fonts-reference-index.md
-	@cat documentation/google-fonts-reference-index.md
+	@$(PYTHON) scripts/report_gf_reference_index.py documentation/google-fonts/google-fonts-reference-index.md
+	@cat documentation/google-fonts/google-fonts-reference-index.md
 
 agent-reuse-check:
-	@$(PYTHON) scripts/report_agent_reuse_readiness.py documentation/google-fonts-agent-reuse-readiness.md
-	@cat documentation/google-fonts-agent-reuse-readiness.md
+	@$(PYTHON) scripts/report_agent_reuse_readiness.py documentation/google-fonts/google-fonts-agent-reuse-readiness.md
+	@cat documentation/google-fonts/google-fonts-agent-reuse-readiness.md
 
 next-actions:
-	@$(PYTHON) scripts/report_next_actions.py documentation/next-actions.md
-	@cat documentation/next-actions.md
+	@$(PYTHON) scripts/report_next_actions.py documentation/google-fonts/next-actions.md
+	@cat documentation/google-fonts/next-actions.md
 
 blockers:
-	@$(PYTHON) scripts/report_final_submission_blockers.py documentation/final-submission-blockers.md
-	@cat documentation/final-submission-blockers.md
+	@$(PYTHON) scripts/report_final_submission_blockers.py documentation/google-fonts/final-submission-blockers.md
+	@cat documentation/google-fonts/final-submission-blockers.md
 
 issue-draft:
-	@$(PYTHON) scripts/report_gf_add_font_template.py documentation/google-fonts-add-font-template-audit.md
-	@$(PYTHON) scripts/report_add_font_issue_draft.py documentation/google-fonts-add-font-issue-draft.md
-	@cat documentation/google-fonts-add-font-issue-draft.md
+	@$(PYTHON) scripts/report_gf_add_font_template.py documentation/google-fonts/google-fonts-add-font-template-audit.md
+	@$(PYTHON) scripts/report_add_font_issue_draft.py documentation/google-fonts/google-fonts-add-font-issue-draft.md
+	@cat documentation/google-fonts/google-fonts-add-font-issue-draft.md
 
 handoff-readiness-check:
-	@$(PYTHON) scripts/report_submission_handoff_readiness.py documentation/submission-handoff-readiness.md
-	@$(PYTHON) scripts/report_final_submission_blockers.py documentation/final-submission-blockers.md
-	@$(PYTHON) scripts/report_next_actions.py documentation/next-actions.md
-	@cat documentation/submission-handoff-readiness.md
+	@$(PYTHON) scripts/report_submission_handoff_readiness.py documentation/google-fonts/submission-handoff-readiness.md
+	@$(PYTHON) scripts/report_final_submission_blockers.py documentation/google-fonts/final-submission-blockers.md
+	@$(PYTHON) scripts/report_next_actions.py documentation/google-fonts/next-actions.md
+	@cat documentation/google-fonts/submission-handoff-readiness.md
 	@printf '\n'
-	@cat documentation/final-submission-blockers.md
+	@cat documentation/google-fonts/final-submission-blockers.md
 	@printf '\n'
-	@cat documentation/next-actions.md
+	@cat documentation/google-fonts/next-actions.md
 
 release-check:
-	@$(PYTHON) scripts/report_release_metadata.py documentation/release-metadata.md
-	@$(PYTHON) scripts/report_release_source_readiness.py documentation/release-source-readiness.md
-	@$(PYTHON) scripts/report_github_release_draft.py documentation/github-release-draft.md
-	@cat documentation/release-metadata.md
+	@$(PYTHON) scripts/report_release_metadata.py documentation/google-fonts/release-metadata.md
+	@$(PYTHON) scripts/report_release_source_readiness.py documentation/google-fonts/release-source-readiness.md
+	@$(PYTHON) scripts/report_github_release_draft.py documentation/google-fonts/github-release-draft.md
+	@cat documentation/google-fonts/release-metadata.md
 	@printf '\n'
-	@cat documentation/release-source-readiness.md
+	@cat documentation/google-fonts/release-source-readiness.md
 	@printf '\n'
-	@cat documentation/github-release-draft.md
+	@cat documentation/google-fonts/github-release-draft.md
 
 release-archive-check:
-	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/release-archive-manifest.md
-	@cat documentation/release-archive-manifest.md
+	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/google-fonts/release-archive-manifest.md
+	@cat documentation/google-fonts/release-archive-manifest.md
 
 release-archive-build:
 	@$(PYTHON) scripts/build_release_archive.py
-	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/release-archive-manifest.md
-	@cat documentation/release-archive-manifest.md
+	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/google-fonts/release-archive-manifest.md
+	@cat documentation/google-fonts/release-archive-manifest.md
 
 release-archive-verify:
 	@$(PYTHON) scripts/verify_release_archive.py
@@ -192,77 +192,77 @@ release-archive-test:
 	./scripts/test_release_archive_gates.sh
 
 release-draft-check:
-	@$(PYTHON) scripts/report_release_metadata.py documentation/release-metadata.md
-	@$(PYTHON) scripts/report_release_source_readiness.py documentation/release-source-readiness.md
-	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/release-archive-manifest.md
-	@$(PYTHON) scripts/report_github_release_draft.py documentation/github-release-draft.md
-	@cat documentation/github-release-draft.md
+	@$(PYTHON) scripts/report_release_metadata.py documentation/google-fonts/release-metadata.md
+	@$(PYTHON) scripts/report_release_source_readiness.py documentation/google-fonts/release-source-readiness.md
+	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/google-fonts/release-archive-manifest.md
+	@$(PYTHON) scripts/report_github_release_draft.py documentation/google-fonts/github-release-draft.md
+	@cat documentation/google-fonts/github-release-draft.md
 
 source-strategy-check:
-	@$(PYTHON) scripts/report_release_metadata.py documentation/release-metadata.md
-	@$(PYTHON) scripts/report_package_source_files.py documentation/package-source-files-audit.md
-	@$(PYTHON) scripts/report_packager_source_strategy.py documentation/packager-source-strategy.md
-	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/release-archive-manifest.md
-	@$(PYTHON) scripts/report_release_source_readiness.py documentation/release-source-readiness.md
-	@cat documentation/release-source-readiness.md
+	@$(PYTHON) scripts/report_release_metadata.py documentation/google-fonts/release-metadata.md
+	@$(PYTHON) scripts/report_package_source_files.py documentation/google-fonts/package-source-files-audit.md
+	@$(PYTHON) scripts/report_packager_source_strategy.py documentation/google-fonts/packager-source-strategy.md
+	@$(PYTHON) scripts/report_release_archive_manifest.py documentation/google-fonts/release-archive-manifest.md
+	@$(PYTHON) scripts/report_release_source_readiness.py documentation/google-fonts/release-source-readiness.md
+	@cat documentation/google-fonts/release-source-readiness.md
 	@printf '\n'
-	@cat documentation/packager-source-strategy.md
+	@cat documentation/google-fonts/packager-source-strategy.md
 	@printf '\n'
-	@cat documentation/release-archive-manifest.md
+	@cat documentation/google-fonts/release-archive-manifest.md
 
 package-readiness-check:
-	@$(PYTHON) scripts/report_package_source_files.py documentation/package-source-files-audit.md
-	@$(PYTHON) scripts/report_packager_source_strategy.py documentation/packager-source-strategy.md
-	@GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_package_dry_run_readiness.py documentation/package-dry-run-readiness.md
-	@$(PYTHON) scripts/report_downstream_metadata_readiness.py documentation/downstream-metadata-readiness.md
-	@GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_downstream_metadata_diff.py documentation/downstream-metadata-diff.md
-	@$(PYTHON) scripts/report_downstream_pr_readiness.py documentation/downstream-pr-readiness.md
-	@cat documentation/packager-source-strategy.md
+	@$(PYTHON) scripts/report_package_source_files.py documentation/google-fonts/package-source-files-audit.md
+	@$(PYTHON) scripts/report_packager_source_strategy.py documentation/google-fonts/packager-source-strategy.md
+	@GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_package_dry_run_readiness.py documentation/google-fonts/package-dry-run-readiness.md
+	@$(PYTHON) scripts/report_downstream_metadata_readiness.py documentation/google-fonts/downstream-metadata-readiness.md
+	@GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_downstream_metadata_diff.py documentation/google-fonts/downstream-metadata-diff.md
+	@$(PYTHON) scripts/report_downstream_pr_readiness.py documentation/google-fonts/downstream-pr-readiness.md
+	@cat documentation/google-fonts/packager-source-strategy.md
 	@printf '\n'
-	@cat documentation/package-dry-run-readiness.md
+	@cat documentation/google-fonts/package-dry-run-readiness.md
 	@printf '\n'
-	@cat documentation/downstream-metadata-readiness.md
+	@cat documentation/google-fonts/downstream-metadata-readiness.md
 	@printf '\n'
-	@cat documentation/downstream-metadata-diff.md
+	@cat documentation/google-fonts/downstream-metadata-diff.md
 	@printf '\n'
-	@cat documentation/downstream-pr-readiness.md
+	@cat documentation/google-fonts/downstream-pr-readiness.md
 
 recent-gf-check:
-	@$(PYTHON) scripts/report_recent_gf_packages.py documentation/recent-google-fonts-packages.md
-	@cat documentation/recent-google-fonts-packages.md
+	@$(PYTHON) scripts/report_recent_gf_packages.py documentation/google-fonts/recent-google-fonts-packages.md
+	@cat documentation/google-fonts/recent-google-fonts-packages.md
 
 family-name-check:
-	@$(PYTHON) scripts/report_family_name_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/family-name-readiness.md
-	@cat documentation/family-name-readiness.md
+	@$(PYTHON) scripts/report_family_name_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/family-name-readiness.md
+	@cat documentation/google-fonts/family-name-readiness.md
 
 authorship-check:
-	@$(PYTHON) scripts/report_authorship_disclosure_readiness.py documentation/authorship-disclosure-readiness.md
-	@cat documentation/authorship-disclosure-readiness.md
+	@$(PYTHON) scripts/report_authorship_disclosure_readiness.py documentation/google-fonts/authorship-disclosure-readiness.md
+	@cat documentation/google-fonts/authorship-disclosure-readiness.md
 
 pr-readiness-check:
-	@$(PYTHON) scripts/report_pr_identity_readiness.py documentation/pr-identity-readiness.md
-	@$(PYTHON) scripts/report_downstream_pr_readiness.py documentation/downstream-pr-readiness.md
-	@cat documentation/pr-identity-readiness.md
+	@$(PYTHON) scripts/report_pr_identity_readiness.py documentation/google-fonts/pr-identity-readiness.md
+	@$(PYTHON) scripts/report_downstream_pr_readiness.py documentation/google-fonts/downstream-pr-readiness.md
+	@cat documentation/google-fonts/pr-identity-readiness.md
 	@printf '\n'
-	@cat documentation/downstream-pr-readiness.md
+	@cat documentation/google-fonts/downstream-pr-readiness.md
 
 vendor-id-check:
-	@$(PYTHON) scripts/report_vendor_id_readiness.py documentation/vendor-id-readiness.md
-	@cat documentation/vendor-id-readiness.md
+	@$(PYTHON) scripts/report_vendor_id_readiness.py documentation/google-fonts/vendor-id-readiness.md
+	@cat documentation/google-fonts/vendor-id-readiness.md
 
 kerning-check:
-	@$(PYTHON) scripts/report_kerning_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/kerning-readiness.md
-	@$(PYTHON) scripts/report_kerning_proof_review.py documentation/kerning-proof-review.md
-	@cat documentation/kerning-readiness.md
+	@$(PYTHON) scripts/report_kerning_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/kerning-readiness.md
+	@$(PYTHON) scripts/report_kerning_proof_review.py documentation/google-fonts/kerning-proof-review.md
+	@cat documentation/google-fonts/kerning-readiness.md
 	@printf '\n'
-	@cat documentation/kerning-proof-review.md
+	@cat documentation/google-fonts/kerning-proof-review.md
 
 kerning-proof-check:
-	@PATH="$(CURDIR)/venv/bin:$$PATH" venv/bin/gftools qa --proof -f '$(VARIABLE_FONT)' -o documentation/gftools-qa
+	@PATH="$(CURDIR)/venv/bin:$$PATH" venv/bin/gftools qa --proof -f '$(VARIABLE_FONT)' -o documentation/google-fonts/gftools-qa
 
 kerning-proof-review-check:
-	@$(PYTHON) scripts/report_kerning_proof_review.py documentation/kerning-proof-review.md
-	@cat documentation/kerning-proof-review.md
+	@$(PYTHON) scripts/report_kerning_proof_review.py documentation/google-fonts/kerning-proof-review.md
+	@cat documentation/google-fonts/kerning-proof-review.md
 
 contour-cleanup-proof:
 	@$(PYTHON) scripts/build_contour_cleanup_proof.py
@@ -280,43 +280,43 @@ contour-decision-helper-test:
 	./scripts/test_contour_decision_update.sh
 
 ufo-editor-check:
-	@$(PYTHON) scripts/report_ufo_editor_readiness.py documentation/ufo-editor-readiness.md
-	@cat documentation/ufo-editor-readiness.md
+	@$(PYTHON) scripts/report_ufo_editor_readiness.py documentation/source/ufo-editor-readiness.md
+	@cat documentation/source/ufo-editor-readiness.md
 
 runebender-ufo-check:
 	./scripts/check_runebender_norad_load.sh
 
 pua-scope-check:
-	@$(PYTHON) scripts/report_pua_scope.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/pua-scope.md
-	@cat documentation/pua-scope.md
+	@$(PYTHON) scripts/report_pua_scope.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/pua-scope.md
+	@cat documentation/google-fonts/pua-scope.md
 
 avar-check:
-	@$(PYTHON) scripts/report_avar_readiness.py '$(VARIABLE_FONT)' documentation/avar-readiness.md
-	@cat documentation/avar-readiness.md
+	@$(PYTHON) scripts/report_avar_readiness.py '$(VARIABLE_FONT)' documentation/google-fonts/avar-readiness.md
+	@cat documentation/google-fonts/avar-readiness.md
 
 warnings-check:
-	@$(PYTHON) scripts/report_metadata_warning_probe.py documentation/fontspector-metadata-warning-probe.md
-	@$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/fontspector-zero-warning-worklist.md
-	@$(PYTHON) scripts/report_fontspector_warnings.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/fontspector-warnings.md
-	@cat documentation/fontspector-warnings.md
+	@$(PYTHON) scripts/report_metadata_warning_probe.py documentation/google-fonts/fontspector-metadata-warning-probe.md
+	@$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/google-fonts/fontspector-zero-warning-worklist.md
+	@$(PYTHON) scripts/report_fontspector_warnings.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/fontspector-warnings.md
+	@cat documentation/google-fonts/fontspector-warnings.md
 
 metadata-warning-check:
-	@$(PYTHON) scripts/report_metadata_warning_probe.py documentation/fontspector-metadata-warning-probe.md
-	@cat documentation/fontspector-metadata-warning-probe.md
+	@$(PYTHON) scripts/report_metadata_warning_probe.py documentation/google-fonts/fontspector-metadata-warning-probe.md
+	@cat documentation/google-fonts/fontspector-metadata-warning-probe.md
 
 zero-warning-check:
-	@$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/fontspector-zero-warning-worklist.md
-	@cat documentation/fontspector-zero-warning-worklist.md
+	@$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/google-fonts/fontspector-zero-warning-worklist.md
+	@cat documentation/google-fonts/fontspector-zero-warning-worklist.md
 
 github-auth-check:
 	@$(PYTHON) scripts/check_github_api_auth.py
 
 designer-profile-check:
-	@$(PYTHON) scripts/report_designer_profile.py documentation/designer-profile-readiness.md
-	@$(PYTHON) scripts/report_designer_profile_package.py documentation/designer-profile-package-draft.md
-	@cat documentation/designer-profile-readiness.md
+	@$(PYTHON) scripts/report_designer_profile.py documentation/google-fonts/designer-profile-readiness.md
+	@$(PYTHON) scripts/report_designer_profile_package.py documentation/google-fonts/designer-profile-package-draft.md
+	@cat documentation/google-fonts/designer-profile-readiness.md
 	@printf '\n'
-	@cat documentation/designer-profile-package-draft.md
+	@cat documentation/google-fonts/designer-profile-package-draft.md
 
 designer-profile-prepare-check:
 	@$(PYTHON) scripts/prepare_designer_profile.py
@@ -352,147 +352,147 @@ arabic-visual-review-helper-test:
 	./scripts/test_arabic_visual_review_update.sh
 
 arabic-candidate-plan:
-	$(PYTHON) scripts/build_arabic_candidate_glyphs.py --output documentation/arabic-candidate-glyph-plan.md
-	@cat documentation/arabic-candidate-glyph-plan.md
+	$(PYTHON) scripts/build_arabic_candidate_glyphs.py --output documentation/glyph-review/arabic-candidate-glyph-plan.md
+	@cat documentation/glyph-review/arabic-candidate-glyph-plan.md
 
 arabic-goal-audit:
-	@$(PYTHON) scripts/report_arabic_goal_completion.py documentation/arabic-goal-completion-audit.md
-	@cat documentation/arabic-goal-completion-audit.md
+	@$(PYTHON) scripts/report_arabic_goal_completion.py documentation/glyph-review/arabic-goal-completion-audit.md
+	@cat documentation/glyph-review/arabic-goal-completion-audit.md
 
 arabic-visual-risk-proof:
-	@$(PYTHON) scripts/report_arabic_visual_risk.py documentation/arabic-visual-risk-audit.md
-	@$(PYTHON) scripts/build_arabic_visual_risk_proof.py documentation/arabic-visual-risk-proof.html
+	@$(PYTHON) scripts/report_arabic_visual_risk.py documentation/glyph-review/arabic-visual-risk-audit.md
+	@$(PYTHON) scripts/build_arabic_visual_risk_proof.py documentation/glyph-review/arabic-visual-risk-proof.html
 
 arabic-structure-sweep:
-	@$(PYTHON) scripts/build_arabic_structure_sweep.py documentation/arabic-structure-sweep.html
+	@$(PYTHON) scripts/build_arabic_structure_sweep.py documentation/glyph-review/arabic-structure-sweep.html
 
 arabic-structure-triage:
-	@$(PYTHON) scripts/report_arabic_structure_triage.py documentation/arabic-structure-triage.md
-	@cat documentation/arabic-structure-triage.md
+	@$(PYTHON) scripts/report_arabic_structure_triage.py documentation/glyph-review/arabic-structure-triage.md
+	@cat documentation/glyph-review/arabic-structure-triage.md
 
 arabic-mark-review-proof:
-	@$(PYTHON) scripts/build_arabic_mark_review_proof.py documentation/arabic-mark-review-proof.html
+	@$(PYTHON) scripts/build_arabic_mark_review_proof.py documentation/glyph-review/arabic-mark-review-proof.html
 
 arabic-mark-triage:
-	@$(PYTHON) scripts/report_arabic_mark_triage.py documentation/arabic-mark-triage.md
-	@cat documentation/arabic-mark-triage.md
+	@$(PYTHON) scripts/report_arabic_mark_triage.py documentation/glyph-review/arabic-mark-triage.md
+	@cat documentation/glyph-review/arabic-mark-triage.md
 
 arabic-manual-review-dashboard:
-	@$(PYTHON) scripts/build_arabic_manual_review_dashboard.py documentation/arabic-manual-review-dashboard.html
+	@$(PYTHON) scripts/build_arabic_manual_review_dashboard.py documentation/glyph-review/arabic-manual-review-dashboard.html
 
 arabic-manual-review-batches:
-	@$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/arabic-manual-review-batches.md
-	@cat documentation/arabic-manual-review-batches.md
+	@$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/glyph-review/arabic-manual-review-batches.md
+	@cat documentation/glyph-review/arabic-manual-review-batches.md
 
 arabic-review-progress:
-	@$(PYTHON) scripts/report_arabic_review_progress.py documentation/arabic-review-progress.md
-	@cat documentation/arabic-review-progress.md
+	@$(PYTHON) scripts/report_arabic_review_progress.py documentation/glyph-review/arabic-review-progress.md
+	@cat documentation/glyph-review/arabic-review-progress.md
 
 arabic-current-review-worksheet:
-	@$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/arabic-current-review-worksheet.md
-	@cat documentation/arabic-current-review-worksheet.md
+	@$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/glyph-review/arabic-current-review-worksheet.md
+	@cat documentation/glyph-review/arabic-current-review-worksheet.md
 
 arabic-review-worksheet-bundle:
-	@$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/arabic-review-worksheet-bundle.md
-	@cat documentation/arabic-review-worksheet-bundle.md
+	@$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/glyph-review/arabic-review-worksheet-bundle.md
+	@cat documentation/glyph-review/arabic-review-worksheet-bundle.md
 
 arabic-drawing-session-checklist:
-	@$(PYTHON) scripts/report_arabic_drawing_session_checklist.py documentation/arabic-drawing-session-checklist.md
-	@cat documentation/arabic-drawing-session-checklist.md
+	@$(PYTHON) scripts/report_arabic_drawing_session_checklist.py documentation/glyph-review/arabic-drawing-session-checklist.md
+	@cat documentation/glyph-review/arabic-drawing-session-checklist.md
 
 arabic-source-edit-diff-check:
-	@$(PYTHON) scripts/report_arabic_source_edit_diff.py documentation/arabic-source-edit-diff.md --fail-on-gap
-	@cat documentation/arabic-source-edit-diff.md
+	@$(PYTHON) scripts/report_arabic_source_edit_diff.py documentation/glyph-review/arabic-source-edit-diff.md --fail-on-gap
+	@cat documentation/glyph-review/arabic-source-edit-diff.md
 
 arabic-first-batch-source-checkpoint:
-	@$(PYTHON) scripts/report_arabic_first_batch_source_checkpoint.py documentation/arabic-first-batch-source-checkpoint.md
-	@cat documentation/arabic-first-batch-source-checkpoint.md
+	@$(PYTHON) scripts/report_arabic_first_batch_source_checkpoint.py documentation/glyph-review/arabic-first-batch-source-checkpoint.md
+	@cat documentation/glyph-review/arabic-first-batch-source-checkpoint.md
 
 arabic-pending-source-checkpoint:
-	@$(PYTHON) scripts/report_arabic_pending_source_checkpoint.py documentation/arabic-pending-source-checkpoint.md
-	@cat documentation/arabic-pending-source-checkpoint.md
+	@$(PYTHON) scripts/report_arabic_pending_source_checkpoint.py documentation/glyph-review/arabic-pending-source-checkpoint.md
+	@cat documentation/glyph-review/arabic-pending-source-checkpoint.md
 
 arabic-before-drawing-check: ufo-editor-check runebender-ufo-check
 
 arabic-after-drawing-check: ufo-editor-check runebender-ufo-check build reports-only preflight-only
 
 arabic-visual-review-batch-tsv:
-	@$(PYTHON) scripts/report_arabic_visual_review_batch_tsv.py documentation/arabic-visual-review-batch.tsv
-	@cat documentation/arabic-visual-review-batch.tsv
+	@$(PYTHON) scripts/report_arabic_visual_review_batch_tsv.py documentation/glyph-review/arabic-visual-review-batch.tsv
+	@cat documentation/glyph-review/arabic-visual-review-batch.tsv
 
 arabic-batch-recorder:
-	@$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/arabic-batch-recorder.md
-	@cat documentation/arabic-batch-recorder.md
+	@$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/glyph-review/arabic-batch-recorder.md
+	@cat documentation/glyph-review/arabic-batch-recorder.md
 
 arabic-first-review-zoom-snapshots:
-	@$(PYTHON) scripts/build_arabic_first_review_zoom_snapshots.py documentation/arabic-first-review-zoom-snapshots.md
-	@cat documentation/arabic-first-review-zoom-snapshots.md
+	@$(PYTHON) scripts/build_arabic_first_review_zoom_snapshots.py documentation/glyph-review/arabic-first-review-zoom-snapshots.md
+	@cat documentation/glyph-review/arabic-first-review-zoom-snapshots.md
 
 arabic-first-review-crop-integrity:
-	@$(PYTHON) scripts/report_arabic_first_review_crop_integrity.py documentation/arabic-first-review-crop-integrity.md
-	@cat documentation/arabic-first-review-crop-integrity.md
+	@$(PYTHON) scripts/report_arabic_first_review_crop_integrity.py documentation/glyph-review/arabic-first-review-crop-integrity.md
+	@cat documentation/glyph-review/arabic-first-review-crop-integrity.md
 
 arabic-first-review-batch:
-	@$(PYTHON) scripts/report_arabic_first_review_batch.py documentation/arabic-first-review-batch.md
-	@cat documentation/arabic-first-review-batch.md
+	@$(PYTHON) scripts/report_arabic_first_review_batch.py documentation/glyph-review/arabic-first-review-batch.md
+	@cat documentation/glyph-review/arabic-first-review-batch.md
 
 arabic-first-review-risk-shortlist:
-	@$(PYTHON) scripts/report_arabic_first_review_risk_shortlist.py documentation/arabic-first-review-risk-shortlist.md
-	@cat documentation/arabic-first-review-risk-shortlist.md
+	@$(PYTHON) scripts/report_arabic_first_review_risk_shortlist.py documentation/glyph-review/arabic-first-review-risk-shortlist.md
+	@cat documentation/glyph-review/arabic-first-review-risk-shortlist.md
 
 arabic-manual-edit-targets:
-	@$(PYTHON) scripts/report_arabic_manual_edit_targets.py documentation/arabic-manual-edit-targets.md
-	@cat documentation/arabic-manual-edit-targets.md
+	@$(PYTHON) scripts/report_arabic_manual_edit_targets.py documentation/glyph-review/arabic-manual-edit-targets.md
+	@cat documentation/glyph-review/arabic-manual-edit-targets.md
 
 arabic-hand-review-session:
-	@$(PYTHON) scripts/report_arabic_hand_review_session.py documentation/arabic-hand-review-session.md
-	@cat documentation/arabic-hand-review-session.md
+	@$(PYTHON) scripts/report_arabic_hand_review_session.py documentation/glyph-review/arabic-hand-review-session.md
+	@cat documentation/glyph-review/arabic-hand-review-session.md
 
 arabic-hand-review-contact-sheet:
-	@$(PYTHON) scripts/build_arabic_hand_review_contact_sheet.py documentation/arabic-hand-review-contact-sheet.html
+	@$(PYTHON) scripts/build_arabic_hand_review_contact_sheet.py documentation/glyph-review/arabic-hand-review-contact-sheet.html
 
 arabic-next-review-packet:
-	@$(PYTHON) scripts/report_arabic_next_review_packet.py documentation/arabic-next-review-packet.md
-	@cat documentation/arabic-next-review-packet.md
+	@$(PYTHON) scripts/report_arabic_next_review_packet.py documentation/glyph-review/arabic-next-review-packet.md
+	@cat documentation/glyph-review/arabic-next-review-packet.md
 
 arabic-next-review-ai-triage:
-	@$(PYTHON) scripts/report_arabic_next_review_ai_triage.py documentation/arabic-next-review-ai-triage.md
-	@cat documentation/arabic-next-review-ai-triage.md
+	@$(PYTHON) scripts/report_arabic_next_review_ai_triage.py documentation/glyph-review/arabic-next-review-ai-triage.md
+	@cat documentation/glyph-review/arabic-next-review-ai-triage.md
 
 arabic-next-review-ai-observations:
-	@$(PYTHON) scripts/report_arabic_next_review_ai_observations.py documentation/arabic-next-review-ai-observations.md
-	@cat documentation/arabic-next-review-ai-observations.md
+	@$(PYTHON) scripts/report_arabic_next_review_ai_observations.py documentation/glyph-review/arabic-next-review-ai-observations.md
+	@cat documentation/glyph-review/arabic-next-review-ai-observations.md
 
 arabic-full-queue-ai-sweep:
-	@$(PYTHON) scripts/report_arabic_full_queue_ai_sweep.py documentation/arabic-full-queue-ai-sweep.md
-	@cat documentation/arabic-full-queue-ai-sweep.md
+	@$(PYTHON) scripts/report_arabic_full_queue_ai_sweep.py documentation/glyph-review/arabic-full-queue-ai-sweep.md
+	@cat documentation/glyph-review/arabic-full-queue-ai-sweep.md
 
 arabic-next-review-board:
-	@$(PYTHON) scripts/build_arabic_next_review_board.py documentation/arabic-next-review-board.html
+	@$(PYTHON) scripts/build_arabic_next_review_board.py documentation/glyph-review/arabic-next-review-board.html
 
 arabic-next-review-snapshots:
 	@$(PYTHON) scripts/build_arabic_next_review_snapshots.py $(ARABIC_SNAPSHOT_ARGS)
-	@cat documentation/arabic-next-review-snapshots.md
+	@cat documentation/glyph-review/arabic-next-review-snapshots.md
 
 arabic-snapshot-integrity:
-	@$(PYTHON) scripts/report_arabic_snapshot_integrity.py documentation/arabic-snapshot-integrity.md
-	@cat documentation/arabic-snapshot-integrity.md
+	@$(PYTHON) scripts/report_arabic_snapshot_integrity.py documentation/glyph-review/arabic-snapshot-integrity.md
+	@cat documentation/glyph-review/arabic-snapshot-integrity.md
 
 arabic-visual-review-runbook:
-	@$(PYTHON) scripts/report_arabic_visual_review_runbook.py documentation/arabic-visual-review-runbook.md
-	@cat documentation/arabic-visual-review-runbook.md
+	@$(PYTHON) scripts/report_arabic_visual_review_runbook.py documentation/glyph-review/arabic-visual-review-runbook.md
+	@cat documentation/glyph-review/arabic-visual-review-runbook.md
 
 arabic-visual-review-check:
-	@cat documentation/arabic-visual-review-checklist.md
+	@cat documentation/glyph-review/arabic-visual-review-checklist.md
 
 arabic-visual-review-log:
-	@$(PYTHON) scripts/report_arabic_visual_review_log.py documentation/arabic-visual-review-log.md
-	@cat documentation/arabic-visual-review-log.md
+	@$(PYTHON) scripts/report_arabic_visual_review_log.py documentation/glyph-review/arabic-visual-review-log.md
+	@cat documentation/glyph-review/arabic-visual-review-log.md
 
 REVIEW_KEY ?= proof-regular-glyphs
 REVIEW_STATUS ?= pass
 REVIEWER ?=
-REVIEW_BATCH ?= documentation/arabic-visual-review-batch.tsv
+REVIEW_BATCH ?= documentation/glyph-review/arabic-visual-review-batch.tsv
 
 arabic-visual-review-update:
 	@$(PYTHON) scripts/update_arabic_visual_review.py '$(REVIEW_KEY)' --status '$(REVIEW_STATUS)' --reviewer '$(REVIEWER)' --notes '$(NOTES)' --apply
@@ -515,107 +515,107 @@ reports: build
 	$(MAKE) reports-only
 
 reports-only:
-	$(PYTHON) scripts/report_decision_answer_sheet.py documentation/google-fonts-decision-answer-sheet.md
-	$(PYTHON) scripts/report_decision_readiness.py documentation/decision-readiness.md
-	$(PYTHON) scripts/report_gf_reference_index.py documentation/google-fonts-reference-index.md
-	$(PYTHON) scripts/report_agent_reuse_readiness.py documentation/google-fonts-agent-reuse-readiness.md
-	$(PYTHON) scripts/report_source_metadata.py sources/VirtuaGrotesk-Regular.ufo sources/VirtuaGrotesk-Bold.ufo documentation/source-ufo-metadata.md
-	$(PYTHON) scripts/report_master_compatibility.py sources/VirtuaGrotesk-Regular.ufo sources/VirtuaGrotesk-Bold.ufo documentation/master-compatibility.md
-	$(PYTHON) scripts/report_generated_font_metadata.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/generated-font-metadata.md
-	$(PYTHON) scripts/report_vendor_id_readiness.py documentation/vendor-id-readiness.md
-	$(PYTHON) scripts/report_release_metadata.py documentation/release-metadata.md
-	$(PYTHON) scripts/report_release_source_readiness.py documentation/release-source-readiness.md
-	$(PYTHON) scripts/report_release_archive_manifest.py documentation/release-archive-manifest.md
-	$(PYTHON) scripts/report_github_release_draft.py documentation/github-release-draft.md
-	$(PYTHON) scripts/report_upstream_structure_readiness.py documentation/upstream-structure-readiness.md
-	$(PYTHON) scripts/report_family_name_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/family-name-readiness.md
-	$(PYTHON) scripts/report_authorship_disclosure_readiness.py documentation/authorship-disclosure-readiness.md
-	$(PYTHON) scripts/report_pr_identity_readiness.py documentation/pr-identity-readiness.md
-	$(PYTHON) scripts/report_drawbot_runtime_readiness.py documentation/drawbot-runtime-readiness.md
-	GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_package_dry_run_readiness.py documentation/package-dry-run-readiness.md
-	$(PYTHON) scripts/report_local_workflow_readiness.py documentation/local-workflow-readiness.md
-	$(PYTHON) scripts/report_designer_profile.py documentation/designer-profile-readiness.md
-	$(PYTHON) scripts/report_designer_profile_package.py documentation/designer-profile-package-draft.md
-	$(PYTHON) scripts/report_variable_metadata.py '$(VARIABLE_FONT)' documentation/variable-font-metadata.md
-	$(PYTHON) scripts/report_avar_readiness.py '$(VARIABLE_FONT)' documentation/avar-readiness.md
-	$(PYTHON) scripts/report_axis_registry.py '$(VARIABLE_FONT)' '$(GF_WEIGHT_AXIS_REGISTRY)' documentation/google-fonts-axis-registry-audit.md
-	$(PYTHON) scripts/report_gf_glyphset_readiness.py '$(VARIABLE_FONT)' documentation/gf-glyphset-readiness.md
-	$(PYTHON) scripts/report_gf_language_metadata.py documentation/google-fonts-language-metadata.md
-	$(PYTHON) scripts/report_ufo_editor_readiness.py documentation/ufo-editor-readiness.md
-	$(PYTHON) scripts/report_missing_gf_latin_core.py '$(VARIABLE_FONT)' documentation/missing-gf-latin-core.md
-	$(PYTHON) scripts/report_missing_gf_arabic_core.py '$(VARIABLE_FONT)' documentation/missing-gf-arabic-core.md
-	$(PYTHON) scripts/report_arabic_source_checklist.py '$(VARIABLE_FONT)' documentation/arabic-source-work-checklist.md
-	$(PYTHON) scripts/build_arabic_candidate_glyphs.py --output documentation/arabic-candidate-glyph-plan.md
-	$(PYTHON) scripts/report_pua_scope.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/pua-scope.md
-	$(PYTHON) scripts/report_public_upstream_readiness.py documentation/public-upstream-readiness.md
-	$(PYTHON) scripts/report_open_placeholders.py documentation/open-placeholder-audit.md
-	$(PYTHON) scripts/report_package_source_files.py documentation/package-source-files-audit.md
-	$(PYTHON) scripts/report_packager_source_strategy.py documentation/packager-source-strategy.md
-	$(PYTHON) scripts/report_downstream_metadata_readiness.py documentation/downstream-metadata-readiness.md
-	GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_downstream_metadata_diff.py documentation/downstream-metadata-diff.md
-	$(PYTHON) scripts/report_decision_application_blockers.py documentation/decision-application-blockers.md
-	$(PYTHON) scripts/report_article_readiness.py documentation/article-readiness.md
-	$(PYTHON) scripts/report_kerning_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/kerning-readiness.md
-	$(PYTHON) scripts/report_kerning_proof_review.py documentation/kerning-proof-review.md
-	$(PYTHON) scripts/report_arabic_mark_readiness.py documentation/arabic-mark-readiness.md
-	$(PYTHON) scripts/report_arabic_shaping.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/arabic-shaping-smoke-test.md
-	$(PYTHON) scripts/report_arabic_visual_risk.py documentation/arabic-visual-risk-audit.md
-	$(PYTHON) scripts/build_arabic_visual_risk_proof.py documentation/arabic-visual-risk-proof.html
-	$(PYTHON) scripts/build_arabic_structure_sweep.py documentation/arabic-structure-sweep.html
-	$(PYTHON) scripts/report_arabic_structure_triage.py documentation/arabic-structure-triage.md
-	$(PYTHON) scripts/build_arabic_mark_review_proof.py documentation/arabic-mark-review-proof.html
-	$(PYTHON) scripts/report_arabic_mark_triage.py documentation/arabic-mark-triage.md
-	$(PYTHON) scripts/report_arabic_visual_review_log.py documentation/arabic-visual-review-log.md
-	$(PYTHON) scripts/report_glyph_reachability.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/glyph-reachability.md
-	$(PYTHON) scripts/report_numeric_feature_readiness.py documentation/numeric-feature-readiness.md
-	$(PYTHON) scripts/report_fontspector_contours.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/fontspector-contour-count.md
+	$(PYTHON) scripts/report_decision_answer_sheet.py documentation/google-fonts/google-fonts-decision-answer-sheet.md
+	$(PYTHON) scripts/report_decision_readiness.py documentation/google-fonts/decision-readiness.md
+	$(PYTHON) scripts/report_gf_reference_index.py documentation/google-fonts/google-fonts-reference-index.md
+	$(PYTHON) scripts/report_agent_reuse_readiness.py documentation/google-fonts/google-fonts-agent-reuse-readiness.md
+	$(PYTHON) scripts/report_source_metadata.py sources/VirtuaGrotesk-Regular.ufo sources/VirtuaGrotesk-Bold.ufo documentation/source/source-ufo-metadata.md
+	$(PYTHON) scripts/report_master_compatibility.py sources/VirtuaGrotesk-Regular.ufo sources/VirtuaGrotesk-Bold.ufo documentation/source/master-compatibility.md
+	$(PYTHON) scripts/report_generated_font_metadata.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/generated-font-metadata.md
+	$(PYTHON) scripts/report_vendor_id_readiness.py documentation/google-fonts/vendor-id-readiness.md
+	$(PYTHON) scripts/report_release_metadata.py documentation/google-fonts/release-metadata.md
+	$(PYTHON) scripts/report_release_source_readiness.py documentation/google-fonts/release-source-readiness.md
+	$(PYTHON) scripts/report_release_archive_manifest.py documentation/google-fonts/release-archive-manifest.md
+	$(PYTHON) scripts/report_github_release_draft.py documentation/google-fonts/github-release-draft.md
+	$(PYTHON) scripts/report_upstream_structure_readiness.py documentation/google-fonts/upstream-structure-readiness.md
+	$(PYTHON) scripts/report_family_name_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/family-name-readiness.md
+	$(PYTHON) scripts/report_authorship_disclosure_readiness.py documentation/google-fonts/authorship-disclosure-readiness.md
+	$(PYTHON) scripts/report_pr_identity_readiness.py documentation/google-fonts/pr-identity-readiness.md
+	$(PYTHON) scripts/report_drawbot_runtime_readiness.py documentation/google-fonts/drawbot-runtime-readiness.md
+	GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_package_dry_run_readiness.py documentation/google-fonts/package-dry-run-readiness.md
+	$(PYTHON) scripts/report_local_workflow_readiness.py documentation/google-fonts/local-workflow-readiness.md
+	$(PYTHON) scripts/report_designer_profile.py documentation/google-fonts/designer-profile-readiness.md
+	$(PYTHON) scripts/report_designer_profile_package.py documentation/google-fonts/designer-profile-package-draft.md
+	$(PYTHON) scripts/report_variable_metadata.py '$(VARIABLE_FONT)' documentation/google-fonts/variable-font-metadata.md
+	$(PYTHON) scripts/report_avar_readiness.py '$(VARIABLE_FONT)' documentation/google-fonts/avar-readiness.md
+	$(PYTHON) scripts/report_axis_registry.py '$(VARIABLE_FONT)' '$(GF_WEIGHT_AXIS_REGISTRY)' documentation/google-fonts/google-fonts-axis-registry-audit.md
+	$(PYTHON) scripts/report_gf_glyphset_readiness.py '$(VARIABLE_FONT)' documentation/google-fonts/gf-glyphset-readiness.md
+	$(PYTHON) scripts/report_gf_language_metadata.py documentation/google-fonts/google-fonts-language-metadata.md
+	$(PYTHON) scripts/report_ufo_editor_readiness.py documentation/source/ufo-editor-readiness.md
+	$(PYTHON) scripts/report_missing_gf_latin_core.py '$(VARIABLE_FONT)' documentation/google-fonts/missing-gf-latin-core.md
+	$(PYTHON) scripts/report_missing_gf_arabic_core.py '$(VARIABLE_FONT)' documentation/google-fonts/missing-gf-arabic-core.md
+	$(PYTHON) scripts/report_arabic_source_checklist.py '$(VARIABLE_FONT)' documentation/glyph-review/arabic-source-work-checklist.md
+	$(PYTHON) scripts/build_arabic_candidate_glyphs.py --output documentation/glyph-review/arabic-candidate-glyph-plan.md
+	$(PYTHON) scripts/report_pua_scope.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/pua-scope.md
+	$(PYTHON) scripts/report_public_upstream_readiness.py documentation/google-fonts/public-upstream-readiness.md
+	$(PYTHON) scripts/report_open_placeholders.py documentation/google-fonts/open-placeholder-audit.md
+	$(PYTHON) scripts/report_package_source_files.py documentation/google-fonts/package-source-files-audit.md
+	$(PYTHON) scripts/report_packager_source_strategy.py documentation/google-fonts/packager-source-strategy.md
+	$(PYTHON) scripts/report_downstream_metadata_readiness.py documentation/google-fonts/downstream-metadata-readiness.md
+	GFT_PACKAGER_SOURCE_MODE='$(GFT_PACKAGER_SOURCE_MODE)' $(PYTHON) scripts/report_downstream_metadata_diff.py documentation/google-fonts/downstream-metadata-diff.md
+	$(PYTHON) scripts/report_decision_application_blockers.py documentation/google-fonts/decision-application-blockers.md
+	$(PYTHON) scripts/report_article_readiness.py documentation/google-fonts/article-readiness.md
+	$(PYTHON) scripts/report_kerning_readiness.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/kerning-readiness.md
+	$(PYTHON) scripts/report_kerning_proof_review.py documentation/google-fonts/kerning-proof-review.md
+	$(PYTHON) scripts/report_arabic_mark_readiness.py documentation/glyph-review/arabic-mark-readiness.md
+	$(PYTHON) scripts/report_arabic_shaping.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/glyph-review/arabic-shaping-smoke-test.md
+	$(PYTHON) scripts/report_arabic_visual_risk.py documentation/glyph-review/arabic-visual-risk-audit.md
+	$(PYTHON) scripts/build_arabic_visual_risk_proof.py documentation/glyph-review/arabic-visual-risk-proof.html
+	$(PYTHON) scripts/build_arabic_structure_sweep.py documentation/glyph-review/arabic-structure-sweep.html
+	$(PYTHON) scripts/report_arabic_structure_triage.py documentation/glyph-review/arabic-structure-triage.md
+	$(PYTHON) scripts/build_arabic_mark_review_proof.py documentation/glyph-review/arabic-mark-review-proof.html
+	$(PYTHON) scripts/report_arabic_mark_triage.py documentation/glyph-review/arabic-mark-triage.md
+	$(PYTHON) scripts/report_arabic_visual_review_log.py documentation/glyph-review/arabic-visual-review-log.md
+	$(PYTHON) scripts/report_glyph_reachability.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/glyph-reachability.md
+	$(PYTHON) scripts/report_numeric_feature_readiness.py documentation/google-fonts/numeric-feature-readiness.md
+	$(PYTHON) scripts/report_fontspector_contours.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/fontspector-contour-count.md
 	$(PYTHON) scripts/build_contour_cleanup_proof.py
-	$(PYTHON) scripts/build_arabic_manual_review_dashboard.py documentation/arabic-manual-review-dashboard.html
-	$(PYTHON) scripts/report_arabic_manual_edit_targets.py documentation/arabic-manual-edit-targets.md
-	$(PYTHON) scripts/build_arabic_first_review_zoom_snapshots.py documentation/arabic-first-review-zoom-snapshots.md
-	$(PYTHON) scripts/report_arabic_first_review_crop_integrity.py documentation/arabic-first-review-crop-integrity.md
-	$(PYTHON) scripts/report_arabic_first_review_batch.py documentation/arabic-first-review-batch.md
-	$(PYTHON) scripts/report_arabic_first_review_risk_shortlist.py documentation/arabic-first-review-risk-shortlist.md
-	$(PYTHON) scripts/report_arabic_hand_review_session.py documentation/arabic-hand-review-session.md
-	$(PYTHON) scripts/build_arabic_hand_review_contact_sheet.py documentation/arabic-hand-review-contact-sheet.html
-	$(PYTHON) scripts/report_arabic_next_review_packet.py documentation/arabic-next-review-packet.md
-	$(PYTHON) scripts/report_arabic_next_review_ai_triage.py documentation/arabic-next-review-ai-triage.md
-	$(PYTHON) scripts/report_arabic_next_review_ai_observations.py documentation/arabic-next-review-ai-observations.md
-	$(PYTHON) scripts/report_arabic_full_queue_ai_sweep.py documentation/arabic-full-queue-ai-sweep.md
-	$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/arabic-manual-review-batches.md
-	$(PYTHON) scripts/report_arabic_review_progress.py documentation/arabic-review-progress.md
-	$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/arabic-current-review-worksheet.md
-	$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/arabic-review-worksheet-bundle.md
-	$(PYTHON) scripts/report_arabic_drawing_session_checklist.py documentation/arabic-drawing-session-checklist.md
-	$(PYTHON) scripts/report_arabic_source_edit_diff.py documentation/arabic-source-edit-diff.md --fail-on-gap
-	$(PYTHON) scripts/report_arabic_first_batch_source_checkpoint.py documentation/arabic-first-batch-source-checkpoint.md
-	$(PYTHON) scripts/report_arabic_pending_source_checkpoint.py documentation/arabic-pending-source-checkpoint.md
-	$(PYTHON) scripts/report_arabic_visual_review_batch_tsv.py documentation/arabic-visual-review-batch.tsv
-	$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/arabic-batch-recorder.md
-	$(PYTHON) scripts/build_arabic_next_review_board.py documentation/arabic-next-review-board.html
-	$(PYTHON) scripts/report_arabic_snapshot_integrity.py documentation/arabic-snapshot-integrity.md
-	$(PYTHON) scripts/report_arabic_visual_review_runbook.py documentation/arabic-visual-review-runbook.md
-	$(PYTHON) scripts/report_arabic_goal_completion.py documentation/arabic-goal-completion-audit.md
-	$(PYTHON) scripts/report_metadata_warning_probe.py documentation/fontspector-metadata-warning-probe.md
-	$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/fontspector-zero-warning-worklist.md
-	$(PYTHON) scripts/report_fontspector_warnings.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/fontspector-warnings.md
-	./scripts/report_fontspector_markdown.sh documentation/fontspector-googlefonts-report.md
-	$(PYTHON) scripts/report_arabic_review_packet.py documentation/arabic-review-packet.md
-	$(PYTHON) scripts/report_production_requirements.py documentation/google-fonts-production-requirements.md
-	$(PYTHON) scripts/report_recent_gf_packages.py documentation/recent-google-fonts-packages.md
-	$(PYTHON) scripts/report_gf_add_font_template.py documentation/google-fonts-add-font-template-audit.md
-	$(PYTHON) scripts/report_add_font_issue_draft.py documentation/google-fonts-add-font-issue-draft.md
-	$(PYTHON) scripts/report_downstream_pr_readiness.py documentation/downstream-pr-readiness.md
-	$(PYTHON) scripts/report_project_template_automation.py documentation/project-template-automation-readiness.md
-	$(PYTHON) scripts/report_submission_handoff_readiness.py documentation/submission-handoff-readiness.md
-	$(PYTHON) scripts/report_final_submission_blockers.py documentation/final-submission-blockers.md
-	$(PYTHON) scripts/report_next_actions.py documentation/next-actions.md
+	$(PYTHON) scripts/build_arabic_manual_review_dashboard.py documentation/glyph-review/arabic-manual-review-dashboard.html
+	$(PYTHON) scripts/report_arabic_manual_edit_targets.py documentation/glyph-review/arabic-manual-edit-targets.md
+	$(PYTHON) scripts/build_arabic_first_review_zoom_snapshots.py documentation/glyph-review/arabic-first-review-zoom-snapshots.md
+	$(PYTHON) scripts/report_arabic_first_review_crop_integrity.py documentation/glyph-review/arabic-first-review-crop-integrity.md
+	$(PYTHON) scripts/report_arabic_first_review_batch.py documentation/glyph-review/arabic-first-review-batch.md
+	$(PYTHON) scripts/report_arabic_first_review_risk_shortlist.py documentation/glyph-review/arabic-first-review-risk-shortlist.md
+	$(PYTHON) scripts/report_arabic_hand_review_session.py documentation/glyph-review/arabic-hand-review-session.md
+	$(PYTHON) scripts/build_arabic_hand_review_contact_sheet.py documentation/glyph-review/arabic-hand-review-contact-sheet.html
+	$(PYTHON) scripts/report_arabic_next_review_packet.py documentation/glyph-review/arabic-next-review-packet.md
+	$(PYTHON) scripts/report_arabic_next_review_ai_triage.py documentation/glyph-review/arabic-next-review-ai-triage.md
+	$(PYTHON) scripts/report_arabic_next_review_ai_observations.py documentation/glyph-review/arabic-next-review-ai-observations.md
+	$(PYTHON) scripts/report_arabic_full_queue_ai_sweep.py documentation/glyph-review/arabic-full-queue-ai-sweep.md
+	$(PYTHON) scripts/report_arabic_manual_review_batches.py documentation/glyph-review/arabic-manual-review-batches.md
+	$(PYTHON) scripts/report_arabic_review_progress.py documentation/glyph-review/arabic-review-progress.md
+	$(PYTHON) scripts/report_arabic_current_review_worksheet.py documentation/glyph-review/arabic-current-review-worksheet.md
+	$(PYTHON) scripts/report_arabic_review_worksheet_bundle.py documentation/glyph-review/arabic-review-worksheet-bundle.md
+	$(PYTHON) scripts/report_arabic_drawing_session_checklist.py documentation/glyph-review/arabic-drawing-session-checklist.md
+	$(PYTHON) scripts/report_arabic_source_edit_diff.py documentation/glyph-review/arabic-source-edit-diff.md --fail-on-gap
+	$(PYTHON) scripts/report_arabic_first_batch_source_checkpoint.py documentation/glyph-review/arabic-first-batch-source-checkpoint.md
+	$(PYTHON) scripts/report_arabic_pending_source_checkpoint.py documentation/glyph-review/arabic-pending-source-checkpoint.md
+	$(PYTHON) scripts/report_arabic_visual_review_batch_tsv.py documentation/glyph-review/arabic-visual-review-batch.tsv
+	$(PYTHON) scripts/report_arabic_batch_recorder.py documentation/glyph-review/arabic-batch-recorder.md
+	$(PYTHON) scripts/build_arabic_next_review_board.py documentation/glyph-review/arabic-next-review-board.html
+	$(PYTHON) scripts/report_arabic_snapshot_integrity.py documentation/glyph-review/arabic-snapshot-integrity.md
+	$(PYTHON) scripts/report_arabic_visual_review_runbook.py documentation/glyph-review/arabic-visual-review-runbook.md
+	$(PYTHON) scripts/report_arabic_goal_completion.py documentation/glyph-review/arabic-goal-completion-audit.md
+	$(PYTHON) scripts/report_metadata_warning_probe.py documentation/google-fonts/fontspector-metadata-warning-probe.md
+	$(PYTHON) scripts/report_zero_warning_worklist.py '$(VARIABLE_FONT)' documentation/google-fonts/fontspector-zero-warning-worklist.md
+	$(PYTHON) scripts/report_fontspector_warnings.py '$(VARIABLE_FONT)' $(STATIC_FONTS) documentation/google-fonts/fontspector-warnings.md
+	./scripts/report_fontspector_markdown.sh documentation/google-fonts/fontspector-googlefonts-report.md
+	$(PYTHON) scripts/report_arabic_review_packet.py documentation/glyph-review/arabic-review-packet.md
+	$(PYTHON) scripts/report_production_requirements.py documentation/google-fonts/google-fonts-production-requirements.md
+	$(PYTHON) scripts/report_recent_gf_packages.py documentation/google-fonts/recent-google-fonts-packages.md
+	$(PYTHON) scripts/report_gf_add_font_template.py documentation/google-fonts/google-fonts-add-font-template-audit.md
+	$(PYTHON) scripts/report_add_font_issue_draft.py documentation/google-fonts/google-fonts-add-font-issue-draft.md
+	$(PYTHON) scripts/report_downstream_pr_readiness.py documentation/google-fonts/downstream-pr-readiness.md
+	$(PYTHON) scripts/report_project_template_automation.py documentation/google-fonts/project-template-automation-readiness.md
+	$(PYTHON) scripts/report_submission_handoff_readiness.py documentation/google-fonts/submission-handoff-readiness.md
+	$(PYTHON) scripts/report_final_submission_blockers.py documentation/google-fonts/final-submission-blockers.md
+	$(PYTHON) scripts/report_next_actions.py documentation/google-fonts/next-actions.md
 
 proof: build
 	$(MAKE) proof-only
 
 proof-only:
-	PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src$${PYTHONPATH:+:$$PYTHONPATH}" $(DRAWBOT_PYTHON) proof.py fonts/ttf/VirtuaGrotesk-Regular.ttf proof.pdf
+	PYTHONPATH="$(DRAWBOT_SKIA_REPO)/src$${PYTHONPATH:+:$$PYTHONPATH}" $(DRAWBOT_PYTHON) scripts/build_general_proof.py fonts/ttf/VirtuaGrotesk-Regular.ttf documentation/proofs/proof.pdf
 
 print-spacing-specimen: build
 	$(MAKE) print-spacing-specimen-only

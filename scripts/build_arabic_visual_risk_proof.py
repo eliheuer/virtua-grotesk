@@ -12,8 +12,8 @@ import unicodedata
 
 
 ROOT = Path(__file__).resolve().parents[1]
-RISK_REPORT = ROOT / "documentation/arabic-visual-risk-audit.md"
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-visual-risk-proof.html"
+RISK_REPORT = ROOT / "documentation/glyph-review/arabic-visual-risk-audit.md"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-visual-risk-proof.html"
 FONT_PATHS = [
     ("Variable", "fonts/variable/VirtuaGrotesk[wght].ttf"),
     ("Regular", "fonts/ttf/VirtuaGrotesk-Regular.ttf"),
@@ -273,7 +273,7 @@ th, td {{
 <main>
 <h1>Arabic Visual Risk Proof</h1>
 <p class="summary">{html.escape(markdown_summary(rows))}</p>
-<p class="note">This proof is generated from <code>documentation/arabic-visual-risk-audit.md</code>. It is a fast triage aid for sidebearing and spacing review, not a substitute for the full Google Fonts proof or native-reader review.</p>
+<p class="note">This proof is generated from <code>documentation/glyph-review/arabic-visual-risk-audit.md</code>. It is a fast triage aid for sidebearing and spacing review, not a substitute for the full Google Fonts proof or native-reader review.</p>
 {cards}
 </main>
 </body>

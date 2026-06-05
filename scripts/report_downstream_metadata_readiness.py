@@ -13,9 +13,9 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/downstream-metadata-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/downstream-metadata-readiness.md")
 VARIABLE_FONT = Path("fonts/variable/VirtuaGrotesk[wght].ttf")
-PREVIEW = Path("documentation/google-fonts-downstream-package-preview.md")
+PREVIEW = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 PLACEHOLDER_URL = "https://github.com/fontgarden/virtua-grotesk"
 
 
@@ -142,14 +142,14 @@ def markdown_report() -> str:
     expected_source_files = [
         "OFL.txt",
         "fonts/variable/VirtuaGrotesk[wght].ttf",
-        "documentation/ARTICLE.en_us.html",
-        "documentation/readme-specimen.png",
+        "documentation/google-fonts/ARTICLE.en_us.html",
+        "documentation/assets/readme-specimen.png",
     ]
     expected_source_mappings = [
         ("OFL.txt", "OFL.txt"),
         ("fonts/variable/VirtuaGrotesk[wght].ttf", "VirtuaGrotesk[wght].ttf"),
-        ("documentation/ARTICLE.en_us.html", "article/ARTICLE.en_us.html"),
-        ("documentation/readme-specimen.png", "article/readme-specimen.png"),
+        ("documentation/google-fonts/ARTICLE.en_us.html", "article/ARTICLE.en_us.html"),
+        ("documentation/assets/readme-specimen.png", "article/readme-specimen.png"),
     ]
     all_expected_sources = all(path in source_files for path in expected_source_files)
     all_expected_mappings = all(mapping in source_mappings for mapping in expected_source_mappings)
@@ -178,7 +178,7 @@ def markdown_report() -> str:
         and f'post_script_name: "{font["post_script_name"]}"' in preview
         and f'full_name: "{font["full_name"]}"' in preview
     )
-    metadata_review = read_text("documentation/google-fonts-metadata-review.md")
+    metadata_review = read_text("documentation/google-fonts/google-fonts-metadata-review.md")
     canonical_semibold = "VirtuaGrotesk-SemiBold.ttf" in metadata_review
     unneeded_fields_absent = all(
         f"{key}:" not in preview
@@ -300,7 +300,7 @@ def markdown_report() -> str:
             "",
             "| Preview field | Current blocker | Decision or evidence that unblocks it | Apply surface |",
             "| --- | --- | --- | --- |",
-            f"| `designer` | `{designers[0] if designers else 'missing'}` | Matching designer profile or profile request | `documentation/google-fonts-downstream-package-preview.md`; designer catalog draft if needed |",
+            f"| `designer` | `{designers[0] if designers else 'missing'}` | Matching designer profile or profile request | `documentation/google-fonts/google-fonts-downstream-package-preview.md`; designer catalog draft if needed |",
             "| `copyright` | final URL applied; copyright-holder wording still reviewer/maintainer-owned | Confirm copyright-holder wording if it changes from project-author form | `OFL.txt`; source UFO fontinfo; metadata preview |",
             f"| `date_added` | `{date_added}` | Final Google Fonts package date, normally the Packager-generated date for the downstream PR | Metadata preview before applying to local `google/fonts` fork |",
             "| `source.repository_url` | final public URL applied | Public canonical repository URL decision | Metadata preview; Add Font issue; handoff docs |",

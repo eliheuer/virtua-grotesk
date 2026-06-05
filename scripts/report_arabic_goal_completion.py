@@ -9,7 +9,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-goal-completion-audit.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-goal-completion-audit.md"
 
 
 def read(relative: str) -> str:
@@ -99,32 +99,32 @@ def table_row(requirement: str, state: str, evidence: str, result: str) -> str:
 
 
 def markdown_report() -> str:
-    arabic = read("documentation/missing-gf-arabic-core.md")
-    source = read("documentation/arabic-source-work-checklist.md")
-    candidate = read("documentation/arabic-candidate-glyph-plan.md")
-    marks = read("documentation/arabic-mark-readiness.md")
-    shaping = read("documentation/arabic-shaping-smoke-test.md")
-    master = read("documentation/master-compatibility.md")
-    visual = read("documentation/arabic-visual-review-checklist.md")
-    visual_log = read("documentation/arabic-visual-review-log.md")
-    next_packet = read("documentation/arabic-next-review-packet.md")
-    crop_integrity = read("documentation/arabic-first-review-crop-integrity.md")
-    snapshot_integrity = read("documentation/arabic-snapshot-integrity.md")
-    hand_review_session = read("documentation/arabic-hand-review-session.md")
-    hand_review_contact_sheet = read("documentation/arabic-hand-review-contact-sheet.html")
-    arabic_print_proof_index = read("documentation/arabic-print-proof-index.md")
-    full_queue_ai_sweep = read("documentation/arabic-full-queue-ai-sweep.md")
-    ai_visual_screen = read("documentation/arabic-ai-visual-screen-batch-2.md")
-    mark_ai_visual_screen = read("documentation/arabic-ai-visual-screen-batch-3.md")
-    dot_ai_visual_screen = read("documentation/arabic-ai-visual-screen-batch-4.md")
-    spacing_ai_visual_screen = read("documentation/arabic-ai-visual-screen-batch-5.md")
-    review_board = read("documentation/arabic-next-review-board.html")
-    edit_targets = read("documentation/arabic-manual-edit-targets.md")
-    first_batch_source_checkpoint = read("documentation/arabic-first-batch-source-checkpoint.md")
-    pending_source_checkpoint = read("documentation/arabic-pending-source-checkpoint.md")
-    blockers = read("documentation/final-submission-blockers.md")
-    contours = read("documentation/contour-cleanup-decision-log.md")
-    fontspector = read("documentation/fontspector-googlefonts-report.md")
+    arabic = read("documentation/google-fonts/missing-gf-arabic-core.md")
+    source = read("documentation/glyph-review/arabic-source-work-checklist.md")
+    candidate = read("documentation/glyph-review/arabic-candidate-glyph-plan.md")
+    marks = read("documentation/glyph-review/arabic-mark-readiness.md")
+    shaping = read("documentation/glyph-review/arabic-shaping-smoke-test.md")
+    master = read("documentation/source/master-compatibility.md")
+    visual = read("documentation/glyph-review/arabic-visual-review-checklist.md")
+    visual_log = read("documentation/glyph-review/arabic-visual-review-log.md")
+    next_packet = read("documentation/glyph-review/arabic-next-review-packet.md")
+    crop_integrity = read("documentation/glyph-review/arabic-first-review-crop-integrity.md")
+    snapshot_integrity = read("documentation/glyph-review/arabic-snapshot-integrity.md")
+    hand_review_session = read("documentation/glyph-review/arabic-hand-review-session.md")
+    hand_review_contact_sheet = read("documentation/glyph-review/arabic-hand-review-contact-sheet.html")
+    arabic_print_proof_index = read("documentation/glyph-review/arabic-print-proof-index.md")
+    full_queue_ai_sweep = read("documentation/glyph-review/arabic-full-queue-ai-sweep.md")
+    ai_visual_screen = read("documentation/glyph-review/arabic-ai-visual-screen-batch-2.md")
+    mark_ai_visual_screen = read("documentation/glyph-review/arabic-ai-visual-screen-batch-3.md")
+    dot_ai_visual_screen = read("documentation/glyph-review/arabic-ai-visual-screen-batch-4.md")
+    spacing_ai_visual_screen = read("documentation/glyph-review/arabic-ai-visual-screen-batch-5.md")
+    review_board = read("documentation/glyph-review/arabic-next-review-board.html")
+    edit_targets = read("documentation/glyph-review/arabic-manual-edit-targets.md")
+    first_batch_source_checkpoint = read("documentation/glyph-review/arabic-first-batch-source-checkpoint.md")
+    pending_source_checkpoint = read("documentation/glyph-review/arabic-pending-source-checkpoint.md")
+    blockers = read("documentation/google-fonts/final-submission-blockers.md")
+    contours = read("documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md")
+    fontspector = read("documentation/google-fonts/fontspector-googlefonts-report.md")
 
     arabic_missing = first_int(r"Missing codepoints: (\d+)", arabic)
     source_missing = first_int(r"Missing required codepoints: (\d+)", source)
@@ -159,15 +159,15 @@ def markdown_report() -> str:
     crop_nonblank = first_int(r"^- Nonblank crops: (\d+)$", crop_integrity)
     snapshot_ready = "Snapshot evidence ready for hand review: yes" in snapshot_integrity
     snapshot_missing = first_int(r"Pending/fix-needed rows without snapshot: (\d+)", snapshot_integrity)
-    arabic_print_proof = ROOT / "documentation/arabic-print-proof.pdf"
+    arabic_print_proof = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
     print_proof_ready = arabic_print_proof.exists() and arabic_print_proof.stat().st_size > 0
     print_proof_index_ready = (
         "# Arabic Print Proof Index" in arabic_print_proof_index
-        and "PDF: `documentation/arabic-print-proof.pdf`" in arabic_print_proof_index
+        and "PDF: `documentation/glyph-review/arabic-print-proof.pdf`" in arabic_print_proof_index
         and "Arabic cmap grid" in arabic_print_proof_index
     )
-    session_links_print_proof = "documentation/arabic-print-proof.pdf" in hand_review_session
-    contact_sheet_links_print_proof = "documentation/arabic-print-proof.pdf" in hand_review_contact_sheet
+    session_links_print_proof = "documentation/glyph-review/arabic-print-proof.pdf" in hand_review_session
+    contact_sheet_links_print_proof = "documentation/glyph-review/arabic-print-proof.pdf" in hand_review_contact_sheet
     full_queue_ai = full_queue_ai_rows(full_queue_ai_sweep)
     board_keys = board_row_keys(review_board)
     board_command_keys = count_keys_with_commands(review_board, pending_keys)
@@ -274,79 +274,79 @@ def markdown_report() -> str:
         table_row(
             "GF Arabic Core gaps are zero or accepted",
             f"{arabic_missing} missing codepoints",
-            "`documentation/missing-gf-arabic-core.md`",
+            "`documentation/google-fonts/missing-gf-arabic-core.md`",
             status(core_done),
         ),
         table_row(
             "Missing source glyphs exist in both masters",
             f"missing codepoints: {source_missing}; suggested names: {suggested_names}; positional forms: {positional_forms}; missing in both masters: {missing_both}; dotted circle missing: {yes_no(not dotted_missing)}; candidate worklist: {candidate_worklist}; candidate auto-create: {candidate_auto_create}; candidate review-needed: {candidate_review_needed}; candidate hand-draw-needed: {candidate_hand_draw}; candidate compatibility-risk: {candidate_compatibility_risk}; candidate existing master entries: {candidate_existing_entries}",
-            "`documentation/arabic-source-work-checklist.md`; `documentation/arabic-candidate-glyph-plan.md`",
+            "`documentation/glyph-review/arabic-source-work-checklist.md`; `documentation/glyph-review/arabic-candidate-glyph-plan.md`",
             status(source_done),
         ),
         table_row(
             "Regular and Bold structures stay compatible",
             f"{master_mismatches} blocking mismatches",
-            "`documentation/master-compatibility.md`",
+            "`documentation/source/master-compatibility.md`",
             status(compatibility_done),
         ),
         table_row(
             "Arabic shaping smoke tests pass",
             f"fonts: {shaping_fonts}; GSUB: {gsub_ready}/5; GPOS: {gpos_ready}/5; no .notdef: {yes_no(no_notdef)}",
-            "`documentation/arabic-shaping-smoke-test.md`",
+            "`documentation/glyph-review/arabic-shaping-smoke-test.md`",
             status(shaping_done),
         ),
         table_row(
             "Dotted circle, marks, anchors, and mark/mkmk are ready or documented",
             f"missing marks: {mark_missing}; dotted circle: {yes_no(dotted_present)}; anchors: {yes_no(source_anchors)}; mark/mkmk: {yes_no(mark_gpos)}",
-            "`documentation/arabic-mark-readiness.md`",
+            "`documentation/glyph-review/arabic-mark-readiness.md`",
             status(marks_done),
         ),
         table_row(
             "Arabic drawings have human visual review",
             f"GF proof files: {proof_files}/16; Arabic PDF proof ready: {yes_no(print_proof_ready)}; Arabic PDF index ready: {yes_no(print_proof_index_ready)}; session links PDF: {yes_no(session_links_print_proof)}; contact sheet links PDF: {yes_no(contact_sheet_links_print_proof)}; first-review focused crops ready: {yes_no(crop_ready)}; nonblank crops: {crop_nonblank}; first-batch source checkpoint glyphs: {first_batch_checkpoint_glyphs}; first-batch missing source files: {first_batch_checkpoint_missing}; first-batch Regular/Bold mismatches: {first_batch_checkpoint_mismatches}; first-batch checkpoint ready: {yes_no(first_batch_checkpoint_ready)}; pending source checkpoint rows: {pending_checkpoint_rows}; pending source glyphs: {pending_checkpoint_glyphs}; pending source files: {pending_checkpoint_files}; pending source missing files: {pending_checkpoint_missing}; pending source Regular/Bold mismatches: {pending_checkpoint_mismatches}; pending source checkpoint ready: {yes_no(pending_checkpoint_ready)}; visual pending: {visual_pending}; next packet pending: {packet_pending}; visual fix-needed: {visual_fix_needed}; visual deferred: {visual_deferred}; decision packet ready: {yes_no(decision_packet_ready)}; first-batch AI visual screen ready: {yes_no(first_batch_ai_screen)}; mark-batch AI visual screen ready: {yes_no(mark_batch_ai_screen)}; dot-batch AI visual screen ready: {yes_no(dot_batch_ai_screen)}; spacing-batch AI visual screen ready: {yes_no(spacing_batch_ai_screen)}; board rows: {len(board_keys)}/{len(pending_keys)}; board command rows: {board_command_keys}/{len(pending_keys)}; AI observation rows: {ai_observation_keys}/{len(pending_keys)}; human follow-up rows: {ai_follow_up_keys}/{len(pending_keys)}; snapshot missing rows: {snapshot_missing}; source target references: {source_targets}; missing target files: {missing_target_files}; contour decisions pending: {contour_pending}; fix-now: {contour_fix_now}; fixed: {contour_fixed}; accepted: {contour_accepted}; deferred: {contour_deferred}",
-            "`documentation/arabic-current-review-worksheet.md`; `documentation/arabic-next-review-packet.md`; `documentation/arabic-ai-visual-screen-batch-2.md`; `documentation/arabic-ai-visual-screen-batch-3.md`; `documentation/arabic-ai-visual-screen-batch-4.md`; `documentation/arabic-ai-visual-screen-batch-5.md`; `documentation/arabic-next-review-board.html`; `documentation/arabic-hand-review-session.md`; `documentation/arabic-hand-review-contact-sheet.html`; `documentation/arabic-print-proof.pdf`; `documentation/arabic-print-proof-index.md`; `documentation/arabic-full-queue-ai-sweep.md`; `documentation/arabic-snapshot-integrity.md`; `documentation/arabic-first-review-crop-integrity.md`; `documentation/arabic-first-batch-source-checkpoint.md`; `documentation/arabic-pending-source-checkpoint.md`; `documentation/arabic-visual-review-checklist.md`; `documentation/arabic-visual-review-log.md`; `documentation/arabic-manual-edit-targets.md`; `documentation/contour-cleanup-decision-log.md`",
+            "`documentation/glyph-review/arabic-current-review-worksheet.md`; `documentation/glyph-review/arabic-next-review-packet.md`; `documentation/glyph-review/arabic-ai-visual-screen-batch-2.md`; `documentation/glyph-review/arabic-ai-visual-screen-batch-3.md`; `documentation/glyph-review/arabic-ai-visual-screen-batch-4.md`; `documentation/glyph-review/arabic-ai-visual-screen-batch-5.md`; `documentation/glyph-review/arabic-next-review-board.html`; `documentation/glyph-review/arabic-hand-review-session.md`; `documentation/glyph-review/arabic-hand-review-contact-sheet.html`; `documentation/glyph-review/arabic-print-proof.pdf`; `documentation/glyph-review/arabic-print-proof-index.md`; `documentation/glyph-review/arabic-full-queue-ai-sweep.md`; `documentation/glyph-review/arabic-snapshot-integrity.md`; `documentation/glyph-review/arabic-first-review-crop-integrity.md`; `documentation/glyph-review/arabic-first-batch-source-checkpoint.md`; `documentation/glyph-review/arabic-pending-source-checkpoint.md`; `documentation/glyph-review/arabic-visual-review-checklist.md`; `documentation/glyph-review/arabic-visual-review-log.md`; `documentation/glyph-review/arabic-manual-edit-targets.md`; `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`",
             status(visual_review_done and contour_done),
         ),
         table_row(
             "`make preflight` has no undocumented drawing/source blockers",
             "preflight gate passes locally; contour/no-contour cleanup is closed",
-            "`documentation/final-submission-blockers.md`; `make preflight-only`",
+            "`documentation/google-fonts/final-submission-blockers.md`; `make preflight-only`",
             status(preflight_no_undocumented and contour_done),
         ),
         table_row(
             "`make test` is ready for final Fontspector review",
             f"Fontspector FAIL results: {fontspector_fails}; WARN results: {fontspector_warns}; INFO results: {fontspector_infos}; PASS results: {fontspector_passes}; SKIP results: {fontspector_skips}; contour decisions pending: {contour_pending}",
-            "`documentation/fontspector-googlefonts-report.md`; `documentation/contour-cleanup-decision-log.md`",
+            "`documentation/google-fonts/fontspector-googlefonts-report.md`; `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`",
             status(final_fontspector_ready),
         ),
         "",
         "## Current Next Work",
         "",
-        "1. Start with `documentation/arabic-current-review-worksheet.md` for",
+        "1. Start with `documentation/glyph-review/arabic-current-review-worksheet.md` for",
         "   the current five-row fill-in sheet, then use",
-        "   `documentation/arabic-next-review-packet.md` for the smallest current",
+        "   `documentation/glyph-review/arabic-next-review-packet.md` for the smallest current",
         "   hand-review batch. For the full queue, open",
-        "   `documentation/arabic-next-review-board.html`; it now carries",
+        "   `documentation/glyph-review/arabic-next-review-board.html`; it now carries",
         "   PNG snapshots, AI-safe notes, human follow-up prompts, edit targets,",
         "   and guarded pass/fix-needed/deferred commands for every pending row.",
-        "   Use `documentation/arabic-print-proof.pdf` and",
-        "   `documentation/arabic-hand-review-contact-sheet.html` as printable",
+        "   Use `documentation/glyph-review/arabic-print-proof.pdf` and",
+        "   `documentation/glyph-review/arabic-hand-review-contact-sheet.html` as printable",
         "   review aids, but keep the linked proof/source HTML authoritative.",
         "   Use the linked GF proof HTML and",
-        "   `documentation/arabic-visual-review-log.md` to record human drawing,",
+        "   `documentation/glyph-review/arabic-visual-review-log.md` to record human drawing,",
         "   spacing, mark, and shaping review.",
         "   The first glyph-proof crop files are mechanically ready in",
-        "   `documentation/arabic-first-review-crop-integrity.md`, but those",
+        "   `documentation/glyph-review/arabic-first-review-crop-integrity.md`, but those",
         "   crops are review aids only and do not close any row.",
-        "   Use `documentation/arabic-first-batch-source-checkpoint.md` for",
+        "   Use `documentation/glyph-review/arabic-first-batch-source-checkpoint.md` for",
         "   the first-batch Regular/Bold source structure, and",
-        "   `documentation/arabic-pending-source-checkpoint.md` to confirm all",
+        "   `documentation/glyph-review/arabic-pending-source-checkpoint.md` to confirm all",
         "   unresolved review-row source targets stay paired before and after",
         "   broader cleanup.",
-        "   Use `documentation/arabic-manual-review-batches.md` and",
-        "   `documentation/arabic-visual-review-runbook.md` when working through",
+        "   Use `documentation/glyph-review/arabic-manual-review-batches.md` and",
+        "   `documentation/glyph-review/arabic-visual-review-runbook.md` when working through",
         "   the full queue. If a row becomes `fix-needed`, use",
-        "   `documentation/arabic-manual-edit-targets.md` to find the matching",
+        "   `documentation/glyph-review/arabic-manual-edit-targets.md` to find the matching",
         "   Regular and Bold GLIF source files before editing.",
         "2. Rerun `make contour-cleanup-proof`, `make reports-only`, and",
         "   `make preflight-only` after each drawing/review batch.",

@@ -10,7 +10,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/google-fonts-decision-answer-sheet.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/google-fonts-decision-answer-sheet.md")
 
 
 @dataclass(frozen=True)
@@ -213,8 +213,8 @@ def decision_status(statuses: dict[str, str], prompt_heading: str) -> str:
 
 
 def markdown_report() -> str:
-    questions_text = read_text("documentation/google-fonts-decision-questions.md")
-    decisions_text = read_text("documentation/google-fonts-decisions.md")
+    questions_text = read_text("documentation/google-fonts/google-fonts-decision-questions.md")
+    decisions_text = read_text("documentation/google-fonts/google-fonts-decisions.md")
     prompts = parse_prompts(questions_text)
     decision_sections = parse_decision_sections(decisions_text)
     decision_statuses = parse_decision_statuses(decisions_text)
@@ -235,15 +235,15 @@ def markdown_report() -> str:
         "Use this flow:",
         "",
         "1. Answer a row here.",
-        "2. Record the accepted answer in `documentation/google-fonts-decisions.md`.",
+        "2. Record the accepted answer in `documentation/google-fonts/google-fonts-decisions.md`.",
         "3. Apply the decision to the listed source, metadata, or downstream package surfaces.",
         "4. Rerun `make preflight` so proof evidence and generated reports stay synchronized.",
         "",
         "Canonical files:",
         "",
-        "- `documentation/google-fonts-decision-questions.md`",
-        "- `documentation/google-fonts-decisions.md`",
-        "- `documentation/decision-readiness.md`",
+        "- `documentation/google-fonts/google-fonts-decision-questions.md`",
+        "- `documentation/google-fonts/google-fonts-decisions.md`",
+        "- `documentation/google-fonts/decision-readiness.md`",
         "",
     ]
 

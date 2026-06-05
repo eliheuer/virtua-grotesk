@@ -11,8 +11,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SNAPSHOT_DIR = ROOT / "documentation/arabic-review-snapshots"
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
+SNAPSHOT_DIR = ROOT / "documentation/glyph-review/review-snapshots"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-first-review-zoom-snapshots.md"
 CROP_HEIGHT = 520
 CROP_WIDTH = 1440
 CROP_OFFSET_Y = 230
@@ -107,7 +107,7 @@ def markdown_report(rendered: list[ZoomSnapshot], errors: list[str], sips: str |
         "PNGs are still review aids only; open the full proof HTML before recording",
         "a `pass`, `fix-needed`, or `deferred` status.",
         "",
-        f"- Crop source: `documentation/arabic-next-review-snapshots.md`",
+        f"- Crop source: `documentation/glyph-review/arabic-next-review-snapshots.md`",
         f"- Crop size: {CROP_WIDTH}x{CROP_HEIGHT}",
         f"- Output scale: {OUTPUT_SCALE}x",
         f"- Output size: {CROP_WIDTH * OUTPUT_SCALE}x{CROP_HEIGHT * OUTPUT_SCALE}",

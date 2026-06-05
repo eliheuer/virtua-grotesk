@@ -11,21 +11,21 @@ import xml.etree.ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-visual-review-runbook.md"
-VISUAL_LOG = ROOT / "documentation/arabic-visual-review-log.md"
-BATCHES = ROOT / "documentation/arabic-manual-review-batches.md"
-SNAPSHOTS = ROOT / "documentation/arabic-next-review-snapshots.md"
-ZOOM_SNAPSHOTS = ROOT / "documentation/arabic-first-review-zoom-snapshots.md"
-SNAPSHOT_INTEGRITY = ROOT / "documentation/arabic-snapshot-integrity.md"
-NEXT_BATCH = ROOT / "documentation/arabic-next-review-batch.html"
-DASHBOARD = ROOT / "documentation/arabic-manual-review-dashboard.html"
-ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
-ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
-PROOF_DIR = ROOT / "documentation/gftools-qa/Proof"
-STRUCTURE_TRIAGE = ROOT / "documentation/arabic-structure-triage.md"
-MARK_TRIAGE = ROOT / "documentation/arabic-mark-triage.md"
-SHAPING_SMOKE = ROOT / "documentation/arabic-shaping-smoke-test.md"
-CONTOUR_DECISIONS = ROOT / "documentation/contour-cleanup-decision-log.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-visual-review-runbook.md"
+VISUAL_LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
+BATCHES = ROOT / "documentation/glyph-review/arabic-manual-review-batches.md"
+SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-next-review-snapshots.md"
+ZOOM_SNAPSHOTS = ROOT / "documentation/glyph-review/arabic-first-review-zoom-snapshots.md"
+SNAPSHOT_INTEGRITY = ROOT / "documentation/glyph-review/arabic-snapshot-integrity.md"
+NEXT_BATCH = ROOT / "documentation/glyph-review/arabic-next-review-batch.html"
+DASHBOARD = ROOT / "documentation/glyph-review/arabic-manual-review-dashboard.html"
+ARABIC_PRINT_PROOF = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/glyph-review/arabic-print-proof-index.md"
+PROOF_DIR = ROOT / "documentation/google-fonts/gftools-qa/Proof"
+STRUCTURE_TRIAGE = ROOT / "documentation/glyph-review/arabic-structure-triage.md"
+MARK_TRIAGE = ROOT / "documentation/glyph-review/arabic-mark-triage.md"
+SHAPING_SMOKE = ROOT / "documentation/glyph-review/arabic-shaping-smoke-test.md"
+CONTOUR_DECISIONS = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md"
 SOURCE_UFOS = [
     ROOT / "sources/VirtuaGrotesk-Regular.ufo",
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",
@@ -81,56 +81,56 @@ BATCH_REVIEW_PRIORITY = {
 }
 FOCUSED_EVIDENCE_BY_KEY = {
     "proof-regular-glyphs": [
-        "documentation/arabic-structure-sweep.html",
-        "documentation/arabic-structure-triage.md",
+        "documentation/glyph-review/arabic-structure-sweep.html",
+        "documentation/glyph-review/arabic-structure-triage.md",
     ],
     "proof-medium-glyphs": [
-        "documentation/arabic-structure-sweep.html",
-        "documentation/arabic-structure-triage.md",
+        "documentation/glyph-review/arabic-structure-sweep.html",
+        "documentation/glyph-review/arabic-structure-triage.md",
     ],
     "proof-semibold-glyphs": [
-        "documentation/arabic-structure-sweep.html",
-        "documentation/arabic-structure-triage.md",
+        "documentation/glyph-review/arabic-structure-sweep.html",
+        "documentation/glyph-review/arabic-structure-triage.md",
     ],
     "proof-bold-glyphs": [
-        "documentation/arabic-structure-sweep.html",
-        "documentation/arabic-structure-triage.md",
+        "documentation/glyph-review/arabic-structure-sweep.html",
+        "documentation/glyph-review/arabic-structure-triage.md",
     ],
     "class-letter-structures": [
-        "documentation/arabic-structure-sweep.html",
-        "documentation/arabic-structure-triage.md",
+        "documentation/glyph-review/arabic-structure-sweep.html",
+        "documentation/glyph-review/arabic-structure-triage.md",
     ],
     "mark-base+fatha": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
     "mark-base+damma": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
     "mark-base+kasra": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
     "mark-shadda+sukun": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
     "mark-tanween": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
     "mark-hamza-above-below": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
     "mark-dotted-circle": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
     "class-mark-combinations": [
-        "documentation/arabic-mark-review-proof.html",
-        "documentation/arabic-mark-triage.md",
+        "documentation/glyph-review/arabic-mark-review-proof.html",
+        "documentation/glyph-review/arabic-mark-triage.md",
     ],
 }
 
@@ -611,7 +611,7 @@ def markdown_report() -> str:
     lines = [
         "# Arabic Visual Review Runbook",
         "",
-        "This generated runbook turns `documentation/arabic-visual-review-log.md`",
+        "This generated runbook turns `documentation/glyph-review/arabic-visual-review-log.md`",
         "into row-by-row review cards. It does not approve drawings; it makes the",
         "remaining human review faster and easier to record.",
         "",

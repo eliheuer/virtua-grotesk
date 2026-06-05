@@ -11,7 +11,7 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/family-name-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/family-name-readiness.md")
 DEFAULT_FONT_PATHS = [
     Path("fonts/variable/VirtuaGrotesk[wght].ttf"),
     Path("fonts/ttf/VirtuaGrotesk-Regular.ttf"),
@@ -73,7 +73,7 @@ def ascii_safe(value: str) -> bool:
 
 
 def decision_status() -> str:
-    text = (ROOT / "documentation/google-fonts-decisions.md").read_text(encoding="utf-8")
+    text = (ROOT / "documentation/google-fonts/google-fonts-decisions.md").read_text(encoding="utf-8")
     match = re.search(r"## Family name, namecheck, trademarks, and CLA\s+Status: ([a-z]+)", text)
     return match.group(1) if match else "unknown"
 
@@ -179,7 +179,7 @@ def markdown_report(font_paths: list[Path]) -> str:
             "## Apply Before Final Submission",
             "",
             "- Keep the confirmed namecheck, trademark/RFN, and CLA statements in",
-            "  `documentation/google-fonts-decisions.md` and the Google Fonts issue",
+            "  `documentation/google-fonts/google-fonts-decisions.md` and the Google Fonts issue",
             "  text.",
             "- Confirm the local git name and email match the signed CLA identity",
             "  before opening the downstream pull request.",

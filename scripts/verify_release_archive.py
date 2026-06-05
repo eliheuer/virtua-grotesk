@@ -12,7 +12,7 @@ import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PREVIEW_DEFAULT = Path("documentation/google-fonts-downstream-package-preview.md")
+PREVIEW_DEFAULT = Path("documentation/google-fonts/google-fonts-downstream-package-preview.md")
 ARCHIVE_DEFAULT = Path("dist/VirtuaGrotesk-1.000.zip")
 ZIP_TIMESTAMP = (1980, 1, 1, 0, 0, 0)
 ZIP_FILE_MODE = 0o644 << 16

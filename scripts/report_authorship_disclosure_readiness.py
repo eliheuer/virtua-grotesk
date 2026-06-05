@@ -9,7 +9,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/authorship-disclosure-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/authorship-disclosure-readiness.md")
 CONTACT_LINE_RE = re.compile(r"^[^<>]+ <[^<>]+>$")
 
 
@@ -93,9 +93,9 @@ def markdown_report() -> str:
     author_contacts = contact_formatted_entries(authors)
     contributor_contacts = contact_formatted_entries(contributors)
     ofl_copyright = first_line("OFL.txt")
-    decisions_text = read_text("documentation/google-fonts-decisions.md")
-    handoff_text = read_text("documentation/google-fonts-submission-handoff.md")
-    template_text = read_text("documentation/google-fonts-add-font-template-audit.md")
+    decisions_text = read_text("documentation/google-fonts/google-fonts-decisions.md")
+    handoff_text = read_text("documentation/google-fonts/google-fonts-submission-handoff.md")
+    template_text = read_text("documentation/google-fonts/google-fonts-add-font-template-audit.md")
     status = decision_status(decisions_text)
     approved_statement = approved_authorship_statement(decisions_text)
     combined_checkbox = (
@@ -147,7 +147,7 @@ def markdown_report() -> str:
         "- The current `google/fonts` Add Font issue template combines sole",
         "  copyright-author authority and AI-use disclosure into one checkbox.",
         "- Final AI-use disclosure wording is recorded in",
-        "  `documentation/google-fonts-decisions.md` and synchronized into",
+        "  `documentation/google-fonts/google-fonts-decisions.md` and synchronized into",
         "  the submission handoff.",
         "",
         "## Approved Add Font Statement",

@@ -17,8 +17,8 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/kerning-readiness.md")
-GFT_QA_OUTPUT = Path("documentation/gftools-qa/Proof")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/kerning-readiness.md")
+GFT_QA_OUTPUT = Path("documentation/google-fonts/gftools-qa/Proof")
 GF_TESTING_GUIDE = "https://googlefonts.github.io/gf-guide/testing.html"
 GF_TOOLS_GUIDE = "https://googlefonts.github.io/gf-guide/tools.html"
 GF_ONBOARDER_WORKFLOW = "https://googlefonts.github.io/gf-guide/onboarder-workflow.html"
@@ -124,13 +124,13 @@ def warning_count(font_paths: list[Path]) -> int:
                             )
                 return count
 
-    text = read_text("documentation/fontspector-warnings.md")
+    text = read_text("documentation/google-fonts/fontspector-warnings.md")
     match = re.search(r"\| `gpos_kerning_info` \| (\d+) \|", text)
     return int(match.group(1)) if match else 0
 
 
 def decision_status() -> str:
-    text = read_text("documentation/google-fonts-decisions.md")
+    text = read_text("documentation/google-fonts/google-fonts-decisions.md")
     match = re.search(r"## Kerning\s*\n\nStatus: ([^\n]+)", text)
     return match.group(1).strip() if match else "unknown"
 
@@ -254,7 +254,7 @@ def markdown_report(font_paths: list[Path]) -> str:
             "",
             "Review the generated HTML before treating kerning, spacing, or a",
             "kerning-deferral decision as final. The report is intentionally kept",
-            "under `documentation/gftools-qa/` and ignored by git because it is",
+            "under `documentation/google-fonts/gftools-qa/` and ignored by git because it is",
             "generated evidence, not source.",
             "",
             "If Google Fonts asks for browser-rendered image proofs, add `--imgs`",
@@ -273,7 +273,7 @@ def markdown_report(font_paths: list[Path]) -> str:
             "- Generate and review the `gftools qa --proof` HTML proof for spacing",
             "  and kerning after kerning is added or explicitly deferred.",
             "- If kerning is deferred, record the explicit reviewer-acceptable",
-            "  rationale in `documentation/google-fonts-decisions.md` and the",
+            "  rationale in `documentation/google-fonts/google-fonts-decisions.md` and the",
             "  submission handoff.",
             "- Rerun `make preflight` and `make test` after kerning changes.",
             "",

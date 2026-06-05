@@ -25,8 +25,8 @@ DEFAULT_FONTS = [
     ROOT / "fonts/ttf/VirtuaGrotesk-SemiBold.ttf",
     ROOT / "fonts/ttf/VirtuaGrotesk-Bold.ttf",
 ]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-print-proof.pdf"
-DEFAULT_INDEX_OUTPUT = ROOT / "documentation/arabic-print-proof-index.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+DEFAULT_INDEX_OUTPUT = ROOT / "documentation/glyph-review/arabic-print-proof-index.md"
 
 PAGE_WIDTH = 612
 PAGE_HEIGHT = 792
@@ -269,16 +269,16 @@ def index_markdown(output_path: Path, page_index: list[dict[str, str | int]]) ->
     lines = [
         "# Arabic Print Proof Index",
         "",
-        "This generated index maps `documentation/arabic-print-proof.pdf` pages to",
+        "This generated index maps `documentation/glyph-review/arabic-print-proof.pdf` pages to",
         "the Arabic visual-review pass. The PDF is a fast print/PDF aid; keep the",
         "Google Fonts HTML proof and source GLIF files authoritative for final",
         "review decisions.",
         "",
         f"- PDF: `{output_path.relative_to(ROOT)}`",
         f"- Pages: {len(page_index)}",
-        "- Review log: `documentation/arabic-visual-review-log.md`",
-        "- Current worksheet: `documentation/arabic-current-review-worksheet.md`",
-        "- Next packet: `documentation/arabic-next-review-packet.md`",
+        "- Review log: `documentation/glyph-review/arabic-visual-review-log.md`",
+        "- Current worksheet: `documentation/glyph-review/arabic-current-review-worksheet.md`",
+        "- Next packet: `documentation/glyph-review/arabic-next-review-packet.md`",
         "",
         "## Page Map",
         "",
@@ -300,7 +300,7 @@ def index_markdown(output_path: Path, page_index: list[dict[str, str | int]]) ->
             "   proof if anything looks missing, clipped, blank, duplicated, malformed,",
             "   or wrong-codepoint.",
             "2. For marks and dotted-circle rows, scan each `Arabic samples` page, then",
-            "   open `documentation/arabic-mark-review-proof.html` and the source glyphs",
+            "   open `documentation/glyph-review/arabic-mark-review-proof.html` and the source glyphs",
             "   for anything that needs drawing or anchor edits.",
             "3. For numeral and punctuation rows, scan each `Arabic numerals and",
             "   punctuation` page before checking the proofer/text HTML.",

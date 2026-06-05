@@ -10,7 +10,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/decision-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/decision-readiness.md")
 
 
 @dataclass(frozen=True)
@@ -147,7 +147,7 @@ MECHANICAL_APPLY_COVERAGE = [
     ),
     (
         "Add Font issue and handoff text",
-        "`make issue-draft` and `documentation/submission-handoff-readiness.md`",
+        "`make issue-draft` and `documentation/google-fonts/submission-handoff-readiness.md`",
         "generated drafts",
         "Keeps current template labels, issue text, Fontspector counts, Arabic scope, and report references synchronized after decisions are applied.",
     ),
@@ -159,7 +159,7 @@ MECHANICAL_APPLY_COVERAGE = [
     ),
     (
         "Decision-linked warnings",
-        "`documentation/fontspector-warnings.md` and `documentation/final-submission-blockers.md`",
+        "`documentation/google-fonts/fontspector-warnings.md` and `documentation/google-fonts/final-submission-blockers.md`",
         "evidence only",
         "Groups Vendor ID, kerning, avar, PUA/reachability, and subsetting warnings for maintainer acceptance or follow-up fixes.",
     ),
@@ -291,11 +291,11 @@ def surface_path_status(surface: ApplyToSurface) -> str:
 
 
 def markdown_report() -> str:
-    decisions = parse_decisions(read_text("documentation/google-fonts-decisions.md"))
-    question_text = read_text("documentation/google-fonts-decision-questions.md")
+    decisions = parse_decisions(read_text("documentation/google-fonts/google-fonts-decisions.md"))
+    question_text = read_text("documentation/google-fonts/google-fonts-decision-questions.md")
     question_prompts = parse_question_prompts(question_text)
     questions = {question.heading for question in question_prompts}
-    add_font_audit = read_text("documentation/google-fonts-add-font-template-audit.md")
+    add_font_audit = read_text("documentation/google-fonts/google-fonts-add-font-template-audit.md")
     open_decisions = [decision for decision in decisions if decision.status == "open"]
     decided_decisions = [decision for decision in decisions if decision.status == "decided"]
     open_with_questions = [
@@ -429,9 +429,9 @@ def markdown_report() -> str:
             "",
             "## Apply Before Final Submission",
             "",
-            "- Record maintainer answers in `documentation/google-fonts-decisions.md`",
+            "- Record maintainer answers in `documentation/google-fonts/google-fonts-decisions.md`",
             "  before editing source metadata or downstream package previews.",
-            "- Keep `documentation/google-fonts-decision-questions.md` focused on",
+            "- Keep `documentation/google-fonts/google-fonts-decision-questions.md` focused on",
             "  open questions only; decided scope belongs in the decision log and",
             "  generated evidence reports.",
             "- Rerun `make preflight` after any decision is answered so proof",

@@ -9,7 +9,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = ROOT / "documentation/arabic-mark-review-proof.html"
+OUTPUT_DEFAULT = ROOT / "documentation/glyph-review/arabic-mark-review-proof.html"
 FONTS = [
     ("Regular", "fonts/ttf/VirtuaGrotesk-Regular.ttf", "400"),
     ("Medium", "fonts/ttf/VirtuaGrotesk-Medium.ttf", "500"),
@@ -220,7 +220,7 @@ window.addEventListener("DOMContentLoaded", () => {{
 <h1>Virtua Grotesk Arabic Mark Review Proof</h1>
 <p class="summary">
 Focused proof for Arabic visual-review batch 3. Use this with
-<code>documentation/arabic-mark-readiness.md</code> to record
+<code>documentation/glyph-review/arabic-mark-readiness.md</code> to record
 <code>mark-base+fatha</code>, <code>mark-base+damma</code>,
 <code>mark-base+kasra</code>, <code>mark-shadda+sukun</code>,
 <code>mark-tanween</code>, <code>mark-hamza-above-below</code>,

@@ -29,9 +29,9 @@ from report_arabic_visual_review_runbook import (
 )
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-review-worksheet-bundle.md"
-ARABIC_PRINT_PROOF = ROOT / "documentation/arabic-print-proof.pdf"
-ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/arabic-print-proof-index.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-review-worksheet-bundle.md"
+ARABIC_PRINT_PROOF = ROOT / "documentation/glyph-review/arabic-print-proof.pdf"
+ARABIC_PRINT_PROOF_INDEX = ROOT / "documentation/glyph-review/arabic-print-proof-index.md"
 
 
 def visual_command(key: str, status: str, notes: str) -> str:
@@ -122,9 +122,9 @@ def markdown_report() -> str:
         "## Coverage",
         "",
         f"- Pending/fix-needed visual rows: {len(pending_visual)}",
-        "- Source for AI-safe notes: `documentation/arabic-full-queue-ai-sweep.md`",
-        "- Source for snapshots: `documentation/arabic-next-review-snapshots.md`",
-        "- Source for official statuses: `documentation/arabic-visual-review-log.md`",
+        "- Source for AI-safe notes: `documentation/glyph-review/arabic-full-queue-ai-sweep.md`",
+        "- Source for snapshots: `documentation/glyph-review/arabic-next-review-snapshots.md`",
+        "- Source for official statuses: `documentation/glyph-review/arabic-visual-review-log.md`",
         f"- Focused Arabic PDF proof: `{ARABIC_PRINT_PROOF.relative_to(ROOT)}`",
         f"- Focused Arabic PDF index: `{ARABIC_PRINT_PROOF_INDEX.relative_to(ROOT)}`",
         "",
@@ -209,7 +209,7 @@ def markdown_report() -> str:
             "```",
             "",
             "If any row becomes `fix-needed`, open",
-            "`documentation/arabic-manual-edit-targets.md` before editing so",
+            "`documentation/glyph-review/arabic-manual-edit-targets.md` before editing so",
             "Regular and Bold stay compatible.",
             "",
         ]

@@ -17,7 +17,7 @@ import sys
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECKLIST = ROOT / "documentation/arabic-source-work-checklist.md"
+CHECKLIST = ROOT / "documentation/glyph-review/arabic-source-work-checklist.md"
 UFO_PATHS = (
     ROOT / "sources/VirtuaGrotesk-Regular.ufo",
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",

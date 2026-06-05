@@ -15,7 +15,7 @@ import report_arabic_visual_review_runbook as runbook
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-pending-source-checkpoint.md"
 
 
 def master_name_for_ufo(ufo: Path) -> str:
@@ -231,7 +231,7 @@ def markdown_report() -> str:
             "  still map to paired Regular/Bold source files.",
             "- If a row becomes `fix-needed`, edit only the relevant paired source",
             "  glyphs, then rerun this report plus `make arabic-after-drawing-check`.",
-            "- Keep review outcomes in `documentation/arabic-visual-review-log.md`;",
+            "- Keep review outcomes in `documentation/glyph-review/arabic-visual-review-log.md`;",
             "  this checkpoint only records source structure.",
             "",
         ]

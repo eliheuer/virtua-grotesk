@@ -29,8 +29,7 @@ This is the most important check — incompatible masters will cause the variabl
 
 **Performance note:** For a full check of all glyphs, use Python with fontTools:
 ```bash
-source ~/Py/venvs/basic-fonts/bin/activate
-python -c "
+./venv/bin/python -c "
 from fontTools.designspaceLib import DesignSpaceDocument
 from fontTools.ufoLib import UFOReader
 import sys

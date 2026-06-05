@@ -13,7 +13,7 @@ import report_arabic_visual_review_runbook as runbook
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-manual-edit-targets.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-manual-edit-targets.md"
 SOURCE_UFOS = [
     ROOT / "sources/VirtuaGrotesk-Regular.ufo",
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",
@@ -176,7 +176,7 @@ def structure_prompt_targets() -> list[EditTarget]:
 
 
 def visual_risk_targets() -> list[EditTarget]:
-    text = runbook.read_text(runbook.ROOT / "documentation/arabic-visual-risk-audit.md")
+    text = runbook.read_text(runbook.ROOT / "documentation/glyph-review/arabic-visual-risk-audit.md")
     codepoints: list[str] = []
     in_section = False
     for line in text.splitlines():

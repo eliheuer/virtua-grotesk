@@ -17,7 +17,7 @@ from update_arabic_visual_review import (
 )
 
 
-DEFAULT_AI_SWEEP = ROOT / "documentation/arabic-full-queue-ai-sweep.md"
+DEFAULT_AI_SWEEP = ROOT / "documentation/glyph-review/arabic-full-queue-ai-sweep.md"
 
 
 def clean_cell(value: str) -> str:

@@ -12,11 +12,11 @@ Run these from the repo root unless a section says otherwise.
 | --- | --- | --- | --- |
 | Build | `make build` | Builds variable and static TTFs from `sources/config.yaml`. | After source, feature, metadata, or build-script changes. |
 | Automated Google Fonts QA | `make test` | Builds, then runs Fontspector's `googlefonts` profile. | Before final submission and after any fix that should reduce Fontspector FAIL/WARN output. |
-| Visual spacing and kerning proof | `make kerning-proof-check` | Runs `gftools qa --proof` and writes HTML proof output to `documentation/gftools-qa/`. | After spacing, kerning, built-font, or kerning-scope decision changes. |
-| Visual proof review packet | `make kerning-proof-review-check` | Generates `documentation/kerning-proof-review.md`, listing the expected gftools proof files and human review checklist. | After regenerating the gftools proof output or before accepting a kerning deferral. |
+| Visual spacing and kerning proof | `make kerning-proof-check` | Runs `gftools qa --proof` and writes HTML proof output to `documentation/google-fonts/gftools-qa/`. | After spacing, kerning, built-font, or kerning-scope decision changes. |
+| Visual proof review packet | `make kerning-proof-review-check` | Generates `documentation/google-fonts/kerning-proof-review.md`, listing the expected gftools proof files and human review checklist. | After regenerating the gftools proof output or before accepting a kerning deferral. |
 | PDF proof | `make proof` | Builds, then renders the DrawBot-style proof PDF with the local `eliheuer/drawbot-skia` fork. | During drawing/source review and before handoff snapshots. |
-| Landscape print spacing specimen | `make print-spacing-specimen` | Builds, then renders `documentation/print-spacing-specimen.pdf` and `documentation/print-spacing-specimen-index.md` for paper review of weight, spacing, texture, numerals, punctuation, and Arabic rhythm across Regular, Medium, SemiBold, and Bold. | During spacing/weight review, after drawing changes, and before final handoff proof review. |
-| Arabic PDF proof | `make arabic-print-proof` | Builds, then renders `documentation/arabic-print-proof.pdf` with Arabic shaping, mark, numeral, punctuation, and cmap-grid pages across Regular, Medium, SemiBold, and Bold. | While clearing the Arabic visual-review queue; use as a print aid alongside the Google Fonts HTML proof. |
+| Landscape print spacing specimen | `make print-spacing-specimen` | Builds, then renders `documentation/proofs/print-spacing-specimen.pdf` and `documentation/proofs/print-spacing-specimen-index.md` for paper review of weight, spacing, texture, numerals, punctuation, and Arabic rhythm across Regular, Medium, SemiBold, and Bold. | During spacing/weight review, after drawing changes, and before final handoff proof review. |
+| Arabic PDF proof | `make arabic-print-proof` | Builds, then renders `documentation/glyph-review/arabic-print-proof.pdf` with Arabic shaping, mark, numeral, punctuation, and cmap-grid pages across Regular, Medium, SemiBold, and Bold. | While clearing the Arabic visual-review queue; use as a print aid alongside the Google Fonts HTML proof. |
 | Readiness reports | `make reports` | Regenerates generated readiness reports from current built fonts and local checkout state. | After build, metadata, package, or decision changes. |
 | Designer profile validators | `make designer-profile-validator-test` | Tests profile `info.pb`, image, bio, and guarded prepare-helper blockers without touching the real `google/fonts` checkout. | After changing designer-profile validators, the prepare helper, or draft-profile rules. |
 | Current handoff gate | `make preflight` | Builds, regenerates the main proof PDF, the focused Arabic PDF proof, and reports, then allows only documented drawing/source blockers. Run `make print-spacing-specimen` separately when paper spacing/weight evidence needs refreshing. | Before handing work back or before any packaging/release milestone. |
@@ -55,10 +55,10 @@ Before kerning, spacing, or a kerning deferral is considered final:
 - Run `make kerning-check`.
 - Run `make kerning-proof-check`.
 - Run `make kerning-proof-review-check`.
-- Review the HTML output in `documentation/gftools-qa/`.
-- Use `documentation/kerning-proof-review.md` to make sure every expected
+- Review the HTML output in `documentation/google-fonts/gftools-qa/`.
+- Use `documentation/google-fonts/kerning-proof-review.md` to make sure every expected
   proof type and weight instance has been inspected.
-- Confirm `documentation/kerning-readiness.md` records the current source
+- Confirm `documentation/google-fonts/kerning-readiness.md` records the current source
   kerning, built GPOS `kern`, Fontspector warning, and proof-output state.
 - Rerun `make preflight`.
 
@@ -75,7 +75,7 @@ track:
 
 The drawing work can remain incomplete during onboarding preparation, but the
 missing Arabic coverage and mark-positioning work must stay visible in
-`documentation/final-submission-blockers.md` and `documentation/next-actions.md`.
+`documentation/google-fonts/final-submission-blockers.md` and `documentation/google-fonts/next-actions.md`.
 
 ## Packaging QA Policy
 

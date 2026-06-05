@@ -28,7 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TARGET = ROOT / "sources/VirtuaGrotesk.designspace"
 DEFAULT_DONOR = Path("/Users/eli/GH/repos/rubik/sources/designspace/Rubik.designspace")
 DEFAULT_OUTPUT = ROOT / "build/arabic-donor-candidates/rubik-to-virtua"
-PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/arabic-pending-source-checkpoint.md"
+PENDING_SOURCE_CHECKPOINT = ROOT / "documentation/glyph-review/arabic-pending-source-checkpoint.md"
 
 SAMPLE_GLYPHS = [
     "beh-ar",

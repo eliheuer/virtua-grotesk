@@ -9,7 +9,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/project-template-automation-readiness.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/project-template-automation-readiness.md")
 DEFAULT_GF_REPO = Path("/Users/eli/GH/forks/fonts")
 
 
@@ -107,7 +107,7 @@ def make_targets() -> set[str]:
 
 
 def decision_status() -> str:
-    decisions = read_text("documentation/google-fonts-decisions.md")
+    decisions = read_text("documentation/google-fonts/google-fonts-decisions.md")
     match = re.search(r"## Project template automation\s*\n\s*Status: ([a-z]+)", decisions)
     return match.group(1) if match else "unknown"
 
@@ -150,8 +150,8 @@ def markdown_report() -> str:
         "  FontBakery-based QA: yes",
         "- Older tools/template prose still describes FontBakery-based",
         "  setup or template QA: yes",
-        "- Mandatory upstream structure report: `documentation/upstream-structure-readiness.md`",
-        "- Template and recent PR audit: `documentation/google-fonts-template-and-pr-audit.md`",
+        "- Mandatory upstream structure report: `documentation/google-fonts/upstream-structure-readiness.md`",
+        "- Template and recent PR audit: `documentation/google-fonts/google-fonts-template-and-pr-audit.md`",
         "",
         "## Optional Template Automation",
         "",
@@ -178,7 +178,7 @@ def markdown_report() -> str:
             "",
             "## Apply Before Final Submission",
             "",
-            "- Keep `documentation/upstream-structure-readiness.md` as the source of truth",
+            "- Keep `documentation/google-fonts/upstream-structure-readiness.md` as the source of truth",
             "  for mandatory Google Fonts upstream shape.",
             "- Revisit template automation only after choosing the public repository",
             "  workflow for CI, proof publishing, dependency updates, and",

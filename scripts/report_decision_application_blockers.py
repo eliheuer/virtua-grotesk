@@ -10,7 +10,7 @@ import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DEFAULT = Path("documentation/decision-application-blockers.md")
+OUTPUT_DEFAULT = Path("documentation/google-fonts/decision-application-blockers.md")
 
 
 @dataclass(frozen=True)
@@ -82,17 +82,17 @@ def unanswered_answer_sheet_items(answer_sheet: str) -> list[str]:
 
 
 def markdown_report() -> str:
-    decisions = read_text("documentation/google-fonts-decisions.md")
-    answer_sheet = read_text("documentation/google-fonts-decision-answer-sheet.md")
-    decision_readiness = read_text("documentation/decision-readiness.md")
-    downstream_metadata = read_text("documentation/downstream-metadata-readiness.md")
-    package_dry_run = read_text("documentation/package-dry-run-readiness.md")
-    open_placeholders = read_text("documentation/open-placeholder-audit.md")
-    final_blockers = read_text("documentation/final-submission-blockers.md")
-    designer_profile = read_text("documentation/designer-profile-readiness.md")
-    pua_scope = read_text("documentation/pua-scope.md")
-    kerning = read_text("documentation/kerning-readiness.md")
-    release_archive = read_text("documentation/release-archive-manifest.md")
+    decisions = read_text("documentation/google-fonts/google-fonts-decisions.md")
+    answer_sheet = read_text("documentation/google-fonts/google-fonts-decision-answer-sheet.md")
+    decision_readiness = read_text("documentation/google-fonts/decision-readiness.md")
+    downstream_metadata = read_text("documentation/google-fonts/downstream-metadata-readiness.md")
+    package_dry_run = read_text("documentation/google-fonts/package-dry-run-readiness.md")
+    open_placeholders = read_text("documentation/google-fonts/open-placeholder-audit.md")
+    final_blockers = read_text("documentation/google-fonts/final-submission-blockers.md")
+    designer_profile = read_text("documentation/google-fonts/designer-profile-readiness.md")
+    pua_scope = read_text("documentation/google-fonts/pua-scope.md")
+    kerning = read_text("documentation/google-fonts/kerning-readiness.md")
+    release_archive = read_text("documentation/google-fonts/release-archive-manifest.md")
 
     statuses = decision_statuses(decisions)
     open_decisions = summary_value("Open decisions", decision_readiness)
@@ -100,7 +100,7 @@ def markdown_report() -> str:
     pending_fields = summary_value("Pending or placeholder metadata lines", downstream_metadata)
     raw_actionable_pending = summary_int("Actionable pending decision markers", open_placeholders)
     decision_blocker_section = open_placeholders.split("## Internal Guards", 1)[0]
-    self_echo_pending = "`documentation/decision-application-blockers.md`" in decision_blocker_section
+    self_echo_pending = "`documentation/google-fonts/decision-application-blockers.md`" in decision_blocker_section
     actionable_pending = max(0, raw_actionable_pending - int(self_echo_pending))
     package_reaches = summary_value("Wrapper can reach Packager", package_dry_run)
     first_blocker = summary_value("First blocker", package_dry_run)
@@ -241,7 +241,7 @@ def markdown_report() -> str:
             "",
             "## Maintainer Answer Sheet State",
             "",
-            "This section mirrors `documentation/google-fonts-decision-answer-sheet.md`",
+            "This section mirrors `documentation/google-fonts/google-fonts-decision-answer-sheet.md`",
             "so an open decision cannot lose its maintainer-facing answer prompt",
             "without the application blocker report noticing.",
             "",

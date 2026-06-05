@@ -10,15 +10,15 @@ from report_arabic_next_review_ai_observations import snapshot_evidence, snapsho
 from report_arabic_visual_review_runbook import ROOT, row_priority, visual_rows
 
 
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-full-queue-ai-sweep.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-full-queue-ai-sweep.md"
 
 
 REPRESENTATIVE_IMAGES = [
-    "documentation/arabic-review-snapshots/proof-regular-glyphs-arabic-zoom.png",
-    "documentation/arabic-review-snapshots/mark-shadda+sukun.png",
-    "documentation/arabic-review-snapshots/proof-bold-text.png",
-    "documentation/arabic-review-snapshots/proof-regular-proofer.png",
-    "documentation/arabic-review-snapshots/class-dot-stack-helpers.png",
+    "documentation/glyph-review/review-snapshots/proof-regular-glyphs-arabic-zoom.png",
+    "documentation/glyph-review/review-snapshots/mark-shadda+sukun.png",
+    "documentation/glyph-review/review-snapshots/proof-bold-text.png",
+    "documentation/glyph-review/review-snapshots/proof-regular-proofer.png",
+    "documentation/glyph-review/review-snapshots/class-dot-stack-helpers.png",
 ]
 
 
@@ -129,11 +129,11 @@ def human_action(row) -> str:
     if key.endswith("-glyphs"):
         return "Open the matching gftools glyph proof at zoom."
     if key.startswith("mark-") or key == "class-mark-combinations":
-        return "Open `documentation/arabic-mark-review-proof.html`."
+        return "Open `documentation/glyph-review/arabic-mark-review-proof.html`."
     if key.startswith("proof-"):
         return "Open the matching gftools proof HTML."
     if key.startswith("smoke-") or key.startswith("class-"):
-        return "Open `documentation/arabic-manual-review-dashboard.html` and linked reports."
+        return "Open `documentation/glyph-review/arabic-manual-review-dashboard.html` and linked reports."
     return "Open linked proof/source evidence."
 
 
@@ -172,14 +172,14 @@ def markdown_report() -> str:
         "",
         "This generated report records AI-safe observations for the full pending",
         "Arabic visual-review queue. It is not a human Arabic review, does not",
-        "approve drawings, and does not update `documentation/arabic-visual-review-log.md`.",
+        "approve drawings, and does not update `documentation/glyph-review/arabic-visual-review-log.md`.",
         "",
         "## Evidence Basis",
         "",
-        "- Snapshot coverage source: `documentation/arabic-next-review-snapshots.md`",
-        "- Focused zoom snapshot source: `documentation/arabic-first-review-zoom-snapshots.md`",
-        "- Snapshot integrity source: `documentation/arabic-snapshot-integrity.md`",
-        "- Official review log: `documentation/arabic-visual-review-log.md`",
+        "- Snapshot coverage source: `documentation/glyph-review/arabic-next-review-snapshots.md`",
+        "- Focused zoom snapshot source: `documentation/glyph-review/arabic-first-review-zoom-snapshots.md`",
+        "- Snapshot integrity source: `documentation/glyph-review/arabic-snapshot-integrity.md`",
+        "- Official review log: `documentation/glyph-review/arabic-visual-review-log.md`",
         f"- Pending/fix-needed rows covered: {len(rows)}",
         "",
         "## Coverage Audit",

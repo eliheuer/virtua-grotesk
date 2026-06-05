@@ -12,7 +12,7 @@ import report_arabic_visual_review_runbook as runbook
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_OUTPUT = ROOT / "documentation/arabic-drawing-session-checklist.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/arabic-drawing-session-checklist.md"
 
 
 def clean(value: str) -> str:
@@ -126,9 +126,9 @@ def markdown_report() -> str:
         "## Start Here",
         "",
         "1. Run `make arabic-before-drawing-check` before opening the sources.",
-        "2. Open `documentation/arabic-print-proof.pdf` and `documentation/arabic-print-proof-index.md`.",
-        "3. Open `documentation/arabic-current-review-worksheet.md` for the current five-row sheet.",
-        "4. Open `documentation/arabic-next-review-board.html` for snapshots, AI notes, proof links, and edit targets.",
+        "2. Open `documentation/glyph-review/arabic-print-proof.pdf` and `documentation/glyph-review/arabic-print-proof-index.md`.",
+        "3. Open `documentation/glyph-review/arabic-current-review-worksheet.md` for the current five-row sheet.",
+        "4. Open `documentation/glyph-review/arabic-next-review-board.html` for snapshots, AI notes, proof links, and edit targets.",
         "5. Record each row as `pass`, `fix-needed`, or `deferred` using the row commands below; do not leave reviewed rows implicit.",
         "6. Optional: use `make arabic-visual-review-batch-tsv` only if you want a small batch-entry form instead of one command per row.",
         "",
@@ -140,7 +140,7 @@ def markdown_report() -> str:
         "- `make arabic-pending-source-checkpoint` records Regular/Bold structure for all unresolved review source targets.",
         "- `make ufo-editor-check` validates both UFO packages and every GLIF in strict mode.",
         "- `make runebender-ufo-check` validates both active UFOs with the same Norad loader family Runebender uses.",
-        "- The canonical review record is `documentation/arabic-visual-review-log.md`; the TSV is only an optional temporary input form.",
+        "- The canonical review record is `documentation/glyph-review/arabic-visual-review-log.md`; the TSV is only an optional temporary input form.",
         "- If you use the TSV form, `make arabic-visual-review-batch-apply-check` applies it, regenerates reports, and reruns preflight.",
         "- If either check fails, fix the source package before drawing.",
         "",
@@ -184,7 +184,7 @@ def markdown_report() -> str:
             evidence = clean(row[3])
             cue = clean(row[5])
             paths = resolved_evidence_paths(key, evidence)
-            snapshot = ROOT / "documentation/arabic-review-snapshots" / f"{key}.png"
+            snapshot = ROOT / "documentation/glyph-review/review-snapshots" / f"{key}.png"
             if snapshot.exists() and snapshot not in paths:
                 paths.append(snapshot)
             lines.extend(
@@ -267,7 +267,7 @@ def markdown_report() -> str:
             "make kerning-proof-review-check",
             "```",
             "",
-            "Before closing the Arabic goal, verify `documentation/arabic-goal-completion-audit.md`",
+            "Before closing the Arabic goal, verify `documentation/glyph-review/arabic-goal-completion-audit.md`",
             "shows every requirement as proven, including human visual review.",
             "",
             "## Optional Batch Recording Shortcut",
@@ -278,14 +278,14 @@ def markdown_report() -> str:
             "",
             "```bash",
             "make arabic-visual-review-batch-tsv",
-            "$EDITOR documentation/arabic-visual-review-batch.tsv",
+            "$EDITOR documentation/glyph-review/arabic-visual-review-batch.tsv",
             "make arabic-visual-review-batch-dry-run",
             "make arabic-visual-review-batch-apply-check",
             "```",
             "",
             "Leave rows blank until they are actually reviewed. Valid statuses are",
             "`pass`, `fix-needed`, and `deferred`. The TSV is not canonical;",
-            "the canonical record remains `documentation/arabic-visual-review-log.md`.",
+            "the canonical record remains `documentation/glyph-review/arabic-visual-review-log.md`.",
             "",
         ]
     )

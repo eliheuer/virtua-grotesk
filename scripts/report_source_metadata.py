@@ -99,7 +99,7 @@ def markdown_report(ufo_paths: list[Path]) -> str:
         "",
         (
             "This report records Google Fonts-facing metadata from the active UFO "
-            "sources. Use it with `documentation/generated-font-metadata.md` to "
+            "sources. Use it with `documentation/google-fonts/generated-font-metadata.md` to "
             "confirm that source metadata and built binary metadata stay aligned."
         ),
         "",

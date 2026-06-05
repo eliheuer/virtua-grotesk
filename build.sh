@@ -8,8 +8,6 @@ set -euo pipefail
 
 if [ -d "venv" ]; then
     source venv/bin/activate
-elif [ -n "${HOME:-}" ] && [ -d "$HOME/Py/venvs/basic-fonts" ]; then
-    source "$HOME/Py/venvs/basic-fonts/bin/activate"
 fi
 
 echo "Building Virtua Grotesk fonts..."

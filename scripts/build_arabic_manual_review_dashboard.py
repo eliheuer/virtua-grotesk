@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import html
+import os
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -15,14 +16,14 @@ from fontTools.ttLib import TTFont
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / "documentation/arabic-manual-review-dashboard.html"
-NEXT_BATCH_OUTPUT = ROOT / "documentation/arabic-next-review-batch.html"
-VISUAL_LOG = ROOT / "documentation/arabic-visual-review-log.md"
-CONTOUR_LOG = ROOT / "documentation/contour-cleanup-decision-log.md"
-RISK_AUDIT = ROOT / "documentation/arabic-visual-risk-audit.md"
-STRUCTURE_TRIAGE = ROOT / "documentation/arabic-structure-triage.md"
-MARK_TRIAGE = ROOT / "documentation/arabic-mark-triage.md"
-PROOF_DIR = ROOT / "documentation/gftools-qa/Proof"
+OUTPUT = ROOT / "documentation/glyph-review/arabic-manual-review-dashboard.html"
+NEXT_BATCH_OUTPUT = ROOT / "documentation/glyph-review/arabic-next-review-batch.html"
+VISUAL_LOG = ROOT / "documentation/glyph-review/arabic-visual-review-log.md"
+CONTOUR_LOG = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md"
+RISK_AUDIT = ROOT / "documentation/glyph-review/arabic-visual-risk-audit.md"
+STRUCTURE_TRIAGE = ROOT / "documentation/glyph-review/arabic-structure-triage.md"
+MARK_TRIAGE = ROOT / "documentation/glyph-review/arabic-mark-triage.md"
+PROOF_DIR = ROOT / "documentation/google-fonts/gftools-qa/Proof"
 SOURCE_UFOS = [
     ROOT / "sources/VirtuaGrotesk-Regular.ufo",
     ROOT / "sources/VirtuaGrotesk-Bold.ufo",
@@ -329,7 +330,7 @@ def proof_links(output_path: Path) -> list[tuple[str, str]]:
     links: list[tuple[str, str]] = []
     for path in sorted(PROOF_DIR.glob("*.html")):
         label = path.name
-        href = path.relative_to(output_path.parent)
+        href = os.path.relpath(path, output_path.parent)
         links.append((label, str(href)))
     return links
 

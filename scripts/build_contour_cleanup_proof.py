@@ -18,16 +18,16 @@ from fontTools.ufoLib import UFOReader
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_REPORT = ROOT / "documentation/fontspector-contour-count.md"
-DEFAULT_OUTPUT = ROOT / "documentation/contour-cleanup-proof.html"
-DEFAULT_QUEUE_OUTPUT = ROOT / "documentation/contour-cleanup-review-queue.md"
-DEFAULT_EDIT_PLAN_OUTPUT = ROOT / "documentation/contour-cleanup-edit-plan.md"
-DEFAULT_BRIEF_OUTPUT = ROOT / "documentation/arabic-cleanup-drawing-briefs.md"
-DEFAULT_BATCH_OUTPUT = ROOT / "documentation/contour-cleanup-batches.md"
-DEFAULT_DECISION_OUTPUT = ROOT / "documentation/contour-cleanup-decision-log.md"
-DEFAULT_TRIAGE_OUTPUT = ROOT / "documentation/contour-cleanup-ai-triage.md"
-DEFAULT_SOURCE_EDIT_OUTPUT = ROOT / "documentation/contour-cleanup-source-edit-runlist.md"
-DEFAULT_FIRST_BATCH_OUTPUT = ROOT / "documentation/contour-cleanup-first-edit-batch.md"
+DEFAULT_REPORT = ROOT / "documentation/google-fonts/fontspector-contour-count.md"
+DEFAULT_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html"
+DEFAULT_QUEUE_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-review-queue.md"
+DEFAULT_EDIT_PLAN_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-edit-plan.md"
+DEFAULT_BRIEF_OUTPUT = ROOT / "documentation/glyph-review/arabic-cleanup-drawing-briefs.md"
+DEFAULT_BATCH_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-batches.md"
+DEFAULT_DECISION_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md"
+DEFAULT_TRIAGE_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-ai-triage.md"
+DEFAULT_SOURCE_EDIT_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md"
+DEFAULT_FIRST_BATCH_OUTPUT = ROOT / "documentation/glyph-review/contour-cleanup/contour-cleanup-first-edit-batch.md"
 DEFAULT_REFERENCE_CANDIDATES = [
     Path("/Users/eli/GH/forks/fonts/ofl/rubik/Rubik[wght].ttf"),
     Path("/Users/eli/GH/repos/google-fonts/ofl/rubik/Rubik[wght].ttf"),
@@ -545,11 +545,11 @@ def build_batch_plan(findings: list[Finding], reference_path: Path | None) -> st
         "cleanup plus AI comparison notes. Rubik is a structural reference only;",
         "do not copy outlines from it into Virtua Grotesk.",
         "",
-        f"- Source report: `documentation/fontspector-contour-count.md`",
-        f"- Visual proof: `documentation/contour-cleanup-proof.html`",
-        f"- Source edit runlist: `documentation/contour-cleanup-source-edit-runlist.md`",
-        f"- First edit batch: `documentation/contour-cleanup-first-edit-batch.md`",
-        f"- Detailed prompt cards: `documentation/arabic-cleanup-drawing-briefs.md`",
+        f"- Source report: `documentation/google-fonts/fontspector-contour-count.md`",
+        f"- Visual proof: `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`",
+        f"- Source edit runlist: `documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md`",
+        f"- First edit batch: `documentation/glyph-review/contour-cleanup/contour-cleanup-first-edit-batch.md`",
+        f"- Detailed prompt cards: `documentation/glyph-review/arabic-cleanup-drawing-briefs.md`",
         f"- Unique review items: {len(items)}",
         f"- All-font finding rows: {len(findings)}",
         "",
@@ -765,11 +765,11 @@ def build_cleanup_briefs(findings: list[Finding], reference_path: Path | None) -
         "comparison notes, and hand editing. Do not copy outlines from Rubik or",
         "any other reference font into Virtua Grotesk.",
         "",
-        f"- Source report: `documentation/fontspector-contour-count.md`",
-        f"- Visual proof: `documentation/contour-cleanup-proof.html`",
-        f"- Edit plan: `documentation/contour-cleanup-edit-plan.md`",
-        f"- Source edit runlist: `documentation/contour-cleanup-source-edit-runlist.md`",
-        f"- First edit batch: `documentation/contour-cleanup-first-edit-batch.md`",
+        f"- Source report: `documentation/google-fonts/fontspector-contour-count.md`",
+        f"- Visual proof: `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`",
+        f"- Edit plan: `documentation/glyph-review/contour-cleanup/contour-cleanup-edit-plan.md`",
+        f"- Source edit runlist: `documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md`",
+        f"- First edit batch: `documentation/glyph-review/contour-cleanup/contour-cleanup-first-edit-batch.md`",
         f"- Reference font availability: `{reference_label}`",
         f"- Briefs: {len(items)}",
         "",
@@ -885,11 +885,11 @@ def build_ai_triage(findings: list[Finding], reference_path: Path | None) -> str
         "This generated sheet is an AI-assisted starting point for the manual",
         "contour/no-contour review. It does not mark anything accepted, fixed,",
         "or deferred. Use it to choose a review lane, then inspect the proof and",
-        "record the human decision in `documentation/contour-cleanup-decision-log.md`.",
+        "record the human decision in `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`.",
         "",
-        "- Source report: `documentation/fontspector-contour-count.md`",
-        "- Visual proof: `documentation/contour-cleanup-proof.html`",
-        "- Decision log: `documentation/contour-cleanup-decision-log.md`",
+        "- Source report: `documentation/google-fonts/fontspector-contour-count.md`",
+        "- Visual proof: `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`",
+        "- Decision log: `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`",
         f"- Triage items: {len(items)}",
         "",
         "## Lane Counts",
@@ -911,7 +911,7 @@ def build_ai_triage(findings: list[Finding], reference_path: Path | None) -> str
             "",
             "## How To Use",
             "",
-            "1. Open `documentation/contour-cleanup-proof.html` and the matching glyph in Runebender.",
+            "1. Open `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html` and the matching glyph in Runebender.",
             "2. Use the triage lane to decide whether to inspect components, mark placement, dot collisions, letterform structure, or punctuation rhythm first.",
             "3. If the glyph needs source edits, use the `fix-now` command pattern and edit both masters.",
             "4. If the glyph is visually intentional, use the `accepted` command pattern with a specific proof note.",
@@ -945,15 +945,15 @@ def build_source_edit_runlist(
         "",
         "This generated runlist is the shortest path from the current contour-count",
         "warnings to source edits. It includes only rows currently marked",
-        "`fix-now` in `documentation/contour-cleanup-decision-log.md`.",
+        "`fix-now` in `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`.",
         "",
         "Do not copy outlines from Rubik or any other reference. Use references only",
         "for structural comparison, then edit both Virtua masters deliberately.",
         "",
-        "- Source report: `documentation/fontspector-contour-count.md`",
-        "- Decision log: `documentation/contour-cleanup-decision-log.md`",
-        "- Visual proof: `documentation/contour-cleanup-proof.html`",
-        "- Drawing briefs: `documentation/arabic-cleanup-drawing-briefs.md`",
+        "- Source report: `documentation/google-fonts/fontspector-contour-count.md`",
+        "- Decision log: `documentation/glyph-review/contour-cleanup/contour-cleanup-decision-log.md`",
+        "- Visual proof: `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`",
+        "- Drawing briefs: `documentation/glyph-review/arabic-cleanup-drawing-briefs.md`",
         f"- Fix-now source glyphs: {len(fix_items)}",
         "",
         "## Edit Loop",
@@ -961,7 +961,7 @@ def build_source_edit_runlist(
         "For each glyph:",
         "",
         "1. Open the Regular and Bold sources with the listed `/edit-glyph` command.",
-        "2. Compare the built glyph in `documentation/contour-cleanup-proof.html`.",
+        "2. Compare the built glyph in `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`.",
         "3. Edit both masters if the proof shows a real drawing issue.",
         "4. Preserve matching contour, point, and component structure across masters.",
         "5. Mark the row `fixed`, `accepted`, or `deferred` with proof notes.",
@@ -1054,9 +1054,9 @@ def build_first_edit_batch(
         "the component bases, and the surrounding Arabic letterforms before making",
         "source changes.",
         "",
-        "- Source edit runlist: `documentation/contour-cleanup-source-edit-runlist.md`",
-        "- Visual proof: `documentation/contour-cleanup-proof.html`",
-        "- Next review page: `documentation/arabic-next-review-batch.html`",
+        "- Source edit runlist: `documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md`",
+        "- Visual proof: `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`",
+        "- Next review page: `documentation/glyph-review/arabic-next-review-batch.html`",
         f"- First-batch fix-now glyphs: {len(fix_items)}",
         "",
         "## Work Order",
@@ -1137,12 +1137,12 @@ def build_edit_plan(findings: list[Finding]) -> str:
         "This generated checklist converts Fontspector production glyph names into",
         "source glyph names for the manual drawing pass. Work from this file when",
         "opening glyphs in Runebender or with the local `/edit-glyph` helper, then",
-        "compare against `documentation/contour-cleanup-proof.html` before changing",
+        "compare against `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html` before changing",
         "contour structure.",
         "For the shortest active edit queue, use",
-        "`documentation/contour-cleanup-source-edit-runlist.md`.",
+        "`documentation/glyph-review/contour-cleanup/contour-cleanup-source-edit-runlist.md`.",
         "For the first component-only drawing session, use",
-        "`documentation/contour-cleanup-first-edit-batch.md`.",
+        "`documentation/glyph-review/contour-cleanup/contour-cleanup-first-edit-batch.md`.",
         "",
         "Do not add or remove contours only to satisfy Fontspector. Edit both",
         "masters deliberately, preserve interpolation compatibility, and rerun",
@@ -1152,7 +1152,7 @@ def build_edit_plan(findings: list[Finding]) -> str:
         "Source structure uses `c` = source contours, `p` = source points, and",
         "`comp` = source components. `Compatible` means Regular and Bold have",
         "matching counts before editing; it is a quick triage signal, not a",
-        "substitute for `documentation/master-compatibility.md`.",
+        "substitute for `documentation/source/master-compatibility.md`.",
         "",
         f"- Unique source glyphs: {len({item.source_name for item in items})}",
         f"- Unique Fontspector glyph items: {len(items)}",
@@ -1212,9 +1212,9 @@ def build_markdown_queue(findings: list[Finding], reference_path: Path | None) -
     lines = [
         "# Contour Cleanup Review Queue",
         "",
-        "This generated queue deduplicates `documentation/fontspector-contour-count.md`",
+        "This generated queue deduplicates `documentation/google-fonts/fontspector-contour-count.md`",
         "so manual drawing cleanup can work through unique glyph decisions before",
-        "checking repeated built-font rows in `documentation/contour-cleanup-proof.html`.",
+        "checking repeated built-font rows in `documentation/glyph-review/contour-cleanup/contour-cleanup-proof.html`.",
         "",
         f"- Unique glyph review items: {len(items)}",
         f"- All-font finding rows: {len(findings)}",
