@@ -28,8 +28,8 @@ FONTS = {
     "Bold": FONT_DIR / "VirtuaGrotesk-Bold.ttf",
 }
 
-WIDTH = 1600
-HEIGHT = 1600
+WIDTH = 2048
+HEIGHT = 1024
 MARGIN = 96
 
 INK = (0.86, 0.86, 0.82)
@@ -114,7 +114,7 @@ def draw_glyphset_overview() -> None:
         "Weight axis overview and core Latin glyph set",
     )
 
-    y = HEIGHT - 310
+    y = HEIGHT - 290
     samples = [
         ("Regular", "ABCDEFGHIJKLM"),
         ("Regular", "NOPQRSTUVWXYZ"),
@@ -130,15 +130,15 @@ def draw_glyphset_overview() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text(text, (MARGIN + 170, y))
-        y -= 122
+        y -= 86
 
-    y -= 22
+    y -= 8
     db.stroke(*RULE)
     db.strokeWidth(2)
     db.line((MARGIN, y), (WIDTH - MARGIN, y))
     db.stroke(None)
 
-    y -= 84
+    y -= 47
     for style, text in [
         ("Regular", "Hamburgefontsiv"),
         ("Medium", "Sphinx of black quartz"),
@@ -151,7 +151,7 @@ def draw_glyphset_overview() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text(text, (MARGIN + 170, y))
-        y -= 58
+        y -= 42
 
     save(db, OUTPUT_DIR / "glyphset-overview.png")
 
@@ -192,10 +192,10 @@ def draw_aa_grid() -> None:
         "1024 UPM, even coordinates, 16-unit chamfer logic",
     )
 
-    grid_x = 150
-    grid_y = 210
-    grid_w = 1050
-    grid_h = 980
+    grid_x = 170
+    grid_y = 115
+    grid_w = 1230
+    grid_h = 720
     scale = grid_h / (ascender - descender)
     baseline_y = grid_y + (-descender * scale)
 
@@ -273,7 +273,7 @@ def draw_text_sizes() -> None:
         (16, "Small text remains open, sturdy, and useful for interface systems."),
         (12, "Caption size: regular rhythm, clear counters, compact spacing, and sharp construction detail."),
     ]
-    y = HEIGHT - 320
+    y = HEIGHT - 304
     for size, text in samples:
         label(db, f"{size} px", MARGIN, y + size * 0.26, 20)
         db.font(str(FONTS["Regular"]))
@@ -281,14 +281,14 @@ def draw_text_sizes() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text(text, (MARGIN + 122, y))
-        y -= max(86, size * 1.42)
+        y -= max(58, size * 1.12)
 
-    y -= 10
+    y -= 6
     db.stroke(*RULE)
     db.strokeWidth(2)
     db.line((MARGIN, y), (WIDTH - MARGIN, y))
     db.stroke(None)
-    y -= 118
+    y -= 52
 
     for style in ["Regular", "Medium", "SemiBold", "Bold"]:
         label(db, style, MARGIN, y + 8, 20)
@@ -297,7 +297,7 @@ def draw_text_sizes() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text("Designing software for careful reading.", (MARGIN + 122, y))
-        y -= 70
+        y -= 45
 
     save(db, OUTPUT_DIR / "text-sizes.png")
 
