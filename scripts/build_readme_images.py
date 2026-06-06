@@ -28,16 +28,18 @@ FONTS = {
     "Bold": FONT_DIR / "VirtuaGrotesk-Bold.ttf",
 }
 
-WIDTH = 1800
-HEIGHT = 1120
+WIDTH = 1600
+HEIGHT = 1600
 MARGIN = 96
 
-INK = (0.05, 0.06, 0.06)
-PAPER = (0.965, 0.955, 0.925)
-MUTED = (0.42, 0.43, 0.40)
-RULE = (0.78, 0.78, 0.72)
-ACCENT = (0.92, 0.24, 0.18)
-BLUE = (0.12, 0.36, 0.80)
+INK = (0.86, 0.86, 0.82)
+PAPER = (0.13, 0.13, 0.13)
+MUTED = (0.58, 0.58, 0.54)
+RULE = (0.34, 0.34, 0.32)
+GRID_MINOR = (0.22, 0.22, 0.21)
+GRID_MAJOR = (0.42, 0.42, 0.39)
+ACCENT = (0.72, 0.72, 0.68)
+BLUE = (0.78, 0.78, 0.74)
 
 
 def require_fonts() -> None:
@@ -112,7 +114,7 @@ def draw_glyphset_overview() -> None:
         "Weight axis overview and core Latin glyph set",
     )
 
-    y = HEIGHT - 250
+    y = HEIGHT - 310
     samples = [
         ("Regular", "ABCDEFGHIJKLM"),
         ("Regular", "NOPQRSTUVWXYZ"),
@@ -128,15 +130,15 @@ def draw_glyphset_overview() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text(text, (MARGIN + 170, y))
-        y -= 104
+        y -= 122
 
-    y -= 12
+    y -= 22
     db.stroke(*RULE)
     db.strokeWidth(2)
     db.line((MARGIN, y), (WIDTH - MARGIN, y))
     db.stroke(None)
 
-    y -= 56
+    y -= 84
     for style, text in [
         ("Regular", "Hamburgefontsiv"),
         ("Medium", "Sphinx of black quartz"),
@@ -149,7 +151,7 @@ def draw_glyphset_overview() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text(text, (MARGIN + 170, y))
-        y -= 46
+        y -= 58
 
     save(db, OUTPUT_DIR / "glyphset-overview.png")
 
@@ -190,15 +192,15 @@ def draw_aa_grid() -> None:
         "1024 UPM, even coordinates, 16-unit chamfer logic",
     )
 
-    grid_x = 170
-    grid_y = 150
-    grid_w = 1100
-    grid_h = 760
+    grid_x = 150
+    grid_y = 210
+    grid_w = 1050
+    grid_h = 980
     scale = grid_h / (ascender - descender)
     baseline_y = grid_y + (-descender * scale)
 
     db.save()
-    db.stroke(0.84, 0.84, 0.78)
+    db.stroke(*GRID_MINOR)
     db.strokeWidth(1)
     for unit in range(descender, ascender + 1, 64):
         y = baseline_y + unit * scale
@@ -207,7 +209,7 @@ def draw_aa_grid() -> None:
         x = grid_x + unit * scale
         if x <= grid_x + grid_w:
             db.line((x, grid_y), (x, grid_y + grid_h))
-    db.stroke(0.68, 0.68, 0.62)
+    db.stroke(*GRID_MAJOR)
     db.strokeWidth(2)
     for unit in range(0, 1537, 128):
         x = grid_x + unit * scale
@@ -264,14 +266,14 @@ def draw_text_sizes() -> None:
 
     samples = [
         (92, "Virtua Grotesk"),
-        (62, "Monolinear strokes with chamfered corners"),
+        (62, "Chamfered corners, monolinear strokes"),
         (42, "The quick brown fox jumps over the lazy dog."),
         (30, "Pack my box with five dozen liquor jugs."),
         (22, "Sphinx of black quartz, judge my vow. 0123456789"),
         (16, "Small text remains open, sturdy, and useful for interface systems."),
         (12, "Caption size: regular rhythm, clear counters, compact spacing, and sharp construction detail."),
     ]
-    y = HEIGHT - 260
+    y = HEIGHT - 320
     for size, text in samples:
         label(db, f"{size} px", MARGIN, y + size * 0.26, 20)
         db.font(str(FONTS["Regular"]))
@@ -279,14 +281,14 @@ def draw_text_sizes() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text(text, (MARGIN + 122, y))
-        y -= max(64, size * 1.32)
+        y -= max(86, size * 1.42)
 
     y -= 10
     db.stroke(*RULE)
     db.strokeWidth(2)
     db.line((MARGIN, y), (WIDTH - MARGIN, y))
     db.stroke(None)
-    y -= 82
+    y -= 118
 
     for style in ["Regular", "Medium", "SemiBold", "Bold"]:
         label(db, style, MARGIN, y + 8, 20)
@@ -295,7 +297,7 @@ def draw_text_sizes() -> None:
         db.stroke(None)
         db.fill(*INK)
         db.text("Designing software for careful reading.", (MARGIN + 122, y))
-        y -= 56
+        y -= 70
 
     save(db, OUTPUT_DIR / "text-sizes.png")
 
