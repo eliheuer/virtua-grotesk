@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>.notdef</key>
+	<string>notdef.glif</string>
 	<key>A</key>
 	<string>A_.glif</string>
 	<key>AE</key>
@@ -100,8 +102,6 @@
 	<string>E_ogonek.glif</string>
 	<key>Eth</key>
 	<string>E_th.glif</string>
-	<key>Euro</key>
-	<string>Euro.glif</string>
 	<key>F</key>
 	<string>F_.glif</string>
 	<key>F001</key>
@@ -114,8 +114,8 @@
 	<string>G_.glif</string>
 	<key>Gbreve</key>
 	<string>G_breve.glif</string>
-	<key>Gcedilla</key>
-	<string>G_cedilla.glif</string>
+	<key>Gcommaaccent</key>
+	<string>G_commaaccent.glif</string>
 	<key>Gdotaccent</key>
 	<string>G_dotaccent.glif</string>
 	<key>Germandbls</key>
@@ -144,16 +144,16 @@
 	<string>J_.glif</string>
 	<key>K</key>
 	<string>K_.glif</string>
-	<key>Kcedilla</key>
-	<string>K_cedilla.glif</string>
+	<key>Kcommaaccent</key>
+	<string>K_commaaccent.glif</string>
 	<key>L</key>
 	<string>L_.glif</string>
 	<key>Lacute</key>
 	<string>L_acute.glif</string>
 	<key>Lcaron</key>
 	<string>L_caron.glif</string>
-	<key>Lcedilla</key>
-	<string>L_cedilla.glif</string>
+	<key>Lcommaaccent</key>
+	<string>L_commaaccent.glif</string>
 	<key>Lslash</key>
 	<string>L_slash.glif</string>
 	<key>M</key>
@@ -164,8 +164,8 @@
 	<string>N_acute.glif</string>
 	<key>Ncaron</key>
 	<string>N_caron.glif</string>
-	<key>Ncedilla</key>
-	<string>N_cedilla.glif</string>
+	<key>Ncommaaccent</key>
+	<string>N_commaaccent.glif</string>
 	<key>Ntilde</key>
 	<string>N_tilde.glif</string>
 	<key>O</key>
@@ -402,10 +402,10 @@
 	<string>cacute.glif</string>
 	<key>caron</key>
 	<string>caron.glif</string>
-	<key>caron.alt</key>
-	<string>caron.alt.glif</string>
 	<key>caroncomb</key>
 	<string>caroncomb.glif</string>
+	<key>caroncomb.alt</key>
+	<string>caroncomb.alt.glif</string>
 	<key>ccaron</key>
 	<string>ccaron.glif</string>
 	<key>ccedilla</key>
@@ -484,12 +484,8 @@
 	<string>dotbelow-ar.glif</string>
 	<key>dotcenter-ar</key>
 	<string>dotcenter-ar.glif</string>
-	<key>dotlessi</key>
-	<string>dotlessi.glif</string>
 	<key>dotlessiogonek</key>
 	<string>dotlessiogonek.glif</string>
-	<key>dotlessj</key>
-	<string>dotlessj.glif</string>
 	<key>dottedCircle</key>
 	<string>dottedCircle.glif</string>
 	<key>doublestroke-ar</key>
@@ -530,6 +526,8 @@
 	<string>equal.glif</string>
 	<key>eth</key>
 	<string>eth.glif</string>
+	<key>euro</key>
+	<string>euro.glif</string>
 	<key>exclam</key>
 	<string>exclam.glif</string>
 	<key>exclamdown</key>
@@ -614,8 +612,8 @@
 	<string>gafsarkashcenter-ar.glif</string>
 	<key>gbreve</key>
 	<string>gbreve.glif</string>
-	<key>gcedilla</key>
-	<string>gcedilla.glif</string>
+	<key>gcommaaccent</key>
+	<string>gcommaaccent.glif</string>
 	<key>gdotaccent</key>
 	<string>gdotaccent.glif</string>
 	<key>germandbls</key>
@@ -634,10 +632,10 @@
 	<string>gravecomb.glif</string>
 	<key>greater</key>
 	<string>greater.glif</string>
-	<key>guillemotleft</key>
-	<string>guillemotleft.glif</string>
-	<key>guillemotright</key>
-	<string>guillemotright.glif</string>
+	<key>guillemetleft</key>
+	<string>guillemetleft.glif</string>
+	<key>guillemetright</key>
+	<string>guillemetright.glif</string>
 	<key>guilsinglleft</key>
 	<string>guilsinglleft.glif</string>
 	<key>guilsinglright</key>
@@ -720,6 +718,10 @@
 	<string>icircumflex.glif</string>
 	<key>idieresis</key>
 	<string>idieresis.glif</string>
+	<key>idotaccent</key>
+	<string>idotaccent.glif</string>
+	<key>idotless</key>
+	<string>idotless.glif</string>
 	<key>igrave</key>
 	<string>igrave.glif</string>
 	<key>imacron</key>
@@ -730,6 +732,8 @@
 	<string>iogonek.glif</string>
 	<key>j</key>
 	<string>j.glif</string>
+	<key>jdotless</key>
+	<string>jdotless.glif</string>
 	<key>jeem-ar</key>
 	<string>jeem-ar.glif</string>
 	<key>jeem-ar.fina</key>
@@ -758,8 +762,8 @@
 	<string>kasra-ar.glif</string>
 	<key>kasratan-ar</key>
 	<string>kasratan-ar.glif</string>
-	<key>kcedilla</key>
-	<string>kcedilla.glif</string>
+	<key>kcommaaccent</key>
+	<string>kcommaaccent.glif</string>
 	<key>keheh-ar</key>
 	<string>keheh-ar.glif</string>
 	<key>keheh-ar.fina</key>
@@ -818,8 +822,8 @@
 	<string>lam_alefW_asla-ar.fina.glif</string>
 	<key>lcaron</key>
 	<string>lcaron.glif</string>
-	<key>lcedilla</key>
-	<string>lcedilla.glif</string>
+	<key>lcommaaccent</key>
+	<string>lcommaaccent.glif</string>
 	<key>less</key>
 	<string>less.glif</string>
 	<key>lslash</key>
@@ -850,10 +854,12 @@
 	<string>n.glif</string>
 	<key>nacute</key>
 	<string>nacute.glif</string>
+	<key>nbspace</key>
+	<string>nbspace.glif</string>
 	<key>ncaron</key>
 	<string>ncaron.glif</string>
-	<key>ncedilla</key>
-	<string>ncedilla.glif</string>
+	<key>ncommaaccent</key>
+	<string>ncommaaccent.glif</string>
 	<key>nine</key>
 	<string>nine.glif</string>
 	<key>nine-ar</key>
@@ -944,6 +950,10 @@
 	<string>period.glif</string>
 	<key>periodcentered</key>
 	<string>periodcentered.glif</string>
+	<key>periodcentered.loclCAT</key>
+	<string>periodcentered.loclCAT.glif</string>
+	<key>periodcentered.loclCAT.case</key>
+	<string>periodcentered.loclCAT.case.glif</string>
 	<key>plus</key>
 	<string>plus.glif</string>
 	<key>q</key>
@@ -1254,8 +1264,6 @@
 	<string>umacron.glif</string>
 	<key>underscore</key>
 	<string>underscore.glif</string>
-	<key>uni00A0</key>
-	<string>uni00A0.glif</string>
 	<key>uni200C</key>
 	<string>uni200C.glif</string>
 	<key>uni200D</key>

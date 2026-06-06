@@ -7,7 +7,7 @@ languagesystem latn dflt;
 @FIGURES_PROPORTIONAL = [zero one two three four five six seven eight nine];
 @FIGURES_TABULAR = [zero.tf one.tf two.tf three.tf four.tf five.tf six.tf seven.tf eight.tf nine.tf];
 @SOFT_DOTTED_BASES = [i j];
-@SOFT_DOTTED_DOTLESS = [dotlessi dotlessj];
+@SOFT_DOTTED_DOTLESS = [idotless jdotless];
 @SOFT_DOTTED_ABOVE_MARKS = [acutecomb gravecomb circumflexcomb tildecomb macroncomb brevecomb dotaccentcomb dieresiscomb ringcomb hungarumlautcomb caroncomb];
 
 table GDEF {
@@ -27,7 +27,7 @@ sub @FIGURES_PROPORTIONAL by @FIGURES_TABULAR;
 } tnum;
 
 @ARAB_MARK_BASES = [dottedCircle alef-ar beh-ar teh-ar jeem-ar seen-ar sad-ar tah-ar meem-ar noon-ar heh-ar waw-ar yeh-ar];
-@LATIN_TOP_BASES = [J dotlessj dottedCircle];
+@LATIN_TOP_BASES = [J jdotless dottedCircle];
 
 markClass acutecomb <anchor 150 638> @MC_latin_top;
 
