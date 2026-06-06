@@ -4,7 +4,11 @@ Virtua Grotesk is an open-source variable geometric grotesk with a Weight axis
 from Regular to Bold. The design uses monolinear strokes and chamfered corners
 as a defining construction detail.
 
-![Virtua Grotesk specimen](documentation/assets/readme-specimen.png)
+![Virtua Grotesk glyphset overview](documentation/assets/readme/glyphset-overview.png)
+
+![Virtua Grotesk Aa construction grid](documentation/assets/readme/aa-grid.png)
+
+![Virtua Grotesk text sizes](documentation/assets/readme/text-sizes.png)
 
 ## About
 
@@ -75,6 +79,7 @@ The normal local workflow is intentionally small:
 | `make build` | Build variable and static TTFs into `fonts/`. |
 | `make proof` | Render the main DrawBot-skia PDF proof. |
 | `make specimen` | Render the landscape print spacing specimen PDF. |
+| `make readme-images` | Render the DrawBot-skia README PNG specimens. |
 | `make qa` / `make test` | Run Fontspector's Google Fonts profile. |
 | `make reports` | Regenerate generated readiness/review reports. |
 | `make preflight` | Build, proof, specimen, reports, then check expected artifacts. |
@@ -113,6 +118,8 @@ When `DRAWBOT_SKIA_REPO` is set, the Makefile prepends
 `$DRAWBOT_SKIA_REPO/src` to `PYTHONPATH` for proof generation.
 Run `make proof` for the main proof and `make specimen` for the landscape
 spacing specimen. Both outputs are written to `documentation/proofs/`.
+Run `make readme-images` to regenerate the README PNG specimens in
+`documentation/assets/readme/`.
 
 ## Google Fonts Readiness
 
