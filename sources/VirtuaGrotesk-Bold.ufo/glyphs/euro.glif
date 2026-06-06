@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="euro" format="2">
+	<unicode hex="20AC"/>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="100" y="388" type="line"/>
+			<point x="412" y="388" type="line"/>
+			<point x="412" y="472" type="line"/>
+			<point x="100" y="472" type="line"/>
+		</contour>
+		<contour>
+			<point x="100" y="292" type="line"/>
+			<point x="380" y="292" type="line"/>
+			<point x="380" y="376" type="line"/>
+			<point x="100" y="376" type="line"/>
+		</contour>
+		<contour>
+			<point x="520" y="552" type="line"/>
+			<point x="328" y="552" type="line"/>
+			<point x="164" y="432" type="line"/>
+			<point x="164" y="292" type="line"/>
+			<point x="328" y="172" type="line"/>
+			<point x="520" y="172" type="line"/>
+			<point x="568" y="236" type="line"/>
+			<point x="444" y="236" type="line"/>
+			<point x="344" y="236" type="line"/>
+			<point x="252" y="304" type="line"/>
+			<point x="252" y="420" type="line"/>
+			<point x="344" y="488" type="line"/>
+			<point x="444" y="488" type="line"/>
+			<point x="568" y="488" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
+</glyph>

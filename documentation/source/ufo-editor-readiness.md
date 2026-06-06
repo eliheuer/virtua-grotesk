@@ -15,8 +15,8 @@ launch the editor; it validates the on-disk UFO package with
 
 | UFO | Loadable | Layers | Glyphs | GLIF read errors | Missing files | Duplicate filenames | Ready |
 | --- | --- | --- | ---: | ---: | ---: | ---: | --- |
-| `sources/VirtuaGrotesk-Regular.ufo` | yes | `public.default` | 682 | 0 | 0 | 0 | yes |
-| `sources/VirtuaGrotesk-Bold.ufo` | yes | `public.default` | 682 | 0 | 0 | 0 | yes |
+| `sources/VirtuaGrotesk-Regular.ufo` | yes | `public.default` | 686 | 0 | 0 | 0 | yes |
+| `sources/VirtuaGrotesk-Bold.ufo` | yes | `public.default` | 686 | 0 | 0 | 0 | yes |
 
 ## Hand Cleanup Use
 
