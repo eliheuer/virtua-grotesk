@@ -10,7 +10,7 @@ GFT_PACKAGER_SOURCE_MODE ?= latest-release
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 
-.PHONY: help setup build proof specimen qa test reports preflight drawing-check release-check package-check clean
+.PHONY: help setup build proof specimen readme-images qa test reports preflight drawing-check release-check package-check clean
 
 help:
 	@printf '%s\n' \
@@ -19,6 +19,7 @@ help:
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
 		'  make specimen       Build the landscape spacing specimen PDF' \
+		'  make readme-images  Build README PNG specimen images' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate generated readiness/review reports' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
@@ -39,6 +40,9 @@ proof: build
 
 specimen: build
 	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_print_spacing_specimen.py
+
+readme-images: build
+	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_readme_images.py
 
 qa: build
 	./scripts/check_gf_fonts.sh
