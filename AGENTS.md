@@ -12,7 +12,7 @@ Virtua Grotesk is an open-source variable font (OFL v1.1 licensed) with a Weight
 /build-font             # Build all fonts (variable + static)
 /proof                  # Generate PDF proof document
 make specimen           # Generate landscape print spacing specimen
-make reports            # Regenerate readiness/review reports
+make reports            # Regenerate source/build metadata reports
 make preflight          # Build, proof, specimen, reports, then check artifacts
 make test               # Build, then run Fontspector googlefonts profile
 /edit-glyph A           # Inspect/edit a glyph
@@ -40,7 +40,7 @@ make setup      # Create .venv and install requirements
 make build      # Build variable and static TTFs into fonts/
 make proof      # Build documentation/proofs/proof.pdf
 make specimen   # Build documentation/proofs/print-spacing-specimen.pdf
-make reports    # Regenerate generated readiness/review reports
+make reports    # Regenerate source/build metadata reports
 make preflight  # Run the full local handoff gate
 make test       # Build, then run Fontspector's googlefonts profile
 ```
@@ -64,17 +64,17 @@ Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and 
 - `make proof` renders the main DrawBot-skia PDF proof.
 - `make specimen` renders the landscape print spacing specimen at
   `documentation/proofs/print-spacing-specimen.pdf`.
-- `make reports` refreshes generated readiness/review Markdown.
+- `make reports` refreshes the active source/build metadata Markdown reports.
 - `make preflight` is the normal local gate: build, proof, specimen, reports,
   then verify expected artifacts exist.
-- Use `make drawing-check` during drawing sessions, `make release-check` for
-  source/release blockers, and `make package-check` for downstream package
-  readiness reports.
 - Agents should regenerate or re-review proofs after spacing, kerning,
   build-output, or kerning-scope changes, then rerun `make preflight`.
 - Do not treat kerning as final until the source kerning decision is recorded,
   the generated fonts expose the expected kerning behavior, and the
   `gftools qa --proof` output has been reviewed.
+- Old agent-generated helper scripts are archived under
+  `documentation/archive/agent-generated-scripts/`; do not wire them back into
+  the active Makefile unless there is a clear current need.
 
 ## Proof Generation
 

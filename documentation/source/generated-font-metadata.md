@@ -1,6 +1,6 @@
 # Generated Font Metadata
 
-This report records Google Fonts-facing metadata from the built variable and static TTFs. It is generated from binaries after the post-build metadata patch, so it should match the files used for Fontspector and downstream packaging review.
+This report records metadata from the built variable and static TTFs. It is generated from binaries after the post-build metadata patch, so it should match the files used for local QA and downstream packaging.
 
 ## Names
 

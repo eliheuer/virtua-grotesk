@@ -81,21 +81,14 @@ The normal local workflow is intentionally small:
 | `make specimen` | Render the landscape print spacing specimen PDF. |
 | `make readme-images` | Render the DrawBot-skia README PNG specimens. |
 | `make qa` / `make test` | Run Fontspector's Google Fonts profile. |
-| `make reports` | Regenerate generated readiness/review reports. |
+| `make reports` | Regenerate source/build metadata reports. |
 | `make preflight` | Build, proof, specimen, reports, then check expected artifacts. |
-| `make drawing-check` | Refresh drawing-session reports while editing sources. |
-| `make release-check` | Refresh source/release blocker reports. |
-| `make package-check` | Refresh downstream package readiness reports. |
-
-Use `GFT_PACKAGER_SOURCE_MODE=latest-release make package-check` or
-`GFT_PACKAGER_SOURCE_MODE=build-from-source make package-check` when comparing
-Google Fonts Packager source strategies.
 
 The canonical human/agent QA checklist is
-`documentation/core-qa-process.md`. Generated readiness reports live under
-`documentation/google-fonts/`; when in doubt, start with
-`documentation/google-fonts/final-submission-blockers.md` and
-`documentation/google-fonts/next-actions.md`.
+`documentation/core-qa-process.md`. The active generated reports live under
+`documentation/source/` and cover UFO metadata, generated font metadata, and
+master compatibility. Older agent-generated report machinery is archived under
+`documentation/archive/agent-generated-scripts/`.
 
 `build.sh` is a small wrapper around `gftools builder sources/config.yaml`.
 It cleans stale outputs, builds variable and static TTFs into `fonts/`, then
@@ -123,16 +116,13 @@ Run `make readme-images` to regenerate the README PNG specimens in
 
 ## Google Fonts Readiness
 
-See `documentation/google-fonts/google-fonts-readiness.md` for the current onboarding
-checklist, open decisions, and known engineering blockers. The final downstream
-packaging checklist is in
-`documentation/google-fonts/google-fonts-package-checklist.md`. The shortest place to answer
-remaining policy and metadata decisions is
-`documentation/google-fonts/google-fonts-decision-questions.md`.
+See `documentation/google-fonts/README.md` for the current curated Google Fonts
+notes and active submission text files. Older generated readiness reports were
+archived under `documentation/archive/agent-generated-reports/google-fonts/`.
 
 If pausing for hand cleanup or drawing work, use
 `documentation/manual-cleanup-handoff.md` as the checkpoint before resuming the
-final package sequence.
+build, proof, and QA sequence.
 
 Reusable Google Fonts onboarding knowledge from this pass is captured in
 `.agents/` so it can be copied into future font repos:
@@ -161,7 +151,7 @@ blockers are fixed. It checks the generated variable font and static TTFs, and
 excludes the downstream-only repository directory-name check because this
 upstream repo is not laid out as `ofl/virtuagrotesk`.
 
-To regenerate the generated readiness and review reports after drawing work:
+To regenerate the active source/build metadata reports after drawing work:
 
 ```bash
 make reports
@@ -169,14 +159,6 @@ make reports
 
 The Makefile uses `PYTHON ?= ./.venv/bin/python`, so another interpreter can be
 used with `make reports PYTHON=/path/to/python`.
-
-For focused checks while preparing a release:
-
-```bash
-make drawing-check
-make release-check
-make package-check
-```
 
 Run the full local handoff gate when you need the current build, proofs,
 reports, and artifact check together:
@@ -186,29 +168,7 @@ make preflight
 ```
 
 This builds the fonts, writes the main proof and spacing specimen, regenerates
-reports with proof artifact evidence, then runs the local gate.
-
-To refresh the local Google Fonts package readiness reports with the selected
-release/archive source mode:
-
-```bash
-GFT_PACKAGER_SOURCE_MODE=latest-release make package-check
-```
-
-Review `documentation/google-fonts/package-dry-run-readiness.md` first. It
-checks the local `google/fonts` fork, source mode, required inputs, downstream
-placeholder state, and GitHub API credentials.
-For a broader local command snapshot, review
-`documentation/google-fonts/local-workflow-readiness.md`.
-
-The checkout path is not hardcoded; set it with
-`GF_REPO_PATH=/path/to/google/fonts` or in ignored `local.mk`. If Google Fonts
-review asks for the fallback source-rebuild path, pass the matching Packager
-mode explicitly:
-
-```bash
-GFT_PACKAGER_SOURCE_MODE=build-from-source make package-check
-```
+the active reports, then runs the local gate.
 
 To regenerate the proof PDF:
 
@@ -226,8 +186,8 @@ created.
 
 - Prepared the UFO/designspace source tree for Google Fonts-style builds with
   `gftools builder sources/config.yaml`.
-- Added local Fontspector, metadata, glyphset, Arabic shaping, Arabic mark,
-  consolidated Arabic review, and master-compatibility reports for onboarding
+- Added local Fontspector, metadata, proof/specimen, README image, and
+  master-compatibility workflows for onboarding
   review.
 - Set the 600 static instance name to `SemiBold`.
 - Recorded Arabic as first-submission scope, with `GF_Arabic_Core` as the

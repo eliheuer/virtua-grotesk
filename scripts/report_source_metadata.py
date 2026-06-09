@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Report source UFO metadata relevant to Google Fonts onboarding."""
+"""Report source UFO metadata."""
 
 from __future__ import annotations
 
@@ -98,9 +98,9 @@ def markdown_report(ufo_paths: list[Path]) -> str:
         "# Source UFO Metadata",
         "",
         (
-            "This report records Google Fonts-facing metadata from the active UFO "
-            "sources. Use it with `documentation/google-fonts/generated-font-metadata.md` to "
-            "confirm that source metadata and built binary metadata stay aligned."
+            "This report records metadata from the active UFO sources. Use it with "
+            "`documentation/source/generated-font-metadata.md` to confirm that source "
+            "metadata and built binary metadata stay aligned."
         ),
         "",
         "## Summary",
