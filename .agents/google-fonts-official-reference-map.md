@@ -29,37 +29,21 @@ Fonts docs, templates, and tooling expectations can change.
 | https://github.com/googlefonts/googlefonts-project-template | Optional automation and baseline upstream project conventions | project-template automation decision |
 | https://github.com/googlefonts/glyphsets | GF Latin Core and script-specific glyphset coverage targets | glyphset/script QA |
 
-## Reusable Report Set
+## Reusable Evidence Set
 
-For a new font repo, recreate these as generated or manually maintained reports.
-Names can change, but the evidence categories should remain visible:
+For a new font repo, keep the evidence categories visible without recreating a
+large generated report farm by default:
 
-- `documentation/google-fonts/google-fonts-reference-index.md`
-- `documentation/google-fonts/google-fonts-production-requirements.md`
-- `documentation/google-fonts/google-fonts-decisions.md`
-- `documentation/google-fonts/decision-readiness.md`
-- `documentation/google-fonts/final-submission-blockers.md`
-- `documentation/google-fonts/next-actions.md`
-- `documentation/google-fonts/generated-font-metadata.md`
-- `documentation/google-fonts/variable-font-metadata.md`
-- `documentation/google-fonts/gf-glyphset-readiness.md`
-- `documentation/google-fonts/google-fonts-language-metadata.md`
-- `documentation/google-fonts/fontspector-googlefonts-report.md`
-- `documentation/google-fonts/fontspector-warnings.md`
-- `documentation/google-fonts/kerning-readiness.md`
-- `documentation/google-fonts/kerning-proof-review.md`
-- `documentation/google-fonts/package-source-files-audit.md`
-- `documentation/google-fonts/packager-source-strategy.md`
-- `documentation/google-fonts/release-source-readiness.md`
-- `documentation/google-fonts/release-archive-manifest.md`
-- `documentation/google-fonts/downstream-metadata-readiness.md`
-- `documentation/google-fonts/downstream-metadata-diff.md`
-- `documentation/google-fonts/package-dry-run-readiness.md`
-- `documentation/google-fonts/google-fonts-add-font-template-audit.md`
-- `documentation/google-fonts/google-fonts-add-font-issue-draft.md`
-- `documentation/google-fonts/pr-identity-readiness.md`
-- `documentation/google-fonts/downstream-pr-readiness.md`
-- `documentation/google-fonts/designer-profile-readiness.md`
+- official reference links and local decisions,
+- source metadata and generated font metadata,
+- master/source compatibility,
+- glyphset and language coverage,
+- Fontspector output,
+- visual proof output,
+- package source strategy,
+- downstream metadata and Add Font issue draft,
+- release/archive evidence if that source strategy is selected,
+- current blockers and next actions.
 
 ## Portable Gate Shape
 

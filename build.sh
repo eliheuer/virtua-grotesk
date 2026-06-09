@@ -35,6 +35,7 @@ if [ "${#built_fonts[@]}" -eq 0 ]; then
 fi
 
 python scripts/fix_gf_metadata.py "${built_fonts[@]}"
+rm -rf sources/build.ninja sources/.ninja_log sources/instance_ufos
 
 echo ""
 echo "Build complete! Fonts are in the fonts/ directory:"

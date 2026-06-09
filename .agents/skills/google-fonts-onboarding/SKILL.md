@@ -105,8 +105,7 @@ Record answers, rationale, and apply-to surfaces for:
 
 Before opening the issue or PR, the repo should have:
 
-- a current final blocker report,
-- a current next-actions report,
+- current blockers and next actions,
 - current Fontspector output,
 - current visual proof review output,
 - a current Add Font issue draft with unchecked template boxes,
@@ -118,4 +117,3 @@ Before opening the issue or PR, the repo should have:
 For Virtua Grotesk, `make preflight` is the synchronized gate. In another repo,
 create an equivalent command that regenerates reports and fails only for
 documented, intentional blockers.
-

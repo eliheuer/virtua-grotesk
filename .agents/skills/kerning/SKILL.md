@@ -30,7 +30,7 @@ Group name shorthand: if the user says `kern1.A` interpret as `public.kern1.A`.
 Build and render kerning/spacing review proofs:
 1. Run `make preflight`
 2. Review `documentation/proofs/proof.pdf` and `documentation/proofs/print-spacing-specimen.pdf`
-3. Review generated readiness reports under `documentation/google-fonts/`
+3. Review `documentation/source/generated-font-metadata.md` and any current QA output
 4. Report spacing or kerning findings
 
 ### `init-regular`
