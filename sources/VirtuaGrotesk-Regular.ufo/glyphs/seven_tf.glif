@@ -1,25 +1,31 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="seven.tf" format="2">
-	<advance width="664" />
+	<advance width="664"/>
 	<outline>
 		<contour>
-			<point x="152" y="0" type="line" />
-			<point x="224" y="0" type="line" />
-			<point x="240" y="16" type="line" />
-			<point x="250" y="274" />
-			<point x="340" y="522" />
-			<point x="532" y="672" type="curve" />
-			<point x="532" y="728" type="line" />
-			<point x="516" y="744" type="line" />
-			<point x="51" y="744" type="line" />
-			<point x="35" y="728" type="line" />
-			<point x="35" y="672" type="line" />
-			<point x="51" y="656" type="line" />
-			<point x="410" y="656" type="line" />
-			<point x="410" y="648" type="line" />
-			<point x="274" y="530" />
-			<point x="136" y="294" />
-			<point x="136" y="16" type="curve" />
+			<point x="210" y="0" type="line"/>
+			<point x="282" y="0" type="line"/>
+			<point x="298" y="16" type="line"/>
+			<point x="308" y="274"/>
+			<point x="398" y="522"/>
+			<point x="590" y="672" type="curve"/>
+			<point x="590" y="728" type="line"/>
+			<point x="574" y="744" type="line"/>
+			<point x="109" y="744" type="line"/>
+			<point x="93" y="728" type="line"/>
+			<point x="93" y="672" type="line"/>
+			<point x="109" y="656" type="line"/>
+			<point x="468" y="656" type="line"/>
+			<point x="468" y="648" type="line"/>
+			<point x="332" y="530"/>
+			<point x="194" y="294"/>
+			<point x="194" y="16" type="curve"/>
 		</contour>
 	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>1,0.29,0.24,1</string>
+		</dict>
+	</lib>
 </glyph>
