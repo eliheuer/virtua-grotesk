@@ -18,11 +18,11 @@ instances changes the output set without script edits.
 
 from __future__ import annotations
 
-import subprocess
 from pathlib import Path
 
 from fontTools.misc.fixedTools import floatToFixedToStr
 from fontTools.ttLib import TTFont
+from PIL import Image
 
 try:
     from drawbot_skia.drawing import Drawing
@@ -110,12 +110,6 @@ def style_near(weight_class: int) -> Style:
     return min(STYLES, key=lambda s: abs(s.weight_class - weight_class))
 
 
-def git_hash() -> str:
-    return subprocess.check_output(
-        "git rev-parse --short HEAD", shell=True, cwd=ROOT
-    ).decode().strip()
-
-
 def grid(db: Drawing) -> None:
     db.save()
     db.stroke(1, 0, 0, 0.75)
@@ -164,7 +158,7 @@ def captions(db: Drawing, bottom_left: str | None = None, footer: bool = True) -
     if footer:
         db.text(bottom_left, (MARGIN, MARGIN))
         db.text(
-            f"github.com/eliheuer/virtua-grotesk · {git_hash()}",
+            "github.com/eliheuer/virtua-grotesk",
             (WIDTH - MARGIN, MARGIN),
             align="right",
         )
@@ -217,6 +211,10 @@ def save(db: Drawing, name: str) -> None:
     path = OUTPUT_DIR / FORMAT_NAME / name
     path.parent.mkdir(parents=True, exist_ok=True)
     db.saveImage(str(path))
+    # Quantize to a 256-color palette: these near-monochrome images lose
+    # nothing visible and shrink ~60-70%, keeping the git repo lean.
+    image = Image.open(path).convert("RGB")
+    image.quantize(colors=256, dither=Image.Dither.NONE).save(path, optimize=True)
     print(path.relative_to(ROOT))
 
 
