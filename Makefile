@@ -8,7 +8,7 @@ DRAWBOT_PYTHONPATH = $(if $(DRAWBOT_SKIA_REPO),$(DRAWBOT_SKIA_REPO)/src$${PYTHON
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 
-.PHONY: help setup build proof specimen readme-images qa test reports preflight clean
+.PHONY: help setup build proof specimen readme-images social-images qa test reports preflight clean
 
 help:
 	@printf '%s\n' \
@@ -18,6 +18,7 @@ help:
 		'  make proof          Build the main PDF proof' \
 		'  make specimen       Build the landscape spacing specimen PDF' \
 		'  make readme-images  Build README PNG specimen images' \
+		'  make social-images  Build square social media specimen PNGs' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
@@ -38,6 +39,9 @@ specimen: build
 
 readme-images: build
 	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_readme_images.py
+
+social-images: build
+	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_social_images.py
 
 qa: build
 	./scripts/check_gf_fonts.sh
