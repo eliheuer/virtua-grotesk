@@ -1,3 +1,8 @@
+---
+name: edit-glyph
+description: Read, display, and edit a glyph in the UFO sources. Use for inspecting or modifying an existing glyph's outline, advance width, or sidebearings.
+---
+
 # /edit-glyph
 
 Read, display, and edit a glyph in the UFO sources.

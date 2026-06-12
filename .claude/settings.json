@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(make build)",
+      "Bash(make proof)",
+      "Bash(make specimen)",
+      "Bash(make readme-images)",
+      "Bash(make reports)",
+      "Bash(make preflight)",
+      "Bash(make test)",
+      "Bash(make qa)",
+      "Bash(./.venv/bin/python:*)",
+      "Bash(.venv/bin/python:*)"
+    ]
+  }
+}

@@ -1,3 +1,8 @@
+---
+name: google-fonts-nonlatin-drawing
+description: Finish missing non-Latin (e.g. Arabic) drawings for a Google Fonts submission while keeping masters compatible and script shaping intact.
+---
+
 # /google-fonts-nonlatin-drawing
 
 Finish missing non-Latin drawings for a Google Fonts submission while keeping

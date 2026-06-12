@@ -1,3 +1,8 @@
+---
+name: build-font
+description: Build Virtua Grotesk variable and static fonts from the UFO sources. Use when asked to build, compile, or regenerate fonts, or after editing sources.
+---
+
 # /build-font
 
 Build Virtua Grotesk fonts from UFO sources.

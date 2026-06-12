@@ -1,3 +1,8 @@
+---
+name: google-fonts-onboarding
+description: Prepare a font repository for Google Fonts onboarding, from first audit through handoff. Portable across font repos.
+---
+
 # /google-fonts-onboarding
 
 Prepare a font repository for Google Fonts onboarding from first audit through

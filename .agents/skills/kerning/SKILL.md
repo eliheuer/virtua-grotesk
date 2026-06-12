@@ -1,3 +1,8 @@
+---
+name: kerning
+description: Manage kerning pairs and groups in the UFO sources: add, list, and test pairs across masters.
+---
+
 # /kerning
 
 Manage kerning pairs and groups in the UFO sources.

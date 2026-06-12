@@ -1,3 +1,8 @@
+---
+name: proof
+description: Generate the multi-page PDF proof document for the font. Use to review the current state of drawing, spacing, and rhythm.
+---
+
 # /proof
 
 Generate a multi-page PDF proof document for the font.

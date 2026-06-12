@@ -1,3 +1,8 @@
+---
+name: compare-reference
+description: Compare a reference image against the current font rendering and propose specific glyph edits. Use when given a reference or target image for a glyph.
+---
+
 # /compare-reference
 
 Compare a reference image to the current font rendering and suggest specific edits.

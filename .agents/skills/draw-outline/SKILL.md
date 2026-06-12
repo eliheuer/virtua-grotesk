@@ -1,3 +1,8 @@
+---
+name: draw-outline
+description: Draw or redraw a glyph outline from scratch in both UFO masters, following Virtua Grotesk vector conventions (16-unit chamfers, master compatibility). Use when adding a new glyph or redrawing an existing one.
+---
+
 # /draw-outline
 
 Draw or redraw a glyph outline from scratch, following vector best practices and Virtua Grotesk conventions.
