@@ -4,7 +4,7 @@ This generated index maps the landscape print/PDF specimen used for
 weight, spacing, texture, numeral, punctuation, and Arabic review.
 
 - PDF: `documentation/proofs/print-spacing-specimen.pdf`
-- Pages: 17
+- Pages: 19
 - Build command: `make print-spacing-specimen`
 
 ## Page Map
@@ -16,18 +16,20 @@ weight, spacing, texture, numeral, punctuation, and Arabic review.
 | 3 | Latin waterfalls continued | Latin weight and size comparisons. |
 | 4 | Paragraph texture | Short columns for print color, rhythm, and weight comparison. |
 | 5 | Numerals and punctuation | Figures and punctuation across weights. |
-| 6 | Arabic weight and spacing | Arabic shaping, marks, numerals, and punctuation across weights. |
-| 7 | Arabic weight and spacing continued | Arabic shaping, marks, numerals, and punctuation. |
-| 8 | Regular lowercase spacing | Generated lowercase spacing strings. |
-| 9 | Regular uppercase spacing | Generated uppercase spacing strings. |
-| 10 | Medium lowercase spacing | Generated lowercase spacing strings. |
-| 11 | Medium uppercase spacing | Generated uppercase spacing strings. |
-| 12 | SemiBold lowercase spacing | Generated lowercase spacing strings. |
-| 13 | SemiBold uppercase spacing | Generated uppercase spacing strings. |
-| 14 | Bold lowercase spacing | Generated lowercase spacing strings. |
-| 15 | Bold uppercase spacing | Generated uppercase spacing strings. |
-| 16 | Regular encoded glyph grid | Compact encoded cmap grid for print scanning. |
-| 17 | Regular encoded glyph grid continued | Compact encoded cmap grid continuation. |
+| 6 | Numerals and punctuation continued | Figures and punctuation across weights. |
+| 7 | Arabic weight and spacing | Arabic shaping, marks, numerals, and punctuation across weights. |
+| 8 | Arabic weight and spacing continued | Arabic shaping, marks, numerals, and punctuation. |
+| 9 | Regular lowercase spacing | Generated lowercase spacing strings. |
+| 10 | Regular uppercase spacing | Generated uppercase spacing strings. |
+| 11 | Medium lowercase spacing | Generated lowercase spacing strings. |
+| 12 | Medium uppercase spacing | Generated uppercase spacing strings. |
+| 13 | SemiBold lowercase spacing | Generated lowercase spacing strings. |
+| 14 | SemiBold uppercase spacing | Generated uppercase spacing strings. |
+| 15 | Bold lowercase spacing | Generated lowercase spacing strings. |
+| 16 | Bold uppercase spacing | Generated uppercase spacing strings. |
+| 17 | Regular encoded glyph grid | Compact encoded cmap grid for print scanning. |
+| 18 | Regular encoded glyph grid continued | Compact encoded cmap grid continuation. |
+| 19 | Regular encoded glyph grid continued | Compact encoded cmap grid continuation. |
 
 ## Review Notes
 

@@ -35,6 +35,14 @@ MARGIN = 36  # 0.5 inch margins
 PAGE_GRID = Grid(PAGE_WIDTH, PAGE_HEIGHT, margin=MARGIN)  # unit = 18
 
 
+BASELINE = PAGE_GRID.unit / 2  # 9pt baseline grid for text leading
+
+
+def snap_baseline(value):
+    """Round a leading to the nearest baseline-grid step."""
+    return max(BASELINE, round(value / BASELINE) * BASELINE)
+
+
 def new_page():
     db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
     if grid_view():
@@ -89,11 +97,11 @@ def draw_header(font_info, page_title):
 
     # Left: Font name
     header_text = f"{font_info['family']} {font_info['style']}"
-    db.text(header_text, (MARGIN, PAGE_HEIGHT - MARGIN + 10))
+    db.text(header_text, (MARGIN, PAGE_HEIGHT - MARGIN + 9))
 
     # Right: Page title
     title_width = db.textSize(page_title)[0]
-    db.text(page_title, (PAGE_WIDTH - MARGIN - title_width, PAGE_HEIGHT - MARGIN + 10))
+    db.text(page_title, (PAGE_WIDTH - MARGIN - title_width, PAGE_HEIGHT - MARGIN + 9))
 
     db.restore()
 
@@ -106,7 +114,7 @@ def draw_footer():
 
     # Left: Date
     date_str = datetime.now().strftime("%Y-%m-%d")
-    db.text(date_str, (MARGIN, MARGIN - 20))
+    db.text(date_str, (MARGIN, MARGIN - 18))
 
     db.restore()
 
@@ -115,20 +123,20 @@ def title_page(font_path, font_info):
     """Create title page with font specimen and metadata."""
     new_page()
 
-    y = PAGE_HEIGHT - MARGIN - 80
+    y = PAGE_HEIGHT - MARGIN - 72
 
     # Font family name large
     db.font(font_path, 48)
     db.fill(0)
     db.text(font_info['family'], (MARGIN, y))
 
-    y -= 50
+    y -= 54
 
     # Style name
     db.font(font_path, 24)
     db.text(font_info['style'], (MARGIN, y))
 
-    y -= 80
+    y -= 90
 
     # Large specimen text
     db.font(font_path, 72)
@@ -141,7 +149,7 @@ def title_page(font_path, font_info):
     y -= 90
     db.text("Gg Hh Ii", (MARGIN, y))
 
-    y -= 120
+    y -= 126
 
     # Metadata section
     db.font("Helvetica", 10)
@@ -161,7 +169,7 @@ def title_page(font_path, font_info):
 
     for line in meta_lines:
         db.text(line, (MARGIN, y))
-        y -= 16
+        y -= 18
 
 
 def alphabet_page(font_path, font_info):
@@ -170,7 +178,7 @@ def alphabet_page(font_path, font_info):
     draw_header(font_info, "Alphabet")
     draw_footer()
 
-    y = PAGE_HEIGHT - MARGIN - 40
+    y = PAGE_HEIGHT - MARGIN - 36
 
     uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     lowercase = "abcdefghijklmnopqrstuvwxyz"
@@ -187,24 +195,24 @@ def alphabet_page(font_path, font_info):
             # Split into two lines
             mid = len(uppercase) // 2
             db.text(uppercase[:mid], (MARGIN, y))
-            y -= size * 1.3
+            y -= snap_baseline(size * 1.3)
             db.text(uppercase[mid:], (MARGIN, y))
         else:
             db.text(uppercase, (MARGIN, y))
 
-        y -= size * 1.3
+        y -= snap_baseline(size * 1.3)
 
         # Lowercase
         lc_width = db.textSize(lowercase)[0]
         if lc_width > PAGE_WIDTH - 2 * MARGIN:
             mid = len(lowercase) // 2
             db.text(lowercase[:mid], (MARGIN, y))
-            y -= size * 1.3
+            y -= snap_baseline(size * 1.3)
             db.text(lowercase[mid:], (MARGIN, y))
         else:
             db.text(lowercase, (MARGIN, y))
 
-        y -= size * 1.8
+        y -= snap_baseline(size * 1.8)
 
         if y < MARGIN + 50:
             break
@@ -216,7 +224,7 @@ def numerals_page(font_path, font_info):
     draw_header(font_info, "Numerals & Punctuation")
     draw_footer()
 
-    y = PAGE_HEIGHT - MARGIN - 50
+    y = PAGE_HEIGHT - MARGIN - 54
 
     numerals = "0123456789"
     punctuation = ".,;:!?\"'`-–—()[]{}/@#$%^&*+=<>"
@@ -227,21 +235,21 @@ def numerals_page(font_path, font_info):
     db.font("Helvetica", 10)
     db.fill(0.5)
     db.text("NUMERALS", (MARGIN, y))
-    y -= 20
+    y -= 18
 
     for size in sizes[:4]:
         db.font(font_path, size)
         db.fill(0)
         db.text(numerals, (MARGIN, y))
-        y -= size * 1.5
+        y -= snap_baseline(size * 1.5)
 
-    y -= 20
+    y -= 18
 
     # Punctuation
     db.font("Helvetica", 10)
     db.fill(0.5)
     db.text("PUNCTUATION", (MARGIN, y))
-    y -= 20
+    y -= 18
 
     for size in sizes[2:]:
         db.font(font_path, size)
@@ -251,11 +259,11 @@ def numerals_page(font_path, font_info):
         if db.textSize(punctuation)[0] > PAGE_WIDTH - 2 * MARGIN:
             mid = len(punctuation) // 2
             db.text(punctuation[:mid], (MARGIN, y))
-            y -= size * 1.3
+            y -= snap_baseline(size * 1.3)
             db.text(punctuation[mid:], (MARGIN, y))
         else:
             db.text(punctuation, (MARGIN, y))
-        y -= size * 1.5
+        y -= snap_baseline(size * 1.5)
 
         if y < MARGIN + 30:
             break
@@ -267,7 +275,7 @@ def waterfall_page(font_path, font_info):
     draw_header(font_info, "Size Waterfall")
     draw_footer()
 
-    y = PAGE_HEIGHT - MARGIN - 40
+    y = PAGE_HEIGHT - MARGIN - 36
 
     sample = "Hamburgefontsiv"
     sizes = [72, 60, 48, 36, 30, 24, 20, 18, 16, 14, 12, 11, 10, 9, 8, 7, 6]
@@ -286,9 +294,9 @@ def waterfall_page(font_path, font_info):
         # Sample text
         db.font(font_path, size)
         db.fill(0)
-        db.text(sample, (MARGIN + 40, y))
+        db.text(sample, (MARGIN + 36, y))
 
-        y -= size * 1.4
+        y -= snap_baseline(size * 1.4)
 
         if y < MARGIN + 20:
             break
@@ -300,9 +308,9 @@ def spacing_page(font_path, font_info):
     draw_header(font_info, "Spacing Proof")
     draw_footer()
 
-    y = PAGE_HEIGHT - MARGIN - 40
+    y = PAGE_HEIGHT - MARGIN - 36
     size = 14
-    line_height = size * 1.4
+    line_height = snap_baseline(size * 1.4)
 
     db.font(font_path, size)
     db.fill(0)
@@ -326,7 +334,7 @@ def spacing_page(font_path, font_info):
             new_page()
             draw_header(font_info, "Spacing Proof (continued)")
             draw_footer()
-            y = PAGE_HEIGHT - MARGIN - 40
+            y = PAGE_HEIGHT - MARGIN - 36
 
 
 def paragraph_page(font_path, font_info):
@@ -335,7 +343,7 @@ def paragraph_page(font_path, font_info):
     draw_header(font_info, "Paragraph Setting")
     draw_footer()
 
-    y = PAGE_HEIGHT - MARGIN - 40
+    y = PAGE_HEIGHT - MARGIN - 36
 
     sample_text = """The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs. How vexingly quick daft zebras jump! The five boxing wizards jump quickly. Sphinx of black quartz, judge my vow. Two driven jocks help fax my big quiz. The jay, pig, fox, zebra, and my wolves quack!"""
 
@@ -346,18 +354,18 @@ def paragraph_page(font_path, font_info):
         db.font("Helvetica", 8)
         db.fill(0.5)
         db.text(f"{size}pt / {int(size * 1.4)}pt leading", (MARGIN, y))
-        y -= 14
+        y -= 18
 
         # Paragraph
         db.font(font_path, size)
         db.fill(0)
 
-        box_height = size * 6
+        box_height = snap_baseline(size * 6)
         box_width = PAGE_WIDTH - 2 * MARGIN
 
         db.textBox(sample_text, (MARGIN, y - box_height, box_width, box_height))
 
-        y -= box_height + 30
+        y -= box_height + 27
 
         if y < MARGIN + 80:
             break
@@ -369,7 +377,7 @@ def kerning_page(font_path, font_info):
     draw_header(font_info, "Kerning Pairs")
     draw_footer()
 
-    y = PAGE_HEIGHT - MARGIN - 50
+    y = PAGE_HEIGHT - MARGIN - 54
 
     kern_pairs = [
         "AV AW AT AY Av Aw Ay AC AG AO AQ AU",
@@ -388,7 +396,7 @@ def kerning_page(font_path, font_info):
         db.font(font_path, size)
         db.fill(0)
         db.text(pairs, (MARGIN, y))
-        y -= size * 1.6
+        y -= snap_baseline(size * 1.6)
 
         if y < MARGIN + 30:
             break
@@ -406,7 +414,7 @@ def glyph_set_page(font_path, font_info, cmap, start_page=1):
     glyph_size = cell_size * 0.6
 
     x_start = MARGIN
-    y_start = PAGE_HEIGHT - MARGIN - 50
+    y_start = PAGE_HEIGHT - MARGIN - 54
 
     x = x_start
     y = y_start
@@ -479,7 +487,7 @@ def arabic_page(font_path, font_info, cmap):
     draw_header(font_info, "Arabic")
     draw_footer()
 
-    y = PAGE_HEIGHT - MARGIN - 50
+    y = PAGE_HEIGHT - MARGIN - 54
 
     sample_lines = [
         ("salaam", "سلام"),
@@ -491,7 +499,7 @@ def arabic_page(font_path, font_info, cmap):
     db.font("Helvetica", 10)
     db.fill(0.5)
     db.text("ARABIC SHAPING SAMPLES", (MARGIN, y))
-    y -= 22
+    y -= 18
 
     for label, sample in sample_lines:
         db.font("Helvetica", 8)
@@ -499,14 +507,14 @@ def arabic_page(font_path, font_info, cmap):
         db.text(label, (MARGIN, y + 8))
         db.font(font_path, 36)
         db.fill(0)
-        db.text(sample, (MARGIN + 80, y))
+        db.text(sample, (MARGIN + 72, y))
         y -= 54
 
-    y -= 12
+    y -= 9
     db.font("Helvetica", 10)
     db.fill(0.5)
     db.text("ARABIC CMAP SAMPLE", (MARGIN, y))
-    y -= 24
+    y -= 27
 
     samples = [
         "".join(arabic_chars[:28]),
@@ -522,9 +530,9 @@ def arabic_page(font_path, font_info, cmap):
         for sample in samples:
             if sample:
                 db.text(sample, (MARGIN, y))
-                y -= size * 1.5
+                y -= snap_baseline(size * 1.5)
 
-        y -= 20
+        y -= 18
 
         if y < MARGIN + 50:
             break
