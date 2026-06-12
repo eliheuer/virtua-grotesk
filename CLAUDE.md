@@ -7,6 +7,9 @@ AI tools). It is imported here in full:
 
 ## Claude Code specifics
 
+- **Do not credit yourself in commits.** No `Co-Authored-By: Claude` trailers,
+  no "Generated with Claude Code" lines — plain commit messages only.
+
 - Skills are canonical in `.agents/skills/` and exposed to Claude Code via the
   `.claude/skills` symlink. **Edit skills only in `.agents/skills/`** — never
   create separate copies under `.claude/`.
