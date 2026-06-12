@@ -22,6 +22,10 @@ make reports            # Regenerate source/build metadata reports
 make preflight          # Build, proof, specimen, reports, then check artifacts
 make test               # Build, then run Fontspector googlefonts profile
 /edit-glyph A           # Inspect/edit a glyph
+runebender-serve sources/VirtuaGrotesk.designspace --open
+                        # Open the font in the Runebender web editor —
+                        # edits to sources/ on disk live-reload in the
+                        # browser; the user's Cmd+S saves back to disk
 /kerning list           # View current kerning pairs
 /compare-reference img  # Compare font to a reference image
 ```
