@@ -1,6 +1,10 @@
 # Top-level Python packages for the local Google Fonts build, report, and
 # package-review workflow. Keep this list small; requirements.txt is the
 # pinned install snapshot generated from the active local .venv.
+# drawbot-skia is installed from the maintained fork so proofs and specimen
+# images render on any machine without a sibling checkout. A local checkout
+# via DRAWBOT_SKIA_REPO in local.mk still takes precedence for development.
+drawbot-skia @ git+https://github.com/eliheuer/drawbot-skia
 fontmake
 fonttools
 gftools[qa]

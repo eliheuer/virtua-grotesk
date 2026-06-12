@@ -91,10 +91,13 @@ make specimen
 ```
 
 Uses DrawBot-style APIs to generate multi-page PDF proofs. The Makefile runs
-this repo's virtualenv Python at `./.venv/bin/python`. If `DRAWBOT_SKIA_REPO`
-is set in the environment or ignored `local.mk`, it prepends that checkout's
-`src` directory to `PYTHONPATH`; otherwise `drawbot_skia` must be importable
-from `.venv`.
+this repo's virtualenv Python at `./.venv/bin/python`. drawbot-skia is
+installed into `.venv` from `github.com/eliheuer/drawbot-skia` via
+`requirements.txt`, so proofs work after a plain `make setup` on any machine.
+Setting `DRAWBOT_SKIA_REPO` in the environment or ignored `local.mk` prepends
+a live checkout's `src` directory to `PYTHONPATH` instead, for drawbot
+development. drawbot-skia is also the standard tool for any ad-hoc image
+generation (quick PNG renders of glyphs or feature tests).
 `make specimen` renders the landscape print review PDF at
 `documentation/proofs/print-spacing-specimen.pdf` across Regular, Medium, SemiBold,
 and Bold, with `documentation/proofs/print-spacing-specimen-index.md` as the page map.
