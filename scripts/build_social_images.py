@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Build square DrawBot-skia PNG specimen images for social media posts.
+"""Build DrawBot-skia PNG specimen images for social media posts.
 
-Layout references: Klim's Die Grotesk poster lockups (type fills the frame,
-one accent color), Geist's Instagram specimen set (header captions, hairline
-rules, size waterfall, coded punctuation strings, giant cropped lowercase),
-and Inter's character-grid density.
+Brutalist / neomodernist style: repetition as the layout device, type fit
+to the frame width, tight leading, left-aligned ragged-right settings,
+near-black ground with gray-white ink, captions in the four corners set in
+the font itself (Font.Garden poster idiom), no decorative rules.
+
+Every image is rendered in three formats at 2x resolution:
+  square    2048x2048  (1:1   - Instagram feed, X/Twitter)
+  portrait  1638x2048  (4:5   - Instagram feed, most screen area)
+  landscape 2048x1152  (16:9  - X/Twitter in-stream)
 
 Weights are discovered from fonts/ttf/*.ttf at runtime (style name from the
 name table, ordering from OS/2 usWeightClass), so adding or removing
@@ -31,18 +36,38 @@ ROOT = Path(__file__).resolve().parents[1]
 FONT_DIR = ROOT / "fonts/ttf"
 OUTPUT_DIR = ROOT / "documentation/assets/social"
 
-WIDTH = 2048
-HEIGHT = 2048
-MARGIN = 128
+FORMATS = {
+    "square": (2048, 2048),
+    "portrait": (1638, 2048),
+    "landscape": (2048, 1152),
+}
 
-INK = (0.86, 0.86, 0.82)
-PAPER = (0.13, 0.13, 0.13)
-MUTED = (0.58, 0.58, 0.54)
-RULE = (0.34, 0.34, 0.32)
-HAIRLINE = (0.24, 0.24, 0.23)
+PAPER = (0.055, 0.055, 0.055)
+INK = (0.83, 0.83, 0.80)
+WHITE = (0.96, 0.96, 0.94)
+MUTED = (0.56, 0.56, 0.53)
+RULE = (0.30, 0.30, 0.28)
 RED = (1.0, 0.29, 0.24)  # the source markColor, used as the single accent
 
+LOGO = ""  # 3x3 grid mark from the font's PUA icon block
+CAP_RATIO = 0.75  # cap height / UPM in this family
+
 GRID_VIEW = False  # Toggle for a red layout grid overlay
+
+# Per-format geometry, set by set_format()
+WIDTH = HEIGHT = MARGIN = CAPTION_SIZE = 0
+BAND_TOP = BAND_BOTTOM = 0.0
+FORMAT_NAME = "square"
+
+
+def set_format(name: str) -> None:
+    global WIDTH, HEIGHT, MARGIN, CAPTION_SIZE, BAND_TOP, BAND_BOTTOM, FORMAT_NAME
+    FORMAT_NAME = name
+    WIDTH, HEIGHT = FORMATS[name]
+    MARGIN = round(min(WIDTH, HEIGHT) / 16)
+    CAPTION_SIZE = max(36, round(min(WIDTH, HEIGHT) * 0.0225))
+    BAND_TOP = HEIGHT - MARGIN - CAPTION_SIZE - 100
+    BAND_BOTTOM = MARGIN + CAPTION_SIZE + 100
 
 
 class Style:
@@ -121,35 +146,29 @@ def page() -> Drawing:
     return db
 
 
-def hairline(db: Drawing, y: float) -> None:
-    db.save()
-    db.stroke(*HAIRLINE)
-    db.strokeWidth(2)
-    db.line((0, y), (WIDTH, y))
-    db.restore()
-
-
-def frame(db: Drawing, footer: bool = True, note: str | None = None) -> None:
-    """Geist-style header and footer captions, set in the font itself."""
+def captions(db: Drawing, bottom_left: str | None = None, footer: bool = True) -> None:
+    """Font.Garden poster idiom: small captions in the four corners."""
+    if bottom_left is None:
+        bottom_left = f"{LIGHTEST.family} {LIGHTEST.name} {LIGHTEST.version}"
     db.save()
     db.stroke(None)
     db.font(str(LIGHTEST.path))
-    db.fontSize(34)
+    db.fontSize(CAPTION_SIZE)
     db.fill(*MUTED)
-    db.text(LIGHTEST.family, (MARGIN, HEIGHT - MARGIN - 24))
-    right = note if note else "Licensed under OFL"
-    db.text(right, (WIDTH - MARGIN, HEIGHT - MARGIN - 24), align="right")
+    db.text(f"{LOGO} Font.Garden/virtua", (MARGIN, HEIGHT - MARGIN - CAPTION_SIZE * 0.74))
+    db.text(
+        "Open Font License OFL v1.1",
+        (WIDTH - MARGIN, HEIGHT - MARGIN - CAPTION_SIZE * 0.74),
+        align="right",
+    )
     if footer:
-        db.text("Open source", (MARGIN, MARGIN))
+        db.text(bottom_left, (MARGIN, MARGIN))
         db.text(
-            f"{LIGHTEST.version} · {git_hash()} · github.com/eliheuer/virtua-grotesk",
+            f"github.com/eliheuer/virtua-grotesk · {git_hash()}",
             (WIDTH - MARGIN, MARGIN),
             align="right",
         )
     db.restore()
-    hairline(db, HEIGHT - MARGIN - 56)
-    if footer:
-        hairline(db, MARGIN + 76)
 
 
 def fit_size(db: Drawing, txt: str, style: Style, target_w: float) -> float:
@@ -158,57 +177,79 @@ def fit_size(db: Drawing, txt: str, style: Style, target_w: float) -> float:
     return 100 * target_w / db.textSize(txt)[0]
 
 
+def fit_stack_size(db: Drawing, rows: list[tuple[str, Style]]) -> float:
+    """Largest size where the widest row fits the inner width and the
+    block fits the caption band at tight leading."""
+    inner = WIDTH - MARGIN * 2
+    width_fit = min(fit_size(db, txt, style, inner) for txt, style in rows)
+    band = BAND_TOP - BAND_BOTTOM
+    cap_max = band / (1.12 * (len(rows) - 1) + 1)
+    return min(width_fit, cap_max / CAP_RATIO)
+
+
+def stack(
+    db: Drawing,
+    rows: list[tuple[str, Style]],
+    size: float,
+    color: tuple[float, float, float] = INK,
+) -> float:
+    """Left-aligned repetition block, vertically centered between the
+    captions, leading clamped between tight and loose. Returns the top
+    baseline y."""
+    cap = CAP_RATIO * size
+    count = len(rows)
+    band = BAND_TOP - BAND_BOTTOM
+    leading = (band - cap) / max(count - 1, 1)
+    leading = max(min(leading, cap * 1.55), cap * 1.12)
+    block = (count - 1) * leading + cap
+    baseline = BAND_BOTTOM + (band - block) / 2 + block - cap
+    top_baseline = baseline
+    db.fill(*color)
+    for txt, style in rows:
+        db.font(str(style.path))
+        db.fontSize(size)
+        db.text(txt, (MARGIN, baseline))
+        baseline -= leading
+    return top_baseline
+
+
 def save(db: Drawing, name: str) -> None:
-    path = OUTPUT_DIR / name
+    path = OUTPUT_DIR / FORMAT_NAME / name
     path.parent.mkdir(parents=True, exist_ok=True)
     db.saveImage(str(path))
     print(path.relative_to(ROOT))
 
 
+def repetition_rows(db: Drawing, txt: str, style: Style) -> list[tuple[str, Style]]:
+    """As many repeated rows as fit the caption band at tight leading."""
+    size = fit_size(db, txt, style, WIDTH - MARGIN * 2)
+    cap = CAP_RATIO * size
+    band = BAND_TOP - BAND_BOTTOM
+    count = max(2, int((band - cap) / (1.15 * cap)) + 1)
+    return [(txt, style)] * count
+
+
 def draw_hero() -> None:
-    """Klim-style lockup: each line fit to the full inner width."""
+    """Repetition poster: the family name over and over, fit to the frame."""
     db = page()
-    inner = WIDTH - MARGIN * 2
-    s1 = fit_size(db, "Virtua", HEAVIEST, inner)
-    s2 = fit_size(db, "Grotesk", HEAVIEST, inner)
-    cap1 = 0.75 * s1
-    cap2 = 0.75 * s2
-    gap = 110
-    top = HEIGHT - MARGIN - 56
-    bottom = MARGIN + 76
-    block = cap1 + gap + cap2
-    baseline1 = (top + bottom) / 2 + block / 2 - cap1
-    baseline2 = baseline1 - gap - cap2
-
-    db.fill(*INK)
-    db.font(str(HEAVIEST.path))
-    db.fontSize(s1)
-    db.text("Virtua", (WIDTH / 2, baseline1), align="center")
-    db.fontSize(s2)
-    db.text("Grotesk", (WIDTH / 2, baseline2), align="center")
-
-    frame(db)
+    rows = repetition_rows(db, "Virtua Grotesk", style_near(500))
+    stack(db, rows, fit_stack_size(db, rows), color=WHITE)
+    captions(db)
     save(db, "social-01-hero.png")
 
 
 def draw_weights() -> None:
+    """One row per discovered weight, lightest to heaviest."""
     db = page()
-    rows = len(STYLES)
-    top = 1490
-    step = min(390, (top - 300) / max(rows - 1, 1))
-    y = top
-    for style in STYLES:
-        db.font(str(LIGHTEST.path))
-        db.fontSize(40)
-        db.fill(*MUTED)
-        db.text(f"wght {style.weight_class}", (MARGIN, y + 290))
-        db.font(str(style.path))
-        db.fontSize(320)
-        db.fill(*INK)
-        db.text("Hamburg", (MARGIN, y))
-        y -= step
-
-    frame(db)
+    rows = [("Hamburg", s) for s in STYLES]
+    stack(db, rows, fit_stack_size(db, rows))
+    captions(
+        db,
+        bottom_left=(
+            f"{LIGHTEST.family} wght {LIGHTEST.weight_class}"
+            f"–{HEAVIEST.weight_class} {LIGHTEST.version}"
+        ),
+    )
     save(db, "social-02-weights.png")
 
 
@@ -216,21 +257,16 @@ def draw_alphabet(style: Style) -> None:
     db = page()
     lines = [
         "ABCDEFGHIJ",
-        "KLMNOPQRST",
-        "UVWXYZ&?!",
-        "abcdefghijklm",
-        "nopqrstuvwxyz",
+        "KLMNOPQR",
+        "STUVWXYZ",
         "0123456789",
+        "abcdefghij",
+        "klmnopqr",
+        "stuvwxyz",
     ]
-    y = 1620
-    db.font(str(style.path))
-    for txt in lines:
-        db.fontSize(230)
-        db.fill(*INK)
-        db.text(txt, (WIDTH / 2, y), align="center")
-        y -= 276
-
-    frame(db, note=f"{style.name} · wght {style.weight_class}")
+    rows = [(txt, style) for txt in lines]
+    stack(db, rows, fit_stack_size(db, rows))
+    captions(db, bottom_left=f"{style.family} {style.name} {style.version}")
     save(db, f"social-03-alphabet-{style.slug}.png")
 
 
@@ -241,77 +277,70 @@ def draw_tabular() -> None:
         return
 
     db = page()
-    db.font(str(HEAVIEST.path))
-    db.fontSize(170)
-    db.fill(*INK)
-    db.text("Tabular Figures", (WIDTH / 2, 1660), align="center")
-
-    size = 270
-    rows = ["650118", "204937", "881265"]
+    rows = [("0123456789", style), ("1463082957", style), ("2048102464", style)]
+    # Fit by tabular advance, not proportional widths: every row is
+    # digits * tab_width wide once tnum is applied.
+    digits = len(rows[0][0])
+    inner = WIDTH - MARGIN * 2
+    width_fit = inner * style.upm / (digits * style.tab_width)
+    band = BAND_TOP - BAND_BOTTOM
+    cap_max = band / (1.12 * (len(rows) - 1) + 1)
+    size = min(width_fit, cap_max / CAP_RATIO)
     tab = style.tab_width / style.upm * size
-    block_w = tab * len(rows[0])
-    x0 = (WIDTH - block_w) / 2
-    y = 1280
+    cap = CAP_RATIO * size
 
+    db.openTypeFeatures(tnum=True)
+    top_baseline = stack(db, rows, size)
+    db.openTypeFeatures(resetFeatures=True)
+
+    leading = max(
+        min((BAND_TOP - BAND_BOTTOM - cap) / (len(rows) - 1), cap * 1.55),
+        cap * 1.12,
+    )
+    bottom = top_baseline - (len(rows) - 1) * leading - size * 0.06
     db.save()
     db.stroke(*RULE)
     db.strokeWidth(2)
-    top = y + size * 0.82
-    bottom = y - 2 * 330 - size * 0.12
-    for i in range(len(rows[0]) + 1):
-        x = x0 + i * tab
-        db.line((x, bottom), (x, top))
+    for i in range(len(rows[0][0]) + 1):
+        x = MARGIN + i * tab
+        db.line((x, bottom), (x, top_baseline + cap))
     db.restore()
 
-    db.font(str(style.path))
-    db.fontSize(size)
-    db.fill(*INK)
-    db.openTypeFeatures(tnum=True)
-    for row in rows:
-        db.text(row, (x0, y))
-        y -= 330
-    db.openTypeFeatures(resetFeatures=True)
-
-    db.font(str(LIGHTEST.path))
-    db.fontSize(56)
-    db.fill(*MUTED)
-    db.text("tnum · uniform widths on every weight", (WIDTH / 2, 330), align="center")
-
-    frame(db)
+    captions(db, bottom_left=f"{style.family} Tabular Figures · tnum")
     save(db, "social-04-tabular.png")
 
 
 def draw_chamfer() -> None:
     db = page()
-    db.font(str(LIGHTEST.path))
-    db.fontSize(56)
-    db.fill(*MUTED)
-    db.text("16-unit chamfered corners", (WIDTH / 2, HEIGHT - MARGIN - 160), align="center")
-
+    rows = [("Aa", HEAVIEST)]
+    size = fit_stack_size(db, rows)
+    cap = CAP_RATIO * size
+    baseline = (BAND_TOP + BAND_BOTTOM) / 2 - cap / 2
     db.font(str(HEAVIEST.path))
-    db.fontSize(1340)
+    db.fontSize(size)
     db.fill(*INK)
-    db.text("Aa", (WIDTH / 2, 540), align="center")
-
-    frame(db)
+    db.text("Aa", (MARGIN, baseline))
+    captions(db, bottom_left=f"{HEAVIEST.family} · 16-unit chamfered corners")
     save(db, "social-05-chamfer.png")
 
 
 def draw_waterfall() -> None:
-    """Geist-style split: point sizes on the left, the name on the right."""
+    """Split panel: point sizes on the left, the name on the right."""
     style = style_near(600)
     db = page()
     split = WIDTH * 0.36
     db.save()
-    db.stroke(*HAIRLINE)
+    db.stroke(*RULE)
     db.strokeWidth(2)
-    db.line((split, MARGIN + 76), (split, HEIGHT - MARGIN - 56))
+    db.line((split, BAND_BOTTOM - 36), (split, BAND_TOP + 36))
     db.restore()
 
-    sizes = [236, 196, 162, 132, 106, 82, 62, 46]
-    y = 1560
+    band = BAND_TOP - BAND_BOTTOM
+    factor = band / 1480
+    sizes = [round(s * factor) for s in [236, 196, 162, 132, 106, 82, 62, 46]]
+    y = BAND_TOP - sizes[0] * 0.82
     for index, size in enumerate(sizes):
-        tint = max(0.30, 0.86 - index * 0.075)
+        tint = max(0.30, 0.83 - index * 0.07)
         db.font(str(style.path))
         db.fontSize(size)
         db.fill(tint, tint, tint * 0.96)
@@ -319,72 +348,70 @@ def draw_waterfall() -> None:
         db.fill(*INK)
         name = "Virtua©" if index < 5 else "Grotesk©"
         db.text(name, (split + 56, y))
-        y -= size * 1.16 + 14
+        y -= size * 1.16 + 14 * factor
 
-    frame(db)
+    captions(db)
     save(db, "social-06-waterfall.png")
 
 
 def draw_symbols() -> None:
-    """Geist-style coded strings, in the source markColor red."""
+    """Coded strings in the source markColor red."""
     db = page()
-    rows = [
+    lines = [
         "*{Virtua}*",
         "<GROTESK>",
         "(+Chamfer)",
         "@16/1024_u",
         "#OFL—2026",
     ]
-    y = 1500
-    db.fill(*RED)
-    db.font(str(LIGHTEST.path))
-    for row in rows:
-        db.fontSize(220)
-        db.text(row, (WIDTH / 2, y), align="center")
-        y -= 290
-
-    frame(db)
+    rows = [(txt, LIGHTEST) for txt in lines]
+    stack(db, rows, fit_stack_size(db, rows), color=RED)
+    captions(db)
     save(db, "social-07-symbols.png")
 
 
 def draw_lowercase() -> None:
-    """Geist-style giant lowercase, weights receding in tint steps."""
+    """Giant cropped lowercase, weights receding in tint steps."""
     db = page()
+    size = HEIGHT * 1.12
     layers = [
-        (LIGHTEST, 0.32, 1940),
-        (style_near(600), 0.52, 1040),
-        (HEAVIEST, 0.86, 140),
+        (LIGHTEST, 0.30, 0.947),
+        (style_near(600), 0.50, 0.508),
+        (HEAVIEST, 0.83, 0.068),
     ]
-    for style, tint, x in reversed(layers):
+    for style, tint, x_frac in reversed(layers):
         db.font(str(style.path))
-        db.fontSize(2300)
+        db.fontSize(size)
         db.fill(tint, tint, tint * 0.96)
-        db.text("a", (x, -130))
+        db.text("a", (WIDTH * x_frac, -HEIGHT * 0.064))
 
     db.font(str(LIGHTEST.path))
-    db.fontSize(46)
+    db.fontSize(CAPTION_SIZE)
     db.fill(*MUTED)
+    box_w = WIDTH * 0.625
     db.textBox(
         "Virtua Grotesk is a geometric grotesk with 16-unit chamfered "
         "corners — monolinear strokes and a retro-futurist technical "
         "character, drawn with modern precision on a 1024-unit grid.",
-        (MARGIN, HEIGHT - MARGIN - 420, 1280, 300),
+        (MARGIN, HEIGHT - MARGIN - CAPTION_SIZE * 2 - 300, box_w, 300),
     )
 
-    frame(db, footer=False)
+    captions(db, footer=False)
     save(db, "social-08-lowercase.png")
 
 
 def main() -> None:
-    draw_hero()
-    draw_weights()
-    for style in STYLES:
-        draw_alphabet(style)
-    draw_tabular()
-    draw_chamfer()
-    draw_waterfall()
-    draw_symbols()
-    draw_lowercase()
+    for format_name in FORMATS:
+        set_format(format_name)
+        draw_hero()
+        draw_weights()
+        for style in STYLES:
+            draw_alphabet(style)
+        draw_tabular()
+        draw_chamfer()
+        draw_waterfall()
+        draw_symbols()
+        draw_lowercase()
 
 
 if __name__ == "__main__":
