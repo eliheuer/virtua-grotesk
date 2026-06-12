@@ -31,6 +31,8 @@ except ModuleNotFoundError as error:
         "drawbot_skia is required. Run `make setup` to install it in .venv."
     ) from error
 
+from grid_system import Grid, grid_view
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FONT_DIR = ROOT / "fonts/ttf"
@@ -52,22 +54,25 @@ RED = (1.0, 0.29, 0.24)  # the source markColor, used as the single accent
 LOGO = ""  # 3x3 grid mark from the font's PUA icon block
 CAP_RATIO = 0.75  # cap height / UPM in this family
 
-GRID_VIEW = False  # Toggle for a red layout grid overlay
-
 # Per-format geometry, set by set_format()
 WIDTH = HEIGHT = MARGIN = CAPTION_SIZE = 0
 BAND_TOP = BAND_BOTTOM = 0.0
 FORMAT_NAME = "square"
+GRID: Grid
 
 
 def set_format(name: str) -> None:
-    global WIDTH, HEIGHT, MARGIN, CAPTION_SIZE, BAND_TOP, BAND_BOTTOM, FORMAT_NAME
+    global WIDTH, HEIGHT, MARGIN, CAPTION_SIZE, BAND_TOP, BAND_BOTTOM
+    global FORMAT_NAME, GRID
     FORMAT_NAME = name
     WIDTH, HEIGHT = FORMATS[name]
-    MARGIN = round(min(WIDTH, HEIGHT) / 16)
+    GRID = Grid(WIDTH, HEIGHT)
+    MARGIN = GRID.margin
     CAPTION_SIZE = max(36, round(min(WIDTH, HEIGHT) * 0.0225))
-    BAND_TOP = HEIGHT - MARGIN - CAPTION_SIZE - 100
-    BAND_BOTTOM = MARGIN + CAPTION_SIZE + 100
+    # The big-type band runs between unit lines two units inside the
+    # margins, clear of the corner captions.
+    BAND_TOP = GRID.y_top(2)
+    BAND_BOTTOM = GRID.y(2)
 
 
 class Style:
@@ -110,33 +115,11 @@ def style_near(weight_class: int) -> Style:
     return min(STYLES, key=lambda s: abs(s.weight_class - weight_class))
 
 
-def grid(db: Drawing) -> None:
-    db.save()
-    db.stroke(1, 0, 0, 0.75)
-    db.strokeWidth(2)
-    db.fill(None)
-    db.rect(MARGIN, MARGIN, WIDTH - MARGIN * 2, HEIGHT - MARGIN * 2)
-    step = MARGIN / 2
-    x = MARGIN
-    while x <= WIDTH - MARGIN:
-        db.line((x, MARGIN), (x, HEIGHT - MARGIN))
-        x += step
-    y = MARGIN
-    while y <= HEIGHT - MARGIN:
-        db.line((MARGIN, y), (WIDTH - MARGIN, y))
-        y += step
-    db.line((WIDTH / 2, 0), (WIDTH / 2, HEIGHT))
-    db.line((0, HEIGHT / 2), (WIDTH, HEIGHT / 2))
-    db.restore()
-
-
 def page() -> Drawing:
     db = Drawing()
     db.newPage(WIDTH, HEIGHT)
     db.fill(*PAPER)
     db.rect(0, 0, WIDTH, HEIGHT)
-    if GRID_VIEW:
-        grid(db)
     return db
 
 
@@ -149,10 +132,11 @@ def captions(db: Drawing, bottom_left: str | None = None, footer: bool = True) -
     db.font(str(LIGHTEST.path))
     db.fontSize(CAPTION_SIZE)
     db.fill(*MUTED)
-    db.text(f"{LOGO} Font.Garden/virtua", (MARGIN, HEIGHT - MARGIN - CAPTION_SIZE * 0.74))
+    top_baseline = HEIGHT - MARGIN - CAPTION_SIZE * CAP_RATIO
+    db.text(f"{LOGO} Font.Garden/virtua", (MARGIN, top_baseline))
     db.text(
         "Open Font License OFL v1.1",
-        (WIDTH - MARGIN, HEIGHT - MARGIN - CAPTION_SIZE * 0.74),
+        (WIDTH - MARGIN, top_baseline),
         align="right",
     )
     if footer:
@@ -202,12 +186,15 @@ def stack(
     for txt, style in rows:
         db.font(str(style.path))
         db.fontSize(size)
-        db.text(txt, (MARGIN, baseline))
+        x = MARGIN - GRID.ink_left(style.path, txt, size)
+        db.text(txt, (x, baseline))
         baseline -= leading
     return top_baseline
 
 
 def save(db: Drawing, name: str) -> None:
+    if grid_view():
+        GRID.draw(db)
     path = OUTPUT_DIR / FORMAT_NAME / name
     path.parent.mkdir(parents=True, exist_ok=True)
     db.saveImage(str(path))
@@ -317,7 +304,7 @@ def draw_chamfer() -> None:
     db.font(str(HEAVIEST.path))
     db.fontSize(size)
     db.fill(*INK)
-    db.text("Aa", (MARGIN, baseline))
+    db.text("Aa", (MARGIN - GRID.ink_left(HEAVIEST.path, "Aa", size), baseline))
     captions(db, bottom_left=f"{HEAVIEST.family} · 16-unit chamfered corners")
     save(db, "social-05-chamfer.png")
 
@@ -326,7 +313,7 @@ def draw_waterfall() -> None:
     """Split panel: point sizes on the left, the name on the right."""
     style = style_near(600)
     db = page()
-    split = WIDTH * 0.36
+    split = GRID.snap(WIDTH * 0.36)
     db.save()
     db.stroke(*RULE)
     db.strokeWidth(2)
