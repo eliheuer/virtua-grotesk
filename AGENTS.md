@@ -1,6 +1,12 @@
 # AGENTS.md
 
-This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
+This file is the canonical guidance for AI coding agents (Claude Code, Codex,
+etc.) working in this repository. `CLAUDE.md` imports this file and adds
+Claude Code-specific notes — shared guidance belongs here, not there.
+
+Agent skills live in `.agents/skills/` (one directory per skill with a
+`SKILL.md`). `.claude/skills` is a symlink to that directory so Claude Code
+picks them up — edit skills only in `.agents/skills/`.
 
 ## Project Overview
 
@@ -105,8 +111,8 @@ Each `.ufo` directory contains:
 - `fontinfo.plist` — font-level metrics and naming
 - `glyphs/contents.plist` — maps glyph names → `.glif` filenames
 - `glyphs/*.glif` — individual glyph outlines (XML)
-- `kerning.plist` — flat kerning pairs (Bold has ~90 pairs; Regular has none yet)
-- `groups.plist` — kerning group definitions (Bold has 40+ groups)
+- `kerning.plist` — group-based kerning pairs (~78 pairs per master)
+- `groups.plist` — kerning group definitions (89 groups per master)
 - `lib.plist` — font-level metadata
 
 ### Character Set
@@ -115,7 +121,7 @@ Latin uppercase (A–Z), lowercase (a–z), numerals (0–9), punctuation, accen
 
 ## The Render-Compare-Edit Loop
 
-The core workflow for type design with Codex:
+The core workflow for type design with an agent:
 
 1. **Render** — `/proof`, `make proof`, or `make specimen` to see the current state
 2. **Compare** — `/compare-reference <image>` to compare against a target

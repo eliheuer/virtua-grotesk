@@ -1,3 +1,8 @@
+---
+name: render-specimen
+description: Render font specimen and proof output using the DrawBot-skia workflow (main proof or landscape spacing specimen).
+---
+
 # /render-specimen
 
 Render font specimen/proof output using the DrawBot-skia workflow.

@@ -1,3 +1,8 @@
+---
+name: google-fonts-packaging
+description: Prepare the upstream release, downstream metadata, Google Fonts Packager dry run, Add Font issue, and downstream PR handoff for a font family.
+---
+
 # /google-fonts-packaging
 
 Prepare the upstream release, downstream metadata, Google Fonts Packager dry

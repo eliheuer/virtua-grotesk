@@ -1,3 +1,8 @@
+---
+name: google-fonts-qa
+description: Run and document Google Fonts QA (Fontspector googlefonts profile and related checks) before packaging a font family.
+---
+
 # /google-fonts-qa
 
 Run and document Google Fonts QA for a font family. This skill covers the

@@ -1,3 +1,8 @@
+---
+name: font-qa
+description: Run quality assurance checks on the font sources: metrics consistency, master compatibility, and kerning sanity. Use before handoff or when verifying source health.
+---
+
 # /font-qa
 
 Run quality assurance checks on the font sources.
