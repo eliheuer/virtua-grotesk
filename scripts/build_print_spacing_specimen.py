@@ -33,8 +33,15 @@ from grid_system import Grid, grid_view
 PAGE_WIDTH = 792
 PAGE_HEIGHT = 612
 MARGIN = 36
-TEXT_LEFT = 110
+PAGE_GRID = Grid(PAGE_WIDTH, PAGE_HEIGHT, margin=MARGIN)  # unit = 18
+BASELINE = PAGE_GRID.unit / 2  # 9pt baseline grid for text leading
+TEXT_LEFT = 108  # four units right of the left margin line
 TEXT_WIDTH = PAGE_WIDTH - TEXT_LEFT - MARGIN
+
+
+def snap_baseline(value: float) -> float:
+    """Round a leading to the nearest baseline-grid step."""
+    return max(BASELINE / 2, round(value / (BASELINE / 2)) * (BASELINE / 2))
 
 LATIN_LOWER = "abcdefghijklmnopqrstuvwxyz"
 LATIN_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -90,15 +97,15 @@ def draw_header(
 ) -> None:
     db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
     if grid_view():
-        Grid(PAGE_WIDTH, PAGE_HEIGHT, margin=MARGIN).draw(db)
+        PAGE_GRID.draw(db)
     page_index.append({"page": len(page_index) + 1, "title": title, "section": section})
     db.save()
     db.font("Helvetica", 8)
     db.fill(0.45)
-    db.text("Virtua Grotesk print spacing specimen", (MARGIN, PAGE_HEIGHT - 22))
+    db.text("Virtua Grotesk print spacing specimen", (MARGIN, PAGE_HEIGHT - MARGIN + 9))
     title_width = db.textSize(title)[0]
-    db.text(title, (PAGE_WIDTH - MARGIN - title_width, PAGE_HEIGHT - 22))
-    db.text(datetime.now().strftime("%Y-%m-%d"), (MARGIN, 16))
+    db.text(title, (PAGE_WIDTH - MARGIN - title_width, PAGE_HEIGHT - MARGIN + 9))
+    db.text(datetime.now().strftime("%Y-%m-%d"), (MARGIN, 18))
     db.restore()
 
 
@@ -145,11 +152,11 @@ def cover_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, s
     db.font(str(font_paths[-1]), 54)
     db.fill(0)
     db.text(str(info["family"] or "Virtua Grotesk"), (MARGIN, y))
-    y -= 42
+    y -= 45
     label(db, f"{info['version']}  /  {len(font_paths)} static review weights  /  landscape letter PDF", MARGIN, y)
-    y -= 38
+    y -= 36
     rule(db, y)
-    y -= 42
+    y -= 45
 
     for font_path in font_paths:
         style = font_label(font_path)
@@ -157,11 +164,11 @@ def cover_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, s
         db.font(str(font_path), 34)
         db.fill(0)
         db.text("Hamburgefontsiv 0123456789", (TEXT_LEFT, y))
-        y -= 62
+        y -= 63
 
-    y -= 8
+    y -= 9
     rule(db, y)
-    y -= 24
+    y -= 27
     label(
         db,
         "Use this PDF on paper for weight balance, sidebearing rhythm, numerals, punctuation, and Arabic texture review.",
@@ -172,7 +179,7 @@ def cover_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, s
 
 def waterfall_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
     draw_header(db, "Latin waterfalls", page_index, "Latin weight and size comparisons.")
-    y = PAGE_HEIGHT - 62
+    y = PAGE_HEIGHT - 63
     sizes = [42, 30, 22, 16, 12, 9]
     for font_path in font_paths:
         draw_left_label(db, font_label(font_path), y - 2)
@@ -180,11 +187,11 @@ def waterfall_page(db: Drawing, font_paths: list[Path], page_index: list[dict[st
             db.font(str(font_path), size)
             db.fill(0)
             db.text(sample, (TEXT_LEFT, y))
-            y -= size * 1.22
-        y -= 16
+            y -= snap_baseline(size * 1.22)
+        y -= 18
         if y < 110 and font_path != font_paths[-1]:
             draw_header(db, "Latin waterfalls continued", page_index, "Latin weight and size comparisons.")
-            y = PAGE_HEIGHT - 62
+            y = PAGE_HEIGHT - 63
 
 
 def generated_spacing_strings(chars: str, anchors: str) -> list[str]:
@@ -204,7 +211,7 @@ def spacing_page(
     anchors: str,
 ) -> None:
     draw_header(db, f"{font_label(font_path)} {title}", page_index, f"Generated {title.lower()} strings.")
-    y = PAGE_HEIGHT - 56
+    y = PAGE_HEIGHT - 54
     db.font(str(font_path), 10)
     db.fill(0)
     for line in generated_spacing_strings(chars, anchors):
@@ -213,25 +220,27 @@ def spacing_page(
                 line = line[:-2]
         db.text(line, (TEXT_LEFT, y))
         draw_left_label(db, line[:1], y)
-        y -= 14
-        if y < 42:
+        y -= 13.5
+        if y < 45:
             draw_header(db, f"{font_label(font_path)} {title} continued", page_index, f"Generated {title.lower()} strings.")
-            y = PAGE_HEIGHT - 56
+            y = PAGE_HEIGHT - 54
 
 
 def texture_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
     draw_header(db, "Paragraph texture", page_index, "Short columns for print color, rhythm, and weight comparison.")
-    col_gap = 20
+    col_gap = PAGE_GRID.unit
     col_w = (PAGE_WIDTH - 2 * MARGIN - col_gap) / 2
-    row_h = 208
+    row_h = PAGE_GRID.unit * 12
+    row_step = row_h + 27
+    top = PAGE_HEIGHT - MARGIN - 27 - row_h
     positions = [
-        (MARGIN, PAGE_HEIGHT - 78 - row_h),
-        (MARGIN + col_w + col_gap, PAGE_HEIGHT - 78 - row_h),
-        (MARGIN, PAGE_HEIGHT - 318 - row_h),
-        (MARGIN + col_w + col_gap, PAGE_HEIGHT - 318 - row_h),
+        (MARGIN, top),
+        (MARGIN + col_w + col_gap, top),
+        (MARGIN, top - row_step),
+        (MARGIN + col_w + col_gap, top - row_step),
     ]
     for font_path, (x, y) in zip(font_paths, positions, strict=True):
-        label(db, font_label(font_path), x, y + row_h + 12)
+        label(db, font_label(font_path), x, y + row_h + 9)
         db.font(str(font_path), 11)
         db.fill(0)
         db.textBox(TEXTURE_TEXT, (x, y, col_w, row_h))
@@ -251,31 +260,39 @@ def numeral_punctuation_page(db: Drawing, font_paths: list[Path], page_index: li
         ("punctuation", LATIN_PUNCT),
         ("mixed", "H1 H2 H3 10:45 12/24 100% $123.45"),
     ]
-    y = PAGE_HEIGHT - 74
+    y = PAGE_HEIGHT - 72
     for font_path in font_paths:
         draw_left_label(db, font_label(font_path), y + 4)
         for sample_label, text in samples:
             label(db, sample_label, TEXT_LEFT, y + 18, 6)
             db.font(str(font_path), 25)
             db.fill(0)
-            db.text(text, (TEXT_LEFT + 70, y))
-            y -= 42
+            db.text(text, (TEXT_LEFT + 72, y))
+            y -= 45
         y -= 18
+        if y < 234 and font_path != font_paths[-1]:
+            draw_header(
+                db,
+                "Numerals and punctuation continued",
+                page_index,
+                "Figures and punctuation across weights.",
+            )
+            y = PAGE_HEIGHT - 72
 
 
 def arabic_weight_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
     draw_header(db, "Arabic weight and spacing", page_index, "Arabic shaping, marks, numerals, and punctuation across weights.")
-    y = PAGE_HEIGHT - 62
+    y = PAGE_HEIGHT - 63
     for font_path in font_paths:
         draw_left_label(db, font_label(font_path), y + 4)
         for sample_label, text in ARABIC_SAMPLES:
             label(db, sample_label, TEXT_LEFT, y + 11, 6)
             draw_rtl(db, font_path, text, 24, y)
-            y -= 35
-        y -= 10
+            y -= 36
+        y -= 9
         if y < 120 and font_path != font_paths[-1]:
             draw_header(db, "Arabic weight and spacing continued", page_index, "Arabic shaping, marks, numerals, and punctuation.")
-            y = PAGE_HEIGHT - 62
+            y = PAGE_HEIGHT - 63
 
 
 def glyph_grid_page(db: Drawing, font_path: Path, page_index: list[dict[str, str | int]]) -> None:
@@ -283,16 +300,16 @@ def glyph_grid_page(db: Drawing, font_path: Path, page_index: list[dict[str, str
     cmap = sorted(cp for cp in (font.getBestCmap() or {}) if cp >= 0x20 and cp != 0x00A0)
     font.close()
     draw_header(db, f"{font_label(font_path)} encoded glyph grid", page_index, "Compact encoded cmap grid for print scanning.")
-    cols = 18
+    cols = 16
     cell_w = (PAGE_WIDTH - 2 * MARGIN) / cols
-    cell_h = 34
+    cell_h = 36
     x = MARGIN
-    y = PAGE_HEIGHT - 58
+    y = PAGE_HEIGHT - 54
     for cp in cmap:
         if y - cell_h < 36:
             draw_header(db, f"{font_label(font_path)} encoded glyph grid continued", page_index, "Compact encoded cmap grid continuation.")
             x = MARGIN
-            y = PAGE_HEIGHT - 58
+            y = PAGE_HEIGHT - 54
         db.save()
         db.stroke(0.88)
         db.strokeWidth(0.35)
