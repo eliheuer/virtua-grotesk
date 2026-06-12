@@ -28,6 +28,8 @@ DEFAULT_FONTS = [
 DEFAULT_OUTPUT = ROOT / "documentation/proofs/print-spacing-specimen.pdf"
 DEFAULT_INDEX_OUTPUT = ROOT / "documentation/proofs/print-spacing-specimen-index.md"
 
+from grid_system import Grid, grid_view
+
 PAGE_WIDTH = 792
 PAGE_HEIGHT = 612
 MARGIN = 36
@@ -87,6 +89,8 @@ def draw_header(
     section: str,
 ) -> None:
     db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    if grid_view():
+        Grid(PAGE_WIDTH, PAGE_HEIGHT, margin=MARGIN).draw(db)
     page_index.append({"page": len(page_index) + 1, "title": title, "section": section})
     db.save()
     db.font("Helvetica", 8)

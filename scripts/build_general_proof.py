@@ -27,9 +27,18 @@ except ModuleNotFoundError as error:
 
 db = Drawing()
 
+from grid_system import Grid, grid_view
+
 # Page settings
 PAGE_WIDTH, PAGE_HEIGHT = 612, 792  # US Letter
 MARGIN = 36  # 0.5 inch margins
+PAGE_GRID = Grid(PAGE_WIDTH, PAGE_HEIGHT, margin=MARGIN)  # unit = 18
+
+
+def new_page():
+    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    if grid_view():
+        PAGE_GRID.draw(db)
 
 
 def get_font_info(font_path):
@@ -104,7 +113,7 @@ def draw_footer():
 
 def title_page(font_path, font_info):
     """Create title page with font specimen and metadata."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
 
     y = PAGE_HEIGHT - MARGIN - 80
 
@@ -157,7 +166,7 @@ def title_page(font_path, font_info):
 
 def alphabet_page(font_path, font_info):
     """Full alphabet display in multiple sizes."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Alphabet")
     draw_footer()
 
@@ -203,7 +212,7 @@ def alphabet_page(font_path, font_info):
 
 def numerals_page(font_path, font_info):
     """Numbers and punctuation."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Numerals & Punctuation")
     draw_footer()
 
@@ -254,7 +263,7 @@ def numerals_page(font_path, font_info):
 
 def waterfall_page(font_path, font_info):
     """Size waterfall with sample text."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Size Waterfall")
     draw_footer()
 
@@ -287,7 +296,7 @@ def waterfall_page(font_path, font_info):
 
 def spacing_page(font_path, font_info):
     """Spacing proof with letter combinations."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Spacing Proof")
     draw_footer()
 
@@ -314,7 +323,7 @@ def spacing_page(font_path, font_info):
         y -= line_height
 
         if y < MARGIN + 30:
-            db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+            new_page()
             draw_header(font_info, "Spacing Proof (continued)")
             draw_footer()
             y = PAGE_HEIGHT - MARGIN - 40
@@ -322,7 +331,7 @@ def spacing_page(font_path, font_info):
 
 def paragraph_page(font_path, font_info):
     """Paragraph text at various sizes."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Paragraph Setting")
     draw_footer()
 
@@ -356,7 +365,7 @@ def paragraph_page(font_path, font_info):
 
 def kerning_page(font_path, font_info):
     """Common kerning pairs."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Kerning Pairs")
     draw_footer()
 
@@ -387,7 +396,7 @@ def kerning_page(font_path, font_info):
 
 def glyph_set_page(font_path, font_info, cmap, start_page=1):
     """Display all glyphs in a grid."""
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Character Set")
     draw_footer()
 
@@ -448,7 +457,7 @@ def glyph_set_page(font_path, font_info, cmap, start_page=1):
 
             if y - cell_size < MARGIN:
                 page_num += 1
-                db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+                new_page()
                 draw_header(font_info, f"Character Set (page {page_num})")
                 draw_footer()
                 x = x_start
@@ -466,7 +475,7 @@ def arabic_page(font_path, font_info, cmap):
     if not arabic_chars:
         return
 
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    new_page()
     draw_header(font_info, "Arabic")
     draw_footer()
 
