@@ -22,6 +22,15 @@ feature medi;
 feature fina;
 } aalt;
 
+feature locl {
+script latn;
+language CAT;
+lookup CAT_MIDDLEDOT {
+	sub l periodcentered' l by periodcentered.loclCAT;
+	sub L periodcentered' L by periodcentered.loclCAT.case;
+} CAT_MIDDLEDOT;
+} locl;
+
 feature tnum {
 sub @FIGURES_PROPORTIONAL by @FIGURES_TABULAR;
 } tnum;
