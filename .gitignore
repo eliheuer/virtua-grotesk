@@ -34,3 +34,5 @@ __pycache__/
 !documentation/assets/readme/*.png
 !documentation/assets/social/
 !documentation/assets/social/*.png
+!documentation/assets/social/**/
+!documentation/assets/social/**/*.png
