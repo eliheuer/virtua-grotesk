@@ -127,6 +127,7 @@ build, proof, and QA sequence.
 Reusable Google Fonts onboarding knowledge from this pass is captured in
 `.agents/` so it can be copied into future font repos:
 
+- `GOOGLE_FONTS_PORTING_CHECKLIST.md`
 - `.agents/google-fonts-onboarding-checklists.md`
 - `.agents/google-fonts-official-reference-map.md`
 - `.agents/skills/google-fonts-onboarding/SKILL.md`

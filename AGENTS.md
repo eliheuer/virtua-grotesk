@@ -64,6 +64,7 @@ Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and 
   hand drawing, source cleanup, or final maintainer inputs are still pending.
 - Reusable Google Fonts onboarding knowledge lives in `.agents/` so it can be
   copied into future font repos:
+  - `GOOGLE_FONTS_PORTING_CHECKLIST.md`
   - `.agents/google-fonts-onboarding-checklists.md`
   - `.agents/google-fonts-official-reference-map.md`
   - `.agents/skills/google-fonts-onboarding/SKILL.md`
@@ -104,7 +105,7 @@ development. drawbot-skia is also the standard tool for any ad-hoc image
 generation (quick PNG renders of glyphs or feature tests).
 `make specimen` renders the landscape print review PDF at
 `documentation/proofs/print-spacing-specimen.pdf` across Regular, Medium, SemiBold,
-and Bold, with `documentation/proofs/print-spacing-specimen-index.md` as the page map.
+and Bold.
 
 ## Source Architecture
 
