@@ -13,7 +13,7 @@ try:
     from drawbot_skia.drawing import Drawing
 except ModuleNotFoundError as error:
     raise SystemExit(
-        "drawbot_skia is required. Run through `make print-spacing-specimen` "
+        "drawbot_skia is required. Run through `make specimen` "
         "after setting DRAWBOT_SKIA_REPO=/path/to/drawbot-skia, or install drawbot_skia in .venv."
     ) from error
 
@@ -26,7 +26,6 @@ DEFAULT_FONTS = [
     ROOT / "fonts/ttf/VirtuaGrotesk-Bold.ttf",
 ]
 DEFAULT_OUTPUT = ROOT / "documentation/proofs/print-spacing-specimen.pdf"
-DEFAULT_INDEX_OUTPUT = ROOT / "documentation/proofs/print-spacing-specimen-index.md"
 
 from grid_system import Grid, grid_view
 
@@ -34,31 +33,61 @@ PAGE_WIDTH = 792
 PAGE_HEIGHT = 612
 MARGIN = 36
 PAGE_GRID = Grid(PAGE_WIDTH, PAGE_HEIGHT, margin=MARGIN)  # unit = 18
-BASELINE = PAGE_GRID.unit / 2  # 9pt baseline grid for text leading
-TEXT_LEFT = 108  # four units right of the left margin line
-TEXT_WIDTH = PAGE_WIDTH - TEXT_LEFT - MARGIN
-
-
-def snap_baseline(value: float) -> float:
-    """Round a leading to the nearest baseline-grid step."""
-    return max(BASELINE / 2, round(value / (BASELINE / 2)) * (BASELINE / 2))
 
 LATIN_LOWER = "abcdefghijklmnopqrstuvwxyz"
 LATIN_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 LATIN_DIGITS = "0123456789"
-LATIN_PUNCT = ".,:;!?\"'()[]{}-/–—"
+LATIN_PUNCT = ".,:;!?/\\-–—'\"()[]{}"
 
-WATERFALL_LINES = [
-    "Hamburgefontsiv 0123456789",
-    "Typography on the UNIX System",
-    "Pack my box with five dozen liquor jugs.",
+BASIC_SPACING_LINES = [
+    "mimic minimum aluminum animal banana canal cinema dilemma",
+    "button sudden hidden ladder middle runner summer tunnel",
+    "office affine waffle suffer different effort staff traffic",
+    "round crown narrow rhythm thrown weather washer whistle",
+    "paper proper pepper upper appear prepare copper zipper",
+    "garden agenda edge judge bridge degree gadget budget",
+    "heavy behave velvet vivid reviver avenue woven wave",
+    "quick equal opaque square antique request quiet unique",
+    "frozen zebra lazy dizzy jazz puzzle buzzard zigzag",
+    "cliff scale local logical occult account circle cycle",
+    "hard shoulder rhythm alphabet method brother bother",
+    "story system steady studio status stainless stress",
+    "TYPE WATERFALL SPACING RHYTHM TEXTURE LETTERS",
+    "HAMBURGEFONTSIV MINIMUM MAXIMUM RHYTHM REVIEW",
+    "naive active civic vivid divide individual invitation",
+    "orange control corridor record border northern honor",
+    "label reliable available village illegal parallel tall",
+    "market remark framework maker kerning tracking texture",
+    "system stress status stories sister assist session",
+    "visual review proof print paper press process",
+    "weight width white window woven awkward onward",
+    "quiet quality equal square liquid sequel antique",
+    "face affine cafe office efficient coefficient traffic",
+    "type rhythm texture system spacing kerning proof",
 ]
 
-TEXTURE_TEXT = (
-    "The quick brown fox jumps over the lazy dog. Pack my box with five dozen "
-    "liquor jugs. How vexingly quick daft zebras jump. Sphinx of black quartz, "
-    "judge my vow. Two driven jocks help fax my big quiz."
-)
+DOUBLE_TEST_LINES = [
+    "Hassel Nibble Riddle Saffron Tunnel Pepper Llama",
+    "Haggard Bookkeeper Coffee Toffee Office Affinity",
+    "Bamboo Balloon Beetle Bubble Butter Succeed",
+    "Added Oddity Middle Saddle Fiddle Hidden Sudden",
+    "Puzzle Fizz Jazz Buzz Fuzzy Dazzle Sizzle",
+    "AARDVARK NIBBLE RIDDLE SAFFRON TUNNEL PEPPER",
+    "BOOKKEEPER COFFEE TOFFEE OFFICE AFFINITY",
+    "BALLOON BEETLE BUBBLE BUTTER SUCCEED PUZZLE",
+    "MIDDLE SADDLE FIDDLE HIDDEN SUDDEN ADDED ODDITY",
+    "PUZZLE FIZZ JAZZ BUZZ FUZZY DAZZLE SIZZLE",
+    "little letter cellar follow mellow pillow yellow",
+    "committee coffee toffee staff office official",
+    "copper zipper pepper upper appear appraise",
+    "runner tunnel sudden hidden middle fiddle",
+    "fuzzy dizzy puzzle sizzle dazzle jazz buzz",
+    "minimum maximum mammal common summer hammer",
+]
+
+LOWER_CONTEXTS = "abcdefghijklmnopqrstuvwxyz"
+RIGHT_CONTEXTS = "aeionrumlhspdftckbgwyvzqxj"
+LEFT_CONTEXTS = "haeionrumlspdftckbgwyvzqxj"
 
 ARABIC_SAMPLES = [
     ("shaping", "بسم الله الرحمن الرحيم"),
@@ -68,6 +97,171 @@ ARABIC_SAMPLES = [
     ("digits", "٠١٢٣٤٥٦٧٨٩  ۰۱۲۳۴۵۶۷۸۹"),
     ("punctuation", "، ؛ ؟ ٪ ٫ ٬ ؍ ۔"),
 ]
+
+MAIN_X = PAGE_GRID.x(10)
+MAIN_Y = PAGE_GRID.y(0)
+MAIN_WIDTH = PAGE_GRID.unit * 30
+MAIN_HEIGHT = PAGE_GRID.unit * 29
+HEADER_RULE_Y = PAGE_GRID.y_top(1)
+HEADER_TEXT_Y = HEADER_RULE_Y + 3
+SIDEBAR_TITLE_Y = PAGE_GRID.y_top(3) + 3
+SIDEBAR_META_Y = PAGE_GRID.y_top(6) + 3
+
+KERN_KING_TEXT = (
+    "lynx tuft frogs, dolphins abduct by proxy the ever awkward klutz, dud, "
+    "dummkopf, jinx snubnose filmgoer, orphan sgt. renfruw grudgek reyfus, "
+    "md. sikh psych if halt tympany jewelry sri heh! twyer vs jojo pneu "
+    "fylfot alcaaba son of nonplussed halfbreed bubbly playboy guggenheim "
+    "daddy coccyx sgraffito effect, vacuum dirndle impossible attempt to "
+    "disvalue, muzzle the afghan czech czar and exninja, bob bixby dvorak "
+    "wood dhurrie savvy, dizzy eye aeon circumcision uvula scrungy picnic "
+    "luxurious special type carbohydrate ovoid adzuki kumquat bomb? afterglows "
+    "gold girl pygmy gnome lb. ankhs acme aggroupment akmed brouhha tv wt. "
+    "ujjain ms. oz abacus mnemonics bhikku khaki bwana aorta embolism vivid "
+    "owls often kvetch otherwise, wysiwyg densfort wright you've absorbed "
+    "rhythm, put obstacle kyaks krieg kern wurst subject enmity equity coquet "
+    "quorum pique tzetse hepzibah sulfhydryl briefcase ajax ehler kafka fjord "
+    "elfship halfdressed jugful eggcup hummingbirds swingdevil bagpipe legwork "
+    "reproachful hunchback archknave baghdad wejh rijswijk rajbansi rajput "
+    "ajdir okay weekday obfuscate subpoena liebknecht marcgravia ecbolic "
+    "arcticward dickcissel pincpinc boldface maidkin adjective adcraft adman "
+    "dwarfness applejack darkbrown kiln palzy always farmland flimflam unbossy "
+    "nonlineal stepbrother lapdog stopgap sx countdown basketball beaujolais "
+    "vb. flowchart aztec lazy bozo syrup tarzan annoying dyke yucky hawg "
+    "gagzhukz cuzco squire when hiho mayhem nietzsche szasz gumdrop milk "
+    "emplotment ambidextrously lacquer byway ecclesiastes stubchen hobgoblins "
+    "crabmill aqua hawaii blvd. subquality byzantine empire debt obvious "
+    "cervantes jekabzeel anecdote flicflac mechanicville bedbug couldn't i've "
+    "it's they'll they'd dpt. headquarter burkhardt xerxes atkins govt. "
+    "ebenezer lg. lhama amtrak amway fixity axmen quumbabda upjohn hrumpf"
+)
+
+def adjacency_matrix_text(chars: str) -> str:
+    control = [
+        chars[13] * 3 + chars[14] * 3 + chars[13] * 2 + chars[14] * 2 + chars[13] + chars[14] + chars[13] + chars[14] * 2 + chars[13] * 2 + chars[14] * 3 + chars[13] * 3,
+        chars[7] * 3 + chars[14] * 3 + chars[7] * 2 + chars[14] * 2 + chars[7] + chars[14] + chars[7] + chars[14] * 2 + chars[7] * 2 + chars[14] * 3 + chars[7] * 3,
+    ]
+    matrix = ["".join(left + right + left for right in chars) for left in chars]
+    return "\n".join(control + matrix)
+
+
+def punctuation_matrix_text(chars: str) -> str:
+    rows = [f"{punct}{punct.join(chars)}{punct}" for punct in LATIN_PUNCT]
+    return "\n".join(rows)
+
+
+def number_matrix_text() -> str:
+    digit_rows = [
+        "00011100110101100111000",
+        *["".join(f"{left}{right}{left}" for right in LATIN_DIGITS) for left in LATIN_DIGITS],
+    ]
+    operators = "+-±×÷=/"
+    operator_rows = [f"{op}{op.join(LATIN_DIGITS)}{op}" for op in operators]
+    currency_rows = [f"{op}{op.join(LATIN_DIGITS)}{op}" for op in "°$€£#%"]
+    punctuation_rows = [f"{digit}% {digit}‰ {digit}-{digit}.{digit},{digit}…{digit}°" for digit in LATIN_DIGITS]
+    return "\n\n".join(
+        [
+            "\n".join(digit_rows),
+            "\n".join(operator_rows),
+            "\n".join(currency_rows),
+            "\n".join(punctuation_rows),
+        ]
+    )
+
+
+def context_strings_text(letters: str) -> str:
+    lines = []
+    for letter in letters:
+        right, left = context_pair(letter)
+        lines.append(right)
+        lines.append(left)
+        lines.append("")
+    return "\n".join(lines)
+
+
+def proof_chrome(
+    db: Drawing,
+    font_path: Path,
+    page_index: list[dict[str, str | int]],
+    title: str,
+    section: str,
+    size: float,
+) -> None:
+    info = font_info(font_path)
+    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
+    db.save()
+    db.fill(1)
+    db.rect(0, 0, PAGE_WIDTH, PAGE_HEIGHT)
+    db.restore()
+    if grid_view():
+        PAGE_GRID.draw(db)
+    page_index.append({"page": len(page_index) + 1, "title": f"{font_label(font_path)} {title}", "section": section})
+
+    db.save()
+    db.stroke(0)
+    db.strokeWidth(1)
+    db.line((MARGIN, HEADER_RULE_Y), (PAGE_WIDTH - MARGIN, HEADER_RULE_Y))
+    db.line((MARGIN, MARGIN), (PAGE_WIDTH - MARGIN, MARGIN))
+    db.restore()
+
+    db.save()
+    db.font("Courier", 10)
+    db.fill(0)
+    db.text(str(len(page_index)), (MARGIN, HEADER_TEXT_Y))
+    db.text(f"{info['family']} {font_label(font_path)}", (PAGE_GRID.x(10), HEADER_TEXT_Y))
+    db.text(datetime.now().strftime("%Y-%m-%d"), (PAGE_GRID.x(24), HEADER_TEXT_Y))
+    db.text("Font Engineer: Eli Heuer", (PAGE_GRID.x(32), HEADER_TEXT_Y))
+
+    db.text(f"{size:g}pt {title}", (MARGIN, SIDEBAR_TITLE_Y))
+    db.text(f"Style: {font_label(font_path)}", (MARGIN, SIDEBAR_META_Y))
+    db.text(f"Glyphs: {info['glyphs']}", (MARGIN, SIDEBAR_META_Y - PAGE_GRID.unit))
+    db.text("Grid: 18pt unit", (MARGIN, SIDEBAR_META_Y - PAGE_GRID.unit * 2))
+    db.restore()
+
+
+def proof_page(
+    db: Drawing,
+    font_path: Path,
+    page_index: list[dict[str, str | int]],
+    title: str,
+    section: str,
+    text: str,
+    size: float,
+    leading: float,
+) -> None:
+    proof_chrome(db, font_path, page_index, title, section, size)
+
+    db.save()
+    db.font(str(font_path), size)
+    db.lineHeight(leading)
+    db.fill(0)
+    db.textBox(text.strip(), (MAIN_X, MAIN_Y, MAIN_WIDTH, MAIN_HEIGHT))
+    db.restore()
+
+
+def arabic_grid_page(db: Drawing, font_path: Path, page_index: list[dict[str, str | int]]) -> None:
+    proof_chrome(
+        db,
+        font_path,
+        page_index,
+        "Arabic Strings",
+        "Arabic shaping, marks, numerals, and punctuation on the same grid system.",
+        18,
+    )
+    y = PAGE_GRID.y_top(3)
+    for sample_label, sample_text in ARABIC_SAMPLES:
+        db.save()
+        db.font("Courier", 10)
+        db.fill(0)
+        db.text(sample_label, (MAIN_X, y))
+        db.restore()
+        db.save()
+        db.font(str(font_path), 18)
+        db.fill(0)
+        text_width = db.textSize(sample_text)[0]
+        db.text(sample_text, (MAIN_X + MAIN_WIDTH - text_width, y - PAGE_GRID.unit))
+        db.restore()
+        y -= PAGE_GRID.unit * 4
 
 
 def font_info(font_path: Path) -> dict[str, str | int]:
@@ -89,280 +283,18 @@ def font_info(font_path: Path) -> dict[str, str | int]:
     return info
 
 
-def draw_header(
-    db: Drawing,
-    title: str,
-    page_index: list[dict[str, str | int]],
-    section: str,
-) -> None:
-    db.newPage(PAGE_WIDTH, PAGE_HEIGHT)
-    if grid_view():
-        PAGE_GRID.draw(db)
-    page_index.append({"page": len(page_index) + 1, "title": title, "section": section})
-    db.save()
-    db.font("Helvetica", 8)
-    db.fill(0.45)
-    db.text("Virtua Grotesk print spacing specimen", (MARGIN, PAGE_HEIGHT - MARGIN + 9))
-    title_width = db.textSize(title)[0]
-    db.text(title, (PAGE_WIDTH - MARGIN - title_width, PAGE_HEIGHT - MARGIN + 9))
-    db.text(datetime.now().strftime("%Y-%m-%d"), (MARGIN, 18))
-    db.restore()
-
-
-def rule(db: Drawing, y: float) -> None:
-    db.save()
-    db.stroke(0.78)
-    db.strokeWidth(0.5)
-    db.line((MARGIN, y), (PAGE_WIDTH - MARGIN, y))
-    db.restore()
-
-
-def label(db: Drawing, text: str, x: float, y: float, size: int = 8) -> None:
-    db.save()
-    db.font("Helvetica", size)
-    db.fill(0.48)
-    db.text(text, (x, y))
-    db.restore()
-
-
 def font_label(font_path: Path) -> str:
     info = font_info(font_path)
     return str(info["style"])
 
 
-def draw_left_label(db: Drawing, text: str, y: float) -> None:
-    db.save()
-    db.font("Helvetica", 7)
-    db.fill(0.48)
-    db.text(text, (MARGIN, y))
-    db.restore()
+def context_pair(letter: str) -> tuple[str, str]:
+    right = " ".join(letter + char for char in RIGHT_CONTEXTS if char != letter)
+    left = " ".join(char + letter for char in LEFT_CONTEXTS if char != letter)
+    return f"{letter}+  {right}", f"+{letter}  {left}"
 
 
-def draw_rtl(db: Drawing, font_path: Path, text: str, size: int, y: float) -> None:
-    db.font(str(font_path), size)
-    db.fill(0)
-    width = db.textSize(text)[0]
-    db.text(text, (PAGE_WIDTH - MARGIN - width, y))
-
-
-def cover_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
-    info = font_info(font_paths[0])
-    draw_header(db, "Weight axis overview", page_index, "Landscape waterfall across all static weights.")
-    y = PAGE_HEIGHT - 90
-    db.font(str(font_paths[-1]), 54)
-    db.fill(0)
-    db.text(str(info["family"] or "Virtua Grotesk"), (MARGIN, y))
-    y -= 45
-    label(db, f"{info['version']}  /  {len(font_paths)} static review weights  /  landscape letter PDF", MARGIN, y)
-    y -= 36
-    rule(db, y)
-    y -= 45
-
-    for font_path in font_paths:
-        style = font_label(font_path)
-        draw_left_label(db, style, y + 8)
-        db.font(str(font_path), 34)
-        db.fill(0)
-        db.text("Hamburgefontsiv 0123456789", (TEXT_LEFT, y))
-        y -= 63
-
-    y -= 9
-    rule(db, y)
-    y -= 27
-    label(
-        db,
-        "Use this PDF on paper for weight balance, sidebearing rhythm, numerals, punctuation, and Arabic texture review.",
-        MARGIN,
-        y,
-    )
-
-
-def waterfall_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
-    draw_header(db, "Latin waterfalls", page_index, "Latin weight and size comparisons.")
-    y = PAGE_HEIGHT - 63
-    sizes = [42, 30, 22, 16, 12, 9]
-    for font_path in font_paths:
-        draw_left_label(db, font_label(font_path), y - 2)
-        for size, sample in zip(sizes, WATERFALL_LINES * 2, strict=False):
-            db.font(str(font_path), size)
-            db.fill(0)
-            db.text(sample, (TEXT_LEFT, y))
-            y -= snap_baseline(size * 1.22)
-        y -= 18
-        if y < 110 and font_path != font_paths[-1]:
-            draw_header(db, "Latin waterfalls continued", page_index, "Latin weight and size comparisons.")
-            y = PAGE_HEIGHT - 63
-
-
-def generated_spacing_strings(chars: str, anchors: str) -> list[str]:
-    lines = []
-    for anchor in anchors:
-        line = anchor + anchor.join(chars) + anchor
-        lines.append(line)
-    return lines
-
-
-def spacing_page(
-    db: Drawing,
-    font_path: Path,
-    page_index: list[dict[str, str | int]],
-    title: str,
-    chars: str,
-    anchors: str,
-) -> None:
-    draw_header(db, f"{font_label(font_path)} {title}", page_index, f"Generated {title.lower()} strings.")
-    y = PAGE_HEIGHT - 54
-    db.font(str(font_path), 10)
-    db.fill(0)
-    for line in generated_spacing_strings(chars, anchors):
-        if db.textSize(line)[0] > TEXT_WIDTH:
-            while db.textSize(line)[0] > TEXT_WIDTH and len(line) > 18:
-                line = line[:-2]
-        db.text(line, (TEXT_LEFT, y))
-        draw_left_label(db, line[:1], y)
-        y -= 13.5
-        if y < 45:
-            draw_header(db, f"{font_label(font_path)} {title} continued", page_index, f"Generated {title.lower()} strings.")
-            y = PAGE_HEIGHT - 54
-
-
-def texture_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
-    draw_header(db, "Paragraph texture", page_index, "Short columns for print color, rhythm, and weight comparison.")
-    col_gap = PAGE_GRID.unit
-    col_w = (PAGE_WIDTH - 2 * MARGIN - col_gap) / 2
-    row_h = PAGE_GRID.unit * 12
-    row_step = row_h + 27
-    top = PAGE_HEIGHT - MARGIN - 27 - row_h
-    positions = [
-        (MARGIN, top),
-        (MARGIN + col_w + col_gap, top),
-        (MARGIN, top - row_step),
-        (MARGIN + col_w + col_gap, top - row_step),
-    ]
-    for font_path, (x, y) in zip(font_paths, positions, strict=True):
-        label(db, font_label(font_path), x, y + row_h + 9)
-        db.font(str(font_path), 11)
-        db.fill(0)
-        db.textBox(TEXTURE_TEXT, (x, y, col_w, row_h))
-        db.save()
-        db.stroke(0.88)
-        db.strokeWidth(0.4)
-        db.fill(None)
-        db.rect(x, y, col_w, row_h)
-        db.restore()
-
-
-def numeral_punctuation_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
-    draw_header(db, "Numerals and punctuation", page_index, "Figures and punctuation across weights.")
-    samples = [
-        ("digits", LATIN_DIGITS),
-        ("tabular contexts", "00 11 22 33 44 55 66 77 88 99"),
-        ("punctuation", LATIN_PUNCT),
-        ("mixed", "H1 H2 H3 10:45 12/24 100% $123.45"),
-    ]
-    y = PAGE_HEIGHT - 72
-    for font_path in font_paths:
-        draw_left_label(db, font_label(font_path), y + 4)
-        for sample_label, text in samples:
-            label(db, sample_label, TEXT_LEFT, y + 18, 6)
-            db.font(str(font_path), 25)
-            db.fill(0)
-            db.text(text, (TEXT_LEFT + 72, y))
-            y -= 45
-        y -= 18
-        if y < 234 and font_path != font_paths[-1]:
-            draw_header(
-                db,
-                "Numerals and punctuation continued",
-                page_index,
-                "Figures and punctuation across weights.",
-            )
-            y = PAGE_HEIGHT - 72
-
-
-def arabic_weight_page(db: Drawing, font_paths: list[Path], page_index: list[dict[str, str | int]]) -> None:
-    draw_header(db, "Arabic weight and spacing", page_index, "Arabic shaping, marks, numerals, and punctuation across weights.")
-    y = PAGE_HEIGHT - 63
-    for font_path in font_paths:
-        draw_left_label(db, font_label(font_path), y + 4)
-        for sample_label, text in ARABIC_SAMPLES:
-            label(db, sample_label, TEXT_LEFT, y + 11, 6)
-            draw_rtl(db, font_path, text, 24, y)
-            y -= 36
-        y -= 9
-        if y < 120 and font_path != font_paths[-1]:
-            draw_header(db, "Arabic weight and spacing continued", page_index, "Arabic shaping, marks, numerals, and punctuation.")
-            y = PAGE_HEIGHT - 63
-
-
-def glyph_grid_page(db: Drawing, font_path: Path, page_index: list[dict[str, str | int]]) -> None:
-    font = TTFont(font_path)
-    cmap = sorted(cp for cp in (font.getBestCmap() or {}) if cp >= 0x20 and cp != 0x00A0)
-    font.close()
-    draw_header(db, f"{font_label(font_path)} encoded glyph grid", page_index, "Compact encoded cmap grid for print scanning.")
-    cols = 16
-    cell_w = (PAGE_WIDTH - 2 * MARGIN) / cols
-    cell_h = 36
-    x = MARGIN
-    y = PAGE_HEIGHT - 54
-    for cp in cmap:
-        if y - cell_h < 36:
-            draw_header(db, f"{font_label(font_path)} encoded glyph grid continued", page_index, "Compact encoded cmap grid continuation.")
-            x = MARGIN
-            y = PAGE_HEIGHT - 54
-        db.save()
-        db.stroke(0.88)
-        db.strokeWidth(0.35)
-        db.fill(None)
-        db.rect(x, y - cell_h, cell_w, cell_h)
-        db.restore()
-        char = chr(cp)
-        db.font(str(font_path), 14)
-        db.fill(0)
-        text_w = db.textSize(char)[0]
-        db.text(char, (x + (cell_w - text_w) / 2, y - cell_h + 12))
-        label(db, f"{cp:04X}", x + 2, y - cell_h + 3, 4)
-        x += cell_w
-        if x + cell_w > PAGE_WIDTH - MARGIN + 0.01:
-            x = MARGIN
-            y -= cell_h
-
-
-def index_markdown(output_path: Path, page_index: list[dict[str, str | int]]) -> str:
-    lines = [
-        "# Print Spacing Specimen Index",
-        "",
-        "This generated index maps the landscape print/PDF specimen used for",
-        "weight, spacing, texture, numeral, punctuation, and Arabic review.",
-        "",
-        f"- PDF: `{output_path.relative_to(ROOT)}`",
-        f"- Pages: {len(page_index)}",
-        "- Build command: `make print-spacing-specimen`",
-        "",
-        "## Page Map",
-        "",
-        "| Page | Title | Review focus |",
-        "| ---: | --- | --- |",
-    ]
-    for entry in page_index:
-        lines.append(f"| {entry['page']} | {entry['title']} | {entry['section']} |")
-    lines.extend(
-        [
-            "",
-            "## Review Notes",
-            "",
-            "- Print in landscape mode at 100% scale; avoid fit-to-page scaling when",
-            "  judging spacing and weight.",
-            "- Use this PDF for paper review, then verify any suspected issue in the",
-            "  source UFOs and Google Fonts HTML proof before recording final status.",
-            "- Regenerate after drawing, spacing, kerning, metrics, or build changes.",
-            "",
-        ]
-    )
-    return "\n".join(lines)
-
-
-def build(font_paths: list[Path], output_path: Path, index_output: Path | None) -> None:
+def build(font_paths: list[Path], output_path: Path) -> None:
     missing = [path for path in font_paths if not path.exists()]
     if missing:
         raise SystemExit("Missing font files: " + ", ".join(str(path) for path in missing))
@@ -372,42 +304,115 @@ def build(font_paths: list[Path], output_path: Path, index_output: Path | None) 
     db.newDrawing()
     page_index: list[dict[str, str | int]] = []
 
-    cover_page(db, font_paths, page_index)
-    waterfall_page(db, font_paths, page_index)
-    texture_page(db, font_paths, page_index)
-    numeral_punctuation_page(db, font_paths, page_index)
-    arabic_weight_page(db, font_paths, page_index)
     for font_path in font_paths:
-        spacing_page(db, font_path, page_index, "lowercase spacing", LATIN_LOWER, "noheisav")
-        spacing_page(db, font_path, page_index, "uppercase spacing", LATIN_UPPER, "HODENS")
-    glyph_grid_page(db, font_paths[0], page_index)
+        proof_page(
+            db,
+            font_path,
+            page_index,
+            "Uppercase Matrix",
+            "Recursive-style all-uppercase adjacency matrix for sidebearing and rhythm review.",
+            adjacency_matrix_text(LATIN_UPPER),
+            7.5,
+            11.5,
+        )
+        proof_page(
+            db,
+            font_path,
+            page_index,
+            "Lowercase Matrix",
+            "Recursive-style all-lowercase adjacency matrix for sidebearing and rhythm review.",
+            adjacency_matrix_text(LATIN_LOWER),
+            7.5,
+            11.5,
+        )
+        proof_page(
+            db,
+            font_path,
+            page_index,
+            "Punctuation Matrix",
+            "Punctuation against uppercase and lowercase alphabets.",
+            "UPPERCASE\n"
+            + punctuation_matrix_text(LATIN_UPPER)
+            + "\n\nLOWERCASE\n"
+            + punctuation_matrix_text(LATIN_LOWER),
+            8,
+            11.5,
+        )
+        proof_page(
+            db,
+            font_path,
+            page_index,
+            "Number Matrix",
+            "Figures, operators, currency, percent, punctuation, and long digit texture.",
+            number_matrix_text(),
+            8.5,
+            12,
+        )
+        proof_page(
+            db,
+            font_path,
+            page_index,
+            "Kern King",
+            "Dense weird-word paragraph for kerning, spacing, and texture review.",
+            KERN_KING_TEXT,
+            14,
+            19.5,
+        )
+        proof_page(
+            db,
+            font_path,
+            page_index,
+            "Basic Word Tests",
+            "Dense word-based spacing tests.",
+            "\n".join(BASIC_SPACING_LINES),
+            11,
+            15,
+        )
+        proof_page(
+            db,
+            font_path,
+            page_index,
+            "Doubles",
+            "Double-letter spacing and kerning tests.",
+            "\n".join(DOUBLE_TEST_LINES),
+            12,
+            16,
+        )
+        for label_text, letters in [
+            ("Lowercase Contexts A-M", LOWER_CONTEXTS[0:13]),
+            ("Lowercase Contexts N-Z", LOWER_CONTEXTS[13:26]),
+        ]:
+            proof_page(
+                db,
+                font_path,
+                page_index,
+                label_text,
+                "a+ and +a style sidebearing/context tests.",
+                context_strings_text(letters),
+                9,
+                12,
+            )
+        arabic_grid_page(db, font_path, page_index)
 
     db.saveImage(str(output_path))
     page_count = db.pageCount()
     db.endDrawing()
     if not output_path.exists() or output_path.stat().st_size == 0:
         raise SystemExit(f"Print spacing specimen was not written: {output_path}")
-    if index_output is not None:
-        index_output.parent.mkdir(parents=True, exist_ok=True)
-        index_output.write_text(index_markdown(output_path, page_index), encoding="utf-8")
 
     print(f"Wrote {output_path}")
     print(f"Pages: {page_count}")
-    if index_output is not None:
-        print(f"Wrote {index_output}")
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
-    parser.add_argument("--index-output", type=Path, default=DEFAULT_INDEX_OUTPUT)
     parser.add_argument("fonts", nargs="*", type=Path, default=DEFAULT_FONTS)
     args = parser.parse_args()
 
     build(
         [path.resolve() for path in args.fonts],
         args.output.resolve(),
-        args.index_output.resolve() if args.index_output else None,
     )
     return 0
 
