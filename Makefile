@@ -20,7 +20,7 @@ help:
 		'  make specimen       Build the landscape spacing specimen PDF' \
 		'  make readme-images  Build README PNG specimen images' \
 		'  make social-images  Build square social media specimen PNGs' \
-		'  make runebender     Open sources/VirtuaGrotesk.designspace in Runebender web' \
+		'  make runebender     Open sources/VirtuaGrotesk.designspace in chromeless Runebender web' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
@@ -46,7 +46,7 @@ social-images: build
 	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_social_images.py
 
 runebender:
-	runebender-serve "$(RUNEBENDER_SOURCE)" --open
+	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-web.sh
 
 qa: build
 	./scripts/check_gf_fonts.sh
