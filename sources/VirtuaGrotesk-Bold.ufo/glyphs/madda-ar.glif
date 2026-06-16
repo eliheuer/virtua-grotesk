@@ -7,12 +7,12 @@
     <contour>
       <point x="-144" y="52" type="line"/>
       <point x="-64" y="100" type="line"/>
-      <point x="0" y="52" type="line"/>
+      <point x="0" y="52" type="line" smooth="yes"/>
       <point x="64" y="4" type="line"/>
       <point x="144" y="52" type="line"/>
       <point x="144" y="104" type="line"/>
       <point x="64" y="56" type="line"/>
-      <point x="0" y="104" type="line"/>
+      <point x="0" y="104" type="line" smooth="yes"/>
       <point x="-64" y="152" type="line"/>
       <point x="-144" y="104" type="line"/>
     </contour>

@@ -22,8 +22,7 @@ make reports            # Regenerate source/build metadata reports
 make preflight          # Build, proof, specimen, reports, then check artifacts
 make test               # Build, then run Fontspector googlefonts profile
 /edit-glyph A           # Inspect/edit a glyph
-runebender-serve sources/VirtuaGrotesk.designspace --open
-                        # Open the font in the Runebender web editor —
+make runebender         # Open the font in the Runebender web editor —
                         # edits to sources/ on disk live-reload in the
                         # browser; the user's Cmd+S saves back to disk
 /kerning list           # View current kerning pairs
@@ -50,12 +49,27 @@ make setup      # Create .venv and install requirements
 make build      # Build variable and static TTFs into fonts/
 make proof      # Build documentation/proofs/proof.pdf
 make specimen   # Build documentation/proofs/print-spacing-specimen.pdf
+make runebender # Open sources/VirtuaGrotesk.designspace in Runebender web
 make reports    # Regenerate source/build metadata reports
 make preflight  # Run the full local handoff gate
 make test       # Build, then run Fontspector's googlefonts profile
 ```
 
 Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and `sources/instance_ufos/` are generated build outputs.
+
+## Runebender Web Editing
+
+Use `make runebender` to open `sources/VirtuaGrotesk.designspace` in the local
+Runebender web editor. The target runs:
+
+```bash
+runebender-serve sources/VirtuaGrotesk.designspace --open
+```
+
+Keep the server running while editing. Source edits on disk live-reload in the
+browser, and the user's Cmd+S in Runebender saves back to disk. Do not use the
+old native `~/.cargo/bin/runebender` unless the user explicitly asks for the
+native app.
 
 ## Core QA Expectations
 

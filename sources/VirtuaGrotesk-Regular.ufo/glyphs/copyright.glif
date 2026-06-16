@@ -35,12 +35,12 @@
       <point x="308" y="252" type="line"/>
       <point x="432" y="252" type="line"/>
       <point x="476" y="300" type="line"/>
-      <point x="392" y="300" type="line"/>
+      <point x="392" y="300" type="line" smooth="yes"/>
       <point x="328" y="300" type="line"/>
       <point x="292" y="336" type="line"/>
       <point x="292" y="372" type="line"/>
       <point x="328" y="408" type="line"/>
-      <point x="392" y="408" type="line"/>
+      <point x="392" y="408" type="line" smooth="yes"/>
       <point x="476" y="408" type="line"/>
     </contour>
   </outline>

@@ -12,6 +12,11 @@
     <key>public.kern2.slash</key>
     <real>-128</real>
   </dict>
+  <key>T</key>
+  <dict>
+    <key>y</key>
+    <real>-152</real>
+  </dict>
   <key>aacute</key>
   <dict>
     <key>public.kern2.apostrophemod</key>
@@ -269,6 +274,11 @@
   <dict>
     <key>public.kern2.t</key>
     <real>-8</real>
+  </dict>
+  <key>space</key>
+  <dict>
+    <key>T</key>
+    <real>0</real>
   </dict>
   <key>y</key>
   <dict>

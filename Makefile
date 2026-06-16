@@ -7,8 +7,9 @@ DRAWBOT_PYTHONPATH = $(if $(DRAWBOT_SKIA_REPO),$(DRAWBOT_SKIA_REPO)/src$${PYTHON
 
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
+RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof specimen readme-images social-images qa test reports preflight clean
+.PHONY: help setup build proof specimen readme-images social-images runebender qa test reports preflight clean
 
 help:
 	@printf '%s\n' \
@@ -19,6 +20,7 @@ help:
 		'  make specimen       Build the landscape spacing specimen PDF' \
 		'  make readme-images  Build README PNG specimen images' \
 		'  make social-images  Build square social media specimen PNGs' \
+		'  make runebender     Open sources/VirtuaGrotesk.designspace in Runebender web' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
@@ -42,6 +44,9 @@ readme-images: build
 
 social-images: build
 	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_social_images.py
+
+runebender:
+	runebender-serve "$(RUNEBENDER_SOURCE)" --open
 
 qa: build
 	./scripts/check_gf_fonts.sh
