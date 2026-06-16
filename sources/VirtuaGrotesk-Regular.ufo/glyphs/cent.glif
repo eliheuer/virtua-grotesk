@@ -17,12 +17,12 @@
       <point x="292" y="196" type="line"/>
       <point x="440" y="196" type="line"/>
       <point x="488" y="256" type="line"/>
-      <point x="392" y="256" type="line"/>
+      <point x="392" y="256" type="line" smooth="yes"/>
       <point x="312" y="256" type="line"/>
       <point x="228" y="320" type="line"/>
       <point x="228" y="424" type="line"/>
       <point x="312" y="488" type="line"/>
-      <point x="392" y="488" type="line"/>
+      <point x="392" y="488" type="line" smooth="yes"/>
       <point x="488" y="488" type="line"/>
     </contour>
   </outline>
