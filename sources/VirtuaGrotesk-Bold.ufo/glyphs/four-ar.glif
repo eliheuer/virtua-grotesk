@@ -1,77 +1,77 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="four-ar" format="2">
-  <advance width="600"/>
-  <unicode hex="0664"/>
-  <outline>
-    <contour>
-      <point x="324" y="-14" type="curve" smooth="yes"/>
-      <point x="502" y="0" type="line" smooth="yes"/>
-      <point x="528" y="-2"/>
-      <point x="538" y="14"/>
-      <point x="536" y="34" type="curve" smooth="yes"/>
-      <point x="528" y="144" type="line" smooth="yes"/>
-      <point x="528" y="162"/>
-      <point x="516" y="176"/>
-      <point x="494" y="174" type="curve" smooth="yes"/>
-      <point x="306" y="160" type="line" smooth="yes"/>
-      <point x="262" y="158"/>
-      <point x="234" y="166"/>
-      <point x="234" y="194" type="curve" smooth="yes"/>
-      <point x="234" y="230"/>
-      <point x="280" y="236"/>
-      <point x="406" y="258" type="curve" smooth="yes"/>
-      <point x="422" y="262"/>
-      <point x="434" y="276"/>
-      <point x="430" y="294" type="curve" smooth="yes"/>
-      <point x="416" y="376" type="line" smooth="yes"/>
-      <point x="412" y="392"/>
-      <point x="402" y="406"/>
-      <point x="386" y="404" type="curve" smooth="yes"/>
-      <point x="354" y="400"/>
-      <point x="320" y="388"/>
-      <point x="286" y="388" type="curve" smooth="yes"/>
-      <point x="264" y="388"/>
-      <point x="246" y="400"/>
-      <point x="246" y="418" type="curve" smooth="yes"/>
-      <point x="246" y="438"/>
-      <point x="260" y="452"/>
-      <point x="312" y="468" type="curve" smooth="yes"/>
-      <point x="462" y="516" type="line" smooth="yes"/>
-      <point x="482" y="522"/>
-      <point x="488" y="534"/>
-      <point x="484" y="552" type="curve" smooth="yes"/>
-      <point x="458" y="664" type="line" smooth="yes"/>
-      <point x="454" y="682"/>
-      <point x="440" y="696"/>
-      <point x="418" y="690" type="curve" smooth="yes"/>
-      <point x="304" y="660" type="line" smooth="yes"/>
-      <point x="174" y="624"/>
-      <point x="70" y="576"/>
-      <point x="70" y="456" type="curve" smooth="yes"/>
-      <point x="70" y="340"/>
-      <point x="194" y="308"/>
-      <point x="286" y="310" type="curve"/>
-      <point x="286" y="354" type="line"/>
-      <point x="146" y="326"/>
-      <point x="64" y="260"/>
-      <point x="64" y="160" type="curve" smooth="yes"/>
-      <point x="64" y="18"/>
-      <point x="196" y="-24"/>
-    </contour>
-  </outline>
-  <lib>
-    <dict>
-      <key>com.runebenderComfy.donorCandidate</key>
-      <dict>
-        <key>donorGlyph</key>
-        <string>four-ar</string>
-        <key>xScale</key>
-        <real>1.05634</real>
-        <key>yScale</key>
-        <real>1.10769</real>
-      </dict>
-      <key>public.markColor</key>
-      <string>1,0.3,0.3,1</string>
-    </dict>
-  </lib>
+	<unicode hex="0664"/>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="324" y="-14" type="curve" smooth="yes"/>
+			<point x="502" y="0" type="line" smooth="yes"/>
+			<point x="528" y="-2"/>
+			<point x="538" y="14"/>
+			<point x="536" y="34" type="curve" smooth="yes"/>
+			<point x="528" y="144" type="line" smooth="yes"/>
+			<point x="528" y="162"/>
+			<point x="516" y="176"/>
+			<point x="494" y="174" type="curve" smooth="yes"/>
+			<point x="306" y="160" type="line" smooth="yes"/>
+			<point x="262" y="158"/>
+			<point x="234" y="166"/>
+			<point x="234" y="194" type="curve" smooth="yes"/>
+			<point x="234" y="230"/>
+			<point x="280" y="236"/>
+			<point x="406" y="258" type="curve" smooth="yes"/>
+			<point x="422" y="262"/>
+			<point x="434" y="276"/>
+			<point x="430" y="294" type="curve" smooth="yes"/>
+			<point x="416" y="376" type="line" smooth="yes"/>
+			<point x="412" y="392"/>
+			<point x="402" y="406"/>
+			<point x="386" y="404" type="curve" smooth="yes"/>
+			<point x="354" y="400"/>
+			<point x="320" y="388"/>
+			<point x="286" y="388" type="curve" smooth="yes"/>
+			<point x="264" y="388"/>
+			<point x="246" y="400"/>
+			<point x="246" y="418" type="curve" smooth="yes"/>
+			<point x="246" y="438"/>
+			<point x="260" y="452"/>
+			<point x="312" y="468" type="curve" smooth="yes"/>
+			<point x="462" y="516" type="line" smooth="yes"/>
+			<point x="482" y="522"/>
+			<point x="488" y="534"/>
+			<point x="484" y="552" type="curve" smooth="yes"/>
+			<point x="458" y="664" type="line" smooth="yes"/>
+			<point x="454" y="682"/>
+			<point x="440" y="696"/>
+			<point x="418" y="690" type="curve" smooth="yes"/>
+			<point x="304" y="660" type="line" smooth="yes"/>
+			<point x="174" y="624"/>
+			<point x="70" y="576"/>
+			<point x="70" y="456" type="curve" smooth="yes"/>
+			<point x="70" y="340"/>
+			<point x="194" y="308"/>
+			<point x="286" y="310" type="curve"/>
+			<point x="286" y="354" type="line"/>
+			<point x="146" y="326"/>
+			<point x="64" y="260"/>
+			<point x="64" y="160" type="curve" smooth="yes"/>
+			<point x="64" y="18"/>
+			<point x="196" y="-24"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebenderComfy.donorCandidate</key>
+			<dict>
+				<key>donorGlyph</key>
+				<string>four-ar</string>
+				<key>xScale</key>
+				<real>1.05634</real>
+				<key>yScale</key>
+				<real>1.10769</real>
+			</dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
 </glyph>

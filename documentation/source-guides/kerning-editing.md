@@ -8,8 +8,10 @@ paths:
 
 ## Current State
 
-- **Bold master:** Has kerning (~90 pairs across 30+ groups) in `kerning.plist` and `groups.plist`
-- **Regular master:** Has NO kerning yet (no `kerning.plist` or `groups.plist`)
+- **Both masters are kerned.** Regular and Bold each have `kerning.plist` and
+  `groups.plist`, over the same group set (89 groups each, required for
+  interpolation). Regular ~84 pairs, Bold ~77 pairs. (This guide previously said
+  Regular had no kerning — that is out of date.)
 
 ## File Locations
 

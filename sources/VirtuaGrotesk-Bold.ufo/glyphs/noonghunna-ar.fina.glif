@@ -1,78 +1,78 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noonghunna-ar.fina" format="2">
-  <advance width="600"/>
-  <unicode hex="FB9F"/>
-  <anchor x="260" y="-144" name="bottom"/>
-  <anchor x="268" y="344" name="topDots"/>
-  <outline>
-    <contour>
-      <point x="268" y="-210" type="curve" smooth="yes"/>
-      <point x="396" y="-210"/>
-      <point x="488" y="-104"/>
-      <point x="512" y="34" type="curve"/>
-      <point x="534" y="-4"/>
-      <point x="572" y="-12"/>
-      <point x="594" y="-12" type="curve" smooth="yes"/>
-      <point x="612" y="-12"/>
-      <point x="620" y="2"/>
-      <point x="620" y="22" type="curve" smooth="yes"/>
-      <point x="620" y="228" type="line" smooth="yes"/>
-      <point x="620" y="238"/>
-      <point x="616" y="244"/>
-      <point x="608" y="244" type="curve" smooth="yes"/>
-      <point x="594" y="244" type="line" smooth="yes"/>
-      <point x="568" y="244"/>
-      <point x="550" y="250"/>
-      <point x="544" y="286" type="curve" smooth="yes"/>
-      <point x="536" y="340"/>
-      <point x="532" y="376"/>
-      <point x="520" y="432" type="curve" smooth="yes"/>
-      <point x="516" y="450"/>
-      <point x="508" y="460"/>
-      <point x="494" y="456" type="curve" smooth="yes"/>
-      <point x="394" y="422" type="line" smooth="yes"/>
-      <point x="376" y="416"/>
-      <point x="370" y="402"/>
-      <point x="376" y="378" type="curve" smooth="yes"/>
-      <point x="390" y="306"/>
-      <point x="398" y="246"/>
-      <point x="400" y="196" type="curve" smooth="yes"/>
-      <point x="400" y="90"/>
-      <point x="362" y="34"/>
-      <point x="278" y="34" type="curve" smooth="yes"/>
-      <point x="196" y="34"/>
-      <point x="156" y="96"/>
-      <point x="156" y="188" type="curve" smooth="yes"/>
-      <point x="156" y="222"/>
-      <point x="162" y="262"/>
-      <point x="176" y="302" type="curve" smooth="yes"/>
-      <point x="184" y="328"/>
-      <point x="184" y="340"/>
-      <point x="160" y="348" type="curve" smooth="yes"/>
-      <point x="84" y="376" type="line" smooth="yes"/>
-      <point x="66" y="384"/>
-      <point x="58" y="374"/>
-      <point x="46" y="338" type="curve" smooth="yes"/>
-      <point x="28" y="280"/>
-      <point x="16" y="204"/>
-      <point x="16" y="134" type="curve" smooth="yes"/>
-      <point x="16" y="-70"/>
-      <point x="114" y="-210"/>
-    </contour>
-  </outline>
-  <lib>
-    <dict>
-      <key>com.runebenderComfy.donorCandidate</key>
-      <dict>
-        <key>donorGlyph</key>
-        <string>noonghunna-ar.fina</string>
-        <key>xScale</key>
-        <real>0.79051</real>
-        <key>yScale</key>
-        <real>1.10769</real>
-      </dict>
-      <key>public.markColor</key>
-      <string>1,0.3,0.3,1</string>
-    </dict>
-  </lib>
+	<unicode hex="FB9F"/>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="268" y="-210" type="curve" smooth="yes"/>
+			<point x="396" y="-210"/>
+			<point x="488" y="-104"/>
+			<point x="512" y="34" type="curve"/>
+			<point x="534" y="-4"/>
+			<point x="572" y="-12"/>
+			<point x="594" y="-12" type="curve" smooth="yes"/>
+			<point x="612" y="-12"/>
+			<point x="620" y="2"/>
+			<point x="620" y="22" type="curve" smooth="yes"/>
+			<point x="620" y="228" type="line" smooth="yes"/>
+			<point x="620" y="238"/>
+			<point x="616" y="244"/>
+			<point x="608" y="244" type="curve" smooth="yes"/>
+			<point x="594" y="244" type="line" smooth="yes"/>
+			<point x="568" y="244"/>
+			<point x="550" y="250"/>
+			<point x="544" y="286" type="curve" smooth="yes"/>
+			<point x="536" y="340"/>
+			<point x="532" y="376"/>
+			<point x="520" y="432" type="curve" smooth="yes"/>
+			<point x="516" y="450"/>
+			<point x="508" y="460"/>
+			<point x="494" y="456" type="curve" smooth="yes"/>
+			<point x="394" y="422" type="line" smooth="yes"/>
+			<point x="376" y="416"/>
+			<point x="370" y="402"/>
+			<point x="376" y="378" type="curve" smooth="yes"/>
+			<point x="390" y="306"/>
+			<point x="398" y="246"/>
+			<point x="400" y="196" type="curve" smooth="yes"/>
+			<point x="400" y="90"/>
+			<point x="362" y="34"/>
+			<point x="278" y="34" type="curve" smooth="yes"/>
+			<point x="196" y="34"/>
+			<point x="156" y="96"/>
+			<point x="156" y="188" type="curve" smooth="yes"/>
+			<point x="156" y="222"/>
+			<point x="162" y="262"/>
+			<point x="176" y="302" type="curve" smooth="yes"/>
+			<point x="184" y="328"/>
+			<point x="184" y="340"/>
+			<point x="160" y="348" type="curve" smooth="yes"/>
+			<point x="84" y="376" type="line" smooth="yes"/>
+			<point x="66" y="384"/>
+			<point x="58" y="374"/>
+			<point x="46" y="338" type="curve" smooth="yes"/>
+			<point x="28" y="280"/>
+			<point x="16" y="204"/>
+			<point x="16" y="134" type="curve" smooth="yes"/>
+			<point x="16" y="-70"/>
+			<point x="114" y="-210"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="260" y="-144"/>
+	<anchor name="topDots" x="268" y="344"/>
+	<lib>
+		<dict>
+			<key>com.runebenderComfy.donorCandidate</key>
+			<dict>
+				<key>donorGlyph</key>
+				<string>noonghunna-ar.fina</string>
+				<key>xScale</key>
+				<real>0.79051</real>
+				<key>yScale</key>
+				<real>1.10769</real>
+			</dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
 </glyph>

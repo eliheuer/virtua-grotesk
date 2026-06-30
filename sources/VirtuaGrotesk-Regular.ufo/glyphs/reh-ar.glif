@@ -1,55 +1,55 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="reh-ar" format="2">
-  <advance width="600"/>
-  <unicode hex="0631"/>
-  <anchor x="232" y="-222" name="bottom"/>
-  <anchor x="286" y="576" name="top"/>
-  <anchor x="342" y="292" name="topDots"/>
-  <outline>
-    <contour>
-      <point x="-58" y="-272" type="curve" smooth="yes"/>
-      <point x="50" y="-272" type="line" smooth="yes"/>
-      <point x="382" y="-272"/>
-      <point x="518" y="-122"/>
-      <point x="518" y="60" type="curve" smooth="yes"/>
-      <point x="518" y="124"/>
-      <point x="488" y="212"/>
-      <point x="456" y="286" type="curve" smooth="yes"/>
-      <point x="442" y="318"/>
-      <point x="426" y="322"/>
-      <point x="402" y="318" type="curve" smooth="yes"/>
-      <point x="360" y="312" type="line" smooth="yes"/>
-      <point x="328" y="306"/>
-      <point x="326" y="292"/>
-      <point x="338" y="270" type="curve" smooth="yes"/>
-      <point x="372" y="198"/>
-      <point x="402" y="148"/>
-      <point x="402" y="72" type="curve" smooth="yes"/>
-      <point x="402" y="-88"/>
-      <point x="302" y="-200"/>
-      <point x="32" y="-200" type="curve" smooth="yes"/>
-      <point x="-54" y="-200" type="line" smooth="yes"/>
-      <point x="-82" y="-200"/>
-      <point x="-96" y="-208"/>
-      <point x="-96" y="-222" type="curve" smooth="yes"/>
-      <point x="-96" y="-248" type="line" smooth="yes"/>
-      <point x="-96" y="-264"/>
-      <point x="-82" y="-272"/>
-    </contour>
-  </outline>
-  <lib>
-    <dict>
-      <key>com.runebenderComfy.donorCandidate</key>
-      <dict>
-        <key>donorGlyph</key>
-        <string>reh-ar</string>
-        <key>xScale</key>
-        <real>1.92926</real>
-        <key>yScale</key>
-        <real>1.10769</real>
-      </dict>
-      <key>public.markColor</key>
-      <string>1,0.3,0.3,1</string>
-    </dict>
-  </lib>
+	<unicode hex="0631"/>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="-58" y="-272" type="curve" smooth="yes"/>
+			<point x="50" y="-272" type="line" smooth="yes"/>
+			<point x="382" y="-272"/>
+			<point x="518" y="-122"/>
+			<point x="518" y="60" type="curve" smooth="yes"/>
+			<point x="518" y="124"/>
+			<point x="488" y="212"/>
+			<point x="456" y="286" type="curve" smooth="yes"/>
+			<point x="442" y="318"/>
+			<point x="426" y="322"/>
+			<point x="402" y="318" type="curve" smooth="yes"/>
+			<point x="360" y="312" type="line" smooth="yes"/>
+			<point x="328" y="306"/>
+			<point x="326" y="292"/>
+			<point x="338" y="270" type="curve" smooth="yes"/>
+			<point x="372" y="198"/>
+			<point x="402" y="148"/>
+			<point x="402" y="72" type="curve" smooth="yes"/>
+			<point x="402" y="-88"/>
+			<point x="302" y="-200"/>
+			<point x="32" y="-200" type="curve" smooth="yes"/>
+			<point x="-54" y="-200" type="line" smooth="yes"/>
+			<point x="-82" y="-200"/>
+			<point x="-96" y="-208"/>
+			<point x="-96" y="-222" type="curve" smooth="yes"/>
+			<point x="-96" y="-248" type="line" smooth="yes"/>
+			<point x="-96" y="-264"/>
+			<point x="-82" y="-272"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="232" y="-222"/>
+	<anchor name="top" x="286" y="576"/>
+	<anchor name="topDots" x="342" y="292"/>
+	<lib>
+		<dict>
+			<key>com.runebenderComfy.donorCandidate</key>
+			<dict>
+				<key>donorGlyph</key>
+				<string>reh-ar</string>
+				<key>xScale</key>
+				<real>1.92926</real>
+				<key>yScale</key>
+				<real>1.10769</real>
+			</dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
 </glyph>
