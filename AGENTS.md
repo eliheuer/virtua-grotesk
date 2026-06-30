@@ -8,6 +8,37 @@ Agent skills live in `.agents/skills/` (one directory per skill with a
 `SKILL.md`). `.claude/skills` is a symlink to that directory so Claude Code
 picks them up — edit skills only in `.agents/skills/`.
 
+## Mission & Map
+
+**Goal: finish Virtua Grotesk and publish it to Google Fonts.** This repo is a
+small AI-driven type studio — an agent (you) orchestrates the tools below to
+draw, space, QA, and ship the font.
+
+The phases and the tools for each:
+
+- **Draw / fix glyphs** — `img2bez` traces from reference images (see "Adding
+  Glyphs from Images"); Runebender (`make runebender`) is the visual review +
+  live-edit surface. Skills: `/draw-outline`, `/edit-glyph`, `/compare-reference`,
+  `/glyph-ai-harness`.
+- **Space & kern** — per-glyph sidebearings in the UFOs; `/kerning`.
+- **Build & QA** — `make build`, `make test` (the Fontspector `googlefonts`
+  gate), `make proof` / `make specimen`, `make preflight`; skill `/font-qa`.
+- **Package & submit** — `/google-fonts-packaging` (produces `METADATA.pb` + the
+  `ofl/virtuagrotesk` layout), `/google-fonts-onboarding`, `/google-fonts-qa`.
+
+**The finish line and current priorities live in
+[`documentation/google-fonts-readiness.md`](documentation/google-fonts-readiness.md)
+— read it first.** In short: the build, Latin, kerning, and the Arabic OpenType
+shaping are done; what remains, in order, is (1) the **Arabic outline cleanup
+pass** (top priority — the bulk of the work left), (2) Latin language-coverage
+anchors, (3) `METADATA.pb` + packaging, (4) the `google/fonts` PR. Progress is
+measured by the excludes in `scripts/check_gf_fonts.sh`: each one removed is a
+step toward done, and **zero excludes = ready to submit.**
+
+**Guardrails:** keep both masters structurally identical (master compatibility),
+and never re-add a QA exclude to force a green `make test` — the excludes are the
+to-do list, not a setting.
+
 ## Project Overview
 
 Virtua Grotesk is an open-source variable font (OFL v1.1 licensed) with a Weight axis (wght 400–700). The sources are UFO files and the Google Fonts-ready build path uses `gftools builder sources/config.yaml`.
@@ -150,6 +181,70 @@ The core workflow for type design with an agent:
 3. **Edit** — `/edit-glyph <name>` to make changes based on the comparison
 4. **Build** — `/build-font` to compile the edited sources
 5. **Verify** — `make preflight` during drawing work, then `make test` before final submission
+
+## Adding Glyphs from Images (img2bez)
+
+To add or replace a glyph from reference images (AI-generated or scanned
+masters), use the `img2bez` CLI — do **not** hand-draw it in the editor.
+img2bez owns deterministic tracing, ink placement, sidebearings, master
+reconciliation, UFO writing, and the report; Runebender is only for visual
+review afterward.
+
+One image per master, traced and reconciled into interpolation-compatible
+outlines in a single command:
+
+```sh
+img2bez masters sources/VirtuaGrotesk.designspace \
+  --glyph germandbls --unicode 00DF \
+  --image Regular=~/Desktop/00DF-regular.png \
+  --image Bold=~/Desktop/00DF-bold.png \
+  --fit descender:cap \
+  --preserve-existing-metrics \
+  --report build/germandbls-trace.json
+```
+
+- `--image NAME=path` names each image by its master stylename (`Regular`,
+  `Bold`); or `--images <dir>` with files named `<stylename>.png`.
+- `--fit zone:zone` sets the vertical band (e.g. `descender:cap`) in the font's
+  own metric zones.
+- `--format json` prints the report + outlines to stdout and writes no UFOs —
+  use it to preview before writing.
+- **Run `img2bez masters --help` for the full, current flag list — it is
+  authoritative; do not rely on a copy of it here.**
+
+**Read the report before opening the editor:**
+
+- `compatible: true` — masters reconciled into one shared point structure
+  (required for the variable build; see Master Compatibility Warning).
+  `false` means a different contour count — regenerate the failing image.
+- `lowConfidence: true` — a point was placed by a guessed correspondence;
+  accept-but-review, or regenerate (`--fail-on-low-confidence` makes this exit
+  non-zero for an unattended loop).
+- Per master: `profile` (`wild`/`clean`/`photo` — how the image was classified),
+  `sharpness`/`bilevelness` (input character), `points`, `advance`, `bounds`.
+
+**Input tuning.** The default auto-detects the input class; clean crisp renders
+trace as `wild`. Force `--profile photo` for soft, low-contrast scans of printed
+type (it clears edge texture that otherwise over-segments). Other per-run
+levers: `--pre-blur`, `--smoothing`, `--corner-threshold`, `--mode
+{smooth,line}`. If a trace in the report looks wrong, re-run with the right flag
+rather than hand-fixing in the editor.
+
+**Trace logging (build the tuning dataset).** Export `IMG2BEZ_LOG` so every
+trace appends a record (image features + settings + output) to one JSONL file —
+this is how the input-adaptive selector gets its training data, and the settings
+you re-run with (last trace per image) are the accepted label:
+
+```sh
+export IMG2BEZ_LOG="$HOME/.img2bez/virtua-grotesk-traces.jsonl"
+```
+
+Set it once at the start of a session; it covers `img2bez masters` and
+single-glyph runs. Inspect the growing dataset with `img2bez`'s
+`eval-harness/tracelog.py "$IMG2BEZ_LOG" --per-image`.
+
+**Then review in Runebender** (`make runebender`) — it live-reloads the written
+UFOs from disk. Use it only for the human visual check and final touch-ups.
 
 ## Design Philosophy
 

@@ -9,7 +9,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof specimen readme-images social-images runebender qa test reports preflight clean
+.PHONY: help setup build proof specimen readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight clean
 
 help:
 	@printf '%s\n' \
@@ -21,6 +21,8 @@ help:
 		'  make readme-images  Build README PNG specimen images' \
 		'  make social-images  Build square social media specimen PNGs' \
 		'  make runebender     Open sources/VirtuaGrotesk.designspace in chromeless Runebender web' \
+		'  make glyph-ai-inventory  Scan Runebender color labels for AI glyph work' \
+		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
@@ -47,6 +49,13 @@ social-images: build
 
 runebender:
 	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-web.sh
+
+glyph-ai-inventory:
+	$(PYTHON) scripts/glyph_ai_harness.py inventory
+
+glyph-ai-prepare:
+	@test -n "$(TARGET)" || (printf '%s\n' 'Set TARGET=<glyph-name>' >&2; exit 2)
+	$(PYTHON) scripts/glyph_ai_harness.py prepare --target "$(TARGET)" $(if $(REFERENCES),--references "$(REFERENCES)",)
 
 qa: build
 	./scripts/check_gf_fonts.sh

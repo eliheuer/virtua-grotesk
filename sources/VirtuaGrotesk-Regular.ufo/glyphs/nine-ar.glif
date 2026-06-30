@@ -1,62 +1,62 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="nine-ar" format="2">
-  <advance width="600"/>
-  <unicode hex="0669"/>
-  <outline>
-    <contour>
-      <point x="470" y="-6" type="curve" smooth="yes"/>
-      <point x="486" y="-6" type="line" smooth="yes"/>
-      <point x="504" y="-6"/>
-      <point x="506" y="8"/>
-      <point x="506" y="22" type="curve" smooth="yes"/>
-      <point x="474" y="488" type="line" smooth="yes"/>
-      <point x="468" y="592"/>
-      <point x="414" y="700"/>
-      <point x="274" y="700" type="curve" smooth="yes"/>
-      <point x="130" y="700"/>
-      <point x="68" y="580"/>
-      <point x="68" y="466" type="curve" smooth="yes"/>
-      <point x="68" y="358"/>
-      <point x="126" y="262"/>
-      <point x="264" y="262" type="curve" smooth="yes"/>
-      <point x="336" y="262"/>
-      <point x="406" y="296"/>
-      <point x="424" y="324" type="curve"/>
-      <point x="444" y="20" type="line" smooth="yes"/>
-      <point x="446" y="0"/>
-      <point x="456" y="-6"/>
-    </contour>
-    <contour>
-      <point x="268" y="328" type="curve" smooth="yes"/>
-      <point x="170" y="328"/>
-      <point x="130" y="388"/>
-      <point x="130" y="470" type="curve" smooth="yes"/>
-      <point x="130" y="558"/>
-      <point x="178" y="634"/>
-      <point x="272" y="634" type="curve" smooth="yes"/>
-      <point x="360" y="634"/>
-      <point x="404" y="574"/>
-      <point x="412" y="506" type="curve" smooth="yes"/>
-      <point x="416" y="468"/>
-      <point x="418" y="430"/>
-      <point x="420" y="390" type="curve"/>
-      <point x="404" y="352"/>
-      <point x="332" y="328"/>
-    </contour>
-  </outline>
-  <lib>
-    <dict>
-      <key>com.runebenderComfy.donorCandidate</key>
-      <dict>
-        <key>donorGlyph</key>
-        <string>nine-ar</string>
-        <key>xScale</key>
-        <real>1.05263</real>
-        <key>yScale</key>
-        <real>1.10769</real>
-      </dict>
-      <key>public.markColor</key>
-      <string>1,0.3,0.3,1</string>
-    </dict>
-  </lib>
+	<unicode hex="0669"/>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="470" y="-6" type="curve" smooth="yes"/>
+			<point x="486" y="-6" type="line" smooth="yes"/>
+			<point x="504" y="-6"/>
+			<point x="506" y="8"/>
+			<point x="506" y="22" type="curve" smooth="yes"/>
+			<point x="474" y="488" type="line" smooth="yes"/>
+			<point x="468" y="592"/>
+			<point x="414" y="700"/>
+			<point x="274" y="700" type="curve" smooth="yes"/>
+			<point x="130" y="700"/>
+			<point x="68" y="580"/>
+			<point x="68" y="466" type="curve" smooth="yes"/>
+			<point x="68" y="358"/>
+			<point x="126" y="262"/>
+			<point x="264" y="262" type="curve" smooth="yes"/>
+			<point x="336" y="262"/>
+			<point x="406" y="296"/>
+			<point x="424" y="324" type="curve"/>
+			<point x="444" y="20" type="line" smooth="yes"/>
+			<point x="446" y="0"/>
+			<point x="456" y="-6"/>
+		</contour>
+		<contour>
+			<point x="268" y="328" type="curve" smooth="yes"/>
+			<point x="170" y="328"/>
+			<point x="130" y="388"/>
+			<point x="130" y="470" type="curve" smooth="yes"/>
+			<point x="130" y="558"/>
+			<point x="178" y="634"/>
+			<point x="272" y="634" type="curve" smooth="yes"/>
+			<point x="360" y="634"/>
+			<point x="404" y="574"/>
+			<point x="412" y="506" type="curve" smooth="yes"/>
+			<point x="416" y="468"/>
+			<point x="418" y="430"/>
+			<point x="420" y="390" type="curve"/>
+			<point x="404" y="352"/>
+			<point x="332" y="328"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebenderComfy.donorCandidate</key>
+			<dict>
+				<key>donorGlyph</key>
+				<string>nine-ar</string>
+				<key>xScale</key>
+				<real>1.05263</real>
+				<key>yScale</key>
+				<real>1.10769</real>
+			</dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
 </glyph>

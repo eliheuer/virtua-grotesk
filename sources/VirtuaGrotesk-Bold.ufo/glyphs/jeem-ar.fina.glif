@@ -1,116 +1,116 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="jeem-ar.fina" format="2">
-  <advance width="600"/>
-  <anchor x="250" y="-354" name="bottom"/>
-  <anchor x="306" y="32" name="center"/>
-  <anchor x="224" y="662" name="top"/>
-  <anchor x="264" y="594" name="topDots"/>
-  <outline>
-    <contour>
-      <point x="316" y="-378" type="curve" smooth="yes"/>
-      <point x="498" y="-378" type="line" smooth="yes"/>
-      <point x="514" y="-378"/>
-      <point x="522" y="-366"/>
-      <point x="522" y="-344" type="curve" smooth="yes"/>
-      <point x="522" y="-158" type="line" smooth="yes"/>
-      <point x="522" y="-136"/>
-      <point x="514" y="-122"/>
-      <point x="496" y="-122" type="curve" smooth="yes"/>
-      <point x="334" y="-122" type="line" smooth="yes"/>
-      <point x="218" y="-122"/>
-      <point x="172" y="-80"/>
-      <point x="172" y="4" type="curve" smooth="yes"/>
-      <point x="172" y="148"/>
-      <point x="308" y="224"/>
-      <point x="500" y="286" type="curve"/>
-      <point x="472" y="416" type="line"/>
-      <point x="154" y="380"/>
-      <point x="32" y="184"/>
-      <point x="32" y="-34" type="curve" smooth="yes"/>
-      <point x="32" y="-220"/>
-      <point x="144" y="-378"/>
-    </contour>
-    <contour>
-      <point x="554" y="-12" type="curve" smooth="yes"/>
-      <point x="596" y="-12" type="line" smooth="yes"/>
-      <point x="610" y="-12"/>
-      <point x="620" y="2"/>
-      <point x="620" y="22" type="curve" smooth="yes"/>
-      <point x="620" y="228" type="line" smooth="yes"/>
-      <point x="620" y="238"/>
-      <point x="614" y="244"/>
-      <point x="608" y="244" type="curve" smooth="yes"/>
-      <point x="526" y="244" type="line" smooth="yes"/>
-      <point x="464" y="244"/>
-      <point x="460" y="254"/>
-      <point x="458" y="308" type="curve"/>
-      <point x="370" y="270" type="line"/>
-      <point x="370" y="62"/>
-      <point x="440" y="-12"/>
-    </contour>
-    <contour>
-      <point x="446" y="272" type="line"/>
-      <point x="542" y="272" type="line" smooth="yes"/>
-      <point x="558" y="272"/>
-      <point x="568" y="286"/>
-      <point x="568" y="306" type="curve" smooth="yes"/>
-      <point x="568" y="446" type="line" smooth="yes"/>
-      <point x="568" y="468"/>
-      <point x="564" y="480"/>
-      <point x="546" y="480" type="curve" smooth="yes"/>
-      <point x="512" y="480" type="line" smooth="yes"/>
-      <point x="378" y="480"/>
-      <point x="348" y="638"/>
-      <point x="216" y="638" type="curve" smooth="yes"/>
-      <point x="116" y="638"/>
-      <point x="24" y="510"/>
-      <point x="24" y="376" type="curve" smooth="yes"/>
-      <point x="24" y="356"/>
-      <point x="32" y="344"/>
-      <point x="54" y="344" type="curve" smooth="yes"/>
-      <point x="116" y="344" type="line" smooth="yes"/>
-      <point x="138" y="344"/>
-      <point x="142" y="348"/>
-      <point x="160" y="374" type="curve" smooth="yes"/>
-      <point x="172" y="394"/>
-      <point x="196" y="400"/>
-      <point x="216" y="400" type="curve" smooth="yes"/>
-      <point x="316" y="400"/>
-      <point x="336" y="292"/>
-      <point x="446" y="294" type="curve"/>
-    </contour>
-    <contour>
-      <point x="318" y="-48" type="curve" smooth="yes"/>
-      <point x="362" y="16" type="line" smooth="yes"/>
-      <point x="370" y="28"/>
-      <point x="370" y="46"/>
-      <point x="362" y="58" type="curve" smooth="yes"/>
-      <point x="316" y="122" type="line" smooth="yes"/>
-      <point x="308" y="132"/>
-      <point x="296" y="132"/>
-      <point x="288" y="122" type="curve" smooth="yes"/>
-      <point x="244" y="58" type="line" smooth="yes"/>
-      <point x="236" y="46"/>
-      <point x="236" y="28"/>
-      <point x="244" y="16" type="curve" smooth="yes"/>
-      <point x="288" y="-48" type="line" smooth="yes"/>
-      <point x="296" y="-58"/>
-      <point x="310" y="-60"/>
-    </contour>
-  </outline>
-  <lib>
-    <dict>
-      <key>com.runebenderComfy.donorCandidate</key>
-      <dict>
-        <key>donorGlyph</key>
-        <string>jeem-ar.fina</string>
-        <key>xScale</key>
-        <real>0.78227</real>
-        <key>yScale</key>
-        <real>1.10769</real>
-      </dict>
-      <key>public.markColor</key>
-      <string>1,0.3,0.3,1</string>
-    </dict>
-  </lib>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="316" y="-378" type="curve" smooth="yes"/>
+			<point x="498" y="-378" type="line" smooth="yes"/>
+			<point x="514" y="-378"/>
+			<point x="522" y="-366"/>
+			<point x="522" y="-344" type="curve" smooth="yes"/>
+			<point x="522" y="-158" type="line" smooth="yes"/>
+			<point x="522" y="-136"/>
+			<point x="514" y="-122"/>
+			<point x="496" y="-122" type="curve" smooth="yes"/>
+			<point x="334" y="-122" type="line" smooth="yes"/>
+			<point x="218" y="-122"/>
+			<point x="172" y="-80"/>
+			<point x="172" y="4" type="curve" smooth="yes"/>
+			<point x="172" y="148"/>
+			<point x="308" y="224"/>
+			<point x="500" y="286" type="curve"/>
+			<point x="472" y="416" type="line"/>
+			<point x="154" y="380"/>
+			<point x="32" y="184"/>
+			<point x="32" y="-34" type="curve" smooth="yes"/>
+			<point x="32" y="-220"/>
+			<point x="144" y="-378"/>
+		</contour>
+		<contour>
+			<point x="554" y="-12" type="curve" smooth="yes"/>
+			<point x="596" y="-12" type="line" smooth="yes"/>
+			<point x="610" y="-12"/>
+			<point x="620" y="2"/>
+			<point x="620" y="22" type="curve" smooth="yes"/>
+			<point x="620" y="228" type="line" smooth="yes"/>
+			<point x="620" y="238"/>
+			<point x="614" y="244"/>
+			<point x="608" y="244" type="curve" smooth="yes"/>
+			<point x="526" y="244" type="line" smooth="yes"/>
+			<point x="464" y="244"/>
+			<point x="460" y="254"/>
+			<point x="458" y="308" type="curve"/>
+			<point x="370" y="270" type="line"/>
+			<point x="370" y="62"/>
+			<point x="440" y="-12"/>
+		</contour>
+		<contour>
+			<point x="446" y="272" type="line"/>
+			<point x="542" y="272" type="line" smooth="yes"/>
+			<point x="558" y="272"/>
+			<point x="568" y="286"/>
+			<point x="568" y="306" type="curve" smooth="yes"/>
+			<point x="568" y="446" type="line" smooth="yes"/>
+			<point x="568" y="468"/>
+			<point x="564" y="480"/>
+			<point x="546" y="480" type="curve" smooth="yes"/>
+			<point x="512" y="480" type="line" smooth="yes"/>
+			<point x="378" y="480"/>
+			<point x="348" y="638"/>
+			<point x="216" y="638" type="curve" smooth="yes"/>
+			<point x="116" y="638"/>
+			<point x="24" y="510"/>
+			<point x="24" y="376" type="curve" smooth="yes"/>
+			<point x="24" y="356"/>
+			<point x="32" y="344"/>
+			<point x="54" y="344" type="curve" smooth="yes"/>
+			<point x="116" y="344" type="line" smooth="yes"/>
+			<point x="138" y="344"/>
+			<point x="142" y="348"/>
+			<point x="160" y="374" type="curve" smooth="yes"/>
+			<point x="172" y="394"/>
+			<point x="196" y="400"/>
+			<point x="216" y="400" type="curve" smooth="yes"/>
+			<point x="316" y="400"/>
+			<point x="336" y="292"/>
+			<point x="446" y="294" type="curve"/>
+		</contour>
+		<contour>
+			<point x="318" y="-48" type="curve" smooth="yes"/>
+			<point x="362" y="16" type="line" smooth="yes"/>
+			<point x="370" y="28"/>
+			<point x="370" y="46"/>
+			<point x="362" y="58" type="curve" smooth="yes"/>
+			<point x="316" y="122" type="line" smooth="yes"/>
+			<point x="308" y="132"/>
+			<point x="296" y="132"/>
+			<point x="288" y="122" type="curve" smooth="yes"/>
+			<point x="244" y="58" type="line" smooth="yes"/>
+			<point x="236" y="46"/>
+			<point x="236" y="28"/>
+			<point x="244" y="16" type="curve" smooth="yes"/>
+			<point x="288" y="-48" type="line" smooth="yes"/>
+			<point x="296" y="-58"/>
+			<point x="310" y="-60"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="250" y="-354"/>
+	<anchor name="center" x="306" y="32"/>
+	<anchor name="top" x="224" y="662"/>
+	<anchor name="topDots" x="264" y="594"/>
+	<lib>
+		<dict>
+			<key>com.runebenderComfy.donorCandidate</key>
+			<dict>
+				<key>donorGlyph</key>
+				<string>jeem-ar.fina</string>
+				<key>xScale</key>
+				<real>0.78227</real>
+				<key>yScale</key>
+				<real>1.10769</real>
+			</dict>
+			<key>public.markColor</key>
+			<string>1,0.3,0.3,1</string>
+		</dict>
+	</lib>
 </glyph>
