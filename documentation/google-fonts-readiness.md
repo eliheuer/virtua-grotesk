@@ -2,7 +2,13 @@
 
 The finish line for Virtua Grotesk: a clean, complete Latin + Arabic variable
 font published on Google Fonts. This is the living tracker the workflow drives
-toward — update it as items close. The orientation in `AGENTS.md` points here.
+toward — update it as items close. The orientation in `AGENTS.md` points here,
+and the full phased plan (the Italic, and the Google Fonts guide references per
+workstream) is in `goal-google-fonts-launch.md`. The authoritative spec is the
+[Google Fonts guide](https://googlefonts.github.io/gf-guide/) — in particular
+[outline quality](https://googlefonts.github.io/gf-guide/outlines.html) for the
+Arabic cleanup below and [diacritics](https://googlefonts.github.io/gf-guide/diacritics.html)
+for the Latin `shape_languages` marks.
 
 ## Definition of done
 
