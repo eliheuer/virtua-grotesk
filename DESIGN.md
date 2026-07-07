@@ -111,5 +111,7 @@ differ. This is a hard requirement of the variable build, checked by
 - **Review gates**: check the 16-unit chamfers exist and are straight, curves
   have on-axis extrema, coordinates are even, key measurements sit on or near
   the power-of-two ladder, and the glyph's weight matches its master's stem
-  ladder (≈96 Regular / ≈160+ Bold).
+  ladder (≈96 Regular / ≈160+ Bold) — *measured*, not eyeballed. Spacing is
+  deliberate: sidebearings referenced to structurally similar glyphs, never
+  zero, never an outline touching the advance-box edges.
 - **Human grading**: green means "this glyph obeys this document."
