@@ -22,8 +22,7 @@ FONT_PATHS=(
 # currently produce near-degenerate intersections when instance overlap
 # removal runs; fixing is outline redrawing work, tracked in
 # documentation/manual-cleanup-handoff.md):
-#   outline_alignment_miss, outline_colinear_vectors,
-#   outline_semi_vertical, contour_count
+#   outline_alignment_miss
 #
 # Deferred until the Latin language-coverage pass (auxiliary characters
 # like E/I/O/U + breve/macron composites, and mark anchors for combining
@@ -37,9 +36,6 @@ FONT_PATHS=(
 EXCLUDES=(
     googlefonts/repo/dirname_matches_nameid_1
     outline_alignment_miss
-    outline_colinear_vectors
-    outline_semi_vertical
-    contour_count
     googlefonts/glyphsets/shape_languages
     googlefonts/metadata/unreachable_subsetting
 )

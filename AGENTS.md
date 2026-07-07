@@ -39,6 +39,27 @@ step toward done, and **zero excludes = ready to submit.**
 and never re-add a QA exclude to force a green `make test` — the excludes are the
 to-do list, not a setting.
 
+## AI Glyph-Completion Harness
+
+This repo is the demo font for a unified AI type-production pipeline
+(img2bez, img2ufo, designbot, an image-generation model, and this repo's
+harness). Three documents define it:
+
+- **`DESIGN.md` (repo root)** — the design contract: power-of-two grid,
+  16-unit chamfers, metrics, curve/spacing rules. Every drawn or traced glyph
+  is judged against it.
+- **`harness/RUNBOOK-codex.md`** — the operating procedure for adding or
+  regenerating **one glyph** from a reference image (trace with
+  `img2bez masters` on a scratch copy, adjust per `DESIGN.md`, port into
+  sources in repo style, mark **blue**, verify). If you were asked to add,
+  regenerate, or trace a glyph, follow this runbook.
+- **`plans/ai-font-completion-harness.md`** — the full system plan, research,
+  mark-color protocol, and phase checklist.
+
+Mark colors in the UFOs are the human's control channel: green = done
+(never touch), yellow/orange = needs polish, red = broken/regenerate,
+blue = AI output awaiting human grading, no color = ignore.
+
 ## Project Overview
 
 Virtua Grotesk is an open-source variable font (OFL v1.1 licensed) with a Weight axis (wght 400–700). The sources are UFO files and the Google Fonts-ready build path uses `gftools builder sources/config.yaml`.
