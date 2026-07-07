@@ -42,6 +42,47 @@ We do **not** start with an autonomous loop. The system earns autonomy:
    let it grind the queue unattended, with the STOP file and mark colors as
    the human controls. Only after the walk phase shows a high accept rate.
 
+### Crawl log
+
+- **Run 1 — `at`, 2026-07-06 (Codex, user-supplied Regular + Bold images).**
+  Trace and port worked end-to-end. Two systemic misses, both now runbook
+  steps + gates: (1) **sidebearings collapsed to zero** — the outline filled
+  the whole advance box; `--preserve-existing-metrics` keeps the advance
+  width, not the spacing, so spacing must be an explicit stage referenced to
+  similar green glyphs. (2) **Weight came out too light** vs the ~96-unit
+  Regular stem ladder — nothing measured stroke thickness in the source image
+  or the traced outline; added a ±15% weight gate at both points. Rendering
+  also switched from drawbot-skia to designbot (Rust-only loop, dark-mode
+  Swiss house style). Longer term, weight fidelity may need training data or
+  a dedicated skill (candidate: learn per-master stroke-ratio targets from
+  the green glyphs and check every generated image against them).
+- **Run 1 postmortem → architecture change, 2026-07-06.** Codex responded to
+  the weight gate by asking Eli for heavier images — wrong division of labor.
+  Decisions: human images are **shape intent only**, never weight/placement
+  ground truth (the green glyphs are); generation moved to the **canvas
+  template + ghost-inking protocol** (§4b) with a self-correcting re-prompt
+  loop; weight gets a deterministic post-trace normalizer (harness first,
+  img2bez `--target-stem` later); sidebearings stay analogy-based (from
+  similar greens) in v1 — the model proposes no spacing. Cross-checked
+  against Cozens' field survey (§2.6), which supports the raster→trace route
+  and keeping metrics/spacing deterministic.
+- **Run 2 — `question`, 2026-07-07 (Codex): vertical metrics failure →
+  toolchain built.** Codex hand-rolled its own canvas renderer and the style
+  sheet came out with glyphs sunk ~90 px below their true positions (O
+  crossing the baseline), so every generation inherited wrong placement —
+  its generated `?` ink measured −193..759 units instead of 0..768. Fix: the
+  coordinate frame is now **checked-in code, not prose** —
+  `harness/designbot/glyph_canvas.rs` (template/sheet/ghost/glyphbox, Rust,
+  designbot) + `harness/canvas.py extract|check` (gates, interim Python).
+  Verified against real sources: sheet places o/n/e/s and H/O on the correct
+  lines with 16-unit overshoots; extract catches both the placement and
+  weight failures numerically. designbot itself gained: `image` crate
+  re-export for scripts, and a CLI fix baking the workspace path in at
+  compile time so installed binaries use the local library instead of
+  silently falling back to stale GitHub main (both uncommitted in
+  ~/GH/repos/designbot). Runbook rule added: agents never write their own
+  renderer or do px↔unit math.
+
 Division of labor, per the project owner's direction:
 
 - **Claude (Anthropic)** — plans, builds, and documents the harness (this doc,
@@ -204,12 +245,21 @@ when HEAD builds" note; (2) README flag-table drift vs `main.rs`; (3)
 (4) its harness doc's color semantics differ from ours (see 2.4) — unify.
 
 **designbot** (`~/GH/repos/designbot`) is a Rust DrawBot-style renderer
-(vello_cpu/Parley/Swash), *not* an image-generation tool. It has variable-font
-axis control, custom font loading, and image compositing — the natural renderer
-for reference-vs-render comparison sheets eventually. **But this repo's
-standard is drawbot-skia** (CLAUDE.md), and the existing render code works.
-Decision: **drawbot-skia stays the renderer for this harness**; designbot is a
-future swap once it renders side-by-side sheets better (tracked, not blocking).
+(vello_cpu/Parley/Swash, Linebender ecosystem), *not* an image-generation
+tool. It has variable-font axis control (`font_variation`), custom font
+loading, image compositing, and — verified 2026-07-06 — a public
+`draw_path(BezPath)` plus `norad`/`kurbo` re-exports, so scripts can read a
+`.glif` and render raw outlines today.
+
+**Decision (Eli, 2026-07-06): designbot/Rust is the renderer for all harness
+review specimens** — no Python venv friction in the loop. Preference for the
+Linebender ecosystem; we add features to designbot as the harness needs them,
+working toward DrawBot feature parity. `make proof`/`make specimen` stay on
+drawbot-skia for now and migrate as parity lands. House specimen style for
+anything reviewed in chat: **dark mode** (dark gray bg ~#202020–#2a2a2a,
+light gray ink ~#c8c8c8–#e6e6e6, never pure black/white), laid out in the
+Swiss / International Typographic Style (Müller-Brockmann, Hofmann): modular
+grid, flush-left, generous margins, no decoration.
 
 ### 2.4 Runebender-web — mark colors and live-edit safety
 
@@ -253,6 +303,35 @@ for Regular, one for Bold, same prompt scaffold with weight language swapped.
 The gpt-image models handle style transfer from references well; the dalet test
 confirmed a usable skeleton on the first real attempt.
 
+### 2.6 External research check — Cozens, "The State of AI Font Generation" (2026-06-22)
+
+Simon Cozens' survey of the academic field
+(simoncozens.github.io/state-of-ai-font-generation/), reviewed 2026-07-06.
+It **cites img2bez by name** (alongside his Glyph Tracy) as the vectorization
+layer that makes raster generation usable. Its conclusions largely *validate*
+this plan's architecture rather than challenge it:
+
+- The research field generates **rasters + post-vectorization**, not vectors —
+  direct vector generation keeps failing (sequence length, non-local effects,
+  no good vector similarity metrics). Matches our raster→img2bez route; keeps
+  the vector-LLM route a secondary track for systematic glyphs only.
+- **Spacing, kerning, metrics, and proportions are untouched by research**
+  ("the real hard parts"). Exactly the parts we keep deterministic.
+- Latin-specific failure modes worth engineering around: **class imbalance**
+  (Latin glyphs ~80% white pixels → models drift lazy/thin — our stroke-ratio
+  gate is the countermeasure) and **structural inconsistency across styles**
+  (single- vs double-storey `a`) — largely neutralized here because we
+  condition on one font's green glyphs, not on cross-font style transfer.
+- His "3–4 years away" verdict is about *end-to-end font generation from
+  nothing*. We are doing something narrower the survey doesn't cover:
+  **agent-orchestrated completion of one designed font**, with a human
+  design-authority signal (green glyphs), deterministic font engineering, and
+  a hosted general image model used only for perception. The gap he says
+  research ignores is precisely where this harness does its work.
+- Worth watching from his survey: VecFusion (Adobe) for few-shot vector
+  generation, and the general few-shot reference-conditioned framing (our
+  green-glyph conditioning is the same idea with a general-purpose model).
+
 ---
 
 ## 3. The mark-color protocol (canonical for this repo + the template)
@@ -289,20 +368,28 @@ red=traced / yellow=auto-composite / orange=derived, and an old green value
 ```
 ┌─ plan ──── derive queue: glyphset diff (glyphsets pkg) ∪ red glyphs,
 │            minus purple/green/blue, sorted by unlock count → queue.json (ephemeral)
-├─ prepare ─ run packet in .glyph-ai-runs/<glyph>/:
-│            reference sheet PNGs per master (green glyphs, drawbot-skia),
-│            prompt.md per master, manifest.json (name, unicode, fit band,
-│            per-master widths, references used)
-├─ generate  [CODEX + OpenAI image API] one grayscale PNG per master →
-│            generated/<master>.png  (the ONLY generative step)
-├─ inspect ─ img2bez stats on each PNG: reject on low sharpness/extent/
-│            bilevelness → retry generate (≤N attempts, logged)
-├─ trace ── img2bez masters <designspace> --glyph X --image ... --fit <band>
-│            --format json --report → reconciled outlines, never writes UFOs
-│            gates: compatible==true, lowConfidence==false (else retry)
-├─ place ── deterministic: scale to fit band, snap to grid 2, snap
-│            near-baseline/H/V/45° (the dalet-test lesson), sidebearings from
-│            reference stats or --preserve-existing-metrics for red targets
+├─ prepare ─ run packet in .glyph-ai-runs/<glyph>/ (designbot, canvas
+│            template §4b): style sheet per master (green glyphs on the
+│            template), target canvas with the GHOST (human sketch or
+│            existing outline, pre-registered), drawing-band mask,
+│            manifest.json (name, unicode, per-master widths, references)
+├─ generate  [CODEX + OpenAI image API] masked edit of the target canvas,
+│            style sheet as reference image, high input fidelity: "ink the
+│            ghost in the sheet's style/weight" (the ONLY generative step)
+├─ inspect ─ deterministic gates + SELF-CORRECTION loop (≤3 rounds, never
+│            ask the human): template drift (fiducials/lines), stroke-ratio
+│            vs the master's stem ladder → re-prompt with parameterized
+│            corrections ("strokes 30% thicker"), img2bez stats
+├─ trace ── extract ink (color-key template graphics out) → img2bez masters
+│            --format json --report; scale/offset EXACT from the template
+│            mapping (no fit guessing); gates: compatible, !lowConfidence
+├─ place ── deterministic: template-mapped scale, snap to grid 2, snap
+│            near-baseline/H/V/45° (the dalet-test lesson); WEIGHT
+│            NORMALIZATION: measure stems, offset contours to the master's
+│            ladder (monolinear font → inward thickening is by design)
+├─ space ── explicit LSB/RSB from structurally similar green glyphs, advance
+│            = LSB + width + RSB; never zero sidebearings (the @-run lesson —
+│            --preserve-existing-metrics keeps advance, not spacing)
 ├─ write ── repo-style .glif writer (tabs, x,y,type,smooth attr order) into
 │            BOTH masters + surgical contents.plist/lib.plist registration +
 │            public.markColor = blue; atomic writes (Runebender live-reloads)
@@ -327,6 +414,34 @@ baseline snapping for `outline_alignment_miss`, the `whitespace_widths` fix,
 are ordinary Claude/Codex code-and-glif tasks gated by `make test`.
 
 ---
+
+### 4b. Canvas template spec v1 (the machine-image API)
+
+One fixed canvas is the coordinate frame shared by every machine-facing image
+— designbot renders it, the image model receives and returns it, the decoder
+verifies it, img2bez's scale/offset derive from it:
+
+- **1024 × 1536 px, 1 font unit = 1 px** (drawing band ascender→descender =
+  1088 px; 224 px top/bottom margins). Metric lines at fixed rows: ascender
+  224, cap 288, x-height 480, baseline 1056, descender 1312. Fiducial squares
+  in the margin corners.
+- Machine-facing = **light mode** (white bg, black ink); template graphics in
+  **pure green `#00ff00`** (chroma-key style — the lines cross the drawing
+  band and get repainted by the model, and a fully saturated green survives
+  approximate repainting; extraction keeps only dark desaturated pixels).
+  Human-facing review renders are dark mode with guides in **bright green
+  `#18b86f`** (Runebender palette green), distinct from the light-gray ink.
+- Generation uses the **masked-edit** form of the API: base = target canvas
+  with the **ghost** (shape-intent sketch or existing outline, pre-registered
+  in light gray), mask = drawing-band interior only, reference image = the
+  style sheet. Unmasked regions (lines, fiducials) come back pixel-perfect;
+  gpt-image-2 holds input fidelity high automatically (`input_fidelity:
+  "high"` on older models).
+- Rationale: image models are good at shape/style and unreliable at
+  coordinates. The ghost removes placement from the model's job; the template
+  removes scale; the correction loop (re-prompt with "strokes N% thicker",
+  ≤3 rounds) plus post-trace weight normalization remove weight. The model is
+  never load-bearing for anything measurable.
 
 ## 5. Harness layout (portable template)
 
@@ -388,6 +503,9 @@ the runbook so Codex discovers it natively.
 | correspondence confidence | `lowConfidence == false` (1 retry allowed) | report |
 | fit | `outOfTarget == false` per master | report |
 | image QC | sharpness ≥ 80, bilevelness ≥ 0.9, extent sane | `img2bez stats` |
+| image weight | stroke-thickness÷height ratio within ±15% of green-reference ratio, per master | harness inspect |
+| traced weight | measured stem width within ±15% of master ladder (≈96 R / ≈160+ B) | harness verify |
+| spacing | LSB/RSB > 0 and within range of similar green glyphs | harness verify |
 | raster fidelity | IoU(built render, generated PNG) ≥ 0.90 | harness verify |
 | structure sanity | point count within ~2σ of green-glyph distribution for the script | inventory stats |
 | build | `make build` succeeds; widths/cmap verified via fontTools | repo gate |
@@ -445,20 +563,27 @@ Owners: **[C]** Claude builds it now · **[X]** Codex executes in the loop ·
 - [ ] Attempt ledger + `STOP` file + events.jsonl
 
 ### Phase 2 — Generation packet [C builds, X uses]
-- [ ] Reference-sheet renderer: N green glyphs per master on one labeled sheet (style refs for the image API)
-- [ ] Prompt templates per script × master (weight language for Bold; Arabic-specific variants)
-- [ ] `inspect`: `img2bez stats` QC gate on generated PNGs with retry messaging
+- [x] Canvas template renderer in designbot (spec §4b): `harness/designbot/glyph_canvas.rs` `template` mode — metric lines, fiducials, 1:1 unit:px, labels
+- [x] Style-sheet renderer: `sheet` mode — named glyphs from a UFO at true scale, warns on non-green picks (verified against real sources 2026-07-07)
+- [x] Ghost placement: `ghost` mode — registers a shape-intent image into a band, emits the drawing-band mask (transparent = editable)
+- [x] `glyphbox` mode — current source glyph on the frame with its advance box (sanity render)
+- [ ] Prompt templates per script × master (ghost-inking phrasing, preserve-list repeated per iteration; Arabic variants)
+- [x] `inspect` gates: `harness/canvas.py extract` — fiducial check, ink bbox → font units + exact `--fit`, stroke gate ±15% with ready-made correction prompt (interim Python)
+- [ ] Port `extract`/`check` gates to img2bez (Rust) — e.g. `img2bez extract` — retiring the interim Python
 - [ ] Optional `generate --api`: direct OpenAI images call when a key is present (so the loop can also run keyed, not only via Codex GUI)
 
 ### Phase 3 — Trace, place, write [C]
 - [ ] Switch tracing to `img2bez masters --format json --report` (joint-trace both masters; drop the single-master path)
 - [ ] `place`: fit-band scaling, grid-2 snap, near-H/V/45° + baseline snapping (dalet bugs #5, #6)
+- [ ] `space`: explicit LSB/RSB from similar green glyphs, advance = LSB + width + RSB, never zero (@-run finding)
+- [ ] Weight normalizer: measure stems, offset contours to the master's ladder (harness post-process first; promote to img2bez `--target-stem` once proven)
+- [ ] Traced-weight gate in `verify`: measured stem width vs master ladder ±15% (@-run finding)
 - [ ] `glif_writer.py`: repo-native glif XML + surgical `contents.plist`/`lib.plist` registration, atomic writes, `markColor` = blue
 - [ ] `verify`: build + fontTools/uharfbuzz checks + raster IoU + point-count sanity + no-new-FAILs vs baseline
 - [ ] Wire `IMG2BEZ_LOG` into every trace (the training-data hopper)
 
 ### Phase 4 — Review loop [C builds, X runs]
-- [ ] Mixed-specimen render (target inline with green neighbors, both masters)
+- [ ] designbot review-render scripts (Rust, no Python): glyph + advance box + metric lines + green neighbors; dark-mode Swiss house style; mixed-specimen from the built font at both weight extremes
 - [ ] Bounded vision-review schema: `accept | adjust{scale,translate,lsb,rsb} | reject` JSON only
 - [ ] `loop` orchestrator: plan → … → commit, one commit per accepted glyph on the `ai-harness` branch, pause-at-generate mode for Codex GUI
 
@@ -488,5 +613,5 @@ Owners: **[C]** Claude builds it now · **[X]** Codex executes in the loop ·
 - [ ] [C] Unify the mark-color protocol across this doc and `img2ufo/docs/glyph-completion-harness.md` (this table wins; web-palette values)
 - [ ] [C] Align worklist JSON schema with img2ufo's `<Family>-<Style>-completion.json`
 - [ ] [C] Document the port procedure: img2ufo bootstrap → copy `harness/` → edit `config.yaml` → point Codex at RUNBOOK
-- [ ] [C] Evaluate designbot as the comparison-sheet renderer (side-by-side ref-vs-render); swap only if it beats drawbot-skia here
+- [ ] [C] designbot: DrawBot feature-parity backlog as the harness needs it (Linebender ecosystem preferred); migrate `make proof`/`make specimen` off drawbot-skia/Python once parity lands
 - [ ] [C] Feed the accumulated `IMG2BEZ_LOG` corpus to img2bez's input-adaptive selector work (needs ≥80 unique images; the grind supplies them)
