@@ -67,13 +67,43 @@ proportionally with the weight.
 ## Stroke and weight model
 
 - **Monolinear**: stems, bars, and curves share one visual thickness.
-  Regular stems ≈ 96 units; Bold stems ≈ 160+.
+  The exact per-master values live in the Dimensions table below.
 - **Weight through counter reduction**: from Regular to Bold, round forms
   keep an (often identical) outer contour and gain weight by shrinking the
   counter inward. Straight forms thicken symmetrically inward. The silhouette
   stays stable across the weight axis.
 - Bold optical shifts are allowed (e.g. Bold A's crossbar sits lower), but
   structure never changes between masters.
+
+## Dimensions
+
+The canonical measured dimensions of each master — the equivalent of the
+Glyphs "Dimensions" widget, recorded here so agents and scripts have them as
+context. **These values are the targets when boldening, tracing, or fitting
+a glyph**: measure the work, then move points until its measurements match
+this table (reference images calibrate everything the table doesn't cover —
+optical weight distribution, never raw outlines).
+
+| measure | where measured | Regular | Bold |
+| --- | --- | --- | --- |
+| cap stem (H, I) | vertical stem @ y=600 | 104 | 200 |
+| cap bar (H) | crossbar @ x=center | 96 | 160 |
+| cap round (O) | bowl side @ y=500 | 110 | 192 |
+| x-height stem (n, t) | vertical stem @ y=288 | 96 | 192 |
+| x-height round (o) | bowl side @ y=288 | 100 | 196 |
+| chamfer | corner cut | 16 | 16 (scales visually with weight) |
+
+Reading the table: the ladder values (96, 192, 160) are the *intent*; the
+off-ladder values (104, 110, 100, 196) are recorded **optical corrections**
+— rounds run slightly wider than flats, caps slightly heavier than
+lowercase. Both are canonical: when boldening a lowercase stem the delta
+budget is 96 units (48 per side, symmetric inward per the counter-reduction
+rule); when drawing a new round, start from the ladder and let the eye add
+its correction, then record it here if it becomes a pattern.
+
+Values were measured by inside/outside scans on the sources at the stated
+heights (grid-2 exact). If a master's proportions are deliberately changed,
+re-measure and update this table in the same commit.
 
 ## Curves
 

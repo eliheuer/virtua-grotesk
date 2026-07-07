@@ -48,19 +48,20 @@ here.
       `reh-ar`), then adjust.
    c. **Manual** — thicken stems per `DESIGN.md`'s Bold measurements.
 
-3. **Calibrate against the reference (if provided).** Trace the reference
-   on a scratch copy — `img2bez --format json --grid 2` — and *measure* it:
-   stem widths, counter widths, overshoot. Compare the draft's measurements.
-   Adjust the draft's deltas so its measurements land on the powers-of-two
-   ladder value nearest the reference's proportions. The trace is a ruler,
-   not a source of outlines.
+3. **Fit to the Dimensions table.** `DESIGN.md`'s **Dimensions** section is
+   the primary target: measure the draft (stems, bars, rounds at the stated
+   heights) and move points until its measurements match the Bold column —
+   e.g. a lowercase stem gains 96 units, 48 per side, symmetric inward per
+   the counter-reduction rule. The reference image covers only what the
+   table doesn't: optical weight distribution, how a specific form carries
+   boldness. If you trace the reference (`img2bez --format json --grid 2`),
+   use the trace as a ruler — measurements only, never outlines.
 
 4. **Restyle to spec.** All coordinates on grid 2 (even integers), chamfers
-   16 units, stems and counters on the 2/4/8/16/32/64/96/128 ladder,
-   vertical metrics untouched (asc 832 / cap 768 / x 576 / desc −256;
-   overshoots +16). Sidebearings: adjust per `DESIGN.md` spacing rules —
-   Bold sidebearings typically tighten by a ladder step; advance widths stay
-   power-of-two sums wherever the drawing allows.
+   16 units, vertical metrics untouched (asc 832 / cap 768 / x 576 /
+   desc −256; overshoots +16). Sidebearings: adjust per `DESIGN.md` spacing
+   rules — Bold sidebearings typically tighten by a ladder step; advance
+   widths stay power-of-two sums wherever the drawing allows.
 
 5. **Verify.**
    - Structure check: point-structure signature identical to Regular
