@@ -6,5 +6,6 @@ familyName: "Virtua Grotesk"
 outputDir: ../fonts
 buildOTF: false
 buildWebfont: false
+autohintTTF: false
 flattenComponents: false
 decomposeTransformedComponents: false

@@ -38,7 +38,7 @@ MASTER_UFOS = {
     "regular": ROOT / "sources" / "VirtuaGrotesk-Regular.ufo",
     "bold": ROOT / "sources" / "VirtuaGrotesk-Bold.ufo",
 }
-DEFAULT_OUTPUT_ROOT = ROOT / "build" / "glyph-ai-harness"
+DEFAULT_OUTPUT_ROOT = ROOT / ".glyph-ai-runs"
 
 GOOD_GREEN = (0.09, 0.72, 0.44, 1.0)
 RED_MARKS = {(1.0, 0.29, 0.24, 1.0), (1.0, 0.3, 0.3, 1.0)}

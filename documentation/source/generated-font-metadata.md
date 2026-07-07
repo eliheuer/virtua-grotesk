@@ -17,20 +17,20 @@ This report records metadata from the built variable and static TTFs. It is gene
 | Font | Version | Weight | Width | fsType | Vendor ID | dlng | slng |
 | --- | --- | ---: | ---: | ---: | --- | --- | --- |
 | `fonts/variable/VirtuaGrotesk[wght].ttf` | Version 1.000 | 400 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
-| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | Version 1.000; ttfautohint (v1.8.4.16-eb64) | 400 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
-| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | Version 1.000; ttfautohint (v1.8.4.16-eb64) | 500 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
-| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | Version 1.000; ttfautohint (v1.8.4.16-eb64) | 600 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
-| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | Version 1.000; ttfautohint (v1.8.4.16-eb64) | 700 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
+| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | Version 1.000 | 400 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
+| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | Version 1.000 | 500 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
+| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | Version 1.000 | 600 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
+| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | Version 1.000 | 700 | 5 | 0 | `FTGD` | `Arab, Latn` | `Arab, Latn` |
 
 ## Vertical Metrics
 
 | Font | OS/2 Typo asc/desc/gap | OS/2 Win asc/desc | hhea asc/desc/gap |
 | --- | --- | --- | --- |
-| `fonts/variable/VirtuaGrotesk[wght].ttf` | 1024/-296/0 | 1024/296 | 1024/-296/0 |
-| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | 1024/-296/0 | 1024/296 | 1024/-296/0 |
-| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | 1024/-296/0 | 1024/296 | 1024/-296/0 |
-| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | 1024/-296/0 | 1024/296 | 1024/-296/0 |
-| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | 1024/-296/0 | 1024/296 | 1024/-296/0 |
+| `fonts/variable/VirtuaGrotesk[wght].ttf` | 1024/-296/0 | 1094/438 | 1024/-296/0 |
+| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | 1024/-296/0 | 1094/438 | 1024/-296/0 |
+| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | 1024/-296/0 | 1094/438 | 1024/-296/0 |
+| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | 1024/-296/0 | 1094/438 | 1024/-296/0 |
+| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | 1024/-296/0 | 1094/438 | 1024/-296/0 |
 
 ## License Strings
 
