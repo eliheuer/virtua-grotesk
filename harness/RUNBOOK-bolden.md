@@ -97,6 +97,12 @@ the 8-grid, that is a tool bug: fix the tool, don't keep cleaning.
 `make lint-grid` checks drafts; the orange optical-density stat is the
 tool-noise alarm.
 
+**Capture rule: commit orange drafts BEFORE a grading session starts.**
+Every draft→green diff is training data for the optical-corrections
+model (the curriculum in DESIGN.md, "The lattice split is a curriculum").
+An uncommitted draft that gets graded in place loses its diff forever.
+Extraction: `font-garden-lab/optics/extract_deltas.py`.
+
 ## Batch mode
 
 Process at most 10–20 glyphs per session, grouped by script/similarity
