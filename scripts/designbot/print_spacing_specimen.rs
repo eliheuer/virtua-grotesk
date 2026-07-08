@@ -44,8 +44,13 @@ const MAIN_H: f64 = UNIT * 29.0; // 522
 const VF_PATH: &str = "fonts/variable/VirtuaGrotesk[wght].ttf";
 const VG_FAMILY: &str = "Virtua Grotesk";
 const WGHT: u32 = u32::from_be_bytes(*b"wght");
-// Virtua Grotesk hhea/typo ascender is 1024/1024 = 1.0 em: parley places the
-// first baseline one full em below the y passed to text().
+// CAUTION: this is a whole-layout empirical calibration against the
+// drawbot-skia reference, NOT parley's true first-baseline offset (a pixel
+// probe measured 86px at size 100, i.e. ~0.86 em — see
+// scripts/designbot/general_proof.rs `baseline_offset` for the exact
+// formula). The constant offset is absorbed by this file's layout numbers,
+// so pages match the reference at specimen sizes; if you add new text at
+// large sizes, use the general_proof.rs formula instead of this constant.
 const VG_ASCENT: f64 = 1.0;
 
 // Chrome text uses the system Courier family, like the Python original.
