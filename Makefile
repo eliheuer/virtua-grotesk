@@ -9,7 +9,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof specimen readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
+.PHONY: help setup build proof specimen proof-py specimen-py readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -38,9 +38,17 @@ build:
 	./build.sh
 
 proof: build
-	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_general_proof.py "$(REGULAR_FONT)" documentation/proofs/proof.pdf
+	designbot --render scripts/designbot/general_proof.rs --output documentation/proofs/proof.pdf -- "$(REGULAR_FONT)"
 
 specimen: build
+	designbot --render scripts/designbot/print_spacing_specimen.rs --output documentation/proofs/print-spacing-specimen.pdf
+
+# Legacy drawbot-skia (Python) fallbacks, kept until the designbot ports have
+# survived a few review cycles. Remove together with the Python scripts.
+proof-py: build
+	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_general_proof.py "$(REGULAR_FONT)" documentation/proofs/proof.pdf
+
+specimen-py: build
 	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_print_spacing_specimen.py
 
 readme-images: build
