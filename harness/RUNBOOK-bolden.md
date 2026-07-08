@@ -58,7 +58,7 @@ here.
    use the trace as a ruler — measurements only, never outlines.
 
 4. **Restyle to spec.** All coordinates on grid 2 (even integers), chamfers
-   16 units, vertical metrics untouched (asc 832 / cap 768 / x 576 /
+   16 units, vertical metrics untouched (asc 768 / cap 768 / x 576 /
    desc −256; overshoots +16). Sidebearings: adjust per `DESIGN.md` spacing
    rules — Bold sidebearings typically tighten by a ladder step; advance
    widths stay power-of-two sums wherever the drawing allows.
