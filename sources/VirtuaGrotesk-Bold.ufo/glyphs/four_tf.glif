@@ -2,41 +2,12 @@
 <glyph name="four.tf" format="2">
 	<advance width="712"/>
 	<outline>
-		<contour>
-			<point x="449" y="0" type="line"/>
-			<point x="609" y="0" type="line"/>
-			<point x="625" y="16" type="line"/>
-			<point x="625" y="150" type="line"/>
-			<point x="633" y="158" type="line"/>
-			<point x="667" y="158" type="line"/>
-			<point x="683" y="174" type="line"/>
-			<point x="683" y="278" type="line"/>
-			<point x="667" y="294" type="line"/>
-			<point x="633" y="294" type="line"/>
-			<point x="625" y="302" type="line"/>
-			<point x="625" y="728" type="line"/>
-			<point x="609" y="744" type="line"/>
-			<point x="481" y="744" type="line"/>
-			<point x="29" y="286" type="line"/>
-			<point x="29" y="174" type="line"/>
-			<point x="45" y="158" type="line"/>
-			<point x="441" y="158" type="line"/>
-			<point x="449" y="150" type="line"/>
-			<point x="449" y="16" type="line"/>
-		</contour>
-		<contour>
-			<point x="209" y="294" type="line"/>
-			<point x="209" y="302" type="line"/>
-			<point x="441" y="560" type="line"/>
-			<point x="449" y="560" type="line"/>
-			<point x="449" y="302" type="line"/>
-			<point x="441" y="294" type="line"/>
-		</contour>
+		<component base="four" xOffset="28"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>1,0.5,0,1</string>
 		</dict>
 	</lib>
 </glyph>
