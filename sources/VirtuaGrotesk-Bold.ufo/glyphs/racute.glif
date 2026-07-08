@@ -4,6 +4,12 @@
 	<advance width="416"/>
 	<outline>
 		<component base="r"/>
-		<component base="acute" xOffset="102" yOffset="0"/>
+		<component base="acute" xOffset="102"/>
 	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>1,0.29,0.24,1</string>
+		</dict>
+	</lib>
 </glyph>

@@ -5,4 +5,10 @@
 		<component base="fehDotless-ar.init"/>
 		<component base="threedotsupabove-ar" xOffset="-8"/>
 	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>1,0.29,0.24,1</string>
+		</dict>
+	</lib>
 </glyph>

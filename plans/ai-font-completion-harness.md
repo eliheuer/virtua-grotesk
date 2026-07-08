@@ -421,10 +421,13 @@ One fixed canvas is the coordinate frame shared by every machine-facing image
 — designbot renders it, the image model receives and returns it, the decoder
 verifies it, img2bez's scale/offset derive from it:
 
-- **1024 × 1536 px, 1 font unit = 1 px** (drawing band ascender→descender =
-  1088 px; 224 px top/bottom margins). Metric lines at fixed rows: ascender
-  224, cap 288, x-height 480, baseline 1056, descender 1312. Fiducial squares
-  in the margin corners.
+- **1536 × 1536 px, 1 font unit = 1 px** (square suits the image API;
+  drawing band = the shared asc/cap ceiling 768 down to descender −256 =
+  1024 px; 256 px top/bottom margins). Metric lines at fixed rows: asc/cap
+  256, x-height 448, baseline 1024, descender 1280. Fiducial squares in the
+  margin corners. (Revised 2026-07-07 from the original 1024×1536/ascender-832
+  spec; implemented in `harness/designbot/glyph_canvas.rs` +
+  `harness/canvas.py` — keep all three in lockstep.)
 - Machine-facing = **light mode** (white bg, black ink); template graphics in
   **pure green `#00ff00`** (chroma-key style — the lines cross the drawing
   band and get repainted by the model, and a fully saturated green survives
