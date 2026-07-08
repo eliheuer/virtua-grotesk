@@ -63,6 +63,32 @@ isolates pure optical knowledge — labeled training data for a future
 optical-correction model. The machine proposes structure on 8; the human
 teaches optics on 2; the dataset is the difference.
 
+### The lattice split is a curriculum, not a wall
+
+The end goal is automated type design: the systems should learn **how,
+why, and where** the human makes optical corrections and eventually make
+most of them automatically — balancing "stay on 8 by default" against
+"deviate to 2 where the corpus shows eyes would". The division of labor
+is therefore dynamic, governed by a trust ladder:
+
+1. **Stage 0 (now):** machine emits 8-only drafts; the human makes every
+   optical correction while grading. Each draft→green diff is captured
+   (font-garden-lab `optics/extract_deltas.py`).
+2. **Stage 1:** a model trained on those diffs *proposes* corrections in
+   drafts. Acceptance rate is measured per geometric category (junction
+   thinning, extreme overshoots, diagonal compensation, terminals…). The
+   honest baseline it must beat: predict zero corrections everywhere.
+3. **Stage 2:** categories with sustained high acceptance auto-apply in
+   drafts. Categories graduate one at a time, with evidence — never by
+   assumption (see the prefill post-mortem: models don't get deployed
+   outside the distribution they were graded on).
+
+Two things never automate: **green** (approval is a biological
+signature), and corrections with no precedent in the corpus (novel
+forms, whole-glyph proportion judgments). Nobody annotates "why" — the
+local geometry around each corrected point is the label, and the model
+learns the mapping the way sequence models always have.
+
 ## Vertical metrics
 
 | zone | y | notes |
