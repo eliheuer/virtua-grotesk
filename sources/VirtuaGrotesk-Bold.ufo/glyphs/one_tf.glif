@@ -2,32 +2,7 @@
 <glyph name="one.tf" format="2">
 	<advance width="712"/>
 	<outline>
-		<contour>
-			<point x="120" y="0" type="line"/>
-			<point x="592" y="0" type="line"/>
-			<point x="608" y="16" type="line"/>
-			<point x="608" y="120" type="line"/>
-			<point x="592" y="136" type="line"/>
-			<point x="448" y="136" type="line"/>
-			<point x="440" y="144" type="line"/>
-			<point x="440" y="728" type="line"/>
-			<point x="424" y="744" type="line"/>
-			<point x="320" y="744" type="line"/>
-			<point x="304" y="728" type="line"/>
-			<point x="288" y="636"/>
-			<point x="216" y="576"/>
-			<point x="100" y="576" type="curve"/>
-			<point x="84" y="560" type="line"/>
-			<point x="84" y="488" type="line"/>
-			<point x="100" y="472" type="line"/>
-			<point x="264" y="472" type="line"/>
-			<point x="272" y="464" type="line"/>
-			<point x="272" y="144" type="line"/>
-			<point x="264" y="136" type="line"/>
-			<point x="120" y="136" type="line"/>
-			<point x="104" y="120" type="line"/>
-			<point x="104" y="16" type="line"/>
-		</contour>
+		<component base="one" xOffset="138"/>
 	</outline>
 	<lib>
 		<dict>
