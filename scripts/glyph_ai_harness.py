@@ -3,8 +3,9 @@
 
 The harness uses Runebender's UFO mark colors as source metadata:
 green glyphs are treated as good references, rendered from the active UFO
-outlines with drawbot-skia, and packaged with prompts plus img2bez trace
-commands for a target glyph.
+outlines via the designbot canvas toolchain (harness/designbot/
+glyph_canvas.rs), and packaged with prompts plus img2bez trace commands
+for a target glyph.
 """
 
 from __future__ import annotations
@@ -22,15 +23,7 @@ import sys
 import xml.etree.ElementTree as ET
 
 from fontTools.pens.boundsPen import BoundsPen
-from fontTools.pens.recordingPen import DecomposingRecordingPen
 from ufoLib2 import Font
-
-try:
-    from drawbot_skia.drawing import Drawing
-except ModuleNotFoundError as error:
-    raise SystemExit(
-        "drawbot_skia is required. Run `make setup` or use ./.venv/bin/python."
-    ) from error
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -213,59 +206,39 @@ def glyph_bounds(font: Font, glyph_name: str) -> tuple[float, float, float, floa
     return pen.bounds
 
 
-def glyph_recording(font: Font, glyph_name: str) -> list[tuple[str, tuple]]:
-    glyph = font[glyph_name]
-    pen = DecomposingRecordingPen(font, skipMissingComponents=True)
-    glyph.draw(pen)
-    return pen.value
-
-
-def draw_recording(db: Drawing, recording: list[tuple[str, tuple]]) -> None:
-    db.newPath()
-    for operator, operands in recording:
-        if operator == "moveTo":
-            db.moveTo(operands[0])
-        elif operator == "lineTo":
-            db.lineTo(operands[0])
-        elif operator == "curveTo":
-            db.curveTo(*operands)
-        elif operator in {"closePath", "endPath"}:
-            db.closePath()
-        elif operator == "qCurveTo":
-            raise ValueError("qCurveTo outlines are not supported by this renderer")
-    db.drawPath()
-
-
 def render_glyph_png(master: str, glyph_name: str, output_path: Path) -> dict[str, object]:
+    """Render one glyph on the canvas-template frame via the designbot
+    toolchain (harness/designbot/glyph_canvas.rs glyphbox mode) — pure Rust
+    rendering, 1 font unit = 1 px, metric lines + advance box included."""
     ufo_path = MASTER_UFOS[master]
     font = load_font(ufo_path)
     if glyph_name not in font:
         raise KeyError(f"{glyph_name} is missing from {display_path(ufo_path)}")
-
-    info = font.info
-    ascender = float(info.ascender or 768)
-    descender = float(info.descender or -256)
-    target_height = ascender - descender
-    scale = (IMAGE_SIZE - IMAGE_PADDING * 2) / target_height
-    glyph = font[glyph_name]
-    width = float(glyph.width or 0)
-    origin_x = (IMAGE_SIZE - width * scale) / 2
-    baseline_y = IMAGE_PADDING + abs(descender) * scale
+    width = float(font[glyph_name].width or 0)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    db = Drawing()
-    db.newPage(IMAGE_SIZE, IMAGE_SIZE)
-    db.fill(1)
-    db.stroke(None)
-    db.rect(0, 0, IMAGE_SIZE, IMAGE_SIZE)
-    db.save()
-    db.translate(origin_x, baseline_y)
-    db.scale(scale)
-    db.fill(0)
-    db.stroke(None)
-    draw_recording(db, glyph_recording(font, glyph_name))
-    db.restore()
-    db.saveImage(str(output_path))
+    designbot = shutil.which("designbot")
+    if designbot is None:
+        raise SystemExit(
+            "designbot is required (install: cargo install --path designbot-cli "
+            "in ~/GH/repos/designbot)."
+        )
+    command = [
+        designbot,
+        "--render",
+        str(ROOT / "harness" / "designbot" / "glyph_canvas.rs"),
+        "--output",
+        str(output_path),
+        "--",
+        "glyphbox",
+        str(ufo_path),
+        glyph_name,
+    ]
+    result = subprocess.run(command, cwd=ROOT, capture_output=True, text=True)
+    if result.returncode != 0:
+        raise SystemExit(
+            f"designbot glyphbox failed for {master}/{glyph_name}:\n{result.stderr}"
+        )
 
     return {
         "master": master,
@@ -275,7 +248,8 @@ def render_glyph_png(master: str, glyph_name: str, output_path: Path) -> dict[st
         "bounds": glyph_bounds(font, glyph_name),
         "image_size": IMAGE_SIZE,
         "padding": IMAGE_PADDING,
-        "scale": scale,
+        "scale": 1.0,
+        "template": "glyph-canvas (1 unit = 1 px, metric lines, advance box)",
     }
 
 

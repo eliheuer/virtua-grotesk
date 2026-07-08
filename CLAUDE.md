@@ -35,16 +35,18 @@ AI tools). It is imported here in full:
 
 ## Seeing your work (visual verification)
 
-- **drawbot-skia is the standard tool for all image generation** (proofs,
-  specimens, quick checks). It is installed in `.venv` from
-  `github.com/eliheuer/drawbot-skia` via `requirements.txt`, so `make proof`
-  and `make specimen` work after a plain `make setup`. Setting
-  `DRAWBOT_SKIA_REPO` in an ignored `local.mk` overrides it with a live
-  checkout for drawbot development.
-- For quick visual checks during glyph work, write a short drawbot-skia
-  script that renders a PNG, save it to `~/Temp/`, and Read the PNG back.
-  `openTypeFeatures(tnum=True)` etc. work, so feature substitutions can be
-  verified visually too.
+- **designbot (Rust) is the standard tool for all image generation** (proofs,
+  specimens, quick checks) — `designbot --render <script.rs> --output <path>`;
+  the output extension picks the format (png/gif/mp4/pdf). Install from the
+  local checkout: `cargo install --path designbot-cli` in
+  `~/GH/repos/designbot`. `make proof` / `make specimen` run the ports in
+  `scripts/designbot/`.
+- For quick visual checks during glyph work, write a short designbot script
+  that renders a PNG, save it to `~/Temp/`, and Read the PNG back. Scripts
+  can read UFO glyphs directly (`designbot::norad` + `draw_path`); for the
+  harness canvas frame use `harness/designbot/glyph_canvas.rs` (glyphbox /
+  sheet modes) instead of writing a new renderer. Note: no openTypeFeatures
+  support yet — verify feature substitutions with uharfbuzz on the built font.
 - After any glyph or feature change: `make build`, then verify the built fonts
   in `fonts/` directly (fontTools for tables/widths, uharfbuzz for shaping)
   rather than trusting the source edit.

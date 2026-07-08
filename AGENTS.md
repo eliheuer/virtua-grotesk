@@ -156,22 +156,20 @@ native app.
 ## Proof Generation
 
 ```bash
-python scripts/build_general_proof.py [font_path] [output_path]
-make proof
-make specimen
+make proof      # designbot --render scripts/designbot/general_proof.rs ...
+make specimen   # designbot --render scripts/designbot/print_spacing_specimen.rs ...
 ```
 
-Uses DrawBot-style APIs to generate multi-page PDF proofs. The Makefile runs
-this repo's virtualenv Python at `./.venv/bin/python`. drawbot-skia is
-installed into `.venv` from `github.com/eliheuer/drawbot-skia` via
-`requirements.txt`, so proofs work after a plain `make setup` on any machine.
-Setting `DRAWBOT_SKIA_REPO` in the environment or ignored `local.mk` prepends
-a live checkout's `src` directory to `PYTHONPATH` instead, for drawbot
-development. drawbot-skia is also the standard tool for any ad-hoc image
-generation (quick PNG renders of glyphs or feature tests).
-`make specimen` renders the landscape print review PDF at
-`documentation/proofs/print-spacing-specimen.pdf` across Regular, Medium, SemiBold,
-and Bold.
+Proofs and specimens are **designbot** (Rust) scripts in `scripts/designbot/`
+producing vector PDFs — the DrawBot-style Python versions are retired.
+designbot is installed from the local checkout (`cargo install --path
+designbot-cli` in `~/GH/repos/designbot`); its `--output` extension picks the
+format (png/gif/mp4/pdf), and multi-image scripts take a mode argument after
+`--`. designbot is also the standard tool for ad-hoc image generation (quick
+PNG renders of glyphs; `harness/designbot/glyph_canvas.rs` for anything on
+the harness canvas frame). `make specimen` renders the landscape print review
+PDF at `documentation/proofs/print-spacing-specimen.pdf` across Regular,
+Medium, SemiBold, and Bold.
 
 ## Source Architecture
 
