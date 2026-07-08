@@ -86,6 +86,17 @@ here.
    draft, needs human polish). Never self-assign green — green is the
    human's call, made in Runebender (`make runebender`).
 
+## The grading contract (two lattices — see DESIGN.md)
+
+A draft handed to the human must be **8-disciplined**: advance width,
+sidebearing-derived spacing, stem widths, and all fitted offsets on the
+8-unit lattice; cuts at spec; metrics pinned. The human's grading time is
+reserved for **optical corrections** — the deliberate 8→2 deviations only
+eyes can make. If a grading session involves snapping anything back to
+the 8-grid, that is a tool bug: fix the tool, don't keep cleaning.
+`make lint-grid` checks drafts; the orange optical-density stat is the
+tool-noise alarm.
+
 ## Batch mode
 
 Process at most 10–20 glyphs per session, grouped by script/similarity
