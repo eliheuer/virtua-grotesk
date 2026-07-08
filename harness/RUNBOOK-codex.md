@@ -57,10 +57,11 @@ Every machine-facing image in the loop — style sheets, generation targets,
 returned generations — lives on one fixed canvas, so pixel↔font-unit mapping
 is **known, never guessed**:
 
-- **1024 × 1536 px, 1 font unit = 1 px.** Drawing band 1088 px tall
-  (ascender→descender), 224 px margin top and bottom.
-- Metric lines at fixed pixel rows: ascender **y=224**, cap **y=288**,
-  x-height **y=480**, baseline **y=1056**, descender **y=1312**.
+- **1536 × 1536 px, 1 font unit = 1 px.** Drawing band 1024 px tall
+  (ascender→descender), 256 px margin top and bottom.
+- Metric lines at fixed pixel rows: ascender & cap height **y=256** (they
+  share the 768 ceiling), x-height **y=448**, baseline **y=1024**,
+  descender **y=1280**.
 - Small solid fiducial squares in the four margin corners (drift check).
 - **Machine-facing images are light mode**: white background, black glyph
   ink; template graphics (metric lines, fiducials, labels) in **pure green
@@ -70,7 +71,7 @@ is **known, never guessed**:
   anything saturated. Dark mode is only for images a human reviews (step 7).
 
 The mapping this buys: a pixel at row *y* is at font-unit
-`832 − (y − 224)`; the ink's pixel bbox gives exact `--target-height` /
+`768 − (y − 256)`; the ink's pixel bbox gives exact `--target-height` /
 placement inputs for tracing. No `--fit` guessing.
 
 ## The procedure: one glyph
