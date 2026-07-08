@@ -25,7 +25,8 @@ with modern precision. Strokes are monolinear; there is no thick/thin contrast.
 Everything in this font is drawn against powers of two.
 
 - **UPM 1024** (= 2^10). All vertical metrics are power-of-two sums:
-  ascender 832, cap height 768, x-height 576, descender −256.
+  ascender 768, cap height 768, x-height 576, descender −256. Ascenders and
+  caps share one height — a single 768 (512+256) ceiling.
 - **Grid size 2**: every coordinate is an integer, and even numbers are
   strongly preferred. img2bez runs with `--grid 2`.
 - **Favored measurements: 2, 4, 8, 16, 32, 64, 128, 256…** Stem widths,
@@ -43,7 +44,7 @@ Everything in this font is drawn against powers of two.
 
 | zone | y | notes |
 |---|---|---|
-| ascender | 832 | |
+| ascender | 768 | shared with cap height |
 | cap height | 768 | round caps overshoot to 784 (+16) |
 | x-height | 576 | round lowercase overshoots to 592 (+16) |
 | baseline | 0 | round forms overshoot to −16 |
