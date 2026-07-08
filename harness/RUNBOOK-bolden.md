@@ -39,14 +39,26 @@ here.
    this glyph needs grading, not boldening.
 
 2. **Get a draft Bold.** In order of preference:
-   a. **Neural pre-fill** — the glyph model in `font-garden-lab` predicts
-      per-point Bold deltas from the Regular (structure-compatible by
-      construction). Batch drafts arrive via a prefill UFO; copy the glyph's
-      outline from there.
-   b. **Analogy from a bolded neighbor** — copy the deltas of the most
+   a. **Lane-2 form transfer** (line-only glyphs; the proven path) — a
+      HUMAN picks a reference image whose form fits the glyph (this is a
+      design decision, never automated), then the `glyph-transfer` tool in
+      `font-garden-lab` fits the Regular outline to it in edge-offset
+      space: edge orientations immutable (the style), corner cuts
+      manufactured at spec, vertical metrics pinned, everything on grid 2.
+      Structure-compatible by construction.
+        cd ~/GH/repos/font-garden-lab
+        .venv/bin/python transfer/bolden_one.py GLYPH --image REF.png
+      Sidebearings inherit the Regular's by default (`--lsb/--rsb` to
+      override); `--lambda` dials form-trust. Graded results: exclam,
+      four. Reference choice is why comma failed — wrong reference form,
+      not a tool bug.
+   b. **Neural pre-fill** — the glyph model in `font-garden-lab` predicts
+      per-point Bold deltas from the Regular. In-distribution glyphs only
+      (see the prefill post-mortem: OOD deploys produce garbage).
+   c. **Analogy from a bolded neighbor** — copy the deltas of the most
       similar already-bolded glyph (e.g. bolden `dal-ar` by analogy to
       `reh-ar`), then adjust.
-   c. **Manual** — thicken stems per `DESIGN.md`'s Bold measurements.
+   d. **Manual** — thicken stems per `DESIGN.md`'s Bold measurements.
 
 3. **Fit to the Dimensions table.** `DESIGN.md`'s **Dimensions** section is
    the primary target: measure the draft (stems, bars, rounds at the stated
