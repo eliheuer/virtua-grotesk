@@ -45,7 +45,7 @@ RED_MARKS = {(1.0, 0.29, 0.24, 1.0), (1.0, 0.3, 0.3, 1.0)}
 ORANGE_MARKS = {(1.0, 0.6, 0.06, 1.0), (1.0, 0.86, 0.2, 1.0)}
 
 IMAGE_SIZE = 1536
-IMAGE_PADDING = 224
+IMAGE_PADDING = 256
 GRID = 2
 DESIGN_CHAMFER = 16
 TRACE_CHAMFER = 0
@@ -243,7 +243,7 @@ def render_glyph_png(master: str, glyph_name: str, output_path: Path) -> dict[st
         raise KeyError(f"{glyph_name} is missing from {display_path(ufo_path)}")
 
     info = font.info
-    ascender = float(info.ascender or 832)
+    ascender = float(info.ascender or 768)
     descender = float(info.descender or -256)
     target_height = ascender - descender
     scale = (IMAGE_SIZE - IMAGE_PADDING * 2) / target_height
@@ -344,7 +344,7 @@ def prompt_text(
             "- Geometric grotesk, monolinear strokes, no contrast.",
             f"- Virtua Grotesk's sharp joins use 45-degree chamfers, usually {DESIGN_CHAMFER} font units.",
             "- Keep curved glyphs smooth; the img2bez trace defaults to no automatic chamfering.",
-            "- Coordinates should be compatible with a 1024 UPM, ascender 832, descender -256 source.",
+            "- Coordinates should be compatible with a 1024 UPM, ascender 768, descender -256 source.",
             "- Prefer simple contours that will trace cleanly; avoid fuzzy, painterly, or ornamental edges.",
             "",
             "Same-master green reference renders:",
