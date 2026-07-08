@@ -42,6 +42,36 @@ Done:
 - **Pipeline** — build (`make build`), the GF QA gate (`make test`), proofs
   (`make proof` / `make specimen`), reports (`make reports`).
 
+## The skeleton and the scoreboard
+
+`make skeleton` runs the whole pipeline end to end — build, GF QA gate,
+reports, scoreboard — **today, debt and all**. QA failures while debt exists
+are expected (make keeps going); what must never break is the *run itself*:
+if the skeleton can't complete, something structural regressed. The day it
+was added it caught a Bold `V` draft whose self-crossing corner broke master
+compatibility inside fontmake.
+
+`make scoreboard` (also the skeleton's last step) rewrites
+`documentation/scoreboard.md`: the **GF-gate headline** (glyphs non-red in
+BOTH masters, out of 690 — the one number that must go up), Bold debt broken
+down by outline class, drafts awaiting human grading, the Regular's own
+debt, and a dated history table so the burn-down is visible in git.
+
+How debt burns down, per class:
+
+- **line-only** → the lane-2 form-transfer loop (`harness/RUNBOOK-bolden.md`
+  step 2a): a human picks a reference image, the `glyph-transfer` tool
+  (font-garden-lab) fits the Regular outline to it, a human grades in
+  Runebender. Works today.
+- **curved** → blocked on curve support in the transfer tool (the ampersand
+  milestone in font-garden-lab).
+- **composite** → propagates automatically as bases go non-red; the
+  scoreboard counts how many are ready now.
+
+Run `make skeleton` at the end of every drawing session and commit the
+updated scoreboard with the glyphs. The session isn't done until the
+headline moved (or a tool got measurably better).
+
 Remaining work, in priority order:
 
 ## 1. Arabic outline cleanup — TOP PRIORITY

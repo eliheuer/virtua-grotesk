@@ -9,7 +9,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof specimen readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight clean
+.PHONY: help setup build proof specimen readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -25,6 +25,8 @@ help:
 		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
+		'  make scoreboard     Update documentation/scoreboard.md (GF-gate burn-down)' \
+		'  make skeleton       End-to-end loop: build + qa + reports + scoreboard (qa may fail while debt exists)' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
 		'  make clean          Remove generated build outputs'
 
@@ -64,6 +66,17 @@ test: qa
 
 reports:
 	$(PYTHON) scripts/run_reports.py
+
+scoreboard:
+	$(PYTHON) scripts/scoreboard.py
+
+# The end-to-end skeleton: prove the whole pipeline runs TODAY, debt and
+# all. qa failures are expected while debt exists (the leading "-" keeps
+# make going); the scoreboard headline is the progress metric.
+skeleton: build
+	-./scripts/check_gf_fonts.sh
+	$(PYTHON) scripts/run_reports.py
+	$(PYTHON) scripts/scoreboard.py
 
 preflight: build proof specimen reports
 	$(PYTHON) scripts/preflight.py
