@@ -40,6 +40,29 @@ Everything in this font is drawn against powers of two.
   deliberate measurement (a 16-unit chamfer, a 96-unit stem) into an arbitrary
   one.
 
+## The two lattices: division of labor
+
+The grid is hierarchical, and the hierarchy assigns the work:
+
+- **The 8-unit lattice is the machine's grid.** Advance widths,
+  sidebearings, stem and bar widths, chamfer sizes, and every offset a
+  tool fits or generates land on multiples of 8. Any tool that hands a
+  human a draft containing 2-grid noise is broken: a human grading
+  session must never include janitorial snapping. `make lint-grid`
+  enforces this (machine drafts are the ERROR class; the *optical
+  density* stat tracks it).
+- **The 2-unit lattice is the human's grid.** Dropping from 8 to 2 is an
+  optical correction — a decision only biological eyes can make, in
+  Runebender, during grading. In a green glyph, every off-8 coordinate
+  is deliberate design data.
+- **Off the 2-grid is always an error**, for everyone.
+
+This is also the data strategy: because machine drafts are 8-disciplined,
+the diff between an orange draft and its human-approved green version
+isolates pure optical knowledge — labeled training data for a future
+optical-correction model. The machine proposes structure on 8; the human
+teaches optics on 2; the dataset is the difference.
+
 ## Vertical metrics
 
 | zone | y | notes |

@@ -78,11 +78,15 @@ reports:
 scoreboard:
 	$(PYTHON) scripts/scoreboard.py
 
+lint-grid:
+	$(PYTHON) scripts/grid_lint.py
+
 # The end-to-end skeleton: prove the whole pipeline runs TODAY, debt and
 # all. qa failures are expected while debt exists (the leading "-" keeps
 # make going); the scoreboard headline is the progress metric.
 skeleton: build
 	-./scripts/check_gf_fonts.sh
+	-$(PYTHON) scripts/grid_lint.py --quiet
 	$(PYTHON) scripts/run_reports.py
 	$(PYTHON) scripts/scoreboard.py
 
