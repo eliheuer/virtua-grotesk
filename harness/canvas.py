@@ -11,11 +11,11 @@ lockstep with the designbot script.
 One coordinate frame, implemented once, used everywhere. Agents call these
 subcommands; they never do pixel<->font-unit math themselves.
 
-Template spec (plans/ai-font-completion-harness.md §4b):
-  1024 x 1536 px, 1 font unit = 1 px.
-  Drawing band = ascender..descender (1088 px), 224 px top/bottom margins.
-  Metric rows: ascender 224, cap 288, x-height 480, baseline 1056,
-  descender 1312.  row = MARGIN + (ASCENDER - y).
+Template spec (plans/ai-font-completion-harness.md §4b, revised 2026-07-07):
+  1536 x 1536 px, 1 font unit = 1 px.
+  Drawing band = 768..-256 (asc/cap ceiling to descender), 256 px margins.
+  Metric rows: asc/cap 256, x-height 448, baseline 1024, descender 1280.
+  row = MARGIN + (BAND_TOP - y).
   Machine-facing graphics: pure green #00ff00 (chroma-key), ink black,
   ghost light gray. Extraction keeps dark desaturated pixels only.
 
@@ -49,12 +49,17 @@ MASTERS = {
     "Regular": SOURCES / "VirtuaGrotesk-Regular.ufo",
     "Bold": SOURCES / "VirtuaGrotesk-Bold.ufo",
 }
-STEM_LADDER = {"Regular": 96, "Bold": 160}
+# Per DESIGN.md "Dimensions": x-height stems 96 (Regular) / 192 (Bold).
+STEM_LADDER = {"Regular": 96, "Bold": 192}
 
-W, H, MARGIN = 1024, 1536, 224
-ASCENDER, CAP, XHEIGHT, BASELINE, DESCENDER = 832, 768, 576, 0, -256
+W, H, MARGIN = 1536, 1536, 256
+# Ascender (832) is capped to the 768 ceiling on the template (square canvas,
+# no VG glyph draws above cap). Keep both names resolvable for band specs.
+BAND_TOP = 768
+CAP, XHEIGHT, BASELINE, DESCENDER = 768, 576, 0, -256
+ASCENDER = BAND_TOP
 ZONES = {
-    "ascender": ASCENDER,
+    "ascender": BAND_TOP,
     "cap": CAP,
     "xheight": XHEIGHT,
     "baseline": BASELINE,
@@ -66,11 +71,11 @@ FIDUCIAL = 16
 
 
 def unit_to_row(y: float) -> float:
-    return MARGIN + (ASCENDER - y)
+    return MARGIN + (BAND_TOP - y)
 
 
 def row_to_unit(row: float) -> float:
-    return ASCENDER - (row - MARGIN)
+    return BAND_TOP - (row - MARGIN)
 
 
 def parse_band(spec: str):

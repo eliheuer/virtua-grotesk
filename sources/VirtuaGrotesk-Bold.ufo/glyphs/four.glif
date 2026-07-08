@@ -1,43 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="four" format="2">
 	<unicode hex="0034"/>
-	<advance width="670"/>
+	<advance width="658"/>
 	<outline>
 		<contour>
-			<point x="428" y="0" type="line"/>
-			<point x="588" y="0" type="line"/>
-			<point x="604" y="16" type="line"/>
-			<point x="604" y="150" type="line"/>
-			<point x="612" y="158" type="line"/>
-			<point x="646" y="158" type="line"/>
-			<point x="662" y="174" type="line"/>
-			<point x="662" y="278" type="line"/>
-			<point x="646" y="294" type="line"/>
-			<point x="612" y="294" type="line"/>
-			<point x="604" y="302" type="line"/>
-			<point x="604" y="728" type="line"/>
-			<point x="588" y="744" type="line"/>
-			<point x="460" y="744" type="line"/>
-			<point x="8" y="286" type="line"/>
-			<point x="8" y="174" type="line"/>
-			<point x="24" y="158" type="line"/>
-			<point x="420" y="158" type="line"/>
-			<point x="428" y="150" type="line"/>
-			<point x="428" y="16" type="line"/>
+			<point x="374" y="0" type="line"/>
+			<point x="520" y="0" type="line"/>
+			<point x="536" y="16" type="line"/>
+			<point x="536" y="156" type="line"/>
+			<point x="544" y="164" type="line"/>
+			<point x="626" y="164" type="line"/>
+			<point x="642" y="180" type="line"/>
+			<point x="642" y="286" type="line"/>
+			<point x="626" y="302" type="line"/>
+			<point x="544" y="302" type="line"/>
+			<point x="536" y="310" type="line"/>
+			<point x="536" y="728" type="line"/>
+			<point x="520" y="744" type="line"/>
+			<point x="342" y="744" type="line"/>
+			<point x="16" y="310" type="line"/>
+			<point x="16" y="180" type="line"/>
+			<point x="32" y="164" type="line"/>
+			<point x="350" y="164" type="line"/>
+			<point x="358" y="156" type="line"/>
+			<point x="358" y="16" type="line"/>
 		</contour>
 		<contour>
-			<point x="188" y="294" type="line"/>
-			<point x="188" y="302" type="line"/>
-			<point x="420" y="560" type="line"/>
-			<point x="428" y="560" type="line"/>
-			<point x="428" y="302" type="line"/>
-			<point x="420" y="294" type="line"/>
+			<point x="164" y="300" type="line"/>
+			<point x="164" y="308" type="line"/>
+			<point x="352" y="554" type="line"/>
+			<point x="360" y="554" type="line"/>
+			<point x="360" y="308" type="line"/>
+			<point x="352" y="300" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- image ref-four-src.png</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>1,0.86,0.2,1</string>
 		</dict>
 	</lib>
 </glyph>

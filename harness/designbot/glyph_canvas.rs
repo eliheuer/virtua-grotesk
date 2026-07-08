@@ -3,8 +3,9 @@
 // One coordinate frame, implemented once. Agents run these modes and never
 // do pixel<->font-unit math themselves. Spec: plans/ai-font-completion-harness.md §4b.
 //
-//   1024 x 1536 px, 1 font unit = 1 px, drawing band ascender..descender,
-//   224 px top/bottom margins. row = MARGIN + (ASCENDER - y).
+//   1536 x 1536 px, 1 font unit = 1 px, drawing band 768..-256 (the shared
+//   asc/cap ceiling down to descender), 256 px top/bottom margins.
+//   row = MARGIN + (BAND_TOP - y).
 //   Machine-facing graphics: pure green #00ff00 (chroma-key), ink black,
 //   ghost light gray.
 //
@@ -30,19 +31,20 @@ use designbot::prelude::*;
 use designbot::kurbo::{Affine, BezPath};
 use designbot::{image, norad};
 
-const W: f64 = 1024.0;
+const W: f64 = 1536.0;
 const H: f64 = 1536.0;
-const MARGIN: f64 = 224.0;
+const MARGIN: f64 = 256.0;
 
-const ASCENDER: f64 = 832.0;
+// Ascender (832) is capped to the 768 ceiling on this template: no VG glyph
+// draws above cap height, and a square canvas suits the image API.
+const BAND_TOP: f64 = 768.0;
 const CAP: f64 = 768.0;
 const XHEIGHT: f64 = 576.0;
 const BASELINE: f64 = 0.0;
 const DESCENDER: f64 = -256.0;
 
-const ZONES: [(&str, &str, f64); 5] = [
-    ("ascender", "asc", ASCENDER),
-    ("cap", "cap", CAP),
+const ZONES: [(&str, &str, f64); 4] = [
+    ("cap", "asc/cap", CAP),
     ("xheight", "x-height", XHEIGHT),
     ("baseline", "baseline", BASELINE),
     ("descender", "desc", DESCENDER),
@@ -53,10 +55,13 @@ const GREEN: (u8, u8, u8) = (0, 255, 0);
 const GHOST_GRAY: (u8, u8, u8) = (200, 200, 200);
 
 fn row(y_units: f64) -> f64 {
-    MARGIN + (ASCENDER - y_units)
+    MARGIN + (BAND_TOP - y_units)
 }
 
 fn parse_zone(s: &str) -> f64 {
+    if s == "ascender" {
+        return BAND_TOP; // alias: ascender is capped to the 768 ceiling
+    }
     for (name, _, v) in ZONES {
         if s == name {
             return v;
@@ -165,7 +170,7 @@ fn glyph_path(font: &norad::Font, name: &str, depth: u8) -> BezPath {
 
 /// Place a font-unit path onto the canvas frame at pen position x0 (px).
 fn to_canvas(mut path: BezPath, x0: f64) -> BezPath {
-    path.apply_affine(Affine::new([1.0, 0.0, 0.0, -1.0, x0, MARGIN + ASCENDER]));
+    path.apply_affine(Affine::new([1.0, 0.0, 0.0, -1.0, x0, MARGIN + BAND_TOP]));
     path
 }
 

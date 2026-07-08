@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="exclam" format="2">
 	<unicode hex="0021"/>
-	<advance width="240"/>
+	<advance width="276"/>
 	<outline>
 		<contour>
-			<point x="72" y="0" type="line"/>
-			<point x="168" y="0" type="line"/>
-			<point x="184" y="16" type="line"/>
-			<point x="184" y="112" type="line"/>
-			<point x="168" y="128" type="line"/>
-			<point x="72" y="128" type="line"/>
-			<point x="56" y="112" type="line"/>
-			<point x="56" y="16" type="line"/>
+			<point x="78" y="0" type="line"/>
+			<point x="202" y="0" type="line"/>
+			<point x="218" y="16" type="line"/>
+			<point x="218" y="136" type="line"/>
+			<point x="202" y="152" type="line"/>
+			<point x="78" y="152" type="line"/>
+			<point x="62" y="136" type="line"/>
+			<point x="62" y="16" type="line"/>
 		</contour>
 		<contour>
-			<point x="104" y="192" type="line"/>
-			<point x="136" y="192" type="line"/>
-			<point x="152" y="208" type="line"/>
-			<point x="184" y="480" type="line"/>
-			<point x="184" y="752" type="line"/>
-			<point x="168" y="768" type="line"/>
+			<point x="118" y="212" type="line"/>
+			<point x="166" y="212" type="line"/>
+			<point x="182" y="228" type="line"/>
+			<point x="220" y="548" type="line"/>
+			<point x="220" y="752" type="line"/>
+			<point x="204" y="768" type="line"/>
 			<point x="72" y="768" type="line"/>
 			<point x="56" y="752" type="line"/>
-			<point x="56" y="480" type="line"/>
-			<point x="88" y="208" type="line"/>
+			<point x="64" y="480" type="line"/>
+			<point x="102" y="228" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- Helvetica Bold &apos;!&apos;</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>1,0.86,0.2,1</string>
 		</dict>
 	</lib>
 </glyph>
