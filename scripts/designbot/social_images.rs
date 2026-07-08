@@ -923,6 +923,34 @@ fn draw_lowercase(page: &mut Page, styles: &[Style]) {
     page.captions(lightest, None, false);
 }
 
+/// Saving shim: the designbot CLI rewrites the string literal in any
+/// `render_to_*(<expr>, "...")` call to the --output path, but (unlike the
+/// Python original) it does not create missing parent directories. Routing
+/// the call through this wrapper lets the script mkdir the real, rewritten
+/// output path before rendering.
+struct Saver<'a> {
+    renderer: &'a Renderer,
+}
+
+impl Saver<'_> {
+    fn mkdirs(path: &str) {
+        if let Some(dir) = std::path::Path::new(path).parent() {
+            let _ = std::fs::create_dir_all(dir);
+        }
+    }
+
+    fn render_to_png(&self, ctx: &Canvas, path: &str) {
+        Self::mkdirs(path);
+        self.renderer.render_to_png(ctx, path).unwrap();
+    }
+
+    #[allow(dead_code)]
+    fn render_to_pdf(&self, ctx: &Canvas, path: &str) {
+        Self::mkdirs(path);
+        self.renderer.render_to_pdf(ctx, path).unwrap();
+    }
+}
+
 // --- main ---------------------------------------------------------------------
 
 fn main() {
@@ -971,5 +999,8 @@ fn main() {
     }
 
     let Page { ctx, .. } = page;
-    renderer.render_to_png(&ctx, "out.png").unwrap();
+    let saver = Saver {
+        renderer: &renderer,
+    };
+    saver.render_to_png(&ctx, "out.png");
 }

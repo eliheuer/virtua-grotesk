@@ -1,15 +1,13 @@
 -include local.mk
 
 PYTHON ?= ./.venv/bin/python
-DRAWBOT_SKIA_REPO ?=
-DRAWBOT_PYTHON ?= $(PYTHON)
-DRAWBOT_PYTHONPATH = $(if $(DRAWBOT_SKIA_REPO),$(DRAWBOT_SKIA_REPO)/src$${PYTHONPATH:+:$$PYTHONPATH},$${PYTHONPATH})
 
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
+PNGQUANT ?= ./.venv/bin/pngquant
 
-.PHONY: help setup build proof specimen proof-py specimen-py readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
+.PHONY: help setup build proof specimen readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -43,19 +41,26 @@ proof: build
 specimen: build
 	designbot --render scripts/designbot/print_spacing_specimen.rs --output documentation/proofs/print-spacing-specimen.pdf
 
-# Legacy drawbot-skia (Python) fallbacks, kept until the designbot ports have
-# survived a few review cycles. Remove together with the Python scripts.
-proof-py: build
-	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_general_proof.py "$(REGULAR_FONT)" documentation/proofs/proof.pdf
-
-specimen-py: build
-	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_print_spacing_specimen.py
+SOCIAL_IMAGES = 01-hero:hero 02-weights:weights 03-alphabet-regular:alphabet-regular \
+	03-alphabet-medium:alphabet-medium 03-alphabet-semibold:alphabet-semibold \
+	03-alphabet-bold:alphabet-bold 04-tabular:tabular 05-chamfer:chamfer \
+	06-waterfall:waterfall 07-symbols:symbols 08-lowercase:lowercase
 
 readme-images: build
-	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_readme_images.py
+	designbot --render scripts/designbot/readme_images.rs --output documentation/assets/readme/glyphset-overview.png -- glyphset
+	designbot --render scripts/designbot/readme_images.rs --output documentation/assets/readme/aa-grid.png -- aa-grid
+	designbot --render scripts/designbot/readme_images.rs --output documentation/assets/readme/text-sizes.png -- text-sizes
+	-$(PNGQUANT) --force --ext .png --skip-if-larger documentation/assets/readme/*.png
 
 social-images: build
-	PYTHONPATH="$(DRAWBOT_PYTHONPATH)" $(DRAWBOT_PYTHON) scripts/build_social_images.py
+	@for f in square portrait landscape; do \
+	  for spec in $(SOCIAL_IMAGES); do \
+	    name=$${spec%%:*}; mode=$${spec##*:}; \
+	    designbot --render scripts/designbot/social_images.rs \
+	      --output "documentation/assets/social/$$f/social-$$name.png" -- "$$f:$$mode" || exit 1; \
+	  done; \
+	done
+	-$(PNGQUANT) --force --ext .png --skip-if-larger documentation/assets/social/*/*.png
 
 runebender:
 	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-web.sh

@@ -33,7 +33,8 @@ Default font: `fonts/ttf/VirtuaGrotesk-Regular.ttf`
 5. Report the output path so the user can open it for detailed review
 
 ## Notes
-- Proof generation uses `drawbot-skia`; set `DRAWBOT_SKIA_REPO=/path/to/drawbot-skia` or copy `local.mk.example` to ignored `local.mk` when using a local fork checkout
-- The proof includes: title page, alphabet display, numerals & punctuation, size waterfall, spacing proof, paragraph setting, kerning pairs, full character set grid
-- For variable font proofs, pass `fonts/variable/VirtuaGrotesk[wght].ttf` to `scripts/build_general_proof.py`
+- Proof generation uses **designbot** (Rust): `make proof` runs
+  `designbot --render scripts/designbot/general_proof.rs --output documentation/proofs/proof.pdf -- <font_path>`
+- The proof includes: title page, alphabet display, numerals & punctuation, size waterfall, spacing proof, paragraph setting, kerning pairs, full character set grid, Arabic
+- For variable font proofs, pass `fonts/variable/VirtuaGrotesk[wght].ttf` as the font argument after `--`
 - Output defaults to `documentation/proofs/proof.pdf`
