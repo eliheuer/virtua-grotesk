@@ -61,8 +61,10 @@ meets the baseline at x: `(x−16−stem, 0) → (x−16, 0) → (x, 16)`.
 
 Applies at stem–baseline and stem–cap junctions, crossbar ends (A H E),
 apexes (A), and open terminals. The chamfer is always a straight line
-segment, never a curve. In the Bold master the chamfer scales up
-proportionally with the weight.
+segment, never a curve. **The chamfer stays the same absolute size in both
+masters** (measured from the drawings: 16-unit cuts in Regular and Bold
+alike, with 8-unit cuts at small junctions) — it reads relatively smaller
+as the weight increases, which is the intended optical effect.
 
 ## Stroke and weight model
 
@@ -91,7 +93,8 @@ optical weight distribution, never raw outlines).
 | cap round (O) | bowl side @ y=500 | 110 | 192 |
 | x-height stem (n, t) | vertical stem @ y=288 | 96 | 192 |
 | x-height round (o) | bowl side @ y=288 | 100 | 196 |
-| chamfer | corner cut | 16 | 16 (scales visually with weight) |
+| chamfer, primary | corner cut | 16 | 16 (same absolute size; reads smaller in Bold) |
+| chamfer, small | junction cut | 8 | 8 |
 
 Reading the table: the ladder values (96, 192, 160) are the *intent*; the
 off-ladder values (104, 110, 100, 196) are recorded **optical corrections**
