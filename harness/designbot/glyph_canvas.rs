@@ -3,9 +3,10 @@
 // One coordinate frame, implemented once. Agents run these modes and never
 // do pixel<->font-unit math themselves. Spec: plans/ai-font-completion-harness.md §4b.
 //
-//   1536 x 1536 px, 1 font unit = 1 px, drawing band 768..-256 (the shared
-//   asc/cap ceiling down to descender), 256 px top/bottom margins.
-//   row = MARGIN + (BAND_TOP - y).
+//   1536 x 1536 px, 1 font unit = 1 px, DrawBot coordinates (origin at the
+//   canvas bottom-left, y-up), drawing band -256..768 (descender up to the
+//   shared asc/cap ceiling), 256 px top/bottom margins.
+//   canvas y = MARGIN + (y - DESCENDER).
 //   Machine-facing graphics: pure green #00ff00 (chroma-key), ink black,
 //   ghost light gray.
 //
@@ -54,8 +55,10 @@ const FIDUCIAL: f64 = 16.0;
 const GREEN: (u8, u8, u8) = (0, 255, 0);
 const GHOST_GRAY: (u8, u8, u8) = (200, 200, 200);
 
-fn row(y_units: f64) -> f64 {
-    MARGIN + (BAND_TOP - y_units)
+/// Font-unit y to canvas y. Both are y-up and 1 unit = 1 px, so this is a
+/// plain shift: the descender line sits MARGIN px above the canvas bottom.
+fn cy(y_units: f64) -> f64 {
+    MARGIN + (y_units - DESCENDER)
 }
 
 fn parse_zone(s: &str) -> f64 {
@@ -92,19 +95,25 @@ fn paint_frame(ctx: &mut Canvas, width: f64) {
     ctx.stroke_width(2.0);
     ctx.no_fill();
     for (_, _, y) in ZONES {
-        let r = row(y);
+        let r = cy(y);
         ctx.line(0.0, r, width, r);
     }
     ctx.no_stroke();
     ctx.fill(green());
+    // Corner fiducials. rect() anchors at its bottom-left; the corner set is
+    // vertically symmetric, so the same offsets serve both margins.
     for fx in [8.0, width - FIDUCIAL - 8.0] {
         for fy in [8.0, H - FIDUCIAL - 8.0] {
             ctx.rect(fx, fy, FIDUCIAL, FIDUCIAL);
         }
     }
     ctx.font_size(24.0);
+    // Each label hangs from a line top 8 px above its metric line. text_box
+    // fills downward from the top edge of the box, so pin the box top there;
+    // the box is otherwise oversized and only sets the wrap width.
     for (_, label, y) in ZONES {
-        ctx.text(label, 40.0, row(y) - 8.0);
+        let top = cy(y) + 8.0;
+        ctx.text_box(label, 40.0, top - 48.0, 320.0, 48.0);
     }
 }
 
@@ -169,8 +178,9 @@ fn glyph_path(font: &norad::Font, name: &str, depth: u8) -> BezPath {
 }
 
 /// Place a font-unit path onto the canvas frame at pen position x0 (px).
+/// Canvas space is y-up like font space, so this is a pure translation.
 fn to_canvas(mut path: BezPath, x0: f64) -> BezPath {
-    path.apply_affine(Affine::new([1.0, 0.0, 0.0, -1.0, x0, MARGIN + BAND_TOP]));
+    path.apply_affine(Affine::translate((x0, cy(0.0))));
     path
 }
 
@@ -266,14 +276,18 @@ fn main() {
                     rgba.extend_from_slice(&[0, 0, 0, 0]);
                 }
             }
-            let row_top = row(y_hi);
+            // image_rgba anchors the image's bottom-left corner; the scaled
+            // ghost is exactly band_px tall, so its top lands on cy(y_hi).
+            let y_bottom = cy(y_lo);
             let col_left = ((W - new_w as f64) / 2.0).round();
 
             let mut ctx = Canvas::new(W, H);
             paint_frame(&mut ctx, W);
-            ctx.image_rgba(rgba, scaled.width(), scaled.height(), col_left, row_top, 1.0);
+            ctx.image_rgba(rgba, scaled.width(), scaled.height(), col_left, y_bottom, 1.0);
 
             // Drawing-band mask: transparent = editable (image-API convention).
+            // Raw PNG data, so rows here are y-down; the drawing band is
+            // vertically centered and mirrors onto the same row interval.
             let mut mask = image::RgbaImage::from_pixel(
                 W as u32,
                 H as u32,
@@ -289,9 +303,9 @@ fn main() {
                 std::process::exit(1);
             });
             eprintln!(
-                "ghost: band {y_lo}:{y_hi} -> rows {}..{}, cols {}..{}; mask -> {mask_out}",
-                row_top,
-                row_top + band_px as f64,
+                "ghost: band {y_lo}:{y_hi} -> canvas y {}..{}, cols {}..{}; mask -> {mask_out}",
+                y_bottom,
+                y_bottom + band_px as f64,
                 col_left,
                 col_left + new_w as f64
             );
@@ -307,8 +321,8 @@ fn main() {
             ctx.stroke(green());
             ctx.stroke_width(2.0);
             ctx.no_fill();
-            ctx.line(x0, MARGIN, x0, H - MARGIN);
-            ctx.line(x0 + advance, MARGIN, x0 + advance, H - MARGIN);
+            ctx.line(x0, cy(DESCENDER), x0, cy(BAND_TOP));
+            ctx.line(x0 + advance, cy(DESCENDER), x0 + advance, cy(BAND_TOP));
             ctx.no_stroke();
             ctx.fill(Color::rgb(0, 0, 0));
             ctx.draw_path(to_canvas(glyph_path(&font, name, 0), x0));

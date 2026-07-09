@@ -2,9 +2,9 @@
 //
 // designbot port of scripts/build_social_images.py (drawbot-skia). Grid math
 // from scripts/grid_system.py is inlined below (designbot scripts are
-// single-file). designbot is y-DOWN with the origin at the TOP-LEFT; layout
-// math here is kept in the Python's bottom-up "y-up" space and flipped only
-// inside the drawing helpers.
+// single-file). designbot uses DrawBot semantics (origin bottom-left, y up,
+// text() anchored at the first baseline), so the Python's y-up layout math
+// passes straight through to the drawing calls.
 //
 // The designbot CLI rewrites every render_to_* path to --output, so this
 // script draws exactly ONE image per run, selected by a mode argument
@@ -34,21 +34,6 @@ use designbot::prelude::*;
 const FONT_DIR: &str = "fonts/ttf";
 const VF_PATH: &str = "fonts/variable/VirtuaGrotesk[wght].ttf";
 const VG_FAMILY: &str = "Virtua Grotesk";
-// Virtua Grotesk ascender / descender in em (hhea and typo agree: 1024, -296).
-const VG_ASC: f64 = 1.0;
-const VG_DESC: f64 = 296.0 / 1024.0;
-
-/// Distance from the y passed to designbot's text() down to the first
-/// baseline. parley 0.2 places it at ascent + leading/2 where leading =
-/// line_height - (ascent + descent) and designbot leaves line_height at the
-/// default 1.0 em; ascent/descent/line_height are rounded to whole pixels
-/// first, then the sum is rounded again (parley greedy.rs).
-fn vg_baseline_offset(size: f64) -> f64 {
-    let asc = (VG_ASC * size).round();
-    let desc = (VG_DESC * size).round();
-    let lh = size.round();
-    (asc + (lh - asc - desc) * 0.5).round()
-}
 const CAP_RATIO: f64 = 0.75; // cap height / UPM in this family
 const LOGO: char = '\u{E008}'; // 3x3 grid mark from the font's PUA icon block
 
@@ -137,11 +122,6 @@ impl Fmt {
     /// Snap a length or position to the nearest unit line.
     fn snap(&self, value: f64) -> f64 {
         (value / self.unit).round() * self.unit
-    }
-
-    /// y-up -> designbot's top-down y.
-    fn flip(&self, y_up: f64) -> f64 {
-        self.h - y_up
     }
 }
 
@@ -492,20 +472,18 @@ impl<'a> Page<'a> {
             .text_width(txt, Some(VG_FAMILY), size, &[(u32::from_be_bytes(*b"wght"), style.wght())])
     }
 
-    /// Virtua Grotesk text with its BASELINE at `baseline` in y-UP page
-    /// coordinates (like the drawbot original). designbot's text() y is the
-    /// top of the line and parley adds the ascent (1.0 em) internally.
+    /// Virtua Grotesk text with its BASELINE at `baseline`, exactly like the
+    /// drawbot original's text() (designbot's text() is baseline-anchored).
     fn vg_text(
         &mut self,
         txt: &str,
         x: f64,
-        baseline_yup: f64,
+        baseline: f64,
         style: &Style,
         size: f64,
         color: Color,
         align: TextAlign,
     ) {
-        let y = self.fmt.flip(baseline_yup) - vg_baseline_offset(size);
         self.ctx
             .font(VG_FAMILY)
             .clear_font_variations()
@@ -513,14 +491,8 @@ impl<'a> Page<'a> {
             .font_size(size)
             .fill(color)
             .text_align(align)
-            .text(txt, x, y);
+            .text(txt, x, baseline);
         self.ctx.text_align(TextAlign::Left);
-    }
-
-    /// Line segment given in y-up coordinates.
-    fn line_yup(&mut self, x1: f64, y1: f64, x2: f64, y2: f64) {
-        let (fy1, fy2) = (self.fmt.flip(y1), self.fmt.flip(y2));
-        self.ctx.line(x1, fy1, x2, fy2);
     }
 
     /// Font.Garden poster idiom: small captions in the four corners.
@@ -620,8 +592,7 @@ impl<'a> Page<'a> {
         (((band - cap) / (1.15 * cap)).floor() as usize + 1).max(2)
     }
 
-    /// GRID_VIEW overlay: grid_system.Grid.draw(), flipped into top-down
-    /// coordinates (symmetric band, so the flip is a mirror of the same lines).
+    /// GRID_VIEW overlay: grid_system.Grid.draw().
     fn draw_grid_overlay(&mut self) {
         let fmt = self.fmt;
         let minor = Color::rgba(255, 0, 0, 71);
@@ -642,7 +613,7 @@ impl<'a> Page<'a> {
             self.ctx.line(x, fmt.margin, x, fmt.h - fmt.margin);
         }
         for i in 0..=units_y {
-            let y = fmt.h - fmt.margin - i as f64 * fmt.unit;
+            let y = fmt.margin + i as f64 * fmt.unit;
             self.ctx.line(fmt.margin, y, fmt.w - fmt.margin, y);
         }
 
@@ -652,7 +623,7 @@ impl<'a> Page<'a> {
             self.ctx.line(x, fmt.margin, x, fmt.h - fmt.margin);
         }
         for i in (0..=units_y).step_by(4) {
-            let y = fmt.h - fmt.margin - i as f64 * fmt.unit;
+            let y = fmt.margin + i as f64 * fmt.unit;
             self.ctx.line(fmt.margin, y, fmt.w - fmt.margin, y);
         }
 
@@ -797,7 +768,7 @@ fn draw_tabular(page: &mut Page, styles: &[Style]) {
     page.ctx.stroke_width(2.0);
     for i in 0..=(digits as i32) {
         let x = fmt.margin + i as f64 * tab;
-        page.line_yup(x, bottom, x, top_baseline + cap);
+        page.ctx.line(x, bottom, x, top_baseline + cap);
     }
     page.ctx.restore();
 
@@ -826,7 +797,7 @@ fn draw_waterfall(page: &mut Page, styles: &[Style]) {
     page.ctx.save();
     page.ctx.stroke(rule());
     page.ctx.stroke_width(2.0);
-    page.line_yup(split, fmt.band_bottom - 36.0, split, fmt.band_top + 36.0);
+    page.ctx.line(split, fmt.band_bottom - 36.0, split, fmt.band_top + 36.0);
     page.ctx.restore();
 
     let band = fmt.band();

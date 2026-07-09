@@ -20,13 +20,9 @@
 // statics are instances of the same VF). Run `make build` first if
 // fonts/variable/ is missing.
 //
-// Layout note: designbot is y-DOWN / top-left origin; the drawbot original
-// is y-UP / bottom-left with text() taking the BASELINE y. All layout math
-// below keeps the original drawbot y-up baseline coordinates and converts at
-// the draw call: top_of_line = (HEIGHT - y_up) - baseline_offset(size),
-// where baseline_offset mirrors parley's line metrics (calibrated
-// pixel-exactly against designbot output for both Virtua Grotesk and
-// Helvetica).
+// Layout note: designbot uses drawbot's coordinate system (y-UP, bottom-left
+// origin, text() taking the BASELINE y), so the layout math below passes
+// straight through to the draw calls.
 
 use designbot::prelude::*;
 use std::env;
@@ -38,11 +34,6 @@ const MARGIN: f64 = 96.0;
 
 const VF_PATH: &str = "fonts/variable/VirtuaGrotesk[wght].ttf";
 const VG_FAMILY: &str = "Virtua Grotesk";
-
-// Helvetica (macOS system font, used for captions/labels like the Python
-// original): hhea ascender 1577 / descender -471, upm 2048.
-const HELV_ASC: f64 = 1577.0 / 2048.0;
-const HELV_DESC: f64 = 471.0 / 2048.0;
 
 // Palette: the Python original uses float RGB; designbot uses u8
 // (value = round(float * 255)).
@@ -116,8 +107,6 @@ struct Metrics {
     descender: i32, // hhea (negative)
     cap_height: i32,
     x_height: i32,
-    asc_frac: f64,  // hhea ascender / upm (for baseline placement)
-    desc_frac: f64, // -hhea descender / upm
 }
 
 fn font_metrics(path: &str) -> Result<Metrics, String> {
@@ -140,77 +129,47 @@ fn font_metrics(path: &str) -> Result<Metrics, String> {
         descender,
         cap_height,
         x_height,
-        asc_frac: ascender as f64 / upm as f64,
-        desc_frac: -descender as f64 / upm as f64,
     })
 }
 
 // ---------------------------------------------------------------------------
-// Baseline conversion helpers
+// Text helpers
 // ---------------------------------------------------------------------------
 
-/// First-line baseline offset from the top of a designbot text line, in
-/// pixels. Mirrors parley's line metrics: line height = 1.0 * font size,
-/// leading = line height - (ascent + descent), baseline = ascent + leading/2
-/// (each rounded to whole pixels, as parley does). Verified pixel-exactly
-/// against designbot output for Virtua Grotesk (86 @ 100px) and Helvetica
-/// (77 @ 100px).
-fn baseline_offset(size: f64, asc: f64, desc: f64) -> f64 {
-    let a = (size * asc).round();
-    let d = (size * desc).round();
-    let leading = size.round() - (a + d);
-    (a + leading * 0.5).round()
-}
-
-/// Convert a drawbot-style baseline y (measured up from the page bottom)
-/// to the designbot top-of-line y for Canvas::text.
-fn flip_baseline(y_up: f64, size: f64, asc: f64, desc: f64) -> f64 {
-    (HEIGHT - y_up) - baseline_offset(size, asc, desc)
-}
-
-/// Flip a plain (non-text) y coordinate.
-fn flip(y_up: f64) -> f64 {
-    HEIGHT - y_up
-}
-
-/// Draw Virtua Grotesk text at (size, wght) with its baseline at y-up `y_up`.
+/// Draw Virtua Grotesk text at (size, wght) with its baseline at `y`.
 /// Fill color must be set by the caller (matching the Python flow).
-fn vg_text(ctx: &mut Canvas, m: &Metrics, s: &str, x: f64, y_up: f64, size: f64, weight: f32) {
+fn vg_text(ctx: &mut Canvas, s: &str, x: f64, y: f64, size: f64, weight: f32) {
     ctx.font(VG_FAMILY);
     ctx.clear_font_variations();
     ctx.font_variation("wght", weight);
     ctx.font_size(size);
-    ctx.text(s, x, flip_baseline(y_up, size, m.asc_frac, m.desc_frac));
+    ctx.text(s, x, y);
 }
 
-/// Helvetica caption in MUTED, baseline at y-up `y_up` (Python `label`).
-fn label(ctx: &mut Canvas, s: &str, x: f64, y_up: f64, size: f64) {
+/// Helvetica caption in MUTED, baseline at `y` (Python `label`).
+fn label(ctx: &mut Canvas, s: &str, x: f64, y: f64, size: f64) {
     ctx.save();
     ctx.no_stroke();
     ctx.font("Helvetica");
     ctx.font_size(size);
     ctx.fill(muted());
-    ctx.text(s, x, flip_baseline(y_up, size, HELV_ASC, HELV_DESC));
+    ctx.text(s, x, y);
     ctx.restore();
 }
 
 /// Page heading: Bold 72 heading, Helvetica 25 subheading, rule underneath.
-fn title(ctx: &mut Canvas, m: &Metrics, heading: &str, subheading: &str) {
+fn title(ctx: &mut Canvas, heading: &str, subheading: &str) {
     ctx.save();
     ctx.no_stroke();
     ctx.fill(ink());
-    vg_text(ctx, m, heading, MARGIN, HEIGHT - MARGIN - 24.0, 72.0, 700.0);
+    vg_text(ctx, heading, MARGIN, HEIGHT - MARGIN - 24.0, 72.0, 700.0);
     ctx.font("Helvetica");
     ctx.font_size(25.0);
     ctx.fill(muted());
-    ctx.text(
-        subheading,
-        MARGIN,
-        flip_baseline(HEIGHT - MARGIN - 68.0, 25.0, HELV_ASC, HELV_DESC),
-    );
+    ctx.text(subheading, MARGIN, HEIGHT - MARGIN - 68.0);
     ctx.stroke(rule());
     ctx.stroke_width(2.0);
-    let y = flip(HEIGHT - MARGIN - 100.0);
+    let y = HEIGHT - MARGIN - 100.0;
     ctx.line(MARGIN, y, WIDTH - MARGIN, y);
     ctx.restore();
 }
@@ -219,10 +178,9 @@ fn title(ctx: &mut Canvas, m: &Metrics, heading: &str, subheading: &str) {
 // Images
 // ---------------------------------------------------------------------------
 
-fn draw_glyphset_overview(ctx: &mut Canvas, m: &Metrics) {
+fn draw_glyphset_overview(ctx: &mut Canvas) {
     title(
         ctx,
-        m,
         "Virtua Grotesk",
         "Weight axis overview and core Latin glyph set",
     );
@@ -240,7 +198,7 @@ fn draw_glyphset_overview(ctx: &mut Canvas, m: &Metrics) {
         label(ctx, style, MARGIN, y + 20.0, 24.0);
         ctx.no_stroke();
         ctx.fill(ink());
-        vg_text(ctx, m, text, MARGIN + 170.0, y, 74.0, wght(style));
+        vg_text(ctx, text, MARGIN + 170.0, y, 74.0, wght(style));
         y -= 86.0;
     }
 
@@ -248,7 +206,7 @@ fn draw_glyphset_overview(ctx: &mut Canvas, m: &Metrics) {
     ctx.save();
     ctx.stroke(rule());
     ctx.stroke_width(2.0);
-    ctx.line(MARGIN, flip(y), WIDTH - MARGIN, flip(y));
+    ctx.line(MARGIN, y, WIDTH - MARGIN, y);
     ctx.restore();
 
     y -= 47.0;
@@ -262,43 +220,38 @@ fn draw_glyphset_overview(ctx: &mut Canvas, m: &Metrics) {
         label(ctx, &format!("wght {style}"), MARGIN, y + 9.0, 20.0);
         ctx.no_stroke();
         ctx.fill(ink());
-        vg_text(ctx, m, text, MARGIN + 170.0, y, 36.0, wght(style));
+        vg_text(ctx, text, MARGIN + 170.0, y, 36.0, wght(style));
         y -= 42.0;
     }
 }
 
 /// Metric guide line with a small colored Helvetica label above it.
-fn draw_metric_line(ctx: &mut Canvas, name: &str, y_up: f64, x0: f64, x1: f64, color: Color) {
+fn draw_metric_line(ctx: &mut Canvas, name: &str, y: f64, x0: f64, x1: f64, color: Color) {
     ctx.save();
     ctx.stroke(color);
     ctx.stroke_width(3.0);
-    ctx.line(x0, flip(y_up), x1, flip(y_up));
+    ctx.line(x0, y, x1, y);
     ctx.no_stroke();
     ctx.font("Helvetica");
     ctx.font_size(18.0);
     ctx.fill(color);
-    ctx.text(
-        name,
-        x0 + 14.0,
-        flip_baseline(y_up + 8.0, 18.0, HELV_ASC, HELV_DESC),
-    );
+    ctx.text(name, x0 + 14.0, y + 8.0);
     ctx.restore();
 }
 
 fn draw_aa_grid(ctx: &mut Canvas, m: &Metrics) {
     title(
         ctx,
-        m,
         "Aa Construction",
         "1024 UPM, even coordinates, 16-unit chamfer logic",
     );
 
     let grid_x = 170.0;
-    let grid_y = 115.0; // y-up bottom of the grid box
+    let grid_y = 115.0; // bottom of the grid box
     let grid_w = 1230.0;
     let grid_h = 720.0;
     let scale = grid_h / (m.ascender - m.descender) as f64;
-    let baseline_y = grid_y + (-m.descender) as f64 * scale; // y-up
+    let baseline_y = grid_y + (-m.descender) as f64 * scale;
 
     // Unit grid
     ctx.save();
@@ -307,14 +260,14 @@ fn draw_aa_grid(ctx: &mut Canvas, m: &Metrics) {
     let mut unit = m.descender;
     while unit <= m.ascender {
         let y = baseline_y + unit as f64 * scale;
-        ctx.line(grid_x, flip(y), grid_x + grid_w, flip(y));
+        ctx.line(grid_x, y, grid_x + grid_w, y);
         unit += 64;
     }
     let mut unit = 0;
     while unit <= 1536 {
         let x = grid_x + unit as f64 * scale;
         if x <= grid_x + grid_w {
-            ctx.line(x, flip(grid_y), x, flip(grid_y + grid_h));
+            ctx.line(x, grid_y, x, grid_y + grid_h);
         }
         unit += 64;
     }
@@ -324,7 +277,7 @@ fn draw_aa_grid(ctx: &mut Canvas, m: &Metrics) {
     while unit <= 1536 {
         let x = grid_x + unit as f64 * scale;
         if x <= grid_x + grid_w {
-            ctx.line(x, flip(grid_y), x, flip(grid_y + grid_h));
+            ctx.line(x, grid_y, x, grid_y + grid_h);
         }
         unit += 128;
     }
@@ -356,7 +309,7 @@ fn draw_aa_grid(ctx: &mut Canvas, m: &Metrics) {
     // The big "Aa" sample, baseline on the grid's baseline
     ctx.no_stroke();
     ctx.fill(ink());
-    vg_text(ctx, m, "Aa", grid_x + 78.0, baseline_y, m.upm as f64 * scale, 400.0);
+    vg_text(ctx, "Aa", grid_x + 78.0, baseline_y, m.upm as f64 * scale, 400.0);
 
     // Numeric notes column on the right
     let x = grid_x + grid_w + 78.0;
@@ -370,7 +323,7 @@ fn draw_aa_grid(ctx: &mut Canvas, m: &Metrics) {
     for (value, note) in notes {
         ctx.no_stroke();
         ctx.fill(ink());
-        vg_text(ctx, m, value, x, y, 48.0, 700.0);
+        vg_text(ctx, value, x, y, 48.0, 700.0);
         label(ctx, note, x + 112.0, y + 11.0, 23.0);
         y -= 78.0;
     }
@@ -381,24 +334,23 @@ fn draw_aa_grid(ctx: &mut Canvas, m: &Metrics) {
     ctx.stroke_width(3.0);
     ctx.line(
         grid_x + 210.0,
-        flip(baseline_y + 715.0 * scale),
+        baseline_y + 715.0 * scale,
         grid_x + 276.0,
-        flip(baseline_y + 768.0 * scale),
+        baseline_y + 768.0 * scale,
     );
     ctx.line(
         grid_x + 286.0,
-        flip(baseline_y + 768.0 * scale),
+        baseline_y + 768.0 * scale,
         grid_x + 350.0,
-        flip(baseline_y + 715.0 * scale),
+        baseline_y + 715.0 * scale,
     );
     ctx.restore();
     label(ctx, "45-degree bevel joins", x, y - 12.0, 24.0);
 }
 
-fn draw_text_sizes(ctx: &mut Canvas, m: &Metrics) {
+fn draw_text_sizes(ctx: &mut Canvas) {
     title(
         ctx,
-        m,
         "Text Sizes",
         "Regular text proof from display down to interface sizes",
     );
@@ -420,7 +372,7 @@ fn draw_text_sizes(ctx: &mut Canvas, m: &Metrics) {
         label(ctx, &format!("{} px", size as i64), MARGIN, y + size * 0.26, 20.0);
         ctx.no_stroke();
         ctx.fill(ink());
-        vg_text(ctx, m, text, MARGIN + 122.0, y, size, 400.0);
+        vg_text(ctx, text, MARGIN + 122.0, y, size, 400.0);
         y -= 58.0_f64.max(size * 1.12);
     }
 
@@ -428,7 +380,7 @@ fn draw_text_sizes(ctx: &mut Canvas, m: &Metrics) {
     ctx.save();
     ctx.stroke(rule());
     ctx.stroke_width(2.0);
-    ctx.line(MARGIN, flip(y), WIDTH - MARGIN, flip(y));
+    ctx.line(MARGIN, y, WIDTH - MARGIN, y);
     ctx.restore();
     y -= 52.0;
 
@@ -438,7 +390,6 @@ fn draw_text_sizes(ctx: &mut Canvas, m: &Metrics) {
         ctx.fill(ink());
         vg_text(
             ctx,
-            m,
             "Designing software for careful reading.",
             MARGIN + 122.0,
             y,
@@ -473,9 +424,9 @@ fn main() {
     }
 
     match mode {
-        "glyphset" | "glyphset-overview" => draw_glyphset_overview(&mut ctx, &m),
+        "glyphset" | "glyphset-overview" => draw_glyphset_overview(&mut ctx),
         "aa-grid" => draw_aa_grid(&mut ctx, &m),
-        "text-sizes" => draw_text_sizes(&mut ctx, &m),
+        "text-sizes" => draw_text_sizes(&mut ctx),
         other => {
             eprintln!(
                 "Usage: designbot --render scripts/designbot/readme_images.rs \
