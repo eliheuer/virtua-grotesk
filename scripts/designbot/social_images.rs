@@ -915,6 +915,14 @@ impl Saver<'_> {
         self.renderer.render_to_png(ctx, path).unwrap();
     }
 
+    /// Social-optimized PNG (sRGB chunk + alpha passthrough pixel); the CLI
+    /// rewrites render calls to this when invoked with --social.
+    #[allow(dead_code)]
+    fn render_to_png_social(&self, ctx: &Canvas, path: &str) {
+        Self::mkdirs(path);
+        self.renderer.render_to_png_social(ctx, path).unwrap();
+    }
+
     #[allow(dead_code)]
     fn render_to_pdf(&self, ctx: &Canvas, path: &str) {
         Self::mkdirs(path);
