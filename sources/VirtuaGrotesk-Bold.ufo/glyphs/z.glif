@@ -2,28 +2,6 @@
 <glyph name="z" format="2">
 	<unicode hex="007A"/>
 	<advance width="576"/>
-	<outline>
-		<contour>
-			<point x="40" y="0" type="line"/>
-			<point x="536" y="0" type="line"/>
-			<point x="552" y="16" type="line"/>
-			<point x="552" y="112" type="line"/>
-			<point x="536" y="128" type="line"/>
-			<point x="264" y="128" type="line"/>
-			<point x="264" y="136" type="line"/>
-			<point x="536" y="488" type="line"/>
-			<point x="536" y="560" type="line"/>
-			<point x="520" y="576" type="line"/>
-			<point x="48" y="576" type="line"/>
-			<point x="32" y="560" type="line"/>
-			<point x="32" y="464" type="line"/>
-			<point x="48" y="448" type="line"/>
-			<point x="296" y="448" type="line"/>
-			<point x="296" y="440" type="line"/>
-			<point x="24" y="88" type="line"/>
-			<point x="24" y="16" type="line"/>
-		</contour>
-	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
