@@ -1,65 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="g" format="2">
-	<unicode hex="0067"/>
-	<advance width="690"/>
-	<outline>
-		<contour>
-			<point x="610" y="576" type="line"/>
-			<point x="450" y="576" type="line"/>
-			<point x="434" y="560" type="line"/>
-			<point x="426" y="512" type="line"/>
-			<point x="418" y="512" type="line"/>
-			<point x="394" y="556"/>
-			<point x="342" y="592"/>
-			<point x="282" y="592" type="curve"/>
-			<point x="138" y="592"/>
-			<point x="70" y="452"/>
-			<point x="70" y="288" type="curve"/>
-			<point x="70" y="172"/>
-			<point x="138" y="16"/>
-			<point x="282" y="16" type="curve"/>
-			<point x="362" y="16"/>
-			<point x="394" y="52"/>
-			<point x="418" y="96" type="curve"/>
-			<point x="426" y="88" type="line"/>
-			<point x="426" y="16" type="line"/>
-			<point x="426" y="-100"/>
-			<point x="374" y="-152"/>
-			<point x="290" y="-152" type="curve"/>
-			<point x="210" y="-152"/>
-			<point x="170" y="-104"/>
-			<point x="162" y="-76" type="curve"/>
-			<point x="146" y="-60" type="line"/>
-			<point x="26" y="-60" type="line"/>
-			<point x="10" y="-76" type="line"/>
-			<point x="10" y="-92" type="line"/>
-			<point x="22" y="-164"/>
-			<point x="114" y="-240"/>
-			<point x="290" y="-240" type="curve"/>
-			<point x="502" y="-240"/>
-			<point x="610" y="-148"/>
-			<point x="610" y="64" type="curve"/>
-			<point x="610" y="560" type="line"/>
-		</contour>
-		<contour>
-			<point x="330" y="144" type="curve"/>
-			<point x="272" y="144"/>
-			<point x="246" y="212"/>
-			<point x="246" y="288" type="curve"/>
-			<point x="246" y="392"/>
-			<point x="272" y="448"/>
-			<point x="330" y="448" type="curve"/>
-			<point x="388" y="448"/>
-			<point x="434" y="392"/>
-			<point x="434" y="288" type="curve"/>
-			<point x="434" y="204"/>
-			<point x="388" y="144"/>
-		</contour>
-	</outline>
-	<lib>
-		<dict>
-			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
-		</dict>
-	</lib>
+  <advance width="712"/>
+  <unicode hex="0067"/>
+  <outline>
+    <contour>
+      <point x="634" y="576" type="line"/>
+      <point x="490" y="576" type="line"/>
+      <point x="474" y="560" type="line"/>
+      <point x="468" y="526" type="line"/>
+      <point x="452" y="526" type="line"/>
+      <point x="420" y="570"/>
+      <point x="352" y="592"/>
+      <point x="276" y="592" type="curve" smooth="yes"/>
+      <point x="112" y="592"/>
+      <point x="38" y="452"/>
+      <point x="38" y="284" type="curve" smooth="yes"/>
+      <point x="38" y="164"/>
+      <point x="112" y="8"/>
+      <point x="276" y="8" type="curve" smooth="yes"/>
+      <point x="362" y="8"/>
+      <point x="418" y="22"/>
+      <point x="450" y="66" type="curve"/>
+      <point x="466" y="58" type="line"/>
+      <point x="466" y="16" type="line" smooth="yes"/>
+      <point x="466" y="-70"/>
+      <point x="418" y="-104"/>
+      <point x="344" y="-104" type="curve" smooth="yes"/>
+      <point x="282" y="-104"/>
+      <point x="248" y="-80"/>
+      <point x="242" y="-60" type="curve"/>
+      <point x="226" y="-44" type="line"/>
+      <point x="82" y="-44" type="line"/>
+      <point x="66" y="-60" type="line"/>
+      <point x="66" y="-88" type="line"/>
+      <point x="80" y="-168"/>
+      <point x="170" y="-240"/>
+      <point x="340" y="-240" type="curve" smooth="yes"/>
+      <point x="552" y="-240"/>
+      <point x="650" y="-164"/>
+      <point x="650" y="64" type="curve" smooth="yes"/>
+      <point x="650" y="560" type="line"/>
+    </contour>
+    <contour>
+      <point x="346" y="144" type="curve" smooth="yes"/>
+      <point x="272" y="144"/>
+      <point x="226" y="220"/>
+      <point x="226" y="284" type="curve" smooth="yes"/>
+      <point x="226" y="384"/>
+      <point x="272" y="448"/>
+      <point x="346" y="448" type="curve" smooth="yes"/>
+      <point x="420" y="448"/>
+      <point x="466" y="384"/>
+      <point x="466" y="284" type="curve" smooth="yes"/>
+      <point x="466" y="208"/>
+      <point x="420" y="144"/>
+    </contour>
+  </outline>
+  <lib>
+    <dict>
+      <key>org.fontgarden.transfer</key>
+      <string>glyph-transfer v2 lambda 1.0 &lt;- image crop-g.png</string>
+      <key>public.markColor</key>
+      <string>1,0.5,0,1</string>
+    </dict>
+  </lib>
 </glyph>
