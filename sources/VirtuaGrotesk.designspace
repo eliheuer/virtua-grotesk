@@ -3,6 +3,22 @@
   <axes>
     <axis name="Weight" tag="wght" default="400" minimum="400" maximum="700"/>
   </axes>
+  <!-- Bracket alternates (the designspace equivalent of Glyphs bracket
+       layers): at the bold end some glyphs change STRUCTURE, not just
+       weight. Each <sub> swaps to an unencoded .bold alternate when the
+       conditions hold; processing="last" compiles to rclt
+       FeatureVariations in the variable font, and fontmake bakes the
+       substitution into static instances. Both glyphs live in both
+       masters (each interpolation-compatible with itself). Switch point
+       600 = SemiBold and up; adjust per glyph as the design demands. -->
+  <rules processing="last">
+    <rule name="bold.a">
+      <conditionset>
+        <condition name="Weight" minimum="600" maximum="700"/>
+      </conditionset>
+      <sub name="a" with="a.bold"/>
+    </rule>
+  </rules>
   <sources>
     <source familyname="Virtua Grotesk" stylename="Regular" name="Virtua Grotesk Regular" filename="VirtuaGrotesk-Regular.ufo">
       <location>
