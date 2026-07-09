@@ -15,13 +15,13 @@
 // the trailing output_path arg is accepted for CLI parity with the Python
 // script but --output wins.
 //
-// Layout note: designbot is y-down / top-left origin, while the drawbot
-// original is y-up / bottom-left. All page math below keeps the original
-// drawbot "baseline cursor" coordinates (y measured up from the page
-// bottom) and converts at the draw call via `flip_baseline`, which also
-// compensates for Canvas::text taking the TOP of the text line rather
-// than the baseline. GRID_VIEW=1 draws the same red modular-grid overlay
-// as scripts/grid_system.py.
+// Layout note: designbot now matches drawbot's coordinate system: y-up,
+// origin at the bottom-left, rect/oval anchored at the bottom-left corner,
+// and Canvas::text taking the baseline of the first line. All page math
+// below is the original drawbot "baseline cursor" layout (y measured up
+// from the page bottom) and passes straight through to the draw calls.
+// GRID_VIEW=1 draws the same red modular-grid overlay as
+// scripts/grid_system.py.
 
 use designbot::prelude::*;
 use std::collections::BTreeMap;
@@ -37,11 +37,6 @@ const MARGIN: f64 = 36.0;
 const UNIT: f64 = 18.0;
 const BASELINE: f64 = UNIT / 2.0; // 9pt baseline grid for text leading
 
-// Helvetica (macOS system font, used for captions/labels like the Python
-// original) vertical metrics: hhea ascender 1577 / descender -471, upm 2048.
-const HELV_ASC: f64 = 1577.0 / 2048.0;
-const HELV_DESC: f64 = 471.0 / 2048.0;
-
 // ---------------------------------------------------------------------------
 // Minimal SFNT parsing (the Python original uses fontTools for this)
 // ---------------------------------------------------------------------------
@@ -54,10 +49,6 @@ fn be32(d: &[u8], o: usize) -> u32 {
     ((d[o] as u32) << 24) | ((d[o + 1] as u32) << 16) | ((d[o + 2] as u32) << 8) | d[o + 3] as u32
 }
 
-fn i16be(d: &[u8], o: usize) -> i32 {
-    be16(d, o) as u16 as i16 as i32
-}
-
 struct FontInfo {
     family: String,
     style: String,
@@ -65,8 +56,6 @@ struct FontInfo {
     designer: String,
     glyph_count: usize,
     upm: f64,
-    asc: f64,  // hhea ascender / upm
-    desc: f64, // -hhea descender / upm
     cmap: BTreeMap<u32, u16>,
     advances: Vec<u16>, // per glyph id, font units
 }
@@ -218,8 +207,6 @@ fn get_font_info(font_path: &str) -> Result<FontInfo, String> {
     let hmtx = find_table(&data, b"hmtx").ok_or("no hmtx table")?;
 
     let upm = be16(&data, head + 18) as f64;
-    let ascender = i16be(&data, hhea + 4) as f64;
-    let descender = i16be(&data, hhea + 6) as f64;
     let num_h_metrics = be16(&data, hhea + 34) as usize;
     let glyph_count = be16(&data, maxp + 4) as usize;
 
@@ -242,8 +229,6 @@ fn get_font_info(font_path: &str) -> Result<FontInfo, String> {
         designer,
         glyph_count,
         upm,
-        asc: ascender / upm,
-        desc: -descender / upm,
         cmap,
         advances,
     })
@@ -258,35 +243,18 @@ fn snap_baseline(value: f64) -> f64 {
     BASELINE.max((value / BASELINE).round() * BASELINE)
 }
 
-/// First-line baseline offset from the top of a designbot text line, in
-/// points. Mirrors parley's line metrics: line height = 1.0 * font size,
-/// leading = line height - (ascent + descent), baseline = ascent + leading/2
-/// (each rounded to whole pixels, as parley does).
-fn baseline_offset(size: f64, asc: f64, desc: f64) -> f64 {
-    let a = (size * asc).round();
-    let d = (size * desc).round();
-    let leading = size.round() - (a + d);
-    (a + leading * 0.5).round()
-}
-
-/// Convert a drawbot-style baseline y (measured up from the page bottom)
-/// to the designbot top-of-line y for Canvas::text.
-fn flip_baseline(y_up: f64, size: f64, asc: f64, desc: f64) -> f64 {
-    (PAGE_HEIGHT - y_up) - baseline_offset(size, asc, desc)
-}
-
-/// Draw `text` in the proofed font with its baseline at drawbot-style `y_up`.
-fn font_text(ctx: &mut Canvas, fi: &FontInfo, text: &str, x: f64, y_up: f64, size: f64) {
+/// Draw `text` in the proofed font with its baseline at `y`.
+fn font_text(ctx: &mut Canvas, fi: &FontInfo, text: &str, x: f64, y: f64, size: f64) {
     ctx.font(&fi.family);
     ctx.font_size(size);
-    ctx.text(text, x, flip_baseline(y_up, size, fi.asc, fi.desc));
+    ctx.text(text, x, y);
 }
 
-/// Draw a Helvetica caption/label with its baseline at drawbot-style `y_up`.
-fn label_text(ctx: &mut Canvas, text: &str, x: f64, y_up: f64, size: f64) {
+/// Draw a Helvetica caption/label with its baseline at `y`.
+fn label_text(ctx: &mut Canvas, text: &str, x: f64, y: f64, size: f64) {
     ctx.font("Helvetica");
     ctx.font_size(size);
-    ctx.text(text, x, flip_baseline(y_up, size, HELV_ASC, HELV_DESC));
+    ctx.text(text, x, y);
 }
 
 fn grid_view() -> bool {
@@ -298,8 +266,8 @@ fn grid_view() -> bool {
 
 /// The live modular-grid overlay from scripts/grid_system.py (GRID_VIEW=1):
 /// unit lines, heavier major lines every 4 units, the margin frame, and
-/// full-bleed center crosshairs. The grid is symmetric so the y-flip is a
-/// no-op.
+/// full-bleed center crosshairs, all drawn directly in y-up page
+/// coordinates.
 fn draw_grid_overlay(ctx: &mut Canvas) {
     let minor = Color::rgba(255, 0, 0, 71);
     let major = Color::rgba(255, 0, 0, 140);
@@ -647,8 +615,8 @@ fox, zebra, and my wolves quack!";
         let box_height = snap_baseline(size * 6.0);
         let box_width = PAGE_WIDTH - 2.0 * MARGIN;
 
-        // drawbot box (x, y - h, w, h) with y-up bottom => designbot top = PAGE_HEIGHT - y
-        ctx.text_box(sample_text, MARGIN, PAGE_HEIGHT - y, box_width, box_height);
+        // y is the top of the box; text_box anchors at the bottom-left
+        ctx.text_box(sample_text, MARGIN, y - box_height, box_width, box_height);
 
         y -= box_height + 27.0;
 
@@ -711,12 +679,12 @@ fn glyph_set_page(ctx: &mut Canvas, pager: &mut Pager, fi: &FontInfo) {
         let Some(ch) = char::from_u32(cp) else { continue };
         let s = ch.to_string();
 
-        // Draw cell (drawbot rect(x, y - cell, cell, cell), y-up)
+        // Draw cell (y is the top of the cell; rect anchors at the bottom-left)
         ctx.save();
         ctx.stroke(Color::gray(217)); // 0.85
         ctx.stroke_width(0.5);
         ctx.no_fill();
-        ctx.rect(x, PAGE_HEIGHT - y, cell_size, cell_size);
+        ctx.rect(x, y - cell_size, cell_size, cell_size);
         ctx.restore();
 
         // Draw glyph, centered in the cell

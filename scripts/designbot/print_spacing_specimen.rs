@@ -2,9 +2,9 @@
 //
 // designbot port of scripts/build_print_spacing_specimen.py (drawbot-skia).
 // Grid math from scripts/grid_system.py is inlined below (designbot scripts
-// are single-file). designbot is y-DOWN with the origin at the TOP-LEFT, so
-// every vertical coordinate here is the top-down mirror of the Python
-// original's bottom-up value.
+// are single-file). designbot uses DrawBot's coordinate system (origin at the
+// BOTTOM-LEFT, y increasing upward), so every vertical coordinate here
+// matches the Python original's value directly.
 //
 // Run from the repo root:
 //   designbot --render scripts/designbot/print_spacing_specimen.rs \
@@ -27,10 +27,9 @@ fn gx(units: f64) -> f64 {
     MARGIN + units * UNIT
 }
 
-/// Top-down Y position `units` below the top margin line
-/// (the mirror of grid_system's y_top()).
+/// Y position `units` below the top margin line (grid_system's y_top()).
 fn gy_top(units: f64) -> f64 {
-    MARGIN + units * UNIT
+    PAGE_H - MARGIN - units * UNIT
 }
 
 // Main text frame (Python: x(10), y(0), 30 x 29 units).
@@ -44,21 +43,10 @@ const MAIN_H: f64 = UNIT * 29.0; // 522
 const VF_PATH: &str = "fonts/variable/VirtuaGrotesk[wght].ttf";
 const VG_FAMILY: &str = "Virtua Grotesk";
 const WGHT: u32 = u32::from_be_bytes(*b"wght");
-// CAUTION: this is a whole-layout empirical calibration against the
-// drawbot-skia reference, NOT parley's true first-baseline offset (a pixel
-// probe measured 86px at size 100, i.e. ~0.86 em — see
-// scripts/designbot/general_proof.rs `baseline_offset` for the exact
-// formula). The constant offset is absorbed by this file's layout numbers,
-// so pages match the reference at specimen sizes; if you add new text at
-// large sizes, use the general_proof.rs formula instead of this constant.
-const VG_ASCENT: f64 = 1.0;
 
 // Chrome text uses the system Courier family, like the Python original.
 const MONO_FAMILY: &str = "Courier";
 const MONO_SIZE: f64 = 10.0;
-// Courier's ascent as a fraction of the em (calibrated against the
-// drawbot-skia reference render).
-const MONO_ASCENT: f64 = 0.755;
 
 // --- proof text -------------------------------------------------------------
 const LATIN_LOWER: &str = "abcdefghijklmnopqrstuvwxyz";
@@ -442,15 +430,13 @@ fn wrap_text(renderer: &Renderer, text: &str, size: f64, wght: f32, max_w: f64) 
 
 // --- drawing helpers ----------------------------------------------------------
 
-/// Chrome (Courier) text with its BASELINE at `baseline` (top-down).
-/// designbot's text() y is the top of the line; the renderer adds the font
-/// ascent internally, so subtract it here.
+/// Chrome (Courier) text with its BASELINE at `baseline`.
 fn mono_text(ctx: &mut Canvas, s: &str, x: f64, baseline: f64) {
     ctx.font(MONO_FAMILY);
     ctx.clear_font_variations();
     ctx.font_size(MONO_SIZE);
     ctx.fill(Color::black());
-    ctx.text(s, x, baseline - MONO_ASCENT * MONO_SIZE);
+    ctx.text(s, x, baseline);
 }
 
 /// Virtua Grotesk text at (size, wght) with its BASELINE at `baseline`.
@@ -460,12 +446,11 @@ fn vg_text(ctx: &mut Canvas, s: &str, x: f64, baseline: f64, size: f64, wght: f3
     ctx.font_variation("wght", wght);
     ctx.font_size(size);
     ctx.fill(Color::black());
-    ctx.text(s, x, baseline - VG_ASCENT * size);
+    ctx.text(s, x, baseline);
 }
 
-/// GRID_VIEW overlay: the modular grid from grid_system.Grid.draw(), mirrored
-/// into top-down coordinates (major horizontals count up from the BOTTOM
-/// margin line, as in the Python).
+/// GRID_VIEW overlay: the modular grid from grid_system.Grid.draw() (major
+/// horizontals count up from the BOTTOM margin line, as in the Python).
 fn draw_grid_overlay(ctx: &mut Canvas) {
     let minor = Color::rgba(255, 0, 0, 71);
     let major = Color::rgba(255, 0, 0, 140);
@@ -483,7 +468,7 @@ fn draw_grid_overlay(ctx: &mut Canvas) {
         ctx.line(x, MARGIN, x, PAGE_H - MARGIN);
     }
     for i in 0..=units_y {
-        let y = PAGE_H - MARGIN - i as f64 * UNIT;
+        let y = MARGIN + i as f64 * UNIT;
         ctx.line(MARGIN, y, PAGE_W - MARGIN, y);
     }
 
@@ -493,7 +478,7 @@ fn draw_grid_overlay(ctx: &mut Canvas) {
         ctx.line(x, MARGIN, x, PAGE_H - MARGIN);
     }
     for i in (0..=units_y).step_by(4) {
-        let y = PAGE_H - MARGIN - i as f64 * UNIT;
+        let y = MARGIN + i as f64 * UNIT;
         ctx.line(MARGIN, y, PAGE_W - MARGIN, y);
     }
 
@@ -512,13 +497,13 @@ struct PageChrome {
 }
 
 impl PageChrome {
-    /// Header rules, page number, running head, and sidebar. Top-down mirrors
-    /// of the Python layout:
-    ///   header rule  y_top(1)          -> 54
-    ///   header text  baseline rule+3up -> 51
-    ///   bottom rule  MARGIN            -> 576
-    ///   sidebar title y_top(3)+3       -> 87
-    ///   sidebar meta  y_top(6)+3       -> 141 (+18 per following line)
+    /// Header rules, page number, running head, and sidebar. Same layout as
+    /// the Python:
+    ///   header rule  y_top(1)          -> 558
+    ///   header text  baseline rule+3up -> 561
+    ///   bottom rule  MARGIN            -> 36
+    ///   sidebar title y_top(3)+3       -> 525
+    ///   sidebar meta  y_top(6)+3       -> 471 (-18 per following line)
     fn draw(&mut self, ctx: &mut Canvas, style: &str, title: &str, size: f64) {
         self.page_num += 1;
         ctx.background(Color::white());
@@ -526,13 +511,13 @@ impl PageChrome {
             draw_grid_overlay(ctx);
         }
 
-        let header_rule_y = gy_top(1.0); // 54
-        let header_baseline = header_rule_y - 3.0; // 51
-        let bottom_rule_y = PAGE_H - MARGIN; // 576
-        // Python: SIDEBAR_TITLE_Y = y_top(3) + 3 (y-up) -> td: M + 3U - 3 = 87
-        let sidebar_title_baseline = MARGIN + 3.0 * UNIT - 3.0;
-        // Python: SIDEBAR_META_Y = y_top(6) + 3 (y-up) -> td: M + 6U - 3 = 141
-        let sidebar_meta_baseline = MARGIN + 6.0 * UNIT - 3.0;
+        let header_rule_y = gy_top(1.0); // 558
+        let header_baseline = header_rule_y + 3.0; // 561
+        let bottom_rule_y = MARGIN; // 36
+        // Python: SIDEBAR_TITLE_Y = y_top(3) + 3 = 525
+        let sidebar_title_baseline = gy_top(3.0) + 3.0;
+        // Python: SIDEBAR_META_Y = y_top(6) + 3 = 471
+        let sidebar_meta_baseline = gy_top(6.0) + 3.0;
 
         ctx.save();
         ctx.stroke(Color::black());
@@ -558,13 +543,13 @@ impl PageChrome {
             ctx,
             &format!("Glyphs: {}", self.glyphs),
             MARGIN,
-            sidebar_meta_baseline + UNIT,
+            sidebar_meta_baseline - UNIT,
         );
         mono_text(
             ctx,
             "Grid: 18pt unit",
             MARGIN,
-            sidebar_meta_baseline + UNIT * 2.0,
+            sidebar_meta_baseline - UNIT * 2.0,
         );
         ctx.restore();
     }
@@ -590,9 +575,6 @@ fn vg_text_segmented(
     let vars = [(WGHT, wght)];
     let measure = |s: &str| renderer.text_width(s, Some(VG_FAMILY), size, &vars);
     let space_w = measure("n n") - 2.0 * measure("n");
-    // Fallback fonts have their own (unknown) ascent; 0.8 em is a reasonable
-    // system-font value, so fallback glyphs sit close to the VG baseline.
-    const FALLBACK_ASCENT: f64 = 0.8;
 
     let mut cursor = x;
     let mut seg = String::new();
@@ -612,12 +594,7 @@ fn vg_text_segmented(
         } else {
             flush(ctx, &mut seg, &mut cursor);
             let s = c.to_string();
-            ctx.font(VG_FAMILY);
-            ctx.clear_font_variations();
-            ctx.font_variation("wght", wght);
-            ctx.font_size(size);
-            ctx.fill(Color::black());
-            ctx.text(&s, cursor, baseline - FALLBACK_ASCENT * size);
+            vg_text(ctx, &s, cursor, baseline, size, wght);
             cursor += measure(&s);
         }
     }
@@ -644,14 +621,14 @@ fn proof_page(
     chrome.draw(ctx, style, title, size);
 
     let main_x = gx(10.0); // 216
-    let frame_top = gy_top(1.0); // 54 (frame top == header rule)
+    let frame_top = gy_top(1.0); // 558 (frame top == header rule)
     let lines = wrap_text(renderer, text.trim(), size, wght, MAIN_W);
     let max_lines = (MAIN_H / leading).floor() as usize;
     for (i, line) in lines.iter().take(max_lines).enumerate() {
         if line.is_empty() {
             continue;
         }
-        let baseline = frame_top + size + i as f64 * leading;
+        let baseline = frame_top - size - i as f64 * leading;
         if line.chars().all(|c| c == ' ' || cmap.contains(&(c as u32))) {
             vg_text(ctx, line, main_x, baseline, size, wght);
         } else {
@@ -694,8 +671,8 @@ fn draw_rtl_line(
 }
 
 /// Arabic page: Courier label on the left, RTL sample right-aligned to the
-/// main frame's right edge. Python y-up rows at y_top(3) - 4 units per row
-/// become top-down rows at 90 + 72 per row (labels), +18 for the sample.
+/// main frame's right edge. As in the Python, label rows start at y_top(3)
+/// and step down 4 units per row; the sample baseline sits 1 unit lower.
 fn arabic_grid_page(
     ctx: &mut Canvas,
     renderer: &Renderer,
@@ -707,11 +684,11 @@ fn arabic_grid_page(
 
     let main_x = gx(10.0);
     let right_edge = main_x + MAIN_W; // 756
-    let mut label_baseline = MARGIN + 3.0 * UNIT; // td of y_top(3) = 90
+    let mut label_baseline = gy_top(3.0); // 522
     for (label, sample) in ARABIC_SAMPLES {
         mono_text(ctx, label, main_x, label_baseline);
-        draw_rtl_line(ctx, renderer, sample, right_edge, label_baseline + UNIT, 18.0, wght);
-        label_baseline += UNIT * 4.0;
+        draw_rtl_line(ctx, renderer, sample, right_edge, label_baseline - UNIT, 18.0, wght);
+        label_baseline -= UNIT * 4.0;
     }
 }
 
