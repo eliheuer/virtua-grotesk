@@ -15,7 +15,7 @@ designbot --render scripts/designbot/social/og_dimension_sheet.rs \
 # them the best possible source — CRF 16, lanczos downscale, BT.709
 # tagged so no player guesses the colors
 BG=101010
-Q="-c:v libx264 -preset slow -crf 16 -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart -an"
+Q="-c:v libx264 -preset slow -crf 16 -x264-params aq-mode=3 -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart -an"
 for spec in 1920:1080:wide 1080:1350:feed 1080:1920:reel; do
   IFS=: read -r FW FH NAME <<<"$spec"
   ffmpeg -y -loglevel error -i "$OUT/og-sheet-native.mp4" \
