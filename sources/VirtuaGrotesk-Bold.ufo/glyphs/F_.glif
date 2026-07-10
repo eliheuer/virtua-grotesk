@@ -1,37 +1,37 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version="1.0" encoding="UTF-8"?>
 <glyph name="F" format="2">
-  <advance width="680"/>
-  <unicode hex="0046"/>
-  <outline>
-    <contour>
-      <point x="96" y="0" type="line"/>
-      <point x="256" y="0" type="line"/>
-      <point x="272" y="16" type="line"/>
-      <point x="272" y="294" type="line"/>
-      <point x="280" y="302" type="line"/>
-      <point x="576" y="302" type="line"/>
-      <point x="592" y="318" type="line"/>
-      <point x="592" y="438" type="line"/>
-      <point x="576" y="454" type="line"/>
-      <point x="280" y="454" type="line"/>
-      <point x="272" y="462" type="line"/>
-      <point x="272" y="596" type="line"/>
-      <point x="280" y="604" type="line"/>
-      <point x="640" y="604" type="line"/>
-      <point x="656" y="620" type="line"/>
-      <point x="656" y="752" type="line"/>
-      <point x="640" y="768" type="line"/>
-      <point x="96" y="768" type="line"/>
-      <point x="80" y="752" type="line"/>
-      <point x="80" y="16" type="line"/>
-    </contour>
-  </outline>
-  <lib>
-    <dict>
-      <key>org.fontgarden.transfer</key>
-      <string>glyph-transfer v2 lambda 1.0 &lt;- image crop-F.png</string>
-      <key>public.markColor</key>
-      <string>1,0.5,0,1</string>
-    </dict>
-  </lib>
+	<unicode hex="0046"/>
+	<advance width="680"/>
+	<outline>
+		<contour>
+			<point x="80" y="16" type="line"/>
+			<point x="96" y="0" type="line"/>
+			<point x="256" y="0" type="line"/>
+			<point x="272" y="16" type="line"/>
+			<point x="272" y="296" type="line"/>
+			<point x="280" y="304" type="line"/>
+			<point x="576" y="304" type="line"/>
+			<point x="592" y="320" type="line"/>
+			<point x="592" y="440" type="line"/>
+			<point x="576" y="456" type="line"/>
+			<point x="280" y="456" type="line"/>
+			<point x="272" y="464" type="line"/>
+			<point x="272" y="592" type="line"/>
+			<point x="280" y="600" type="line"/>
+			<point x="640" y="600" type="line"/>
+			<point x="656" y="616" type="line"/>
+			<point x="656" y="752" type="line"/>
+			<point x="640" y="768" type="line"/>
+			<point x="96" y="768" type="line"/>
+			<point x="80" y="752" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-F.png</string>
+			<key>public.markColor</key>
+			<string>0.09,0.72,0.44,1</string>
+		</dict>
+	</lib>
 </glyph>
