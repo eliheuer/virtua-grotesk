@@ -11,13 +11,17 @@ mkdir -p "$OUT"
 # the sheet background color.)
 designbot --render scripts/designbot/social/og_dimension_sheet.rs \
     --output "$OUT/og-sheet-native.mp4"
+# high-quality fits: platforms recompress whatever we upload, so give
+# them the best possible source — CRF 16, lanczos downscale, BT.709
+# tagged so no player guesses the colors
 BG=101010
-ffmpeg -y -loglevel error -i "$OUT/og-sheet-native.mp4" \
-  -vf "scale=1920:-2,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:0x$BG" -an "$OUT/og-sheet-wide.mp4"
-ffmpeg -y -loglevel error -i "$OUT/og-sheet-native.mp4" \
-  -vf "scale=1080:-2,pad=1080:1350:(ow-iw)/2:(oh-ih)/2:0x$BG" -an "$OUT/og-sheet-feed.mp4"
-ffmpeg -y -loglevel error -i "$OUT/og-sheet-native.mp4" \
-  -vf "scale=1080:-2,pad=1080:1920:(ow-iw)/2:(oh-ih)/2:0x$BG" -an "$OUT/og-sheet-reel.mp4"
+Q="-c:v libx264 -preset slow -crf 16 -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart -an"
+for spec in 1920:1080:wide 1080:1350:feed 1080:1920:reel; do
+  IFS=: read -r FW FH NAME <<<"$spec"
+  ffmpeg -y -loglevel error -i "$OUT/og-sheet-native.mp4" \
+    -vf "scale=$FW:-2:flags=lanczos,pad=$FW:$FH:(ow-iw)/2:(oh-ih)/2:0x$BG" \
+    $Q "$OUT/og-sheet-$NAME.mp4"
+done
 
 # LAB stacked reel (native per-format compositions)
 for f in reel feed wide; do
