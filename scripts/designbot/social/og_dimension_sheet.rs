@@ -47,7 +47,7 @@ const DWELL: f64 = 0.18;
 const W: f64 = 2400.0;
 const H: f64 = 1260.0;
 
-const MARGIN: f64 = 96.0; // content runs MARGIN...W-MARGIN
+// content edges are derived from the glyph run (see grid_left/right)
 const BASELINE_Y: f64 = 308.0; // canvas y of font y=0
 const GRID_TOP: f64 = BASELINE_Y + 784.0; // cap overshoot line
 const GRID_BOTTOM: f64 = BASELINE_Y - 80.0;
@@ -415,8 +415,11 @@ fn main() {
     // ── the 16-unit design grid, aligned to the glyph origin and snapped to
     //    whole cells: the box starts and ends exactly on grid lines ──
     let step = 16.0;
-    let grid_left = x0 - (((x0 - MARGIN) / step).floor()) * step;
-    let grid_right = grid_left + (((W - MARGIN - grid_left) / step).floor()) * step;
+    // one shared content edge: the grid, metric lines, rules, and labels
+    // all run from the first advance boundary to the last, so every
+    // horizontal terminates exactly on a boundary vertical
+    let grid_left = x0;
+    let grid_right = *bounds.last().unwrap();
     {
         let ctx = &mut sheet.ctx;
         ctx.no_fill();
@@ -583,11 +586,11 @@ fn main() {
     {
         let base_y = 1182.0;
         let size = 30.0;
-        sheet.label("VIRTUA GROTESK", MARGIN, base_y, size, text_bright(), -1);
+        sheet.label("VIRTUA GROTESK", grid_left, base_y, size, text_bright(), -1);
 
         sheet.label(
             "SIL OPEN FONT LICENSE (OFL) VERSION 1.1",
-            W - MARGIN,
+            grid_right,
             base_y,
             size,
             text_bright(),
@@ -599,12 +602,12 @@ fn main() {
     {
         let ctx = &mut sheet.ctx;
         ctx.stroke(rule()).stroke_width(2.5).no_fill();
-        ctx.line(MARGIN, HEADER_RULE_Y, W - MARGIN, HEADER_RULE_Y);
-        ctx.line(MARGIN, FOOTER_RULE_Y, W - MARGIN, FOOTER_RULE_Y);
+        ctx.line(grid_left, HEADER_RULE_Y, grid_right, HEADER_RULE_Y);
+        ctx.line(grid_left, FOOTER_RULE_Y, grid_right, FOOTER_RULE_Y);
     }
     sheet.label(
         &format!("POWERS OF TWO GRID / WEIGHT {:.0} / UPM 1024", weight_now),
-        MARGIN,
+        grid_left,
         64.0,
         30.0,
         text_bright(),
@@ -612,7 +615,7 @@ fn main() {
     );
     sheet.label(
         "GITHUB.COM/ELIHEUER/VIRTUA-GROTESK",
-        W - MARGIN,
+        grid_right,
         64.0,
         30.0,
         text_bright(),
