@@ -16,11 +16,15 @@ designbot --render scripts/designbot/social/og_dimension_sheet.rs \
 # tagged so no player guesses the colors
 BG=101010
 Q="-c:v libx264 -preset slow -crf 16 -x264-params aq-mode=3 -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart -an"
-for spec in 1920:1080:wide 1080:1350:feed 1080:1920:reel; do
-  IFS=: read -r FW FH NAME <<<"$spec"
-  ffmpeg -y -loglevel error -i "$OUT/og-sheet-native.mp4" \
-    -vf "scale=$FW:-2:flags=lanczos,pad=$FW:$FH:(ow-iw)/2:(oh-ih)/2:0x$BG" \
-    $Q "$OUT/og-sheet-$NAME.mp4"
+ffmpeg -y -loglevel error -i "$OUT/og-sheet-native.mp4" \
+  -vf "scale=1920:-2:flags=lanczos,pad=1920:1080:(ow-iw)/2:(oh-ih)/2:0x$BG" \
+  $Q "$OUT/og-sheet-wide.mp4"
+
+# Vertical formats get their own composition (single-glyph sheet)
+# rendered natively per aspect ratio — no letterboxing.
+for f in reel feed; do
+  designbot --render scripts/designbot/social/glyph_sheet_vertical.rs \
+      --output "$OUT/glyph-sheet-$f.mp4" -- "$f"
 done
 
 # LAB stacked reel (native per-format compositions)
