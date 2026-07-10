@@ -65,23 +65,23 @@ fn grid() -> Color {
     Color::rgb(0x32, 0x32, 0x32)
 }
 fn rule() -> Color {
-    Color::rgb(0x15, 0xc4, 0x74)
+    Color::rgb(0x14, 0xd6, 0x7e)
 }
 fn text_bright() -> Color {
-    Color::rgb(0x15, 0xc4, 0x74)
+    Color::rgb(0x14, 0xd6, 0x7e)
 }
 fn subdued() -> Color {
-    Color::rgb(0x15, 0xc4, 0x74)
+    Color::rgb(0x14, 0xd6, 0x7e)
 }
 fn red() -> Color {
-    Color::rgb(0xff, 0x45, 0x35)
+    Color::rgb(0xff, 0x3a, 0x28)
 }
 fn blue() -> Color {
-    Color::rgb(0x4a, 0x78, 0xff)
+    Color::rgb(0x5c, 0x86, 0xff)
 }
 fn red_fill() -> Color {
     // the mark red at ~40%, so grid and construction lines read through
-    Color::rgba(0xff, 0x45, 0x35, 64)
+    Color::rgba(0xff, 0x3a, 0x28, 64)
 }
 
 // --- minimal sfnt reader (family name for ctx.font()) ----------------------
@@ -303,7 +303,7 @@ impl Sheet<'_> {
         } else {
             y_line - box_h - 16.0
         };
-        self.ctx.fill(bg()).stroke(blue()).stroke_width(2.5);
+        self.ctx.fill(bg()).stroke(blue()).stroke_width(3.5);
         self.ctx.rect(x0, y0, box_w, box_h);
         // Geist Mono caps/figures are ~0.73 em tall; center that ink box
         let baseline = y0 + (box_h - 0.73 * size) / 2.0;
@@ -313,7 +313,7 @@ impl Sheet<'_> {
     /// 45-degree hatching clipped to a rect, Replica side-bearing style.
     fn hatch(&mut self, x0: f64, y0: f64, x1: f64, y1: f64, color: Color) {
         let h = y1 - y0;
-        self.ctx.stroke(color).stroke_width(2.5).no_fill();
+        self.ctx.stroke(color).stroke_width(3.5).no_fill();
         let step = 6.0;
         let mut t = x0 - h;
         while t < x1 {
@@ -330,7 +330,7 @@ impl Sheet<'_> {
     /// Small circle node at a blue-line crossing, knocked out with the
     /// background color like the point markers.
     fn node(&mut self, x: f64, y: f64, r: f64) {
-        self.ctx.fill(bg()).stroke(blue()).stroke_width(2.5);
+        self.ctx.fill(bg()).stroke(blue()).stroke_width(3.5);
         self.ctx.oval(x - r, y - r, r * 2.0, r * 2.0);
     }
 }
@@ -439,7 +439,7 @@ fn main() {
     // ── per-glyph cells: advance-boundary verticals ──
     {
         let ctx = &mut sheet.ctx;
-        ctx.stroke(blue()).stroke_width(2.5).no_fill();
+        ctx.stroke(blue()).stroke_width(3.5).no_fill();
         for &b in &bounds {
             ctx.line(b, GRID_BOTTOM, b, GRID_TOP);
         }
@@ -449,7 +449,7 @@ fn main() {
     //    overshoots dashed, cap/x-height/baseline solid ──
     {
         let ctx = &mut sheet.ctx;
-        ctx.stroke(blue()).stroke_width(2.5).no_fill();
+        ctx.stroke(blue()).stroke_width(3.5).no_fill();
         ctx.line_dash(&[10.0, 10.0]);
         for y in [784.0, -16.0] {
             ctx.line(grid_left, BASELINE_Y + y, grid_right, BASELINE_Y + y);
@@ -464,7 +464,7 @@ fn main() {
     //    Replica gauge-ball-page style; canvas and font agree on y-up, so
     //    placement is a plain translate ──
     for ((o, w), dx) in outlines.iter().zip(bounds.windows(2)).zip(&offsets) {
-        sheet.ctx.fill(red_fill()).stroke(red()).stroke_width(2.5);
+        sheet.ctx.fill(red_fill()).stroke(red()).stroke_width(3.5);
         sheet
             .ctx
             .draw_path(Affine::translate((w[0] + dx, BASELINE_Y)) * o.path.clone());
@@ -473,13 +473,13 @@ fn main() {
     // ── bezier handles and points over everything, Runebender palette ──
     for ((o, w), dx) in outlines.iter().zip(bounds.windows(2)).zip(&offsets) {
         let (gx, gy) = (w[0] + dx, BASELINE_Y);
-        sheet.ctx.stroke(red()).stroke_width(2.5).no_fill();
+        sheet.ctx.stroke(red()).stroke_width(3.5).no_fill();
         for ((x1, y1), (x2, y2)) in &o.handles {
             sheet.ctx.line(gx + x1, gy + y1, gx + x2, gy + y2);
         }
         // red markers knocked out with the background color so they stay
         // readable over the fill and grid
-        sheet.ctx.fill(bg()).stroke(red()).stroke_width(2.5);
+        sheet.ctx.fill(bg()).stroke(red()).stroke_width(3.5);
         for (x, y, role) in &o.points {
             let (px, py) = (gx + x, gy + y);
             match role {
@@ -525,7 +525,7 @@ fn main() {
         sheet
             .ctx
             .stroke(subdued())
-            .stroke_width(2.5)
+            .stroke_width(3.5)
             .no_fill()
             .line(bx0, row_y, bx1, row_y);
         sheet.hatch(bx0, row_y - 14.0, ink0, row_y + 14.0, red());
@@ -572,7 +572,7 @@ fn main() {
         sheet
             .ctx
             .stroke(blue())
-            .stroke_width(2.5)
+            .stroke_width(3.5)
             .no_fill()
             .line(b, GRID_BOTTOM, b, tick_end);
         sheet.node(b, tick_end, 6.0);
@@ -601,7 +601,7 @@ fn main() {
     // ── rules and footer captions ──
     {
         let ctx = &mut sheet.ctx;
-        ctx.stroke(rule()).stroke_width(2.5).no_fill();
+        ctx.stroke(rule()).stroke_width(3.5).no_fill();
         ctx.line(grid_left, HEADER_RULE_Y, grid_right, HEADER_RULE_Y);
         ctx.line(grid_left, FOOTER_RULE_Y, grid_right, FOOTER_RULE_Y);
     }
