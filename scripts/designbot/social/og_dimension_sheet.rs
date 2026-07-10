@@ -38,8 +38,11 @@ use designbot_render::Renderer;
 use designbot::kurbo::{Affine, BezPath, Shape};
 
 const FPS: f64 = 30.0;
-const SECONDS_PER_LOOP: f64 = 3.0;
+const SECONDS_PER_LOOP: f64 = 4.0;
 const LOOPS: usize = 4;
+// fraction of each loop spent holding at each weight extreme, so the
+// 400 and 700 states are actually readable before the morph moves on
+const DWELL: f64 = 0.18;
 
 const W: f64 = 2400.0;
 const H: f64 = 1260.0;
@@ -78,7 +81,7 @@ fn blue() -> Color {
 }
 fn red_fill() -> Color {
     // the mark red at ~40%, so grid and construction lines read through
-    Color::rgba(0xff, 0x45, 0x35, 104)
+    Color::rgba(0xff, 0x45, 0x35, 64)
 }
 
 // --- minimal sfnt reader (family name for ctx.font()) ----------------------
@@ -359,14 +362,40 @@ fn main() {
     };
     sheet.ctx.frame_duration(1.0 / FPS);
 
+    // ── static layout: cells sized to the Bold advances (the widest), so
+    //    the grid, boundaries, ticks, tags, and labels never move; only the
+    //    letterforms breathe inside their cells ──
+    let cell_widths: Vec<f64> = raw_bold.iter().map(|(_, w)| *w).collect();
+    let total_advance: f64 = cell_widths.iter().sum();
+    let x0 = ((W - total_advance) / 2.0).round();
+    let mut bounds = vec![x0];
+    let mut cursor = x0;
+    for w in &cell_widths {
+        cursor += w;
+        bounds.push(cursor);
+    }
+
     let frames = (FPS * SECONDS_PER_LOOP) as usize * LOOPS;
     for frame in 0..frames {
     if frame > 0 {
         sheet.ctx.new_page();
     }
-    // seamless sine loop: 0 at frame 0, 0 at frame N, Bold at each crest
+    // seamless loop with dwells: hold Regular, sine-ease up, hold Bold,
+    // sine-ease back — endpoints and their derivatives match, so the
+    // loop point is invisible
     let phase = (frame as f64 / frames as f64) * LOOPS as f64;
-    let morph = 0.5 - (phase.fract() * std::f64::consts::TAU).cos() / 2.0;
+    let t = phase.fract();
+    let ease = |u: f64| (1.0 - (std::f64::consts::PI * u.clamp(0.0, 1.0)).cos()) / 2.0;
+    let half = 0.5 - DWELL; // duration of each transition
+    let morph = if t < DWELL {
+        0.0
+    } else if t < DWELL + half {
+        ease((t - DWELL) / half)
+    } else if t < 0.5 + DWELL {
+        1.0
+    } else {
+        1.0 - ease((t - 0.5 - DWELL) / half)
+    };
     let weight_now = 400.0 + 300.0 * morph;
 
     let outlines: Vec<Outline> = raw_reg
@@ -374,18 +403,14 @@ fn main() {
         .zip(&raw_bold)
         .map(|(r, b)| build_outline(&interp_raw(r, b, morph)))
         .collect();
-    let total_advance: f64 = outlines.iter().map(|o| o.width).sum();
+    // center each interpolated glyph's advance inside its static cell;
+    // at full Bold the offset is zero and the sheet is metrically exact
+    let offsets: Vec<f64> = outlines
+        .iter()
+        .zip(&cell_widths)
+        .map(|(o, cw)| ((cw - o.width) / 2.0).round())
+        .collect();
     sheet.ctx.background(bg());
-
-    // one font unit = one pixel; center the run
-    let x0 = ((W - total_advance) / 2.0).round();
-    // advance boundaries, canvas x
-    let mut bounds = vec![x0];
-    let mut cursor = x0;
-    for o in &outlines {
-        cursor += o.width;
-        bounds.push(cursor);
-    }
 
     // ── the 16-unit design grid, aligned to the glyph origin and snapped to
     //    whole cells: the box starts and ends exactly on grid lines ──
@@ -435,16 +460,16 @@ fn main() {
     // ── glyphs: half-transparent mark-red fill with a solid contour stroke,
     //    Replica gauge-ball-page style; canvas and font agree on y-up, so
     //    placement is a plain translate ──
-    for (o, w) in outlines.iter().zip(bounds.windows(2)) {
+    for ((o, w), dx) in outlines.iter().zip(bounds.windows(2)).zip(&offsets) {
         sheet.ctx.fill(red_fill()).stroke(red()).stroke_width(2.5);
         sheet
             .ctx
-            .draw_path(Affine::translate((w[0], BASELINE_Y)) * o.path.clone());
+            .draw_path(Affine::translate((w[0] + dx, BASELINE_Y)) * o.path.clone());
     }
 
     // ── bezier handles and points over everything, Runebender palette ──
-    for (o, w) in outlines.iter().zip(bounds.windows(2)) {
-        let (gx, gy) = (w[0], BASELINE_Y);
+    for ((o, w), dx) in outlines.iter().zip(bounds.windows(2)).zip(&offsets) {
+        let (gx, gy) = (w[0] + dx, BASELINE_Y);
         sheet.ctx.stroke(red()).stroke_width(2.5).no_fill();
         for ((x1, y1), (x2, y2)) in &o.handles {
             sheet.ctx.line(gx + x1, gy + y1, gx + x2, gy + y2);
@@ -485,13 +510,15 @@ fn main() {
             152.0
         }
     }
-    for (j, (o, w)) in outlines.iter().zip(bounds.windows(2)).enumerate() {
+    for (j, ((o, w), dx)) in outlines.iter().zip(bounds.windows(2)).zip(&offsets).enumerate() {
         let (bx0, bx1) = (w[0], w[1]);
         let row_y = row_y(j);
-        let ink0 = bx0 + o.lsb;
-        let ink1 = bx1 - o.rsb;
+        // drawn ink edges (glyph is centered in its static cell)
+        let ink0 = bx0 + dx + o.lsb;
+        let ink1 = bx0 + dx + o.width - o.rsb;
 
-        // dim line across the cell, hatched side-bearing blocks at the ends
+        // dim line across the cell, hatched side-bearing blocks at the ends;
+        // hatches breathe with the ink, everything else stays put
         sheet
             .ctx
             .stroke(subdued())
@@ -501,26 +528,27 @@ fn main() {
         sheet.hatch(bx0, row_y - 14.0, ink0, row_y + 14.0, red());
         sheet.hatch(ink1, row_y - 14.0, bx1, row_y + 14.0, red());
 
-        // ink width, bright, centered; side bearings, red, tucked at the ends
+        // ink width, bright, at the static cell center; side-bearing gaps,
+        // red, docked at the static cell edges (values track the drawing)
         sheet.label_padded(
             &format!("{}", (ink1 - ink0).round()),
-            (ink0 + ink1) / 2.0,
+            (bx0 + bx1) / 2.0,
             row_y - 11.0,
             30.0,
             text_bright(),
             0,
         );
         sheet.label(
-            &format!("{}", o.lsb.round()),
-            ink0 + 10.0,
+            &format!("{}", (ink0 - bx0).round()),
+            bx0 + 10.0,
             row_y + 22.0,
             30.0,
             red(),
             -1,
         );
         sheet.label(
-            &format!("{}", o.rsb.round()),
-            ink1 - 10.0,
+            &format!("{}", (bx1 - ink1).round()),
+            bx1 - 10.0,
             row_y + 22.0,
             30.0,
             red(),
