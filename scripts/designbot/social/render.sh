@@ -27,6 +27,10 @@ for f in reel feed; do
       --output "$OUT/glyph-sheet-$f.mp4" -- "$f"
 done
 
+# Instagram carousel: 9 slides, 1080x1350 PNGs (script writes them
+# into documentation/assets/social/carousel/ itself)
+designbot --render scripts/designbot/social/carousel_grid_as_dataset.rs
+
 # LAB stacked reel (native per-format compositions)
 for f in reel feed wide; do
   designbot --render scripts/designbot/social/reel_grid_as_dataset.rs \
