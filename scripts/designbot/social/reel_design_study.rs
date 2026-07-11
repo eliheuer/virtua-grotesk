@@ -378,6 +378,13 @@ fn main() {
     let ticker_bottom = "THE DATASET IS THE SOURCE CODE ";
     let wght_tag = u32::from_be_bytes(*b"wght");
 
+    // hero scale adapts to the glyph: target ink height ~1250px, box
+    // centered at y=1090, so lowercase runs huge and caps stay readable
+    // while still bleeding the frame horizontally
+    let bb = build_outline(&raw_reg).path.bounding_box();
+    let hero_scale = 1250.0 / (bb.y1 - bb.y0);
+    let hero_cy = 1090.0;
+
     let frames = (FPS * SECONDS_PER_LOOP) as usize * LOOPS;
     for frame in 0..frames {
         if frame > 0 {
@@ -421,9 +428,9 @@ fn main() {
         // ── hero: giant outline with point structure, bleeding the frame ──
         let hero = build_outline(&interp_raw(&raw_reg, &raw_bold, morph));
         {
-            let scale = 1.9;
+            let scale = hero_scale;
             let gx = (W - hero.width * scale) / 2.0;
-            let gy = 620.0; // baseline; x-height glyphs run to ~1715px
+            let gy = hero_cy - scale * (bb.y0 + bb.y1) / 2.0;
             let tr = Affine::translate((gx, gy)) * Affine::scale(scale);
 
             sheet.ctx.fill(red_fill()).stroke(red()).stroke_width(5.0);
