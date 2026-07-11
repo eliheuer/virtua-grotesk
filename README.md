@@ -4,11 +4,7 @@ Virtua Grotesk is an open-source variable geometric grotesk with a Weight axis
 from Regular to Bold. The design uses monolinear strokes and chamfered corners
 as a defining construction detail.
 
-![Virtua Grotesk glyphset overview](documentation/assets/readme/glyphset-overview.png)
-
-![Virtua Grotesk Aa construction grid](documentation/assets/readme/aa-grid.png)
-
-![Virtua Grotesk text sizes](documentation/assets/readme/text-sizes.png)
+![Virtua Grotesk specimen: the word Grid set as a powers-of-two dimension sheet, red glyphs on the 16-unit design grid with labeled vertical metrics and dimensioned side bearings](documentation/assets/readme/hero.png)
 
 ## About
 
