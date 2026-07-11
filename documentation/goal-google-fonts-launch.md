@@ -136,7 +136,7 @@ Follow the GF guide order — **GF requires an issue before a PR**
 2. **Prerequisites** (Eligibility section above): CLA signed, `gftools` in the
    venv, fork `google/fonts`, clone, add the `upstream` remote.
 3. **Confirm upstream is ready**: this repo is public and **both VFs pass the
-   Fontbakery `googlefonts` profile clean** (Phases 1–2 done — no excludes).
+   Fontspector `googlefonts` profile clean** (Rust successor to the deprecated FontBakery) (Phases 1–2 done — no excludes).
 4. **Package** in the fork: branch `virtuagrotesk`, create `ofl/virtuagrotesk/`,
    add the built TTFs + `OFL.txt`, then run `gftools add-font ofl/virtuagrotesk`
    to generate `METADATA.pb` + the article template. (The `/google-fonts-packaging`
@@ -193,7 +193,7 @@ There is no single linear checklist; work the relevant page per workstream:
 - **Axis registry** (`wght`, `ital`) — [axis-registry](https://googlefonts.github.io/gf-guide/axis-registry.html)
 - **Vertical metrics** — [metrics](https://googlefonts.github.io/gf-guide/metrics.html)
 - **Build** (fontmake / gftools) — [build](https://googlefonts.github.io/gf-guide/build.html)
-- **QA** (Fontbakery `googlefonts` profile = our `make test`) —
+- **QA** (Fontspector `googlefonts` profile = our `make test`) —
   [qa](https://googlefonts.github.io/gf-guide/qa.html),
   [testing](https://googlefonts.github.io/gf-guide/testing.html)
 - **Packaging / metadata / article / profile** (Phase 3) —
