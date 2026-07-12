@@ -55,6 +55,12 @@ harness). Three documents define it:
   regenerate, or trace a glyph, follow this runbook.
 - **`plans/ai-font-completion-harness.md`** — the full system plan, research,
   mark-color protocol, and phase checklist.
+- **`documentation/design-pass-worklog.md`** — the running glyph-by-glyph
+  review of sources against the published blog contract (measurements,
+  decisions and their reasons, OPEN items). Read it before touching A–Z/a–z;
+  append an entry whenever a review or design decision happens. OPEN items
+  are Eli's to resolve — agents measure and propose, never settle them by
+  editing sources.
 
 Mark colors in the UFOs are the human's control channel: green = done
 (never touch), yellow/orange = needs polish, red = broken/regenerate,
