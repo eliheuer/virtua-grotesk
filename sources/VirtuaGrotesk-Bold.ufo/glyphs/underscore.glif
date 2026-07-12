@@ -2,10 +2,18 @@
 <glyph name="underscore" format="2">
 	<unicode hex="005F"/>
 	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="64" y="-96" type="line"/>
+			<point x="536" y="-96" type="line"/>
+			<point x="536" y="-40" type="line"/>
+			<point x="64" y="-40" type="line"/>
+		</contour>
+	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>1,0.3,0.3,1</string>
 		</dict>
 	</lib>
 </glyph>
