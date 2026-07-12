@@ -1,125 +1,56 @@
 # Hebrew Support Plan
 
-This document tracks the Hebrew expansion plan for Virtua Grotesk. The goal is
-to use Rubik as a practical open-source reference for Latin/Arabic/Hebrew source
-organization, then use the img2bez/OpenAI raster workflow as a drafting tool for
-new Virtua-style Hebrew outlines.
+This document tracks the Hebrew expansion of Virtua Grotesk. The goal is full
+Google Fonts Hebrew support, using Rubik (a shipped Google Fonts
+Latin/Arabic/Hebrew family, cloned at `/Users/eli/GH/repos/rubik`) as the
+reference for glyph inventory and source organization, and the glyph AI
+harness (img2bez + designbot + OpenAI raster drafting) as the drawing tool.
 
-## Current State
+## Current State (2026-07-12)
 
-- Virtua Grotesk currently has no encoded Hebrew glyphs in the built variable
-  font or either UFO master.
-- The active sources are `sources/VirtuaGrotesk-Regular.ufo`,
-  `sources/VirtuaGrotesk-Bold.ufo`, and
-  `sources/VirtuaGrotesk.designspace`.
-- The repo worktree is already dirty from earlier Google Fonts/Arabic cleanup
-  work. Hebrew work should avoid touching unrelated modified glyphs.
-- Rubik is available locally at `/Users/eli/GH/repos/rubik` and already has UFO
-  masters, so no Glyphs-to-UFO conversion is needed for reference inspection.
+- **The full Hebrew skeleton is in both masters.** All 77 glyphs of Rubik's
+  exporting Hebrew inventory are registered in `contents.plist` and encoded:
+  27 letters incl. finals (U+05D0–U+05EA), niqqud and dot marks
+  (U+05B0–U+05BC, U+05C1, U+05C2, U+05C7), punctuation (U+05BE maqaf,
+  U+05F2–U+05F4), the dagesh/shin-dot presentation forms
+  (U+FB2A–U+FB4B, Rubik's subset), and U+20AA sheqel.
+- **Five glyphs are drawn** (mark color orange, promoted via the harness):
+  `dalet-hb`, `vav-hb`, `yod-hb`, `finalnun-hb`, `resh-hb`.
+- **72 glyphs are empty placeholders**, mark color red (= broken/regenerate,
+  the harness to-do signal). Letters carry a placeholder advance of 600;
+  combining marks have no advance (width 0). Empty glyphs are trivially
+  master-compatible.
+- Naming follows the readable `*-hb` convention (Rubik's `uni05B8` is named
+  `qamats-hb` here). Unicode assignments live in each `.glif`.
 
-## Reference Scope
+## Drawing Workflow
 
-Rubik's shipped Google Fonts build covers 47 Hebrew codepoints:
+Use the glyph AI harness per `harness/RUNBOOK-codex.md`: green references +
+raster generation, then `img2bez masters` — which traces one image per master
+and reconciles them into interpolation-compatible outlines in a single
+command (the old single-master-trace constraint is gone). Check the report's
+`compatible: true` before promotion, then re-mark blue for human grading.
 
-- Marks: U+05B0..U+05BC, U+05C1, U+05C2, U+05C7
-- Punctuation: U+05BE, U+05F2, U+05F3, U+05F4
-- Letters: U+05D0..U+05EA, including the final forms
+Rubik metrics are proportions only — trace targets are Virtua's coordinate
+system (UPM 1024, ascender 832, descender -256, x-height 576, grid 2), e.g.
+`--fit descender:ascender` style zone bands rather than copied coordinates.
 
-The Google Fonts `hebrew_unique-glyphs.nam` file is much larger. It includes
-cantillation marks, support/control codepoints, U+25CC, shekel, and Hebrew
-presentation forms. That larger set is not a good first drawing batch. The
-pragmatic first target should match Rubik's 47-codepoint coverage, then decide
-whether to expand to the full Google subset after the basic text setting works.
+## Suggested Batch Order
 
-## Source Naming
+1. Remaining simple-silhouette letters: `he-hb`, `het-hb`, `tav-hb`,
+   `kaf-hb`, `finalkaf-hb`, `bet-hb` — rectilinear constructions close to
+   the drawn five.
+2. The rest of the letters and finals.
+3. Punctuation, `sheqel`, `yodyod-hb`.
+4. Niqqud marks + anchors, `languagesystem hebr dflt;`, mark/mkmk
+   positioning, GDEF classes.
+5. Dagesh presentation forms (mostly composites of letter + dagesh once
+   anchors exist).
 
-Rubik uses readable source names such as `alef-hb`, `bet-hb`, `vav-hb`,
-`finalnun-hb`, and `gershayim-hb`. The compiled TTF maps these to production
-glyph names like `uni05D0`.
+## QA Notes
 
-For Virtua, the same readable `*-hb` source-name convention is recommended. It
-keeps feature code and Runebender review easier to read while still assigning
-the correct Unicode values in each `.glif`.
-
-## Metrics And Scaling
-
-Virtua Grotesk uses:
-
-- UPM 1024
-- Ascender 832
-- Descender -256
-- x-height 576
-- Cap height 832
-- Preferred grid 2
-
-Rubik uses:
-
-- UPM 1000
-- Ascender 750
-- Descender -225
-- x-height 520
-- Cap height 700
-
-The img2bez trace should therefore target Virtua's coordinate system directly,
-not copy Rubik coordinates. For this repo the useful defaults are:
-
-- `--target-height 1088`
-- `--y-offset -256`
-- `--grid 2`
-- `--chamfer 0` for curved or mixed Hebrew forms
-
-Advance widths should be chosen in Virtua space, then mirrored across masters
-with the same glyph structure. Rubik widths are useful as proportions only.
-
-## img2bez Constraint
-
-The installed `img2bez` CLI currently supports a single-master trace:
-
-```sh
-img2bez --input glyph.png --output Master.ufo --name glyph --unicode 05D0
-```
-
-It does not currently expose a multi-master compatibility command. Separate
-Regular and Bold traces can easily produce incompatible contour and point
-structure. Until img2bez has a dedicated masters workflow, every generated
-glyph must be treated as a sketch and reconciled before promotion.
-
-## Recommended First Batch
-
-Start with simple Hebrew letters that exercise different construction patterns
-without immediately forcing mark positioning or presentation forms:
-
-- `vav-hb` U+05D5
-- `yod-hb` U+05D9
-- `finalnun-hb` U+05DF
-- `resh-hb` U+05E8
-
-These are good first img2bez/OpenAI tests because they are simpler silhouettes,
-they can be checked quickly in long Hebrew strings, and they make scaling,
-baseline, and sidebearing problems obvious.
-
-## Workflow
-
-1. Render green Latin/Arabic Virtua references and selected Rubik Hebrew
-   references as raster prompt material.
-2. Generate clean black-on-white Hebrew glyph rasters with OpenAI image
-   generation, one image per master.
-3. Trace into scratch UFO copies with img2bez, never directly into the active
-   sources first.
-4. Compare Regular/Bold structure. If incompatible, either redraw one master
-   from the other or use the trace only as a visual template.
-5. Promote only compatible outlines into both Virtua masters.
-6. Add each glyph to `contents.plist` and keep Unicode assignments identical.
-7. Run `make reports`, `make build`, and proof strings that mix Latin, Arabic,
-   and Hebrew.
-
-## Later Work
-
-After the first batch is stable:
-
-- Add all 27 Hebrew letters and final forms.
-- Add Hebrew punctuation and U+05F2/U+05F3/U+05F4.
-- Add niqqud marks and anchors.
-- Add `languagesystem hebr dflt;` and update GDEF/mark positioning.
-- Decide whether Virtua should cover only Rubik's practical set or the full
-  Google Fonts Hebrew subset.
+- Empty placeholders will show as blank glyphs and will fail glyph-content
+  QA until drawn — that is the intended burn-down signal (do not add
+  excludes to hide them).
+- Proof strings should mix Latin, Arabic, and Hebrew; rerun `make reports`,
+  `make build`, and `make preflight` after each promoted batch.
