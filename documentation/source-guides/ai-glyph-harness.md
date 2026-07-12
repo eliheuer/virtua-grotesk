@@ -9,7 +9,8 @@ make glyph-ai-prepare TARGET=<glyph-name> REFERENCES="a,e,exclam"
 
 The harness reads Runebender's `public.markColor` labels from the UFO sources.
 Green (`0.09,0.72,0.44,1`) means a glyph is a good reference. The script renders
-those reference glyphs from the active UFO outlines with drawbot-skia, then
+those reference glyphs from the active UFO outlines with the designbot canvas
+toolchain (`harness/designbot/glyph_canvas.rs`), then
 creates a run packet under `build/glyph-ai-harness/<glyph-name>/`.
 
 Each run packet contains:

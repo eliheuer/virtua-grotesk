@@ -1,11 +1,11 @@
 ---
 name: render-specimen
-description: Render font specimen and proof output using the DrawBot-skia workflow (main proof or landscape spacing specimen).
+description: Render font specimen and proof output with designbot (main proof or landscape spacing specimen).
 ---
 
 # /render-specimen
 
-Render font specimen/proof output using the DrawBot-skia workflow.
+Render font specimen/proof output with designbot (the Rust renderer; scripts in scripts/designbot/).
 
 ## Usage
 `/render-specimen [proof|spacing]`

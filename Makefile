@@ -7,7 +7,7 @@ REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 PNGQUANT ?= ./.venv/bin/pngquant
 
-.PHONY: help setup build proof specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
+.PHONY: help setup build proof specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -22,6 +22,7 @@ help:
 		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
+		'  make lint-grid      Check source outlines against the power-of-two grid' \
 		'  make scoreboard     Update documentation/scoreboard.md (GF-gate burn-down)' \
 		'  make skeleton       End-to-end loop: build + qa + reports + scoreboard (qa may fail while debt exists)' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
