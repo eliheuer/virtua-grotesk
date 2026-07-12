@@ -138,7 +138,7 @@ native app.
   - `.agents/skills/google-fonts-packaging/SKILL.md`
   - `.agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
 - `make test` is the automated Fontspector `googlefonts` profile gate.
-- `make proof` renders the main DrawBot-skia PDF proof.
+- `make proof` renders the main proof PDF with designbot.
 - `make specimen` renders the landscape print spacing specimen at
   `documentation/proofs/print-spacing-specimen.pdf`.
 - `make reports` refreshes the active source/build metadata Markdown reports.
