@@ -102,9 +102,8 @@ The normal local workflow is intentionally small:
 | --- | --- |
 | `make setup` | Create `.venv` and install `requirements.txt`. |
 | `make build` | Build variable and static TTFs into `fonts/`. |
-| `make proof` | Render the main DrawBot-skia PDF proof. |
-| `make specimen` | Render the landscape print spacing specimen PDF. |
-| `make readme-images` | Render the DrawBot-skia README PNG specimens. |
+| `make proof` | Render the main proof PDF (designbot). |
+| `make specimen` | Render the landscape print-spacing specimen PDF (designbot). |
 | `make qa` / `make test` | Run Fontspector's Google Fonts profile. |
 | `make reports` | Regenerate source/build metadata reports. |
 | `make preflight` | Build, proof, specimen, reports, then check expected artifacts. |
@@ -123,21 +122,10 @@ Note: The `fonts/` directory is excluded from version control to keep the reposi
 
 ## Proofs And Specimens
 
-Proof PDFs use the project virtualenv plus `drawbot-skia`. If you want to run
-proofs directly from a local checkout of the `eliheuer/drawbot-skia` fork, set
-`DRAWBOT_SKIA_REPO` in the environment or in an ignored `local.mk` copied from
-`local.mk.example`.
-
-```bash
-./.venv/bin/python
-```
-
-When `DRAWBOT_SKIA_REPO` is set, the Makefile prepends
-`$DRAWBOT_SKIA_REPO/src` to `PYTHONPATH` for proof generation.
-Run `make proof` for the main proof and `make specimen` for the landscape
-spacing specimen. Both outputs are written to `documentation/proofs/`.
-Run `make readme-images` to regenerate the README PNG specimens in
-`documentation/assets/readme/`.
+Proofs and specimens are rendered with
+[designbot](https://github.com/eliheuer/designbot), a Rust rendering tool. Run
+`make proof` for the main proof and `make specimen` for the landscape
+print-spacing specimen. Both PDFs are written to `documentation/proofs/`.
 
 ## Google Fonts Readiness
 
