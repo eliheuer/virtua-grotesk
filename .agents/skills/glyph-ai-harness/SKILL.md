@@ -1,6 +1,6 @@
 ---
 name: glyph-ai-harness
-description: Use when expanding, repairing, or drafting Virtua Grotesk glyphs with Runebender green reference labels, drawbot-skia source renders, OpenAI image generation, and img2bez tracing.
+description: Use when expanding, repairing, or drafting Virtua Grotesk glyphs with Runebender green reference labels, designbot source renders, OpenAI image generation, and img2bez tracing.
 ---
 
 # Glyph AI Harness

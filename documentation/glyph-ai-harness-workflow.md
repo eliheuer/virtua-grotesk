@@ -128,8 +128,8 @@ full script expansion.
 
 ## Phase 2: Reference Rendering
 
-Render green references from the active UFOs with drawbot-skia. For each master,
-produce:
+Render green references from the active UFOs with the designbot canvas
+toolchain (`harness/designbot/glyph_canvas.rs`). For each master, produce:
 
 - individual glyph PNGs on a consistent white canvas
 - reference sheets by category: straight stems, rounds, counters, joins,

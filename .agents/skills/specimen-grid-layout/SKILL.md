@@ -15,8 +15,9 @@ All drawing scripts are **designbot** (Rust, single-file) under
 `scripts/designbot/`, run via
 `designbot --render scripts/designbot/<name>.rs --output <path> [-- <mode>]`.
 The retired drawbot-skia originals (including the old shared
-`grid_system.py`) live in `documentation/archive/agent-generated-scripts/`
-— reference only, never wire them back in.
+`grid_system.py`) were deleted — drawbot-skia is unmaintained and fully
+out of this repo; the ports in `scripts/designbot/` are the only
+implementation (git history has the originals if ever needed).
 
 ## The system
 
@@ -29,12 +30,12 @@ The retired drawbot-skia originals (including the old shared
 - **Every coordinate is a whole multiple of the unit**, measured from the
   margin lines. If you find yourself typing a raw pixel number for a
   position, snap it to the unit grid.
-- **designbot is y-down, top-left origin** (the archived drawbot scripts
-  were y-up). The ports keep drawbot-style baseline math internally and
-  flip at the draw call — follow that pattern, and remember
-  `Canvas::text(s, x, y)` takes the TOP of the line, not the baseline
-  (see `baseline_offset` in `scripts/designbot/general_proof.rs` for the
-  exact parley first-baseline formula).
+- **designbot matches drawbot's coordinate system: y-up, origin at the
+  bottom-left**, `rect`/`oval` anchored at their bottom-left corner, and
+  `Canvas::text(s, x, y)` taking the BASELINE of the first line (see the
+  layout note at the top of `scripts/designbot/general_proof.rs`).
+  Drawbot-style baseline-cursor math passes straight through to the draw
+  calls — no coordinate flipping.
 - **Leading in stacked text should be unit-friendly** — when rows of type
   repeat down the page, prefer leadings that put successive baselines on
   or near unit lines. Cap heights are what the eye reads; align cap-tops

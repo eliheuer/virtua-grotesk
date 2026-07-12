@@ -150,13 +150,13 @@ already implement the *front half* of the loop:
 | Stage | Status |
 |---|---|
 | `inventory` — classify every glyph by `public.markColor` in both masters | **working** |
-| `render` — glyph → PNG via drawbot-skia (1536px canvas, 224 padding) | **working** |
+| `render` — glyph → PNG via designbot (`harness/designbot/glyph_canvas.rs`, 1 unit = 1 px) | **working** |
 | `prepare` — run packet: green reference renders + prompt briefs + `trace-commands.sh` | **working** |
 | `trace` — copies master UFO to scratch, shells out to `img2bez` (single-master), runs compat report | **working but outdated** (should use `img2bez masters`) |
 | `generate` (OpenAI call), `place`, `specimen`, `review`, `promote`, `plan --script` | **missing — documentation only** |
 
 The workflow contract lives in `documentation/glyph-ai-harness-workflow.md`
-(8 phases); `documentation/glyph-ai-harness-dalet-test.md` records the first
+(8 phases); `documentation/archive/glyph-ai-harness-dalet-test.md` records the first
 successful end-to-end run (Hebrew dalet, U+05D3, promoted to both masters,
 `make test` clean) and its 7 bug findings — most importantly: placement/scaling
 is mandatory (raw traces land wrong), raster cleanup to exact H/V/45° is
@@ -254,8 +254,10 @@ loading, image compositing, and — verified 2026-07-06 — a public
 **Decision (Eli, 2026-07-06): designbot/Rust is the renderer for all harness
 review specimens** — no Python venv friction in the loop. Preference for the
 Linebender ecosystem; we add features to designbot as the harness needs them,
-working toward DrawBot feature parity. `make proof`/`make specimen` stay on
-drawbot-skia for now and migrate as parity lands. House specimen style for
+working toward DrawBot feature parity. (Done: `make proof`/`make specimen`
+now render via designbot; drawbot-skia is fully retired from this repo, and
+the old Python scripts live in `documentation/archive/agent-generated-scripts/`.)
+House specimen style for
 anything reviewed in chat: **dark mode** (dark gray bg ~#202020–#2a2a2a,
 light gray ink ~#c8c8c8–#e6e6e6, never pure black/white), laid out in the
 Swiss / International Typographic Style (Müller-Brockmann, Hofmann): modular
@@ -475,7 +477,7 @@ template), then this harness takes over for completion — same worklist schema,
 same color protocol.
 
 Migration note: `scripts/glyph_ai_harness.py`'s working pieces (inventory,
-mark parsing, drawbot render, packet prep) move into `harness/font_harness.py`;
+mark parsing, designbot render, packet prep) move into `harness/font_harness.py`;
 the old script and Make targets get thin deprecation shims or are re-pointed.
 
 ## 6. The Codex execution contract (RUNBOOK-codex.md, sketch)
@@ -616,5 +618,5 @@ Owners: **[C]** Claude builds it now · **[X]** Codex executes in the loop ·
 - [ ] [C] Unify the mark-color protocol across this doc and `img2ufo/docs/glyph-completion-harness.md` (this table wins; web-palette values)
 - [ ] [C] Align worklist JSON schema with img2ufo's `<Family>-<Style>-completion.json`
 - [ ] [C] Document the port procedure: img2ufo bootstrap → copy `harness/` → edit `config.yaml` → point Codex at RUNBOOK
-- [ ] [C] designbot: DrawBot feature-parity backlog as the harness needs it (Linebender ecosystem preferred); migrate `make proof`/`make specimen` off drawbot-skia/Python once parity lands
+- [x] [C] designbot: DrawBot feature-parity backlog as the harness needs it (Linebender ecosystem preferred). Done 2026-07: `make proof`/`make specimen`/`make social-images` all render via designbot; drawbot-skia removed from `requirements.in` and the venv
 - [ ] [C] Feed the accumulated `IMG2BEZ_LOG` corpus to img2bez's input-adaptive selector work (needs ≥80 unique images; the grind supplies them)
