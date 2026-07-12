@@ -33,13 +33,9 @@ snapshot, then rerun `make preflight`.
   automated Google Fonts QA entrypoint. The local QA scripts use the normal
   `~/.fontspector` directory and still pass `--skip-network` so report
   generation stays local and repeatable.
-- DrawBot-skia PDF proofing is the active local visual QA path. Use
+- designbot PDF proofing is the active local visual QA path. Use
   `make proof` and `make specimen` after builds and before final handoff,
   especially when spacing or kerning changes.
-- DrawBot proof generation is supplied by `drawbot-skia`. Set
-  `DRAWBOT_SKIA_REPO=/path/to/drawbot-skia` in the environment or ignored
-  `local.mk` to run directly from a fork checkout; otherwise `drawbot_skia`
-  must be importable from `.venv`.
 Some transitive packages in the local virtual environment may include older
 tooling names such as `fontbakery`. Those are not project entrypoints. Use
 Fontspector for Google Fonts QA. Older Google Fonts upstream/template

@@ -31,7 +31,6 @@ Copy and adapt these files from Virtua Grotesk:
 - [ ] `build.sh`
 - [ ] `requirements.in`
 - [ ] `requirements.txt`
-- [ ] `local.mk.example`
 - [ ] `scripts/check_gf_fonts.sh`
 - [ ] `scripts/fix_gf_metadata.py`
 - [ ] `scripts/preflight.py`
@@ -73,8 +72,7 @@ reviving one tool:
 ## 4. Set Up Proofs And Specimens
 
 - [ ] Use `.venv/` in the repo root.
-- [ ] Use `drawbot-skia` from `requirements.txt`; only use
-      `DRAWBOT_SKIA_REPO` in `local.mk` when developing drawbot-skia itself.
+- [ ] Render proofs and specimens with designbot (`make proof` / `make specimen`).
 - [ ] Adapt `scripts/grid_system.py` to the new font's UPM, ascender,
       descender, cap height, x-height, and design grid.
 - [ ] Adapt `scripts/build_general_proof.py`.
