@@ -7,7 +7,7 @@ REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 PNGQUANT ?= ./.venv/bin/pngquant
 
-.PHONY: help setup build proof specimen readme-images social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
+.PHONY: help setup build proof specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -16,7 +16,6 @@ help:
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
 		'  make specimen       Build the landscape spacing specimen PDF' \
-		'  make readme-images  Build README PNG specimen images' \
 		'  make social-images  Build square social media specimen PNGs' \
 		'  make runebender     Open sources/VirtuaGrotesk.designspace in chromeless Runebender web' \
 		'  make glyph-ai-inventory  Scan Runebender color labels for AI glyph work' \
@@ -45,12 +44,6 @@ SOCIAL_IMAGES = 01-hero:hero 02-weights:weights 03-alphabet-regular:alphabet-reg
 	03-alphabet-medium:alphabet-medium 03-alphabet-semibold:alphabet-semibold \
 	03-alphabet-bold:alphabet-bold 04-tabular:tabular 05-chamfer:chamfer \
 	06-waterfall:waterfall 07-symbols:symbols 08-lowercase:lowercase
-
-readme-images: build
-	designbot --render scripts/designbot/readme_images.rs --output documentation/assets/readme/glyphset-overview.png -- glyphset
-	designbot --render scripts/designbot/readme_images.rs --output documentation/assets/readme/aa-grid.png -- aa-grid
-	designbot --render scripts/designbot/readme_images.rs --output documentation/assets/readme/text-sizes.png -- text-sizes
-	-$(PNGQUANT) --force --ext .png --skip-if-larger documentation/assets/readme/*.png
 
 social-images: build
 	@for f in square portrait landscape; do \
