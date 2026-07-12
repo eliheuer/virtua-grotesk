@@ -1,21 +1,50 @@
 # Virtua Grotesk
 
-Virtua Grotesk is an open-source variable geometric grotesk with a Weight axis
-from Regular to Bold. The design uses monolinear strokes and chamfered corners
-as a defining construction detail.
+Virtua Grotesk is an open-source variable geometric grotesk designed on a
+powers-of-two grid. It runs from Regular (400) to Bold (700) on a single Weight
+axis, with monolinear strokes and chamfered corners as its defining
+construction detail.
 
 ![Virtua Grotesk specimen: the word Grid set as a powers-of-two dimension sheet, red glyphs on the 16-unit design grid with labeled vertical metrics and dimensioned side bearings](documentation/assets/readme/hero.png)
 
+**Read the story:** [Virtua Grotesk: Grid System as Dataset](https://elih.net/blog/virtua-grotesk),
+on how the typeface is designed and the small neural network learning to draw it.
+
 ## About
 
-Virtua Grotesk is designed for interfaces, editorial systems, and display
-typography that need a sturdy grotesk voice with a visible construction logic.
-Its sharp junctions use consistent 45-degree bevels, while round forms keep
-smooth curves and generous counters. The family is being prepared with Latin
-and Arabic support for Google Fonts onboarding.
+Virtua Grotesk is drawn against powers of two rather than the usual decimal
+grid. The em square is 1024 (2¹⁰), the vertical metrics are power-of-two sums,
+and every coordinate lands on a strict 2-unit grid. That discipline gives the
+family its sharp, systematic voice, and it also makes the source files
+unusually clean training data: a small neural network is learning to draw the
+typeface from its own grid-native outlines. The
+[accompanying essay](https://elih.net/blog/virtua-grotesk) covers both the
+typeface and the model, and why they are the same idea.
 
-The variable font currently exposes a single `wght` axis from 400 to 700, with
-static Regular, Medium, SemiBold, and Bold instances generated from the same
+The design targets interfaces, editorial systems, and display typography that
+want a sturdy grotesk voice with a visible construction logic. Sharp junctions
+use consistent 45-degree bevels; round forms keep smooth curves and generous
+counters. The family is being prepared with Latin and Arabic support for Google
+Fonts.
+
+## Design System
+
+The load-bearing numbers (the full spec lives in [`DESIGN.md`](DESIGN.md)):
+
+| Measurement | Value | Note |
+| --- | --- | --- |
+| UPM | 1024 | 2^10 |
+| Drawing grid | 2 units | even coordinates preferred |
+| Structural grid | 8 units | where most points land |
+| Cap height | 768 | 512 + 256 |
+| x-height | 576 | 512 + 64 |
+| Descender | −256 | −2^8 |
+| Chamfers | 16 units | the signature corner cut |
+| Weight axis | 400–700 | Regular to Bold |
+
+The grid is hierarchical: structure lands on an 8-unit lattice, and dropping to
+the 2-unit lattice marks a deliberate optical correction. Static Regular,
+Medium, SemiBold, and Bold instances are generated from the same variable
 sources.
 
 ## Building
