@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="j" format="2">
 	<unicode hex="006A"/>
-	<advance width="304"/>
+	<advance width="312"/>
 	<outline>
 		<contour>
 			<point x="-32" y="-184" type="line"/>
 			<point x="-16" y="-200" type="line"/>
 			<point x="60" y="-200" type="line" smooth="yes"/>
 			<point x="152" y="-200"/>
-			<point x="244" y="-168"/>
-			<point x="244" y="-52" type="curve" smooth="yes"/>
-			<point x="244" y="560" type="line"/>
-			<point x="228" y="576" type="line"/>
-			<point x="76" y="576" type="line"/>
-			<point x="60" y="560" type="line"/>
-			<point x="60" y="-52" type="line" smooth="yes"/>
-			<point x="60" y="-64"/>
-			<point x="56" y="-68"/>
-			<point x="44" y="-68" type="curve" smooth="yes"/>
+			<point x="248" y="-168"/>
+			<point x="248" y="-52" type="curve" smooth="yes"/>
+			<point x="248" y="560" type="line"/>
+			<point x="232" y="576" type="line"/>
+			<point x="72" y="576" type="line"/>
+			<point x="56" y="560" type="line"/>
+			<point x="56" y="-52" type="line" smooth="yes"/>
+			<point x="56" y="-60"/>
+			<point x="48" y="-68"/>
+			<point x="40" y="-68" type="curve" smooth="yes"/>
 			<point x="-16" y="-68" type="line"/>
 			<point x="-32" y="-84" type="line"/>
 		</contour>
 		<contour>
-			<point x="60" y="640" type="line"/>
-			<point x="76" y="624" type="line"/>
-			<point x="228" y="624" type="line"/>
-			<point x="244" y="640" type="line"/>
-			<point x="244" y="752" type="line"/>
-			<point x="228" y="768" type="line"/>
-			<point x="76" y="768" type="line"/>
-			<point x="60" y="752" type="line"/>
+			<point x="56" y="640" type="line"/>
+			<point x="72" y="624" type="line"/>
+			<point x="232" y="624" type="line"/>
+			<point x="248" y="640" type="line"/>
+			<point x="248" y="752" type="line"/>
+			<point x="232" y="768" type="line"/>
+			<point x="72" y="768" type="line"/>
+			<point x="56" y="752" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -37,7 +37,7 @@
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-j.png</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>0.27,0.44,1,1</string>
 		</dict>
 	</lib>
 </glyph>
