@@ -106,6 +106,22 @@ decision is reversed, add a dated follow-up entry.
   bar updated 160→168 same commit. STILL OPEN for lowercase bars
   (88→152, delta 64): e/f/t/A-bar etc. need the same treatment when
   reviewed.
+  **FINAL 2026-07-13: Eli's eye read the +16 lift as low; both bars
+  moved up 8 in the editor. Final: Regular 360..456 (center 408 =
+  +24), Bold 312..480 (center 396). Deltas −48/+24 unchanged, so the
+  instance property is intact (96/120/144/168, edges on-8). Blog
+  lesson: the grid offered two legal positions; the eye picked —
+  the division of labor working as designed.**
+- **C7 target numbers (2026-07-13), for the Bold O redraw:** keep
+  outer 48..800 / −16..784; inner x extrema at **252 and 596** (bowl
+  204 = cap stem 200 + 4, edges off-8-by-4, self-labeling); inner y
+  extrema at **152 and 616** (horizontal 168 = new cap bar exactly,
+  matching the Regular's "curve horizontal = bar" rule: 96=96,
+  88=88). Instance check: bowl 108→204 (delta 96) gives 140/172 =
+  instance cap stems 136/168 + 4 — the +4 rule propagates for caps
+  exactly as it does for the lowercase; inner-y deltas +72/−72 also
+  multiples of 24. Regular O already conforms (bowl 108 = 104+4,
+  horiz 96 = bar) — no Regular changes needed.
 - **C7 — Bold cap round is LIGHTER than the cap stem.** Regular
   follows "rounds slightly wider than flats" (+6 UC, +4 lc). Bold
   lowercase follows it (+4: 192→196). Bold uppercase inverts it:
