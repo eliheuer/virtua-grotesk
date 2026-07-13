@@ -214,6 +214,18 @@ All verified: strokes exact, on-2 everywhere, structures match.
 Regular, matches nothing in Bold) vs curve-horiz 92/140 — left
 as-is, Eli decides. Regular t foot handle (96,32)(128,0) fine.
 
+**Batch 2 CORRECTION (2026-07-13):** the first Bold e attempt
+(bar 152 + right side +32) MANGLED the glyph — Eli caught it against
+NHG Bold. Reverted, redone minimally: **the e bar is its OWN value,
+not the f/t bar** (NHG Bold e bar ≈ 0.55 stem): Regular 80 → Bold
+104 (delta 24, instances 88/96). Final Bold e: side 196, top/bottom
+140, bar 104 (248..352), width UNCHANGED (adv 640; the o-parity
+widening is dropped — e ink vs o ink differs 16 Reg / 48 Bold,
+logged as an open proportion question for Eli). PROCESS RULE
+re-learned: render (glyph_canvas glyphbox/sheet) and LOOK after
+every outline edit before committing — numeric checks alone missed
+this completely.
+
 **Batch 2 DONE (blue):** m both masters (stems 104/184 -> 96/192 at
 64/408/752-anchored positions, counters equalized 248/248 Reg and
 152/152 Bold, crowns 92/140, seams = n exactly, adv 912/1008);
