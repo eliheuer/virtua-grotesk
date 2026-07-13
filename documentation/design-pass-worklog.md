@@ -214,9 +214,13 @@ All verified: strokes exact, on-2 everywhere, structures match.
 Regular, matches nothing in Bold) vs curve-horiz 92/140 — left
 as-is, Eli decides. Regular t foot handle (96,32)(128,0) fine.
 
-**Remaining worklist:** m (stems are 104, must be 96/192 — 3-stem
-renumber + crowns 92/140); Bold e (full o-alignment: side 196,
-horiz 140, bar 152, ink +32); rounds c C G Q (align to o/O DNA);
+**Batch 2 DONE (blue):** m both masters (stems 104/184 -> 96/192 at
+64/408/752-anchored positions, counters equalized 248/248 Reg and
+152/152 Bold, crowns 92/140, seams = n exactly, adv 912/1008);
+Bold e (side 196, horizontals 140, bar 152 at 200..352, ink +32 ->
+32..640, adv 680 so SBs 32/40 match Regular). All verified.
+
+**Remaining worklist:** rounds c C G Q (align to o/O DNA);
 b d p q g (bowl+stem hybrids; d/p/q/b relate by rotation like u/n);
 straights E F L I J (bars/arms vs 96/168); diagonals A V W X Y K k
 v w x y z N M Z (optical, endpoints on-8); two-story a, S/s
