@@ -125,18 +125,32 @@ overshoot from them. The current pass is exactly this. Measure new
 work against the live OHno, not stale tables; re-measure the
 Dimensions table whenever one of the four changes.
 
-**Regular n and o confirmed by Eli 2026-07-12 after his editor pass —
-these two are the settled lowercase anchors.** Remaining OHno work is
-the Bold side: Bold o redraw (decides C6), Bold O weight check (C7).
+**n and o redrawn by Eli in BOTH masters 2026-07-12 — the lowercase
+anchors are settled** (pending two float advances, below). Remaining
+OHno work: Bold O weight check (C7).
 
-Current OHno state (2026-07-12, after n redraw):
+Current OHno state (2026-07-12, after Eli's n+o redraws):
 
 | glyph | Reg adv | Reg ink w | Bold adv | Bold ink w | status |
 | --- | --- | --- | --- | --- | --- |
 | O | 848 | 752 | 848 | 752 | green/green |
 | H | 768 (=cap: square!) | 608 | 816 | 656 | green/green |
-| n | 592 | 464 | 704 | 576 | green / orange (redrawn) |
-| o | 632 | 570 | 680 | 618 | green (2u bulge) / orange draft |
+| n | 592 | 464 | 704 | 576 | anchor ✓ |
+| o | 616* | 552 | 672* | 608 | anchor ✓ (*float advance, snap to 616/672) |
+
+Anchor verification (2026-07-12): all four n/o outlines are fully
+compliant — every point (handles included) on the 2-grid, every
+on-curve point on the 8-grid EXCEPT exactly the four +4 bowl-side
+optical points (Reg o 132/484, Bold o 228/444 — the canonical
+example, now symmetric in both masters); strokes n 96/192,
+o 196 = 192+4 in Bold and 100 = 96+4 in Regular (the +4 rule holds
+across the axis); SB n 64/64, o 32/32; overshoot ±16 everywhere;
+point-type sequences identical across masters (27/24 pts).
+**C6 data point from the redraws: straights grew +112 ink, rounds
++56 — rounds widen at half the rate of straights** (H also +48).
+Advance relationship flips across the axis (Reg o = n + 24;
+Bold o = n − 32) — legitimate consequence of round-fits-tighter
+(SB 32 vs 64) with rounds gaining less ink.
 
 Facts worth keeping: Regular H advance = cap height = 768 (perfect
 square — candidate blog beat). Overshoot ±16 on O and o, both
