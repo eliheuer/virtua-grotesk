@@ -177,6 +177,35 @@ The reasons, mined for blog illustrations:
   whole axis, off-8-by-4 at every weight. (Strong illustration:
   the correction as a constant ribbon across the axis.)
 
+## Pass 2: curve-tension unification (2026-07-13) — the "two designs" fix
+
+Eli's observation on the NHG comparison: Regular and Bold O read as
+DIFFERENT DESIGNS, where NHG reads as one design extrapolated.
+Diagnosis: the superellipse tension was INVERTED between masters —
+Regular O outer κ (0.55 sides, 0.64 crown) vs Bold (0.62, 0.58).
+
+Fix (Bold O, Bold o; Regulars untouched):
+- **Bold O outer contour is now IDENTICAL to Regular O outer,
+  coordinate for coordinate** — counter-reduction in its purest
+  form; the Bold O is the Regular O with a smaller counter. The
+  outer contour is static across the entire weight axis.
+- Bold O inner handles set to the Regular counter's κ (0.657 crown,
+  0.587 side): handles 312/536 (x), 236/532 (y).
+- Bold o outer side handles → dy 176 = exactly the Regular o's
+  handle offset (uniform κ 0.58 all around, both masters); inner
+  handles to Regular-counter κ (0.558, 0.604): 276/396, 188/388.
+- Verified: Bold O outer == Regular O outer True; all points on the
+  2-grid; structures unchanged.
+- BLOG MATERIAL: "the bold is the regular with smaller counters" is
+  now literally true for O — one outline never moves, weight is
+  purely counter reduction.
+
+Left deliberately for Eli's pass (design calls): Bold o/O counter
+size (the "slit" — the width lever, C6), n shoulder taper (NHG
+thins the shoulder into the joints; Virtua joins at near-full
+thickness and clots — needs a design decision on how taper is
+expressed in the system).
+
 ## Agent system pass on n o H O (2026-07-13) — MARKED BLUE, Eli grades
 
 Eli-directed pass to make all four reference glyphs fit the system
