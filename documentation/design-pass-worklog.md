@@ -42,8 +42,36 @@ decision is reversed, add a dated follow-up entry.
   Eli's, via the blog agent).
 - **C3 — Bold lowercase stems measure 184 mid-glyph across many
   drafts** (see documentation/grading-worklist.md) vs contract 192.
-  Either the drafts are systematically 8u light, or the contract
-  number should be 184. Status: OPEN — decide once, apply everywhere.
+  **RESOLVED 2026-07-12: contract stands at 192; drafts are
+  systematically 8u light and get corrected during the pass.**
+  Eli's call, after this analysis (keep for the blog / future agents):
+  - **Interpolation stays on-grid only with 192.** wght 400–700 with
+    Medium/SemiBold at t=1/3, 2/3: stems 96→192 (delta 96) give
+    instance stems of exactly 128 and 160 — every named weight on the
+    8-grid. 96→184 (delta 88) gives 125.33 at Medium: off-grid,
+    non-integer. The two-lattice thesis holds across the whole
+    variable space only if master stems differ by a multiple of 24
+    (and of 8): 96 works.
+  - **UC−lc stem gap stays parallel**: Regular 104−96=8, Bold
+    200−192=8. At 184 the Bold gap would be 16 for no stated reason.
+  - **Bold = exactly 2× Regular** — the kind of relationship the
+    system celebrates; 184 is legal (23×8) but meaningless.
+  - Counterargument acknowledged: 2× is dark for a 400→700 grotesk
+    and Bold counters lose ~35% vs Regular. Remedy is advance width /
+    counter, not an off-system stem (8u ≈ only 4% lighter anyway).
+  First application: Bold n redrawn (see entry) — counters opened by
+  widening the advance to 704, exactly the predicted remedy.
+- **C5 — co-centered elements must differ in width by a multiple of
+  16, or one of them leaves the 8-grid.** Discovered on Regular i
+  (see entry). An element of width w centered at c has edges on the
+  8-grid iff c ≡ w/2 (mod 8). Two elements sharing a center (stem +
+  dot of i/j, stem + diacritics, etc.) can therefore both sit on the
+  8-grid only when their widths are congruent mod 16. Stem 96 +
+  dot 104 (Δ8) is structurally impossible; dot 96 or 112 (Δ0/Δ16)
+  works. This is a theorem of the system, not a taste call — worth a
+  line in DESIGN.md and possibly the blog. Status: rule established;
+  sweep dot/mark widths for compliance (i j dotlessi period colon
+  semicolon exclam question dieresis dotaccent...).
 - **C4 — shoulder-basin anatomy consistency** (h vs n arch springing
   differs by ~28u; check m, u too). Both legal per the grid; optics
   question. Status: OPEN.
@@ -72,6 +100,32 @@ identical to Regular ✓.
 - Overshoot 16, same as Regular — classic wisdom wants slightly more
   in the bold; Eli's call whether to differentiate.
 - Decisions: PENDING (Eli's editor pass in progress).
+
+**Bold — REDRAWN by Eli 2026-07-12.** Now: advance 704 (was 688),
+sidebearings 64/64, stems 64..256 and 448..640 — both exactly **192**
+(C3 resolved), counter between stems exactly 192 (stem = counter).
+The 184-vs-192 and off-8-cluster findings above are historical.
+
+### i (U+0069) — reviewed 2026-07-12
+
+**Regular** (green, needs rework) — advance 232.
+- Stem is 96 wide but sits at x 68..164 — **off the 8-grid** (68 ≡ 4
+  mod 8), because stem and dot (104 wide, x 64..168) were both
+  centered at 116 = advance/2. Root cause is C5: widths 96 and 104
+  differ by 8, so no shared center puts both on the grid — the flaw
+  was never "SB 64 + stem 96" (64+96+64 = 224 is fully on-grid, and
+  matches n's left stem at 64..160 exactly).
+- Fix options (Eli to pick): dot width 96 (= stem; what the Bold
+  already does) or 112 (= stem + one 16u chamfer unit, edges 56..168
+  overhanging the stem 8u per side like an overshoot). Either way:
+  stem 64..160, advance 224, SB 64/64.
+- Dot gap above x-height: 80 (656−576) — recheck after resize.
+
+**Bold** (green) — advance 320, SB 64/64, stem 64..256 = 192 ✓ ALL
+on the 8-grid; dot width = stem width (192), which is why it works —
+the Bold i already embodies the C5 rule. Dot 192×144, gap 48 above
+x-height (624−576) vs Regular's 80 — cross-master dot-gap consistency
+worth a look when Regular i is redone.
 
 <!-- Template for new entries:
 
