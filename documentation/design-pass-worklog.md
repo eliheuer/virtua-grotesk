@@ -177,6 +177,53 @@ The reasons, mined for blog illustrations:
   whole axis, off-8-by-4 at every weight. (Strong illustration:
   the correction as a constant ribbon across the axis.)
 
+## FULL A–Z a–z GRID PASS (started 2026-07-13) — Eli-directed
+
+Mandate: snap all 52 to the system, HOno = source of truth for
+weight (DESIGN.md may be stale — verify against sources, update
+table as we go). Greens may be edited (go blue). Redraws allowed.
+Diagonals: optical weight, endpoints on-grid. Handle lengths prefer
+16/8 when tension shift is imperceptible, else 4/2.
+
+**Derived truth (measured from HOno sources, both masters):**
+stems lc 96/192, caps 104/200; curve-vert = stem+4 (100/196,
+108/204); curve-horiz lc 92/140, caps 100/148; bars lc 80/152
+(NOT 88 — DESIGN/blog value was stale; e/f/t sources say 80; the
+"adopt 160" decision was corrected to 152 = 80+72, keeping
+cap bar = lc bar + 16 in both masters: 96/80, 168/152);
+growth quanta: curve-horiz +48, bars +72, verticals +96;
+SB flat 64 lc / 80 cap, round 32 lc / 48 cap; overshoot ±16;
+chamfer 16, joint chamfer 8; n seam = (264,512)(256,512)(248,560)
+(232,576) Bold / (168..136, 512..576) Regular.
+
+**Audit result (2026-07-13):** zero floats, zero off-2 points, zero
+master incompatibilities in A–Z a–z. Debt = 17 off-8 advances +
+off-8-not-4 points + stroke misfits (Bold lowercase transfer drafts
+have stems 168–184 and three different bar values).
+
+**Batch 1 DONE (blue):** u := rot180(n) in BOTH masters — exact
+construction from the anchor (Reg adv 592, basin 92; Bold adv 704,
+basin 140); Regular e (adv 608, side 100, horizontals 92 = o's);
+Regular f (adv 352, bar-end RSB 16 = t); Regular r (arm 92);
+Bold t (stem 192, bar 152, tail top 152 = bar, junk fillet
+rebuilt, foot handles on-8); Bold f (stem 192, bar 152, adv 384,
+hook junction rebuilt); Bold r (stem 192, arm 140, seam = n's).
+All verified: strokes exact, on-2 everywhere, structures match.
+
+**Open flags:** f hook horizontal is 80/128 (matches bar in
+Regular, matches nothing in Bold) vs curve-horiz 92/140 — left
+as-is, Eli decides. Regular t foot handle (96,32)(128,0) fine.
+
+**Remaining worklist:** m (stems are 104, must be 96/192 — 3-stem
+renumber + crowns 92/140); Bold e (full o-alignment: side 196,
+horiz 140, bar 152, ink +32); rounds c C G Q (align to o/O DNA);
+b d p q g (bowl+stem hybrids; d/p/q/b relate by rotation like u/n);
+straights E F L I J (bars/arms vs 96/168); diagonals A V W X Y K k
+v w x y z N M Z (optical, endpoints on-8); two-story a, S/s
+(redraw allowed), B D P R U (bowl caps). Advances to snap: K 676,
+g 618, p 618, A 692, B 716, c 580, k 540, q 628, x 514, y 524,
+N 774, D 756, R 668, Z 604, j 244.
+
 ## Reference proportions: Inter / Geist / Helvetica (measured 2026-07-13)
 
 Measured from local sources (google-fonts checkout, system Helvetica)
