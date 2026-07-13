@@ -177,6 +177,38 @@ The reasons, mined for blog illustrations:
   whole axis, off-8-by-4 at every weight. (Strong illustration:
   the correction as a constant ribbon across the axis.)
 
+## Reference proportions: Inter / Geist / Helvetica (measured 2026-07-13)
+
+Measured from local sources (google-fonts checkout, system Helvetica)
+per Eli's rule: when unsure on HOno, check the core references.
+Remarkably tight consensus across all three:
+
+| metric | refs Regular | refs Bold | Virtua R | Virtua B |
+| --- | --- | --- | --- | --- |
+| n ink / x-height | 0.79–0.82 | 0.90–0.91 | **0.81 ✓** | 1.00 (wide: display-dark bold) |
+| o ink / x-height | 0.91–0.93 | 0.98–1.02 | 0.96 | 1.08 |
+| o ink / n ink | 1.13–1.15 | 1.07–1.14 | 1.19 | 1.08 |
+| o adv / n adv | 0.99–1.02 | 0.99–1.01 | 1.04 | **0.98 ✓** |
+| O w/h | 0.86–0.92 | 0.91–0.93 | 0.94 | 0.94 |
+
+Findings:
+- **"Is the Regular o too narrow?" — NO.** At ink 552 it is already
+  a notch WIDER than every reference (0.96 vs 0.91–0.93 of x-height).
+  The agent's 576 experiment overshot; reverted to Eli's 552.
+  Virtua's identity: rounds run ~one notch rounder than the
+  neo-grotesk baseline at every weight (O 0.94 vs refs 0.86–0.92,
+  o likewise) — consistent, intentional, keep.
+- **Regular n is reference-perfect** (0.806 vs Helvetica 0.815).
+- **Bold o widened 608→624 ink (adv 688) KEPT**: brings o_adv/n_adv
+  to 0.98 (dead-on refs), relieves the slit counter by 16, and keeps
+  the one-notch-rounder identity in the Bold.
+- Virtua Bold n reads wide vs refs (1.00 vs 0.90) but Virtua's Bold
+  is much darker than any reference 700 (stem/xh 0.33 vs ~0.28) —
+  extra width is the legitimate cost of extra weight. Not a defect.
+- Helvetica falsified the agent's earlier "o is the roundest glyph"
+  claim: Helvetica's o (0.875) is NARROWER than its O (0.923).
+  Inter/Geist keep them equal. No reference makes o rounder than O.
+
 ## Pass 2: curve-tension unification (2026-07-13) — the "two designs" fix
 
 Eli's observation on the NHG comparison: Regular and Bold O read as
