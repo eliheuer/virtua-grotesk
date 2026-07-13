@@ -103,6 +103,10 @@ overshoot from them. The current pass is exactly this. Measure new
 work against the live OHno, not stale tables; re-measure the
 Dimensions table whenever one of the four changes.
 
+**Regular n and o confirmed by Eli 2026-07-12 after his editor pass —
+these two are the settled lowercase anchors.** Remaining OHno work is
+the Bold side: Bold o redraw (decides C6), Bold O weight check (C7).
+
 Current OHno state (2026-07-12, after n redraw):
 
 | glyph | Reg adv | Reg ink w | Bold adv | Bold ink w | status |
