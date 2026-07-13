@@ -94,6 +94,28 @@ decision is reversed, add a dated follow-up entry.
   either intentional (big bold rounds self-compensate) or drift.
   Status: OPEN.
 
+## THE core example of the two-lattice system (Eli, 2026-07-12)
+
+The Regular n/o pair is the canonical illustration of the blog's
+optical-correction thesis — use it everywhere (blog, DESIGN.md,
+teaching agents):
+
+- n stem = **96** — pure ladder, machine lattice, every edge on 8.
+- o bowl side = **100** — curves need to be a touch heavier than
+  flats to read as equal, so the eye adds **+4: exactly half an
+  8-unit**, the smallest meaningful step of the human lattice.
+- The coordinates tell the story by themselves: o outer edge x=32
+  (on 8, structural), inner edge x=132 (off-8 by 4, on 2 — the
+  point self-labels as the optical correction). The machine drew the
+  outside; the human moved the inside.
+- Same constant uppercase: O inner edge 156, off-8 by 4; bowl at the
+  extremum 108 = cap stem 104 + 4. **Regular rule: curve = stem + 4
+  at the extremum.** (DESIGN.md's table value 110 for the O is a
+  chord scan @ y=500, not the extremum — both true, different
+  measuring points.)
+- TODO for the blog (Eli / blog agent): add this as the flagship
+  example in §03. Status: OPEN.
+
 ## Method: O H n o first (logged 2026-07-12)
 
 Classical anchor-glyph method, now in DESIGN.md ("Reference glyphs"):
