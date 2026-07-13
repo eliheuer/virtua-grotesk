@@ -76,6 +76,51 @@ decision is reversed, add a dated follow-up entry.
   differs by ~28u; check m, u too). Both legal per the grid; optics
   question. Status: OPEN.
 
+- **C6 — how much does the Bold WIDEN? The masters currently follow
+  three different rules.** Advance growth Regular→Bold: O +0 (848→848,
+  identical outer per DESIGN.md counter-reduction), H +48 (768→816),
+  o +48 draft (632→680), n +112 (592→704, Eli's redraw). Counter
+  loss: O −30%, H −36%, n −29%, o −35%. DESIGN.md says round forms
+  keep an "often identical" outer contour — Bold O honors it, but the
+  new wide Bold n makes a fixed-width Bold o/O look pinched next to
+  it. Needs one rule (or one deliberate exception list) across OHno
+  before the rest of the Bold is graded. Status: OPEN — Eli decides
+  while drawing Bold o.
+- **C7 — Bold cap round is LIGHTER than the cap stem.** Regular
+  follows "rounds slightly wider than flats" (+6 UC, +4 lc). Bold
+  lowercase follows it (+4: 192→196). Bold uppercase inverts it:
+  stem 200, O bowl 192 in the table, 188 at the extremum in the
+  green source. One weight class contradicts the stated principle —
+  either intentional (big bold rounds self-compensate) or drift.
+  Status: OPEN.
+
+## Method: O H n o first (logged 2026-07-12)
+
+Classical anchor-glyph method, now in DESIGN.md ("Reference glyphs"):
+perfect O, H, n, o on the grid system in both masters FIRST; all
+other Latin glyphs derive stems, curve weights, spacing class, and
+overshoot from them. The current pass is exactly this. Measure new
+work against the live OHno, not stale tables; re-measure the
+Dimensions table whenever one of the four changes.
+
+Current OHno state (2026-07-12, after n redraw):
+
+| glyph | Reg adv | Reg ink w | Bold adv | Bold ink w | status |
+| --- | --- | --- | --- | --- | --- |
+| O | 848 | 752 | 848 | 752 | green/green |
+| H | 768 (=cap: square!) | 608 | 816 | 656 | green/green |
+| n | 592 | 464 | 704 | 576 | green / orange (redrawn) |
+| o | 632 | 570 | 680 | 618 | green (2u bulge) / orange draft |
+
+Facts worth keeping: Regular H advance = cap height = 768 (perfect
+square — candidate blog beat). Overshoot ±16 on O and o, both
+masters, symmetric ✓. Regular o = n + 40 advance; Bold draft
+currently INVERTS it (o 680 < n 704) — fix expected with Bold o
+redraw (→ C6). Regular o has a 2u ink bulge past the on-curve
+extremum (ink 602 vs point 600, makes right SB read 30) — missing
+true extremum, tiny cleanup. O is 8 on-curve points total (pure
+4-extrema construction, no chamfers).
+
 ---
 
 ## Glyph entries

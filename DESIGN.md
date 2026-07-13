@@ -116,6 +116,27 @@ masters** (measured from the drawings: 16-unit cuts in Regular and Bold
 alike, with 8-unit cuts at small junctions) — it reads relatively smaller
 as the weight increases, which is the intended optical effect.
 
+## Reference glyphs: O H n o (the classical anchor)
+
+Traditional type-design method, adopted here as process: **get O, H,
+n, o right first — everything else derives from them.** H and O set
+the uppercase (flat stem/bar vs round stroke, flat vs round
+sidebearings, overshoot); n and o set the lowercase the same way.
+Every other Latin glyph inherits its stems, curve weights, spacing
+class, and overshoot from these four.
+
+Practical consequences:
+
+- These four glyphs get perfected on the grid system FIRST, in both
+  masters, before mass-grading or training runs — an error here
+  multiplies into the whole alphabet.
+- When any of the four changes, the Dimensions table below must be
+  re-measured in the same commit, and dependent glyphs re-checked
+  against it.
+- Agents evaluating or generating any Latin glyph should measure it
+  against the current O H n o, not against stale table values or
+  other unreviewed glyphs.
+
 ## Stroke and weight model
 
 - **Monolinear**: stems, bars, and curves share one visual thickness.
