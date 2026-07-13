@@ -86,6 +86,16 @@ decision is reversed, add a dated follow-up entry.
   it. Needs one rule (or one deliberate exception list) across OHno
   before the rest of the Bold is graded. Status: OPEN — Eli decides
   while drawing Bold o.
+- **C8 — Bold BAR values break the on-grid-instances property.**
+  The instance math that makes stems/bowls land on the 8-grid at
+  Medium/SemiBold needs Regular→Bold deltas that are multiples of 24.
+  Stems (96) and bowls (96) comply. Bars don't: cap bar 96→160 and
+  lc bar 88→152 are delta 64 → Medium bars = 117.33/109.33,
+  non-integer. Options: Bold bars +8 (cap 168, lc 160; delta 72 →
+  instances 120/144 and 112/136, all on-8; makes the Bold rule
+  "bar = stem − 32" in both cases, vs Regular's "bar = stem − 8"),
+  or accept rounded instance bars and soften the blog claim.
+  Status: OPEN — Eli decides while on H/O.
 - **C7 — Bold cap round is LIGHTER than the cap stem.** Regular
   follows "rounds slightly wider than flats" (+6 UC, +4 lc). Bold
   lowercase follows it (+4: 192→196). Bold uppercase inverts it:
@@ -115,6 +125,31 @@ teaching agents):
   measuring points.)
 - TODO for the blog (Eli / blog agent): add this as the flagship
   example in §03. Status: OPEN.
+
+## H spacing + cap-stem rationale (2026-07-13) — BLOG ILLUSTRATION MATERIAL
+
+Eli confirmed Regular H stem 104 and SB 80 during the OHno pass.
+The reasons, mined for blog illustrations:
+
+- **Cap stem 104 = lowercase stem + 8**, and the Regular→Bold delta
+  is 96 for BOTH (104→200, 96→192) — so at Medium/SemiBold (t=1/3,
+  2/3) cap stems hit 136/168 and lc stems 128/160: the "+8 caps"
+  relationship holds at every instance, all on the 8-grid.
+- **The H square**: SB 80 makes the Regular H advance
+  80+104+400+104+80 = 768 = cap height. The H occupies a perfect
+  square. (Illustration: H inside a 768×768 box.)
+- **One-sentence spacing rule**: caps get one 16-unit more air than
+  their lowercase counterparts (H 80 = n 64 + 16; O 48 = o 32 + 16),
+  and rounds get 32 less than flats in both cases (64→32, 80→48).
+- **80 is optically conservative, not loose**: SB/counter ratio is
+  n 64/272 ≈ 0.235 vs H 80/400 = 0.20 — caps at 80 are already
+  relatively tighter than the lowercase; 72 would read cramped in
+  cap-heavy settings.
+- **The +4 curve rule propagates through interpolation**: o bowl
+  100→196 (delta 96, same as stems) gives instance bowls 132/164 =
+  instance stems 128/160 + 4. The optical correction survives the
+  whole axis, off-8-by-4 at every weight. (Strong illustration:
+  the correction as a constant ribbon across the axis.)
 
 ## Method: O H n o first (logged 2026-07-12)
 
