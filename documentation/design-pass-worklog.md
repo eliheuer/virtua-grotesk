@@ -265,6 +265,51 @@ x adv 514, y adv 524, v/w Reg off8 pts); bowl caps B D P R U
 (B adv 716, D adv 756, R adv 668 off-8; conform bowls to O DNA,
 Bold stems 200); final full audit + DESIGN.md refresh.
 
+## AGENT PASS COMPLETE (2026-07-13) — handoff to Eli's pass
+
+Final state after batches 1–7 (commits 6884003..HEAD): **38 of 52
+glyphs fully clean** (advances on-8, every point on-2, on-curve
+points on-8 or off-by-exactly-4, master structures compatible).
+`./build.sh` compiles the VF + 4 statics. All touched glyphs BLUE.
+
+**Batch 6-7:** D conformed to O DNA both masters (Reg outer 712 /
+inner 604, horizontals 100; Bold stem 280, outer 760, bowl 204,
+horizontals 148, adv 760/808 — RSB 48 = O). Advance snaps: B 720,
+R 672, N 776, Z 608, x 512, y 528, A 696, K 680. Straggler off-grid
+points snapped in A B K g q z (renders checked).
+
+**What I did NOT do (Eli's pass / future sessions):**
+- **Bold a — still Regular-weight** (byte-identical copy). The big one.
+- **s / S** — 4-5 off-8-not-4 pts each (Reg+Bold), the known
+  terminal-extreme pathology. Wants a redraw session with renders.
+- **Diagonal interiors** (N W X v w x y; Reg mostly): junction points
+  off-8 encode diagonal stroke width = LEGAL per the diagonals rule
+  (optical stroke, endpoints on grid). Endpoints verified on-8. If
+  Eli wants junctions purer, that is a per-glyph redraw.
+- **B P R U bowls** — organic constructions left alone beyond
+  advance snaps + straggler points; conforming their bowls/arms to
+  the E/F/H-bar system needs per-glyph design decisions (B's two-bowl
+  balance especially).
+- **G bar/spur** (96/96 Reg, 136/136 Bold): internally consistent,
+  off-system; design call.
+- **f hook** horizontal 80/128 vs curve-horiz 92/140: design call.
+- **e width vs o** (Reg -16, Bold -48): refs keep e ≈ o; may want
+  Bold e wider eventually (careful: first attempt mangled it).
+- **U basin** vs n-crown value: U audit-clean but basin stroke
+  unmeasured against 92/140 rule — check during Eli pass.
+
+**Lessons this pass (for the diff-review after Eli's pass):**
+1. u := rot180(n) EXACTLY worked; d/p/q/b relate the same way but
+   were conformed in place, not derived. Consider full derivation.
+2. The e bar is its own value (80/104), NOT the f/t bar (80/152).
+3. Bold transfer drafts systematically: stems -8 to -24 light, bars
+   chaotic (112/128/136 for the same role), micro-fillet junk at
+   junctions (4-unit handles) in t f j.
+4. Cap arms (E F) = H bar POSITION exactly, not just thickness.
+5. j = i + hook: same stem placement logic, dot = stem width (C5).
+6. RENDER EVERY EDIT (glyph_canvas sheet) — numeric checks pass on
+   mangled outlines.
+
 ## Reference proportions: Inter / Geist / Helvetica (measured 2026-07-13)
 
 Measured from local sources (google-fonts checkout, system Helvetica)
