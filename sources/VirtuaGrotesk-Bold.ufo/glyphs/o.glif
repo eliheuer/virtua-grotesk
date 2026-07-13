@@ -18,18 +18,18 @@
 			<point x="32" y="104"/>
 		</contour>
 		<contour>
-			<point x="416" y="112"/>
-			<point x="336" y="112" type="curve" smooth="yes"/>
-			<point x="256" y="112"/>
-			<point x="228" y="192"/>
+			<point x="416" y="124"/>
+			<point x="336" y="124" type="curve" smooth="yes"/>
+			<point x="256" y="124"/>
+			<point x="228" y="198"/>
 			<point x="228" y="288" type="curve" smooth="yes"/>
-			<point x="228" y="384"/>
-			<point x="256" y="464"/>
-			<point x="336" y="464" type="curve" smooth="yes"/>
-			<point x="416" y="464"/>
-			<point x="444" y="384"/>
+			<point x="228" y="378"/>
+			<point x="256" y="452"/>
+			<point x="336" y="452" type="curve" smooth="yes"/>
+			<point x="416" y="452"/>
+			<point x="444" y="378"/>
 			<point x="444" y="288" type="curve" smooth="yes"/>
-			<point x="444" y="192"/>
+			<point x="444" y="198"/>
 		</contour>
 	</outline>
 	<lib>
@@ -37,7 +37,7 @@
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-o.png</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>0.27,0.44,1,1</string>
 		</dict>
 	</lib>
 </glyph>

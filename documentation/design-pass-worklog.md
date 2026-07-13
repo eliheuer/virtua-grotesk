@@ -177,6 +177,46 @@ The reasons, mined for blog illustrations:
   whole axis, off-8-by-4 at every weight. (Strong illustration:
   the correction as a constant ribbon across the axis.)
 
+## Agent system pass on n o H O (2026-07-13) — MARKED BLUE, Eli grades
+
+Eli-directed pass to make all four reference glyphs fit the system
+maximally; his edit pass follows. H untouched in both masters
+(already conformant). Regular O untouched (it SET the rules).
+Changes (all marked blue 0.27,0.44,1,1):
+
+- **Regular o**: horizontals 88→92 (inner y 76/500). The "+4
+  everywhere" rule Eli's Regular-O redraw established (curve = flat
+  + 4 in BOTH axes), and the value the blog table already claimed.
+- **Regular n**: arch crown 88→92 (crest trio y 504→500) — n crown
+  must equal o crown; they sit adjacent in text.
+- **Bold o**: horizontals 128→140 (inner y 124/452, side handles
+  rescaled). See growth-quanta rule below.
+- **Bold n**: arch crown 152→140 (crest trio 440→452, spring handles
+  408→416). Before this pass Bold n (152) and Bold o (128)
+  disagreed by 24 — they must match; 140 sits exactly between
+  Eli's two eyeballed values.
+- **Bold O (the C7 fix)**: bowls 188→204 = cap stem 200 + 4 (inner
+  x 252/596, off-8-by-4 self-labeling); horizontals 160→148 (inner
+  y 132/636); all eight inner handles rescaled to preserve curve
+  tension (side κ≈0.55, crown κ≈0.67, matching the prior shape).
+  Outer contour untouched (Eli's superellipse).
+
+**The growth-quanta rule (new, now in DESIGN.md):** Regular→Bold
+stroke growth comes in quanta of 24 — curve horizontals +48, bars
++72, verticals +96 — so every named instance lands on the grid, and
+the +4 curve correction rides on top at every weight. Chosen because
+delta-24 is what makes Medium/SemiBold land on-8, and 140 for the
+Bold lc horizontal happened to bisect Eli's two hand values (128 o,
+152 n) — the system and the eye converged.
+
+Verified after the pass: every point in all 8 glyphs on the 2-grid;
+master point structures identical; strokes exact. Instance
+predictions: lc horiz 92/108/124/140; cap horiz 100/116/132/148;
+bowls: lc 100/132/164/196, cap 108/140/172/204 = instance stems + 4
+throughout. C7 RESOLVED (pending Eli's eye). C6 note: Bold O outer
+deliberately kept identical to Regular (DESIGN.md counter-reduction)
+— the caps absorb weight inward; only lowercase rounds widened.
+
 ## Method: O H n o first (logged 2026-07-12)
 
 Classical anchor-glyph method, now in DESIGN.md ("Reference glyphs"):
