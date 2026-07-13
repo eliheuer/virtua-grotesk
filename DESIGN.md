@@ -160,7 +160,7 @@ optical weight distribution, never raw outlines).
 | measure | where measured | Regular | Bold |
 | --- | --- | --- | --- |
 | cap stem (H, I) | vertical stem @ y=600 | 104 | 200 |
-| cap bar (H) | crossbar @ x=center | 96 | 160 |
+| cap bar (H) | crossbar @ x=center | 96 | 168 |
 | cap round (O) | bowl side @ y=500 | 110 | 192 |
 | x-height stem (n, t) | vertical stem @ y=288 | 96 | 192 |
 | x-height round (o) | bowl side @ y=288 | 100 | 196 |

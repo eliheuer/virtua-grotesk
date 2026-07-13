@@ -95,7 +95,17 @@ decision is reversed, add a dated follow-up entry.
   instances 120/144 and 112/136, all on-8; makes the Bold rule
   "bar = stem − 32" in both cases, vs Regular's "bar = stem − 8"),
   or accept rounded instance bars and soften the blog claim.
-  Status: OPEN — Eli decides while on H/O.
+  **H RESOLVED 2026-07-13 (agent edit, Eli-directed, pending his
+  eyeball):** Regular bar moved down 8 to 352..448 (center 400 =
+  cap center + 16 — joins the font's +16 constant family; edges on
+  the 32-grid). Bold bar 304..472 = 168 thick (center 388). Edge
+  deltas −48/+24 (multiples of 24) → instance bars 336..456 (120)
+  and 320..464 (144), all edges on-8 at every named weight:
+  96→120→144→168. Bar center drifts +16→+4 across the axis
+  (conventional: heavy bars sit nearer true center). DESIGN.md cap
+  bar updated 160→168 same commit. STILL OPEN for lowercase bars
+  (88→152, delta 64): e/f/t/A-bar etc. need the same treatment when
+  reviewed.
 - **C7 — Bold cap round is LIGHTER than the cap stem.** Regular
   follows "rounds slightly wider than flats" (+6 UC, +4 lc). Bold
   lowercase follows it (+4: 192→196). Bold uppercase inverts it:
