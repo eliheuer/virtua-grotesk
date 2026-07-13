@@ -232,6 +232,18 @@ this completely.
 Bold e (side 196, horizontals 140, bar 152 at 200..352, ink +32 ->
 32..640, adv 680 so SBs 32/40 match Regular). All verified.
 
+**Batch 3 DONE (rounds, commit cab0b31):** c (horiz 92/140, Bold
+side 196, terminals on-8, Reg adv 584), C/G (horiz 100/148, Bold
+sides 204 = O), Reg Q outer kappa = O, Bold Q remapped to O frame
+(adv 848). FLAG: G bar/spur 96/96 Reg, 136/136 Bold — design call.
+
+**Batch 4 DONE (bowls):** b d p q both masters — Bold stems all were
+176/184 -> 192; bowls to o values (sides 196, horiz 140 Bold; 100/92
+Reg); Reg d was 80/80/104 (!) -> 92/92/100; p/q seams = n exactly;
+Reg p adv 616 + outer 584 (= o), Bold p adv 688 (= o); Reg q stem
+normalized 464..560 (was straddling 460/468), adv 624; Bold q stem
+448..640, adv 704 (RSB 64 = n). All rendered + inspected.
+
 **Remaining worklist:** rounds c C G Q (align to o/O DNA);
 b d p q g (bowl+stem hybrids; d/p/q/b relate by rotation like u/n);
 straights E F L I J (bars/arms vs 96/168); diagonals A V W X Y K k
