@@ -244,13 +244,26 @@ Reg p adv 616 + outer 584 (= o), Bold p adv 688 (= o); Reg q stem
 normalized 464..560 (was straddling 460/468), adv 624; Bold q stem
 448..640, adv 704 (RSB 64 = n). All rendered + inspected.
 
-**Remaining worklist:** rounds c C G Q (align to o/O DNA);
-b d p q g (bowl+stem hybrids; d/p/q/b relate by rotation like u/n);
-straights E F L I J (bars/arms vs 96/168); diagonals A V W X Y K k
-v w x y z N M Z (optical, endpoints on-8); two-story a, S/s
-(redraw allowed), B D P R U (bowl caps). Advances to snap: K 676,
-g 618, p 618, A 692, B 716, c 580, k 540, q 628, x 514, y 524,
-N 774, D 756, R 668, Z 604, j 244.
+**Batch 5 DONE (commit pending):** g both masters (edges on-8:
+bowl left 32/132 Reg + 32/228 Bold, right col 552, inner right
+96/196; horizontals 92/140 incl. loop; seams gap-8; Reg adv 616);
+k (Reg adv 544 + endpoint snap; Bold stem 168->192 with junctions
++24, endpoint 52->48); E F (mid arm = H bar EXACTLY 360..456 Reg /
+312..480 Bold; top arm 96/168; Bold stems 192->200 edge 280);
+j (Reg stem 72..168 + dot 96 = stem per C5, adv 232, matching Eli's
+fixed i at 224/64..160/dot 96; Bold stem+dot 56..248 = 192, adv 312,
+hook micro-fillet rebuilt). All rendered + inspected.
+
+**FLAG — Bold a is byte-identical to Regular a** (never boldened;
+adv 576 both). Needs a real boldening session (the a.bold shape-swap
+history applies). Not attempted in this pass.
+
+**Remaining worklist:** s S (spine pathology, redraw allowed);
+diagonals v w x y z A V W X Y Z N M (snap off-8-not-4 endpoints,
+optical stroke, endpoints on-8; N adv 774 off-8, Z adv 604 off-8,
+x adv 514, y adv 524, v/w Reg off8 pts); bowl caps B D P R U
+(B adv 716, D adv 756, R adv 668 off-8; conform bowls to O DNA,
+Bold stems 200); final full audit + DESIGN.md refresh.
 
 ## Reference proportions: Inter / Geist / Helvetica (measured 2026-07-13)
 

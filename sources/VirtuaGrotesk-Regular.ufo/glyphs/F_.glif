@@ -8,18 +8,18 @@
 			<point x="96" y="0" type="line"/>
 			<point x="168" y="0" type="line"/>
 			<point x="184" y="16" type="line"/>
-			<point x="184" y="344" type="line"/>
-			<point x="192" y="352" type="line"/>
-			<point x="512" y="352" type="line"/>
-			<point x="528" y="368" type="line"/>
-			<point x="528" y="424" type="line"/>
-			<point x="512" y="440" type="line"/>
-			<point x="192" y="440" type="line"/>
-			<point x="184" y="448" type="line"/>
-			<point x="184" y="668" type="line"/>
-			<point x="192" y="676" type="line"/>
-			<point x="576" y="676" type="line"/>
-			<point x="592" y="692" type="line"/>
+			<point x="184" y="352" type="line"/>
+			<point x="192" y="360" type="line"/>
+			<point x="512" y="360" type="line"/>
+			<point x="528" y="376" type="line"/>
+			<point x="528" y="440" type="line"/>
+			<point x="512" y="456" type="line"/>
+			<point x="192" y="456" type="line"/>
+			<point x="184" y="464" type="line"/>
+			<point x="184" y="664" type="line"/>
+			<point x="192" y="672" type="line"/>
+			<point x="576" y="672" type="line"/>
+			<point x="592" y="688" type="line"/>
 			<point x="592" y="752" type="line"/>
 			<point x="576" y="768" type="line"/>
 			<point x="96" y="768" type="line"/>
@@ -29,7 +29,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>0.27,0.44,1,1</string>
 		</dict>
 	</lib>
 </glyph>
