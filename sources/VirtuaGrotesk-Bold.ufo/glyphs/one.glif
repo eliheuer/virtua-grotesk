@@ -7,18 +7,18 @@
 			<point x="204" y="0" type="line"/>
 			<point x="352" y="0" type="line"/>
 			<point x="368" y="16" type="line"/>
-			<point x="368" y="728" type="line"/>
-			<point x="352" y="744" type="line"/>
-			<point x="236" y="744" type="line"/>
-			<point x="220" y="728" type="line"/>
-			<point x="202" y="636"/>
-			<point x="118" y="600"/>
-			<point x="48" y="600" type="curve"/>
-			<point x="32" y="584" type="line"/>
-			<point x="32" y="488" type="line"/>
-			<point x="48" y="472" type="line"/>
-			<point x="180" y="472" type="line"/>
-			<point x="188" y="464" type="line"/>
+			<point x="368" y="752" type="line"/>
+			<point x="352" y="768" type="line"/>
+			<point x="236" y="768" type="line"/>
+			<point x="220" y="752" type="line"/>
+			<point x="202" y="660"/>
+			<point x="118" y="624"/>
+			<point x="48" y="624" type="curve"/>
+			<point x="32" y="608" type="line"/>
+			<point x="32" y="512" type="line"/>
+			<point x="48" y="496" type="line"/>
+			<point x="180" y="496" type="line"/>
+			<point x="188" y="488" type="line"/>
 			<point x="188" y="16" type="line"/>
 		</contour>
 	</outline>
@@ -27,7 +27,7 @@
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-one.png</string>
 			<key>public.markColor</key>
-			<string>1,0.86,0.2,1</string>
+			<string>0.09,0.72,0.44,1</string>
 		</dict>
 	</lib>
 </glyph>

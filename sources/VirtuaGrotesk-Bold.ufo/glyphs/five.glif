@@ -15,14 +15,14 @@
 			<point x="274" y="488"/>
 			<point x="248" y="468" type="curve"/>
 			<point x="240" y="468" type="line"/>
-			<point x="266" y="592" type="line"/>
-			<point x="274" y="600" type="line"/>
-			<point x="576" y="600" type="line"/>
-			<point x="592" y="616" type="line"/>
-			<point x="592" y="728" type="line"/>
-			<point x="576" y="744" type="line"/>
-			<point x="148" y="744" type="line"/>
-			<point x="132" y="728" type="line"/>
+			<point x="266" y="616" type="line"/>
+			<point x="274" y="624" type="line"/>
+			<point x="576" y="624" type="line"/>
+			<point x="592" y="640" type="line"/>
+			<point x="592" y="752" type="line"/>
+			<point x="576" y="768" type="line"/>
+			<point x="148" y="768" type="line"/>
+			<point x="132" y="752" type="line"/>
 			<point x="60" y="378" type="line"/>
 			<point x="60" y="352" type="line"/>
 			<point x="76" y="336" type="line"/>
@@ -51,7 +51,7 @@
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-five.png</string>
 			<key>public.markColor</key>
-			<string>1,0.86,0.2,1</string>
+			<string>0.09,0.72,0.44,1</string>
 		</dict>
 	</lib>
 </glyph>
