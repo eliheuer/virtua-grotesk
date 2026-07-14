@@ -265,6 +265,33 @@ x adv 514, y adv 524, v/w Reg off8 pts); bowl caps B D P R U
 (B adv 716, D adv 756, R adv 668 off-8; conform bowls to O DNA,
 Bold stems 200); final full audit + DESIGN.md refresh.
 
+## Data-quality session for v0.9 (2026-07-14, agent + Eli in parallel)
+
+v0.8 result: OFL-pretrain -> finetune BEATS the mean-delta baseline
+20.9 vs 31.3 MAE on all 10 held-out glyphs (control without
+pretraining: 32.0 = tie). Gate 0 passed. Public name: Virtua v0.1.
+
+Diagnosis of residual error: NEW calibration report shows x 0.81 /
+y 1.01 -- the model under-boldens STEMS specifically (81% of required
+x-growth; y-optics perfectly calibrated). Recentered deltas target
+exactly this and are the v0.9 model-side variable.
+
+Prepared for v0.9 (all committed in font-garden-lab):
+- trim-close encoding (duplicated contour-closing point removed;
+  the twins could receive different deltas -- observed failure)
+- OFL corpus recentering on its own mean (token semantics align with
+  the Virtua-recentered finetune within one grid step)
+- 5-fold eval: every trainable pair held out once (runs/v09.sh)
+- system_snap post-processor: model deltas pulled to the 8-ladder
+  (tol 3), optical residuals preserved; INSTALL-time only
+- curve normalizer swept b c (both masters; p q left for Eli's
+  orange-polish queue)
+
+Corpus at green+blue = 59 pairs and growing as Eli grades digits +
+punctuation (agent first-pass on : ; < = > ? committed, blue).
+Launch when Eli's current grading burst is committed:
+  cd ~/GH/repos/font-garden-lab && nohup bash runs/v09.sh > runs/v09/run.log 2>&1 &
+
 ## AGENT PASS COMPLETE (2026-07-13) — handoff to Eli's pass
 
 Final state after batches 1–7 (commits 6884003..HEAD): **38 of 52
