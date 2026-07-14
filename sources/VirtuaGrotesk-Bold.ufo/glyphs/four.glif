@@ -15,9 +15,9 @@
 			<point x="626" y="302" type="line"/>
 			<point x="544" y="302" type="line"/>
 			<point x="536" y="310" type="line"/>
-			<point x="536" y="728" type="line"/>
-			<point x="520" y="744" type="line"/>
-			<point x="342" y="744" type="line"/>
+			<point x="536" y="752" type="line"/>
+			<point x="520" y="768" type="line"/>
+			<point x="342" y="768" type="line"/>
 			<point x="16" y="310" type="line"/>
 			<point x="16" y="180" type="line"/>
 			<point x="32" y="164" type="line"/>
@@ -28,8 +28,8 @@
 		<contour>
 			<point x="164" y="300" type="line"/>
 			<point x="164" y="308" type="line"/>
-			<point x="352" y="554" type="line"/>
-			<point x="360" y="554" type="line"/>
+			<point x="352" y="578" type="line"/>
+			<point x="360" y="578" type="line"/>
 			<point x="360" y="308" type="line"/>
 			<point x="352" y="300" type="line"/>
 		</contour>
@@ -39,7 +39,7 @@
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image ref-four-src.png</string>
 			<key>public.markColor</key>
-			<string>1,0.86,0.2,1</string>
+			<string>0.09,0.72,0.44,1</string>
 		</dict>
 	</lib>
 </glyph>
