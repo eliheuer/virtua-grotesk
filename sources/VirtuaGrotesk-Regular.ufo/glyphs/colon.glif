@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="colon" format="2">
 	<unicode hex="003A"/>
-	<advance width="192"/>
+	<advance width="240"/>
 	<outline>
-		<component base="period" xOffset="-24" identifier="fec4af0d-6364-409c-b6e2-6746fede35a7"/>
-		<component base="period" xOffset="-24" yOffset="448" identifier="11b24502-c9ea-4983-80ab-673f9981a339"/>
+		<contour>
+			<point x="72" y="0" type="line"/>
+			<point x="168" y="0" type="line"/>
+			<point x="184" y="16" type="line"/>
+			<point x="184" y="112" type="line"/>
+			<point x="168" y="128" type="line"/>
+			<point x="72" y="128" type="line"/>
+			<point x="56" y="112" type="line"/>
+			<point x="56" y="16" type="line"/>
+		</contour>
+		<contour>
+			<point x="72" y="304" type="line"/>
+			<point x="168" y="304" type="line"/>
+			<point x="184" y="320" type="line"/>
+			<point x="184" y="416" type="line"/>
+			<point x="168" y="432" type="line"/>
+			<point x="72" y="432" type="line"/>
+			<point x="56" y="416" type="line"/>
+			<point x="56" y="320" type="line"/>
+		</contour>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.86,0.2,1</string>
-			<key>public.objectLibs</key>
-			<dict>
-				<key>11b24502-c9ea-4983-80ab-673f9981a339</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-				<key>fec4af0d-6364-409c-b6e2-6746fede35a7</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-			</dict>
+			<string>0.27,0.44,1,1</string>
 		</dict>
 	</lib>
 </glyph>
