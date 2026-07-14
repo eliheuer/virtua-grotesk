@@ -60,7 +60,7 @@ fn main() {
     vg(&mut ctx, "Font.Garden", margin, h - margin * 0.72, 500.0f32, cap, muted(), TextAlign::Left);
     vg(&mut ctx, &LOGO.to_string(), w - margin, h - margin * 0.72, 500.0f32, cap, muted(), TextAlign::Right);
     vg(&mut ctx, "a neural net drew the bold", margin, margin * 0.55, 500.0f32, cap, muted(), TextAlign::Left);
-    vg(&mut ctx, "virtua grotesk \u{00B7} glyphlm v0.7", w - margin, margin * 0.55, 500.0f32, cap, muted(), TextAlign::Right);
+    vg(&mut ctx, "virtua grotesk \u{00B7} virtua v0.1", w - margin, margin * 0.55, 500.0f32, cap, muted(), TextAlign::Right);
 
     // the two glyphs on a shared baseline
     let size = h * 0.52;
