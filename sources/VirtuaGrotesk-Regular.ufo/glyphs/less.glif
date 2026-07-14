@@ -4,19 +4,19 @@
 	<advance width="600"/>
 	<outline>
 		<contour>
-			<point x="524" y="104" type="line"/>
-			<point x="524" y="184" type="line"/>
-			<point x="156" y="336" type="line"/>
-			<point x="524" y="488" type="line"/>
-			<point x="524" y="566" type="line"/>
-			<point x="88" y="380" type="line"/>
-			<point x="88" y="290" type="line"/>
+			<point x="520" y="128" type="line"/>
+			<point x="520" y="208" type="line"/>
+			<point x="160" y="360" type="line"/>
+			<point x="520" y="512" type="line"/>
+			<point x="520" y="592" type="line"/>
+			<point x="88" y="400" type="line"/>
+			<point x="88" y="320" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.27,0.44,1,1</string>
 		</dict>
 	</lib>
 </glyph>

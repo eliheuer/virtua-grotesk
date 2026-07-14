@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="period" format="2">
 	<unicode hex="002E"/>
-	<advance width="240"/>
+	<advance width="288"/>
 	<outline>
 		<contour>
 			<point x="72" y="0" type="line"/>
-			<point x="168" y="0" type="line"/>
-			<point x="184" y="16" type="line"/>
-			<point x="184" y="112" type="line"/>
-			<point x="168" y="128" type="line"/>
-			<point x="72" y="128" type="line"/>
-			<point x="56" y="112" type="line"/>
+			<point x="216" y="0" type="line"/>
+			<point x="232" y="16" type="line"/>
+			<point x="232" y="160" type="line"/>
+			<point x="216" y="176" type="line"/>
+			<point x="72" y="176" type="line"/>
+			<point x="56" y="160" type="line"/>
 			<point x="56" y="16" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.86,0.2,1</string>
+			<string>0.27,0.44,1,1</string>
 		</dict>
 	</lib>
 </glyph>
