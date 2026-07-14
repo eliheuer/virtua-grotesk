@@ -93,7 +93,7 @@ fn main() {
     vg(&mut ctx, "Font.Garden", margin, h - margin * 0.72, cap, muted(), TextAlign::Left);
     vg(&mut ctx, &LOGO.to_string(), w - margin, h - margin * 0.72, cap, muted(), TextAlign::Right);
     vg(&mut ctx, "held-out glyphs \u{2014} the model never saw these bolds", margin, margin * 0.55, cap, muted(), TextAlign::Left);
-    vg(&mut ctx, "virtua grotesk \u{00B7} model v0.7", w - margin, margin * 0.55, cap, muted(), TextAlign::Right);
+    vg(&mut ctx, "virtua grotesk \u{00B7} virtua v0.1", w - margin, margin * 0.55, cap, muted(), TextAlign::Right);
 
     // grid: 3 rows x 7 columns of glyphs, row labels at left
     let rows: [(&str, &norad::Font, Color); 3] = [
