@@ -265,6 +265,22 @@ x adv 514, y adv 524, v/w Reg off8 pts); bowl caps B D P R U
 (B adv 716, D adv 756, R adv 668 off-8; conform bowls to O DNA,
 Bold stems 200); final full audit + DESIGN.md refresh.
 
+## The lumpy-counters incident + curve fairness lint (2026-07-14)
+
+Eli caught egg-shaped b/d counters at zoom that ALL existing checks
+missed. Root cause: after the reference-driven widening, counter
+crests sat 14u off the counter's center (and side crests 12u off the
+y-mid) — and nothing measured curve GEOMETRY: stroke/grid lints check
+values, sheet renders hide 10u curve errors. PROCESS FIX:
+scripts/curve_lint.py (crest centering + curvature tension breaks at
+smooth joints), `make lint-curves`, and the CLAUDE.md rule: after
+curve edits, lint + render the single glyph LARGE (glyphbox), never
+just sheets. b/d counters recentered (crests on grid mids), lint
+clean. Interpretation note: the lint is a REVIEW tool — asymmetric
+bowls (Arabic, apertures like c/e) flag by design; the actionable
+Latin residue after b/d: small (10-16u) counter offsets in p, g,
+e inner + tension breaks in a(draft)/e/g/p — sweep queued.
+
 ## Data-quality session for v0.9 (2026-07-14, agent + Eli in parallel)
 
 v0.8 result: OFL-pretrain -> finetune BEATS the mean-delta baseline
