@@ -594,6 +594,41 @@ no curve reshaping.
 - Note: nearly all glyphs this pass touched were marked green (= done);
   grid-qa disagrees with the green marks. Eli authorized the edits.
 
+### grid-qa pass 2: digits, spines, and `less` — 2026-07-15
+
+Second Eli-directed grid-qa pass; clears every remaining FAIL (124
+glyph-masters, 0 FAIL, 63 PERFECT).
+
+- **`less` (blue, both masters) — REDRAWN Bold.** Bold was 10 pts with
+  half-chamfered ends and advance 560 vs `greater`'s 7 pts / 600; Regular
+  `less` was already `greater`'s exact mirror. Bold `less` is now the exact
+  mirror of Bold `greater` (7 pts, advance 600), point-ordered to match
+  Regular. This unblocked `make build`.
+- **Digit advances (Regular), rounded to the 8-grid, RSB chosen to match
+  the Bold master's sidebearing pattern:** two 594→592, three 628→624,
+  four 598→600, five 604→600, six 636→640, seven 548→552, nine 628→624;
+  Bold four 658→656. All digit off-grid points snapped (same ±2 clusters
+  as pass 1); Regular four's whole crossbar band was 2 low.
+- **Diagonal-handle FAILs.** Two distinct causes found:
+  (a) *tangent seams on diagonals* — s/S spine points, two's neck points,
+  y's descender-to-diagonal joints: these are seams, not extrema, so the
+  `smooth` flag was removed (zero geometry change; the convention already
+  says corner-point handles may be diagonal). (b) *near-axis handles* —
+  eight's top/waist handles were 2u off horizontal (782/786/474/470 →
+  784/472): flattened. Bold a's bowl-top handle bulged to 624 → flattened
+  to 592 (x-height + 16 overshoot, same as Regular a and n's crown); its
+  two near-axis counter handles squared up; the genuinely diagonal counter
+  seam (264,88) demoted to corner.
+- Verified: `make build` green, built hmtx widths match sources, Medium
+  instance interpolates, `make preflight` green, curve_lint shows no new
+  flags (several pre-existing ones on Bold two vanished), large renders of
+  two/eight/s/a clean.
+- **Handle-length polish (popcount niceness) deliberately not done** for
+  the OK-grade glyphs (zero/C/O/Q/c/e/g/o/b/d/p/q/G/B/D/P/U/m/j/h/t/S/s,
+  digits) — that's tension re-tuning, better done with eyes in Runebender.
+- Eli plans a manual cleanup pass over all of this; blue/orange marks left
+  as-is for that review.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
