@@ -265,6 +265,22 @@ x adv 514, y adv 524, v/w Reg off8 pts); bowl caps B D P R U
 (B adv 716, D adv 756, R adv 668 off-8; conform bowls to O DNA,
 Bold stems 200); final full audit + DESIGN.md refresh.
 
+## Reference round 2: e f g (2026-07-14, Eli's NHG image)
+
+Measured (x-height calibrated): e ink 608 = ours EXACTLY; e bar
+top/thickness match; g bowl counter 229x285 vs ours 224x304 = match;
+f stem/width: ours 344 vs ref 380 (flag), stems by-design darker.
+Fixes applied (blue): e outer crests to round-part mid 336 + tension
+normalized; g counter sides to y-mid 300, crests 340; p q handle
+normalization (their remaining tension breaks are bowl-to-seam
+anatomy -- Eli's polish queue). Lint sharpened: crest checks only on
+pure round extrema (off-curve neighbors both sides).
+
+**JUDGMENT CALL FLAGGED -- f/t bar weight:** NHG Bold f bar is ~0.63
+of stem (would be ~128 for us); ours is 152 (0.79), which matches
+Regular's near-monolinear ratio (80/96 = 0.83). Kept 152: Virtua's
+monolinearity is identity, NHG's contrast is NHG's. Eli's eye
+decides; 128 is the quanta-legal alternative (Regular 80 + 48).
 ## The lumpy-counters incident + curve fairness lint (2026-07-14)
 
 Eli caught egg-shaped b/d counters at zoom that ALL existing checks
