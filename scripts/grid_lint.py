@@ -2,11 +2,11 @@
 
 The Font Garden design system works on a hierarchical grid:
 
-- 8-unit lattice — the MACHINE's grid. Measurements (advance widths,
+- 8-unit lattice — the STRUCTURE grid. Measurements (advance widths,
   stem widths, chamfer sizes) and machine-fitted geometry live here.
   Tools must emit 8-disciplined drafts; a human should never spend
   grading time snapping things to 8.
-- 2-unit lattice — the HUMAN's grid. Deviations from 8 down to 2 are
+- 2-unit lattice — the CORRECTION grid. Deviations from 8 down to 2 are
   deliberate optical corrections made by eyes in Runebender. In a green
   glyph they are design data, never noise.
 - off the 2-grid — always an error.
