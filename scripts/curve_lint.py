@@ -60,8 +60,13 @@ def lint_glyph(path, name):
         segs=segments(cont)
         if not segs: continue
         # crest centering: on-curve smooth extrema with H or V tangents
-        ons=[p for p in cont if p['on']]
-        h=[p for p in ons if p['smooth']]
+        n=len(cont)
+        h=[]
+        for i,p in enumerate(cont):
+            if not (p['on'] and p['smooth']): continue
+            prev=cont[(i-1)%n]; nxt=cont[(i+1)%n]
+            if not prev['on'] and not nxt['on']:  # pure round extremum
+                h.append(p)
         xs=[p['x'] for p in h]; ys=[p['y'] for p in h]
         if len(h)>=4:
             left=min(h,key=lambda p:p['x']); right=max(h,key=lambda p:p['x'])
