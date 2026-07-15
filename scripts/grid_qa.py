@@ -145,14 +145,31 @@ def glyph_grade(r):
     return "OK", f"{YELLOW}OK{END}"
 
 
-def fmt_hist(values):
-    from collections import Counter
-    c = Counter(popcount(v) for v in values)
+def fmt_nice(values):
+    """'nice/total (worst 158)' — nice = short sum (popcount <= 2)."""
+    if not values:
+        return "-", DIM
+    nice_n = sum(1 for v in values if popcount(v) <= 2)
+    total = len(values)
+    if nice_n == total:
+        return f"{nice_n}/{total}", GREEN
+    worst = max(values, key=popcount)
+    frac = nice_n / total
+    color = GREEN if frac >= 0.8 else (YELLOW if frac >= 0.5 else RED)
+    return f"{nice_n}/{total} (worst {worst})", color
+
+
+def fail_reason(r):
     parts = []
-    for p in sorted(c):
-        color = GREEN if p <= 2 else (YELLOW if p == 3 else RED)
-        parts.append(f"{color}p{p}×{c[p]}{END}")
-    return " ".join(parts) if parts else f"{DIM}-{END}"
+    if r["off2"]:
+        parts.append(f"{len(r['off2'])} pts off the 2-grid")
+    if r["off8bad"]:
+        parts.append(f"{len(r['off8bad'])} on-curve off-grid")
+    if not r["adv_ok"]:
+        parts.append(f"advance {r['adv']:g} off-8")
+    if r["handles_diag"]:
+        parts.append(f"{len(r['handles_diag'])} diagonal handles")
+    return "; ".join(parts)
 
 
 def detail(name, master, r):
@@ -230,13 +247,21 @@ def main():
                 detail(name, master, r)
 
     if not args.verbose:
-        rows.sort(key=lambda t: -t[0])
-        print(f"{BOLD}{'glyph':>10} {'master':>8} {'grade':>16} "
-              f"{'handles':>18} {'spans':>22}{END}")
+        rows.sort(key=lambda t: (-t[0], t[2], t[1]))
+        GRADE_COLOR = {"FAIL": RED, "OK": YELLOW, "GOOD": GREEN,
+                       "PERFECT": GREEN}
+        hdr = (f"{'glyph':<10} {'master':<8} {'grade':<8} "
+               f"{'handles nice':<22} {'spans nice':<22} problem")
+        print(f"{BOLD}{hdr}{END}")
+        print(DIM + "-" * len(hdr) + END)
         for badness, master, name, r, grade, colored in rows:
-            print(f"{name:>10} {master:>8} {colored:>25} "
-                  f"{fmt_hist(r['handles']):>28} "
-                  f"{fmt_hist(r['spans_x'] + r['spans_y']):>34}")
+            htxt, hcol = fmt_nice(r["handles"])
+            stxt, scol = fmt_nice(r["spans_x"] + r["spans_y"])
+            reason = fail_reason(r) if grade == "FAIL" else ""
+            gcol = GRADE_COLOR[grade]
+            print(f"{name:<10} {master:<8} {gcol}{grade:<8}{END} "
+                  f"{hcol}{htxt:<22}{END} {scol}{stxt:<22}{END} "
+                  f"{RED}{reason}{END}")
         if args.worst:
             for badness, master, name, r, grade, colored in rows[: args.worst]:
                 detail(name, master, r)
@@ -247,8 +272,8 @@ def main():
     print(f"\n{BOLD}{total} glyph-masters checked: "
           f"{GREEN}{perfect} PERFECT{END}{BOLD}, {good} at GOOD or better, "
           f"{RED if fails else GREEN}{fails} FAIL{END}")
-    print(f"{DIM}popcount legend: p1 pure power of two · p2 elegant sum "
-          f"(96=64+32) · p3 ok (104) · p4+ review{END}")
+    print(f"{DIM}nice = the value is a sum of at most two powers of two "
+          f"(64, 96=64+32, 272=256+16); worst = the least-nice value{END}")
     sys.exit(1 if fails else 0)
 
 
