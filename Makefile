@@ -22,6 +22,7 @@ help:
 		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
+		'  make grid-qa        Per-glyph design-system conformance report (grades + popcounts)' \
 		'  make lint-grid      Check source outlines against the power-of-two grid' \
 		'  make scoreboard     Update documentation/scoreboard.md (GF-gate burn-down)' \
 		'  make skeleton       End-to-end loop: build + qa + reports + scoreboard (qa may fail while debt exists)' \
@@ -76,6 +77,9 @@ reports:
 
 scoreboard:
 	$(PYTHON) scripts/scoreboard.py
+
+grid-qa:
+	$(PYTHON) scripts/grid_qa.py
 
 lint-grid:
 	$(PYTHON) scripts/grid_lint.py
