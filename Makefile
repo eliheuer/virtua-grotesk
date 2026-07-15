@@ -80,6 +80,10 @@ scoreboard:
 lint-grid:
 	$(PYTHON) scripts/grid_lint.py
 
+lint-curves:
+	$(PYTHON) scripts/curve_lint.py Regular --all
+	$(PYTHON) scripts/curve_lint.py Bold --all
+
 # The end-to-end skeleton: prove the whole pipeline runs TODAY, debt and
 # all. qa failures are expected while debt exists (the leading "-" keeps
 # make going); the scoreboard headline is the progress metric.
