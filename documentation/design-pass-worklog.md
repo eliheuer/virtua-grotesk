@@ -566,6 +566,34 @@ the Bold i already embodies the C5 rule. Dot 192×144, gap 48 above
 x-height (624−576) vs Regular's 80 — cross-master dot-gap consistency
 worth a look when Regular i is redone.
 
+### grid-qa snap pass — 2026-07-15
+
+First trial of `make grid-qa` as a cleanup driver (Eli-directed experiment).
+Fixed the FAIL grades that were pure grid noise — on-curve points off the
+8-grid by exactly ±2 — using the PERFECT-graded glyphs as the pattern.
+All moves ±2 units, chamfer pairs moved together, smooth-point handles
+moved with their on-curve point to stay axis-aligned. No advance widths,
+no curve reshaping.
+
+- **Regular:** v, x, W, N, X, w → all now PERFECT. Bonuses found by the
+  snaps: W's bottom-right chamfer was 20u and 4u off mirror-symmetry (now
+  16u and symmetric); N's right stem was 2u off, sidebearings now 80/80;
+  x's terminals now mirror at SB 32/32; w's first inner-vertex flat was
+  12u vs the second's 16u (now both 16).
+- **Bold:** three, five, six, seven, nine → hard failures cleared (grade
+  OK; handle-length polish remains). curve_lint flags on these are
+  pre-existing and slightly *improved* by the snaps (three's tension
+  ratio 8.6→7.2, six/nine crest offsets 18→16).
+- NOT touched (need Eli's call): Regular digit advances off the 8-grid
+  (two 594, three 628, four 598, five 604, six 636, seven 548, nine 628 —
+  spacing decisions); diagonal-handle FAILs (s, S, two, eight, y, a Bold —
+  curve reshaping); four Bold (advance 658).
+- **OPEN:** `less` masters are structurally incompatible (Regular 7 pts vs
+  Bold 10, contour 0) on committed main — blocks `make build` entirely.
+  Pre-existing, not from this pass.
+- Note: nearly all glyphs this pass touched were marked green (= done);
+  grid-qa disagrees with the green marks. Eli authorized the edits.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
