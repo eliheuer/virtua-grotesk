@@ -47,6 +47,11 @@ AI tools). It is imported here in full:
   harness canvas frame use `harness/designbot/glyph_canvas.rs` (glyphbox /
   sheet modes) instead of writing a new renderer. Note: no openTypeFeatures
   support yet — verify feature substitutions with uharfbuzz on the built font.
+- After CURVE edits: run `scripts/curve_lint.py <Master> <glyphs>` (crest
+  centering + tension breaks — the lumps numeric checks miss) and render the
+  single glyph LARGE (`glyph_canvas glyphbox`), never just sheets: sheet-scale
+  renders hide 10-unit curve errors (learned 2026-07-14, the lumpy-counters
+  incident).
 - After any glyph or feature change: `make build`, then verify the built fonts
   in `fonts/` directly (fontTools for tables/widths, uharfbuzz for shaping)
   rather than trusting the source edit.
