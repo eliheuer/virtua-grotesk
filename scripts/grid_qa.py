@@ -272,8 +272,21 @@ def main():
     print(f"\n{BOLD}{total} glyph-masters checked: "
           f"{GREEN}{perfect} PERFECT{END}{BOLD}, {good} at GOOD or better, "
           f"{RED if fails else GREEN}{fails} FAIL{END}")
-    print(f"{DIM}nice = the value is a sum of at most two powers of two "
-          f"(64, 96=64+32, 272=256+16); worst = the least-nice value{END}")
+    print(f"""{DIM}
+terms:
+  handle   distance from an on-curve point to its off-curve handle
+           (curve tension); the design system wants these axis-aligned
+           and in tidy lengths
+  span     gap between neighboring on-curve x-columns / y-rows (>=24u):
+           stems, bars, counters, sidebearing-to-stem distances
+  nice     value is a sum of at most TWO powers of two (64, 96=64+32,
+           272=256+16); 'worst N' = the least-tidy value found
+  optical  on-curve point off the 8-grid by exactly 4 — a deliberate
+           optical correction (never penalized)
+grades:
+  FAIL     breaks a hard rule (see problem column)   OK    handles have
+  GOOD     all handles tidy to 3 terms                     4+ term values
+  PERFECT  hard rules pass and every handle is nice{END}""")
     sys.exit(1 if fails else 0)
 
 
