@@ -7,6 +7,11 @@
     <key>public.kern2.a</key>
     <real>-16</real>
   </dict>
+  <key>D</key>
+  <dict>
+    <key>a</key>
+    <real>-16</real>
+  </dict>
   <key>P</key>
   <dict>
     <key>public.kern2.slash</key>
@@ -21,6 +26,11 @@
   <dict>
     <key>e</key>
     <real>-104</real>
+  </dict>
+  <key>a</key>
+  <dict>
+    <key>t</key>
+    <real>-16</real>
   </dict>
   <key>aacute</key>
   <dict>
@@ -302,8 +312,10 @@
   </dict>
   <key>t</key>
   <dict>
-    <key>u</key>
+    <key>e</key>
     <real>-16</real>
+    <key>u</key>
+    <real>0</real>
   </dict>
   <key>y</key>
   <dict>
