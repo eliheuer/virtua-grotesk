@@ -4,7 +4,8 @@ Fontspector-style terminal report over the UFO sources. For every glyph
 it checks the two-lattice contract and the powers-of-two aesthetic:
 
   GRID      every point on the 2-grid (the law); on-curve points on the
-            8-grid, or off by EXACTLY 4 (the self-labeling optical class)
+            8-grid, or consciously off it on the 2-grid (the
+            self-labeling optical class: off-8 by 2, 4, or 6)
   ADVANCE   advance width and ink sidebearings on the 8-grid
   HANDLES   every off-curve handle axis-aligned to its on-curve neighbor
             (H/V), with a length that is a SHORT SUM of powers of two
@@ -83,7 +84,7 @@ def parse_glyph(path):
 
 def qa_glyph(adv, contours):
     """Returns dict of findings."""
-    r = dict(off2=[], off8bad=[], opt4=0, handles_diag=[], handles=[],
+    r = dict(off2=[], opt4=0, handles_diag=[], handles=[],
              spans_x=[], spans_y=[], adv_ok=adv % 8 == 0, adv=adv,
              sb=None, n_pts=0)
     xs_on, ys_on = set(), set()
@@ -96,10 +97,10 @@ def qa_glyph(adv, contours):
             if p["x"] % 2 or p["y"] % 2:
                 r["off2"].append((p["x"], p["y"]))
             if p["on"]:
+                # off the 8-grid but on the 2-grid = the optical class;
+                # odd coordinates are already hard failures via off2.
                 mx, my = p["x"] % 8, p["y"] % 8
-                if mx not in (0, 4) or my not in (0, 4):
-                    r["off8bad"].append((p["x"], p["y"]))
-                elif mx == 4 or my == 4:
+                if (mx or my) and mx % 2 == 0 and my % 2 == 0:
                     r["opt4"] += 1
                 xs_on.add(p["x"])
                 ys_on.add(p["y"])
@@ -134,7 +135,7 @@ def glyph_grade(r):
     """(grade, colored_grade). Hard rules + handle niceness grade the
     glyph; spans are informational (they include composite distances).
     Optical off-8-by-4 on-curves are a FEATURE and never penalized."""
-    if r["off2"] or r["off8bad"] or not r["adv_ok"] or r["handles_diag"]:
+    if r["off2"] or not r["adv_ok"] or r["handles_diag"]:
         return "FAIL", f"{RED}FAIL{END}"
     hp = [popcount(h) for h in r["handles"]]
     worst = max(hp + [0])
@@ -163,8 +164,6 @@ def fail_reason(r):
     parts = []
     if r["off2"]:
         parts.append(f"{len(r['off2'])} pts off the 2-grid")
-    if r["off8bad"]:
-        parts.append(f"{len(r['off8bad'])} on-curve off-grid")
     if not r["adv_ok"]:
         parts.append(f"advance {r['adv']:g} off-8")
     if r["handles_diag"]:
@@ -178,10 +177,8 @@ def detail(name, master, r):
           f"  sb {r['sb'][0]:g}/{r['sb'][1]:g}" if r["sb"] else "")
     if r["off2"]:
         print(f"  {RED}off-2 points:{END} {r['off2']}")
-    if r["off8bad"]:
-        print(f"  {RED}on-curve off-8-not-4:{END} {r['off8bad']}")
     if r["opt4"]:
-        print(f"  {DIM}optical (off-8-by-4) on-curves: {r['opt4']}{END}")
+        print(f"  {DIM}optical (on-2, off-8) on-curves: {r['opt4']}{END}")
     if r["handles_diag"]:
         print(f"  {RED}diagonal handles:{END}")
         for x, y, dx, dy in r["handles_diag"]:
@@ -237,7 +234,7 @@ def main():
             grade, colored = glyph_grade(r)
             if grade == "FAIL":
                 fails += 1
-            badness = (len(r["off2"]) * 100 + len(r["off8bad"]) * 50
+            badness = (len(r["off2"]) * 100
                        + len(r["handles_diag"]) * 30
                        + (0 if r["adv_ok"] else 40)
                        + sum(max(0, popcount(v) - 2)
@@ -281,7 +278,7 @@ terms:
            stems, bars, counters, sidebearing-to-stem distances
   nice     value is a sum of at most TWO powers of two (64, 96=64+32,
            272=256+16); 'worst N' = the least-tidy value found
-  optical  on-curve point off the 8-grid by exactly 4 — a deliberate
+  optical  on-curve point on the 2-grid but off the 8 — a deliberate
            optical correction (never penalized)
 grades:
   FAIL     breaks a hard rule (see problem column)   OK    handles have

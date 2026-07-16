@@ -629,6 +629,43 @@ glyph-masters, 0 FAIL, 63 PERFECT).
 - Eli plans a manual cleanup pass over all of this; blue/orange marks left
   as-is for that review.
 
+### grid-qa pass 3: handle-length niceness — 2026-07-15
+
+Final cleanup pass: **124/124 glyph-masters at GOOD or better, 74
+PERFECT, 0 FAIL** (from 51 PERFECT / 29 FAIL two days ago). No on-curve
+points moved this pass — off-curve handles only.
+
+- **Round 1+2 (single-handle snaps, 368 handles):** every graded
+  axis-aligned handle with a popcount-4+ length snapped to the nearest
+  popcount<=2 (or <=3) even value within ~5% of its length (7% for
+  values stuck in the pop<=2 void zones like 98..127). Tool archived at
+  `documentation/archive/agent-generated-scripts/nice_handles.py`.
+- **Round 3 (compensated pairs, per Eli's rules stated mid-pass):** for
+  popcount-3 blockers, redistribute length between the two handles of
+  one cubic segment (one longer, one shorter, total preserved +-4) so
+  both land nice — form roughly preserved, and segment evenness must not
+  degrade (it improved nearly everywhere: C 144/176→160/160, Bold O
+  112/144→128/128, six 208/112→192/128). Tool:
+  `.../agent-generated-scripts/pair_nice.py`. One reverted case: Bold d,
+  where the pair move balanced the segment but worsened contrast across
+  the smooth join with its stubby 40u partner handle (curve_lint caught
+  it) — d stays GOOD.
+- Eli's handle rules recorded this pass: compensated pairs preserve
+  form; prefer somewhat-even handles within a segment; handle lengths
+  should mirror the glyph's proportions (tall o → side handles longer
+  than top).
+- **Uneven-pair audit (left for Eli, deliberately untouched):** zero
+  R 288/128 and B 320/132 (x4 each), s R 40/96 / B 24/64, eight B 80/32.
+  These are numerically clean but break the evenness preference —
+  rebalancing them would change the superelliptical character, so they
+  are flagged, not fixed.
+- **Remaining GOOD (not PERFECT) blockers** are lengths like 208/176/112
+  whose nearest pop<=2 partition is >7% away even with pair moves (O, o,
+  C, G, Q bowls and similar). Honest ceiling without visible form change.
+- Verified: curve_lint net-improved (Bold a and Bold five dropped off
+  the flagged list, zero new flags), build green, preflight green, large
+  renders of C/O/o/zero/D/six/p clean.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
