@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dotabove-ar" format="2">
+	<advance width="300"/>
 	<outline>
 		<contour>
 			<point x="152" y="688" type="curve" smooth="yes"/>
@@ -16,4 +17,12 @@
 			<point x="108" y="688"/>
 		</contour>
 	</outline>
+	<anchor name="top" x="152" y="812"/>
+	<anchor name="_topDots" x="152" y="576"/>
+	<lib>
+		<dict>
+			<key>com.schriftgestaltung.Glyphs.lastChange</key>
+			<string>2025-06-22 06:29:54 +0000</string>
+		</dict>
+	</lib>
 </glyph>

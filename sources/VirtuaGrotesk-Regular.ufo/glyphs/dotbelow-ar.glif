@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dotbelow-ar" format="2">
+	<advance width="244"/>
 	<outline>
 		<contour>
 			<point x="122" y="-272" type="curve" smooth="yes"/>
@@ -16,4 +17,12 @@
 			<point x="78" y="-272"/>
 		</contour>
 	</outline>
+	<anchor name="_bottomDots" x="124" y="0"/>
+	<anchor name="bottom" x="124" y="-306"/>
+	<lib>
+		<dict>
+			<key>com.schriftgestaltung.Glyphs.lastChange</key>
+			<string>2025-06-16 06:14:52 +0000</string>
+		</dict>
+	</lib>
 </glyph>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hamzaabove-ar" format="2">
 	<unicode hex="0654"/>
+	<advance width="224"/>
 	<outline>
 		<contour>
 			<point x="16" y="832" type="line"/>
@@ -36,6 +37,11 @@
 			<point x="0" y="848" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="0" y="576"/>
-	<anchor name="top" x="0" y="720"/>
+	<anchor name="_top" x="112" y="768"/>
+	<lib>
+		<dict>
+			<key>com.schriftgestaltung.Glyphs.lastChange</key>
+			<string>2025-06-16 04:23:13 +0000</string>
+		</dict>
+	</lib>
 </glyph>

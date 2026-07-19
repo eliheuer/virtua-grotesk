@@ -1,24 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <glyph name="doublestroke-ar" format="2">
-	<advance width="600"/>
-	<outline>
-		<contour>
-			<point x="228" y="120" type="line"/>
-			<point x="312" y="120" type="line"/>
-			<point x="312" y="640" type="line"/>
-			<point x="228" y="640" type="line"/>
-		</contour>
-		<contour>
-			<point x="324" y="120" type="line"/>
-			<point x="408" y="120" type="line"/>
-			<point x="408" y="640" type="line"/>
-			<point x="324" y="640" type="line"/>
-		</contour>
-	</outline>
-	<lib>
-		<dict>
-			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
-		</dict>
-	</lib>
+  <advance width="300"/>
+  <outline>
+  </outline>
 </glyph>
