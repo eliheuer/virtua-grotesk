@@ -23,6 +23,7 @@ help:
 		'  make qa             Run Fontspector Google Fonts profile' \
 		'  make reports        Regenerate source/build metadata reports' \
 		'  make grid-qa        Per-glyph design-system conformance report (grades + popcounts)' \
+		'  make dashboard GLYPH=a  Live one-glyph design dashboard (re-renders on save)' \
 		'  make lint-grid      Check source outlines against the power-of-two grid' \
 		'  make scoreboard     Update documentation/scoreboard.md (GF-gate burn-down)' \
 		'  make skeleton       End-to-end loop: build + qa + reports + scoreboard (qa may fail while debt exists)' \
@@ -80,6 +81,14 @@ scoreboard:
 
 grid-qa:
 	$(PYTHON) scripts/grid_qa.py
+
+# Live design dashboard for one glyph, for a second monitor while editing:
+# re-renders on every save. GLYPH accepts a glyph name, character, or U+XXXX.
+# Usage: make dashboard GLYPH=a
+GLYPH ?= $(G)
+dashboard:
+	@test -n "$(GLYPH)" || { echo "usage: make dashboard GLYPH=<name|char|U+XXXX>"; exit 1; }
+	$(PYTHON) scripts/grid_qa.py --focus "$(GLYPH)" --watch
 
 lint-grid:
 	$(PYTHON) scripts/grid_lint.py
