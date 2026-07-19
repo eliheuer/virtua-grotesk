@@ -94,7 +94,8 @@ def nice(v):
 
 def parse_glyph(path):
     src = open(path).read()
-    adv = float(re.search(r'width="([\d.]+)"', src).group(1))
+    m = re.search(r'<advance[^>]*width="([\d.]+)"', src)
+    adv = float(m.group(1)) if m else 0.0  # some glyphs have no advance
     contours = []
     for cm in re.finditer(r"<contour>(.*?)</contour>", src, re.S):
         pts = []
@@ -563,6 +564,9 @@ def main():
     ap.add_argument("glyphs", nargs="*", help="glyph names (default: A-Z a-z 0-9)")
     ap.add_argument("--master", choices=["Regular", "Bold"], default=None)
     ap.add_argument("--all", action="store_true", help="every glyph in the UFO")
+    ap.add_argument("--arabic", action="store_true",
+                    help="check the Arabic (-ar) glyphs (isolated + "
+                         "positional forms) with contours")
     ap.add_argument("-v", "--verbose", action="store_true",
                     help="full detail per glyph")
     ap.add_argument("--worst", type=int, default=0,
@@ -589,6 +593,9 @@ def main():
             names = args.glyphs
         elif args.all:
             names = sorted(contents)
+        elif args.arabic:
+            names = sorted(n for n in contents
+                           if n.endswith("-ar") or "-ar." in n)
         else:
             names = DEFAULT_SET
         for name in names:
