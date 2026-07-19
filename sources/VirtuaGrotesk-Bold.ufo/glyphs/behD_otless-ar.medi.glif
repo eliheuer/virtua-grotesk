@@ -28,15 +28,17 @@
       <point x="416" y="0" type="line"/>
       <point x="352" y="0" type="line" smooth="yes"/>
       <point x="296" y="0"/>
-      <point x="248" y="0"/>
-      <point x="224" y="60" type="curve"/>
-      <point x="208" y="60" type="line"/>
-      <point x="184" y="0"/>
+      <point x="248" y="4"/>
+      <point x="224" y="64" type="curve"/>
+      <point x="208" y="64" type="line"/>
+      <point x="184" y="4"/>
       <point x="128" y="0"/>
     </contour>
   </outline>
   <lib>
     <dict>
+    <key>public.markColor</key>
+    <string>0.09,0.72,0.44,1</string>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
       <string>2025-06-29 02:26:52 +0000</string>
     </dict>

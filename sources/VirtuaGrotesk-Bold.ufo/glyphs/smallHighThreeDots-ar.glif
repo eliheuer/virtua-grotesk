@@ -3,22 +3,22 @@
 	<unicode hex="06DB"/>
 	<outline>
 		<contour>
-			<point x="-82" y="614" type="line"/>
-			<point x="-30" y="614" type="line"/>
-			<point x="-30" y="666" type="line"/>
-			<point x="-82" y="666" type="line"/>
+			<point x="-80" y="616" type="line"/>
+			<point x="-32" y="616" type="line"/>
+			<point x="-32" y="664" type="line"/>
+			<point x="-80" y="664" type="line"/>
 		</contour>
 		<contour>
-			<point x="30" y="614" type="line"/>
-			<point x="82" y="614" type="line"/>
-			<point x="82" y="666" type="line"/>
-			<point x="30" y="666" type="line"/>
+			<point x="32" y="616" type="line"/>
+			<point x="80" y="616" type="line"/>
+			<point x="80" y="664" type="line"/>
+			<point x="32" y="664" type="line"/>
 		</contour>
 		<contour>
-			<point x="-26" y="678" type="line"/>
-			<point x="26" y="678" type="line"/>
-			<point x="26" y="730" type="line"/>
-			<point x="-26" y="730" type="line"/>
+			<point x="-24" y="680" type="line"/>
+			<point x="24" y="680" type="line"/>
+			<point x="24" y="728" type="line"/>
+			<point x="-24" y="728" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="_top" x="0" y="576"/>
@@ -26,7 +26,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.09,0.72,0.44,1</string>
 		</dict>
 	</lib>
 </glyph>
