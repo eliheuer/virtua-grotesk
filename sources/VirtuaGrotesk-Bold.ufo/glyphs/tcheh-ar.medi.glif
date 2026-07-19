@@ -5,46 +5,46 @@
 		<contour>
 			<point x="-24" y="128" type="line"/>
 			<point x="624" y="128" type="line"/>
-			<point x="624" y="212" type="line"/>
-			<point x="-24" y="212" type="line"/>
+			<point x="624" y="208" type="line"/>
+			<point x="-24" y="208" type="line"/>
 		</contour>
 		<contour>
 			<point x="136" y="168" type="line"/>
 			<point x="216" y="128" type="line"/>
 			<point x="448" y="128" type="line"/>
-			<point x="520" y="196" type="line"/>
-			<point x="492" y="292" type="line"/>
+			<point x="520" y="192" type="line"/>
+			<point x="496" y="288" type="line"/>
 			<point x="376" y="336" type="line"/>
-			<point x="240" y="316" type="line"/>
-			<point x="184" y="252" type="line"/>
-			<point x="244" y="212" type="line"/>
-			<point x="388" y="220" type="line"/>
-			<point x="420" y="196" type="line"/>
+			<point x="240" y="320" type="line"/>
+			<point x="184" y="256" type="line"/>
+			<point x="240" y="208" type="line"/>
+			<point x="384" y="224" type="line"/>
+			<point x="416" y="192" type="line"/>
 			<point x="392" y="176" type="line"/>
 		</contour>
 		<contour>
-			<point x="212" y="-120" type="line"/>
-			<point x="276" y="-120" type="line"/>
-			<point x="276" y="-56" type="line"/>
-			<point x="212" y="-56" type="line"/>
+			<point x="208" y="-120" type="line"/>
+			<point x="272" y="-120" type="line"/>
+			<point x="272" y="-56" type="line"/>
+			<point x="208" y="-56" type="line"/>
 		</contour>
 		<contour>
-			<point x="324" y="-120" type="line"/>
-			<point x="388" y="-120" type="line"/>
-			<point x="388" y="-56" type="line"/>
-			<point x="324" y="-56" type="line"/>
+			<point x="320" y="-120" type="line"/>
+			<point x="384" y="-120" type="line"/>
+			<point x="384" y="-56" type="line"/>
+			<point x="320" y="-56" type="line"/>
 		</contour>
 		<contour>
-			<point x="268" y="-184" type="line"/>
-			<point x="332" y="-184" type="line"/>
-			<point x="332" y="-120" type="line"/>
-			<point x="268" y="-120" type="line"/>
+			<point x="272" y="-184" type="line"/>
+			<point x="336" y="-184" type="line"/>
+			<point x="336" y="-120" type="line"/>
+			<point x="272" y="-120" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.09,0.72,0.44,1</string>
 		</dict>
 	</lib>
 </glyph>

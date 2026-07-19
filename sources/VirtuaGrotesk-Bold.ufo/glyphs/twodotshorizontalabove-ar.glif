@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="twodotshorizontalabove-ar" format="2">
-  <advance width="300"/>
+  <advance width="304"/>
   <anchor x="152" y="800" name="top"/>
   <anchor x="152" y="576" name="_topDots"/>
   <outline>
@@ -35,6 +35,8 @@
   </outline>
   <lib>
     <dict>
+    <key>public.markColor</key>
+    <string>0.09,0.72,0.44,1</string>
       <key>com.schriftgestaltung.Glyphs.lastChange</key>
       <string>2025-06-22 06:02:46 +0000</string>
     </dict>

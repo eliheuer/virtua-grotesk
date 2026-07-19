@@ -9,10 +9,16 @@
 			<point x="-32" y="680" type="line"/>
 		</contour>
 		<contour>
-			<point x="-20" y="712" type="line"/>
-			<point x="20" y="712" type="line"/>
-			<point x="20" y="752" type="line"/>
-			<point x="-20" y="752" type="line"/>
+			<point x="-16" y="712" type="line"/>
+			<point x="16" y="712" type="line"/>
+			<point x="16" y="752" type="line"/>
+			<point x="-16" y="752" type="line"/>
 		</contour>
 	</outline>
+  <lib>
+    <dict>
+    <key>public.markColor</key>
+    <string>0.09,0.72,0.44,1</string>
+    </dict>
+  </lib>
 </glyph>

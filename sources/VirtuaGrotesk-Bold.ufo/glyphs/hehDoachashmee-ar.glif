@@ -4,28 +4,28 @@
 	<advance width="528"/>
 	<outline>
 		<contour>
-			<point x="264" y="500" type="line"/>
-			<point x="188" y="424" type="line"/>
-			<point x="188" y="268" type="line"/>
+			<point x="264" y="496" type="line"/>
+			<point x="192" y="424" type="line"/>
+			<point x="192" y="272" type="line"/>
 			<point x="264" y="192" type="line"/>
-			<point x="420" y="192" type="line"/>
-			<point x="496" y="268" type="line"/>
+			<point x="416" y="192" type="line"/>
+			<point x="496" y="272" type="line"/>
 			<point x="496" y="424" type="line"/>
-			<point x="420" y="500" type="line"/>
+			<point x="416" y="496" type="line"/>
 		</contour>
 		<contour>
-			<point x="264" y="396" type="line"/>
-			<point x="348" y="440" type="line"/>
-			<point x="432" y="396" type="line"/>
+			<point x="264" y="400" type="line"/>
+			<point x="352" y="440" type="line"/>
+			<point x="432" y="400" type="line"/>
 			<point x="432" y="296" type="line"/>
-			<point x="348" y="252" type="line"/>
+			<point x="352" y="256" type="line"/>
 			<point x="264" y="296" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.09,0.72,0.44,1</string>
 		</dict>
 	</lib>
 </glyph>

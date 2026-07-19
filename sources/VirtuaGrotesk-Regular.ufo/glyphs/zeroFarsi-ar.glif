@@ -4,26 +4,32 @@
 	<advance width="600"/>
 	<outline>
 		<contour>
-			<point x="300" y="520" type="line" smooth="yes"/>
-			<point x="196" y="520" type="line"/>
-			<point x="120" y="444" type="line"/>
-			<point x="120" y="340" type="line"/>
-			<point x="196" y="264" type="line"/>
-			<point x="300" y="264" type="line" smooth="yes"/>
-			<point x="404" y="264" type="line"/>
-			<point x="480" y="340" type="line"/>
-			<point x="480" y="444" type="line"/>
-			<point x="404" y="520" type="line"/>
+			<point x="304" y="520" type="line" smooth="yes"/>
+			<point x="192" y="520" type="line"/>
+			<point x="120" y="448" type="line"/>
+			<point x="120" y="336" type="line"/>
+			<point x="192" y="264" type="line"/>
+			<point x="304" y="264" type="line" smooth="yes"/>
+			<point x="400" y="264" type="line"/>
+			<point x="480" y="336" type="line"/>
+			<point x="480" y="448" type="line"/>
+			<point x="400" y="520" type="line"/>
 		</contour>
 		<contour>
-			<point x="300" y="444" type="line" smooth="yes"/>
-			<point x="356" y="444" type="line"/>
-			<point x="404" y="396" type="line"/>
-			<point x="356" y="340" type="line"/>
-			<point x="300" y="340" type="line" smooth="yes"/>
-			<point x="244" y="340" type="line"/>
-			<point x="196" y="396" type="line"/>
-			<point x="244" y="444" type="line"/>
+			<point x="304" y="448" type="line" smooth="yes"/>
+			<point x="352" y="448" type="line"/>
+			<point x="400" y="400" type="line"/>
+			<point x="352" y="336" type="line"/>
+			<point x="304" y="336" type="line" smooth="yes"/>
+			<point x="240" y="336" type="line"/>
+			<point x="192" y="400" type="line"/>
+			<point x="240" y="448" type="line"/>
 		</contour>
 	</outline>
+  <lib>
+    <dict>
+    <key>public.markColor</key>
+    <string>0.09,0.72,0.44,1</string>
+    </dict>
+  </lib>
 </glyph>
