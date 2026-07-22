@@ -353,6 +353,7 @@ def dash_collect(master, name):
     import curve_lint
     d = dict(g=g, r=r, grade=grade, colored=colored, path=path,
              lint=curve_lint.lint_glyph(path, name),
+             continuity=curve_lint.node_continuity(g["contours"]),
              pairs=segment_pairs(g["contours"]),
              chamfers=chamfers(g["contours"]))
     on = [p for c in g["contours"] for p in c if p["on"]]
@@ -410,6 +411,14 @@ def dash_think(data):
                              f"{b['y']:g}) — contract is 16{END}")
         for issue in d["lint"]:
             items.append(f"{YELLOW}{master} lint: {issue}{END}")
+        for x in d.get("continuity", []):
+            if x["level"] == "kink":
+                items.insert(0, f"{RED}{master}: KINK at smooth point "
+                             f"({x['x']:g},{x['y']:g}) — tangent broken{END}")
+            elif x["level"] == "G1":
+                items.append(f"{YELLOW}{master}: G1-only curve join at "
+                             f"({x['x']:g},{x['y']:g}) — harmonize for G2 "
+                             f"(Δκ {x['value']*100:.0f}%){END}")
     dr, db = data.get("Regular"), data.get("Bold")
     if dr and db and dr["structure"] != db["structure"]:
         items.insert(0, f"{RED}masters structurally INCOMPATIBLE — "
@@ -479,6 +488,29 @@ def dash_render(name, prev):
         xs = " ".join(color_len(v) for v in sorted(set(r["spans_x"])))
         ys = " ".join(color_len(v) for v in sorted(set(r["spans_y"])))
         print(f"  {master:<9}x: {xs}   {DIM}|{END}   y: {ys}")
+
+    # smoothness / geometric continuity
+    print(f"\n  {BOLD}SMOOTHNESS{END} {DIM}(continuity at smooth joins — "
+          f"curves want G2){END}")
+    for master in ("Regular", "Bold"):
+        d = data[master]
+        if d is None:
+            continue
+        nc = d.get("continuity", [])
+        from collections import Counter
+        tally = Counter(x["level"] for x in nc)
+        # G2 green, G1line dim (best-possible line↔curve), G1 yellow
+        # (harmonize candidate), kink red.
+        order = [("kink", RED), ("G1", YELLOW), ("G1line", DIM),
+                 ("G2", GREEN), ("G3", GREEN)]
+        cells = [f"{col}{lvl} {tally[lvl]}{END}" for lvl, col in order if tally.get(lvl)]
+        summary = "  ".join(cells) if cells else f"{DIM}—{END}"
+        worst = [x for x in nc if x["level"] in ("kink", "G1")]
+        worst.sort(key=lambda x: -x["value"])
+        detail_bits = "".join(
+            f"   {(RED if x['level']=='kink' else YELLOW)}{x['level']}"
+            f"@({x['x']:g},{x['y']:g}){END}" for x in worst[:3])
+        print(f"  {master:<9}{summary}{detail_bits}")
 
     # optical corrections
     any_opt = any(d and d["opt4"] for d in data.values())
@@ -610,12 +642,18 @@ def main():
             grade, colored = glyph_grade(r)
             if grade == "FAIL":
                 fails += 1
-            badness = (len(r["off2"]) * 100
+            import curve_lint
+            nc = curve_lint.node_continuity(contours)
+            kinks = sum(1 for x in nc if x["level"] == "kink")
+            g1 = sum(1 for x in nc if x["level"] == "G1")
+            # A kink is a smoothness defect worse than any popcount noise.
+            badness = (kinks * 200 + g1 * 15
+                       + len(r["off2"]) * 100
                        + len(r["handles_diag"]) * 30
                        + (0 if r["adv_ok"] else 40)
                        + sum(max(0, popcount(v) - 2)
                              for v in r["handles"] + r["spans_x"] + r["spans_y"]))
-            rows.append((badness, master, name, r, grade, colored))
+            rows.append((badness, master, name, r, grade, colored, kinks, g1))
             if args.verbose:
                 detail(name, master, r)
 
@@ -623,21 +661,28 @@ def main():
         rows.sort(key=lambda t: (-t[0], t[2], t[1]))
         GRADE_COLOR = {"FAIL": RED, "OK": YELLOW, "GOOD": GREEN,
                        "PERFECT": GREEN}
-        hdr = (f"{'glyph':<10} {'master':<8} {'grade':<8} "
+        hdr = (f"{'glyph':<10} {'master':<8} {'grade':<8} {'smooth':<9} "
                f"{'handles nice':<22} {'spans nice':<22} problem")
         print(f"{BOLD}{hdr}{END}")
         print(DIM + "-" * len(hdr) + END)
-        for badness, master, name, r, grade, colored in rows:
+        for badness, master, name, r, grade, colored, kinks, g1 in rows:
             htxt, hcol = fmt_nice(r["handles"])
             stxt, scol = fmt_nice(r["spans_x"] + r["spans_y"])
             reason = fail_reason(r) if grade == "FAIL" else ""
             gcol = GRADE_COLOR[grade]
+            if kinks:
+                smcol, smtxt = RED, f"kink x{kinks}"
+            elif g1:
+                smcol, smtxt = YELLOW, f"G1 x{g1}"
+            else:
+                smcol, smtxt = GREEN, "smooth"
             print(f"{name:<10} {master:<8} {gcol}{grade:<8}{END} "
+                  f"{smcol}{smtxt:<9}{END} "
                   f"{hcol}{htxt:<22}{END} {scol}{stxt:<22}{END} "
                   f"{RED}{reason}{END}")
         if args.worst:
-            for badness, master, name, r, grade, colored in rows[: args.worst]:
-                detail(name, master, r)
+            for row in rows[: args.worst]:
+                detail(row[2], row[1], row[3])
 
     total = len(rows)
     perfect = sum(1 for row in rows if row[4] == "PERFECT")
