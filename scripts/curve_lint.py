@@ -92,6 +92,83 @@ def lint_glyph(path, name):
                               f'({a[3]["x"]:g},{a[3]["y"]:g}) ratio {hi/lo:.1f}')
     return issues
 
+# ---- geometric continuity (G0/G1/G2/G3), mirrors core/src/curve.rs ----
+G1_ANGLE_TOL = 0.009   # ~0.5deg: catches integer-rounding kinks at smooth pts
+G2_REL_TOL   = 0.05    # relative curvature mismatch for G2
+G3_REL_TOL   = 0.08
+
+def _cross(u, v): return u[0]*v[1] - u[1]*v[0]
+def _sub(a, b): return (a[0]-b[0], a[1]-b[1])
+def _hyp(v): return (v[0]*v[0] + v[1]*v[1])**0.5
+
+def all_segments(cont):
+    """Every segment as (P0,P1,P2,P3, straight, start_smooth); P=(x,y).
+    Straight lines get chord-thirds handles; quadratics elevate to cubic."""
+    n=len(cont); ons=[i for i,p in enumerate(cont) if p['on']]
+    if len(ons)<2: return []
+    segs=[]
+    for k in range(len(ons)):
+        i0,i1=ons[k],ons[(k+1)%len(ons)]
+        mid=[]; j=(i0+1)%n
+        while j!=i1: mid.append(cont[j]); j=(j+1)%n
+        p0=(cont[i0]['x'],cont[i0]['y']); p3=(cont[i1]['x'],cont[i1]['y'])
+        ss=cont[i0]['smooth']
+        if len(mid)==2:
+            segs.append((p0,(mid[0]['x'],mid[0]['y']),(mid[1]['x'],mid[1]['y']),p3,False,ss))
+        elif len(mid)==0:
+            p1=(p0[0]+(p3[0]-p0[0])/3, p0[1]+(p3[1]-p0[1])/3)
+            p2=(p0[0]+(p3[0]-p0[0])*2/3, p0[1]+(p3[1]-p0[1])*2/3)
+            segs.append((p0,p1,p2,p3,True,ss))
+        elif len(mid)==1:
+            q=(mid[0]['x'],mid[0]['y'])
+            p1=(p0[0]+(q[0]-p0[0])*2/3, p0[1]+(q[1]-p0[1])*2/3)
+            p2=(p3[0]+(q[0]-p3[0])*2/3, p3[1]+(q[1]-p3[1])*2/3)
+            segs.append((p0,p1,p2,p3,False,ss))
+    return segs
+
+def _curv_start(s):
+    if s[4]: return 0.0
+    h=_sub(s[1],s[0]); L=_hyp(h)
+    return (2/3)*_cross(h,_sub(s[2],s[0]))/(L**3) if L>1e-9 else 0.0
+
+def _curv_end(s):
+    if s[4]: return 0.0
+    h=_sub(s[3],s[2]); L=_hyp(h)
+    return (2/3)*_cross(h,_sub(s[1],s[2]))/(L**3) if L>1e-9 else 0.0
+
+def classify_join(a, b):
+    """(level, value) for the join where incoming seg a meets outgoing seg b.
+    Levels: G0 (intended corner), kink (smooth but tangent broken = defect),
+    G1line (line<->curve, G1 is the best possible = OK), G1 (curve-curve,
+    curvature broken = harmonize candidate), G2, G3."""
+    if not b[5]:
+        return ('G0', 0.0)
+    ti=_sub(a[3],a[2]);  ti=ti if _hyp(ti)>1e-9 else _sub(a[3],a[0])
+    to=_sub(b[1],b[0]);  to=to if _hyp(to)>1e-9 else _sub(b[3],b[0])
+    if _hyp(ti)<1e-9 or _hyp(to)<1e-9: return ('G0', 0.0)
+    dot=ti[0]*to[0]+ti[1]*to[1]
+    angle=math.atan2(abs(_cross(ti,to)), dot)
+    if dot<=0 or angle>G1_ANGLE_TOL: return ('kink', angle)
+    if a[4] and b[4]: return ('G2', 0.0)
+    if a[4] or b[4]:  return ('G1line', 0.0)
+    ki=_curv_end(a); ko=_curv_start(b)
+    rel=abs(ki-ko)/max(abs(ki),abs(ko),1e-6)
+    if rel>G2_REL_TOL: return ('G1', rel)
+    return ('G2', rel)
+
+def node_continuity(conts):
+    """Per smooth on-curve node: dict(x,y,level,value). Corners omitted."""
+    out=[]
+    for cont in conts:
+        segs=all_segments(cont)
+        if len(segs)<2: continue
+        for k in range(len(segs)):
+            a=segs[(k-1)%len(segs)]; b=segs[k]
+            level,val=classify_join(a,b)
+            if level=='G0': continue
+            out.append(dict(x=b[0][0], y=b[0][1], level=level, value=val))
+    return out
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('master',choices=['Regular','Bold'])

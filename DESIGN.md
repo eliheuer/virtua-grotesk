@@ -89,6 +89,41 @@ forms, whole-glyph proportion judgments). Nobody annotates "why" — the
 local geometry around each corrected point is the label, and the model
 learns the mapping the way sequence models always have.
 
+## Curve smoothness comes before popcount
+
+The power-of-two / low-popcount discipline exists for exactly one reason:
+to make the sources compress into training data a small model can learn
+efficiently. It is a **means, not the goal**, and it must never be pursued
+at the expense of curve continuity. A kink costs the model far more than a
+high-popcount coordinate ever saves.
+
+- **A high-popcount coordinate is not a defect — it is signal.** It marks
+  a place where an optical correction was needed. That tells the model
+  "something happened here," which is useful information, not noise to
+  scrub away. Do not blindly snap points toward round numbers to lower
+  popcount.
+- **If a "cleaner" number introduces a kink, a curvature jump, or a broken
+  tangent, the clean number is wrong.** The eye and the curve win.
+- **Priority order when they conflict:** (1) geometric continuity — G1
+  tangent everywhere a point is smooth, and G2 curvature continuity
+  wherever the design intends a smooth curve; then (2) correct optical
+  weight and proportion; then (3) low popcount / power-of-two values where
+  they cost nothing. **Popcount is the tiebreaker, never the master.**
+
+Continuity vocabulary (used by the tools): **G0** positional only (a
+corner — intended at sharp joins), **G1** tangent-continuous (handles
+collinear through a smooth point), **G2** curvature-continuous (no visible
+break in the curvature comb), **G3** curvature-derivative-continuous. Most
+smooth points in Virtua should be at least G1, and the reference curves
+(O H n o bowls and shoulders) should be G2.
+
+We therefore analyze curves for continuity and curvature alongside the
+grid metrics: `make grid-qa` / `make dashboard` report smoothness
+(curvature discontinuities, kinks) per glyph, and Runebender draws a
+curvature comb and continuity markers and offers harmonize / balance
+tools. **A glyph is not signed off until its curves are smooth, not merely
+until its numbers are round.**
+
 ## Vertical metrics
 
 | zone | y | notes |
