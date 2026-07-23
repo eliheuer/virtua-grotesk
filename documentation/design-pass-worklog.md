@@ -666,6 +666,46 @@ points moved this pass — off-curve handles only.
   the flagged list, zero new flags), build green, preflight green, large
   renders of C/O/o/zero/D/six/p clean.
 
+### H O n o — cap vs lowercase weight & spacing study — 2026-07-22
+
+Normalized comparison against Inter (north star) and Geist, via
+`make metrics` (`scripts/normalize_metrics.py`; method in
+`documentation/normalized-metrics-workflow.md`). Regular master. Raw
+Virtua units: H stem 104 / n stem 96; O side 108 / o side 100; O crown
+96 / o crown 88; sidebearings H 80 / O 52 / n 64 / o 40.
+
+**Weight — Virtua is internally consistent, caps ~8% heavier everywhere.**
+- `H stem / n stem` 1.08 (Inter 1.06, Geist 1.02) — caps a hair heavier
+  than lowercase uprights; fine, at the heavier end of normal.
+- `O side / o side` **1.08** (Inter **1.01**, Geist 1.02) — the notable
+  divergence. Inter keeps *round* weights equal across case; Virtua's O
+  is 8% heavier than o, matching its uprights' 8%. So Virtua is
+  self-consistent (uniform cap-heaviness) where Inter is not — a real
+  fork in philosophy, not an error. Question for Eli: keep uniform +8%
+  caps, or follow Inter and equalize the rounds (O side 108 → ~100)?
+- Contrast healthy: lc `o/n` 1.04 and cap `O/H` 1.04 both match Inter's
+  ~1.02–0.97 band; rounds carry the right optical over-weight.
+- Overshoot `o crown/o side` 0.88 = Inter exactly. `O crown/O side` 0.89
+  vs Inter 0.95 — Virtua's cap crown is a touch light; minor.
+
+**Spacing — lowercase is deliberately tight; caps read relatively open.**
+- `n sb / n counter` 0.25 (Inter 0.30) and `o sb / o side` 0.40 (Inter
+  0.57) confirm the intentional tight, display-leaning lowercase.
+- `H sb / n sb` 1.25 and `O sb / o sb` 1.30 (Inter 1.14 / 1.17) — caps
+  sit **more openly relative to lowercase** than in Inter. Largely a
+  consequence of the tight lowercase denominator, but in mixed setting
+  (`Ho`, `On`) the caps will have more air than Inter's. Question for
+  Eli: pull cap sidebearings in slightly (H 80→72, O 52→48) to tighten
+  the cap↔lowercase transition, or leave caps open on purpose?
+
+**Proportion — all close to Inter.** `cap/x-height` 1.33 (Inter 1.33
+exactly); `O/o width` 1.38 (Inter 1.30, Virtua O slightly wider);
+`H/n width` 1.32 (Inter 1.30). No action.
+
+Two decisions parked for Eli (both aesthetic, not defects): round-weight
+philosophy (uniform-heavy vs Inter's equal rounds), and cap spacing
+openness. Nothing edited this pass.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD

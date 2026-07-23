@@ -25,6 +25,7 @@ help:
 		'  make grid-qa        Per-glyph design-system conformance report (grades + popcounts)' \
 		'  make dashboard GLYPH=a  Live one-glyph design dashboard (re-renders on save)' \
 		'  make lint-grid      Check source outlines against the power-of-two grid' \
+		'  make metrics        Normalized metric comparison vs Inter/Geist (weight, spacing, proportion)' \
 		'  make scoreboard     Update documentation/scoreboard.md (GF-gate burn-down)' \
 		'  make skeleton       End-to-end loop: build + qa + reports + scoreboard (qa may fail while debt exists)' \
 		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
@@ -96,6 +97,11 @@ lint-grid:
 lint-curves:
 	$(PYTHON) scripts/curve_lint.py Regular --all
 	$(PYTHON) scripts/curve_lint.py Bold --all
+
+# Normalized metric comparison of Virtua glyphs against reference fonts
+# (Inter, Geist). See documentation/normalized-metrics-workflow.md.
+metrics:
+	$(PYTHON) scripts/normalize_metrics.py
 
 # The end-to-end skeleton: prove the whole pipeline runs TODAY, debt and
 # all. qa failures are expected while debt exists (the leading "-" keeps
