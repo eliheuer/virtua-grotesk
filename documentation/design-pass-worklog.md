@@ -722,7 +722,13 @@ openness. Nothing edited this pass.
   top. So the pair intentionally does NOT share top tension; perceived weight
   won over numeric consistency. Side handles ~0.63. No inflections; curve_lint
   clean.
-- Round side weight = 108 (cap) / 100 (lc); counters self-label: O 472, o 344.
+- Round side weight: O 108 (cap). Lc o side FINALIZED at 98 (not 100) —
+  round compensation 98/96 = 1.02, matching Inter (1.017) vs Geist (1.048);
+  100 was Geist-heavy and the o out-weighed its neighbors. Crown thinned to
+  84 (crown/side 0.86 ≈ Inter 0.88) to pull weight from the fuller top. These
+  are optical corrections: the resulting high-popcount values (side 98, crown
+  84, counter 348) are intended teaching SIGNAL, not error — see
+  [[dyadic-self-labeling-grid]]. o counter self-labels 348; O counter 472.
 - Open/accepted: O crown 96 (crown/side 0.89, a touch light vs refs 0.93–0.95)
   left clean-on-8 rather than nudged to off-8 100.
 
