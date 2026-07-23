@@ -712,12 +712,17 @@ openness. Nothing edited this pass.
 - Spacing: sidebearings are multiples of 8 (kerning in 8s), counter is the
   free variable that self-labels ([[dyadic-self-labeling-grid]]). Final sb:
   H 80, O 48, n 64, o 40. Cap O pulled in from 52.
-- Round aspect (w/h): O 0.86, o 0.87 — matched to each other and to Inter
-  (0.86)/Geist (0.88). Cap O was narrowed 736→688 (it had bulged to 0.92).
-- Round top-handle tension unified: O 192/rad 344 = 0.558, o 144/rad 264 =
-  0.545 (near circular-ideal 0.552). Side handles ~0.63. Curvature peaks at
-  the diagonal on both (superelliptical), flat at the extrema, no inflections.
-- Round side weight = 108 (cap) / 100 (lc); counters self-label: O 472, o 328.
+- Round aspect (w/h): O 0.86, o 0.895 — the o is drawn ROUNDER than the cap O
+  (Inter does the same: o 0.882 > O 0.864), so the lowercase o holds its own
+  and doesn't read as a shrunk O. Cap O was narrowed 736→688 (it had bulged
+  to 0.92); o was then widened 528→544 for presence.
+- Round top-handle tension: O 192/rad 344 = 0.558 (near circular-ideal), o
+  128/rad 272 = 0.471 kept SHORT on purpose — 144 made the o look heavy
+  (longer top handle = more mass near the top), 128 keeps a lighter, tighter
+  top. So the pair intentionally does NOT share top tension; perceived weight
+  won over numeric consistency. Side handles ~0.63. No inflections; curve_lint
+  clean.
+- Round side weight = 108 (cap) / 100 (lc); counters self-label: O 472, o 344.
 - Open/accepted: O crown 96 (crown/side 0.89, a touch light vs refs 0.93–0.95)
   left clean-on-8 rather than nudged to off-8 100.
 
