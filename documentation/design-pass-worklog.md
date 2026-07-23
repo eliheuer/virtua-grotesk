@@ -706,6 +706,25 @@ Two decisions parked for Eli (both aesthetic, not defects): round-weight
 philosophy (uniform-heavy vs Inter's equal rounds), and cap spacing
 openness. Nothing edited this pass.
 
+**LOCKED 2026-07-22 — H O n o are the master templates.** Resolved:
+- Weight: keep caps ~8% heavier everywhere (Swiss/Helvetica, Eli's call) —
+  O side 108 / o side 100, H stem 104 / n stem 96.
+- Spacing: sidebearings are multiples of 8 (kerning in 8s), counter is the
+  free variable that self-labels ([[dyadic-self-labeling-grid]]). Final sb:
+  H 80, O 48, n 64, o 40. Cap O pulled in from 52.
+- Round aspect (w/h): O 0.86, o 0.87 — matched to each other and to Inter
+  (0.86)/Geist (0.88). Cap O was narrowed 736→688 (it had bulged to 0.92).
+- Round top-handle tension unified: O 192/rad 344 = 0.558, o 144/rad 264 =
+  0.545 (near circular-ideal 0.552). Side handles ~0.63. Curvature peaks at
+  the diagonal on both (superelliptical), flat at the extrema, no inflections.
+- Round side weight = 108 (cap) / 100 (lc); counters self-label: O 472, o 328.
+- Open/accepted: O crown 96 (crown/side 0.89, a touch light vs refs 0.93–0.95)
+  left clean-on-8 rather than nudged to off-8 100.
+
+Propagate these to C G Q D (caps) and c e (lowercase): sb mult-of-8, aspect
+~0.86/0.87, top-handle tension ~0.55, side 108/100, counter self-labels.
+Verify each with `make metrics` and `curve_lint`.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
