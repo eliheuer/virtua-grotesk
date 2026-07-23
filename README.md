@@ -5,7 +5,7 @@ powers-of-two grid. It runs from Regular (400) to Bold (700) on a single Weight
 axis, with monolinear strokes and chamfered corners as its defining
 construction detail.
 
-![Virtua Grotesk specimen: the word Grid set as a powers-of-two dimension sheet, red glyphs on the 16-unit design grid with labeled vertical metrics and dimensioned side bearings](documentation/assets/readme/hero.png)
+![The word Grid drawn as a Virtua Grotesk dimension sheet: red G, orange r, yellow i, and green d with every Bézier point and handle marked, stem widths labeled with their power-of-two sums, and advance widths dimensioned along the baseline.](https://elih.net/og/virtua-grotesk.png)
 
 **Read the story:** [Virtua Grotesk: Grid System as Dataset](https://elih.net/blog/virtua-grotesk),
 on how the typeface is designed and the small neural network learning to draw it.
