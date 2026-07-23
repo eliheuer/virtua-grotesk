@@ -730,6 +730,40 @@ Propagate these to C G Q D (caps) and c e (lowercase): sb mult-of-8, aspect
 ~0.86/0.87, top-handle tension ~0.55, side 108/100, counter self-labels.
 Verify each with `make metrics` and `curve_lint`.
 
+### a–z A–Z 0–9 — system pass vs HOno / Inter / Geist — 2026-07-22
+
+Broad normalized pass over basic Latin + digits, using the finalized HOno
+system as the reference (lc stem 96 / cap 104; lc round-side 100 / cap 108;
+sb mult-of-8; curved extremes overshoot ~16). Method: `make metrics`,
+`curve_lint`, and a min-stroke/sidebearing/overshoot audit. **The system is
+holding well** — verified: cap stems land on 104 (D E F H I K L N P R T U Y),
+lc stems on 96 (d f h i j k l m n p q r t u), cap round-sides on 108 (G Q, via
+mid scan), lc round-side 100 (o); curved-extreme overshoot ~16 is consistent
+(caps C G O Q S; lc a c e o s; ascenders to 768, descenders ~-200/-224).
+
+**Tier 1 — verified conformance defects (objective, worth fixing):**
+- **Sidebearings off the 8-grid (11 glyphs):** A (sbR 12), B (36), K (20),
+  P (28), R (68), Z (20), and digits 3 (28), 5 (28), 6 (44), 7 (36/20),
+  9 (44). Breaks kerning-in-8s. Mostly the right sidebearing; fixable via
+  advance/position without touching the drawing.
+- **Digit 0 is ~24u short:** top 760 vs 784 for 6/8/9 (and O's 784). Reads
+  small among the figures. Should overshoot to ~784 like the other round digits.
+- **r has no arch overshoot:** top sits at 576 (x-height) while n's shoulder
+  overshoots to 592. r's curved shoulder should overshoot ~16 like n.
+- **b stem ~88 (should be 96):** ~8u light vs every other lc stem (d, which
+  shares the stem+bowl structure, is a correct 96).
+
+**Tier 2 — design considerations (Eli's call, not defects):**
+- Pointed cap apexes A V W M sit at +0 overshoot; many grotesques overshoot
+  pointed apexes a few units so they don't read short.
+- Curve fairness: curve_lint flags crest-off-center on s and 6 (and 3/5-ish
+  curves) — minor superelliptical-crest tuning, not kinks.
+- Round-cap widths are natural (C 0.88, G 0.89, Q 0.94 w/ tail, D 0.82) —
+  consistent with their forms; no action.
+
+Nothing edited this pass — this is the findings map. Propagation order when
+fixing: sb-on-8 sweep → digit 0 height → r overshoot → b stem.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
