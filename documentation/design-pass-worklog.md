@@ -14,6 +14,30 @@ decisions — agents never resolve an OPEN item by editing sources;
 they measure, propose, and log. Append; don't rewrite history — if a
 decision is reversed, add a dated follow-up entry.
 
+## Bowl unification b d p q g (2026-07-24, agent pass — Eli to review)
+
+Normalized bowl-vs-o study (`tmp/bowl_vs_o.py`, Inter + Geist refs, all
+% of x-height). Two rules the references follow, both uniform across
+b/d/p/q/g:
+- **Round side = the o's curve, exactly.** round-side sidebearing ==
+  o's in all three fonts (ratio 1.00). Virtua already conformed.
+- **Counter = a uniform ~0.96x the o counter** — the SAME reduction for
+  every bowl letter (Inter 0.96, Geist 0.96–0.97). The closed stem side
+  reads heavier than the open o, so they pull the counter in a hair,
+  consistently.
+
+Virtua's counters were spread **0.93–1.00x o**: d = 1.00 (raw o bowl,
+too wide), b/p/g = 0.93 (tight), q = 0.95; plus b had a stem-side bulge
+(inner-left 152 vs stem line 160) thinning its wall to 88.
+
+**Applied:** unified all five to counter **336 (0.965x o)**, stem 96,
+round wall 100, sidebearings **40 (round) / 64 (stem)**, advance **636**.
+Each edit keeps the round half rigid (round curve untouched) and only
+repositions the counter/stem side; b/p counter crests re-centered to the
+new midline (x=328). curve_lint clean. Kept round wall at 100 (bowls'
+existing value; o is 98 — 2u heavier, left for Eli to judge). Script:
+`tmp/unify_bowls.py`. **OPEN for Eli's review pass in Runebender.**
+
 ## The contract being checked (blog §03, quick reference)
 
 - UPM 1024, drawing grid 2. Ascender 768, cap height 768,
