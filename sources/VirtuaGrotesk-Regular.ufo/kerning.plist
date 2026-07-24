@@ -22,8 +22,15 @@
     <key>public.kern2.slash</key>
     <real>-128</real>
   </dict>
+  <key>S</key>
+  <dict>
+    <key>y</key>
+    <real>-32</real>
+  </dict>
   <key>T</key>
   <dict>
+    <key>e</key>
+    <real>-160</real>
     <key>o</key>
     <real>-160</real>
     <key>r</key>
@@ -52,6 +59,8 @@
     <real>-160</real>
     <key>quoteright</key>
     <real>-128</real>
+    <key>t</key>
+    <real>-32</real>
     <key>z</key>
     <real>-40</real>
   </dict>
@@ -318,9 +327,11 @@
   <key>s</key>
   <dict>
     <key>o</key>
-    <real>40</real>
+    <real>0</real>
     <key>public.kern2.t</key>
     <real>-8</real>
+    <key>t</key>
+    <real>-16</real>
   </dict>
   <key>space</key>
   <dict>
@@ -331,13 +342,19 @@
   <dict>
     <key>e</key>
     <real>-16</real>
+    <key>s</key>
+    <real>-16</real>
     <key>u</key>
     <real>0</real>
   </dict>
   <key>y</key>
   <dict>
+    <key>T</key>
+    <real>-192</real>
     <key>public.kern2.period</key>
     <real>-128</real>
+    <key>s</key>
+    <real>-16</real>
   </dict>
 </dict>
 </plist>
