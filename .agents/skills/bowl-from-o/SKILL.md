@@ -83,8 +83,37 @@ negotiation — they come from the o verbatim. Do not translate, scale, or
 - Forcing the counter crest to exact center when the bowl wants a slight
   optical offset.
 
+## Deriving b p q from d by flip/rotate
+Once ONE ascender bowl (the `d`) is finalized, the other full-height bowls
+are geometric transforms of it — same bowl, byte-for-byte, no re-drawing:
+- **b = d mirrored horizontally** (x → adv − x). Ascender stays; sidebearings
+  swap.
+- **q = d mirrored vertically** (y → xHeight − y). Ascender → descender.
+- **p = d rotated 180°** (both). Bowl-right, stem-left, descender.
+
+Rules that make it build:
+- A reflection (b, q) **reverses contour winding** — reverse each contour
+  after transforming, or the counter fills solid. A 180° rotation (p) is two
+  reflections, so winding is preserved — do NOT reverse.
+- **Do both masters.** Interpolation needs identical point structure across
+  masters, so flip each master's own `d` (Regular d → Regular b, Bold d →
+  Bold b). Advance unifies to that master's d advance.
+- **Descender fix-up:** a vertical flip about the x-height center lands the
+  stem terminal ~8u high of the −200 Latin descender line (j y p q); shift the
+  terminal row (y < −100) down so the descender bottom = −200.
+
+Script: `tmp/flip_bowls.py` (fontTools glifLib + ReverseContourPointPen).
+Done in commit that follows 8e35588; both masters, curve_lint clean.
+
+## g is NOT a flip
+The single-story `g` cannot be derived from `d` or `o`. Its bowl is
+deliberately **shorter and higher** (Regular: inner y 108..500 vs o's
+68..508, bowl center ~304 vs 288) to clear the ear/spine and tail. Treat its
+bowl size as a design decision; only the round-side **wall (98)** and curve
+character should echo the o. Draw `g` by hand.
+
 ## Scope note
 The agent unification pass (commit 8e35588) brought b p q g into a shared
-geometry by shifting, not by copying the o. They are candidates for the
-same o-verbatim treatment this skill describes — re-derive each from the o
-rather than trusting the shifted version. `d` is the reference example.
+geometry by *shifting*. b p q have since been re-derived by flipping the
+finalized d (above), so they are now o-exact. `g` remains shifted (wall 100,
+advance 636) and awaits a hand pass. `d` is the reference example.
