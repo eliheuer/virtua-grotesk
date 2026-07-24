@@ -14,6 +14,8 @@
   </dict>
   <key>F</key>
   <dict>
+    <key>O</key>
+    <real>-64</real>
     <key>a</key>
     <real>-96</real>
   </dict>
@@ -29,6 +31,8 @@
   </dict>
   <key>T</key>
   <dict>
+    <key>A</key>
+    <real>-128</real>
     <key>e</key>
     <real>-160</real>
     <key>o</key>
@@ -86,6 +90,11 @@
     <key>public.kern2.t</key>
     <real>-8</real>
     <key>public.kern2.y</key>
+    <real>-32</real>
+  </dict>
+  <key>o</key>
+  <dict>
+    <key>t</key>
     <real>-32</real>
   </dict>
   <key>period</key>
@@ -321,6 +330,8 @@
   <dict>
     <key>hyphen</key>
     <real>-128</real>
+    <key>o</key>
+    <real>-64</real>
     <key>quoteright</key>
     <real>-64</real>
   </dict>
