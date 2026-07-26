@@ -326,6 +326,11 @@
     <key>public.kern2.period</key>
     <real>-32</real>
   </dict>
+  <key>public.kern2.hyphen</key>
+  <dict>
+    <key>public.kern1.one</key>
+    <real>-128</real>
+  </dict>
   <key>public.kern2.w</key>
   <dict>
     <key>public.kern1.x</key>
