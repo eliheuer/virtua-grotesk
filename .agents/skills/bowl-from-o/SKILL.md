@@ -105,12 +105,36 @@ Rules that make it build:
 Script: `tmp/flip_bowls.py` (fontTools glifLib + ReverseContourPointPen).
 Done in commit that follows 8e35588; both masters, curve_lint clean.
 
-## g is NOT a flip
+## g is NOT a flip (single-story g)
 The single-story `g` cannot be derived from `d` or `o`. Its bowl is
 deliberately **shorter and higher** (Regular: inner y 108..500 vs o's
-68..508, bowl center ~304 vs 288) to clear the ear/spine and tail. Treat its
-bowl size as a design decision; only the round-side **wall (98)** and curve
-character should echo the o. Draw `g` by hand.
+68..508, bowl center ~304 vs 288) to clear the ear/spine and tail. Draw it by
+hand, but the bowl-from-o rules still apply to the parts that are a bowl.
+Learned from Eli's cleanup of an agent's best-effort g (the agent got the
+inner counter; Eli reshaped the outer and the tail):
+
+- **Inner counter: build it o-derived and it will hold.** wall **98**, extrema
+  aligned to the bowl's own vertical center (304 here), symmetric handles at
+  the o proportion. Eli accepted the agent's inner contour with only 2u
+  tweaks — this is the reliable part.
+- **Advance 624, wall 98, extrema aligned to the bowl center.** Same as the
+  round bowls. The agent's fixes here (revert over-widening to 624, wall
+  100→98, outer extremum 288→304 to stop the wall skewing) were all kept.
+- **Outer round side is a hair FLATTER than the o.** Vertical handles at
+  **±160** about the bowl center, not the o-proportion ±166 the agent used.
+  The single-story bowl wants slightly less curvature than the o.
+- **Top-left is fuller than bottom-left (asymmetric horizontal handles).** The
+  upper handle reaches further out (x≈124) than the lower (x≈144), because the
+  bottom-left runs into the tail junction and must tuck in. Do NOT mirror the
+  bowl top-to-bottom here.
+- **The tail is the real hand work — not derivable.** Eli set the tail depth
+  to **−216** (deeper than the −200 descender line, shallower than a naive
+  −224) and lowered the spine→tail transition (spine smooth y 80→48, tail
+  spring −96→−152) to shape the hook. Expect to draw the ear, spine, and tail
+  entirely by eye; the o only informs the bowl.
+
+Counter came out **326** (0.94× o) — a touch tighter than the round bowls'
+330, which is correct for the smaller compressed bowl.
 
 ## Scope note
 The agent unification pass (commit 8e35588) brought b p q g into a shared
