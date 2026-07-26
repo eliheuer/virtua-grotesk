@@ -7,7 +7,7 @@ REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 PNGQUANT ?= ./.venv/bin/pngquant
 
-.PHONY: help setup build proof specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build proof review review-rubik specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -40,6 +40,23 @@ build:
 
 proof: build
 	designbot --render scripts/designbot/general_proof.rs --output documentation/proofs/proof.pdf -- "$(REGULAR_FONT)"
+
+# diffenator2 -- the Google Fonts onboarding review view (glyph set, diacritic
+# proofer, spacing, waterfall). Must run with the venv on PATH so diffenator2's
+# _diffbrowsers helper resolves. `make review` = Virtua; `make review-rubik` =
+# the shipped Rubik reference to match against. Open the printed index in a browser.
+DIFFENATOR = PATH="$(CURDIR)/.venv/bin:$$PATH" ./.venv/bin/diffenator2
+RUBIK_FONT ?= $(HOME)/GH/repos/google-fonts/ofl/rubik/Rubik[wght].ttf
+
+review: build
+	@mkdir -p out
+	$(DIFFENATOR) proof "$(VARIABLE_FONT)" -o out/review
+	@echo ">>> open out/review/diffenator2-report.html"
+
+review-rubik:
+	@mkdir -p out
+	$(DIFFENATOR) proof "$(RUBIK_FONT)" -o out/review-rubik
+	@echo ">>> open out/review-rubik/diffenator2-report.html"
 
 specimen: build
 	designbot --render scripts/designbot/print_spacing_specimen.rs --output documentation/proofs/print-spacing-specimen.pdf

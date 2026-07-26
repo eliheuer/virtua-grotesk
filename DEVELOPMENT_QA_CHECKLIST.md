@@ -23,21 +23,20 @@ make metrics                                              # normalized vs Inter/
 ```
 Plus a quick PIL/hb render of whatever you touched.
 
-## 2. diffenator2 — the GF onboarders' gold standard  ⚠️ FINISH SETUP
-What GF reviewers use. Two modes:
+## 2. diffenator2 — the GF onboarders' gold standard  ✅ WIRED UP
+What GF reviewers actually use to review submissions. Run via the Makefile
+(the targets put the venv on PATH so diffenator2's `_diffbrowsers` helper
+resolves — running `.venv/bin/diffenator2` directly fails without that):
 ```
-mkdir -p out
-# proof = HTML web view (waterfall, glyph set, DIACRITICS, spacing, text):
-.venv/bin/diffenator2 proof "fonts/variable/VirtuaGrotesk[wght].ttf" -o out/proof
-#   then open out/proof/index.html
-# diff = compare two fonts (regression / before-after):
-.venv/bin/diffenator2 diff OLD.ttf NEW.ttf -o out/diff
+make review          # Virtua -> out/review/diffenator2-report.html
+make review-rubik    # Rubik reference -> out/review-rubik/diffenator2-report.html
 ```
-**Status (2026-07-26):** `proof` errors at `build_index_page` ("No html docs
-found") — the ninja proof step emits no HTML. `ninja` IS installed, so it's a
-render-backend issue, not ninja. **TODO (task #13-adjacent):** inspect the
-ninja build log under `out/proof/`, check for a missing render dep (hb/browser
-backend). Once green, this is the primary visual QA + the Rubik comparison in §3.
+Open the report in a browser. Each has 4 views per instance:
+- **proofer** — the diacritic + spacing view (the important one for accents)
+- **glyphs** — the full glyph set
+- **waterfall** — sizes; **text** — running text
+For before/after regression: `.venv/bin/diffenator2 diff OLD.ttf NEW.ttf -o out/diff`
+(also run with the venv on PATH). `out/` is gitignored.
 
 ## 3. Match Rubik (the workflow that lets agents do most of the work)
 - Built ref: `~/GH/repos/google-fonts/ofl/rubik/Rubik[wght].ttf`
