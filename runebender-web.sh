@@ -10,6 +10,24 @@ CHROME_APP="${RUNEBENDER_CHROME_APP:-Google Chrome}"
 
 cd "$ROOT_DIR"
 
+# Locate a Chromium-based browser for app mode (WebGPU). Honour an explicit
+# override, otherwise probe the usual Linux/macOS binaries. Empty result on
+# macOS means we fall back to `open -na "$CHROME_APP"` below.
+find_browser() {
+  if [[ -n "${RUNEBENDER_CHROME_BIN:-}" ]]; then
+    printf '%s\n' "$RUNEBENDER_CHROME_BIN"; return 0
+  fi
+  local c
+  for c in chromium google-chrome google-chrome-stable chromium-browser \
+           brave brave-browser microsoft-edge; do
+    if command -v "$c" >/dev/null 2>&1; then
+      command -v "$c"; return 0
+    fi
+  done
+  return 0
+}
+BROWSER_BIN="$(find_browser)"
+
 if ! command -v runebender-serve >/dev/null 2>&1; then
   echo "runebender-serve was not found on PATH." >&2
   echo "Expected: ~/GH/repos/runebender-web/server/serve.mjs" >&2
@@ -20,22 +38,45 @@ info_url="${URL}runebender/api/info"
 expected_entry="$ROOT_DIR/$SOURCE_PATH"
 
 open_chrome_app() {
-  echo "Opening Runebender web in ${CHROME_APP} app mode:"
   echo "  url      $URL"
   echo "  profile  $PROFILE_DIR"
-  if ! open -na "$CHROME_APP" --args \
-    --app="$URL" \
-    --new-window \
-    --user-data-dir="$PROFILE_DIR"
-  then
-    echo "Could not open ${CHROME_APP} in app mode." >&2
-    echo "Open this URL manually instead: $URL" >&2
-    return 1
+
+  # Linux / explicit binary: launch the browser directly in app mode.
+  # The window runs detached; a GUI launch can't be probed synchronously, so
+  # we start it in the background and leave the server in the foreground.
+  if [[ -n "$BROWSER_BIN" ]]; then
+    echo "Opening Runebender web in $(basename "$BROWSER_BIN") app mode."
+    "$BROWSER_BIN" \
+      --app="$URL" \
+      --new-window \
+      --user-data-dir="$PROFILE_DIR" \
+      --window-size=1400,900 \
+      >/dev/null 2>&1 &
+    disown 2>/dev/null || true
+    return 0
   fi
 
-  if command -v osascript >/dev/null 2>&1; then
-    osascript -e "tell application \"$CHROME_APP\" to activate" >/dev/null 2>&1 || true
+  # macOS fallback: use `open` to launch the named Chrome app.
+  if command -v open >/dev/null 2>&1; then
+    echo "Opening Runebender web in ${CHROME_APP} app mode."
+    if ! open -na "$CHROME_APP" --args \
+      --app="$URL" \
+      --new-window \
+      --user-data-dir="$PROFILE_DIR"
+    then
+      echo "Could not open ${CHROME_APP} in app mode." >&2
+      echo "Open this URL manually instead: $URL" >&2
+      return 1
+    fi
+    if command -v osascript >/dev/null 2>&1; then
+      osascript -e "tell application \"$CHROME_APP\" to activate" >/dev/null 2>&1 || true
+    fi
+    return 0
   fi
+
+  echo "No Chromium-based browser found for app mode." >&2
+  echo "Set RUNEBENDER_CHROME_BIN, or open this URL manually: $URL" >&2
+  return 1
 }
 
 existing_info="$(curl -fsS "$info_url" 2>/dev/null || true)"
@@ -55,7 +96,7 @@ fi
 echo "Starting Runebender web:"
 echo "  source  $ROOT_DIR/$SOURCE_PATH"
 echo "  url     $URL"
-echo "  chrome  $CHROME_APP"
+echo "  browser ${BROWSER_BIN:-$CHROME_APP}"
 
 runebender-serve "$SOURCE_PATH" --port "$PORT" &
 server_pid=$!
