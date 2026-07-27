@@ -831,6 +831,32 @@ advances +16/+8 as expected, before/after renders in
 - Off-8 sidebearings from the 2026-07-22 Tier-1 list remain off-8 (this pass
   deliberately changed only the one variable).
 
+### m — rebuilt from the n templates — 2026-07-27
+
+Eli flagged the m as out of date with the (LOCKED) n. Normalized study of
+`m counter / n counter` at the 0.45-x-height scan: Inter 0.878, Geist 0.92,
+Virtua Regular **0.97** (m barely narrowed → too wide, m/n adv 1.568 vs refs
+1.48–1.51) and Bold **0.79** (over-compressed; was orange-marked). Old m
+arches also used pre-HOno geometry (104-unit shoulder handles vs n's 128).
+
+Rebuilt m in both masters as a literal derivation of the current n:
+n's outline with only the counter span compressed (Regular 256→**232**,
+ratio 0.906; Bold 192→**172**, ratio 0.896 — both inside the Inter–Geist
+band), arch repeated at pitch stem+counter, n's outer shoulder/flag/junction
+copied verbatim (mid junction flat = stem2 right edge + 8, exactly n's
+stem-top junction). Arch1's right flank is the junction-descent mirrored
+and stretched to reach apex1. Same 45-point topology as before.
+
+**Regular** — advance 928→**896**, sb 72/72, counters 232/232, inner apexes
+centered on the counters, m/n adv 1.514 (≈Geist). curve_lint clean.
+**Bold** — advance 1024→**1064**, sb 72/72, counters 172/172, m/n adv 1.478
+(≈Inter). curve_lint clean. Stale `org.fontgarden.transfer` keys dropped
+(outline no longer image-traced); Bold glif normalized to repo XML style.
+
+Marked **blue** in both masters (was green Regular / orange Bold) — AI
+rebuild awaiting Eli's grading. Build + preflight green; context renders in
+`~/Temp/m-new-{reg,bold}.png`, `~/Temp/vg-m-context.png`.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
