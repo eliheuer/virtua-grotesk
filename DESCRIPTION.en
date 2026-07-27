@@ -1,0 +1,21 @@
+<!-- PLACEHOLDER — drafted 2026-07-26 from https://elih.net/blog/virtua-grotesk/.
+     The newer article/ARTICLE.en.md is the primary description; this HTML
+     fallback mirrors it in brief. Review before submission. -->
+<p>
+Virtua Grotesk is a neo-grotesque sans-serif built on a hidden mathematical
+grid. Every curve and angle aligns to powers of two &mdash; a dyadic,
+self-labeling coordinate system that doubles as machine-learning training
+data. It is a working font today and an experiment in how typefaces might
+evolve through machine learning tomorrow.
+</p>
+<p>
+Point placement defaults to an 8-unit structural grid, with optical
+refinements on a 2-unit subgrid, all inside a 1024-unit em. This discipline
+lets a small open-weight language model (Virtua-12M) learn the design system
+and generate new letterforms and weights that snap cleanly to the grid.
+</p>
+<p>
+Designed by Eli Heuer, with tooling from the open-source Runebender font
+editor. Virtua Grotesk is free and open source under the
+<a href="https://openfontlicense.org">SIL Open Font License, Version 1.1</a>.
+</p>
