@@ -1,76 +1,77 @@
 #!/usr/bin/env bash
-# Render the Virtua Grotesk social assets.
+# Social-image factory — theme-swappable, color-managed renders.
 #
-# The Rust binaries are the source of truth; they emit color-managed PNG frame
-# sequences into out/frames/ and carousel slides into out/carousel/. This script
-# builds them, runs them, then encodes the frame sequences to mp4 + gif with
-# ffmpeg. All of out/ is gitignored (the repo .gitignore ignores `out/`).
+# The Rust bins are the source of truth: they emit sRGB-tagged PNGs (and, for
+# animations, frame sequences that this script encodes to mp4 + gif). Committed
+# output lands in ../../documentation/social-assets/; a --scratch run (passed
+# straight through) writes throwaways under out/.
 #
-#   scripts/social/render.sh            # everything
-#   scripts/social/render.sh carousel   # just the carousel PNGs
-#   scripts/social/render.sh square     # just the square animation
-#   scripts/social/render.sh reel       # just the vertical reel
+#   ./render.sh                        # every composition, every configured theme
+#   ./render.sh specimen               # one composition, every configured theme
+#   ./render.sh specimen light         # one composition, one theme
+#   ./render.sh specimen light square  # one composition, one theme, one format
 #
-# Deps: cargo (offline once designbot is cached), ffmpeg (for mp4/gif).
+# Deps: cargo (offline once designbot is cached); ffmpeg (only for animations).
 set -euo pipefail
 cd "$(dirname "$0")"
 
-OUT=out
-VID=$OUT/video
-mkdir -p "$VID"
+# --- config -----------------------------------------------------------------
+# Which themes to render when none is named. Edit freely.
+THEMES=(dark light)
+# Static-image compositions (each accepts --theme / --format / --scratch).
+STATICS=(specimen)
+# Animation compositions (emit out/frames/<name>/; encoded below). None yet.
+ANIMATIONS=()
 
+# --- ffmpeg encode helpers (kept ready for the animation phase) -------------
 have_ffmpeg=1
 command -v ffmpeg >/dev/null 2>&1 || have_ffmpeg=0
-
-# High-quality x264 source; platforms recompress, so hand them the best master.
 # yuv420p for universal playback; BT.709 tagged so no player guesses colors.
 X264="-c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p \
   -colorspace bt709 -color_primaries bt709 -color_trc bt709 -movflags +faststart -an"
 
 encode_mp4() { # <frames_dir> <fps> <out.mp4>
-  local dir=$1 fps=$2 out=$3
-  if [ "$have_ffmpeg" = 1 ]; then
-    ffmpeg -y -loglevel error -framerate "$fps" -i "$dir/%04d.png" $X264 "$out"
-    echo "  mp4 -> $out"
-  else
-    echo "  ffmpeg not found; skipping $out (frames are in $dir)"
-  fi
+  [ "$have_ffmpeg" = 1 ] || { echo "  (no ffmpeg; frames in $1)"; return; }
+  ffmpeg -y -loglevel error -framerate "$2" -i "$1/%04d.png" $X264 "$3"
+  echo "  mp4 -> $3"
 }
-
 encode_gif() { # <frames_dir> <fps> <scale_w> <out.gif>
-  local dir=$1 fps=$2 sw=$3 out=$4
-  if [ "$have_ffmpeg" = 1 ]; then
-    local pal; pal=$(mktemp -t vgpal).png
-    local vf="fps=$fps,scale=$sw:-1:flags=lanczos"
-    ffmpeg -y -loglevel error -i "$dir/%04d.png" -vf "$vf,palettegen=stats_mode=diff" "$pal"
-    ffmpeg -y -loglevel error -i "$dir/%04d.png" -i "$pal" \
-      -lavfi "$vf,paletteuse=dither=bayer:bayer_scale=3" -loop 0 "$out"
-    rm -f "$pal"
-    echo "  gif -> $out"
-  else
-    echo "  ffmpeg not found; skipping $out"
-  fi
+  [ "$have_ffmpeg" = 1 ] || return
+  local pal; pal=$(mktemp -t vgpal).png
+  local vf="fps=$2,scale=$3:-1:flags=lanczos"
+  ffmpeg -y -loglevel error -i "$1/%04d.png" -vf "$vf,palettegen=stats_mode=diff" "$pal"
+  ffmpeg -y -loglevel error -i "$1/%04d.png" -i "$pal" \
+    -lavfi "$vf,paletteuse=dither=bayer:bayer_scale=3" -loop 0 "$4"
+  rm -f "$pal"; echo "  gif -> $4"
 }
 
-target=${1:-all}
+# --- driver -----------------------------------------------------------------
+cargo build --release --bins --quiet
 
-if [ "$target" = all ] || [ "$target" = carousel ]; then
-  echo "carousel (§03 dyadic grid, 1080x1350 PNGs)"
-  cargo run --release --quiet --bin carousel
+render_static() { # bin theme [format...]
+  local bin=$1 theme=$2; shift 2
+  local args=(); [ -n "$theme" ] && args+=(--theme "$theme")
+  local f; for f in "$@"; do args+=(--format "$f"); done
+  echo "· $bin${theme:+ [$theme]}"
+  cargo run --release --quiet --bin "$bin" -- "${args[@]}"
+}
+
+comp=${1:-all}; theme=${2:-}
+formats=()
+[ $# -gt 2 ] && { shift 2; formats=("$@"); }
+
+if [ "$comp" = all ]; then
+  for c in "${STATICS[@]}"; do
+    for t in "${THEMES[@]}"; do render_static "$c" "$t"; done
+  done
+elif printf '%s\n' "${STATICS[@]}" | grep -qx "$comp"; then
+  if [ -n "$theme" ]; then
+    render_static "$comp" "$theme" ${formats[@]+"${formats[@]}"}
+  else
+    for t in "${THEMES[@]}"; do render_static "$comp" "$t" ${formats[@]+"${formats[@]}"}; done
+  fi
+else
+  echo "unknown composition: $comp"; echo "known: ${STATICS[*]}"; exit 1
 fi
 
-if [ "$target" = all ] || [ "$target" = square ]; then
-  echo "square animation (2048x2048 weight morph)"
-  cargo run --release --quiet --bin sq_morph
-  encode_mp4 "$OUT/frames/sq_morph" 30 "$VID/sq-morph.mp4"
-  encode_gif "$OUT/frames/sq_morph" 20 900 "$VID/sq-morph.gif"
-fi
-
-if [ "$target" = all ] || [ "$target" = reel ]; then
-  echo "vertical reel (1080x1920 grid-as-dataset loop)"
-  cargo run --release --quiet --bin reel_grid
-  encode_mp4 "$OUT/frames/reel_grid" 30 "$VID/reel-grid.mp4"
-  encode_gif "$OUT/frames/reel_grid" 20 540 "$VID/reel-grid.gif"
-fi
-
-echo "done -> $OUT/"
+echo "done"

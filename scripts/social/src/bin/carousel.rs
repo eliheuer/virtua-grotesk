@@ -16,7 +16,7 @@ use designbot::prelude::Color;
 use designbot_render::Renderer;
 use virtua_grotesk_social::*;
 
-const FORMAT: Format = Format::Carousel;
+const FORMAT: Format = Format::Portrait;
 const SLIDES: usize = 6;
 
 struct Ctx<'a> {

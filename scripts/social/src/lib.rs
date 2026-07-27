@@ -24,6 +24,7 @@ use std::path::Path;
 pub mod inputs;
 pub mod style;
 pub mod technical;
+pub mod theme;
 pub use style::*;
 pub use technical::*;
 
@@ -36,19 +37,22 @@ pub const FAVORED: [f64; 7] = [64.0, 96.0, 128.0, 160.0, 192.0, 224.0, 256.0];
 /// compositions are drawn at the real aspect ratio, never letterboxed.
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Format {
-    /// Instagram carousel / portrait feed slide.
-    Carousel,
     /// Square X / LinkedIn / Instagram card, also the square animation master.
     Square,
-    /// Vertical Instagram / TikTok reel & story (9:16).
+    /// Portrait 4:5 Instagram feed / carousel slide.
+    Portrait,
+    /// Landscape 1.91:1 — the X / LinkedIn card ratio (blog-figure master size).
+    Landscape,
+    /// Vertical 9:16 Instagram / TikTok reel & story.
     Vertical,
 }
 
 impl Format {
     pub fn size(self) -> (f64, f64) {
         match self {
-            Format::Carousel => (1080.0, 1350.0),
             Format::Square => (2048.0, 2048.0),
+            Format::Portrait => (1080.0, 1350.0),
+            Format::Landscape => (2520.0, 1320.0),
             Format::Vertical => (1080.0, 1920.0),
         }
     }
@@ -60,9 +64,102 @@ impl Format {
     }
     pub fn margin(self) -> f64 {
         match self {
-            Format::Carousel => 72.0,
             Format::Square => 128.0,
+            Format::Portrait => 72.0,
+            Format::Landscape => 96.0,
             Format::Vertical => 72.0,
+        }
+    }
+    /// Short slug for filenames / CLI (`--format square`).
+    pub fn slug(self) -> &'static str {
+        match self {
+            Format::Square => "square",
+            Format::Portrait => "portrait",
+            Format::Landscape => "landscape",
+            Format::Vertical => "vertical",
+        }
+    }
+    /// Parse a `--format` value; None if unknown.
+    pub fn from_slug(s: &str) -> Option<Format> {
+        Some(match s.trim().to_ascii_lowercase().as_str() {
+            "square" | "sq" => Format::Square,
+            "portrait" | "carousel" | "feed" => Format::Portrait,
+            "landscape" | "wide" | "og" => Format::Landscape,
+            "vertical" | "reel" | "story" => Format::Vertical,
+            _ => return None,
+        })
+    }
+    /// The four canvases, for "render all formats" loops.
+    pub fn all() -> [Format; 4] {
+        [Format::Square, Format::Portrait, Format::Landscape, Format::Vertical]
+    }
+}
+
+// --- CLI + output routing ----------------------------------------------------
+//
+// Mirrors the blog crate's OutputPaths/--scratch discipline: committed renders
+// land in the project's documentation/social-assets/ (the GF convention); a
+// --scratch run writes a throwaway under the crate's own out/.
+
+/// Parsed shared flags: `--theme <name>`, `--format <name>` (repeatable),
+/// `--scratch`. Unknown/extra args are ignored so a bin can add its own.
+pub struct Cli {
+    pub theme: theme::Theme,
+    /// Requested formats; empty means "the bin's default set".
+    pub formats: Vec<Format>,
+    pub scratch: bool,
+}
+
+impl Cli {
+    pub fn parse() -> Self {
+        let mut theme_name = String::from("dark");
+        let mut formats = Vec::new();
+        let mut scratch = false;
+        let mut args = std::env::args().skip(1);
+        while let Some(a) = args.next() {
+            match a.as_str() {
+                "--theme" | "-t" => {
+                    if let Some(v) = args.next() {
+                        theme_name = v;
+                    }
+                }
+                "--format" | "-f" => {
+                    if let Some(v) = args.next() {
+                        if let Some(fmt) = Format::from_slug(&v) {
+                            formats.push(fmt);
+                        }
+                    }
+                }
+                "--scratch" => scratch = true,
+                _ => {}
+            }
+        }
+        let theme = theme::by_name(&theme_name);
+        theme::set_active(theme);
+        Cli { theme, formats, scratch }
+    }
+
+    /// The formats to render: those requested, else the provided default set.
+    pub fn formats_or(&self, default: &[Format]) -> Vec<Format> {
+        if self.formats.is_empty() {
+            default.to_vec()
+        } else {
+            self.formats.clone()
+        }
+    }
+
+    /// Output path for a composition: committed under
+    /// `documentation/social-assets/<group>/<name>-<theme>-<format>.png`,
+    /// or a scratch copy under the crate's `out/`.
+    pub fn out(&self, group: &str, name: &str, format: Format) -> std::path::PathBuf {
+        let file = format!("{name}-{}-{}.png", self.theme.name, format.slug());
+        if self.scratch {
+            std::path::PathBuf::from(env!("CARGO_MANIFEST_DIR"))
+                .join("out")
+                .join(group)
+                .join(file)
+        } else {
+            inputs::social_assets().join(group).join(file)
         }
     }
 }
