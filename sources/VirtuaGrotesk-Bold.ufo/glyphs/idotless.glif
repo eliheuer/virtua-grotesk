@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idotless" format="2">
 	<unicode hex="0131"/>
-	<advance width="296"/>
+	<advance width="312"/>
 	<outline>
 		<contour>
-			<point x="68" y="0" type="line"/>
-			<point x="228" y="0" type="line"/>
-			<point x="244" y="16" type="line"/>
-			<point x="244" y="560" type="line"/>
-			<point x="228" y="576" type="line"/>
-			<point x="68" y="576" type="line"/>
-			<point x="52" y="560" type="line"/>
-			<point x="52" y="16" type="line"/>
+			<point x="76" y="0" type="line"/>
+			<point x="236" y="0" type="line"/>
+			<point x="252" y="16" type="line"/>
+			<point x="252" y="560" type="line"/>
+			<point x="236" y="576" type="line"/>
+			<point x="76" y="576" type="line"/>
+			<point x="60" y="560" type="line"/>
+			<point x="60" y="16" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="148" y="576"/>
-	<anchor name="bottom" x="148" y="0"/>
+	<anchor name="top" x="156" y="576"/>
+	<anchor name="bottom" x="156" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

@@ -794,6 +794,43 @@ mid scan), lc round-side 100 (o); curved-extreme overshoot ~16 is consistent
 Nothing edited this pass — this is the findings map. Propagation order when
 fixing: sb-on-8 sweep → digit 0 height → r overshoot → b stem.
 
+### Global spacing loosen pass (+8/side) — 2026-07-27
+
+Eli judged the overall spacing too tight after the normalized comparison
+(`make metrics`) against Inter and Geist, and asked for a full loosen pass
+over a–z, A–Z, 0–9. Applied one +8 step on the 8-grid, both masters, via
+text-level glif edits (`~/Temp/spacing_pass.py`):
+
+- **a–z (+ idotless, jdotless, germandbls) and 0–9: +8 both sides**
+  (advance +16) — preserves every internal lowercase/digit relationship.
+- **Caps: round class only** — C left, G left, D right +8; O and Q both
+  sides +8 (48→56). Flats stay at 80; diagonals/apertures untouched.
+- Anchors moved with outlines; composites got mark/slash/hyphen xOffset +8
+  and advance deltas (accent composites +16 over lc bases, +8/+16 over cap
+  rounds; ae/oe right edge = e, OE right edge = E so RSB preserved).
+
+Result (Regular, `make metrics`): `n sb/counter` 0.25→**0.28** (Inter 0.30),
+`o sb/o side` 0.41→**0.49** (≈Geist 0.50), `O sb/O side` 0.44→**0.52**,
+`H sb/n sb` 1.25→**1.11** (Inter 1.14), `O sb/o sb` 1.20→**1.17 = Inter**.
+Spacing now ~Geist-open, still tighter than Inter — display lean retained,
+and the cap↔lowercase air imbalance is resolved without touching cap flats.
+New anchors: n 72, o 48 (Bold 40), O/Q/G/C-left/D-right 56, H 80, digits
+flats 40 / rounds 56. The blog spacing rule "caps get one 16-unit more air"
+is now a one-8-unit step (80 vs 72).
+
+Verified: build green (pure translation, master compat intact), built hmtx
+advances +16/+8 as expected, before/after renders in
+`~/Temp/vg-spacing-{before,after}.png`.
+
+**Follow-ups:**
+- **Kerning review required** — all pair values predate the loosening; lc
+  pairs now have +16 more base air, cap-round pairs +8–16.
+- Pre-existing composite RSB oddities (unchanged by this pass, deltas
+  preserved): OE RSB −144, oslash/eth/thorn RSB ≈0/negative vs their bases,
+  lslash advance 608 (looks copied from Lslash), iacute acute overhang.
+- Off-8 sidebearings from the 2026-07-22 Tier-1 list remain off-8 (this pass
+  deliberately changed only the one variable).
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
