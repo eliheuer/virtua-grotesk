@@ -24,19 +24,21 @@ any time — the scripts are the source of truth).
 Run from the **repo root** (so the font paths resolve):
 
 ```sh
-designbot documentation/specimen-square.rs --social
+designbot documentation/specimen-square.rs
 ```
 
-This writes `documentation/specimen-square.png` next to the script. `--social`
-tags the PNG as sRGB and keeps it lossless on X/Twitter. The first run for a
-given script compiles a cache (~80 s); every run after that is ~1 second, so
-editing and re-rendering is fast.
+This writes `documentation/specimen-square.png` next to the script. PNG output
+is **social-optimized by default**: an sRGB tag, saturation + grain
+pre-compensation for platform JPEG recompression, and the X-lossless alpha
+trick. Add `--raw` if you want a plain, pixel-exact master instead. The first
+run for a given script compiles a cache (~80 s); every run after that is
+~1 second, so editing and re-rendering is fast.
 
 Rebuild every specimen:
 
 ```sh
 for s in square portrait landscape vertical; do
-  designbot documentation/specimen-$s.rs --social
+  designbot documentation/specimen-$s.rs
 done
 ```
 

@@ -1,7 +1,7 @@
 //! Virtua Grotesk — vertical specimen (9:16, Reels / Stories).
 //!
 //! Render from the repo root:
-//!   designbot documentation/specimen-vertical.rs --social
+//!   designbot documentation/specimen-vertical.rs
 //!
 //! Everything reusable lives in designbot; edit the strings + the explicit
 //! layout numbers below by hand.

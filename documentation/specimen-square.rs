@@ -1,8 +1,7 @@
 //! Virtua Grotesk — square specimen (1:1).
 //!
 //! Rendered with designbot. Run from the repo root:
-//!   designbot --render documentation/specimen-square.rs \
-//!             --output documentation/specimen-square.png --social
+//!   designbot documentation/specimen-square.rs
 //!
 //! Everything reusable (theme, palette, canonical size) lives in designbot.
 //! Edit the strings and the explicit layout numbers below by hand.
