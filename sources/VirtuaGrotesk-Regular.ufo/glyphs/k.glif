@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="k" format="2">
 	<unicode hex="006B"/>
-	<advance width="520"/>
+	<advance width="536"/>
 	<outline>
 		<contour>
-			<point x="64" y="16" type="line"/>
-			<point x="80" y="0" type="line"/>
-			<point x="144" y="0" type="line"/>
-			<point x="160" y="16" type="line"/>
-			<point x="160" y="200" type="line"/>
-			<point x="240" y="280" type="line"/>
+			<point x="72" y="16" type="line"/>
+			<point x="88" y="0" type="line"/>
+			<point x="152" y="0" type="line"/>
+			<point x="168" y="16" type="line"/>
+			<point x="168" y="200" type="line"/>
 			<point x="248" y="280" type="line"/>
-			<point x="440" y="0" type="line"/>
-			<point x="488" y="0" type="line"/>
-			<point x="504" y="16" type="line"/>
-			<point x="504" y="64" type="line"/>
-			<point x="312" y="344" type="line"/>
-			<point x="312" y="352" type="line"/>
-			<point x="472" y="512" type="line"/>
-			<point x="472" y="560" type="line"/>
-			<point x="456" y="576" type="line"/>
-			<point x="416" y="576" type="line"/>
+			<point x="256" y="280" type="line"/>
+			<point x="448" y="0" type="line"/>
+			<point x="496" y="0" type="line"/>
+			<point x="512" y="16" type="line"/>
+			<point x="512" y="64" type="line"/>
+			<point x="320" y="344" type="line"/>
+			<point x="320" y="352" type="line"/>
+			<point x="480" y="512" type="line"/>
+			<point x="480" y="560" type="line"/>
+			<point x="464" y="576" type="line"/>
+			<point x="424" y="576" type="line"/>
+			<point x="176" y="328" type="line"/>
 			<point x="168" y="328" type="line"/>
-			<point x="160" y="328" type="line"/>
-			<point x="160" y="752" type="line"/>
-			<point x="144" y="768" type="line"/>
-			<point x="80" y="768" type="line"/>
-			<point x="64" y="752" type="line"/>
+			<point x="168" y="752" type="line"/>
+			<point x="152" y="768" type="line"/>
+			<point x="88" y="768" type="line"/>
+			<point x="72" y="752" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="296" y="576"/>
-	<anchor name="bottom" x="296" y="0"/>
+	<anchor name="top" x="304" y="576"/>
+	<anchor name="bottom" x="304" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
