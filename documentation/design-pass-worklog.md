@@ -857,6 +857,20 @@ Marked **blue** in both masters (was green Regular / orange Bold) — AI
 rebuild awaiting Eli's grading. Build + preflight green; context renders in
 `~/Temp/m-new-{reg,bold}.png`, `~/Temp/vg-m-context.png`.
 
+### h (Regular) — re-synced to n — 2026-07-27
+
+Eli flagged the Regular h as drifted from the LOCKED n (counter 272 vs 256,
+shoulder y 352 with 104-unit handles vs n's 344/128, outer shoulder 384 vs
+368 — pre-HOno geometry, same story as the m). Per Eli's instruction the
+outline was replaced wholesale with the current Regular n, keeping only the
+ascender top-left (flag → stem to 752/768). Advance 608→**592** (= n),
+sb 72/72, 27 points — same topology as before, Bold untouched and still
+compatible. curve_lint clean, build green. Marked blue for grading.
+
+**OPEN: Bold h has the same drift** (counter 176 vs Bold n 192, shoulder
+y 416 vs n's 452) — not touched because the request was Regular-only;
+same n-verbatim treatment recommended.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
