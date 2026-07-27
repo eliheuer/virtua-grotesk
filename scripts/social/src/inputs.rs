@@ -24,6 +24,18 @@ pub const BRAND_URL: &str = "elih.net/blog/virtua-grotesk";
 /// Human-readable family/project name for in-copy references.
 pub const PROJECT: &str = "Virtua Grotesk";
 
+// --- specimen furniture (the four mono corner labels) ------------------------
+// Portable strings for the foundry-post chrome. A new repo edits only these.
+
+/// Top-left wordmark, drawn after the ⊞ foundry mark.
+pub const FOUNDRY: &str = "Font.Garden/virtua";
+/// Top-right license line.
+pub const LICENSE: &str = "Open Font License OFL v1.1";
+/// Bottom-right source URL.
+pub const REPO: &str = "github.com/eliheuer/virtua-grotesk";
+/// Family version, folded into the bottom-left label.
+pub const VERSION: &str = "v0.1";
+
 fn user_root() -> PathBuf {
     std::env::var_os("HOME")
         .map(PathBuf::from)
@@ -43,6 +55,12 @@ pub fn virtua_repo() -> PathBuf {
 
 pub fn virtua_sources() -> PathBuf {
     virtua_repo().join("sources")
+}
+
+/// Committed home for rendered social assets (Google Fonts documentation
+/// convention). Retarget with the repo in a new project.
+pub fn social_assets() -> PathBuf {
+    virtua_repo().join("documentation/social-assets")
 }
 
 pub fn regular_ufo() -> PathBuf {

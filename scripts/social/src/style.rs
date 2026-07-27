@@ -203,65 +203,84 @@ pub use color::{blue, gray, green, orange, purple, red, yellow};
 // jobs, so palette edits and role edits remain separate decisions.
 
 pub mod role {
-    /// Shared appearance of the figures, mirroring the blog crate's `figure`
-    /// role so social art matches the inline illustrations.
+    /// Shared appearance of the figures. Every color now resolves through the
+    /// ACTIVE [`theme`](crate::theme), so `--theme light|dark|…` re-skins the
+    /// whole figure family with no change to a composition.
     pub mod figure {
-        use super::super::{color, Color};
+        use crate::theme::active;
+        use designbot::prelude::Color;
 
         pub fn background() -> Color {
-            color::gray_350()
+            active().figure_ground
         }
         pub fn pen() -> Color {
-            color::gray_900()
+            active().pen
         }
         pub fn point_fill() -> Color {
-            color::gray_200()
+            active().point_fill
         }
         pub fn correction_point_fill() -> Color {
-            color::gray_100()
+            active().correction_fill
         }
         pub fn red() -> Color {
-            color::red()
+            active().red
         }
         pub fn orange() -> Color {
-            color::orange()
+            active().orange
         }
         pub fn yellow() -> Color {
-            color::yellow()
+            active().yellow
         }
         pub fn green() -> Color {
-            color::green()
+            active().green
         }
         pub fn blue() -> Color {
-            color::blue()
+            active().blue
         }
         pub fn purple() -> Color {
-            color::purple()
+            active().purple
+        }
+        pub fn accent() -> Color {
+            active().accent
         }
     }
 
     pub mod canvas {
-        use super::super::{color, Color};
+        use crate::theme::active;
+        use designbot::prelude::Color;
 
         pub fn background() -> Color {
-            color::gray_350()
+            active().ground
+        }
+        /// Primary type / specimen fill.
+        pub fn ink() -> Color {
+            active().ink
+        }
+        /// Monospace corner furniture.
+        pub fn furniture() -> Color {
+            active().furniture
+        }
+        /// Hairline rules.
+        pub fn rule() -> Color {
+            active().rule
         }
     }
 
     pub mod grid {
-        use super::super::{color, Color};
+        use crate::theme::active;
+        use designbot::prelude::Color;
 
         pub fn faint() -> Color {
-            color::gray_475()
+            active().grid_faint
         }
         pub fn subtle() -> Color {
-            color::gray_400()
+            active().grid_subtle
         }
         pub fn standard() -> Color {
-            color::gray_650()
+            active().grid_standard
         }
         pub fn major() -> Color {
-            color::gray_800()
+            active().grid_major
         }
     }
 

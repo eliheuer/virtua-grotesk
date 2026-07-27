@@ -1,48 +1,70 @@
-# Virtua Grotesk — DesignBot social system
+# A reusable specimen + social-image factory
 
-Native social-media compositions for the "Virtua Grotesk: Powers-of-Two Design
-Grids for Neural Networks" post, drawn with [DesignBot]. This crate is the
-**PHASE 4** promotion pass that the blog-figure crate at
-`~/GH/repos/elih.net/scripts/virtua-grotesk` planned in its `export_social.py`
-header and the placeholder at the bottom of its `src/lib.rs`: native **square
-(2048×2048)** and **vertical (1080×1920)** compositions plus an Instagram
-**carousel (1080×1350)**, instead of letterboxing the fixed 2520×1320 blog card.
+A drop-in [DesignBot] crate that renders minimalist, high-taste specimen and
+social cards for a font family — the whole character set drawn as **vectors from
+the UFO**, quiet monospace furniture in the corners, in the family itself. Built
+on the mature blog-figure crate at `~/GH/repos/elih.net/scripts/virtua-grotesk`
+(same seven-layer split, same OKLCH color engine, same sRGB tagging), it adds the
+two things a factory needs: **swappable color themes** and **native multi-format
+output**.
 
-It reuses the blog crate's renderer, its OKLCH color-management guardrail, and
-its section-03 technical-drawing language — applied to social-native canvases and
-motion. The look is Eli's established aesthetic; this crate does **not** invent a
-new one.
+The reusability contract is strict: only `src/inputs.rs` names the project (paths
++ four furniture strings). Everything else — themes, style, drawing mechanics,
+compositions — copies verbatim into any repo.
 
 [DesignBot]: https://github.com/eliheuer/designbot
 
-## What it produces (the three proven formats)
+## Themes — the heart of it
 
-| Format | Binary | Output | Notes |
+`src/theme.rs` defines complete, swappable color schemes (`dark`, `light`,
+`black`; add your own). A composition never names a raw color — it reads the
+**active theme** through `role::`. So the *same* composition re-skins for free:
+
+```sh
+cargo run --release --bin specimen -- --theme dark
+cargo run --release --bin specimen -- --theme light
+```
+
+The semantic hues (green/red/yellow…) come from the shared OKLCH palette so they
+read at even intensity on any ground; a theme may override them.
+
+## Formats
+
+Every static bin takes `--format`; the default renders all four.
+
+| Slug | Size | Ratio | Use |
 | --- | --- | --- | --- |
-| IG carousel, 1080×1350 | `carousel` | `out/carousel/03-dyadic-grid/slide-0N.png` | 6 slides teaching §03 |
-| Square animation, 2048×2048 | `sq_morph` | `out/frames/sq_morph/*.png` → `out/video/sq-morph.{mp4,gif}` | Regular↔Bold weight interpolation on `n`, seamless loop |
-| Vertical reel, 1080×1920 | `reel_grid` | `out/frames/reel_grid/*.png` → `out/video/reel-grid.{mp4,gif}` | grid-as-dataset scan, seamless loop |
-
-All of `out/` is gitignored (regenerable); the Rust sources and scripts are the
-source of truth.
+| `square` | 2048×2048 | 1:1 | X / LinkedIn / IG card |
+| `portrait` | 1080×1350 | 4:5 | IG feed / carousel |
+| `landscape` | 2520×1320 | 1.91:1 | X / LinkedIn card (blog-figure master size) |
+| `vertical` | 1080×1920 | 9:16 | Reels / Stories |
 
 ## Regenerate
 
 ```sh
 cd scripts/social
-./render.sh          # or: make
-# targeted:
-./render.sh carousel # just the PNG slides
-./render.sh square   # frames + mp4 + gif
-./render.sh reel     # frames + mp4 + gif
+./render.sh                        # every composition × every configured theme
+./render.sh specimen               # one composition, all themes
+./render.sh specimen light         # one composition, one theme
+./render.sh specimen light square  # + one format
+# scratch (throwaway under out/, not documentation/):
+cargo run --release --bin specimen -- --theme dark --scratch
 ```
 
-`render.sh` builds the release binaries, runs them (each emits a color-managed
-PNG frame sequence / slide set), then encodes the animation frame sequences to
-mp4 + gif with ffmpeg (x264 CRF 16, yuv420p, BT.709-tagged; gif via
-palettegen/paletteuse). Animations render a **frame sequence** varying one
-parameter — no runtime video interpreter — so every frame is an inspectable,
-sRGB-tagged PNG.
+Committed renders land in `../../documentation/social-assets/<group>/<name>-<theme>-<format>.png`
+(the Google Fonts convention); the directory is gitignored — the Rust sources
+are the source of truth. `render.sh` still carries the ffmpeg encode helpers
+(x264 CRF 16, yuv420p, BT.709-tagged; gif via palettegen/paletteuse) for the
+animation phase.
+
+## Current compositions
+
+| Bin | What | Formats |
+| --- | --- | --- |
+| `specimen` | Foundry specimen — full charset, corner furniture, theme-swappable | all four |
+
+Older prototype bins (`carousel`, `sq_morph`, `reel_grid`) predate the theme
+system and are slated for rework/retirement; they still compile.
 
 ## Dependencies
 
