@@ -7,7 +7,7 @@ REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 PNGQUANT ?= ./.venv/bin/pngquant
 
-.PHONY: help setup build proof review review-rubik specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build proof review review-rubik qa-diacritics specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -57,6 +57,11 @@ review-rubik:
 	@mkdir -p out
 	$(DIFFENATOR) proof "$(RUBIK_FONT)" -o out/review-rubik
 	@echo ">>> open out/review-rubik/diffenator2-report.html"
+
+# Diacritic/spacing QA loop harness: audit + Rubik render + review checklist.
+# The agent (person, or Gemma once wired) drives this; fix with build_anchors.py.
+qa-diacritics: build
+	$(PYTHON) scripts/qa_loop.py
 
 specimen: build
 	designbot --render scripts/designbot/print_spacing_specimen.rs --output documentation/proofs/print-spacing-specimen.pdf
