@@ -38,3 +38,6 @@ __pycache__/
 documentation/assets/social/video/
 documentation/assets/social/carousel/
 out/
+
+# Claude Code agent worktrees (isolated working copies, never commit)
+.claude/worktrees/
