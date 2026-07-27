@@ -1,7 +1,7 @@
 //! Virtua Grotesk — portrait specimen (4:5, Instagram feed).
 //!
 //! Render from the repo root:
-//!   designbot documentation/specimen-portrait.rs --social
+//!   designbot documentation/specimen-portrait.rs
 //!
 //! Everything reusable lives in designbot; edit the strings + the explicit
 //! layout numbers below by hand.

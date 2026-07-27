@@ -1,7 +1,7 @@
 //! Virtua Grotesk — landscape specimen (1.91:1, X / LinkedIn card).
 //!
 //! Render from the repo root:
-//!   designbot documentation/specimen-landscape.rs --social
+//!   designbot documentation/specimen-landscape.rs
 //!
 //! The wide canvas reflows the charset into three long rows. Edit the strings
 //! + the explicit layout numbers below by hand.
