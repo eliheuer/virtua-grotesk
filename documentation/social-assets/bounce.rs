@@ -33,16 +33,6 @@ struct Body {
     r: f64,
     ch: char,
     color: Color,
-    squash: f64,  // 0 = round; spikes to 1 on impact, eases back to 0
-    snx: f64,     // impact-normal x (the squash axis)
-    sny: f64,     // impact-normal y
-}
-
-/// Record an impact so the glyph squashes along the collision normal.
-fn poke(b: &mut Body, nx: f64, ny: f64) {
-    b.squash = 1.0;
-    b.snx = nx;
-    b.sny = ny;
 }
 
 /// Bounce a circle body out of an axis-aligned rectangle (x, y, w, h).
@@ -62,7 +52,6 @@ fn hit_rect(b: &mut Body, rect: (f64, f64, f64, f64)) {
         if vn < 0.0 {
             b.vx -= 2.0 * vn * nx;
             b.vy -= 2.0 * vn * ny;
-            poke(b, nx, ny);
         }
     }
 }
@@ -81,7 +70,6 @@ fn hit_static_circle(b: &mut Body, cx: f64, cy: f64, cr: f64) {
         if vn < 0.0 {
             b.vx -= 2.0 * vn * nx;
             b.vy -= 2.0 * vn * ny;
-            poke(b, nx, ny);
         }
     }
 }
@@ -105,8 +93,6 @@ fn hit_pair(bodies: &mut [Body], i: usize, j: usize) {
             bodies[i].vy += vn * ny;
             bodies[j].vx -= vn * nx;
             bodies[j].vy -= vn * ny;
-            poke(&mut bodies[i], -nx, -ny);
-            poke(&mut bodies[j], nx, ny);
         }
     }
 }
@@ -179,9 +165,6 @@ fn main() {
                 r: radius,
                 ch,
                 color: hues[i % hues.len()],
-                squash: 0.0,
-                snx: 1.0,
-                sny: 0.0,
             }
         })
         .collect();
@@ -200,28 +183,23 @@ fn main() {
 
         // integrate + walls + static obstacles
         for b in bodies.iter_mut() {
-            b.squash *= 0.80; // ease the squash back to round each frame
             b.x += b.vx * dt;
             b.y += b.vy * dt;
             if b.x - b.r < 0.0 {
                 b.x = b.r;
                 b.vx = b.vx.abs();
-                poke(b, 1.0, 0.0);
             }
             if b.x + b.r > w {
                 b.x = w - b.r;
                 b.vx = -b.vx.abs();
-                poke(b, 1.0, 0.0);
             }
             if b.y - b.r < 0.0 {
                 b.y = b.r;
                 b.vy = b.vy.abs();
-                poke(b, 0.0, 1.0);
             }
             if b.y + b.r > h {
                 b.y = h - b.r;
                 b.vy = -b.vy.abs();
-                poke(b, 0.0, 1.0);
             }
             for &(cx, cy, cr) in &title_dots {
                 hit_static_circle(b, cx, cy, cr);
@@ -244,16 +222,7 @@ fn main() {
                 .font(FAMILY)
                 .font_size(glyph_size)
                 .text_align(TextAlign::Center);
-            // squash-and-stretch: compress along the impact normal, eased back.
-            let k = b.squash * 0.28;
-            let ang = b.sny.atan2(b.snx).to_degrees();
-            ctx.save();
-            ctx.translate(b.x, b.y);
-            ctx.rotate(ang);
-            ctx.scale_xy(1.0 - k, 1.0 + k);
-            ctx.rotate(-ang);
-            ctx.text(&b.ch.to_string(), 0.0, -glyph_size * 0.35);
-            ctx.restore();
+            ctx.text(&b.ch.to_string(), b.x, b.y - glyph_size * 0.35);
         }
         // static labels on top (no stroke)
         ctx.fill(ink).no_stroke().text_align(TextAlign::Left).font(FAMILY);
