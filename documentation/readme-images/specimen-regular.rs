@@ -1,11 +1,9 @@
 //! Virtua Grotesk — README specimen (Regular).
 //!
-//! Portrait card, type sized to fill the width and LEFT-ALIGNED (ragged),
-//! stacked to fill the height — the classic specimen layout. Portrait because a
-//! full character set is a *tall* block (many short rows); matching the canvas
-//! shape to the content is what makes it fall into place, no justification or
-//! fussing. Two colors only (theme ground + ink), no furniture, so a theme swap
-//! re-skins the whole thing.
+//! DrawBot-style manual layout: you pick the dimensions, the font size, and the
+//! line height, then place the rows. Because `line_height` is a power of two and
+//! the block is snapped to the grid, every baseline lands on a grid line.
+//! Two colors only (theme ground + ink), no furniture.
 //!
 //!   designbot documentation/readme-images/specimen-regular.rs
 
@@ -13,8 +11,8 @@ use designbot::prelude::*;
 
 fn main() {
     let t = Theme::dark();
-    let (w, h) = (1024.0, 1280.0); // grid-clean 4:5 portrait; width == UPM
-    let m = 64.0; // margin (keep a multiple of 64 so the grid stays aligned)
+    let (w, h) = (1024.0, 1280.0); // you choose the dimensions
+    let m = 64.0; // margin (a multiple of 64, the grid step)
 
     let mut ctx = Canvas::new(w, h);
     let mut r = Renderer::new(w as u32, h as u32);
@@ -22,12 +20,17 @@ fn main() {
 
     ctx.background(t.ground);
 
-    const SHOW_GRID: bool = false;
+    const SHOW_GRID: bool = true; // on to see the baselines sit on the grid
     if SHOW_GRID {
         Grid::upm(1024.0).structural(64.0).margin(m).color(t.grid).draw(&mut ctx, w, h);
     }
 
-    // Natural chunks of the character set, roughly even in length (~10/row).
+    // --- the two knobs you tune by hand ---
+    let size = 116.0; // font size; bigger = bigger type
+    let line_height = 128.0; // baseline-to-baseline; a power of two → on the grid
+
+    ctx.fill(t.ink).font("Virtua Grotesk").font_size(size);
+
     let rows = [
         "ABCDEFGHIJ",
         "KLMNOPQRS",
@@ -38,26 +41,17 @@ fn main() {
         "vwxyz.,!?",
     ];
 
-    // One size: fit the widest row to the width (which binds on a portrait card,
-    // so the type fills edge to edge), capped at one row per vertical slot so
-    // adding rows never overflows.
-    let content_w = w - 2.0 * m;
-    let content_h = h - 2.0 * m;
-    let n = rows.len() as f64;
-    let widest = rows
-        .iter()
-        .map(|row| r.text_width(row, Some("Virtua Grotesk"), 1.0, &[]))
-        .fold(0.0_f64, f64::max);
-    let size = (content_w / widest).min(content_h / n);
-    let cap = size * 0.72; // cap height, for vertical centering only
-
-    // Left-aligned (ragged, like the reference), distributed down the height.
-    ctx.fill(t.ink).font("Virtua Grotesk").text_align(TextAlign::Left);
-    let slot = content_h / n;
-    for (i, row) in rows.iter().enumerate() {
-        let baseline = (h - m) - slot * (i as f64 + 0.5) - cap / 2.0;
-        ctx.font_size(size).text(row, m, baseline);
+    // Center the block vertically and snap the first baseline to the grid, so
+    // every row (stepping down by line_height) stays on a grid line.
+    let block = (rows.len() as f64 - 1.0) * line_height;
+    let mut y = ((h + block) / 2.0 / 64.0).round() * 64.0;
+    for row in rows {
+        ctx.text(row, m, y); // left-aligned at the margin
+        y -= line_height; // step down one line
     }
+
+    // (For flowing paragraphs, designbot also has DrawBot's textBox + lineHeight:
+    //  ctx.line_height(line_height); ctx.text_box(&rows.join("\n"), m, m, w-2.0*m, h-2.0*m); )
 
     r.render_to_png(&ctx, "documentation/readme-images/specimen-regular.png").unwrap();
 }
