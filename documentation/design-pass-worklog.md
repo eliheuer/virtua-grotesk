@@ -1008,6 +1008,33 @@ Makefile still points `proof`/`specimen`/`social` targets there, so
 replacement proof/specimen scripts exist under documentation/. Eli to
 decide: retire the targets, restore the two QA scripts, or re-point.
 
+### Width pass — narrow cluster to Helvetica Neue proportions — 2026-07-28
+
+Eli set the width reference: **Helvetica / Neue Haas Grotesk proportions**.
+Measured against HN (not Inter/Geist) the picture inverted: Virtua's "wide"
+glyphs are CORRECT (E +4.9%, B +0.0%, S +1.0%, L −0.9%, Q +2.2% vs HN —
+Helvetica's generous even widths match Virtua's temperament), and the whole
+correction is the narrow cluster.
+
+Widened (Regular, ink targets = HN Regular ratio × ref height, sb kept,
+arms spread with edge pairs parallel): V 600→656, X 560→656, Y 592→688,
+K 580→636, T 552→616, Z 572→608; v 496→524, x 464→556, y 504→536,
+k 440→500, t 272→308, z 440→484, f 296→316. Bold targeted from HN Bold
+(bold widths converge): V 736→692 (was too WIDE), X +16, Y +64, K +20,
+Z +16, x +44, y +24, k +24, t +16, f +28; Bold T/v/z within 8u, left.
+All land within ±0.7% of HN in both masters. E F L B S Q W w untouched
+(already in HN band). 35 accent composites synced (adv +Δ, marks +Δ/2).
+
+The spread also thins the diagonals slightly (same perpendicular over a
+shallower angle), eating part of the +10-18% ink surpluses X/x/k/Z carried.
+Build green (structures unchanged), curve_lint clean. All 23 touched
+glyphs marked blue.
+
+**Kerning review now REQUIRED**: advances of V W X Y K T Z and lc
+diagonals changed substantially; every pair/group touching them predates
+this. designbot is temporarily broken (other agent mid-migration), so the
+weight-basic re-render is pending; verified via built-font PIL renders.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
