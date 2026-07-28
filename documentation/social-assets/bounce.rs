@@ -138,10 +138,12 @@ fn main() {
     let link_size = 48.0; // bigger, and the link now bounces (see the link body below)
     let first_base = h - safe_t - title_size; // top line baseline, below the top UI
 
-    // Per-letter obstacles for the title: a round bumper at each title glyph, so
-    // the flying glyphs bounce off the actual letters, not one big bounding box.
+    // Per-letter obstacles for the title (round bumpers, one per glyph) so the
+    // flying glyphs bounce off the actual letters; plus the title's bounding box,
+    // which the (rectangular) link bounces off.
     let mut title_dots: Vec<(f64, f64, f64)> = Vec::new();
     let dot_r = title_size * 0.32;
+    let mut title_w = 0.0_f64;
     for (li, line) in title.split('\n').enumerate() {
         let cy = (first_base - li as f64 * title_lh) + 0.30 * title_size;
         let mut cx = m;
@@ -152,7 +154,13 @@ fn main() {
             }
             cx += cw + title_track;
         }
+        title_w = title_w.max(cx - m - title_track);
     }
+    let title_box = {
+        let top = first_base + 0.72 * title_size; // cap of the first line
+        let bot = (first_base - 2.0 * title_lh) - 0.2 * title_size; // descender of the last
+        (m, bot, title_w, top - bot)
+    };
 
     // --- bodies: a-z A-Z 0-9 ---
     let glyphs: Vec<char> = ('a'..='z').chain('A'..='Z').chain('0'..='9').collect();
@@ -217,6 +225,22 @@ fn main() {
         if link_y + link_h > h - safe_t {
             link_y = h - safe_t - link_h;
             link_vy = -link_vy.abs();
+        }
+        // bounce the link off the title's bounding box (push out the shallower axis)
+        {
+            let (tx, ty, tw, th) = title_box;
+            if link_x < tx + tw && link_x + link_w > tx && link_y < ty + th && link_y + link_h > ty {
+                let (dl, dr) = ((tx + tw) - link_x, (link_x + link_w) - tx);
+                let (du, dd) = ((ty + th) - link_y, (link_y + link_h) - ty);
+                let (px, py) = (dl.min(dr), du.min(dd));
+                if px < py {
+                    if dl < dr { link_x += px } else { link_x -= px }
+                    link_vx = -link_vx;
+                } else {
+                    if du < dd { link_y += py } else { link_y -= py }
+                    link_vy = -link_vy;
+                }
+            }
         }
         let link_rect = (link_x, link_y, link_w, link_h);
 
