@@ -42,8 +42,10 @@ out/
 # Claude Code agent worktrees (isolated working copies, never commit)
 .claude/worktrees/
 
-# rendered social promo assets (regenerable; force-add selected finals at v1.0)
-documentation/social-assets/
+# social promo: commit the .rs scripts, ignore the rendered media (until v1.0)
+documentation/social-assets/*.png
+documentation/social-assets/*.gif
+documentation/social-assets/*.mp4
 
 # rendered specimen/social images at the documentation root: the .rs scripts
 # beside them are the source of truth (regenerable; force-add finals at v1.0)
