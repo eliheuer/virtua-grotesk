@@ -92,6 +92,8 @@ fn main() {
         Color::oklch(0.74, 0.160, 52.0),  // orange
         Color::oklch(0.88, 0.160, 92.0),  // yellow
         Color::oklch(0.67, 0.160, 159.0), // leaf green
+        Color::oklch(0.65, 0.160, 258.0), // blue
+        Color::oklch(0.65, 0.160, 302.0), // purple
     ];
 
     let mut ctx = Canvas::new(w, h);
@@ -99,20 +101,24 @@ fn main() {
     r.load_font(find_up("fonts/ttf/VirtuaGrotesk-Regular.ttf")).expect("Virtua Grotesk");
 
     // --- static labels + their obstacle rectangles ---
-    let label = "Virtua Grotesk";
+    let title1 = "Virtua Grotesk:";
+    let title2 = "Grid Systems as Datasets"; // blog post title
     let link = "elih.net/blog/virtua-grotesk";
-    let (label_size, label_track) = (48.0, 3.0);
+    let (title_size, title_track) = (60.0, 2.0);
     let link_size = 34.0;
-    let label_w = r.text_width(label, Some(FAMILY), label_size, &[]) + label_track * (label.len() as f64 - 1.0);
+    let tw = |s: &str| r.text_width(s, Some(FAMILY), title_size, &[]) + title_track * (s.len() as f64 - 1.0);
+    let title_w = tw(title1).max(tw(title2));
     let link_w = r.text_width(link, Some(FAMILY), link_size, &[]);
-    let label_base = h - m - label_size; // upper-left baseline
+    let line_step = title_size * 1.15;
+    let t1_base = h - m - title_size; // upper-left, top line
+    let t2_base = t1_base - line_step; // second line
     let link_base = m; // bottom-left baseline
-    let label_rect = (m, label_base - 0.25 * label_size, label_w, label_size);
+    let title_rect = (m, t2_base - 0.25 * title_size, title_w, (t1_base - t2_base) + title_size);
     let link_rect = (m, link_base - 0.25 * link_size, link_w, link_size);
 
     // --- bodies: a-z A-Z 0-9 ---
     let glyphs: Vec<char> = ('a'..='z').chain('A'..='Z').chain('0'..='9').collect();
-    let glyph_size = 104.0;
+    let glyph_size = 132.0;
     let radius = glyph_size * 0.38;
     let mut rng = Rng(0x9E37_79B9_7F4A_7C15);
     let mut bodies: Vec<Body> = glyphs
@@ -122,8 +128,8 @@ fn main() {
             let ang = rng.range(0.0, std::f64::consts::TAU);
             let speed = rng.range(220.0, 420.0);
             Body {
-                x: rng.range(m + radius, w - m - radius),
-                y: rng.range(m + 260.0, h - m - 260.0),
+                x: rng.range(radius, w - radius),
+                y: rng.range(320.0, h - 320.0),
                 vx: speed * ang.cos(),
                 vy: speed * ang.sin(),
                 r: radius,
@@ -149,23 +155,23 @@ fn main() {
         for b in bodies.iter_mut() {
             b.x += b.vx * dt;
             b.y += b.vy * dt;
-            if b.x - b.r < m {
-                b.x = m + b.r;
+            if b.x - b.r < 0.0 {
+                b.x = b.r;
                 b.vx = b.vx.abs();
             }
-            if b.x + b.r > w - m {
-                b.x = w - m - b.r;
+            if b.x + b.r > w {
+                b.x = w - b.r;
                 b.vx = -b.vx.abs();
             }
-            if b.y - b.r < m {
-                b.y = m + b.r;
+            if b.y - b.r < 0.0 {
+                b.y = b.r;
                 b.vy = b.vy.abs();
             }
-            if b.y + b.r > h - m {
-                b.y = h - m - b.r;
+            if b.y + b.r > h {
+                b.y = h - b.r;
                 b.vy = -b.vy.abs();
             }
-            hit_rect(b, label_rect);
+            hit_rect(b, title_rect);
             hit_rect(b, link_rect);
         }
         // pairwise collisions
@@ -179,14 +185,18 @@ fn main() {
         ctx.background(bg);
         for b in &bodies {
             ctx.fill(b.color)
+                .stroke(ink)
+                .stroke_width(1.0)
                 .font(FAMILY)
                 .font_size(glyph_size)
                 .text_align(TextAlign::Center);
             ctx.text(&b.ch.to_string(), b.x, b.y - glyph_size * 0.35);
         }
-        // static labels on top
-        ctx.fill(ink).text_align(TextAlign::Left).font(FAMILY);
-        ctx.tracking(label_track).font_size(label_size).text(label, m, label_base);
+        // static labels on top (no stroke)
+        ctx.fill(ink).no_stroke().text_align(TextAlign::Left).font(FAMILY);
+        ctx.tracking(title_track).font_size(title_size);
+        ctx.text(title1, m, t1_base);
+        ctx.text(title2, m, t2_base);
         ctx.tracking(0.0).font_size(link_size).text(link, m, link_base);
     }
 
