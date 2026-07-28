@@ -100,7 +100,18 @@ fn hit_pair(bodies: &mut [Body], i: usize, j: usize) {
 fn main() {
     let f = Format::Vertical; // 1080 x 1920, Reels
     let (w, h) = (f.w(), f.h());
-    let m = 64.0;
+
+    // PLATFORM SAFE ZONES (Instagram Reels / TikTok, 1080x1920): the app UI
+    // covers the edges, so readable content must stay inside a safe box —
+    // roughly 108px from the top (status/handle), 320px from the bottom
+    // (caption + audio title), 60px from the left, 120px from the right (the
+    // like/comment/share buttons). We round those up a little. The flying
+    // glyphs stay `play` px off the very edge so nothing clips on the phone's
+    // rounded corners; the title and the (bouncing) link live fully inside the
+    // safe box so they're never hidden.
+    let (safe_l, safe_r, safe_t, safe_b) = (72.0, 130.0, 128.0, 340.0);
+    let m = safe_l; // left margin for the title
+    let play = 56.0; // how far the glyphs stay off the screen edge
 
     // OG palette (from elih.net/blog/virtua-grotesk)
     let bg = Color::rgb(0x92, 0x92, 0x8e);
@@ -124,11 +135,8 @@ fn main() {
     let title_size = 96.0;
     let title_track = -6.0; // tight tracking, like the blog headline
     let title_lh = title_size * 0.98; // tight leading (match the reference)
-    let meta_size = 40.0; // link
-    let link_w = r.text_width(link, Some(FAMILY), meta_size, &[]);
-    let first_base = h - m - title_size; // top line baseline
-    let link_base = m; // bottom-left baseline
-    let link_rect = (m, link_base - 0.25 * meta_size, link_w, meta_size);
+    let link_size = 48.0; // bigger, and the link now bounces (see the link body below)
+    let first_base = h - safe_t - title_size; // top line baseline, below the top UI
 
     // Per-letter obstacles for the title: a round bumper at each title glyph, so
     // the flying glyphs bounce off the actual letters, not one big bounding box.
@@ -148,7 +156,7 @@ fn main() {
 
     // --- bodies: a-z A-Z 0-9 ---
     let glyphs: Vec<char> = ('a'..='z').chain('A'..='Z').chain('0'..='9').collect();
-    let glyph_size = 132.0;
+    let glyph_size = 152.0; // bigger flying letters
     let radius = glyph_size * 0.38;
     let mut rng = Rng(0x9E37_79B9_7F4A_7C15);
     let mut bodies: Vec<Body> = glyphs
@@ -158,8 +166,8 @@ fn main() {
             let ang = rng.range(0.0, std::f64::consts::TAU);
             let speed = rng.range(220.0, 420.0);
             Body {
-                x: rng.range(radius, w - radius),
-                y: rng.range(320.0, h - 320.0),
+                x: rng.range(play + radius, w - play - radius),
+                y: rng.range(play + radius, h - 640.0), // below the title
                 vx: speed * ang.cos(),
                 vy: speed * ang.sin(),
                 r: radius,
@@ -168,6 +176,16 @@ fn main() {
             }
         })
         .collect();
+
+    // --- the link: a single bouncing label, kept inside the safe zone so it is
+    // always visible (the static bottom-left spot is hidden by the caption UI) ---
+    let link_w = r.text_width(link, Some(FAMILY), link_size, &[]);
+    let link_h = link_size;
+    let la = rng.range(0.0, std::f64::consts::TAU);
+    let mut link_x = rng.range(safe_l, w - safe_r - link_w);
+    let mut link_y = rng.range(safe_b, h - safe_t - link_h - 360.0);
+    let mut link_vx = 175.0 * la.cos();
+    let mut link_vy = 175.0 * la.sin();
 
     // --- simulate + draw ---
     let fps = 30.0;
@@ -181,24 +199,45 @@ fn main() {
             ctx.new_page();
         }
 
-        // integrate + walls + static obstacles
+        // move the bouncing link, keeping it inside the safe zone
+        link_x += link_vx * dt;
+        link_y += link_vy * dt;
+        if link_x < safe_l {
+            link_x = safe_l;
+            link_vx = link_vx.abs();
+        }
+        if link_x + link_w > w - safe_r {
+            link_x = w - safe_r - link_w;
+            link_vx = -link_vx.abs();
+        }
+        if link_y < safe_b {
+            link_y = safe_b;
+            link_vy = link_vy.abs();
+        }
+        if link_y + link_h > h - safe_t {
+            link_y = h - safe_t - link_h;
+            link_vy = -link_vy.abs();
+        }
+        let link_rect = (link_x, link_y, link_w, link_h);
+
+        // integrate + walls (a `play` inset from the edge) + obstacles
         for b in bodies.iter_mut() {
             b.x += b.vx * dt;
             b.y += b.vy * dt;
-            if b.x - b.r < 0.0 {
-                b.x = b.r;
+            if b.x - b.r < play {
+                b.x = play + b.r;
                 b.vx = b.vx.abs();
             }
-            if b.x + b.r > w {
-                b.x = w - b.r;
+            if b.x + b.r > w - play {
+                b.x = w - play - b.r;
                 b.vx = -b.vx.abs();
             }
-            if b.y - b.r < 0.0 {
-                b.y = b.r;
+            if b.y - b.r < play {
+                b.y = play + b.r;
                 b.vy = b.vy.abs();
             }
-            if b.y + b.r > h {
-                b.y = h - b.r;
+            if b.y + b.r > h - play {
+                b.y = h - play - b.r;
                 b.vy = -b.vy.abs();
             }
             for &(cx, cy, cr) in &title_dots {
@@ -218,18 +257,24 @@ fn main() {
         for b in &bodies {
             ctx.fill(b.color)
                 .stroke(ink)
-                .stroke_width(1.0)
+                .stroke_width(1.5)
                 .font(FAMILY)
                 .font_size(glyph_size)
                 .text_align(TextAlign::Center);
             ctx.text(&b.ch.to_string(), b.x, b.y - glyph_size * 0.35);
         }
-        // static labels on top (no stroke)
-        ctx.fill(ink).no_stroke().text_align(TextAlign::Left).font(FAMILY);
+        // the bouncing link (above the glyphs)
+        ctx.fill(ink)
+            .no_stroke()
+            .text_align(TextAlign::Left)
+            .font(FAMILY)
+            .tracking(0.0)
+            .auto_line_height()
+            .font_size(link_size);
+        ctx.text(link, link_x, link_y + 0.22 * link_h);
+        // title on top
         ctx.tracking(title_track).font_size(title_size).line_height(title_lh);
         ctx.text(title, m, first_base);
-        ctx.auto_line_height().tracking(0.0).font_size(meta_size);
-        ctx.text(link, m, link_base);
     }
 
     r.render_to_mp4(&ctx, "documentation/social-assets/bounce.mp4").expect("render");
