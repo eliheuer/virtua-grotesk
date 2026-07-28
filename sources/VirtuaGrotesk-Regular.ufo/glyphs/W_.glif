@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="W" format="2">
 	<unicode hex="0057"/>
-	<advance width="1000"/>
+	<advance width="1016"/>
 	<outline>
 		<contour>
-			<point x="200" y="16" type="line"/>
-			<point x="216" y="0" type="line"/>
-			<point x="328" y="0" type="line"/>
-			<point x="344" y="16" type="line"/>
-			<point x="496" y="640" type="line"/>
+			<point x="208" y="16" type="line"/>
+			<point x="224" y="0" type="line"/>
+			<point x="336" y="0" type="line"/>
+			<point x="352" y="16" type="line"/>
 			<point x="504" y="640" type="line"/>
-			<point x="656" y="16" type="line"/>
-			<point x="672" y="0" type="line"/>
-			<point x="784" y="0" type="line"/>
-			<point x="800" y="16" type="line"/>
-			<point x="976" y="704" type="line"/>
-			<point x="976" y="752" type="line"/>
-			<point x="960" y="768" type="line"/>
-			<point x="896" y="768" type="line"/>
-			<point x="880" y="752" type="line"/>
+			<point x="512" y="640" type="line"/>
+			<point x="664" y="16" type="line"/>
+			<point x="680" y="0" type="line"/>
+			<point x="792" y="0" type="line"/>
+			<point x="808" y="16" type="line"/>
+			<point x="984" y="704" type="line"/>
+			<point x="984" y="752" type="line"/>
+			<point x="968" y="768" type="line"/>
+			<point x="904" y="768" type="line"/>
+			<point x="888" y="752" type="line"/>
+			<point x="736" y="128" type="line"/>
 			<point x="728" y="128" type="line"/>
-			<point x="720" y="128" type="line"/>
-			<point x="572" y="752" type="line"/>
-			<point x="556" y="768" type="line"/>
-			<point x="444" y="768" type="line"/>
-			<point x="428" y="752" type="line"/>
+			<point x="580" y="752" type="line"/>
+			<point x="564" y="768" type="line"/>
+			<point x="452" y="768" type="line"/>
+			<point x="436" y="752" type="line"/>
+			<point x="288" y="128" type="line"/>
 			<point x="280" y="128" type="line"/>
-			<point x="272" y="128" type="line"/>
-			<point x="120" y="752" type="line"/>
-			<point x="104" y="768" type="line"/>
-			<point x="40" y="768" type="line"/>
-			<point x="24" y="752" type="line"/>
-			<point x="24" y="704" type="line"/>
+			<point x="128" y="752" type="line"/>
+			<point x="112" y="768" type="line"/>
+			<point x="48" y="768" type="line"/>
+			<point x="32" y="752" type="line"/>
+			<point x="32" y="704" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="500" y="768"/>
-	<anchor name="bottom" x="500" y="0"/>
+	<anchor name="top" x="508" y="768"/>
+	<anchor name="bottom" x="508" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

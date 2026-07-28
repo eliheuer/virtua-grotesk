@@ -871,6 +871,48 @@ compatible. curve_lint clean, build green. Marked blue for grading.
 y 416 vs n's 452) — not touched because the request was Regular-only;
 same n-verbatim treatment recommended.
 
+### Lowercase vs uppercase — normalized pass vs Inter/Geist — 2026-07-27
+
+Extended the HOno method across the full case relationship (Regular master,
+refs instanced at wght 400): stem sweep (H I N U M L E vs n m h u i l),
+round sweep (O C Q G vs o c b d), same-form ink-width and advance pairs
+(O/o C/c S/s U/u V/v W/w X/x Z/z), and sb class ratios. Data:
+`~/Temp/capslc-data.json`.
+
+**System health — very good.** Cap stems uniformly 1.083× lc (Inter 1.056,
+Geist 1.024) and cap rounds uniformly 1.10× lc across O C Q G — the locked
+uniform-cap-heaviness fork, applied with zero drift. All lc stems == n,
+all lc round sides == o, exactly (1.000). H/n sb 1.11 and O/o sb 1.17 (=
+Inter) confirm the loosen pass landed.
+
+**Findings (measured, proposed — not edited; Eli to settle):**
+1. **M stems are 96 = lc weight**, not the 104 cap stem (ratio 1.000 vs
+   system 1.083). Inter drops its M only ~5% below system (1.005 vs 1.056);
+   Geist doesn't drop at all. Propose M 100 (compromise) or full 104.
+2. **Cap diagonal sb now read very tight vs lc**: V sb/v sb 0.40 (Inter
+   0.96, Geist 0.91), Z/z 0.40 (Inter 0.97, Geist 0.55) — the loosen pass
+   gave lc diagonals +8 while cap diagonals (V 16, X 24, Z 16, A 16) stayed.
+   Propose +8 on cap-diagonal sides (A V W X Y Z) to restore the pre-pass
+   optical balance, or accept and handle in kerning.
+3. **C/c width relationship off its own family line**: C/c ink 1.354 vs
+   Virtua's O/o 1.265 (Inter keeps these within 0.01, Geist 0.02). c ink 520
+   vs o 544 — the c reads narrow next to the deliberately-widened o.
+   Propose widening c toward o per [[bowl-from-o]] (c ≈ o with the right
+   side opened), ~+16-24, or narrowing C.
+4. **S is wide for a cap** (ink/cap 0.812 vs Inter 0.726, Geist 0.746) and
+   S/s 1.30 vs refs ~1.23 — S is the outlier, s only mildly wide (0.833 vs
+   0.779/0.815).
+5. **V and X run narrow** vs refs: V ink/cap 0.781 (refs 0.88), X 0.729
+   (0.81-0.86); x also narrow (0.806 vs 0.884/0.926). Combined with finding
+   2, the cap diagonals are both narrow AND tight — the darkest, most
+   compressed corner of the caps. If the compact diagonal stance is
+   intentional display character, keep widths and fix only sb.
+6. Minor: Z slightly wide / z slightly narrow (Z/z 1.30 vs 1.19/1.12);
+   U/u 1.339 slightly above refs (1.30/1.29). Watch, no action.
+
+O/o width 1.265 vs refs 1.30-1.34 is the locked rounder-o decision — noted
+as intentional, not drift.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
