@@ -5,9 +5,8 @@ PYTHON ?= ./.venv/bin/python
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
-PNGQUANT ?= ./.venv/bin/pngquant
 
-.PHONY: help setup build proof review review-rubik qa-diacritics specimen social-images runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build proof review review-rubik qa-diacritics specimen runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -16,7 +15,6 @@ help:
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
 		'  make specimen       (not implemented yet — marketing specimen is future work)' \
-		'  make social-images  Build square social media specimen PNGs' \
 		'  make runebender     Open sources/VirtuaGrotesk.designspace in chromeless Runebender web' \
 		'  make glyph-ai-inventory  Scan Runebender color labels for AI glyph work' \
 		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
@@ -72,20 +70,9 @@ qa-diacritics: build
 specimen:
 	@echo "specimen: not implemented yet — see documentation/proofs/PROOF_SPEC.md (marketing specimen is future work)"; exit 1
 
-SOCIAL_IMAGES = 01-hero:hero 02-weights:weights 03-alphabet-regular:alphabet-regular \
-	03-alphabet-medium:alphabet-medium 03-alphabet-semibold:alphabet-semibold \
-	03-alphabet-bold:alphabet-bold 04-tabular:tabular 05-chamfer:chamfer \
-	06-waterfall:waterfall 07-symbols:symbols 08-lowercase:lowercase
-
-social-images: build
-	@for f in square portrait landscape; do \
-	  for spec in $(SOCIAL_IMAGES); do \
-	    name=$${spec%%:*}; mode=$${spec##*:}; \
-	    designbot --render scripts/designbot/social_images.rs \
-	      --output "documentation/assets/social/$$f/social-$$name.png" -- "$$f:$$mode" || exit 1; \
-	  done; \
-	done
-	-$(PNGQUANT) --force --ext .png --skip-if-larger documentation/assets/social/*/*.png
+# Social media assets now live as co-located designbot scripts under
+# documentation/social-assets/ (render each with `designbot <script.rs>`);
+# the old batch target rendered a since-deleted script.
 
 runebender:
 	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-web.sh

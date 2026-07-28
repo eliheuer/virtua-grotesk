@@ -39,8 +39,8 @@ AI tools). It is imported here in full:
   specimens, quick checks) — `designbot --render <script.rs> --output <path>`;
   the output extension picks the format (png/gif/mp4/pdf). Install from the
   local checkout: `cargo install --path designbot-cli` in
-  `~/GH/repos/designbot`. `make proof` / `make specimen` run the ports in
-  `scripts/designbot/`.
+  `~/GH/repos/designbot`. `make proof` runs the built-in `designbot proof
+  <font>` (no per-repo script); `make specimen` is future work.
 - For quick visual checks during glyph work, write a short designbot script
   that renders a PNG, save it to `~/Temp/`, and Read the PNG back. Scripts
   can read UFO glyphs directly (`designbot::norad` + `draw_path`); for the
