@@ -979,6 +979,35 @@ weights are optical values (the 8-grid is reserved for spacing/interface
 values, per the HOno o=98 precedent), and lowercase is more common than
 capitals, so caps defer. Outlines still blue pending Eli's visual pass.
 
+### Cap horizontal class unified at 96 (option 1) — 2026-07-28
+
+Eli set the H bar to 96 and asked for review. Measurement across Inter,
+Geist, and Helvetica Neue settled it: (1) every ref draws ONE cap
+horizontal value (H bar = E arms = T bar = L arm), (2) crowns are never
+lighter than the bar (Geist/HN: crown = bar; Inter: crown > bar), and
+(3) 96 = lc stem is exactly Geist's identity (bar/n-stem 1.000). NHG/HN
+is the thin-bar outlier (0.84) — comparing against it will always read
+fuller; that's flavor, not error.
+
+Applied: all cap horizontals/crowns back to **96** (reverting the 92s from
+yesterday's pass on E F L T U J Z A O B P R S; the Q C G D 100→96 cuts
+already sat on the class value and stay). G's short right stem restored to
+its native 96. Vertical stems stay 100, round sides 102, diagonal thinning
+kept. System now: **cap verticals 100 (sole off-8 optical value), cap
+horizontals = crowns = lc stem = 96 (on-grid), rounds 102.**
+Result: cap/lc line color **1.054 ≈ Geist (1.055)**, from 1.079 pre-pass.
+
+Eli also narrowed H by 8 (right stem outer 672→664, counter 376, H/n width
+1.30 ≈ Inter); advance corrected 752→744 to restore sb 80/80, Hbar synced
+696. curve_lint: S down to ONE pre-existing crest flag. Build green,
+reports green.
+
+**BROKEN GATE:** commit ef4bf8b retired scripts/designbot/ but the
+Makefile still points `proof`/`specimen`/`social` targets there, so
+`make proof`, `make specimen`, and `make preflight` now fail. No
+replacement proof/specimen scripts exist under documentation/. Eli to
+decide: retire the targets, restore the two QA scripts, or re-point.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
