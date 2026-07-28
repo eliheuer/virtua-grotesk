@@ -20,6 +20,16 @@ fn main() {
     r.load_font("fonts/ttf/VirtuaGrotesk-Regular.ttf").expect("Virtua Grotesk");
 
     ctx.background(t.ground);
+
+    // Flip this on while laying things out; off for the final image.
+    const SHOW_GRID: bool = false;
+    if SHOW_GRID {
+        // basic unit grid: a line every 60px, one finer sub-line between.
+        Grid::unit(60.0).margin(m).subdivisions(2).color(t.grid).draw(&mut ctx, w, h);
+        // Swiss / Müller-Brockmann alternative (columns x rows, gutter):
+        // Grid::modular(12, 6).margin(m).gutter(20.0).color(t.grid).draw(&mut ctx, w, h);
+    }
+
     ctx.fill(t.ink).font("Virtua Grotesk").text_align(TextAlign::Left);
 
     let rows = [
