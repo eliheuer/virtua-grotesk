@@ -943,6 +943,42 @@ already, needs Eli's polish pass.
 Build + preflight green. Renders: `~/Temp/M-new-{reg,bold}.png`,
 `~/Temp/C-new-reg.png`.
 
+### Cap weight reduction — full A–Z pass (Regular only) — 2026-07-28
+
+Eli judged the caps too heavy in real headline use; ink-density measurement
+confirmed it: cap/lc line color (ink area ÷ advance, averaged A–Z vs a–z)
+was **1.079** vs Inter 1.013 / Geist 1.055, and Virtua sat above both refs
+on every same-form coverage pair. This REVISES the locked 2026-07-22
+"uniform +8% caps" decision, by Eli's call, with data.
+
+New Regular cap stroke system (was → now): **flat stems 104→100, round
+sides 108→102, horizontals/crowns 96→92** (Q/C/G/D 100-crowns →96;
+B midbar 88, A bar 84; Z's off-system 100 bars →92), diagonals thinned
+~4-5 perpendicular (V W Y A N K-leg; notch vertices recomputed to keep
+8-unit flats, 16-unit chamfers preserved). All edits move inner /
+counter-facing edges only — outer silhouettes, sidebearings, advances
+unchanged, so no composite or kerning fallout. M (100) was already on the
+new system; X measured 94–104 perpendicular already (its steep stance
+slims true stroke) and was left alone.
+
+Result: cap/lc line color **1.046** — inside the Inter–Geist band, just
+under Geist; per-glyph ink −3 to −4% (K −2.1, Z −1.8, S −2.4 are
+geometry-limited). One more −2u step (stems 98) is available if the visual
+pass still reads heavy. Bold untouched (refs converge cap=lc at 700;
+Virtua Bold already matches). curve_lint: only S's two pre-existing crest
+flags remain (one of three actually cleared). Build + preflight green.
+Headline verification render: `~/Temp/vg-capweight-after.png`.
+
+All 24 edited caps marked blue for grading.
+
+**RESOLVED 2026-07-28 (Eli): cap stems 100 confirmed.** No on-8 stem value
+lands in the refs' optical band (96 → 1.00 too light, 104 → 1.083 too
+heavy; the band lies strictly between adjacent 8-steps), and stems are the
+dominant lever so "104 + thin the rest" stays ~1.065. Rationale: stroke
+weights are optical values (the 8-grid is reserved for spacing/interface
+values, per the HOno o=98 precedent), and lowercase is more common than
+capitals, so caps defer. Outlines still blue pending Eli's visual pass.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
