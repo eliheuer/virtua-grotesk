@@ -165,7 +165,7 @@ Gerangel quickly.";
         ctx.font_variation("wght", 400.0f32);
         ctx.font_size(norm_size(f, 24.0, false));
         ctx.line_height(64.0);
-        ctx.text_box(para, M, yb - 160.0, CW, 128.0);
+        ctx.text_box(para, M, yb - 144.0, CW, 128.0);
         yb -= 224.0;
     }
     caption(ctx, ink, y0, "Virtua Grotesk / Inter / Geist / Helvetica Neue", "x-height normalized");
