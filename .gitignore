@@ -56,3 +56,6 @@ documentation/*.mp4
 
 # Rust build artifacts
 target/
+
+# rendered print proofs (regenerable via `designbot proof`; source is designbot itself)
+documentation/proofs/*.pdf

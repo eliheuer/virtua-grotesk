@@ -15,7 +15,7 @@ help:
 		'  make setup          Create .venv and install requirements' \
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
-		'  make specimen       Build the landscape spacing specimen PDF' \
+		'  make specimen       (not implemented yet — marketing specimen is future work)' \
 		'  make social-images  Build square social media specimen PNGs' \
 		'  make runebender     Open sources/VirtuaGrotesk.designspace in chromeless Runebender web' \
 		'  make glyph-ai-inventory  Scan Runebender color labels for AI glyph work' \
@@ -38,8 +38,11 @@ setup:
 build:
 	./build.sh
 
+# The built-in designbot print proof: introspects the variable font (axes,
+# instances, charset, metrics, features) and emits a color-managed multi-page
+# PDF. No per-repo script to maintain — see documentation/proofs/PROOF_SPEC.md.
 proof: build
-	designbot --render scripts/designbot/general_proof.rs --output documentation/proofs/proof.pdf -- "$(REGULAR_FONT)"
+	designbot proof "$(VARIABLE_FONT)" --output documentation/proofs/proof.pdf
 
 # diffenator2 -- the Google Fonts onboarding review view (glyph set, diacritic
 # proofer, spacing, waterfall). Must run with the venv on PATH so diffenator2's
@@ -63,8 +66,11 @@ review-rubik:
 qa-diacritics: build
 	$(PYTHON) scripts/qa_loop.py
 
-specimen: build
-	designbot --render scripts/designbot/print_spacing_specimen.rs --output documentation/proofs/print-spacing-specimen.pdf
+# The marketing specimen (on-brand showcase) is not built yet — it will be a
+# `designbot specimen` built-in or a per-repo on-brand script. Until then this
+# target is a no-op stub so `make specimen` fails loudly instead of silently.
+specimen:
+	@echo "specimen: not implemented yet — see documentation/proofs/PROOF_SPEC.md (marketing specimen is future work)"; exit 1
 
 SOCIAL_IMAGES = 01-hero:hero 02-weights:weights 03-alphabet-regular:alphabet-regular \
 	03-alphabet-medium:alphabet-medium 03-alphabet-semibold:alphabet-semibold \
@@ -134,7 +140,7 @@ skeleton: build
 	$(PYTHON) scripts/run_reports.py
 	$(PYTHON) scripts/scoreboard.py
 
-preflight: build proof specimen reports
+preflight: build proof reports
 	$(PYTHON) scripts/preflight.py
 
 clean:
