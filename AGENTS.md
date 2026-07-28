@@ -162,12 +162,14 @@ native app.
 ## Proof Generation
 
 ```bash
-make proof      # designbot --render scripts/designbot/general_proof.rs ...
-make specimen   # designbot --render scripts/designbot/print_spacing_specimen.rs ...
+make proof      # designbot proof "$(VARIABLE_FONT)" -o documentation/proofs/proof.pdf
+make specimen   # marketing specimen — not implemented yet (see PROOF_SPEC.md)
 ```
 
-Proofs and specimens are **designbot** (Rust) scripts in `scripts/designbot/`
-producing vector PDFs — the DrawBot-style Python versions are retired.
+The print proof is a **built-in** designbot command (`designbot proof <font>`)
+that introspects the font and emits a color-managed multi-page vector PDF — no
+per-repo script (the full page plan is in `documentation/proofs/PROOF_SPEC.md`).
+The old DrawBot-style Python and per-repo `.rs` proof scripts are retired.
 designbot is installed from the local checkout (`cargo install --path
 designbot-cli` in `~/GH/repos/designbot`); its `--output` extension picks the
 format (png/gif/mp4/pdf), and multi-image scripts take a mode argument after
