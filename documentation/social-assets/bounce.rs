@@ -56,6 +56,24 @@ fn hit_rect(b: &mut Body, rect: (f64, f64, f64, f64)) {
     }
 }
 
+/// Bounce a circle body off a fixed (immovable) circle obstacle.
+fn hit_static_circle(b: &mut Body, cx: f64, cy: f64, cr: f64) {
+    let (dx, dy) = (b.x - cx, b.y - cy);
+    let d2 = dx * dx + dy * dy;
+    let rsum = b.r + cr;
+    if d2 > 1e-6 && d2 < rsum * rsum {
+        let d = d2.sqrt();
+        let (nx, ny) = (dx / d, dy / d);
+        b.x = cx + nx * rsum;
+        b.y = cy + ny * rsum;
+        let vn = b.vx * nx + b.vy * ny;
+        if vn < 0.0 {
+            b.vx -= 2.0 * vn * nx;
+            b.vy -= 2.0 * vn * ny;
+        }
+    }
+}
+
 /// Elastic collision between two equal-mass circle bodies (by index).
 fn hit_pair(bodies: &mut [Body], i: usize, j: usize) {
     let (dx, dy) = (bodies[j].x - bodies[i].x, bodies[j].y - bodies[i].y);
@@ -102,28 +120,31 @@ fn main() {
 
     // --- static labels + their obstacle rectangles ---
     let title = "Virtua Grotesk:\nGrid Systems for\nDataset Engineering"; // blog title, 3 lines
-    let date = "July 20, 2026";
     let link = "elih.net/blog/virtua-grotesk";
     let title_size = 96.0;
-    let title_track = -2.0; // tight tracking, like the blog headline
-    let title_lh = title_size * 1.06; // tight leading
-    let meta_size = 40.0; // date + link
-    let line_w = |s: &str| {
-        r.text_width(s, Some(FAMILY), title_size, &[]) + title_track * (s.chars().count() as f64 - 1.0)
-    };
-    let title_w = title.split('\n').map(line_w).fold(0.0_f64, f64::max);
+    let title_track = -6.0; // tight tracking, like the blog headline
+    let title_lh = title_size * 0.98; // tight leading (match the reference)
+    let meta_size = 40.0; // link
     let link_w = r.text_width(link, Some(FAMILY), meta_size, &[]);
     let first_base = h - m - title_size; // top line baseline
-    let last_base = first_base - 2.0 * title_lh; // third line baseline
-    let date_base = last_base - 0.62 * title_size; // date, just below the headline
     let link_base = m; // bottom-left baseline
-    let title_rect = (
-        m,
-        date_base - 0.25 * meta_size,
-        title_w,
-        (first_base + 0.72 * title_size) - (date_base - 0.25 * meta_size),
-    );
     let link_rect = (m, link_base - 0.25 * meta_size, link_w, meta_size);
+
+    // Per-letter obstacles for the title: a round bumper at each title glyph, so
+    // the flying glyphs bounce off the actual letters, not one big bounding box.
+    let mut title_dots: Vec<(f64, f64, f64)> = Vec::new();
+    let dot_r = title_size * 0.32;
+    for (li, line) in title.split('\n').enumerate() {
+        let cy = (first_base - li as f64 * title_lh) + 0.30 * title_size;
+        let mut cx = m;
+        for ch in line.chars() {
+            let cw = r.text_width(&ch.to_string(), Some(FAMILY), title_size, &[]);
+            if ch != ' ' {
+                title_dots.push((cx + cw / 2.0, cy, dot_r));
+            }
+            cx += cw + title_track;
+        }
+    }
 
     // --- bodies: a-z A-Z 0-9 ---
     let glyphs: Vec<char> = ('a'..='z').chain('A'..='Z').chain('0'..='9').collect();
@@ -180,7 +201,9 @@ fn main() {
                 b.y = h - b.r;
                 b.vy = -b.vy.abs();
             }
-            hit_rect(b, title_rect);
+            for &(cx, cy, cr) in &title_dots {
+                hit_static_circle(b, cx, cy, cr);
+            }
             hit_rect(b, link_rect);
         }
         // pairwise collisions
@@ -206,7 +229,6 @@ fn main() {
         ctx.tracking(title_track).font_size(title_size).line_height(title_lh);
         ctx.text(title, m, first_base);
         ctx.auto_line_height().tracking(0.0).font_size(meta_size);
-        ctx.text(date, m, date_base);
         ctx.text(link, m, link_base);
     }
 
