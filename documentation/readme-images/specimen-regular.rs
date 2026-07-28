@@ -14,8 +14,9 @@ use designbot::prelude::*;
 
 fn main() {
     let t = Theme::dark(); // background = t.ground, type = t.ink
-    let (w, h) = (2048.0, 1024.0); // powers of two; h == UPM
-    let m = 128.0; // margin — a power of two, two 64-cells in
+    let f = Format::Wide; // 2048 x 1024 powers-of-two; h == UPM (1024)
+    let (w, h) = (f.w(), f.h());
+    let m = f.margin(); // 128, a power of two
 
     let mut ctx = Canvas::new(w, h);
     let mut r = Renderer::new(w as u32, h as u32);
@@ -28,11 +29,10 @@ fn main() {
     // Flip on while laying things out; off for the final image.
     const SHOW_GRID: bool = true;
     if SHOW_GRID {
-        // Powers-of-two grid: 64px cells (= UPM / 16), 32px sub-lines,
-        // full-bleed so every line lands exactly on 2048 x 1024.
-        Grid::unit(64.0).subdivisions(2).color(t.grid).border(false).draw(&mut ctx, w, h);
-        // Swiss / Müller-Brockmann alternative (columns x rows, gutter):
-        // Grid::modular(16, 8).margin(0.0).gutter(0.0).color(t.grid).draw(&mut ctx, w, h);
+        // UPM-aware grid: the 8-unit structural grid (faint) under a heavier
+        // 128-unit reference, mapped 1 font unit = 1px so it tiles exactly.
+        Grid::upm(1024.0).color(t.grid).draw(&mut ctx, w, h);
+        // Coarser: .structural(64.0). Swiss: Grid::modular(16, 8).gutter(0.0)…
     }
 
     ctx.fill(t.ink).font("Virtua Grotesk").text_align(TextAlign::Left);
