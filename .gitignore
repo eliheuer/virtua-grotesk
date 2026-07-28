@@ -50,3 +50,6 @@ documentation/social-assets/
 documentation/*.png
 documentation/*.gif
 documentation/*.mp4
+
+# Rust build artifacts
+target/
