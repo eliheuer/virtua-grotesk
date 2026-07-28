@@ -27,12 +27,12 @@ fn main() {
     ctx.background(t.ground);
 
     // Flip on while laying things out; off for the final image.
-    const SHOW_GRID: bool = false;
+    const SHOW_GRID: bool = true;
     if SHOW_GRID {
-        // UPM-aware grid: the 8-unit structural grid (faint) under a heavier
-        // 128-unit reference, mapped 1 font unit = 1px so it tiles exactly.
-        Grid::upm(1024.0).color(t.grid).draw(&mut ctx, w, h);
-        // Coarser: .structural(64.0). Swiss: Grid::modular(16, 8).gutter(0.0)…
+        // UPM-aware grid. `.structural(N)` = finest lines every N units; bigger
+        // N = fewer lines (8 = full structural, 64 = medium, 128 = coarse).
+        // `.subdivisions(0)` shows only the 128-unit reference lines.
+        Grid::upm(1024.0).structural(64.0).color(t.grid).draw(&mut ctx, w, h);
     }
 
     ctx.fill(t.ink).font("Virtua Grotesk").text_align(TextAlign::Left);
