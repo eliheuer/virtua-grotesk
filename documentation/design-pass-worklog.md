@@ -1074,6 +1074,16 @@ both weights. Marked blue.
 Also found: **Bold hyphen is unbolded** (88 = Regular value) — add to
 the red list; the symbol class ratio came from HN instead.
 
+**Follow-up (same day):** Eli corrected the chevron tips (too pointy) —
+tips now land on a 16u flat before the bevel, the V/W terminal anatomy.
+greater re-mirrored from the corrected less in both masters. The workflow
+is now TOOLING + A SKILL: `scripts/anchor_sheet.py` (sheet calibration),
+`scripts/symbol_gen.py` (line-grammar generator; round-trips Eli's
+corrected files exactly), and `.agents/skills/anchor-sheet-glyphs/` with
+`LESSONS.md` — the running log of optical corrections (tip-flat rule is
+entry #1). Rule: whenever Eli corrects generated output, the rule gets
+appended to LESSONS.md in the same session.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
