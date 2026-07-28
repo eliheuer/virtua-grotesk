@@ -27,7 +27,7 @@ fn main() {
     ctx.background(t.ground);
 
     // Flip on while laying things out; off for the final image.
-    const SHOW_GRID: bool = true;
+    const SHOW_GRID: bool = false;
     if SHOW_GRID {
         // UPM-aware grid: the 8-unit structural grid (faint) under a heavier
         // 128-unit reference, mapped 1 font unit = 1px so it tiles exactly.
