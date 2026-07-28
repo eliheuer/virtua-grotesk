@@ -207,10 +207,23 @@ The core workflow for type design with an agent:
 4. **Build** — `/build-font` to compile the edited sources
 5. **Verify** — `make preflight` during drawing work, then `make test` before final submission
 
-## Adding Glyphs from Images (img2bez)
+## Adding Glyphs from Images
 
-To add or replace a glyph from reference images (AI-generated or scanned
-masters), use the `img2bez` CLI — do **not** hand-draw it in the editor.
+**Anchor sheets first.** The standing workflow for building missing or red
+glyphs from a reference image is the **`/anchor-sheet-glyphs` skill**
+(`.agents/skills/anchor-sheet-glyphs/` — read its `LESSONS.md` before
+generating anything; it logs Eli's optical corrections and outranks the
+formulas). One image containing a known green glyph (the anchor, usually
+`n`) plus the targets; `scripts/anchor_sheet.py` calibrates px→units from
+the anchor; then line-grammar glyphs (math/punctuation/arrows/icons) are
+GENERATED with `scripts/symbol_gen.py`, and organic glyphs (Arabic, drawn
+Latin) are traced with img2bez using exact `--fit` from the calibration.
+Every graded correction goes into `LESSONS.md` so the system improves.
+
+### Single-glyph tracing (img2bez)
+
+To add or replace an organic glyph from reference images (AI-generated or
+scanned masters), use the `img2bez` CLI — do **not** hand-draw it in the editor.
 img2bez owns deterministic tracing, ink placement, sidebearings, master
 reconciliation, UFO writing, and the report; Runebender is only for visual
 review afterward.
