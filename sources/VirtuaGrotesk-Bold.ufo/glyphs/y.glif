@@ -1,30 +1,30 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <glyph name="y" format="2">
-  <advance width="608"/>
+  <advance width="632"/>
   <unicode hex="0079"/>
   <outline>
     <contour>
       <point x="80" y="-200" type="line"/>
       <point x="120" y="-200" type="line" smooth="yes"/>
-      <point x="264" y="-200"/>
-      <point x="324" y="-200"/>
-      <point x="368" y="-92" type="curve"/>
-      <point x="592" y="464" type="line"/>
-      <point x="592" y="560" type="line"/>
-      <point x="576" y="576" type="line"/>
-      <point x="448" y="576" type="line"/>
-      <point x="432" y="560" type="line"/>
-      <point x="312" y="256" type="line"/>
-      <point x="304" y="256" type="line"/>
+      <point x="276" y="-200"/>
+      <point x="336" y="-200"/>
+      <point x="380" y="-92" type="curve"/>
+      <point x="616" y="464" type="line"/>
+      <point x="616" y="560" type="line"/>
+      <point x="600" y="576" type="line"/>
+      <point x="472" y="576" type="line"/>
+      <point x="456" y="560" type="line"/>
+      <point x="324" y="256" type="line"/>
+      <point x="316" y="256" type="line"/>
       <point x="192" y="560" type="line"/>
       <point x="176" y="576" type="line"/>
       <point x="40" y="576" type="line"/>
       <point x="24" y="560" type="line"/>
       <point x="24" y="504" type="line"/>
-      <point x="208" y="16" type="line"/>
-      <point x="208" y="0" type="line"/>
-      <point x="196" y="-24" type="line"/>
-      <point x="184" y="-56"/>
+      <point x="220" y="16" type="line"/>
+      <point x="220" y="0" type="line"/>
+      <point x="208" y="-24" type="line"/>
+      <point x="196" y="-56"/>
       <point x="160" y="-56"/>
       <point x="120" y="-56" type="curve" smooth="yes"/>
       <point x="80" y="-56" type="line"/>
@@ -39,7 +39,7 @@
       <key>org.fontgarden.transfer</key>
       <string>glyph-transfer v2 lambda 1.0 &lt;- image crop-y.png</string>
       <key>public.markColor</key>
-      <string>1,0.5,0,1</string>
+      <string>0.27,0.44,1,1</string>
     </dict>
   </lib>
 </glyph>

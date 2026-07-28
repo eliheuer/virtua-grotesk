@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="f" format="2">
 	<unicode hex="0066"/>
-	<advance width="344"/>
+	<advance width="364"/>
 	<outline>
 		<contour>
 			<point x="112" y="16" type="line"/>
@@ -10,10 +10,10 @@
 			<point x="208" y="16" type="line"/>
 			<point x="208" y="488" type="line"/>
 			<point x="216" y="496" type="line"/>
-			<point x="304" y="496" type="line"/>
-			<point x="320" y="512" type="line"/>
-			<point x="320" y="560" type="line"/>
-			<point x="304" y="576" type="line"/>
+			<point x="324" y="496" type="line"/>
+			<point x="340" y="512" type="line"/>
+			<point x="340" y="560" type="line"/>
+			<point x="324" y="576" type="line"/>
 			<point x="216" y="576" type="line"/>
 			<point x="208" y="584" type="line"/>
 			<point x="208" y="632" type="line" smooth="yes"/>
@@ -41,7 +41,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>0.27,0.44,1,1</string>
 		</dict>
 	</lib>
 </glyph>
