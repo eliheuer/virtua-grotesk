@@ -101,22 +101,29 @@ fn main() {
     r.load_font(find_up("fonts/ttf/VirtuaGrotesk-Regular.ttf")).expect("Virtua Grotesk");
 
     // --- static labels + their obstacle rectangles ---
-    let title = "Virtua Grotesk:\nGrid Systems\nas Datasets"; // blog title, 3 lines
+    let title = "Virtua Grotesk:\nGrid Systems for\nDataset Engineering"; // blog title, 3 lines
+    let date = "July 20, 2026";
     let link = "elih.net/blog/virtua-grotesk";
     let title_size = 96.0;
     let title_track = -2.0; // tight tracking, like the blog headline
     let title_lh = title_size * 1.06; // tight leading
-    let link_size = 34.0;
+    let meta_size = 40.0; // date + link
     let line_w = |s: &str| {
         r.text_width(s, Some(FAMILY), title_size, &[]) + title_track * (s.chars().count() as f64 - 1.0)
     };
     let title_w = title.split('\n').map(line_w).fold(0.0_f64, f64::max);
-    let link_w = r.text_width(link, Some(FAMILY), link_size, &[]);
+    let link_w = r.text_width(link, Some(FAMILY), meta_size, &[]);
     let first_base = h - m - title_size; // top line baseline
     let last_base = first_base - 2.0 * title_lh; // third line baseline
+    let date_base = last_base - 0.62 * title_size; // date, just below the headline
     let link_base = m; // bottom-left baseline
-    let title_rect = (m, last_base - 0.22 * title_size, title_w, (first_base - last_base) + 0.9 * title_size);
-    let link_rect = (m, link_base - 0.25 * link_size, link_w, link_size);
+    let title_rect = (
+        m,
+        date_base - 0.25 * meta_size,
+        title_w,
+        (first_base + 0.72 * title_size) - (date_base - 0.25 * meta_size),
+    );
+    let link_rect = (m, link_base - 0.25 * meta_size, link_w, meta_size);
 
     // --- bodies: a-z A-Z 0-9 ---
     let glyphs: Vec<char> = ('a'..='z').chain('A'..='Z').chain('0'..='9').collect();
@@ -198,7 +205,9 @@ fn main() {
         ctx.fill(ink).no_stroke().text_align(TextAlign::Left).font(FAMILY);
         ctx.tracking(title_track).font_size(title_size).line_height(title_lh);
         ctx.text(title, m, first_base);
-        ctx.auto_line_height().tracking(0.0).font_size(link_size).text(link, m, link_base);
+        ctx.auto_line_height().tracking(0.0).font_size(meta_size);
+        ctx.text(date, m, date_base);
+        ctx.text(link, m, link_base);
     }
 
     r.render_to_mp4(&ctx, "documentation/social-assets/bounce.mp4").expect("render");
