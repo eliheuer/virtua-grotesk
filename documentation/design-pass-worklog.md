@@ -1052,6 +1052,28 @@ kern1.T+kern2.a −128→−144, kern1.Y+kern2.o −112→−128. Bold untouched
 Verified in re-renders ("Total Toyota Tokyo Yonder" rhythm even) and the
 regenerated weight images (designbot fixed).
 
+### less / equal / greater — anchor-sheet pilot (red → rebuilt) — 2026-07-28
+
+First run of the ANCHOR-SHEET workflow: Eli supplied one image ("Regular
+n < = >"); the known n calibrates scale + baseline (n px height ↔ 592u),
+making the sheet self-calibrating — no --target-height guessing (the #1
+img2bez failure mode). Measured from the sheet: math axis 352, symbol
+stroke ~71, chevron box 456×480 (y 112..592), equal bars ~510/gap ~126.
+Cross-check: stroke from the image (71.2) vs system-derived (hyphen 88 ×
+HN's 64/80 math ratio = 70.4) agreed within 1u. The sheet is authoritative
+over refs (it wasn't HN — HN's axis is 282; the sheet said 352).
+
+Rebuilt PARAMETRICALLY (not traced — these are line-grammar glyphs):
+axis 352, stroke 72 R / 132 B (HN R→B ratio 1.85), chevrons 72..528 ×
+112..592 both weights, equal bars x 48..552, centers ±100 R / ±132 B,
+16u bevels on all terminals, 8u notch flats, 2-grid, adv 600 all, sb
+symmetric. greater = exact mirror of less. Same point structure both
+masters by construction. Build green; verified in shaped text renders
+both weights. Marked blue.
+
+Also found: **Bold hyphen is unbolded** (88 = Regular value) — add to
+the red list; the symbol class ratio came from HN instead.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
