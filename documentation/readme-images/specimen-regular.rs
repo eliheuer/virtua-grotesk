@@ -16,7 +16,7 @@ fn main() {
     let t = Theme::dark(); // background = t.ground, type = t.ink
     let f = Format::Wide; // 2048 x 1024 powers-of-two; h == UPM (1024)
     let (w, h) = (f.w(), f.h());
-    let m = f.margin(); // 128, a power of two
+    let m = 64.0; // margin — smaller = more room / bigger type; keep a multiple of 64
 
     let mut ctx = Canvas::new(w, h);
     let mut r = Renderer::new(w as u32, h as u32);
@@ -57,9 +57,9 @@ fn main() {
         .iter()
         .map(|row| r.text_width(row, Some("Virtua Grotesk"), 1.0, &[]))
         .fold(0.0_f64, f64::max);
-    let fill = 0.82; // fraction of each row's slot the type fills (leaves gaps)
+    let fill = 0.92; // BIGGER TYPE: fraction of each row's slot the type fills (→1.0 = tightest)
     let size = (content_w / widest).min(fill * content_h / n);
-    let cap = size * 0.72; // Virtua cap height as a fraction of the em
+    let cap = size * 0.72; // Virtua cap height (for centering only — not a size knob)
 
     // Distribute the rows evenly down the live area (y-up: first row highest),
     // and JUSTIFY each row: spread its glyphs across the full width with even
