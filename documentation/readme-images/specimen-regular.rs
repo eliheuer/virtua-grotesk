@@ -29,10 +29,11 @@ fn main() {
     // Flip on while laying things out; off for the final image.
     const SHOW_GRID: bool = true;
     if SHOW_GRID {
-        // UPM-aware grid. `.structural(N)` = finest lines every N units; bigger
-        // N = fewer lines (8 = full structural, 64 = medium, 128 = coarse).
-        // `.subdivisions(0)` shows only the 128-unit reference lines.
-        Grid::upm(1024.0).structural(64.0).color(t.grid).draw(&mut ctx, w, h);
+        // UPM-aware grid, inset by the margin (keep the margin a multiple of the
+        // grid step so lines still land exactly). `.structural(N)` = finest
+        // lines every N units; bigger N = fewer lines. `.subdivisions(0)` shows
+        // only the coarse reference lines.
+        Grid::upm(1024.0).structural(64.0).margin(m).color(t.grid).draw(&mut ctx, w, h);
     }
 
     ctx.fill(t.ink).font("Virtua Grotesk").text_align(TextAlign::Left);
