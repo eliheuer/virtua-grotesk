@@ -39,21 +39,50 @@ fn main() {
     ctx.fill(t.ink).font("Virtua Grotesk").text_align(TextAlign::Left);
 
     let rows = [
-        "abcdefghijklmnopqrstuvwxyz",
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-        "1234567890 ß &?!£$(.,;:)",
+        "abcdefghijklmno",
+        "pqrstuvwxyz",
+        "ABCDEFGHIJKLMN",
+        "OPQRSTUVWXYZ",
+        "1234567890",
     ];
 
-    // One size for all rows: fit the widest (uppercase) to the margins.
+    // One size for all rows, fit to whichever constraint binds first:
+    //   width  — the widest row spans the margins, or
+    //   height — all the rows stack in the live area without overlapping.
+    // Taking the smaller of the two means it always fits, for any rows/count.
     let content_w = w - 2.0 * m;
-    let size = content_w / r.text_width(rows[1], Some("Virtua Grotesk"), 1.0, &[]);
+    let content_h = h - 2.0 * m;
+    let n = rows.len() as f64;
+    let widest = rows
+        .iter()
+        .map(|row| r.text_width(row, Some("Virtua Grotesk"), 1.0, &[]))
+        .fold(0.0_f64, f64::max);
+    let fill = 0.82; // fraction of each row's slot the type fills (leaves gaps)
+    let size = (content_w / widest).min(fill * content_h / n);
     let cap = size * 0.72; // Virtua cap height as a fraction of the em
 
-    // Distribute the three rows evenly down the live area (y-up: first highest).
-    let slot = (h - 2.0 * m) / rows.len() as f64;
+    // Distribute the rows evenly down the live area (y-up: first row highest),
+    // and JUSTIFY each row: spread its glyphs across the full width with even
+    // tracking, so every row spans margin-to-margin at one consistent size.
+    let slot = content_h / n;
     for (i, row) in rows.iter().enumerate() {
         let baseline = (h - m) - slot * (i as f64 + 0.5) - cap / 2.0;
-        ctx.font_size(size).text(row, m, baseline);
+        let chars: Vec<char> = row.chars().collect();
+        let widths: Vec<f64> = chars
+            .iter()
+            .map(|c| r.text_width(&c.to_string(), Some("Virtua Grotesk"), size, &[]))
+            .collect();
+        let natural: f64 = widths.iter().sum();
+        let track = if chars.len() > 1 {
+            (content_w - natural) / (chars.len() - 1) as f64
+        } else {
+            0.0
+        };
+        let mut x = m;
+        for (c, cw) in chars.iter().zip(&widths) {
+            ctx.font_size(size).text(&c.to_string(), x, baseline);
+            x += cw + track;
+        }
     }
 
     r.render_to_png(&ctx, "documentation/readme-images/specimen-regular.png").unwrap();
