@@ -913,6 +913,36 @@ Inter) confirm the loosen pass landed.
 O/o width 1.265 vs refs 1.30-1.34 is the locked rounder-o decision — noted
 as intentional, not drift.
 
+### Cap/lc pass — edits applied from the 2026-07-27 findings — 2026-07-27
+
+Follow-up to the normalized lc-vs-caps study; refs also instanced at wght
+700 to learn the Bold behavior: Inter/Geist collapse the cap/lc stem gap at
+bold (H/n 1.019/1.013, O/o ~1.014, M = H). So Virtua Bold's flat caps at
+192 = lc stem are CORRECT (not drift) — the Bold cap system is convergence,
+matching the refs.
+
+Edits (all marked blue for grading):
+1. **Cap diagonal sb +8, both masters** (A V W X Y Z + 21 composites each,
+   AE advance +8 with E offset +8) — completes the loosen pass; V/v sb ratio
+   0.40 → 0.71 (Inter 0.96; diagonals keep some Virtua tightness).
+2. **M stems**: Regular 96 → **100** (Inter-style half-step below the 104
+   system; M/H 0.96 ≈ Inter 0.95), Bold 176/168 (asymmetric!) → **192/192**
+   (= Bold H, per refs-at-700). Inner edges moved, 16u chamfers and 4u
+   diagonal-attach flats preserved.
+3. **Regular C right side −16**: lower terminal reached x 760 while the
+   upper terminal and O both stop at 744 (asymmetric jaw = drift). Terminal
+   block moved in 16; ink 704→688 = O exactly (C/O 1.023→1.000, refs
+   0.95–1.01); advance 792→776 (RSB 32 kept); C-composites −16. Bold C was
+   already correct (0.947). curve_lint clean.
+
+NOT edited (design calls for Eli, from findings 4/5): S width (0.81 of cap
+vs refs 0.73–0.75), V/X/x narrowness. Also flagged: Bold l stem is 176 vs
+n 192 with the foot overhanging its advance (R −24) — orange-marked
+already, needs Eli's polish pass.
+
+Build + preflight green. Renders: `~/Temp/M-new-{reg,bold}.png`,
+`~/Temp/C-new-reg.png`.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
