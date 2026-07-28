@@ -59,3 +59,6 @@ target/
 
 # rendered print proofs (regenerable via `designbot proof`; source is designbot itself)
 documentation/proofs/*.pdf
+
+# weight-comparison proof images (regenerable; un-ignore and commit at v1.0)
+documentation/proofs/images/*.png

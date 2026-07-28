@@ -1035,6 +1035,23 @@ diagonals changed substantially; every pair/group touching them predates
 this. designbot is temporarily broken (other agent mid-migration), so the
 weight-basic re-render is pending; verified via built-font PIL renders.
 
+### Kerning review after the width pass — 2026-07-28
+
+Rendered all pairs touching the widened cluster from the BUILT fonts
+(uharfbuzz shaping + outline fills, both weights). Verdict: the widening
+survived its kerning far better than geometry predicted, because pair fit
+is carried by the arm TIPS, whose sidebearings were preserved. V/A/W pairs
+and the lc diagonals read correctly at both weights; Bold (incl. the
+narrowed V in "Valve"/"AVAST") needs nothing.
+
+The one real effect: **T-tuck pairs read looser** in Regular — the longer
+bar moved the stem away from the tucked letter (T+o: stem gap 74→106 at
+the old value). Applied −16 deeper tucks, Regular only:
+T+e/o/r −160→−176, T+y −184→−200, e+T −160→−176, y+T −192→−208,
+kern1.T+kern2.a −128→−144, kern1.Y+kern2.o −112→−128. Bold untouched.
+Verified in re-renders ("Total Toyota Tokyo Yonder" rhythm even) and the
+regenerated weight images (designbot fixed).
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
