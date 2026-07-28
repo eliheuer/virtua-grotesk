@@ -3,11 +3,11 @@
 //! A seamless loop breathing the variable font's wght axis (400 → 700 → 400)
 //! with an eased ping-pong. Two colors only (theme ground + ink).
 //!
-//!   designbot --render documentation/social-assets/weight-morph.rs \
-//!             --output documentation/social-assets/weight-morph.gif
+//!   designbot --render documentation/social-assets/loops/weight-morph.rs \
+//!             --output documentation/social-assets/loops/weight-morph.gif
 //!   # or .mp4 (needs ffmpeg):
-//!   designbot --render documentation/social-assets/weight-morph.rs \
-//!             --output documentation/social-assets/weight-morph.mp4
+//!   designbot --render documentation/social-assets/loops/weight-morph.rs \
+//!             --output documentation/social-assets/loops/weight-morph.mp4
 //!
 //! Every new_page() is one frame; frame_duration sets the per-frame delay.
 
@@ -43,6 +43,6 @@ fn main() {
         ctx.text("Aa", w / 2.0, h / 2.0 - size * 0.36); // optically centered
     }
 
-    r.render_to_gif(&ctx, "documentation/social-assets/weight-morph.gif").unwrap();
+    r.render_to_gif(&ctx, "documentation/social-assets/loops/weight-morph.gif").unwrap();
     println!("{} frames", ctx.page_count());
 }

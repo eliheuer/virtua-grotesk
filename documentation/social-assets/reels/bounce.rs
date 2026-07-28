@@ -4,8 +4,8 @@
 //! 0–9 bounce around a gray field, colliding with each other and with the two
 //! static labels (the "Virtua Grotesk" wordmark and the blog link).
 //!
-//!   designbot --render documentation/social-assets/bounce.rs \
-//!             --output documentation/social-assets/bounce.mp4     # needs ffmpeg
+//!   designbot --render documentation/social-assets/reels/bounce.rs \
+//!             --output documentation/social-assets/reels/bounce.mp4   # needs ffmpeg
 //!
 //! Coordinates are y-up (origin bottom-left), like DrawBot.
 
@@ -301,6 +301,6 @@ fn main() {
         ctx.text(title, m, first_base);
     }
 
-    r.render_to_mp4(&ctx, "documentation/social-assets/bounce.mp4").expect("render");
+    r.render_to_mp4(&ctx, "documentation/social-assets/reels/bounce.mp4").expect("render");
     println!("{} frames", ctx.page_count());
 }
