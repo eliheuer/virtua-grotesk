@@ -212,6 +212,8 @@ The core workflow for type design with an agent:
 
 **Anchor sheets first.** The standing workflow for building missing or red
 glyphs from a reference image is the **`/anchor-sheet-glyphs` skill**
+(step-by-step operator procedure for any agent:
+`harness/RUNBOOK-anchor-sheets.md`)
 (`.agents/skills/anchor-sheet-glyphs/` — read its `LESSONS.md` before
 generating anything; it logs Eli's optical corrections and outranks the
 formulas). One image containing a known green glyph (the anchor, usually
