@@ -491,11 +491,15 @@ def gen_yen(master):
     stem = {"Regular": 100, "Bold": 192}[master]
     cx = 332
     x0, x1 = cx - stem // 2, cx + stem // 2
+    # topology mirrors the green Y: stem -> right arm LOWER edge -> tip ->
+    # right arm upper edge -> notch -> left arm upper edge -> tip -> left
+    # arm lower edge -> stem. (v1 routed the outer edge into the notch and
+    # the arms crossed like a bowtie.)
     ypart = [
         (x0, 16), (x0 + 16, 0), (x1 - 16, 0), (x1, 16),
-        (x1, 430), (548, 752), (564, 768), (616, 768), (632, 752), (632, 704),
+        (x1, 430), (632, 704), (632, 752), (616, 768), (564, 768), (548, 752),
         (cx + 4, 470), (cx - 4, 470),
-        (32, 704), (32, 752), (48, 768), (100, 768), (116, 752), (x0, 430),
+        (116, 752), (100, 768), (48, 768), (32, 752), (32, 704), (x0, 430),
     ]
     if master == "Regular":
         bars = [bar(84, 294, 580, 366), bar(84, 186, 580, 258)]

@@ -4,7 +4,7 @@
 	<advance width="360"/>
 	<outline>
 		<component base="I"/>
-		<component base="dieresis" yOffset="144" xOffset="-4"/>
+		<component base="dieresis" xOffset="-4" yOffset="144"/>
 	</outline>
 	<lib>
 		<dict>
