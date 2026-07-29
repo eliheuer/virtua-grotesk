@@ -77,8 +77,23 @@ def main():
 
     ink = np.array(Image.open(a.sheet).convert("L")) < a.threshold
     boxes = segment(ink)
-    if len(boxes) != len(a.names):
-        sys.exit(f"segmented {len(boxes)} glyphs but {len(a.names)} names given")
+    # Multi-part glyphs (dieresis, i, ?, %) split into several column spans.
+    # Declare them explicitly as name:N (e.g. dieresis:2) — each name
+    # consumes N consecutive spans left-to-right. (A smallest-gap heuristic
+    # was tried and merged the wrong pair; explicit beats clever.)
+    names, counts = [], []
+    for nm_ in a.names:
+        name, _, cnt = nm_.partition(":")
+        names.append(name); counts.append(int(cnt) if cnt else 1)
+    a.names = names
+    if sum(counts) != len(boxes):
+        sys.exit(f"segmented {len(boxes)} spans but names declare {sum(counts)}")
+    merged, i = [], 0
+    for cnt in counts:
+        grp = boxes[i:i + cnt]; i += cnt
+        merged.append((grp[0][0], max(b[1] for b in grp),
+                       min(b[2] for b in grp), max(b[3] for b in grp)))
+    boxes = merged
 
     ax0, ax1, ay0, ay1 = boxes[a.anchor]
     uxmin, uxmax, uymin, uymax, _ = anchor_bbox_units(a.names[a.anchor])
