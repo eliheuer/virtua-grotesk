@@ -42,10 +42,17 @@ def glif(name, uni, adv, contours, color=BLUE):
     L += [f'\t<advance width="{adv}"/>', '\t<outline>']
     for pts in contours:
         L.append('\t\t<contour>')
-        for x, y in pts:
+        for pt in pts:
+            x, y = pt[0], pt[1]
+            typ = pt[2] if len(pt) > 2 else "line"
             fx = str(int(x)) if float(x) == int(x) else str(x)
             fy = str(int(y)) if float(y) == int(y) else str(y)
-            L.append(f'\t\t\t<point x="{fx}" y="{fy}" type="line"/>')
+            if typ is None:
+                L.append(f'\t\t\t<point x="{fx}" y="{fy}"/>')
+            elif typ.endswith("-smooth"):
+                L.append(f'\t\t\t<point x="{fx}" y="{fy}" type="{typ[:-7]}" smooth="yes"/>')
+            else:
+                L.append(f'\t\t\t<point x="{fx}" y="{fy}" type="{typ}"/>')
         L.append('\t\t</contour>')
     L += ['\t</outline>', '\t<lib>', '\t\t<dict>', '\t\t\t<key>public.markColor</key>',
           f'\t\t\t<string>{color}</string>', '\t\t</dict>', '\t</lib>', '</glyph>', '']
@@ -91,17 +98,79 @@ def chevron_left(x0, x1, y_bot, y_top, tv, axis, apex_flat=48, notch_x=None):
     ]
 
 
+def _split_type(typ):
+    if typ is None:
+        return None, False
+    if typ.endswith("-smooth"):
+        return typ[:-7], True
+    return typ, False
+
+
+def _join_type(base, smooth):
+    if base is None:
+        return None
+    return base + ("-smooth" if smooth else "")
+
+
+def reverse_contour(pts):
+    """Reverse traversal, shifting segment types incoming->outgoing."""
+    pts = [_norm(pt) for pt in pts]
+    onc = [i for i, pt in enumerate(pts) if pt[2] is not None]
+    outgoing = {}
+    for k, i in enumerate(onc):
+        nxt = onc[(k + 1) % len(onc)]
+        outgoing[i] = _split_type(pts[nxt][2])[0]
+    out = []
+    for i in range(len(pts) - 1, -1, -1):
+        x, y, typ = pts[i]
+        base, smooth = _split_type(typ)
+        nb = outgoing[i] if base is not None else None
+        out.append((x, y, _join_type(nb, smooth)))
+    return out
+
+
 def mirror(pts, adv):
-    """Mirror a contour horizontally inside its advance, preserving winding."""
-    return [(adv - x, y) for x, y in pts][::-1]
+    """Mirror a contour horizontally inside its advance, preserving winding.
+
+    Reversal moves segment types (line/curve) from incoming to outgoing
+    segments; smooth flags stay with their points."""
+    pts = [_norm(pt) for pt in pts]
+    onc = [i for i, pt in enumerate(pts) if pt[2] is not None]
+    outgoing = {}
+    for k, i in enumerate(onc):
+        nxt = onc[(k + 1) % len(onc)]
+        outgoing[i] = _split_type(pts[nxt][2])[0]
+    out = []
+    for i in range(len(pts) - 1, -1, -1):
+        x, y, typ = pts[i]
+        base, smooth = _split_type(typ)
+        nb = outgoing[i] if base is not None else None
+        out.append((adv - x, y, _join_type(nb, smooth)))
+    return out
+
+
+def _norm(pt):
+    return pt if len(pt) > 2 else (pt[0], pt[1], "line")
+
+
+def normalize_start(pts):
+    """START RULE (Eli, 2026-07-28): contour starts at the lower-left
+    on-curve point (min y, then min x). Rotation keeps curve runs intact."""
+    pts = [_norm(pt) for pt in pts]
+    onc = [i for i, pt in enumerate(pts) if pt[2] is not None]
+    best = min(onc, key=lambda i: (pts[i][1], pts[i][0]))
+    return pts[best:] + pts[:best]
 
 
 def write(master, name, uni, adv, contours):
-    for pts in contours:  # outer contours must wind CCW (UFO ink convention)
-        s = sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(pts, pts[1:] + pts[:1]))
+    fixed = []
+    for pts in contours:
+        pts = normalize_start(pts)
+        s = sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(pts, pts[1:] + pts[:1]))
         assert s > 0, f"{name}: contour wound backwards (signed area {s/2:.0f})"
+        fixed.append(pts)
     p = REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{name}.glif"
-    p.write_text(glif(name, uni, adv, contours))
+    p.write_text(glif(name, uni, adv, fixed))
     return p
 
 
@@ -196,7 +265,105 @@ def gen_underscore(master):
     write(master, "underscore", "005F", 600, [bar(68, -188, 532, -116)])
 
 
-GENERATORS = {"less": gen_less_greater, "greater": gen_less_greater, "equal": gen_equal,
+
+
+def _read_glyph(master, name):
+    """Parse a glif into (adv, [contours of (x, y, type) tuples])."""
+    txt = (REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{name}.glif").read_text()
+    adv = int(float(re.search(r'<advance width="([\d.]+)"', txt).group(1)))
+    contours = []
+    for cm in re.finditer(r"<contour>(.*?)</contour>", txt, re.S):
+        pts = []
+        for pm in re.finditer(r'<point x="(-?[\d.]+)" y="(-?[\d.]+)"(?: type="(\w+)")?( smooth="yes")?', cm.group(1)):
+            x, y, typ, sm = float(pm.group(1)), float(pm.group(2)), pm.group(3), pm.group(4)
+            pts.append((x, y, _join_type(typ, bool(sm)) if typ else None))
+        contours.append(pts)
+    return adv, contours
+
+
+def gen_bar(master):
+    s = {"Regular": 80, "Bold": 144}[master]  # sheet 79; Bold via bracket ratio
+    x0 = (320 - s) // 2
+    write(master, "bar", "007C", 320, [bar(x0, -128, x0 + s, 848)])
+
+
+def gen_exclamdown(master):
+    """exclamdown := exclam rotated 180 degrees, top aligned at 656."""
+    adv, cont = _read_glyph(master, "exclam")
+    # 180-degree rotation preserves orientation: transform in order, no reversal.
+    out = []
+    for pts in cont:
+        out.append([(adv - pt[0], 656 - pt[1], _norm(pt)[2]) for pt in pts])
+    write(master, "exclamdown", "00A1", adv, out)
+
+
+def gen_cent(master):
+    """cent := c + vertical bar through the ink center (sheet: -96..656)."""
+    adv, cont = _read_glyph(master, "c")
+    xs = [pt[0] for pts in cont for pt in pts]
+    cx = (min(xs) + max(xs)) / 2
+    s = {"Regular": 96, "Bold": 192}[master]  # lc stem class
+    x0 = int(round((cx - s / 2) / 2) * 2)
+    cont.append(bar(x0, -96, x0 + s, 656))
+    write(master, "cent", "00A2", adv, cont)
+
+
+def gen_asciitilde(master):
+    """Wave: cubic S centerline, vertical stroke offset, beveled faces."""
+    half = {"Regular": 36, "Bold": 66}[master]
+    yl, yr = 344, 396              # end centers; crest/trough +-28
+    lo, hi = yl - half, yr + half
+    pts = [
+        (80, yl - half + 16), (96, yl - half),
+        (150, yl - half + 54, None), (214, yl - half + 54, None), (260, 370 - half, "curve-smooth"),
+        (306, 342 - half, None), (370, 342 - half, None), (416, yr - half, "curve"),
+        (432, yr - half + 16), (432, yr + half - 16), (416, yr + half),
+        (370, yr + half - 54 + 16 + 38, None), (306, 342 + half + 36, None), (260, 370 + half, "curve-smooth"),
+        (214, 398 + half, None), (150, 398 + half, None), (96, yl + half, "curve"),
+        (80, yl + half - 16),
+    ]
+    write(master, "asciitilde", "007E", 520, [pts])
+
+
+def gen_braces(master):
+    """{ : chevron-style beak + curved hooks + stem runs. Box -128..848."""
+    t_ = {"Regular": 72, "Bold": 128}[master]
+    xo = {"Regular": 200, "Bold": 176}[master]   # stem outer x
+    xi = xo + t_                                  # stem inner x
+    tipx = {"Regular": 360, "Bold": 392}[master]  # tip face x
+    adv = {"Regular": 400, "Bold": 432}[master]
+    nx = {"Regular": 176, "Bold": 232}[master]    # inner notch x
+    mid = 360
+    pts = [
+        # beak face (lower-left start comes from normalize_start)
+        (88, 336), (88, 384), (104, 400),
+        # outer: beak -> stem -> top tip
+        (148, 404, None), (xo, 432, None), (xo, 480, "curve-smooth"),
+        (xo, 680, "line-smooth"),
+        (xo, 772, None), (xo + 56, 848, None), (tipx - 16, 848, "curve"),
+        (tipx, 832), (tipx, 792), (tipx - 16, 776),
+        # inner: top tip -> stem -> notch
+        (xi + 16, 776, None), (xi, 732, None), (xi, 672, "curve-smooth"),
+        (xi, 488, "line-smooth"),
+        (xi, 432, None), (nx + 40, 396, None), (nx, 364, "curve"),
+        (nx, 356),
+        # mirror half (bottom): notch -> stem -> bottom tip -> beak
+        (nx + 40, 324, None), (xi, 288, None), (xi, 232, "curve-smooth"),
+        (xi, 48, "line-smooth"),
+        (xi, -12, None), (xi + 16, -56, None), (tipx - 16, -56, "curve"),
+        (tipx, -72), (tipx, -112), (tipx - 16, -128),
+        (xo + 56, -128, None), (xo, -52, None), (xo, 40, "curve-smooth"),
+        (xo, 240, "line-smooth"),
+        (xo, 288, None), (148, 316, None), (104, 320, "curve"),
+    ]
+    pts = reverse_contour(pts)
+    write(master, "braceleft", "007B", adv, [pts])
+    write(master, "braceright", "007D", adv, [mirror(pts, adv)])
+
+
+GENERATORS = {"bar": gen_bar, "exclamdown": gen_exclamdown, "cent": gen_cent,
+              "asciitilde": gen_asciitilde, "braceleft": gen_braces, "braceright": gen_braces,
+              "less": gen_less_greater, "greater": gen_less_greater, "equal": gen_equal,
               "bracketleft": gen_brackets, "bracketright": gen_brackets,
               "backslash": gen_backslash, "grave": gen_grave,
               "asciicircum": gen_asciicircum, "underscore": gen_underscore}

@@ -22,8 +22,10 @@
 		</contour>
 		<component base="twodotshorizontalabove-ar" xOffset="76" yOffset="-128"/>
 	</outline>
-  <lib>
-    <dict>
-    </dict>
-  </lib>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.09,0.72,0.44,1</string>
+		</dict>
+	</lib>
 </glyph>
