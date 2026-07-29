@@ -556,7 +556,7 @@ Owners: **[C]** Claude builds it now · **[X]** Codex executes in the loop ·
 - [x] [C] Write `DESIGN.md` at the repo root — the power-of-two grid / chamfer design contract every pipeline stage consumes
 - [ ] [H] Commit or stash the current WIP (Arabic outline cleanup, Hebrew glyphs, harness edits) so the harness branch starts clean
 - [ ] [C] Update `documentation/google-fonts-readiness.md` to the real exclude list (4, not 7) and current worklist
-- [ ] [C] Fix or delete the stale `documentation/source-guides/ai-glyph-harness.md` (old `build/` paths)
+- [x] [C] Deleted the stale `documentation/source-guides/ai-glyph-harness.md` (superseded by this plan + the `glyph-ai-harness` skill)
 - [ ] [C] Add yellow (`1,0.86,0.2,1`) as its own class in inventory; classify all 7 palette colors + legacy red distinctly
 - [ ] [H] Grading pass in Runebender: confirm every glyph's color reflects current truth (85 reds especially)
 

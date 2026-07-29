@@ -131,9 +131,8 @@ native app.
 
 ## Core QA Expectations
 
-- `documentation/core-qa-process.md` is the canonical human/agent QA process.
-- `documentation/manual-cleanup-handoff.md` is the pause/resume checkpoint when
-  hand drawing, source cleanup, or final maintainer inputs are still pending.
+- `documentation/core-qa-process.md` is the canonical human/agent QA process
+  (also the pause/resume gate when hand drawing or source cleanup is pending).
 - Reusable Google Fonts onboarding knowledge lives in `.agents/` so it can be
   copied into future font repos:
   - `GOOGLE_FONTS_PORTING_CHECKLIST.md`
