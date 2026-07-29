@@ -163,13 +163,35 @@ def normalize_start(pts):
     return pts[best:] + pts[:best]
 
 
+def _bbox(pts):
+    xs = [p[0] for p in pts]; ys = [p[1] for p in pts]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
 def write(master, name, uni, adv, contours):
-    fixed = []
+    """Outer contours must wind CCW (positive); counters (contours whose
+    bbox sits inside another contour's bbox) must wind CW (negative)."""
+    fixed, areas, boxes = [], [], []
     for pts in contours:
         pts = normalize_start(pts)
         s = sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(pts, pts[1:] + pts[:1]))
-        assert s > 0, f"{name}: contour wound backwards (signed area {s/2:.0f})"
-        fixed.append(pts)
+        fixed.append(pts); areas.append(s); boxes.append(_bbox(pts))
+    def _pip(pt, poly):
+        # even-odd point-in-polygon on the control polygon (fine for nesting)
+        x, y = pt[0], pt[1]
+        inside = False
+        for a, b in zip(poly, poly[1:] + poly[:1]):
+            if (a[1] > y) != (b[1] > y):
+                xi = a[0] + (y - a[1]) * (b[0] - a[0]) / (b[1] - a[1])
+                if xi > x:
+                    inside = not inside
+        return inside
+
+    for i, (pts, s, bb) in enumerate(zip(fixed, areas, boxes)):
+        depth = sum(1 for j in range(len(fixed)) if j != i and _pip(pts[0], fixed[j]))
+        want_pos = depth % 2 == 0  # even nesting = ink (CCW), odd = counter (CW)
+        assert (s > 0) == want_pos, (
+            f"{name}: contour {i} winding wrong (signed area {s/2:.0f}, depth {depth})")
     p = REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{name}.glif"
     p.write_text(glif(name, uni, adv, fixed))
     return p
@@ -367,7 +389,147 @@ def gen_braces(master):
     write(master, "braceright", "007D", adv, [mirror(pts, adv)])
 
 
-GENERATORS = {"bar": gen_bar, "exclamdown": gen_exclamdown, "cent": gen_cent,
+
+
+def harmonize_g2(pts, passes=6):
+    """Auto-harmonize: at every smooth curve-curve joint, scale the two
+    adjacent handle lengths so endpoint curvatures match (kappa = 2/3 d/l^2)
+    — symbol_gen's version of Runebender's harmonize->G2. Tangents are
+    untouched; only handle lengths change. Grid-rounds at the end."""
+    import math
+    pts = [_norm(pt) for pt in pts]
+    n = len(pts)
+    for _ in range(passes):
+        onc = [i for i, pt in enumerate(pts) if pt[2] is not None]
+        for i in onc:
+            if not (pts[i][2] or "").startswith("curve-smooth") and pts[i][2] != "curve-smooth":
+                continue
+            ip, iN = (i - 1) % n, (i + 1) % n
+            if pts[ip][2] is not None or pts[iN][2] is not None:
+                continue  # need curves on both sides
+            i2, i3 = (i - 2) % n, (i + 2) % n
+            P = pts[i]
+            def kappa(cadj, csec):
+                l = math.hypot(cadj[0] - P[0], cadj[1] - P[1])
+                if l == 0: return None, 0
+                ux, uy = (P[0] - cadj[0]) / l, (P[1] - cadj[1]) / l
+                d = abs((csec[0] - P[0]) * uy - (csec[1] - P[1]) * ux)
+                return (2.0 / 3.0) * d / (l * l), l
+            k_in, l_in = kappa(pts[ip], pts[i2])
+            k_out, l_out = kappa(pts[iN], pts[i3])
+            if not k_in or not k_out or min(k_in, k_out) <= 0:
+                continue
+            kt = math.sqrt(k_in * k_out)
+            for j, l, k in ((ip, l_in, k_in), (iN, l_out, k_out)):
+                f = math.sqrt(k / kt)
+                x, y, typ = pts[j]
+                pts[j] = (P[0] + (x - P[0]) * f, P[1] + (y - P[1]) * f, typ)
+    return [(round(x / 2) * 2, round(y / 2) * 2, typ) for x, y, typ in pts]
+
+
+def _scale_translate(contours, s, dx, dy):
+    out = []
+    for pts in contours:
+        out.append([(round((x * s + dx) / 2) * 2, round((y * s + dy) / 2) * 2, typ)
+                    for x, y, typ in [_norm(pt) for pt in pts]])
+    return out
+
+
+def _circle(cx, cy, r, ccw=True):
+    """Circle contour from four cubic quadrants (kappa 0.5523)."""
+    k = round(r * 0.5523 / 2) * 2
+    P = [(cx + r, cy, "curve-smooth"), (cx + r, cy + k, None), (cx + k, cy + r, None),
+         (cx, cy + r, "curve-smooth"), (cx - k, cy + r, None), (cx - r, cy + k, None),
+         (cx - r, cy, "curve-smooth"), (cx - r, cy - k, None), (cx - k, cy - r, None),
+         (cx, cy - r, "curve-smooth"), (cx + k, cy - r, None), (cx + r, cy - k, None)]
+    return P if ccw else reverse_contour(P)
+
+
+def gen_dieresis(master):
+    """Two i-tittles (family donor); ink center kept at 180 for composites."""
+    _, cont = _read_glyph(master, "i")
+    tittle = max(cont, key=lambda pts: min(pt[1] for pt in pts))
+    tittle = [_norm(pt) for pt in tittle]
+    x0 = min(pt[0] for pt in tittle)
+    w = max(pt[0] for pt in tittle) - x0
+    gap = {"Regular": 88, "Bold": 64}[master]
+    dl = (180 - gap / 2 - w) - x0
+    dr = (180 + gap / 2) - x0
+    left = [(x + dl, y, typ) for x, y, typ in tittle]
+    right = [(x + dr, y, typ) for x, y, typ in tittle]
+    write(master, "dieresis", "00A8", 360, [left, right])
+
+
+def gen_ordfeminine(master):
+    """Superior a: the a scaled 0.87 (sheet), bottom seated at 256."""
+    _, cont = _read_glyph(master, "a")
+    xs = [pt[0] for pts in cont for pt in pts]
+    ys = [pt[1] for pts in cont for pt in pts]
+    s = 0.87
+    dy = 256 - min(ys) * s
+    dx = (616 - (max(xs) - min(xs)) * s) / 2 - min(xs) * s
+    write(master, "ordfeminine", "00AA", 616, _scale_translate(cont, s, dx, dy))
+
+
+def gen_copyright(master):
+    """Ring (outer dia 832, stroke 44/80) + c scaled 0.74 at ring center."""
+    ring_s = {"Regular": 44, "Bold": 80}[master]
+    cx, cy, R = 464, 384, 416
+    _, cont = _read_glyph(master, "c")
+    xs = [pt[0] for pts in cont for pt in pts]
+    ys = [pt[1] for pts in cont for pt in pts]
+    s = 0.74
+    dx = cx - (min(xs) + max(xs)) / 2 * s
+    dy = cy - (min(ys) + max(ys)) / 2 * s
+    contours = [_circle(cx, cy, R), _circle(cx, cy, R - ring_s, ccw=False)]
+    contours += _scale_translate(cont, s, dx, dy)
+    write(master, "copyright", "00A9", 928, contours)
+
+
+def gen_yen(master):
+    """V-arms + stem + two bars (sheet: bars at 294/186 R, arms to 768)."""
+    stem = {"Regular": 100, "Bold": 192}[master]
+    cx = 332
+    x0, x1 = cx - stem // 2, cx + stem // 2
+    ypart = [
+        (x0, 16), (x0 + 16, 0), (x1 - 16, 0), (x1, 16),
+        (x1, 430), (548, 752), (564, 768), (616, 768), (632, 752), (632, 704),
+        (cx + 4, 470), (cx - 4, 470),
+        (32, 704), (32, 752), (48, 768), (100, 768), (116, 752), (x0, 430),
+    ]
+    if master == "Regular":
+        bars = [bar(84, 294, 580, 366), bar(84, 186, 580, 258)]
+    else:
+        bars = [bar(84, 274, 580, 386), bar(84, 130, 580, 242)]
+    write(master, "yen", "00A5", 664, [ypart] + bars)
+
+
+def gen_sterling(master):
+    """v1: straight base + stem + hook with G2 apex extrema + crossbar.
+    (The sheet has a gentle wave base - flagged as an upgrade candidate.)"""
+    st = {"Regular": 100, "Bold": 176}[master]
+    xs0 = 120
+    xs1 = xs0 + st
+    base = bar(32, 0, 600, 88)
+    crossbar = bar(40, 348, 376, 420)
+    hook_t = {"Regular": 96, "Bold": 172}[master]
+    apex_o, apex_i = 784, 784 - hook_t
+    main = [
+        (xs0, 88), (xs0, 560, "line-smooth"),
+        (xs0, 688, None), (196, apex_o, None), (312, apex_o, "curve-smooth"),
+        (452, apex_o, None), (600, 726, None), (600, 640, "curve"),
+        (600, 612), (584, 596), (568, 612),
+        (568, 640, None), (460, apex_i, None), (320, apex_i, "curve-smooth"),
+        (236, apex_i, None), (xs1, 656, None), (xs1, 560, "curve-smooth"),
+        (xs1, 88),
+    ]
+    main = harmonize_g2(reverse_contour(main))  # CCW + auto-G2
+    write(master, "sterling", "00A3", 632, [base, crossbar, main])
+
+
+GENERATORS = {"dieresis": gen_dieresis, "ordfeminine": gen_ordfeminine,
+              "copyright": gen_copyright, "yen": gen_yen, "sterling": gen_sterling,
+              "bar": gen_bar, "exclamdown": gen_exclamdown, "cent": gen_cent,
               "asciitilde": gen_asciitilde, "braceleft": gen_braces, "braceright": gen_braces,
               "less": gen_less_greater, "greater": gen_less_greater, "equal": gen_equal,
               "bracketleft": gen_brackets, "bracketright": gen_brackets,
