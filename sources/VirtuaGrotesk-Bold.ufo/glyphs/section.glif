@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="section" format="2">
 	<unicode hex="00A7"/>
-	<advance width="667"/>
+	<advance width="667.0914679385266"/>
 	<outline>
 		<contour>
+			<point x="393.3565470258304" y="-206.31021933397687" type="curve" smooth="yes"/>
 			<point x="477.0245788288425" y="-199.42130768592486"/>
 			<point x="559.5018169730226" y="-146.61777771067136"/>
 			<point x="559.5018169730226" y="-60.68498611314703" type="curve" smooth="yes"/>
@@ -53,7 +54,6 @@
 			<point x="174.1036447219326" y="-166.49797752935334" type="curve" smooth="yes"/>
 			<point x="240.42564198668936" y="-209.82735299329306"/>
 			<point x="320.8535691324474" y="-212.2798423568314"/>
-			<point x="393.3565470258304" y="-206.31021933397687" type="curve" smooth="yes"/>
 		</contour>
 		<contour>
 			<point x="450.6318088168268" y="146.6188792377764" type="curve"/>
@@ -73,7 +73,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>0.27,0.44,1,1</string>
+			<string>1,0.5,0,1</string>
 		</dict>
 	</lib>
 </glyph>
