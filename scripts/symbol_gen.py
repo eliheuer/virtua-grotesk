@@ -310,23 +310,24 @@ def gen_cent(master):
 
 
 def gen_asciitilde(master):
-    """Wave with ON-CURVE POINTS AT THE EXTREMA (the img2bez discipline):
-    the crest and trough projections of each edge are on-curve with
-    horizontal tangents; all segments between are monotonic.
-    Centerline: ends (96,344)/(416,396), crest (192,398), trough (328,342)."""
-    h = {"Regular": 36, "Bold": 66}[master]
-    yl, yr, yc, yt = 344, 396, 398, 342          # end-left/right, crest, trough
-    pts = [
-        (80, yl - h + 16), (96, yl - h),                       # left face + corner
-        (122, yl - h + 14, None), (140, yc - h, None), (192, yc - h, "curve-smooth"),
-        (244, yc - h, None), (276, yt - h, None), (328, yt - h, "curve-smooth"),
-        (380, yt - h, None), (394, yr - h - 16, None), (416, yr - h, "curve"),
-        (432, yr - h + 16), (432, yr + h - 16), (416, yr + h),
-        (394, yr + h - 14, None), (370, yt + h, None), (328, yt + h, "curve-smooth"),
-        (276, yt + h, None), (244, yc + h, None), (192, yc + h, "curve-smooth"),
-        (140, yc + h, None), (122, yl + h + 14, None), (96, yl + h, "curve"),
-        (80, yl + h - 16),
-    ]
+    """Tilde per Eli's graded Regular (2026-07-29): terminals are
+    face + 16u bevel + 16u flat, the curve LEAVES the flat at a corner and
+    ENTERS the opposite terminal's 45-degree bevel tangentially; crest and
+    trough projections are on-curve G2 smooths with horizontal tangents.
+    Bold = same skeleton, bottom side -30 / top side +30 (stroke 72->132).
+    Verify with scripts/curve_continuity.py (targets: G2, no kinks)."""
+    # (x, y, type, side) — side: -1 bottom path, +1 top path
+    P = [(80,320,"line",-1),(96,304,"line",-1),(112,304,"line",-1),
+         (128,338,None,-1),(160,362,None,-1),(192,362,"curve-smooth",-1),
+         (240,362,None,-1),(264,306,None,-1),(328,306,"curve-smooth",-1),
+         (366,306,None,-1),(382,326,None,-1),(416,360,"curve-smooth",-1),
+         (432,376,"line",-1),(432,416,"line",+1),(416,432,"line",+1),
+         (400,432,"line",+1),(368,392,None,+1),(346,378,None,+1),
+         (328,378,"curve-smooth",+1),(292,378,None,+1),(254,432,None,+1),
+         (192,432,"curve-smooth",+1),(164,432,None,+1),(141,421,None,+1),
+         (96,376,"curve-smooth",+1),(80,360,"line",+1)]
+    d = {"Regular": 0, "Bold": 30}[master]
+    pts = [(x, (y - d) if s < 0 else (y + d), typ) for (x, y, typ, s) in P]
     write(master, "asciitilde", "007E", 520, [pts])
 
 

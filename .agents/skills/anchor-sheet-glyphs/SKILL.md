@@ -48,7 +48,10 @@ the glyph, exact numbers, and (when captured) the generator change.
 
 4. **Verify** before showing: bbox/advance/axis assertions, stroke scans at
    two heights, `make build` (master compat), shaped-text render at both
-   weights (uharfbuzz), curve_lint for anything curved. Mark results
+   weights (uharfbuzz), curve_lint for anything curved, and
+   **`scripts/curve_continuity.py <Master> <glyphs>`** — the Runebender
+   G0–G3 overlay as a CLI gate. It must exit 0: no KINKs, line↔curve
+   joints tangent, every smooth curve-curve joint G2. Mark results
    **blue** and stop — Eli grades.
 
 ## Grammar constants (Regular / Bold)
