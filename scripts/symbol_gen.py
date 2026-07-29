@@ -154,11 +154,12 @@ def _norm(pt):
 
 
 def normalize_start(pts):
-    """START RULE (Eli, 2026-07-28): contour starts at the lower-left
-    on-curve point (min y, then min x). Rotation keeps curve runs intact."""
+    """START RULE (Eli, 2026-07-28): contour starts at the lower-LEFT
+    on-curve point — leftmost first, lowest as tiebreak (min x, then min y).
+    (min-y-first put the tilde's start at its trough: wrong corner.)"""
     pts = [_norm(pt) for pt in pts]
     onc = [i for i, pt in enumerate(pts) if pt[2] is not None]
-    best = min(onc, key=lambda i: (pts[i][1], pts[i][0]))
+    best = min(onc, key=lambda i: (pts[i][0], pts[i][1]))
     return pts[best:] + pts[:best]
 
 
@@ -309,18 +310,22 @@ def gen_cent(master):
 
 
 def gen_asciitilde(master):
-    """Wave: cubic S centerline, vertical stroke offset, beveled faces."""
-    half = {"Regular": 36, "Bold": 66}[master]
-    yl, yr = 344, 396              # end centers; crest/trough +-28
-    lo, hi = yl - half, yr + half
+    """Wave with ON-CURVE POINTS AT THE EXTREMA (the img2bez discipline):
+    the crest and trough projections of each edge are on-curve with
+    horizontal tangents; all segments between are monotonic.
+    Centerline: ends (96,344)/(416,396), crest (192,398), trough (328,342)."""
+    h = {"Regular": 36, "Bold": 66}[master]
+    yl, yr, yc, yt = 344, 396, 398, 342          # end-left/right, crest, trough
     pts = [
-        (80, yl - half + 16), (96, yl - half),
-        (150, yl - half + 54, None), (214, yl - half + 54, None), (260, 370 - half, "curve-smooth"),
-        (306, 342 - half, None), (370, 342 - half, None), (416, yr - half, "curve"),
-        (432, yr - half + 16), (432, yr + half - 16), (416, yr + half),
-        (370, yr + half - 54 + 16 + 38, None), (306, 342 + half + 36, None), (260, 370 + half, "curve-smooth"),
-        (214, 398 + half, None), (150, 398 + half, None), (96, yl + half, "curve"),
-        (80, yl + half - 16),
+        (80, yl - h + 16), (96, yl - h),                       # left face + corner
+        (122, yl - h + 14, None), (140, yc - h, None), (192, yc - h, "curve-smooth"),
+        (244, yc - h, None), (276, yt - h, None), (328, yt - h, "curve-smooth"),
+        (380, yt - h, None), (394, yr - h - 16, None), (416, yr - h, "curve"),
+        (432, yr - h + 16), (432, yr + h - 16), (416, yr + h),
+        (394, yr + h - 14, None), (370, yt + h, None), (328, yt + h, "curve-smooth"),
+        (276, yt + h, None), (244, yc + h, None), (192, yc + h, "curve-smooth"),
+        (140, yc + h, None), (122, yl + h + 14, None), (96, yl + h, "curve"),
+        (80, yl + h - 16),
     ]
     write(master, "asciitilde", "007E", 520, [pts])
 
