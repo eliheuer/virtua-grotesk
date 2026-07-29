@@ -168,12 +168,17 @@ def _bbox(pts):
     return min(xs), min(ys), max(xs), max(ys)
 
 
-def write(master, name, uni, adv, contours):
+def write(master, name, uni, adv, contours, normalize=True):
     """Outer contours must wind CCW (positive); counters (contours whose
-    bbox sits inside another contour's bbox) must wind CW (negative)."""
+    bbox sits inside another contour's bbox) must wind CW (negative).
+
+    normalize=False keeps the given point order — REQUIRED for contours
+    copied from a donor glyph: rotating each master to its own lower-left
+    point can pick different indices and break master compatibility
+    (dollar's S copy, 2026-07-29)."""
     fixed, areas, boxes = [], [], []
     for pts in contours:
-        pts = normalize_start(pts)
+        pts = normalize_start(pts) if normalize else [_norm(pt) for pt in pts]
         s = sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(pts, pts[1:] + pts[:1]))
         fixed.append(pts); areas.append(s); boxes.append(_bbox(pts))
     def _pip(pt, poly):
@@ -187,8 +192,15 @@ def write(master, name, uni, adv, contours):
                     inside = not inside
         return inside
 
+    def _contained(inner, outer):
+        # true nesting: EVERY on-curve point inside (overlapping ink shares
+        # only some points — euro's bars cross the C without nesting)
+        onc = [pt for pt in inner if pt[2] is not None] or inner
+        return all(_pip(pt, outer) for pt in onc)
+
     for i, (pts, s, bb) in enumerate(zip(fixed, areas, boxes)):
-        depth = sum(1 for j in range(len(fixed)) if j != i and _pip(pts[0], fixed[j]))
+        depth = sum(1 for j in range(len(fixed))
+                    if j != i and _contained(pts, fixed[j]))
         want_pos = depth % 2 == 0  # even nesting = ink (CCW), odd = counter (CW)
         assert (s > 0) == want_pos, (
             f"{name}: contour {i} winding wrong (signed area {s/2:.0f}, depth {depth})")
@@ -233,7 +245,7 @@ def _mirror_of_source(master, src, dst, dst_uni, about="adv"):
         out = [(axis - x, y) for x, y in pts][::-1]
     else:
         out = mirror(pts, adv)
-    write(master, dst, dst_uni, adv, [out])
+    write(master, dst, dst_uni, adv, [out], normalize=False)
 
 
 def gen_backslash(master):
@@ -317,7 +329,7 @@ def gen_exclamdown(master):
     out = []
     for pts in cont:
         out.append([(adv - pt[0], 656 - pt[1], _norm(pt)[2]) for pt in pts])
-    write(master, "exclamdown", "00A1", adv, out)
+    write(master, "exclamdown", "00A1", adv, out, normalize=False)
 
 
 def gen_cent(master):
@@ -328,7 +340,7 @@ def gen_cent(master):
     s = {"Regular": 96, "Bold": 192}[master]  # lc stem class
     x0 = int(round((cx - s / 2) / 2) * 2)
     cont.append(bar(x0, -96, x0 + s, 656))
-    write(master, "cent", "00A2", adv, cont)
+    write(master, "cent", "00A2", adv, cont, normalize=False)
 
 
 def gen_asciitilde(master):
@@ -457,7 +469,7 @@ def gen_dieresis(master):
     dr = (180 + gap / 2) - x0
     left = [(x + dl, y, typ) for x, y, typ in tittle]
     right = [(x + dr, y, typ) for x, y, typ in tittle]
-    write(master, "dieresis", "00A8", 360, [left, right])
+    write(master, "dieresis", "00A8", 360, [left, right], normalize=False)
 
 
 def gen_ordfeminine(master):
@@ -468,7 +480,7 @@ def gen_ordfeminine(master):
     s = 0.87
     dy = 256 - min(ys) * s
     dx = (616 - (max(xs) - min(xs)) * s) / 2 - min(xs) * s
-    write(master, "ordfeminine", "00AA", 616, _scale_translate(cont, s, dx, dy))
+    write(master, "ordfeminine", "00AA", 616, _scale_translate(cont, s, dx, dy), normalize=False)
 
 
 def gen_copyright(master):
@@ -483,7 +495,7 @@ def gen_copyright(master):
     dy = cy - (min(ys) + max(ys)) / 2 * s
     contours = [_circle(cx, cy, R), _circle(cx, cy, R - ring_s, ccw=False)]
     contours += _scale_translate(cont, s, dx, dy)
-    write(master, "copyright", "00A9", 928, contours)
+    write(master, "copyright", "00A9", 928, contours, normalize=False)
 
 
 def gen_yen(master):
@@ -531,7 +543,109 @@ def gen_sterling(master):
     write(master, "sterling", "00A3", 632, [base, crossbar, main])
 
 
-GENERATORS = {"dieresis": gen_dieresis, "ordfeminine": gen_ordfeminine,
+
+
+def _translate(contours, dx, dy):
+    return [[(x + dx, y + dy, typ) for x, y, typ in [_norm(pt) for pt in pts]]
+            for pts in contours]
+
+
+def _rotate180(contours, adv, top):
+    """Rotate 180 degrees about the advance center, seating the result's top
+    at `top` (the exclamdown/questiondown convention)."""
+    out = []
+    for pts in contours:
+        out.append([(adv - pt[0], top - pt[1], _norm(pt)[2]) for pt in pts])
+    return out
+
+
+def gen_plus(master):
+    """Cross: math class. Arms 72/132, extent 480 square on axis 352,
+    bar-end bevels 16, concave junction fillets 8 (H-crossbar anatomy)."""
+    s = MATH_STROKE[master]
+    h = s // 2
+    cx, cy, ext = 300, MATH_AXIS, 240
+    x0, x1 = cx - ext, cx + ext
+    y0, y1 = cy - ext, cy + ext
+    vl, vr = cx - h, cx + h
+    hb, ht = cy - h, cy + h
+    pts = [
+        (vl, y0 + 16), (vl + 16, y0), (vr - 16, y0), (vr, y0 + 16),
+        (vr, hb - 8), (vr + 8, hb),
+        (x1 - 16, hb), (x1, hb + 16), (x1, ht - 16), (x1 - 16, ht),
+        (vr + 8, ht), (vr, ht + 8),
+        (vr, y1 - 16), (vr - 16, y1), (vl + 16, y1), (vl, y1 - 16),
+        (vl, ht + 8), (vl - 8, ht),
+        (x0 + 16, ht), (x0, ht - 16), (x0, hb + 16), (x0 + 16, hb),
+        (vl - 8, hb), (vl, hb - 8),
+    ]
+    write(master, "plus", "002B", 600, [pts])
+
+
+def gen_periodcentered(master):
+    """period raised to the math axis."""
+    adv, cont = _read_glyph(master, "period")
+    ys = [pt[1] for pts in cont for pt in pts]
+    dy = MATH_AXIS - (min(ys) + max(ys)) / 2
+    write(master, "periodcentered", "00B7", adv, _translate(cont, 0, round(dy / 2) * 2), normalize=False)
+
+
+def gen_ordmasculine(master):
+    """Superior o: twin of ordfeminine (o scaled 0.87, seated at 256)."""
+    _, cont = _read_glyph(master, "o")
+    xs = [pt[0] for pts in cont for pt in pts]
+    ys = [pt[1] for pts in cont for pt in pts]
+    s = 0.87
+    dy = 256 - min(ys) * s
+    dx = (616 - (max(xs) - min(xs)) * s) / 2 - min(xs) * s
+    write(master, "ordmasculine", "00BA", 616, _scale_translate(cont, s, dx, dy), normalize=False)
+
+
+def gen_questiondown(master):
+    """question rotated 180, top seated at 656 (exclamdown convention)."""
+    adv, cont = _read_glyph(master, "question")
+    write(master, "questiondown", "00BF", adv, _rotate180(cont, adv, 656), normalize=False)
+
+
+def gen_dollar(master):
+    """S + vertical bar through the ink center, poking ~72 past the S."""
+    adv, cont = _read_glyph(master, "S")
+    xs = [pt[0] for pts in cont for pt in pts]
+    cx = round((min(xs) + max(xs)) / 4) * 2
+    bw = {"Regular": 64, "Bold": 104}[master]
+    cont.append(bar(int(cx - bw / 2), -88, int(cx + bw / 2), 856))
+    write(master, "dollar", "0024", adv, cont, normalize=False)
+
+
+def gen_euro(master):
+    """C + two crossbars (the cent construction at cap scale)."""
+    adv, cont = _read_glyph(master, "C")
+    s = MATH_STROKE[master]
+    off = {"Regular": 60, "Bold": 90}[master]  # Bold bars at +-60 overlap
+    for c0 in (384 + off, 384 - off):
+        cont.append(bar(8, int(c0 - s / 2), 400, int(c0 + s / 2)))
+    write(master, "euro", "20AC", adv, cont, normalize=False)
+
+
+def gen_registered(master):
+    """copyright's ring + R scaled 0.60 at the ring center."""
+    ring_s = {"Regular": 44, "Bold": 80}[master]
+    cx, cy, R = 464, 384, 416
+    _, cont = _read_glyph(master, "R")
+    xs = [pt[0] for pts in cont for pt in pts]
+    ys = [pt[1] for pts in cont for pt in pts]
+    s = 0.68
+    dx = cx - (min(xs) + max(xs)) / 2 * s
+    dy = cy - (min(ys) + max(ys)) / 2 * s
+    contours = [_circle(cx, cy, R), _circle(cx, cy, R - ring_s, ccw=False)]
+    contours += _scale_translate(cont, s, dx, dy)
+    write(master, "registered", "00AE", 928, contours, normalize=False)
+
+
+GENERATORS = {"plus": gen_plus, "periodcentered": gen_periodcentered,
+              "ordmasculine": gen_ordmasculine, "questiondown": gen_questiondown,
+              "dollar": gen_dollar, "euro": gen_euro, "registered": gen_registered,
+              "dieresis": gen_dieresis, "ordfeminine": gen_ordfeminine,
               "copyright": gen_copyright, "yen": gen_yen, "sterling": gen_sterling,
               "bar": gen_bar, "exclamdown": gen_exclamdown, "cent": gen_cent,
               "asciitilde": gen_asciitilde, "braceleft": gen_braces, "braceright": gen_braces,
