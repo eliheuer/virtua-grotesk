@@ -4,26 +4,26 @@
 	<advance width="256"/>
 	<outline>
 		<contour>
-			<point x="64" y="544" type="line"/>
-			<point x="80" y="528" type="line"/>
-			<point x="176" y="528" type="line"/>
-			<point x="192" y="544" type="line"/>
 			<point x="192" y="640" type="line"/>
 			<point x="176" y="656" type="line"/>
 			<point x="80" y="656" type="line"/>
 			<point x="64" y="640" type="line"/>
+			<point x="64" y="544" type="line"/>
+			<point x="80" y="528" type="line"/>
+			<point x="176" y="528" type="line"/>
+			<point x="192" y="544" type="line"/>
 		</contour>
 		<contour>
-			<point x="64" y="-96" type="line"/>
-			<point x="80" y="-112" type="line"/>
-			<point x="176" y="-112" type="line"/>
-			<point x="192" y="-96" type="line"/>
-			<point x="192" y="176" type="line"/>
 			<point x="160" y="448" type="line"/>
 			<point x="144" y="464" type="line"/>
 			<point x="112" y="464" type="line"/>
 			<point x="96" y="448" type="line"/>
 			<point x="64" y="176" type="line"/>
+			<point x="64" y="-96" type="line"/>
+			<point x="80" y="-112" type="line"/>
+			<point x="176" y="-112" type="line"/>
+			<point x="192" y="-96" type="line"/>
+			<point x="192" y="176" type="line"/>
 		</contour>
 	</outline>
 	<lib>
