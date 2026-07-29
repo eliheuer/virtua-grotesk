@@ -21,7 +21,7 @@ the running lessons log):
 Use as a library or run to (re)generate specific glyphs:
     ./.venv/bin/python scripts/symbol_gen.py equal
 """
-import pathlib, sys
+import pathlib, re, sys
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 MASTERS = ("Regular", "Bold")
@@ -97,6 +97,9 @@ def mirror(pts, adv):
 
 
 def write(master, name, uni, adv, contours):
+    for pts in contours:  # outer contours must wind CCW (UFO ink convention)
+        s = sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(pts, pts[1:] + pts[:1]))
+        assert s > 0, f"{name}: contour wound backwards (signed area {s/2:.0f})"
     p = REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{name}.glif"
     p.write_text(glif(name, uni, adv, contours))
     return p
@@ -121,7 +124,82 @@ def gen_equal(master):
     write(master, "equal", "003D", 600, bars)
 
 
-GENERATORS = {"less": gen_less_greater, "greater": gen_less_greater, "equal": gen_equal}
+def _mirror_of_source(master, src, dst, dst_uni, about="adv"):
+    """dst := src mirrored (backslash<-slash, grave<-acute).
+    Family/mirror-partner rule: when the partner exists green, derive it.
+    about="adv" mirrors inside the advance (spacing glyphs); about="ink"
+    mirrors about the ink center — REQUIRED for mark components (grave),
+    so composites that position the mark by xOffset stay aligned."""
+    g = REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{src}.glif"
+    txt = g.read_text()
+    adv = int(float(re.search(r'<advance width="([\d.]+)"', txt).group(1)))
+    pts = [(float(m.group(1)), float(m.group(2))) for m in
+           re.finditer(r'<point x="(-?[\d.]+)" y="(-?[\d.]+)"', txt)]
+    if about == "ink":
+        xs = [x for x, _ in pts]
+        axis = min(xs) + max(xs)          # reflect: x' = axis - x
+        out = [(axis - x, y) for x, y in pts][::-1]
+    else:
+        out = mirror(pts, adv)
+    write(master, dst, dst_uni, adv, [out])
+
+
+def gen_backslash(master):
+    _mirror_of_source(master, "slash", "backslash", "005C")
+
+
+def gen_grave(master):
+    _mirror_of_source(master, "acute", "grave", "0060", about="ink")
+
+
+def gen_brackets(master):
+    s = {"Regular": 72, "Bold": 128}[master]           # stroke (HN B/R ratio 1.78)
+    reach = {"Regular": 288, "Bold": 368}[master]      # arm right extent
+    adv = {"Regular": 320, "Bold": 400}[master]        # sb 80 stem-side / 32 open
+    y0, y1 = -128, 848
+    x0 = 80
+    left = [
+        (x0 + BEVEL, y0), (reach - BEVEL, y0), (reach, y0 + BEVEL),
+        (reach, y0 + s - BEVEL), (reach - BEVEL, y0 + s),
+        (x0 + s + 8, y0 + s), (x0 + s, y0 + s + 8),
+        (x0 + s, y1 - s - 8), (x0 + s + 8, y1 - s),
+        (reach - BEVEL, y1 - s), (reach, y1 - s + BEVEL),
+        (reach, y1 - BEVEL), (reach - BEVEL, y1),
+        (x0 + BEVEL, y1), (x0, y1 - BEVEL), (x0, y0 + BEVEL),
+    ]
+    write(master, "bracketleft", "005B", adv, [left])
+    write(master, "bracketright", "005D", adv, [mirror(left, adv)])
+
+
+def gen_asciicircum(master):
+    # chevron pointing up: apex flat on top, tips follow the TIP RULE rotated
+    # (vertical 16u flat -> bevel -> horizontal face). Box 40..520 x 480..800.
+    if master == "Regular":
+        face_in, notch_y = 116, 704
+    else:
+        face_in, notch_y = 204, 594
+    fl = face_in - 16                                  # inner bevel start x (left)
+    pts = [
+        (40, 512), (240, 784), (256, 800), (304, 800), (320, 784),
+        (520, 512), (520, 496), (504, 480),
+        (560 - fl, 480), (560 - face_in, 496),
+        (284, notch_y), (276, notch_y),
+        (face_in, 496), (fl, 480),
+        (56, 480), (40, 496),
+    ]
+    pts = pts[::-1]  # wind CCW like every other contour (UFO ink convention)
+    write(master, "asciicircum", "005E", 560, [pts])
+
+
+def gen_underscore(master):
+    # same both masters (HN precedent: underscore does not bolden)
+    write(master, "underscore", "005F", 600, [bar(68, -188, 532, -116)])
+
+
+GENERATORS = {"less": gen_less_greater, "greater": gen_less_greater, "equal": gen_equal,
+              "bracketleft": gen_brackets, "bracketright": gen_brackets,
+              "backslash": gen_backslash, "grave": gen_grave,
+              "asciicircum": gen_asciicircum, "underscore": gen_underscore}
 
 if __name__ == "__main__":
     targets = sys.argv[1:] or sorted(set(GENERATORS))
