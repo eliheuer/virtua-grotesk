@@ -70,15 +70,15 @@ Acceptance (match Rubik in diffenator2):
 
 ## 5. Spec / metadata / coverage (before a PR)
 ```
-.venv/bin/fontbakery check-googlefonts fonts/ttf/*.ttf   # installed 1.1.0
+make qa   # fontspector googlefonts profile via scripts/check_gf_fonts.sh
 .venv/bin/shaperglot report fonts/ttf/VirtuaGrotesk-Regular.ttf   # language coverage
 .venv/bin/gftools qa -f "fonts/variable/VirtuaGrotesk[wght].ttf" --proof -o out/gfqa
 ```
-Note: `fontspector` (newer Rust replacement for fontbakery) is **not installed**
-— `pip install fontspector` (or cargo) if you want it.
+Fontspector is the QA tool (fontbakery is retired).
 
 ## 6. Ship
-- `GOOGLE_FONTS_PORTING_CHECKLIST.md` (existing) — packaging/metadata/PR.
+- `.agents/google-fonts-onboarding-checklists.md` — the canonical checklist
+  (packaging/metadata/PR).
 - GF engineering hub: https://googlefonts.github.io/
 
 ---

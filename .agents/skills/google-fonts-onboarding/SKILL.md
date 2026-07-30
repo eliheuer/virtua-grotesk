@@ -6,8 +6,10 @@ description: Prepare a font repository for Google Fonts onboarding, from first a
 # /google-fonts-onboarding
 
 Prepare a font repository for Google Fonts onboarding from first audit through
-handoff. This skill is intentionally portable: replace project-specific names,
-paths, scripts, and source strategy values before copying it to another family.
+handoff. This skill is intentionally portable: `{{FAMILY}}`-style tokens are
+defined in `.agents/google-fonts-onboarding-checklists.md` (in this repo,
+`{{FAMILY}}` = Virtua Grotesk). When copying to another family, fill in that
+token table and substitute.
 
 ## Usage
 `/google-fonts-onboarding [audit|decisions|handoff|all]`
@@ -119,6 +121,6 @@ Before opening the issue or PR, the repo should have:
 - a current downstream PR readiness report,
 - release/archive evidence if that source strategy is selected.
 
-For Virtua Grotesk, `make preflight` is the synchronized gate. In another repo,
+For {{FAMILY}}, `make preflight` is the synchronized gate. In another repo,
 create an equivalent command that regenerates reports and fails only for
 documented, intentional blockers.
