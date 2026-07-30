@@ -1,16 +1,54 @@
 # Google Fonts Onboarding Checklists
 
-These checklists collect the reusable parts of the Virtua Grotesk onboarding
-work so another font project can start from a stronger baseline. Copy this file
-and the related `.agents/skills/google-fonts-*` skills into the next repo, then
-replace family-specific paths, names, scripts, and source strategy values.
+This is the **canonical** Google Fonts checklist for this repo (the root
+`GOOGLE_FONTS_PORTING_CHECKLIST.md` is a pointer here). It collects the
+reusable parts of the Virtua Grotesk onboarding work so another font project
+can start from a stronger baseline. Copy this file and the related
+`.agents/skills/google-fonts-*` skills into the next repo.
+
+Portable tokens used in this file and the `google-fonts-*` skills — replace
+when copying (values for this repo shown):
+
+- `{{FAMILY}}` = Virtua Grotesk
+- `{{FAMILY_DIR}}` = virtuagrotesk (downstream `ofl/` directory name)
+- `{{AXES}}` = wght 400–700
+- `{{REPO_URL}}` = https://github.com/eliheuer/virtua-grotesk
+- `{{VF_PATH}}` = fonts/variable/VirtuaGrotesk[wght].ttf
+
+Two standing rulings (they resolve older contradictory wording anywhere else
+in this repo's docs):
+
+1. **Fontspector is the QA tool.** The `googlefonts` profile via
+   `make qa` / `scripts/check_gf_fonts.sh`. Fontbakery is retired; treat any
+   remaining fontbakery instructions as stale.
+2. **The release bar is the honest warning floor, not literal zero WARN.**
+   The gate output must be zero-noise (anything printed is a regression), but
+   that is achieved by documented, owned, temporary exclusions — never by
+   hiding intended scope or shrinking coverage to game the count. See §3.
 
 ## 1. Repo Baseline
 
 - Public upstream URL chosen and recorded.
-- OFL or other accepted license present.
+- Repo layout follows the gf-guide upstream structure: `sources/` (with
+  `config.yaml` and/or `build.sh`), `fonts/` split by format
+  (`variable/ ttf/ otf/ webfonts/`), `documentation/`, `OFL.txt`, `README.md`,
+  `AUTHORS.txt`, `CONTRIBUTORS.txt`, `requirements.txt`, `.gitignore`.
+  The official starting point is `googlefonts/googlefonts-project-template`
+  (the Unified Font Repository is its legacy ancestor — do not copy UFR);
+  the template's automation is recommended, not required.
+- OFL or other accepted license present. `OFL.txt` first line uses the exact
+  scheme `Copyright { year } The { family } Project Authors ({ git_url })`,
+  the body is the unmodified OFL 1.1 text, and the preamble references
+  https://openfontlicense.org.
+- **No Reserved Font Name.** Google Fonts does not accept RFNs except for
+  inherited RFNs from an upstream libre font or a signed agreement. If an RFN
+  is unavoidable, it appears on the OFL first/second line and matches the
+  name table and metadata everywhere.
 - `AUTHORS.txt` and `CONTRIBUTORS.txt` present when applicable.
-- Reserved Font Name status explicit.
+- Family name cleared with `gftools namecheck` (no trademark/catalog
+  collision) and the copyright holder identity matches the Google CLA the
+  submitter will sign on the pull request.
+- CI builds and QA-checks the fonts on every push (see §14).
 - Active sources live in a clear source directory.
 - Generated build outputs are ignored unless the packaging strategy requires
   committing them.
@@ -45,8 +83,26 @@ surfaces. Track at least:
 - Build variable fonts and expected static instances.
 - Confirm generated file names and locations.
 - Inspect name table, version, license, `OS/2.fsType`, vendor ID, `fvar`,
-  `STAT`, and script metadata.
-- Run Fontspector `googlefonts` profile.
+  `STAT`, and script metadata against the GF specs:
+  - Copyright string (name ID 0) = `Copyright { year } The { family } Project
+    Authors ({ git_url })`, identical to the OFL.txt first line.
+  - License string (name ID 13) = `This Font Software is licensed under the
+    SIL Open Font License, Version 1.1. This license is available with a FAQ
+    at: https://openfontlicense.org`; license URL (name ID 14) =
+    `https://openfontlicense.org`.
+  - `OS/2.fsType = 0` (installable embedding).
+  - Version follows GF's `MAJOR.SIGNIFICANTMINORPATCH` decimal scheme
+    (e.g. 1.000), not semver; bump on every re-onboarding.
+- Verify vertical metrics per the GF metrics spec:
+  - `typoLineGap` and `hheaLineGap` = 0.
+  - typo and hhea ascender/descender pairs equal; `winAscent`/`winDescent`
+    cover the family bounding box (no clipping).
+  - `fsSelection` bit 7 (USE_TYPO_METRICS) set.
+  - Identical vertical metrics across every font in the family, and frozen
+    after first onboarding (changes reflow users' documents).
+  - Sanity target: typoAscender + |typoDescender| ≈ 120–130% of UPM.
+- Run Fontspector `googlefonts` profile (fontspector is the QA tool;
+  fontbakery is retired).
 - Save the report in `documentation/`.
 - Classify every FAIL and WARN.
 - Run a package-context warning probe with the intended `METADATA.pb` before
@@ -219,13 +275,25 @@ surfaces. Track at least:
 - Include `source.config_yaml` only for build-from-source mode or reviewer
   request.
 - Avoid custom `languages`, `sample_text`, or `tags` unless review asks.
+- Upstream linkage lives in the `source {}` block of `METADATA.pb`; a separate
+  `upstream.yaml` is the legacy mechanism — do not author one unless the
+  packager or reviewer explicitly asks.
 
 ## 7. Article And Images
 
-- Decide Article versus legacy description.
-- Keep `ARTICLE.en_us.html` valid and package-ready.
+- Decide Article versus legacy description. New onboardings should ship an
+  Article (`documentation/article/`); the legacy description is only for
+  updates to families that already use one.
+- Keep the article valid and package-ready: plain restricted HTML (packager
+  converts Markdown), no scripts/styles, relative image paths that resolve
+  inside `documentation/`.
+- Write it as a specimen-first story: what the family is, design decisions,
+  scripts covered, credits — the README description is the seed, the article
+  is the long form. The reviewer reads it as the fonts.google.com About text.
 - Keep `DESCRIPTION.en_us.html` available if needed.
-- Track image paths, size limits, and provenance/license.
+- Track image paths, size limits, and provenance/license. Add
+  `documentation/image-license.txt` (or equivalent) stating the license and
+  source of every image that is not a rendering of the font itself.
 - Use real font specimens or relevant visuals, not placeholder art.
 - Confirm article assets appear in the selected package source strategy.
 
@@ -306,10 +374,27 @@ Before final issue/PR work, the repo should have current reports for:
 - downstream PR readiness,
 - designer profile readiness.
 
-## 14. Copy-To-Next-Font Notes
+## 14. Continuous Integration
+
+- `.github/workflows/build.yaml`, adapted from
+  `googlefonts/googlefonts-project-template`: build (`make build`),
+  Fontspector QA (`make qa`, continue-on-error while drawing debt exists),
+  proof render (`make proof`), artifact upload, and a release job that
+  attaches a `{{FAMILY_DIR}}-<tag>.zip` bundle (fonts + OFL.txt + article)
+  when a tag is pushed.
+- Tag releases with GF decimal versions (`1.000`), matching the font version.
+- The template also deploys QA reports and HTML proofs to GitHub Pages;
+  enable that only after Pages is configured for the repo.
+- CI must run the same Make targets developers run locally — no CI-only
+  build path.
+
+## 15. Copy-To-Next-Font Notes
 
 When copying to another font repo:
 
+- fill in the token table at the top of this file ({{FAMILY}}, {{FAMILY_DIR}},
+  {{AXES}}, {{REPO_URL}}, {{VF_PATH}}) and substitute tokens throughout the
+  copied `google-fonts-*` skills,
 - replace family name, style names, axes, source paths, and downstream directory,
 - remove Virtua-specific Arabic, PUA, and release decisions unless they apply,
 - refresh official Google Fonts docs and templates before relying on copied

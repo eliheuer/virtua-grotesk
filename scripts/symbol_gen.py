@@ -21,7 +21,7 @@ the running lessons log):
 Use as a library or run to (re)generate specific glyphs:
     ./.venv/bin/python scripts/symbol_gen.py equal
 """
-import pathlib, re, sys
+import pathlib, plistlib, re, sys
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 MASTERS = ("Regular", "Bold")
@@ -304,7 +304,10 @@ def gen_underscore(master):
 
 def _read_glyph(master, name):
     """Parse a glif into (adv, [contours of (x, y, type) tuples])."""
-    txt = (REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{name}.glif").read_text()
+    glyphs = REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs"
+    with (glyphs / "contents.plist").open("rb") as f:
+        filename = plistlib.load(f)[name]
+    txt = (glyphs / filename).read_text()
     adv = int(float(re.search(r'<advance width="([\d.]+)"', txt).group(1)))
     contours = []
     for cm in re.finditer(r"<contour>(.*?)</contour>", txt, re.S):
@@ -314,6 +317,68 @@ def _read_glyph(master, name):
             pts.append((x, y, _join_type(typ, bool(sm)) if typ else None))
         contours.append(pts)
     return adv, contours
+
+
+def _union_contours(contours):
+    """Cubic-aware boolean union, preserving typed points in the result."""
+    from booleanOperations.booleanOperationManager import BooleanOperationManager
+    from defcon import Glyph
+
+    source = Glyph()
+    pen = source.getPointPen()
+    for pts in contours:
+        pen.beginPath()
+        for x, y, typ in [_norm(pt) for pt in pts]:
+            segment_type, smooth = _split_type(typ)
+            pen.addPoint((x, y), segmentType=segment_type, smooth=smooth)
+        pen.endPath()
+
+    result = Glyph()
+    BooleanOperationManager.union(list(source), result.getPointPen())
+    out = []
+    for contour in result:
+        pts = []
+        for point in contour:
+            typ = _join_type(point.segmentType, point.smooth)
+            pts.append((round(point.x / 2) * 2,
+                        round(point.y / 2) * 2,
+                        typ))
+        out.append(pts)
+    return out
+
+
+def _reconcile_dollar_union(master, contours):
+    """Remove Bold-only union slivers so dollar masters share topology."""
+    outer = contours[0]
+    if master == "Regular":
+        upper = next(i for i, pt in enumerate(outer)
+                     if pt[:2] == (392, 448))
+        assert outer[upper] == (392, 448, "curve-smooth")
+        outer[upper] = (392, 448, "curve")
+        return contours
+
+    upper = next(i for i, pt in enumerate(outer)
+                 if pt[:2] == (440, 464))
+    assert outer[upper:upper + 4] == [
+        (440, 464, "curve"),
+        (426, 466, None),
+        (414, 470, None),
+        (400, 472, "curve"),
+    ]
+    outer[upper:upper + 4] = [
+        (440, 464, "curve"),
+        (400, 472, "line"),
+    ]
+
+    lower = next(i for i, pt in enumerate(outer)
+                 if pt[:2] == (288, 328))
+    assert outer[lower:lower + 3] == [
+        (288, 328, "curve"),
+        (296, 326, "line"),
+        (296, 146, "line"),
+    ]
+    del outer[lower + 1]
+    return contours
 
 
 def gen_bar(master):
@@ -608,13 +673,14 @@ def gen_questiondown(master):
 
 
 def gen_dollar(master):
-    """S + vertical bar through the ink center, poking ~72 past the S."""
+    """Uppercase S + centered bar, flattened per the FLAT RULE."""
     adv, cont = _read_glyph(master, "S")
     xs = [pt[0] for pts in cont for pt in pts]
     cx = round((min(xs) + max(xs)) / 4) * 2
     bw = {"Regular": 64, "Bold": 104}[master]
-    cont.append(bar(int(cx - bw / 2), -88, int(cx + bw / 2), 856))
-    write(master, "dollar", "0024", adv, cont, normalize=False)
+    cont.append(bar(int(cx - bw / 2), -96, int(cx + bw / 2), 848))
+    united = _reconcile_dollar_union(master, _union_contours(cont))
+    write(master, "dollar", "0024", adv, united, normalize=False)
 
 
 def gen_euro(master):
