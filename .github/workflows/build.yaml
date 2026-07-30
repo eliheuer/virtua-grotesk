@@ -1,0 +1,132 @@
+name: Build font and QA
+
+# Adapted from googlefonts/googlefonts-project-template (the current official
+# template; supersedes the Unified Font Repository). Differences from the
+# template: proofs render with designbot instead of diffenator3, and the
+# GitHub Pages deploy is omitted until Pages is enabled for this repo.
+
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+    tags:
+      - "*"
+
+permissions: write-all
+
+jobs:
+  build:
+    name: Build and test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v6
+        id: python
+        with:
+          python-version: "3.11"
+
+      - name: Setup fontspector
+        uses: fonttools/setup-fontspector@main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install system toolset
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ttfautohint libcairo2-dev pkg-config python3-dev
+
+      - name: Cache Python venv
+        uses: actions/cache@v5
+        with:
+          path: ./.venv/
+          key: ${{ runner.os }}-venv${{ steps.python.outputs.python-version }}-${{ hashFiles('**/requirements*.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-venv${{ steps.python.outputs.python-version }}-
+
+      - name: Install Python toolchain
+        run: make setup
+
+      - name: Cache cargo (designbot)
+        uses: actions/cache@v5
+        with:
+          path: |
+            ~/.cargo/bin/designbot
+            ~/.cargo/registry
+          key: ${{ runner.os }}-designbot-v1
+
+      - name: Install designbot
+        run: |
+          if ! command -v designbot >/dev/null 2>&1; then
+            cargo install --git https://github.com/eliheuer/designbot designbot-cli
+          fi
+
+      - name: Build font
+        run: make build
+
+      # The QA gate is zero-noise by policy (scripts/check_gf_fonts.sh), but
+      # drawing debt can legitimately fail it before v1.0 — keep CI green and
+      # read the log, matching the upstream template's continue-on-error.
+      - name: Check with fontspector
+        run: make qa
+        continue-on-error: true
+
+      - name: Generate proof
+        run: make proof
+
+      - name: Set artifact file name
+        shell: bash
+        run: echo "ZIP_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')-fonts" >> $GITHUB_ENV
+
+      - name: Archive artifacts
+        uses: actions/upload-artifact@v6
+        with:
+          name: ${{ env.ZIP_NAME }}
+          path: |
+            fonts
+            documentation/proofs/proof.pdf
+    outputs:
+      zip_name: ${{ env.ZIP_NAME }}
+
+  release:
+    name: Release bundle
+    if: ${{ github.ref_type == 'tag' }}
+    needs: build
+    runs-on: ubuntu-latest
+    env:
+      ZIP_NAME: ${{ needs.build.outputs.zip_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Use font artifacts from CI
+        uses: actions/download-artifact@v7
+        with:
+          name: ${{ env.ZIP_NAME }}
+          path: ${{ env.ZIP_NAME }}
+      - name: Copy article to release directory
+        run: cp documentation/article/ARTICLE.en.md ${{ env.ZIP_NAME }}/ARTICLE.en.md
+        continue-on-error: true
+      - name: Copy OFL.txt to release directory
+        run: cp OFL.txt ${{ env.ZIP_NAME }}/OFL.txt
+      - name: Remove proof outputs from release
+        run: rm -rf ${{ env.ZIP_NAME }}/documentation
+      - name: Set release file name
+        shell: bash
+        run: echo "RELEASE_ZIP_NAME=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')-${{ github.ref_name }}" >> $GITHUB_ENV
+      - name: Create release bundle
+        run: mv ${{ env.ZIP_NAME }} ${{ env.RELEASE_ZIP_NAME }}; zip -r ${{ env.RELEASE_ZIP_NAME }}.zip ${{ env.RELEASE_ZIP_NAME }}
+      - name: Check for release
+        id: create_release
+        run: |
+          if ! gh release view ${{ github.ref_name }}; then
+          git show -s --format=%B ${{ github.ref_name }} | tail -n +4 | gh release create ${{ github.ref_name }} -t ${{ github.ref_name }} -F -
+          fi
+      - name: Populate release
+        run: |
+          gh release upload ${{ github.ref_name }} ${{ env.RELEASE_ZIP_NAME }}.zip --clobber
+      - name: Set release live
+        run: |
+          gh release edit ${{ github.ref_name }} --draft=false
