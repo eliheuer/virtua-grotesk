@@ -7,7 +7,8 @@ description: Run and document Google Fonts QA (Fontspector googlefonts profile a
 
 Run and document Google Fonts QA for a font family. This skill covers the
 repeatable checks that should happen before packaging, and it keeps drawing
-quality separate from packaging mechanics.
+quality separate from packaging mechanics. `{{TOKEN}}` values are defined in
+`.agents/google-fonts-onboarding-checklists.md`.
 
 ## Usage
 `/google-fonts-qa [fontspector|glyphsets|proof|kerning|metadata|all]`
@@ -207,7 +208,7 @@ large.
 Portable command shape:
 
 ```bash
-gftools qa --proof fonts/variable/FamilyName[wght].ttf fonts/ttf/*.ttf
+gftools qa --proof "{{VF_PATH}}" fonts/ttf/*.ttf
 ```
 
 If `gftools qa --proof` needs live catalog access for comparisons, note that

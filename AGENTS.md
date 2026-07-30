@@ -135,8 +135,8 @@ native app.
   (also the pause/resume gate when hand drawing or source cleanup is pending).
 - Reusable Google Fonts onboarding knowledge lives in `.agents/` so it can be
   copied into future font repos:
-  - `GOOGLE_FONTS_PORTING_CHECKLIST.md`
-  - `.agents/google-fonts-onboarding-checklists.md`
+  - `.agents/google-fonts-onboarding-checklists.md` (the canonical checklist;
+    root `GOOGLE_FONTS_PORTING_CHECKLIST.md` is just a pointer to it)
   - `.agents/google-fonts-official-reference-map.md`
   - `.agents/skills/google-fonts-onboarding/SKILL.md`
   - `.agents/skills/google-fonts-qa/SKILL.md`

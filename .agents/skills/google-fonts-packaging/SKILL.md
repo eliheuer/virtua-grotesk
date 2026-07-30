@@ -8,8 +8,10 @@ description: Prepare the upstream release, downstream metadata, Google Fonts Pac
 Prepare the upstream release, downstream metadata, Google Fonts Packager dry
 run, Add Font issue, and downstream PR handoff for a font family.
 
-This skill is portable: copy it to another font repo and replace the family
-name, downstream directory, release strategy, and local wrapper commands.
+This skill is portable: `{{TOKEN}}` values are defined in
+`.agents/google-fonts-onboarding-checklists.md`. When copying to another font
+repo, fill in that token table and also replace the release strategy and
+local wrapper commands.
 
 ## Usage
 `/google-fonts-packaging [metadata|release|packager|issue|pr|all]`
@@ -83,7 +85,7 @@ Never cite a release archive URL as final before the tag and asset exist.
 Run Packager without PR mode first:
 
 ```bash
-gftools packager -n -d /path/to/google/fonts ofl/familyname
+gftools packager -n -d /path/to/google/fonts ofl/{{FAMILY_DIR}}
 ```
 
 or the repo's wrapper equivalent.
@@ -103,7 +105,7 @@ Packager run use PR mode with the issue number.
 
 Build the issue draft from the current Google Fonts Add Font template. Keep:
 
-- title concise, usually `Add Family Name`,
+- title concise, usually `Add {{FAMILY}}`,
 - labels from the template, usually `I New Font, II Submission`,
 - requirement boxes unchecked until actually opening the issue,
 - public repo URL,
