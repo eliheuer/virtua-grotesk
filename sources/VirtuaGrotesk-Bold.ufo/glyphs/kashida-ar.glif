@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kashida-ar" format="2">
-	<advance width="320"/>
+	<advance width="356"/>
 	<unicode hex="0640"/>
 	<outline>
 		<contour>
-			<point x="0" y="0" type="line"/>
-			<point x="320" y="0" type="line"/>
-			<point x="320" y="104" type="line"/>
-			<point x="0" y="104" type="line"/>
+			<point x="-36" y="0" type="line"/>
+			<point x="356" y="0" type="line"/>
+			<point x="356" y="176" type="line"/>
+			<point x="-36" y="176" type="line"/>
 		</contour>
 	</outline>
 	<lib>

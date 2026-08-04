@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="one-ar" format="2">
-	<advance width="288"/>
+	<advance width="360"/>
 	<unicode hex="0661"/>
 	<outline>
 		<contour>
-			<point x="112" y="0" type="line"/>
-			<point x="176" y="0" type="line"/>
-			<point x="192" y="16" type="line"/>
-			<point x="192" y="624" type="line"/>
-			<point x="176" y="640" type="line"/>
-			<point x="112" y="640" type="line"/>
-			<point x="96" y="624" type="line"/>
-			<point x="96" y="16" type="line"/>
+			<point x="94" y="0" type="line"/>
+			<point x="194" y="0" type="line"/>
+			<point x="228" y="8" type="line"/>
+			<point x="228" y="632" type="line"/>
+			<point x="186" y="694" type="line"/>
+			<point x="102" y="694" type="line"/>
+			<point x="60" y="632" type="line"/>
+			<point x="60" y="8" type="line"/>
 		</contour>
 	</outline>
 	<lib>
