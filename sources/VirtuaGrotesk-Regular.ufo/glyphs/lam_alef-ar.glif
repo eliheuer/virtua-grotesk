@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alef-ar" format="2">
-	<advance width="600"/>
+	<advance width="544"/>
+	<outline>
+		<component base="lam-ar.init" xOffset="256"/>
+		<component base="alef-ar.fina"/>
+	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

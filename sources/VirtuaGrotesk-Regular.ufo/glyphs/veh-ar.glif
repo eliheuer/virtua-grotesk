@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="veh-ar" format="2">
+	<advance width="864"/>
 	<unicode hex="06A4"/>
-	<advance width="600"/>
 	<outline>
 		<component base="fehDotless-ar"/>
-		<component base="threedotsupabove-ar"/>
+		<component base="threedotsupabove-ar" xOffset="376"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

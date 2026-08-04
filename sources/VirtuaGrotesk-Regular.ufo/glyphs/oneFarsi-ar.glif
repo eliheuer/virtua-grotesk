@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="oneFarsi-ar" format="2">
+	<advance width="288"/>
 	<unicode hex="06F1"/>
-	<advance width="600"/>
 	<outline>
-		<contour>
-			<point x="264" y="176" type="line"/>
-			<point x="320" y="176" type="line"/>
-			<point x="320" y="456" type="line"/>
-			<point x="368" y="496" type="line"/>
-			<point x="336" y="584" type="line"/>
-			<point x="320" y="584" type="line"/>
-			<point x="320" y="584" type="line"/>
-			<point x="320" y="584" type="line"/>
-			<point x="264" y="584" type="line"/>
-			<point x="264" y="536" type="line"/>
-			<point x="256" y="528" type="line"/>
-			<point x="264" y="512" type="line"/>
-		</contour>
+		<component base="one-ar"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

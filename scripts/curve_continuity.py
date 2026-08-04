@@ -134,8 +134,11 @@ def main():
     master, glyphs = sys.argv[1], sys.argv[2:]
     bad = 0
     for g in glyphs:
-        fn = f"{g}_.glif" if g[0].isupper() else f"{g}.glif"
-        path = REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{fn}"
+        import plistlib
+        ufo = REPO / f"sources/VirtuaGrotesk-{master}.ufo"
+        contents = plistlib.loads((ufo / "glyphs" / "contents.plist").read_bytes())
+        fn = contents.get(g, f"{g}_.glif" if g[0].isupper() else f"{g}.glif")
+        path = ufo / "glyphs" / fn
         print(f"== {master} {g} ==")
         for ci, (x, y), cls, dev, ki, ko, smooth in classify(path):
             flag = ""

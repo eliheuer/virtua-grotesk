@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="rreh-ar" format="2">
-	<unicode hex="0691"/>
 	<advance width="600"/>
+	<unicode hex="0691"/>
 	<outline>
-		<contour>
-			<point x="176" y="472" type="line"/>
-			<point x="288" y="240" type="line"/>
-			<point x="224" y="176" type="line"/>
-			<point x="88" y="128" type="line"/>
-			<point x="144" y="64" type="line"/>
-			<point x="288" y="96" type="line"/>
-			<point x="368" y="192" type="line"/>
-			<point x="392" y="304" type="line"/>
-			<point x="264" y="472" type="line"/>
-		</contour>
-		<contour>
-			<point x="272" y="584" type="line"/>
-			<point x="296" y="528" type="line"/>
-			<point x="424" y="584" type="line"/>
-			<point x="400" y="640" type="line"/>
-		</contour>
+		<component base="reh-ar"/>
+		<component base="smallHighTah-ar" xOffset="172"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

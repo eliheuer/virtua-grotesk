@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="thal-ar" format="2">
+	<advance width="480"/>
 	<unicode hex="0630"/>
-	<advance width="476"/>
 	<outline>
 		<component base="dal-ar"/>
-		<component base="dotabove-ar"/>
+		<component base="dotabove-ar" xOffset="88"/>
 	</outline>
 	<lib>
 		<dict>
-			<key>com.schriftgestaltung.Glyphs.lastChange</key>
-			<string>2025-02-22 19:37:20 +0000</string>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

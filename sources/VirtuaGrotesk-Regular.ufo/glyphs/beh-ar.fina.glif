@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="beh-ar.fina" format="2">
-	<advance width="600"/>
+	<advance width="1104"/>
 	<outline>
 		<component base="behDotless-ar.fina"/>
-		<component base="dotbelow-ar"/>
+		<component base="dotbelow-ar" xOffset="416"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>
