@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="decimalseparator-ar" format="2">
-	<advance width="256"/>
+	<advance width="328"/>
 	<unicode hex="066B"/>
 	<outline>
 		<contour>
-			<point x="96" y="0" type="line"/>
-			<point x="160" y="0" type="line"/>
-			<point x="176" y="16" type="line"/>
-			<point x="176" y="112" type="line"/>
-			<point x="160" y="128" type="line"/>
-			<point x="96" y="128" type="line"/>
-			<point x="80" y="112" type="line"/>
-			<point x="80" y="16" type="line"/>
+			<point x="78" y="0" type="line"/>
+			<point x="178" y="0" type="line"/>
+			<point x="212" y="8" type="line"/>
+			<point x="212" y="120" type="line"/>
+			<point x="170" y="182" type="line"/>
+			<point x="86" y="182" type="line"/>
+			<point x="44" y="120" type="line"/>
+			<point x="44" y="8" type="line"/>
 		</contour>
 	</outline>
 	<lib>

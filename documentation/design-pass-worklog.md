@@ -1177,6 +1177,66 @@ to 50, and **every remaining one is a green source**.
 - **hehGoal vs hehDoachashmee** are currently the same shape in isol/init
   (both derived from their own green fina/medi, which are also identical).
 
+### Arabic Bold — the script gets a second master — 2026-08-04
+
+The Arabic had never been emboldened: both masters held byte-identical
+Arabic, so the weight axis did nothing across the whole script. It does now.
+
+**Method: anisotropic outline offset, not interpolation or retracing.**
+Every point moves along its outward-from-ink normal by dx horizontally and
+dy vertically, with corners mitered. Point count, point type and component
+lists never change, so master compatibility holds by construction —
+which is why this beat the alternatives (img2bez's `refit` is explicitly
+experimental and untested; dilate-and-retrace would have replaced the green
+Regular outlines with traced approximations).
+
+**The amounts came from Virtua's own Latin, not from Rubik.**
+`scripts/latin_weight_deltas.py` measured Regular → Bold: lc stem 96 → 192,
+cap horizontal 96 → 168, `o` sides 98 → 196, `o` top/bottom 85 → 153, with
+every vertical zone held exactly. That is an elliptical offset of dx 48 /
+dy 36, and feeding the real Latin Regular through the script reproduces the
+real Latin Bold to within 4 units on every stroke class — the model was
+validated against known-good output before it was pointed at the Arabic.
+
+`scripts/rubik_weight_deltas.py` measured Rubik Light → Black for
+*behaviour*: the silhouette grows outward (Rubik does not hold the outer
+contour), ascender height is held, but **tooth and bowl heights rise with
+weight** (+119 / +175), and dots grow with the stroke.
+
+**Shipped at dx 36 / dy 27, not 48 / 36.** The Latin amounts produced a
+Black: Arabic forms here are about a quarter shorter than the Latin (tooth
+432 vs x-height 576), so the same absolute offset closed their counters —
+meem's knot went to a slit. Scaling by that height ratio gives 36 / 27
+(stems 96 → 168). Rendering four variants side by side made the call easy.
+
+**Three bugs, each now a guard in the script:**
+
+1. **The green Arabic's winding is not uniform** (some outer contours CW,
+   some CCW), so a fixed −90° rotation pointed *into* the ink for part of
+   the set and thinned those glyphs instead of emboldening them. The
+   direction is now decided per contour from its own winding and nesting.
+2. **Coincident points** at notch vertices in `ain-ar.medi`, `seen-ar.init`
+   and `reh-ar` — offsetting the copies apart turns a zero-length segment
+   into a reversed one, i.e. an open corner, which ufo2ft *deletes* at
+   build time and silently breaks compatibility. Fixing this alone took
+   `ain-ar.medi` from ×0.10 back to full weight.
+3. **Open corners generally.** Instead of guessing which corners are safe,
+   the script runs ufo2ft's real `EraseOpenCornersPen` as an oracle and
+   backs the offset off per glyph until the filter leaves it alone. The
+   same loop enforces the vertical envelope.
+
+**Result.** `make test` still **0 FAIL** (497 PASS). The SemiBold and
+Medium instances now interpolate a real Arabic weight — verified by
+rendering shaped words from each static instance. 15 of 146 glyphs took a
+reduced offset; `reh-ar` and `reh-ar.fina` at ×0.40 are the ones that
+matter, since reh is common and reads light in Bold text.
+
+**OPEN for Eli:** is 36 / 27 the right weight (any value is a one-line
+re-run)? Should the Arabic tooth/bowl heights rise in Bold the way Rubik's
+do, which is what would let the Arabic carry the full Latin weight without
+closing up? And the reh tail wants hand-redrawing for Bold — offsetting
+cannot invent the room a small detail needs.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
