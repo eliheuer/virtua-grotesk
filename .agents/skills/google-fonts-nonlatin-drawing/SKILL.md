@@ -7,7 +7,8 @@ description: Finish missing non-Latin (e.g. Arabic) drawings for a Google Fonts 
 
 Finish missing non-Latin drawings for a Google Fonts submission while keeping
 source masters compatible, script behavior intact, and final outline decisions
-under human review. This skill is portable; replace family names, source paths,
+under human review. This skill is portable: `{{TOKEN}}` values are defined in
+`.agents/google-fonts-onboarding-checklists.md`; also replace source paths,
 script tags, glyphsets, and proof commands when copying it to another repo.
 
 ## Usage
@@ -87,7 +88,7 @@ For replacement batches, prefer this split:
    with a surgical `.glif` copy. Do not save/rewrite whole UFOs just to copy
    outlines.
 
-Prototype donor-copy scripts from an earlier Virtua Grotesk pass were archived
+Prototype donor-copy scripts from an earlier {{FAMILY}} pass were archived
 under `documentation/archive/agent-generated-scripts/scripts/`. Do not treat
 those as active commands. If this workflow is needed again, first promote a
 small generic candidate/apply script back into `scripts/`, document the exact
