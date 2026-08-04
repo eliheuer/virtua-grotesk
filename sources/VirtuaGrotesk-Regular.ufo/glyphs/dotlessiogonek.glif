@@ -5,4 +5,10 @@
 		<component base="idotless"/>
 		<component base="ogonek" xOffset="38"/>
 	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>1,0.29,0.24,1</string>
+		</dict>
+	</lib>
 </glyph>
