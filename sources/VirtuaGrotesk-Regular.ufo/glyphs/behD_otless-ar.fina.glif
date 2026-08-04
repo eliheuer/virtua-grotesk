@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="behDotless-ar.fina" format="2">
-	<advance width="600"/>
+	<advance width="1104"/>
+	<outline>
+		<contour>
+			<point x="128" y="176" type="line"/>
+			<point x="128" y="72"/>
+			<point x="200" y="0"/>
+			<point x="304" y="0" type="curve" smooth="yes"/>
+			<point x="824" y="0" type="line" smooth="yes"/>
+			<point x="848" y="0"/>
+			<point x="872" y="4"/>
+			<point x="888" y="64" type="curve"/>
+			<point x="904" y="64" type="line"/>
+			<point x="920" y="4"/>
+			<point x="944" y="0"/>
+			<point x="968" y="0" type="curve" smooth="yes"/>
+			<point x="1104" y="0" type="line"/>
+			<point x="1104" y="104" type="line"/>
+			<point x="1040" y="104" type="line" smooth="yes"/>
+			<point x="976" y="104"/>
+			<point x="944" y="136"/>
+			<point x="944" y="200" type="curve" smooth="yes"/>
+			<point x="944" y="416" type="line"/>
+			<point x="928" y="432" type="line"/>
+			<point x="864" y="432" type="line"/>
+			<point x="848" y="416" type="line"/>
+			<point x="848" y="200" type="line" smooth="yes"/>
+			<point x="848" y="136"/>
+			<point x="816" y="104"/>
+			<point x="752" y="104" type="curve" smooth="yes"/>
+			<point x="320" y="104" type="line" smooth="yes"/>
+			<point x="256" y="104"/>
+			<point x="224" y="136"/>
+			<point x="224" y="200" type="curve" smooth="yes"/>
+			<point x="224" y="272" type="line"/>
+			<point x="208" y="288" type="line"/>
+			<point x="144" y="288" type="line"/>
+			<point x="128" y="272" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="896" y="432"/>
+	<anchor name="topDots" x="896" y="448"/>
+	<anchor name="bottom" x="536" y="16"/>
+	<anchor name="bottomDots" x="536" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

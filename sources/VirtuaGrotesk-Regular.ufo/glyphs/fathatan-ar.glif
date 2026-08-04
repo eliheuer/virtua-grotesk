@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="fathatan-ar" format="2">
+	<advance width="224"/>
 	<unicode hex="064B"/>
-	<advance width="300"/>
+	<outline>
+		<component base="fatha-ar"/>
+		<component base="fatha-ar" yOffset="152"/>
+	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

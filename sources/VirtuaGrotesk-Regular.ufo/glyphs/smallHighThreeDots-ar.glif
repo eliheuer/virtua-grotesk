@@ -1,32 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="smallHighThreeDots-ar" format="2">
+	<advance width="464"/>
 	<unicode hex="06DB"/>
 	<outline>
-		<contour>
-			<point x="-80" y="624" type="line"/>
-			<point x="-32" y="624" type="line"/>
-			<point x="-32" y="656" type="line"/>
-			<point x="-80" y="656" type="line"/>
-		</contour>
-		<contour>
-			<point x="32" y="624" type="line"/>
-			<point x="80" y="624" type="line"/>
-			<point x="80" y="656" type="line"/>
-			<point x="32" y="656" type="line"/>
-		</contour>
-		<contour>
-			<point x="-16" y="688" type="line"/>
-			<point x="16" y="688" type="line"/>
-			<point x="16" y="720" type="line"/>
-			<point x="-16" y="720" type="line"/>
-		</contour>
+		<component base="threedotsupabove-ar"/>
 	</outline>
-	<anchor name="_top" x="0" y="576"/>
-	<anchor name="top" x="0" y="720"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

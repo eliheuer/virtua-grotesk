@@ -1,23 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noonGhunna-ar" format="2">
+	<advance width="680"/>
 	<unicode hex="0658"/>
 	<outline>
-		<contour>
-			<point x="-112" y="592" type="line"/>
-			<point x="-64" y="544" type="line"/>
-			<point x="0" y="592" type="line"/>
-			<point x="64" y="544" type="line"/>
-			<point x="112" y="592" type="line"/>
-			<point x="56" y="656" type="line"/>
-			<point x="-56" y="656" type="line"/>
-		</contour>
+		<component base="noonghunna-ar"/>
 	</outline>
-	<anchor name="_top" x="0" y="576"/>
-	<anchor name="top" x="0" y="720"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

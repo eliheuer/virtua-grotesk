@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="sevenFarsi-ar" format="2">
+	<advance width="512"/>
 	<unicode hex="06F7"/>
-	<advance width="600"/>
 	<outline>
-		<contour>
-			<point x="96" y="584" type="line"/>
-			<point x="96" y="496" type="line"/>
-			<point x="400" y="496" type="line"/>
-			<point x="192" y="232" type="line"/>
-			<point x="288" y="232" type="line"/>
-			<point x="512" y="496" type="line"/>
-			<point x="512" y="584" type="line"/>
-		</contour>
+		<component base="seven-ar"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

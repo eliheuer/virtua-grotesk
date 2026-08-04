@@ -1,31 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="twoFarsi-ar" format="2">
+	<advance width="480"/>
 	<unicode hex="06F2"/>
-	<advance width="600"/>
 	<outline>
-		<contour>
-			<point x="160" y="232" type="line"/>
-			<point x="448" y="232" type="line"/>
-			<point x="496" y="288" type="line"/>
-			<point x="480" y="352" type="line"/>
-			<point x="336" y="352" type="line"/>
-			<point x="256" y="400" type="line"/>
-			<point x="304" y="472" type="line"/>
-			<point x="440" y="472" type="line"/>
-			<point x="496" y="528" type="line"/>
-			<point x="440" y="584" type="line"/>
-			<point x="240" y="584" type="line"/>
-			<point x="168" y="512" type="line"/>
-			<point x="192" y="448" type="line"/>
-			<point x="272" y="352" type="line"/>
-			<point x="160" y="352" type="line"/>
-			<point x="96" y="304" type="line"/>
-		</contour>
+		<component base="two-ar"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

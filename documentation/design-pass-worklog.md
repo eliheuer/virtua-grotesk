@@ -1084,6 +1084,99 @@ corrected files exactly), and `.agents/skills/anchor-sheet-glyphs/` with
 entry #1). Rule: whenever Eli corrects generated output, the rule gets
 appended to LESSONS.md in the same session.
 
+### Arabic completion pass — 244 red/empty glyphs rebuilt — 2026-08-04
+
+Rebuilt the whole non-green Arabic set by **derivation from the 70 green
+Arabic glyphs**, with Rubik (`~/GH/repos/rubik`) used only for topology and
+proportion, never traced. Everything below is marked **blue** — Eli grades.
+
+**Method.** The set was measured first (`scripts/arabic_measure.py` →
+`documentation/source/arabic-grammar.md`), then classified into four lanes
+by `scripts/arabic_lanes.py` (100% rule coverage, 249 targets): 133
+recompose, 52 derive, 43 skeleton, 21 symbol. Four runners execute the
+lanes — `arabic_skeletons.py`, `arabic_derive.py`, `arabic_recompose.py`,
+`arabic_symbols.py` — all on top of `arabic_build.py`, which writes glif
+XML in repo style and registers new glyphs in contents.plist +
+public.glyphOrder.
+
+**Key measurement: the green Arabic is byte-identical in both masters.**
+The Arabic bold weight has never been drawn. All new work follows that
+convention (Bold == Regular), so the Arabic emboldening pass is still
+entirely outstanding and is now the single biggest Arabic item left.
+
+**Grammar constants measured off green:** stem 96; horizontals/rounds
+104–117 (dal/waw 112, hah 104, ain 106–117); tooth top 432; hah bowl 504;
+ascender 768; dots 160×160 in band 688..848, below band −272..−112;
+two-dot gap 96. Advance classes: init 288, medi 416, wide fina 864–976.
+
+**Composite placement rule, recovered from the green composites** (teh.medi,
+theh.medi, qaf.medi, noon.init, beh.init all agree): mark ink-centre x
+aligns to the base's `topDots`/`bottomDots` anchor x; an above-mark's ink
+bottom sits at anchor y + 112; a below-mark's ink top at anchor y − 112.
+This is now encoded in `arabic_recompose.place()` rather than hand-tuned
+offsets, so 133 composites are generated from one rule.
+
+**Skeletons drawn (lane 3)** — beh boat isol/fina, noon cup, seen isol/medi/
+fina, hah isol/medi/fina, ain isol/fina, sad init/medi/isol/fina, tah all
+four, qafDotless isol/fina, fehDotless isol/fina, meem all four, heh ring
+isol/init/fina, kaf and keheh init/medi, lam_alef isol, yehBarree, the ten
+Arabic-Indic digits, Farsi four/five, and the harakat (fatha, kasra, damma,
+sukun, shadda, madda, wasla, hamza, the dot clusters).
+
+Reusable splices came out of this and are the real deliverable:
+`cup_run` (noon/seen/sad tail), `boat_run` (beh/feh tail), `hah_bowl_run`,
+`ain_bowl_run`, and `_bowl_replacing_stub`, which swaps any donor's left
+joining stub for a tail as long as the donor arrives on the bar bottom and
+leaves on the bar top. That is why isol/fina forms cost almost nothing once
+the init/medi form is green.
+
+**Verification.** `make build` green; masters structurally identical (0
+mismatches); `make test` went from **15 FAIL to 0 FAIL** (504 PASS, 23
+WARN). Shaped-word proof through the built variable font
+(`harness/designbot/arabic_words.rs`): كتاب سلام العربية محمد جميل شمس قمر
+طريق مكتبة خط عربي, the digits, and harakat on beh all shape with no
+`.notdef` and correct positional forms.
+
+**Three bugs found and fixed, each now a permanent gate**
+(`scripts/glif_lint.py`):
+
+1. A spliced contour inherited a `curve` point type with no off-curve
+   points before it (sad isol/fina). cu2qu raises a bare `IndexError` with
+   no glyph name, which is very hard to trace — the lint now names it.
+2. Nested components (lam_alef + mark, tanwin stacks) — Google Fonts
+   rejects these. `arabic_recompose.flatten()` resolves them to primitives.
+3. Auto-placed marks blew past the vertical envelope (shaddaKasratan
+   reached −1176 against a WinDescent of 438). `place()` now clamps to
+   ±(1024, −432), and the bowl skeletons got `bottomDots` anchors *inside*
+   the bowl, which is where jeem/khah dots belong.
+
+**Winding.** `scripts/normalize_winding.py` normalized 90 blue glyph files
+to outer-CCW / holes-CW by nesting parity (a mechanical edit — shapes
+verified unchanged). `outline_direction` warnings dropped from 164 glyphs
+to 50, and **every remaining one is a green source**.
+
+**OPEN for Eli:**
+
+- **Arabic Bold.** Not drawn at all. Counter-reduction like the Latin, or
+  a stroke offset? This blocks a real variable Arabic.
+- **Green Arabic winding is inconsistent** — `behDotless-ar.medi`,
+  `seen-ar.init`, `hah-ar.init` and ~24 more are CW-outer where
+  `alef-ar` and `behDotless-ar.init` are CCW. Fixing is mechanical and
+  changes no shape, but they are green, so it is Eli's call.
+- **gaf / keheh three-dot placement.** The dots are clamped to the ceiling
+  and may sit over the stem rather than beside it. Needs a real decision
+  about where the sarkash and dots live relative to the kaf arm.
+- **Canonical horizontal stroke.** Green varies 104–117; pick one (112?)
+  or keep per-family optics.
+- **`peh-ar.init` (green) has no dots** — pre-existing gap, not from this
+  pass.
+- **`lam-ar.fina` (green) has no bowl**, just a stem plus joining bar, so
+  words ending in ل (جميل in the shaped proof) end on a bare stroke. The
+  isolated `lam-ar` was derived from it and inherits this. Pre-existing,
+  but it is the most visible remaining shape issue in running text.
+- **hehGoal vs hehDoachashmee** are currently the same shape in isol/init
+  (both derived from their own green fina/medi, which are also identical).
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD

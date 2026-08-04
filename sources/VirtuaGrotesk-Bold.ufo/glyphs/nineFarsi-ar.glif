@@ -1,62 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="nineFarsi-ar" format="2">
+	<advance width="528"/>
 	<unicode hex="06F9"/>
-	<advance width="600"/>
 	<outline>
-		<contour>
-			<point x="400" y="-8" type="curve" smooth="yes"/>
-			<point x="528" y="-8" type="line" smooth="yes"/>
-			<point x="542" y="-8"/>
-			<point x="552" y="-2"/>
-			<point x="552" y="32" type="curve" smooth="yes"/>
-			<point x="520" y="448" type="line" smooth="yes"/>
-			<point x="506" y="626"/>
-			<point x="372" y="704"/>
-			<point x="272" y="704" type="curve" smooth="yes"/>
-			<point x="132" y="704"/>
-			<point x="40" y="588"/>
-			<point x="40" y="448" type="curve" smooth="yes"/>
-			<point x="40" y="288"/>
-			<point x="144" y="216"/>
-			<point x="248" y="216" type="curve" smooth="yes"/>
-			<point x="286" y="216"/>
-			<point x="320" y="230"/>
-			<point x="352" y="248" type="curve"/>
-			<point x="376" y="16" type="line" smooth="yes"/>
-			<point x="376" y="-2"/>
-			<point x="386" y="-8"/>
-		</contour>
-		<contour>
-			<point x="264" y="400" type="curve" smooth="yes"/>
-			<point x="224" y="400"/>
-			<point x="184" y="414"/>
-			<point x="184" y="456" type="curve" smooth="yes"/>
-			<point x="184" y="496"/>
-			<point x="214" y="520"/>
-			<point x="256" y="520" type="curve" smooth="yes"/>
-			<point x="288" y="520"/>
-			<point x="320" y="504"/>
-			<point x="336" y="480" type="curve" smooth="yes"/>
-			<point x="348" y="460"/>
-			<point x="352" y="440"/>
-			<point x="352" y="416" type="curve"/>
-			<point x="324" y="408"/>
-			<point x="300" y="400"/>
-		</contour>
+		<component base="nine-ar"/>
 	</outline>
 	<lib>
 		<dict>
-			<key>com.runebenderComfy.donorCandidate</key>
-			<dict>
-				<key>donorGlyph</key>
-				<string>nine-persian</string>
-				<key>xScale</key>
-				<real>0.97879</real>
-				<key>yScale</key>
-				<real>1.10769</real>
-			</dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -41,6 +41,25 @@ Done:
   positional substitution, `ccmp` mark composition, `mark`/`mkmk` positioning.
 - **Pipeline** — build (`make build`), the GF QA gate (`make test`), proofs
   (`make proof` / `make specimen`), reports (`make reports`).
+- **Arabic outlines — first complete pass done (2026-08-04, awaiting grading).**
+  All 244 red/empty Arabic glyphs were rebuilt by derivation from the 70 green
+  ones, with Rubik used only for topology and proportion. `make test` went from
+  15 FAIL to **0 FAIL**. Every new glyph is marked **blue** and needs Eli's
+  review before it counts as done. See the worklog entry
+  (`documentation/design-pass-worklog.md`, "Arabic completion pass") and the
+  measured style contract in `documentation/source/arabic-grammar.md`.
+
+Outstanding on the Arabic, in order:
+
+1. **Grade the blue set** — 209 glyphs. Green what is right, mark the rest.
+2. **Arabic Bold has never been drawn.** The green Arabic is byte-identical in
+   both masters, so the whole script is currently un-emboldened. This is the
+   largest remaining Arabic item and needs a design decision first
+   (counter-reduction like the Latin, or a stroke offset).
+3. **Green-source winding** — ~27 green Arabic glyphs are CW-outer, which is
+   what the residual `outline_direction` warnings are. `scripts/normalize_winding.py`
+   fixes this mechanically without changing shapes, but they are green, so it
+   needs Eli's go-ahead.
 
 ## The skeleton and the scoreboard
 

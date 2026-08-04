@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="smallHighTah-ar" format="2">
+	<advance width="288"/>
 	<unicode hex="0615"/>
 	<outline>
 		<contour>
-			<point x="-32" y="688" type="line"/>
-			<point x="32" y="688" type="line"/>
-			<point x="32" y="752" type="line"/>
-			<point x="-32" y="752" type="line"/>
+			<point x="96" y="688" type="line"/>
+			<point x="192" y="688" type="line"/>
+			<point x="192" y="848" type="line"/>
+			<point x="96" y="848" type="line"/>
 		</contour>
 		<contour>
-			<point x="-96" y="616" type="line"/>
-			<point x="96" y="616" type="line"/>
-			<point x="96" y="680" type="line"/>
-			<point x="-96" y="680" type="line"/>
+			<point x="48" y="848" type="line"/>
+			<point x="240" y="848" type="line"/>
+			<point x="240" y="848" type="line"/>
+			<point x="240" y="912" type="line"/>
+			<point x="240" y="912" type="line"/>
+			<point x="48" y="912" type="line"/>
+			<point x="48" y="912" type="line"/>
+			<point x="48" y="848" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="0" y="576"/>
-	<anchor name="top" x="0" y="720"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0,0.67,0.91,1</string>
 		</dict>
 	</lib>
 </glyph>
