@@ -37,7 +37,7 @@ from arabic_build import write_glyph, read_points  # noqa: E402
 BAND_BOT = 638          # grave / acute / hungarumlaut ink bottom
 BAND_TOP = 832          # ... and ink top
 CH = 16                 # house chamfer
-GREEN = "0.09,0.72,0.44,1"
+# output is marked BLUE (arabic_build default) — awaiting grading
 
 
 def chamfer_rect(x0, y0, x1, y1, ch=CH):
@@ -96,14 +96,14 @@ def build_circumflex():
     # weight, and low enough to clear a capital inside WinAscent.
     c = chevron(cx=212, half=140, y_bot=BAND_BOT, y_top=BAND_TOP, slope=0.75)
     write_glyph("circumflex", 420, contours=[c],
-                anchors=[("_top", 212, 576)], color=GREEN)
+                anchors=[("_top", 212, 576)])
 
 
 def build_caron():
     c = chevron(cx=212, half=140, y_bot=BAND_BOT, y_top=BAND_TOP,
                 slope=0.75, up=False)
     write_glyph("caron", 420, contours=[c],
-                anchors=[("_top", 212, 576)], color=GREEN)
+                anchors=[("_top", 212, 576)])
 
 
 def build_tilde():
@@ -127,7 +127,7 @@ def build_tilde():
     ]
     c = [(round(x / 2) * 2, round(y / 2) * 2, t, s) for x, y, t, s in c]
     write_glyph("tilde", 520, contours=[c],
-                anchors=[("_top", 240, 576)], color=GREEN)
+                anchors=[("_top", 240, 576)])
 
 
 BUILDERS = {
