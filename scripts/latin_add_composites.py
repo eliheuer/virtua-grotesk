@@ -34,6 +34,33 @@ COMPOSITES = [
     ("omacron", "014D", "o", "macroncomb"),
     ("Ubreve",  "016C", "U", "brevecomb"),
     ("ubreve",  "016D", "u", "brevecomb"),
+
+    # --- second pass: the rest of the auxiliary set that is pure
+    # base+mark (Finnish / Sami / Esperanto / Latvian / pinyin).
+    ("Itilde",       "0128", "I", "tildecomb"),
+    ("itilde",       "0129", "idotless", "tildecomb"),
+    ("Utilde",       "0168", "U", "tildecomb"),
+    ("utilde",       "0169", "u", "tildecomb"),
+    ("Etilde",       "1EBC", "E", "tildecomb"),
+    ("etilde",       "1EBD", "e", "tildecomb"),
+    ("Acaron",       "01CD", "A", "caroncomb"),
+    ("acaron",       "01CE", "a", "caroncomb"),
+    ("Ucaron",       "01D3", "U", "caroncomb"),
+    ("ucaron",       "01D4", "u", "caroncomb"),
+    ("Gcaron",       "01E6", "G", "caroncomb"),
+    ("gcaron",       "01E7", "g", "caroncomb"),
+    ("Kcaron",       "01E8", "K", "caroncomb"),
+    ("kcaron",       "01E9", "k", "caroncomb"),
+    ("Hcaron",       "021E", "H", "caroncomb"),
+    ("hcaron",       "021F", "h", "caroncomb"),
+    ("Scircumflex",  "015C", "S", "circumflexcomb"),
+    ("scircumflex",  "015D", "s", "circumflexcomb"),
+    ("Rcedilla",     "0156", "R", "cedillacomb"),
+    ("rcedilla",     "0157", "r", "cedillacomb"),
+    ("Tcedilla",     "0162", "T", "cedillacomb"),
+    ("tcedilla",     "0163", "t", "cedillacomb"),
+    ("Oslashacute",  "01FE", "Oslash", "acutecomb"),
+    ("oslashacute",  "01FF", "oslash", "acutecomb"),
 ]
 
 # L with middle dot: the dot sits to the RIGHT of the letter, not above,
@@ -79,11 +106,26 @@ def main():
                 continue
             ba = anchors_of(ufo, cmap, base)
             ma = anchors_of(ufo, cmap, mark)
-            if "top" not in ba or "_top" not in ma:
-                skipped.append(f"{name}: no anchors on {base}/{mark}")
+            # pick the side from the MARK: cedilla/ogonek attach below
+            side = "_bottom" if "_bottom" in ma else "_top"
+            bkey = "bottom" if side == "_bottom" else "top"
+            if side not in ma:
+                skipped.append(f"{name}: {mark} has no attachment anchor")
                 continue
-            dx = ba["top"][0] - ma["_top"][0]
-            dy = ba["top"][1] - ma["_top"][1]
+            if bkey in ba:
+                bx, by = ba[bkey]
+            else:
+                # base carries no anchor of its own (Oslash, ligatures):
+                # fall back to its ink centre on the relevant metric line
+                bb = bbox(ufo, cmap, base)
+                if not bb:
+                    skipped.append(f"{name}: {base} has no ink")
+                    continue
+                bx = (bb[0] + bb[2]) / 2
+                by = 0.0 if bkey == "bottom" else (
+                    768.0 if base[0].isupper() else 576.0)
+            dx = bx - ma[side][0]
+            dy = by - ma[side][1]
             if dry:
                 continue
             register_glyph(name)
