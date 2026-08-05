@@ -2,8 +2,15 @@
 """Lane-3 skeleton constructions for the Arabic completion pass.
 
 Each builder emits explicit point lists in the green-donor idiom
-(bar 104, stem 96, chamfer 16, tooth lip 432) with Rubik supplying
-topology and proportions only. Output goes to both masters, marked blue.
+(bar 104, stem 96, chamfer 16) with Rubik supplying topology and
+proportions only. Output goes to both masters, marked blue.
+
+EVEN-TERMINAL RULE (Eli, 2026-08-04): a free-standing terminal on an
+isolated boat or cup rises to 288 with a 16-chamfer and a 64 flat, and
+BOTH ends of a symmetric form use it. 432 is the height of a joining
+TOOTH (beh.init/medi, seen's teeth) and must not be borrowed for a
+terminal — that made the isolated beh lopsided. Simple, even and
+geometric beats expressive in this design.
 
 Usage:
     ./.venv/bin/python scripts/arabic_skeletons.py behDotless-ar behDotless-ar.fina
@@ -77,61 +84,49 @@ def build_behDotless_isol():
         (80, 288, "line", False),        # left terminal flat
         (64, 272, "line", False),        # chamfer, closes to (64,176)
     ]
-    anchors = [("top", 832, 288), ("topDots", 832, 304),
+    anchors = [("top", 832, 272), ("topDots", 832, 288),
                ("bottom", 472, 16), ("bottomDots", 472, 0)]
     write_glyph("behDotless-ar", 944, contours=[match_winding(c)],
                 anchors=anchors)
 
 
 def build_behDotless_fina():
-    """Beh boat, final: boat + medial-style tooth on the bar + entry bar to
-    the right edge, V-notch under the tooth per behDotless-ar.medi."""
+    """Beh boat, final: the isolated boat with its RIGHT terminal replaced
+    by the joining bar out to the advance edge.
+
+    The first version put a medial-style tooth (432) in the middle of the
+    final form, copied from behDotless-ar.medi. A final beh has no tooth —
+    it is a shallow bowl that connects on the right and rises on the left
+    only. Same EVEN/SIMPLE rule as the isolated form.
+    """
+    adv = 1024
     c = [
-        (128, 176, "line", False),       # left outer edge
-        (128, 72, None, False),
-        (200, 0, None, False),
-        (304, 0, "curve", True),         # bottom edge
-        (824, 0, "line", True),
-        (848, 0, None, False),
-        (872, 4, None, False),
-        (888, 64, "curve", False),       # V-notch rise (under tooth)
-        (904, 64, "line", False),
-        (920, 4, None, False),
-        (944, 0, None, False),
-        (968, 0, "curve", True),
-        (1104, 0, "line", False),        # bottom to right edge
-        (1104, 104, "line", False),      # entry edge (flat at advance)
-        (1040, 104, "line", True),       # bar top, leftward
-        (976, 104, None, False),
-        (944, 136, None, False),
-        (944, 200, "curve", True),       # up tooth right edge
-        (944, 416, "line", False),
-        (928, 432, "line", False),       # chamfer
-        (864, 432, "line", False),       # tooth lip flat
-        (848, 416, "line", False),       # chamfer
-        (848, 200, "line", True),        # tooth left edge down
-        (848, 136, None, False),
-        (816, 104, None, False),
-        (752, 104, "curve", True),       # onto inner bowl bottom
-        (320, 104, "line", True),
-        (256, 104, None, False),
-        (224, 136, None, False),
-        (224, 200, "curve", True),       # inner left rise
-        (224, 272, "line", False),
-        (208, 288, "line", False),       # chamfer
-        (144, 288, "line", False),       # left tip flat
-        (128, 272, "line", False),       # chamfer
+        (64, 176, "line", False),        # left terminal outer edge
+        (64, 72, None, False),
+        (136, 0, None, False),
+        (240, 0, "curve", True),         # onto the flat bottom
+        (adv, 0, "line", False),         # bottom runs to the advance edge
+        (adv, 104, "line", False),       # entry edge
+        (256, 104, "line", True),        # bar top / inner bowl, leftward
+        (192, 104, None, False),
+        (160, 136, None, False),
+        (160, 200, "curve", True),       # inner left rise
+        (160, 272, "line", False),
+        (144, 288, "line", False),       # chamfer
+        (80, 288, "line", False),        # left terminal flat
+        (64, 272, "line", False),        # chamfer, closes to (64,176)
     ]
-    anchors = [("top", 896, 432), ("topDots", 896, 448),
-               ("bottom", 536, 16), ("bottomDots", 536, 0)]
-    write_glyph("behDotless-ar.fina", 1104, contours=[match_winding(c)],
+    anchors = [("top", 544, 272), ("topDots", 544, 288),
+               ("bottom", 544, 16), ("bottomDots", 544, 0)]
+    write_glyph("behDotless-ar.fina", adv, contours=[match_winding(c)],
                 anchors=anchors)
 
 
 def build_noonghunna_isol():
-    """Noon cup, isolated: deep round cup dipping below baseline, right lip
-    at tooth height, left tip at boat-tip height. Rubik noonghunna-ar for
-    depth ratio (cup dips ~-133/750 upm -> -160 here)."""
+    """Noon cup, isolated: deep round cup dipping below the baseline, with
+    two EVEN terminals at 288 (same rule as the beh boat — an isolated cup
+    is mirror symmetric). Rubik noonghunna-ar for the depth ratio (its cup
+    dips ~-133 on a 750 cap -> -160 here)."""
     c = [
         (64, 168, "line", False),        # left outer wall
         (64, -8, None, False),
@@ -140,10 +135,10 @@ def build_noonghunna_isol():
         (504, -160, None, False),
         (616, -8, None, False),
         (616, 168, "curve", True),       # right outer wall rise
-        (616, 416, "line", False),
-        (600, 432, "line", False),       # chamfer
-        (536, 432, "line", False),       # right lip flat
-        (520, 416, "line", False),       # chamfer
+        (616, 272, "line", False),
+        (600, 288, "line", False),       # chamfer
+        (536, 288, "line", False),       # right terminal flat
+        (520, 272, "line", False),       # chamfer
         (520, 152, "line", True),        # right inner wall down
         (520, 8, None, False),
         (444, -56, None, False),
@@ -156,7 +151,7 @@ def build_noonghunna_isol():
         (80, 288, "line", False),        # left tip flat
         (64, 272, "line", False),        # chamfer
     ]
-    anchors = [("top", 340, 448), ("topDots", 340, 448),
+    anchors = [("top", 340, 272), ("topDots", 340, 288),
                ("bottom", 340, -176), ("bottomDots", 340, -176)]
     write_glyph("noonghunna-ar", 680, contours=[match_winding(c)],
                 anchors=anchors)

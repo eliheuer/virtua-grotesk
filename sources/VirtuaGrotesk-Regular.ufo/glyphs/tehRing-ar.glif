@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tehRing-ar" format="2">
-	<advance width="944"/>
 	<unicode hex="067C"/>
+	<advance width="944"/>
 	<outline>
 		<component base="behDotless-ar"/>
-		<component base="ring-ar" xOffset="720" yOffset="-128"/>
+		<component base="ring-ar" xOffset="720" yOffset="-288"/>
 	</outline>
 	<lib>
 		<dict>

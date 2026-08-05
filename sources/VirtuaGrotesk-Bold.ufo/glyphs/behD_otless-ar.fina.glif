@@ -1,48 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="behDotless-ar.fina" format="2">
-	<advance width="1140"/>
+	<advance width="1060"/>
 	<outline>
 		<contour>
-			<point x="92" y="176" type="line"/>
-			<point x="102" y="52"/>
-			<point x="200" y="0"/>
-			<point x="304" y="0" type="curve" smooth="yes"/>
-			<point x="824" y="0" type="line" smooth="yes"/>
-			<point x="854" y="0"/>
-			<point x="906" y="-2"/>
-			<point x="894" y="60" type="curve"/>
-			<point x="898" y="60" type="line"/>
-			<point x="914" y="-22"/>
-			<point x="944" y="0"/>
-			<point x="968" y="0" type="curve" smooth="yes"/>
-			<point x="1140" y="0" type="line"/>
-			<point x="1140" y="176" type="line"/>
-			<point x="1040" y="176" type="line" smooth="yes"/>
-			<point x="1002" y="176"/>
-			<point x="980" y="136"/>
-			<point x="980" y="200" type="curve" smooth="yes"/>
-			<point x="980" y="424" type="line"/>
-			<point x="946" y="460" type="line"/>
-			<point x="846" y="460" type="line"/>
-			<point x="812" y="424" type="line"/>
-			<point x="812" y="200" type="line" smooth="yes"/>
-			<point x="832" y="148"/>
-			<point x="816" y="176"/>
-			<point x="752" y="176" type="curve" smooth="yes"/>
-			<point x="320" y="176" type="line" smooth="yes"/>
-			<point x="282" y="176"/>
-			<point x="260" y="136"/>
-			<point x="260" y="200" type="curve" smooth="yes"/>
-			<point x="260" y="280" type="line"/>
-			<point x="226" y="316" type="line"/>
-			<point x="126" y="316" type="line"/>
-			<point x="92" y="280" type="line"/>
+			<point x="28" y="176" type="line"/>
+			<point x="38" y="52"/>
+			<point x="136" y="0"/>
+			<point x="240" y="0" type="curve" smooth="yes"/>
+			<point x="1060" y="0" type="line"/>
+			<point x="1060" y="176" type="line"/>
+			<point x="256" y="176" type="line" smooth="yes"/>
+			<point x="218" y="176"/>
+			<point x="196" y="136"/>
+			<point x="196" y="200" type="curve" smooth="yes"/>
+			<point x="196" y="280" type="line"/>
+			<point x="162" y="316" type="line"/>
+			<point x="62" y="316" type="line"/>
+			<point x="28" y="280" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="896" y="432"/>
-	<anchor name="topDots" x="896" y="448"/>
-	<anchor name="bottom" x="536" y="16"/>
-	<anchor name="bottomDots" x="536" y="0"/>
+	<anchor name="top" x="544" y="272"/>
+	<anchor name="topDots" x="544" y="288"/>
+	<anchor name="bottom" x="544" y="16"/>
+	<anchor name="bottomDots" x="544" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
