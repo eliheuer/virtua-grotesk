@@ -332,6 +332,16 @@
     <key>public.kern2.period</key>
     <real>-32</real>
   </dict>
+  <key>public.kern2.kaf-ar</key>
+  <dict>
+    <key>space</key>
+    <real>-128</real>
+  </dict>
+  <key>public.kern2.reh-ar</key>
+  <dict>
+    <key>public.kern1.kaf-ar</key>
+    <real>-348</real>
+  </dict>
   <key>r</key>
   <dict>
     <key>hyphen</key>
