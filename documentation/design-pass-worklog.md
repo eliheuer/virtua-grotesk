@@ -1237,6 +1237,71 @@ do, which is what would let the Arabic carry the full Latin weight without
 closing up? And the reh tail wants hand-redrawing for Bold — offsetting
 cannot invent the room a small detail needs.
 
+### Latin diacritics — the whole system rebuilt — 2026-08-05
+
+Audited with the new `scripts/latin_diacritics_audit.py` and against Rubik.
+Four separate faults, one of them a hard functional bug.
+
+**1. Every combining mark was an empty glyph.** All fourteen —
+`gravecomb`, `circumflexcomb`, `tildecomb`, `macroncomb`, `brevecomb`,
+`dotaccentcomb`, `dieresiscomb`, `ringcomb`, `hungarumlautcomb`,
+`caroncomb`, `cedillacomb`, `ogonekcomb`, `commaaccentcomb`, `acutecomb` —
+had no outline. Typing any base plus a combining accent produced a blank.
+Each is now a zero-width component of its spacing accent carrying an
+attachment anchor plus a stacking anchor.
+
+**2. Latin mark attachment covered three glyphs.** `@LATIN_TOP_BASES` was
+`[J jdotless dottedCircle]` positioned against one hardcoded anchor, and
+`acutecomb` (empty) was the only mark class. Now 55 top bases, 54 bottom
+bases, 11 top marks and 3 bottom marks, generated from the UFO anchors by
+`scripts/latin_mark_feature.py`. Verified with uharfbuzz on sequences that
+have no precomposed form (b + acute, q + dieresis, V + ogonek, m + cedilla
+…): all attach, none unpositioned.
+
+**3. 20 base letters had no anchors at all** (B F H J M P Q V X and their
+lowercase). Filled per master from each master's own ink centre — caps at
+768, lowercase at 576, matching what A/C/E/O already did.
+
+**4. 140 composites hand-placed their marks, and disagreed.** Acircumflex
+sat 105 units higher than Aacute, which made it the tallest glyph in the
+font (1081). All 280 mark placements are now computed from anchors. Every
+glyph now fits the vertical envelope with room to spare — the tallest is
+1024 against a WinAscent of 1094.
+
+**Accent shapes.** circumflex (440..744) and caron (504..808) were 304 tall
+against the family's 194, and tilde sat at 380..548 — below x-height. All
+three also lacked the house 16-unit chamfer that grave/acute/hungarumlaut
+carry. A 304-tall accent cannot clear a capital without passing WinAscent,
+which is *why* Acircumflex had been shoved to +337. Rebuilt in the band
+with chamfers by `scripts/latin_accents.py`; the chevron is parametric, so
+circumflex and caron stay an exact mirror pair by construction.
+
+**Coverage.** 36 composites added, closing the Czech, Welsh, Spanish,
+Hungarian, Portuguese, Slovak, Turkish and Catalan gaps in
+`googlefonts/glyphsets/shape_languages` (Ĕĕ Ĭĭ Ŏŏ Ōō Ŭŭ Ŀŀ), plus the
+composable half of the Finnish/Sami set (Ĩĩ Ũũ Ẽẽ Ǎǎ Ǔǔ Ǧǧ Ǩǩ Ȟȟ Ŝŝ Ŗŗ Ţţ
+Ǿǿ).
+
+**OPEN for Eli:**
+
+- **9 glyphs still block the `shape_languages` exclude** because they need
+  new letterforms, not composition: **Ŋ ŋ** (eng), **Ŧ ŧ** (T with
+  stroke), **Ǥ ǥ** (G with stroke), **Ʒ ʒ** (ezh), **ʻ** (turned comma).
+  Ǯ/ǯ follow once ezh exists.
+- **The accents do not gain weight in Bold.** circumflex, caron, tilde,
+  acute, grave, macron, breve and the rest are byte-identical in both
+  masters (only `dieresis` differs), so accented text in Bold carries
+  Regular-weight accents. `scripts/embolden.py` could do this, but it is a
+  design call, not a mechanical one.
+- **Latin mark GPOS does not vary across the axis.** The anchors are
+  written into `features.fea` from the Regular. Fixing it properly means
+  deleting the hand-written mark/mkmk features and letting ufo2ft generate
+  them from anchors — which first needs the Arabic marks to carry
+  `_top`/`_bottom`, so it was not attempted while the Arabic is in flight.
+- **`ring` is a small square** (156×156) where the rest of the family is
+  wider; and `caroncomb.alt` (Lcaron, Tcaron, dcaron, lcaron, tcaron) has
+  no attachment anchor, so those five keep their original hand offsets.
+
 <!-- Template for new entries:
 
 ### X (U+0000) — reviewed YYYY-MM-DD
