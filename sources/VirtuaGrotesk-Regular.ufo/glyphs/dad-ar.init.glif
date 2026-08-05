@@ -3,12 +3,20 @@
 	<advance width="1200"/>
 	<outline>
 		<component base="sad-ar.init"/>
-		<component base="dotabove-ar" xOffset="592" yOffset="-112"/>
+		<component base="dotabove-ar" xOffset="400.73904561195525" yOffset="-235.71530942283175" identifier="959c691b-76da-4857-9a72-1703d7af53d4"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>959c691b-76da-4857-9a72-1703d7af53d4</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
