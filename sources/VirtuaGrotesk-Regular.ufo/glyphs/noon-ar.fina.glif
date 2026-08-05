@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noon-ar.fina" format="2">
-	<advance width="800"/>
+	<advance width="680"/>
 	<outline>
 		<component base="noonghunna-ar.fina"/>
-		<component base="dotabove-ar" xOffset="248" yOffset="-456"/>
+		<component base="dotabove-ar" xOffset="192" yOffset="-704" identifier="776bcf4a-d08f-4e79-b279-61f74f7bf27d"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>776bcf4a-d08f-4e79-b279-61f74f7bf27d</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
