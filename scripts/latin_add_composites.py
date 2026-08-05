@@ -24,43 +24,43 @@ from arabic_build import register_glyph  # noqa: E402
 
 # name -> (unicode, base, mark)  — mark placed via anchors
 COMPOSITES = [
-    ("Ebreve",  "0114", "E", "brevecomb"),
-    ("ebreve",  "0115", "e", "brevecomb"),
-    ("Ibreve",  "012C", "I", "brevecomb"),
-    ("ibreve",  "012D", "idotless", "brevecomb"),
-    ("Obreve",  "014E", "O", "brevecomb"),
-    ("obreve",  "014F", "o", "brevecomb"),
-    ("Omacron", "014C", "O", "macroncomb"),
-    ("omacron", "014D", "o", "macroncomb"),
-    ("Ubreve",  "016C", "U", "brevecomb"),
-    ("ubreve",  "016D", "u", "brevecomb"),
+    ("Ebreve",  "0114", "E", "breve"),
+    ("ebreve",  "0115", "e", "breve"),
+    ("Ibreve",  "012C", "I", "breve"),
+    ("ibreve",  "012D", "idotless", "breve"),
+    ("Obreve",  "014E", "O", "breve"),
+    ("obreve",  "014F", "o", "breve"),
+    ("Omacron", "014C", "O", "macron"),
+    ("omacron", "014D", "o", "macron"),
+    ("Ubreve",  "016C", "U", "breve"),
+    ("ubreve",  "016D", "u", "breve"),
 
     # --- second pass: the rest of the auxiliary set that is pure
     # base+mark (Finnish / Sami / Esperanto / Latvian / pinyin).
-    ("Itilde",       "0128", "I", "tildecomb"),
-    ("itilde",       "0129", "idotless", "tildecomb"),
-    ("Utilde",       "0168", "U", "tildecomb"),
-    ("utilde",       "0169", "u", "tildecomb"),
-    ("Etilde",       "1EBC", "E", "tildecomb"),
-    ("etilde",       "1EBD", "e", "tildecomb"),
-    ("Acaron",       "01CD", "A", "caroncomb"),
-    ("acaron",       "01CE", "a", "caroncomb"),
-    ("Ucaron",       "01D3", "U", "caroncomb"),
-    ("ucaron",       "01D4", "u", "caroncomb"),
-    ("Gcaron",       "01E6", "G", "caroncomb"),
-    ("gcaron",       "01E7", "g", "caroncomb"),
-    ("Kcaron",       "01E8", "K", "caroncomb"),
-    ("kcaron",       "01E9", "k", "caroncomb"),
-    ("Hcaron",       "021E", "H", "caroncomb"),
-    ("hcaron",       "021F", "h", "caroncomb"),
-    ("Scircumflex",  "015C", "S", "circumflexcomb"),
-    ("scircumflex",  "015D", "s", "circumflexcomb"),
-    ("Rcedilla",     "0156", "R", "cedillacomb"),
-    ("rcedilla",     "0157", "r", "cedillacomb"),
-    ("Tcedilla",     "0162", "T", "cedillacomb"),
-    ("tcedilla",     "0163", "t", "cedillacomb"),
-    ("Oslashacute",  "01FE", "Oslash", "acutecomb"),
-    ("oslashacute",  "01FF", "oslash", "acutecomb"),
+    ("Itilde",       "0128", "I", "tilde"),
+    ("itilde",       "0129", "idotless", "tilde"),
+    ("Utilde",       "0168", "U", "tilde"),
+    ("utilde",       "0169", "u", "tilde"),
+    ("Etilde",       "1EBC", "E", "tilde"),
+    ("etilde",       "1EBD", "e", "tilde"),
+    ("Acaron",       "01CD", "A", "caron"),
+    ("acaron",       "01CE", "a", "caron"),
+    ("Ucaron",       "01D3", "U", "caron"),
+    ("ucaron",       "01D4", "u", "caron"),
+    ("Gcaron",       "01E6", "G", "caron"),
+    ("gcaron",       "01E7", "g", "caron"),
+    ("Kcaron",       "01E8", "K", "caron"),
+    ("kcaron",       "01E9", "k", "caron"),
+    ("Hcaron",       "021E", "H", "caron"),
+    ("hcaron",       "021F", "h", "caron"),
+    ("Scircumflex",  "015C", "S", "circumflex"),
+    ("scircumflex",  "015D", "s", "circumflex"),
+    ("Rcedilla",     "0156", "R", "cedilla"),
+    ("rcedilla",     "0157", "r", "cedilla"),
+    ("Tcedilla",     "0162", "T", "cedilla"),
+    ("tcedilla",     "0163", "t", "cedilla"),
+    ("Oslashacute",  "01FE", "Oslash", "acute"),
+    ("oslashacute",  "01FF", "oslash", "acute"),
 ]
 
 # L with middle dot: the dot sits to the RIGHT of the letter, not above,
@@ -72,6 +72,28 @@ def advance_of(ufo, cmap, name):
     import xml.etree.ElementTree as ET
     a = ET.parse(path_of(ufo, cmap, name)).getroot().find("advance")
     return float(a.get("width")) if a is not None else 0.0
+
+
+def flatten(ufo, cmap, comps):
+    """Expand any component whose base is itself a composite.
+
+    Google Fonts rejects nested components, and Oslash/oslash are composed
+    (O + slash), so Oslashacute would nest two deep.
+    """
+    import xml.etree.ElementTree as ET
+    out = []
+    for base, dx, dy in comps:
+        if base not in cmap:
+            out.append((base, dx, dy))
+            continue
+        root = ET.parse(path_of(ufo, cmap, base)).getroot()
+        subs = [(c.get("base"), float(c.get("xOffset") or 0),
+                 float(c.get("yOffset") or 0)) for c in root.iter("component")]
+        if subs:
+            out += [(sb, dx + sx, dy + sy) for sb, sx, sy in subs]
+        else:
+            out.append((base, dx, dy))
+    return out
 
 
 def write_composite(ufo, cmap, name, uni, comps, advance):
@@ -131,7 +153,8 @@ def main():
             register_glyph(name)
             cmap = contents(ufo)
             write_composite(ufo, cmap, name, uni,
-                            [(base, 0, 0), (mark, dx, dy)],
+                            flatten(ufo, cmap,
+                                    [(base, 0, 0), (mark, dx, dy)]),
                             advance_of(ufo, cmap, base))
         made.append(name)
 

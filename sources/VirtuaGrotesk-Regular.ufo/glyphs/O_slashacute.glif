@@ -3,8 +3,9 @@
 	<unicode hex="01FE"/>
 	<advance width="720"/>
 	<outline>
-		<component base="Oslash"/>
-		<component base="acutecomb" xOffset="228" yOffset="192"/>
+		<component base="O"/>
+		<component base="slash" xOffset="8"/>
+		<component base="acute" xOffset="228" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
