@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yeh-ar" format="2">
 	<unicode hex="064A"/>
-	<advance width="976"/>
+	<advance width="944"/>
 	<outline>
 		<component base="alefMaksura-ar"/>
-		<component base="twodotshorizontalbelow-ar" xOffset="352"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="184" yOffset="-16" identifier="a4777962-0d60-4709-a09d-5f8ad386d16a"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>public.kern1</key>
+			<string>public.kern1.yeh-ar</string>
+			<key>public.kern2</key>
+			<string>public.kern2.yeh-ar</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>a4777962-0d60-4709-a09d-5f8ad386d16a</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
