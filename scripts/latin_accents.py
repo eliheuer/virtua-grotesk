@@ -59,7 +59,7 @@ def chevron(cx, half, y_bot, y_top, slope, up=True, ch=CH):
     and inner edge is the perpendicular stroke times sqrt(1+slope^2) — so
     picking the slope sets the stroke for a given overall height.
     """
-    apex_half = 32                       # half of the 64-wide apex flat
+    apex_half = 20                       # half of the apex flat
     run = half - apex_half
     rise = round(run * slope)
     outer_foot = y_top - rise            # outer edge at the feet
@@ -94,14 +94,14 @@ def chevron(cx, half, y_bot, y_top, slope, up=True, ch=CH):
 def build_circumflex():
     # slope 0.75 gives a ~90 stroke over the 194-high band — the family
     # weight, and low enough to clear a capital inside WinAscent.
-    c = chevron(cx=212, half=140, y_bot=BAND_BOT, y_top=BAND_TOP, slope=0.75)
+    c = chevron(cx=212, half=140, y_bot=BAND_BOT, y_top=BAND_TOP, slope=0.85)
     write_glyph("circumflex", 420, contours=[c],
                 anchors=[("_top", 212, 576)])
 
 
 def build_caron():
     c = chevron(cx=212, half=140, y_bot=BAND_BOT, y_top=BAND_TOP,
-                slope=0.75, up=False)
+                slope=0.85, up=False)
     write_glyph("caron", 420, contours=[c],
                 anchors=[("_top", 212, 576)])
 
