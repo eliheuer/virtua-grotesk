@@ -43,9 +43,14 @@ def match_winding(contour):
 # ---------------------------------------------------------------------------
 
 def build_behDotless_isol():
-    """Beh boat, isolated: left rising tip, flat bottom, right tooth.
-    Rubik behDotless-ar for proportions (adv 924/968 h, tip lower than
-    tooth); Virtua grammar for everything else."""
+    """Beh boat, isolated: two EVEN rising terminals over a flat bottom.
+
+    EVEN-TERMINAL RULE (Eli, 2026-08-04): an isolated boat/cup is mirror
+    symmetric — both terminals rise to the same height (288) with the same
+    16-chamfer and 64 flat. The first version borrowed the init/medi tooth
+    height (432) for the right end, which made the form lopsided. This is a
+    neo-grotesk: simple, even, geometric beats expressive.
+    """
     c = [
         (64, 176, "line", False),        # left outer edge (chamfer above)
         (64, 72, None, False),
@@ -54,12 +59,12 @@ def build_behDotless_isol():
         (704, 0, "line", False),
         (808, 0, None, False),
         (880, 72, None, False),
-        (880, 176, "curve", True),       # up tooth outer edge
-        (880, 416, "line", False),
-        (864, 432, "line", False),       # chamfer
-        (800, 432, "line", False),       # tooth lip flat
-        (784, 416, "line", False),       # chamfer
-        (784, 200, "line", True),        # tooth inner edge down
+        (880, 176, "curve", True),       # right terminal outer edge
+        (880, 272, "line", False),
+        (864, 288, "line", False),       # chamfer
+        (800, 288, "line", False),       # right terminal flat
+        (784, 272, "line", False),       # chamfer
+        (784, 200, "line", True),        # right terminal inner edge down
         (784, 136, None, False),
         (752, 104, None, False),
         (688, 104, "curve", True),       # onto inner bowl bottom
@@ -69,10 +74,10 @@ def build_behDotless_isol():
         (160, 200, "curve", True),       # inner left rise
         (160, 272, "line", False),
         (144, 288, "line", False),       # chamfer
-        (80, 288, "line", False),        # left tip flat
+        (80, 288, "line", False),        # left terminal flat
         (64, 272, "line", False),        # chamfer, closes to (64,176)
     ]
-    anchors = [("top", 832, 432), ("topDots", 832, 448),
+    anchors = [("top", 832, 288), ("topDots", 832, 304),
                ("bottom", 472, 16), ("bottomDots", 472, 0)]
     write_glyph("behDotless-ar", 944, contours=[match_winding(c)],
                 anchors=anchors)
