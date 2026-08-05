@@ -345,18 +345,75 @@ def build_seen_medi():
     write_glyph("seen-ar.medi", 992, contours=[c], anchors=anchors)
 
 
-def _seen_with_cup(donor_contour, name, advance, anchors, dx=460,
+def seen_tail_run(J, land_type="curve", left=64, term=432, d_out=-272):
+    """The seen/sad tail, as ONE continuous stroke out of the teeth.
+
+    The donor arrives at (J, 0) with a horizontal tangent and leaves
+    (J, 104) with a horizontal tangent, so the tail must join tangentially
+    at BOTH edges. The first version turned 90 degrees straight off the
+    junction, which left a square step where the tail met the teeth — the
+    letter read as two pieces butted together (Eli, 2026-08-04).
+
+    Terminal rises to `term` (tooth height), so all four verticals of seen
+    line up: even and geometric, per the same rule as the beh boat.
+    """
+    k = 0.55
+    inner_left = left + 96               # 96 = vertical stem
+    bend = 120                           # radius of the bar's turn-down
+    Rx = J - bend                        # outer right wall of the bowl
+    d_in = d_out + 104                   # 104 = horizontal stroke
+    ix = Rx - 104                        # inner right wall
+    # Both side walls turn into the bowl at the same height as the bar's
+    # bend, and the inner curve turns at the SAME y as the outer — that is
+    # what makes the stroke a true constant-width offset round the U.
+    # Letting these drift apart put a visible dent in the outer edge.
+    wall_y = iwall_y = -bend
+    Bx = round((left + Rx) / 4) * 2      # outer bowl centre, on the 2-grid
+    Ix = round((inner_left + ix) / 4) * 2
+
+    def px(v):
+        return round(v / 2) * 2
+
+    return [
+        # --- outer: the bar turns down, then a round U, then the left wall
+        (J, 0, land_type, True),                    # tangential landing
+        (px(J - k * bend), 0, None, False),
+        (Rx, px(-k * bend), None, False),
+        (Rx, -bend, "curve", True),                 # onto the right wall
+        (Rx, px(d_out + k * (wall_y - d_out)), None, False),
+        (px(Bx + k * (Rx - Bx)), d_out, None, False),
+        (Bx, d_out, "curve", True),                 # bowl outer bottom
+        (px(Bx - k * (Bx - left)), d_out, None, False),
+        (left, px(d_out + k * (wall_y - d_out)), None, False),
+        (left, wall_y, "curve", True),              # onto the left wall
+        (left, term - 16, "line", False),
+        (left + 16, term, "line", False),           # chamfer
+        (left + 80, term, "line", False),           # terminal flat
+        (inner_left, term - 16, "line", False),     # chamfer
+        # --- inner: back down the left wall, round the bowl, into the tooth
+        (inner_left, iwall_y, "line", True),
+        (inner_left, px(d_in + k * (iwall_y - d_in)), None, False),
+        (px(Ix - k * (Ix - inner_left)), d_in, None, False),
+        (Ix, d_in, "curve", True),                  # bowl inner bottom
+        (px(Ix + k * (ix - Ix)), d_in, None, False),
+        (ix, px(d_in + k * (iwall_y - d_in)), None, False),
+        (ix, iwall_y, "curve", True),               # onto the inner right wall
+        (ix, px(104 - k * (104 - iwall_y)), None, False),
+        (px(J - k * (J - ix)), 104, None, False),
+        (J, 104, "curve", True),                    # tangential exit onto bar
+    ]
+
+
+def _seen_with_cup(donor_contour, name, advance, anchors, dx=640,
                    extra_contours=()):
-    """Replace the left stub of a seen-family donor with the cup tail.
-    dx is the cup width (donor shifts right by it)."""
+    """Replace the left stub of a seen-family donor with the flowing tail.
+    dx is the tail width (the donor shifts right by it)."""
     d = [(x + dx, y, t, s) for x, y, t, s in donor_contour]
     i00 = find_pt(d, 0 + dx, 0)          # stub corner (0,0)
     i104 = find_pt(d, 0 + dx, 104)       # stub corner (0,104)
     # donor order: ...bottom edge -> (0,0) -> stub pts -> (0,104) -> top...
-    # the landing point must keep the type of the segment that reaches it,
-    # which is the donor point we are replacing (a line on the sad prefix).
-    cup = cup_run(wall_x=dx, depth=-192, land_type=d[i00][2] or "line")
-    c = d[:i00] + cup + d[i104 + 1:]
+    tail = seen_tail_run(dx, land_type=d[i00][2] or "line")
+    c = d[:i00] + tail + d[i104 + 1:]
     extras = [[(x + dx, y, t, s) for x, y, t, s in e]
               for e in extra_contours]
     write_glyph(name, advance, contours=[c] + extras, anchors=anchors)
@@ -365,20 +422,20 @@ def _seen_with_cup(donor_contour, name, advance, anchors, dx=460,
 def build_seen_isol():
     donor = read_points("seen-ar.init")[0]
     anchors = [("top", 892, 400), ("topDots", 892, 432), ("bottom", 892, 0)]
-    _seen_with_cup(donor, "seen-ar", 864 + 460, anchors)
+    _seen_with_cup(donor, "seen-ar", 864 + 640, anchors)
 
 
 def build_seen_fina():
     donor = read_points("seen-ar.medi")[0]  # the freshly built medi
     anchors = [("top", 892, 400), ("topDots", 892, 432), ("bottom", 892, 0)]
-    _seen_with_cup(donor, "seen-ar.fina", 992 + 460, anchors)
+    _seen_with_cup(donor, "seen-ar.fina", 992 + 640, anchors)
 
 
 def build_sad_isol():
     donor = read_points("sad-ar.init")
     anchors = [("top", 1204, 464), ("topDots", 1204, 464),
                ("bottom", 1204, 0)]
-    _seen_with_cup(donor[0], "sad-ar", 1200 + 460, anchors,
+    _seen_with_cup(donor[0], "sad-ar", 1200 + 640, anchors,
                    extra_contours=donor[1:])
 
 
@@ -386,7 +443,7 @@ def build_sad_fina():
     donor = read_points("sad-ar.medi")
     anchors = [("top", 1204, 464), ("topDots", 1204, 464),
                ("bottom", 1204, 0)]
-    _seen_with_cup(donor[0], "sad-ar.fina", 1264 + 460, anchors,
+    _seen_with_cup(donor[0], "sad-ar.fina", 1264 + 640, anchors,
                    extra_contours=donor[1:])
 
 
