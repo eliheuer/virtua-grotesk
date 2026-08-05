@@ -30,6 +30,8 @@
 			<point x="32" y="64" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="bottom" x="360" y="0"/>
+	<anchor name="top" x="360" y="768"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

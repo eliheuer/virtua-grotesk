@@ -24,6 +24,8 @@
 			<point x="72" y="560" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="bottom" x="168" y="0"/>
+	<anchor name="top" x="168" y="576"/>
 	<lib>
 		<dict>
 			<key>org.fontgarden.transfer</key>
