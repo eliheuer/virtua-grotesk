@@ -195,9 +195,11 @@ def write_glyph(name, advance, contours=(), components=(), anchors=(),
     body = []
     body.append('<?xml version="1.0" encoding="UTF-8"?>')
     body.append(f'<glyph name="{name}" format="2">')
-    body.append(f'\t<advance width="{fmt_num(advance)}"/>')
+    # Runebender writes <unicode> BEFORE <advance>; match it so a
+    # regenerated glyph does not churn against a Runebender save.
     if unicode_hex:
         body.append(f'\t<unicode hex="{unicode_hex}"/>')
+    body.append(f'\t<advance width="{fmt_num(advance)}"/>')
     body.append("\t<outline>")
     for base, dx, dy in components:
         body.append(component_xml(base, dx, dy))
@@ -223,8 +225,11 @@ def write_glyph(name, advance, contours=(), components=(), anchors=(),
         if unicode_hex is None:
             hexes = re.findall(r'<unicode hex="([0-9A-Fa-f]+)"/>', old)
             if hexes:
-                t = text.replace("\t<outline>", "".join(
-                    f'\t<unicode hex="{h}"/>\n' for h in hexes) + "\t<outline>")
+                t = text.replace(f'\t<advance width="{fmt_num(advance)}"/>',
+                                 "".join(f'\t<unicode hex="{h}"/>\n'
+                                         for h in hexes)
+                                 + f'\t<advance width="{fmt_num(advance)}"/>',
+                                 1)
             else:
                 t = text
         else:

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tehRing-ar.fina" format="2">
-	<advance width="1104"/>
+	<advance width="1024"/>
 	<outline>
 		<component base="behDotless-ar.fina"/>
-		<component base="ring-ar" xOffset="784" yOffset="-128"/>
+		<component base="ring-ar" xOffset="432" yOffset="-288"/>
 	</outline>
 	<lib>
 		<dict>
