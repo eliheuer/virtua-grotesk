@@ -200,6 +200,35 @@ def find_pt(contour, x, y):
     raise ValueError(f"point ({x},{y}) not in donor")
 
 
+def orient_to_stub(contour, jx):
+    """Rotate (and if needed reverse) a donor so its left joining stub runs
+    FORWARD from index 0, starting at (jx, 0). Returns (contour, k) where k
+    is the index of the stub's last point (jx, 104), so a caller splices
+    `replacement + contour[k + 1:]`.
+
+    Two things this guards:
+
+    * Direction. scripts/normalize_winding.py reverses blue contours to get
+      outer-CCW, so a blue donor arrives at (jx, 104) FIRST. The naive
+      splice then silently dropped everything after the stub — seen.fina
+      and sad lost their teeth and loop that way.
+    * Stub length. The plain idiom is 4 points, but hah/ain step in from
+      the bar first, giving 6. Scan for the closing point instead of
+      assuming.
+    """
+    from arabic_build import reverse_contour
+    for cand in (contour, reverse_contour(contour)):
+        try:
+            i0 = find_pt(cand, jx, 0)
+        except ValueError:
+            continue
+        rot = cand[i0:] + cand[:i0]
+        for k in range(2, 8):
+            if k < len(rot) and rot[k][:2] == (jx, 104):
+                return rot, k
+    raise ValueError(f"no joining stub at x={jx} in donor")
+
+
 def cup_replacing_stub(wall_x, tip_x=64, depth=-160, tip_top=288):
     """The noon-cup run that replaces a left joining stub, traversed in the
     donor direction (arriving at the stub's (0,0) corner from the bottom
@@ -294,12 +323,11 @@ def _feh_with_boat(donor_name, out_name, advance, dxt=384):
     outer_i = next(i for i, c in enumerate(contours)
                    if any(p[0] == -16 for p in c))
     d = [(x + dxt, y, t, s) for x, y, t, s in contours[outer_i]]
-    i0 = find_pt(d, dxt, 0)
-    i104 = find_pt(d, dxt, 104)
+    d, k = orient_to_stub(d, dxt)
     boat = boat_run(wall_x=dxt)
     x, y, _t, s = boat[0]
-    boat[0] = (x, y, d[i0][2], s)
-    c = d[:i0] + boat + d[i104 + 1:]
+    boat[0] = (x, y, d[0][2], s)
+    c = boat + d[k + 1:]
     out = [c] + [[(x + dxt, y, t, s) for x, y, t, s in contours[i]]
                  for i in range(len(contours)) if i != outer_i]
     write_glyph(out_name, advance, contours=out,
@@ -409,11 +437,9 @@ def _seen_with_cup(donor_contour, name, advance, anchors, dx=640,
     """Replace the left stub of a seen-family donor with the flowing tail.
     dx is the tail width (the donor shifts right by it)."""
     d = [(x + dx, y, t, s) for x, y, t, s in donor_contour]
-    i00 = find_pt(d, 0 + dx, 0)          # stub corner (0,0)
-    i104 = find_pt(d, 0 + dx, 104)       # stub corner (0,104)
-    # donor order: ...bottom edge -> (0,0) -> stub pts -> (0,104) -> top...
-    tail = seen_tail_run(dx, land_type=d[i00][2] or "line")
-    c = d[:i00] + tail + d[i104 + 1:]
+    d, k = orient_to_stub(d, dx)
+    tail = seen_tail_run(dx, land_type=d[0][2] or "line")
+    c = tail + d[k + 1:]
     extras = [[(x + dx, y, t, s) for x, y, t, s in e]
               for e in extra_contours]
     write_glyph(name, advance, contours=[c] + extras, anchors=anchors)
@@ -515,12 +541,11 @@ def _bowl_replacing_stub(donor_name, out_name, advance, dxt, jx,
     the junction column."""
     contours = read_points(donor_name)
     d = [(x + dxt, y, t, s) for x, y, t, s in contours[0]]
-    i0 = find_pt(d, jx + dxt, 0)
-    i5 = find_pt(d, jx + dxt, 104)
+    d, k = orient_to_stub(d, jx + dxt)
     bowl = hah_bowl_run(dx=jx + dxt - 64)
     x, y, _t, s = bowl[0]
-    bowl[0] = (x, y, d[i0][2], s)         # inherit the landing type
-    c = bowl + d[i5 + 1:] + d[:i0]
+    bowl[0] = (x, y, d[0][2], s)          # inherit the landing type
+    c = bowl + d[k + 1:]
     out = [c]
     for extra in contours[1:]:
         out.append([(x + dxt, y, t, s) for x, y, t, s in extra])
@@ -714,11 +739,10 @@ def _qaf_with_cup(donor_name, out_name, advance, dxt):
     outer_i = next(i for i, c in enumerate(contours)
                    if any(p[0] == -16 for p in c))
     d = [(x + dxt, y, t, s) for x, y, t, s in contours[outer_i]]
-    i0 = find_pt(d, dxt, 0)
-    i104 = find_pt(d, dxt, 104)
+    d, k = orient_to_stub(d, dxt)
     cup = cup_run(wall_x=dxt, depth=-288, tip_top=240,
-                  land_type=d[i0][2])
-    c = d[:i0] + cup + d[i104 + 1:]
+                  land_type=d[0][2])
+    c = cup + d[k + 1:]
     out = [c] + [[(x + dxt, y, t, s) for x, y, t, s in contours[i]]
                  for i in range(len(contours)) if i != outer_i]
     # bottomDots inside the cup, per the hah/jeem convention
