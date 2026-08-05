@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hamza-ar" format="2">
-	<advance width="400"/>
 	<unicode hex="0621"/>
+	<advance width="400"/>
 	<outline>
 		<contour>
 			<point x="46" y="0" type="line"/>
@@ -40,7 +40,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>0,0.67,0.91,1</string>
+			<string>0.09,0.72,0.44,1</string>
 		</dict>
 	</lib>
 </glyph>
