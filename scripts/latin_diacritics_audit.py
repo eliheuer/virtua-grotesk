@@ -87,11 +87,13 @@ def main():
         for cand in (f"{m}comb", m):
             if cand in data:
                 d = data[cand]
-                root = root_of(R, cr, cand)
-                ys = [float(p.get("y")) for p in root.iter("point")]
-                xs = [float(p.get("x")) for p in root.iter("point")]
-                bb = (f"{min(xs):.0f},{min(ys):.0f}..{max(xs):.0f},{max(ys):.0f}"
-                      if xs else "EMPTY")
+                # resolve components: the comb glyphs are components of the
+                # spacing accents and have no points of their own
+                sys.path.insert(0, str(pathlib.Path(__file__).parent))
+                from latin_marks import bbox as _bbox
+                bb_t = _bbox(R, cr, cand)
+                bb = (f"{bb_t[0]:.0f},{bb_t[1]:.0f}..{bb_t[2]:.0f},{bb_t[3]:.0f}"
+                      if bb_t else "EMPTY")
                 anc = ",".join(k for k in d["anchors"] if k.startswith("_"))
                 print(f"{cand:22s} {'yes':>7s} {anc or 'MISSING':>14s} {bb:>26s}")
                 break
