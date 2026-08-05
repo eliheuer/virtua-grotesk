@@ -390,11 +390,42 @@ def lift_bar_tops(original, moved):
     return out
 
 
-def write_bold(name, contours, advance, cmap_b):
+def regenerate_bold(name, contours, advance, cmap_r, cmap_b):
+    """Write a complete Bold glif from the emboldened contours.
+
+    Needed when the Regular's structure has changed under us — a glyph
+    redrawn from components into outlines, say — so the Bold has no
+    matching contour blocks to patch. Unicodes and anchors are carried
+    over from the Regular so nothing is lost.
+    """
+    src = ET.parse(REGULAR / "glyphs" / cmap_r[name]).getroot()
+    body = ['<?xml version="1.0" encoding="UTF-8"?>',
+            f'<glyph name="{name}" format="2">']
+    for u in src.iter("unicode"):
+        body.append(f'\t<unicode hex="{u.get("hex")}"/>')
+    body.append(f'\t<advance width="{fmt_num(advance)}"/>')
+    body.append("\t<outline>")
+    for c in contours:
+        body.append(contour_xml(c))
+    body.append("\t</outline>")
+    for a in src.iter("anchor"):
+        body.append(f'\t<anchor name="{a.get("name")}" '
+                    f'x="{a.get("x")}" y="{a.get("y")}"/>')
+    body += ["\t<lib>", "\t\t<dict>",
+             "\t\t\t<key>public.markColor</key>",
+             "\t\t\t<string>0,0.67,0.91,1</string>",
+             "\t\t</dict>", "\t</lib>", "</glyph>", ""]
+    (BOLD / "glyphs" / cmap_b[name]).write_text("\n".join(body))
+
+
+def write_bold(name, contours, advance, cmap_b, cmap_r=None):
     path = BOLD / "glyphs" / cmap_b[name]
     text = path.read_text()
     blocks = re.findall(r"\t\t<contour>.*?\t\t</contour>", text, re.S)
     if len(blocks) != len(contours):
+        if cmap_r is not None:
+            regenerate_bold(name, contours, advance, cmap_r, cmap_b)
+            return
         raise AssertionError(f"{name}: {len(blocks)} blocks vs "
                              f"{len(contours)} contours")
     for old, new in zip(blocks, contours):
@@ -549,7 +580,7 @@ def main():
                   f"ink {lo_r:.0f}..{hi_r:.0f} -> {lo_m:.0f}..{hi_m:.0f}")
         else:
             try:
-                write_bold(name, moved, advance, cb)
+                write_bold(name, moved, advance, cb, cr)
                 done += 1
             except AssertionError as e:
                 skipped.append(str(e))

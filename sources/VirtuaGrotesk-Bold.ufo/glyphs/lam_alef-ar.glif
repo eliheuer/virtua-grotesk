@@ -1,9 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alef-ar" format="2">
-	<advance width="544"/>
+	<advance width="616"/>
 	<outline>
-		<component base="lam-ar.init" xOffset="256"/>
-		<component base="alef-ar.fina"/>
+		<contour>
+			<point x="28" y="8" type="line"/>
+			<point x="62" y="0" type="line"/>
+			<point x="482" y="0" type="line"/>
+			<point x="516" y="8" type="line"/>
+			<point x="516" y="190" type="line"/>
+			<point x="352" y="362" type="line"/>
+			<point x="352" y="368" type="line"/>
+			<point x="516" y="536" type="line"/>
+			<point x="516" y="760" type="line"/>
+			<point x="482" y="768" type="line"/>
+			<point x="382" y="768" type="line"/>
+			<point x="348" y="760" type="line"/>
+			<point x="348" y="582" type="line"/>
+			<point x="274" y="448" type="line"/>
+			<point x="270" y="448" type="line"/>
+			<point x="196" y="582" type="line"/>
+			<point x="196" y="760" type="line"/>
+			<point x="162" y="768" type="line"/>
+			<point x="62" y="768" type="line"/>
+			<point x="28" y="760" type="line"/>
+			<point x="28" y="536" type="line"/>
+			<point x="192" y="370" type="line"/>
+			<point x="192" y="364" type="line"/>
+			<point x="28" y="170" type="line"/>
+		</contour>
+		<contour>
+			<point x="196" y="146" type="line"/>
+			<point x="270" y="284" type="line"/>
+			<point x="274" y="284" type="line"/>
+			<point x="348" y="128" type="line"/>
+			<point x="378" y="114" type="line"/>
+			<point x="374" y="176" type="line"/>
+			<point x="170" y="176" type="line"/>
+			<point x="166" y="116" type="line"/>
+		</contour>
 	</outline>
 	<lib>
 		<dict>

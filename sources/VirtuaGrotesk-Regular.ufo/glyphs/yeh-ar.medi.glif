@@ -3,12 +3,20 @@
 	<advance width="416"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="twodotshorizontalbelow-ar"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="56" identifier="060aa63e-aa0e-4a58-80ee-d353d7289ce1"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>060aa63e-aa0e-4a58-80ee-d353d7289ce1</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>

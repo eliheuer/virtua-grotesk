@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="teh-ar.init" format="2">
-	<advance width="440"/>
+	<advance width="344"/>
 	<outline>
 		<contour>
 			<point x="80" y="0" type="line"/>
@@ -12,13 +12,13 @@
 			<point x="174" y="460" type="line"/>
 			<point x="140" y="424" type="line"/>
 			<point x="140" y="208" type="line" smooth="yes"/>
-			<point x="150" y="164"/>
-			<point x="144" y="140"/>
-			<point x="80" y="166" type="curve"/>
-			<point x="-10" y="166" type="line"/>
-			<point x="-52" y="104" type="line"/>
-			<point x="-52" y="8" type="line"/>
-			<point x="-18" y="0" type="line"/>
+			<point x="148" y="160"/>
+			<point x="144" y="176"/>
+			<point x="80" y="176" type="curve"/>
+			<point x="0" y="176" type="line"/>
+			<point x="-16" y="160" type="line"/>
+			<point x="-16" y="16" type="line"/>
+			<point x="0" y="0" type="line"/>
 		</contour>
 		<component base="twodotshorizontalabove-ar" xOffset="76" yOffset="-128"/>
 	</outline>
