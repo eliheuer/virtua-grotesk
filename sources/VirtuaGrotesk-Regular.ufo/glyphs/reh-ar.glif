@@ -22,6 +22,10 @@
 			<point x="504" y="-192"/>
 		</contour>
 	</outline>
+	<anchor name="bottom" x="268" y="-256"/>
+	<anchor name="top" x="268" y="432"/>
+	<anchor name="bottomDots" x="268" y="-256"/>
+	<anchor name="topDots" x="268" y="432"/>
 	<lib>
 		<dict>
 			<key>public.kern1</key>

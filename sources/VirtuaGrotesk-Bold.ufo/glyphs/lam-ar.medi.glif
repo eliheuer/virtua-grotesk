@@ -33,6 +33,10 @@
 			<point x="64" y="0" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
+	<anchor name="bottom" x="226" y="-24"/>
+	<anchor name="top" x="226" y="768"/>
+	<anchor name="bottomDots" x="226" y="-24"/>
+	<anchor name="topDots" x="226" y="768"/>
 	<lib>
 		<dict>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>

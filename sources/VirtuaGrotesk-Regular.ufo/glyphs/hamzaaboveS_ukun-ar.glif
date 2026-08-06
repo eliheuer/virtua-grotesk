@@ -3,8 +3,12 @@
 	<advance width="224"/>
 	<outline>
 		<component base="hamzaabove-ar"/>
-		<component base="sukun-ar" yOffset="176"/>
+		<component base="sukun-ar" yOffset="246"/>
 	</outline>
+	<anchor name="bottom" x="112" y="832"/>
+	<anchor name="top" x="112" y="1094"/>
+	<anchor name="topDots" x="112" y="1024"/>
+	<anchor name="bottomDots" x="112" y="832"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

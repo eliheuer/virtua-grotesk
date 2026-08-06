@@ -3,8 +3,12 @@
 	<advance width="512"/>
 	<outline>
 		<component base="keheh-ar.init"/>
-		<component base="gafsarkashabove-ar" xOffset="232" yOffset="184"/>
+		<component base="gafsarkashabove-ar" xOffset="63" yOffset="254"/>
 	</outline>
+	<anchor name="bottom" x="200" y="0"/>
+	<anchor name="top" x="368" y="1094"/>
+	<anchor name="topDots" x="200" y="768"/>
+	<anchor name="bottomDots" x="200" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

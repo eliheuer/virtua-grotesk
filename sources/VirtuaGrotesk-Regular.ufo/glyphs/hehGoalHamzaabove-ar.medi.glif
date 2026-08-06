@@ -3,8 +3,12 @@
 	<advance width="480"/>
 	<outline>
 		<component base="hehGoal-ar.medi"/>
-		<component base="hamzaabove-ar" xOffset="120"/>
+		<component base="hamzaabove-ar" xOffset="120" yOffset="-320"/>
 	</outline>
+	<anchor name="bottom" x="232" y="-296"/>
+	<anchor name="top" x="232" y="704"/>
+	<anchor name="topDots" x="232" y="448"/>
+	<anchor name="bottomDots" x="232" y="-296"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

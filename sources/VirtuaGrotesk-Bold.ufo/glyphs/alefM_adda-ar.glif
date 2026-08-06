@@ -4,8 +4,12 @@
 	<advance width="224"/>
 	<outline>
 		<component base="alef-ar"/>
-		<component base="madda-ar" xOffset="-32" yOffset="168"/>
+		<component base="madda-ar" xOffset="-28" yOffset="196"/>
 	</outline>
+	<anchor name="bottom" x="116" y="0"/>
+	<anchor name="top" x="116" y="1000"/>
+	<anchor name="topDots" x="112" y="768"/>
+	<anchor name="bottomDots" x="112" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

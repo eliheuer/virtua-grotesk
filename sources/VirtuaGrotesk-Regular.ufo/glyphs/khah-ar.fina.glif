@@ -5,6 +5,10 @@
 		<component base="hah-ar.fina"/>
 		<component base="dotabove-ar" xOffset="334" yOffset="-46"/>
 	</outline>
+	<anchor name="bottom" x="416" y="-424"/>
+	<anchor name="top" x="486" y="802"/>
+	<anchor name="bottomDots" x="416" y="68"/>
+	<anchor name="topDots" x="486" y="530"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

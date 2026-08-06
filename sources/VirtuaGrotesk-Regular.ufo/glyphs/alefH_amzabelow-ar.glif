@@ -6,6 +6,10 @@
 		<component base="alef-ar"/>
 		<component base="hamzabelow-ar"/>
 	</outline>
+	<anchor name="bottom" x="112" y="-256"/>
+	<anchor name="top" x="112" y="768"/>
+	<anchor name="topDots" x="112" y="768"/>
+	<anchor name="bottomDots" x="112" y="0"/>
 	<lib>
 		<dict>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>

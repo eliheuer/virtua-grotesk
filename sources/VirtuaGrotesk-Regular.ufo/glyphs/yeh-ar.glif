@@ -4,8 +4,12 @@
 	<advance width="944"/>
 	<outline>
 		<component base="alefMaksura-ar"/>
-		<component base="twodotshorizontalbelow-ar" xOffset="168" yOffset="8" identifier="a4777962-0d60-4709-a09d-5f8ad386d16a"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="304"/>
 	</outline>
+	<anchor name="bottom" x="456" y="-272"/>
+	<anchor name="top" x="456" y="448"/>
+	<anchor name="topDots" x="456" y="448"/>
+	<anchor name="bottomDots" x="456" y="0"/>
 	<lib>
 		<dict>
 			<key>public.kern1</key>

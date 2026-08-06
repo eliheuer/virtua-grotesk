@@ -4,8 +4,12 @@
 	<outline>
 		<component base="lam-ar.init" xOffset="256"/>
 		<component base="alef-ar.fina"/>
-		<component base="wasla-ar" xOffset="144"/>
+		<component base="wasla-ar" xOffset="-6" yOffset="218"/>
 	</outline>
+	<anchor name="bottom" x="106" y="0"/>
+	<anchor name="top" x="106" y="1094"/>
+	<anchor name="topDots" x="106" y="768"/>
+	<anchor name="bottomDots" x="106" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

@@ -5,6 +5,8 @@
 	<outline>
 		<component base="threedotsupabove-ar"/>
 	</outline>
+	<anchor name="top" x="232" y="1100"/>
+	<anchor name="_topDots" x="232" y="516"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

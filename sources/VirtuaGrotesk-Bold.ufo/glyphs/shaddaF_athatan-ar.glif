@@ -3,9 +3,13 @@
 	<advance width="224"/>
 	<outline>
 		<component base="shadda-ar"/>
-		<component base="fatha-ar" yOffset="32"/>
-		<component base="fatha-ar" yOffset="184"/>
+		<component base="fatha-ar" yOffset="214"/>
+		<component base="fatha-ar" yOffset="-290"/>
 	</outline>
+	<anchor name="bottom" x="112" y="374"/>
+	<anchor name="top" x="112" y="1094"/>
+	<anchor name="topDots" x="112" y="876"/>
+	<anchor name="bottomDots" x="112" y="660"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

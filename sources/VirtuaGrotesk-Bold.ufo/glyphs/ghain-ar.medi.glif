@@ -5,6 +5,10 @@
 		<component base="ain-ar.medi"/>
 		<component base="dotabove-ar"/>
 	</outline>
+	<anchor name="bottom" x="314" y="0"/>
+	<anchor name="top" x="314" y="876"/>
+	<anchor name="topDots" x="314" y="460"/>
+	<anchor name="bottomDots" x="314" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

@@ -3,8 +3,12 @@
 	<advance width="672"/>
 	<outline>
 		<component base="hah-ar.medi"/>
-		<component base="dotbelow-ar" xOffset="208" yOffset="8" identifier="e347093c-d7d2-4fc7-a806-75dd48305bcf"/>
+		<component base="dotbelow-ar" xOffset="276"/>
 	</outline>
+	<anchor name="bottom" x="400" y="-272"/>
+	<anchor name="top" x="324" y="574"/>
+	<anchor name="bottomDots" x="400" y="0"/>
+	<anchor name="topDots" x="326" y="530"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

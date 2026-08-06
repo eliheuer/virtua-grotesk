@@ -3,8 +3,12 @@
 	<advance width="600"/>
 	<outline>
 		<component base="reh-ar.fina"/>
-		<component base="dotabove-ar" xOffset="300" yOffset="-136" identifier="9bbfffeb-bcf8-4131-9eed-10ef8f2d2ba4"/>
+		<component base="dotabove-ar" xOffset="204" yOffset="-248"/>
 	</outline>
+	<anchor name="bottom" x="356" y="-240"/>
+	<anchor name="top" x="356" y="600"/>
+	<anchor name="topDots" x="356" y="328"/>
+	<anchor name="bottomDots" x="356" y="-240"/>
 	<lib>
 		<dict>
 			<key>public.kern1</key>

@@ -65,6 +65,10 @@
 			<point x="398" y="-306"/>
 		</contour>
 	</outline>
+	<anchor name="bottom" x="240" y="-306"/>
+	<anchor name="top" x="240" y="458"/>
+	<anchor name="bottomDots" x="240" y="-306"/>
+	<anchor name="topDots" x="240" y="458"/>
 	<lib>
 		<dict>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>

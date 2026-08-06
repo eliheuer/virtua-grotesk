@@ -3,8 +3,12 @@
 	<advance width="1264"/>
 	<outline>
 		<component base="tah-ar.fina"/>
-		<component base="dotabove-ar" xOffset="592" yOffset="-112"/>
+		<component base="dotabove-ar" xOffset="480" yOffset="192"/>
 	</outline>
+	<anchor name="bottom" x="744" y="0"/>
+	<anchor name="top" x="744" y="1040"/>
+	<anchor name="topDots" x="632" y="768"/>
+	<anchor name="bottomDots" x="632" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

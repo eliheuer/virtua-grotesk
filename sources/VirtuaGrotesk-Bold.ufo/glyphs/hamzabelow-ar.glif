@@ -37,6 +37,10 @@
 			<point x="-20" y="-244" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="top" x="112" y="-50"/>
+	<anchor name="bottomDots" x="112" y="-270"/>
+	<anchor name="topDots" x="112" y="-50"/>
+	<anchor name="bottom" x="112" y="-318"/>
 	<anchor name="_bottom" x="112" y="0"/>
 	<lib>
 		<dict>

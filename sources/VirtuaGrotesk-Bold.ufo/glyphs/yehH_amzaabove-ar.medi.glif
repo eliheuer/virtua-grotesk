@@ -3,8 +3,12 @@
 	<advance width="416"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="hamzaabove-ar" xOffset="96" yOffset="-288"/>
+		<component base="hamzaabove-ar" xOffset="96" yOffset="-272"/>
 	</outline>
+	<anchor name="bottom" x="208" y="-22"/>
+	<anchor name="top" x="208" y="780"/>
+	<anchor name="topDots" x="208" y="432"/>
+	<anchor name="bottomDots" x="208" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

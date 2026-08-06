@@ -4,8 +4,12 @@
 	<advance width="480"/>
 	<outline>
 		<component base="dal-ar"/>
-		<component base="dotabove-ar" xOffset="88"/>
+		<component base="dotabove-ar" xOffset="120" yOffset="-176"/>
 	</outline>
+	<anchor name="bottom" x="272" y="0"/>
+	<anchor name="top" x="272" y="672"/>
+	<anchor name="topDots" x="272" y="400"/>
+	<anchor name="bottomDots" x="272" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

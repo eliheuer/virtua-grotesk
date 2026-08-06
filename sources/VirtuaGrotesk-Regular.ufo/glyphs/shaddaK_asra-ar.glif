@@ -3,8 +3,12 @@
 	<advance width="224"/>
 	<outline>
 		<component base="shadda-ar"/>
-		<component base="kasra-ar"/>
+		<component base="kasra-ar" yOffset="760"/>
 	</outline>
+	<anchor name="bottom" x="112" y="520"/>
+	<anchor name="top" x="112" y="896"/>
+	<anchor name="topDots" x="112" y="848"/>
+	<anchor name="bottomDots" x="112" y="688"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

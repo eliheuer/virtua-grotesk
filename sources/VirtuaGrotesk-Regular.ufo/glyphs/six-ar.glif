@@ -24,6 +24,10 @@
 			<point x="416" y="240" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
+	<anchor name="bottom" x="232" y="0"/>
+	<anchor name="top" x="232" y="640"/>
+	<anchor name="bottomDots" x="232" y="0"/>
+	<anchor name="topDots" x="232" y="640"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

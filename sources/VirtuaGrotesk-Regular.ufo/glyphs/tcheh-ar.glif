@@ -4,8 +4,12 @@
 	<advance width="864"/>
 	<outline>
 		<component base="hah-ar"/>
-		<component base="threedotsdowncenter-ar" xOffset="184" yOffset="-508"/>
+		<component base="threedotsdowncenter-ar" xOffset="254" yOffset="546"/>
 	</outline>
+	<anchor name="bottom" x="416" y="-424"/>
+	<anchor name="top" x="486" y="1010"/>
+	<anchor name="bottomDots" x="416" y="68"/>
+	<anchor name="topDots" x="486" y="530"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
