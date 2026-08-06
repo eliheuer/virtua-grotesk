@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qaf-ar.medi" format="2">
-	<advance width="592"/>
+	<advance width="512"/>
 	<outline>
 		<component base="fehDotless-ar.medi"/>
-		<component base="twodotshorizontalabove-ar" xOffset="152" yOffset="-144"/>
+		<component base="twodotshorizontalabove-ar" xOffset="108" yOffset="-120" identifier="6bf0db37-882e-4590-bd13-4b50acdc8ae6"/>
 	</outline>
 	<lib>
 		<dict>
@@ -11,6 +11,14 @@
 			<string>2025-06-22 06:34:33 +0000</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>6bf0db37-882e-4590-bd13-4b50acdc8ae6</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>

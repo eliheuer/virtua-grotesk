@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noon-ar.medi" format="2">
-	<advance width="416"/>
+	<advance width="480"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="dotabove-ar" xOffset="56" yOffset="-144"/>
+		<component base="dotabove-ar" xOffset="86" yOffset="-256" identifier="6d797f05-6a4e-45b0-bc1d-764246d43d1b"/>
 	</outline>
 	<lib>
 		<dict>
@@ -11,6 +11,14 @@
 			<string>2025-06-22 06:32:51 +0000</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>6d797f05-6a4e-45b0-bc1d-764246d43d1b</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
