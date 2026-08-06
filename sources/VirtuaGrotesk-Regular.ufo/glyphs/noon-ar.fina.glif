@@ -3,7 +3,7 @@
 	<advance width="680"/>
 	<outline>
 		<component base="noonghunna-ar.fina"/>
-		<component base="dotabove-ar" xOffset="192" yOffset="-456"/>
+		<component base="dotabove-ar" xOffset="192" yOffset="-712" identifier="798775f6-2b8e-438c-a6b6-94cd0cf6142a"/>
 	</outline>
 	<anchor name="bottom" x="340" y="-272"/>
 	<anchor name="top" x="344" y="392"/>
@@ -13,7 +13,7 @@
 			<string>0,0.67,0.91,1</string>
 			<key>public.objectLibs</key>
 			<dict>
-				<key>776bcf4a-d08f-4e79-b279-61f74f7bf27d</key>
+				<key>798775f6-2b8e-438c-a6b6-94cd0cf6142a</key>
 				<dict>
 					<key>com.glyphsapp.component.alignment</key>
 					<integer>-1</integer>

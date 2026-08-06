@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yeh-ar.medi" format="2">
-	<advance width="480"/>
+	<advance width="448"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="twodotshorizontalbelow-ar" xOffset="96"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="88" yOffset="8" identifier="676c29a4-92d6-440b-8b60-941d68cc8148"/>
 	</outline>
 	<anchor name="bottom" x="248" y="-272"/>
 	<anchor name="top" x="240" y="376"/>
@@ -13,7 +13,7 @@
 			<string>0.09,0.72,0.44,1</string>
 			<key>public.objectLibs</key>
 			<dict>
-				<key>060aa63e-aa0e-4a58-80ee-d353d7289ce1</key>
+				<key>676c29a4-92d6-440b-8b60-941d68cc8148</key>
 				<dict>
 					<key>com.glyphsapp.component.alignment</key>
 					<integer>-1</integer>
