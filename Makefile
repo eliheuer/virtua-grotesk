@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof review review-rubik qa-diacritics specimen runebender glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build proof review review-rubik qa-diacritics specimen runebender runebender-tab glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -15,7 +15,8 @@ help:
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
 		'  make specimen       (not implemented yet — marketing specimen is future work)' \
-		'  make runebender     Open sources/VirtuaGrotesk.designspace in chromeless Runebender web' \
+		'  make runebender     Open the designspace in Runebender web, chromeless app window' \
+		'  make runebender-tab Same, but as a tab in your default browser' \
 		'  make glyph-ai-inventory  Scan Runebender color labels for AI glyph work' \
 		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
 		'  make qa             Run Fontspector Google Fonts profile' \
@@ -74,8 +75,15 @@ specimen:
 # documentation/social-assets/ (render each with `designbot <script.rs>`);
 # the old batch target rendered a since-deleted script.
 
+# Chromeless app window on its own Chrome profile: the editor and nothing
+# else, which is how the design work happens.
 runebender:
 	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-web.sh
+
+# The same server, opened as an ordinary tab in the default browser —
+# devtools, the address bar and your logged-in profile all to hand.
+runebender-tab:
+	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" RUNEBENDER_OPEN_MODE=tab ./runebender-web.sh
 
 glyph-ai-inventory:
 	$(PYTHON) scripts/glyph_ai_harness.py inventory

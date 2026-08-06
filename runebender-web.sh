@@ -7,6 +7,10 @@ PORT="${RUNEBENDER_PORT:-8765}"
 URL="http://localhost:${PORT}/"
 PROFILE_DIR="${RUNEBENDER_CHROME_PROFILE:-$HOME/.runebender-web-chrome}"
 CHROME_APP="${RUNEBENDER_CHROME_APP:-Google Chrome}"
+# app: a chromeless window with its own profile (the default, and what you
+# want for design work). tab: an ordinary tab in your usual browser, where
+# devtools and the address bar are a keystroke away.
+OPEN_MODE="${RUNEBENDER_OPEN_MODE:-app}"
 
 cd "$ROOT_DIR"
 
@@ -36,6 +40,27 @@ fi
 
 info_url="${URL}runebender/api/info"
 expected_entry="$ROOT_DIR/$SOURCE_PATH"
+
+open_default_tab() {
+  echo "  url      $URL"
+  if command -v open >/dev/null 2>&1; then
+    echo "Opening Runebender web in your default browser."
+    open "$URL" && return 0
+  elif command -v xdg-open >/dev/null 2>&1; then
+    echo "Opening Runebender web in your default browser."
+    xdg-open "$URL" >/dev/null 2>&1 && return 0
+  fi
+  echo "Could not open a browser. Open this URL manually: $URL" >&2
+  return 1
+}
+
+open_editor() {
+  if [[ "$OPEN_MODE" == "tab" ]]; then
+    open_default_tab
+  else
+    open_chrome_app
+  fi
+}
 
 open_chrome_app() {
   echo "  url      $URL"
@@ -88,7 +113,7 @@ if [[ "$existing_info" == *'"server":"runebender-serve"'* ]]; then
     exit 1
   fi
   echo "Using existing Runebender server at ${URL}"
-  open_chrome_app
+  open_editor
   echo "If no window appeared, check whether Chrome opened behind other windows."
   exit 0
 fi
@@ -97,6 +122,7 @@ echo "Starting Runebender web:"
 echo "  source  $ROOT_DIR/$SOURCE_PATH"
 echo "  url     $URL"
 echo "  browser ${BROWSER_BIN:-$CHROME_APP}"
+echo "  window  $OPEN_MODE"
 
 runebender-serve "$SOURCE_PATH" --port "$PORT" &
 server_pid=$!
@@ -117,7 +143,7 @@ for _ in {1..50}; do
 done
 
 curl -fsS "$info_url" >/dev/null
-open_chrome_app
+open_editor
 
 echo "Runebender web is running. Press Ctrl+C here to stop the server."
 wait "$server_pid"
