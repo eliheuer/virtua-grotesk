@@ -137,6 +137,19 @@ def set_anchors(ufo, cmap, n, new, overwrite=False):
     return changed
 
 
+def drop_anchors(ufo, cmap, n, names):
+    """Remove named anchors from a glif."""
+    p = gpath(ufo, cmap, n)
+    text = p.read_text()
+    out = text
+    for name in names:
+        out = re.sub(rf'\t<anchor name="{re.escape(name)}"[^/]*/>\n', "", out)
+    if out != text:
+        p.write_text(out)
+        return True
+    return False
+
+
 def set_offset(ufo, cmap, n, base, dx, dy):
     p = gpath(ufo, cmap, n)
     text = p.read_text()
@@ -252,17 +265,23 @@ def main():
             # same: teh-ar.init raises top from 520 to 556)
             bb = bbox(ufo, cmap, n)
             if bb and not dry:
-                inherit = {k: v for k, v in ba.items()
-                           if k in ("topDots", "bottomDots")}
-                # keep the base's x (a below-dot must not drag the top
-                # anchor sideways) and move y only far enough to clear
-                # whatever the composite added
+                # A composite keeps ONLY top/bottom. Those are load-bearing:
+                # they are where a haraka attaches (several composites are
+                # in @ARAB_MARK_BASES in features.fea), and they must clear
+                # the dots the composite just added.
+                #
+                # It does NOT keep topDots/bottomDots. A letter that already
+                # has its dots never receives more, and no Arabic composite
+                # is a base for another glyph — so those slots would only be
+                # dead weight in the source.
+                inherit = {}
                 if "top" in ba:
                     inherit["top"] = (ba["top"][0], max(ba["top"][1], bb[3]))
                 if "bottom" in ba:
                     inherit["bottom"] = (ba["bottom"][0],
                                          min(ba["bottom"][1], bb[1]))
                 set_anchors(ufo, cmap, n, inherit, overwrite=True)
+                drop_anchors(ufo, cmap, n, ("topDots", "bottomDots"))
 
     verb = "would set" if dry else "set"
     print(f"{verb} (both masters):")
