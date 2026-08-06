@@ -4,8 +4,12 @@
 	<advance width="976"/>
 	<outline>
 		<component base="alefMaksura-ar"/>
-		<component base="hamzaabove-ar" xOffset="392"/>
+		<component base="hamzaabove-ar" xOffset="344" yOffset="-292"/>
 	</outline>
+	<anchor name="bottom" x="456" y="0"/>
+	<anchor name="top" x="456" y="760"/>
+	<anchor name="topDots" x="456" y="476"/>
+	<anchor name="bottomDots" x="456" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

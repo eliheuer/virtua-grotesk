@@ -6,6 +6,8 @@
 		<component base="percent"/>
 		<component base="zero-ar" xOffset="936"/>
 	</outline>
+	<anchor name="bottom" x="592" y="-16"/>
+	<anchor name="top" x="592" y="784"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

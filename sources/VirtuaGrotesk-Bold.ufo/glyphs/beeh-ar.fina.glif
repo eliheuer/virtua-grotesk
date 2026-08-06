@@ -3,8 +3,12 @@
 	<advance width="1024"/>
 	<outline>
 		<component base="behDotless-ar.fina"/>
-		<component base="twodotsverticalbelow-ar" xOffset="424"/>
+		<component base="twodotsverticalbelow-ar" xOffset="424" yOffset="-2"/>
 	</outline>
+	<anchor name="bottom" x="544" y="-438"/>
+	<anchor name="top" x="544" y="316"/>
+	<anchor name="bottomDots" x="544" y="0"/>
+	<anchor name="topDots" x="544" y="288"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

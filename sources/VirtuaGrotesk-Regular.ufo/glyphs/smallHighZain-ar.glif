@@ -24,6 +24,11 @@
 			<point x="112" y="880" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="bottom" x="144" y="688"/>
+	<anchor name="bottomDots" x="144" y="688"/>
+	<anchor name="topDots" x="144" y="944"/>
+	<anchor name="top" x="144" y="992"/>
+	<anchor name="_topDots" x="144" y="576"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

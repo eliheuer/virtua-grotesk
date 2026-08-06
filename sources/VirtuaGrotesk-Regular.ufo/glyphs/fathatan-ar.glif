@@ -3,9 +3,14 @@
 	<unicode hex="064B"/>
 	<advance width="224"/>
 	<outline>
-		<component base="fatha-ar"/>
+		<component base="fatha-ar" yOffset="168"/>
 		<component base="fatha-ar" yOffset="152"/>
 	</outline>
+	<anchor name="bottom" x="112" y="704"/>
+	<anchor name="topDots" x="112" y="840"/>
+	<anchor name="bottomDots" x="112" y="704"/>
+	<anchor name="top" x="112" y="1008"/>
+	<anchor name="_top" x="112" y="592"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

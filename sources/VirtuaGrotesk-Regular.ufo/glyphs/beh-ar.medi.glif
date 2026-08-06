@@ -5,6 +5,10 @@
 		<component base="behDotless-ar.medi"/>
 		<component base="dotbelow-ar" xOffset="84"/>
 	</outline>
+	<anchor name="bottom" x="248" y="-272"/>
+	<anchor name="top" x="240" y="376"/>
+	<anchor name="topDots" x="240" y="312"/>
+	<anchor name="bottomDots" x="248" y="0"/>
 	<lib>
 		<dict>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>

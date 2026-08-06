@@ -5,6 +5,10 @@
 		<component base="seen-ar.init"/>
 		<component base="threedotsupabove-ar" xOffset="200" yOffset="-144"/>
 	</outline>
+	<anchor name="bottom" x="432" y="-16"/>
+	<anchor name="top" x="432" y="880"/>
+	<anchor name="topDots" x="432" y="432"/>
+	<anchor name="bottomDots" x="376" y="-16"/>
 	<lib>
 		<dict>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>

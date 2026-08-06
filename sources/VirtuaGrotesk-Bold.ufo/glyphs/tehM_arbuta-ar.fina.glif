@@ -3,8 +3,12 @@
 	<advance width="704"/>
 	<outline>
 		<component base="heh-ar.fina"/>
-		<component base="twodotshorizontalabove-ar" xOffset="136" yOffset="-128"/>
+		<component base="twodotshorizontalabove-ar" xOffset="168" yOffset="-90"/>
 	</outline>
+	<anchor name="bottom" x="288" y="-16"/>
+	<anchor name="top" x="288" y="786"/>
+	<anchor name="topDots" x="320" y="486"/>
+	<anchor name="bottomDots" x="320" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

@@ -4,8 +4,12 @@
 	<outline>
 		<component base="lam-ar.medi" xOffset="256"/>
 		<component base="alef-ar.fina"/>
-		<component base="hamzabelow-ar" xOffset="264"/>
+		<component base="hamzabelow-ar" xOffset="114" yOffset="-24"/>
 	</outline>
+	<anchor name="bottom" x="226" y="-294"/>
+	<anchor name="top" x="226" y="768"/>
+	<anchor name="topDots" x="226" y="768"/>
+	<anchor name="bottomDots" x="226" y="-24"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

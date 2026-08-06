@@ -5,6 +5,10 @@
 		<component base="behDotless-ar.init"/>
 		<component base="twodotsverticalabove-ar" xOffset="-8" yOffset="-64"/>
 	</outline>
+	<anchor name="bottom" x="0" y="0"/>
+	<anchor name="top" x="144" y="912"/>
+	<anchor name="bottomDots" x="0" y="0"/>
+	<anchor name="topDots" x="144" y="448"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

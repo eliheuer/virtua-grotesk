@@ -5,6 +5,10 @@
 		<component base="qafDotless-ar.fina"/>
 		<component base="dotabove-ar" xOffset="472" yOffset="32"/>
 	</outline>
+	<anchor name="bottom" x="232" y="-304"/>
+	<anchor name="top" x="624" y="880"/>
+	<anchor name="bottomDots" x="224" y="88"/>
+	<anchor name="topDots" x="624" y="608"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

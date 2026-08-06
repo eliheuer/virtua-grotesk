@@ -4,8 +4,12 @@
 	<advance width="864"/>
 	<outline>
 		<component base="fehDotless-ar"/>
-		<component base="threedotsupabove-ar" xOffset="376"/>
+		<component base="threedotsupabove-ar" xOffset="260" yOffset="42"/>
 	</outline>
+	<anchor name="bottom" x="608" y="-16"/>
+	<anchor name="top" x="608" y="1094"/>
+	<anchor name="topDots" x="492" y="620"/>
+	<anchor name="bottomDots" x="492" y="0"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

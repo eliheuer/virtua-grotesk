@@ -3,9 +3,13 @@
 	<advance width="224"/>
 	<outline>
 		<component base="shadda-ar"/>
-		<component base="damma-ar" xOffset="-118"/>
+		<component base="damma-ar" xOffset="-118" yOffset="102"/>
 		<component base="damma-ar" xOffset="-118" yOffset="32"/>
 	</outline>
+	<anchor name="bottom" x="112" y="688"/>
+	<anchor name="top" x="112" y="1094"/>
+	<anchor name="topDots" x="112" y="848"/>
+	<anchor name="bottomDots" x="112" y="688"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
