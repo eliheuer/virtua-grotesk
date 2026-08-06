@@ -132,3 +132,10 @@ preflight: build proof reports
 
 clean:
 	rm -rf build build.ninja .ninja_log dist fonts sources/build.ninja sources/.ninja_log sources/instance_ufos
+
+.PHONY: arabic-sync
+arabic-sync:  ## Re-snap Arabic dots to their anchors, then re-sync Bold
+	./.venv/bin/python scripts/arabic_anchors.py
+	./.venv/bin/python scripts/embolden.py --dx 36 --dy 27
+	./.venv/bin/python scripts/arabic_anchors.py
+	./.venv/bin/python scripts/glif_lint.py
