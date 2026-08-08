@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="h" format="2">
 	<unicode hex="0068"/>
-	<advance width="592"/>
+	<advance width="464"/>
 	<outline>
 		<contour>
 			<point x="72" y="16" type="line"/>
@@ -37,6 +37,8 @@
 	<anchor name="top" x="296" y="576"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
 		</dict>
