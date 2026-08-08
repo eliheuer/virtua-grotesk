@@ -346,6 +346,8 @@
   </dict>
   <key>public.kern2.reh-ar</key>
   <dict>
+    <key>public.kern1.beh-ar</key>
+    <real>-320</real>
     <key>public.kern1.kaf-ar</key>
     <real>-348</real>
     <key>public.kern1.yeh-ar</key>
@@ -367,6 +369,8 @@
   </dict>
   <key>reh-ar.fina</key>
   <dict>
+    <key>hah-ar.init</key>
+    <real>-320</real>
     <key>public.kern1.yeh-ar</key>
     <real>-320</real>
   </dict>
