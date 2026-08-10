@@ -31,6 +31,7 @@ reel with `~/Desktop/add-sound.sh` (designbot renders silent video).
 | Script | Output |
 | --- | --- |
 | `reels/bounce.rs` | bouncing-glyphs physics reel (30s, 9:16) |
+| `reels/runebender-dvd.rs` | Runebender screenshot bouncing DVD-logo style over a Capital-cover "runebender.org" grid (24s, 9:16) |
 | `loops/weight-morph.rs` | `Aa` breathing the wght axis (Regular ⇄ Bold) |
 
 See `../README.md` for the overall documentation-image system, the DrawBot-style

@@ -60,6 +60,10 @@
 	<anchor name="bottom" x="308" y="0"/>
 	<lib>
 		<dict>
+			<key>public.kern1</key>
+			<string>public.kern1.o</string>
+			<key>public.kern2</key>
+			<string>public.kern2.n</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
 		</dict>

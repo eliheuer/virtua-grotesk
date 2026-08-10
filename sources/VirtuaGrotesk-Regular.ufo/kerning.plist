@@ -160,6 +160,8 @@
   </dict>
   <key>public.kern1.a</key>
   <dict>
+    <key>public.kern2.quoteright</key>
+    <real>-96</real>
     <key>public.kern2.t</key>
     <real>-8</real>
     <key>public.kern2.v</key>
@@ -253,7 +255,7 @@
   <key>public.kern1.quoteright</key>
   <dict>
     <key>public.kern2.s</key>
-    <real>-104</real>
+    <real>-64</real>
   </dict>
   <key>public.kern1.reh-ar.fina</key>
   <dict>
@@ -291,7 +293,7 @@
     <key>public.kern2.emdash</key>
     <real>-108</real>
     <key>public.kern2.hyphen</key>
-    <real>-64</real>
+    <real>-96</real>
     <key>public.kern2.o</key>
     <real>-24</real>
     <key>public.kern2.quoteright</key>
@@ -339,10 +341,17 @@
     <key>public.kern1.s</key>
     <real>-64</real>
   </dict>
-  <key>public.kern2.a</key>
+  <key>public.kern2.period</key>
   <dict>
-    <key>public.kern1.quoteright</key>
-    <real>-64</real>
+    <key>public.kern1.o</key>
+    <real>-32</real>
+  </dict>
+  <key>public.kern2.r</key>
+  <dict>
+    <key>public.kern1.o</key>
+    <real>-32</real>
+    <key>public.kern1.period</key>
+    <real>-128</real>
   </dict>
   <key>public.kern2.reh-ar</key>
   <dict>
@@ -365,7 +374,7 @@
     <key>o</key>
     <real>-64</real>
     <key>quoteright</key>
-    <real>-64</real>
+    <real>-32</real>
   </dict>
   <key>reh-ar.fina</key>
   <dict>
