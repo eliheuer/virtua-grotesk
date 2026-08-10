@@ -4,9 +4,9 @@
 <dict>
 	<key>com.schriftgestaltung.DisplayStrings</key>
 	<array>
-		<string>أشهد يا إلهي بأنك خلقتني لعرفانك وعبادتك 
-أشهد في هذا الحين بعجزي وقوتك وضعفي واقتدارك 
-وفقري وغنائك لا إله إلا أنت المهيمن القيوم</string>
+		<string>أ/sheen-ar.init /heh-ar.medi /dal-ar.fina  /yeh-ar.init /alef-ar.fina  إ/lam-ar.init /heh-ar.medi /yeh-ar.fina  /beh-ar.init /alefHamzaabove-ar.fina /noon-ar.init /kaf-ar.fina  /khah-ar.init /lam-ar.medi /qaf-ar.medi /teh-ar.medi /noon-ar.medi /yeh-ar.fina  /lam-ar.init /ain-ar.medi /reh-ar.fina /feh-ar.init /alef-ar.fina /noon-ar.init /kaf-ar.fina  و/ain-ar.init /beh-ar.medi /alef-ar.fina د/teh-ar.init /kaf-ar.fina  
+أ/sheen-ar.init /heh-ar.medi /dal-ar.fina  /feh-ar.init /yeh-ar.fina  /heh-ar.init /thal-ar.fina ا ا/lam-ar.init /hah-ar.medi /yeh-ar.medi /noon-ar.fina  /beh-ar.init /ain-ar.medi /jeem-ar.medi /zain-ar.fina ي و/qaf-ar.init /waw-ar.fina /teh-ar.init /kaf-ar.fina  و/dad-ar.init /ain-ar.medi /feh-ar.medi /yeh-ar.fina  وا/qaf-ar.init /teh-ar.medi /dal-ar.fina ارك 
+و/feh-ar.init /qaf-ar.medi /reh-ar.fina ي و/ghain-ar.init /noon-ar.medi /alef-ar.fina /yehHamzaabove-ar.init /kaf-ar.fina  /lam_alef-ar ا إ/lam-ar.init /heh-ar.fina  إ/lam_alef-ar ا أ/noon-ar.init /teh-ar.fina  ا/lam-ar.init /meem-ar.medi /heh-ar.medi /yeh-ar.medi /meem-ar.medi /noon-ar.fina  ا/lam-ar.init /qaf-ar.medi /yeh-ar.medi /waw-ar.fina م</string>
 		<string>Call me Ishmael. Some years ago—never mind how long precisely—having 
 little or no money in my purse, and nothing particular to interest me on shore, 
 I thought I would sail about a little and see the watery part of the world. It is a 
@@ -28,7 +28,7 @@ towards the ocean with me.</string>
 مالك يوم الدين 
 إياك نعبد وإياك نستعين 
 اهدنا الصراط المستقيم 
-صراط الذين أنعمت عليهم غير المغضوب عليهم ولا الضالين</string>
+/sad-ar.init راط الذ/dotabove-ar /dal-ar.fina ين أنعمت عليهم غير المغضوب عليهم ولا الضالين</string>
 		<string>هذا كتاب — this is a book
 هذا قلم — this is a pen
 الكتاب كبير — the book is big
@@ -44,6 +44,7 @@ towards the ocean with me.</string>
 الولد يكتب بالقلم — the boy writes with the pen
 البنت تقرأ الكتاب — the girl reads the book</string>
 		<string>هذا /kaf-ar.init تاب — this is a book</string>
+		<string>Nasta’liq Distilled: Post-OpenType Neural Network Fonts</string>
 	</array>
 	<key>com.github.googlei18n.ufo2ft.featureWriters</key>
 	<array>
