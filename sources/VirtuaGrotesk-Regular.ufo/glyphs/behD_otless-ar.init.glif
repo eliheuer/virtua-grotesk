@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="behDotless-ar.init" format="2">
-	<advance width="288"/>
+	<advance width="256"/>
 	<outline>
 		<contour>
 			<point x="0" y="0" type="line"/>
@@ -13,18 +13,20 @@
 			<point x="96" y="416" type="line"/>
 			<point x="96" y="200" type="line" smooth="yes"/>
 			<point x="96" y="136"/>
-			<point x="64" y="104"/>
-			<point x="0" y="104" type="curve"/>
-			<point x="-16" y="88" type="line"/>
+			<point x="64" y="96"/>
+			<point x="0" y="96" type="curve"/>
+			<point x="-16" y="80" type="line"/>
 			<point x="-16" y="16" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="top" x="144" y="432"/>
-	<anchor name="bottom" x="0" y="16"/>
+	<anchor name="bottom" x="0" y="8"/>
 	<anchor name="topDots" x="144" y="448"/>
-	<anchor name="bottomDots" x="0" y="0"/>
+	<anchor name="bottomDots" x="0" y="-8"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>
 			<string>2025-06-29 02:27:40 +0000</string>
 			<key>public.markColor</key>
