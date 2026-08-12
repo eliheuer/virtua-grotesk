@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="teh-ar.medi" format="2">
-	<advance width="448"/>
+	<advance width="416"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="twodotshorizontalabove-ar" xOffset="88" yOffset="-256" identifier="44e08086-8e4b-442f-9df7-4a033cb452bf"/>
+		<component base="twodotshorizontalabove-ar" xOffset="56" yOffset="-256" identifier="44e08086-8e4b-442f-9df7-4a033cb452bf"/>
 	</outline>
 	<anchor name="bottom" x="248" y="-8"/>
-	<anchor name="top" x="240" y="592"/>
+	<anchor name="top" x="240" y="576"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>
 			<string>2025-06-22 06:32:51 +0000</string>
 			<key>public.markColor</key>

@@ -3,16 +3,26 @@
 	<advance width="288"/>
 	<outline>
 		<component base="behDotless-ar.init"/>
-		<component base="dotabove-ar" xOffset="-8" yOffset="-128"/>
+		<component base="dotabove-ar" xOffset="-8" yOffset="-192" identifier="c585399c-3002-49b3-92c8-0aa0c41102d8"/>
 	</outline>
 	<anchor name="bottom" x="0" y="0"/>
-	<anchor name="top" x="144" y="720"/>
+	<anchor name="top" x="144" y="680"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>
 			<string>2025-06-29 02:27:40 +0000</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>c585399c-3002-49b3-92c8-0aa0c41102d8</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
