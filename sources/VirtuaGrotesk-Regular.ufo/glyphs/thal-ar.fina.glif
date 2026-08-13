@@ -3,17 +3,19 @@
 	<advance width="528"/>
 	<outline>
 		<component base="dal-ar.fina"/>
-		<component base="dotabove-ar" xOffset="128" yOffset="-176"/>
+		<component base="dotabove-ar" xOffset="72" yOffset="-176" identifier="7de18169-fd32-4762-ab93-b7c735a7ab74"/>
 	</outline>
 	<anchor name="bottom" x="280" y="0"/>
 	<anchor name="top" x="280" y="672"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>blue</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
 			<key>public.objectLibs</key>
 			<dict>
-				<key>a458f87d-1613-4946-9f8e-ba5e489d7d68</key>
+				<key>7de18169-fd32-4762-ab93-b7c735a7ab74</key>
 				<dict>
 					<key>com.glyphsapp.component.alignment</key>
 					<integer>-1</integer>
