@@ -3,18 +3,18 @@
 	<advance width="672"/>
 	<outline>
 		<contour>
-			<point x="96" y="0" type="curve" smooth="yes"/>
+			<point x="128" y="0" type="curve" smooth="yes"/>
 			<point x="0" y="0" type="line"/>
 			<point x="-16" y="16" type="line"/>
 			<point x="-16" y="80" type="line"/>
 			<point x="0" y="96" type="line"/>
-			<point x="64" y="96" type="line" smooth="yes"/>
-			<point x="256" y="96"/>
-			<point x="360" y="128"/>
-			<point x="464" y="216" type="curve"/>
-			<point x="464" y="224" type="line"/>
-			<point x="352" y="240"/>
-			<point x="304" y="312"/>
+			<point x="96" y="96" type="line" smooth="yes"/>
+			<point x="264" y="96"/>
+			<point x="320" y="208"/>
+			<point x="416" y="236" type="curve"/>
+			<point x="416" y="244" type="line"/>
+			<point x="296" y="256"/>
+			<point x="240" y="312"/>
 			<point x="176" y="312" type="curve" smooth="yes"/>
 			<point x="112" y="312"/>
 			<point x="88" y="264"/>
@@ -27,15 +27,15 @@
 			<point x="48" y="400"/>
 			<point x="176" y="400" type="curve" smooth="yes"/>
 			<point x="304" y="400"/>
-			<point x="432" y="296"/>
+			<point x="368" y="296"/>
 			<point x="560" y="296" type="curve" smooth="yes"/>
 			<point x="624" y="296" type="line"/>
 			<point x="640" y="280" type="line"/>
 			<point x="640" y="216" type="line"/>
 			<point x="624" y="200" type="line"/>
-			<point x="560" y="200" type="line"/>
-			<point x="472" y="120"/>
-			<point x="352" y="0"/>
+			<point x="560" y="200" type="line" smooth="yes"/>
+			<point x="408" y="200"/>
+			<point x="320" y="0"/>
 		</contour>
 	</outline>
 	<anchor name="bottomDots" x="324" y="0"/>
