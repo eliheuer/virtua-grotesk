@@ -4,12 +4,14 @@
 	<advance width="944"/>
 	<outline>
 		<component base="alefMaksura-ar"/>
-		<component base="twodotshorizontalbelow-ar" xOffset="304"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="112" identifier="b871d4e9-04fa-48d4-9d23-31dfaee1d426"/>
 	</outline>
-	<anchor name="bottom" x="456" y="-272"/>
-	<anchor name="top" x="456" y="448"/>
+	<anchor name="bottom" x="320" y="-256"/>
+	<anchor name="top" x="328" y="448"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>blue</string>
 			<key>public.kern1</key>
 			<string>public.kern1.yeh-ar</string>
 			<key>public.kern2</key>
@@ -18,7 +20,7 @@
 			<string>0,0.67,0.91,1</string>
 			<key>public.objectLibs</key>
 			<dict>
-				<key>2a704859-0aec-43dd-8495-5b8a01c57823</key>
+				<key>b871d4e9-04fa-48d4-9d23-31dfaee1d426</key>
 				<dict>
 					<key>com.glyphsapp.component.alignment</key>
 					<integer>-1</integer>
