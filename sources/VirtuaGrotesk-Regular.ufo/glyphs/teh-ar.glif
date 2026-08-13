@@ -4,14 +4,24 @@
 	<advance width="944"/>
 	<outline>
 		<component base="behDotless-ar"/>
-		<component base="twodotshorizontalabove-ar" xOffset="680" yOffset="-288"/>
+		<component base="twodotshorizontalabove-ar" xOffset="272" yOffset="-288" identifier="f2b4c753-e91e-4215-a725-0dbe9f370783"/>
 	</outline>
 	<anchor name="bottom" x="472" y="0"/>
 	<anchor name="top" x="832" y="560"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>blue</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>f2b4c753-e91e-4215-a725-0dbe9f370783</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
