@@ -20,7 +20,7 @@
 			<point x="-16" y="16" type="line"/>
 			<point x="0" y="0" type="line"/>
 		</contour>
-		<component base="twodotshorizontalabove-ar" xOffset="76" yOffset="-128"/>
+		<component base="twodotshorizontalabove-ar" xOffset="12" yOffset="-128" identifier="e4e033ca-3b91-4a54-bd3d-048f7c1925d9"/>
 	</outline>
 	<anchor name="top" x="228" y="432"/>
 	<anchor name="bottom" x="84" y="16"/>
@@ -34,6 +34,14 @@
 			<string>2025-06-28 17:11:19 +0000</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>e4e033ca-3b91-4a54-bd3d-048f7c1925d9</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
