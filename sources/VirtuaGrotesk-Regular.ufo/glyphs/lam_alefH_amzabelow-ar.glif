@@ -4,14 +4,24 @@
 	<outline>
 		<component base="lam-ar.init" xOffset="256"/>
 		<component base="alef-ar.fina"/>
-		<component base="hamzabelow-ar" xOffset="-24"/>
+		<component base="hamzabelow-ar" xOffset="48" identifier="a0c8b8d1-7cb3-4868-965d-c2d1f6525663"/>
 	</outline>
 	<anchor name="bottom" x="88" y="-256"/>
 	<anchor name="top" x="88" y="768"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>blue</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>a0c8b8d1-7cb3-4868-965d-c2d1f6525663</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
