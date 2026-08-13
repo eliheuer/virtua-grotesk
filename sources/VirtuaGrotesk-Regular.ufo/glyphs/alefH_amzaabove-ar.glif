@@ -4,16 +4,26 @@
 	<advance width="224"/>
 	<outline>
 		<component base="alef-ar"/>
-		<component base="hamzaabove-ar"/>
+		<component base="hamzaabove-ar" yOffset="-16" identifier="bd1764e5-b176-460a-bded-f45b7920723d"/>
 	</outline>
 	<anchor name="bottom" x="112" y="0"/>
 	<anchor name="top" x="112" y="1024"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>com.schriftgestaltung.Glyphs.lastChange</key>
 			<string>2025-06-22 06:23:47 +0000</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>bd1764e5-b176-460a-bded-f45b7920723d</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
