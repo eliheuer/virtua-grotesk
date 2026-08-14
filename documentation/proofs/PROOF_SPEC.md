@@ -25,10 +25,11 @@ This doc specs the **QA Print Proof** in full; the specimen is sketched at the e
   Regular 400 / Medium 500 / SemiBold 600 / Bold 700.
 - UPM **1024**. Metrics: ascender/cap 768, x-height 576, baseline 0,
   descender −256, overshoot 16.
-- **Latin-only scope** (METADATA subsets: `latin`, `latin-ext`). Arabic/Hebrew
-  are compiled into the TTF but out of GF scope — **not proofed**.
+- **Latin and Arabic.** Arabic is in scope and proofed: finishing it is the
+  work left before submission, so the proof has to be able to carry it.
+  Hebrew is compiled into the TTF but not proofed.
 - 751 glyphs / 550 codepoints. Features present: `kern`, `mark`, `mkmk`, `tnum`,
-  `ccmp`, `locl` (+ Arabic shaping, ignored here).
+  `ccmp`, `locl`, and the Arabic shaping features `init`/`medi`/`fina`/`rlig`.
 - Drive off `fonts/variable/VirtuaGrotesk[wght].ttf` via
   `font_variation("wght", …)` — **never** re-parse SFNT (that was the old mess).
 
@@ -141,3 +142,30 @@ index → language support → curated text settings (large→small) → OpenTyp
 showcase → numeral styles → full glyph display → footer. On-brand: OG palette,
 the grid-as-dataset dimension-sheet hero (Bézier points + power-of-two stem/
 advance labels), "Grid Systems for Dataset Engineering".
+
+## Arabic pages
+
+Added to the designbot built-in (`designbot-render/src/proof.rs`), gated on the
+font actually covering the script, so a latin-only font proofs exactly as before.
+Eleven sheets, in build order:
+
+| Page | What it catches |
+|---|---|
+| Arabic Character Set | a missing or misencoded glyph; combining marks shown on a dotted circle |
+| Joining — Positional Forms | a wrong `init`/`medi`/`fina` substitution, a stub that misses its neighbour |
+| Mark Attachment (2 sheets) | every harakat on every skeleton, against a baseline rule — anchors that sit off the shared line |
+| Dot Clusters & Ligatures | dot clusters merging where two dotted letters meet; the four lam-alef ligatures |
+| Running Text & Waterfall | the abjad, then vocalised text down the sizes |
+| Quranic Text — Al-Fatiha | the densest ordinary mark stacking: shadda over fatha, tanwin, superscript alef, alef wasla |
+| Quranic Text — Running Paragraphs | wrapping meeting mark stacking |
+| Long Text — Surah Yusuf (2 sheets) | colour and spacing in aggregate at 13pt and 9.5pt |
+| Weights | mark anchors drifting sideways or vertically across the axis |
+
+Scripture is byte-exact from tanzil via api.alquran.cloud. Al-Fatiha is in the
+Uthmani orthography (fully covered by the font); the rest are in the simple
+orthography, and Surah Yusuf has its waqf marks dropped — those are recitation
+annotations rather than part of the words, and no ordinary Arabic character set
+encodes them.
+
+Known gaps this surfaced, all Quranic annotation marks the font does not yet
+have: U+06D6, U+06D7, U+06DA, U+06DE, U+06DF, U+06E2, U+06E5, U+06E6, U+06ED.
