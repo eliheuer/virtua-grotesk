@@ -3,7 +3,7 @@
 	<advance width="864"/>
 	<outline>
 		<component base="seen-ar.medi"/>
-		<component base="threedotsupabove-ar" xOffset="200" yOffset="-156" identifier="4ed5323c-3e14-4510-87ad-7b9e547f9ccc"/>
+		<component base="threedotsupabove-ar" xOffset="200" yOffset="-150" identifier="4ed5323c-3e14-4510-87ad-7b9e547f9ccc"/>
 	</outline>
 	<anchor name="bottom" x="432" y="-16"/>
 	<anchor name="top" x="432" y="880"/>
@@ -13,14 +13,6 @@
 			<string>blue</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
-			<key>public.objectLibs</key>
-			<dict>
-				<key>4ed5323c-3e14-4510-87ad-7b9e547f9ccc</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-			</dict>
 		</dict>
 	</lib>
 </glyph>

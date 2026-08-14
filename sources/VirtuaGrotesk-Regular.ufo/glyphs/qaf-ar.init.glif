@@ -3,7 +3,7 @@
 	<advance width="504"/>
 	<outline>
 		<component base="fehDotless-ar.init"/>
-		<component base="twodotshorizontalabove-ar" xOffset="8" identifier="350249bb-ec7d-41d5-9f27-ca0e45d669ee"/>
+		<component base="twodotshorizontalabove-ar" xOffset="16" identifier="350249bb-ec7d-41d5-9f27-ca0e45d669ee"/>
 	</outline>
 	<anchor name="bottom" x="216" y="0"/>
 	<anchor name="top" x="224" y="848"/>
@@ -15,14 +15,6 @@
 			<string>2025-06-28 22:53:57 +0000</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
-			<key>public.objectLibs</key>
-			<dict>
-				<key>350249bb-ec7d-41d5-9f27-ca0e45d669ee</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-			</dict>
 		</dict>
 	</lib>
 </glyph>

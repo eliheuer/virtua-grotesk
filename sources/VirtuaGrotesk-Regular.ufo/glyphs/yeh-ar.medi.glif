@@ -3,7 +3,7 @@
 	<advance width="408"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="twodotshorizontalbelow-ar" yOffset="8" identifier="676c29a4-92d6-440b-8b60-941d68cc8148"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="-4" yOffset="8" identifier="676c29a4-92d6-440b-8b60-941d68cc8148"/>
 	</outline>
 	<anchor name="bottom" x="248" y="-272"/>
 	<anchor name="top" x="208" y="360"/>
@@ -13,14 +13,6 @@
 			<string>green</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
-			<key>public.objectLibs</key>
-			<dict>
-				<key>676c29a4-92d6-440b-8b60-941d68cc8148</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-			</dict>
 		</dict>
 	</lib>
 </glyph>

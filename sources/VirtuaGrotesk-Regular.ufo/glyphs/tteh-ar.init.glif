@@ -20,8 +20,9 @@
 			<point x="-16" y="16" type="line"/>
 			<point x="0" y="0" type="line"/>
 		</contour>
-		<component base="twodotshorizontalabove-ar" xOffset="76" yOffset="-128"/>
+		<component base="twodotshorizontalabove-ar" xOffset="16" yOffset="-128"/>
 	</outline>
+	<anchor name="topDots" x="224" y="448"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
