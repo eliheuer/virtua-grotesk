@@ -153,12 +153,13 @@ Eleven sheets, in build order:
 |---|---|
 | Arabic Character Set | a missing or misencoded glyph; combining marks shown on a dotted circle |
 | Joining — Positional Forms | a wrong `init`/`medi`/`fina` substitution, a stub that misses its neighbour |
+| Repetition — Joined Runs & Isolated | ننن ن per letter: rhythm in a run, and whether the joined and isolated shapes agree |
 | Mark Attachment (2 sheets) | every harakat on every skeleton, against a baseline rule — anchors that sit off the shared line |
 | Dot Clusters & Ligatures | dot clusters merging where two dotted letters meet; the four lam-alef ligatures |
 | Running Text & Waterfall | the abjad, then vocalised text down the sizes |
 | Quranic Text — Al-Fatiha | the densest ordinary mark stacking: shadda over fatha, tanwin, superscript alef, alef wasla |
 | Quranic Text — Running Paragraphs | wrapping meeting mark stacking |
-| Long Text — Surah Yusuf (2 sheets) | colour and spacing in aggregate at 13pt and 9.5pt |
+| Long Text — Surah Yusuf (2 sheets) | the same passage vocalised and bare, side by side, at 13pt and 9.5pt — what the marks cost |
 | Weights | mark anchors drifting sideways or vertically across the axis |
 
 Scripture is byte-exact from tanzil via api.alquran.cloud. Al-Fatiha is in the
