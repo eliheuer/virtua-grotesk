@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="smallHighThreeDots-ar" format="2">
-	<advance width="464"/>
+	<advance width="0"/>
 	<unicode hex="06DB"/>
 	<outline>
 		<component base="threedotsupabove-ar"/>
 	</outline>
 	<anchor name="top" x="232" y="1072"/>
-	<anchor name="_topDots" x="232" y="544"/>
+	<anchor name="_top" x="232" y="544"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
