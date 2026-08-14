@@ -3,7 +3,7 @@
 	<advance width="576"/>
 	<outline>
 		<component base="qafDotless-ar.fina"/>
-		<component base="twodotshorizontalabove-ar" xOffset="103.50617794093309" yOffset="-201.78092292264583" identifier="1c19b31a-36a2-442c-9a55-f7fca5127e44"/>
+		<component base="twodotshorizontalabove-ar" xOffset="104" yOffset="-202" identifier="1c19b31a-36a2-442c-9a55-f7fca5127e44"/>
 	</outline>
 	<anchor name="bottom" x="232" y="-304"/>
 	<anchor name="top" x="274.79573546988297" y="452.56577347798793"/>
@@ -13,14 +13,6 @@
 			<string>blue</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
-			<key>public.objectLibs</key>
-			<dict>
-				<key>1c19b31a-36a2-442c-9a55-f7fca5127e44</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-			</dict>
 		</dict>
 	</lib>
 </glyph>

@@ -31,11 +31,8 @@
 			<point x="292" y="688"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="208" y="688"/>
-	<anchor name="bottomDots" x="208" y="688"/>
-	<anchor name="topDots" x="208" y="848"/>
-	<anchor name="top" x="208" y="800"/>
 	<anchor name="_topDots" x="208" y="576"/>
+	<anchor name="top" x="208" y="800"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

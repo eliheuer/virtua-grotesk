@@ -3,7 +3,7 @@
 	<advance width="416"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="twodotshorizontalbelow-ar"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="-4" yOffset="8"/>
 	</outline>
 	<anchor name="bottom" x="248" y="-272"/>
 	<anchor name="top" x="240" y="376"/>

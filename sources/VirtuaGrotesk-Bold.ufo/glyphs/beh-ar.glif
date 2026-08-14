@@ -4,7 +4,7 @@
 	<advance width="944"/>
 	<outline>
 		<component base="behDotless-ar"/>
-		<component base="dotbelow-ar" xOffset="348"/>
+		<component base="dotbelow-ar" xOffset="348" yOffset="18"/>
 	</outline>
 	<anchor name="bottom" x="472" y="-300"/>
 	<anchor name="top" x="832" y="316"/>

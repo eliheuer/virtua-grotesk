@@ -3,7 +3,7 @@
 	<advance width="592"/>
 	<outline>
 		<component base="fehDotless-ar.medi"/>
-		<component base="dotbelow-ar" xOffset="124"/>
+		<component base="dotbelow-ar" xOffset="124" yOffset="20"/>
 	</outline>
 	<anchor name="bottom" x="248" y="-272"/>
 	<anchor name="top" x="256" y="528"/>
