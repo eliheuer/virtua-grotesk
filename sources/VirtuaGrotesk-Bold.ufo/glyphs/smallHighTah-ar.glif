@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="smallHighTah-ar" format="2">
-	<advance width="360"/>
+	<advance width="0"/>
 	<unicode hex="0615"/>
 	<outline>
 		<contour>
@@ -24,7 +24,7 @@
 	<anchor name="bottomDots" x="144" y="660"/>
 	<anchor name="topDots" x="144" y="940"/>
 	<anchor name="top" x="144" y="988"/>
-	<anchor name="_topDots" x="144" y="548"/>
+	<anchor name="_top" x="144" y="548"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
