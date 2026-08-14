@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof review review-rubik qa-diacritics specimen runebender runebender-tab glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build build-fontc proof review review-rubik qa-diacritics specimen runebender runebender-tab glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -36,6 +36,9 @@ setup:
 
 build:
 	./build.sh
+
+build-fontc:  ## Build with fontc (Rust) instead of fontmake
+	./build-fontc.sh
 
 # The built-in designbot print proof: introspects the variable font (axes,
 # instances, charset, metrics, features) and emits a color-managed multi-page
