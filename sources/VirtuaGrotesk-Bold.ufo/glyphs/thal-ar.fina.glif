@@ -5,8 +5,6 @@
 		<component base="dal-ar.fina"/>
 		<component base="dotabove-ar" xOffset="128" yOffset="-148"/>
 	</outline>
-	<anchor name="bottom" x="280" y="-6"/>
-	<anchor name="top" x="280" y="728"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

@@ -6,8 +6,6 @@
 		<component base="alef-ar"/>
 		<component base="madda-ar" xOffset="-32" yOffset="168"/>
 	</outline>
-	<anchor name="bottom" x="112" y="0"/>
-	<anchor name="top" x="112" y="944"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

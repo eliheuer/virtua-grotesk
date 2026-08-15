@@ -1689,5 +1689,14 @@
 		<key>zero-ar</key>
 		<string>base</string>
 	</dict>
+	<key>com.github.googlei18n.ufo2ft.filters</key>
+	<array>
+		<dict>
+			<key>name</key>
+			<string>propagateAnchors</string>
+			<key>pre</key>
+			<true/>
+		</dict>
+	</array>
 </dict>
 </plist>
