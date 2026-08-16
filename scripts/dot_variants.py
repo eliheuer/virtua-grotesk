@@ -45,7 +45,7 @@ def variant_name(name):
     return f"{name}.ctr"
 
 
-def shift_component(text, base, shift):
+def shift_component(text, base, shift, identifier):
     """Move one component left by `shift`, adding xOffset if it had none."""
     pattern = re.compile(r'(\t\t<component base="' + re.escape(base) + r'")([^\n]*?)(/>)')
     m = pattern.search(text)
@@ -60,7 +60,18 @@ def shift_component(text, base, shift):
     # and reusing the original's would tie their lib entries together
     rest = re.sub(r' identifier="[^"]*"', "", rest)
     attrs = f' xOffset="{int(x)}"' if round(x) else ""
-    return text[:m.start()] + m.group(1) + attrs + rest + m.group(3) + text[m.end():]
+    # An alternate is off its anchor on purpose, so its component is unlocked.
+    # Leaving it flagged as aligned is a contradiction the editor takes
+    # literally: it refuses to let you drag the dot, and the next realign
+    # snaps it back onto the anchor, undoing the only thing that made this
+    # glyph different from the one it was copied from.
+    attrs += f' identifier="{identifier}"'
+    out = text[:m.start()] + m.group(1) + attrs + rest + m.group(3) + text[m.end():]
+    pin = (f'\t\t\t<key>public.objectLibs</key>\n\t\t\t<dict>\n'
+           f'\t\t\t\t<key>{identifier}</key>\n\t\t\t\t<dict>\n'
+           f'\t\t\t\t\t<key>com.glyphsapp.component.alignment</key>\n'
+           f'\t\t\t\t\t<integer>-1</integer>\n\t\t\t\t</dict>\n\t\t\t</dict>\n')
+    return out.replace("\t\t</dict>\n\t</lib>", pin + "\t\t</dict>\n\t</lib>", 1)
 
 
 def main():
@@ -78,7 +89,8 @@ def main():
                 skipped.append(f"{mname}/{source}: missing")
                 continue
             text = (ufo / "glyphs" / cmap[source]).read_text()
-            moved = shift_component(text, mark, shift)
+            ident = f"c7f1a2e0-{abs(hash((mname, target))) % 10**12:012d}"
+            moved = shift_component(text, mark, shift, ident)
             if moved is None:
                 skipped.append(f"{mname}/{source}: no {mark} component")
                 continue

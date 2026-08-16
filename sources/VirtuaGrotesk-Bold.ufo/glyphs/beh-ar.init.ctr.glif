@@ -3,7 +3,7 @@
 	<advance width="288"/>
 	<outline>
 		<component base="behDotless-ar.init"/>
-		<component base="dotbelow-ar" xOffset="-84" yOffset="18"/>
+		<component base="dotbelow-ar" xOffset="-84" yOffset="18" identifier="c7f1a2e0-0001-4000-8000-000000000002"/>
 	</outline>
 	<lib>
 		<dict>
@@ -11,6 +11,14 @@
 			<string>2025-06-22 06:38:52 +0000</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
+			<key>public.objectLibs</key>
+			<dict>
+				<key>c7f1a2e0-0001-4000-8000-000000000002</key>
+				<dict>
+					<key>com.glyphsapp.component.alignment</key>
+					<integer>-1</integer>
+				</dict>
+			</dict>
 		</dict>
 	</lib>
 </glyph>
