@@ -319,8 +319,17 @@ lookup calt_arab_dots {
 	# Centre the dot when what follows leaves room for it. Anything not in
 	# @AR_DOTS_BELOW_NEXT does: alef, dal, reh, waw, lam, kaf, meem, seen,
 	# sad, tah, heh and the rest carry nothing below.
+	# beh: one dot. Leave it under the tooth when the next letter has dots
+	# below, centre it otherwise.
 	sub beh-ar.init' beh-ar.medi by beh-ar.init;
 	sub beh-ar.init' @AR_DOTS_BELOW_NEXT by beh-ar.init;
 	sub beh-ar.init' by beh-ar.init.ctr;
+
+	# yeh: two dots, 416 units of them. They reach much further than beh's
+	# single dot, so the same following letters crowd them harder and the
+	# class here will probably need to be wider than beh's, not narrower.
+	sub yeh-ar.init' yeh-ar.medi by yeh-ar.init;
+	sub yeh-ar.init' @AR_DOTS_BELOW_NEXT by yeh-ar.init;
+	sub yeh-ar.init' by yeh-ar.init.ctr;
 } calt_arab_dots;
 } calt;
