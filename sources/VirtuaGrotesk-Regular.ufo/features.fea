@@ -297,28 +297,16 @@ lookup rlig_arab_0 {
 # letter was on a short list — so centred was effectively the default and the
 # dot ran into every descender that was not on it.
 
-# Nothing of these drops more than 60 units below the baseline, so an incoming
-# centred dot has room. Read off the outlines, not guessed; worth regenerating
-# when a descender changes.
+# Centring is the special case, not the default. The dot moves to the middle
+# only before alef, where beh's tooth and alef's stem read as one bowl and a
+# dot under the tooth looks pushed to the edge of it.
+#
+# This was a list of 70 letters — everything that did not descend — which made
+# centred the normal look and the offset the exception. That is backwards.
+# Add letters here one at a time, when a word shows it is wanted.
 @AR_CLEAR_BELOW_NEXT = [
-    ain-ar.medi alef-ar.fina alefHamzaabove-ar.fina alefMadda-ar.fina
-    alefMaksura-ar.fina alefMaksura-ar.medi alefWasla-ar.fina
-    behDotless-ar.fina behDotless-ar.medi dad-ar.medi dal-ar.fina
-    ddal-ar.fina feh-ar.fina feh-ar.medi fehDotless-ar.fina
-    fehDotless-ar.medi gaf-ar.fina gaf-ar.medi ghain-ar.medi hah-ar.medi
-    heh-ar.fina hehDoachashmee-ar.fina hehGoal-ar.fina
-    hehGoalHamzaabove-ar.fina kaf-ar.fina kaf-ar.medi keheh-ar.fina
-    keheh-ar.medi kehehThreedotsabove-ar.fina kehehThreedotsabove-ar.medi
-    khah-ar.medi lam-ar.fina lam-ar.medi lam_alef-ar.fina
-    lam_alefHamzaabove-ar.fina lam_alefMadda-ar.fina lam_alefWasla-ar.fina
-    noon-ar.medi peh-ar.medi qaf-ar.medi qafDotabove-ar.medi
-    qafThreedotsabove-ar.medi sad-ar.medi seen-ar.medi seenSixdots-ar.medi
-    sheen-ar.medi tah-ar.fina tah-ar.medi tcheh-ar.medi teh-ar.fina
-    teh-ar.medi tehMarbuta-ar.fina tehMarbutaGoal-ar.fina tehRing-ar.fina
-    tehRing-ar.medi tehThreedotsdown-ar.fina tehThreedotsdown-ar.medi
-    thal-ar.fina theh-ar.fina theh-ar.medi tteh-ar.fina tteh-ar.medi
-    tteheh-ar.fina tteheh-ar.medi veh-ar.fina veh-ar.medi
-    yehHamzaabove-ar.fina yehHamzaabove-ar.medi zah-ar.fina zah-ar.medi
+    alef-ar.fina alefHamzaabove-ar.fina alefHamzabelow-ar.fina
+    alefMadda-ar.fina alefWasla-ar.fina
 ];
 
 feature calt {
