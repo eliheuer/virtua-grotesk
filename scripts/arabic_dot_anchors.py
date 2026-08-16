@@ -161,6 +161,23 @@ ENTRY_RE = re.compile(
     r"\t\t\t\t<key>([^<]+)</key>\n\t\t\t\t<dict>\n.*?\n\t\t\t\t</dict>\n?", re.S)
 
 
+def is_unpinned(text, base):
+    """Whether `base`'s component here has been unlocked from its anchor."""
+    import xml.etree.ElementTree as ET
+    root = ET.fromstring(text)
+    ident = next((c.get("identifier") for c in root.iter("component")
+                  if c.get("base") == base and c.get("identifier")), None)
+    if not ident:
+        return False
+    m = OBJLIB_RE.search(text)
+    if not m:
+        return False
+    for entry in ENTRY_RE.finditer(m.group(1) + "\n"):
+        if entry.group(1) == ident and "alignment" in entry.group(0):
+            return True
+    return False
+
+
 def unpin(text, identifiers):
     """Remove alignment pins for `identifiers` only.
 
@@ -189,7 +206,7 @@ def unpin(text, identifiers):
 def main():
     dry = "--dry-run" in sys.argv
     report = {"marks": [], "moved": [], "kept": [], "snapped": 0,
-              "unpinned": [], "skipped": [], "outliers": []}
+              "unpinned": [], "skipped": [], "outliers": [], "left_unlocked": []}
 
     for mname, ufo in MASTERS.items():
         cmap = contents(ufo)
@@ -290,6 +307,14 @@ def main():
                 p = path_of(ufo, cmap, comp)
                 text = p.read_text()
                 r = ET.fromstring(text)
+                # A component unlocked on purpose stays where it was put.
+                # This was written as a one-off migration, when every pin in
+                # the font was stale; now the centred alternates are pinned
+                # deliberately, and re-running it used to snap their dots back
+                # onto the anchor — silently undoing the reason they exist.
+                if is_unpinned(text, mark):
+                    report["left_unlocked"].append(f"{mname}/{comp}")
+                    continue
                 pinned = {c.get("identifier") for c in r.iter("component")
                           if c.get("base") in marks and c.get("identifier")}
                 text, changed = set_component_offset(text, mark, bx - mx, by - my)
@@ -312,6 +337,11 @@ def main():
         print(f"\njoining forms left alone ({len(report['kept'])}):")
         for k in report["kept"][:12]:
             print("   " + k)
+    if report["left_unlocked"]:
+        n = len(set(report["left_unlocked"]))
+        print(f"\nleft alone, unlocked from their anchor ({n}):")
+        for u in sorted(set(report["left_unlocked"]))[:10]:
+            print("   " + u)
     if report["outliers"]:
         n_out = len(set(report["outliers"]))
         print(f"\ncomposites ignored when placing an anchor ({n_out}):")
