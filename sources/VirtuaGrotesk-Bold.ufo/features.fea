@@ -289,47 +289,48 @@ lookup rlig_arab_0 {
 
 # --- Arabic: centred vs offset dots -----------------------------------------
 #
-# An initial beh's dot sits under the tooth. That is the position furthest
-# from a collision, and it has to be that when the next letter carries dots
-# below too. But in با the tooth is at the far right of what reads as one
-# bowl, and the dot looks pushed aside — there, centring it is right.
+# The dot sits under the tooth by default: the position that never collides,
+# and what you get with calt off. It moves to the middle only when the next
+# letter leaves the space clear.
 #
-# So the default is the safe one and the alternate is the centred one: with
-# calt off you get dots that never collide, only slightly off-centre.
-#
-# THESE CLASSES ARE A STARTING POINT. The real rule is expected to come out
-# of looking at words, not from reasoning — edit @AR_DOTS_BELOW_NEXT freely.
-# A letter belongs in it if its own dots sit low enough to crowd the dot of
-# the letter before it.
+# The first version had this the other way round — centre unless the next
+# letter was on a short list — so centred was effectively the default and the
+# dot ran into every descender that was not on it.
 
-# Letters whose below-dots would meet an incoming centred dot.
-@AR_DOTS_BELOW_NEXT = [
-    beh-ar.medi beh-ar.fina
-    yeh-ar.medi yeh-ar.fina
-    farsiYeh-ar.medi farsiYeh-ar.fina
-    jeem-ar.medi jeem-ar.fina
-    peh-ar.medi peh-ar.fina
-    beeh-ar.medi beeh-ar.fina
+# Nothing of these drops more than 60 units below the baseline, so an incoming
+# centred dot has room. Read off the outlines, not guessed; worth regenerating
+# when a descender changes.
+@AR_CLEAR_BELOW_NEXT = [
+    ain-ar.medi alef-ar.fina alefHamzaabove-ar.fina alefMadda-ar.fina
+    alefMaksura-ar.fina alefMaksura-ar.medi alefWasla-ar.fina
+    behDotless-ar.fina behDotless-ar.medi dad-ar.medi dal-ar.fina
+    ddal-ar.fina feh-ar.fina feh-ar.medi fehDotless-ar.fina
+    fehDotless-ar.medi gaf-ar.fina gaf-ar.medi ghain-ar.medi hah-ar.medi
+    heh-ar.fina hehDoachashmee-ar.fina hehGoal-ar.fina
+    hehGoalHamzaabove-ar.fina kaf-ar.fina kaf-ar.medi keheh-ar.fina
+    keheh-ar.medi kehehThreedotsabove-ar.fina kehehThreedotsabove-ar.medi
+    khah-ar.medi lam-ar.fina lam-ar.medi lam_alef-ar.fina
+    lam_alefHamzaabove-ar.fina lam_alefMadda-ar.fina lam_alefWasla-ar.fina
+    noon-ar.medi peh-ar.medi qaf-ar.medi qafDotabove-ar.medi
+    qafThreedotsabove-ar.medi sad-ar.medi seen-ar.medi seenSixdots-ar.medi
+    sheen-ar.medi tah-ar.fina tah-ar.medi tcheh-ar.medi teh-ar.fina
+    teh-ar.medi tehMarbuta-ar.fina tehMarbutaGoal-ar.fina tehRing-ar.fina
+    tehRing-ar.medi tehThreedotsdown-ar.fina tehThreedotsdown-ar.medi
+    thal-ar.fina theh-ar.fina theh-ar.medi tteh-ar.fina tteh-ar.medi
+    tteheh-ar.fina tteheh-ar.medi veh-ar.fina veh-ar.medi
+    yehHamzaabove-ar.fina yehHamzaabove-ar.medi zah-ar.fina zah-ar.medi
 ];
 
 feature calt {
 script arab;
 language dflt;
 lookup calt_arab_dots {
-	# Centre the dot when what follows leaves room for it. Anything not in
-	# @AR_DOTS_BELOW_NEXT does: alef, dal, reh, waw, lam, kaf, meem, seen,
-	# sad, tah, heh and the rest carry nothing below.
-	# beh: one dot. Leave it under the tooth when the next letter has dots
-	# below, centre it otherwise.
-	sub beh-ar.init' beh-ar.medi by beh-ar.init;
-	sub beh-ar.init' @AR_DOTS_BELOW_NEXT by beh-ar.init;
-	sub beh-ar.init' by beh-ar.init.ctr;
+	# beh: one dot.
+	sub beh-ar.init' @AR_CLEAR_BELOW_NEXT by beh-ar.init.ctr;
 
-	# yeh: two dots, 416 units of them. They reach much further than beh's
-	# single dot, so the same following letters crowd them harder and the
-	# class here will probably need to be wider than beh's, not narrower.
-	sub yeh-ar.init' yeh-ar.medi by yeh-ar.init;
-	sub yeh-ar.init' @AR_DOTS_BELOW_NEXT by yeh-ar.init;
-	sub yeh-ar.init' by yeh-ar.init.ctr;
+	# yeh: two dots, 416 units of them against beh's 160. They reach much
+	# further into whatever follows, so this class will probably want to be
+	# narrower than beh's rather than the same one.
+	sub yeh-ar.init' @AR_CLEAR_BELOW_NEXT by yeh-ar.init.ctr;
 } calt_arab_dots;
 } calt;
