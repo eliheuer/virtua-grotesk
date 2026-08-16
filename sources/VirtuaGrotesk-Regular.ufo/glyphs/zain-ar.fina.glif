@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zain-ar.fina" format="2">
-	<advance width="600"/>
+	<advance width="504"/>
 	<outline>
 		<component base="reh-ar.fina"/>
 		<component base="dotabove-ar" xOffset="204" yOffset="-248"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>blue</string>
 			<key>public.kern1</key>
 			<string>public.kern1.reh-ar</string>
 			<key>public.kern2</key>
 			<string>public.kern2.reh-ar</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
-			<key>public.objectLibs</key>
-			<dict>
-				<key>9bbfffeb-bcf8-4131-9eed-10ef8f2d2ba4</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-			</dict>
 		</dict>
 	</lib>
 </glyph>
