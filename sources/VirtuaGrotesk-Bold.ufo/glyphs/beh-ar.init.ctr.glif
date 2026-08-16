@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<glyph name="beh-ar.init" format="2">
+<glyph name="beh-ar.init.ctr" format="2">
 	<advance width="288"/>
 	<outline>
 		<component base="behDotless-ar.init"/>
-		<component base="dotbelow-ar" xOffset="0" yOffset="18" identifier="54ea7109-9de7-4923-bbbc-47698f6d58c9"/>
+		<component base="dotbelow-ar" xOffset="-84" yOffset="18"/>
 	</outline>
 	<lib>
 		<dict>

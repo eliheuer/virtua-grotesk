@@ -286,3 +286,41 @@ lookup rlig_arab_0 {
 	sub lam-ar.medi alefWasla-ar.fina by lam_alefWasla-ar.fina;
 } rlig_arab_0;
 } rlig;
+
+# --- Arabic: centred vs offset dots -----------------------------------------
+#
+# An initial beh's dot sits under the tooth. That is the position furthest
+# from a collision, and it has to be that when the next letter carries dots
+# below too. But in با the tooth is at the far right of what reads as one
+# bowl, and the dot looks pushed aside — there, centring it is right.
+#
+# So the default is the safe one and the alternate is the centred one: with
+# calt off you get dots that never collide, only slightly off-centre.
+#
+# THESE CLASSES ARE A STARTING POINT. The real rule is expected to come out
+# of looking at words, not from reasoning — edit @AR_DOTS_BELOW_NEXT freely.
+# A letter belongs in it if its own dots sit low enough to crowd the dot of
+# the letter before it.
+
+# Letters whose below-dots would meet an incoming centred dot.
+@AR_DOTS_BELOW_NEXT = [
+    beh-ar.medi beh-ar.fina
+    yeh-ar.medi yeh-ar.fina
+    farsiYeh-ar.medi farsiYeh-ar.fina
+    jeem-ar.medi jeem-ar.fina
+    peh-ar.medi peh-ar.fina
+    beeh-ar.medi beeh-ar.fina
+];
+
+feature calt {
+script arab;
+language dflt;
+lookup calt_arab_dots {
+	# Centre the dot when what follows leaves room for it. Anything not in
+	# @AR_DOTS_BELOW_NEXT does: alef, dal, reh, waw, lam, kaf, meem, seen,
+	# sad, tah, heh and the rest carry nothing below.
+	sub beh-ar.init' beh-ar.medi by beh-ar.init;
+	sub beh-ar.init' @AR_DOTS_BELOW_NEXT by beh-ar.init;
+	sub beh-ar.init' by beh-ar.init.ctr;
+} calt_arab_dots;
+} calt;
