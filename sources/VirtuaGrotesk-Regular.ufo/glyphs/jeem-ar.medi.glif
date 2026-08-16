@@ -3,20 +3,12 @@
 	<advance width="672"/>
 	<outline>
 		<component base="hah-ar.medi"/>
-		<component base="dotbelow-ar" xOffset="276"/>
+		<component base="dotbelow-ar" xOffset="288"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
-			<key>public.objectLibs</key>
-			<dict>
-				<key>e347093c-d7d2-4fc7-a806-75dd48305bcf</key>
-				<dict>
-					<key>com.glyphsapp.component.alignment</key>
-					<integer>-1</integer>
-				</dict>
-			</dict>
 		</dict>
 	</lib>
 </glyph>
