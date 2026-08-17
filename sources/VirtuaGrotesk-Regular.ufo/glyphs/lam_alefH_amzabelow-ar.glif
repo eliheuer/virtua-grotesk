@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alefHamzabelow-ar" format="2">
-	<advance width="544"/>
+	<advance width="496"/>
 	<outline>
-		<component base="lam-ar.init" xOffset="256"/>
-		<component base="alef-ar.fina"/>
-		<component base="hamzabelow-ar" xOffset="48" identifier="a0c8b8d1-7cb3-4868-965d-c2d1f6525663"/>
+		<component base="lam_alef-ar"/>
+		<component base="hamzabelow-ar" xOffset="-4" identifier="la4910640754"/>
 	</outline>
-	<anchor name="bottom" x="88" y="-256"/>
-	<anchor name="top" x="88" y="768"/>
+	<anchor name="top" x="264" y="768"/>
+	<anchor name="bottom" x="108" y="-304"/>
 	<lib>
 		<dict>
-			<key>com.runebender.markLabel</key>
-			<string>blue</string>
 			<key>public.markColor</key>
 			<string>0,0.67,0.91,1</string>
 			<key>public.objectLibs</key>
 			<dict>
-				<key>a0c8b8d1-7cb3-4868-965d-c2d1f6525663</key>
+				<key>la4910640754</key>
 				<dict>
 					<key>com.glyphsapp.component.alignment</key>
 					<integer>-1</integer>
