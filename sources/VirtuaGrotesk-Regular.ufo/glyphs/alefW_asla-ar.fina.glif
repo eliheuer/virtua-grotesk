@@ -3,7 +3,7 @@
 	<advance width="256"/>
 	<outline>
 		<component base="alef-ar.fina"/>
-		<component base="wasla-ar" yOffset="208"/>
+		<component base="wasla-ar" xOffset="4" yOffset="208"/>
 	</outline>
 	<lib>
 		<dict>
