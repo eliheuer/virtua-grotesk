@@ -309,6 +309,15 @@ lookup rlig_arab_0 {
     alefMadda-ar.fina alefWasla-ar.fina
 ];
 
+# The reverse case: the letter *before* reaches under the one that follows.
+# reh and zain do not join to the left, so what comes after them is an initial
+# form, and their tail sweeps back under its right-hand side — exactly where
+# yeh's offset dots sit. Centring moves the dots out from under the tail.
+@AR_TAIL_BELOW_PREV = [
+    reh-ar reh-ar.fina zain-ar zain-ar.fina
+    jeh-ar jeh-ar.fina rreh-ar rreh-ar.fina
+];
+
 feature calt {
 script arab;
 language dflt;
@@ -320,5 +329,6 @@ lookup calt_arab_dots {
 	# further into whatever follows, so this class will probably want to be
 	# narrower than beh's rather than the same one.
 	sub yeh-ar.init' @AR_CLEAR_BELOW_NEXT by yeh-ar.init.ctr;
+	sub @AR_TAIL_BELOW_PREV yeh-ar.init' by yeh-ar.init.ctr;
 } calt_arab_dots;
 } calt;
