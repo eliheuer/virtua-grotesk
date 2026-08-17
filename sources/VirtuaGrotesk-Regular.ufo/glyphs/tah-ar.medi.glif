@@ -56,11 +56,13 @@
 		</contour>
 	</outline>
 	<anchor name="bottomDots" x="624" y="0"/>
-	<anchor name="topDots" x="624" y="768"/>
+	<anchor name="topDots" x="696" y="448"/>
 	<anchor name="top" x="744" y="464"/>
 	<anchor name="bottom" x="744" y="0"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
 		</dict>
