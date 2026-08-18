@@ -2,8 +2,9 @@
 <glyph name="lam_alefWasla-ar.fina" format="2">
 	<advance width="672"/>
 	<outline>
-		<component base="lam_alef-ar.fina"/>
-		<component base="wasla-ar" yOffset="218" identifier="la7967537738"/>
+		<component base="lam-ar.medi" xOffset="256"/>
+		<component base="alef-ar.fina"/>
+		<component base="wasla-ar" yOffset="218" identifier="la8090187615"/>
 	</outline>
 	<anchor name="top" x="112" y="1142"/>
 	<anchor name="bottom" x="226" y="-24"/>
@@ -13,7 +14,7 @@
 			<string>0,0.67,0.91,1</string>
 			<key>public.objectLibs</key>
 			<dict>
-				<key>la7967537738</key>
+				<key>la8090187615</key>
 				<dict>
 					<key>com.glyphsapp.component.alignment</key>
 					<integer>-1</integer>
