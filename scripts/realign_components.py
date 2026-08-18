@@ -20,10 +20,28 @@ are — that flag exists to say "I placed this by hand, do not touch it".
 
 Anchors themselves are never edited here. Only component offsets move.
 
+Two things it will not touch on its own, because doing so made the font worse
+once already:
+
+  * composites built out of marks (shaddaFatha-ar, hamzaaboveDammatan-ar,
+    dammatan-ar and the rest). A mark's own `top` anchor is a mkmk anchor,
+    sized for the next mark in a run — stacking a precomposed pair on it
+    throws the two halves apart. Those pairs are placed by hand and stay
+    that way.
+  * moves beyond `--max-move` (64 units by default). Small disagreements are
+    drift: an anchor was nudged and the composite did not follow. A large one
+    means the anchor and the drawing disagree about the design, and a script
+    guessing between them is how tcheh-ar's three dots ended up on top of the
+    letter. Those are listed, not applied.
+
+Name a glyph with `--glyph` to apply its move whatever the size — that is the
+escape hatch for a base that really was redrawn.
+
 Usage:
     ./.venv/bin/python scripts/realign_components.py            # report only
     ./.venv/bin/python scripts/realign_components.py --write
     ./.venv/bin/python scripts/realign_components.py --glyph khah-ar --write
+    ./.venv/bin/python scripts/realign_components.py --all --write   # no limits
 """
 
 import pathlib
@@ -110,13 +128,23 @@ def set_component_offset(text, index, dx, dy):
     return text[: matches[index].start()] + updated + text[matches[index].end() :]
 
 
+def is_mark(root):
+    """A glyph that attaches to something else: it carries an `_x` anchor."""
+    return any(name.startswith("_") for name, _ in anchors_of(root))
+
+
 def main():
     write = "--write" in sys.argv
+    unrestricted = "--all" in sys.argv
     only = None
     if "--glyph" in sys.argv:
         only = sys.argv[sys.argv.index("--glyph") + 1]
+    max_move = 64.0
+    if "--max-move" in sys.argv:
+        max_move = float(sys.argv[sys.argv.index("--max-move") + 1])
 
     total = 0
+    held = 0
     for master in MASTERS:
         ufo = pathlib.Path(f"sources/VirtuaGrotesk-{master}.ufo")
         cmap = contents(ufo)
@@ -145,6 +173,10 @@ def main():
                     )
                 )
             wanted = realign(described, unlocked_identifiers(root))
+            # A composite of marks: hand-placed, and the mkmk anchors are the
+            # wrong ruler for it. See the module docstring.
+            first_base = roots.get(described[0][0])
+            stacked_marks = first_base is not None and is_mark(first_base)
 
             text = None
             for index, ((base, offset, _, _), new) in enumerate(zip(described, wanted)):
@@ -153,11 +185,19 @@ def main():
                     round(offset[1]),
                 ):
                     continue
+                move = max(abs(new[0] - offset[0]), abs(new[1] - offset[1]))
+                targeted = only == name or unrestricted
+                apply = targeted or (not stacked_marks and move <= max_move)
                 total += 1
                 print(
-                    f"{master}/{name}: {base} "
+                    f"{'    ' if apply else 'HELD'} {master}/{name}: {base} "
                     f"({fmt(offset[0])}, {fmt(offset[1])}) -> ({fmt(new[0])}, {fmt(new[1])})"
+                    + ("" if apply else
+                       f"  [{'mark stack' if stacked_marks else f'{fmt(move)}u'}]")
                 )
+                if not apply:
+                    held += 1
+                    continue
                 if write:
                     if text is None:
                         text = (ufo / "glyphs" / cmap[name]).read_text()
@@ -165,8 +205,10 @@ def main():
             if write and text is not None:
                 (ufo / "glyphs" / cmap[name]).write_text(text)
 
-    print(f"\n{total} component{'' if total == 1 else 's'} off their anchor"
-          f"{' — rewritten' if write else ' (run with --write to fix)'}")
+    action = "rewritten" if write else "to rewrite (run with --write)"
+    print(f"\n{total} component{'' if total == 1 else 's'} off their anchor: "
+          f"{total - held} {action}, {held} held back for a human "
+          f"(mark stacks and moves over {fmt(max_move)}u)")
 
 
 if __name__ == "__main__":

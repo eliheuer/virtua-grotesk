@@ -36,6 +36,17 @@ BASE_ADVANCE = {
     "lam_alef-ar.fina": {"Regular": 672, "Bold": 672},
 }
 
+# What to draw for each base. lam_alef-ar is drawn, so one component does it.
+# lam_alef-ar.fina is itself a composite, and a component pointing at a
+# composite is a nested component — which Google Fonts' QA fails outright
+# (`nested_components`). So the final forms repeat its two components instead
+# of pointing at it. If lam_alef-ar.fina is ever redrawn, this list has to
+# follow it.
+BASE_COMPONENTS = {
+    "lam_alef-ar": [("lam_alef-ar", 0, 0)],
+    "lam_alef-ar.fina": [("lam-ar.medi", 256, 0), ("alef-ar.fina", 0, 0)],
+}
+
 # glyph -> base, mark, {master: (xOffset, yOffset, top anchor, bottom anchor)}
 PLAN = {
     "lam_alefHamzaabove-ar": ("lam_alef-ar", "hamzaabove-ar", {
@@ -89,12 +100,16 @@ def build(name, master):
     x, y, top, bottom = per_master[master]
     advance = BASE_ADVANCE[base][master]
     ident = f"la{abs(hash((master, name))) % 10**10:010d}"
+    drawn = "".join(
+        f'\t\t<component base="{part}"{offsets(px, py)}/>\n'
+        for part, px, py in BASE_COMPONENTS[base]
+    )
     return (
         '<?xml version="1.0" encoding="UTF-8"?>\n'
         f'<glyph name="{name}" format="2">\n'
         f'\t<advance width="{advance}"/>\n'
         "\t<outline>\n"
-        f'\t\t<component base="{base}"/>\n'
+        f"{drawn}"
         f'\t\t<component base="{mark}"{offsets(x, y)} identifier="{ident}"/>\n'
         "\t</outline>\n"
         f'\t<anchor name="top" x="{top[0]}" y="{top[1]}"/>\n'
