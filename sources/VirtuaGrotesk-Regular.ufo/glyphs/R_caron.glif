@@ -6,4 +6,12 @@
 		<component base="R"/>
 		<component base="caron" xOffset="128" yOffset="192"/>
 	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
 </glyph>
