@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof review review-rubik qa-diacritics specimen runebender runebender-tab glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build build-fontc proof review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -15,8 +15,9 @@ help:
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
 		'  make specimen       (not implemented yet — marketing specimen is future work)' \
-		'  make runebender     Open the designspace in Runebender web, chromeless app window' \
-		'  make runebender-tab Same, but as a tab in your default browser' \
+		'  make runebender     Open the designspace in Runebender gpui (native)' \
+		'  make runebender-web Same source in Runebender web, chromeless app window' \
+		'  make runebender-tab Runebender web as a tab in your default browser' \
 		'  make glyph-ai-inventory  Scan Runebender color labels for AI glyph work' \
 		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
 		'  make qa             Run Fontspector Google Fonts profile' \
@@ -78,9 +79,16 @@ specimen:
 # documentation/social-assets/ (render each with `designbot <script.rs>`);
 # the old batch target rendered a since-deleted script.
 
-# Chromeless app window on its own Chrome profile: the editor and nothing
-# else, which is how the design work happens.
+# The native editor. Faster and the one being developed against, but it
+# is younger than the web build: no sketch layer (the raster brush), and
+# no font info editing. If it gets in the way, `make runebender-web` is
+# the same source in the editor that has more mileage on it.
 runebender:
+	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-gpui.sh
+
+# The fallback: a chromeless app window on its own Chrome profile, the
+# editor and nothing else.
+runebender-web:
 	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-web.sh
 
 # The same server, opened as an ordinary tab in the default browser —

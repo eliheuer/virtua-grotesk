@@ -6,10 +6,10 @@
 		<contour>
 			<point x="32" y="14" type="line"/>
 			<point x="48" y="0" type="line"/>
-			<point x="96" y="0" type="line"/>
-			<point x="256" y="232" type="line"/>
-			<point x="264" y="232" type="line"/>
-			<point x="424" y="0" type="line"/>
+			<point x="88" y="0" type="line"/>
+			<point x="256" y="240" type="line"/>
+			<point x="264" y="240" type="line"/>
+			<point x="432" y="0" type="line"/>
 			<point x="480" y="0" type="line"/>
 			<point x="496" y="16" type="line"/>
 			<point x="496" y="64" type="line"/>
@@ -21,10 +21,10 @@
 			<point x="404" y="576" type="line"/>
 			<point x="264" y="374" type="line"/>
 			<point x="256" y="374" type="line"/>
-			<point x="122" y="576" type="line"/>
-			<point x="66" y="576" type="line"/>
-			<point x="50" y="560" type="line"/>
-			<point x="50" y="512" type="line"/>
+			<point x="128" y="576" type="line"/>
+			<point x="72" y="576" type="line"/>
+			<point x="56" y="560" type="line"/>
+			<point x="56" y="512" type="line"/>
 			<point x="200" y="304" type="line"/>
 			<point x="200" y="296" type="line"/>
 			<point x="32" y="64" type="line"/>
@@ -34,6 +34,8 @@
 	<anchor name="top" x="264" y="576"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>public.markColor</key>
 			<string>0.09,0.72,0.44,1</string>
 		</dict>
