@@ -37,4 +37,12 @@
       </location>
     </instance>
   </instances>
+  <rules processing="last">
+    <rule name="a bold">
+      <conditionset>
+        <condition name="Weight" minimum="500" maximum="700"/>
+      </conditionset>
+      <sub name="a" with="a.bold"/>
+    </rule>
+  </rules>
 </designspace>
