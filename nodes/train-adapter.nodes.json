@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "core.source",
+      "pos": [
+        32,
+        64
+      ]
+    },
+    {
+      "id": 2,
+      "type": "core.master",
+      "pos": [
+        32,
+        192
+      ],
+      "values": {
+        "name": "Bold"
+      }
+    },
+    {
+      "id": 3,
+      "type": "core.model",
+      "pos": [
+        32,
+        336
+      ],
+      "values": {
+        "name": "virtua-12m-bolden"
+      }
+    },
+    {
+      "id": 4,
+      "type": "font-ml.train",
+      "pos": [
+        320,
+        64
+      ],
+      "values": {
+        "out": "unused",
+        "adapter_out": "adapters/virtua-demo",
+        "steps": 200.0,
+        "rank": 8.0,
+        "colors": "any"
+      }
+    },
+    {
+      "id": 5,
+      "type": "core.adapter",
+      "pos": [
+        608,
+        192
+      ],
+      "values": {
+        "strength": 1.0
+      }
+    },
+    {
+      "id": 6,
+      "type": "font-ml.bolden",
+      "pos": [
+        864,
+        128
+      ],
+      "values": {
+        "strength": 1.0
+      }
+    },
+    {
+      "id": 7,
+      "type": "core.compare",
+      "pos": [
+        1136,
+        128
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      "source",
+      4,
+      "source"
+    ],
+    [
+      2,
+      "source",
+      4,
+      "target"
+    ],
+    [
+      3,
+      "model",
+      4,
+      "init"
+    ],
+    [
+      3,
+      "model",
+      5,
+      "model"
+    ],
+    [
+      4,
+      "adapter",
+      5,
+      "name"
+    ],
+    [
+      5,
+      "model",
+      6,
+      "model"
+    ],
+    [
+      1,
+      "source",
+      6,
+      "source"
+    ],
+    [
+      1,
+      "glyphs",
+      6,
+      "glyphs"
+    ],
+    [
+      6,
+      "layer",
+      7,
+      "layer"
+    ],
+    [
+      2,
+      "source",
+      7,
+      "against"
+    ],
+    [
+      2,
+      "source",
+      6,
+      "reference"
+    ]
+  ]
+}
