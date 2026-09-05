@@ -134,6 +134,12 @@ until its numbers are round.**
 | baseline | 0 | round forms overshoot to −16 |
 | descender | −256 | |
 
+The OpenType line box follows the same numbers: hhea and typo ascender
+1024, descender −256, line gap 0. Ascender minus cap height equals the
+descender, so a line box centred on a field centres the capitals. The
+win metrics cover the tallest and deepest glyphs in the family, 1152 and
+512, so nothing clips on Windows.
+
 Overshoot is **16 units** — one grid quantum of the design, same as the
 chamfer. Flat forms (E, H, stems) sit exactly on the lines; only curves
 overshoot.
