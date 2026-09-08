@@ -36,8 +36,10 @@
 	<anchor name="bottom" x="358" y="0"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>0.91,0.79,0.27,1</string>
 		</dict>
 	</lib>
 </glyph>
