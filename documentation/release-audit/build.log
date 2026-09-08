@@ -1,0 +1,40 @@
+./build.sh
+Building Virtua Grotesk fonts with gftools builder...
+[1/15] instantiateUfo
+fontmake -i Virtua Grotesk SemiBold -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[2/15] instantiateUfo
+fontmake -i Virtua Grotesk Medium -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[3/15] instantiateUfo
+fontmake -i Virtua Grotesk Bold -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[4/15] instantiateUfo
+fontmake -i Virtua Grotesk Regular -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[5/15] buildVariable
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpirx779e6 -o variable -m VirtuaGrotesk.designspace --filter ...
+[6/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp9bvci0i0 -o ttf -u instance_ufos/VirtuaGrotesk-SemiBold.ufo.json --filter ...
+[7/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmprpmtzz18 -o ttf -u instance_ufos/VirtuaGrotesk-Bold.ufo.json --filter ...
+[8/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpbt1p7_4n -o ttf -u instance_ufos/VirtuaGrotesk-Medium.ufo.json --filter ...
+[9/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpaopmuxdp -o ttf -u instance_ufos/VirtuaGrotesk-Regular.ufo.json --filter ...
+[10/15] fix
+gftools-fix-font -o ../fonts/variable/VirtuaGrotesk[wght].ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpirx779e6
+[11/15] gftools-gen-stat --inplace  -- '../fonts/variable/VirtuaGrotesk[wght].ttf' && touch /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp_lzgdao9.buildStatstamp
+['../fonts/variable/VirtuaGrotesk[wght].ttf']
+Saving font to ../fonts/variable/VirtuaGrotesk[wght].ttf
+[12/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-Bold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmprpmtzz18
+[13/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-Medium.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpbt1p7_4n
+[14/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-Regular.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpaopmuxdp
+[15/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-SemiBold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp9bvci0i0
+
+Build complete! Fonts are in the fonts/ directory:
+fonts/variable/VirtuaGrotesk[wght].ttf
+fonts/ttf/VirtuaGrotesk-Bold.ttf
+fonts/ttf/VirtuaGrotesk-Medium.ttf
+fonts/ttf/VirtuaGrotesk-Regular.ttf
+fonts/ttf/VirtuaGrotesk-SemiBold.ttf
