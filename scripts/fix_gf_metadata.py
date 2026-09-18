@@ -10,7 +10,7 @@ from fontTools.ttLib import TTFont, newTable
 
 ROOT = Path(__file__).resolve().parents[1]
 COPYRIGHT = (ROOT / "OFL.txt").read_text().splitlines()[0]
-SCRIPT_TAGS = "Arab, Latn"
+SCRIPT_TAGS = "Arab, Hebr, Latn"
 SOURCE_ONLY_ARABIC_HELPERS = {
     "dotabovear",
     "dotbelowar",
@@ -86,6 +86,10 @@ def remove_unreachable_arabic_helpers(font):
 def patch_font(path):
     font = TTFont(path)
     font["OS/2"].fsType = 0
+    # This family varies only by weight and uses WWS-conformant names.
+    # OpenType OS/2 v4 bit 8 avoids redundant WWS name records (IDs 21/22).
+    if font["OS/2"].version >= 4:
+        font["OS/2"].fsSelection |= 1 << 8
     set_name(font, 0, COPYRIGHT)
     add_identity_avar(font)
     meta = font["meta"] if "meta" in font else newTable("meta")

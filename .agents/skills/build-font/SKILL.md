@@ -15,7 +15,7 @@ Default: `all`
 ## Instructions
 
 ### Activate the project Python venv first
-Run: `source venv/bin/activate`
+Run: `source .venv/bin/activate`
 
 ### Based on the argument:
 

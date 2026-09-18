@@ -1,149 +1,54 @@
 ---
 name: google-fonts-packaging
-description: Prepare the upstream release, downstream metadata, Google Fonts Packager dry run, Add Font issue, and downstream PR handoff for a font family.
+description: Prepare and review a local Google Fonts package and submission draft before authorized publication.
 ---
 
-# /google-fonts-packaging
+# Google Fonts packaging
 
-Prepare the upstream release, downstream metadata, Google Fonts Packager dry
-run, Add Font issue, and downstream PR handoff for a font family.
+Read `.agents/google-fonts-onboarding-checklists.md` and the project checklist.
+Refresh the official [package](https://googlefonts.github.io/gf-guide/package.html),
+[metadata](https://googlefonts.github.io/gf-guide/metadata.html), and
+[article](https://googlefonts.github.io/gf-guide/article.html) pages.
 
-This skill is portable: `{{TOKEN}}` values are defined in
-`.agents/google-fonts-onboarding-checklists.md`. When copying to another font
-repo, fill in that token table and also replace the release strategy and
-local wrapper commands.
+## Local preview
 
-## Usage
-`/google-fonts-packaging [metadata|release|packager|issue|pr|all]`
+Work in a scratch output directory, separate from live source files and any
+shared google/fonts checkout. Copy the exact reviewed TTFs and OFL.txt into
+`ofl/virtuagrotesk/`, then run `gftools add-font` on that directory. Copy the
+upstream article to `article/ARTICLE.en_us.html`. Inspect generated metadata;
+its defaults are not approved scope or release values.
 
-Default: `all`
+Check names, designer, category/stroke, axes, subsets including menu, primary
+script, date, and source linkage. Confirm all declared files exist. Preserve
+intended Arabic and Hebrew support even when the automatic subset detector
+omits a subset. A preview can carry provisional values if clearly identified;
+do not present it as ready to publish.
 
-## Preconditions
+Run `make qa-package PACKAGE=<directory>`. Keep network failures/skips distinct
+from font defects. Review package-context findings and actual proof output.
+The variable font is the current downstream proposal; static outputs remain
+upstream build artifacts unless the release plan changes.
 
-- Maintainer decisions are recorded.
-- Drawing/source blockers are either fixed or explicitly accepted for review.
-- Fontspector and visual proof evidence is current.
-- Public upstream URL is final.
-- Local `google/fonts` fork is synced with upstream.
-- Git identity and Google CLA identity are aligned.
-- GitHub CLI or `GH_TOKEN` auth is available before Packager needs the API.
+## Public source and Packager
 
-## Source Strategy
+Choose a reviewed public binary source before finalizing `source.files` or
+`source.archive_url`. Ignored local fonts are not public branch files. Verify
+archive contents and hashes if using a release. Do not invent URLs, tags,
+commits, dates, or designer approvals.
 
-Choose exactly one strategy for the first package, then document fallback paths:
+Read `gftools packager --help` for the installed version before invoking it.
+Do not copy old command syntax. Identify modes that commit, push, or open a PR;
+keep the preview local until those actions are authorized. Inspect every path
+and ensure only the intended downstream family is affected.
 
-- Default branch: Packager reads files from the public repo branch.
-- Latest release/archive: Packager reads generated files from a GitHub release
-  archive URL ending in `.zip`.
-- Build from source: Packager builds from public source inputs and a supported
-  config, if Google Fonts accepts that path for the family.
+## Submission
 
-For each strategy, verify:
+Search for an existing Add Font issue. Prepare an honest draft from the current
+template; leave maintainer attestations unchecked until confirmed. The issue
+can begin while requirements are still being completed. It must precede a PR.
 
-- every `source.files` path exists locally,
-- no `source.files` path is unsafe,
-- there are no duplicate source or destination paths,
-- generated or ignored files are either committed through the selected strategy
-  or intentionally excluded,
-- `source.config_yaml` is present only for a build-from-source strategy or when
-  Google Fonts review asks for it.
-
-## Downstream METADATA.pb
-
-Review and generate downstream metadata from built fonts and decisions. Check:
-
-- family name and designer strings,
-- `category`,
-- `date_added` final value,
-- `fonts` blocks and filenames,
-- `axes` and `fvar` alignment,
-- `subsets`, including `menu`,
-- `primary_script` when needed,
-- `source.repository_url`,
-- `source.archive_url` or source files strategy fields,
-- `source.commit` as a final 40-character lowercase Git commit,
-- absence of project-only placeholders.
-
-Do not apply metadata into the local `google/fonts` fork until final values are
-available and a dry-run checker says it is ready.
-
-## Release Archive Path
-
-When using latest-release/archive mode:
-
-1. Build final fonts.
-2. Generate the release archive from an explicit manifest.
-3. Verify archive contents, path safety, duplicates, and hashes.
-4. Create the final source commit and tag.
-5. Publish the GitHub release asset.
-6. Confirm the downstream `source.archive_url` matches the public release asset.
-
-Never cite a release archive URL as final before the tag and asset exist.
-
-## Packager Dry Run
-
-Run Packager without PR mode first:
-
-```bash
-gftools packager -n -d /path/to/google/fonts ofl/{{FAMILY_DIR}}
-```
-
-or the repo's wrapper equivalent.
-
-Review the generated package before any `-p` run:
-
-- changed paths are limited to one family directory,
-- `METADATA.pb` matches the reviewed preview,
-- fonts, article, images, license, and upstream metadata are present as expected,
-- generated `upstream.yaml` or source linkage is sensible,
-- no unrelated downstream files changed.
-
-Only after that review and after the Add Font issue exists should the final
-Packager run use PR mode with the issue number.
-
-## Add Font Issue
-
-Build the issue draft from the current Google Fonts Add Font template. Keep:
-
-- title concise, usually `Add {{FAMILY}}`,
-- labels from the template, usually `I New Font, II Submission`,
-- requirement boxes unchecked until actually opening the issue,
-- public repo URL,
-- short description,
-- copyright and AI-use disclosure,
-- namecheck status,
-- glyphset/script status,
-- known blockers or reviewer questions,
-- links to proof, specimen, and evidence reports as appropriate.
-
-Refresh the issue template from `google/fonts` before opening the real issue.
-
-## Downstream PR
-
-Follow the Google Fonts PR guide:
-
-- issue first,
-- one family directory per PR,
-- branch name from Packager or a clear family-specific branch,
-- PR title in the expected package format,
-- body includes upstream repo and commit provenance,
-- local `google/fonts` fork has no dirty paths outside the family directory,
-- current family directory contents are explicitly listed before branching.
-
-If the local downstream family directory contains only a starter `METADATA.pb`,
-record that clearly. The starter-only state must be replaced by Packager output
-before opening the PR.
-
-## Final Handoff Evidence
-
-Keep durable docs for:
-
-- package source strategy,
-- release/archive manifest,
-- downstream metadata preview and diff,
-- package dry-run readiness,
-- Add Font issue draft,
-- PR identity/auth readiness,
-- downstream PR readiness,
-- final blockers,
-- next actions.
+Before publication, resolve actual QA failures, record warning dispositions,
+confirm drawing/script acceptance and artwork licensing, and ensure public
+artifacts are exactly the reviewed binaries. User authorization is required
+for public messages or publication. Report local, submitted, approved, and
+published states separately.

@@ -1,71 +1,76 @@
-#!/bin/bash
-
+#!/usr/bin/env bash
+# Development, full-font, and downstream-package Google Fonts QA.
 set -euo pipefail
+cd "$(dirname "$0")/.."
 
-FONT_PATHS=(
-    'fonts/variable/VirtuaGrotesk[wght].ttf'
-    'fonts/ttf/VirtuaGrotesk-Regular.ttf'
-    'fonts/ttf/VirtuaGrotesk-Medium.ttf'
-    'fonts/ttf/VirtuaGrotesk-SemiBold.ttf'
-    'fonts/ttf/VirtuaGrotesk-Bold.ttf'
-)
+MODE=${1:-development}
+FONTSPECTOR=${FONTSPECTOR:-fontspector}
+QA_NETWORK=${QA_NETWORK:-online}
+QA_REPORT_DIR=${QA_REPORT_DIR:-out/qa/$MODE}
 
-# Checks excluded from the gate, each with a reason and a re-enable
-# condition. The goal is a ZERO-noise gate: anything this script prints
-# is a regression. Revisit this list whenever one of the conditions is
-# met, and prefer deleting entries over adding them.
-#
-# googlefonts/repo/dirname_matches_nameid_1
-#   Local repo directory naming; not meaningful before GF packaging.
-#
-# Deferred until the Arabic drawing cleanup pass (overlapping parts
-# currently produce near-degenerate intersections when instance overlap
-# removal runs; fixing is outline redrawing work, tracked in
-# documentation/manual-cleanup-handoff.md):
-#   outline_alignment_miss
-#
-# Deferred until the Latin language-coverage pass (auxiliary characters
-# like E/I/O/U + breve/macron composites, and mark anchors for combining
-# accents over ogonek/dotaccent bases):
-#   googlefonts/glyphsets/shape_languages
-#
-# Deferred until GF packaging (requires a real METADATA.pb with an
-# arabic subset; the PUA icon block E000-E021 will always be outside GF
-# subsets by design):
-#   googlefonts/metadata/unreachable_subsetting
-EXCLUDES=(
-    googlefonts/repo/dirname_matches_nameid_1
-    outline_alignment_miss
-    googlefonts/glyphsets/shape_languages
-    googlefonts/metadata/unreachable_subsetting
-)
+case "$MODE" in
+    development|full)
+        if [ "$#" -gt 1 ]; then
+            echo "usage: $0 [development|full|package DIRECTORY]" >&2; exit 2
+        fi
+        FONT_PATHS=(
+            'fonts/variable/VirtuaGrotesk[wght].ttf'
+            'fonts/ttf/VirtuaGrotesk-Regular.ttf'
+            'fonts/ttf/VirtuaGrotesk-Medium.ttf'
+            'fonts/ttf/VirtuaGrotesk-SemiBold.ttf'
+            'fonts/ttf/VirtuaGrotesk-Bold.ttf'
+        )
+        ;;
+    package)
+        if [ "$#" -ne 2 ] || [ ! -f "$2/METADATA.pb" ] || [ ! -f "$2/OFL.txt" ] || [ ! -f "$2/article/ARTICLE.en_us.html" ]; then
+            echo "package QA needs DIRECTORY with METADATA.pb, OFL.txt, and article/ARTICLE.en_us.html" >&2; exit 2
+        fi
+        shopt -s nullglob
+        FONT_PATHS=("$2"/*.ttf)
+        if [ "${#FONT_PATHS[@]}" -eq 0 ]; then echo 'Package has no TTFs' >&2; exit 2; fi
+        ;;
+    *) echo "usage: $0 [development|full|package DIRECTORY]" >&2; exit 2 ;;
+esac
 
-if ! command -v fontspector >/dev/null 2>&1; then
-    echo "Missing fontspector. Install it from https://github.com/fonttools/fontspector/releases or with cargo-binstall."
-    exit 1
+command -v "$FONTSPECTOR" >/dev/null 2>&1 || { echo "Missing Fontspector; see documentation/qa.md" >&2; exit 1; }
+for font_path in "${FONT_PATHS[@]}"; do
+    [ -f "$font_path" ] || { echo "Missing $font_path. Run make build." >&2; exit 1; }
+done
+
+INPUT_PATHS=("${FONT_PATHS[@]}")
+if [ "$MODE" = package ]; then
+    INPUT_PATHS+=("$2/METADATA.pb" "$2/OFL.txt" "$2/article/ARTICLE.en_us.html")
 fi
 
-for font_path in "${FONT_PATHS[@]}"; do
-    if [ ! -f "$font_path" ]; then
-        echo "Missing $font_path. Run 'make build' before running Google Fonts QA."
-        exit 1
-    fi
-done
+ARGS=(-p googlefonts --error-code-on fail --loglevel warn --succinct)
+if [ "$MODE" = development ]; then
+    # Existing development debt. These are not release exceptions.
+    # Directory naming needs downstream context; the other checks need
+    # outline, language/mark, and subset work. Never add exclusions to hide debt.
+    EXCLUDES=(
+        googlefonts/repo/dirname_matches_nameid_1
+        outline_alignment_miss
+        googlefonts/glyphsets/shape_languages
+        googlefonts/metadata/unreachable_subsetting
+    )
+    for check in "${EXCLUDES[@]}"; do ARGS+=(--exclude-checkid "$check"); done
+    QA_NETWORK=offline
+fi
+case "$QA_NETWORK" in
+    offline) ARGS+=(--skip-network) ;;
+    online) ;;
+    *) echo 'QA_NETWORK must be online or offline' >&2; exit 2 ;;
+esac
 
-mkdir -p "$HOME/.fontspector"
-
-EXCLUDE_ARGS=()
-for check in "${EXCLUDES[@]}"; do
-    EXCLUDE_ARGS+=(--exclude-checkid "$check")
-done
-
-fontspector \
-    -p googlefonts \
-    "${FONT_PATHS[@]}" \
-    "${EXCLUDE_ARGS[@]}" \
-    --succinct \
-    --loglevel warn \
-    --skip-network
-
-echo "Note: $(( ${#EXCLUDES[@]} - 1 )) checks deferred with documented reasons (see scripts/check_gf_fonts.sh)."
-echo "Anything WARN/FAIL printed above is a regression."
+mkdir -p "$QA_REPORT_DIR"
+"$FONTSPECTOR" --version > "$QA_REPORT_DIR/tool-version.txt"
+shasum -a 256 "${INPUT_PATHS[@]}" > "$QA_REPORT_DIR/input-sha256.txt"
+git rev-parse HEAD > "$QA_REPORT_DIR/repository-revision.txt"
+printf 'Mode: %s\nNetwork: %s\n' "$MODE" "$QA_NETWORK" > "$QA_REPORT_DIR/run.txt"
+printf '%s\n' "${ARGS[@]}" "${INPUT_PATHS[@]}" >> "$QA_REPORT_DIR/run.txt"
+# Clear only this run's generated reports so a failed invocation cannot leave
+# an earlier result looking current.
+rm -f "$QA_REPORT_DIR/fontspector.json" "$QA_REPORT_DIR/fontspector.md"
+printf 'QA mode: %s; network: %s; reports: %s\n' "$MODE" "$QA_NETWORK" "$QA_REPORT_DIR"
+"$FONTSPECTOR" "${ARGS[@]}" --json "$QA_REPORT_DIR/fontspector.json" \
+    --ghmarkdown "$QA_REPORT_DIR/fontspector.md" "${INPUT_PATHS[@]}"

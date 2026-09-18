@@ -1,5 +1,9 @@
 # Arabic Bold — the weight contract
 
+Historical measurements from the initial Bold planning pass. Statements below
+about identical masters describe that starting point, not the current sources.
+Use current builds and the design worklog before acting on this proposal.
+
 The green Arabic is byte-identical in both masters, so the Arabic has never
 been emboldened. This is the measured basis for doing it.
 

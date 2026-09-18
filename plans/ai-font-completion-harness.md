@@ -136,7 +136,7 @@ verifier** system. The design principles that follow from that:
 6. **Verifiable definition of done.** Not vibes: **zero excludes in
    `scripts/check_gf_fonts.sh` + `make test` clean + `METADATA.pb` + the
    google/fonts PR**. The exclude list is the burn-down chart
-   (`documentation/google-fonts-readiness.md` already establishes this).
+   (`documentation/google-fonts/README.md` already establishes this).
 
 ---
 
@@ -166,7 +166,7 @@ wiped by builds).
 Current classification bug: the script lumps **yellow** (`1,0.86,0.2,1`) in
 with orange, losing a rung of the human's quality gradient. Fix in Phase 1.
 
-**GF readiness state** (`documentation/google-fonts-readiness.md` +
+**GF readiness state** (`documentation/google-fonts/README.md` +
 `scripts/check_gf_fonts.sh`): GF Latin Core is complete (319/319), masters
 interpolate, kerning and Arabic shaping are done. The exclude list is down to
 **four** (three Arabic outline checks were just cleared — the readiness doc is
@@ -254,9 +254,8 @@ loading, image compositing, and — verified 2026-07-06 — a public
 **Decision (Eli, 2026-07-06): designbot/Rust is the renderer for all harness
 review specimens** — no Python venv friction in the loop. Preference for the
 Linebender ecosystem; we add features to designbot as the harness needs them,
-working toward DrawBot feature parity. (Done: `make proof`/`make specimen`
-now render via designbot; drawbot-skia is fully retired from this repo, and
-the old Python scripts live in `documentation/archive/agent-generated-scripts/`.)
+working toward DrawBot feature parity. The current `make proof` uses designbot; `make specimen` is an unfinished
+marketing target. Retired Python scripts are recoverable from Git history.
 House specimen style for
 anything reviewed in chat: **dark mode** (dark gray bg ~#202020–#2a2a2a,
 light gray ink ~#c8c8c8–#e6e6e6, never pure black/white), laid out in the
@@ -555,7 +554,7 @@ Owners: **[C]** Claude builds it now · **[X]** Codex executes in the loop ·
 ### Phase 0 — Ground truth cleanup (make the repo honest before automating)
 - [x] [C] Write `DESIGN.md` at the repo root — the power-of-two grid / chamfer design contract every pipeline stage consumes
 - [ ] [H] Commit or stash the current WIP (Arabic outline cleanup, Hebrew glyphs, harness edits) so the harness branch starts clean
-- [ ] [C] Update `documentation/google-fonts-readiness.md` to the real exclude list (4, not 7) and current worklist
+- [ ] [C] Update `documentation/google-fonts/README.md` to the real exclude list (4, not 7) and current worklist
 - [x] [C] Deleted the stale `documentation/source-guides/ai-glyph-harness.md` (superseded by this plan + the `glyph-ai-harness` skill)
 - [ ] [C] Add yellow (`1,0.86,0.2,1`) as its own class in inventory; classify all 7 palette colors + legacy red distinctly
 - [ ] [H] Grading pass in Runebender: confirm every glyph's color reflects current truth (85 reds especially)
@@ -605,7 +604,7 @@ Owners: **[C]** Claude builds it now · **[X]** Codex executes in the loop ·
 - [ ] [C/X] Bulk baseline-snap the ~16 `outline_alignment_miss` Arabic glyphs → remove exclude
 - [ ] [C/X] Fix 4 Arabic `contour_count` glyphs (uni062C.fina, uni062D.fina, uni0635.init, uni0636.init)
 - [ ] [C/X] `shape_languages`: mark anchors over ogonek/dotaccent, breve/macron composites → remove exclude
-- [ ] [H] Kerning sign-off per core-qa-process (source decision recorded, `gftools qa --proof` reviewed)
+- [ ] [H] Kerning sign-off per documentation/qa.md (source decision recorded, `gftools qa --proof` reviewed)
 
 ### Phase 7 — Package & submit
 - [ ] [C] `/google-fonts-packaging`: `METADATA.pb` + `ofl/virtuagrotesk/` → removes `unreachable_subsetting` + `dirname_matches_nameid_1` excludes
@@ -618,5 +617,5 @@ Owners: **[C]** Claude builds it now · **[X]** Codex executes in the loop ·
 - [ ] [C] Unify the mark-color protocol across this doc and `img2ufo/docs/glyph-completion-harness.md` (this table wins; web-palette values)
 - [ ] [C] Align worklist JSON schema with img2ufo's `<Family>-<Style>-completion.json`
 - [ ] [C] Document the port procedure: img2ufo bootstrap → copy `harness/` → edit `config.yaml` → point Codex at RUNBOOK
-- [x] [C] designbot: DrawBot feature-parity backlog as the harness needs it (Linebender ecosystem preferred). Done 2026-07: `make proof`/`make specimen`/`make social-images` all render via designbot; drawbot-skia removed from `requirements.in` and the venv
+- [x] [C] designbot: DrawBot feature-parity backlog as the harness needs it (Linebender ecosystem preferred). Historical migration completed in July 2026. Currently `make proof` uses designbot, image scripts are co-located under `documentation/`, and `make specimen` remains unimplemented.
 - [ ] [C] Feed the accumulated `IMG2BEZ_LOG` corpus to img2bez's input-adaptive selector work (needs ≥80 unique images; the grind supplies them)

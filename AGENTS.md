@@ -1,296 +1,138 @@
-# AGENTS.md
+# Agent guidance
 
-This file is the canonical guidance for AI coding agents (Claude Code, Codex,
-etc.) working in this repository. `CLAUDE.md` imports this file and adds
-Claude Code-specific notes — shared guidance belongs here, not there.
+Virtua Grotesk is an OFL variable font in development for Google Fonts.
+Use the [onboarding checklist](documentation/google-fonts/README.md) for release
+scope and remaining work.
+Dated audits are snapshots, not current build or review results.
 
-Agent skills live in `.agents/skills/` (one directory per skill with a
-`SKILL.md`). `.claude/skills` is a symlink to that directory so Claude Code
-picks them up — edit skills only in `.agents/skills/`.
+Codex reads this file directly. Shared workflows live in `.agents/skills/`;
+`CLAUDE.md` and `.claude/skills` provide compatibility for Claude Code.
+Edit the canonical files, not separate model-specific copies.
 
-## Mission & Map
+## Working style and scope
 
-**Goal: finish Virtua Grotesk and publish it to Google Fonts.** This repo is a
-small AI-driven type studio — an agent (you) orchestrates the tools below to
-draw, space, QA, and ship the font.
+Use the user's requested outcome and current release scope to choose the work.
+Load the relevant skill and referenced evidence as needed; do not load the whole
+archive or every skill. Use current files and command results over dated prose.
 
-The phases and the tools for each:
+Complete authorized, reversible work without repeated permission questions.
+When a missing design, licensing, or release decision blocks one step, ask a
+focused question and continue independent work. Reuse decisions and approvals
+already given in the task. Review-only requests remain review-only; onboarding
+preparation does not authorize public messages or publication.
 
-- **Draw / fix glyphs** — `img2bez` traces from reference images (see "Adding
-  Glyphs from Images"); Runebender (`make runebender`) is the visual review +
-  live-edit surface. Skills: `/draw-outline`, `/edit-glyph`, `/compare-reference`,
-  `/glyph-ai-harness`.
-- **Space & kern** — per-glyph sidebearings in the UFOs; `/kerning`.
-- **Build & QA** — `make build`, `make test` (the Fontspector `googlefonts`
-  gate), `make proof` / `make specimen`, `make preflight`; skill `/font-qa`.
-- **Package & submit** — `/google-fonts-packaging` (produces `METADATA.pb` + the
-  `ofl/virtuagrotesk` layout), `/google-fonts-onboarding`, `/google-fonts-qa`.
+Keep updates concise: outcome, evidence, remaining blockers. Do not create new
+checklists or reports that duplicate maintained ones. Preserve unresolved human
+choices through handoffs; distinguish proposed, verified, approved, and published.
+Use plain commit messages without agent self-credit or generated-by trailers.
 
-**The finish line and current priorities live in
-[`documentation/google-fonts-readiness.md`](documentation/google-fonts-readiness.md)
-— read it first.** In short: the build, Latin, kerning, and the Arabic OpenType
-shaping are done; what remains, in order, is (1) the **Arabic outline cleanup
-pass** (top priority — the bulk of the work left), (2) Latin language-coverage
-anchors, (3) `METADATA.pb` + packaging, (4) the `google/fonts` PR. Progress is
-measured by the excludes in `scripts/check_gf_fonts.sh`: each one removed is a
-step toward done, and **zero excludes = ready to submit.**
+For onboarding/readiness use `$google-fonts-onboarding`; for binary or package
+checks use `$google-fonts-qa`; for a downstream preview use
+`$google-fonts-packaging`. Source-only checks belong to `$font-qa`.
 
-**Guardrails:** keep both masters structurally identical (master compatibility),
-and never re-add a QA exclude to force a green `make test` — the excludes are the
-to-do list, not a setting.
+## Sources and design
 
-## AI Glyph-Completion Harness
+The active sources are `sources/VirtuaGrotesk.designspace` and the Regular
+and Bold UFOs beside it. The weight axis runs from 400 to 700. `sources/archive/`
+is historical material, not build input. Builds use `sources/config.yaml`.
 
-This repo is the demo font for a unified AI type-production pipeline
-(img2bez, img2ufo, designbot, an image-generation model, and this repo's
-harness). Three documents define it:
+Read `DESIGN.md` before drawing. The font uses 16-unit chamfers, monolinear
+strokes, and smooth cubic curves. Weight gain generally reduces counters;
+follow the glyph-specific contract rather than assuming every outer contour
+is fixed.
 
-- **`DESIGN.md` (repo root)** — the design contract: power-of-two grid,
-  16-unit chamfers, metrics, curve/spacing rules. Every drawn or traced glyph
-  is judged against it.
-- **`harness/RUNBOOK-codex.md`** — the operating procedure for adding or
-  regenerating **one glyph** from a reference image (trace with
-  `img2bez masters` on a scratch copy, adjust per `DESIGN.md`, port into
-  sources in repo style, mark **blue**, verify). If you were asked to add,
-  regenerate, or trace a glyph, follow this runbook.
-- **`plans/ai-font-completion-harness.md`** — the full system plan, research,
-  mark-color protocol, and phase checklist.
-- **`documentation/design-pass-worklog.md`** — the running glyph-by-glyph
-  review of sources against the published blog contract (measurements,
-  decisions and their reasons, OPEN items). Read it before touching A–Z/a–z;
-  append an entry whenever a review or design decision happens. OPEN items
-  are Eli's to resolve — agents measure and propose, never settle them by
-  editing sources.
-
-Mark colors in the UFOs are the human's control channel: green = done
-(never touch), yellow/orange = needs polish, red = broken/regenerate,
-blue = AI output awaiting human grading, no color = ignore.
-
-## Project Overview
-
-Virtua Grotesk is an open-source variable font (OFL v1.1 licensed) with a Weight axis (wght 400–700). The sources are UFO files and the Google Fonts-ready build path uses `gftools builder sources/config.yaml`.
-
-## Quick Start
-
-```bash
-/build-font             # Build all fonts (variable + static)
-/proof                  # Generate PDF proof document
-make specimen           # Generate landscape print spacing specimen
-make reports            # Regenerate source/build metadata reports
-make preflight          # Build, proof, specimen, reports, then check artifacts
-make test               # Build, then run Fontspector googlefonts profile
-/edit-glyph A           # Inspect/edit a glyph
-make runebender         # Open the font in the Runebender web editor —
-                        # edits to sources/ on disk live-reload in the
-                        # browser; the user's Cmd+S saves back to disk
-/kerning list           # View current kerning pairs
-/compare-reference img  # Compare font to a reference image
-```
-
-## Font Metrics
-
-| Metric | Value |
-|--------|-------|
-| Units per Em | 1024 |
+| Metric | Units |
+| --- | --- |
+| Units per em | 1024 |
 | Ascender | 832 |
-| Cap Height | 768 |
-| x-Height | 576 |
+| Cap height | 768 |
+| x-height | 576 |
 | Descender | -256 |
-| Grid Size | 2 (prefer even coordinates) |
+| Grid | 2; prefer even coordinates |
 
-## Build Commands
+Before touching A–Z or a–z, read `documentation/design-pass-worklog.md`.
+Append measurements and design decisions there. OPEN decisions belong to Eli;
+measure and propose without resolving them by editing sources.
 
-**Prerequisites:** Python virtual environment at `.venv/` with `pip install -r requirements.txt`.
+## Source safety
 
-```bash
-make setup      # Create .venv and install requirements
-make build      # Build variable and static TTFs into fonts/
-make proof      # Build documentation/proofs/proof.pdf
-make specimen   # Build documentation/proofs/print-spacing-specimen.pdf
-make runebender # Open sources/VirtuaGrotesk.designspace in Runebender web
-make reports    # Regenerate source/build metadata reports
-make preflight  # Run the full local handoff gate
-make test       # Build, then run Fontspector's googlefonts profile
-```
+- Green glyphs are human-approved: do not edit them. Purple means do not touch.
+- Blue means AI output awaiting human grading. Yellow/orange needs polish;
+  red needs repair. Uncolored glyphs are outside automatic completion work.
+  Classify unfamiliar colors before acting; never auto-grade AI output green.
+- Both masters must have matching contours, point counts, and point types.
+  Mirror structural changes and verify master compatibility.
+- Preserve unrelated work. Check the working tree and other worktrees before
+  starting a source batch.
+- Do not save whole UFOs with `defcon`/`ufoLib` `font.save()`: it reformats the
+  sources. Edit GLIF XML and plists surgically in their existing style (tabs,
+  double-quoted attributes, no space before `/>`, point attribute order
+  `x`, `y`, `type`, `smooth`).
+- Register new glyphs in each master's `glyphs/contents.plist`,
+  `public.glyphOrder` in `lib.plist`, and the GLIF file itself.
 
-Built fonts go to `fonts/variable/` and `fonts/ttf/` (gitignored). `build/` and `sources/instance_ufos/` are generated build outputs.
+## Drawing from images
 
-## Runebender Web Editing
+Use `.agents/skills/anchor-sheet-glyphs/SKILL.md` and
+`harness/RUNBOOK-anchor-sheets.md` for reference sheets. Read the skill's
+`LESSONS.md` before generating; record Eli's corrections there. Calibrate
+pixel-to-font coordinates against a known green anchor. Use `symbol_gen.py`
+for line-grammar symbols and img2bez for organic outlines.
 
-Use `make runebender` to open `sources/VirtuaGrotesk.designspace` in the local
-Runebender web editor. The target runs:
+For a single organic glyph, follow `harness/RUNBOOK-codex.md`: trace on a
+scratch copy, review against `DESIGN.md`, port in the repository's style,
+mark blue, and verify. Use `img2bez masters --help` for current flags.
+Do not replace tracing with a hand-drawn approximation.
 
-```bash
-runebender-serve sources/VirtuaGrotesk.designspace --open
-```
+Inspect the trace report before installation: `compatible` must be true;
+`lowConfidence` requires review or regeneration. Check bounds, advance,
+point counts, and profile. Tune and retrace poor results. Trace logging uses
+`IMG2BEZ_LOG` (normally `~/.img2bez/virtua-grotesk-traces.jsonl`).
 
-Keep the server running while editing. Source edits on disk live-reload in the
-browser, and the user's Cmd+S in Runebender saves back to disk. Do not use the
-old native `~/.cargo/bin/runebender` unless the user explicitly asks for the
-native app.
+The broader harness design is in `plans/ai-font-completion-harness.md`.
+Runebender is the human visual review and final editing surface.
 
-## Core QA Expectations
+## Commands
 
-- `documentation/core-qa-process.md` is the canonical human/agent QA process
-  (also the pause/resume gate when hand drawing or source cleanup is pending).
-- Reusable Google Fonts onboarding knowledge lives in `.agents/` so it can be
-  copied into future font repos:
-  - `.agents/google-fonts-onboarding-checklists.md` (the canonical checklist;
-    root `GOOGLE_FONTS_PORTING_CHECKLIST.md` is just a pointer to it)
-  - `.agents/google-fonts-official-reference-map.md`
-  - `.agents/skills/google-fonts-onboarding/SKILL.md`
-  - `.agents/skills/google-fonts-qa/SKILL.md`
-  - `.agents/skills/google-fonts-packaging/SKILL.md`
-  - `.agents/skills/google-fonts-nonlatin-drawing/SKILL.md`
-- `make test` is the automated Fontspector `googlefonts` profile gate.
-- `make proof` renders the main proof PDF with designbot.
-- `make specimen` renders the landscape print spacing specimen at
-  `documentation/proofs/print-spacing-specimen.pdf`.
-- `make reports` refreshes the active source/build metadata Markdown reports.
-- `make preflight` is the normal local gate: build, proof, specimen, reports,
-  then verify expected artifacts exist.
-- Agents should regenerate or re-review proofs after spacing, kerning,
-  build-output, or kerning-scope changes, then rerun `make preflight`.
-- Do not treat kerning as final until the source kerning decision is recorded,
-  the generated fonts expose the expected kerning behavior, and the
-  `gftools qa --proof` output has been reviewed.
-- Old agent-generated helper scripts are archived under
-  `documentation/archive/agent-generated-scripts/`; do not wire them back into
-  the active Makefile unless there is a clear current need.
+Run from the repository root. Use `.venv/bin/python` for Python tools.
 
-## Proof Generation
+| Command | Purpose |
+| --- | --- |
+| `make setup` | Create the Python environment and install requirements. |
+| `make build` | Build the variable and four static TTFs into `fonts/`. |
+| `make proof` | Build and render the main PDF with designbot. |
+| `make review` | Build a diffenator2 browser proof. |
+| `make reports` | Refresh source, built-font, and compatibility reports. |
+| `make preflight` | Build, proof, reports, and required-file checks. |
+| `make test` | Build and run the configured Fontspector checks. |
+| `make runebender` | Open the designspace with the native GPUI launcher. |
+| `make runebender-web` | Open the web editor in an app window. |
+| `make runebender-tab` | Open the web editor in a browser tab. |
 
-```bash
-make proof      # designbot proof "$(VARIABLE_FONT)" -o documentation/proofs/proof.pdf
-make specimen   # marketing specimen — not implemented yet (see PROOF_SPEC.md)
-```
+`make specimen` is an unimplemented marketing-specimen target; do not use it
+as a completed proof workflow. `make help` lists additional development tools.
+When explicitly asked to open a font in the web editor, use
+`runebender-serve <path> --open` and leave the server running for the session.
+Do not use the old `~/.cargo/bin/runebender` binary.
 
-The print proof is a **built-in** designbot command (`designbot proof <font>`)
-that introspects the font and emits a color-managed multi-page vector PDF — no
-per-repo script (the full page plan is in `documentation/proofs/PROOF_SPEC.md`).
-The old DrawBot-style Python and per-repo `.rs` proof scripts are retired.
-designbot is installed from the local checkout (`cargo install --path
-designbot-cli` in `~/GH/repos/designbot`); its `--output` extension picks the
-format (png/gif/mp4/pdf), and multi-image scripts take a mode argument after
-`--`. designbot is also the standard tool for ad-hoc image generation (quick
-PNG renders of glyphs; `harness/designbot/glyph_canvas.rs` for anything on
-the harness canvas frame). `make specimen` renders the landscape print review
-PDF at `documentation/proofs/print-spacing-specimen.pdf` across Regular,
-Medium, SemiBold, and Bold.
+## Verification and release
 
-## Source Architecture
+Follow `documentation/qa.md`. After drawing, spacing, kerning,
+or feature changes, build and inspect the compiled fonts, render the affected
+forms, review proofs, and run preflight. After curve edits, also run
+`scripts/curve_lint.py <Master> <glyphs>` and inspect a large single-glyph render.
+Verify shaping with the built font, not just the feature source.
 
-- `sources/VirtuaGrotesk.designspace` — master designspace defining the Weight axis with two masters (Regular=400, Bold=700) and four instances (Regular, Medium, SemiBold, Bold)
-- `sources/VirtuaGrotesk-Regular.ufo` / `VirtuaGrotesk-Bold.ufo` — the two master UFO sources
-- `sources/archive/` — older versions of the sources (lowercase naming convention)
+The main proof is `designbot proof <font> --output <pdf>`; `make proof` uses
+the variable font. For harness renders, use `harness/designbot/glyph_canvas.rs`.
+Read `documentation/proofs/PROOF_SPEC.md` for the proof layout. Inspect actual
+rendered output before claiming visual review.
 
-### UFO File Quick Reference
+Preflight only checks artifact presence. `make skeleton` tolerates QA failures;
+neither establishes release readiness. Do not add Fontspector exclusions to
+force a passing result. Review each existing exclusion and remove it when the
+check passes. Human grading remains separate from automated QA.
 
-Each `.ufo` directory contains:
-- `fontinfo.plist` — font-level metrics and naming
-- `glyphs/contents.plist` — maps glyph names → `.glif` filenames
-- `glyphs/*.glif` — individual glyph outlines (XML)
-- `kerning.plist` — group-based kerning pairs (~78 pairs per master)
-- `groups.plist` — kerning group definitions (89 groups per master)
-- `lib.plist` — font-level metadata
-
-### Character Set
-
-Latin uppercase (A–Z), lowercase (a–z), numerals (0–9), punctuation, accented Latin characters, and a developing Arabic character set. Plus a private-use area block (E000–E020) for custom icons/symbols.
-
-## The Render-Compare-Edit Loop
-
-The core workflow for type design with an agent:
-
-1. **Render** — `/proof`, `make proof`, or `make specimen` to see the current state
-2. **Compare** — `/compare-reference <image>` to compare against a target
-3. **Edit** — `/edit-glyph <name>` to make changes based on the comparison
-4. **Build** — `/build-font` to compile the edited sources
-5. **Verify** — `make preflight` during drawing work, then `make test` before final submission
-
-## Adding Glyphs from Images
-
-**Anchor sheets first.** The standing workflow for building missing or red
-glyphs from a reference image is the **`/anchor-sheet-glyphs` skill**
-(step-by-step operator procedure for any agent:
-`harness/RUNBOOK-anchor-sheets.md`)
-(`.agents/skills/anchor-sheet-glyphs/` — read its `LESSONS.md` before
-generating anything; it logs Eli's optical corrections and outranks the
-formulas). One image containing a known green glyph (the anchor, usually
-`n`) plus the targets; `scripts/anchor_sheet.py` calibrates px→units from
-the anchor; then line-grammar glyphs (math/punctuation/arrows/icons) are
-GENERATED with `scripts/symbol_gen.py`, and organic glyphs (Arabic, drawn
-Latin) are traced with img2bez using exact `--fit` from the calibration.
-Every graded correction goes into `LESSONS.md` so the system improves.
-
-### Single-glyph tracing (img2bez)
-
-To add or replace an organic glyph from reference images (AI-generated or
-scanned masters), use the `img2bez` CLI — do **not** hand-draw it in the editor.
-img2bez owns deterministic tracing, ink placement, sidebearings, master
-reconciliation, UFO writing, and the report; Runebender is only for visual
-review afterward.
-
-One image per master, traced and reconciled into interpolation-compatible
-outlines in a single command:
-
-```sh
-img2bez masters sources/VirtuaGrotesk.designspace \
-  --glyph germandbls --unicode 00DF \
-  --image Regular=~/Desktop/00DF-regular.png \
-  --image Bold=~/Desktop/00DF-bold.png \
-  --fit descender:cap \
-  --preserve-existing-metrics \
-  --report build/germandbls-trace.json
-```
-
-- `--image NAME=path` names each image by its master stylename (`Regular`,
-  `Bold`); or `--images <dir>` with files named `<stylename>.png`.
-- `--fit zone:zone` sets the vertical band (e.g. `descender:cap`) in the font's
-  own metric zones.
-- `--format json` prints the report + outlines to stdout and writes no UFOs —
-  use it to preview before writing.
-- **Run `img2bez masters --help` for the full, current flag list — it is
-  authoritative; do not rely on a copy of it here.**
-
-**Read the report before opening the editor:**
-
-- `compatible: true` — masters reconciled into one shared point structure
-  (required for the variable build; see Master Compatibility Warning).
-  `false` means a different contour count — regenerate the failing image.
-- `lowConfidence: true` — a point was placed by a guessed correspondence;
-  accept-but-review, or regenerate (`--fail-on-low-confidence` makes this exit
-  non-zero for an unattended loop).
-- Per master: `profile` (`wild`/`clean`/`photo` — how the image was classified),
-  `sharpness`/`bilevelness` (input character), `points`, `advance`, `bounds`.
-
-**Input tuning.** The default auto-detects the input class; clean crisp renders
-trace as `wild`. Force `--profile photo` for soft, low-contrast scans of printed
-type (it clears edge texture that otherwise over-segments). Other per-run
-levers: `--pre-blur`, `--smoothing`, `--corner-threshold`, `--mode
-{smooth,line}`. If a trace in the report looks wrong, re-run with the right flag
-rather than hand-fixing in the editor.
-
-**Trace logging (build the tuning dataset).** Export `IMG2BEZ_LOG` so every
-trace appends a record (image features + settings + output) to one JSONL file —
-this is how the input-adaptive selector gets its training data, and the settings
-you re-run with (last trace per image) are the accepted label:
-
-```sh
-export IMG2BEZ_LOG="$HOME/.img2bez/virtua-grotesk-traces.jsonl"
-```
-
-Set it once at the start of a session; it covers `img2bez masters` and
-single-glyph runs. Inspect the growing dataset with `img2bez`'s
-`eval-harness/tracelog.py "$IMG2BEZ_LOG" --per-image`.
-
-**Then review in Runebender** (`make runebender`) — it live-reloads the written
-UFOs from disk. Use it only for the human visual check and final touch-ups.
-
-## Design Philosophy
-
-Virtua Grotesk is a geometric grotesk defined by its **16-unit chamfered corners** — every sharp junction gets a 45-degree bevel. Strokes are monolinear (no thick/thin contrast). Round forms use smooth cubic Bezier curves with generous counters. Weight gain across the axis works by **counter reduction** — outer contours often stay identical between Regular and Bold while the inner counter shrinks inward. See `documentation/source-guides/design-philosophy.md` for full outline drawing conventions.
-
-## Master Compatibility Warning
-
-Both masters (Regular and Bold) **must** have identical glyph structure: same contours, same point counts, same point types. Only coordinates and advance widths may differ. Structural changes to one master must be mirrored in the other. Incompatible masters will cause the variable font build to fail. Run `make reports` and review `documentation/source/master-compatibility.md` to verify.
+Use `.agents/google-fonts-onboarding-checklists.md` and the onboarding, QA,
+and packaging skills for submission work. Keep release results tied to the
+source revision and built artifacts that were actually checked.
