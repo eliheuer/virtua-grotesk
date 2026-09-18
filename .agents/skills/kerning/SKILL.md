@@ -1,6 +1,6 @@
 ---
 name: kerning
-description: Manage kerning pairs and groups in the UFO sources: add, list, and test pairs across masters.
+description: "Manage kerning pairs and groups in the UFO sources: add, list, and test pairs across masters."
 ---
 
 # /kerning
@@ -34,7 +34,7 @@ Group name shorthand: if the user says `kern1.A` interpret as `public.kern1.A`.
 ### `test`
 Build and render kerning/spacing review proofs:
 1. Run `make preflight`
-2. Review `documentation/proofs/proof.pdf` and `documentation/proofs/print-spacing-specimen.pdf`
+2. Review `documentation/proofs/proof.pdf` and the browser proof from `make review`
 3. Review `documentation/source/generated-font-metadata.md` and any current QA output
 4. Report spacing or kerning findings
 

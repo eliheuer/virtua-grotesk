@@ -88,11 +88,9 @@ For replacement batches, prefer this split:
    with a surgical `.glif` copy. Do not save/rewrite whole UFOs just to copy
    outlines.
 
-Prototype donor-copy scripts from an earlier {{FAMILY}} pass were archived
-under `documentation/archive/agent-generated-scripts/scripts/`. Do not treat
-those as active commands. If this workflow is needed again, first promote a
-small generic candidate/apply script back into `scripts/`, document the exact
-inputs, and keep the apply step dry-run-first.
+Retired donor-copy prototypes are available in Git history, not as active
+commands. If this workflow is needed again, implement a narrowly scoped
+candidate/apply script, document its inputs, and keep application dry-run-first.
 
 Guardrails for the apply step:
 
@@ -140,7 +138,7 @@ After shaping-sensitive work:
 
 ```bash
 make preflight
-make specimen
+make review
 ```
 
 Verify evidence, not intent:

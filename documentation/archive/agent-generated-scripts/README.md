@@ -1,9 +1,10 @@
-# Archived Agent-Generated Scripts
+# Retired automation
 
-This directory keeps the old report and helper script farm out of the active
-workflow without deleting it immediately.
+The old report, review-packet, donor-copy, and packaging scripts were removed
+because they are not used by the active workflow. Their last pre-cleanup tree
+is commit `f9edce3221d79114859374df2edf63f939f96185`; recover individual files
+from Git if needed. Review their assumptions before using them again.
 
-The active scripts now live in `scripts/` and are limited to build metadata
-reports, proof/specimen generation, Fontspector QA, and preflight checks. If an
-archived script becomes useful again, move it back deliberately and wire it into
-the Makefile with a narrow purpose.
+Historical reports and human review records remain in
+`../agent-generated-reports/`. Current commands are documented in
+`../../core-qa-process.md` and the root Makefile.

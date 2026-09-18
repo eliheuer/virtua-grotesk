@@ -26,7 +26,7 @@ Read the reference image file at the provided path. Describe in detail:
 ### Phase 2: Build & Render Matching Specimen
 1. Determine what text is shown in the reference image
 2. Build the font if needed: `./build.sh`
-3. Render the closest current proof: `make proof` for a general PDF or `make specimen` for spacing/weight review
+3. Render the closest current proof: `make proof` for a general PDF or `make review` for browser spacing/weight review
 4. Use the generated PDF pages in `documentation/proofs/` as the current rendering
 
 ### Phase 3: Read Current Rendering

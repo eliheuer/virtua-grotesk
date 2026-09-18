@@ -7,7 +7,7 @@ active workflow.
 Current docs and reports live in:
 
 - `documentation/core-qa-process.md`
-- `documentation/manual-cleanup-handoff.md`
+- `GOOGLE_FONTS_RELEASE_CHECKLIST.md`
 - `documentation/source/`
 - `documentation/source-guides/`
 - `documentation/proofs/`

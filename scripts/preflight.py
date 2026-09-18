@@ -15,7 +15,6 @@ REQUIRED_FILES = [
     "fonts/ttf/VirtuaGrotesk-SemiBold.ttf",
     "fonts/ttf/VirtuaGrotesk-Bold.ttf",
     "documentation/proofs/proof.pdf",
-    "documentation/proofs/print-spacing-specimen.pdf",
     "documentation/source/source-ufo-metadata.md",
     "documentation/source/master-compatibility.md",
     "documentation/source/generated-font-metadata.md",

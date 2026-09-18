@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Fonts packaging"
+  short_description: "Prepare and review a local downstream font package"
+  default_prompt: "Use $google-fonts-packaging to prepare a local package preview from reviewed artifacts and identify what remains before publication."

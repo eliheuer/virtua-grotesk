@@ -62,3 +62,6 @@ documentation/proofs/*.pdf
 
 # weight-comparison proof images (regenerable; un-ignore and commit at v1.0)
 documentation/proofs/images/*.png
+
+# Historical proof images moved with their September 7 audit evidence.
+!documentation/archive/release-audit-2026-09-07/*.png

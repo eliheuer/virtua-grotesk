@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build build-fontc proof review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa qa-full qa-package test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -20,15 +20,18 @@ help:
 		'  make runebender-tab Runebender web as a tab in your default browser' \
 		'  make glyph-ai-inventory  Scan Runebender color labels for AI glyph work' \
 		'  make glyph-ai-prepare TARGET=glyph REFERENCES="a,e"  Build AI glyph run packet' \
-		'  make qa             Run Fontspector Google Fonts profile' \
+		'  make qa             Development Fontspector checks (documented exclusions)' \
+		'  make qa-hebrew      Check Hebrew coverage/attachment and render three weights' \
+		'  make qa-full        Full Fontspector profile; no exclusions' \
+		'  make qa-package PACKAGE=path  Full downstream-package QA' \
 		'  make reports        Regenerate source/build metadata reports' \
 		'  make grid-qa        Per-glyph design-system conformance report (grades + popcounts)' \
 		'  make dashboard GLYPH=a  Live one-glyph design dashboard (re-renders on save)' \
 		'  make lint-grid      Check source outlines against the power-of-two grid' \
 		'  make metrics        Normalized metric comparison vs Inter/Geist (weight, spacing, proportion)' \
-		'  make scoreboard     Update documentation/scoreboard.md (GF-gate burn-down)' \
+		'  make scoreboard     Update documentation/scoreboard.md (source color inventory)' \
 		'  make skeleton       End-to-end loop: build + qa + reports + scoreboard (qa may fail while debt exists)' \
-		'  make preflight      Build, proof, specimen, reports, then check artifacts' \
+		'  make preflight      Build, proof, reports, then check artifacts' \
 		'  make clean          Remove generated build outputs'
 
 setup:
@@ -104,7 +107,14 @@ glyph-ai-prepare:
 	$(PYTHON) scripts/glyph_ai_harness.py prepare --target "$(TARGET)" $(if $(REFERENCES),--references "$(REFERENCES)",)
 
 qa: build
-	./scripts/check_gf_fonts.sh
+	./scripts/check_gf_fonts.sh development
+
+qa-full: build
+	./scripts/check_gf_fonts.sh full
+
+qa-package:
+	@test -n "$(PACKAGE)" || { echo "Set PACKAGE=/path/to/ofl/virtuagrotesk" >&2; exit 2; }
+	./scripts/check_gf_fonts.sh package "$(PACKAGE)"
 
 test: qa
 
@@ -158,3 +168,7 @@ arabic-sync:  ## Re-snap Arabic dots to their anchors, then re-sync Bold
 	./.venv/bin/python scripts/embolden.py --dx 36 --dy 27
 	./.venv/bin/python scripts/arabic_anchors.py
 	./.venv/bin/python scripts/glif_lint.py
+
+.PHONY: qa-hebrew
+qa-hebrew: build
+	$(PYTHON) scripts/check_hebrew.py "$(VARIABLE_FONT)" --json out/hebrew/qa.json --proof-dir out/hebrew/proofs

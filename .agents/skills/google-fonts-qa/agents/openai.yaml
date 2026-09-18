@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Fonts QA"
+  short_description: "Check fonts, packages, shaping, and proof evidence"
+  default_prompt: "Use $google-fonts-qa to run the appropriate checks on the requested fonts or package and report verified findings and remaining review work."

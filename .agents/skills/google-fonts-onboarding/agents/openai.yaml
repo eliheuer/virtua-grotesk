@@ -1,0 +1,4 @@
+interface:
+  display_name: "Google Fonts onboarding"
+  short_description: "Audit readiness and organize onboarding work"
+  default_prompt: "Use $google-fonts-onboarding to prepare this repository for Google Fonts review, verify current evidence, and update the existing checklist."

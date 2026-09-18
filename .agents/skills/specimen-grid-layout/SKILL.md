@@ -1,6 +1,6 @@
 ---
 name: specimen-grid-layout
-description: Modular grid discipline for all designbot specimen output in this repo — PNG social images and PDF proofs. Use whenever creating or editing a script in scripts/designbot/ that draws pages or images, or when reviewing/fixing layout. Encodes the house unit-grid idiom, the inlined grid helpers, the GRID_VIEW overlay toggle, and the render-and-look verification loop.
+description: Apply the house modular grid when creating or editing designbot specimen and artwork layouts under documentation, with rendered visual verification.
 ---
 
 # /specimen-grid-layout
@@ -11,19 +11,15 @@ Müller-Brockmann's modular grid ethic (*Grid Systems in Graphic Design*,
 fg-grotesk, micro-grotesk): **the grid is the coordinate system, not
 decoration.**
 
-All drawing scripts are **designbot** (Rust, single-file) under
-`scripts/designbot/`, run via
-`designbot --render scripts/designbot/<name>.rs --output <path> [-- <mode>]`.
-The retired drawbot-skia originals (including the old shared
-`grid_system.py`) were deleted — drawbot-skia is unmaintained and fully
-out of this repo; the ports in `scripts/designbot/` are the only
-implementation (git history has the originals if ever needed).
+Image scripts are co-located under `documentation/`; the main PDF uses
+`designbot proof`. Inspect the chosen script and installed CLI before editing.
+The former `scripts/designbot/` directory is retired.
 
 ## The system
 
 - **The grid helpers are inlined per script** (designbot scripts are
-  single-file, so there is no shared module — the canonical Grid port to
-  copy from is in `scripts/designbot/print_spacing_specimen.rs`). Keep the
+  single-file, so there is no shared module — inspect the current co-located scripts under `documentation/`
+  before choosing a Grid implementation). Keep the
   math identical across scripts; never invent a new grid idiom per script.
 - **Margin** = `min(width, height) / 16` unless a format dictates
   otherwise. **Unit** = `margin / 2`.
@@ -32,8 +28,7 @@ implementation (git history has the originals if ever needed).
   position, snap it to the unit grid.
 - **designbot matches drawbot's coordinate system: y-up, origin at the
   bottom-left**, `rect`/`oval` anchored at their bottom-left corner, and
-  `Canvas::text(s, x, y)` taking the BASELINE of the first line (see the
-  layout note at the top of `scripts/designbot/general_proof.rs`).
+  `Canvas::text(s, x, y)` taking the BASELINE of the first line (verify the current designbot API before changing layout code).
   Drawbot-style baseline-cursor math passes straight through to the draw
   calls — no coordinate flipping.
 - **Leading in stacked text should be unit-friendly** — when rows of type
@@ -51,20 +46,13 @@ implementation (git history has the originals if ever needed).
 
 ## The overlay toggle
 
-`GRID_VIEW=1` in the environment turns on the live grid overlay in every
-ported script:
+Inspect how the selected script enables its overlay. For example,
+`documentation/proofs/images/weight-compare.rs` reads `GRID_VIEW`, while
+`documentation/readme-images/specimen-regular.rs` has a `SHOW_GRID` constant.
+Do not assume the built-in proof command or every script honors `GRID_VIEW`.
 
-```bash
-GRID_VIEW=1 make social-images
-GRID_VIEW=1 make proof
-GRID_VIEW=1 designbot --render scripts/designbot/social_images.rs \
-  --output ~/Temp/check.png -- square:hero
-```
-
-The overlay is drawn in the **same coordinate space the layout uses** —
-minor lines every unit, major lines every 4 units, the margin frame, and
-center crosshairs. If the overlay doesn't match where elements sit, the
-layout is off the grid, not the overlay.
+The overlay should share the layout's coordinate space: unit lines, margin
+frame, and any major grid lines. Check both the overlay and final artwork.
 
 ## Optical alignment — ink, not box
 
@@ -80,7 +68,7 @@ from roughly 100pt up.
 
 After any layout change:
 
-1. Render with `GRID_VIEW=1`.
+1. Render with the selected script's grid overlay enabled.
 2. Downscale for review: `sips -Z 640 out.png --out preview.png`.
 3. Read the preview and check: left edges of ink on unit lines, repeated
    baselines evenly stepped, captions on the margin lines, nothing
@@ -88,24 +76,16 @@ After any layout change:
 4. Render once more with the overlay off before committing — overlay
    pixels must never ship.
 
-Social/readme PNGs are quantized by the Makefile (`pngquant` post-step)
-to keep tracked assets small; PDFs are vector with FlateDecode streams.
-Re-rendering unchanged sources should produce visually identical files
-(designbot renders are deterministic; quantization is too).
+Inspect output size and rendering before selecting final assets. There is no
+Makefile PNG-quantization step. Do not assume a script's overlay is disabled in
+its committed defaults; check before exporting release artwork.
 
 ## Applying to scripts
 
-- `scripts/designbot/social_images.rs` — fully on the system; the
-  reference implementation (per-format grid, caption band from unit
-  lines, fit-to-width sizes). One image per invocation via
-  `<format>:<image>` modes.
-- `scripts/designbot/general_proof.rs` and
-  `scripts/designbot/print_spacing_specimen.rs` — US Letter pages,
-  margin 36, unit 18. The overlay toggle is wired into page creation;
-  when editing these layouts, move positions onto unit coordinates
-  rather than adding new magic numbers.
-- New scripts: copy the grid helpers from an existing port, place
-  everything through the grid accessors, take a mode argument if the
-  script emits more than one image (the CLI rewrites every `render_to_*`
-  call to the single `--output`), and add a `GRID_VIEW=1` screenshot to
-  your review loop before the first human look.
+Image scripts live alongside their outputs under `documentation/`. Inspect
+an existing script before extending it. The old `scripts/designbot/` proof
+and social scripts have been retired; do not use them as reference paths.
+The main PDF is generated by designbot's built-in `proof` command.
+
+For a new script, keep grid helpers consistent with the selected current
+reference, render the output, and inspect both the grid overlay and final art.
