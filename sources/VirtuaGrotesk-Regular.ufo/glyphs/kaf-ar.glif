@@ -74,12 +74,14 @@
 	<anchor name="topDots" x="400" y="768"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>orange</string>
 			<key>public.kern1</key>
 			<string>public.kern1.kaf-ar</string>
 			<key>public.kern2</key>
 			<string>public.kern2.kaf-ar</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>1,0.5,0,1</string>
 		</dict>
 	</lib>
 </glyph>
