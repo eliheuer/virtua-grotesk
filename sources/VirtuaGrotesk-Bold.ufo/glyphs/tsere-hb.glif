@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tsere-hb" format="2">
 	<unicode hex="05B5"/>
+	<anchor name="_hbBottom" x="124" y="0"/>
+	<anchor name="hbMeteg" x="-36" y="0"/>
+	<anchor name="hbCantLeftVowel" x="32" y="0"/>
+	<anchor name="hbCantRightVowel" x="216" y="0"/>
 	<outline>
 		<contour>
 			<point x="70" y="-164" type="curve" smooth="yes"/>

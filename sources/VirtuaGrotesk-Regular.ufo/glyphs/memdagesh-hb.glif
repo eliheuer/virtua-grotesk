@@ -2,6 +2,16 @@
 <glyph name="memdagesh-hb" format="2">
 	<unicode hex="FB3E"/>
 	<advance width="628"/>
+	<anchor name="hbBottom" x="292" y="0"/>
+	<anchor name="hbCenter" x="292" y="320"/>
+	<anchor name="hbHolam" x="14" y="588"/>
+	<anchor name="hbRafe" x="293" y="684"/>
+	<anchor name="hbMeteg" x="292" y="0"/>
+	<anchor name="hbCantAbove" x="296" y="592"/>
+	<anchor name="hbCantAboveLeft" x="16" y="592"/>
+	<anchor name="hbCantAboveRight" x="576" y="592"/>
+	<anchor name="hbCantBelow" x="292" y="0"/>
+	<anchor name="hbCantBelowRight" x="292" y="0"/>
 	<outline>
 		<contour>
 			<point x="572" y="0" type="line"/>

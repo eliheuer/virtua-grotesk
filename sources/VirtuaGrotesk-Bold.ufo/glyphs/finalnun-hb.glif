@@ -2,6 +2,16 @@
 <glyph name="finalnun-hb" format="2">
 	<unicode hex="05DF"/>
 	<advance width="328"/>
+	<anchor name="hbBottom" x="164" y="-128"/>
+	<anchor name="hbCenter" x="164" y="320"/>
+	<anchor name="hbHolam" x="48" y="576"/>
+	<anchor name="hbRafe" x="164" y="672"/>
+	<anchor name="hbMeteg" x="164" y="-128"/>
+	<anchor name="hbCantAbove" x="160" y="576"/>
+	<anchor name="hbCantAboveLeft" x="48" y="576"/>
+	<anchor name="hbCantAboveRight" x="280" y="576"/>
+	<anchor name="hbCantBelow" x="164" y="-128"/>
+	<anchor name="hbCantBelowRight" x="164" y="-128"/>
 	<outline>
 		<contour>
 			<point x="64" y="-128" type="line"/>

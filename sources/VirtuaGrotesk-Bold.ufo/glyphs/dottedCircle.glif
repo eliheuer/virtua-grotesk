@@ -2,6 +2,18 @@
 <glyph name="dottedCircle" format="2">
 	<unicode hex="25CC"/>
 	<advance width="600"/>
+	<anchor name="hbBottom" x="300" y="176"/>
+	<anchor name="hbCenter" x="300" y="432"/>
+	<anchor name="hbHolam" x="300" y="688"/>
+	<anchor name="hbShin" x="500" y="688"/>
+	<anchor name="hbSin" x="100" y="688"/>
+	<anchor name="hbRafe" x="300" y="784"/>
+	<anchor name="hbMeteg" x="300" y="176"/>
+	<anchor name="hbCantAbove" x="304" y="688"/>
+	<anchor name="hbCantAboveLeft" x="48" y="688"/>
+	<anchor name="hbCantAboveRight" x="544" y="688"/>
+	<anchor name="hbCantBelow" x="300" y="176"/>
+	<anchor name="hbCantBelowRight" x="300" y="176"/>
 	<outline>
 		<contour>
 			<point x="272" y="632" type="line"/>
@@ -52,7 +64,7 @@
 			<point x="80" y="560" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="300" y="576"/>
+	<anchor name="top" x="300" y="688"/>
 	<anchor name="bottom" x="300" y="0"/>
 	<lib>
 		<dict>

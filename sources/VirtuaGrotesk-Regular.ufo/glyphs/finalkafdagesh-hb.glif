@@ -2,6 +2,16 @@
 <glyph name="finalkafdagesh-hb" format="2">
 	<unicode hex="FB3A"/>
 	<advance width="490"/>
+	<anchor name="hbBottom" x="224" y="240"/>
+	<anchor name="hbCenter" x="224" y="320"/>
+	<anchor name="hbHolam" x="14" y="576"/>
+	<anchor name="hbRafe" x="224" y="672"/>
+	<anchor name="hbMeteg" x="224" y="240"/>
+	<anchor name="hbCantAbove" x="224" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="432" y="576"/>
+	<anchor name="hbCantBelow" x="224" y="240"/>
+	<anchor name="hbCantBelowRight" x="224" y="240"/>
 	<outline>
 		<contour>
 			<point x="434" y="-182" type="line"/>

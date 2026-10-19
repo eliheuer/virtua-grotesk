@@ -5,6 +5,7 @@ from pathlib import Path
 import sys
 
 from fontTools import subset
+from fontTools.otlLib.builder import buildStatTable
 from fontTools.ttLib import TTFont, newTable
 
 
@@ -52,9 +53,31 @@ def add_identity_avar(font):
     font["avar"] = avar
 
 
-def remove_unreachable_arabic_helpers(font):
+def add_static_stat(font):
+    """Describe each static's weight with the same axis ordering as the VF."""
+    if "fvar" in font or "STAT" in font:
+        return
+    weight = font["OS/2"].usWeightClass
+    style = {400: "Regular", 500: "Medium", 600: "SemiBold", 700: "Bold"}[weight]
+    value = {"value": weight, "name": style, "flags": 2 if weight == 400 else 0}
+    if weight == 400:
+        value["linkedValue"] = 700
+    buildStatTable(font, [
+        {"tag": "wght", "name": "Weight", "values": [value]},
+        {"tag": "ital", "name": "Italic", "values": [
+            {"value": 0, "name": "Roman", "flags": 2, "linkedValue": 1}
+        ]},
+    ])
+
+
+def remove_unreachable_source_glyphs(font):
     glyph_order = font.getGlyphOrder()
     helpers = SOURCE_ONLY_ARABIC_HELPERS.intersection(glyph_order)
+    # The designspace's alternate a is needed by the VF and heavier instances.
+    # In Regular it is unused. Subset closure retains it wherever a component
+    # or layout lookup actually needs it; never remove it from the sources.
+    if "fvar" not in font:
+        helpers |= {"a.bold"}.intersection(glyph_order)
     if not helpers or "glyf" not in font:
         return
 
@@ -92,12 +115,13 @@ def patch_font(path):
         font["OS/2"].fsSelection |= 1 << 8
     set_name(font, 0, COPYRIGHT)
     add_identity_avar(font)
+    add_static_stat(font)
     meta = font["meta"] if "meta" in font else newTable("meta")
     meta.data = dict(getattr(meta, "data", {}))
     meta.data["dlng"] = SCRIPT_TAGS
     meta.data["slng"] = SCRIPT_TAGS
     font["meta"] = meta
-    remove_unreachable_arabic_helpers(font)
+    remove_unreachable_source_glyphs(font)
     font.save(path)
 
 

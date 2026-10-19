@@ -2,8 +2,8 @@
 <glyph name="shaddaFathatan-ar" format="2">
 	<outline>
 		<component base="shadda-ar"/>
-		<component base="fatha-ar" yOffset="214"/>
-		<component base="fatha-ar" yOffset="-290"/>
+		<component base="fatha-ar" xScale="0.5" yScale="0.5" xOffset="56" yOffset="576"/>
+		<component base="fatha-ar" xScale="0.5" yScale="0.5" xOffset="56" yOffset="700"/>
 	</outline>
 	<lib>
 		<dict>

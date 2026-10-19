@@ -2,6 +2,16 @@
 <glyph name="finalpe-hb" format="2">
 	<unicode hex="05E3"/>
 	<advance width="548"/>
+	<anchor name="hbBottom" x="262" y="-182"/>
+	<anchor name="hbCenter" x="236" y="420"/>
+	<anchor name="hbHolam" x="32" y="576"/>
+	<anchor name="hbRafe" x="262" y="672"/>
+	<anchor name="hbMeteg" x="262" y="-182"/>
+	<anchor name="hbCantAbove" x="264" y="576"/>
+	<anchor name="hbCantAboveLeft" x="32" y="576"/>
+	<anchor name="hbCantAboveRight" x="496" y="576"/>
+	<anchor name="hbCantBelow" x="262" y="-182"/>
+	<anchor name="hbCantBelowRight" x="262" y="-182"/>
 	<outline>
 		<contour>
 			<point x="492" y="-182" type="line"/>

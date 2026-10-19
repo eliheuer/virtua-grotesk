@@ -25,13 +25,6 @@ jobs:
           sudo apt-get install -y libcairo2-dev pkg-config python3-dev
       - name: Install Python dependencies
         run: make setup
-      - name: Install Fontspector 1.7.4
-        run: |
-          curl -fsSL https://github.com/fonttools/fontspector/releases/download/fontspector-v1.7.4/fontspector-v1.7.4-x86_64-unknown-linux-gnu.tar.gz -o "$RUNNER_TEMP/fontspector.tar.gz"
-          echo "4b1a0af657a4645a56958fadb3b921bce6489bda6d7d1ae8f3ac33baab8e2257  $RUNNER_TEMP/fontspector.tar.gz" | sha256sum --check
-          mkdir -p "$RUNNER_TEMP/fontspector"
-          tar -xzf "$RUNNER_TEMP/fontspector.tar.gz" --strip-components=1 -C "$RUNNER_TEMP/fontspector"
-          echo "$RUNNER_TEMP/fontspector" >> "$GITHUB_PATH"
       - name: Build fonts
         run: make build
       - name: Test QA entrypoints

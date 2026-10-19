@@ -75,6 +75,10 @@ Requirements:
 - after write, rerun dry-run and expect no remaining creation or compatibility
   risks.
 
+For compiled before/after chat proofs, use `scripts/proof_compare.py` and the
+[chat proof workflow](../../../documentation/qa.md#chat-proof-workflow). The
+tracked Hebrew sample file is a smoke set, not complete script validation.
+
 ### Review-Then-Apply Workflow
 
 For replacement batches, prefer this split:

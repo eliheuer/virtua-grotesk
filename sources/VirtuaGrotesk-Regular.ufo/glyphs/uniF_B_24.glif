@@ -1,7 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB24" format="2">
 	<unicode hex="FB24"/>
-	<advance width="512"/>
+	<advance width="716"/>
+	<anchor name="hbBottom" x="352" y="0"/>
+	<anchor name="hbCenter" x="196" y="300"/>
+	<anchor name="hbHolam" x="14" y="576"/>
+	<anchor name="hbRafe" x="352" y="672"/>
+	<anchor name="hbMeteg" x="352" y="0"/>
+	<anchor name="hbCantAbove" x="352" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="688" y="576"/>
+	<anchor name="hbCantBelow" x="352" y="0"/>
+	<anchor name="hbCantBelowRight" x="352" y="0"/>
+	<outline>
+		<contour>
+			<point x="174" y="0" type="line" smooth="yes"/>
+			<point x="622" y="0"/>
+			<point x="684" y="117"/>
+			<point x="684" y="292" type="curve" smooth="yes"/>
+			<point x="684" y="506"/>
+			<point x="580" y="576"/>
+			<point x="194" y="576" type="curve" smooth="yes"/>
+			<point x="14" y="576" type="line"/>
+			<point x="14" y="498" type="line"/>
+			<point x="158" y="498" type="line" smooth="yes"/>
+			<point x="564" y="498"/>
+			<point x="598" y="434"/>
+			<point x="598" y="288" type="curve" smooth="yes"/>
+			<point x="598" y="168"/>
+			<point x="553" y="80"/>
+			<point x="190" y="80" type="curve" smooth="yes"/>
+			<point x="14" y="80" type="line"/>
+			<point x="14" y="0" type="line"/>
+		</contour>
+	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

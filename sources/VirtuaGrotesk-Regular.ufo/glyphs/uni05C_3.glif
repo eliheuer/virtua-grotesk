@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni05C3" format="2">
 	<unicode hex="05C3"/>
-	<advance width="512"/>
+	<advance width="240"/>
+	<outline>
+		<contour>
+			<point x="64" y="16" type="line"/>
+			<point x="80" y="0" type="line"/>
+			<point x="160" y="0" type="line"/>
+			<point x="176" y="16" type="line"/>
+			<point x="176" y="96" type="line"/>
+			<point x="160" y="112" type="line"/>
+			<point x="80" y="112" type="line"/>
+			<point x="64" y="96" type="line"/>
+		</contour>
+		<contour>
+			<point x="64" y="480" type="line"/>
+			<point x="80" y="464" type="line"/>
+			<point x="160" y="464" type="line"/>
+			<point x="176" y="480" type="line"/>
+			<point x="176" y="560" type="line"/>
+			<point x="160" y="576" type="line"/>
+			<point x="80" y="576" type="line"/>
+			<point x="64" y="560" type="line"/>
+		</contour>
+	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

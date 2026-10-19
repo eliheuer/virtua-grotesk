@@ -37,6 +37,7 @@ help:
 setup:
 	python3 -m venv .venv
 	$(PYTHON) -m pip install -r requirements.txt
+	$(PYTHON) scripts/install_fontspector.py
 
 build:
 	./build.sh
@@ -50,22 +51,19 @@ build-fontc:  ## Build with fontc (Rust) instead of fontmake
 proof: build
 	designbot proof "$(VARIABLE_FONT)" --output documentation/proofs/proof.pdf
 
-# diffenator2 -- the Google Fonts onboarding review view (glyph set, diacritic
-# proofer, spacing, waterfall). Must run with the venv on PATH so diffenator2's
-# _diffbrowsers helper resolves. `make review` = Virtua; `make review-rubik` =
-# the shipped Rubik reference to match against. Open the printed index in a browser.
-DIFFENATOR = PATH="$(CURDIR)/.venv/bin:$$PATH" ./.venv/bin/diffenator2
+# Current Google Fonts browser proof renderer, distributed with Diffenator3.
+DIFFPROOF = ./.venv/bin/diff3proof
 RUBIK_FONT ?= $(HOME)/GH/repos/google-fonts/ofl/rubik/Rubik[wght].ttf
 
 review: build
 	@mkdir -p out
-	$(DIFFENATOR) proof "$(VARIABLE_FONT)" -o out/review
-	@echo ">>> open out/review/diffenator2-report.html"
+	$(DIFFPROOF) "$(VARIABLE_FONT)" --output out/review
+	@echo ">>> open out/review/diff3proof.html"
 
 review-rubik:
 	@mkdir -p out
-	$(DIFFENATOR) proof "$(RUBIK_FONT)" -o out/review-rubik
-	@echo ">>> open out/review-rubik/diffenator2-report.html"
+	$(DIFFPROOF) "$(RUBIK_FONT)" --output out/review-rubik
+	@echo ">>> open out/review-rubik/diff3proof.html"
 
 # Diacritic/spacing QA loop harness: audit + Rubik render + review checklist.
 # The agent (person, or Gemma once wired) drives this; fix with build_anchors.py.

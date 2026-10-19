@@ -2,6 +2,16 @@
 <glyph name="lamed-hb" format="2">
 	<unicode hex="05DC"/>
 	<advance width="496"/>
+	<anchor name="hbBottom" x="248" y="0"/>
+	<anchor name="hbCenter" x="200" y="340"/>
+	<anchor name="hbHolam" x="32" y="784"/>
+	<anchor name="hbRafe" x="248" y="880"/>
+	<anchor name="hbMeteg" x="248" y="0"/>
+	<anchor name="hbCantAbove" x="248" y="784"/>
+	<anchor name="hbCantAboveLeft" x="32" y="784"/>
+	<anchor name="hbCantAboveRight" x="464" y="784"/>
+	<anchor name="hbCantBelow" x="248" y="0"/>
+	<anchor name="hbCantBelowRight" x="248" y="0"/>
 	<outline>
 		<contour>
 			<point x="90" y="-22" type="line"/>

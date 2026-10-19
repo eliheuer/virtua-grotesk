@@ -2,6 +2,16 @@
 <glyph name="finalmem-hb" format="2">
 	<unicode hex="05DD"/>
 	<advance width="606"/>
+	<anchor name="hbBottom" x="304" y="0"/>
+	<anchor name="hbCenter" x="304" y="320"/>
+	<anchor name="hbHolam" x="56" y="576"/>
+	<anchor name="hbRafe" x="303" y="672"/>
+	<anchor name="hbMeteg" x="304" y="0"/>
+	<anchor name="hbCantAbove" x="304" y="576"/>
+	<anchor name="hbCantAboveLeft" x="56" y="576"/>
+	<anchor name="hbCantAboveRight" x="552" y="576"/>
+	<anchor name="hbCantBelow" x="304" y="0"/>
+	<anchor name="hbCantBelowRight" x="304" y="0"/>
 	<outline>
 		<contour>
 			<point x="550" y="0" type="line"/>

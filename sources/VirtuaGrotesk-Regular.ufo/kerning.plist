@@ -18,11 +18,15 @@
 		<integer>-64</integer>
 		<key>a</key>
 		<integer>-96</integer>
+		<key>s</key>
+		<integer>-64</integer>
 	</dict>
 	<key>P</key>
 	<dict>
 		<key>public.kern2.slash</key>
 		<integer>-128</integer>
+		<key>s</key>
+		<integer>-64</integer>
 	</dict>
 	<key>S</key>
 	<dict>
@@ -92,8 +96,6 @@
 	</dict>
 	<key>n</key>
 	<dict>
-		<key>public.kern1.v</key>
-		<integer>-32</integer>
 		<key>public.kern2.T</key>
 		<integer>-196</integer>
 		<key>public.kern2.slash</key>
@@ -101,6 +103,8 @@
 		<key>public.kern2.t</key>
 		<integer>-8</integer>
 		<key>public.kern2.y</key>
+		<integer>-32</integer>
+		<key>v</key>
 		<integer>-32</integer>
 	</dict>
 	<key>o</key>
@@ -114,6 +118,12 @@
 		<integer>-112</integer>
 		<key>public.kern2.one</key>
 		<integer>-96</integer>
+		<key>c</key>
+		<integer>-32</integer>
+		<key>o</key>
+		<integer>-32</integer>
+		<key>p</key>
+		<integer>-32</integer>
 	</dict>
 	<key>public.kern1.A</key>
 	<dict>
@@ -345,23 +355,9 @@
 		<key>public.kern2.period</key>
 		<integer>-32</integer>
 	</dict>
-	<key>public.kern2.H</key>
-	<dict>
-		<key>public.kern1.s</key>
-		<integer>-64</integer>
-	</dict>
-	<key>public.kern2.period</key>
-	<dict>
-		<key>public.kern1.o</key>
-		<integer>-32</integer>
-	</dict>
-	<key>public.kern2.r</key>
-	<dict>
-		<key>public.kern1.o</key>
-		<integer>-32</integer>
-		<key>public.kern1.period</key>
-		<integer>-128</integer>
-	</dict>
+
+
+
 	<key>public.kern2.reh-ar</key>
 	<dict>
 		<key>public.kern1.beh-ar</key>
@@ -371,11 +367,7 @@
 		<key>public.kern1.yeh-ar</key>
 		<integer>-320</integer>
 	</dict>
-	<key>public.kern2.t</key>
-	<dict>
-		<key>public.kern1.a</key>
-		<integer>-32</integer>
-	</dict>
+
 	<key>r</key>
 	<dict>
 		<key>hyphen</key>
@@ -384,6 +376,12 @@
 		<integer>-64</integer>
 		<key>quoteright</key>
 		<integer>-32</integer>
+		<key>c</key>
+		<integer>-32</integer>
+		<key>p</key>
+		<integer>-32</integer>
+		<key>period</key>
+		<integer>-128</integer>
 	</dict>
 	<key>reh-ar.fina</key>
 	<dict>
@@ -414,6 +412,8 @@
 		<integer>-16</integer>
 		<key>u</key>
 		<integer>0</integer>
+		<key>a</key>
+		<integer>-32</integer>
 	</dict>
 	<key>y</key>
 	<dict>
