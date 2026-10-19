@@ -2,8 +2,8 @@
 <glyph name="hamzabelowKasratan-ar" format="2">
 	<outline>
 		<component base="hamzabelow-ar"/>
-		<component base="kasra-ar" yOffset="-158"/>
-		<component base="kasra-ar" yOffset="466"/>
+		<component base="kasra-ar" xScale="0.5" yScale="0.5" xOffset="56" yOffset="-254"/>
+		<component base="kasra-ar" xScale="0.5" yScale="0.5" xOffset="56" yOffset="-370"/>
 	</outline>
 	<lib>
 		<dict>

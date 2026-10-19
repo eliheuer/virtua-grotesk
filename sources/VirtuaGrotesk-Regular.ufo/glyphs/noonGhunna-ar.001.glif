@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noonGhunna-ar" format="2">
 	<unicode hex="0658"/>
+	<advance width="0"/>
 	<outline>
-		<component base="noonghunna-ar"/>
+		<component base="noonghunna-ar" xScale="0.25" yScale="0.25" xOffset="24" yOffset="736"/>
 	</outline>
+	<anchor name="_top" x="112" y="576"/>
+	<anchor name="top" x="112" y="864"/>
+	<anchor name="bottom" x="112" y="688"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

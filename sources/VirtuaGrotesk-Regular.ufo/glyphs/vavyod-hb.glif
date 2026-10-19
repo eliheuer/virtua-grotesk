@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="vavyod-hb" format="2">
 	<unicode hex="05F1"/>
-	<advance width="512"/>
+	<advance width="480"/>
+	<anchor name="hbRafe" x="240" y="672"/>
+	<anchor name="hbMeteg" x="240" y="0"/>
+	<anchor name="hbCantAbove" x="240" y="576"/>
+	<anchor name="hbCantAboveLeft" x="48" y="576"/>
+	<anchor name="hbCantAboveRight" x="432" y="576"/>
+	<anchor name="hbCantBelow" x="240" y="0"/>
+	<anchor name="hbCantBelowRight" x="240" y="0"/>
+	<outline>
+		<component base="yod-hb"/>
+		<component base="vav-hb" xOffset="240"/>
+	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

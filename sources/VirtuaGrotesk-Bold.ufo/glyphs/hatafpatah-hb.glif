@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hatafpatah-hb" format="2">
 	<unicode hex="05B2"/>
+	<anchor name="_hbBottom" x="160" y="0"/>
+	<anchor name="hbMeteg" x="-32" y="0"/>
+	<anchor name="hbCantLeftVowel" x="32" y="0"/>
+	<anchor name="hbCantRightVowel" x="288" y="0"/>
 	<outline>
 		<contour>
 			<point x="186" y="-76" type="line"/>

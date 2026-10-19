@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hiriq-hb" format="2">
 	<unicode hex="05B4"/>
+	<anchor name="_hbBottom" x="68" y="0"/>
+	<anchor name="hbMeteg" x="-28" y="0"/>
+	<anchor name="hbCantLeftVowel" x="32" y="0"/>
+	<anchor name="hbCantRightVowel" x="106" y="0"/>
 	<outline>
 		<contour>
 			<point x="70" y="-164" type="curve" smooth="yes"/>

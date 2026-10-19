@@ -2,6 +2,16 @@
 <glyph name="finaltsadi-hb" format="2">
 	<unicode hex="05E5"/>
 	<advance width="484"/>
+	<anchor name="hbBottom" x="242" y="-182"/>
+	<anchor name="hbCenter" x="242" y="320"/>
+	<anchor name="hbHolam" x="14" y="576"/>
+	<anchor name="hbRafe" x="242" y="672"/>
+	<anchor name="hbMeteg" x="242" y="-182"/>
+	<anchor name="hbCantAbove" x="240" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="472" y="576"/>
+	<anchor name="hbCantBelow" x="242" y="-182"/>
+	<anchor name="hbCantBelowRight" x="242" y="-182"/>
 	<outline>
 		<contour>
 			<point x="250" y="-182" type="line"/>

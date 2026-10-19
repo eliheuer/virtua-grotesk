@@ -50,7 +50,8 @@ exit "${FIXTURE_EXIT:-0}"
     def test_development_is_explicitly_offline_and_excluded(self):
         code, args = self.run_qa('development')
         self.assertEqual(code, 0)
-        self.assertEqual(args.count('--exclude-checkid'), 4)
+        self.assertEqual(args.count('--exclude-checkid'), 3)
+        self.assertNotIn('outline_alignment_miss', args)
         self.assertIn('--skip-network', args)
 
     def test_full_qa_has_no_exclusions_and_preserves_failure(self):
@@ -62,14 +63,16 @@ exit "${FIXTURE_EXIT:-0}"
 
     def test_package_qa_includes_non_font_inputs(self):
         package = self.work / 'ofl/virtuagrotesk'
-        for name in ['METADATA.pb', 'OFL.txt', 'article/ARTICLE.en_us.html', 'Font.ttf']:
+        for name in ['METADATA.pb', 'OFL.txt', 'article/ARTICLE.en_us.html',
+                     'article/specimen.svg', 'Font.ttf']:
             p = package / name
             p.parent.mkdir(parents=True, exist_ok=True)
             p.touch()
         code, args = self.run_qa('package', str(package))
         self.assertEqual(code, 0)
         self.assertNotIn('--exclude-checkid', args)
-        for name in ['METADATA.pb', 'OFL.txt', 'article/ARTICLE.en_us.html']:
+        for name in ['METADATA.pb', 'OFL.txt', 'article/ARTICLE.en_us.html',
+                     'article/specimen.svg']:
             self.assertIn(str(package / name), args)
 
     def test_missing_package_fails_before_tool_runs(self):

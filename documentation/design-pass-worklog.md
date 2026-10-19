@@ -1312,3 +1312,71 @@ composable half of the Finnish/Sami set (Ĩĩ Ũũ Ẽẽ Ǎǎ Ǔǔ Ǧǧ Ǩǩ Ȟ
 
 **Bold** — same.
 -->
+
+### Google Fonts point-correspondence repair — 2026-10-17
+
+Engineering-only pass authorized by Eli; no master coordinates, colors, widths,
+or drawing decisions changed in these three glyphs. Regular `w` stays frozen.
+Bold `w` (orange) has 28 line points; its last point (148,16) corresponds to
+Regular's first (182,16), but the Bold contour started one point later. Rotate
+Bold's last point to the start. The sum of squared corresponding-point distances
+drops from 1,654,536 to 152,232; this is diagnostic evidence, not design grading.
+
+For comma, rotate the editable Regular yellow contour forward one point to
+match frozen Bold; for quotesingle, rotate Regular's last point to the start
+to match frozen Bold. These are cyclic permutations of unchanged point records.
+Point counts/types and both endpoint drawings remain identical. The repair
+also reaches quoteright and the four accented w forms through their components.
+
+A scratch build removes all nine related Fontspector interpolation warnings,
+including the spurious quotesingle intermediate underweight result. Browser
+proofs inspected at 400/550/700 show unchanged endpoints and repaired
+intermediate correspondence. Six Arabic stacked-mark interpolation warnings
+remain and need review of their differing master geometry/placement.
+Evidence: `out/qa/2026-10-17/latest-tools/point-order-candidate/` and
+`point-order-review.html`. No OPEN design decision was resolved by this repair.
+
+## QA eng construction (2026-10-18)
+
+Eli authorized targeted QA repairs without per-glyph approval. The new U+014B
+`eng` reuses the green `n` shoulder/stems and the green `j` hook in each master;
+no reference glyph was edited. Regular: 96-unit right stem, advance 592, tail
+translated +344 x. Bold: 192-unit right stem, advance 720, tail translated +392 x.
+Both have one 35-point contour, y bounds -200..592, and 72-unit sidebearings.
+The four baseline chamfer points on n's right stem are replaced with j's exact
+12-point hook run; both vertical joins align without scaling or curve changes.
+The bottom attachment anchor follows the new -200 descender. Curve lint passes
+both masters; interpolation and enlarged renders are checked in
+`out/qa/2026-10-18/eng-candidate/`. New eng remains ungraded. Existing OPEN
+design decisions and n/j sources are unchanged.
+
+The case-pair check also requires uppercase U+014A `Eng`. It reuses green `N`
+above the baseline and the `j` hook, with the inner hook curve translated to
+meet N's lower-right boundary. Regular: advance 776, hook x +520, inner-curve
+adjustment -8, lower stem 104. Bold: advance 824, hook x +488, inner-curve
+adjustment +16, lower stem 176. Both have 30 points, descend to -200, and retain
+N's 80-unit sidebearings. Capital Eng is also ungraded; N and j are untouched.
+
+
+### Combining tilde and ascender attachment — 2026-10-18
+
+Source-first investigation of the nine Fontspector subset findings found Regular
+`tildecomb` translated 250 units above its spacing-tilde component despite the
+unchanged `_top` anchor at (240, 576). Removed that component yOffset; Bold was
+already zero. The 250-unit Regular / 125-unit midpoint placement difference from
+precomposed E/e-tilde is resolved. No tilde points or contour shapes were changed.
+
+Proofs exposed top anchors below ascender ink. Updated only the top-anchor y in
+both masters for b/d/f/h/k/l: 576 -> 768; t: 576 -> 696 Regular / 736 Bold;
+dottedCircle: 576 -> 680 Regular / 688 Bold. X positions, glyph advances, other
+anchors, source contours, and review colors are preserved. Compiled tilde clearance
+is at least 48 units in all five outputs and the tested variable weights.
+
+A scratch e-tilde kerning-inheritance proposal was rejected because it caused
+Regular T-tilde contact. Existing e/etilde kerning was left intact. Added only
+Latin/DFLT ccmp E/e + tildecomb recomposition so web-subset fallback can retain the
+existing Etilde/etilde glyph spacing via layout closure. No OPEN design decision
+was resolved by this change. Proofs at 400/550/700 and the final results are in
+`out/qa/2026-10-18/applied-subset-source-fixes/`; anchor proofs and backups are in
+`applied-tilde-anchors/`. Thirteen regression tests and structural compatibility
+pass; official package QA remains 10 FAIL / 6 WARN. No upstream PR was made.

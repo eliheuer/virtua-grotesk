@@ -2,6 +2,18 @@
 <glyph name="shindageshshindot-hb" format="2">
 	<unicode hex="FB2C"/>
 	<advance width="680"/>
+	<anchor name="hbBottom" x="340" y="0"/>
+	<anchor name="hbCenter" x="340" y="320"/>
+	<anchor name="hbHolam" x="14" y="760"/>
+	<anchor name="hbShin" x="618" y="760"/>
+	<anchor name="hbSin" x="62" y="760"/>
+	<anchor name="hbRafe" x="340" y="856"/>
+	<anchor name="hbMeteg" x="340" y="0"/>
+	<anchor name="hbCantAbove" x="336" y="760"/>
+	<anchor name="hbCantAboveLeft" x="16" y="760"/>
+	<anchor name="hbCantAboveRight" x="664" y="760"/>
+	<anchor name="hbCantBelow" x="340" y="0"/>
+	<anchor name="hbCantBelowRight" x="340" y="0"/>
 	<outline>
 		<contour>
 			<point x="122" y="0" type="line"/>

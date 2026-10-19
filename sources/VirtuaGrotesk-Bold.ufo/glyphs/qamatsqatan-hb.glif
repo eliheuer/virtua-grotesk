@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qamatsqatan-hb" format="2">
 	<unicode hex="05C7"/>
+	<anchor name="_hbBottom" x="132" y="0"/>
+	<anchor name="hbMeteg" x="-36" y="0"/>
+	<anchor name="hbCantLeftVowel" x="32" y="0"/>
+	<anchor name="hbCantRightVowel" x="234" y="0"/>
 	<outline>
 		<contour>
 			<point x="160" y="-182" type="line"/>

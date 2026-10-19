@@ -4,7 +4,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 
 MODE=${1:-development}
-FONTSPECTOR=${FONTSPECTOR:-fontspector}
+if [ -x .venv/bin/fontspector ]; then
+    FONTSPECTOR=${FONTSPECTOR:-.venv/bin/fontspector}
+else
+    FONTSPECTOR=${FONTSPECTOR:-fontspector}
+fi
 QA_NETWORK=${QA_NETWORK:-online}
 QA_REPORT_DIR=${QA_REPORT_DIR:-out/qa/$MODE}
 
@@ -40,16 +44,21 @@ done
 INPUT_PATHS=("${FONT_PATHS[@]}")
 if [ "$MODE" = package ]; then
     INPUT_PATHS+=("$2/METADATA.pb" "$2/OFL.txt" "$2/article/ARTICLE.en_us.html")
+    # Fontspector resolves article references from its explicit input set.
+    # Include and hash assets as well as HTML so their existence is checked.
+    while IFS= read -r asset; do
+        INPUT_PATHS+=("$asset")
+    done < <(find "$2/article" -type f \( -name '*.svg' -o -name '*.png' \
+        -o -name '*.jpg' -o -name '*.jpeg' -o -name '*.mp4' \) | sort)
 fi
 
 ARGS=(-p googlefonts --error-code-on fail --loglevel warn --succinct)
 if [ "$MODE" = development ]; then
     # Existing development debt. These are not release exceptions.
     # Directory naming needs downstream context; the other checks need
-    # outline, language/mark, and subset work. Never add exclusions to hide debt.
+    # language/mark and subset work. Never add exclusions to hide debt.
     EXCLUDES=(
         googlefonts/repo/dirname_matches_nameid_1
-        outline_alignment_miss
         googlefonts/glyphsets/shape_languages
         googlefonts/metadata/unreachable_subsetting
     )

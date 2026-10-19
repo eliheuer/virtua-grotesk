@@ -1,12 +1,20 @@
 # Top-level Python packages for the local Google Fonts build, report, and
 # package-review workflow. Keep this list small; requirements.txt is the
 # pinned install snapshot generated from the active local .venv.
-# Proofs and specimen images render with designbot (Rust, installed via
-# cargo from ~/GH/repos/designbot) — no Python renderer dependency.
+# Main PDF proofs use designbot (installed separately). Chat comparison
+# proofs use HarfBuzz, FreeType, and Pillow through scripts/proof_compare.py.
 fontmake
 fonttools
 gftools[qa]
+diffenator3
+ufo2ft
+gflanguages
+gfsubsets
+axisregistry
+opentype-sanitizer
 GitPython
 glyphsets
 PyYAML
 uharfbuzz
+freetype-py
+Pillow

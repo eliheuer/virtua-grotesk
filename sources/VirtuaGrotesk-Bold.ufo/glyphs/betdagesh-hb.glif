@@ -2,6 +2,16 @@
 <glyph name="betdagesh-hb" format="2">
 	<unicode hex="FB31"/>
 	<advance width="532"/>
+	<anchor name="hbBottom" x="266" y="0"/>
+	<anchor name="hbCenter" x="266" y="320"/>
+	<anchor name="hbHolam" x="14" y="576"/>
+	<anchor name="hbRafe" x="266" y="672"/>
+	<anchor name="hbMeteg" x="266" y="0"/>
+	<anchor name="hbCantAbove" x="264" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="520" y="576"/>
+	<anchor name="hbCantBelow" x="266" y="0"/>
+	<anchor name="hbCantBelowRight" x="266" y="0"/>
 	<outline>
 		<contour>
 			<point x="518" y="0" type="line"/>

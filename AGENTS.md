@@ -56,10 +56,25 @@ measure and propose without resolving them by editing sources.
 
 ## Source safety
 
-- Green glyphs are human-approved: do not edit them. Purple means do not touch.
-- Blue means AI output awaiting human grading. Yellow/orange needs polish;
-  red needs repair. Uncolored glyphs are outside automatic completion work.
-  Classify unfamiliar colors before acting; never auto-grade AI output green.
+- Before adding or changing glyph drawings, name the exact glyphs and masters,
+  explain the proposed changes and their purpose, and wait for Eli's approval.
+  Approval applies only to that named scope, not nearby glyphs or a broader batch.
+  Prepare changes on a scratch copy with a reversible backup; show before/after
+  proofs and verify master compatibility and compiled shaping. Distinguish approval
+  to prepare a candidate from approval to apply it to the active sources. Stop and
+  ask again if the repair needs broader changes. Reuse approval already given for
+  the same scope; do not ask repeatedly.
+- Follow the canonical [semantic colors](README.md#semantic-colors) before selecting targets or references.
+  Green drawings and purple composites are frozen by default. Editing or removing
+  them requires explicit approval naming those glyphs and masters.
+- Colors describe the default scope of an approved edit, not blanket authorization.
+  Only red permits overwriting or replacement without an explicit exception.
+  Orange and yellow permit edits while preserving the existing drawing; neither is reference material.
+  Blue means a composite needing diagnosis and repair; pink means a composite needing smaller edits.
+  Neither blue nor pink is approved reference material; blue does not mean AI output.
+- Uncolored glyphs are outside automatic completion work.
+  Classify unfamiliar colors before acting; never change review colors automatically.
+  Leave new candidates ungraded unless Eli specifies a review color.
 - Both masters must have matching contours, point counts, and point types.
   Mirror structural changes and verify master compatibility.
 - Preserve unrelated work. Check the working tree and other worktrees before
@@ -81,7 +96,8 @@ for line-grammar symbols and img2bez for organic outlines.
 
 For a single organic glyph, follow `harness/RUNBOOK-codex.md`: trace on a
 scratch copy, review against `DESIGN.md`, port in the repository's style,
-mark blue, and verify. Use `img2bez masters --help` for current flags.
+leave final color grading to Eli, and verify.
+Use `img2bez masters --help` for current flags.
 Do not replace tracing with a hand-drawn approximation.
 
 Inspect the trace report before installation: `compatible` must be true;
@@ -101,7 +117,7 @@ Run from the repository root. Use `.venv/bin/python` for Python tools.
 | `make setup` | Create the Python environment and install requirements. |
 | `make build` | Build the variable and four static TTFs into `fonts/`. |
 | `make proof` | Build and render the main PDF with designbot. |
-| `make review` | Build a diffenator2 browser proof. |
+| `make review` | Build a Diffenator3 browser proof. |
 | `make reports` | Refresh source, built-font, and compatibility reports. |
 | `make preflight` | Build, proof, reports, and required-file checks. |
 | `make test` | Build and run the configured Fontspector checks. |
@@ -125,7 +141,9 @@ Verify shaping with the built font, not just the feature source.
 
 The main proof is `designbot proof <font> --output <pdf>`; `make proof` uses
 the variable font. For harness renders, use `harness/designbot/glyph_canvas.rs`.
-Read `documentation/proofs/PROOF_SPEC.md` for the proof layout. Inspect actual
+For chat before/after proofs, follow `documentation/qa.md#chat-proof-workflow`
+and use `scripts/proof_compare.py`; keep scale and baseline fixed.
+Read `documentation/proofs/PROOF_SPEC.md` for the print proof layout. Inspect actual
 rendered output before claiming visual review.
 
 Preflight only checks artifact presence. `make skeleton` tolerates QA failures;

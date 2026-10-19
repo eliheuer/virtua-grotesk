@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="holam-hb" format="2">
 	<unicode hex="05B9"/>
+	<anchor name="_hbHolam" x="68" y="576"/>
+	<anchor name="hbCantAfterHolam" x="106" y="576"/>
+	<anchor name="hbCantBeforeHolam" x="32" y="576"/>
 	<outline>
 		<contour>
 			<point x="68" y="680" type="curve" smooth="yes"/>
