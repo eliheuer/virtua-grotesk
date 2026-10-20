@@ -73,3 +73,34 @@ documentation/proofs/images/*.png
 # Frozen, licensed assets required to reopen the committed HEB-002 web proof.
 !agent-proofs/cases/hebrew-002/layout-v3/fonts/
 !agent-proofs/cases/hebrew-002/layout-v3/fonts/*.ttf
+
+# Frozen HEB-003 baseline and licensed reference snapshots.
+!agent-proofs/cases/hebrew-003/baseline/fonts/
+!agent-proofs/cases/hebrew-003/baseline/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-003/candidate-v2/fonts/
+!agent-proofs/cases/hebrew-003/candidate-v2/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-004/baseline/fonts/
+!agent-proofs/cases/hebrew-004/baseline/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-004/candidate-v1/fonts/
+!agent-proofs/cases/hebrew-004/candidate-v1/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-005/candidate-v3/fonts/
+!agent-proofs/cases/hebrew-005/candidate-v3/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-005/candidate-v4/fonts/
+!agent-proofs/cases/hebrew-005/candidate-v4/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-005/candidate-v5/fonts/
+!agent-proofs/cases/hebrew-005/candidate-v5/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-005/applied-v5/fonts/
+!agent-proofs/cases/hebrew-005/applied-v5/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-006/candidate-v1/fonts/
+!agent-proofs/cases/hebrew-006/candidate-v1/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-006/candidate-v2/fonts/
+!agent-proofs/cases/hebrew-006/candidate-v2/fonts/*.ttf

@@ -937,6 +937,34 @@ VF with the prior OFL, article/assets, and metadata for arabic/hebrew/latin/
 latin-ext/menu. `Latn` primary script and generated date remain provisional;
 release source/archive mapping is unfinished. No publication was performed.
 
+## Latest applied design review — 2026-10-19
+
+[HEB-001](../../agent-proofs/cases/hebrew-001/README.md) applies the approved `dalet-hb`
+and `resh-hb` outlines in both masters. Weight is explicitly provisional; no
+Latin, Arabic, related-form, anchor, advance or grade change was authorized.
+Source hashing verified exactly four changes against the frozen candidate
+baseline. Active preflight, both curve-lint runs and 20 regression tests pass.
+All five active binaries match the reviewed candidate’s tables except head
+build timestamps/checksum adjustment.
+
+New VF SHA-256: `3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e`.
+[Retained identities](../../agent-proofs/cases/hebrew-001/applied-v1-evidence.json) record
+the four source hashes and all five binaries. Previous sections' font hashes
+and local packages are historical snapshots, not this applied build.
+
+The refreshed online package run remains **9 FAIL / 6 WARN**, and the five-font
+run remains **1 FAIL / 28 WARN**, with no ERROR/FATAL results. Finding IDs/codes
+are unchanged and no exclusions were added. Reports, tool version, input hashes,
+backups and the current local package are under
+`out/qa/2026-10-19/applied-dalet-resh/`; use `full-qa-online/` and
+`package-qa-online/` (the initial network-restricted attempts are superseded).
+
+The three comparison sheets now use the approved DesignBot Rust workflow,
+Virtua labels, title case and both gray polarities. See HEB-001 for the inspected
+six PNGs, recipe and tighter-headline setting. This presentation-only port leaves
+font sources/binaries unchanged. Final cross-script weight remains open.
+No release approval or publication is implied.
+
 ## Before submitting the font
 
 - [x] Consolidate build/QA instructions and remove placeholder metadata and
