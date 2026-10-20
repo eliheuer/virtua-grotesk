@@ -172,3 +172,10 @@ Keep temporary AI review files outside the active docs unless they are still
 being used. Do not ask AI to approve final Arabic or other script drawings without human
 visual review. When a row is uncertain, record `deferred` with the needed
 native-reader or script-specialist follow-up.
+
+### Active Virtua drawing workflow
+
+Follow the standing authorization in `agent-proofs/README.md`: as of 2026-10-20,
+new Hebrew drawing batches go directly into active masters after preserving a
+baseline; no repeated application question is needed. Retain technical checks,
+proofs, exact manual corrections, source-color protections and human grading.

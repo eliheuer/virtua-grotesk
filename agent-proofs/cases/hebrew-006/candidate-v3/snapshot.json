@@ -1,0 +1,90 @@
+{
+  "description": "HEB-006 v3: Eli Regular correction plus proposed Bold adaptation. Only scratch Bold edited this turn.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-3af5770a1220.ttf",
+      "sha256": "3af5770a12209a93a7ab1ec497c502cccfafd500b785f3d560aef0a984dbeef5",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Candidate"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-6d6aeee339d3.ttf",
+      "sha256": "6d6aeee339d3eaaadaec3d7f0a783d6cbbe86098ceca155d27b878f2fa777f7d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 06 · Zayin",
+    "status": "Bold candidate · Not applied",
+    "note": "Before is committed v2. At 400, Candidate shows Eli’s saved Regular edit unchanged. At 700, Candidate shows the proposed Bold adaptation. Only scratch Bold was edited; active sources are untouched.",
+    "glyphs": [
+      {
+        "key": "zayin",
+        "char": "ז",
+        "name": "Zayin"
+      }
+    ],
+    "presets": {
+      "group": [
+        "ז",
+        "Zayin"
+      ],
+      "words": [
+        "זז זמן זית זהב",
+        "Words"
+      ],
+      "marks": [
+        "זָ זֶ זִ זּ",
+        "Marks"
+      ],
+      "latin": [
+        "H ז n",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

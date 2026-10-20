@@ -54,15 +54,29 @@ The files survive closing the browser or chat; the server may need restarting.
 Custom text and UI settings are not yet persisted: record important passages,
 settings and feedback in the case before refreshing or ending a session.
 
+## Standing drawing authorization — 2026-10-20
+
+Eli authorized continuing Hebrew development directly in the active Regular and
+Bold UFOs, then Arabic after Hebrew. Do not ask for per-batch application approval.
+Preserve a before snapshot, check source colors and current file hashes, make
+bounded compatible edits, rebuild and show the comparison with Rubik. Active
+sources are the working drawings visible in Runebender; application does not
+mean final visual approval, green grading, or release readiness. Preserve manual
+corrections and unrelated edits. Keep recording exact correction pairs and
+promote measured lessons into DESIGN.md and the shared skills.
+
 ## Current handoff — 2026-10-20
 
 Current case: [HEB-006 — Yod, Vav, Zayin, Nun and Final Nun](cases/hebrew-006/README.md).
-HEB-006 v2 is installed in both active masters at Eli's request as a baseline
-for his own outline corrections. This is not final design approval. Preserve
-his upcoming edits and compare against the retained v2 GLIFs to understand
-corrections; do not regenerate over them. The frozen proof at localhost:60272
-still shows the v1/v2 comparison with Rubik and Noto. Source receipts and review
-history are in HEB-006. HEB-005 v5 remains the last fully approved group.
+Eli’s manual Regular and Bold Zayin corrections are now saved in the active
+sources and preserved as exact examples in HEB-006. Correction 02 replaces v3’s
+tall Bold right junction with a compact square turn and equal tangent handles.
+Both live outlines have matching 21-point topology. Preserve these drawings.
+The localhost proof still shows frozen candidate v3, before the latest Bold edit.
+The [manual correction library](FEEDBACK.md#manual-correction-library) indexes
+both edits and records the unsuccessful aspect of the Regular-to-Bold transfer.
+Eli accepted the saved HEB-006 drawings for committing and moving on.
+The final saved pair passed the root build/proof/reports preflight on 2026-10-20.
 
 HEB-001 through HEB-005 are approved and applied: Dalet/Resh, He/Het/Tav,
 Bet/Kaf/Final Kaf, Pe/Final Pe, and Mem/Final Mem/Samekh (13 of 27 base letters/final forms in this
@@ -82,7 +96,7 @@ Remaining review sequence (adapt grouping to feedback):
 | Group | State / focus |
 | --- | --- |
 | מ ם ס — Mem, Final Mem, Samekh | HEB-005 v5 approved and applied; v4 redesign rejected |
-| י ו ז נ ן — Yod, Vav, Zayin, Nun, Final Nun | HEB-006 v2 installed for hand correction; not final approval |
+| י ו ז נ ן — Yod, Vav, Zayin, Nun, Final Nun | HEB-006 accepted for continuation, including both manual Zayin corrections |
 | ג ל ק — Gimel, Lamed, Qof | Feet, ascender/descender and spacing |
 | ט ע — Tet, Ayin | Interior construction and joins |
 | א צ ץ ש — Alef, Tsadi, Final Tsadi, Shin | Diagonal and multi-stroke forms; split into smaller trials as needed |
@@ -139,7 +153,7 @@ current machine. Relative links keep the guide usable in another checkout.
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/hebrew-006/candidate-v2/` |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/hebrew-006/candidate-v3/` |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |
@@ -156,8 +170,9 @@ PNG sheets are historical; `make review` is a separate Diffenator3 QA report.
    dirty files and other worktrees; do not overwrite another session's work.
 2. Read the relevant design rules and drawing skill. Inspect source colors,
    dependencies and actual compiled-font freshness. Choose a named small scope.
-3. Preserve a real baseline. Prepare authorized candidates in scratch sources,
-   build them and verify the exact font identities used for the comparison.
+3. Preserve a real baseline. Under the standing authorization above, write bounded
+   drawing updates to the active sources without another application question.
+   Build and verify the exact font identities used for the comparison.
 4. Review equal-scale before/candidate/reference samples and running text in
    the browser. Screenshots support the review; actual fonts render the samples.
    A text-only agent should ask Eli to inspect the browser, not claim it saw it.

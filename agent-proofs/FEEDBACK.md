@@ -190,3 +190,56 @@ stem connection, retaining Virtua chamfers. Other four candidates unchanged.
 HEB-006 hand-edit baseline (2026-10-20): Eli requested applying the current
 drawings, committing and pushing them so he can edit on top. Preserve v2 as
 the comparison baseline; do not treat installation as final drawing approval.
+
+HEB-006 manual correction (2026-10-20): Eli saved a local Regular Zayin neck
+refinement: tangent right-hand arrival into the flat head underside, and an
+8-unit chamfer before the left curve. Preserve the saved outline. The exact
+before/after geometry and limits of this glyph-specific lesson are recorded in
+[cases/hebrew-006/README.md](cases/hebrew-006/README.md#elis-saved-regular-zayin-correction--2026-10-20).
+Bold adaptation remains open; this does not approve a family-wide construction rule.
+
+## Manual correction library
+
+This index routes agents to exact examples; case files own the evidence.
+Read the relevant pair before drawing, and record whether the next candidate
+actually benefited from it. Keep observations, proposed generalizations, and
+Eli-confirmed reusable rules distinct. A saved source is evidence of what Eli
+drew, not permission to reproduce every detail across the family.
+
+| Example | Find by | Scope and evidence | Reuse status |
+| --- | --- | --- | --- |
+| HEB-005 Samekh v3 → v5 | bowl, curve tension, cleanup, preserve skeleton | [Case](cases/hebrew-005/README.md): restrained handles, rejected rectangular redesign retained | Approved in both masters; exact geometry remains glyph-specific |
+| HEB-006 correction 01 | Zayin, neck, head/stem, tangent, chamfer, asymmetric junction | [Case and exact saved Regular](cases/hebrew-006/README.md#elis-saved-regular-zayin-correction--2026-10-20): committed v2 → Eli’s hand edit | V3 transferred structure, but Eli corrected its tall right turn; see correction 02 |
+| HEB-006 correction 02 | Zayin Bold, machined, geometric turn, square extent, equal handles, weight adaptation | [Case](cases/hebrew-006/README.md#manual-correction-02--bold-geometric-turn-2026-10-20): v3 → saved Bold; only three points changed | Human correction recorded; next reuse not yet tested |
+
+For each new manual correction, preserve the starting revision/source and saved
+GLIF, identify the actual geometric/spacing changes separately from editor
+rewrites, and record Eli’s explanation when available. Infer intent cautiously.
+Retain the proof settings and result of subsequent reuse. Retrieve only the
+examples relevant to the next glyph rather than loading the entire archive.
+
+As examples accumulate, consolidate recurring confirmed patterns into DESIGN.md
+and concise skill instructions, with links to examples and exceptions. Keep
+one-off measurements local. Check proposed rules against earlier accepted and
+rejected forms before broad use. This is explicit, portable repository context;
+it does not retrain a model or guarantee improvement merely from example count.
+
+Confirmed 2026-10-20 — machined construction: Eli explicitly rejects the sloppy,
+humanist quality of Bold Zayin v3 and asks for clean neo-modernist forms with
+mathematical precision. Correction 02 shows a 56×56 right turn with equal
+40-unit handles replacing a 56×104 transition. Grid compliance and tangency
+were already present in the rejected candidate, so neither is sufficient to
+establish the requested character. Exact dimensions remain local; see DESIGN.md
+for the stated style direction and the case for measured evidence.
+
+## Standing drawing authorization — 2026-10-20
+
+Eli authorized continuing Hebrew development directly in the active Regular and
+Bold UFOs, then Arabic after Hebrew. Do not ask for per-batch application approval.
+Preserve a before snapshot, check source colors and current file hashes, make
+bounded compatible edits, rebuild and show the comparison with Rubik. Active
+sources are the working drawings visible in Runebender; application does not
+mean final visual approval, green grading, or release readiness. Preserve manual
+corrections and unrelated edits. Keep recording exact correction pairs and
+promote measured lessons into DESIGN.md and the shared skills.
+

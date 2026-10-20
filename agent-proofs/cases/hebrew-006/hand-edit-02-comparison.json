@@ -1,0 +1,103 @@
+{
+  "id": "HEB-006 correction 02",
+  "date": "2026-10-20",
+  "glyph": "zayin-hb",
+  "master": "Bold",
+  "feedback": "Candidate too sloppy and humanist; saved correction is clean, designed, neo-modernist and machined; seek mathematical precision, not a human-hand appearance.",
+  "before": {
+    "path": "agent-proofs/cases/hebrew-006/candidate-v3-sources/sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif",
+    "sha256": "5381b7e58ac5e67f16ebf9013527405d17ae9b429620d9342f4042308fd4c3b0"
+  },
+  "after": {
+    "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif",
+    "snapshot": "agent-proofs/cases/hebrew-006/hand-edit-02-Bold-zayin.glif",
+    "sha256": "aae09cc12e03fff790b9f835e2dd5d7aef15b295b74858ac9adfa05267667342"
+  },
+  "point_changes": [
+    {
+      "index": 3,
+      "before": {
+        "x": "328",
+        "y": "328",
+        "type": "line",
+        "smooth": "yes"
+      },
+      "after": {
+        "x": "328",
+        "y": "376",
+        "type": "line",
+        "smooth": "yes"
+      }
+    },
+    {
+      "index": 4,
+      "before": {
+        "x": "328",
+        "y": "392"
+      },
+      "after": {
+        "x": "328",
+        "y": "416"
+      }
+    },
+    {
+      "index": 5,
+      "before": {
+        "x": "336",
+        "y": "432"
+      },
+      "after": {
+        "x": "344",
+        "y": "432"
+      }
+    }
+  ],
+  "right_transition": {
+    "before": {
+      "extent": [
+        56,
+        104
+      ],
+      "start": [
+        328,
+        328
+      ],
+      "end": [
+        384,
+        432
+      ],
+      "handle_lengths": [
+        64,
+        48
+      ]
+    },
+    "after": {
+      "extent": [
+        56,
+        56
+      ],
+      "start": [
+        328,
+        376
+      ],
+      "end": [
+        384,
+        432
+      ],
+      "handle_lengths": [
+        40,
+        40
+      ]
+    }
+  },
+  "unchanged": [
+    "all other points",
+    "advance 432",
+    "anchors",
+    "glyph color",
+    "Regular source"
+  ],
+  "compatibility": "one contour with matching 21-point type sequence in both masters",
+  "limits": "Source geometry inspection only; no new build or rendered-font QA in this recording turn. Square extent and equal handles do not imply an exact circular arc.",
+  "regular_sha256": "f1a1659624a317814e4ce80eb2b211d4a80e0ec2e12ada3b482bd0cdfc8f1171"
+}
