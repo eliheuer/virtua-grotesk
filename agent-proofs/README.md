@@ -47,29 +47,80 @@ From the repository root:
 make proof-web
 ```
 
-Open the printed URL, normally <http://127.0.0.1:60271/>. The launcher verifies
+Open the printed URL, currently <http://127.0.0.1:60272/>. The launcher verifies
 the frozen fonts and reuses a matching server. Leave a newly started server
 running. This opens the recorded comparison, not a live rebuild of the UFOs.
 The files survive closing the browser or chat; the server may need restarting.
 Custom text and UI settings are not yet persisted: record important passages,
 settings and feedback in the case before refreshing or ending a session.
 
-## Current handoff — 2026-10-19
+## Current handoff — 2026-10-20
 
-Eli said the interface is better and ready to move on after the custom-text
-editor pass. The intensive UI pass is complete enough to resume font review;
-this is not final approval of every UI detail or blanket approval of new drawings.
+Current case: [HEB-006 — Yod, Vav, Zayin, Nun and Final Nun](cases/hebrew-006/README.md).
+HEB-006 v2 is installed in both active masters at Eli's request as a baseline
+for his own outline corrections. This is not final design approval. Preserve
+his upcoming edits and compare against the retained v2 GLIFs to understand
+corrections; do not regenerate over them. The frozen proof at localhost:60272
+still shows the v1/v2 comparison with Rubik and Noto. Source receipts and review
+history are in HEB-006. HEB-005 v5 remains the last fully approved group.
 
-- Current case: [HEB-002 — He, Het and Tav](cases/hebrew-002/README.md).
-  Candidate v2 was applied to both masters; see its application receipt.
-- Prior case: [HEB-001 — Dalet and Resh](cases/hebrew-001/README.md).
-- Hebrew/Arabic weight relative to Latin remains provisional. Read the case's
-  open questions and DESIGN.md before choosing the next bounded task.
-- Latest UI evidence: HEB-002 `layout-v3/ui-pass-22-custom-editor.png` and
-  `ui-pass-22-verification.json`. Later case updates supersede this handoff.
-- Next: inspect the current source state and dependent marked forms, then
-  propose the next small review scope. Do not rerun an old application script
-  merely because a new session started.
+HEB-001 through HEB-005 are approved and applied: Dalet/Resh, He/Het/Tav,
+Bet/Kaf/Final Kaf, Pe/Final Pe, and Mem/Final Mem/Samekh (13 of 27 base letters/final forms in this
+review sequence). Applications and exact hashes live in their cases; no glyph
+was auto-graded. Historical comparisons, GLIFs, licenses and binaries remain.
+Protected marked forms and cross-script weight remain follow-up. No public
+release or Google Fonts readiness claim has been made.
+
+Eli's continuing objective is Hebrew parity with Rubik. The frozen-reference
+coverage audit in HEB-005 finds all 76 of Rubik's encoded Hebrew/presentation
+codepoints already present with nonempty outlines. This only establishes cmap
+coverage. Compare drawing quality and mark behavior in the existing 400–700
+Virtua range; Rubik's additional 300–900 range is not a silent scope expansion.
+
+Remaining review sequence (adapt grouping to feedback):
+
+| Group | State / focus |
+| --- | --- |
+| מ ם ס — Mem, Final Mem, Samekh | HEB-005 v5 approved and applied; v4 redesign rejected |
+| י ו ז נ ן — Yod, Vav, Zayin, Nun, Final Nun | HEB-006 v2 installed for hand correction; not final approval |
+| ג ל ק — Gimel, Lamed, Qof | Feet, ascender/descender and spacing |
+| ט ע — Tet, Ayin | Interior construction and joins |
+| א צ ץ ש — Alef, Tsadi, Final Tsadi, Shin | Diagonal and multi-stroke forms; split into smaller trials as needed |
+
+After the base sequence: reconcile protected presentation forms with the
+approved bases, review niqqud and combined marks/mark-to-mark positioning,
+Hebrew punctuation and mixed-direction text, then full spacing/kerning and
+Latin–Hebrew weight texture. Native-reader review and fresh release QA remain
+required before calling Hebrew shippable. Use the maintained Google Fonts
+checklist for submission checks rather than creating another release checklist.
+
+### Hebrew resumed — 2026-10-19
+
+Eli requested reopening the proof and choosing the next group, with Hebrew
+completion for Google Fonts as the goal and Rubik as a reference. Read-only
+inspection confirmed the current sources match the UI-start source snapshot,
+all six HEB-002 application hashes match, and the current variable binary equals
+the proof's Applied font. No new drawings were made in this resumption.
+
+Recommended next base group: **ב כ ך — bet, kaf, final kaf**. All three still
+have identical Regular/Bold outline XML and widths; this is also true of 19 of
+the 27 Hebrew letters/finals overall. Their related right-hand curves and the
+bet/kaf distinction make a bounded next comparison. This is a proposal, not an
+applied or approved candidate. Keep the earlier dalet/resh/he/het/tav dotted
+presentation forms on the follow-up list: they are standalone outlines and do
+not inherit the applied base changes; respect their existing color permissions.
+
+Rubik's local source checkout is `/Users/eli/GH/repos/rubik/`, origin
+`https://github.com/googlefonts/rubik`, inspected revision
+`e337a5f69a9bea30e58d05bd40184d79cc099628`. Its original upright source is
+`sources/Rubik.glyphs`. A local, untracked conversion already exists at
+`sources/designspace/Rubik.designspace`, with Light/Black UFOs in its `masters/`
+directory and a sparse intermediate layer. Both endpoint UFOs opened successfully;
+bet, kaf and final kaf contain outlines and positioning anchors. No conversion
+or modification was needed. Treat these as local derived references, not a newly
+verified build of the exact Rubik binary used in the proof. Preserve the proof's
+existing reference hash. Consult Rubik for structure, spacing and attachment;
+Virtua's live green Latin geometry remains the style authority.
 
 ## Where everything lives
 
@@ -81,14 +132,14 @@ current machine. Relative links keep the guide usable in another checkout.
 | Session entry, source permissions, agent behavior | [AGENTS.md](../AGENTS.md) |
 | Drawing rules and unresolved design contracts | [DESIGN.md](../DESIGN.md) |
 | Confirmed user preferences and case index | [Design review and feedback](FEEDBACK.md) |
-| Current decisions, application receipt, evidence | [HEB-002](cases/hebrew-002/README.md) |
+| Current inspection and proposal | [HEB-005](cases/hebrew-005/README.md); prior application in [HEB-004](cases/hebrew-004/README.md) |
 | Latin measurements and OPEN human decisions | [Design worklog](../documentation/design-pass-worklog.md) |
 | UI implementation, spacing contract, recovery instructions | [Web-proof guide](app/README.md) |
 | Editable web UI | `agent-proofs/app/index.html`, `review.css`, `review.js` |
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Generated page, exact served fonts, screenshots | `agent-proofs/cases/hebrew-002/layout-v3/` |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/hebrew-006/candidate-v2/` |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |
@@ -119,8 +170,7 @@ PNG sheets are historical; `make review` is a separate Diffenator3 QA report.
 
 The detailed loop and feedback schema live in [the review record](FEEDBACK.md#the-loop).
 Update this guide's current-case pointer and the server target when advancing to
-a new case. Update study definitions and real font roles deliberately: current
-preparation labels the second font **Applied**, so a scratch candidate needs an
+a new case. Update study definitions and real font roles deliberately: study manifests can set each font role label; a scratch candidate must use an
 accurate Candidate label. Do not rewrite old case evidence to imply a new state.
 
 ## Preservation and recovery

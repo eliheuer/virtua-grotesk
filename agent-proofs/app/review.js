@@ -1,6 +1,8 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const glyphs = [
+const data = window.REVIEW_DATA;
+const study = data.study;
+const glyphs = study?.glyphs || [
   {key: 'he', char: 'ה', name: 'He'}, {key: 'het', char: 'ח', name: 'Het'}, {key: 'tav', char: 'ת', name: 'Tav'}
 ];
 const codepoint = char => 'U+' + char.codePointAt(0).toString(16).toUpperCase().padStart(4, '0');
@@ -10,7 +12,7 @@ const presets = {
   group: ['החת', 'He, Het and Tav'], words: ['היה חיה תחיה', 'Words'],
   marks: ['הָ חַ תֵ הּ חִ תַ', 'Marks'], latin: ['no HO החת', 'Latin and Hebrew']
 };
-const data = window.REVIEW_DATA;
+if (study?.presets) Object.assign(presets, study.presets);
 const proof = $('proof');
 // Measurement only: all visible lettering remains native DOM text.
 const inkContext = document.createElement('canvas').getContext('2d');
@@ -27,6 +29,16 @@ function element(tag, text, className) {
 }
 function labelGlyphs() {
   $('study-title').replaceChildren();
+  $('study-title').style.setProperty('--glyph-count', glyphs.length);
+  $('sample').replaceChildren(...glyphs.map(g => new Option(glyphLabel(g), g.key)), ...['group', 'words', 'marks', 'latin'].map(key => new Option(presets[key][1], key)), new Option('Your Text', 'custom'));
+  if (study) {
+    $('sample').value = 'group';
+    document.querySelector('.review-state').textContent = study.status;
+    $('study-id').textContent = study.id;
+    $('study-note').textContent = study.note;
+    $('show-after').textContent = data.fonts.after.label;
+    document.querySelector('[data-mode=switch]').hidden = !data.fonts.before;
+  }
   for (const glyph of glyphs) {
     const identity = element('span', undefined, 'glyph-identity');
     const name = element('span', undefined, 'glyph-name');
@@ -36,7 +48,7 @@ function labelGlyphs() {
     $('study-title').append(identity);
     document.querySelector(`#sample option[value=${glyph.key}]`).textContent = glyphLabel(glyph);
   }
-  document.querySelector('#sample option[value=group]').textContent = 'ה ח ת (He, Het and Tav)';
+  document.querySelector('#sample option[value=group]').textContent = glyphs.map(g => g.char).join(' ') + ' (' + presets.group[1] + ')';
 }
 // A single grid-aligned picker fronts the glyph and reading sample values.
 let pickerIndex = 0;
@@ -131,7 +143,7 @@ function activeText() {
   return $('sample').value === 'custom' ? $('custom').value : presets[$('sample').value][0];
 }
 function roles() {
-  const virtua = mode === 'switch' ? [before ? 'before' : 'after'] : ['before', 'after'];
+  const virtua = !data.fonts.before ? ['after'] : mode === 'switch' ? [before ? 'before' : 'after'] : ['before', 'after'];
   return $('references').checked ? [...virtua, 'rubik', 'noto'] : virtua;
 }
 function specimen(role, text, size) {

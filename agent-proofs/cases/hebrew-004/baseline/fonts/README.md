@@ -1,0 +1,1 @@
+Frozen current Virtua after HEB-003 application, plus unchanged Rubik and Noto reference binaries. Exact hashes in ../snapshot.json; OFL licenses retained. labels.ttf copies Current. These are review assets.

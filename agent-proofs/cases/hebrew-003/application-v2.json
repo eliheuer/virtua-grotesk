@@ -1,0 +1,48 @@
+{
+  "authorization": "2026-10-19: ok this looks good, ship it, next?",
+  "scope": "Apply reviewed HEB-003 v2 to six active base GLIFs. No release publication or color grading.",
+  "changed_files": [
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/bet-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/bet-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif"
+  ],
+  "before_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/bet-hb.glif": "416db9ddd2760050f0d2d1bbef4f93903aa2dc721af7e71d7f63429e088f4357",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-hb.glif": "ae73cee35dbe0c075e478e414ed3a50dab0842a019b68c5d5fb84d8572f73de1",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif": "c1d66a0e4c0b14f929b8750e314e32f1097bd43da2b88d86959b1b766756ac30",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/bet-hb.glif": "ce99cdd3965d7883af63bddfff523718cf3e2e95c92ac34f19a961c10ae0c984",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-hb.glif": "c2c565f4fe2f48ab5ef7f58226fadb9192754b5121f28055cd89955fd231876b",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif": "189fa8722ce35cb48485df67a7b4b9b8abe6eb4652f1af2346100b6cdb2da54c"
+  },
+  "after_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/bet-hb.glif": "d8de9b5136dd77d9decb21edcb8b72f99a1c10afde3fa2138fe309c8a4ca2ab9",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-hb.glif": "6efff0762dd6ea7b8f64565141fbed8e42709f5888db092c83a4af587b4aa872",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif": "99933c3769c5a658d655381123dbe728dfc9798ee312ceef7d978c8ebdd32c8f",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/bet-hb.glif": "fee6a7ede142c55c8d76f97d5efda36811fa919616d568b26266925b52fe48b7",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-hb.glif": "45939c19699fbc3daa996a18fb1512dec53ee88b97b30844d4c352f850590490",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif": "e832b3953489c2f6c22f4c560327e935122a20a04c36258328b6a7001648ecb0"
+  },
+  "state": "Applied and verified",
+  "colors_preserved": true,
+  "protected_forms": "No direct edits to rafe composites or standalone dagesh forms; follow-up remains.",
+  "other_sources_unchanged": true,
+  "guarded_source_files": 1759,
+  "validation": {
+    "preflight": "passed; five fonts, PDF and reports generated",
+    "grid": "six glyph-masters pass",
+    "curves": "both masters clean",
+    "compatibility_blockers": 0,
+    "hebrew_checks_failed": 0,
+    "candidate_equivalence": "All tables match except head.modified and head.checkSumAdjustment; font data and shaping unchanged"
+  },
+  "fonts": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "d5136e504d29c8f705063e710bab8db2fe9a6693cb2b25e46180ca99f3b0ec30",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "fc930b5a16c5e47da9ff09ec683723806516b741c8ce986d0f36aca608fb56d9",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "0dee68a874add2b670378a393f028edc3867f771a14057d4debb25473de886a3",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "65e9a892b1afd4e0c2b27e48f0aebcada5737d49d8026eafb7be70b5ee14527e",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "506eb6447bd7aa6f582210897aaa370689a0b13b94e8a42d6bda98e223de962a"
+  }
+}

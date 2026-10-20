@@ -1,0 +1,831 @@
+{
+  "source_files_guarded": 1759,
+  "only_six_scratch_sources_changed": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/bet-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/bet-hb.glif"
+  ],
+  "colors_and_unicode_preserved": true,
+  "metadata": [
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-hb.glif",
+      "before_width": "460",
+      "after_width": 576,
+      "anchors": [
+        {
+          "name": "hbBottom",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            272,
+            0
+          ]
+        },
+        {
+          "name": "hbCenter",
+          "before": [
+            196,
+            300
+          ],
+          "after": [
+            248,
+            304
+          ]
+        },
+        {
+          "name": "hbHolam",
+          "before": [
+            14,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbRafe",
+          "before": [
+            221,
+            672
+          ],
+          "after": [
+            272,
+            672
+          ]
+        },
+        {
+          "name": "hbMeteg",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            272,
+            0
+          ]
+        },
+        {
+          "name": "hbCantAbove",
+          "before": [
+            224,
+            576
+          ],
+          "after": [
+            272,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveLeft",
+          "before": [
+            16,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveRight",
+          "before": [
+            432,
+            576
+          ],
+          "after": [
+            528,
+            576
+          ]
+        },
+        {
+          "name": "hbCantBelow",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            272,
+            0
+          ]
+        },
+        {
+          "name": "hbCantBelowRight",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            272,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif",
+      "before_width": "490",
+      "after_width": 592,
+      "anchors": [
+        {
+          "name": "hbBottom",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        },
+        {
+          "name": "hbCenter",
+          "before": [
+            188,
+            332
+          ],
+          "after": [
+            240,
+            336
+          ]
+        },
+        {
+          "name": "hbHolam",
+          "before": [
+            14,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbRafe",
+          "before": [
+            224,
+            672
+          ],
+          "after": [
+            272,
+            672
+          ]
+        },
+        {
+          "name": "hbMeteg",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        },
+        {
+          "name": "hbCantAbove",
+          "before": [
+            224,
+            576
+          ],
+          "after": [
+            272,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveLeft",
+          "before": [
+            16,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveRight",
+          "before": [
+            432,
+            576
+          ],
+          "after": [
+            528,
+            576
+          ]
+        },
+        {
+          "name": "hbCantBelow",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        },
+        {
+          "name": "hbCantBelowRight",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        }
+      ]
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/bet-hb.glif",
+      "before_width": "532",
+      "after_width": 640,
+      "anchors": [
+        {
+          "name": "hbBottom",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            312,
+            0
+          ]
+        },
+        {
+          "name": "hbCenter",
+          "before": [
+            196,
+            332
+          ],
+          "after": [
+            248,
+            336
+          ]
+        },
+        {
+          "name": "hbHolam",
+          "before": [
+            14,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbRafe",
+          "before": [
+            266,
+            672
+          ],
+          "after": [
+            312,
+            672
+          ]
+        },
+        {
+          "name": "hbMeteg",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            312,
+            0
+          ]
+        },
+        {
+          "name": "hbCantAbove",
+          "before": [
+            264,
+            576
+          ],
+          "after": [
+            312,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveLeft",
+          "before": [
+            16,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveRight",
+          "before": [
+            520,
+            576
+          ],
+          "after": [
+            616,
+            576
+          ]
+        },
+        {
+          "name": "hbCantBelow",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            312,
+            0
+          ]
+        },
+        {
+          "name": "hbCantBelowRight",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            312,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-hb.glif",
+      "before_width": "460",
+      "after_width": 480,
+      "anchors": [
+        {
+          "name": "hbBottom",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            224,
+            0
+          ]
+        },
+        {
+          "name": "hbCenter",
+          "before": [
+            196,
+            300
+          ],
+          "after": [
+            200,
+            304
+          ]
+        },
+        {
+          "name": "hbHolam",
+          "before": [
+            14,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbRafe",
+          "before": [
+            221,
+            672
+          ],
+          "after": [
+            224,
+            672
+          ]
+        },
+        {
+          "name": "hbMeteg",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            224,
+            0
+          ]
+        },
+        {
+          "name": "hbCantAbove",
+          "before": [
+            224,
+            576
+          ],
+          "after": [
+            224,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveLeft",
+          "before": [
+            16,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveRight",
+          "before": [
+            432,
+            576
+          ],
+          "after": [
+            432,
+            576
+          ]
+        },
+        {
+          "name": "hbCantBelow",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            224,
+            0
+          ]
+        },
+        {
+          "name": "hbCantBelowRight",
+          "before": [
+            220,
+            0
+          ],
+          "after": [
+            224,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif",
+      "before_width": "490",
+      "after_width": 496,
+      "anchors": [
+        {
+          "name": "hbBottom",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        },
+        {
+          "name": "hbCenter",
+          "before": [
+            188,
+            332
+          ],
+          "after": [
+            192,
+            336
+          ]
+        },
+        {
+          "name": "hbHolam",
+          "before": [
+            14,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbRafe",
+          "before": [
+            224,
+            672
+          ],
+          "after": [
+            224,
+            672
+          ]
+        },
+        {
+          "name": "hbMeteg",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        },
+        {
+          "name": "hbCantAbove",
+          "before": [
+            224,
+            576
+          ],
+          "after": [
+            224,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveLeft",
+          "before": [
+            16,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveRight",
+          "before": [
+            432,
+            576
+          ],
+          "after": [
+            432,
+            576
+          ]
+        },
+        {
+          "name": "hbCantBelow",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        },
+        {
+          "name": "hbCantBelowRight",
+          "before": [
+            224,
+            240
+          ],
+          "after": [
+            208,
+            240
+          ]
+        }
+      ]
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/bet-hb.glif",
+      "before_width": "532",
+      "after_width": 544,
+      "anchors": [
+        {
+          "name": "hbBottom",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            264,
+            0
+          ]
+        },
+        {
+          "name": "hbCenter",
+          "before": [
+            196,
+            332
+          ],
+          "after": [
+            200,
+            336
+          ]
+        },
+        {
+          "name": "hbHolam",
+          "before": [
+            14,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbRafe",
+          "before": [
+            266,
+            672
+          ],
+          "after": [
+            264,
+            672
+          ]
+        },
+        {
+          "name": "hbMeteg",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            264,
+            0
+          ]
+        },
+        {
+          "name": "hbCantAbove",
+          "before": [
+            264,
+            576
+          ],
+          "after": [
+            264,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveLeft",
+          "before": [
+            16,
+            576
+          ],
+          "after": [
+            16,
+            576
+          ]
+        },
+        {
+          "name": "hbCantAboveRight",
+          "before": [
+            520,
+            576
+          ],
+          "after": [
+            520,
+            576
+          ]
+        },
+        {
+          "name": "hbCantBelow",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            264,
+            0
+          ]
+        },
+        {
+          "name": "hbCantBelowRight",
+          "before": [
+            266,
+            0
+          ],
+          "after": [
+            264,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "compiled_scope": {
+    "400": {
+      "outlines_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb",
+        "uniFB4C",
+        "uniFB4D"
+      ],
+      "advances_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb"
+      ]
+    },
+    "450": {
+      "outlines_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb",
+        "uniFB4C",
+        "uniFB4D"
+      ],
+      "advances_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb"
+      ]
+    },
+    "500": {
+      "outlines_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb",
+        "uniFB4C",
+        "uniFB4D"
+      ],
+      "advances_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb"
+      ]
+    },
+    "550": {
+      "outlines_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb",
+        "uniFB4C",
+        "uniFB4D"
+      ],
+      "advances_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb"
+      ]
+    },
+    "600": {
+      "outlines_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb",
+        "uniFB4C",
+        "uniFB4D"
+      ],
+      "advances_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb"
+      ]
+    },
+    "650": {
+      "outlines_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb",
+        "uniFB4C",
+        "uniFB4D"
+      ],
+      "advances_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb"
+      ]
+    },
+    "700": {
+      "outlines_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb",
+        "uniFB4C",
+        "uniFB4D"
+      ],
+      "advances_changed": [
+        "bethb",
+        "finalkafhb",
+        "kafhb"
+      ]
+    }
+  },
+  "glyph_weight_comparisons": 6048,
+  "mark_collision_checks": {
+    "samples": 294,
+    "collisions": []
+  },
+  "fonts": {
+    "before": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-003-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "70dc500c2240b606da09de615e85e0631966c004f1cdd6f14ced60d337a04edf"
+    },
+    "candidate": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-003-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "fefe3f77b036438091a690ce05429d62e04aa4473efffcf92eb4a337ad99f79b"
+    }
+  }
+}

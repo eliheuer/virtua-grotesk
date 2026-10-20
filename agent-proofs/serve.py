@@ -10,13 +10,13 @@ from urllib.error import URLError
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-CURRENT = ROOT / 'agent-proofs/cases/hebrew-002/layout-v3'
+CURRENT = ROOT / 'agent-proofs/cases/hebrew-006/candidate-v2'
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--directory', type=Path, default=CURRENT)
-    parser.add_argument('--port', type=int, default=60271)
+    parser.add_argument('--port', type=int, default=60272)
     parser.add_argument('--check', action='store_true', help='Validate local assets without starting a server')
     args = parser.parse_args()
     folder = args.directory.resolve()

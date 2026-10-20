@@ -1,0 +1,54 @@
+{
+  "authorization": "2026-10-20: put these drawings in commit and push; user will make corrections by hand on top",
+  "scope": "Exact HEB-006 v2 in both masters, as a hand-edit baseline; not final design approval",
+  "changed_files": [
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/yod-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/vav-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/nun-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalnun-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/yod-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/vav-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/nun-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalnun-hb.glif"
+  ],
+  "before_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/yod-hb.glif": "54cf054ea36f823b8b4d52d1123170a15ffc438339fed3677d3b084a06c0a66c",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/vav-hb.glif": "fd6a8337cfe387928e50b4932347bd03b57e38dc4599f768d1b985e8e9f4e339",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif": "6c1d1d60ab3d36e98ba7519682f6ae53d118caf6d46896c2fcac9b9a42d12c9c",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/nun-hb.glif": "c98e378ba63080102711d5e5775f6370272e46727ce3db57172ab9211f46a943",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalnun-hb.glif": "a057bdf16f392967be4c70306b292784ebfe85d87285ea697dedb7896f43cb99",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/yod-hb.glif": "d7d902280dfbfa13b6827617b9cdefb2dcd2294c1adf1be9ef1cd9993acf252f",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/vav-hb.glif": "3a3d9e5ebbf90aefee19c4fda3e05f882bf0bff41faab3d46508402a6493b428",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif": "cdf7a29d2cd099cac83c40d0b684ffadee3f167c60c1b61e07d6a92b6a570db9",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/nun-hb.glif": "9f2bd45d26b146940f5bf6f2c77d17f24b99a2e799572afc43effcbfd83aa8ba",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalnun-hb.glif": "73b93d2428581128cb7b32991295d365df64128ef2d0ac8e7f2d628f48b88731"
+  },
+  "after_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/yod-hb.glif": "007880ce9f5d543568593ef8b16e14f700ffc1f82f32e6b6680e32269b9de23b",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/vav-hb.glif": "bcee973abed19100e42fc0b002463dfc19f0ef26a19db1db0325d170ac39ee30",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif": "a634052de5c5eaa7a9ed5d6284ceb7bd56e23a88403bd047908629143a56fc5c",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/nun-hb.glif": "e087e43b7f2b9ac4a2e1f179412982c742d746c602455bd728006d35e6065ad7",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalnun-hb.glif": "e4641c98de03bfc9cac8a2fb8018b5febfedab51ab4f6f911992b8956b503670",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/yod-hb.glif": "22af4f86414f40a7445724651c1d45cdc1abf5457519840bc5279057bdb6d525",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/vav-hb.glif": "3bbf56220af0442e9a6b9f2ee66a8804d0b663b5b629d6d127f4a2e5f74e2e61",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif": "80740e6a63d83e3708e1a209fc37ee12a3650677082a8dc60a7d5850dd68551a",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/nun-hb.glif": "fe9e25b728deebd11bd9bd74d53d0ac96827c4aaa2011def8dc18c26dfe40a80",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalnun-hb.glif": "34cfaebec83c2cbd1f688f946f9a319a8c62e121eee69ab1892d07470d03c710"
+  },
+  "state": "Applied for hand editing; build and preflight passed",
+  "other_sources_unchanged": true,
+  "colors_preserved": true,
+  "verification": {
+    "preflight": "passed",
+    "source_hashes_checked": 1759,
+    "compiled_fonts_match_candidate_except_build_metadata": [
+      "fonts/ttf/VirtuaGrotesk-Bold.ttf",
+      "fonts/ttf/VirtuaGrotesk-Medium.ttf",
+      "fonts/ttf/VirtuaGrotesk-Regular.ttf",
+      "fonts/ttf/VirtuaGrotesk-SemiBold.ttf",
+      "fonts/variable/VirtuaGrotesk[wght].ttf"
+    ]
+  }
+}

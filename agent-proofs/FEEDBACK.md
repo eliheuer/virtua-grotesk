@@ -72,6 +72,13 @@ glyph-specific correction into a family-wide rule without evidence and agreement
 | P040 | Changing selected-mode styling must preserve the established text grid, including Compare flush with the left margin. Verify existing alignments across modes before considering a UI change complete. | Eli, 2026-10-19, correction after P039. Layout padding shifted labels; selection fill now paints around the text without adding layout width. |
 | P041 | Make Your Text a coherent, usable editor section: separate it from the sliders with a margin-aligned rule, use consistent thin rules/focus treatment, remove the resize handle and preserve the established margins. | Eli, 2026-10-19, 17:54:51 screenshot. Auto-growing height with bounded scrolling and U-based insets is the current implementation for review. |
 
+| P042 | Replace inverted active-mode fills with a thick underline at the bottom rule. Keep the indicator within the tab text width and preserve the page margin. | Eli, 2026-10-19, 19:12:10 screenshot: the inverse selection breaks left containment. Supersedes P039 and the fill implementation described in P040; P040's alignment requirement remains. |
+
+Confirmed 2026-10-19, 19:47: Eli requests divider strokes twice as thick,
+preferably with rounded ends, and compact control-section vertical spacing
+comparable to the mode bar (P043). This supersedes the 1px rules and roomy
+slider-band spacing. Existing page margins and shared UI type remain.
+
 ## The loop
 
 1. Read confirmed preferences, the latest open review, relevant design contracts,
@@ -113,6 +120,14 @@ is implied: this system improves through explicit repository records and tools.
 | [HEB-001](cases/hebrew-001/README.md) | Dalet/resh in both masters; specimen redesign | Candidate v1 applied; weight provisional; refined DesignBot layout approved |
 | [HEB-002](cases/hebrew-002/README.md) | He, het and tav in both masters | Candidate v2 applied; UI pass ready to move on; next font scope to be selected |
 
+| [HEB-003](cases/hebrew-003/README.md) | Bet, Kaf and Final Kaf in both masters | Candidate v2 applied; protected marked forms remain follow-up |
+
+| [HEB-004](cases/hebrew-004/README.md) | Pe and Final Pe in both masters | Candidate v1 approved and applied; protected marked forms remain follow-up |
+
+| [HEB-005](cases/hebrew-005/README.md) | Mem, Final Mem and Samekh in both masters | V5 approved and applied to both masters; v4 rejected |
+
+| [HEB-006](cases/hebrew-006/README.md) | Yod, Vav, Zayin, Nun and Final Nun in both masters | V2 installed for Eli’s hand corrections; not final approval |
+
 ## Next phases
 
 **Current phase: resume font review through Virtua Design Review.** On 2026-10-19,
@@ -150,3 +165,28 @@ and scratch UFO backups remain in ignored `out/qa/`. External reference fonts
 remain cached locally; record origin, license, and exact binary hash. A missing
 cache is not permission to silently substitute a different version. Rebuild or
 fetch the recorded reference, verify it, and label any intentional update.
+
+P044 (2026-10-19): Open proofs in dark mode by default, including the initial
+HTML paint. The Dark checkbox still allows switching to the neutral light palette.
+
+HEB-005 Samekh (2026-10-19): Eli finds v3 too organic/humanist and requests a
+more geometric neo-grotesk construction. Revise Samekh only; preserve the v3
+trial and the unchanged Mem/Final Mem candidates for comparison. Not applied.
+
+HEB-005 correction (2026-10-19): v4 rejected as a different, worse design.
+“More geometric” meant slight contour cleanup of v3, with Rubik as a reference,
+not a rectangular replacement. Restore v3 and make only restrained handle edits.
+Preserve skeleton, on-curve points and metrics; do not generalize feedback into
+an unrequested redesign.
+
+HEB-005 approval (2026-10-19): Eli approved Mem, Final Mem and refined Samekh
+v5 for application to both masters. Exact reviewed sources applied and rebuilt;
+see `cases/hebrew-005/application-v5.json`.
+
+HEB-006 Zayin (2026-10-20): Eli finds the angled v1 construction overcomplicated
+and requests a simpler form closer to Rubik. Trial a level head with a clean
+stem connection, retaining Virtua chamfers. Other four candidates unchanged.
+
+HEB-006 hand-edit baseline (2026-10-20): Eli requested applying the current
+drawings, committing and pushing them so he can edit on top. Preserve v2 as
+the comparison baseline; do not treat installation as final drawing approval.

@@ -1,0 +1,95 @@
+{
+  "description": "HEB-004 approved v1 applied to both active masters.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-53302c3efb55.ttf",
+      "sha256": "53302c3efb55bd0e63fcf59d522fbc03402e2882432bf4584a3c55f04ddb036d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Applied"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-d5136e504d29.ttf",
+      "sha256": "d5136e504d29c8f705063e710bab8db2fe9a6693cb2b25e46180ca99f3b0ec30",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 04",
+    "status": "Applied · Weight provisional",
+    "note": "Pe and Final Pe v1 approved and applied to both masters. Protected presentation forms and cross-script weight remain follow-up.",
+    "glyphs": [
+      {
+        "key": "pe",
+        "char": "פ",
+        "name": "Pe"
+      },
+      {
+        "key": "finalpe",
+        "char": "ף",
+        "name": "Final Pe"
+      }
+    ],
+    "presets": {
+      "group": [
+        "פף",
+        "Pe and Final Pe"
+      ],
+      "words": [
+        "פה פתח ספר סוף",
+        "Words"
+      ],
+      "marks": [
+        "פּ פַ פָ ףּ ףְ ףָ",
+        "Marks"
+      ],
+      "latin": [
+        "no HO פף",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

@@ -1,0 +1,1 @@
+Frozen HEB-003 Before and Candidate variable fonts, plus Rubik and Noto references. Exact hashes and roles are in ../snapshot.json. labels.ttf copies Candidate for UI labels. OFL files are retained alongside the fonts. Candidate has not been applied to active sources.

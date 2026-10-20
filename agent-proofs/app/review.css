@@ -1,6 +1,6 @@
 @font-face{font-family:ReviewLabels;src:url('fonts/labels.ttf') format('truetype');font-weight:400;font-display:swap}
 /* Spacing contract: the page margin is U. Every layout gap uses U or a subdivision. */
-:root{--light-paper:#a8a8a8;--light-ink:#2e2e2e;--dark-paper:#181818;--dark-ink:#dedede;--paper:var(--light-paper);--ink:var(--light-ink);--weight:400;--space:32px;--half:calc(var(--space)/2);--quarter:calc(var(--space)/4);--eighth:calc(var(--space)/8);--double:calc(var(--space)*2);--field:calc(var(--space) + var(--half));--margin:var(--space);--gutter:var(--half);--headline:40px;--ui:14px;color-scheme:light}
+:root{--light-paper:#a8a8a8;--light-ink:#2e2e2e;--dark-paper:#181818;--dark-ink:#dedede;--paper:var(--light-paper);--ink:var(--light-ink);--weight:400;--space:32px;--half:calc(var(--space)/2);--quarter:calc(var(--space)/4);--eighth:calc(var(--space)/8);--double:calc(var(--space)*2);--field:var(--space);--rule:2px;--margin:var(--space);--gutter:var(--half);--headline:40px;--ui:14px;color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--ink);font:var(--ui)/1.4 ReviewLabels,Arial,sans-serif;font-synthesis:none}
 body.dark{--paper:var(--dark-paper);--ink:var(--dark-ink);color-scheme:dark}
@@ -14,20 +14,20 @@ input[type=checkbox]:checked::before{content:'';box-sizing:border-box;width:5px;
 input[type=number]{appearance:textfield;-moz-appearance:textfield;border:0;border-bottom:1px solid var(--ink);width:100%;padding:0 0 var(--quarter);text-align:left;font-size:var(--ui);line-height:calc(var(--field) - var(--quarter))}
 input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
 .masthead{position:relative;display:flex;align-items:center;justify-content:space-between;gap:var(--space);max-width:1664px;margin:auto;padding:var(--space)}
-.masthead::after{content:"";position:absolute;inset-inline:var(--space);bottom:0;border-bottom:1px solid var(--ink)}
+.masthead::after{content:"";position:absolute;inset-inline:var(--space);bottom:0;height:var(--rule);background:var(--ink);border-radius:var(--rule)}
 .brand,h1{font-size:var(--headline);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin:0;text-box-trim:trim-both;text-box-edge:cap alphabetic}
 .brand{text-decoration:none}.view-options{display:flex;gap:var(--half);flex:none}
 .view-options label,.check{display:flex;align-items:center;gap:var(--quarter);font-size:var(--ui);line-height:1.25;cursor:pointer}
 main{position:relative;max-width:1664px;margin:auto;padding:0 var(--space)}
 .intro{padding:var(--space) 0}
-.view-bar{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space);border-block:1px solid var(--ink);padding-top:var(--half)}
-nav{display:flex;align-items:baseline;gap:var(--space)}nav button{padding:0 0 var(--half);border:0;border-bottom:2px solid transparent;background:transparent;font-size:var(--ui);line-height:1.25;text-box-trim:trim-both;text-box-edge:cap alphabetic}
-nav button[aria-pressed=true]{color:var(--paper)}
-.mode-label{display:block;position:relative;isolation:isolate;text-box-trim:trim-both;text-box-edge:cap alphabetic}
-nav button[aria-pressed=true] .mode-label::before{content:"";position:absolute;inset:calc(-1 * var(--quarter)) calc(-1 * var(--half));background:var(--ink);z-index:-1}
+.view-bar{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space);border-block:var(--rule) solid transparent;padding-top:var(--half)}
+nav{display:flex;align-self:stretch;align-items:stretch;gap:var(--space)}nav button{position:relative;display:flex;align-items:baseline;padding:0 0 var(--half);border:0;border-bottom:2px solid transparent;background:transparent;font-size:var(--ui);line-height:1.25;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+.mode-label{display:block;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+/* Stretch tabs to the bar's lower edge; paint the marker over the shared rule. */
+nav button[aria-pressed=true]::after{content:"";position:absolute;inset-inline:0;bottom:-4px;height:4px;border-radius:var(--rule);background:var(--ink)}
 .view-bar .check{align-items:baseline;padding-bottom:var(--half);border-bottom:2px solid transparent}.view-bar .check span{text-box-trim:trim-both;text-box-edge:cap alphabetic}.view-bar .check input{align-self:center}
-.controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gutter);row-gap:var(--half);padding:var(--space) 0 var(--half)}
-.sample-control{grid-column:span 2}.sample-control,.axis-control{min-width:0;display:grid;grid-template-rows:max-content var(--field) var(--space);row-gap:var(--half);font-size:var(--ui);line-height:1.25}
+.controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gutter);row-gap:var(--half);padding:var(--half) 0 var(--quarter)}
+.sample-control{grid-column:span 2}.sample-control,.axis-control{min-width:0;display:grid;grid-template-rows:max-content var(--field) minmax(var(--half),max-content);row-gap:var(--quarter);font-size:var(--ui);line-height:1.25}
 /* The popup shares the field width, type and spacing; no platform accent or shadow. */
 .sample-picker{position:relative;min-width:0}
 #sample-trigger{display:flex;align-items:center;justify-content:space-between;gap:var(--half);width:100%;height:var(--field);padding:0 0 var(--quarter);border-bottom:1px solid var(--ink);text-align:left;line-height:1.25}
@@ -40,10 +40,10 @@ nav button[aria-pressed=true] .mode-label::before{content:"";position:absolute;i
 .picker-option[aria-selected=true]::after{content:'';position:absolute;right:var(--half);top:calc(50% - 3px);width:7px;height:4px;border-left:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(-45deg)}
 .picker-option.active{color:var(--paper);background:var(--ink)}
 .control-caption{display:contents}
-input[type=range]{appearance:none;-webkit-appearance:none;width:100%;height:var(--space);background:transparent;margin:0;cursor:pointer}
-input[type=range]::-webkit-slider-runnable-track{height:1px;background:var(--ink)}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:7px;height:13px;background:var(--ink);margin-top:-6px}
-input[type=range]::-moz-range-track{height:1px;background:var(--ink)}
+input[type=range]{appearance:none;-webkit-appearance:none;width:100%;height:var(--half);background:transparent;margin:0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:var(--rule);border-radius:var(--rule);background:var(--ink)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:7px;height:13px;background:var(--ink);margin-top:-5.5px}
+input[type=range]::-moz-range-track{height:var(--rule);border-radius:var(--rule);background:var(--ink)}
 input[type=range]::-moz-range-thumb{width:7px;height:13px;border:0;border-radius:0;background:var(--ink)}
 #fitted-size{grid-row:2;font-size:var(--ui);line-height:calc(var(--field) - var(--quarter));margin:0;padding-bottom:var(--quarter)}
 #fitted-size{border-bottom:1px solid var(--ink)}
@@ -96,9 +96,11 @@ body.reading .fit-toggle{display:none}
 @media(max-width:1199px){.reading-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:599px){.reading-grid{grid-template-columns:1fr}.view-bar{flex-wrap:wrap;row-gap:var(--half)}nav{gap:var(--half)}}
 
-.glyph-heading{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gutter)}
+.glyph-heading{display:grid;grid-template-columns:repeat(var(--glyph-count,3),minmax(0,1fr));gap:var(--gutter)}
 .glyph-identity{display:flex;flex-direction:column;align-items:start;gap:var(--quarter)}
 .glyph-name{white-space:nowrap}
+/* Larger review groups wrap identities without shrinking the shared heading size. */
+.glyph-heading:has(.glyph-identity:nth-child(4)){grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
 .glyph-unicode{font-size:var(--ui);line-height:1.25;letter-spacing:0}
 
 /* Keep the Toggle shortcut in the mode bar, outside the proof spacing. */
@@ -110,3 +112,13 @@ body.size-study .controls{grid-template-columns:repeat(2,minmax(0,1fr))}
 body.size-study .sample-control{grid-column:span 1;grid-template-rows:max-content var(--field)}
 .waterfall-stack{min-width:0}
 @media(max-width:599px){body.size-study .controls{grid-template-columns:1fr}}
+
+/* Shared 2px rules with round ends; inset to existing content margins. */
+.view-bar,.font-caption,footer,#custom-wrap{position:relative}
+.font-caption,footer,#custom-wrap{border-top:var(--rule) solid transparent}
+.view-bar::before,.view-bar::after,.font-caption::before,footer::before,#custom-wrap::before{content:"";position:absolute;inset-inline:0;height:var(--rule);background:var(--ink);border-radius:var(--rule);pointer-events:none}
+.view-bar::before,.font-caption::before,footer::before,#custom-wrap::before{top:calc(-1 * var(--rule))}
+.view-bar::after{bottom:calc(-1 * var(--rule))}
+/* A capsule background also works on native inputs, which cannot host pseudos. */
+input[type=number],#sample-trigger,#fitted-size,#custom{border-bottom:0;background-image:radial-gradient(circle at 1px 1px,var(--ink) 1px,transparent 1px),linear-gradient(var(--ink),var(--ink)),radial-gradient(circle at 1px 1px,var(--ink) 1px,transparent 1px);background-size:2px 2px,calc(100% - 2px) 2px,2px 2px;background-position:left bottom,center bottom,right bottom;background-repeat:no-repeat}
+#custom:focus-visible{outline-width:var(--rule);outline-offset:calc(-1 * var(--rule))}

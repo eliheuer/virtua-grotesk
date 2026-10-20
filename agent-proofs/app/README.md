@@ -15,7 +15,7 @@ From the repository root:
 make proof-web
 ```
 
-Open the printed localhost URL (normally `http://127.0.0.1:60271/`). The launcher
+Open the printed localhost URL (currently `http://127.0.0.1:60272/`). The launcher
 verifies the four local font snapshots, reuses the matching server if already
 running, and otherwise serves only the review folder. It does not build fonts,
 edit sources, or silently replace the before/applied snapshots. To validate
@@ -25,22 +25,22 @@ without starting a server:
 .venv/bin/python agent-proofs/serve.py --check
 ```
 
-Current case: [HEB-002](../cases/hebrew-002/README.md), he, het and tav.
-Its served files are under `agent-proofs/cases/hebrew-002/layout-v3/`.
-The historical directory name is retained; its `index.html` is now the live
-interface. `image-viewer.html` is the superseded PNG viewer.
+Current case: [HEB-004](../cases/hebrew-004/README.md), pe and final pe.
+Its served files are under `agent-proofs/cases/hebrew-004/baseline/`.
+The preceding HEB-002 comparison remains in `cases/hebrew-002/layout-v3/`;
+its `image-viewer.html` is the superseded PNG viewer.
 
 ## Mode names
 
 The visible tabs are **Compare, Toggle, Waterfall, Text** (P025, revised by P037). Earlier notes below
 use the former Switch / Sizes / Reading names. Internal data-mode identifiers
 remain compare / switch / waterfall / reading. A rule above the bar separates
-it from the glyph identities. P039 replaces the active underline with an
-inverted tab; P040 corrects its first implementation’s margin regression.
-Labels retain their original layout positions (Compare flush with the content
-margin) and baseline. A pseudo-element paints the selected fill U/4 vertically
-and U/2 horizontally around the label, without adding horizontal layout padding.
-The original U tab gaps (U/2 on narrow screens) and vertical bar geometry remain.
+it from the glyph identities. P042 restores a thick active underline in place
+of the inverted fill (superseding P039). The marker spans the tab label width
+and joins the lower rule. Labels retain their original positions (Compare
+flush with the content margin), shared baseline and UI size. Tabs stretch to
+the bar's lower edge so the References control cannot leave a gap beneath the
+marker. The original U tab gaps (U/2 on narrow screens) remain.
 The masthead rule uses those same page-margin endpoints (P026). Rendering
 explanations belong in Review Details, outside the control-to-proof interval;
 the slider-to-caption rule interval stays U in Text as well as Compare.
@@ -290,3 +290,24 @@ they are not the live renderer.
 `make review` remains the separate Diffenator3 QA proof. `make proof` remains the
 DesignBot print PDF. Neither replaces the live design-review interface, and
 the live interface does not establish Google Fonts release readiness.
+
+## Case-specific studies
+
+`prepare.py` accepts optional `study` metadata in the evidence manifest:
+`glyphs`, `presets`, `id`, `status`, and `note`. Font records may specify `label`.
+HEB-003 demonstrates a current-only inspection: omit `before`, label `after`
+Current, and the UI renders three reference-comparison columns and hides Toggle.
+Existing HEB-002 manifests retain their original study and Before/Applied roles.
+Use this configuration for new cases rather than editing the app's default
+Hebrew sample identities or relabeling historical comparisons.
+
+
+P043 (2026-10-19) supersedes older one-pixel divider and roomy controls notes:
+structural rules and slider tracks use 2px rounded strokes; controls start U/2
+below the menu, field height is U, label/row gap U/4, slider hit area U/2, and
+bottom padding U/4. Thus the slider center has U/2 to each adjacent rule. Toggle
+retains its U-high two-button control. The square checkboxes keep their existing
+stroke and inset tick. Menu label positions and the content margin are unchanged.
+
+P044 (2026-10-19): Open proofs in dark mode by default, including the initial
+HTML paint. The Dark checkbox still allows switching to the neutral light palette.

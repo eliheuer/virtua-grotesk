@@ -14,17 +14,22 @@
 	<anchor name="hbCantBelowRight" x="284" y="0"/>
 	<outline>
 		<contour>
-			<point x="400" y="0" type="line"/>
+			<point x="408" y="16" type="line"/>
+			<point x="424" y="0" type="line"/>
 			<point x="488" y="0" type="line"/>
 			<point x="504" y="16" type="line"/>
-			<point x="504" y="560" type="line"/>
-			<point x="488" y="576" type="line"/>
+			<point x="504" y="352" type="line" smooth="yes"/>
+			<point x="504" y="480"/>
+			<point x="440" y="576"/>
+			<point x="312" y="576" type="curve" smooth="yes"/>
 			<point x="80" y="576" type="line"/>
 			<point x="64" y="560" type="line"/>
-			<point x="64" y="488" type="line"/>
-			<point x="80" y="472" type="line"/>
-			<point x="384" y="472" type="line"/>
-			<point x="400" y="456" type="line"/>
+			<point x="64" y="496" type="line"/>
+			<point x="80" y="480" type="line"/>
+			<point x="280" y="480" type="line" smooth="yes"/>
+			<point x="344" y="480"/>
+			<point x="408" y="448"/>
+			<point x="408" y="320" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
 	<lib>

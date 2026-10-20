@@ -1,0 +1,110 @@
+{
+  "description": "HEB-006 v2: simplified Zayin against v1. Other four candidates unchanged; not applied.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-6d6aeee339d3.ttf",
+      "sha256": "6d6aeee339d3eaaadaec3d7f0a783d6cbbe86098ceca155d27b878f2fa777f7d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Revised"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-7521c3918ea8.ttf",
+      "sha256": "7521c3918ea8fe385c33349c79c98cb5e3a62c9c3e93d04829375bd9d9224142",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Previous"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 06",
+    "status": "Revised · Not applied",
+    "note": "Previous is candidate v1. Revised simplifies only Zayin to a level crown and cleaner stem connection, informed by Rubik. Other four candidates unchanged.",
+    "glyphs": [
+      {
+        "key": "yod",
+        "char": "י",
+        "name": "Yod"
+      },
+      {
+        "key": "vav",
+        "char": "ו",
+        "name": "Vav"
+      },
+      {
+        "key": "zayin",
+        "char": "ז",
+        "name": "Zayin"
+      },
+      {
+        "key": "nun",
+        "char": "נ",
+        "name": "Nun"
+      },
+      {
+        "key": "finalnun",
+        "char": "ן",
+        "name": "Final Nun"
+      }
+    ],
+    "presets": {
+      "group": [
+        "יוזנן",
+        "Yod, Vav, Zayin, Nun and Final Nun"
+      ],
+      "words": [
+        "יין זמן זית נון חלון",
+        "Words"
+      ],
+      "marks": [
+        "יּ וּ זּ נּ ןָ וֹ נִ",
+        "Marks"
+      ],
+      "latin": [
+        "in H יוזנן",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

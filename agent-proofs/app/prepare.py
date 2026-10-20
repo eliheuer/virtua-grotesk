@@ -17,8 +17,8 @@ def main():
     (target / 'fonts').mkdir(parents=True, exist_ok=True)
     roles = {'before': 'Before', 'after': 'Applied', 'rubik': 'Reference', 'noto': 'Reference'}
     records = {}
-    for role, label in roles.items():
-        record = evidence['fonts'][role]
+    for role, record in evidence['fonts'].items():
+        label = record.get('label', roles[role])
         source = Path(record['path'])
         if not source.is_absolute():
             source = args.evidence.resolve().parent / source
@@ -35,7 +35,7 @@ def main():
             records[role] = dict(family=record['family'], label=label,
                                  url=f'fonts/{name}', sha256=digest,
                                  codepoints=sorted(font.getBestCmap()), axes=record['axes'])
-    (target / 'review-data.js').write_text('window.REVIEW_DATA = '+json.dumps({'fonts': records, 'reading': json.loads((Path(__file__).parent / 'reading-samples.json').read_text())}, ensure_ascii=False)+';\n')
+    (target / 'review-data.js').write_text('window.REVIEW_DATA = '+json.dumps({'study': evidence.get('study'), 'fonts': records, 'reading': json.loads((Path(__file__).parent / 'reading-samples.json').read_text())}, ensure_ascii=False)+';\n')
     for name in ['index.html', 'review.css', 'review.js']:
         shutil.copy2(Path(__file__).parent / name, target / name)
     # Native browser reloads can otherwise mix cached scripts with fresh HTML.
@@ -44,6 +44,7 @@ def main():
                         'fonts/labels.ttf?v=' + records['after']['sha256'][:12]))
     index_path = target / 'index.html'
     html = index_path.read_text()
+    html = html.replace('between Before and Applied', 'between Before and ' + records['after']['label'])
     for name in ['review.css', 'review.js', 'review-data.js']:
         version = hashlib.sha256((target / name).read_bytes()).hexdigest()[:12]
         html = html.replace('"' + name + '"', '"' + name + '?v=' + version + '"')

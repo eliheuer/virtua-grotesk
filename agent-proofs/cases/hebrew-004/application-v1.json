@@ -1,0 +1,42 @@
+{
+  "authorization": "2026-10-19: apply the Pe and Final Pe changes to both masters",
+  "scope": "Exact reviewed HEB-004 v1, four active base GLIFs",
+  "changed_files": [
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/pe-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalpe-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/pe-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalpe-hb.glif"
+  ],
+  "before_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/pe-hb.glif": "11d3931c6c48f0e2e573df54a989da868f40057394ff1c7e464335252a6e928c",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalpe-hb.glif": "6c6e31310e4301cd9764c7754b8a5b5618c3e3c1208f1b1d5adaa080cb17cc12",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/pe-hb.glif": "8490a78e565943e557436a3fe956d2e226e2d59d90d51ffa05a4d1ca68607976",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalpe-hb.glif": "3f4250407108283dcb2501ebba842c1a0e67323b2335db50344f48a9226327d6"
+  },
+  "after_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/pe-hb.glif": "881d48f69d49e0bfccca3904220bae3cca83d7aca22be2a35a47cb48e2a9f64c",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalpe-hb.glif": "4ef75e304f2e0b69513c93b87b11c9c19847252a4397bcf960b7e9c445f40051",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/pe-hb.glif": "eb99e9a84460ad27a8bc43e34055f8e71e95fa5e2f9704c99ac20202b84083c8",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalpe-hb.glif": "16627087acb60d41c61e789768274338c40e2eed2d0f8a9c997a14f149d480ad"
+  },
+  "state": "Applied and verified",
+  "colors_preserved": true,
+  "other_sources_unchanged": true,
+  "guarded_source_files": 1759,
+  "protected_forms": "No direct edits to Pe-rafe or standalone dagesh forms; follow-up remains.",
+  "validation": {
+    "preflight": "passed; variable, four statics, PDF and reports",
+    "grid": "four glyph-masters pass",
+    "curves": "both masters clean",
+    "compatibility_blockers": 0,
+    "hebrew_checks_failed": 0,
+    "candidate_equivalence": "All font tables match except head.modified/checkSumAdjustment"
+  },
+  "fonts": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "53302c3efb55bd0e63fcf59d522fbc03402e2882432bf4584a3c55f04ddb036d",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "68de6158c028db57378806d246a657e7cc0437d299369ae2cc5122f1f2279cdb",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "660e921e9182bf6de7e5e92c92f749329524ad47e647c6699fb8dd228d219b1d",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "02c14dc34fee126031c54a1a59a394b2ddf727f9670c4233399e46f77ca2e2db",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "3aa20e3c7af8df3edce98e9f06e0f421e258ec3d078ca22ac081be1262e17f9a"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "description": "Approved HEB-005 v5 applied to both masters. Before is active HEB-004 baseline.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-dd5d6c0412a6.ttf",
+      "sha256": "dd5d6c0412a6f9ab5e7f29281e300017425b52161d0fcf195a995aba689706d0",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Applied"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-53302c3efb55.ttf",
+      "sha256": "53302c3efb55bd0e63fcf59d522fbc03402e2882432bf4584a3c55f04ddb036d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 05",
+    "status": "Applied · Weight provisional",
+    "note": "Mem, Final Mem and refined Samekh v5 approved and applied to both masters. V4 redesign rejected. Next: Yod, Vav, Zayin, Nun and Final Nun.",
+    "glyphs": [
+      {
+        "key": "mem",
+        "char": "מ",
+        "name": "Mem"
+      },
+      {
+        "key": "finalmem",
+        "char": "ם",
+        "name": "Final Mem"
+      },
+      {
+        "key": "samekh",
+        "char": "ס",
+        "name": "Samekh"
+      }
+    ],
+    "presets": {
+      "group": [
+        "מםס",
+        "Mem, Final Mem and Samekh"
+      ],
+      "words": [
+        "מים מקום מסך סוס",
+        "Words"
+      ],
+      "marks": [
+        "מּ מַ םָ סּ סֵ",
+        "Marks"
+      ],
+      "latin": [
+        "no HO מםס",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

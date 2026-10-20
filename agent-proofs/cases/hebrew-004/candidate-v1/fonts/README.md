@@ -1,0 +1,1 @@
+Frozen Before (HEB-003 applied), reviewed Candidate, rebuilt Applied (HEB-004 v1), Rubik and Noto binaries. Current exact hashes are in ../snapshot.json; original candidate identity is in ../reviewed-candidate-snapshot.json. labels.ttf copies Applied. OFL licenses retained.

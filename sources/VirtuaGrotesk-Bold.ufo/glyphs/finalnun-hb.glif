@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="finalnun-hb" format="2">
 	<unicode hex="05DF"/>
-	<advance width="328"/>
-	<anchor name="hbBottom" x="164" y="-128"/>
-	<anchor name="hbCenter" x="164" y="320"/>
-	<anchor name="hbHolam" x="48" y="576"/>
-	<anchor name="hbRafe" x="164" y="672"/>
-	<anchor name="hbMeteg" x="164" y="-128"/>
-	<anchor name="hbCantAbove" x="160" y="576"/>
-	<anchor name="hbCantAboveLeft" x="48" y="576"/>
-	<anchor name="hbCantAboveRight" x="280" y="576"/>
-	<anchor name="hbCantBelow" x="164" y="-128"/>
-	<anchor name="hbCantBelowRight" x="164" y="-128"/>
+	<advance width="336"/>
+	<anchor name="hbBottom" x="168" y="-128"/>
+	<anchor name="hbCenter" x="0" y="320"/>
+	<anchor name="hbHolam" x="72" y="576"/>
+	<anchor name="hbRafe" x="168" y="672"/>
+	<anchor name="hbMeteg" x="168" y="-128"/>
+	<anchor name="hbCantAbove" x="168" y="576"/>
+	<anchor name="hbCantAboveLeft" x="72" y="576"/>
+	<anchor name="hbCantAboveRight" x="264" y="576"/>
+	<anchor name="hbCantBelow" x="168" y="-128"/>
+	<anchor name="hbCantBelowRight" x="168" y="-128"/>
 	<outline>
 		<contour>
-			<point x="64" y="-128" type="line"/>
-			<point x="264" y="-128" type="line"/>
-			<point x="280" y="-112" type="line"/>
-			<point x="280" y="560" type="line"/>
-			<point x="264" y="576" type="line"/>
-			<point x="64" y="576" type="line"/>
-			<point x="48" y="560" type="line"/>
-			<point x="48" y="-112" type="line"/>
+			<point x="88" y="-128" type="line"/>
+			<point x="248" y="-128" type="line"/>
+			<point x="264" y="-112" type="line"/>
+			<point x="264" y="560" type="line"/>
+			<point x="248" y="576" type="line"/>
+			<point x="88" y="576" type="line"/>
+			<point x="72" y="560" type="line"/>
+			<point x="72" y="-112" type="line"/>
 		</contour>
 	</outline>
 	<lib>

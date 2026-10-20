@@ -809,3 +809,14 @@ sources or snapshots changed.
 
 Evidence: [editor with preserved text](layout-v3/ui-pass-22-custom-editor.png),
 [geometry and behavior checks](layout-v3/ui-pass-22-verification.json).
+
+## Underlined mode selection — 2026-10-19
+
+P042 replaces the inverted selection, which extended into the left gutter,
+with a three-pixel underline spanning the selected label and meeting the lower
+rule. Compare remains flush with the page margin. Live geometry confirmed the
+Compare and References label bounds share a baseline and 14px size; the old
+fill is absent. All four modes were exercised, and Compare was visually
+inspected with the original group sample and weight 576 restored.
+
+Evidence: [underlined selection](layout-v3/ui-pass-23-underlined-mode.png).

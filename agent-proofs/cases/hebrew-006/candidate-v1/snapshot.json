@@ -1,0 +1,110 @@
+{
+  "description": "HEB-006 v1: Yod, Vav, Zayin, Nun and Final Nun in isolated masters; not applied.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-7521c3918ea8.ttf",
+      "sha256": "7521c3918ea8fe385c33349c79c98cb5e3a62c9c3e93d04829375bd9d9224142",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Candidate"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-dd5d6c0412a6.ttf",
+      "sha256": "dd5d6c0412a6f9ab5e7f29281e300017425b52161d0fcf195a995aba689706d0",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 06",
+    "status": "Candidate · Not applied",
+    "note": "Narrow stems, angled Zayin head and Nun shoulder/foot. Review Regular and Bold, spacing, marks and inherited Yod/Vav composites. Before is applied HEB-005 v5.",
+    "glyphs": [
+      {
+        "key": "yod",
+        "char": "י",
+        "name": "Yod"
+      },
+      {
+        "key": "vav",
+        "char": "ו",
+        "name": "Vav"
+      },
+      {
+        "key": "zayin",
+        "char": "ז",
+        "name": "Zayin"
+      },
+      {
+        "key": "nun",
+        "char": "נ",
+        "name": "Nun"
+      },
+      {
+        "key": "finalnun",
+        "char": "ן",
+        "name": "Final Nun"
+      }
+    ],
+    "presets": {
+      "group": [
+        "יוזנן",
+        "Yod, Vav, Zayin, Nun and Final Nun"
+      ],
+      "words": [
+        "יין זמן זית נון חלון",
+        "Words"
+      ],
+      "marks": [
+        "יּ וּ זּ נּ ןָ וֹ נִ",
+        "Marks"
+      ],
+      "latin": [
+        "in H יוזנן",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

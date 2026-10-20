@@ -1,0 +1,100 @@
+{
+  "description": "HEB-003 scratch candidate v2 against the unchanged current font; not applied.",
+  "fonts": {
+    "before": {
+      "path": "fonts/before-70dc500c2240.ttf",
+      "sha256": "70dc500c2240b606da09de615e85e0631966c004f1cdd6f14ced60d337a04edf",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    },
+    "after": {
+      "path": "fonts/after-fefe3f77b036.ttf",
+      "sha256": "fefe3f77b036438091a690ce05429d62e04aa4473efffcf92eb4a337ad99f79b",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Candidate"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 03",
+    "status": "Candidate · Not applied",
+    "note": "Bet, Kaf and Final Kaf: scratch v2 in both masters. Final Kaf below-mark anchors corrected after collision checking. Cross-script weight remains provisional. Protected rafe composites inherit the base outlines but retain old metrics; standalone dagesh forms remain unchanged and need separate review before release.",
+    "glyphs": [
+      {
+        "key": "bet",
+        "char": "ב",
+        "name": "Bet"
+      },
+      {
+        "key": "kaf",
+        "char": "כ",
+        "name": "Kaf"
+      },
+      {
+        "key": "finalkaf",
+        "char": "ך",
+        "name": "Final Kaf"
+      }
+    ],
+    "presets": {
+      "group": [
+        "בכך",
+        "Bet, Kaf and Final Kaf"
+      ],
+      "words": [
+        "בכך כתב כוכב דרך מלך",
+        "Words"
+      ],
+      "marks": [
+        "בּ בָ כּ כַ ךְ ךָ",
+        "Marks"
+      ],
+      "latin": [
+        "no HO בכך",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

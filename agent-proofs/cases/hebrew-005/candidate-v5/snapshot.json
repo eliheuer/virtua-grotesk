@@ -1,0 +1,100 @@
+{
+  "description": "HEB-005 v5: slight Samekh curve cleanup from v3. V4 rectangular redesign rejected. Not applied.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-4cbae87a86e5.ttf",
+      "sha256": "4cbae87a86e5005aa40cc722788849bab6307e76f4928d0c4da9f898c8439b29",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Refined"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-1efccba86887.ttf",
+      "sha256": "1efccba868870f292ef6834fe4f79373da192671082664d94e362f0021a5c638",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Previous"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 05",
+    "status": "Refined · Not applied",
+    "note": "Previous is v3. Refined preserves its skeleton, on-curve points, proportions and metrics; only small curve-handle adjustments. Mem and Final Mem unchanged. V4 rejected.",
+    "glyphs": [
+      {
+        "key": "mem",
+        "char": "מ",
+        "name": "Mem"
+      },
+      {
+        "key": "finalmem",
+        "char": "ם",
+        "name": "Final Mem"
+      },
+      {
+        "key": "samekh",
+        "char": "ס",
+        "name": "Samekh"
+      }
+    ],
+    "presets": {
+      "group": [
+        "מםס",
+        "Mem, Final Mem and Samekh"
+      ],
+      "words": [
+        "מים מקום מסך סוס",
+        "Words"
+      ],
+      "marks": [
+        "מּ מַ םָ סּ סֵ",
+        "Marks"
+      ],
+      "latin": [
+        "no HO מםס",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

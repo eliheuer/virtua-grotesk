@@ -1,0 +1,47 @@
+{
+  "authorization": "2026-10-19: apply the Mem, Final Mem and refined Samekh changes to both masters",
+  "scope": "Exact approved HEB-005 v5; six base GLIFs",
+  "changed_files": [
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/mem-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalmem-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/samekh-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/mem-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalmem-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/samekh-hb.glif"
+  ],
+  "before_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/mem-hb.glif": "91627fbd0ba6e3b5356f90d047ec3610c812d528955720b9221d29d479e36ab8",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalmem-hb.glif": "cd31ffaca478fd5851cc74e4a39e4bbdaa7dfa32362d461f14139e26e0ae50e7",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/samekh-hb.glif": "3a0687eb69ab2e086c041456ae82f9fcf603e3afcb50a235dbf1566762feebf1",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/mem-hb.glif": "017629ee5c9898f6a54b1c5718dbe96b4ea3ed7f44bd66e1e4cbf4125fababbf",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalmem-hb.glif": "fc175174fcd9a6a47a03600d585543651b3a1cd6d978fc3e24a171275a3ec757",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/samekh-hb.glif": "c90acd485c08365c3eb35dd784eaf5ce38d56a2d71aae96bef61e8674ab35d41"
+  },
+  "after_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/mem-hb.glif": "d31519ecc4bbc9467557de1944713823d38bc1ea976810da38be2e042a4e4069",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalmem-hb.glif": "4cde9f1bcc46745f322dc22c12f9f510ee6abfdb17268fbe49db402db9e17944",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/samekh-hb.glif": "c1a24c1116f94877aefbe195dd17a0832107d123cf093855cf2959ccb94a81e8",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/mem-hb.glif": "2d0fd41c4992b1711d603096fd52aec170937115aec2c22b62427ee29736a412",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalmem-hb.glif": "4d22e0210520c76d6c2c1af3893da6aba3c526909e4bbfb6a7e60d768fa69cce",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/samekh-hb.glif": "7b0889113ee46f002356d1e756436738a84b644b498d5f227050a38e84e4963d"
+  },
+  "state": "Applied and verified",
+  "guarded_source_files": 1759,
+  "other_sources_unchanged": true,
+  "colors_preserved": true,
+  "fonts": {
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "6f0de04c39afb2d3fa7d21b1c39082fdb0d073e196c734594d7bed516a018b37",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "04bc56bd3422e5db5851f09f15877cd21fe70566310e6a0cea59ec5c83b43ab2",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "906ca114ef4d2f1279cd262b4491df9cb117ea4ebba96b91963b1f422468537b",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "eabe153ea6618a55fc2e81dc64696ae2f576a409254d3a1cc73634fc74f873af",
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "dd5d6c0412a6f9ab5e7f29281e300017425b52161d0fcf195a995aba689706d0"
+  },
+  "validation": {
+    "preflight": "passed; variable, four statics, PDF, reports",
+    "grid": "six glyph-masters pass",
+    "curves": "both masters clean",
+    "hebrew_checks_failed": 0,
+    "candidate_equivalence": "All font tables match approved v5 except head.modified/checkSumAdjustment"
+  },
+  "protected_forms": "Standalone Mem/Samekh marked presentation forms remain a later consistency pass; no direct edits."
+}
