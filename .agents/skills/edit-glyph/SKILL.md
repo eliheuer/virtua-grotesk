@@ -81,3 +81,39 @@ glyphs in both scratch UFOs. This checks all points/handles, anchors, advances
 and ink sidebearings on 8 and records descriptive measurement popcounts.
 Do not normalize green optical geometry or infer a human grade from QA.
 Retain the source/proof evidence and feedback in `agent-proofs/cases/`.
+
+### Learn from saved manual corrections
+
+Before revising a related form, search the
+[manual correction index](../../../agent-proofs/FEEDBACK.md#manual-correction-library)
+by glyph and construction (for example, tangent, chamfer, neck, bowl).
+Read the relevant source pair and its case notes, not just the lesson summary.
+Separate geometry changes from editor serialization or metadata changes.
+Treat the human-edited source as fixed when adapting another master; transfer
+construction relationships, not a blanket coordinate scale. Check point order,
+metrics, anchors and interpolated forms in scratch before presenting a candidate.
+
+For Zayin’s head/stem junction, HEB-006 correction 01 demonstrates a horizontal
+tangent on one side and an intentional small cut on the other. Do not interpret
+“chamfer corners” as adding bevels to smooth tangent joins. This is a local
+example, not a requirement to make all Hebrew junctions asymmetric.
+Record reuse and Eli’s verdict in the same case; promote repeated, confirmed
+patterns into DESIGN.md while retaining exceptions and rejected examples.
+
+HEB-006 correction 02 revises that transfer: the Bold candidate had the correct
+tangent/cut types but kept Regular’s tall transition, which Eli rejected as
+humanist. His Bold turns within a square extent with equal tangent handles,
+keeping the curve start at Regular’s y=376 as the head thickens. Before adapting
+weight, compare curve extents, straight-run lengths and handle relationships;
+choose fixed alignments explicitly. Neither lattice compliance nor matching
+point types establishes the intended machined character. Retrieve the exact
+[source pair and measurements](../../../agent-proofs/cases/hebrew-006/README.md#manual-correction-02--bold-geometric-turn-2026-10-20).
+Treat 56-unit extent and 40-unit handles as this example’s dimensions, not a
+generic corner recipe. Retain rejected candidates alongside human corrections.
+
+### Active Virtua drawing workflow
+
+Follow the standing authorization in `agent-proofs/README.md`: as of 2026-10-20,
+new Hebrew drawing batches go directly into active masters after preserving a
+baseline; no repeated application question is needed. Retain technical checks,
+proofs, exact manual corrections, source-color protections and human grading.

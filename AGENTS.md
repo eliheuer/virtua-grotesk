@@ -48,6 +48,17 @@ Resume through the central guide and current case; preserve the established proo
 layout. This does not approve a new drawing batch or resolve provisional weight.
 Record further corrections in the existing design-review records.
 
+## Standing drawing authorization — 2026-10-20
+
+Eli authorized continuing Hebrew development directly in the active Regular and
+Bold UFOs, then Arabic after Hebrew. Do not ask for per-batch application approval.
+Preserve a before snapshot, check source colors and current file hashes, make
+bounded compatible edits, rebuild and show the comparison with Rubik. Active
+sources are the working drawings visible in Runebender; application does not
+mean final visual approval, green grading, or release readiness. Preserve manual
+corrections and unrelated edits. Keep recording exact correction pairs and
+promote measured lessons into DESIGN.md and the shared skills.
+
 ## Sources and design
 
 The active sources are `sources/VirtuaGrotesk.designspace` and the Regular

@@ -20,6 +20,23 @@ for committing to a coarse drawing grid and cut corners — reinterpreted here
 as a retro-futuristic, technical sans: 1980s computer-interface signage redrawn
 with modern precision. Strokes are monolinear; there is no thick/thin contrast.
 
+### Machined character — confirmed 2026-10-20
+
+Eli’s direction is clean neo-modernist, machined construction with mathematical
+precision, rather than loose or humanist transitions. Specify geometric
+relationships deliberately: straight-run boundaries, curve extents, tangent
+axes, handle lengths and chamfer sizes. Grid compliance and smooth tangency
+alone do not establish this character; a compliant curve can still be too
+elongated or soft for the intended form. Preserve the established skeleton.
+
+[HEB-006 Bold Zayin correction 02](agent-proofs/cases/hebrew-006/README.md#manual-correction-02--bold-geometric-turn-2026-10-20)
+is a measured example: a 56×104 transition with unequal handles became a 56×56
+turn with equal 40-unit handles, extending the straight stem. The local curve
+is balanced without making the whole glyph symmetric. These numbers are not a
+universal radius, circular-arc formula or reason to square off approved bowls.
+When adapting weight, decide which alignments stay fixed instead of translating
+all curve points with a thicker bar. Human-corrected examples govern that choice.
+
 ## The power-of-two grid
 
 Everything in this font is drawn against powers of two.
