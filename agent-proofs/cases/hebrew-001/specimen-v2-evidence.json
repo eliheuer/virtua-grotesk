@@ -1,0 +1,6096 @@
+{
+  "review": {
+    "fonts": {
+      "Virtua / before": {
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "sha256": "4479a843be9c6d747826909cc05e59d93e0677ce82a93bcebc6e89f17339d418"
+      },
+      "Virtua / applied": {
+        "path": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "sha256": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e"
+      },
+      "Rubik": {
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+      },
+      "Noto Sans Hebrew": {
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+      }
+    },
+    "palette": {
+      "background": "#dedede",
+      "ink": "#444444",
+      "baseline": "#999999",
+      "removed": "#d02070",
+      "added": "#008ba3"
+    },
+    "weights": [
+      400,
+      550,
+      700
+    ],
+    "text_recipe": [
+      [
+        "דרך חדר סדר",
+        44
+      ],
+      [
+        "דרדר רדרד",
+        32
+      ],
+      [
+        "דרך חדר סדר",
+        24
+      ]
+    ],
+    "text_records": [
+      {
+        "weight": 400,
+        "shaping": [
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 521,
+              "cluster": 8,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 7,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 6,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 5,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 4,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 3,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 2,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 521,
+              "cluster": 8,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 7,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 6,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 5,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 4,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 3,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 2,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 823,
+              "cluster": 10,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 9,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 811,
+              "cluster": 8,
+              "advance": [
+                637,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 7,
+              "advance": [
+                245,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 6,
+              "advance": [
+                515,
+                0
+              ],
+              "offset": [
+                -24,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 5,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 794,
+              "cluster": 4,
+              "advance": [
+                621,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 3,
+              "advance": [
+                245,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 799,
+              "cluster": 2,
+              "advance": [
+                541,
+                0
+              ],
+              "offset": [
+                -24,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 785,
+              "cluster": 8,
+              "advance": [
+                557,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 7,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 6,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 5,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 4,
+              "advance": [
+                245,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 3,
+              "advance": [
+                515,
+                0
+              ],
+              "offset": [
+                -24,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 2,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 823,
+              "cluster": 10,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 9,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 811,
+              "cluster": 8,
+              "advance": [
+                637,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 7,
+              "advance": [
+                245,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 6,
+              "advance": [
+                515,
+                0
+              ],
+              "offset": [
+                -24,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 5,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 794,
+              "cluster": 4,
+              "advance": [
+                621,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 3,
+              "advance": [
+                245,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 799,
+              "cluster": 2,
+              "advance": [
+                541,
+                0
+              ],
+              "offset": [
+                -24,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                535,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 86,
+              "cluster": 10,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 9,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            },
+            {
+              "gid": 89,
+              "cluster": 8,
+              "advance": [
+                643,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 7,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 6,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 5,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            },
+            {
+              "gid": 44,
+              "cluster": 4,
+              "advance": [
+                662,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 3,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 21,
+              "cluster": 2,
+              "advance": [
+                545,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                508,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 16,
+              "cluster": 8,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 7,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 6,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 5,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 4,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 3,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 2,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 86,
+              "cluster": 10,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 9,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            },
+            {
+              "gid": 89,
+              "cluster": 8,
+              "advance": [
+                643,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 7,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 6,
+              "advance": [
+                523,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 5,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            },
+            {
+              "gid": 44,
+              "cluster": 4,
+              "advance": [
+                662,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 3,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 21,
+              "cluster": 2,
+              "advance": [
+                545,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                508,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                506,
+                0
+              ],
+              "offset": [
+                -36,
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "weight": 550,
+        "shaping": [
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 521,
+              "cluster": 8,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 7,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 6,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 5,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 4,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 3,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 2,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 521,
+              "cluster": 8,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 7,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 6,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 5,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 4,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 3,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 2,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 823,
+              "cluster": 10,
+              "advance": [
+                547,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 9,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            },
+            {
+              "gid": 811,
+              "cluster": 8,
+              "advance": [
+                644,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 7,
+              "advance": [
+                225,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 6,
+              "advance": [
+                525,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 5,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            },
+            {
+              "gid": 794,
+              "cluster": 4,
+              "advance": [
+                638,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 3,
+              "advance": [
+                225,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 799,
+              "cluster": 2,
+              "advance": [
+                536,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                547,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 785,
+              "cluster": 8,
+              "advance": [
+                557,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 7,
+              "advance": [
+                547,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 6,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 5,
+              "advance": [
+                547,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 4,
+              "advance": [
+                225,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 3,
+              "advance": [
+                525,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 2,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                547,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 823,
+              "cluster": 10,
+              "advance": [
+                547,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 9,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            },
+            {
+              "gid": 811,
+              "cluster": 8,
+              "advance": [
+                644,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 7,
+              "advance": [
+                225,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 6,
+              "advance": [
+                525,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 5,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            },
+            {
+              "gid": 794,
+              "cluster": 4,
+              "advance": [
+                638,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 3,
+              "advance": [
+                225,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 799,
+              "cluster": 2,
+              "advance": [
+                536,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                547,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -18,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 86,
+              "cluster": 10,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 9,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            },
+            {
+              "gid": 89,
+              "cluster": 8,
+              "advance": [
+                662,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 7,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 6,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 5,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            },
+            {
+              "gid": 44,
+              "cluster": 4,
+              "advance": [
+                675,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 3,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 21,
+              "cluster": 2,
+              "advance": [
+                557,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                511,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 16,
+              "cluster": 8,
+              "advance": [
+                556,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 7,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 6,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 5,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 4,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 3,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 2,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 86,
+              "cluster": 10,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 9,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            },
+            {
+              "gid": 89,
+              "cluster": 8,
+              "advance": [
+                662,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 7,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 6,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 5,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            },
+            {
+              "gid": 44,
+              "cluster": 4,
+              "advance": [
+                675,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 3,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 21,
+              "cluster": 2,
+              "advance": [
+                557,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                511,
+                0
+              ],
+              "offset": [
+                -22,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                522,
+                0
+              ],
+              "offset": [
+                -34,
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "weight": 700,
+        "shaping": [
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 521,
+              "cluster": 8,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 7,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 6,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 5,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 4,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 3,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 2,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 521,
+              "cluster": 8,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 7,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 6,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 5,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 4,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 3,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 2,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 10,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 9,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 701,
+              "cluster": 8,
+              "advance": [
+                602,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 7,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 6,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 5,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 607,
+              "cluster": 4,
+              "advance": [
+                588,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 3,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 560,
+              "cluster": 2,
+              "advance": [
+                490,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 694,
+              "cluster": 1,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 823,
+              "cluster": 10,
+              "advance": [
+                552,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 9,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 811,
+              "cluster": 8,
+              "advance": [
+                647,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 7,
+              "advance": [
+                213,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 6,
+              "advance": [
+                531,
+                0
+              ],
+              "offset": [
+                -21,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 5,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 794,
+              "cluster": 4,
+              "advance": [
+                649,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 3,
+              "advance": [
+                213,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 799,
+              "cluster": 2,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                -21,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                552,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 785,
+              "cluster": 8,
+              "advance": [
+                558,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 7,
+              "advance": [
+                552,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 6,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 5,
+              "advance": [
+                552,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 4,
+              "advance": [
+                213,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 3,
+              "advance": [
+                531,
+                0
+              ],
+              "offset": [
+                -21,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 2,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                552,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 823,
+              "cluster": 10,
+              "advance": [
+                552,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 9,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 811,
+              "cluster": 8,
+              "advance": [
+                647,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 7,
+              "advance": [
+                213,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 6,
+              "advance": [
+                531,
+                0
+              ],
+              "offset": [
+                -21,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 5,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            },
+            {
+              "gid": 794,
+              "cluster": 4,
+              "advance": [
+                649,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 928,
+              "cluster": 3,
+              "advance": [
+                213,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 799,
+              "cluster": 2,
+              "advance": [
+                533,
+                0
+              ],
+              "offset": [
+                -21,
+                0
+              ]
+            },
+            {
+              "gid": 823,
+              "cluster": 1,
+              "advance": [
+                552,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 785,
+              "cluster": 0,
+              "advance": [
+                543,
+                0
+              ],
+              "offset": [
+                -15,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 86,
+              "cluster": 10,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 9,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            },
+            {
+              "gid": 89,
+              "cluster": 8,
+              "advance": [
+                680,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 7,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 6,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 5,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            },
+            {
+              "gid": 44,
+              "cluster": 4,
+              "advance": [
+                687,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 3,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 21,
+              "cluster": 2,
+              "advance": [
+                570,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                512,
+                0
+              ],
+              "offset": [
+                -30,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 16,
+              "cluster": 8,
+              "advance": [
+                571,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 7,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 6,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 5,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 4,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 3,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 2,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 86,
+              "cluster": 10,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 9,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            },
+            {
+              "gid": 89,
+              "cluster": 8,
+              "advance": [
+                680,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 7,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 6,
+              "advance": [
+                542,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 5,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            },
+            {
+              "gid": 44,
+              "cluster": 4,
+              "advance": [
+                687,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 106,
+              "cluster": 3,
+              "advance": [
+                270,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 21,
+              "cluster": 2,
+              "advance": [
+                570,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 86,
+              "cluster": 1,
+              "advance": [
+                512,
+                0
+              ],
+              "offset": [
+                -30,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 0,
+              "advance": [
+                539,
+                0
+              ],
+              "offset": [
+                -32,
+                0
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    "weight_records": [
+      {
+        "weight": 400,
+        "shaping": [
+          [
+            {
+              "gid": 45,
+              "cluster": 0,
+              "advance": [
+                592,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 46,
+              "cluster": 2,
+              "advance": [
+                640,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 9,
+              "cluster": 0,
+              "advance": [
+                744,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 2,
+              "advance": [
+                800,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 2,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                568,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "weight": 550,
+        "shaping": [
+          [
+            {
+              "gid": 45,
+              "cluster": 0,
+              "advance": [
+                656,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 46,
+              "cluster": 2,
+              "advance": [
+                672,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 9,
+              "cluster": 0,
+              "advance": [
+                780,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 2,
+              "advance": [
+                832,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 2,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                596,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ]
+        ]
+      },
+      {
+        "weight": 700,
+        "shaping": [
+          [
+            {
+              "gid": 45,
+              "cluster": 0,
+              "advance": [
+                720,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 46,
+              "cluster": 2,
+              "advance": [
+                704,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 9,
+              "cluster": 0,
+              "advance": [
+                816,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 16,
+              "cluster": 2,
+              "advance": [
+                864,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ],
+          [
+            {
+              "gid": 694,
+              "cluster": 2,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 236,
+              "cluster": 1,
+              "advance": [
+                256,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            },
+            {
+              "gid": 521,
+              "cluster": 0,
+              "advance": [
+                624,
+                0
+              ],
+              "offset": [
+                0,
+                0
+              ]
+            }
+          ]
+        ]
+      }
+    ],
+    "text_layout": {
+      "pages": [
+        "out/qa/2026-10-19/applied-dalet-resh/specimens/02-text.png"
+      ],
+      "page_size": [
+        1600,
+        1280
+      ],
+      "margin": 80,
+      "unit": 40,
+      "folio": "02 / 03",
+      "columns": [
+        "Virtua / before",
+        "Virtua / applied",
+        "Rubik",
+        "Noto Sans Hebrew"
+      ],
+      "placements": [
+        {
+          "page": 1,
+          "row": 0,
+          "column": 0,
+          "x": 80,
+          "y": 477,
+          "baseline": 600,
+          "width": 272,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 1,
+          "x": 440,
+          "y": 477,
+          "baseline": 600,
+          "width": 272,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 2,
+          "x": 800,
+          "y": 477,
+          "baseline": 600,
+          "width": 272,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 3,
+          "x": 1160,
+          "y": 477,
+          "baseline": 600,
+          "width": 272,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 0,
+          "x": 80,
+          "y": 717,
+          "baseline": 840,
+          "width": 277,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 1,
+          "x": 440,
+          "y": 717,
+          "baseline": 840,
+          "width": 277,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 2,
+          "x": 800,
+          "y": 717,
+          "baseline": 840,
+          "width": 277,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 3,
+          "x": 1160,
+          "y": 717,
+          "baseline": 840,
+          "width": 277,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 0,
+          "x": 80,
+          "y": 957,
+          "baseline": 1080,
+          "width": 282,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 1,
+          "x": 440,
+          "y": 957,
+          "baseline": 1080,
+          "width": 282,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 2,
+          "x": 800,
+          "y": 957,
+          "baseline": 1080,
+          "width": 282,
+          "height": 144
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 3,
+          "x": 1160,
+          "y": 957,
+          "baseline": 1080,
+          "width": 282,
+          "height": 144
+        }
+      ],
+      "grid_overlay": false,
+      "label_typeface": [
+        "Helvetica",
+        "Regular"
+      ],
+      "title": "Reading texture",
+      "subtitle": "02   Words / repetition / reading size"
+    },
+    "weight_layout": {
+      "pages": [
+        "out/qa/2026-10-19/applied-dalet-resh/specimens/03-weight.png"
+      ],
+      "page_size": [
+        1600,
+        1280
+      ],
+      "margin": 80,
+      "unit": 40,
+      "folio": "03 / 03",
+      "columns": [
+        "Latin / lowercase",
+        "Latin / capitals",
+        "Hebrew / provisional"
+      ],
+      "placements": [
+        {
+          "page": 1,
+          "row": 0,
+          "column": 0,
+          "x": 80,
+          "y": 449,
+          "baseline": 600,
+          "width": 332,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 1,
+          "x": 560,
+          "y": 449,
+          "baseline": 600,
+          "width": 332,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 2,
+          "x": 1040,
+          "y": 449,
+          "baseline": 600,
+          "width": 332,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 0,
+          "x": 80,
+          "y": 689,
+          "baseline": 840,
+          "width": 344,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 1,
+          "x": 560,
+          "y": 689,
+          "baseline": 840,
+          "width": 344,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 2,
+          "x": 1040,
+          "y": 689,
+          "baseline": 840,
+          "width": 344,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 0,
+          "x": 80,
+          "y": 929,
+          "baseline": 1080,
+          "width": 355,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 1,
+          "x": 560,
+          "y": 929,
+          "baseline": 1080,
+          "width": 355,
+          "height": 170
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 2,
+          "x": 1040,
+          "y": 929,
+          "baseline": 1080,
+          "width": 355,
+          "height": 170
+        }
+      ],
+      "grid_overlay": false,
+      "label_typeface": [
+        "Helvetica",
+        "Regular"
+      ],
+      "title": "Latin / Hebrew",
+      "subtitle": "03   Green Latin references / provisional Hebrew weight"
+    },
+    "weight_state": "provisional; no final script-wide contract",
+    "grid": false,
+    "source": "HEB-001; user approval 2026-10-19"
+  },
+  "form": {
+    "layout": {
+      "pages": [
+        "out/qa/2026-10-19/applied-dalet-resh/specimens/01-form.png"
+      ],
+      "page_size": [
+        1600,
+        1280
+      ],
+      "margin": 80,
+      "unit": 40,
+      "folio": "01 / 03",
+      "columns": [
+        "Virtua / before",
+        "Virtua / applied",
+        "Rubik",
+        "Noto Sans Hebrew"
+      ],
+      "placements": [
+        {
+          "page": 1,
+          "row": 0,
+          "column": 0,
+          "x": 80,
+          "y": 470,
+          "baseline": 600,
+          "width": 293,
+          "height": 146
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 1,
+          "x": 440,
+          "y": 470,
+          "baseline": 600,
+          "width": 293,
+          "height": 146
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 2,
+          "x": 800,
+          "y": 470,
+          "baseline": 600,
+          "width": 293,
+          "height": 146
+        },
+        {
+          "page": 1,
+          "row": 0,
+          "column": 3,
+          "x": 1160,
+          "y": 470,
+          "baseline": 600,
+          "width": 293,
+          "height": 146
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 0,
+          "x": 80,
+          "y": 709,
+          "baseline": 840,
+          "width": 304,
+          "height": 147
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 1,
+          "x": 440,
+          "y": 709,
+          "baseline": 840,
+          "width": 304,
+          "height": 147
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 2,
+          "x": 800,
+          "y": 709,
+          "baseline": 840,
+          "width": 304,
+          "height": 147
+        },
+        {
+          "page": 1,
+          "row": 1,
+          "column": 3,
+          "x": 1160,
+          "y": 709,
+          "baseline": 840,
+          "width": 304,
+          "height": 147
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 0,
+          "x": 80,
+          "y": 948,
+          "baseline": 1080,
+          "width": 314,
+          "height": 148
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 1,
+          "x": 440,
+          "y": 948,
+          "baseline": 1080,
+          "width": 314,
+          "height": 148
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 2,
+          "x": 800,
+          "y": 948,
+          "baseline": 1080,
+          "width": 314,
+          "height": 148
+        },
+        {
+          "page": 1,
+          "row": 2,
+          "column": 3,
+          "x": 1160,
+          "y": 948,
+          "baseline": 1080,
+          "width": 314,
+          "height": 148
+        }
+      ],
+      "grid_overlay": false,
+      "label_typeface": [
+        "Helvetica",
+        "Regular"
+      ],
+      "title": "Dalet / Resh",
+      "subtitle": "01   Letterform comparison   /   Dalet U+05D3   Resh U+05E8"
+    },
+    "fonts": [
+      {
+        "label": "Virtua / before",
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "sha256": "4479a843be9c6d747826909cc05e59d93e0677ce82a93bcebc6e89f17339d418",
+        "family": "Virtua Grotesk",
+        "axes": {
+          "wght": [
+            400.0,
+            400.0,
+            700.0
+          ]
+        },
+        "upm": 1024
+      },
+      {
+        "label": "Virtua / applied",
+        "path": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "sha256": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e",
+        "family": "Virtua Grotesk",
+        "axes": {
+          "wght": [
+            400.0,
+            400.0,
+            700.0
+          ]
+        },
+        "upm": 1024
+      },
+      {
+        "label": "Rubik",
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+        "family": "Rubik Light",
+        "axes": {
+          "wght": [
+            300.0,
+            300.0,
+            900.0
+          ]
+        },
+        "upm": 1000
+      },
+      {
+        "label": "Noto Sans Hebrew",
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+        "family": "Noto Sans Hebrew Thin",
+        "axes": {
+          "wght": [
+            100.0,
+            100.0,
+            900.0
+          ],
+          "wdth": [
+            62.5,
+            100.0,
+            100.0
+          ]
+        },
+        "upm": 1000
+      }
+    ],
+    "palette": {
+      "background": "#dedede",
+      "ink": "#444444",
+      "baseline": "#999999",
+      "removed": "#d02070",
+      "added": "#008ba3"
+    },
+    "samples": [
+      {
+        "label": "Dalet + resh",
+        "text": "ד ר",
+        "size": 192
+      }
+    ],
+    "rows": [
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Virtua / before",
+        "weight": 400,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -114,
+          261,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 694,
+            "cluster": 2,
+            "advance": [
+              568,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 236,
+            "cluster": 1,
+            "advance": [
+              256,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 521,
+            "cluster": 0,
+            "advance": [
+              568,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Virtua / applied",
+        "weight": 400,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -114,
+          261,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 694,
+            "cluster": 2,
+            "advance": [
+              568,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 236,
+            "cluster": 1,
+            "advance": [
+              256,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 521,
+            "cluster": 0,
+            "advance": [
+              568,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Rubik",
+        "weight": 400,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -114,
+          261,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 823,
+            "cluster": 2,
+            "advance": [
+              539,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 928,
+            "cluster": 1,
+            "advance": [
+              245,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 785,
+            "cluster": 0,
+            "advance": [
+              533,
+              0
+            ],
+            "offset": [
+              -24,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Noto Sans Hebrew",
+        "weight": 400,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -114,
+          261,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 86,
+            "cluster": 2,
+            "advance": [
+              523,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 106,
+            "cluster": 1,
+            "advance": [
+              270,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 16,
+            "cluster": 0,
+            "advance": [
+              542,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Virtua / before",
+        "weight": 550,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -115,
+          272,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 694,
+            "cluster": 2,
+            "advance": [
+              596,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 236,
+            "cluster": 1,
+            "advance": [
+              256,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 521,
+            "cluster": 0,
+            "advance": [
+              596,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Virtua / applied",
+        "weight": 550,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -115,
+          272,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 694,
+            "cluster": 2,
+            "advance": [
+              596,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 236,
+            "cluster": 1,
+            "advance": [
+              256,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 521,
+            "cluster": 0,
+            "advance": [
+              596,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Rubik",
+        "weight": 550,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -115,
+          272,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 823,
+            "cluster": 2,
+            "advance": [
+              547,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 928,
+            "cluster": 1,
+            "advance": [
+              225,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 785,
+            "cluster": 0,
+            "advance": [
+              535,
+              0
+            ],
+            "offset": [
+              -22,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Noto Sans Hebrew",
+        "weight": 550,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -115,
+          272,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 86,
+            "cluster": 2,
+            "advance": [
+              533,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 106,
+            "cluster": 1,
+            "advance": [
+              270,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 16,
+            "cluster": 0,
+            "advance": [
+              556,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Virtua / before",
+        "weight": 700,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -116,
+          282,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 694,
+            "cluster": 2,
+            "advance": [
+              624,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 236,
+            "cluster": 1,
+            "advance": [
+              256,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 521,
+            "cluster": 0,
+            "advance": [
+              624,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Virtua / applied",
+        "weight": 700,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -116,
+          282,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 694,
+            "cluster": 2,
+            "advance": [
+              624,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 236,
+            "cluster": 1,
+            "advance": [
+              256,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 521,
+            "cluster": 0,
+            "advance": [
+              624,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Rubik",
+        "weight": 700,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -116,
+          282,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 823,
+            "cluster": 2,
+            "advance": [
+              552,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 928,
+            "cluster": 1,
+            "advance": [
+              213,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 785,
+            "cluster": 0,
+            "advance": [
+              537,
+              0
+            ],
+            "offset": [
+              -21,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      },
+      {
+        "sample": "Dalet + resh",
+        "text": "ד ר",
+        "font": "Noto Sans Hebrew",
+        "weight": 700,
+        "size_px_per_em": 192,
+        "shared_pixel_bounds": [
+          0,
+          -116,
+          282,
+          0
+        ],
+        "shaping": [
+          {
+            "gid": 86,
+            "cluster": 2,
+            "advance": [
+              542,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 106,
+            "cluster": 1,
+            "advance": [
+              270,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "gid": 16,
+            "cluster": 0,
+            "advance": [
+              571,
+              0
+            ],
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "missing_glyph": false
+      }
+    ],
+    "tools": {
+      "uharfbuzz": "0.56.3",
+      "freetype-py": "2.3.0",
+      "Pillow": "12.2.0",
+      "fonttools": "4.67.0"
+    },
+    "harfbuzz": "14.6.0",
+    "freetype": [
+      2,
+      12,
+      0
+    ],
+    "note": "Single-script shaped runs. Fixed em scale, no auto-fit or optical weight matching. References are not design approval."
+  },
+  "selected_images": {
+    "specimen-v2-02-text.png": "09b31658168991623a0ae9f8950034c7acb835008bfa1aff2588224fc5142ba6",
+    "specimen-v2-03-weight.png": "2477f1267b6e7689c077596d77c32bfa59064faee127af0206e9a4488f78197f",
+    "specimen-v2-01-form.png": "07aa978eee3a7ff5245ae1d8c55962d41033cea09dfaf750dc11bd3884ce8397"
+  }
+}

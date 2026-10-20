@@ -1,0 +1,19 @@
+{
+  "before": {
+    "SKIP": 8,
+    "PASS": 19,
+    "WARN": 13
+  },
+  "candidate": {
+    "SKIP": 8,
+    "PASS": 19,
+    "WARN": 13
+  },
+  "identical_findings_after_normalizing_input_paths": true,
+  "checks": [
+    "outline*",
+    "overlapping_path_segments",
+    "interpolation_issues"
+  ],
+  "scope": "One VF and four statics; not full release QA"
+}

@@ -38,9 +38,15 @@ a public release for onboarding is still pending.
 
 ## Review and contribute
 
+Start with [Virtua Design Review](agent-proofs/README.md):
+the central map, current handoff and new-session instructions for the font review
+loop. Its default comparison interface is the
+[live web proof](agent-proofs/app/README.md).
+
+- `make proof-web`: serve or reuse the live design-review interface.
 - `make test`: development Fontspector checks, with documented exclusions.
 - `make qa-full`: all configured Google Fonts profile checks, without exclusions.
-- `make review`: a diffenator2 browser proof.
+- `make review`: a separate Diffenator3 QA browser proof.
 - `make proof`: the main PDF, requiring the separately installed designbot CLI.
 - `make help`: editor and other development commands.
 

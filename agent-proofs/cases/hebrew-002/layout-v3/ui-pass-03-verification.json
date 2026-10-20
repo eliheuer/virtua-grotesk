@@ -1,0 +1,198 @@
+{
+  "baselines": [
+    455.3385314941406,
+    455.3385314941406,
+    455.3385314941406,
+    455.3385314941406
+  ],
+  "boxes": [
+    {
+      "scroll": 160,
+      "width": 160
+    },
+    {
+      "scroll": 160,
+      "width": 160
+    },
+    {
+      "scroll": 160,
+      "width": 160
+    },
+    {
+      "scroll": 160,
+      "width": 160
+    }
+  ],
+  "fit": true,
+  "fittedSize": "76",
+  "fonts": [
+    {
+      "family": "Review-before",
+      "size": "76px",
+      "transform": "none"
+    },
+    {
+      "family": "Review-after",
+      "size": "76px",
+      "transform": "none"
+    },
+    {
+      "family": "Review-rubik",
+      "size": "76px",
+      "transform": "none"
+    },
+    {
+      "family": "Review-noto",
+      "size": "76px",
+      "transform": "none"
+    }
+  ],
+  "ready": true,
+  "requestedSize": "128",
+  "sample": "group",
+  "viewport": {
+    "height": 728,
+    "width": 736
+  },
+  "responsiveChecks": [
+    {
+      "width": 360,
+      "pageOverflow": false,
+      "fit": "72",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 152,
+          "scroll": 152
+        },
+        {
+          "width": 152,
+          "scroll": 152
+        },
+        {
+          "width": 152,
+          "scroll": 152
+        },
+        {
+          "width": 152,
+          "scroll": 152
+        }
+      ],
+      "sizes": [
+        "72px",
+        "72px",
+        "72px",
+        "72px"
+      ]
+    },
+    {
+      "width": 480,
+      "pageOverflow": false,
+      "fit": "102",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 210,
+          "scroll": 210
+        },
+        {
+          "width": 210,
+          "scroll": 210
+        },
+        {
+          "width": 210,
+          "scroll": 210
+        },
+        {
+          "width": 210,
+          "scroll": 210
+        }
+      ],
+      "sizes": [
+        "102px",
+        "102px",
+        "102px",
+        "102px"
+      ]
+    },
+    {
+      "width": 960,
+      "pageOverflow": false,
+      "fit": "100",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 206,
+          "scroll": 206
+        },
+        {
+          "width": 206,
+          "scroll": 206
+        },
+        {
+          "width": 206,
+          "scroll": 206
+        },
+        {
+          "width": 206,
+          "scroll": 206
+        }
+      ],
+      "sizes": [
+        "100px",
+        "100px",
+        "100px",
+        "100px"
+      ]
+    },
+    {
+      "width": 1440,
+      "pageOverflow": false,
+      "fit": "128",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 326,
+          "scroll": 326
+        },
+        {
+          "width": 326,
+          "scroll": 326
+        },
+        {
+          "width": 326,
+          "scroll": 326
+        },
+        {
+          "width": 326,
+          "scroll": 326
+        }
+      ],
+      "sizes": [
+        "128px",
+        "128px",
+        "128px",
+        "128px"
+      ]
+    }
+  ],
+  "date": "2026-10-19",
+  "source_files_checked": 3046,
+  "source_changes": [],
+  "font_manifest": "live-fonts.json",
+  "approval": "Requested responsive behavior implemented; exact layout open for feedback",
+  "interface_sha256": {
+    "index.html": "a6f198365358a45c374fd4492903a58191c57cbf978806d0e69e2c8c4974647b",
+    "review.css": "c0e109639c89e3412611684842a1d572aacc33435dd60852b10c30da4a1709fe",
+    "review.js": "ba0775c0a37406ccdb824ba9eeb38493ccbb607a52d8bd7726cdbab45636a297"
+  },
+  "checks": [
+    "No horizontal overflow at 360/480/960/1440 CSS px in native same-origin frames",
+    "All four fonts share the displayed size",
+    "Before/applied switch holds size at 76 px",
+    "Long custom string wraps at 16 px without overflow",
+    "Sizes reflows 96 px group to two columns in live panel",
+    "Fixed 128 px mode restored when Fit unchecked",
+    "No browser warnings/errors observed"
+  ]
+}

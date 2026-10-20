@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Virtua Grotesk — Live Review</title>
+<link rel="stylesheet" href="review.css">
+<script src="review-data.js" defer></script>
+<script src="review.js" defer></script>
+</head>
+<body>
+<header class="masthead">
+ <p>Virtua Grotesk <span>Design Review 02</span></p>
+ <label class="check"><input id="dark" type="checkbox">Dark</label>
+</header>
+<main>
+ <div class="intro"><div><h1>He, Het and Tav</h1><p>Outline, weight and spacing</p></div><p class="render-note">Live Fonts · Browser Rendering</p></div>
+ <nav aria-label="Review mode"><button data-mode="compare" aria-pressed="true">Compare</button><button data-mode="switch" aria-pressed="false">Before / After</button><button data-mode="waterfall" aria-pressed="false">Size Study</button></nav>
+ <section class="controls" aria-label="Proof settings">
+  <label>Sample<select id="sample"><option value="he">He</option><option value="het">Het</option><option value="tav">Tav</option><option value="group">He, Het and Tav</option><option value="words">Words</option><option value="marks">Marks</option><option value="latin">Latin and Hebrew</option><option value="custom">Your Text</option></select></label>
+  <label>Weight<select id="weight"><option value="400">Regular · 400</option><option value="550">Midpoint · 550</option><option value="700">Bold · 700</option></select></label>
+  <label>Size <span class="size-entry"><input id="size" type="number" min="16" max="320" step="1" value="128"><span>px</span></span></label>
+  <label class="check"><input id="references" type="checkbox" checked>References</label>
+  <label class="check"><input id="grid" type="checkbox">Grid</label>
+ </section>
+ <div id="custom-wrap" hidden><label for="custom">Your Text</label><textarea id="custom" rows="2" dir="auto" spellcheck="false">היה חיה תחיה</textarea></div>
+ <div class="review-meta"><p id="sample-label">He · U+05D4</p><p id="scale-label">128 px · Weight 400</p></div>
+ <div id="switch-tools" hidden><button id="flip">Show Before</button><p>Switch in place to compare the same origin. Keyboard: B.</p></div>
+ <p id="status" role="status">Loading and verifying font files…</p>
+ <p id="overflow-note" hidden>Some samples extend beyond the column. Scroll within a sample to inspect the full text.</p>
+ <section id="proof" aria-label="Font comparison" aria-busy="true"></section>
+ <footer><p>Equal em size. Zero added tracking. Reference weights are not optical matches.</p><p>The he, het and tav changes are applied. Weight remains provisional; grading is unchanged.</p><details><summary>Font Files and Rendering</summary><div id="font-info"></div><p>These are live OpenType fonts, shaped and rasterized by this browser. No specimen images or CSS scaling. Browser rendering can differ from DesignBot; neither view changes the outlines.</p><p>Inspired by <a href="https://github.com/googlefonts/diffenator3">Diffenator’s browser proofing</a>. This is a design-review tool, not a replacement for release QA.</p></details></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,366 @@
+{
+  "review": "HEB-001",
+  "date": "2026-10-19",
+  "head": "47948496d2da13aefea495cf15f5107b46107188",
+  "state": "proposal only; no drawing edits",
+  "fonts": [
+    {
+      "label": "Virtua Grotesk",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "4479a843be9c6d747826909cc05e59d93e0677ce82a93bcebc6e89f17339d418",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "upm": 1024
+    },
+    {
+      "label": "Rubik",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik Light",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      },
+      "upm": 1000
+    },
+    {
+      "label": "Noto Sans Hebrew",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew Thin",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      },
+      "upm": 1000
+    }
+  ],
+  "reference_provenance": [
+    {
+      "repository": "googlefonts/rubik",
+      "revision": "e337a5f69a9bea30e58d05bd40184d79cc099628",
+      "path": "sources/Rubik.glyphs",
+      "file": "rubik-Rubik.glyphs",
+      "sha256": "f2d79490c358b3466da01c6bbda33cf8781a915a9446e6512db0da7479eb6131",
+      "url": "https://raw.githubusercontent.com/googlefonts/rubik/e337a5f69a9bea30e58d05bd40184d79cc099628/sources/Rubik.glyphs"
+    },
+    {
+      "repository": "googlefonts/rubik",
+      "revision": "e337a5f69a9bea30e58d05bd40184d79cc099628",
+      "path": "fonts/variable/Rubik[wght].ttf",
+      "file": "rubik-Rubik[wght].ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "url": "https://raw.githubusercontent.com/googlefonts/rubik/e337a5f69a9bea30e58d05bd40184d79cc099628/fonts/variable/Rubik%5Bwght%5D.ttf"
+    },
+    {
+      "repository": "googlefonts/rubik",
+      "revision": "e337a5f69a9bea30e58d05bd40184d79cc099628",
+      "path": "OFL.txt",
+      "file": "rubik-OFL.txt",
+      "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb",
+      "url": "https://raw.githubusercontent.com/googlefonts/rubik/e337a5f69a9bea30e58d05bd40184d79cc099628/OFL.txt"
+    },
+    {
+      "repository": "notofonts/hebrew",
+      "revision": "3d639736161377dd9acf51441dd17e44daea0da4",
+      "path": "sources/NotoSansHebrew.glyphs",
+      "file": "hebrew-NotoSansHebrew.glyphs",
+      "sha256": "034f4893daa8e15c927fa7d1e9b38e2fa53ea278326ac476c1b7663183448c12",
+      "url": "https://raw.githubusercontent.com/notofonts/hebrew/3d639736161377dd9acf51441dd17e44daea0da4/sources/NotoSansHebrew.glyphs"
+    },
+    {
+      "repository": "notofonts/hebrew",
+      "revision": "3d639736161377dd9acf51441dd17e44daea0da4",
+      "path": "OFL.txt",
+      "file": "hebrew-OFL.txt",
+      "sha256": "e08036dbb38d9e7a033a721e0ca60befde2ed9d1a8075922dbd3429093dd793b",
+      "url": "https://raw.githubusercontent.com/notofonts/hebrew/3d639736161377dd9acf51441dd17e44daea0da4/OFL.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshebrew/NotoSansHebrew%5Bwdth%2Cwght%5D.ttf",
+      "file": "NotoSansHebrew[wdth,wght].ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+    }
+  ],
+  "palette": {
+    "background": "#dedede",
+    "ink": "#444444",
+    "baseline": "#999999",
+    "removed": "#d02070",
+    "added": "#008ba3"
+  },
+  "tools": {
+    "uharfbuzz": "0.56.3",
+    "freetype-py": "2.3.0",
+    "Pillow": "12.2.0",
+    "fonttools": "4.67.0"
+  },
+  "base_letter_inventory": [
+    {
+      "glyph": "alef-hb",
+      "codepoint": "05D0",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/alef-hb.glif": "59401265ef8f802f87c0a28c4e27c92361b297913564540c35cecca59ff46265",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/alef-hb.glif": "6864f1c24f89f0ea092962db432fae81ef5fe7f3b75b6cd500c5ccd3c92e48d6"
+      }
+    },
+    {
+      "glyph": "bet-hb",
+      "codepoint": "05D1",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/bet-hb.glif": "416db9ddd2760050f0d2d1bbef4f93903aa2dc721af7e71d7f63429e088f4357",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/bet-hb.glif": "ce99cdd3965d7883af63bddfff523718cf3e2e95c92ac34f19a961c10ae0c984"
+      }
+    },
+    {
+      "glyph": "gimel-hb",
+      "codepoint": "05D2",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/gimel-hb.glif": "1047043ff5eefb37fc9abda33557a164d1b6503cf44143abf10cbb9a4a12e359",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/gimel-hb.glif": "1293924355b63071ddd6b4eec375179f306a342d160a0083592a79c461f94446"
+      }
+    },
+    {
+      "glyph": "dalet-hb",
+      "codepoint": "05D3",
+      "outlines_identical": false,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif": "d8b17fd28f0ab4df3abfc89f924a0374448e7e638158f34379dedb5dd9c60efc",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif": "3c6c4ae45e43e35ebbe10877f38bd301d1cb0443818c85887312aff98259e996"
+      }
+    },
+    {
+      "glyph": "he-hb",
+      "codepoint": "05D4",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif": "fbe5a38d22f13882f3d557a777aff801f4ae33f356162dd241a099f154aa20b1",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif": "f9add636322198b358dbeef7ae656fe033e780fd1ac4c2e3da5448090b6e2b50"
+      }
+    },
+    {
+      "glyph": "vav-hb",
+      "codepoint": "05D5",
+      "outlines_identical": false,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/vav-hb.glif": "fd6a8337cfe387928e50b4932347bd03b57e38dc4599f768d1b985e8e9f4e339",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/vav-hb.glif": "3a3d9e5ebbf90aefee19c4fda3e05f882bf0bff41faab3d46508402a6493b428"
+      }
+    },
+    {
+      "glyph": "zayin-hb",
+      "codepoint": "05D6",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif": "6c1d1d60ab3d36e98ba7519682f6ae53d118caf6d46896c2fcac9b9a42d12c9c",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif": "cdf7a29d2cd099cac83c40d0b684ffadee3f167c60c1b61e07d6a92b6a570db9"
+      }
+    },
+    {
+      "glyph": "het-hb",
+      "codepoint": "05D7",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif": "e16dfc9897b14ad11b4d8375c21a5d42a8e02083e921f6e0fdadaa5cdd13ad54",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif": "b93c4352f6746cd8bfeef0139ec0a1b5fae6e58351dc1585e846be79b83f5b16"
+      }
+    },
+    {
+      "glyph": "tet-hb",
+      "codepoint": "05D8",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/tet-hb.glif": "25d1f410cf0bc1257ee07526bc2d51fcd726ed6e2360b7f19260c40f2b1c9190",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/tet-hb.glif": "5d588135c0defa7b79c091dec1b79040deb5b1fdcbf2542ca0a4022b1e005b17"
+      }
+    },
+    {
+      "glyph": "yod-hb",
+      "codepoint": "05D9",
+      "outlines_identical": false,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/yod-hb.glif": "54cf054ea36f823b8b4d52d1123170a15ffc438339fed3677d3b084a06c0a66c",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/yod-hb.glif": "d7d902280dfbfa13b6827617b9cdefb2dcd2294c1adf1be9ef1cd9993acf252f"
+      }
+    },
+    {
+      "glyph": "finalkaf-hb",
+      "codepoint": "05DA",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif": "c1d66a0e4c0b14f929b8750e314e32f1097bd43da2b88d86959b1b766756ac30",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif": "189fa8722ce35cb48485df67a7b4b9b8abe6eb4652f1af2346100b6cdb2da54c"
+      }
+    },
+    {
+      "glyph": "kaf-hb",
+      "codepoint": "05DB",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-hb.glif": "ae73cee35dbe0c075e478e414ed3a50dab0842a019b68c5d5fb84d8572f73de1",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-hb.glif": "c2c565f4fe2f48ab5ef7f58226fadb9192754b5121f28055cd89955fd231876b"
+      }
+    },
+    {
+      "glyph": "lamed-hb",
+      "codepoint": "05DC",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/lamed-hb.glif": "ae472f6ac2e618ed8e6458082c2b959fb8f64a65895e774ffa2d94a7c985ac39",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/lamed-hb.glif": "8762615d6341d697891c3ee3524b1101f007b363006a000ce8548be74df16a66"
+      }
+    },
+    {
+      "glyph": "finalmem-hb",
+      "codepoint": "05DD",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalmem-hb.glif": "cd31ffaca478fd5851cc74e4a39e4bbdaa7dfa32362d461f14139e26e0ae50e7",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalmem-hb.glif": "fc175174fcd9a6a47a03600d585543651b3a1cd6d978fc3e24a171275a3ec757"
+      }
+    },
+    {
+      "glyph": "mem-hb",
+      "codepoint": "05DE",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/mem-hb.glif": "91627fbd0ba6e3b5356f90d047ec3610c812d528955720b9221d29d479e36ab8",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/mem-hb.glif": "017629ee5c9898f6a54b1c5718dbe96b4ea3ed7f44bd66e1e4cbf4125fababbf"
+      }
+    },
+    {
+      "glyph": "finalnun-hb",
+      "codepoint": "05DF",
+      "outlines_identical": false,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalnun-hb.glif": "a057bdf16f392967be4c70306b292784ebfe85d87285ea697dedb7896f43cb99",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalnun-hb.glif": "73b93d2428581128cb7b32991295d365df64128ef2d0ac8e7f2d628f48b88731"
+      }
+    },
+    {
+      "glyph": "nun-hb",
+      "codepoint": "05E0",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/nun-hb.glif": "c98e378ba63080102711d5e5775f6370272e46727ce3db57172ab9211f46a943",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/nun-hb.glif": "9f2bd45d26b146940f5bf6f2c77d17f24b99a2e799572afc43effcbfd83aa8ba"
+      }
+    },
+    {
+      "glyph": "samekh-hb",
+      "codepoint": "05E1",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/samekh-hb.glif": "3a0687eb69ab2e086c041456ae82f9fcf603e3afcb50a235dbf1566762feebf1",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/samekh-hb.glif": "c90acd485c08365c3eb35dd784eaf5ce38d56a2d71aae96bef61e8674ab35d41"
+      }
+    },
+    {
+      "glyph": "ayin-hb",
+      "codepoint": "05E2",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/ayin-hb.glif": "db093a26c0652e0c5db9fbc3ac79d3d7aebfc0b5bc8ef6a9b655e5e56e1e9c66",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/ayin-hb.glif": "568eb8f8d790a466ea45a8715e1c1a8591bb80c8d0072a220d67af533228a52e"
+      }
+    },
+    {
+      "glyph": "finalpe-hb",
+      "codepoint": "05E3",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalpe-hb.glif": "6c6e31310e4301cd9764c7754b8a5b5618c3e3c1208f1b1d5adaa080cb17cc12",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalpe-hb.glif": "3f4250407108283dcb2501ebba842c1a0e67323b2335db50344f48a9226327d6"
+      }
+    },
+    {
+      "glyph": "pe-hb",
+      "codepoint": "05E4",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/pe-hb.glif": "11d3931c6c48f0e2e573df54a989da868f40057394ff1c7e464335252a6e928c",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/pe-hb.glif": "8490a78e565943e557436a3fe956d2e226e2d59d90d51ffa05a4d1ca68607976"
+      }
+    },
+    {
+      "glyph": "finaltsadi-hb",
+      "codepoint": "05E5",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/finaltsadi-hb.glif": "00593f383afc5be55d7010f8887bae26eb503ad82833762cdf9c532cdc176d6e",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/finaltsadi-hb.glif": "7e4a6c71dab275fe31bea5a87856c8df25f8e5cf44917e2ece96db57d4d50702"
+      }
+    },
+    {
+      "glyph": "tsadi-hb",
+      "codepoint": "05E6",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/tsadi-hb.glif": "33ff0d7853c25e93c1c9bbf7fe3295b70827e8fc73ed98016bfeb63c4d93183c",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/tsadi-hb.glif": "5367e46cd4116fd8e9ae3977f51138dda111c837ed7bf802ff9aa35008033895"
+      }
+    },
+    {
+      "glyph": "qof-hb",
+      "codepoint": "05E7",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/qof-hb.glif": "15693c610a64aa3bc9b1686f51e1064c3b9d8ed88e9074b0a202f0e627e4c3b2",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/qof-hb.glif": "0e2e0e922843a1aea573243f1c702c66e0d093b10500caebd271930e15cf62d1"
+      }
+    },
+    {
+      "glyph": "resh-hb",
+      "codepoint": "05E8",
+      "outlines_identical": false,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif": "6ff218aefa385f6791d6ea40384e3dc4d80711d6a8fb541845ed29634ada23bb",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif": "92fd93059132cd0263b5fdb09a0314cf14e42197dd7f0b262f06a49f1e303b5a"
+      }
+    },
+    {
+      "glyph": "shin-hb",
+      "codepoint": "05E9",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/shin-hb.glif": "21892f6b036e2335ce66a997d39689e786ff1e9fb24cd4d0936d8b0da0da89bd",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/shin-hb.glif": "635ce2646e560de407efa94517aaf0106d5d495fb7f505035f865e66af23cd27"
+      }
+    },
+    {
+      "glyph": "tav-hb",
+      "codepoint": "05EA",
+      "outlines_identical": true,
+      "source_hashes": {
+        "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif": "56080a9cbcd13ed85996b6714285b6fcd8f5a2118a7c49061dc3a7e6fd1baf86",
+        "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif": "3739bb422369e00ea717ec2c35ce856f0133873da2261341c0c97db174f6a77a"
+      }
+    }
+  ],
+  "proof_sha256": {
+    "regular.png": "77418ca0ed18d1cca8e00127f084f2f04f137d8f9242d30abfee1f3c628860aa",
+    "bold.png": "e845d65124f6e004ccb79a5e6a42b347aa13eae1432318d8c8051a8a8d1a72fb",
+    "dalet-resh.png": "739b3be8eed7b749f6976674e9c3cbc5b920bf8a07756b611797d79ec51e4f1c"
+  },
+  "source_freshness": "All source hashes matched out/qa/2026-10-18/applied-hebrew-remaining/manifest.json. Existing Regular notdef color-only change remains local."
+}

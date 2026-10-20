@@ -1,0 +1,26 @@
+@font-face{font-family:ReviewLabels;src:url('fonts/labels.ttf') format('truetype');font-weight:400;font-display:swap}
+:root{--paper:#dedede;--ink:#444444;--size:128px;--weight:400;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.4 ReviewLabels,Arial,sans-serif;font-synthesis:none}
+body.dark{--paper:#444444;--ink:#dedede;color-scheme:dark}
+button,input,select,textarea{font:inherit;color:inherit}button,select,input[type=number],textarea{background:var(--paper);border:1px solid var(--ink);border-radius:0;padding:8px 10px;min-height:40px}
+button,label.check,summary{cursor:pointer}button[aria-pressed=true],#flip{background:var(--ink);color:var(--paper)}input[type=checkbox]{accent-color:var(--ink);width:16px;height:16px;margin:0}
+button:disabled,input:disabled{opacity:.5;cursor:default}:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 32px;border-bottom:1px solid var(--ink)}.masthead p{margin:0}.masthead span{display:block;font-size:14px}
+main{max-width:1440px;margin:auto;padding:32px}.intro{display:flex;align-items:start;justify-content:space-between;gap:24px;margin-bottom:32px}h1{font-size:48px;line-height:1.05;font-weight:400;letter-spacing:-.02em;margin:0 0 12px}.intro p{margin:0}.render-note{font-size:14px;white-space:nowrap}
+nav{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--ink)}
+.controls{display:flex;align-items:end;gap:16px 24px;flex-wrap:wrap;padding:24px 0}label{display:grid;gap:8px}label.check{display:flex;gap:8px;align-items:center;min-height:40px}.size-entry{display:flex;gap:8px;align-items:center}#size{width:80px}#custom-wrap{padding-bottom:24px}textarea{display:block;width:100%;margin-top:8px;resize:vertical}
+.review-meta{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--ink);padding-top:16px;font-size:14px}.review-meta p{margin:0 0 16px}#switch-tools{margin:0 0 24px}#switch-tools p{font-size:14px;margin:8px 0 0}#status{font-size:14px;margin:0 0 16px}#status:empty{display:none}
+#proof{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px 24px;visibility:hidden}#proof.ready{visibility:visible}#proof.with-references{grid-template-columns:repeat(4,minmax(0,1fr))}
+.font-panel{min-width:0}.font-panel h2{font-size:18px;line-height:1.2;font-weight:400;margin:0 0 4px}.role{font-size:14px;margin:0 0 12px}.sample-viewport{overflow:auto;padding:0 0 12px;scrollbar-width:thin;scrollbar-color:var(--ink) var(--paper)}
+.sample-line{font-size:var(--size);font-weight:var(--weight);font-variation-settings:'wght' var(--weight);font-synthesis:none;font-optical-sizing:none;font-kerning:normal;letter-spacing:0;line-height:1;white-space:pre;width:max-content;min-width:100%;text-align:left;unicode-bidi:plaintext;position:relative}
+.sample-line::after{content:'';display:inline-block;width:0;height:1px}body.grid .font-panel{outline:1px solid var(--ink);outline-offset:8px}body.grid .sample-line{background:repeating-linear-gradient(to bottom,transparent 0,transparent 7px,color-mix(in srgb,var(--ink) 14%,transparent) 7px,color-mix(in srgb,var(--ink) 14%,transparent) 8px)}
+.waterfall-size{font-size:14px;margin:16px 0 4px}.missing{font-size:14px;white-space:normal;margin:12px 0}.scroll-hint{font-size:13px;margin:4px 0 0}.switch-panel{grid-column:1/-1;max-width:100%}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--ink);font-size:14px}footer p{margin:0 0 12px}details{margin-top:24px}summary{padding:8px 0}#font-info p{overflow-wrap:anywhere}a{color:inherit}code{font-size:12px}details>p{max-width:72ch}
+[hidden]{display:none!important}
+@media(max-width:1050px){#proof.with-references{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.masthead{padding:16px 24px}main{padding:24px}h1{font-size:36px}.intro{display:block;margin-bottom:24px}.render-note{margin-top:12px!important;font-size:13px}.render-note br{display:none}.render-note br::after{content:' · '}.controls{gap:16px}.controls label:first-child{flex:1}select{max-width:100%}#proof{gap:32px 24px}.font-panel h2{font-size:16px}.review-meta{font-size:13px}nav{gap:6px}nav button{padding:8px}.sample-line{line-height:1}}
+@media(max-width:340px){#proof,#proof.with-references{grid-template-columns:1fr}}
+
+@media(max-width:600px){.intro{margin-bottom:20px}.render-note{margin-top:8px!important}nav{padding-bottom:16px}.controls{padding:16px 0}.review-meta{padding-top:12px}.review-meta p{margin-bottom:12px}}
+
+#overflow-note{font-size:14px;margin:0 0 24px;max-width:64ch}

@@ -1,0 +1,495 @@
+{
+  "inputs": {
+    "documentation/proofs/designbot_diagnostic.rs": "ccc2c661dddb6b5474d033f150d31740862c8eb57ff950cde6b3ab6438edac3d",
+    "documentation/proofs/designbot_diagnostic_control.py": "da02461775cf750f5a43b65e81cc972fce1cbc7f2642bf1b1572f2a1cd31b6d0",
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e",
+    "out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf": "4479a843be9c6d747826909cc05e59d93e0677ce82a93bcebc6e89f17339d418",
+    "/Users/eli/GH/repos/designbot/designbot-render/src/renderer.rs": "6cf53a2e92073fa20568e2e3a9bf10274097168f9fa957fd1186ae8db581a104"
+  },
+  "output_checks": {
+    "light": {
+      "size": [
+        1600,
+        1280
+      ],
+      "neutral_grays_only": true,
+      "opaque": true,
+      "channel_range": [
+        68,
+        222
+      ]
+    },
+    "dark": {
+      "size": [
+        1600,
+        1280
+      ],
+      "neutral_grays_only": true,
+      "opaque": true,
+      "channel_range": [
+        68,
+        222
+      ]
+    }
+  },
+  "palette": [
+    "#dedede",
+    "#444444"
+  ],
+  "label_font": "Virtua Grotesk, wght=400",
+  "script": "documentation/proofs/designbot_diagnostic.rs",
+  "renderer": "DesignBot/Parley/Swash/Kurbo/Vello CPU; raw PNG; native-size grayscale alpha layers",
+  "pillow_control": {
+    "font": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+    "font_sha256": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e",
+    "face": [
+      "Virtua Grotesk",
+      "Regular"
+    ],
+    "pillow": "12.2.0",
+    "lines": [
+      [
+        "Individual Glyphs / Equal Em Scale",
+        40,
+        20
+      ],
+      [
+        "Equal Em Scale And Baseline",
+        80,
+        18
+      ],
+      [
+        "E I H T / E I H T",
+        160,
+        40
+      ]
+    ],
+    "bounds": {
+      "18": {
+        "E": [
+          0,
+          -14,
+          12,
+          0
+        ],
+        "I": [
+          0,
+          -14,
+          4,
+          0
+        ],
+        "H": [
+          0,
+          -14,
+          13,
+          0
+        ],
+        "T": [
+          0,
+          -14,
+          12,
+          0
+        ]
+      },
+      "20": {
+        "E": [
+          0,
+          -16,
+          13,
+          0
+        ],
+        "I": [
+          0,
+          -16,
+          4,
+          0
+        ],
+        "H": [
+          0,
+          -16,
+          15,
+          0
+        ],
+        "T": [
+          0,
+          -16,
+          13,
+          0
+        ]
+      },
+      "40": {
+        "E": [
+          0,
+          -30,
+          26,
+          0
+        ],
+        "I": [
+          0,
+          -30,
+          8,
+          0
+        ],
+        "H": [
+          0,
+          -30,
+          29,
+          0
+        ],
+        "T": [
+          0,
+          -30,
+          27,
+          0
+        ]
+      }
+    },
+    "palette": [
+      "#dedede",
+      "#444444"
+    ]
+  },
+  "virtua_designbot_bounds": {
+    "18": {
+      "E": [
+        17,
+        46,
+        28,
+        60
+      ],
+      "I": [
+        17,
+        46,
+        19,
+        60
+      ],
+      "H": [
+        17,
+        46,
+        28,
+        60
+      ],
+      "T": [
+        16,
+        46,
+        28,
+        60
+      ]
+    },
+    "20": {
+      "E": [
+        17,
+        45,
+        29,
+        60
+      ],
+      "I": [
+        17,
+        45,
+        20,
+        60
+      ],
+      "H": [
+        17,
+        45,
+        29,
+        60
+      ],
+      "T": [
+        16,
+        45,
+        29,
+        60
+      ]
+    },
+    "40": {
+      "E": [
+        19,
+        30,
+        41,
+        60
+      ],
+      "I": [
+        18,
+        30,
+        23,
+        60
+      ],
+      "H": [
+        19,
+        30,
+        42,
+        60
+      ],
+      "T": [
+        17,
+        30,
+        42,
+        60
+      ]
+    }
+  },
+  "helvetica_hinting_experiment": {
+    "original": {
+      "18": {
+        "E": {
+          "bbox": [
+            17,
+            47,
+            28,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 1.722
+        },
+        "I": {
+          "bbox": [
+            17,
+            47,
+            20,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 1.765
+        },
+        "H": {
+          "bbox": [
+            17,
+            47,
+            28,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 3.529
+        },
+        "T": {
+          "bbox": [
+            16,
+            47,
+            27,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 1.784
+        }
+      },
+      "20": {
+        "E": {
+          "bbox": [
+            17,
+            45,
+            29,
+            60
+          ],
+          "height": 15,
+          "stem_coverage_near_baseline": 1.906
+        },
+        "I": {
+          "bbox": [
+            17,
+            46,
+            20,
+            60
+          ],
+          "height": 14,
+          "stem_coverage_near_baseline": 1.953
+        },
+        "H": {
+          "bbox": [
+            17,
+            45,
+            29,
+            60
+          ],
+          "height": 15,
+          "stem_coverage_near_baseline": 3.906
+        },
+        "T": {
+          "bbox": [
+            16,
+            45,
+            28,
+            60
+          ],
+          "height": 15,
+          "stem_coverage_near_baseline": 1.969
+        }
+      },
+      "40": {
+        "E": {
+          "bbox": [
+            19,
+            31,
+            41,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 3.78
+        },
+        "I": {
+          "bbox": [
+            19,
+            31,
+            24,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 3.937
+        },
+        "H": {
+          "bbox": [
+            19,
+            31,
+            42,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 7.859
+        },
+        "T": {
+          "bbox": [
+            16,
+            31,
+            40,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 3.953
+        }
+      }
+    },
+    "no-hints": {
+      "18": {
+        "E": {
+          "bbox": [
+            17,
+            47,
+            28,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 1.722
+        },
+        "I": {
+          "bbox": [
+            17,
+            47,
+            20,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 1.765
+        },
+        "H": {
+          "bbox": [
+            17,
+            47,
+            28,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 3.529
+        },
+        "T": {
+          "bbox": [
+            16,
+            47,
+            27,
+            60
+          ],
+          "height": 13,
+          "stem_coverage_near_baseline": 1.784
+        }
+      },
+      "20": {
+        "E": {
+          "bbox": [
+            17,
+            45,
+            29,
+            60
+          ],
+          "height": 15,
+          "stem_coverage_near_baseline": 1.906
+        },
+        "I": {
+          "bbox": [
+            17,
+            45,
+            20,
+            60
+          ],
+          "height": 15,
+          "stem_coverage_near_baseline": 1.953
+        },
+        "H": {
+          "bbox": [
+            17,
+            45,
+            29,
+            60
+          ],
+          "height": 15,
+          "stem_coverage_near_baseline": 3.906
+        },
+        "T": {
+          "bbox": [
+            16,
+            45,
+            28,
+            60
+          ],
+          "height": 15,
+          "stem_coverage_near_baseline": 1.969
+        }
+      },
+      "40": {
+        "E": {
+          "bbox": [
+            19,
+            31,
+            41,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 11.157
+        },
+        "I": {
+          "bbox": [
+            19,
+            31,
+            24,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 3.937
+        },
+        "H": {
+          "bbox": [
+            19,
+            31,
+            42,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 7.859
+        },
+        "T": {
+          "bbox": [
+            16,
+            31,
+            40,
+            60
+          ],
+          "height": 29,
+          "stem_coverage_near_baseline": 3.953
+        }
+      }
+    }
+  },
+  "images": {
+    "designbot-diagnostic-dark.png": "6938698b8dd5b85442968a18a26c99ae2e71fedf8a13e5a43db172588e4a21cf",
+    "designbot-diagnostic-light.png": "4bbe8e26703b14becad125c1a7ad2712cf21ffe3c18655aa04ea117c071b4838"
+  },
+  "inspection": "Both final polarities and grid inspected; no source drawing changes; full specimen port pending"
+}

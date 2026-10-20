@@ -1,0 +1,286 @@
+{
+  "fonts": {
+    "before": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "4479a843be9c6d747826909cc05e59d93e0677ce82a93bcebc6e89f17339d418",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      }
+    },
+    "after": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      }
+    },
+    "rubik": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    }
+  },
+  "script": {
+    "path": "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+    "sha256": "9d4f928a8e0d0e4fca35eae68b38189cccd73b3921b0ef0ea37003793f6d2919"
+  },
+  "runner_sha256": "f21727e2a1738bb2adb5faa4056e99b67317c294f99b63feaf8695b541b13bb7",
+  "designbot": {
+    "path": "/Users/eli/.cargo/bin/designbot",
+    "sha256": "679656960abd698378971ad806a2f019d33c39598fc9e78f9868d89b7d2dd63f"
+  },
+  "outputs": [
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/01-form-light.png",
+      "sha256": "be5191ea389cde7a23d88d728cf4de10914cd710a50f328fa6e65437ed305403",
+      "theme": "light",
+      "sheet": "form",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/01-form-light.png",
+        "--",
+        "light",
+        "form",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "applied"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/02-text-light.png",
+      "sha256": "afa11df9cbd768e93cfc33f6bc03b1cb3aed13e5b819947723b4c99c671b77d2",
+      "theme": "light",
+      "sheet": "text",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/02-text-light.png",
+        "--",
+        "light",
+        "text",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "applied"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/03-weight-light.png",
+      "sha256": "a6946688454254bb9c560d4d7e3fc2427ef9e367e8cc9ded26e324ae33e0cf74",
+      "theme": "light",
+      "sheet": "weight",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/03-weight-light.png",
+        "--",
+        "light",
+        "weight",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "applied"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/01-form-dark.png",
+      "sha256": "8964acf7f61fc4568b11147b65c1eadadc31da127d46aad6ef128ed8077d3b50",
+      "theme": "dark",
+      "sheet": "form",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/01-form-dark.png",
+        "--",
+        "dark",
+        "form",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "applied"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/02-text-dark.png",
+      "sha256": "408103e4cb02c0065b31c613a024f65a4aa2a83a44cceeee45352dcf450d353c",
+      "theme": "dark",
+      "sheet": "text",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/02-text-dark.png",
+        "--",
+        "dark",
+        "text",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "applied"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/03-weight-dark.png",
+      "sha256": "e189468ef290e9ac73a46369a9bba5ec7bb0c6105c9294df777e682f389a3d53",
+      "theme": "dark",
+      "sheet": "weight",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/designbot-review/03-weight-dark.png",
+        "--",
+        "dark",
+        "weight",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "applied"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    }
+  ],
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "state": "applied",
+  "palette": [
+    "#dedede",
+    "#444444"
+  ],
+  "page_size": [
+    1600,
+    1280
+  ],
+  "margin": 80,
+  "grid_unit": 40,
+  "headline": {
+    "size": 64,
+    "tracking_em": -0.02,
+    "tracking_px": -1.28
+  },
+  "sample_tracking": 0,
+  "label_weight": 400,
+  "grid_overlay": false,
+  "sizes": {
+    "form": 192,
+    "text": [
+      44,
+      32,
+      24
+    ],
+    "weight": 176
+  },
+  "rendering": "DesignBot / Parley / Swash outlines / Vello CPU; hinting enabled; raw PNG",
+  "validation": "Cmap, axis and family preflight; Rust advance/ink bounds; pixel checks. Not native-reader approval.",
+  "verification_tools": {
+    "fonttools": "4.67.0",
+    "Pillow": "12.2.0"
+  },
+  "tracking_isolation": {
+    "form": {
+      "only_headline_changes": true,
+      "difference_bounds": [
+        128,
+        152,
+        448,
+        201
+      ]
+    },
+    "text": {
+      "only_headline_changes": true,
+      "difference_bounds": [
+        123,
+        152,
+        567,
+        214
+      ]
+    },
+    "weight": {
+      "only_headline_changes": true,
+      "difference_bounds": [
+        119,
+        152,
+        525,
+        201
+      ]
+    }
+  },
+  "compiled_renderer": {
+    "/Users/eli/.designbot/cache/hebrew_review-29bc93f65e314640/Cargo.lock": "9252f8497a0d7c4426b5b013d0c643cc5b39538c5dd70ebe7e8714454ea8c96f",
+    "/Users/eli/.designbot/cache/hebrew_review-29bc93f65e314640/target/release/designbot-script": "38e58d0ab842bc1dc5133a210f6b1684833ba3b2a4ec71b07e83dbd3de7fe514",
+    "/Users/eli/GH/repos/designbot/designbot-render/src/renderer.rs": "6cf53a2e92073fa20568e2e3a9bf10274097168f9fa957fd1186ae8db581a104"
+  },
+  "retained_images": {
+    "designbot-v1-02-text-dark.png": "408103e4cb02c0065b31c613a024f65a4aa2a83a44cceeee45352dcf450d353c",
+    "designbot-v1-02-text-light.png": "afa11df9cbd768e93cfc33f6bc03b1cb3aed13e5b819947723b4c99c671b77d2",
+    "designbot-v1-03-weight-light.png": "a6946688454254bb9c560d4d7e3fc2427ef9e367e8cc9ded26e324ae33e0cf74",
+    "designbot-v1-01-form-light.png": "be5191ea389cde7a23d88d728cf4de10914cd710a50f328fa6e65437ed305403",
+    "designbot-v1-01-form-dark.png": "8964acf7f61fc4568b11147b65c1eadadc31da127d46aad6ef128ed8077d3b50",
+    "designbot-v1-03-weight-dark.png": "e189468ef290e9ac73a46369a9bba5ec7bb0c6105c9294df777e682f389a3d53"
+  },
+  "visual_review": "All six final sheets inspected; grid versions inspected separately. No human approval of numerical tracking assumed.",
+  "source_guard": {
+    "count": 1759,
+    "result": "unchanged from applied dalet/resh snapshot"
+  }
+}

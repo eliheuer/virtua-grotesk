@@ -1,0 +1,29 @@
+{
+  "status": "Layout proposal awaiting Eli review",
+  "source_application": "../application-v2.json",
+  "records": {
+    "clean": {
+      "render_evidence": "clean-render.json",
+      "count": 14
+    },
+    "structure": {
+      "render_evidence": "structure-render.json",
+      "count": 6
+    },
+    "baseline": {
+      "render_evidence": "baseline-render.json",
+      "count": 6
+    }
+  },
+  "review": "14 clean exports inspected as contact sheets; representative form, reading and weight pages and grid variants inspected individually. No observed clipping or label collisions.",
+  "viewer": "Sheet selector, dark mode, structural grid, baselines and guides-off checked in browser.",
+  "tracking_diff_bounds": [
+    282,
+    102,
+    657,
+    152
+  ],
+  "tracking_isolation": "Only headline pixels changed against zero tracking control.",
+  "export_note": "Initial concurrent outputs discarded. All retained outputs regenerated sequentially; runner now serializes DesignBot invocations.",
+  "recipe_sha256": "b619bf2f95dbed1df86d4935ad9c459e4c52130543379c95f3395930054fd291"
+}

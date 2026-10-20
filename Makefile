@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa qa-full qa-package test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa qa-full qa-package test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -14,6 +14,8 @@ help:
 		'  make setup          Create .venv and install requirements' \
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
+		'  make proof-web      Serve or reuse the live design-review interface' \
+		'  make review         Build a Diffenator3 QA browser proof' \
 		'  make specimen       (not implemented yet — marketing specimen is future work)' \
 		'  make runebender     Open the designspace in Runebender gpui (native)' \
 		'  make runebender-web Same source in Runebender web, chromeless app window' \
@@ -50,6 +52,10 @@ build-fontc:  ## Build with fontc (Rust) instead of fontmake
 # PDF. No per-repo script to maintain — see documentation/proofs/PROOF_SPEC.md.
 proof: build
 	designbot proof "$(VARIABLE_FONT)" --output documentation/proofs/proof.pdf
+
+# Interactive design review uses an explicit, verified snapshot, not a rebuild.
+proof-web:
+	$(PYTHON) agent-proofs/serve.py
 
 # Current Google Fonts browser proof renderer, distributed with Diffenator3.
 DIFFPROOF = ./.venv/bin/diff3proof

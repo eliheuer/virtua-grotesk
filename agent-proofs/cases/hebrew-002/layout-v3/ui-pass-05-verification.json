@@ -1,0 +1,240 @@
+{
+  "bodies": [
+    {
+      "baseline": 50.37762451171875,
+      "family": "Review-before",
+      "isolates": 8,
+      "leading": "36px",
+      "paragraphs": 3,
+      "role": "before",
+      "scroll": 413,
+      "size": "24px",
+      "width": 413
+    },
+    {
+      "baseline": 50.37762451171875,
+      "family": "Review-after",
+      "isolates": 8,
+      "leading": "36px",
+      "paragraphs": 3,
+      "role": "after",
+      "scroll": 413,
+      "size": "24px",
+      "width": 413
+    },
+    {
+      "baseline": 50.377685546875,
+      "family": "Review-rubik",
+      "isolates": 8,
+      "leading": "36px",
+      "paragraphs": 3,
+      "role": "rubik",
+      "scroll": 413,
+      "size": "24px",
+      "width": 413
+    },
+    {
+      "baseline": 50.377685546875,
+      "family": "Review-noto",
+      "isolates": 8,
+      "leading": "36px",
+      "paragraphs": 3,
+      "role": "noto",
+      "scroll": 413,
+      "size": "24px",
+      "width": 413
+    }
+  ],
+  "identicalText": true,
+  "identities": [
+    "ה (He)U+05D4",
+    "ח (Het)U+05D7",
+    "ת (Tav)U+05EA"
+  ],
+  "mode": "reading",
+  "ready": true,
+  "sample": "mixed",
+  "viewport": {
+    "height": 760,
+    "width": 906
+  },
+  "weight": "400",
+  "responsiveChecks": [
+    {
+      "width": 360,
+      "pageOverflow": false,
+      "ready": true,
+      "headingOverflow": false,
+      "columns": "320px",
+      "bodies": [
+        {
+          "width": 320,
+          "scroll": 320,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 38.375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 38.375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 38.375
+        },
+        {
+          "width": 320,
+          "scroll": 320,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 38.375
+        }
+      ],
+      "identicalText": true
+    },
+    {
+      "width": 736,
+      "pageOverflow": false,
+      "ready": true,
+      "headingOverflow": false,
+      "columns": "338px 338px",
+      "bodies": [
+        {
+          "width": 338,
+          "scroll": 338,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 42.375
+        },
+        {
+          "width": 338,
+          "scroll": 338,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 42.375
+        },
+        {
+          "width": 338,
+          "scroll": 338,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 42.375
+        },
+        {
+          "width": 338,
+          "scroll": 338,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 42.375
+        }
+      ],
+      "identicalText": true
+    },
+    {
+      "width": 1440,
+      "pageOverflow": false,
+      "ready": true,
+      "headingOverflow": false,
+      "columns": "332px 332px 332px 332px",
+      "bodies": [
+        {
+          "width": 332,
+          "scroll": 332,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 50.375
+        },
+        {
+          "width": 332,
+          "scroll": 332,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 50.375
+        },
+        {
+          "width": 332,
+          "scroll": 332,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 50.375
+        },
+        {
+          "width": 332,
+          "scroll": 332,
+          "size": "24px",
+          "leading": "36px",
+          "paragraphs": 3,
+          "isolates": 8,
+          "baseline": 50.375
+        }
+      ],
+      "identicalText": true
+    }
+  ],
+  "date": "2026-10-19",
+  "source_files_checked": 3046,
+  "source_changes": [],
+  "font_manifest": "live-fonts.json",
+  "approval": "Requested reading and identity UI implemented; layout remains open to feedback",
+  "interface_sha256": {
+    "index.html": "73a07a4f0dd9579e20c941fed2a338e0b5fa11430117de63dacd4cb0e2178e35",
+    "review.css": "b0effd302fce7383398bc379b0bb86fa6527effd8825f148a452b717d89b7f7e",
+    "review.js": "2be467db71cd41827530920bffab95a62793a62ddea3585213aa662d394839c7",
+    "reading-samples.json": "74fadffda18f1cc553cf421127ff9c1d5f6256b15b7db725550a8713c7d97d6b",
+    "prepare.py": "a0d8842715ec35741b30d1d59cacc417a47860ff622b3f852ab0b36410ae674f"
+  },
+  "checks": [
+    "Hebrew/mixed corpus cmap coverage verified for all four frozen fonts",
+    "Identical passage text across all four fonts",
+    "Same 24 px size, 36 px leading and equal column width",
+    "First baseline offsets match",
+    "32 px size and 550 weight tested; native leading 48 px",
+    "Glyph size 64 and reading size 32 restore independently",
+    "Custom missing U+1F642 notice in all four fonts",
+    "Reference visibility toggles 2/4 font panels",
+    "Heading/selector show Hebrew form, Latin name and Unicode",
+    "Light and dark reading themes inspected",
+    "Native 360/736/1440 frame checks",
+    "No browser warnings or errors observed"
+  ],
+  "corpus": {
+    "hebrew": {
+      "characters": 1099,
+      "sha256": "3fc26a5964fab23c01f315be52a4bc43424d53fdc387799d7a054996f56a4c45",
+      "target_occurrences": 212
+    },
+    "mixed": {
+      "characters": 1313,
+      "sha256": "ef9f22afbf082cca33b94ad073893d4839f61389231ca6ea7c85c04482a8cc26",
+      "target_occurrences": 129
+    }
+  }
+}

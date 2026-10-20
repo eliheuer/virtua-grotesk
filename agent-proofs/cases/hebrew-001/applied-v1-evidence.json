@@ -1,0 +1,119 @@
+{
+  "application": {
+    "status": "applied; weight provisional; colors unchanged",
+    "files": {
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif": "2304311fa1e36889d57d3f015e87cc414fafa9123778062b11b1132e76ccaff0",
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif": "6278f87288426532f6b6d7664fddafe88a99d11425adae74cc9f884417574811",
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif": "8cb4a371f20d406cdef1239fab7e6db923eb0acb276bcef5d7b38fb841b7778b",
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif": "62d3afbc9c60893cb27b62205329fb72751d3e70d61c068cca82827f53c57dd6"
+    },
+    "before": {
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif": "d8b17fd28f0ab4df3abfc89f924a0374448e7e638158f34379dedb5dd9c60efc",
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif": "6ff218aefa385f6791d6ea40384e3dc4d80711d6a8fb541845ed29634ada23bb",
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif": "3c6c4ae45e43e35ebbe10877f38bd301d1cb0443818c85887312aff98259e996",
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif": "92fd93059132cd0263b5fdb09a0314cf14e42197dd7f0b262f06a49f1e303b5a"
+    },
+    "authorized_by": "Eli 2026-10-19; application approval with explicit weight uncertainty"
+  },
+  "verification": {
+    "source_changes": [
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif",
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif",
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif",
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif"
+    ],
+    "source_count_checked": 1759,
+    "fonts": [
+      {
+        "path": "fonts/ttf/VirtuaGrotesk-Bold.ttf",
+        "sha256": "ffae026b1a476c876bedb361ea51ed580e35ce320b0ad63f4364ef470def4168",
+        "candidate_sha256": "f7ddba6873b696588042b13bf387efdccd6c19bd250adc227326fa6bd63a1be9",
+        "equivalent_tables": true,
+        "ignored_head_fields": [
+          "checkSumAdjustment",
+          "created",
+          "modified"
+        ]
+      },
+      {
+        "path": "fonts/ttf/VirtuaGrotesk-Medium.ttf",
+        "sha256": "5f978995c67addfd1792679c1710e44cfb74b85069ed4c1f03f0cb1081f38f1c",
+        "candidate_sha256": "95d55dd0fa840534d32ba9b9d1e482b6ed57ebe070b83292160cbd0ede98b1b4",
+        "equivalent_tables": true,
+        "ignored_head_fields": [
+          "checkSumAdjustment",
+          "created",
+          "modified"
+        ]
+      },
+      {
+        "path": "fonts/ttf/VirtuaGrotesk-Regular.ttf",
+        "sha256": "24cf57ef330ec616d16c3936ccaf115a7239667993e3dfb02908940d756cf2c0",
+        "candidate_sha256": "ae97d872296d7459c0a50a0da1a7305336c8233a25f8da28f7f2b252ac59555f",
+        "equivalent_tables": true,
+        "ignored_head_fields": [
+          "checkSumAdjustment",
+          "created",
+          "modified"
+        ]
+      },
+      {
+        "path": "fonts/ttf/VirtuaGrotesk-SemiBold.ttf",
+        "sha256": "588bb1cfcdfbbaf0be1f138e7190e9c7244d85cfc87e1e6a1f065d6234667fbf",
+        "candidate_sha256": "c7971d0b68e0c3762f9ee96dbca7d88616543fd2f9f40fbe3901a8d972484a12",
+        "equivalent_tables": true,
+        "ignored_head_fields": [
+          "checkSumAdjustment",
+          "created",
+          "modified"
+        ]
+      },
+      {
+        "path": "fonts/variable/VirtuaGrotesk[wght].ttf",
+        "sha256": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e",
+        "candidate_sha256": "6a111690be74eea6bacbb6eb94d93e95aef8a146054e3a518d5a0526fd4365e2",
+        "equivalent_tables": true,
+        "ignored_head_fields": [
+          "checkSumAdjustment",
+          "created",
+          "modified"
+        ]
+      }
+    ],
+    "renderer_checks": [
+      "identical font: zero changed pixels at 400/550/700",
+      "seven rows paginate to three pages without clipping",
+      "oversize sample rejects rather than auto-fits"
+    ],
+    "preflight": "passed; see preflight.log",
+    "regression_tests": 20
+  },
+  "qa": {
+    "full": {
+      "summary": {
+        "SKIP": 294,
+        "PASS": 530,
+        "INFO": 39,
+        "WARN": 28,
+        "FAIL": 1
+      },
+      "report": "out/qa/2026-10-19/applied-dalet-resh/full-qa-online/fontspector.json",
+      "report_sha256": "eaed5e9e9a44cfe22ea2582a3af2770190bf3b91d75892bebc64974eabcaaf1c",
+      "finding_ids_and_codes_unchanged": true,
+      "errors": 0
+    },
+    "package": {
+      "summary": {
+        "SKIP": 41,
+        "PASS": 162,
+        "INFO": 10,
+        "WARN": 6,
+        "FAIL": 9
+      },
+      "report": "out/qa/2026-10-19/applied-dalet-resh/package-qa-online/fontspector.json",
+      "report_sha256": "6172dddbb9385361e60da92f70f4e4caf4d291d5a89bc8c99a90932f7fbb9cfc",
+      "finding_ids_and_codes_unchanged": true,
+      "errors": 0
+    }
+  }
+}

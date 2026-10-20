@@ -1,0 +1,354 @@
+{
+  "baselines": [
+    416.0676879882813,
+    416.0676879882813,
+    416.0676879882813,
+    416.0676879882813
+  ],
+  "fonts": [
+    {
+      "family": "Review-before",
+      "size": "85px",
+      "transform": "none"
+    },
+    {
+      "family": "Review-after",
+      "size": "85px",
+      "transform": "none"
+    },
+    {
+      "family": "Review-rubik",
+      "size": "85px",
+      "transform": "none"
+    },
+    {
+      "family": "Review-noto",
+      "size": "85px",
+      "transform": "none"
+    }
+  ],
+  "gutter": "12px",
+  "headlineTrim": "trim-both",
+  "ink": [
+    {
+      "bottom": 24,
+      "height": 98,
+      "scroll": 175,
+      "top": 26.624378204345703,
+      "width": 175
+    },
+    {
+      "bottom": 24,
+      "height": 98,
+      "scroll": 175,
+      "top": 26.624378204345703,
+      "width": 175
+    },
+    {
+      "bottom": 24,
+      "height": 98,
+      "scroll": 175,
+      "top": 25.901878356933594,
+      "width": 175
+    },
+    {
+      "bottom": 24,
+      "height": 98,
+      "scroll": 175,
+      "top": 24,
+      "width": 175
+    }
+  ],
+  "ready": true,
+  "sliderAbove": 23.997385025024418,
+  "sliderBelow": 23.99739646911621,
+  "unit": "24px",
+  "viewport": {
+    "height": 744,
+    "width": 784
+  },
+  "responsiveChecks": [
+    {
+      "unit": "20px",
+      "sliderAbove": 20,
+      "sliderBelow": 20,
+      "ink": [
+        {
+          "top": 22.315628051757812,
+          "bottom": 20
+        },
+        {
+          "top": 22.315628051757812,
+          "bottom": 20
+        },
+        {
+          "top": 21.678131103515625,
+          "bottom": 20
+        },
+        {
+          "top": 20,
+          "bottom": 20
+        }
+      ],
+      "width": 360,
+      "pageOverflow": false,
+      "fit": "75",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 155,
+          "scroll": 155
+        },
+        {
+          "width": 155,
+          "scroll": 155
+        },
+        {
+          "width": 155,
+          "scroll": 155
+        },
+        {
+          "width": 155,
+          "scroll": 155
+        }
+      ],
+      "sizes": [
+        "75px",
+        "75px",
+        "75px",
+        "75px"
+      ]
+    },
+    {
+      "unit": "20px",
+      "sliderAbove": 20,
+      "sliderBelow": 20,
+      "ink": [
+        {
+          "top": 23.272754669189453,
+          "bottom": 20
+        },
+        {
+          "top": 23.272754669189453,
+          "bottom": 20
+        },
+        {
+          "top": 22.37175750732422,
+          "bottom": 20
+        },
+        {
+          "top": 20,
+          "bottom": 20
+        }
+      ],
+      "width": 480,
+      "pageOverflow": false,
+      "fit": "106",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 215,
+          "scroll": 215
+        },
+        {
+          "width": 215,
+          "scroll": 215
+        },
+        {
+          "width": 215,
+          "scroll": 215
+        },
+        {
+          "width": 215,
+          "scroll": 215
+        }
+      ],
+      "sizes": [
+        "106px",
+        "106px",
+        "106px",
+        "106px"
+      ]
+    },
+    {
+      "unit": "24px",
+      "sliderAbove": 24,
+      "sliderBelow": 24,
+      "ink": [
+        {
+          "top": 26.439128875732422,
+          "bottom": 24
+        },
+        {
+          "top": 26.439128875732422,
+          "bottom": 24
+        },
+        {
+          "top": 25.76763153076172,
+          "bottom": 24
+        },
+        {
+          "top": 24,
+          "bottom": 24
+        }
+      ],
+      "width": 736,
+      "pageOverflow": false,
+      "fit": "79",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 163,
+          "scroll": 163
+        },
+        {
+          "width": 163,
+          "scroll": 163
+        },
+        {
+          "width": 163,
+          "scroll": 163
+        },
+        {
+          "width": 163,
+          "scroll": 163
+        }
+      ],
+      "sizes": [
+        "79px",
+        "79px",
+        "79px",
+        "79px"
+      ]
+    },
+    {
+      "unit": "32px",
+      "sliderAbove": 32,
+      "sliderBelow": 32,
+      "ink": [
+        {
+          "top": 35.18012619018555,
+          "bottom": 32
+        },
+        {
+          "top": 35.18012619018555,
+          "bottom": 32
+        },
+        {
+          "top": 34.30462646484375,
+          "bottom": 32
+        },
+        {
+          "top": 32,
+          "bottom": 32
+        }
+      ],
+      "width": 960,
+      "pageOverflow": false,
+      "fit": "103",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 212,
+          "scroll": 212
+        },
+        {
+          "width": 212,
+          "scroll": 212
+        },
+        {
+          "width": 212,
+          "scroll": 212
+        },
+        {
+          "width": 212,
+          "scroll": 212
+        }
+      ],
+      "sizes": [
+        "103px",
+        "103px",
+        "103px",
+        "103px"
+      ]
+    },
+    {
+      "unit": "32px",
+      "sliderAbove": 32,
+      "sliderBelow": 32,
+      "ink": [
+        {
+          "top": 35.952003479003906,
+          "bottom": 32
+        },
+        {
+          "top": 35.952003479003906,
+          "bottom": 32
+        },
+        {
+          "top": 34.86400604248047,
+          "bottom": 32
+        },
+        {
+          "top": 32,
+          "bottom": 32
+        }
+      ],
+      "width": 1440,
+      "pageOverflow": false,
+      "fit": "128",
+      "ready": true,
+      "boxes": [
+        {
+          "width": 332,
+          "scroll": 332
+        },
+        {
+          "width": 332,
+          "scroll": 332
+        },
+        {
+          "width": 332,
+          "scroll": 332
+        },
+        {
+          "width": 332,
+          "scroll": 332
+        }
+      ],
+      "sizes": [
+        "128px",
+        "128px",
+        "128px",
+        "128px"
+      ]
+    }
+  ],
+  "date": "2026-10-19",
+  "source_files_checked": 3046,
+  "source_changes": [],
+  "font_manifest": "live-fonts.json",
+  "approval": "Requested spacing system implemented; exact layout awaiting feedback",
+  "interface_sha256": {
+    "index.html": "a6f198365358a45c374fd4492903a58191c57cbf978806d0e69e2c8c4974647b",
+    "review.css": "ef45e303b101aad0c67a7834e639e9d72e935adf8929e1cd68cead3bd1997399",
+    "review.js": "5ca353773fcc4eb7ea0c0a6856e0dc08cd8b13a39de215ae370d7988f1f77e2a"
+  },
+  "checks": [
+    "Layout gaps derive from margin U and subdivisions",
+    "Slider spacing above/below equals U",
+    "Sample field extends U above maximum ink ascent and U below maximum descent",
+    "Native baseline remains shared across all fonts",
+    "Bold Hebrew marks visually inspected",
+    "Wrapped mixed text and Latin descenders visually inspected",
+    "Compare, Switch and Sizes inspected",
+    "360 and 736 px frame layouts visually inspected",
+    "Wider native frame measurements checked",
+    "No console warnings/errors observed"
+  ],
+  "limitations": [
+    "Ink metrics are browser measurements; screenshots were also inspected",
+    "Other browser engines not checked",
+    "Layout implementation remains open to Eli feedback"
+  ]
+}

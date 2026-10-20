@@ -1,0 +1,3140 @@
+{
+  "before": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+  "after": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/fonts/variable/VirtuaGrotesk[wght].ttf",
+  "sha256": {
+    "before": "4479a843be9c6d747826909cc05e59d93e0677ce82a93bcebc6e89f17339d418",
+    "after": "6a111690be74eea6bacbb6eb94d93e95aef8a146054e3a518d5a0526fd4365e2"
+  },
+  "size_px_per_em": 96,
+  "weights": [
+    400.0,
+    550.0,
+    700.0
+  ],
+  "palette": {
+    "background": "#dedede",
+    "ink": "#444444",
+    "baseline": "#999999",
+    "removed": "#d02070",
+    "added": "#008ba3"
+  },
+  "tools": {
+    "uharfbuzz": "0.56.3",
+    "freetype-py": "2.3.0",
+    "Pillow": "12.2.0"
+  },
+  "harfbuzz": "14.6.0",
+  "freetype": [
+    2,
+    12,
+    0
+  ],
+  "rows": [
+    {
+      "label": "Dagesh / vowel / rafe / holam",
+      "text": "דּ רּ דַ רַ דֿ רֿ דֹ רֹ",
+      "weight": 400.0,
+      "shared_pixel_bounds": [
+        0,
+        -71,
+        594,
+        11
+      ],
+      "changed_pixels": 3376,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 609,
+          "cluster": 21,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 21,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 20,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 609,
+          "cluster": 18,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 18,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 17,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 15,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            284,
+            672
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 15,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 14,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            274,
+            672
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 12,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 9,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 9,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 8,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 6,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            162,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 6,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 3,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            118,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 3,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 2,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            106,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 609,
+          "cluster": 21,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 21,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 20,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 609,
+          "cluster": 18,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 18,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 17,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 15,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            284,
+            672
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 15,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 14,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            274,
+            672
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 12,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 9,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 9,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 8,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 6,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            162,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 6,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 3,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            118,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 3,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 2,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            106,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Dagesh / vowel / rafe / holam",
+      "text": "דּ רּ דַ רַ דֿ רֿ דֹ רֹ",
+      "weight": 550.0,
+      "shared_pixel_bounds": [
+        0,
+        -71,
+        615,
+        11
+      ],
+      "changed_pixels": 4596,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 609,
+          "cluster": 21,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -12,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 21,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 20,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 609,
+          "cluster": 18,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 18,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 17,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 15,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            294,
+            672
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 15,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 14,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            279,
+            672
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 12,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 9,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            182,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 9,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 8,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 6,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            167,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 6,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 3,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            118,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 3,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 2,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            106,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 609,
+          "cluster": 21,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -12,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 21,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 20,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 609,
+          "cluster": 18,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 18,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 17,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 15,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            294,
+            672
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 15,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 14,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            279,
+            672
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 12,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 9,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            182,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 9,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 8,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 6,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            167,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 6,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 3,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            118,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 3,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 2,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            106,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Dagesh / vowel / rafe / holam",
+      "text": "דּ רּ דַ רַ דֿ רֿ דֹ רֹ",
+      "weight": 700.0,
+      "shared_pixel_bounds": [
+        0,
+        -71,
+        636,
+        11
+      ],
+      "changed_pixels": 5380,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 609,
+          "cluster": 21,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -20,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 21,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 20,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 609,
+          "cluster": 18,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 18,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 17,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 15,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            304,
+            672
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 15,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 14,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            283,
+            672
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 12,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 9,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            192,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 9,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 8,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 6,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 6,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 3,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            118,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 3,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 2,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            106,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 609,
+          "cluster": 21,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -20,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 21,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 20,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 609,
+          "cluster": 18,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            -4,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 18,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 17,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 15,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            304,
+            672
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 15,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 14,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 804,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            283,
+            672
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 12,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 9,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            192,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 9,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 8,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 6,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 6,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 3,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            118,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 3,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 2,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 520,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            106,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Cantillation and vowels",
+      "text": "דַ֗ רַ֗ דִ֖ רִ֖",
+      "weight": 400.0,
+      "shared_pixel_bounds": [
+        0,
+        -74,
+        285,
+        21
+      ],
+      "changed_pixels": 1688,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 777,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            136,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            216,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 12,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 777,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            126,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            206,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 8,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 7,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            288,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 4,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            272,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            162,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 777,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            136,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            216,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 12,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 777,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            126,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            206,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 8,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 7,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            288,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 4,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            272,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            162,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Cantillation and vowels",
+      "text": "דַ֗ רַ֗ דִ֖ רִ֖",
+      "weight": 550.0,
+      "shared_pixel_bounds": [
+        0,
+        -76,
+        296,
+        21
+      ],
+      "changed_pixels": 2298,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 777,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            146,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            226,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 12,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 777,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            131,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            211,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 8,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 7,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            296,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            182,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 4,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            276,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            167,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 777,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            146,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            226,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 12,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 777,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            131,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            211,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 8,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 7,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            296,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            182,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 4,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            276,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            167,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Cantillation and vowels",
+      "text": "דַ֗ רַ֗ דִ֖ רִ֖",
+      "weight": 700.0,
+      "shared_pixel_bounds": [
+        0,
+        -77,
+        306,
+        21
+      ],
+      "changed_pixels": 2690,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 777,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            156,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            236,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 12,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 777,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            136,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            216,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 8,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 7,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            304,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            192,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 4,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            280,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 777,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            156,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 12,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            236,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 12,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 11,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 777,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            136,
+            -64
+          ]
+        },
+        {
+          "gid": 608,
+          "cluster": 8,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            216,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 8,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 7,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            304,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 4,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            192,
+            0
+          ]
+        },
+        {
+          "gid": 694,
+          "cluster": 4,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 778,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            280,
+            656
+          ]
+        },
+        {
+          "gid": 668,
+          "cluster": 0,
+          "advance": [
+            0,
+            0
+          ],
+          "offset": [
+            172,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Wide dalet unchanged; adjacent normal dalet",
+      "text": "ﬢ ד",
+      "weight": 400.0,
+      "shared_pixel_bounds": [
+        0,
+        -54,
+        154,
+        0
+      ],
+      "changed_pixels": 609,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 521,
+          "cluster": 2,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 824,
+          "cluster": 0,
+          "advance": [
+            824,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 521,
+          "cluster": 2,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 824,
+          "cluster": 0,
+          "advance": [
+            824,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Wide dalet unchanged; adjacent normal dalet",
+      "text": "ﬢ ד",
+      "weight": 550.0,
+      "shared_pixel_bounds": [
+        0,
+        -54,
+        160,
+        0
+      ],
+      "changed_pixels": 890,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 521,
+          "cluster": 2,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 824,
+          "cluster": 0,
+          "advance": [
+            852,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 521,
+          "cluster": 2,
+          "advance": [
+            596,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 824,
+          "cluster": 0,
+          "advance": [
+            852,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Wide dalet unchanged; adjacent normal dalet",
+      "text": "ﬢ ד",
+      "weight": 700.0,
+      "shared_pixel_bounds": [
+        0,
+        -54,
+        165,
+        0
+      ],
+      "changed_pixels": 1060,
+      "missing_glyph": false,
+      "before_shaping": [
+        {
+          "gid": 521,
+          "cluster": 2,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 824,
+          "cluster": 0,
+          "advance": [
+            880,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "after_shaping": [
+        {
+          "gid": 521,
+          "cluster": 2,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 824,
+          "cluster": 0,
+          "advance": [
+            880,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "note": "Fixed scale and shared origin; raster differences are evidence, not an aesthetic score."
+}

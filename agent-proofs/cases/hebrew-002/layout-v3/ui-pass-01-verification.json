@@ -1,0 +1,79 @@
+{
+  "baselines": [
+    536.5625,
+    536.5625,
+    536.5625,
+    536.5689697265625
+  ],
+  "loaded": true,
+  "mode": "compare",
+  "sample": "he",
+  "samples": [
+    {
+      "family": "Review-before",
+      "size": "128px",
+      "tracking": "normal",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    },
+    {
+      "family": "Review-after",
+      "size": "128px",
+      "tracking": "normal",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    },
+    {
+      "family": "Review-rubik",
+      "size": "128px",
+      "tracking": "normal",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    },
+    {
+      "family": "Review-noto",
+      "size": "128px",
+      "tracking": "normal",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    }
+  ],
+  "size": "128",
+  "status": "",
+  "viewport": {
+    "height": 728,
+    "width": 658
+  },
+  "weight": "400",
+  "date": "2026-10-19",
+  "browser": "Codex in-app browser",
+  "approval": "Proposed; awaiting Eli feedback",
+  "source_files_checked": 3046,
+  "source_changes": [],
+  "baseline_max_spread_css_px": 0.0064697265625,
+  "interface_sha256": {
+    "index.html": "75a0bb9131ee40f666f4b91e6dde18fe5f052f123796eaee6fc8b92a20526c97",
+    "review.css": "713c3bcbbae9bf7ac2edf3059383c49b5e3f5bba79b2264d887dc901176a0d1b",
+    "review.js": "ba49814c3a8d0cba65cff0d4520bc9ab682cd1a0b21df3a1c3b8baf8d6103185"
+  },
+  "font_manifest": "live-fonts.json",
+  "checked_interactions": [
+    "Compare with and without references",
+    "Switch with references and B keyboard shortcut",
+    "Sizes row-major comparison",
+    "Weight 625 numerical entry",
+    "Weight and size slider keyboard input",
+    "Size presets",
+    "Custom mixed Latin-Hebrew text",
+    "Missing U+1F642 notice",
+    "Light and dark themes",
+    "Shared layout guides",
+    "RTL synchronized scrolling: all four offsets -17.5 CSS px"
+  ],
+  "limits": [
+    "Panel widths approximately 658-774 CSS px inspected",
+    "Below-600 breakpoint and wide desktop not visually checked",
+    "Not cross-browser or release QA",
+    "Settings do not yet persist"
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "baselines": [
+    503.671875,
+    503.671875,
+    503.671875,
+    503.671875
+  ],
+  "fonts": [
+    {
+      "family": "Review-before",
+      "size": "128px",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    },
+    {
+      "family": "Review-after",
+      "size": "128px",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    },
+    {
+      "family": "Review-rubik",
+      "size": "128px",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    },
+    {
+      "family": "Review-noto",
+      "size": "128px",
+      "transform": "none",
+      "weight": "\"wght\" 400"
+    }
+  ],
+  "headlines": [
+    {
+      "leading": "33.6px",
+      "size": "32px",
+      "text": "Virtua Grotesk",
+      "tracking": "-0.8px"
+    },
+    {
+      "leading": "33.6px",
+      "size": "32px",
+      "text": "He, Het and Tav",
+      "tracking": "-0.8px"
+    }
+  ],
+  "ink": "rgb(222, 222, 222)",
+  "paper": "rgb(40, 40, 40)",
+  "ready": true,
+  "status": "",
+  "values": [
+    {
+      "height": 31.99869728088379,
+      "id": "sample",
+      "top": 256.1002502441406
+    },
+    {
+      "height": 31.99869728088379,
+      "id": "weight",
+      "top": 256.1002502441406
+    },
+    {
+      "height": 31.99869728088379,
+      "id": "size",
+      "top": 256.1002502441406
+    }
+  ],
+  "viewport": {
+    "height": 728,
+    "width": 658
+  },
+  "date": "2026-10-19",
+  "browser": "Codex in-app browser",
+  "approval": "Requested corrections implemented; revised layout awaiting feedback",
+  "source_files_checked": 3046,
+  "source_changes_since_ui_pass_01": [],
+  "font_manifest": "live-fonts.json",
+  "interface_sha256": {
+    "index.html": "52272fb98d05919b2b7860344e3049e0a8e4727352289d86b95307a1e562b093",
+    "review.css": "02b4b83f5d96a82fbfdd828436ae77f184709859709c355a5807e939bbf2efaa",
+    "review.js": "5fb3f1262cdeda6f6a455375d935a6b33d6eaadc3d9716640711959474faddaa"
+  },
+  "checks": [
+    "Matched computed headline size, leading and tracking",
+    "Sample, weight and size values share top and height",
+    "All four font baselines equal",
+    "Compare, Switch and B shortcut",
+    "Weight 625 and size 96 numeric fields update render",
+    "Sizes shows actual 24\u201396 range",
+    "Light, dark and grid visually inspected",
+    "Review Details expands with provenance",
+    "No browser warnings or errors observed"
+  ],
+  "limits": [
+    "Visually inspected at current 658 CSS px panel width",
+    "Other widths and browsers pending",
+    "No font QA rerun for UI-only change"
+  ]
+}

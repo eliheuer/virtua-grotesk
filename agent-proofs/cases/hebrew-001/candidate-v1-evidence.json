@@ -1,0 +1,128 @@
+{
+  "active_sources_unchanged": true,
+  "only_four_scratch_outlines_changed": true,
+  "metadata_preserved": true,
+  "compatibility_blockers": 0,
+  "curve_lint": "both clean",
+  "unrelated_glyph_checks": 6048,
+  "changed_built_glyphs": {
+    "400": [
+      "dalethb",
+      "reshhb"
+    ],
+    "450": [
+      "dalethb",
+      "reshhb"
+    ],
+    "500": [
+      "dalethb",
+      "reshhb"
+    ],
+    "550": [
+      "dalethb",
+      "reshhb"
+    ],
+    "600": [
+      "dalethb",
+      "reshhb"
+    ],
+    "650": [
+      "dalethb",
+      "reshhb"
+    ],
+    "700": [
+      "dalethb",
+      "reshhb"
+    ]
+  },
+  "green_latin_reference_hashes": {
+    "Regular": {
+      "H_": {
+        "sha256": "bcf627603388d23921e31e52e6508746f489817b07ef39843b2d6e8bc14acdbb"
+      },
+      "E_": {
+        "sha256": "89b62ecb7de70f403f1bed27ba196baffbfdb757cbb01605f4308497162ddd29"
+      },
+      "n": {
+        "sha256": "a58c9477dc6b6c2470dabd5909e7ab4fd3cdf742b0b82ed490673ae2b3d4da78"
+      },
+      "o": {
+        "sha256": "8d0efd02fb6c9e375ef812f712ae1a71d637ce03ceb2a61bf2734a46d94f150f"
+      }
+    },
+    "Bold": {
+      "H_": {
+        "sha256": "cbd23af7102b0c6ba6443e7c9c9d7e5c0b3af26abed0ae6a0446d033f30b0fe8"
+      },
+      "E_": {
+        "sha256": "37364398d2a87fc8460180e3a414be31899e2e1b584398f7cd40325ceed739bf"
+      },
+      "n": {
+        "sha256": "9981b7d6cc0d1446f74c26378eca34a55f0a0761ba2b7f526e8464c233468f28"
+      },
+      "o": {
+        "sha256": "d13fc73af40d3735bf3f35846117d20f695c5a7057270cec9edac11247f71b19"
+      }
+    }
+  },
+  "weights": {
+    "vertical_stems": [
+      96,
+      192
+    ],
+    "top_bars": [
+      96,
+      168
+    ],
+    "height": 576,
+    "advance": [
+      568,
+      624
+    ],
+    "dalet_projection": 64
+  },
+  "tests": "20 passed",
+  "preflight": "passed; presence gate, not release readiness",
+  "application": "not applied",
+  "scoped_fontspector": {
+    "summary": {
+      "SKIP": 8,
+      "PASS": 19,
+      "WARN": 13
+    },
+    "baseline_findings_identical": true,
+    "scope": "outline_* + overlapping_path_segments + interpolation_issues across five fonts; not full release QA"
+  },
+  "status": "scratch candidate ready for review; NOT applied",
+  "scratch_directory": "out/qa/2026-10-19/hebrew-dalet-resh-v1",
+  "expected_before_source_hashes": {
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif": "92fd93059132cd0263b5fdb09a0314cf14e42197dd7f0b262f06a49f1e303b5a",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif": "3c6c4ae45e43e35ebbe10877f38bd301d1cb0443818c85887312aff98259e996",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/E_.glif": "37364398d2a87fc8460180e3a414be31899e2e1b584398f7cd40325ceed739bf",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/o.glif": "d13fc73af40d3735bf3f35846117d20f695c5a7057270cec9edac11247f71b19",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/n.glif": "9981b7d6cc0d1446f74c26378eca34a55f0a0761ba2b7f526e8464c233468f28",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/H_.glif": "cbd23af7102b0c6ba6443e7c9c9d7e5c0b3af26abed0ae6a0446d033f30b0fe8",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif": "6ff218aefa385f6791d6ea40384e3dc4d80711d6a8fb541845ed29634ada23bb",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif": "d8b17fd28f0ab4df3abfc89f924a0374448e7e638158f34379dedb5dd9c60efc",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/E_.glif": "89b62ecb7de70f403f1bed27ba196baffbfdb757cbb01605f4308497162ddd29",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/o.glif": "8d0efd02fb6c9e375ef812f712ae1a71d637ce03ceb2a61bf2734a46d94f150f",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/n.glif": "a58c9477dc6b6c2470dabd5909e7ab4fd3cdf742b0b82ed490673ae2b3d4da78",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/H_.glif": "bcf627603388d23921e31e52e6508746f489817b07ef39843b2d6e8bc14acdbb"
+  },
+  "source_files": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif": "2304311fa1e36889d57d3f015e87cc414fafa9123778062b11b1132e76ccaff0",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif": "6278f87288426532f6b6d7664fddafe88a99d11425adae74cc9f884417574811",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif": "8cb4a371f20d406cdef1239fab7e6db923eb0acb276bcef5d7b38fb841b7778b",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif": "62d3afbc9c60893cb27b62205329fb72751d3e70d61c068cca82827f53c57dd6"
+  },
+  "font_hashes": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "6a111690be74eea6bacbb6eb94d93e95aef8a146054e3a518d5a0526fd4365e2",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "f7ddba6873b696588042b13bf387efdccd6c19bd250adc227326fa6bd63a1be9",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "95d55dd0fa840534d32ba9b9d1e482b6ed57ebe070b83292160cbd0ede98b1b4",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "ae97d872296d7459c0a50a0da1a7305336c8233a25f8da28f7f2b252ac59555f",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "c7971d0b68e0c3762f9ee96dbca7d88616543fd2f9f40fbe3901a8d972484a12"
+  },
+  "related_forms": "Dagesh forms are standalone purple outlines, not composites; unchanged along with wide dalet.",
+  "geometry": "Outer resh quadrant translated exactly from green n. Inner shoulder adapted on the 8-unit grid to connect 96/192 stems to 96/168 bars.",
+  "active_baseline_rebuilt": true
+}

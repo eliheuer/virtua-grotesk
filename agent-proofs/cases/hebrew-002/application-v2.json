@@ -1,0 +1,45 @@
+{
+  "authorization": "2026-10-19: this looks good! you can apply these",
+  "changed_files": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif"
+  ],
+  "before_hashes": {
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif": "f9add636322198b358dbeef7ae656fe033e780fd1ac4c2e3da5448090b6e2b50",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif": "3739bb422369e00ea717ec2c35ce856f0133873da2261341c0c97db174f6a77a",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif": "b93c4352f6746cd8bfeef0139ec0a1b5fae6e58351dc1585e846be79b83f5b16",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif": "fbe5a38d22f13882f3d557a777aff801f4ae33f356162dd241a099f154aa20b1",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif": "56080a9cbcd13ed85996b6714285b6fcd8f5a2118a7c49061dc3a7e6fd1baf86",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif": "e16dfc9897b14ad11b4d8375c21a5d42a8e02083e921f6e0fdadaa5cdd13ad54"
+  },
+  "after_hashes": {
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif": "6388a85304fae9458ea2beca6434bf1a8f392440d4d2ac4cf803b7ba2df5d6c1",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif": "d2c78457546264b28ddea8f59eb3741bee3962ba00c8b885ea64f4e665ab184b",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif": "e276738ada938b56a487084d9b17feb9de3eb2cbcc811bb806b0274e0713c3bd",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif": "cb6aadd521c4bedd85383f016e6e765212020a4fa4e2c9b4626c11a4fb75d3cf",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif": "6a680ca0212e4274d228470f8f0e34ba32a6e7d5a7f31fea6cc035d675079375",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif": "789e1e6e4a60725327101f43cf99ec6df15bc9786a6158988f3ab8f229433c9f"
+  },
+  "other_sources_unchanged": true,
+  "colors_preserved": true,
+  "grading": "unchanged; no automatic green",
+  "state": "Applied and verified",
+  "validation": {
+    "preflight": "passed; five builds and PDF/reports present",
+    "source_grid": "6 glyph-masters pass",
+    "curve_lint": "both masters clean",
+    "compatibility_blockers": 0,
+    "hebrew_shaping": "passed",
+    "compiled_equivalence": "all five fonts match approved candidate except timestamps/checksum",
+    "fontspector": {
+      "SKIP": 8,
+      "PASS": 19,
+      "WARN": 13
+    },
+    "active_source_guard": "Only six approved GLIFs differ from frozen input"
+  }
+}

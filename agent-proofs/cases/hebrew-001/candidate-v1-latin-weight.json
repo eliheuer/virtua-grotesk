@@ -1,0 +1,674 @@
+{
+  "fonts": [
+    {
+      "label": "Virtua before",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "4479a843be9c6d747826909cc05e59d93e0677ce82a93bcebc6e89f17339d418",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "upm": 1024
+    },
+    {
+      "label": "Virtua candidate",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-dalet-resh-v1/fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "6a111690be74eea6bacbb6eb94d93e95aef8a146054e3a518d5a0526fd4365e2",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "upm": 1024
+    }
+  ],
+  "palette": {
+    "background": "#dedede",
+    "ink": "#444444",
+    "baseline": "#999999",
+    "removed": "#d02070",
+    "added": "#008ba3"
+  },
+  "samples": [
+    {
+      "label": "Green Latin weight references",
+      "text": "H E n o",
+      "size": 112
+    },
+    {
+      "label": "Hebrew candidate pair",
+      "text": "ד ר",
+      "size": 112
+    }
+  ],
+  "rows": [
+    {
+      "sample": "Green Latin weight references",
+      "text": "H E n o",
+      "font": "Virtua before",
+      "weight": 400.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -84,
+        374,
+        2
+      ],
+      "shaping": [
+        {
+          "gid": 9,
+          "cluster": 0,
+          "advance": [
+            744,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 6,
+          "cluster": 2,
+          "advance": [
+            672,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 45,
+          "cluster": 4,
+          "advance": [
+            592,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 46,
+          "cluster": 6,
+          "advance": [
+            640,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    },
+    {
+      "sample": "Green Latin weight references",
+      "text": "H E n o",
+      "font": "Virtua candidate",
+      "weight": 400.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -84,
+        374,
+        2
+      ],
+      "shaping": [
+        {
+          "gid": 9,
+          "cluster": 0,
+          "advance": [
+            744,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 6,
+          "cluster": 2,
+          "advance": [
+            672,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 45,
+          "cluster": 4,
+          "advance": [
+            592,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 46,
+          "cluster": 6,
+          "advance": [
+            640,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    },
+    {
+      "sample": "Green Latin weight references",
+      "text": "H E n o",
+      "font": "Virtua before",
+      "weight": 700.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -84,
+        406,
+        2
+      ],
+      "shaping": [
+        {
+          "gid": 9,
+          "cluster": 0,
+          "advance": [
+            816,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 6,
+          "cluster": 2,
+          "advance": [
+            704,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 45,
+          "cluster": 4,
+          "advance": [
+            720,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 46,
+          "cluster": 6,
+          "advance": [
+            704,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    },
+    {
+      "sample": "Green Latin weight references",
+      "text": "H E n o",
+      "font": "Virtua candidate",
+      "weight": 700.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -84,
+        406,
+        2
+      ],
+      "shaping": [
+        {
+          "gid": 9,
+          "cluster": 0,
+          "advance": [
+            816,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 6,
+          "cluster": 2,
+          "advance": [
+            704,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 3,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 45,
+          "cluster": 4,
+          "advance": [
+            720,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 5,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 46,
+          "cluster": 6,
+          "advance": [
+            704,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    },
+    {
+      "sample": "Hebrew candidate pair",
+      "text": "ד ר",
+      "font": "Virtua before",
+      "weight": 400.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -63,
+        152,
+        0
+      ],
+      "shaping": [
+        {
+          "gid": 694,
+          "cluster": 2,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    },
+    {
+      "sample": "Hebrew candidate pair",
+      "text": "ד ר",
+      "font": "Virtua candidate",
+      "weight": 400.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -63,
+        152,
+        0
+      ],
+      "shaping": [
+        {
+          "gid": 694,
+          "cluster": 2,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            568,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    },
+    {
+      "sample": "Hebrew candidate pair",
+      "text": "ד ר",
+      "font": "Virtua before",
+      "weight": 700.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -63,
+        164,
+        0
+      ],
+      "shaping": [
+        {
+          "gid": 694,
+          "cluster": 2,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    },
+    {
+      "sample": "Hebrew candidate pair",
+      "text": "ד ר",
+      "font": "Virtua candidate",
+      "weight": 700.0,
+      "size_px_per_em": 112,
+      "shared_pixel_bounds": [
+        0,
+        -63,
+        164,
+        0
+      ],
+      "shaping": [
+        {
+          "gid": 694,
+          "cluster": 2,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 236,
+          "cluster": 1,
+          "advance": [
+            256,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "gid": 521,
+          "cluster": 0,
+          "advance": [
+            624,
+            0
+          ],
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "missing_glyph": false
+    }
+  ],
+  "tools": {
+    "uharfbuzz": "0.56.3",
+    "freetype-py": "2.3.0",
+    "Pillow": "12.2.0",
+    "fonttools": "4.67.0"
+  },
+  "harfbuzz": "14.6.0",
+  "freetype": [
+    2,
+    12,
+    0
+  ],
+  "note": "Single-script shaped runs. Fixed em scale, no auto-fit or optical weight matching. References are not design approval."
+}

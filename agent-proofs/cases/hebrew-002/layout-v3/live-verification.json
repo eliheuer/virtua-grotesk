@@ -1,0 +1,36 @@
+{
+  "status": "Live browser prototype awaiting Eli feedback",
+  "date": "2026-10-19",
+  "font_hashes": {
+    "before": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e",
+    "after": "70dc500c2240b606da09de615e85e0631966c004f1cdd6f14ced60d337a04edf",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "noto": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+  },
+  "sources": "Six applied glyph hashes unchanged; no glyph editing performed in this pass",
+  "renderer": "Native browser FontFace rendering; separate aliases, zero added tracking, no synthetic bold, native font metrics",
+  "checks": [
+    "JavaScript syntax",
+    "Python syntax",
+    "Font source and copied-byte hashes",
+    "No specimen image element or CSS scaling in live page",
+    "Compare and reference toggle",
+    "Regular 400, midpoint 550 and bold 700",
+    "Size changed from 128 to 192 px",
+    "Before/applied button and B-key switching",
+    "Words size study",
+    "Dark mode and grid",
+    "Custom text: U+1F642 rejected in all four fonts rather than fallback"
+  ],
+  "limits": [
+    "In-app browser at narrow panel width inspected; no cross-browser signoff",
+    "Browser metrics and rasterization differ from DesignBot",
+    "Font-source QA not rerun for presentation-only changes"
+  ],
+  "artifacts": {
+    "index.html": "f84e2144c7c40d4ba9142cefbeb88a232f52959757440e40e8d850e8ef3181d8",
+    "review.css": "0246a7a63685cd03357ff119be13a31616679f79d638926724e22fb6b72af212",
+    "review.js": "6b1725ad47267d115cd753c38230bdadc2c065d63b6aa3191b3ed1bf1f7c4d69",
+    "review-data.js": "1cc11e272728177244e798daebf62b164e03a45d91f2ceff764cd280e6c3c714"
+  }
+}

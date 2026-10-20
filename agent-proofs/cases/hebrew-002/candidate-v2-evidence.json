@@ -1,0 +1,2539 @@
+{
+  "fonts": {
+    "before": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      }
+    },
+    "after": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "29190625877d97d75161e27cb4ad523ca51141d5c8cc69a0ed12eace63e76516",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      }
+    },
+    "rubik": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    }
+  },
+  "script": {
+    "path": "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+    "sha256": "e42f3a5b1393d0931be09024173de09c62ab87c7195208af4419f0f81b1bfc1d"
+  },
+  "runner_sha256": "bcb6363b5e48cdcd4e79aa41d2b58dee220ea1426d9b8036e4b557a7471eaba3",
+  "designbot": {
+    "path": "/Users/eli/.cargo/bin/designbot",
+    "sha256": "679656960abd698378971ad806a2f019d33c39598fc9e78f9868d89b7d2dd63f"
+  },
+  "outputs": [
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/01-form-light.png",
+      "sha256": "d829f4073b066da02010e7992df4572be0c49695a4e4b0bbcd2a127f6009d5dd",
+      "theme": "light",
+      "sheet": "form",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/01-form-light.png",
+        "--",
+        "light",
+        "form",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/02-text-light.png",
+      "sha256": "16ecc9a1ad2f8a37ff92e4e6a7fe24d7fb6afb8f0b73dfaa8c4bd3e5325f560d",
+      "theme": "light",
+      "sheet": "text",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/02-text-light.png",
+        "--",
+        "light",
+        "text",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/03-weight-light.png",
+      "sha256": "e6d7aeac1af8ba9311e62a9fe3b17b925ce1a1e121ba6392e33906f6a1063e8a",
+      "theme": "light",
+      "sheet": "weight",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/03-weight-light.png",
+        "--",
+        "light",
+        "weight",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/04-detail-he-light.png",
+      "sha256": "7035e5aa6756ea0b4c2757f9065881c451884bcbbe0b8147ab6d1ae424f52734",
+      "theme": "light",
+      "sheet": "detail-he",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/04-detail-he-light.png",
+        "--",
+        "light",
+        "detail-he",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/05-detail-het-light.png",
+      "sha256": "9949d6bfc24086ccbbf2ae4646bc811dc66fe0326d51e3797f81a8e3752ab284",
+      "theme": "light",
+      "sheet": "detail-het",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/05-detail-het-light.png",
+        "--",
+        "light",
+        "detail-het",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/06-detail-tav-light.png",
+      "sha256": "7fad9b711a24716cc13e8276fc82f941612565f5a1251e7714563432d43f5fa3",
+      "theme": "light",
+      "sheet": "detail-tav",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/06-detail-tav-light.png",
+        "--",
+        "light",
+        "detail-tav",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/07-marks-light.png",
+      "sha256": "cfb549223fe54bc736a6ced11a7fb848e7a560ad1c61a3f3fd441206fd3e4124",
+      "theme": "light",
+      "sheet": "marks",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/07-marks-light.png",
+        "--",
+        "light",
+        "marks",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/01-form-dark.png",
+      "sha256": "ffd81f86be0e7fd81aab2c0dcefd692d1aa71e08c23f8620880b12ba84266502",
+      "theme": "dark",
+      "sheet": "form",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/01-form-dark.png",
+        "--",
+        "dark",
+        "form",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/02-text-dark.png",
+      "sha256": "ae39cfdeddb6ed153b67c8b4d1735fd5fd6c835ae9f8ef6c10904b13baafd4de",
+      "theme": "dark",
+      "sheet": "text",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/02-text-dark.png",
+        "--",
+        "dark",
+        "text",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/03-weight-dark.png",
+      "sha256": "bce40697bba96983bbe1568e22248eecc28b28e23cec783003dde9a8dd79edcc",
+      "theme": "dark",
+      "sheet": "weight",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/03-weight-dark.png",
+        "--",
+        "dark",
+        "weight",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/04-detail-he-dark.png",
+      "sha256": "9367aef783f72a9834578bce89dae70713dad801d01aef2858612ee7420eadd8",
+      "theme": "dark",
+      "sheet": "detail-he",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/04-detail-he-dark.png",
+        "--",
+        "dark",
+        "detail-he",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/05-detail-het-dark.png",
+      "sha256": "e1809cb6508a2f54313a593ad0eeaabd2ace619a7c8bcae84300c595d09abeac",
+      "theme": "dark",
+      "sheet": "detail-het",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/05-detail-het-dark.png",
+        "--",
+        "dark",
+        "detail-het",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/06-detail-tav-dark.png",
+      "sha256": "26a51eb676af370fdd88ac6af67882b1a9966e7f625a5934873b53bf291c5696",
+      "theme": "dark",
+      "sheet": "detail-tav",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/06-detail-tav-dark.png",
+        "--",
+        "dark",
+        "detail-tav",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    },
+    {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/07-marks-dark.png",
+      "sha256": "d79c20aac7972ab30420a2a94b12db2bbdd03d316b6911db57463478ec167264",
+      "theme": "dark",
+      "sheet": "marks",
+      "command": [
+        "/Users/eli/.cargo/bin/designbot",
+        "--raw",
+        "/Users/eli/GH/repos/virtua-grotesk/documentation/proofs/hebrew_review.rs",
+        "--output",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/specimens/07-marks-dark.png",
+        "--",
+        "dark",
+        "marks",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/rubik-Rubik[wght].ttf",
+        "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-18/hebrew-remaining-candidate/references/NotoSansHebrew[wdth,wght].ttf",
+        "candidate"
+      ],
+      "pixel_checks": "opaque neutral grays, 68..222"
+    }
+  ],
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "group": "he-het-tav-candidate",
+  "state": "candidate",
+  "palette": [
+    "#dedede",
+    "#444444"
+  ],
+  "page_size": [
+    1600,
+    1280
+  ],
+  "margin": 80,
+  "grid_unit": 40,
+  "headline": {
+    "size": 64,
+    "tracking_em": -0.02,
+    "tracking_px": -1.28
+  },
+  "sample_tracking": 0,
+  "label_weight": 400,
+  "grid_overlay": false,
+  "sizes": {
+    "form": 120,
+    "text": [
+      44,
+      32,
+      24
+    ],
+    "weight": 160,
+    "detail": 384
+  },
+  "rendering": "DesignBot / Parley / Swash outlines / Vello CPU; hinting enabled; raw PNG",
+  "validation": {
+    "source_files_guarded": 1759,
+    "only_six_scratch_sources_changed": [
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif",
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif",
+      "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif",
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif",
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif",
+      "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif"
+    ],
+    "colors_and_unicode_preserved": true,
+    "metadata": [
+      {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif",
+        "before_width": "574",
+        "after_width": 672,
+        "anchors": [
+          {
+            "name": "hbBottom",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              336,
+              0
+            ]
+          },
+          {
+            "name": "hbCenter",
+            "before": [
+              286,
+              332
+            ],
+            "after": [
+              336,
+              336
+            ]
+          },
+          {
+            "name": "hbHolam",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbRafe",
+            "before": [
+              287,
+              672
+            ],
+            "after": [
+              336,
+              672
+            ]
+          },
+          {
+            "name": "hbMeteg",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              336,
+              0
+            ]
+          },
+          {
+            "name": "hbCantAbove",
+            "before": [
+              288,
+              576
+            ],
+            "after": [
+              336,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveLeft",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveRight",
+            "before": [
+              520,
+              576
+            ],
+            "after": [
+              616,
+              576
+            ]
+          },
+          {
+            "name": "hbCantBelow",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              336,
+              0
+            ]
+          },
+          {
+            "name": "hbCantBelowRight",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              336,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif",
+        "before_width": "630",
+        "after_width": 728,
+        "anchors": [
+          {
+            "name": "hbBottom",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          },
+          {
+            "name": "hbCenter",
+            "before": [
+              332,
+              332
+            ],
+            "after": [
+              384,
+              336
+            ]
+          },
+          {
+            "name": "hbHolam",
+            "before": [
+              14,
+              576
+            ],
+            "after": [
+              16,
+              576
+            ]
+          },
+          {
+            "name": "hbRafe",
+            "before": [
+              294,
+              672
+            ],
+            "after": [
+              344,
+              672
+            ]
+          },
+          {
+            "name": "hbMeteg",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          },
+          {
+            "name": "hbCantAbove",
+            "before": [
+              296,
+              576
+            ],
+            "after": [
+              344,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveLeft",
+            "before": [
+              16,
+              576
+            ],
+            "after": [
+              16,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveRight",
+            "before": [
+              576,
+              576
+            ],
+            "after": [
+              672,
+              576
+            ]
+          },
+          {
+            "name": "hbCantBelow",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          },
+          {
+            "name": "hbCantBelowRight",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif",
+        "before_width": "588",
+        "after_width": 688,
+        "anchors": [
+          {
+            "name": "hbBottom",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          },
+          {
+            "name": "hbCenter",
+            "before": [
+              294,
+              320
+            ],
+            "after": [
+              344,
+              320
+            ]
+          },
+          {
+            "name": "hbHolam",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbRafe",
+            "before": [
+              294,
+              672
+            ],
+            "after": [
+              344,
+              672
+            ]
+          },
+          {
+            "name": "hbMeteg",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          },
+          {
+            "name": "hbCantAbove",
+            "before": [
+              296,
+              576
+            ],
+            "after": [
+              344,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveLeft",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveRight",
+            "before": [
+              528,
+              576
+            ],
+            "after": [
+              624,
+              576
+            ]
+          },
+          {
+            "name": "hbCantBelow",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          },
+          {
+            "name": "hbCantBelowRight",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              344,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif",
+        "before_width": "574",
+        "after_width": 576,
+        "anchors": [
+          {
+            "name": "hbBottom",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              288,
+              0
+            ]
+          },
+          {
+            "name": "hbCenter",
+            "before": [
+              286,
+              332
+            ],
+            "after": [
+              288,
+              336
+            ]
+          },
+          {
+            "name": "hbHolam",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbRafe",
+            "before": [
+              287,
+              672
+            ],
+            "after": [
+              288,
+              672
+            ]
+          },
+          {
+            "name": "hbMeteg",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              288,
+              0
+            ]
+          },
+          {
+            "name": "hbCantAbove",
+            "before": [
+              288,
+              576
+            ],
+            "after": [
+              288,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveLeft",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveRight",
+            "before": [
+              520,
+              576
+            ],
+            "after": [
+              520,
+              576
+            ]
+          },
+          {
+            "name": "hbCantBelow",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              288,
+              0
+            ]
+          },
+          {
+            "name": "hbCantBelowRight",
+            "before": [
+              288,
+              0
+            ],
+            "after": [
+              288,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif",
+        "before_width": "630",
+        "after_width": 632,
+        "anchors": [
+          {
+            "name": "hbBottom",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          },
+          {
+            "name": "hbCenter",
+            "before": [
+              332,
+              332
+            ],
+            "after": [
+              336,
+              336
+            ]
+          },
+          {
+            "name": "hbHolam",
+            "before": [
+              14,
+              576
+            ],
+            "after": [
+              16,
+              576
+            ]
+          },
+          {
+            "name": "hbRafe",
+            "before": [
+              294,
+              672
+            ],
+            "after": [
+              296,
+              672
+            ]
+          },
+          {
+            "name": "hbMeteg",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          },
+          {
+            "name": "hbCantAbove",
+            "before": [
+              296,
+              576
+            ],
+            "after": [
+              296,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveLeft",
+            "before": [
+              16,
+              576
+            ],
+            "after": [
+              16,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveRight",
+            "before": [
+              576,
+              576
+            ],
+            "after": [
+              576,
+              576
+            ]
+          },
+          {
+            "name": "hbCantBelow",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          },
+          {
+            "name": "hbCantBelowRight",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          }
+        ]
+      },
+      {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif",
+        "before_width": "588",
+        "after_width": 592,
+        "anchors": [
+          {
+            "name": "hbBottom",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          },
+          {
+            "name": "hbCenter",
+            "before": [
+              294,
+              320
+            ],
+            "after": [
+              296,
+              320
+            ]
+          },
+          {
+            "name": "hbHolam",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbRafe",
+            "before": [
+              294,
+              672
+            ],
+            "after": [
+              296,
+              672
+            ]
+          },
+          {
+            "name": "hbMeteg",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          },
+          {
+            "name": "hbCantAbove",
+            "before": [
+              296,
+              576
+            ],
+            "after": [
+              296,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveLeft",
+            "before": [
+              56,
+              576
+            ],
+            "after": [
+              56,
+              576
+            ]
+          },
+          {
+            "name": "hbCantAboveRight",
+            "before": [
+              528,
+              576
+            ],
+            "after": [
+              528,
+              576
+            ]
+          },
+          {
+            "name": "hbCantBelow",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          },
+          {
+            "name": "hbCantBelowRight",
+            "before": [
+              294,
+              0
+            ],
+            "after": [
+              296,
+              0
+            ]
+          }
+        ]
+      }
+    ],
+    "compiled_scope": {
+      "400": {
+        "outlines_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ],
+        "advances_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ]
+      },
+      "450": {
+        "outlines_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ],
+        "advances_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ]
+      },
+      "500": {
+        "outlines_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ],
+        "advances_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ]
+      },
+      "550": {
+        "outlines_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ],
+        "advances_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ]
+      },
+      "600": {
+        "outlines_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ],
+        "advances_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ]
+      },
+      "650": {
+        "outlines_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ],
+        "advances_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ]
+      },
+      "700": {
+        "outlines_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ],
+        "advances_changed": [
+          "hehb",
+          "hethb",
+          "tavhb"
+        ]
+      }
+    },
+    "glyph_weight_comparisons": 6048,
+    "mark_collision_checks": {
+      "samples": 294,
+      "collisions": []
+    },
+    "fonts": {
+      "before": {
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/before-fonts/variable/VirtuaGrotesk[wght].ttf",
+        "sha256": "3b3d76a92eb124774f7ae56b2ffcf1352cc73d0da738af7924dea777c310736e"
+      },
+      "candidate": {
+        "path": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/fonts/variable/VirtuaGrotesk[wght].ttf",
+        "sha256": "29190625877d97d75161e27cb4ad523ca51141d5c8cc69a0ed12eace63e76516"
+      }
+    }
+  },
+  "verification_tools": {
+    "fonttools": "4.67.0",
+    "Pillow": "12.2.0"
+  },
+  "status": "Scratch v2; awaiting Eli review; not applied; no grading changes",
+  "source_revision": "47948496d2da13aefea495cf15f5107b46107188",
+  "working_tree": "Dirty; exact input source hashes in candidate-v2-scope.json",
+  "reference_sources": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/n.glif": {
+      "sha256": "a58c9477dc6b6c2470dabd5909e7ab4fd3cdf742b0b82ed490673ae2b3d4da78",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/j.glif": {
+      "sha256": "c99251e69682b5e6fe99e47481cd16fbdcb4a61c7a7496f11f31a5381d2c2659",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/H_.glif": {
+      "sha256": "bcf627603388d23921e31e52e6508746f489817b07ef39843b2d6e8bc14acdbb",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/E_.glif": {
+      "sha256": "89b62ecb7de70f403f1bed27ba196baffbfdb757cbb01605f4308497162ddd29",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif": {
+      "sha256": "2304311fa1e36889d57d3f015e87cc414fafa9123778062b11b1132e76ccaff0",
+      "role": "Applied provisional Hebrew weight"
+    },
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif": {
+      "sha256": "6278f87288426532f6b6d7664fddafe88a99d11425adae74cc9f884417574811",
+      "role": "Applied provisional Hebrew weight"
+    },
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/n.glif": {
+      "sha256": "9981b7d6cc0d1446f74c26378eca34a55f0a0761ba2b7f526e8464c233468f28",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/j.glif": {
+      "sha256": "2c30a78c412ce6f89115803063209c2c0c9e4a24a12f6058b504ef0a3fb9fe3a",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/H_.glif": {
+      "sha256": "cbd23af7102b0c6ba6443e7c9c9d7e5c0b3af26abed0ae6a0446d033f30b0fe8",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/E_.glif": {
+      "sha256": "37364398d2a87fc8460180e3a414be31899e2e1b584398f7cd40325ceed739bf",
+      "role": "Green Latin construction"
+    },
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif": {
+      "sha256": "8cb4a371f20d406cdef1239fab7e6db923eb0acb276bcef5d7b38fb841b7778b",
+      "role": "Applied provisional Hebrew weight"
+    },
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif": {
+      "sha256": "62d3afbc9c60893cb27b62205329fb72751d3e70d61c068cca82827f53c57dd6",
+      "role": "Applied provisional Hebrew weight"
+    }
+  },
+  "reference_provenance": [
+    {
+      "repository": "googlefonts/rubik",
+      "revision": "e337a5f69a9bea30e58d05bd40184d79cc099628",
+      "path": "sources/Rubik.glyphs",
+      "file": "rubik-Rubik.glyphs",
+      "sha256": "f2d79490c358b3466da01c6bbda33cf8781a915a9446e6512db0da7479eb6131",
+      "url": "https://raw.githubusercontent.com/googlefonts/rubik/e337a5f69a9bea30e58d05bd40184d79cc099628/sources/Rubik.glyphs"
+    },
+    {
+      "repository": "googlefonts/rubik",
+      "revision": "e337a5f69a9bea30e58d05bd40184d79cc099628",
+      "path": "fonts/variable/Rubik[wght].ttf",
+      "file": "rubik-Rubik[wght].ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "url": "https://raw.githubusercontent.com/googlefonts/rubik/e337a5f69a9bea30e58d05bd40184d79cc099628/fonts/variable/Rubik%5Bwght%5D.ttf"
+    },
+    {
+      "repository": "googlefonts/rubik",
+      "revision": "e337a5f69a9bea30e58d05bd40184d79cc099628",
+      "path": "OFL.txt",
+      "file": "rubik-OFL.txt",
+      "sha256": "472cbe7c25441df63e9c7864b43eb3c0f4b3df950c66a76224e6cfe1eae843fb",
+      "url": "https://raw.githubusercontent.com/googlefonts/rubik/e337a5f69a9bea30e58d05bd40184d79cc099628/OFL.txt"
+    },
+    {
+      "repository": "notofonts/hebrew",
+      "revision": "3d639736161377dd9acf51441dd17e44daea0da4",
+      "path": "sources/NotoSansHebrew.glyphs",
+      "file": "hebrew-NotoSansHebrew.glyphs",
+      "sha256": "034f4893daa8e15c927fa7d1e9b38e2fa53ea278326ac476c1b7663183448c12",
+      "url": "https://raw.githubusercontent.com/notofonts/hebrew/3d639736161377dd9acf51441dd17e44daea0da4/sources/NotoSansHebrew.glyphs"
+    },
+    {
+      "repository": "notofonts/hebrew",
+      "revision": "3d639736161377dd9acf51441dd17e44daea0da4",
+      "path": "OFL.txt",
+      "file": "hebrew-OFL.txt",
+      "sha256": "e08036dbb38d9e7a033a721e0ca60befde2ed9d1a8075922dbd3429093dd793b",
+      "url": "https://raw.githubusercontent.com/notofonts/hebrew/3d639736161377dd9acf51441dd17e44daea0da4/OFL.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanshebrew/NotoSansHebrew%5Bwdth%2Cwght%5D.ttf",
+      "file": "NotoSansHebrew[wdth,wght].ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+    }
+  ],
+  "generation": {
+    "script": "prepare_candidate.py",
+    "sha256": "98ad6e1fed26ce0fd2b9024d5e85cd3ee185af7b577f4dd50ef30e6b49581299",
+    "note": "Reference hash guard added after generation; geometry unchanged"
+  },
+  "grid": {
+    "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+    "glyph_masters": 6,
+    "passed": true,
+    "results": [
+      {
+        "glyph": "he-hb",
+        "points": 24,
+        "advance": 576.0,
+        "bounds": [
+          56,
+          0,
+          520,
+          576
+        ],
+        "failures": [],
+        "measurements": [
+          {
+            "name": "advance",
+            "value": 576.0,
+            "popcount": 2
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 224.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 96.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 304.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 344.0,
+            "popcount": 4
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "left_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "right_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          }
+        ],
+        "popcount_histogram": {
+          "2": 2,
+          "1": 20,
+          "3": 4,
+          "4": 1
+        },
+        "passed": true,
+        "ufo": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/sources/VirtuaGrotesk-Regular.ufo",
+        "sha256": "cb6aadd521c4bedd85383f016e6e765212020a4fa4e2c9b4626c11a4fb75d3cf"
+      },
+      {
+        "glyph": "het-hb",
+        "points": 20,
+        "advance": 592.0,
+        "bounds": [
+          56,
+          0,
+          536,
+          576
+        ],
+        "failures": [],
+        "measurements": [
+          {
+            "name": "advance",
+            "value": 592.0,
+            "popcount": 3
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 152.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 96.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 304.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 120.0,
+            "popcount": 4
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 80.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "left_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "right_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          }
+        ],
+        "popcount_histogram": {
+          "3": 5,
+          "1": 16,
+          "2": 2,
+          "4": 1
+        },
+        "passed": true,
+        "ufo": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/sources/VirtuaGrotesk-Regular.ufo",
+        "sha256": "789e1e6e4a60725327101f43cf99ec6df15bc9786a6158988f3ab8f229433c9f"
+      },
+      {
+        "glyph": "tav-hb",
+        "points": 32,
+        "advance": 632.0,
+        "bounds": [
+          16,
+          0,
+          576,
+          576
+        ],
+        "failures": [],
+        "measurements": [
+          {
+            "name": "advance",
+            "value": 632.0,
+            "popcount": 5
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 24.0,
+            "popcount": 2
+          },
+          {
+            "name": "handle.x",
+            "value": 96.0,
+            "popcount": 2
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 24.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 96.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 96.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 48.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 168.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 32.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 120.0,
+            "popcount": 4
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "left_sidebearing",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "right_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          }
+        ],
+        "popcount_histogram": {
+          "5": 1,
+          "1": 27,
+          "2": 6,
+          "3": 3,
+          "4": 1
+        },
+        "passed": true,
+        "ufo": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/sources/VirtuaGrotesk-Regular.ufo",
+        "sha256": "6a680ca0212e4274d228470f8f0e34ba32a6e7d5a7f31fea6cc035d675079375"
+      },
+      {
+        "glyph": "he-hb",
+        "points": 24,
+        "advance": 672.0,
+        "bounds": [
+          56,
+          0,
+          616,
+          576
+        ],
+        "failures": [],
+        "measurements": [
+          {
+            "name": "advance",
+            "value": 672.0,
+            "popcount": 3
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 72.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 256.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 80.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 160.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 288.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 48.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 136.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 160.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 272.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "left_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "right_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          }
+        ],
+        "popcount_histogram": {
+          "3": 4,
+          "1": 15,
+          "2": 8
+        },
+        "passed": true,
+        "ufo": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/sources/VirtuaGrotesk-Bold.ufo",
+        "sha256": "6388a85304fae9458ea2beca6434bf1a8f392440d4d2ac4cf803b7ba2df5d6c1"
+      },
+      {
+        "glyph": "het-hb",
+        "points": 20,
+        "advance": 688.0,
+        "bounds": [
+          56,
+          0,
+          632,
+          576
+        ],
+        "failures": [],
+        "measurements": [
+          {
+            "name": "advance",
+            "value": 688.0,
+            "popcount": 4
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 72.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 160.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 88.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 80.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 160.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 288.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 40.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 152.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "left_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "right_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          }
+        ],
+        "popcount_histogram": {
+          "4": 1,
+          "1": 12,
+          "2": 6,
+          "3": 5
+        },
+        "passed": true,
+        "ufo": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/sources/VirtuaGrotesk-Bold.ufo",
+        "sha256": "e276738ada938b56a487084d9b17feb9de3eb2cbcc811bb806b0274e0713c3bd"
+      },
+      {
+        "glyph": "tav-hb",
+        "points": 32,
+        "advance": 728.0,
+        "bounds": [
+          16,
+          0,
+          672,
+          576
+        ],
+        "failures": [],
+        "measurements": [
+          {
+            "name": "advance",
+            "value": 728.0,
+            "popcount": 5
+          },
+          {
+            "name": "handle.y",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 128.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.x",
+            "value": 96.0,
+            "popcount": 2
+          },
+          {
+            "name": "handle.y",
+            "value": 112.0,
+            "popcount": 3
+          },
+          {
+            "name": "handle.x",
+            "value": 64.0,
+            "popcount": 1
+          },
+          {
+            "name": "handle.y",
+            "value": 72.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 48.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 184.0,
+            "popcount": 4
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 80.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 80.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 160.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.x",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 104.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 152.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 56.0,
+            "popcount": 3
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 40.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 8.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 136.0,
+            "popcount": 2
+          },
+          {
+            "name": "adjacent_oncurve_span.y",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "left_sidebearing",
+            "value": 16.0,
+            "popcount": 1
+          },
+          {
+            "name": "right_sidebearing",
+            "value": 56.0,
+            "popcount": 3
+          }
+        ],
+        "popcount_histogram": {
+          "5": 1,
+          "1": 22,
+          "2": 8,
+          "3": 5,
+          "4": 1
+        },
+        "passed": true,
+        "ufo": "/Users/eli/GH/repos/virtua-grotesk/out/qa/2026-10-19/hebrew-002-candidate-v2/sources/VirtuaGrotesk-Bold.ufo",
+        "sha256": "d2c78457546264b28ddea8f59eb3741bee3962ba00c8b885ea64f4e665ab184b"
+      }
+    ]
+  },
+  "qa": {
+    "before": {
+      "SKIP": 8,
+      "PASS": 19,
+      "WARN": 13
+    },
+    "candidate": {
+      "SKIP": 8,
+      "PASS": 19,
+      "WARN": 13
+    },
+    "identical_findings_after_normalizing_input_paths": true,
+    "checks": [
+      "outline*",
+      "overlapping_path_segments",
+      "interpolation_issues"
+    ],
+    "scope": "One VF and four statics; not full release QA"
+  },
+  "fontspector_version": "fontspector 1.9.0\ntag:fontspector-v1.9.0\ncommit_hash:d9d0f7b0\nbuild_time:2026-10-09 13:29:06 +00:00\nbuild_env:rustc 1.99.0 (b940084d7 2026-09-28),stable-aarch64-apple-darwin",
+  "default_layout_regression": {
+    "01-form-light.png": true,
+    "02-text-light.png": true,
+    "02-text-dark.png": true,
+    "03-weight-dark.png": true,
+    "03-weight-light.png": true,
+    "01-form-dark.png": true
+  },
+  "visual_review": {
+    "inspected": "All 14 final PNGs in both polarities, including 384 px/em details and marks; source curve lint clean in both masters.",
+    "assessment": "Shared shoulder and chamfer treatment is coherent; detached he leg remains clear, tav has a deliberate foot, Bold no longer duplicates Regular. Weight and spacing remain provisional.",
+    "limitations": "Precomposed hedagesh-hb and tavdagesh-hb remain unchanged standalone outlines; no native-reader approval or full release-QA claim."
+  },
+  "retained_outputs": [
+    {
+      "path": "candidate-v2-01-form-light.png",
+      "sha256": "d829f4073b066da02010e7992df4572be0c49695a4e4b0bbcd2a127f6009d5dd"
+    },
+    {
+      "path": "candidate-v2-02-text-light.png",
+      "sha256": "16ecc9a1ad2f8a37ff92e4e6a7fe24d7fb6afb8f0b73dfaa8c4bd3e5325f560d"
+    },
+    {
+      "path": "candidate-v2-03-weight-light.png",
+      "sha256": "e6d7aeac1af8ba9311e62a9fe3b17b925ce1a1e121ba6392e33906f6a1063e8a"
+    },
+    {
+      "path": "candidate-v2-04-detail-he-light.png",
+      "sha256": "7035e5aa6756ea0b4c2757f9065881c451884bcbbe0b8147ab6d1ae424f52734"
+    },
+    {
+      "path": "candidate-v2-05-detail-het-light.png",
+      "sha256": "9949d6bfc24086ccbbf2ae4646bc811dc66fe0326d51e3797f81a8e3752ab284"
+    },
+    {
+      "path": "candidate-v2-06-detail-tav-light.png",
+      "sha256": "7fad9b711a24716cc13e8276fc82f941612565f5a1251e7714563432d43f5fa3"
+    },
+    {
+      "path": "candidate-v2-07-marks-light.png",
+      "sha256": "cfb549223fe54bc736a6ced11a7fb848e7a560ad1c61a3f3fd441206fd3e4124"
+    },
+    {
+      "path": "candidate-v2-01-form-dark.png",
+      "sha256": "ffd81f86be0e7fd81aab2c0dcefd692d1aa71e08c23f8620880b12ba84266502"
+    },
+    {
+      "path": "candidate-v2-02-text-dark.png",
+      "sha256": "ae39cfdeddb6ed153b67c8b4d1735fd5fd6c835ae9f8ef6c10904b13baafd4de"
+    },
+    {
+      "path": "candidate-v2-03-weight-dark.png",
+      "sha256": "bce40697bba96983bbe1568e22248eecc28b28e23cec783003dde9a8dd79edcc"
+    },
+    {
+      "path": "candidate-v2-04-detail-he-dark.png",
+      "sha256": "9367aef783f72a9834578bce89dae70713dad801d01aef2858612ee7420eadd8"
+    },
+    {
+      "path": "candidate-v2-05-detail-het-dark.png",
+      "sha256": "e1809cb6508a2f54313a593ad0eeaabd2ace619a7c8bcae84300c595d09abeac"
+    },
+    {
+      "path": "candidate-v2-06-detail-tav-dark.png",
+      "sha256": "26a51eb676af370fdd88ac6af67882b1a9966e7f625a5934873b53bf291c5696"
+    },
+    {
+      "path": "candidate-v2-07-marks-dark.png",
+      "sha256": "d79c20aac7972ab30420a2a94b12db2bbdd03d316b6911db57463478ec167264"
+    }
+  ],
+  "source_snapshots": [
+    {
+      "path": "candidate-v2-sources/Regular/he-hb.before.glif",
+      "sha256": "fbe5a38d22f13882f3d557a777aff801f4ae33f356162dd241a099f154aa20b1",
+      "active_relative_path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif",
+      "state": "before"
+    },
+    {
+      "path": "candidate-v2-sources/Regular/he-hb.candidate.glif",
+      "sha256": "cb6aadd521c4bedd85383f016e6e765212020a4fa4e2c9b4626c11a4fb75d3cf",
+      "active_relative_path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif",
+      "state": "candidate"
+    },
+    {
+      "path": "candidate-v2-sources/Regular/het-hb.before.glif",
+      "sha256": "e16dfc9897b14ad11b4d8375c21a5d42a8e02083e921f6e0fdadaa5cdd13ad54",
+      "active_relative_path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif",
+      "state": "before"
+    },
+    {
+      "path": "candidate-v2-sources/Regular/het-hb.candidate.glif",
+      "sha256": "789e1e6e4a60725327101f43cf99ec6df15bc9786a6158988f3ab8f229433c9f",
+      "active_relative_path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif",
+      "state": "candidate"
+    },
+    {
+      "path": "candidate-v2-sources/Regular/tav-hb.before.glif",
+      "sha256": "56080a9cbcd13ed85996b6714285b6fcd8f5a2118a7c49061dc3a7e6fd1baf86",
+      "active_relative_path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif",
+      "state": "before"
+    },
+    {
+      "path": "candidate-v2-sources/Regular/tav-hb.candidate.glif",
+      "sha256": "6a680ca0212e4274d228470f8f0e34ba32a6e7d5a7f31fea6cc035d675079375",
+      "active_relative_path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif",
+      "state": "candidate"
+    },
+    {
+      "path": "candidate-v2-sources/Bold/he-hb.before.glif",
+      "sha256": "f9add636322198b358dbeef7ae656fe033e780fd1ac4c2e3da5448090b6e2b50",
+      "active_relative_path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif",
+      "state": "before"
+    },
+    {
+      "path": "candidate-v2-sources/Bold/he-hb.candidate.glif",
+      "sha256": "6388a85304fae9458ea2beca6434bf1a8f392440d4d2ac4cf803b7ba2df5d6c1",
+      "active_relative_path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif",
+      "state": "candidate"
+    },
+    {
+      "path": "candidate-v2-sources/Bold/het-hb.before.glif",
+      "sha256": "b93c4352f6746cd8bfeef0139ec0a1b5fae6e58351dc1585e846be79b83f5b16",
+      "active_relative_path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif",
+      "state": "before"
+    },
+    {
+      "path": "candidate-v2-sources/Bold/het-hb.candidate.glif",
+      "sha256": "e276738ada938b56a487084d9b17feb9de3eb2cbcc811bb806b0274e0713c3bd",
+      "active_relative_path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif",
+      "state": "candidate"
+    },
+    {
+      "path": "candidate-v2-sources/Bold/tav-hb.before.glif",
+      "sha256": "3739bb422369e00ea717ec2c35ce856f0133873da2261341c0c97db174f6a77a",
+      "active_relative_path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif",
+      "state": "before"
+    },
+    {
+      "path": "candidate-v2-sources/Bold/tav-hb.candidate.glif",
+      "sha256": "d2c78457546264b28ddea8f59eb3741bee3962ba00c8b885ea64f4e665ab184b",
+      "active_relative_path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif",
+      "state": "candidate"
+    }
+  ],
+  "layout_grid_review": {
+    "path": "candidate-v2-layout-grid.png",
+    "sha256": "6af18af1b80e4835e2508df1cedce55a95c3907d71ed419c28ebfa5d22900d96",
+    "inspected": true
+  }
+}

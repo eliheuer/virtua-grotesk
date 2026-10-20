@@ -1,0 +1,86 @@
+{
+  "fitWithReferences": {
+    "panels": [
+      {
+        "baseline": "185.39801025390625",
+        "role": "before",
+        "scroll": 177,
+        "size": "272px",
+        "viewport": 177,
+        "width": 170.7161407470703
+      },
+      {
+        "baseline": "185.39801025390625",
+        "role": "after",
+        "scroll": 177,
+        "size": "272px",
+        "viewport": 177,
+        "width": 170.72265625
+      },
+      {
+        "baseline": "185.39801025390625",
+        "role": "rubik",
+        "scroll": 177,
+        "size": "272px",
+        "viewport": 177,
+        "width": 170.72265625
+      },
+      {
+        "baseline": "185.39801025390625",
+        "role": "noto",
+        "scroll": 177,
+        "size": "272px",
+        "viewport": 177,
+        "width": 170.72265625
+      }
+    ],
+    "size": "272"
+  },
+  "fitWithoutReferences": {
+    "panels": [
+      {
+        "baseline": "382.875",
+        "scroll": 365,
+        "size": "638px",
+        "viewport": 365
+      },
+      {
+        "baseline": "382.875",
+        "scroll": 365,
+        "size": "638px",
+        "viewport": 365
+      }
+    ],
+    "size": "638"
+  },
+  "fixedSizeCheck": {
+    "rendered": [
+      "128px",
+      "128px"
+    ],
+    "setting": "128"
+  },
+  "toggleAfterSize": "272",
+  "toggleBeforeSize": "272",
+  "marksFitCheck": {
+    "panels": [
+      {
+        "scroll": 177,
+        "width": 177
+      },
+      {
+        "scroll": 177,
+        "width": 177
+      },
+      {
+        "scroll": 177,
+        "width": 177
+      },
+      {
+        "scroll": 177,
+        "width": 177
+      }
+    ],
+    "size": "32"
+  }
+}
