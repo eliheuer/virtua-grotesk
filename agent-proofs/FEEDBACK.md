@@ -243,3 +243,8 @@ mean final visual approval, green grading, or release readiness. Preserve manual
 corrections and unrelated edits. Keep recording exact correction pairs and
 promote measured lessons into DESIGN.md and the shared skills.
 
+HEB-007 working batch (2026-10-20): Gimel, Lamed and Qof are written to both
+active masters under standing authorization. The first rendered pass caught
+a Bold Qof stroke collision and an uneven Bold Gimel foot; v2 corrects these.
+This is agent verification, not a new human-approved rule. See the case for
+exact source snapshots and remaining reader/marked-form review.

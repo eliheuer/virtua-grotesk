@@ -67,16 +67,16 @@ promote measured lessons into DESIGN.md and the shared skills.
 
 ## Current handoff — 2026-10-20
 
-Current case: [HEB-006 — Yod, Vav, Zayin, Nun and Final Nun](cases/hebrew-006/README.md).
-Eli’s manual Regular and Bold Zayin corrections are now saved in the active
-sources and preserved as exact examples in HEB-006. Correction 02 replaces v3’s
-tall Bold right junction with a compact square turn and equal tangent handles.
-Both live outlines have matching 21-point topology. Preserve these drawings.
-The localhost proof still shows frozen candidate v3, before the latest Bold edit.
-The [manual correction library](FEEDBACK.md#manual-correction-library) indexes
-both edits and records the unsuccessful aspect of the Regular-to-Bold transfer.
-Eli accepted the saved HEB-006 drawings for committing and moving on.
-The final saved pair passed the root build/proof/reports preflight on 2026-10-20.
+Current case: [HEB-007 — Gimel, Lamed and Qof](cases/hebrew-007/README.md).
+Working v2 is in both active masters and shown at localhost:60272 beside the
+frozen pre-batch font, Rubik and Noto. Build, grid, curve, compatibility and Hebrew
+checks pass; the browser was inspected at 400, 550 and 700 and in running text.
+These are working drawings, not green grades or release approval.
+
+HEB-006, including Eli's exact manual Regular and Bold Zayin corrections, was
+committed as `4a2fb2b`. Preserve those drawings. The manual correction library
+indexes both edits, including the rejected tall Bold transition. Next: Tet and
+Ayin, then Alef/Tsadi/Final Tsadi/Shin, followed by marks and script QA.
 
 HEB-001 through HEB-005 are approved and applied: Dalet/Resh, He/Het/Tav,
 Bet/Kaf/Final Kaf, Pe/Final Pe, and Mem/Final Mem/Samekh (13 of 27 base letters/final forms in this
@@ -97,7 +97,7 @@ Remaining review sequence (adapt grouping to feedback):
 | --- | --- |
 | מ ם ס — Mem, Final Mem, Samekh | HEB-005 v5 approved and applied; v4 redesign rejected |
 | י ו ז נ ן — Yod, Vav, Zayin, Nun, Final Nun | HEB-006 accepted for continuation, including both manual Zayin corrections |
-| ג ל ק — Gimel, Lamed, Qof | Feet, ascender/descender and spacing |
+| ג ל ק — Gimel, Lamed, Qof | HEB-007 working v2 active in both masters; proof ready |
 | ט ע — Tet, Ayin | Interior construction and joins |
 | א צ ץ ש — Alef, Tsadi, Final Tsadi, Shin | Diagonal and multi-stroke forms; split into smaller trials as needed |
 
@@ -146,14 +146,14 @@ current machine. Relative links keep the guide usable in another checkout.
 | Session entry, source permissions, agent behavior | [AGENTS.md](../AGENTS.md) |
 | Drawing rules and unresolved design contracts | [DESIGN.md](../DESIGN.md) |
 | Confirmed user preferences and case index | [Design review and feedback](FEEDBACK.md) |
-| Current inspection and proposal | [HEB-005](cases/hebrew-005/README.md); prior application in [HEB-004](cases/hebrew-004/README.md) |
+| Current inspection and proposal | [HEB-007](cases/hebrew-007/README.md); prior manual corrections in [HEB-006](cases/hebrew-006/README.md) |
 | Latin measurements and OPEN human decisions | [Design worklog](../documentation/design-pass-worklog.md) |
 | UI implementation, spacing contract, recovery instructions | [Web-proof guide](app/README.md) |
 | Editable web UI | `agent-proofs/app/index.html`, `review.css`, `review.js` |
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/hebrew-006/candidate-v3/` |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/hebrew-007/working-v2/` |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

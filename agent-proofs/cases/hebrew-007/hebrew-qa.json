@@ -1,0 +1,3865 @@
+{
+  "font": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+  "sha256": "93c5958477bf4aef0baa5c11c775295d2ea43c486c0b23433b927b31cd917369",
+  "gpos_scripts": [
+    "DFLT",
+    "arab",
+    "hebr",
+    "latn"
+  ],
+  "hebrew_features": [
+    "mark",
+    "mkmk"
+  ],
+  "glyphs": [
+    {
+      "codepoint": "U+0591",
+      "name": "uni0591",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0592",
+      "name": "uni0592",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0593",
+      "name": "uni0593",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0594",
+      "name": "uni0594",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0595",
+      "name": "uni0595",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0596",
+      "name": "uni0596",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0597",
+      "name": "uni0597",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0598",
+      "name": "uni0598",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+0599",
+      "name": "uni0599",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+059A",
+      "name": "uni059A",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+059B",
+      "name": "uni059B",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+059C",
+      "name": "uni059C",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+059D",
+      "name": "uni059D",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+059E",
+      "name": "uni059E",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+059F",
+      "name": "uni059F",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A0",
+      "name": "uni05A0",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A1",
+      "name": "uni05A1",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A2",
+      "name": "uni05A2",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A3",
+      "name": "uni05A3",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A4",
+      "name": "uni05A4",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A5",
+      "name": "uni05A5",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A6",
+      "name": "uni05A6",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A7",
+      "name": "uni05A7",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A8",
+      "name": "uni05A8",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05A9",
+      "name": "uni05A9",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05AA",
+      "name": "uni05AA",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05AB",
+      "name": "uni05AB",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05AC",
+      "name": "uni05AC",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05AD",
+      "name": "uni05AD",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05AE",
+      "name": "uni05AE",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05AF",
+      "name": "uni05AF",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B0",
+      "name": "shevahb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B1",
+      "name": "hatafsegolhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B2",
+      "name": "hatafpatahhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B3",
+      "name": "hatafqamatshb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B4",
+      "name": "hiriqhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B5",
+      "name": "tserehb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B6",
+      "name": "segolhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B7",
+      "name": "patahhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B8",
+      "name": "qamatshb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05B9",
+      "name": "holamhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05BA",
+      "name": "holamhaserhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05BB",
+      "name": "qubutshb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05BC",
+      "name": "dageshhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05BD",
+      "name": "uni05BD",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05BE",
+      "name": "maqafhb",
+      "ink": true,
+      "advance": 380,
+      "mark": false,
+      "gdef_class": null
+    },
+    {
+      "codepoint": "U+05BF",
+      "name": "uni05BF",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05C0",
+      "name": "uni05C0",
+      "ink": true,
+      "advance": 224,
+      "mark": false,
+      "gdef_class": null
+    },
+    {
+      "codepoint": "U+05C1",
+      "name": "shindothb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05C2",
+      "name": "sindothb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05C3",
+      "name": "uni05C3",
+      "ink": true,
+      "advance": 240,
+      "mark": false,
+      "gdef_class": null
+    },
+    {
+      "codepoint": "U+05C4",
+      "name": "uni05C4",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05C5",
+      "name": "uni05C5",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05C6",
+      "name": "uni05C6",
+      "ink": true,
+      "advance": 392,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05C7",
+      "name": "qamatsqatanhb",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+05D0",
+      "name": "alefhb",
+      "ink": true,
+      "advance": 588,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D1",
+      "name": "bethb",
+      "ink": true,
+      "advance": 544,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D2",
+      "name": "gimelhb",
+      "ink": true,
+      "advance": 392,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D3",
+      "name": "dalethb",
+      "ink": true,
+      "advance": 568,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D4",
+      "name": "hehb",
+      "ink": true,
+      "advance": 576,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D5",
+      "name": "vavhb",
+      "ink": true,
+      "advance": 240,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D6",
+      "name": "zayinhb",
+      "ink": true,
+      "advance": 304,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D7",
+      "name": "hethb",
+      "ink": true,
+      "advance": 592,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D8",
+      "name": "tethb",
+      "ink": true,
+      "advance": 588,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05D9",
+      "name": "yodhb",
+      "ink": true,
+      "advance": 240,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05DA",
+      "name": "finalkafhb",
+      "ink": true,
+      "advance": 496,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05DB",
+      "name": "kafhb",
+      "ink": true,
+      "advance": 480,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05DC",
+      "name": "lamedhb",
+      "ink": true,
+      "advance": 496,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05DD",
+      "name": "finalmemhb",
+      "ink": true,
+      "advance": 600,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05DE",
+      "name": "memhb",
+      "ink": true,
+      "advance": 608,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05DF",
+      "name": "finalnunhb",
+      "ink": true,
+      "advance": 240,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E0",
+      "name": "nunhb",
+      "ink": true,
+      "advance": 336,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E1",
+      "name": "samekhhb",
+      "ink": true,
+      "advance": 640,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E2",
+      "name": "ayinhb",
+      "ink": true,
+      "advance": 522,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E3",
+      "name": "finalpehb",
+      "ink": true,
+      "advance": 608,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E4",
+      "name": "pehb",
+      "ink": true,
+      "advance": 600,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E5",
+      "name": "finaltsadihb",
+      "ink": true,
+      "advance": 484,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E6",
+      "name": "tsadihb",
+      "ink": true,
+      "advance": 506,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E7",
+      "name": "qofhb",
+      "ink": true,
+      "advance": 496,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E8",
+      "name": "reshhb",
+      "ink": true,
+      "advance": 568,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05E9",
+      "name": "shinhb",
+      "ink": true,
+      "advance": 664,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05EA",
+      "name": "tavhb",
+      "ink": true,
+      "advance": 632,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05EF",
+      "name": "yodtrianglehb",
+      "ink": true,
+      "advance": 576,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05F0",
+      "name": "vavvavhb",
+      "ink": true,
+      "advance": 480,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05F1",
+      "name": "vavyodhb",
+      "ink": true,
+      "advance": 480,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05F2",
+      "name": "yodyodhb",
+      "ink": true,
+      "advance": 438,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+05F3",
+      "name": "gereshhb",
+      "ink": true,
+      "advance": 200,
+      "mark": false,
+      "gdef_class": null
+    },
+    {
+      "codepoint": "U+05F4",
+      "name": "gershayimhb",
+      "ink": true,
+      "advance": 410,
+      "mark": false,
+      "gdef_class": null
+    },
+    {
+      "codepoint": "U+20AA",
+      "name": "sheqel",
+      "ink": true,
+      "advance": 760,
+      "mark": false,
+      "gdef_class": null
+    },
+    {
+      "codepoint": "U+FB1D",
+      "name": "uniFB1D",
+      "ink": true,
+      "advance": 240,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB1E",
+      "name": "uniFB1E",
+      "ink": true,
+      "advance": 0,
+      "mark": true,
+      "gdef_class": 3
+    },
+    {
+      "codepoint": "U+FB1F",
+      "name": "uniFB1F",
+      "ink": true,
+      "advance": 438,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB20",
+      "name": "uniFB20",
+      "ink": true,
+      "advance": 522,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB21",
+      "name": "uniFB21",
+      "ink": true,
+      "advance": 844,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB22",
+      "name": "uniFB22",
+      "ink": true,
+      "advance": 824,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB23",
+      "name": "uniFB23",
+      "ink": true,
+      "advance": 830,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB24",
+      "name": "uniFB24",
+      "ink": true,
+      "advance": 716,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB25",
+      "name": "uniFB25",
+      "ink": true,
+      "advance": 752,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB26",
+      "name": "uniFB26",
+      "ink": true,
+      "advance": 862,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB27",
+      "name": "uniFB27",
+      "ink": true,
+      "advance": 824,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB28",
+      "name": "uniFB28",
+      "ink": true,
+      "advance": 886,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB29",
+      "name": "uniFB29",
+      "ink": true,
+      "advance": 608,
+      "mark": false,
+      "gdef_class": null
+    },
+    {
+      "codepoint": "U+FB2A",
+      "name": "shinshindothb",
+      "ink": true,
+      "advance": 664,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB2B",
+      "name": "shinsindothb",
+      "ink": true,
+      "advance": 664,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB2C",
+      "name": "shindageshshindothb",
+      "ink": true,
+      "advance": 680,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB2D",
+      "name": "shindageshsindothb",
+      "ink": true,
+      "advance": 664,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB2E",
+      "name": "alefpatahhb",
+      "ink": true,
+      "advance": 588,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB2F",
+      "name": "alefqamatshb",
+      "ink": true,
+      "advance": 588,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB30",
+      "name": "alefdageshhb",
+      "ink": true,
+      "advance": 588,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB31",
+      "name": "betdageshhb",
+      "ink": true,
+      "advance": 532,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB32",
+      "name": "gimeldageshhb",
+      "ink": true,
+      "advance": 380,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB33",
+      "name": "daletdageshhb",
+      "ink": true,
+      "advance": 516,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB34",
+      "name": "hedageshhb",
+      "ink": true,
+      "advance": 574,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB35",
+      "name": "vavdageshhb",
+      "ink": true,
+      "advance": 288,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB36",
+      "name": "zayindageshhb",
+      "ink": true,
+      "advance": 368,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB38",
+      "name": "tetdageshhb",
+      "ink": true,
+      "advance": 588,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB39",
+      "name": "yoddageshhb",
+      "ink": true,
+      "advance": 288,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB3A",
+      "name": "finalkafdageshhb",
+      "ink": true,
+      "advance": 490,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB3B",
+      "name": "kafdageshhb",
+      "ink": true,
+      "advance": 460,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB3C",
+      "name": "lameddageshhb",
+      "ink": true,
+      "advance": 496,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB3E",
+      "name": "memdageshhb",
+      "ink": true,
+      "advance": 628,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB40",
+      "name": "nundageshhb",
+      "ink": true,
+      "advance": 334,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB41",
+      "name": "samekhdageshhb",
+      "ink": true,
+      "advance": 602,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB43",
+      "name": "finalpedageshhb",
+      "ink": true,
+      "advance": 548,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB44",
+      "name": "pedageshhb",
+      "ink": true,
+      "advance": 556,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB46",
+      "name": "tsadidageshhb",
+      "ink": true,
+      "advance": 506,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB47",
+      "name": "qofdageshhb",
+      "ink": true,
+      "advance": 486,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB48",
+      "name": "reshdageshhb",
+      "ink": true,
+      "advance": 490,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB49",
+      "name": "shindageshhb",
+      "ink": true,
+      "advance": 664,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB4A",
+      "name": "tavdageshhb",
+      "ink": true,
+      "advance": 630,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB4B",
+      "name": "vavholamhb",
+      "ink": true,
+      "advance": 198,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB4C",
+      "name": "uniFB4C",
+      "ink": true,
+      "advance": 532,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB4D",
+      "name": "uniFB4D",
+      "ink": true,
+      "advance": 460,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB4E",
+      "name": "uniFB4E",
+      "ink": true,
+      "advance": 556,
+      "mark": false,
+      "gdef_class": 1
+    },
+    {
+      "codepoint": "U+FB4F",
+      "name": "uniFB4F",
+      "ink": true,
+      "advance": 672,
+      "mark": false,
+      "gdef_class": 1
+    }
+  ],
+  "shaping": {
+    "400": {
+      "letters": [
+        {
+          "glyph": "finaltsadihb",
+          "cluster": 27,
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalpehb",
+          "cluster": 26,
+          "advance": 608,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalnunhb",
+          "cluster": 25,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 24,
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 23,
+          "advance": 496,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 22,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tavhb",
+          "cluster": 21,
+          "advance": 632,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 20,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 19,
+          "advance": 568,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qofhb",
+          "cluster": 18,
+          "advance": 496,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tsadihb",
+          "cluster": 17,
+          "advance": 506,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "pehb",
+          "cluster": 16,
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "ayinhb",
+          "cluster": 15,
+          "advance": 522,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "samekhhb",
+          "cluster": 14,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "nunhb",
+          "cluster": 13,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "memhb",
+          "cluster": 12,
+          "advance": 608,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "lamedhb",
+          "cluster": 11,
+          "advance": 496,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "kafhb",
+          "cluster": 10,
+          "advance": 480,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 9,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tethb",
+          "cluster": 8,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hethb",
+          "cluster": 7,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "zayinhb",
+          "cluster": 6,
+          "advance": 304,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 5,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hehb",
+          "cluster": 4,
+          "advance": 576,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "dalethb",
+          "cluster": 3,
+          "advance": 568,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "gimelhb",
+          "cluster": 2,
+          "advance": 392,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 1,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "alefhb",
+          "cluster": 0,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "vowels": [
+        {
+          "glyph": "dageshhb",
+          "cluster": 32,
+          "advance": 0,
+          "x": 130,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 32,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 31,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 28,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "sindothb",
+          "cluster": 28,
+          "advance": 0,
+          "x": -6,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 28,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 27,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 24,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 24,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 24,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 23,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 21,
+          "advance": 0,
+          "x": 212,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 21,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 20,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qubutshb",
+          "cluster": 18,
+          "advance": 0,
+          "x": 136,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 18,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 17,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "holamhb",
+          "cluster": 15,
+          "advance": 0,
+          "x": -52,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 15,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 14,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 196,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 12,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 11,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tserehb",
+          "cluster": 9,
+          "advance": 0,
+          "x": 140,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 9,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 8,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "segolhb",
+          "cluster": 6,
+          "advance": 0,
+          "x": 158,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 6,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 5,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 3,
+          "advance": 0,
+          "x": 156,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 3,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 2,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "patahhb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 152,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 0,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "words": [
+        {
+          "glyph": "tavhb",
+          "cluster": 27,
+          "advance": 632,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 26,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 23,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 23,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 23,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "alefhb",
+          "cluster": 22,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tserehb",
+          "cluster": 20,
+          "advance": 0,
+          "x": 160,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 20,
+          "advance": 568,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 17,
+          "advance": 0,
+          "x": 212,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 17,
+          "advance": 0,
+          "x": 130,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 17,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 16,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tavhb",
+          "cluster": 15,
+          "advance": 632,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 14,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 216,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 12,
+          "advance": 568,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 10,
+          "advance": 0,
+          "x": 212,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 10,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 192,
+          "y": 0
+        },
+        {
+          "glyph": "ayinhb",
+          "cluster": 8,
+          "advance": 522,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 7,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 6,
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "holamhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 52,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 4,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "lamedhb",
+          "cluster": 3,
+          "advance": 496,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 0,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "finals": [
+        {
+          "glyph": "hiriqhb",
+          "cluster": 15,
+          "advance": 0,
+          "x": 174,
+          "y": -182
+        },
+        {
+          "glyph": "finaltsadihb",
+          "cluster": 15,
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 14,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 228,
+          "y": -184
+        },
+        {
+          "glyph": "finalpehb",
+          "cluster": 12,
+          "advance": 608,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 11,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 9,
+          "advance": 0,
+          "x": 52,
+          "y": -128
+        },
+        {
+          "glyph": "finalnunhb",
+          "cluster": 9,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 8,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 6,
+          "advance": 0,
+          "x": 236,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 6,
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 5,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 3,
+          "advance": 0,
+          "x": 156,
+          "y": 240
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 3,
+          "advance": 496,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 2,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 100,
+          "y": 240
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 0,
+          "advance": 496,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "stacked": [
+        {
+          "glyph": "holamhb",
+          "cluster": 21,
+          "advance": 0,
+          "x": 52,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 21,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 20,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 18,
+          "advance": 0,
+          "x": -70,
+          "y": -12
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 18,
+          "advance": 240,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 17,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 13,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 13,
+          "advance": 0,
+          "x": 366,
+          "y": -32
+        },
+        {
+          "glyph": "sindothb",
+          "cluster": 13,
+          "advance": 0,
+          "x": -6,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 13,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 12,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 366,
+          "y": -32
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 8,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 7,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 196,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 130,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 4,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 3,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 212,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 130,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 0,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    "550": {
+      "letters": [
+        {
+          "glyph": "finaltsadihb",
+          "cluster": 27,
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalpehb",
+          "cluster": 26,
+          "advance": 704,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalnunhb",
+          "cluster": 25,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 24,
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 23,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 22,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tavhb",
+          "cluster": 21,
+          "advance": 680,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 20,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 19,
+          "advance": 596,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qofhb",
+          "cluster": 18,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tsadihb",
+          "cluster": 17,
+          "advance": 506,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "pehb",
+          "cluster": 16,
+          "advance": 696,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "ayinhb",
+          "cluster": 15,
+          "advance": 522,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "samekhhb",
+          "cluster": 14,
+          "advance": 672,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "nunhb",
+          "cluster": 13,
+          "advance": 384,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "memhb",
+          "cluster": 12,
+          "advance": 656,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "lamedhb",
+          "cluster": 11,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "kafhb",
+          "cluster": 10,
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 9,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tethb",
+          "cluster": 8,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hethb",
+          "cluster": 7,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "zayinhb",
+          "cluster": 6,
+          "advance": 368,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 5,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hehb",
+          "cluster": 4,
+          "advance": 624,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "dalethb",
+          "cluster": 3,
+          "advance": 596,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "gimelhb",
+          "cluster": 2,
+          "advance": 440,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 1,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "alefhb",
+          "cluster": 0,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "vowels": [
+        {
+          "glyph": "dageshhb",
+          "cluster": 32,
+          "advance": 0,
+          "x": 154,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 32,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 31,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 28,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "sindothb",
+          "cluster": 28,
+          "advance": 0,
+          "x": -6,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 28,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 27,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 24,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 24,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 24,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 23,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 21,
+          "advance": 0,
+          "x": 236,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 21,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 20,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qubutshb",
+          "cluster": 18,
+          "advance": 0,
+          "x": 160,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 18,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 17,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "holamhb",
+          "cluster": 15,
+          "advance": 0,
+          "x": -52,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 15,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 14,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 220,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 12,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 11,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tserehb",
+          "cluster": 9,
+          "advance": 0,
+          "x": 164,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 9,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 8,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "segolhb",
+          "cluster": 6,
+          "advance": 0,
+          "x": 182,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 6,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 5,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 3,
+          "advance": 0,
+          "x": 180,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 3,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 2,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "patahhb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 176,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 0,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "words": [
+        {
+          "glyph": "tavhb",
+          "cluster": 27,
+          "advance": 680,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 26,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 23,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 23,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 23,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "alefhb",
+          "cluster": 22,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tserehb",
+          "cluster": 20,
+          "advance": 0,
+          "x": 170,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 20,
+          "advance": 596,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 17,
+          "advance": 0,
+          "x": 236,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 17,
+          "advance": 0,
+          "x": 154,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 17,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 16,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tavhb",
+          "cluster": 15,
+          "advance": 680,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 14,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 226,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 12,
+          "advance": 596,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 10,
+          "advance": 0,
+          "x": 236,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 10,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 192,
+          "y": 0
+        },
+        {
+          "glyph": "ayinhb",
+          "cluster": 8,
+          "advance": 522,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 7,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 6,
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "holamhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 76,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 4,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "lamedhb",
+          "cluster": 3,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 0,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "finals": [
+        {
+          "glyph": "hiriqhb",
+          "cluster": 15,
+          "advance": 0,
+          "x": 174,
+          "y": -182
+        },
+        {
+          "glyph": "finaltsadihb",
+          "cluster": 15,
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 14,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 280,
+          "y": -184
+        },
+        {
+          "glyph": "finalpehb",
+          "cluster": 12,
+          "advance": 704,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 11,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 9,
+          "advance": 0,
+          "x": 76,
+          "y": -128
+        },
+        {
+          "glyph": "finalnunhb",
+          "cluster": 9,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 8,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 6,
+          "advance": 0,
+          "x": 260,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 6,
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 5,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 3,
+          "advance": 0,
+          "x": 156,
+          "y": 240
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 3,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 2,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 100,
+          "y": 240
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 0,
+          "advance": 544,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "stacked": [
+        {
+          "glyph": "holamhb",
+          "cluster": 21,
+          "advance": 0,
+          "x": 76,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 21,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 20,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 18,
+          "advance": 0,
+          "x": -70,
+          "y": -12
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 18,
+          "advance": 288,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 17,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 13,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 13,
+          "advance": 0,
+          "x": 366,
+          "y": -32
+        },
+        {
+          "glyph": "sindothb",
+          "cluster": 13,
+          "advance": 0,
+          "x": -6,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 13,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 12,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 366,
+          "y": -32
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 8,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 7,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 220,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 154,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 4,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 3,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 236,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 154,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 0,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    "700": {
+      "letters": [
+        {
+          "glyph": "finaltsadihb",
+          "cluster": 27,
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalpehb",
+          "cluster": 26,
+          "advance": 800,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalnunhb",
+          "cluster": 25,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 24,
+          "advance": 696,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 23,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 22,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tavhb",
+          "cluster": 21,
+          "advance": 728,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 20,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 19,
+          "advance": 624,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qofhb",
+          "cluster": 18,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tsadihb",
+          "cluster": 17,
+          "advance": 506,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "pehb",
+          "cluster": 16,
+          "advance": 792,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "ayinhb",
+          "cluster": 15,
+          "advance": 522,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "samekhhb",
+          "cluster": 14,
+          "advance": 704,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "nunhb",
+          "cluster": 13,
+          "advance": 432,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "memhb",
+          "cluster": 12,
+          "advance": 704,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "lamedhb",
+          "cluster": 11,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "kafhb",
+          "cluster": 10,
+          "advance": 576,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 9,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tethb",
+          "cluster": 8,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hethb",
+          "cluster": 7,
+          "advance": 688,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "zayinhb",
+          "cluster": 6,
+          "advance": 432,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 5,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hehb",
+          "cluster": 4,
+          "advance": 672,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "dalethb",
+          "cluster": 3,
+          "advance": 624,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "gimelhb",
+          "cluster": 2,
+          "advance": 488,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 1,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "alefhb",
+          "cluster": 0,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "vowels": [
+        {
+          "glyph": "dageshhb",
+          "cluster": 32,
+          "advance": 0,
+          "x": 178,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 32,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 31,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 28,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "sindothb",
+          "cluster": 28,
+          "advance": 0,
+          "x": -6,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 28,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 27,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 24,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 24,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 24,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 23,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 21,
+          "advance": 0,
+          "x": 260,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 21,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 20,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qubutshb",
+          "cluster": 18,
+          "advance": 0,
+          "x": 184,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 18,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 17,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "holamhb",
+          "cluster": 15,
+          "advance": 0,
+          "x": -52,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 15,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 14,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 244,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 12,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 11,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tserehb",
+          "cluster": 9,
+          "advance": 0,
+          "x": 188,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 9,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 8,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "segolhb",
+          "cluster": 6,
+          "advance": 0,
+          "x": 206,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 6,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 5,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 3,
+          "advance": 0,
+          "x": 204,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 3,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 2,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "patahhb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 200,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 0,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "words": [
+        {
+          "glyph": "tavhb",
+          "cluster": 27,
+          "advance": 728,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 26,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 23,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 23,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 23,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "alefhb",
+          "cluster": 22,
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tserehb",
+          "cluster": 20,
+          "advance": 0,
+          "x": 180,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 20,
+          "advance": 624,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 17,
+          "advance": 0,
+          "x": 260,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 17,
+          "advance": 0,
+          "x": 178,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 17,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 16,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "tavhb",
+          "cluster": 15,
+          "advance": 728,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "yodhb",
+          "cluster": 14,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 236,
+          "y": 0
+        },
+        {
+          "glyph": "reshhb",
+          "cluster": 12,
+          "advance": 624,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 10,
+          "advance": 0,
+          "x": 260,
+          "y": 0
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 10,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 192,
+          "y": 0
+        },
+        {
+          "glyph": "ayinhb",
+          "cluster": 8,
+          "advance": 522,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 7,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 6,
+          "advance": 696,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "holamhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 100,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 4,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "lamedhb",
+          "cluster": 3,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 0,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "finals": [
+        {
+          "glyph": "hiriqhb",
+          "cluster": 15,
+          "advance": 0,
+          "x": 174,
+          "y": -182
+        },
+        {
+          "glyph": "finaltsadihb",
+          "cluster": 15,
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 14,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 12,
+          "advance": 0,
+          "x": 332,
+          "y": -184
+        },
+        {
+          "glyph": "finalpehb",
+          "cluster": 12,
+          "advance": 800,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 11,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 9,
+          "advance": 0,
+          "x": 100,
+          "y": -128
+        },
+        {
+          "glyph": "finalnunhb",
+          "cluster": 9,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 8,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 6,
+          "advance": 0,
+          "x": 284,
+          "y": 0
+        },
+        {
+          "glyph": "finalmemhb",
+          "cluster": 6,
+          "advance": 696,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 5,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 3,
+          "advance": 0,
+          "x": 156,
+          "y": 240
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 3,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 2,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 100,
+          "y": 240
+        },
+        {
+          "glyph": "finalkafhb",
+          "cluster": 0,
+          "advance": 592,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "stacked": [
+        {
+          "glyph": "holamhb",
+          "cluster": 21,
+          "advance": 0,
+          "x": 100,
+          "y": 0
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 21,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 20,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 18,
+          "advance": 0,
+          "x": -70,
+          "y": -12
+        },
+        {
+          "glyph": "vavhb",
+          "cluster": 18,
+          "advance": 336,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 17,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 13,
+          "advance": 0,
+          "x": 264,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 13,
+          "advance": 0,
+          "x": 366,
+          "y": -32
+        },
+        {
+          "glyph": "sindothb",
+          "cluster": 13,
+          "advance": 0,
+          "x": -6,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 13,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 12,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "qamatshb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 224,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 366,
+          "y": -32
+        },
+        {
+          "glyph": "shindothb",
+          "cluster": 8,
+          "advance": 0,
+          "x": 534,
+          "y": 6
+        },
+        {
+          "glyph": "shinhb",
+          "cluster": 8,
+          "advance": 664,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 7,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "hiriqhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 244,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 4,
+          "advance": 0,
+          "x": 178,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 4,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "cluster": 3,
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "shevahb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 260,
+          "y": 0
+        },
+        {
+          "glyph": "dageshhb",
+          "cluster": 0,
+          "advance": 0,
+          "x": 178,
+          "y": 4
+        },
+        {
+          "glyph": "bethb",
+          "cluster": 0,
+          "advance": 640,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  "failures": []
+}

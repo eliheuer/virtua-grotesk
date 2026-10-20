@@ -1,0 +1,100 @@
+{
+  "description": "HEB-007: active working Gimel, Lamed and Qof in both masters; frozen pre-batch baseline.",
+  "fonts": {
+    "after": {
+      "path": "working-v2/fonts/after-93c5958477bf.ttf",
+      "sha256": "93c5958477bf4aef0baa5c11c775295d2ea43c486c0b23433b927b31cd917369",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "working-v2/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "working-v2/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "working-v2/fonts/before-bb64bdc6f84c.ttf",
+      "sha256": "bb64bdc6f84c911eb74752726bffc06097c548b19eac123c8a3291b6e593cf33",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 07",
+    "status": "Working drawings · Applied to sources",
+    "note": "Gimel, Lamed and Qof in both active masters. Before preserves the source state immediately before this batch. Manual Zayin corrections are unchanged. Visual approval and marked-form reconciliation remain open.",
+    "glyphs": [
+      {
+        "key": "gimel",
+        "char": "ג",
+        "name": "Gimel"
+      },
+      {
+        "key": "lamed",
+        "char": "ל",
+        "name": "Lamed"
+      },
+      {
+        "key": "qof",
+        "char": "ק",
+        "name": "Qof"
+      }
+    ],
+    "presets": {
+      "group": [
+        "גלק",
+        "Gimel, Lamed and Qof"
+      ],
+      "words": [
+        "גל קול קל רגל דגל",
+        "Words"
+      ],
+      "marks": [
+        "גָ לֶ קִ גּ לּ קּ",
+        "Marks"
+      ],
+      "latin": [
+        "H ג ל ק n",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}
