@@ -30,6 +30,24 @@ For onboarding/readiness use `$google-fonts-onboarding`; for binary or package
 checks use `$google-fonts-qa`; for a downstream preview use
 `$google-fonts-packaging`. Source-only checks belong to `$font-qa`.
 
+For iterative design review, start with `agent-proofs/README.md`
+(**Virtua Design Review**, the shared session handoff), then read
+`agent-proofs/FEEDBACK.md` and
+the latest open review. Record Eli's feedback and its exact scope in that review
+before continuing edits. Keep proposed rules separate from confirmed preferences;
+promote reusable lessons to their canonical document or skill with an evidence link.
+
+**Interactive proofing defaults to the live web proof.** Start with
+`agent-proofs/app/README.md` and `make proof-web`; use the
+`render-specimen` skill. Render actual fonts in the browser, not scaled specimen
+images. `make review` is the separate Diffenator3 QA report; `make proof` is the
+DesignBot print PDF.
+
+**Current handoff (2026-10-19): Eli is ready to move on from the intensive UI pass.**
+Resume through the central guide and current case; preserve the established proof
+layout. This does not approve a new drawing batch or resolve provisional weight.
+Record further corrections in the existing design-review records.
+
 ## Sources and design
 
 The active sources are `sources/VirtuaGrotesk.designspace` and the Regular
@@ -117,6 +135,7 @@ Run from the repository root. Use `.venv/bin/python` for Python tools.
 | `make setup` | Create the Python environment and install requirements. |
 | `make build` | Build the variable and four static TTFs into `fonts/`. |
 | `make proof` | Build and render the main PDF with designbot. |
+| `make proof-web` | Serve or reuse the live interface for interactive design review. |
 | `make review` | Build a Diffenator3 browser proof. |
 | `make reports` | Refresh source, built-font, and compatibility reports. |
 | `make preflight` | Build, proof, reports, and required-file checks. |
@@ -141,8 +160,9 @@ Verify shaping with the built font, not just the feature source.
 
 The main proof is `designbot proof <font> --output <pdf>`; `make proof` uses
 the variable font. For harness renders, use `harness/designbot/glyph_canvas.rs`.
-For chat before/after proofs, follow `documentation/qa.md#chat-proof-workflow`
-and use `scripts/proof_compare.py`; keep scale and baseline fixed.
+For interactive before/after review, use the live web proof described in
+`agent-proofs/app/README.md` and `documentation/qa.md#live-browser-review`.
+`scripts/proof_compare.py` is an optional historical pixel-difference diagnostic.
 Read `documentation/proofs/PROOF_SPEC.md` for the print proof layout. Inspect actual
 rendered output before claiming visual review.
 

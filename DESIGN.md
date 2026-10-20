@@ -27,16 +27,17 @@ Everything in this font is drawn against powers of two.
 - **UPM 1024** (= 2^10). All vertical metrics are power-of-two sums:
   ascender 768, cap height 768, x-height 576, descender −256. Ascenders and
   caps share one height — a single 768 (512+256) ceiling.
-- **Grid size 2**: every coordinate is an integer, and even numbers are
-  strongly preferred. img2bez runs with `--grid 2`.
+- **Grid size 2 is the hard floor**: every outline coordinate is even.
+  New machine drafts use the 8-unit lattice below, including off-curve handles.
+  A tracing configuration of `--grid 2` alone does not satisfy the draft gate.
 - **Favored measurements: 2, 4, 8, 16, 32, 64, 128, 256…** Stem widths,
   sidebearings, counters, overshoots, chamfers, and advance widths should land
   on powers of two — or short sums of them (e.g. 96 = 64+32, 160 = 128+32) —
   wherever the drawing allows.
 - **Optical corrections are allowed and expected** — the grid is the starting
-  point, not a cage. When a curve needs a 1–2 unit nudge to look right, the
-  eye wins. But corrections are deviations *from* a power-of-two intent, so
-  they should be small, even-numbered when possible, and never turn a
+  point, not a cage. When an approved optical correction needs a 2-unit nudge
+  to look right, the eye wins. Corrections deviate *from* a power-of-two intent,
+  so they should be small, even-numbered, and never turn a
   deliberate measurement (a 16-unit chamfer, a 96-unit stem) into an arbitrary
   one.
 
@@ -48,9 +49,10 @@ The grid is hierarchical, and the hierarchy assigns the work:
   sidebearings, stem and bar widths, chamfer sizes, and every offset a
   tool fits or generates land on multiples of 8. Any tool that hands a
   human a draft containing 2-grid noise is broken: a human grading
-  session must never include janitorial snapping. `make lint-grid`
-  enforces this (machine drafts are the ERROR class; the *optical
-  density* stat tracks it).
+  session must never include janitorial snapping. Run the explicit
+  `scripts/draft_grid_check.py` gate on each proposed glyph in both scratch
+  UFOs. `make lint-grid` is an older inventory: it does not enforce 8-grid
+  handles/points, and its legacy color classification is not authoritative.
 - **The 2-unit lattice is the human's grid.** Dropping from 8 to 2 is an
   optical correction — a decision only biological eyes can make, in
   Runebender, during grading. In a green glyph, every off-8 coordinate
@@ -62,6 +64,29 @@ the diff between an orange draft and its human-approved green version
 isolates pure optical knowledge — labeled training data for a future
 optical-correction model. The machine proposes structure on 8; the human
 teaches optics on 2; the dataset is the difference.
+
+### What the mathematical checks establish
+
+Eli reaffirmed the [published system](https://elih.net/blog/virtua-grotesk/) on
+2026-10-19. Keep **position** and **measurement** separate: divisibility by 8
+checks a new point's lattice; popcount describes the binary decomposition of a
+distance, such as a handle length, stem width or sidebearing. For example,
+96 = 64+32 has popcount 2; 168 = 128+32+8 has popcount 3. The latter is not an
+automatic failure. Zero and non-integer measurements need explicit treatment;
+never silently round a measurement to improve its count.
+
+The draft gate checks every on/off-curve coordinate, anchor, advance and actual
+ink sidebearing on 8. It also checks component offsets and donors; scaled or
+rotated components require a decomposed review. Popcount is recorded without a
+pass/fail threshold. Kerning is separate and must be checked if edited. Run this
+on source masters; interpolated positions and compiled quadratic approximations
+need not remain on the source lattice at every weight.
+
+Passing this gate does **not** establish chamfer consistency, smoothness,
+readability or green approval. Follow it with curve lint, master compatibility,
+compiled shaping and visual review. Preserve the draft, hashes, proof and Eli's
+corrections so later approved green versions can form traceable training pairs.
+Do not automatically normalize existing green geometry or label it training-ready.
 
 ### The lattice split is a curriculum, not a wall
 
@@ -159,6 +184,39 @@ as the weight increases, which is the intended optical effect.
 
 ## Reference glyphs: O H n o (the classical anchor)
 
+### Applying the drawing style across scripts
+
+Eli reaffirmed on 2026-10-19 that Hebrew and Arabic must share the green Latin
+drawings' consistent chamfered construction, in the Replica-inspired direction
+described above. A recognizably Hebrew or Arabic skeleton is not sufficient if
+its terminals and joins lose Virtua's identity.
+
+- Read the **live green outlines**, not only a reference rendering or a numeric
+  table. Record the exact donor glyph, master and curve/corner run in the review.
+- Use **16-unit straight, 45-degree cuts at exposed straight corners**, staying
+  the same absolute size across masters. Green H/E demonstrate **8-unit cuts at
+  tight internal joins**. Do not round these cuts into soft corners or enlarge
+  them in proportion to Bold stroke weight.
+- Combine those straight cuts with deliberate smooth cubic shoulders and bowls.
+  The style is not a polygonal approximation of every curve. Preserve donor
+  tangents when reusing green geometry. At the current machine-draft stage,
+  adapt a donor's optical coordinates deliberately to 8 and recheck curves;
+  never alter the green donor. Exact optical reuse needs an explicit recorded
+  exception. Explain adaptations needed for the new letter's structure.
+- Rubik and Noto are references for script structure, distinction and reading
+  texture. They do not override Virtua's curves, chamfers or Latin weight model.
+- The accepted dalet/resh weight is **provisional**. Hebrew and Arabic need
+  optical review beside both Latin cases; do not turn one accepted trial into
+  an unqualified script-wide weight rule.
+
+The [HEB-002 review](agent-proofs/cases/hebrew-002/README.md) records
+the source measurements and the user-supplied outline screenshot. Measurements
+come from the UFOs; the screenshot communicates style, not calibrated dimensions.
+Keep future confirmed design principles here, local trial values and outcomes
+in the review, and reusable execution steps in `.agents/skills/`.
+
+### Core Latin references
+
 Traditional type-design method, adopted here as process: **get O, H,
 n, o right first — everything else derives from them.** H and O set
 the uppercase (flat stem/bar vs round stroke, flat vs round
@@ -233,7 +291,8 @@ re-measure and update this table in the same commit.
   on-axis (horizontal or vertical) at the extrema.
 - Outer forms are precisely geometric (the O is a near-superellipse);
   counters may be slightly organic for warmth.
-- Winding: outer contour clockwise, counters counter-clockwise.
+- UFO source winding: outer contour counter-clockwise, counters clockwise.
+  TrueType uses the opposite convention after compilation.
 - Generous counters and open apertures (c e s a) — this is not a closed
   grotesk, even in Bold.
 

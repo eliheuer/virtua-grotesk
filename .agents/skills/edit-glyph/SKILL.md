@@ -65,3 +65,19 @@ Multiply all x,y coordinates by a factor. Recalculate advance width.
 Common mappings: `A` → `A_.glif`, `a` → `a.glif`, `period` → `period.glif`, `comma` → `comma.glif`, `space` → `space.glif`, `zero`–`nine` for digits, `exclam`, `question`, `semicolon`, etc.
 
 For accented characters: `aacute`, `egrave`, `ntilde`, etc.
+
+For iterative design work, read
+[Design review and feedback](../../../agent-proofs/FEEDBACK.md)
+and the latest open review. Record Eli's correction, interpretation, exact scope,
+and proposal/application state before the next edit. Keep agent suggestions
+separate from confirmed rules. Reference comparisons use
+`scripts/proof_reference.py`; preserve selected evidence with the review.
+
+### Machine-draft grid gate
+
+Read the cross-script construction and lattice rules in `DESIGN.md`. For new
+or redrawn scratch outlines, run `scripts/draft_grid_check.py` on the named
+glyphs in both scratch UFOs. This checks all points/handles, anchors, advances
+and ink sidebearings on 8 and records descriptive measurement popcounts.
+Do not normalize green optical geometry or infer a human grade from QA.
+Retain the source/proof evidence and feedback in `agent-proofs/cases/`.

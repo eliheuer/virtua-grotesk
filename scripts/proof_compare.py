@@ -8,7 +8,17 @@ from pathlib import Path
 
 import freetype
 import uharfbuzz as hb
-from PIL import Image, ImageChops, ImageDraw, ImageFont
+from PIL import Image, ImageChops, ImageDraw
+from specimen_layout import render_pages
+
+
+PALETTE = {
+    'background': '#dedede',
+    'ink': '#444444',
+    'baseline': '#999999',
+    'removed': '#d02070',
+    'added': '#008ba3',
+}
 
 
 def shaped_run(path, text, weight, size):
@@ -64,8 +74,7 @@ def mask_for(tiles, bounds):
     return mask
 
 
-def compare(before, after, samples, weights, size, output):
-    font = ImageFont.load_default(size=15)
+def compare(before, after, samples, weights, size, output, title="Revision study", subtitle="Before / after / difference", grid=False):
     rows, measurements = [], []
     for sample in samples:
         for weight in weights:
@@ -79,44 +88,30 @@ def compare(before, after, samples, weights, size, output):
             added = ImageChops.subtract(new, old)
             images = []
             for mask in (old, new):
-                im = Image.new('RGB', mask.size, 'white')
-                im.paste('black', mask=mask)
+                im = Image.new('RGB', mask.size, PALETTE['background'])
+                im.paste(PALETTE['ink'], mask=mask)
                 images.append(im)
-            diff = Image.new('RGB', old.size, 'white')
-            for color, mask in [('#333333', common), ('#d02070', removed), ('#008ba3', added)]:
+            diff = Image.new('RGB', old.size, PALETTE['background'])
+            for color, mask in [(PALETTE['ink'], common), (PALETTE['removed'], removed), (PALETTE['added'], added)]:
                 diff.paste(color, mask=mask)
             images.append(diff)
             for im in images:
                 # Same source origin and baseline in all three panels.
                 draw = ImageDraw.Draw(im)
                 baseline = 16 - bounds[1]
-                draw.line((0, baseline, 10, baseline), fill='#999999')
-                draw.line((im.width - 10, baseline, im.width, baseline), fill='#999999')
-            title = f"{sample['label']} | wght {weight} | {size:g}px/em"
-            rows.append((title, images))
+                draw.line((0, baseline, 10, baseline), fill=PALETTE['baseline'])
+                draw.line((im.width - 10, baseline, im.width, baseline), fill=PALETTE['baseline'])
+            rows.append({'label':f"{weight:g}  /  {sample['label']}", 'note':f'{size:g} px/em', 'images':images, 'baseline':16-bounds[1]})
             measurements.append({'label': sample['label'], 'text': sample['text'],
                                  'weight': weight, 'shared_pixel_bounds': bounds,
                                  'changed_pixels': old.width * old.height - ImageChops.difference(old, new).histogram()[0],
                                  'missing_glyph': any(r['gid'] == 0 for r in ar + br),
                                  'before_shaping': ar, 'after_shaping': br})
-    col_width = max(360, max(ims[0].width for _, ims in rows))
-    height = 65 + sum(ims[0].height + 42 for _, ims in rows)
-    sheet = Image.new('RGB', (col_width * 3 + 40, height), 'white')
-    draw = ImageDraw.Draw(sheet)
-    for col, title in enumerate(['BEFORE', 'AFTER', 'DIFFERENCE: magenta removed / cyan added']):
-        draw.text((20 + col * col_width, 15), title, fill='black', font=font)
-    y = 55
-    for title, ims in rows:
-        draw.text((20, y), title, fill='black', font=font)
-        for col, im in enumerate(ims):
-            sheet.paste(im, (20 + col * col_width, y + 25))
-        y += ims[0].height + 42
-    output.parent.mkdir(parents=True, exist_ok=True)
-    sheet.save(output)
-    manifest = {'before': str(before.resolve()), 'after': str(after.resolve()),
+    layout=render_pages(rows,['Before','After','Difference'],output,title,subtitle,footnote='Magenta: removed ink. Cyan: added ink. Fixed scale; no optical fitting.',grid=grid)
+    manifest = {'layout':layout, 'before': str(before.resolve()), 'after': str(after.resolve()),
                 'sha256': {name: hashlib.sha256(path.read_bytes()).hexdigest()
                            for name, path in [('before', before), ('after', after)]},
-                'size_px_per_em': size, 'weights': weights,
+                'size_px_per_em': size, 'weights': weights, 'palette': PALETTE,
                 'tools': {p: importlib.metadata.version(p)
                           for p in ['uharfbuzz', 'freetype-py', 'Pillow']},
                 'harfbuzz': hb.version_string(), 'freetype': freetype.version(),
@@ -137,6 +132,9 @@ def main():
     parser.add_argument('--weights', type=float, nargs='+', default=[400, 550, 700])
     parser.add_argument('--size', type=float, default=96, help='Pixels per em; never auto-fitted')
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--title', default='Revision study')
+    parser.add_argument('--subtitle', default='Before / after / difference')
+    parser.add_argument('--grid', action='store_true')
     args = parser.parse_args()
     samples = json.loads(args.samples.read_text())
     if not samples or args.size <= 0:
@@ -146,7 +144,7 @@ def main():
     inputs = {args.before.resolve(), args.after.resolve(), args.samples.resolve()}
     if {args.output.resolve(), args.output.with_suffix('.json').resolve()} & inputs:
         parser.error('Output must not overwrite an input')
-    compare(args.before, args.after, samples, args.weights, args.size, args.output)
+    compare(args.before, args.after, samples, args.weights, args.size, args.output, args.title, args.subtitle, args.grid)
 
 
 if __name__ == '__main__':

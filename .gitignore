@@ -66,3 +66,10 @@ documentation/proofs/images/*.png
 
 # Historical proof images moved with their September 7 audit evidence.
 !documentation/archive/release-audit-2026-09-07/*.png
+
+# Selected design-review evidence; raw scratch artifacts remain under out/.
+!agent-proofs/**/*.png
+
+# Frozen, licensed assets required to reopen the committed HEB-002 web proof.
+!agent-proofs/cases/hebrew-002/layout-v3/fonts/
+!agent-proofs/cases/hebrew-002/layout-v3/fonts/*.ttf

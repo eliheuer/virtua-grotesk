@@ -15,6 +15,8 @@ Default master: `both` (a new glyph needs both masters for interpolation)
 ## Instructions
 
 ### Step 0: Gather Context
+Read `DESIGN.md` and the applicable `agent-proofs/cases/` feedback before drawing. Green Virtua geometry governs construction across scripts; external fonts are script references. Record donor geometry and any adaptation.
+
 1. Check if the glyph already exists — read `sources/VirtuaGrotesk-Regular.ufo/glyphs/contents.plist`
 2. If it exists, read the current `.glif` to understand what's there (this may be a redraw)
 3. If `--from-sketch` is provided, read the image to understand the intended shape
@@ -113,8 +115,10 @@ Round forms overshoot alignment zones by ~16 units:
 - Cap height overshoot: y = 784 (768 + 16)
 
 ### Coordinates
-- All integers, preferably multiples of 2
-- Key measurements in multiples of 8 or 16
+- New machine drafts: every on/off-curve point, anchor, advance and sidebearing on 8. Read DESIGN.md for recorded optical exceptions; never snap green donors.
+- Measure popcount separately; high popcount alone is not a failure.
+- Run `scripts/draft_grid_check.py --ufo <scratch-Regular.ufo> --ufo <scratch-Bold.ufo> --glyphs <names> --json <report>` before building. Then check curves, compatibility, shaping and rendered proofs. Retain source hashes and draft evidence for later human corrections.
+- Keep 16-unit exposed chamfers and 8-unit small joins in both masters
 - Regular stems ~96 units wide, Bold stems ~160+ units
 
 ### Weight Axis Strategy
