@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="gaf-ar" format="2">
+	<unicode hex="06AF"/>
+	<advance width="960"/>
+	<outline>
+		<component base="keheh-ar"/>
+		<contour>
+			<point x="464" y="592" type="line"/>
+			<point x="880" y="832" type="line"/>
+			<point x="896" y="848" type="line"/>
+			<point x="896" y="896" type="line"/>
+			<point x="880" y="912" type="line"/>
+			<point x="464" y="672" type="line"/>
+			<point x="448" y="656" type="line"/>
+			<point x="448" y="608" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="447" y="798"/>
+	<anchor name="bottomDots" x="447" y="798"/>
+	<anchor name="top" x="448" y="1142"/>
+	<anchor name="topDots" x="447" y="1094"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

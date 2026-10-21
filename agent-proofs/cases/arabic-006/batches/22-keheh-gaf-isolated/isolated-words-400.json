@@ -1,0 +1,49 @@
+{
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "b089f3f31121ea991f660e233cfb728a2ddb14a123c697fd3dd1a994a85dc861",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "after",
+      "sha256": "1f7555ac156fa1d974b67afce5dd7d86eaa01289e8fc5235608964c77ec01862",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "noto",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "plex",
+      "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "readex",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "rendered_weight": 400,
+      "missing": [
+        1705,
+        1711
+      ]
+    }
+  ],
+  "text": "\u062f\u0631\u06a9 \u0631\u06af",
+  "weight": 400,
+  "size": 96,
+  "image_sha256": "b31040be20ca9a1e18c9c334b0102d01aac06aad5b70981d05e2c33bd496949c",
+  "recipe_sha256": "7321c739f73d7d78d7506e9a0ce1b066c017d33fdfd237e517ce3cdd675afc3b",
+  "notes": "Readex Pro lacks U+06A9 and U+06AF; its panel is explicitly unavailable."
+}

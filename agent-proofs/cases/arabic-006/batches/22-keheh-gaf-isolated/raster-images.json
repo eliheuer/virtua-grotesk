@@ -1,0 +1,27 @@
+{
+  "images": {
+    "Bold-kehehThreedotsabove-ar-large.png": "07aae3fbeb486469e565954700847faef1e3b7e1ab26eee2c6c0d68ad6cbdaf3",
+    "Bold-gaf-ar-large.png": "1fb19e292b35097fe4569715840227918efb07a66e63157a4bd324df67728531",
+    "Regular-keheh-ar-large.png": "2715a9d55e77d42b18c4e708968cb22690f525ec198e5f50a82f3cbb68fac4a9",
+    "isolated-550.png": "85392ae07b94d0554468ad50065b77ebbf85d379484672a8ac300a8289ae3994",
+    "Bold-three-dots-full.png": "8e823b869553472ca2a906b9f4d3c25365d7d1e825c121a4cc70d8766803a1aa",
+    "Regular-gaf-ar-large.png": "f6820fa35a2f2d744332cddf7ed2c5531003af6cc7589aaed3516ad4291ecafa",
+    "Regular-kehehThreedotsabove-ar-large.png": "afb705016388d4143e2ee4497c55fc677411a9d061ffc4cd54d34a371332035e",
+    "isolated-words-700.png": "aed68ce3b49ac7ac33e76a5f07b8974e01e922a6382179eb9be76c137af7a579",
+    "isolated-700.png": "ed6a2f61b3860c0840b95cab4731800ebed52438e669afc9026508c94d6216de",
+    "words-400.png": "93db90dc409385f16b33d4b521e89d4bc92cd43da38386c3226d9ab875c00008",
+    "marks-400.png": "f2c36568c8ab40a0dc8e0809bbfcd6fcc661df74176d2289c8063969fb6a17b6",
+    "forms-700.png": "ed2e0254e352211d5d3ff28103f358d9f061241aed84802a4f2dc367e22ac2fd",
+    "isolated-400.png": "93a5742d2620c6a8249d1d8bed7dfef6ccf15e6d08869c0c02a69eebf652f5eb",
+    "isolated-words-400.png": "b31040be20ca9a1e18c9c334b0102d01aac06aad5b70981d05e2c33bd496949c",
+    "marks-700.png": "42e4ad5033ca1488945affcce907fbd5fbcc8bbc15a263c6c6092981d374d76d",
+    "words-700.png": "1b6568c808dfef4341e4581b404af437b4660d5dd1159a2f522eab60f1ac2f01",
+    "Regular-three-dots-full.png": "a240a7e82913ee866c3b588eda5f39c8cf41d198e7973dbd633f33b70b1ba79b",
+    "forms-400.png": "7984fa4bbbbb4f926588d81b2debb5f3d4ed0afc86d482fe5706daf56ba2dca0",
+    "Bold-keheh-ar-large.png": "ca0f7e48c4b0ea2c244af9ec5d49d3a3cbf2821369256afed7b90f878ab73381",
+    "browser-700.jpg": "d0b54356bb89d12edef5b7a35d0536d02bc52853059b8f9992749524c0b6b888"
+  },
+  "large_source_recipe": "harness/designbot/glyph_canvas.rs",
+  "tall_recipe": "tall-glyph.rs",
+  "note": "Taller canvas retains full three-dot extent; no new dot outlines or placements."
+}

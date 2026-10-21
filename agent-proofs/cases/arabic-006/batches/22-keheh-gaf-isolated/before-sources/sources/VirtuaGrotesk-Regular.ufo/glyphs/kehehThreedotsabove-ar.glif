@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kehehThreedotsabove-ar" format="2">
+	<unicode hex="0763"/>
+	<advance width="864"/>
+	<outline>
+		<component base="keheh-ar"/>
+		<component base="threedotsupabove-ar" xOffset="216" yOffset="70"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>orange</string>
+			<key>public.markColor</key>
+			<string>1,0.5,0,1</string>
+		</dict>
+	</lib>
+</glyph>

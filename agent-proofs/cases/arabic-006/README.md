@@ -149,6 +149,14 @@ batches and exclude any shared donor that could change this human work.
   exceptions remain. Other forms stay on the queue; Beh/manual hamza untouched.
   See [final-form evidence](batches/21-keheh-gaf-final/README.md).
 
+- **Batch 22 — isolated Keheh/Gaf, both masters:** corrected the upright Kaf
+  duplicates to angled heads and isolated bowls; Gaf retains a Keheh component
+  plus a local bar. Three-dot wrappers receive advance-only fixes. 777 shaping
+  comparisons and endpoint/intermediate reference rasters checked. All shared
+  donors, Beh and manual corrections preserved. Existing Gaf propagated anchors
+  are retained explicitly and remain on the attachment queue. See
+  [isolated-form evidence](batches/22-keheh-gaf-isolated/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -169,7 +177,8 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    pending. Sad/Dad Bold first pass is saved in batch 18 and Tah/Zah in batch 19.
    Orange Regular Tah/Zah trough/dot heights remain a refinement; preserve
    the current exact evidence when preparing that follow-up.
-5. Keheh/Gaf isolated bases and local wrappers next, then initial/medial.
+5. Keheh/Gaf initial/medial and the shared Gaf bar donor next.
+   Isolated forms and local wrappers are repaired in batch 22.
    Both final forms are repaired in batch 21; the separate three-dot final
    Keheh and the old hamza-like Gaf donor remain follow-ups. Kaf isolated/final Bold repair is in batch 20;
    initial/medial contextual construction remains unresolved. Regular initial
@@ -215,9 +224,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 21 Keheh/Gaf
-final-form repair in both masters is the current Working proof.
-Next bounded repair: Keheh/Gaf isolated bases and local wrappers. Beh and its component donors are
+Final Lam is applied after Eli’s named Regular green exception. Batch 22 Keheh/Gaf
+isolated-form repair in both masters is the current Working proof.
+Next bounded repair: Keheh/Gaf initial/medial and the shared Gaf donor. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.
