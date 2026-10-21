@@ -71,6 +71,13 @@ batches and exclude any shared donor that could change this human work.
   initial and dot-placement problems remain explicit. See
   [batch evidence](batches/10-hah-family/README.md).
 
+- Batch 11: Tcheh initial base reconciled to Hah in both masters; three-dot
+  groups moved below joins / inside bowls using an exclusive circular donor.
+  Explicit top anchors preserve base attachment. 364 shaping comparisons,
+  400/550/700 rasters, marked endpoint proofs, sampled clearance and preflight
+  passed. All Beh reservations unchanged. Readex Pro U+0686 is explicitly
+  unavailable. See [Tcheh evidence](batches/11-tcheh/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -84,9 +91,8 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    than the other forms; a named exception is needed for that construction.
    Final Lam is repaired in batch 08. Lam–Alef still has structural issues
    involving green Regular drawings; keep that follow-up open.
-3. Tcheh independent initial base and misplaced/missing three-dot groups need a
-   bounded follow-up; batch 10 has exact evidence. Then Ain/Ghain head, counter
-   and descender construction. Regular Jeem final dot collision and Khah dot
+3. Tcheh base and dot first pass is saved in batch 11. Next: Ain/Ghain head,
+   counter and descender construction. Regular Jeem final dot collision and Khah dot
    heights remain placement follow-ups; preserve protected base drawings.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
@@ -127,9 +133,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 10 Hah/Jeem/Khah is
+Final Lam is applied after Eli’s named Regular green exception. Batch 11 Tcheh is
 the current Working proof.
-Next bounded repair: Tcheh initial base and dots, then Ain/Ghain. Beh and its component donors are
+Next bounded repair: Ain/Ghain. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.

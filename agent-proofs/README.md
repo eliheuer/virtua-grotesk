@@ -91,13 +91,15 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/09-meem/working/`, the four Bold Meem
-forms with all four references. Build/preflight and 287 shaping checks passed;
-400/550/700 and large compiled rasters inspected. Regular medial remains an
-explicit green-source construction follow-up.
-Next: Hah/Jeem/Khah. Eli is editing Beh (`ببب ب`): reserve those forms in both masters
-and every recursive component donor, including dots. Check live hashes before
-each write and preserve human saves. Working drafts are not human-approved.
+Current proof: `cases/arabic-006/batches/11-tcheh/working/`. Batch 10 repaired
+Bold Hah and inherited Jeem/Khah forms. Batch 11 reconciles Tcheh’s initial base,
+three-dot placements and explicit top attachment in both masters. Its 364 shaping
+checks, endpoint/intermediate rasters, large detail and preflight passed.
+Readex Pro lacks U+0686; that reference panel explicitly shows unavailable.
+Next: Ain/Ghain. Regular medial Meem and Lam–Alef remain protected follow-ups.
+Eli is editing Beh (`ببب ب`): reserve those forms in both masters and every
+recursive component donor, including dots. Check live hashes before each write
+and preserve human saves. Working drafts are not human-approved.
 
 ### Earlier Beh checkpoint
 Checkpoint `211c3b8d` is pushed and preserves the accepted Fathatan repair and
@@ -220,7 +222,7 @@ current machine. Relative links keep the guide usable in another checkout.
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/06-medial-loop/working/`; raster and browser evidence in its parent batch folder |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/11-tcheh/working/`; raster and browser evidence in its parent batch folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

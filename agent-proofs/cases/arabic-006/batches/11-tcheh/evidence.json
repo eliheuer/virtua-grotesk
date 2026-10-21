@@ -1,0 +1,152 @@
+{
+  "description": "Tcheh base and dots",
+  "fonts": {
+    "before": {
+      "path": "assets/before.ttf",
+      "sha256": "cb10218afe0f4f798dfc89ea96202753b541e916637e23f6a2465a245791eaeb",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    },
+    "after": {
+      "path": "assets/after.ttf",
+      "sha256": "32a2fbe5b94eff98a3b426e22ee635cd7b91c923b103ab1a323db23d3d3d6b90",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "../../../arabic-001/assets/rubik.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "../../../arabic-001/assets/noto.ttf",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "family": "Noto Sans Arabic",
+      "axes": {
+        "wght": [
+          100.0,
+          400.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "plex": {
+      "family": "IBM Plex Sans Arabic",
+      "label": "Reference",
+      "faces": [
+        {
+          "path": "../../../arabic-001/assets/plex-400.ttf",
+          "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+          "axes": {},
+          "weight": 400
+        },
+        {
+          "path": "../../../arabic-001/assets/plex-500.ttf",
+          "sha256": "b8363ab9f733dfa4f8e96b8b2102c24b5cf4110fb96d1d3d9a9412f6fb49cf74",
+          "axes": {},
+          "weight": 500
+        },
+        {
+          "path": "../../../arabic-001/assets/plex-600.ttf",
+          "sha256": "597bd5502e5997be4414e4c9c88834b30ff3784250c84f20bce2b20e53ebd467",
+          "axes": {},
+          "weight": 600
+        },
+        {
+          "path": "../../../arabic-001/assets/plex-700.ttf",
+          "sha256": "691e0c891a38637ae6bbdb69700f8042cb0724a137bee615068ffdb92244f61f",
+          "axes": {},
+          "weight": 700
+        }
+      ]
+    },
+    "readex": {
+      "path": "../../../arabic-001/assets/readex.ttf",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "axes": {
+        "wght": [
+          160.0,
+          400.0,
+          700.0
+        ],
+        "HEXP": [
+          0.0,
+          0.0,
+          100.0
+        ]
+      },
+      "family": "Readex Pro",
+      "label": "Reference"
+    }
+  },
+  "study": {
+    "id": "Arabic \u00b7 Autonomous pass",
+    "language": "ar",
+    "readingDefault": "arabic",
+    "status": "Tcheh \u00b7 Working",
+    "note": "Shared initial base and corrected dot groups; Readex Pro lacks U+0686.",
+    "glyphs": [
+      {
+        "key": "tcheh",
+        "char": "\u0686",
+        "name": "Tcheh"
+      }
+    ],
+    "presets": {
+      "group": [
+        "\u0686\u0686\u0686 \u0686",
+        "Tcheh \u00b7 All four forms"
+      ],
+      "joins": [
+        "\u0628\u0686\u0628 \u0686",
+        "Connected Tcheh"
+      ],
+      "words": [
+        "\u0686\u0631\u062e \u0686\u0627\u06cc \u0686\u0634\u0645",
+        "Tcheh words"
+      ]
+    }
+  },
+  "reading": {
+    "arabic": {
+      "label": "Meem contexts",
+      "paragraphs": [
+        {
+          "lang": "ar",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "\u0686\u0686\u0686 \u0686   \u0628\u0686\u0628 \u0686   \u0686\u0631\u062e \u0686\u0627\u06cc \u0686\u0634\u0645"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
