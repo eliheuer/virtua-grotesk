@@ -50,8 +50,10 @@
 	<anchor name="topDots" x="456" y="476"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0,0.67,0.91,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

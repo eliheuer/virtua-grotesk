@@ -2,6 +2,11 @@
 <glyph name="yodtriangle-hb" format="2">
 	<unicode hex="05EF"/>
 	<advance width="856"/>
+	<outline>
+		<component base="yod-hb"/>
+		<component base="yod-hb" xOffset="528"/>
+		<component base="yod-hb" xOffset="264" yOffset="184"/>
+	</outline>
 	<anchor name="hbBottom" x="432" y="0"/>
 	<anchor name="hbHolam" x="64" y="760"/>
 	<anchor name="hbCenter" x="432" y="320"/>
@@ -12,17 +17,12 @@
 	<anchor name="hbCantBelowRight" x="432" y="0"/>
 	<anchor name="hbRafe" x="432" y="856"/>
 	<anchor name="hbMeteg" x="432" y="0"/>
-	<outline>
-		<component base="yod-hb" xOffset="0" yOffset="0"/>
-		<component base="yod-hb" xOffset="528" yOffset="0"/>
-		<component base="yod-hb" xOffset="264" yOffset="184"/>
-	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>blue</string>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0,0,1,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

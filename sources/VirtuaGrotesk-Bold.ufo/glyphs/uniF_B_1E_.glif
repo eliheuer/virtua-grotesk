@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB1E" format="2">
 	<unicode hex="FB1E"/>
-	<advance width="0"/>
-	<anchor name="_hbCantAbove" x="0" y="-80"/>
-	<anchor name="_hbCantAfterHolam" x="-176" y="-80"/>
-	<anchor name="hbCantAbove" x="0" y="144"/>
 	<outline>
 		<contour>
 			<point x="-144" y="144" type="line"/>
@@ -23,12 +19,15 @@
 			<point x="-80" y="144" type="curve"/>
 		</contour>
 	</outline>
+	<anchor name="_hbCantAbove" x="0" y="-80"/>
+	<anchor name="_hbCantAfterHolam" x="-176" y="-80"/>
+	<anchor name="hbCantAbove" x="0" y="144"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

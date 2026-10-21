@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noonGhunna-ar" format="2">
 	<unicode hex="0658"/>
-	<advance width="0"/>
 	<outline>
 		<component base="noonghunna-ar" xScale="0.25" yScale="0.25" xOffset="24" yOffset="736"/>
 	</outline>
@@ -10,8 +9,10 @@
 	<anchor name="bottom" x="112" y="688"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0,0.67,0.91,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

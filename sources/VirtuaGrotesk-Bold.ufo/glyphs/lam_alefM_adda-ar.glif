@@ -9,8 +9,10 @@
 	<anchor name="bottom" x="272" y="0"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0,0.67,0.91,1</string>
+			<string>1,0,0,1</string>
 			<key>public.objectLibs</key>
 			<dict>
 				<key>la6128493928</key>

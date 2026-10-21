@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni05A6" format="2">
 	<unicode hex="05A6"/>
-	<advance width="0"/>
-	<anchor name="_hbCantBelow" x="0" y="64"/>
-	<anchor name="_hbCantLeftVowel" x="208" y="64"/>
-	<anchor name="hbCantLeftVowel" x="-176" y="64"/>
 	<outline>
 		<contour>
 			<point x="-176" y="-160" type="line"/>
@@ -27,6 +23,9 @@
 			<point x="16" y="-112" type="curve"/>
 		</contour>
 	</outline>
+	<anchor name="_hbCantBelow" x="0" y="64"/>
+	<anchor name="_hbCantLeftVowel" x="208" y="64"/>
+	<anchor name="hbCantLeftVowel" x="-176" y="64"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

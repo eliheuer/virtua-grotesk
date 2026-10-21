@@ -2,16 +2,6 @@
 <glyph name="mem-hb" format="2">
 	<unicode hex="05DE"/>
 	<advance width="608"/>
-	<anchor name="hbBottom" x="320" y="0"/>
-	<anchor name="hbCenter" x="320" y="288"/>
-	<anchor name="hbHolam" x="48" y="592"/>
-	<anchor name="hbRafe" x="320" y="688"/>
-	<anchor name="hbMeteg" x="320" y="0"/>
-	<anchor name="hbCantAbove" x="320" y="592"/>
-	<anchor name="hbCantAboveLeft" x="48" y="592"/>
-	<anchor name="hbCantAboveRight" x="560" y="592"/>
-	<anchor name="hbCantBelow" x="320" y="0"/>
-	<anchor name="hbCantBelowRight" x="320" y="0"/>
 	<outline>
 		<contour>
 			<point x="320" y="0" type="line"/>
@@ -47,6 +37,16 @@
 			<point x="304" y="16" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="hbBottom" x="320" y="0"/>
+	<anchor name="hbCenter" x="320" y="288"/>
+	<anchor name="hbHolam" x="48" y="592"/>
+	<anchor name="hbRafe" x="320" y="688"/>
+	<anchor name="hbMeteg" x="320" y="0"/>
+	<anchor name="hbCantAbove" x="320" y="592"/>
+	<anchor name="hbCantAboveLeft" x="48" y="592"/>
+	<anchor name="hbCantAboveRight" x="560" y="592"/>
+	<anchor name="hbCantBelow" x="320" y="0"/>
+	<anchor name="hbCantBelowRight" x="320" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

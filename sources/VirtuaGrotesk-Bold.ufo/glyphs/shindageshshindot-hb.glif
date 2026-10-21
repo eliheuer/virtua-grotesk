@@ -3,9 +3,9 @@
 	<unicode hex="FB2C"/>
 	<advance width="848"/>
 	<outline>
-		<component base="shin-hb" xOffset="0" yOffset="0"/>
+		<component base="shin-hb"/>
 		<component base="dagesh-hb" xOffset="498" yOffset="20"/>
-		<component base="shindot-hb" xOffset="652" yOffset="0"/>
+		<component base="shindot-hb" xOffset="652"/>
 	</outline>
 	<anchor name="hbBottom" x="424" y="-32"/>
 	<anchor name="hbCenter" x="568" y="352"/>
@@ -23,8 +23,10 @@
 	<anchor name="hbCantBeforeHolam" x="684" y="576"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0.27,0.44,1,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -3,8 +3,8 @@
 	<unicode hex="FB2B"/>
 	<advance width="672"/>
 	<outline>
-		<component base="shin-hb" xOffset="0" yOffset="0"/>
-		<component base="sindot-hb" xOffset="12" yOffset="0"/>
+		<component base="shin-hb"/>
+		<component base="sindot-hb" xOffset="12"/>
 	</outline>
 	<anchor name="hbBottom" x="336" y="-32"/>
 	<anchor name="hbCenter" x="464" y="240"/>
@@ -23,9 +23,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>purple</string>
+			<string>orange</string>
 			<key>public.markColor</key>
-			<string>0.5,0,1,1</string>
+			<string>1,0.5,0,1</string>
 		</dict>
 	</lib>
 </glyph>

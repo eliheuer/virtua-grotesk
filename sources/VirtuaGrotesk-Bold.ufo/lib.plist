@@ -435,41 +435,171 @@
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
-		<key>uni05C6</key>
-		<string>base</string>
-		<key>a.bold</key>
-		<string>base</string>
-		<key>macronbelowcomb</key>
-		<string>mark</string>
 		<key>A</key>
+		<string>base</string>
+		<key>AE</key>
+		<string>base</string>
+		<key>Aacute</key>
+		<string>base</string>
+		<key>Abreve</key>
+		<string>base</string>
+		<key>Acaron</key>
+		<string>base</string>
+		<key>Acircumflex</key>
+		<string>base</string>
+		<key>Adieresis</key>
+		<string>base</string>
+		<key>Agrave</key>
+		<string>base</string>
+		<key>Amacron</key>
+		<string>base</string>
+		<key>Aogonek</key>
+		<string>base</string>
+		<key>Aring</key>
+		<string>base</string>
+		<key>Atilde</key>
 		<string>base</string>
 		<key>B</key>
 		<string>base</string>
 		<key>C</key>
 		<string>base</string>
+		<key>Cacute</key>
+		<string>base</string>
+		<key>Ccaron</key>
+		<string>base</string>
+		<key>Ccedilla</key>
+		<string>base</string>
+		<key>Cdotaccent</key>
+		<string>base</string>
 		<key>D</key>
 		<string>base</string>
+		<key>Dcaron</key>
+		<string>base</string>
+		<key>Dcroat</key>
+		<string>base</string>
 		<key>E</key>
+		<string>base</string>
+		<key>Eacute</key>
+		<string>base</string>
+		<key>Ebreve</key>
+		<string>base</string>
+		<key>Ecaron</key>
+		<string>base</string>
+		<key>Ecircumflex</key>
+		<string>base</string>
+		<key>Edieresis</key>
+		<string>base</string>
+		<key>Edotaccent</key>
+		<string>base</string>
+		<key>Egrave</key>
+		<string>base</string>
+		<key>Emacron</key>
+		<string>base</string>
+		<key>Eng</key>
+		<string>base</string>
+		<key>Eogonek</key>
+		<string>base</string>
+		<key>Eth</key>
+		<string>base</string>
+		<key>Etilde</key>
 		<string>base</string>
 		<key>F</key>
 		<string>base</string>
 		<key>G</key>
 		<string>base</string>
+		<key>Gbreve</key>
+		<string>base</string>
+		<key>Gcaron</key>
+		<string>base</string>
+		<key>Gcommaaccent</key>
+		<string>base</string>
+		<key>Gdotaccent</key>
+		<string>base</string>
+		<key>Germandbls</key>
+		<string>base</string>
 		<key>H</key>
 		<string>base</string>
+		<key>Hbar</key>
+		<string>base</string>
+		<key>Hcaron</key>
+		<string>base</string>
 		<key>I</key>
+		<string>base</string>
+		<key>IJ</key>
+		<string>base</string>
+		<key>Iacute</key>
+		<string>base</string>
+		<key>Ibreve</key>
+		<string>base</string>
+		<key>Icircumflex</key>
+		<string>base</string>
+		<key>Idieresis</key>
+		<string>base</string>
+		<key>Idotaccent</key>
+		<string>base</string>
+		<key>Igrave</key>
+		<string>base</string>
+		<key>Imacron</key>
+		<string>base</string>
+		<key>Iogonek</key>
+		<string>base</string>
+		<key>Itilde</key>
 		<string>base</string>
 		<key>J</key>
 		<string>base</string>
 		<key>K</key>
 		<string>base</string>
+		<key>Kcaron</key>
+		<string>base</string>
+		<key>Kcommaaccent</key>
+		<string>base</string>
 		<key>L</key>
+		<string>base</string>
+		<key>Lacute</key>
+		<string>base</string>
+		<key>Lcaron</key>
+		<string>base</string>
+		<key>Lcommaaccent</key>
+		<string>base</string>
+		<key>Ldot</key>
+		<string>base</string>
+		<key>Lslash</key>
 		<string>base</string>
 		<key>M</key>
 		<string>base</string>
 		<key>N</key>
 		<string>base</string>
+		<key>Nacute</key>
+		<string>base</string>
+		<key>Ncaron</key>
+		<string>base</string>
+		<key>Ncommaaccent</key>
+		<string>base</string>
+		<key>Ntilde</key>
+		<string>base</string>
 		<key>O</key>
+		<string>base</string>
+		<key>OE</key>
+		<string>base</string>
+		<key>Oacute</key>
+		<string>base</string>
+		<key>Obreve</key>
+		<string>base</string>
+		<key>Ocircumflex</key>
+		<string>base</string>
+		<key>Odieresis</key>
+		<string>base</string>
+		<key>Ograve</key>
+		<string>base</string>
+		<key>Ohungarumlaut</key>
+		<string>base</string>
+		<key>Omacron</key>
+		<string>base</string>
+		<key>Oslash</key>
+		<string>base</string>
+		<key>Oslashacute</key>
+		<string>base</string>
+		<key>Otilde</key>
 		<string>base</string>
 		<key>P</key>
 		<string>base</string>
@@ -477,26 +607,110 @@
 		<string>base</string>
 		<key>R</key>
 		<string>base</string>
+		<key>Racute</key>
+		<string>base</string>
+		<key>Rcaron</key>
+		<string>base</string>
+		<key>Rcedilla</key>
+		<string>base</string>
 		<key>S</key>
+		<string>base</string>
+		<key>Sacute</key>
+		<string>base</string>
+		<key>Scaron</key>
+		<string>base</string>
+		<key>Scedilla</key>
+		<string>base</string>
+		<key>Scircumflex</key>
+		<string>base</string>
+		<key>Scommaaccent</key>
 		<string>base</string>
 		<key>T</key>
 		<string>base</string>
+		<key>Tcaron</key>
+		<string>base</string>
+		<key>Tcedilla</key>
+		<string>base</string>
+		<key>Tcommaaccent</key>
+		<string>base</string>
+		<key>Thorn</key>
+		<string>base</string>
 		<key>U</key>
+		<string>base</string>
+		<key>Uacute</key>
+		<string>base</string>
+		<key>Ubreve</key>
+		<string>base</string>
+		<key>Ucaron</key>
+		<string>base</string>
+		<key>Ucircumflex</key>
+		<string>base</string>
+		<key>Udieresis</key>
+		<string>base</string>
+		<key>Ugrave</key>
+		<string>base</string>
+		<key>Uhungarumlaut</key>
+		<string>base</string>
+		<key>Umacron</key>
+		<string>base</string>
+		<key>Uogonek</key>
+		<string>base</string>
+		<key>Uring</key>
+		<string>base</string>
+		<key>Utilde</key>
 		<string>base</string>
 		<key>V</key>
 		<string>base</string>
 		<key>W</key>
 		<string>base</string>
+		<key>Wacute</key>
+		<string>base</string>
+		<key>Wcircumflex</key>
+		<string>base</string>
+		<key>Wdieresis</key>
+		<string>base</string>
+		<key>Wgrave</key>
+		<string>base</string>
 		<key>X</key>
 		<string>base</string>
 		<key>Y</key>
 		<string>base</string>
+		<key>Yacute</key>
+		<string>base</string>
+		<key>Ycircumflex</key>
+		<string>base</string>
+		<key>Ydieresis</key>
+		<string>base</string>
+		<key>Ygrave</key>
+		<string>base</string>
 		<key>Z</key>
+		<string>base</string>
+		<key>Zacute</key>
+		<string>base</string>
+		<key>Zcaron</key>
+		<string>base</string>
+		<key>Zdotaccent</key>
 		<string>base</string>
 		<key>a</key>
 		<string>base</string>
+		<key>a.bold</key>
+		<string>base</string>
+		<key>aacute</key>
+		<string>base</string>
+		<key>abreve</key>
+		<string>base</string>
+		<key>acaron</key>
+		<string>base</string>
+		<key>acircumflex</key>
+		<string>base</string>
 		<key>acutecomb</key>
 		<string>mark</string>
+		<key>adieresis</key>
+		<string>base</string>
+		<key>ae</key>
+		<string>base</string>
+		<key>agrave</key>
+		<string>base</string>
 		<key>ain-ar</key>
 		<string>base</string>
 		<key>ain-ar.fina</key>
@@ -508,6 +722,8 @@
 		<key>alef-ar</key>
 		<string>base</string>
 		<key>alef-ar.fina</key>
+		<string>base</string>
+		<key>alef-hb</key>
 		<string>base</string>
 		<key>alefHamzaabove-ar</key>
 		<string>base</string>
@@ -537,7 +753,25 @@
 		<string>mark</string>
 		<key>alefbelow-ar</key>
 		<string>mark</string>
+		<key>alefdagesh-hb</key>
+		<string>base</string>
+		<key>alefpatah-hb</key>
+		<string>base</string>
+		<key>alefqamats-hb</key>
+		<string>base</string>
+		<key>amacron</key>
+		<string>base</string>
+		<key>aogonek</key>
+		<string>base</string>
+		<key>apostrophemod</key>
+		<string>base</string>
+		<key>aring</key>
+		<string>base</string>
 		<key>asterisk-ar</key>
+		<string>base</string>
+		<key>atilde</key>
+		<string>base</string>
+		<key>ayin-hb</key>
 		<string>base</string>
 		<key>b</key>
 		<string>base</string>
@@ -565,14 +799,30 @@
 		<string>base</string>
 		<key>behDotless-ar.medi</key>
 		<string>base</string>
+		<key>bet-hb</key>
+		<string>base</string>
+		<key>betdagesh-hb</key>
+		<string>base</string>
 		<key>brevecomb</key>
 		<string>mark</string>
 		<key>c</key>
 		<string>base</string>
+		<key>cacute</key>
+		<string>base</string>
+		<key>caron</key>
+		<string>base</string>
 		<key>caroncomb</key>
 		<string>mark</string>
+		<key>ccaron</key>
+		<string>base</string>
+		<key>ccedilla</key>
+		<string>base</string>
+		<key>cdotaccent</key>
+		<string>base</string>
 		<key>cedillacomb</key>
 		<string>mark</string>
+		<key>circumflex</key>
+		<string>base</string>
 		<key>circumflexcomb</key>
 		<string>mark</string>
 		<key>comma-ar</key>
@@ -595,11 +845,19 @@
 		<string>base</string>
 		<key>dal-ar.fina</key>
 		<string>base</string>
+		<key>dalet-hb</key>
+		<string>base</string>
+		<key>daletdagesh-hb</key>
+		<string>base</string>
 		<key>damma-ar</key>
 		<string>mark</string>
 		<key>dammatan-ar</key>
 		<string>mark</string>
 		<key>dateSeparator-ar</key>
+		<string>base</string>
+		<key>dcaron</key>
+		<string>base</string>
+		<key>dcroat</key>
 		<string>base</string>
 		<key>ddal-ar</key>
 		<string>base</string>
@@ -611,13 +869,39 @@
 		<string>mark</string>
 		<key>dotaccentcomb</key>
 		<string>mark</string>
+		<key>dotlessiogonek</key>
+		<string>base</string>
 		<key>dottedCircle</key>
 		<string>base</string>
 		<key>doublestroke-ar</key>
 		<string>base</string>
 		<key>e</key>
 		<string>base</string>
+		<key>eacute</key>
+		<string>base</string>
+		<key>ebreve</key>
+		<string>base</string>
+		<key>ecaron</key>
+		<string>base</string>
+		<key>ecircumflex</key>
+		<string>base</string>
+		<key>edieresis</key>
+		<string>base</string>
+		<key>edotaccent</key>
+		<string>base</string>
+		<key>egrave</key>
+		<string>base</string>
 		<key>eight-ar</key>
+		<string>base</string>
+		<key>emacron</key>
+		<string>base</string>
+		<key>eng</key>
+		<string>base</string>
+		<key>eogonek</key>
+		<string>base</string>
+		<key>eth</key>
+		<string>base</string>
+		<key>etilde</key>
 		<string>base</string>
 		<key>f</key>
 		<string>base</string>
@@ -665,6 +949,20 @@
 		<string>base</string>
 		<key>fehThreedotsbelow-ar.medi</key>
 		<string>base</string>
+		<key>finalkaf-hb</key>
+		<string>base</string>
+		<key>finalkafdagesh-hb</key>
+		<string>base</string>
+		<key>finalmem-hb</key>
+		<string>base</string>
+		<key>finalnun-hb</key>
+		<string>base</string>
+		<key>finalpe-hb</key>
+		<string>base</string>
+		<key>finalpedagesh-hb</key>
+		<string>base</string>
+		<key>finaltsadi-hb</key>
+		<string>base</string>
 		<key>five-ar</key>
 		<string>base</string>
 		<key>fiveFarsi-ar</key>
@@ -683,6 +981,16 @@
 		<string>base</string>
 		<key>gaf-ar.medi</key>
 		<string>base</string>
+		<key>gbreve</key>
+		<string>base</string>
+		<key>gcaron</key>
+		<string>base</string>
+		<key>gcommaaccent</key>
+		<string>base</string>
+		<key>gdotaccent</key>
+		<string>base</string>
+		<key>germandbls</key>
+		<string>base</string>
 		<key>ghain-ar</key>
 		<string>base</string>
 		<key>ghain-ar.fina</key>
@@ -690,6 +998,10 @@
 		<key>ghain-ar.init</key>
 		<string>base</string>
 		<key>ghain-ar.medi</key>
+		<string>base</string>
+		<key>gimel-hb</key>
+		<string>base</string>
+		<key>gimeldagesh-hb</key>
 		<string>base</string>
 		<key>gravecomb</key>
 		<string>mark</string>
@@ -729,6 +1041,14 @@
 		<string>mark</string>
 		<key>hatafsegol-hb</key>
 		<string>mark</string>
+		<key>hbar</key>
+		<string>base</string>
+		<key>hcaron</key>
+		<string>base</string>
+		<key>he-hb</key>
+		<string>base</string>
+		<key>hedagesh-hb</key>
+		<string>base</string>
 		<key>heh-ar</key>
 		<string>base</string>
 		<key>heh-ar.fina</key>
@@ -761,6 +1081,8 @@
 		<string>base</string>
 		<key>hehGoalHamzaabove-ar.medi</key>
 		<string>base</string>
+		<key>het-hb</key>
+		<string>base</string>
 		<key>hiriq-hb</key>
 		<string>mark</string>
 		<key>holam-hb</key>
@@ -771,10 +1093,28 @@
 		<string>mark</string>
 		<key>i</key>
 		<string>base</string>
+		<key>iacute</key>
+		<string>base</string>
+		<key>ibreve</key>
+		<string>base</string>
+		<key>icircumflex</key>
+		<string>base</string>
+		<key>idieresis</key>
+		<string>base</string>
 		<key>idotless</key>
+		<string>base</string>
+		<key>igrave</key>
+		<string>base</string>
+		<key>ij</key>
+		<string>base</string>
+		<key>imacron</key>
 		<string>base</string>
 		<key>invertedDamma-ar</key>
 		<string>mark</string>
+		<key>iogonek</key>
+		<string>base</string>
+		<key>itilde</key>
+		<string>base</string>
 		<key>j</key>
 		<string>base</string>
 		<key>jdotless</key>
@@ -801,12 +1141,20 @@
 		<string>base</string>
 		<key>kaf-ar.medi</key>
 		<string>base</string>
+		<key>kaf-hb</key>
+		<string>base</string>
+		<key>kafdagesh-hb</key>
+		<string>base</string>
 		<key>kashida-ar</key>
 		<string>base</string>
 		<key>kasra-ar</key>
 		<string>mark</string>
 		<key>kasratan-ar</key>
 		<string>mark</string>
+		<key>kcaron</key>
+		<string>base</string>
+		<key>kcommaaccent</key>
+		<string>base</string>
 		<key>keheh-ar</key>
 		<string>base</string>
 		<key>keheh-ar.fina</key>
@@ -832,6 +1180,8 @@
 		<key>khah-ar.medi</key>
 		<string>base</string>
 		<key>l</key>
+		<string>base</string>
+		<key>lacute</key>
 		<string>base</string>
 		<key>lam-ar</key>
 		<string>base</string>
@@ -861,8 +1211,22 @@
 		<string>base</string>
 		<key>lam_alefWasla-ar.fina</key>
 		<string>base</string>
+		<key>lamed-hb</key>
+		<string>base</string>
+		<key>lameddagesh-hb</key>
+		<string>base</string>
+		<key>lcaron</key>
+		<string>base</string>
+		<key>lcommaaccent</key>
+		<string>base</string>
+		<key>ldot</key>
+		<string>base</string>
+		<key>lslash</key>
+		<string>base</string>
 		<key>m</key>
 		<string>base</string>
+		<key>macronbelowcomb</key>
+		<string>mark</string>
 		<key>macroncomb</key>
 		<string>mark</string>
 		<key>madda-ar</key>
@@ -875,7 +1239,17 @@
 		<string>base</string>
 		<key>meem-ar.medi</key>
 		<string>base</string>
+		<key>mem-hb</key>
+		<string>base</string>
+		<key>memdagesh-hb</key>
+		<string>base</string>
 		<key>n</key>
+		<string>base</string>
+		<key>nacute</key>
+		<string>base</string>
+		<key>ncaron</key>
+		<string>base</string>
+		<key>ncommaaccent</key>
 		<string>base</string>
 		<key>nine-ar</key>
 		<string>base</string>
@@ -893,16 +1267,52 @@
 		<string>base</string>
 		<key>noonghunna-ar.fina</key>
 		<string>base</string>
+		<key>ntilde</key>
+		<string>base</string>
+		<key>nun-hb</key>
+		<string>base</string>
+		<key>nundagesh-hb</key>
+		<string>base</string>
 		<key>o</key>
+		<string>base</string>
+		<key>oacute</key>
+		<string>base</string>
+		<key>obreve</key>
+		<string>base</string>
+		<key>ocircumflex</key>
+		<string>base</string>
+		<key>odieresis</key>
+		<string>base</string>
+		<key>oe</key>
 		<string>base</string>
 		<key>ogonekcomb</key>
 		<string>mark</string>
+		<key>ograve</key>
+		<string>base</string>
+		<key>ohungarumlaut</key>
+		<string>base</string>
+		<key>omacron</key>
+		<string>base</string>
 		<key>one-ar</key>
+		<string>base</string>
+		<key>ordfeminine</key>
+		<string>base</string>
+		<key>ordmasculine</key>
+		<string>base</string>
+		<key>oslash</key>
+		<string>base</string>
+		<key>oslashacute</key>
+		<string>base</string>
+		<key>otilde</key>
 		<string>base</string>
 		<key>p</key>
 		<string>base</string>
 		<key>patah-hb</key>
 		<string>mark</string>
+		<key>pe-hb</key>
+		<string>base</string>
+		<key>pedagesh-hb</key>
+		<string>base</string>
 		<key>peh-ar</key>
 		<string>base</string>
 		<key>peh-ar.fina</key>
@@ -947,15 +1357,29 @@
 		<string>mark</string>
 		<key>qamatsqatan-hb</key>
 		<string>mark</string>
+		<key>qof-hb</key>
+		<string>base</string>
+		<key>qofdagesh-hb</key>
+		<string>base</string>
 		<key>qubuts-hb</key>
 		<string>mark</string>
 		<key>question-ar</key>
 		<string>base</string>
 		<key>r</key>
 		<string>base</string>
+		<key>racute</key>
+		<string>base</string>
+		<key>rcaron</key>
+		<string>base</string>
+		<key>rcedilla</key>
+		<string>base</string>
 		<key>reh-ar</key>
 		<string>base</string>
 		<key>reh-ar.fina</key>
+		<string>base</string>
+		<key>resh-hb</key>
+		<string>base</string>
+		<key>reshdagesh-hb</key>
 		<string>base</string>
 		<key>ringcomb</key>
 		<string>mark</string>
@@ -965,6 +1389,8 @@
 		<string>base</string>
 		<key>s</key>
 		<string>base</string>
+		<key>sacute</key>
+		<string>base</string>
 		<key>sad-ar</key>
 		<string>base</string>
 		<key>sad-ar.fina</key>
@@ -972,6 +1398,18 @@
 		<key>sad-ar.init</key>
 		<string>base</string>
 		<key>sad-ar.medi</key>
+		<string>base</string>
+		<key>samekh-hb</key>
+		<string>base</string>
+		<key>samekhdagesh-hb</key>
+		<string>base</string>
+		<key>scaron</key>
+		<string>base</string>
+		<key>scedilla</key>
+		<string>base</string>
+		<key>scircumflex</key>
+		<string>base</string>
+		<key>scommaaccent</key>
 		<string>base</string>
 		<key>seen-ar</key>
 		<string>base</string>
@@ -1021,8 +1459,20 @@
 		<string>base</string>
 		<key>sheva-hb</key>
 		<string>mark</string>
+		<key>shin-hb</key>
+		<string>base</string>
+		<key>shindagesh-hb</key>
+		<string>base</string>
+		<key>shindageshshindot-hb</key>
+		<string>base</string>
+		<key>shindageshsindot-hb</key>
+		<string>base</string>
 		<key>shindot-hb</key>
 		<string>mark</string>
+		<key>shinshindot-hb</key>
+		<string>base</string>
+		<key>shinsindot-hb</key>
+		<string>base</string>
 		<key>sindot-hb</key>
 		<string>mark</string>
 		<key>six-ar</key>
@@ -1045,6 +1495,14 @@
 		<string>base</string>
 		<key>tah-ar.medi</key>
 		<string>base</string>
+		<key>tav-hb</key>
+		<string>base</string>
+		<key>tavdagesh-hb</key>
+		<string>base</string>
+		<key>tcaron</key>
+		<string>base</string>
+		<key>tcedilla</key>
+		<string>base</string>
 		<key>tcheh-ar</key>
 		<string>base</string>
 		<key>tcheh-ar.fina</key>
@@ -1052,6 +1510,8 @@
 		<key>tcheh-ar.init</key>
 		<string>base</string>
 		<key>tcheh-ar.medi</key>
+		<string>base</string>
+		<key>tcommaaccent</key>
 		<string>base</string>
 		<key>teh-ar</key>
 		<string>base</string>
@@ -1085,6 +1545,10 @@
 		<string>base</string>
 		<key>tehThreedotsdown-ar.medi</key>
 		<string>base</string>
+		<key>tet-hb</key>
+		<string>base</string>
+		<key>tetdagesh-hb</key>
+		<string>base</string>
 		<key>thal-ar</key>
 		<string>base</string>
 		<key>thal-ar.fina</key>
@@ -1097,12 +1561,18 @@
 		<string>base</string>
 		<key>theh-ar.medi</key>
 		<string>base</string>
+		<key>thorn</key>
+		<string>base</string>
 		<key>thousandseparator-ar</key>
 		<string>base</string>
 		<key>three-ar</key>
 		<string>base</string>
 		<key>tildecomb</key>
 		<string>mark</string>
+		<key>tsadi-hb</key>
+		<string>base</string>
+		<key>tsadidagesh-hb</key>
+		<string>base</string>
 		<key>tsere-hb</key>
 		<string>mark</string>
 		<key>tteh-ar</key>
@@ -1123,530 +1593,6 @@
 		<string>base</string>
 		<key>u</key>
 		<string>base</string>
-		<key>v</key>
-		<string>base</string>
-		<key>veh-ar</key>
-		<string>base</string>
-		<key>veh-ar.fina</key>
-		<string>base</string>
-		<key>veh-ar.init</key>
-		<string>base</string>
-		<key>veh-ar.medi</key>
-		<string>base</string>
-		<key>w</key>
-		<string>base</string>
-		<key>waw-ar</key>
-		<string>base</string>
-		<key>waw-ar.fina</key>
-		<string>base</string>
-		<key>wawHamzaabove-ar</key>
-		<string>base</string>
-		<key>wawHamzaabove-ar.fina</key>
-		<string>base</string>
-		<key>x</key>
-		<string>base</string>
-		<key>y</key>
-		<string>base</string>
-		<key>yeh-ar</key>
-		<string>base</string>
-		<key>yeh-ar.fina</key>
-		<string>base</string>
-		<key>yeh-ar.init</key>
-		<string>base</string>
-		<key>yeh-ar.medi</key>
-		<string>base</string>
-		<key>yehBarree-ar</key>
-		<string>base</string>
-		<key>yehBarree-ar.fina</key>
-		<string>base</string>
-		<key>yehHamzaabove-ar</key>
-		<string>base</string>
-		<key>yehHamzaabove-ar.fina</key>
-		<string>base</string>
-		<key>yehHamzaabove-ar.init</key>
-		<string>base</string>
-		<key>yehHamzaabove-ar.medi</key>
-		<string>base</string>
-		<key>z</key>
-		<string>base</string>
-		<key>zah-ar</key>
-		<string>base</string>
-		<key>zah-ar.fina</key>
-		<string>base</string>
-		<key>zah-ar.init</key>
-		<string>base</string>
-		<key>zah-ar.medi</key>
-		<string>base</string>
-		<key>zain-ar</key>
-		<string>base</string>
-		<key>zain-ar.fina</key>
-		<string>base</string>
-		<key>zero-ar</key>
-		<string>base</string>
-		<key>AE</key>
-		<string>base</string>
-		<key>Aacute</key>
-		<string>base</string>
-		<key>Abreve</key>
-		<string>base</string>
-		<key>Acaron</key>
-		<string>base</string>
-		<key>Acircumflex</key>
-		<string>base</string>
-		<key>Adieresis</key>
-		<string>base</string>
-		<key>Agrave</key>
-		<string>base</string>
-		<key>Amacron</key>
-		<string>base</string>
-		<key>Aogonek</key>
-		<string>base</string>
-		<key>Aring</key>
-		<string>base</string>
-		<key>Atilde</key>
-		<string>base</string>
-		<key>Cacute</key>
-		<string>base</string>
-		<key>Ccaron</key>
-		<string>base</string>
-		<key>Ccedilla</key>
-		<string>base</string>
-		<key>Cdotaccent</key>
-		<string>base</string>
-		<key>Dcaron</key>
-		<string>base</string>
-		<key>Dcroat</key>
-		<string>base</string>
-		<key>Eacute</key>
-		<string>base</string>
-		<key>Ebreve</key>
-		<string>base</string>
-		<key>Ecaron</key>
-		<string>base</string>
-		<key>Ecircumflex</key>
-		<string>base</string>
-		<key>Edieresis</key>
-		<string>base</string>
-		<key>Edotaccent</key>
-		<string>base</string>
-		<key>Egrave</key>
-		<string>base</string>
-		<key>Emacron</key>
-		<string>base</string>
-		<key>Eogonek</key>
-		<string>base</string>
-		<key>Eth</key>
-		<string>base</string>
-		<key>Etilde</key>
-		<string>base</string>
-		<key>Gbreve</key>
-		<string>base</string>
-		<key>Gcaron</key>
-		<string>base</string>
-		<key>Gcommaaccent</key>
-		<string>base</string>
-		<key>Gdotaccent</key>
-		<string>base</string>
-		<key>Germandbls</key>
-		<string>base</string>
-		<key>Hbar</key>
-		<string>base</string>
-		<key>Hcaron</key>
-		<string>base</string>
-		<key>Iacute</key>
-		<string>base</string>
-		<key>Ibreve</key>
-		<string>base</string>
-		<key>Icircumflex</key>
-		<string>base</string>
-		<key>Idieresis</key>
-		<string>base</string>
-		<key>Idotaccent</key>
-		<string>base</string>
-		<key>Igrave</key>
-		<string>base</string>
-		<key>Imacron</key>
-		<string>base</string>
-		<key>Iogonek</key>
-		<string>base</string>
-		<key>Itilde</key>
-		<string>base</string>
-		<key>Kcaron</key>
-		<string>base</string>
-		<key>Kcommaaccent</key>
-		<string>base</string>
-		<key>Lacute</key>
-		<string>base</string>
-		<key>Lcaron</key>
-		<string>base</string>
-		<key>Lcommaaccent</key>
-		<string>base</string>
-		<key>Ldot</key>
-		<string>base</string>
-		<key>Lslash</key>
-		<string>base</string>
-		<key>Nacute</key>
-		<string>base</string>
-		<key>Ncaron</key>
-		<string>base</string>
-		<key>Ncommaaccent</key>
-		<string>base</string>
-		<key>Ntilde</key>
-		<string>base</string>
-		<key>OE</key>
-		<string>base</string>
-		<key>Oacute</key>
-		<string>base</string>
-		<key>Obreve</key>
-		<string>base</string>
-		<key>Ocircumflex</key>
-		<string>base</string>
-		<key>Odieresis</key>
-		<string>base</string>
-		<key>Ograve</key>
-		<string>base</string>
-		<key>Ohungarumlaut</key>
-		<string>base</string>
-		<key>Omacron</key>
-		<string>base</string>
-		<key>Oslash</key>
-		<string>base</string>
-		<key>Oslashacute</key>
-		<string>base</string>
-		<key>Otilde</key>
-		<string>base</string>
-		<key>Racute</key>
-		<string>base</string>
-		<key>Rcaron</key>
-		<string>base</string>
-		<key>Rcedilla</key>
-		<string>base</string>
-		<key>Sacute</key>
-		<string>base</string>
-		<key>Scaron</key>
-		<string>base</string>
-		<key>Scedilla</key>
-		<string>base</string>
-		<key>Scircumflex</key>
-		<string>base</string>
-		<key>Scommaaccent</key>
-		<string>base</string>
-		<key>Tcaron</key>
-		<string>base</string>
-		<key>Tcedilla</key>
-		<string>base</string>
-		<key>Tcommaaccent</key>
-		<string>base</string>
-		<key>Thorn</key>
-		<string>base</string>
-		<key>Uacute</key>
-		<string>base</string>
-		<key>Ubreve</key>
-		<string>base</string>
-		<key>Ucaron</key>
-		<string>base</string>
-		<key>Ucircumflex</key>
-		<string>base</string>
-		<key>Udieresis</key>
-		<string>base</string>
-		<key>Ugrave</key>
-		<string>base</string>
-		<key>Uhungarumlaut</key>
-		<string>base</string>
-		<key>Umacron</key>
-		<string>base</string>
-		<key>Uogonek</key>
-		<string>base</string>
-		<key>Uring</key>
-		<string>base</string>
-		<key>Utilde</key>
-		<string>base</string>
-		<key>Wacute</key>
-		<string>base</string>
-		<key>Wcircumflex</key>
-		<string>base</string>
-		<key>Wdieresis</key>
-		<string>base</string>
-		<key>Wgrave</key>
-		<string>base</string>
-		<key>Yacute</key>
-		<string>base</string>
-		<key>Ycircumflex</key>
-		<string>base</string>
-		<key>Ydieresis</key>
-		<string>base</string>
-		<key>Ygrave</key>
-		<string>base</string>
-		<key>Zacute</key>
-		<string>base</string>
-		<key>Zcaron</key>
-		<string>base</string>
-		<key>Zdotaccent</key>
-		<string>base</string>
-		<key>aacute</key>
-		<string>base</string>
-		<key>abreve</key>
-		<string>base</string>
-		<key>acaron</key>
-		<string>base</string>
-		<key>acircumflex</key>
-		<string>base</string>
-		<key>adieresis</key>
-		<string>base</string>
-		<key>ae</key>
-		<string>base</string>
-		<key>agrave</key>
-		<string>base</string>
-		<key>alef-hb</key>
-		<string>base</string>
-		<key>alefdagesh-hb</key>
-		<string>base</string>
-		<key>alefpatah-hb</key>
-		<string>base</string>
-		<key>alefqamats-hb</key>
-		<string>base</string>
-		<key>amacron</key>
-		<string>base</string>
-		<key>aogonek</key>
-		<string>base</string>
-		<key>apostrophemod</key>
-		<string>base</string>
-		<key>aring</key>
-		<string>base</string>
-		<key>atilde</key>
-		<string>base</string>
-		<key>ayin-hb</key>
-		<string>base</string>
-		<key>bet-hb</key>
-		<string>base</string>
-		<key>betdagesh-hb</key>
-		<string>base</string>
-		<key>cacute</key>
-		<string>base</string>
-		<key>caron</key>
-		<string>base</string>
-		<key>ccaron</key>
-		<string>base</string>
-		<key>ccedilla</key>
-		<string>base</string>
-		<key>cdotaccent</key>
-		<string>base</string>
-		<key>circumflex</key>
-		<string>base</string>
-		<key>dalet-hb</key>
-		<string>base</string>
-		<key>daletdagesh-hb</key>
-		<string>base</string>
-		<key>dcaron</key>
-		<string>base</string>
-		<key>dcroat</key>
-		<string>base</string>
-		<key>dotlessiogonek</key>
-		<string>base</string>
-		<key>eacute</key>
-		<string>base</string>
-		<key>ebreve</key>
-		<string>base</string>
-		<key>ecaron</key>
-		<string>base</string>
-		<key>ecircumflex</key>
-		<string>base</string>
-		<key>edieresis</key>
-		<string>base</string>
-		<key>edotaccent</key>
-		<string>base</string>
-		<key>egrave</key>
-		<string>base</string>
-		<key>emacron</key>
-		<string>base</string>
-		<key>eogonek</key>
-		<string>base</string>
-		<key>eth</key>
-		<string>base</string>
-		<key>etilde</key>
-		<string>base</string>
-		<key>finalkaf-hb</key>
-		<string>base</string>
-		<key>finalkafdagesh-hb</key>
-		<string>base</string>
-		<key>finalmem-hb</key>
-		<string>base</string>
-		<key>finalnun-hb</key>
-		<string>base</string>
-		<key>finalpe-hb</key>
-		<string>base</string>
-		<key>finalpedagesh-hb</key>
-		<string>base</string>
-		<key>finaltsadi-hb</key>
-		<string>base</string>
-		<key>gbreve</key>
-		<string>base</string>
-		<key>gcaron</key>
-		<string>base</string>
-		<key>gcommaaccent</key>
-		<string>base</string>
-		<key>gdotaccent</key>
-		<string>base</string>
-		<key>germandbls</key>
-		<string>base</string>
-		<key>gimel-hb</key>
-		<string>base</string>
-		<key>gimeldagesh-hb</key>
-		<string>base</string>
-		<key>hbar</key>
-		<string>base</string>
-		<key>hcaron</key>
-		<string>base</string>
-		<key>he-hb</key>
-		<string>base</string>
-		<key>hedagesh-hb</key>
-		<string>base</string>
-		<key>het-hb</key>
-		<string>base</string>
-		<key>iacute</key>
-		<string>base</string>
-		<key>ibreve</key>
-		<string>base</string>
-		<key>icircumflex</key>
-		<string>base</string>
-		<key>idieresis</key>
-		<string>base</string>
-		<key>igrave</key>
-		<string>base</string>
-		<key>imacron</key>
-		<string>base</string>
-		<key>iogonek</key>
-		<string>base</string>
-		<key>itilde</key>
-		<string>base</string>
-		<key>kaf-hb</key>
-		<string>base</string>
-		<key>kafdagesh-hb</key>
-		<string>base</string>
-		<key>kcaron</key>
-		<string>base</string>
-		<key>kcommaaccent</key>
-		<string>base</string>
-		<key>lacute</key>
-		<string>base</string>
-		<key>lamed-hb</key>
-		<string>base</string>
-		<key>lameddagesh-hb</key>
-		<string>base</string>
-		<key>lcaron</key>
-		<string>base</string>
-		<key>lcommaaccent</key>
-		<string>base</string>
-		<key>ldot</key>
-		<string>base</string>
-		<key>lslash</key>
-		<string>base</string>
-		<key>mem-hb</key>
-		<string>base</string>
-		<key>memdagesh-hb</key>
-		<string>base</string>
-		<key>nacute</key>
-		<string>base</string>
-		<key>ncaron</key>
-		<string>base</string>
-		<key>ncommaaccent</key>
-		<string>base</string>
-		<key>ntilde</key>
-		<string>base</string>
-		<key>nun-hb</key>
-		<string>base</string>
-		<key>nundagesh-hb</key>
-		<string>base</string>
-		<key>oacute</key>
-		<string>base</string>
-		<key>obreve</key>
-		<string>base</string>
-		<key>ocircumflex</key>
-		<string>base</string>
-		<key>odieresis</key>
-		<string>base</string>
-		<key>oe</key>
-		<string>base</string>
-		<key>ograve</key>
-		<string>base</string>
-		<key>ohungarumlaut</key>
-		<string>base</string>
-		<key>omacron</key>
-		<string>base</string>
-		<key>ordfeminine</key>
-		<string>base</string>
-		<key>ordmasculine</key>
-		<string>base</string>
-		<key>oslash</key>
-		<string>base</string>
-		<key>oslashacute</key>
-		<string>base</string>
-		<key>otilde</key>
-		<string>base</string>
-		<key>pe-hb</key>
-		<string>base</string>
-		<key>pedagesh-hb</key>
-		<string>base</string>
-		<key>qof-hb</key>
-		<string>base</string>
-		<key>qofdagesh-hb</key>
-		<string>base</string>
-		<key>racute</key>
-		<string>base</string>
-		<key>rcaron</key>
-		<string>base</string>
-		<key>rcedilla</key>
-		<string>base</string>
-		<key>resh-hb</key>
-		<string>base</string>
-		<key>reshdagesh-hb</key>
-		<string>base</string>
-		<key>sacute</key>
-		<string>base</string>
-		<key>samekh-hb</key>
-		<string>base</string>
-		<key>samekhdagesh-hb</key>
-		<string>base</string>
-		<key>scaron</key>
-		<string>base</string>
-		<key>scedilla</key>
-		<string>base</string>
-		<key>scircumflex</key>
-		<string>base</string>
-		<key>scommaaccent</key>
-		<string>base</string>
-		<key>shin-hb</key>
-		<string>base</string>
-		<key>shindagesh-hb</key>
-		<string>base</string>
-		<key>shindageshshindot-hb</key>
-		<string>base</string>
-		<key>shindageshsindot-hb</key>
-		<string>base</string>
-		<key>shinshindot-hb</key>
-		<string>base</string>
-		<key>shinsindot-hb</key>
-		<string>base</string>
-		<key>tav-hb</key>
-		<string>base</string>
-		<key>tavdagesh-hb</key>
-		<string>base</string>
-		<key>tcaron</key>
-		<string>base</string>
-		<key>tcedilla</key>
-		<string>base</string>
-		<key>tcommaaccent</key>
-		<string>base</string>
-		<key>tet-hb</key>
-		<string>base</string>
-		<key>tetdagesh-hb</key>
-		<string>base</string>
-		<key>thorn</key>
-		<string>base</string>
-		<key>tsadi-hb</key>
-		<string>base</string>
-		<key>tsadidagesh-hb</key>
-		<string>base</string>
 		<key>uacute</key>
 		<string>base</string>
 		<key>ubreve</key>
@@ -1662,6 +1608,8 @@
 		<key>uhungarumlaut</key>
 		<string>base</string>
 		<key>umacron</key>
+		<string>base</string>
+		<key>uni02BB</key>
 		<string>base</string>
 		<key>uni0591</key>
 		<string>mark</string>
@@ -1733,6 +1681,8 @@
 		<string>mark</string>
 		<key>uni05C5</key>
 		<string>mark</string>
+		<key>uni05C6</key>
+		<string>base</string>
 		<key>uniFB1D</key>
 		<string>base</string>
 		<key>uniFB1E</key>
@@ -1771,6 +1721,8 @@
 		<string>base</string>
 		<key>utilde</key>
 		<string>base</string>
+		<key>v</key>
+		<string>base</string>
 		<key>vav-hb</key>
 		<string>base</string>
 		<key>vavdagesh-hb</key>
@@ -1781,7 +1733,25 @@
 		<string>base</string>
 		<key>vavyod-hb</key>
 		<string>base</string>
+		<key>veh-ar</key>
+		<string>base</string>
+		<key>veh-ar.fina</key>
+		<string>base</string>
+		<key>veh-ar.init</key>
+		<string>base</string>
+		<key>veh-ar.medi</key>
+		<string>base</string>
+		<key>w</key>
+		<string>base</string>
 		<key>wacute</key>
+		<string>base</string>
+		<key>waw-ar</key>
+		<string>base</string>
+		<key>waw-ar.fina</key>
+		<string>base</string>
+		<key>wawHamzaabove-ar</key>
+		<string>base</string>
+		<key>wawHamzaabove-ar.fina</key>
 		<string>base</string>
 		<key>wcircumflex</key>
 		<string>base</string>
@@ -1789,11 +1759,35 @@
 		<string>base</string>
 		<key>wgrave</key>
 		<string>base</string>
+		<key>x</key>
+		<string>base</string>
+		<key>y</key>
+		<string>base</string>
 		<key>yacute</key>
 		<string>base</string>
 		<key>ycircumflex</key>
 		<string>base</string>
 		<key>ydieresis</key>
+		<string>base</string>
+		<key>yeh-ar</key>
+		<string>base</string>
+		<key>yeh-ar.fina</key>
+		<string>base</string>
+		<key>yeh-ar.init</key>
+		<string>base</string>
+		<key>yeh-ar.medi</key>
+		<string>base</string>
+		<key>yehBarree-ar</key>
+		<string>base</string>
+		<key>yehBarree-ar.fina</key>
+		<string>base</string>
+		<key>yehHamzaabove-ar</key>
+		<string>base</string>
+		<key>yehHamzaabove-ar.fina</key>
+		<string>base</string>
+		<key>yehHamzaabove-ar.init</key>
+		<string>base</string>
+		<key>yehHamzaabove-ar.medi</key>
 		<string>base</string>
 		<key>ygrave</key>
 		<string>base</string>
@@ -1805,7 +1799,21 @@
 		<string>base</string>
 		<key>yodyod-hb</key>
 		<string>base</string>
+		<key>z</key>
+		<string>base</string>
 		<key>zacute</key>
+		<string>base</string>
+		<key>zah-ar</key>
+		<string>base</string>
+		<key>zah-ar.fina</key>
+		<string>base</string>
+		<key>zah-ar.init</key>
+		<string>base</string>
+		<key>zah-ar.medi</key>
+		<string>base</string>
+		<key>zain-ar</key>
+		<string>base</string>
+		<key>zain-ar.fina</key>
 		<string>base</string>
 		<key>zayin-hb</key>
 		<string>base</string>
@@ -1815,15 +1823,7 @@
 		<string>base</string>
 		<key>zdotaccent</key>
 		<string>base</string>
-		<key>IJ</key>
-		<string>base</string>
-		<key>ij</key>
-		<string>base</string>
-		<key>uni02BB</key>
-		<string>base</string>
-		<key>eng</key>
-		<string>base</string>
-		<key>Eng</key>
+		<key>zero-ar</key>
 		<string>base</string>
 	</dict>
 	<key>public.postscriptNames</key>
