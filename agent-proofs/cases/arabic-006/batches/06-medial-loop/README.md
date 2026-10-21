@@ -58,3 +58,8 @@ counter and existing skeleton are intentionally untouched.
 
 Current status: applied working draft, inspected and technically checked;
 human review pending. Proceed independently to Bold Lam, preserving Beh.
+
+Browser proof reloaded at 700 and visually checked against the raster;
+`browser-700.jpg` records the visible viewport. The remaining two reference
+panels were inspected in the saved full raster sheets. Local checkpoint
+`45ecaeaf` saves the drawing revision; later notes preserve continuation state.

@@ -60,7 +60,14 @@ The old `scripts/arabic_*` builders contain historical color semantics and
 Bold-equals-Regular recipes. Do not run them wholesale.
 
 1. Feh/Qaf repair is ready for later human review; preserve its evidence.
-2. Meem, Lam and Lam–Alef; keep joining bar heights consistent.
+2. Bold Lam isolated/initial/medial: isolated currently retains Regular's 96-unit
+   stroke and its 488 advance is narrower than the outline's x=584 extent;
+   initial/medial have distorted inner curves and 34×8 cap cuts. Repair these
+   independent forms first, inspecting inherited Lam–Alef composites. Final
+   Lam's green Regular skeleton has no descending bowl (visible in all four
+   references); changing that topology requires a named green exception, so
+   preserve it and continue to independent Meem work rather than blocking.
+   Keep joining bar heights consistent.
 3. Hah/Jeem/Khah and Ain/Ghain: head, counter and descender construction.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
