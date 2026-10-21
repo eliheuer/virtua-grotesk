@@ -91,13 +91,13 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/24-heh-bowls/working/`.
-Bold isolated/final Heh now have aligned bowl handles, open counters, straight
-final stems and restored cuts. Three sources changed, including an advance-only
-final Teh Marbuta fix. All Regular, Beh and manual hamza bytes are unchanged.
-840 shaping comparisons, 400/550/700 rasters with all four references, large
-details and preflight checked. Next: Bold initial/medial Heh, then Goal and
-Doachashmee. Existing mark collisions and dot placement remain later work.
+Current proof: `cases/arabic-006/batches/25-heh-joining/working/`.
+Bold initial/medial Heh now have open counters, aligned extremum handles and
+steadier loop transitions. Two Bold sources changed; all Regular, Beh and manual
+hamza bytes are unchanged. 833 shaping comparisons, 400/550/700 four-reference
+rasters, large details and preflight checked. Increased initial proportions and
+medial depth remain human-review questions; initial fatha collision is recorded
+for attachment. Next: Goal/Doachashmee, then Yeh/Maksura/Barree.
 Regular medial Meem and
 Lam–Alef remain protected follow-ups. Eli is editing Beh (`ببب ب`): reserve
 those forms in both masters and every recursive donor, including dots. Check
@@ -225,7 +225,7 @@ current machine. Relative links keep the guide usable in another checkout.
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/24-heh-bowls/working/`; raster and browser evidence in its parent batch folder |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/25-heh-joining/working/`; raster and browser evidence in its parent batch folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

@@ -1,0 +1,57 @@
+{
+  "renderer": "DesignBot --raw",
+  "weight": 400,
+  "size_px_em": 144,
+  "text": "بهب هب",
+  "title": "Heh · Medial and initial",
+  "dimensions": [
+    1600,
+    1120
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "family": "Virtua Grotesk",
+      "file": "fonts/before-cc07aa42f3ba.ttf",
+      "sha256": "cc07aa42f3ba3d0f68e64e0de1208dff8d45e9390ccb37cdc908031b1cf1dabd",
+      "rendered_weight": 400
+    },
+    {
+      "role": "after",
+      "family": "Virtua Grotesk",
+      "file": "fonts/after-3ef6c5753e93.ttf",
+      "sha256": "3ef6c5753e93c1ba448f958b4b5ecbdb37455d88ec0f30bc71e118a2e3e9b7f1",
+      "rendered_weight": 400
+    },
+    {
+      "role": "rubik",
+      "family": "Rubik",
+      "file": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "rendered_weight": 400
+    },
+    {
+      "role": "noto",
+      "family": "Noto Sans Arabic",
+      "file": "fonts/noto-63111b5b2e07.ttf",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "rendered_weight": 400
+    },
+    {
+      "role": "plex",
+      "family": "IBM Plex Sans Arabic",
+      "file": "fonts/plex-6f611412270a.ttf",
+      "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+      "rendered_weight": 400
+    },
+    {
+      "role": "readex",
+      "family": "Readex Pro",
+      "file": "fonts/readex-268bba7e1e8f.ttf",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "rendered_weight": 400
+    }
+  ],
+  "recipe_sha256": "ded54aa1b72a6926b0d2fb52273cb14fc31fa9a285200886a2c2459a8bf0d03b",
+  "image_sha256": "56040abc434f7bdd33cbbea054a15c708ebe204f7d092c556032be29c87f4a4d"
+}

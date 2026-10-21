@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "compiled_snapshot": "3ef6c5753e93c1ba448f958b4b5ecbdb37455d88ec0f30bc71e118a2e3e9b7f1",
+  "preflight_font": "d0e35c815b0dc3ee7930fd7137f0daed286f05eee18a6469c32607d08e132c89",
+  "difference": "head modified timestamp and checksum only; verified by verify.py",
+  "source_changes": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/heh-ar.init.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/heh-ar.medi.glif"
+  ],
+  "reserved_beh_files": 18,
+  "shaping_comparisons": 833,
+  "blocking_master_mismatches": 0
+}
