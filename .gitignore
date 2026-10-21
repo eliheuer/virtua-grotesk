@@ -177,3 +177,9 @@ documentation/proofs/images/*.png
 !agent-proofs/cases/arabic-003/manual-correction-01/working/fonts/*.ttf
 !agent-proofs/cases/arabic-003/manual-correction-01/*.jpg
 !agent-proofs/cases/arabic-003/manual-correction-01/*.png
+
+# ARB-004 exact before/working fonts and browser evidence.
+!agent-proofs/cases/arabic-004/assets/*.ttf
+!agent-proofs/cases/arabic-004/working/fonts/
+!agent-proofs/cases/arabic-004/working/fonts/*.ttf
+!agent-proofs/cases/arabic-004/*.png

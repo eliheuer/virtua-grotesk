@@ -341,3 +341,25 @@ Bold U+0654 donor only, preserving Regular and other source files. The existing
 19 component dependents inherit its outline. Exact 96/32/48-unit turn sizes are
 trial choices, not confirmed style rules. Keep human review before proceeding.
 Evidence and source pairs: [ARB-003](cases/arabic-003/README.md).
+
+## Save hamza learning and continue — 2026-10-21
+
+Eli requested saving the manual hamza correction and curve-tool lessons in Git,
+then one more small Arabic loop with all four references. Commit `d23f1bed`
+preserves that checkpoint. [ARB-004](cases/arabic-004/README.md) repairs component
+placement in `fathatan-ar` and `hamzaaboveFathatan-ar` in Regular and Bold;
+the manually corrected hamza and all donor outlines remain unchanged. The
+standalone fathatan is included because ordinary carrier text shapes through it,
+not through the combined helper. This is an applied working trial awaiting visual
+feedback, not a human grade or approval of another drawing batch.
+
+## Arabic base forms before diacritics — 2026-10-21
+
+Eli accepted [ARB-004](cases/arabic-004/README.md): “ok looks good, ship it.”
+This accepts the four Regular/Bold Fathatan placement repairs for Git; source
+colors stay unchanged. Eli explicitly prioritized getting all Arabic base forms
+into a good state before further diacritic work, because changing the bases
+would waste placement work. Continue small interactive base-form loops across
+the applicable joining forms with all four references. Defer diacritic drawing,
+stacking and attachment tuning until the base drawings are stable; retain the
+known issues rather than treating them as resolved.

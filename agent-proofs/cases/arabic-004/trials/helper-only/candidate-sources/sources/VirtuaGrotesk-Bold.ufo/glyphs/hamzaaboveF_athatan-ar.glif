@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hamzaaboveFathatan-ar" format="2">
+	<outline>
+		<component base="hamzaabove-ar"/>
+		<component base="fatha-ar" yOffset="608"/>
+		<component base="fatha-ar" yOffset="432"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
+</glyph>

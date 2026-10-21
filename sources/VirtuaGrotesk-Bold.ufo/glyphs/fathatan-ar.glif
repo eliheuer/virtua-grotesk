@@ -2,11 +2,11 @@
 <glyph name="fathatan-ar" format="2">
 	<unicode hex="064B"/>
 	<outline>
-		<component base="fatha-ar" yOffset="214"/>
-		<component base="fatha-ar" yOffset="-334"/>
+		<component base="fatha-ar" yOffset="176"/>
+		<component base="fatha-ar" yOffset="0"/>
 	</outline>
-	<anchor name="bottom" x="112" y="330"/>
-	<anchor name="top" x="112" y="1094"/>
+	<anchor name="bottom" x="112" y="664"/>
+	<anchor name="top" x="112" y="1104"/>
 	<anchor name="_top" x="112" y="552"/>
 	<lib>
 		<dict>

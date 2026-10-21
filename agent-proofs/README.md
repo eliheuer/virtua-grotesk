@@ -67,28 +67,38 @@ promote measured lessons into DESIGN.md and the shared skills.
 
 ## Current handoff — 2026-10-21
 
-Current case: [ARB-003 — Bold Hamza Above](cases/arabic-003/README.md).
-Eli completed grading in `4318e7a1` and requested short interactive Arabic loops.
-Only green is frozen; purple marks AI work awaiting human review. No unattended
-run has started. Retain Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro.
+Current case: [ARB-004 — Fathatan and Hamza with Fathatan](cases/arabic-004/README.md).
+Checkpoint `d23f1bed` preserves Eli's Bold hamza correction, exact learning pair,
+curve diagnostics/skills, earlier Arabic loops and four-reference proof setup.
+Only green is frozen; purple identifies unreviewed AI drawings. Continue short
+interactive loops; no autonomous run has begun.
 
-Eli saved a manual Bold hamza correction on 2026-10-21. Exact AI/human sources,
-29 moved-point measurements and font snapshots are preserved in
-`cases/arabic-003/manual-correction-01/`. Only that root Bold outline changed;
-Regular and every other source file are unchanged. It narrows/lightens the base
-and adjusts several turns with unequal handles, preserving 16/8-unit cuts,
-axis tangencies and the 40-unit aperture. DESIGN.md and the editing/drawing
-skills now link this counterexample to a universal square/equal-handle recipe.
-Eli confirmed reduced inflation/mass and identified basic curve issues. The
+ARB-004 repairs component placement in `fathatan-ar` and `hamzaaboveFathatan-ar`
+in both masters. Four GLIFs changed; all donor outlines, including Eli's saved
+Bold hamza, remain unchanged. Both ordinary أً and explicit hamza/fathatan
+combining sequences now show separated strokes. See the case for the helper-only
+trial and why shaping required the encoded Fathatan repair too.
+
+Current proof: `cases/arabic-004/working/`, **Before / Working**, with Rubik,
+Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro. Build/preflight and 175
+shaping comparisons passed; 13 sampled weights retain separate helper pieces.
+Eli accepted this placement repair on 2026-10-21 and requested committing and
+shipping it. Acceptance does not assign a new source color or establish release
+readiness.
+
+**Next priority: Arabic base forms first, in both masters.** Work through their
+isolated, initial, medial and final forms where applicable, with joining-context
+proofs and all four references. Keep the interactive loops small. Defer further
+diacritic drawing, mark stacking and attachment tuning until the base forms are
+in a good, stable state: changing bases would invalidate that placement work.
+Hamza/Dammatan composition, the inherited Fatha root drawing and other mark
+issues remain recorded follow-ups, not the next targets. Preserve manual edits.
+
+ARB-003's exact correction and signed comb evidence remain in
+`cases/arabic-003/manual-correction-01/`. The reusable
 [curve-quality workflow](../.agents/skills/draw-outline/references/curve-quality.md)
-now adds signed comb/continuity review; the case retains an exact diagnostic
-comparison. No new drawing changes were made during that research.
-
-Current proof: `cases/arabic-003/manual-correction-01/working/`, **AI draft**
-versus **Your edit**, with all four references. Original ARB-003 snapshots remain
-unchanged. The saved purple label and anchors are preserved, not auto-graded or
-normalized. Existing Fathatan overlap and Dammatan placement issues remain a
-separate next small loop. No autonomous run has begun.
+records the unwanted AI S-bend, improved inner continuity and deliberately
+preserved human shoulder; do not equate machine precision with equal handles.
 
 Previous Hebrew evidence remains at `cases/hebrew-010/applied-v3/`; manual
 correction lessons and exact snapshots remain in their original case folders.
@@ -161,14 +171,14 @@ current machine. Relative links keep the guide usable in another checkout.
 | Session entry, source permissions, agent behavior | [AGENTS.md](../AGENTS.md) |
 | Drawing rules and unresolved design contracts | [DESIGN.md](../DESIGN.md) |
 | Confirmed user preferences and case index | [Design review and feedback](FEEDBACK.md) |
-| Current inspection and proposal | [HEB-008](cases/hebrew-008/README.md); prior manual corrections in [HEB-006](cases/hebrew-006/README.md) |
+| Current accepted review and next priority | [ARB-004](cases/arabic-004/README.md); Arabic base forms next; manual Arabic correction in [ARB-003](cases/arabic-003/README.md) |
 | Latin measurements and OPEN human decisions | [Design worklog](../documentation/design-pass-worklog.md) |
 | UI implementation, spacing contract, recovery instructions | [Web-proof guide](app/README.md) |
 | Editable web UI | `agent-proofs/app/index.html`, `review.css`, `review.js` |
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/hebrew-008/working-v7/` |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-004/working/`; screenshots in its parent case folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

@@ -25,8 +25,8 @@ without starting a server:
 .venv/bin/python agent-proofs/serve.py --check
 ```
 
-Current case: [ARB-003](../cases/arabic-003/README.md), Bold Hamza Above, manual correction 01.
-Served files are under `agent-proofs/cases/arabic-003/manual-correction-01/working/`.
+Current case: [ARB-004](../cases/arabic-004/README.md), Fathatan placement in both masters.
+Served files are under `agent-proofs/cases/arabic-004/working/`.
 Previous Hebrew snapshots remain in their case folders.
 
 ## Mode names
