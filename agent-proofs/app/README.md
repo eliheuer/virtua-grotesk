@@ -25,9 +25,21 @@ without starting a server:
 .venv/bin/python agent-proofs/serve.py --check
 ```
 
-Current case: [ARB-004](../cases/arabic-004/README.md), Fathatan placement in both masters.
-Served files are under `agent-proofs/cases/arabic-004/working/`.
+Current case: [ARB-005](../cases/arabic-005/README.md), Beh bases with Regular and Bold proofs.
+Served files are under `agent-proofs/cases/arabic-005/round-dots/working/`.
 Previous Hebrew snapshots remain in their case folders.
+
+## Arabic base-form samples
+
+For dual-joining letters, set the study's default `presets.group` to three
+repetitions plus a space and an isolated repetition, for example `ببب ب`.
+This exposes initial, medial, final and isolated forms using normal Arabic
+shaping. Retain word/context presets as well, verify the compiled glyph sequence,
+and inspect both 400 and 700 with all four references. Right-joining letters
+only have the joining forms their script behavior supports; do not manufacture
+four forms with presentation characters. Keep `language: "ar"` and RTL proofing.
+ARB-005 demonstrates this using the existing study configuration, without a
+layout change.
 
 ## Mode names
 
@@ -348,3 +360,9 @@ for genuine static weights; otherwise the existing single-file record is used.
 Static families use native CSS weight matching, with synthesis disabled. Every
 face is hashed independently. Six-panel comparisons reflow to two columns below
 1440px; narrow Text remains one column. Historical four-panel layouts are intact.
+
+The viewport scrollbar is themed at `:root:has(body.dark)` because setting
+`color-scheme` only on the body leaves the browser's root scrollbar light.
+Standard thin scrollbar colors and a WebKit fallback share neutral thumb/track
+colors with internal scrollers. Preserve scrolling and the established content
+margins; do not hide overflow to remove the scrollbar.

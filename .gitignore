@@ -183,3 +183,17 @@ documentation/proofs/images/*.png
 !agent-proofs/cases/arabic-004/working/fonts/
 !agent-proofs/cases/arabic-004/working/fonts/*.ttf
 !agent-proofs/cases/arabic-004/*.png
+
+# ARB-005 exact source/font comparisons and curve/browser evidence.
+!agent-proofs/cases/arabic-005/assets/*.ttf
+!agent-proofs/cases/arabic-005/working/fonts/
+!agent-proofs/cases/arabic-005/working/fonts/*.ttf
+!agent-proofs/cases/arabic-005/*.png
+!agent-proofs/cases/arabic-005/*-comb.svg
+
+# ARB-005 circular-dot correction and exact comparison evidence.
+!agent-proofs/cases/arabic-005/round-dots/assets/*.ttf
+!agent-proofs/cases/arabic-005/round-dots/working/fonts/
+!agent-proofs/cases/arabic-005/round-dots/working/fonts/*.ttf
+!agent-proofs/cases/arabic-005/round-dots/*.png
+!agent-proofs/cases/arabic-005/round-dots/comb.svg

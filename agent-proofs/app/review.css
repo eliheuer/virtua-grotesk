@@ -1,7 +1,14 @@
 @font-face{font-family:ReviewLabels;src:url('fonts/labels.ttf') format('truetype');font-weight:400;font-display:swap}
 /* Spacing contract: the page margin is U. Every layout gap uses U or a subdivision. */
 :root{--light-paper:#a8a8a8;--light-ink:#2e2e2e;--dark-paper:#181818;--dark-ink:#dedede;--paper:var(--light-paper);--ink:var(--light-ink);--weight:400;--space:32px;--half:calc(var(--space)/2);--quarter:calc(var(--space)/4);--eighth:calc(var(--space)/8);--double:calc(var(--space)*2);--field:var(--space);--rule:2px;--margin:var(--space);--gutter:var(--half);--headline:40px;--ui:14px;color-scheme:light}
-*{box-sizing:border-box}
+/* The viewport scrollbar takes its theme from html, not body. */
+:root{--scroll-thumb:#707070;scrollbar-width:thin;scrollbar-color:var(--scroll-thumb) var(--paper)}
+:root:has(body.dark){--paper:var(--dark-paper);--ink:var(--dark-ink);--scroll-thumb:#666;color-scheme:dark}
+*{box-sizing:border-box;scrollbar-width:thin;scrollbar-color:var(--scroll-thumb) var(--paper)}
+/* Fallback for WebKit versions without standard scrollbar styling. */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track,::-webkit-scrollbar-corner{background:var(--paper)}
+::-webkit-scrollbar-thumb{background:var(--scroll-thumb);border:2px solid var(--paper);border-radius:999px}
 body{margin:0;background:var(--paper);color:var(--ink);font:var(--ui)/1.4 ReviewLabels,Arial,sans-serif;font-synthesis:none}
 body.dark{--paper:var(--dark-paper);--ink:var(--dark-ink);color-scheme:dark}
 button,input,select,textarea{font:inherit;color:inherit;border-radius:0}
@@ -65,7 +72,7 @@ body.size-study #size-control{display:none}
 .font-panel{min-width:0}.font-caption{border-top:1px solid var(--ink);padding-top:var(--half)}
 .font-panel h2{font-size:var(--ui);line-height:1.25;font-weight:400;margin:0;text-box-trim:trim-both;text-box-edge:cap alphabetic}
 /* JS sets a shared ink field: U above the highest ink, U below the lowest ink. */
-.sample-viewport{position:relative;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:var(--ink) var(--paper)}
+.sample-viewport{position:relative;overflow-x:auto;overflow-y:hidden}
 .sample-line{position:relative;font-weight:var(--weight);font-variation-settings:'wght' var(--weight);font-synthesis:none;font-optical-sizing:none;font-kerning:normal;letter-spacing:0;line-height:1.1;white-space:pre;width:max-content;min-width:100%;text-align:left;unicode-bidi:plaintext}
 .baseline-mark{display:inline-block;width:0;height:0;padding:0;vertical-align:baseline}
 .missing{font-size:var(--ui);margin:var(--half) 0;overflow-wrap:anywhere}

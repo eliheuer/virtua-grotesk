@@ -363,3 +363,40 @@ would waste placement work. Continue small interactive base-form loops across
 the applicable joining forms with all four references. Defer diacritic drawing,
 stacking and attachment tuning until the base drawings are stable; retain the
 known issues rather than treating them as resolved.
+
+## Four-form Arabic base proof — 2026-10-21
+
+Eli requested the next small base-form loop and a sample like `ببب ب` showing
+initial, medial, final and isolated forms together, with both weights and all
+four references. [ARB-005](cases/arabic-005/README.md) uses that as the default
+sample. Its Bold Beh bases need repair; approved green Regular is preserved
+and shown as the weight/construction reference. Keep the diacritic deferral.
+
+## Arabic dot shape — 2026-10-21
+
+Eli judged the ARB-005 base trial better than before, but requested that the dots
+be close to perfect circles under the grid system in
+https://elih.net/blog/virtua-grotesk/. This is a confirmed Arabic letter-dot
+preference, distinct from the earlier Hebrew mark construction. The
+[dot correction](cases/arabic-005/round-dots/README.md) repairs the two red Bold
+single-dot donors (`dotbelow-ar`, `dotabove-ar`), retaining green Regular,
+placement and the base trial. No blanket acceptance or human grade is inferred.
+
+## Proof scrollbar theme — 2026-10-21
+
+While editing Beh manually, Eli requested removing the bright scrollbar that
+clashed with dark mode. The viewport now inherits the selected theme at the
+root element, with a thin neutral-gray thumb and matching paper-colored track.
+Light mode follows its own gray palette. Verified both modes in the browser;
+no font source edits or rebuilds were part of this UI correction.
+
+## Autonomous Arabic first pass — 2026-10-21
+
+Eli reports that Runebender's component editing is broken and asks the agent to
+make a first pass on the full Arabic independently while he fixes the editor,
+then review and edit afterward. This explicitly replaces the prior short-loop
+requirement. Continue direct source application under the standing authorization,
+preserving green drawings and manual corrections, with bounded reversible
+batches and all four references. Base forms remain first; dependent marks and
+spacing follow. This grants work authorization, not human approval of the results.
+See [ARB-006](cases/arabic-006/README.md) for the queue and evidence.
