@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni05BD" format="2">
 	<unicode hex="05BD"/>
-	<advance width="0"/>
-	<anchor name="hbCantLeftVowel" x="-32" y="0"/>
 	<outline>
 		<contour>
 			<point x="-32" y="-200" type="line"/>
@@ -15,5 +13,14 @@
 			<point x="-32" y="-56" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="hbCantLeftVowel" x="-32" y="0"/>
 	<anchor name="_hbMeteg" x="0" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
 </glyph>

@@ -2,16 +2,6 @@
 <glyph name="kaf-hb" format="2">
 	<unicode hex="05DB"/>
 	<advance width="576"/>
-	<anchor name="hbBottom" x="272" y="0"/>
-	<anchor name="hbCenter" x="248" y="304"/>
-	<anchor name="hbHolam" x="16" y="576"/>
-	<anchor name="hbRafe" x="272" y="672"/>
-	<anchor name="hbMeteg" x="272" y="0"/>
-	<anchor name="hbCantAbove" x="272" y="576"/>
-	<anchor name="hbCantAboveLeft" x="16" y="576"/>
-	<anchor name="hbCantAboveRight" x="528" y="576"/>
-	<anchor name="hbCantBelow" x="272" y="0"/>
-	<anchor name="hbCantBelowRight" x="272" y="0"/>
 	<outline>
 		<contour>
 			<point x="256" y="0" type="line" smooth="yes"/>
@@ -38,10 +28,22 @@
 			<point x="32" y="0" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="hbBottom" x="272" y="0"/>
+	<anchor name="hbCenter" x="248" y="304"/>
+	<anchor name="hbHolam" x="16" y="576"/>
+	<anchor name="hbRafe" x="272" y="672"/>
+	<anchor name="hbMeteg" x="272" y="0"/>
+	<anchor name="hbCantAbove" x="272" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="528" y="576"/>
+	<anchor name="hbCantBelow" x="272" y="0"/>
+	<anchor name="hbCantBelowRight" x="272" y="0"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0.27,0.44,1,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

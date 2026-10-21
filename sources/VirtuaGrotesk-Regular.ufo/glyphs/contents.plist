@@ -102,6 +102,8 @@
 	<string>E_grave.glif</string>
 	<key>Emacron</key>
 	<string>E_macron.glif</string>
+	<key>Eng</key>
+	<string>E_ng.glif</string>
 	<key>Eogonek</key>
 	<string>E_ogonek.glif</string>
 	<key>Eth</key>
@@ -136,6 +138,8 @@
 	<string>H_caron.glif</string>
 	<key>I</key>
 	<string>I_.glif</string>
+	<key>IJ</key>
+	<string>I_J_.glif</string>
 	<key>Iacute</key>
 	<string>I_acute.glif</string>
 	<key>Ibreve</key>
@@ -584,6 +588,8 @@
 	<string>emdash.glif</string>
 	<key>endash</key>
 	<string>endash.glif</string>
+	<key>eng</key>
+	<string>eng.glif</string>
 	<key>eogonek</key>
 	<string>eogonek.glif</string>
 	<key>equal</key>
@@ -834,6 +840,8 @@
 	<string>idotless.glif</string>
 	<key>igrave</key>
 	<string>igrave.glif</string>
+	<key>ij</key>
+	<string>ij.glif</string>
 	<key>imacron</key>
 	<string>imacron.glif</string>
 	<key>invertedDamma-ar</key>
@@ -956,6 +964,8 @@
 	<string>m.glif</string>
 	<key>macron</key>
 	<string>macron.glif</string>
+	<key>macronbelowcomb</key>
+	<string>macronbelowcomb.glif</string>
 	<key>macroncomb</key>
 	<string>macroncomb.glif</string>
 	<key>madda-ar</key>
@@ -1476,6 +1486,8 @@
 	<string>underscore.glif</string>
 	<key>uni00A0</key>
 	<string>uni00A_0.glif</string>
+	<key>uni02BB</key>
+	<string>uni02BB.glif</string>
 	<key>uni0591</key>
 	<string>uni0591.glif</string>
 	<key>uni0592</key>
@@ -1728,17 +1740,5 @@
 	<string>zero_tf.glif</string>
 	<key>zeroFarsi-ar</key>
 	<string>zeroFarsi-ar.glif</string>
-	<key>macronbelowcomb</key>
-	<string>macronbelowcomb.glif</string>
-	<key>IJ</key>
-	<string>I_J_.glif</string>
-	<key>ij</key>
-	<string>ij.glif</string>
-	<key>uni02BB</key>
-	<string>uni02BB.glif</string>
-	<key>eng</key>
-	<string>eng.glif</string>
-	<key>Eng</key>
-	<string>E_ng.glif</string>
 </dict>
 </plist>

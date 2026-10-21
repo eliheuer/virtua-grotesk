@@ -2,6 +2,9 @@
 <glyph name="uniFB20" format="2">
 	<unicode hex="FB20"/>
 	<advance width="522"/>
+	<outline>
+		<component base="ayin-hb"/>
+	</outline>
 	<anchor name="hbRafe" x="261" y="674"/>
 	<anchor name="hbMeteg" x="260" y="0"/>
 	<anchor name="hbCantAbove" x="264" y="584"/>
@@ -9,10 +12,15 @@
 	<anchor name="hbCantAboveRight" x="512" y="584"/>
 	<anchor name="hbCantBelow" x="260" y="0"/>
 	<anchor name="hbCantBelowRight" x="260" y="0"/>
-	<outline>
-		<component base="ayin-hb"/>
-	</outline>
 	<anchor name="hbBottom" x="260" y="0"/>
 	<anchor name="hbCenter" x="260" y="320"/>
 	<anchor name="hbHolam" x="14" y="578"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
 </glyph>

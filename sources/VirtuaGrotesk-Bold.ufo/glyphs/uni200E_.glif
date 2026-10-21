@@ -2,4 +2,12 @@
 <glyph name="uni200E" format="2">
 	<unicode hex="200E"/>
 	<advance width="512"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
 </glyph>

@@ -2,16 +2,6 @@
 <glyph name="finalpe-hb" format="2">
 	<unicode hex="05E3"/>
 	<advance width="800"/>
-	<anchor name="hbBottom" x="400" y="-184"/>
-	<anchor name="hbCenter" x="344" y="376"/>
-	<anchor name="hbHolam" x="48" y="576"/>
-	<anchor name="hbRafe" x="400" y="672"/>
-	<anchor name="hbMeteg" x="400" y="-184"/>
-	<anchor name="hbCantAbove" x="400" y="576"/>
-	<anchor name="hbCantAboveLeft" x="48" y="576"/>
-	<anchor name="hbCantAboveRight" x="744" y="576"/>
-	<anchor name="hbCantBelow" x="400" y="-184"/>
-	<anchor name="hbCantBelowRight" x="400" y="-184"/>
 	<outline>
 		<contour>
 			<point x="552" y="-168" type="line"/>
@@ -40,10 +30,22 @@
 			<point x="552" y="288" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
+	<anchor name="hbBottom" x="400" y="-184"/>
+	<anchor name="hbCenter" x="344" y="376"/>
+	<anchor name="hbHolam" x="48" y="576"/>
+	<anchor name="hbRafe" x="400" y="672"/>
+	<anchor name="hbMeteg" x="400" y="-184"/>
+	<anchor name="hbCantAbove" x="400" y="576"/>
+	<anchor name="hbCantAboveLeft" x="48" y="576"/>
+	<anchor name="hbCantAboveRight" x="744" y="576"/>
+	<anchor name="hbCantBelow" x="400" y="-184"/>
+	<anchor name="hbCantBelowRight" x="400" y="-184"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0.27,0.44,1,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

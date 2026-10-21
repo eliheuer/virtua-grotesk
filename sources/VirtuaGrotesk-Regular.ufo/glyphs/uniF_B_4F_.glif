@@ -2,13 +2,6 @@
 <glyph name="uniFB4F" format="2">
 	<unicode hex="FB4F"/>
 	<advance width="672"/>
-	<anchor name="hbRafe" x="344" y="880"/>
-	<anchor name="hbMeteg" x="336" y="0"/>
-	<anchor name="hbCantAbove" x="344" y="784"/>
-	<anchor name="hbCantAboveLeft" x="64" y="784"/>
-	<anchor name="hbCantAboveRight" x="624" y="784"/>
-	<anchor name="hbCantBelow" x="336" y="0"/>
-	<anchor name="hbCantBelowRight" x="336" y="0"/>
 	<outline>
 		<contour>
 			<point x="624" y="0" type="line"/>
@@ -35,15 +28,22 @@
 			<point x="512" y="0" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="hbRafe" x="344" y="880"/>
+	<anchor name="hbMeteg" x="336" y="0"/>
+	<anchor name="hbCantAbove" x="344" y="784"/>
+	<anchor name="hbCantAboveLeft" x="64" y="784"/>
+	<anchor name="hbCantAboveRight" x="624" y="784"/>
+	<anchor name="hbCantBelow" x="336" y="0"/>
+	<anchor name="hbCantBelowRight" x="336" y="0"/>
 	<anchor name="hbBottom" x="336" y="0"/>
 	<anchor name="hbCenter" x="336" y="200"/>
 	<anchor name="hbHolam" x="64" y="784"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>purple</string>
+			<string>orange</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>1,0.5,0,1</string>
 		</dict>
 	</lib>
 </glyph>

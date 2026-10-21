@@ -3,7 +3,7 @@
 	<unicode hex="FB49"/>
 	<advance width="848"/>
 	<outline>
-		<component base="shin-hb" xOffset="0" yOffset="0"/>
+		<component base="shin-hb"/>
 		<component base="dagesh-hb" xOffset="498" yOffset="20"/>
 	</outline>
 	<anchor name="hbBottom" x="424" y="-32"/>
@@ -20,8 +20,10 @@
 	<anchor name="hbCantBelowRight" x="424" y="-32"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
 			<key>public.markColor</key>
-			<string>0.27,0.44,1,1</string>
+			<string>1,0,0,1</string>
 		</dict>
 	</lib>
 </glyph>

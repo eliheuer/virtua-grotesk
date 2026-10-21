@@ -2,18 +2,6 @@
 <glyph name="dottedCircle" format="2">
 	<unicode hex="25CC"/>
 	<advance width="600"/>
-	<anchor name="hbBottom" x="300" y="184"/>
-	<anchor name="hbCenter" x="300" y="432"/>
-	<anchor name="hbHolam" x="300" y="680"/>
-	<anchor name="hbShin" x="492" y="680"/>
-	<anchor name="hbSin" x="108" y="680"/>
-	<anchor name="hbRafe" x="300" y="776"/>
-	<anchor name="hbMeteg" x="300" y="184"/>
-	<anchor name="hbCantAbove" x="304" y="680"/>
-	<anchor name="hbCantAboveLeft" x="64" y="680"/>
-	<anchor name="hbCantAboveRight" x="544" y="680"/>
-	<anchor name="hbCantBelow" x="300" y="184"/>
-	<anchor name="hbCantBelowRight" x="300" y="184"/>
 	<outline>
 		<contour>
 			<point x="280" y="640" type="line"/>
@@ -64,6 +52,18 @@
 			<point x="88" y="552" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="hbBottom" x="300" y="184"/>
+	<anchor name="hbCenter" x="300" y="432"/>
+	<anchor name="hbHolam" x="300" y="680"/>
+	<anchor name="hbShin" x="492" y="680"/>
+	<anchor name="hbSin" x="108" y="680"/>
+	<anchor name="hbRafe" x="300" y="776"/>
+	<anchor name="hbMeteg" x="300" y="184"/>
+	<anchor name="hbCantAbove" x="304" y="680"/>
+	<anchor name="hbCantAboveLeft" x="64" y="680"/>
+	<anchor name="hbCantAboveRight" x="544" y="680"/>
+	<anchor name="hbCantBelow" x="300" y="184"/>
+	<anchor name="hbCantBelowRight" x="300" y="184"/>
 	<anchor name="top" x="300" y="680"/>
 	<anchor name="bottom" x="300" y="0"/>
 	<lib>

@@ -26,4 +26,12 @@
 		</contour>
 	</outline>
 	<anchor name="hbNunDot" x="228" y="576"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
 </glyph>

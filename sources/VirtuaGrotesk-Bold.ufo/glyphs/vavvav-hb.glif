@@ -2,6 +2,10 @@
 <glyph name="vavvav-hb" format="2">
 	<unicode hex="05F0"/>
 	<advance width="656"/>
+	<outline>
+		<component base="vav-hb"/>
+		<component base="vav-hb" xOffset="328"/>
+	</outline>
 	<anchor name="hbRafe" x="328" y="672"/>
 	<anchor name="hbMeteg" x="328" y="0"/>
 	<anchor name="hbCantAbove" x="328" y="576"/>
@@ -9,8 +13,12 @@
 	<anchor name="hbCantAboveRight" x="608" y="576"/>
 	<anchor name="hbCantBelow" x="328" y="0"/>
 	<anchor name="hbCantBelowRight" x="328" y="0"/>
-	<outline>
-		<component base="vav-hb"/>
-		<component base="vav-hb" xOffset="328"/>
-	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
 </glyph>

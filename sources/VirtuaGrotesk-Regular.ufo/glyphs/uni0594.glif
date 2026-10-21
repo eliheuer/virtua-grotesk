@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni0594" format="2">
 	<unicode hex="0594"/>
-	<advance width="0"/>
-	<anchor name="_hbCantAbove" x="0" y="-80"/>
-	<anchor name="_hbCantAfterHolam" x="-64" y="-80"/>
-	<anchor name="hbCantAbove" x="0" y="192"/>
 	<outline>
 		<contour>
 			<point x="-32" y="8" type="line"/>
@@ -27,6 +23,9 @@
 			<point x="-32" y="184" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="_hbCantAbove" x="0" y="-80"/>
+	<anchor name="_hbCantAfterHolam" x="-64" y="-80"/>
+	<anchor name="hbCantAbove" x="0" y="192"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

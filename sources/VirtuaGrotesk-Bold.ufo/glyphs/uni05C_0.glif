@@ -14,4 +14,12 @@
 			<point x="64" y="560" type="line"/>
 		</contour>
 	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
 </glyph>

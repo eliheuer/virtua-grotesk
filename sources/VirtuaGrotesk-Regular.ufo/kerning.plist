@@ -114,16 +114,16 @@
 	</dict>
 	<key>period</key>
 	<dict>
-		<key>public.kern2.O</key>
-		<integer>-112</integer>
-		<key>public.kern2.one</key>
-		<integer>-96</integer>
 		<key>c</key>
 		<integer>-32</integer>
 		<key>o</key>
 		<integer>-32</integer>
 		<key>p</key>
 		<integer>-32</integer>
+		<key>public.kern2.O</key>
+		<integer>-112</integer>
+		<key>public.kern2.one</key>
+		<integer>-96</integer>
 	</dict>
 	<key>public.kern1.A</key>
 	<dict>
@@ -355,9 +355,6 @@
 		<key>public.kern2.period</key>
 		<integer>-32</integer>
 	</dict>
-
-
-
 	<key>public.kern2.reh-ar</key>
 	<dict>
 		<key>public.kern1.beh-ar</key>
@@ -367,21 +364,20 @@
 		<key>public.kern1.yeh-ar</key>
 		<integer>-320</integer>
 	</dict>
-
 	<key>r</key>
 	<dict>
+		<key>c</key>
+		<integer>-32</integer>
 		<key>hyphen</key>
 		<integer>-128</integer>
 		<key>o</key>
 		<integer>-64</integer>
-		<key>quoteright</key>
-		<integer>-32</integer>
-		<key>c</key>
-		<integer>-32</integer>
 		<key>p</key>
 		<integer>-32</integer>
 		<key>period</key>
 		<integer>-128</integer>
+		<key>quoteright</key>
+		<integer>-32</integer>
 	</dict>
 	<key>reh-ar.fina</key>
 	<dict>
@@ -406,14 +402,14 @@
 	</dict>
 	<key>t</key>
 	<dict>
+		<key>a</key>
+		<integer>-32</integer>
 		<key>e</key>
 		<integer>-16</integer>
 		<key>s</key>
 		<integer>-16</integer>
 		<key>u</key>
 		<integer>0</integer>
-		<key>a</key>
-		<integer>-32</integer>
 	</dict>
 	<key>y</key>
 	<dict>
