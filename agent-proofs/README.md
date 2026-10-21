@@ -67,28 +67,30 @@ promote measured lessons into DESIGN.md and the shared skills.
 
 ## Current handoff — 2026-10-20
 
-Current case: [HEB-008 — remaining Hebrew base letters](cases/hebrew-008/README.md).
-The current proof is `cases/hebrew-008/working-v7/`, restored after the restart
-on port 60272. It now focuses on Shin and Final Tsadi, revised toward Rubik’s constructions
-in both masters. V7 preserves Eli’s exact Regular Final Tsadi correction and
-transfers its bounded curves and straight landings to Bold Final Tsadi and both
-Shins. Before is the preceding agent v6; the transfer awaits visual review. Tet, Ayin, Alef
-and Tsadi remain unchanged from v5. Punctuation and attachment-anchor
-updates are also active. All 27 base/final letters have a development pass;
-that is not final visual approval or a release claim.
+Current case: [HEB-009 — marked-form reconciliation](cases/hebrew-009/README.md).
+The proof at `cases/hebrew-009/working-v1/` serves port 60272, comparing the
+stored marked forms before/after with Rubik and Noto. Eli explicitly approved
+rebuilding all 29 named forms in both masters despite Regular’s purple protection.
+All 58 active GLIFs now reference the current bases and unchanged marks. Grades,
+Unicode, standalone marks, and all other sources are preserved byte-for-byte.
 
-HEB-007 Gimel v4 was accepted as good enough to continue. Both manual Zayin
-corrections and the Regular/Bold Gimel drawings are preserved byte-for-byte.
-Current compiled Hebrew checks pass and 6,076 mark-clearance trials find no
-working overlaps. See HEB-008 for exact source scope, hashes and QA limits.
-Next: review revised Shin and Final Tsadi, then protected marks/presentation forms and
-spacing. The explicit exception request for protected Hebrew forms is unresolved.
+HEB-008 v7 was accepted as better and saved in `df38c4a`, together with the
+manual correction lessons. Its Shin and Final Tsadi drawings remain unchanged.
+Both manual Zayin corrections and the accepted Gimel drawings are preserved.
+All 27 base/final letters have a development pass; this is not final grading.
+
+HEB-009 passes source compatibility, compiled Hebrew smoke checks, 203 stored-form
+comparisons across seven weights, and 423 additional mark-context comparisons.
+Full offline QA remains at 1 failure / 28 warnings; see the case for its exact
+scope and release limitations. Next: niqqud texture, combined marks, punctuation,
+running-text spacing and Eli’s whole-font grading. Arabic overnight work has
+been discussed but not scheduled or started.
 
 HEB-001 through HEB-005 are approved and applied: Dalet/Resh, He/Het/Tav,
 Bet/Kaf/Final Kaf, Pe/Final Pe, and Mem/Final Mem/Samekh (13 of 27 base letters/final forms in this
 review sequence). Applications and exact hashes live in their cases; no glyph
 was auto-graded. Historical comparisons, GLIFs, licenses and binaries remain.
-Protected marked forms and cross-script weight remain follow-up. No public
+Standalone marks and cross-script weight remain follow-up. No public
 release or Google Fonts readiness claim has been made.
 
 Eli's continuing objective is Hebrew parity with Rubik. The frozen-reference
@@ -107,8 +109,8 @@ Remaining review sequence (adapt grouping to feedback):
 | ט ע — Tet, Ayin | HEB-008 active working drawings; visual review pending |
 | א צ ץ ש — Alef, Tsadi, Final Tsadi, Shin | HEB-008 active working drawings; visual review pending |
 
-After the base sequence: reconcile protected presentation forms with the
-approved bases, review niqqud and combined marks/mark-to-mark positioning,
+The 29 marked forms have been reconciled in HEB-009. Next review niqqud
+and combined marks/mark-to-mark positioning,
 Hebrew punctuation and mixed-direction text, then full spacing/kerning and
 Latin–Hebrew weight texture. Native-reader review and fresh release QA remain
 required before calling Hebrew shippable. Use the maintained Google Fonts

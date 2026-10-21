@@ -963,7 +963,7 @@
       "sources": {
         "Regular": {
           "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finaltsadi-hb.glif",
-          "sha256": "e487477f95434b14b46516de23c9d2acf423bba8a7fe3ba8585af501c7e51803",
+          "sha256": "fe47da63758724e06d310d830e1799cffd2dd546d45bddea423dbaebbff69751",
           "label": "orange",
           "color": "1,0.5,0,1",
           "contours": 1,
@@ -971,7 +971,7 @@
         },
         "Bold": {
           "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finaltsadi-hb.glif",
-          "sha256": "02201fe47519aebe369dab25cd842a9b3a9942a77602277280d8181c3209572d",
+          "sha256": "146f71a114e0a05c29b180e5f4cb897842db5e3a62e2879197f4077dbbe800e1",
           "label": null,
           "color": "0.27,0.44,1,1",
           "contours": 1,
@@ -1063,7 +1063,7 @@
       "sources": {
         "Regular": {
           "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shin-hb.glif",
-          "sha256": "bde27f5a2ef5c0117eafa0ea332e6d61e2b436f728f0605c997509c03fe74fdb",
+          "sha256": "6b9c5e2fe8306c9d3e5d6071d4c0c60c9575c0e856e26b23033a7bc2d9da57ce",
           "label": "orange",
           "color": "1,0.5,0,1",
           "contours": 1,
@@ -1071,7 +1071,7 @@
         },
         "Bold": {
           "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shin-hb.glif",
-          "sha256": "8818c194f20d67320fef7bb9c381a855861bf9af114e539bbe38bc8d532cd492",
+          "sha256": "c78c9dea1b70f864f918e2594475a97fb21d74f63f9cb964931019c99f5dc1a9",
           "label": null,
           "color": "0.27,0.44,1,1",
           "contours": 1,
@@ -1113,25 +1113,19 @@
       "sources": {
         "Regular": {
           "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/yodyod-hb.glif",
-          "sha256": "4b2b596acce60fae61db44fc22abd3086029501a1db313abd761b4501ae1f06a",
+          "sha256": "3ac6258520f124e5bd8cc0fcba0244eb1cb3a8a6d05d00e00cddfb0a5789d660",
           "label": "orange",
           "color": "1,0.5,0,1",
-          "contours": 0,
-          "components": [
-            "yod-hb",
-            "yod-hb"
-          ]
+          "contours": 2,
+          "components": []
         },
         "Bold": {
           "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/yodyod-hb.glif",
-          "sha256": "3df38f8d3fe5b869170bf3189f0a23e7727ae1402d57ca66c5d227068616e58f",
+          "sha256": "60292b9f953155a06601159927e51c5b374dee1819ff4089397d241836a87b13",
           "label": null,
           "color": "0.27,0.44,1,1",
-          "contours": 0,
-          "components": [
-            "yod-hb",
-            "yod-hb"
-          ]
+          "contours": 2,
+          "components": []
         }
       },
       "same_master_outline": false,

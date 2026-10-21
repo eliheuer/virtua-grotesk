@@ -1,0 +1,15 @@
+Mode: full
+Network: offline
+-p
+googlefonts
+--error-code-on
+fail
+--loglevel
+warn
+--succinct
+--skip-network
+fonts/variable/VirtuaGrotesk[wght].ttf
+fonts/ttf/VirtuaGrotesk-Regular.ttf
+fonts/ttf/VirtuaGrotesk-Medium.ttf
+fonts/ttf/VirtuaGrotesk-SemiBold.ttf
+fonts/ttf/VirtuaGrotesk-Bold.ttf

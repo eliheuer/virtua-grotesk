@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="vavholam-hb" format="2">
+	<unicode hex="FB4B"/>
+	<advance width="336"/>
+	<outline>
+		<component base="vav-hb" xOffset="0" yOffset="0"/>
+		<component base="holam-hb" xOffset="100" yOffset="0"/>
+	</outline>
+	<anchor name="hbBottom" x="168" y="0"/>
+	<anchor name="hbCenter" x="0" y="320"/>
+	<anchor name="hbHolam" x="168" y="576"/>
+	<anchor name="hbRafe" x="168" y="672"/>
+	<anchor name="hbMeteg" x="168" y="0"/>
+	<anchor name="hbCantAbove" x="168" y="576"/>
+	<anchor name="hbCantAboveLeft" x="72" y="576"/>
+	<anchor name="hbCantAboveRight" x="264" y="576"/>
+	<anchor name="hbCantBelow" x="168" y="0"/>
+	<anchor name="hbCantBelowRight" x="168" y="0"/>
+	<anchor name="hbCantAfterHolam" x="206" y="576"/>
+	<anchor name="hbCantBeforeHolam" x="132" y="576"/>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>

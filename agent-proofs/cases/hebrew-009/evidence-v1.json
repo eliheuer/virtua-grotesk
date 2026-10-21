@@ -1,0 +1,100 @@
+{
+  "description": "HEB-009: 29 Hebrew presentation forms reconciled with current bases and unchanged marks.",
+  "fonts": {
+    "after": {
+      "path": "working-v1/fonts/after-dd336336bc1a.ttf",
+      "sha256": "dd336336bc1a3b65bda21e5dd7a5dee588dee671361bf81a35a6a4cc52c105dc",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "working-v1/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "working-v1/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "working-v1/fonts/before-5c012703c870.ttf",
+      "sha256": "5c012703c8703e97cd38fc1b9a14ddfbfc48173c7fffe53619efdff5f87db094",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 09",
+    "status": "Marked forms rebuilt · grading unchanged",
+    "note": "29 stored forms in Regular and Bold now use the current letters and existing marks. Before is HEB-008 v7. No standalone mark drawings or grades changed. All 27 base/final letters have a development pass; marks, spacing and human grading remain.",
+    "glyphs": [
+      {
+        "key": "shin",
+        "char": "שּׁ",
+        "name": "Shin with Dagesh and Shin Dot"
+      },
+      {
+        "key": "bet",
+        "char": "בּ",
+        "name": "Bet with Dagesh"
+      },
+      {
+        "key": "pe",
+        "char": "פּ",
+        "name": "Pe with Dagesh"
+      }
+    ],
+    "presets": {
+      "group": [
+        "שּׁבּפּ",
+        "Marked forms"
+      ],
+      "words": [
+        "אּ גּ דּ הּ וּ זּ טּ יּ",
+        "Alef through Yod"
+      ],
+      "marks": [
+        "ךּ כּ לּ מּ נּ סּ ףּ צּ קּ רּ שּ תּ וֹ",
+        "Remaining marked forms"
+      ],
+      "latin": [
+        "H n שׁ שׂ שּׂ אַ אָ",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

@@ -265,3 +265,10 @@ HEB-008 revision v6 (2026-10-20): Eli rejects the current Shin and Final Tsadi
 forms and requests constructions closer to Rubik. This specifically authorizes
 revising those two letters in both masters; it is not a generic instruction to
 replace other Hebrew designs. See the [case](cases/hebrew-008/README.md#revision-v6--shin-and-final-tsadi).
+
+
+HEB-009 exception (2026-10-20): Eli explicitly approved rebuilding the 29
+presentation forms named in [HEB-009](cases/hebrew-009/README.md) in both masters
+from current bases and existing marks. Preserve standalone mark drawings and
+all grades. This closes the named purple-protection exception only; it is not
+blanket permission to revise protected marks or infer human grading.

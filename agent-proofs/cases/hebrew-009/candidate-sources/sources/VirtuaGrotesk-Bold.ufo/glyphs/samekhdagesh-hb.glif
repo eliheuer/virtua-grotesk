@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="samekhdagesh-hb" format="2">
+	<unicode hex="FB41"/>
+	<advance width="704"/>
+	<outline>
+		<component base="samekh-hb" xOffset="0" yOffset="0"/>
+		<component base="dagesh-hb" xOffset="282" yOffset="-44"/>
+	</outline>
+	<anchor name="hbBottom" x="352" y="-32"/>
+	<anchor name="hbCenter" x="352" y="288"/>
+	<anchor name="hbHolam" x="16" y="576"/>
+	<anchor name="hbRafe" x="352" y="672"/>
+	<anchor name="hbMeteg" x="352" y="-32"/>
+	<anchor name="hbCantAbove" x="352" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="664" y="576"/>
+	<anchor name="hbCantBelow" x="352" y="-32"/>
+	<anchor name="hbCantBelowRight" x="352" y="-32"/>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>

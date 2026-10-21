@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="finalpedagesh-hb" format="2">
+	<unicode hex="FB43"/>
+	<advance width="800"/>
+	<outline>
+		<component base="finalpe-hb" xOffset="0" yOffset="0"/>
+		<component base="dagesh-hb" xOffset="274" yOffset="44"/>
+	</outline>
+	<anchor name="hbBottom" x="400" y="-184"/>
+	<anchor name="hbCenter" x="344" y="376"/>
+	<anchor name="hbHolam" x="48" y="576"/>
+	<anchor name="hbRafe" x="400" y="672"/>
+	<anchor name="hbMeteg" x="400" y="-184"/>
+	<anchor name="hbCantAbove" x="400" y="576"/>
+	<anchor name="hbCantAboveLeft" x="48" y="576"/>
+	<anchor name="hbCantAboveRight" x="744" y="576"/>
+	<anchor name="hbCantBelow" x="400" y="-184"/>
+	<anchor name="hbCantBelowRight" x="400" y="-184"/>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>

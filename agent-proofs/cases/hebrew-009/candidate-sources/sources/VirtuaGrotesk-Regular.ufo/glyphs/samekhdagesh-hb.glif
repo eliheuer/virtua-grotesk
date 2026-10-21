@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="samekhdagesh-hb" format="2">
+	<unicode hex="FB41"/>
+	<advance width="640"/>
+	<outline>
+		<component base="samekh-hb" xOffset="0" yOffset="0"/>
+		<component base="dagesh-hb" xOffset="250" yOffset="-44"/>
+	</outline>
+	<anchor name="hbBottom" x="320" y="-32"/>
+	<anchor name="hbCenter" x="320" y="288"/>
+	<anchor name="hbHolam" x="16" y="576"/>
+	<anchor name="hbRafe" x="320" y="672"/>
+	<anchor name="hbMeteg" x="320" y="-32"/>
+	<anchor name="hbCantAbove" x="320" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="592" y="576"/>
+	<anchor name="hbCantBelow" x="320" y="-32"/>
+	<anchor name="hbCantBelowRight" x="320" y="-32"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

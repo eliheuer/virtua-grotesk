@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tetdagesh-hb" format="2">
+	<unicode hex="FB38"/>
+	<advance width="720"/>
+	<outline>
+		<component base="tet-hb" xOffset="0" yOffset="0"/>
+		<component base="dagesh-hb" xOffset="290" yOffset="4"/>
+	</outline>
+	<anchor name="hbBottom" x="360" y="-32"/>
+	<anchor name="hbCenter" x="360" y="336"/>
+	<anchor name="hbHolam" x="56" y="592"/>
+	<anchor name="hbRafe" x="360" y="688"/>
+	<anchor name="hbMeteg" x="360" y="-32"/>
+	<anchor name="hbCantAbove" x="360" y="592"/>
+	<anchor name="hbCantAboveLeft" x="56" y="592"/>
+	<anchor name="hbCantAboveRight" x="688" y="592"/>
+	<anchor name="hbCantBelow" x="360" y="-32"/>
+	<anchor name="hbCantBelowRight" x="360" y="-32"/>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>
