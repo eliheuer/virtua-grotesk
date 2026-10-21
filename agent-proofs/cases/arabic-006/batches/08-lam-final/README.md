@@ -1,4 +1,4 @@
-# ARB-006 batch 08 — Final Lam correction (candidate)
+# ARB-006 batch 08 — Final Lam correction (applied)
 
 Eli reports that Lam still has issues in the 700 joined proof (2026-10-21).
 The leftmost joined form is thin, has a joining-bar step, and lacks its descending
@@ -6,8 +6,9 @@ bowl. Batch 07 repaired three forms but left this visible structural problem.
 Do not call a family checked/completed merely because its edited roots pass.
 
 Scope: `lam-ar.fina` in Regular and Bold, 31 matching points instead of 14.
-Separate scratch candidate only: Regular is green and needs an explicit named
-exception before active application. No active font source has been changed.
+Prepared in scratch because Regular was green. Eli subsequently approved both
+masters, explicitly including that green exception; the exact candidate is now
+applied to the two active GLIFs.
 The descending bowl follows the family's isolated shape, with 96/160 stems,
 104/176 bottom weight, 96/176 joining bars, 16-unit exposed chamfers and an
 8-unit lower branch cut. The incoming arm has a separate 96-square tangent
@@ -30,9 +31,11 @@ Actually inspected the 400, 550 and 700 six-panel raster sheets and the large
 Bold detail. The final bowl now descends consistently with the isolated form,
 stem weights match, and the incoming bar is continuous without the old step.
 A bounded 8-unit branch cut and 16-unit external chamfers remain intentional.
-The browser proof is labeled Candidate. No claim of human approval or release
-readiness. Full active-source build/preflight follows application if authorized.
+The live proof now labels the applied font Working. Application was approved;
+this does not assign green or establish release readiness.
 
-A specific request to apply `lam-ar.fina` in Regular and Bold, including the green
-Regular exception, is pending. Do not apply by heartbeat unless Eli grants it.
-Other independent work may continue while preserving this candidate and Beh.
+Applied after the explicit 2026-10-21 approval. `application.json` records the
+exact source hashes and recomputed 18-file Beh reservation. Active build and
+preflight passed; rerun verification confirms only final Lam changes in compiled
+fonts at seven weights, with 70 shaping checks. The applied 700 raster is saved
+separately; Lam–Alef remains unresolved. Next independent family: Meem.

@@ -1,0 +1,41 @@
+{
+  "authorization": "Eli explicitly approved lam-ar.fina in Regular and Bold, including green Regular, 2026-10-21",
+  "applied": [
+    {
+      "name": "lam-ar.fina",
+      "master": "Regular",
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/lam-ar.fina.glif",
+      "before_sha256": "912210fed399744cac694afedce96a2a991a656f29282cdc49ee6a5828a893e1",
+      "candidate_sha256": "3616e913ed4d8b91db575b9d196651180d17eb7f6ed648074a55536da45bb127",
+      "points": 31
+    },
+    {
+      "name": "lam-ar.fina",
+      "master": "Bold",
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam-ar.fina.glif",
+      "before_sha256": "35bebc96d5d4a6d87687da914d504bca1ccf09672d76f7216b68cdd2cabb05a2",
+      "candidate_sha256": "df6c63fc7b3d1efe78e75c0969300eb67b62d99cf0f08903582675be443bbb94",
+      "points": 31
+    }
+  ],
+  "reserved_beh_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/behD_otless-ar.fina.glif": "d8670eaff6e40815048d663de6d3043b9deebeb8fda1075e670a48bfc0565f81",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/behD_otless-ar.medi.glif": "7576a84766e518b95be8d4c5b4c618c60e81e4c0ce3ccec136c9656e8c91f38a",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/behD_otless-ar.init.glif": "cc602b1731df8ee58695fa61d1aaa6097b799a94422a1b655185f99bf7713dbc",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/behD_otless-ar.glif": "e4fe4d64a8c91950654abdbf9fcb155265b5e8466a465cc5acea0ceb030bcdf9",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.fina.glif": "1da3545234f17457a632007a466c08fefab55ae01273c4493c1186307f6a5a3a",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/dotbelow-ar.glif": "80df2925ac726186fa7f9be646807e64bc859664a14dd9273a7b3ebb128df67e",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.medi.glif": "809025e3c2884bb3b3cb97dba75513072a4920b6f29fbc41e81b2c6c0887b8f7",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.init.glif": "d3588a9af316ca8f3c1c5660e9c5fdb2daeca9cb8fdef30cb7c79a373d618bd0",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/beh-ar.glif": "ac31de0948cae7e0b72f5f7c84c1793b451c0d2b18d3f0d19aec8f74271ce603",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/behD_otless-ar.fina.glif": "ed11c391c3a6818c4bc1bce5f861ae844f14a626077d44e7159ae81b46ff7623",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/behD_otless-ar.medi.glif": "63b116d0d62fb317f457b4861f5c50699828ed5b98aa28e40353cfbd9e868eba",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/behD_otless-ar.init.glif": "09deac601174d864452ec6ddb825b68da36c109da1b7fa70ec154e1abeca7235",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/behD_otless-ar.glif": "70ff59125aabd628b6d6a8e5b1c590b58585bb4186268de0809f6c5b8e21df57",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.fina.glif": "793690afc168256caa7a112191b0d8ea0e9c040f931aaf739e56683b0dcd79c7",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/dotbelow-ar.glif": "ff65c3d5be010f346e04d9e7acc64f7a09eafcffa8b06772f0d11dd0751ff0ab",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.medi.glif": "b9eb1fbba2117b0d8f11519152cf8d9c1fd8e9055271f071456e541ea376cd7c",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.init.glif": "a959d1c17df7610f65f7d2972f934e883dce389c2a22b861b4ac63c816f8cda9",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/beh-ar.glif": "7d375fded73cd6aa64f02231af745f29f7218608b0d69ee1ad6650473190daa7"
+  }
+}

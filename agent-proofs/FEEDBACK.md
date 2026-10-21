@@ -465,3 +465,8 @@ The earlier report disclosed that defect but advancing the queue did not resolve
 the visible joined-string failure. Batch 08 prepares a compatible final-form
 repair in both masters; Regular's green protection still requires a named
 exception before application. Preserve Beh's recursive reservation throughout.
+
+Eli explicitly approved applying `lam-ar.fina` in Regular and Bold, including
+the green Regular exception. Applied the exact reviewed candidate, kept its
+purple review grade, and preserved all 18 reserved Beh dependency files. This
+exception does not authorize changing other green Lam or Lam–Alef forms.

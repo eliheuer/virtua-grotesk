@@ -1,4 +1,4 @@
-@font-face{font-family:ReviewLabels;src:url('fonts/labels.ttf?v=158dd8bf1dd3') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:ReviewLabels;src:url('fonts/labels.ttf?v=2dc57cfdb543') format('truetype');font-weight:400;font-display:swap}
 /* Spacing contract: the page margin is U. Every layout gap uses U or a subdivision. */
 :root{--light-paper:#a8a8a8;--light-ink:#2e2e2e;--dark-paper:#181818;--dark-ink:#dedede;--paper:var(--light-paper);--ink:var(--light-ink);--weight:400;--space:32px;--half:calc(var(--space)/2);--quarter:calc(var(--space)/4);--eighth:calc(var(--space)/8);--double:calc(var(--space)*2);--field:var(--space);--rule:2px;--margin:var(--space);--gutter:var(--half);--headline:40px;--ui:14px;color-scheme:light}
 /* The viewport scrollbar takes its theme from html, not body. */

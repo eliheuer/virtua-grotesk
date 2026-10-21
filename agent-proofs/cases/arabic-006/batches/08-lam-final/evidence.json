@@ -1,5 +1,5 @@
 {
-  "description": "Final Lam repair in both masters; scratch candidate, active sources unchanged",
+  "description": "Approved final Lam repair applied in both masters",
   "fonts": {
     "before": {
       "path": "assets/before.ttf",
@@ -16,7 +16,7 @@
     },
     "after": {
       "path": "assets/after.ttf",
-      "sha256": "158dd8bf1dd35e6809c26f97c0b948ceb1fd06894c9297a5b377d00c0c4f1b36",
+      "sha256": "2dc57cfdb543d2086f5e78109fbf831f3311d9f9e9ff35089048456b9d9f68ef",
       "family": "Virtua Grotesk",
       "axes": {
         "wght": [
@@ -25,7 +25,7 @@
           700.0
         ]
       },
-      "label": "Candidate"
+      "label": "Working"
     },
     "rubik": {
       "path": "../../../arabic-001/assets/rubik.ttf",
@@ -109,8 +109,8 @@
     "id": "Arabic · Autonomous pass",
     "language": "ar",
     "readingDefault": "arabic",
-    "status": "Final Lam · Candidate",
-    "note": "Descending bowl and matched incoming join. Regular green exception required before application.",
+    "status": "Final Lam · Applied",
+    "note": "Approved descending bowl and continuous incoming join applied to Regular and Bold. Lam–Alef remains a separate follow-up.",
     "glyphs": [
       {
         "key": "lam",

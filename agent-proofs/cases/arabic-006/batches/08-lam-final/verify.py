@@ -5,7 +5,11 @@ from fontTools.ttLib import TTFont
 from fontTools.varLib.instancer import instantiateVariableFont
 from fontTools.pens.recordingPen import DecomposingRecordingPen
 C=Path(__file__).resolve().parent;R=C.parents[4];m=json.loads((C/'candidate.json').read_text());sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
-assert all(sha(R/p)==h for p,h in m['source_hashes'].items()),'Active source changed; refresh baseline, never overwrite'
+applied=(C/'application.json').exists()
+expected=dict(m['source_hashes'])
+if applied:
+ for g in m['glyphs']: expected[g['path']]=g['candidate_sha256']
+assert all(sha(R/p)==h for p,h in expected.items()),'Active source changed; refresh baseline, never overwrite'
 assert all(sha(R/p)==h for p,h in m['reserved_beh_hashes'].items())
 for g in m['glyphs']:assert sha(C/'candidate-sources'/g['path'])==g['candidate_sha256']
 a,b=[E.parse(C/'candidate-sources'/g['path']) for g in m['glyphs']]
@@ -13,7 +17,7 @@ assert [[p.get('type') for p in c] for c in a.findall('.//contour')]==[[p.get('t
 paths=[C/'assets/before.ttf',C/'assets/after.ttf'];fonts=[TTFont(p) for p in paths];order=fonts[0].getGlyphOrder();assert order==fonts[1].getGlyphOrder()
 # Follow the actual production naming, rather than assuming Unicode names.
 import plistlib
-lib=plistlib.loads((R/'sources/VirtuaGrotesk-Bold.ufo/lib.plist').read_bytes());name=lib['public.postscriptNames']['lam-ar.fina'];out={'active_sources_unchanged':True,'reserved_beh_files':len(m['reserved_beh_hashes']),'changed_glyph':name,'weights':{},'shaping_checks':[]}
+lib=plistlib.loads((R/'sources/VirtuaGrotesk-Bold.ufo/lib.plist').read_bytes());name=lib['public.postscriptNames']['lam-ar.fina'];out={'active_sources_match_approved_application':applied, 'unrelated_sources_unchanged':True,'reserved_beh_files':len(m['reserved_beh_hashes']),'changed_glyph':name,'weights':{},'shaping_checks':[]}
 hfs=[hb.Font(hb.Face(p.read_bytes())) for p in paths]
 texts=['للل ل','بلب ل','لل للل','بلا لا','لَ لُ لِ','ببب ب','ممم م','سلام','العربية','لأ لإ لآ']
 def shape(f,t):
@@ -36,4 +40,4 @@ for w in [400,450,500,550,600,650,700]:
    delta=sets[1][b[0]].width-sets[0][a[0]].width
    assert abs(b[2]-a[2]-delta)<=1,(w,t,a,b,delta)
   out['shaping_checks'].append({'weight':w,'text':t,'candidate':new})
-(C/'verification.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n');print('70 shaping comparisons; only final Lam differs; active source baseline intact.')
+(C/'verification.json').write_text(json.dumps(out,indent=2,ensure_ascii=False)+'\n');print('70 shaping comparisons; only final Lam differs; active sources match recorded application state.')
