@@ -51,6 +51,10 @@ batches and exclude any shared donor that could change this human work.
 - Batch 07: Bold Lam isolated/initial/medial repaired with five wrapper advances;
   252 shaping checks, 400/550/700 and large raster inspection, preflight.
   Final Lam and Lam–Alef structure remain unresolved; see [Lam evidence](batches/07-lam/README.md).
+- Batch 08: final Lam candidate in both masters addresses Eli’s continuing
+  complaint. Built and checked at 400/550/700 with 70 shaping comparisons.
+  **Not applied**: named Regular green exception is pending.
+  See [candidate evidence](batches/08-lam-final/README.md).
 - All Regular drawings, all green drawings and Eli's manual hamza are preserved.
 - The full Arabic first pass is **in progress**, not complete or human-approved.
 
@@ -105,9 +109,12 @@ for a genuine unresolved dependency/decision, not routine application approval.
 ## Continuation and proof tools
 
 The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed authorization;
-its configured recurrence is 20 minutes
+its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
+Final Lam application is awaiting Eli’s named Regular green exception. Keep
+batch 08 visible while that question is pending; independent raster/source work
+may continue without replacing this review.
 Next bounded family: Meem. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low

@@ -91,7 +91,9 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 unresolved; see the case before drawing conclusions from the full joined string.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/07-lam/working/`, with all four references.
+Current proof: `cases/arabic-006/batches/08-lam-final/working/`, a scratch candidate
+for final Lam in both masters with all four references. Application awaits the
+named Regular green exception; active sources still match batch 07.
 Next: Meem. Eli is editing Beh (`ببب ب`): reserve those forms in both masters
 and every recursive component donor, including dots. Check live hashes before
 each write and preserve human saves. Working drafts are not human-approved.

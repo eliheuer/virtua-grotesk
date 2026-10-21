@@ -456,3 +456,12 @@ relationship, not a copied outline or newly confirmed universal style rule.
 Beh's four forms and recursive component donors remain reserved in both masters.
 The previous autonomous quality hold may end once the repair is checked; human
 review remains pending and autonomous continuation does not assign approval.
+
+## Lam joined-form rejection — 2026-10-21
+
+Eli reports continuing Lam issues in the batch 07 700 proof. Agent diagnosis:
+final Lam remained thin, stepped at the incoming join and missing its bowl.
+The earlier report disclosed that defect but advancing the queue did not resolve
+the visible joined-string failure. Batch 08 prepares a compatible final-form
+repair in both masters; Regular's green protection still requires a named
+exception before application. Preserve Beh's recursive reservation throughout.
