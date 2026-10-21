@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
-"""Continuity checker — Runebender web's G0-G3 overlay as a CLI gate.
+"""Legacy continuity checker with unsigned curvature and historical tolerances.
+
+Use curve_profile.py for signed, whole-segment diagnostics and SVG combs.
+These labels are not interchangeable with the native editor overlay.
 
 Classifies every on-curve joint in a glyph:
   corner       not smooth-marked, tangents disagree (fine, by design)
-  line<->curve smooth line-curve joint, tangents collinear (G1; curvature
-               cannot match a straight line, so G1 is the ceiling here)
+  line<->curve tangent line-curve joint; this legacy category does not test
+               whether endpoint curvature is zero (which can give G2)
   G1           smooth curve joint, tangents collinear but curvatures differ
   G2           smooth curve joint, tangents collinear AND endpoint
                curvatures match within tolerance

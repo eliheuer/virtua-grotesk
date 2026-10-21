@@ -96,9 +96,11 @@ measure and propose without resolving them by editing sources.
 - Follow the canonical [semantic colors](README.md#semantic-colors) before selecting targets or references.
   Only green glyphs—outlines or composites—are frozen by default (Eli, 2026-10-20). Editing or removing
   green glyphs requires explicit approval naming those glyphs and masters.
-  Purple is retired and has no approval, reference, or protection meaning.
-  Composites Eli wants to freeze use green. Do not automatically convert legacy
-  purple labels to green; preserve green component donors.
+  Purple identifies new AI drawings awaiting human review; it does not grant
+  approval, reference status or protection. Label newly AI-drawn/redrawn work
+  purple under Eli's requested convention; never promote it to green. Human
+  review assigns the subsequent grade. Composites Eli wants frozen use green;
+  preserve green component donors.
 - Colors describe the default scope of an approved edit, not blanket authorization.
   Only red permits overwriting or replacement without an explicit exception.
   Orange and yellow permit edits while preserving the existing drawing; neither is reference material.

@@ -92,7 +92,7 @@ def lint_glyph(path, name):
                               f'({a[3]["x"]:g},{a[3]["y"]:g}) ratio {hi/lo:.1f}')
     return issues
 
-# ---- geometric continuity (G0/G1/G2/G3), mirrors core/src/curve.rs ----
+# ---- geometric continuity (G0/G1/G2), adapted from Runebender ----
 G1_ANGLE_TOL = 0.009   # ~0.5deg: catches integer-rounding kinks at smooth pts
 G2_REL_TOL   = 0.05    # relative curvature mismatch for G2
 G3_REL_TOL   = 0.08
@@ -139,8 +139,9 @@ def _curv_end(s):
 def classify_join(a, b):
     """(level, value) for the join where incoming seg a meets outgoing seg b.
     Levels: G0 (intended corner), kink (smooth but tangent broken = defect),
-    G1line (line<->curve, G1 is the best possible = OK), G1 (curve-curve,
-    curvature broken = harmonize candidate), G2, G3."""
+    G1line (tangent line<->curve; inspect endpoint curvature separately),
+    G1 (curve-curve curvature mismatch = review candidate), G2.
+    This historical classifier does not distinguish G2 line/curve joins."""
     if not b[5]:
         return ('G0', 0.0)
     ti=_sub(a[3],a[2]);  ti=ti if _hyp(ti)>1e-9 else _sub(a[3],a[0])
@@ -184,8 +185,11 @@ def join_audit(conts):
             incoming=_sub(a[3],a[2]); outgoing=_sub(b[1],b[0])
             angle=math.degrees(math.atan2(abs(_cross(incoming,outgoing)),
                                sum(x*y for x,y in zip(incoming,outgoing))))
+            ki,ko=_curv_end(a),_curv_start(b)
             rows.append(dict(contour=ci, point=b[0], smooth=b[5], angle=angle,
-                             classification=classify_join(a,b)[0]))
+                             classification=classify_join(a,b)[0],
+                             curvature_in=ki, curvature_out=ko,
+                             relative_jump=abs(ki-ko)/max(abs(ki),abs(ko),1e-6)))
     return rows
 
 
@@ -211,14 +215,17 @@ def main():
             for row in join_audit(parse(open(path).read())):
                 x,y=row['point']
                 kind='smooth' if row['smooth'] else 'corner: review intent'
-                print(f'{a.master} {g}: join ({x:g},{y:g}) {kind}; tangent angle {row["angle"]:.3f} deg')
+                print(f'{a.master} {g}: join ({x:g},{y:g}) {kind}; '
+                      f'{row["classification"]}; tangent angle {row["angle"]:.3f} deg; '
+                      f'signed curvature {row["curvature_in"]:.6g} -> '
+                      f'{row["curvature_out"]:.6g}; relative jump {row["relative_jump"]:.1%}')
                 if row['classification']=='kink':
                     issues.append(f'marked smooth join ({x:g},{y:g}) has a tangent kink')
         if issues:
             bad+=1
             print(f'{a.master} {g}:')
             for i in issues: print('  '+i)
-    print(f'{bad} glyphs flagged' if bad else 'all clean')
+    print(f'{bad} glyphs flagged' if bad else 'no crest/tension/kink flags (not a curve-quality verdict)')
 
 if __name__=='__main__':
     main()

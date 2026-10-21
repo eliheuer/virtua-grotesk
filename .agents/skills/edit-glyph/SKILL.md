@@ -141,3 +141,19 @@ fixed as weight changes. Do not assume an unmarked curve/line join is an
 intentional corner: inspect its geometry. Preserve human smooth flags/source
 bytes even when geometry is tangent. Exact 64/128 handles are local evidence,
 not universal radii; distinguish the requested transfer trial from approval.
+
+For an explicit counterexample to equal-handle/square-turn generalization, read
+[ARB-003 correction 01](../../../agent-proofs/cases/arabic-003/README.md#manual-correction-01--bold-hamza-above).
+Compare contour mass and terminal projection as well as local handle lengths:
+the human hamza correction preserves tangency and chamfers while narrowing its
+base and using unequal handles. Do not "repair" that measured human geometry
+back to the earlier AI recipe merely to improve a generic numerical score.
+
+### Curve corrections
+
+Read [Curve quality](../draw-outline/references/curve-quality.md) before changing
+handles. Preserve an exact before snapshot and use `scripts/curve_profile.py`
+for a signed comb comparison at common scale, plus `curve_lint.py --joins`.
+Choose a local operation for the diagnosed fault; do not bulk Balance or
+Optimize a human correction. Recheck neighboring joins after changes and
+rounding, then verify interpolation and compiled context proofs.
