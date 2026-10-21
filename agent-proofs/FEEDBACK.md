@@ -410,3 +410,14 @@ them in chat. Use bounded, readable images, shared sizes, explicit weights and
 recorded font hashes. Browser comparison remains useful for interactive shaping;
 DesignBot is an additional inspection surface, not a substitute for source
 curve checks or human grading. See the [proof guide](app/README.md#whole-font-views-and-image-inspection).
+
+## Raster proof gate — 2026-10-21
+
+Eli accepted the new comparison approach and requested continuing the remaining
+Arabic base forms with raster proofs as a core workflow step. Each drawing batch
+must render and inspect fixed DesignBot comparisons at both master endpoints,
+using Before, Working and all four references at a shared size. Add a focused
+larger sample or reading-size context when the overview hides the issue. Record
+what was seen and fix observed defects before advancing. Retain PNGs and hash
+receipts beside the source pair. This accepts the proofing method and continuation;
+it does not automatically green-grade the preceding Dal/Reh drawings.

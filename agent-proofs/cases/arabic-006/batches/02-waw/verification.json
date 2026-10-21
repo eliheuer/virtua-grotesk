@@ -1,0 +1,10431 @@
+{
+  "source_changes": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.fina.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/waw-ar.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/wawH_amzaabove-ar.fina.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/wawH_amzaabove-ar.glif"
+  ],
+  "regular_sources_unchanged": true,
+  "manual_hamza_unchanged": true,
+  "font_hashes": {
+    "before": "33263e051459122b416afab2c363f7eb4bd04f1c0aaa42e5a1b88d63eae269a6",
+    "working": "a7835f442a4c376c3df51549a5d952947cbb1502f53b7a479631f346c08f4350"
+  },
+  "compiled_changes": {
+    "400": {
+      "outlines_or_widths": [
+        "uni0648",
+        "uni0648.fina",
+        "uni0624",
+        "uni0624.fina"
+      ],
+      "widths": {}
+    },
+    "450": {
+      "outlines_or_widths": [
+        "uni0648",
+        "uni0648.fina",
+        "uni0624",
+        "uni0624.fina"
+      ],
+      "widths": {
+        "uni0648": [
+          544,
+          571
+        ],
+        "uni0648.fina": [
+          619,
+          667
+        ],
+        "uni0624": [
+          568,
+          591
+        ],
+        "uni0624.fina": [
+          568,
+          607
+        ]
+      }
+    },
+    "500": {
+      "outlines_or_widths": [
+        "uni0648",
+        "uni0648.fina",
+        "uni0624",
+        "uni0624.fina"
+      ],
+      "widths": {
+        "uni0648": [
+          544,
+          597
+        ],
+        "uni0648.fina": [
+          597,
+          693
+        ],
+        "uni0624": [
+          568,
+          613
+        ],
+        "uni0624.fina": [
+          568,
+          645
+        ]
+      }
+    },
+    "550": {
+      "outlines_or_widths": [
+        "uni0648",
+        "uni0648.fina",
+        "uni0624",
+        "uni0624.fina"
+      ],
+      "widths": {
+        "uni0648": [
+          544,
+          624
+        ],
+        "uni0648.fina": [
+          576,
+          720
+        ],
+        "uni0624": [
+          568,
+          636
+        ],
+        "uni0624.fina": [
+          568,
+          684
+        ]
+      }
+    },
+    "600": {
+      "outlines_or_widths": [
+        "uni0648",
+        "uni0648.fina",
+        "uni0624",
+        "uni0624.fina"
+      ],
+      "widths": {
+        "uni0648": [
+          544,
+          651
+        ],
+        "uni0648.fina": [
+          555,
+          747
+        ],
+        "uni0624": [
+          568,
+          659
+        ],
+        "uni0624.fina": [
+          568,
+          723
+        ]
+      }
+    },
+    "650": {
+      "outlines_or_widths": [
+        "uni0648",
+        "uni0648.fina",
+        "uni0624",
+        "uni0624.fina"
+      ],
+      "widths": {
+        "uni0648": [
+          544,
+          677
+        ],
+        "uni0648.fina": [
+          533,
+          773
+        ],
+        "uni0624": [
+          568,
+          681
+        ],
+        "uni0624.fina": [
+          568,
+          761
+        ]
+      }
+    },
+    "700": {
+      "outlines_or_widths": [
+        "uni0648",
+        "uni0648.fina",
+        "uni0624",
+        "uni0624.fina"
+      ],
+      "widths": {
+        "uni0648": [
+          544,
+          704
+        ],
+        "uni0648.fina": [
+          512,
+          800
+        ],
+        "uni0624": [
+          568,
+          704
+        ],
+        "uni0624.fina": [
+          568,
+          800
+        ]
+      }
+    }
+  },
+  "shape_checks": [
+    {
+      "weight": 400,
+      "text": "بو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 640,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "ؤ ؤؤ بوؤ",
+      "working": [
+        {
+          "name": "uni0624",
+          "cluster": 7,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 6,
+          "advance": 640,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 2,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 0,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "نور ورود دور",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 11,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 10,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 9,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 640,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0646.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "وَ وُ وِ",
+      "working": [
+        {
+          "name": "uni0650",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            132,
+            -280
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064F",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            14,
+            -140
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            132,
+            -184
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "بد د بر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 6,
+          "advance": 496,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "بذ ذ بز ز",
+      "working": [
+        {
+          "name": "uni0632",
+          "cluster": 8,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0632.fina",
+          "cluster": 6,
+          "advance": 504,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630",
+          "cluster": 3,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "بژ ژ بڑ ڑ",
+      "working": [
+        {
+          "name": "rrehar",
+          "cluster": 8,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rrehar.fina",
+          "cluster": 6,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar",
+          "cluster": 3,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar.fina",
+          "cluster": 1,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "دار درب برد ورد",
+      "working": [
+        {
+          "name": "uni062F",
+          "cluster": 14,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 13,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 12,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 11,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 10,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 9,
+          "advance": 496,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 8,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 6,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 1,
+          "advance": 216,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "ددد د ررر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 9,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 7,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 2,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "ببب ب",
+      "working": [
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.fina",
+          "cluster": 2,
+          "advance": 1024,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.medi",
+          "cluster": 1,
+          "advance": 408,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "دَرْب بَدْر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 8,
+          "advance": 0,
+          "offset": [
+            168,
+            -176
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 8,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            28,
+            -172
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 6,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 2,
+          "advance": 0,
+          "offset": [
+            156,
+            -144
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            152,
+            -192
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "دد در رد رر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 9,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 4,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "أً ؤً ئً",
+      "working": [
+        {
+          "name": "uni064B",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            344,
+            160
+          ]
+        },
+        {
+          "name": "uni0626",
+          "cluster": 6,
+          "advance": 976,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            132,
+            120
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            0,
+            464
+          ]
+        },
+        {
+          "name": "uni0623",
+          "cluster": 0,
+          "advance": 224,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "ممم م",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 4,
+          "advance": 592,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.fina",
+          "cluster": 2,
+          "advance": 656,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.medi",
+          "cluster": 1,
+          "advance": 512,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.init",
+          "cluster": 0,
+          "advance": 456,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "ههه ه",
+      "working": [
+        {
+          "name": "uni0647",
+          "cluster": 4,
+          "advance": 576,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.fina",
+          "cluster": 2,
+          "advance": 536,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.medi",
+          "cluster": 1,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.init",
+          "cluster": 0,
+          "advance": 768,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "سلام",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 3,
+          "advance": 592,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni06440627.fina",
+          "cluster": 1,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0633.init",
+          "cluster": 0,
+          "advance": 808,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "العربية",
+      "working": [
+        {
+          "name": "uni0629.fina",
+          "cluster": 6,
+          "advance": 536,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064A.medi",
+          "cluster": 5,
+          "advance": 408,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 4,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 3,
+          "advance": 496,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0639.medi",
+          "cluster": 2,
+          "advance": 608,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0644.init",
+          "cluster": 1,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 0,
+          "advance": 216,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "بو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 667,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "ؤ ؤؤ بوؤ",
+      "working": [
+        {
+          "name": "uni0624",
+          "cluster": 7,
+          "advance": 591,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 6,
+          "advance": 667,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 591,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 2,
+          "advance": 591,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 0,
+          "advance": 591,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "نور ورود دور",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 11,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 10,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 9,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 667,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0646.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "وَ وُ وِ",
+      "working": [
+        {
+          "name": "uni0650",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            132,
+            -287
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064F",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            14,
+            -137
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            132,
+            -177
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "بد د بر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 6,
+          "advance": 520,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "بذ ذ بز ز",
+      "working": [
+        {
+          "name": "uni0632",
+          "cluster": 8,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0632.fina",
+          "cluster": 6,
+          "advance": 527,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630",
+          "cluster": 3,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "بژ ژ بڑ ڑ",
+      "working": [
+        {
+          "name": "rrehar",
+          "cluster": 8,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rrehar.fina",
+          "cluster": 6,
+          "advance": 602,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar",
+          "cluster": 3,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar.fina",
+          "cluster": 1,
+          "advance": 602,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "دار درب برد ورد",
+      "working": [
+        {
+          "name": "uni062F",
+          "cluster": 14,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 13,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 12,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 11,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 10,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 9,
+          "advance": 520,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 8,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 6,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 1,
+          "advance": 229,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "ددد د ررر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 9,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 7,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 2,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "ببب ب",
+      "working": [
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.fina",
+          "cluster": 2,
+          "advance": 1024,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.medi",
+          "cluster": 1,
+          "advance": 409,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "دَرْب بَدْر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 8,
+          "advance": 0,
+          "offset": [
+            168,
+            -171
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 8,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            29,
+            -165
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 6,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 2,
+          "advance": 0,
+          "offset": [
+            156,
+            -134
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            153,
+            -180
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "دد در رد رر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 9,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 4,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 543,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "أً ؤً ئً",
+      "working": [
+        {
+          "name": "uni064B",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            344,
+            177
+          ]
+        },
+        {
+          "name": "uni0626",
+          "cluster": 6,
+          "advance": 976,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            109,
+            137
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 591,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            7,
+            479
+          ]
+        },
+        {
+          "name": "uni0623",
+          "cluster": 0,
+          "advance": 236,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 571,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "ممم م",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 4,
+          "advance": 631,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.fina",
+          "cluster": 2,
+          "advance": 702,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.medi",
+          "cluster": 1,
+          "advance": 512,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.init",
+          "cluster": 0,
+          "advance": 456,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "ههه ه",
+      "working": [
+        {
+          "name": "uni0647",
+          "cluster": 4,
+          "advance": 588,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.fina",
+          "cluster": 2,
+          "advance": 549,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.medi",
+          "cluster": 1,
+          "advance": 536,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.init",
+          "cluster": 0,
+          "advance": 774,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "سلام",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 3,
+          "advance": 631,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni06440627.fina",
+          "cluster": 1,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0633.init",
+          "cluster": 0,
+          "advance": 808,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 450,
+      "text": "العربية",
+      "working": [
+        {
+          "name": "uni0629.fina",
+          "cluster": 6,
+          "advance": 564,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064A.medi",
+          "cluster": 5,
+          "advance": 409,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 4,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 3,
+          "advance": 520,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0639.medi",
+          "cluster": 2,
+          "advance": 614,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0644.init",
+          "cluster": 1,
+          "advance": 294,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 0,
+          "advance": 229,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "بو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 693,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "ؤ ؤؤ بوؤ",
+      "working": [
+        {
+          "name": "uni0624",
+          "cluster": 7,
+          "advance": 613,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 6,
+          "advance": 693,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 613,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 2,
+          "advance": 613,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 0,
+          "advance": 613,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "نور ورود دور",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 11,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 10,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 9,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 693,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0646.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "وَ وُ وِ",
+      "working": [
+        {
+          "name": "uni0650",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            132,
+            -293
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064F",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            14,
+            -134
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            132,
+            -171
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "بد د بر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 6,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "بذ ذ بز ز",
+      "working": [
+        {
+          "name": "uni0632",
+          "cluster": 8,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0632.fina",
+          "cluster": 6,
+          "advance": 549,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630",
+          "cluster": 3,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "بژ ژ بڑ ڑ",
+      "working": [
+        {
+          "name": "rrehar",
+          "cluster": 8,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rrehar.fina",
+          "cluster": 6,
+          "advance": 605,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar",
+          "cluster": 3,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar.fina",
+          "cluster": 1,
+          "advance": 605,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "دار درب برد ورد",
+      "working": [
+        {
+          "name": "uni062F",
+          "cluster": 14,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 13,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 12,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 11,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 10,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 9,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 8,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 6,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 1,
+          "advance": 243,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "ددد د ررر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 9,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 7,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 2,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "ببب ب",
+      "working": [
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.fina",
+          "cluster": 2,
+          "advance": 1024,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.medi",
+          "cluster": 1,
+          "advance": 411,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "دَرْب بَدْر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 8,
+          "advance": 0,
+          "offset": [
+            168,
+            -167
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 8,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            29,
+            -159
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 6,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 2,
+          "advance": 0,
+          "offset": [
+            156,
+            -126
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            155,
+            -170
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "دد در رد رر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 9,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 4,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 557,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "أً ؤً ئً",
+      "working": [
+        {
+          "name": "uni064B",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            344,
+            193
+          ]
+        },
+        {
+          "name": "uni0626",
+          "cluster": 6,
+          "advance": 976,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            87,
+            153
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 613,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            13,
+            493
+          ]
+        },
+        {
+          "name": "uni0623",
+          "cluster": 0,
+          "advance": 248,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 597,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "ممم م",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 4,
+          "advance": 669,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.fina",
+          "cluster": 2,
+          "advance": 748,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.medi",
+          "cluster": 1,
+          "advance": 512,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.init",
+          "cluster": 0,
+          "advance": 456,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "ههه ه",
+      "working": [
+        {
+          "name": "uni0647",
+          "cluster": 4,
+          "advance": 600,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.fina",
+          "cluster": 2,
+          "advance": 561,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.medi",
+          "cluster": 1,
+          "advance": 527,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.init",
+          "cluster": 0,
+          "advance": 780,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "سلام",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 3,
+          "advance": 669,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni06440627.fina",
+          "cluster": 1,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0633.init",
+          "cluster": 0,
+          "advance": 808,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 500,
+      "text": "العربية",
+      "working": [
+        {
+          "name": "uni0629.fina",
+          "cluster": 6,
+          "advance": 592,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064A.medi",
+          "cluster": 5,
+          "advance": 411,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 4,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 3,
+          "advance": 544,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0639.medi",
+          "cluster": 2,
+          "advance": 620,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0644.init",
+          "cluster": 1,
+          "advance": 300,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 0,
+          "advance": 243,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "بو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 720,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "ؤ ؤؤ بوؤ",
+      "working": [
+        {
+          "name": "uni0624",
+          "cluster": 7,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 6,
+          "advance": 720,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 2,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 0,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "نور ورود دور",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 11,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 10,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 9,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 720,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0646.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "وَ وُ وِ",
+      "working": [
+        {
+          "name": "uni0650",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            132,
+            -300
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064F",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            14,
+            -131
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            132,
+            -164
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "بد د بر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 6,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "بذ ذ بز ز",
+      "working": [
+        {
+          "name": "uni0632",
+          "cluster": 8,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0632.fina",
+          "cluster": 6,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630",
+          "cluster": 3,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "بژ ژ بڑ ڑ",
+      "working": [
+        {
+          "name": "rrehar",
+          "cluster": 8,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rrehar.fina",
+          "cluster": 6,
+          "advance": 607,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar",
+          "cluster": 3,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar.fina",
+          "cluster": 1,
+          "advance": 607,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "دار درب برد ورد",
+      "working": [
+        {
+          "name": "uni062F",
+          "cluster": 14,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 13,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 12,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 11,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 10,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 9,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 8,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 6,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "ددد د ررر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 9,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 7,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 2,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "ببب ب",
+      "working": [
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.fina",
+          "cluster": 2,
+          "advance": 1024,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.medi",
+          "cluster": 1,
+          "advance": 412,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "دَرْب بَدْر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 8,
+          "advance": 0,
+          "offset": [
+            168,
+            -162
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 8,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            30,
+            -152
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 6,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 2,
+          "advance": 0,
+          "offset": [
+            156,
+            -116
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            156,
+            -158
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "دد در رد رر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 9,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 4,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 572,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "أً ؤً ئً",
+      "working": [
+        {
+          "name": "uni064B",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            344,
+            210
+          ]
+        },
+        {
+          "name": "uni0626",
+          "cluster": 6,
+          "advance": 976,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            64,
+            170
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            20,
+            508
+          ]
+        },
+        {
+          "name": "uni0623",
+          "cluster": 0,
+          "advance": 260,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "ممم م",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 4,
+          "advance": 708,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.fina",
+          "cluster": 2,
+          "advance": 794,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.medi",
+          "cluster": 1,
+          "advance": 512,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.init",
+          "cluster": 0,
+          "advance": 456,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "ههه ه",
+      "working": [
+        {
+          "name": "uni0647",
+          "cluster": 4,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.fina",
+          "cluster": 2,
+          "advance": 574,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.medi",
+          "cluster": 1,
+          "advance": 519,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.init",
+          "cluster": 0,
+          "advance": 786,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "سلام",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 3,
+          "advance": 708,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni06440627.fina",
+          "cluster": 1,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0633.init",
+          "cluster": 0,
+          "advance": 808,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "العربية",
+      "working": [
+        {
+          "name": "uni0629.fina",
+          "cluster": 6,
+          "advance": 620,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064A.medi",
+          "cluster": 5,
+          "advance": 412,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 4,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 3,
+          "advance": 568,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0639.medi",
+          "cluster": 2,
+          "advance": 626,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0644.init",
+          "cluster": 1,
+          "advance": 306,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 0,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "بو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 747,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "ؤ ؤؤ بوؤ",
+      "working": [
+        {
+          "name": "uni0624",
+          "cluster": 7,
+          "advance": 659,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 6,
+          "advance": 747,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 659,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 2,
+          "advance": 659,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 0,
+          "advance": 659,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "نور ورود دور",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 11,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 10,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 9,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 747,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0646.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "وَ وُ وِ",
+      "working": [
+        {
+          "name": "uni0650",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            132,
+            -307
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064F",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            14,
+            -128
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            132,
+            -157
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "بد د بر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 6,
+          "advance": 592,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "بذ ذ بز ز",
+      "working": [
+        {
+          "name": "uni0632",
+          "cluster": 8,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0632.fina",
+          "cluster": 6,
+          "advance": 595,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630",
+          "cluster": 3,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "بژ ژ بڑ ڑ",
+      "working": [
+        {
+          "name": "rrehar",
+          "cluster": 8,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rrehar.fina",
+          "cluster": 6,
+          "advance": 609,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar",
+          "cluster": 3,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar.fina",
+          "cluster": 1,
+          "advance": 609,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "دار درب برد ورد",
+      "working": [
+        {
+          "name": "uni062F",
+          "cluster": 14,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 13,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 12,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 11,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 10,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 9,
+          "advance": 592,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 8,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 6,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 1,
+          "advance": 269,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "ددد د ررر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 9,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 7,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 2,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "ببب ب",
+      "working": [
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.fina",
+          "cluster": 2,
+          "advance": 1024,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.medi",
+          "cluster": 1,
+          "advance": 413,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "دَرْب بَدْر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 8,
+          "advance": 0,
+          "offset": [
+            168,
+            -157
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 8,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            31,
+            -145
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 6,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 2,
+          "advance": 0,
+          "offset": [
+            156,
+            -106
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            157,
+            -146
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "دد در رد رر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 9,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 4,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "أً ؤً ئً",
+      "working": [
+        {
+          "name": "uni064B",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            344,
+            227
+          ]
+        },
+        {
+          "name": "uni0626",
+          "cluster": 6,
+          "advance": 976,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            41,
+            187
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 659,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            27,
+            523
+          ]
+        },
+        {
+          "name": "uni0623",
+          "cluster": 0,
+          "advance": 272,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 651,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "ممم م",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 4,
+          "advance": 747,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.fina",
+          "cluster": 2,
+          "advance": 840,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.medi",
+          "cluster": 1,
+          "advance": 512,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.init",
+          "cluster": 0,
+          "advance": 456,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "ههه ه",
+      "working": [
+        {
+          "name": "uni0647",
+          "cluster": 4,
+          "advance": 624,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.fina",
+          "cluster": 2,
+          "advance": 587,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.medi",
+          "cluster": 1,
+          "advance": 511,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.init",
+          "cluster": 0,
+          "advance": 792,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "سلام",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 3,
+          "advance": 747,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni06440627.fina",
+          "cluster": 1,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0633.init",
+          "cluster": 0,
+          "advance": 808,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 600,
+      "text": "العربية",
+      "working": [
+        {
+          "name": "uni0629.fina",
+          "cluster": 6,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064A.medi",
+          "cluster": 5,
+          "advance": 413,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 4,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 3,
+          "advance": 592,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0639.medi",
+          "cluster": 2,
+          "advance": 632,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0644.init",
+          "cluster": 1,
+          "advance": 312,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 0,
+          "advance": 269,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "بو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 773,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "ؤ ؤؤ بوؤ",
+      "working": [
+        {
+          "name": "uni0624",
+          "cluster": 7,
+          "advance": 681,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 6,
+          "advance": 773,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 681,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 2,
+          "advance": 681,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 0,
+          "advance": 681,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "نور ورود دور",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 11,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 10,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 9,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 773,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0646.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "وَ وُ وِ",
+      "working": [
+        {
+          "name": "uni0650",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            132,
+            -313
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064F",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            14,
+            -125
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            132,
+            -151
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "بد د بر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 6,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "بذ ذ بز ز",
+      "working": [
+        {
+          "name": "uni0632",
+          "cluster": 8,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0632.fina",
+          "cluster": 6,
+          "advance": 617,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630",
+          "cluster": 3,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "بژ ژ بڑ ڑ",
+      "working": [
+        {
+          "name": "rrehar",
+          "cluster": 8,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rrehar.fina",
+          "cluster": 6,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar",
+          "cluster": 3,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar.fina",
+          "cluster": 1,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "دار درب برد ورد",
+      "working": [
+        {
+          "name": "uni062F",
+          "cluster": 14,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 13,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 12,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 11,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 10,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 9,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 8,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 6,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 1,
+          "advance": 283,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "ددد د ررر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 9,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 7,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 2,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "ببب ب",
+      "working": [
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.fina",
+          "cluster": 2,
+          "advance": 1024,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.medi",
+          "cluster": 1,
+          "advance": 415,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "دَرْب بَدْر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 8,
+          "advance": 0,
+          "offset": [
+            168,
+            -153
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 8,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            31,
+            -139
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 6,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 2,
+          "advance": 0,
+          "offset": [
+            156,
+            -98
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            159,
+            -136
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "دد در رد رر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 9,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 4,
+          "advance": 660,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 601,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "أً ؤً ئً",
+      "working": [
+        {
+          "name": "uni064B",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            344,
+            243
+          ]
+        },
+        {
+          "name": "uni0626",
+          "cluster": 6,
+          "advance": 976,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            19,
+            203
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 681,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            33,
+            537
+          ]
+        },
+        {
+          "name": "uni0623",
+          "cluster": 0,
+          "advance": 284,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 677,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "ممم م",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 4,
+          "advance": 785,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.fina",
+          "cluster": 2,
+          "advance": 886,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.medi",
+          "cluster": 1,
+          "advance": 512,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.init",
+          "cluster": 0,
+          "advance": 456,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "ههه ه",
+      "working": [
+        {
+          "name": "uni0647",
+          "cluster": 4,
+          "advance": 636,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.fina",
+          "cluster": 2,
+          "advance": 599,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.medi",
+          "cluster": 1,
+          "advance": 502,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.init",
+          "cluster": 0,
+          "advance": 798,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "سلام",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 3,
+          "advance": 785,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni06440627.fina",
+          "cluster": 1,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0633.init",
+          "cluster": 0,
+          "advance": 808,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 650,
+      "text": "العربية",
+      "working": [
+        {
+          "name": "uni0629.fina",
+          "cluster": 6,
+          "advance": 676,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064A.medi",
+          "cluster": 5,
+          "advance": 415,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 4,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 3,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0639.medi",
+          "cluster": 2,
+          "advance": 638,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0644.init",
+          "cluster": 1,
+          "advance": 318,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 0,
+          "advance": 283,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "بو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 800,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "ؤ ؤؤ بوؤ",
+      "working": [
+        {
+          "name": "uni0624",
+          "cluster": 7,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 6,
+          "advance": 800,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 2,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 1,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 0,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "نور ورود دور",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 11,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 10,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 9,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648.fina",
+          "cluster": 1,
+          "advance": 800,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0646.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "وَ وُ وِ",
+      "working": [
+        {
+          "name": "uni0650",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            132,
+            -320
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 6,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064F",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            14,
+            -122
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 3,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            132,
+            -144
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "بد د بر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 6,
+          "advance": 640,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "بذ ذ بز ز",
+      "working": [
+        {
+          "name": "uni0632",
+          "cluster": 8,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0632.fina",
+          "cluster": 6,
+          "advance": 640,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630",
+          "cluster": 3,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0630.fina",
+          "cluster": 1,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "بژ ژ بڑ ڑ",
+      "working": [
+        {
+          "name": "rrehar",
+          "cluster": 8,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "rrehar.fina",
+          "cluster": 6,
+          "advance": 614,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 5,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 4,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar",
+          "cluster": 3,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "jehar.fina",
+          "cluster": 1,
+          "advance": 614,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "دار درب برد ورد",
+      "working": [
+        {
+          "name": "uni062F",
+          "cluster": 14,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 13,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 12,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 11,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 10,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 9,
+          "advance": 640,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 8,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 7,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 6,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 5,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 1,
+          "advance": 296,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "ددد د ررر ر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 9,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 8,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 7,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 4,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 2,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "ببب ب",
+      "working": [
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.fina",
+          "cluster": 2,
+          "advance": 1024,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.medi",
+          "cluster": 1,
+          "advance": 416,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 0,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "دَرْب بَدْر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 8,
+          "advance": 0,
+          "offset": [
+            168,
+            -148
+          ]
+        },
+        {
+          "name": "uni062F.fina",
+          "cluster": 8,
+          "advance": 528,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            32,
+            -132
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 6,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628",
+          "cluster": 4,
+          "advance": 944,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0652",
+          "cluster": 2,
+          "advance": 0,
+          "offset": [
+            156,
+            -88
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 2,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064E",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            160,
+            -124
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "دد در رد رر",
+      "working": [
+        {
+          "name": "uni0631",
+          "cluster": 10,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 9,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 8,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 7,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 6,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631",
+          "cluster": 4,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 3,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 1,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni062F",
+          "cluster": 0,
+          "advance": 616,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "أً ؤً ئً",
+      "working": [
+        {
+          "name": "uni064B",
+          "cluster": 6,
+          "advance": 0,
+          "offset": [
+            344,
+            260
+          ]
+        },
+        {
+          "name": "uni0626",
+          "cluster": 6,
+          "advance": 976,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 5,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 3,
+          "advance": 0,
+          "offset": [
+            -4,
+            220
+          ]
+        },
+        {
+          "name": "uni0624",
+          "cluster": 3,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 2,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064B",
+          "cluster": 0,
+          "advance": 0,
+          "offset": [
+            40,
+            552
+          ]
+        },
+        {
+          "name": "uni0623",
+          "cluster": 0,
+          "advance": 296,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "ووو و",
+      "working": [
+        {
+          "name": "uni0648",
+          "cluster": 4,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 2,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 1,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0648",
+          "cluster": 0,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "ممم م",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 4,
+          "advance": 824,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.fina",
+          "cluster": 2,
+          "advance": 932,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.medi",
+          "cluster": 1,
+          "advance": 512,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0645.init",
+          "cluster": 0,
+          "advance": 456,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "ههه ه",
+      "working": [
+        {
+          "name": "uni0647",
+          "cluster": 4,
+          "advance": 648,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "space",
+          "cluster": 3,
+          "advance": 256,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.fina",
+          "cluster": 2,
+          "advance": 612,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.medi",
+          "cluster": 1,
+          "advance": 494,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0647.init",
+          "cluster": 0,
+          "advance": 804,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "سلام",
+      "working": [
+        {
+          "name": "uni0645",
+          "cluster": 3,
+          "advance": 824,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni06440627.fina",
+          "cluster": 1,
+          "advance": 672,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0633.init",
+          "cluster": 0,
+          "advance": 808,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "العربية",
+      "working": [
+        {
+          "name": "uni0629.fina",
+          "cluster": 6,
+          "advance": 704,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni064A.medi",
+          "cluster": 5,
+          "advance": 416,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0628.init",
+          "cluster": 4,
+          "advance": 288,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0631.fina",
+          "cluster": 3,
+          "advance": 640,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0639.medi",
+          "cluster": 2,
+          "advance": 644,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0644.init",
+          "cluster": 1,
+          "advance": 324,
+          "offset": [
+            0,
+            0
+          ]
+        },
+        {
+          "name": "uni0627",
+          "cluster": 0,
+          "advance": 296,
+          "offset": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ]
+}

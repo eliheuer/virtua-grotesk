@@ -291,3 +291,13 @@ captures, but the human comparison panel needs a visible browser. Anthropic,
 local models, Hermes or Pi should reuse this documented loop where their tools
 permit; compatibility has not been tested. Generic extraction, editor embedding
 and automatic agent coordination are future work, not part of this handoff.
+
+## Required visual checkpoint — 2026-10-21
+
+For each Arabic drawing batch, render and inspect fixed DesignBot raster proofs
+at 400 and 700 with Before, Working and the four references. Retain the PNGs,
+font-hash receipts and observed findings in the case. Add large details or
+reading-size context when needed; fix visible faults before continuing.
+See [the raster workflow](app/README.md#whole-font-views-and-image-inspection).
+This is a core check alongside curve diagnostics and compiled shaping, not
+human grading or release approval.

@@ -179,3 +179,14 @@ Follow the standing authorization in `agent-proofs/README.md`: as of 2026-10-20,
 new Hebrew drawing batches go directly into active masters after preserving a
 baseline; no repeated application question is needed. Retain technical checks,
 proofs, exact manual corrections, source-color protections and human grading.
+
+### Required raster proof gate — 2026-10-21
+
+Eli made fixed raster inspection a core part of Arabic drawing work. After each
+bounded batch, render 400 and 700 with `agent-proofs/app/render-detail.py`, using
+Before, Working, Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro.
+Inspect the actual PNGs, record visible findings, and fix observed faults before
+advancing. Use shorter/larger details or reading-size context as needed. Keep
+PNGs and hash receipts beside source snapshots. Browser proofs, curve diagnostics
+and compiled shaping remain complementary; command success is not visual review
+or a human grade. See `agent-proofs/FEEDBACK.md#raster-proof-gate--2026-10-21`.

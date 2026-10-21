@@ -401,3 +401,13 @@ The viewport scrollbar is themed at `:root:has(body.dark)` because setting
 Standard thin scrollbar colors and a WebKit fallback share neutral thumb/track
 colors with internal scrollers. Preserve scrolling and the established content
 margins; do not hide overflow to remove the scrollbar.
+
+### Required drawing-batch raster check
+
+Confirmed by Eli on 2026-10-21: fixed raster inspection is a core step for each
+Arabic drawing batch. Render endpoint sheets with `render-detail.py`, open and
+inspect both PNGs, record visible findings, and correct faults before moving
+on. Use a shorter/larger detail and reading-size context where appropriate.
+Retain the PNG and its receipt with each batch, alongside curve and shaping
+checks. Browser interaction complements this gate; a successful render command
+alone does not satisfy visual inspection.
