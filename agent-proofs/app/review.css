@@ -136,3 +136,12 @@ input[type=number],#sample-trigger,#fitted-size,#custom{border-bottom:0;backgrou
  .comparison-grid.many-references.switch-references .font-panel:first-child{grid-column:span 2}
 }
 @media(max-width:599px){.reading-grid.many-references{grid-template-columns:1fr}}
+
+/* Whole-font proofs are independently named/capturable, on the same margin grid. */
+.overview-section{margin-block:0 var(--space);scroll-margin-top:var(--half)}
+.overview-label{font:400 var(--ui)/1.4 ReviewLabels,Arial,sans-serif;margin:0 0 var(--half)}
+.overview-section .font-caption{position:relative;top:auto}
+.reading-body .missing{font:400 var(--ui)/1.4 ReviewLabels,Arial,sans-serif;font-variation-settings:normal}
+
+.reading-body .coverage-note{font:400 var(--ui)/1.4 ReviewLabels,Arial,sans-serif;font-variation-settings:normal;text-align:left;padding-block:var(--half)}
+.reading-body .coverage-note p{margin-top:var(--half);overflow-wrap:anywhere}

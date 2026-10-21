@@ -1,0 +1,175 @@
+{
+  "description": "Autonomous Arabic batch 01: Bold Dal and Reh family",
+  "fonts": {
+    "before": {
+      "path": "assets/before.ttf",
+      "sha256": "4db9d7e1d3a7a0d697587f5a8fcbb93828453a91d62ddeea4c70db30530576cc",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    },
+    "after": {
+      "path": "assets/after.ttf",
+      "sha256": "33263e051459122b416afab2c363f7eb4bd04f1c0aaa42e5a1b88d63eae269a6",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "../../../arabic-001/assets/rubik.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "../../../arabic-001/assets/noto.ttf",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "family": "Noto Sans Arabic",
+      "axes": {
+        "wght": [
+          100.0,
+          400.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "plex": {
+      "family": "IBM Plex Sans Arabic",
+      "label": "Reference",
+      "faces": [
+        {
+          "path": "../../../arabic-001/assets/plex-400.ttf",
+          "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+          "axes": {},
+          "weight": 400
+        },
+        {
+          "path": "../../../arabic-001/assets/plex-500.ttf",
+          "sha256": "b8363ab9f733dfa4f8e96b8b2102c24b5cf4110fb96d1d3d9a9412f6fb49cf74",
+          "axes": {},
+          "weight": 500
+        },
+        {
+          "path": "../../../arabic-001/assets/plex-600.ttf",
+          "sha256": "597bd5502e5997be4414e4c9c88834b30ff3784250c84f20bce2b20e53ebd467",
+          "axes": {},
+          "weight": 600
+        },
+        {
+          "path": "../../../arabic-001/assets/plex-700.ttf",
+          "sha256": "691e0c891a38637ae6bbdb69700f8042cb0724a137bee615068ffdb92244f61f",
+          "axes": {},
+          "weight": 700
+        }
+      ]
+    },
+    "readex": {
+      "path": "../../../arabic-001/assets/readex.ttf",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "axes": {
+        "wght": [
+          160.0,
+          400.0,
+          700.0
+        ],
+        "HEXP": [
+          0.0,
+          0.0,
+          100.0
+        ]
+      },
+      "family": "Readex Pro",
+      "label": "Reference"
+    }
+  },
+  "study": {
+    "id": "Arabic · Autonomous pass",
+    "language": "ar",
+    "readingDefault": "arabic",
+    "status": "Dal and Reh · Working drafts",
+    "note": "Four Bold base drawings refined. Regular and manual corrections are unchanged. Five component advances now follow their base. Marks and dot placement remain follow-up.",
+    "glyphs": [
+      {
+        "key": "dal",
+        "char": "د",
+        "name": "Dal"
+      },
+      {
+        "key": "reh",
+        "char": "ر",
+        "name": "Reh"
+      }
+    ],
+    "presets": {
+      "group": [
+        "بد د بر ر",
+        "Joined and isolated"
+      ],
+      "words": [
+        "دار درب برد ورد",
+        "Words"
+      ],
+      "marks": [
+        "بذ ذ بز ز",
+        "Dotted family"
+      ],
+      "latin": [
+        "بژ ژ بڑ ڑ",
+        "Extended family"
+      ]
+    }
+  },
+  "reading": {
+    "arabic": {
+      "label": "Dal and Reh contexts",
+      "paragraphs": [
+        {
+          "lang": "ar",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "بد د بر ر   بذ ذ بز ز   دار درب برد ورد   بژ ژ بڑ ڑ"
+            }
+          ]
+        }
+      ]
+    },
+    "joining": {
+      "label": "Unvocalized text",
+      "paragraphs": [
+        {
+          "lang": "ar",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "دار في بلد بعيد ورد في كتاب العربية ببد ببر د ر"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

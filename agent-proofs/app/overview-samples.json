@@ -1,0 +1,246 @@
+{
+  "arabic-alphabet": {
+    "label": "Arabic alphabet",
+    "overview": true,
+    "paragraphs": [
+      {
+        "label": "Basic alphabet",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ء ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي"
+          }
+        ]
+      },
+      {
+        "label": "Alef, hamza and alternate forms",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "آ أ إ ٱ ؤ ئ ء ة ى ي"
+          }
+        ]
+      },
+      {
+        "label": "Arabic and Persian numerals",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "٠١٢٣٤٥٦٧٨٩   ۰۱۲۳۴۵۶۷۸۹"
+          }
+        ]
+      },
+      {
+        "label": "Words and rhythm",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "باب كتاب سبب   دار درب ورد   سلام شمس قلم   لغة عربية"
+          }
+        ]
+      }
+    ]
+  },
+  "arabic-joining": {
+    "label": "Arabic joining forms",
+    "overview": true,
+    "paragraphs": [
+      {
+        "label": "Joining forms · ا ب ت ث",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "با ا   ببب ب   تتت ت   ثثث ث"
+          }
+        ]
+      },
+      {
+        "label": "Joining forms · ج ح خ د",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ججج ج   ححح ح   خخخ خ   بد د"
+          }
+        ]
+      },
+      {
+        "label": "Joining forms · ذ ر ز س",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "بذ ذ   بر ر   بز ز   سسس س"
+          }
+        ]
+      },
+      {
+        "label": "Joining forms · ش ص ض ط",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ششش ش   صصص ص   ضضض ض   ططط ط"
+          }
+        ]
+      },
+      {
+        "label": "Joining forms · ظ ع غ ف",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ظظظ ظ   ععع ع   غغغ غ   ففف ف"
+          }
+        ]
+      },
+      {
+        "label": "Joining forms · ق ك ل م",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ققق ق   ككك ك   للل ل   ممم م"
+          }
+        ]
+      },
+      {
+        "label": "Joining forms · ن ه و ي",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ننن ن   ههه ه   بو و   ييي ي"
+          }
+        ]
+      },
+      {
+        "label": "Lam–Alef and mixed joins",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "لا لأ لإ لآ   بلا بلأ بلإ بلآ   سلام كتاب مدرسة"
+          }
+        ]
+      }
+    ]
+  },
+  "all-scripts": {
+    "label": "All scripts",
+    "overview": true,
+    "paragraphs": [
+      {
+        "label": "Latin · Capitals",
+        "lang": "en",
+        "dir": "ltr",
+        "runs": [
+          {
+            "text": "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+          }
+        ]
+      },
+      {
+        "label": "Latin · Lowercase",
+        "lang": "en",
+        "dir": "ltr",
+        "runs": [
+          {
+            "text": "abcdefghijklmnopqrstuvwxyz"
+          }
+        ]
+      },
+      {
+        "label": "Latin · Text",
+        "lang": "en",
+        "dir": "ltr",
+        "runs": [
+          {
+            "text": "The quick brown fox jumps over the lazy dog.\nHamburgefontsiv · minimum · HAMBURGEFONTSIV"
+          }
+        ]
+      },
+      {
+        "label": "Hebrew · Alphabet and finals",
+        "lang": "he",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "א ב ג ד ה ו ז ח ט י כ ל מ נ ס ע פ צ ק ר ש ת   ך ם ן ף ץ"
+          }
+        ]
+      },
+      {
+        "label": "Hebrew · Text",
+        "lang": "he",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "בתחילת היום נפתח חלון הבית אל הרחוב. האור נח על השולחן ועל הספר הפתוח."
+          }
+        ]
+      },
+      {
+        "label": "Arabic · Alphabet",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ء ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي"
+          }
+        ]
+      },
+      {
+        "label": "Arabic · Joining and text",
+        "lang": "ar",
+        "dir": "rtl",
+        "runs": [
+          {
+            "text": "ببب ب   سسس س   ممم م   ههه ه   ييي ي\nفي بداية اليوم نفتح الكتاب ونقرأ النص العربي."
+          }
+        ]
+      },
+      {
+        "label": "Numerals and punctuation",
+        "lang": "en",
+        "dir": "ltr",
+        "runs": [
+          {
+            "text": "0123456789   ٠١٢٣٤٥٦٧٨٩   ۰۱۲۳۴۵۶۷۸۹\n.,:;!? () [] {} / — –   ، ؛ ؟"
+          }
+        ]
+      },
+      {
+        "label": "Script transitions",
+        "lang": "en",
+        "dir": "ltr",
+        "runs": [
+          {
+            "text": "Virtua Grotesk 2026 · "
+          },
+          {
+            "text": "שלום עולם",
+            "lang": "he",
+            "dir": "rtl"
+          },
+          {
+            "text": " · "
+          },
+          {
+            "text": "اللغة العربية",
+            "lang": "ar",
+            "dir": "rtl"
+          },
+          {
+            "text": " · Regular / Bold"
+          }
+        ]
+      }
+    ]
+  }
+}

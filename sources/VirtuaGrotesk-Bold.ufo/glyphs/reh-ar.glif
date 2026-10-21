@@ -4,22 +4,22 @@
 	<advance width="672"/>
 	<outline>
 		<contour>
-			<point x="540" y="0" type="curve" smooth="yes"/>
-			<point x="540" y="424" type="line"/>
-			<point x="506" y="460" type="line"/>
-			<point x="406" y="460" type="line"/>
-			<point x="372" y="424" type="line"/>
-			<point x="372" y="24" type="line" smooth="yes"/>
-			<point x="382" y="-84"/>
-			<point x="360" y="-124"/>
-			<point x="232" y="-124" type="curve" smooth="yes"/>
-			<point x="30" y="-124" type="line"/>
-			<point x="-4" y="-160" type="line"/>
-			<point x="-4" y="-248" type="line"/>
-			<point x="30" y="-284" type="line"/>
-			<point x="248" y="-284" type="line" smooth="yes"/>
-			<point x="466" y="-276"/>
-			<point x="540" y="-192"/>
+			<point x="536" y="0" type="curve" smooth="yes"/>
+			<point x="536" y="416" type="line"/>
+			<point x="520" y="432" type="line"/>
+			<point x="384" y="432" type="line"/>
+			<point x="368" y="416" type="line"/>
+			<point x="368" y="32" type="line" smooth="yes"/>
+			<point x="368" y="-56"/>
+			<point x="328" y="-96"/>
+			<point x="232" y="-96" type="curve" smooth="yes"/>
+			<point x="48" y="-96" type="line"/>
+			<point x="32" y="-112" type="line"/>
+			<point x="32" y="-240" type="line"/>
+			<point x="48" y="-256" type="line"/>
+			<point x="248" y="-256" type="line" smooth="yes"/>
+			<point x="448" y="-256"/>
+			<point x="536" y="-168"/>
 		</contour>
 	</outline>
 	<anchor name="bottom" x="268" y="-284"/>
@@ -29,9 +29,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

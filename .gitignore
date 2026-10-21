@@ -197,3 +197,11 @@ documentation/proofs/images/*.png
 !agent-proofs/cases/arabic-005/round-dots/working/fonts/*.ttf
 !agent-proofs/cases/arabic-005/round-dots/*.png
 !agent-proofs/cases/arabic-005/round-dots/comb.svg
+
+# ARB-006 reproducible autonomous batch evidence.
+!agent-proofs/cases/arabic-006/batches/*/assets/*.ttf
+!agent-proofs/cases/arabic-006/batches/*/working/fonts/
+!agent-proofs/cases/arabic-006/batches/*/working/fonts/*.ttf
+!agent-proofs/cases/arabic-006/batches/*/*.png
+!agent-proofs/cases/arabic-006/batches/*/*.jpg
+!agent-proofs/cases/arabic-006/batches/*/*-comb.svg

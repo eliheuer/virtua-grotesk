@@ -400,3 +400,13 @@ preserving green drawings and manual corrections, with bounded reversible
 batches and all four references. Base forms remain first; dependent marks and
 spacing follow. This grants work authorization, not human approval of the results.
 See [ARB-006](cases/arabic-006/README.md) for the queue and evidence.
+
+## Whole-font proofing and raster details — 2026-10-21
+
+Eli requested full-Arabic and all-script proof options alongside focused cases,
+with the reference fonts, while autonomous work continues. He also suggested
+rendering specific inspection samples as DesignBot raster images and sharing
+them in chat. Use bounded, readable images, shared sizes, explicit weights and
+recorded font hashes. Browser comparison remains useful for interactive shaping;
+DesignBot is an additional inspection surface, not a substitute for source
+curve checks or human grading. See the [proof guide](app/README.md#whole-font-views-and-image-inspection).

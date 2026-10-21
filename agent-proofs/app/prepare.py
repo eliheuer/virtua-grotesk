@@ -5,6 +5,7 @@ import hashlib
 import json
 from pathlib import Path
 import shutil
+import unicodedata
 from fontTools.ttLib import TTFont
 
 def main():
@@ -44,8 +45,40 @@ def main():
             records[role]['faces'] = faces
         else:
             records[role].update(faces[0])
+    overview = json.loads((Path(__file__).parent / 'overview-samples.json').read_text())
+    # Inventory the actual Working font, not a guessed alphabet or system fallback.
+    known_arabic = {ord(char) for paragraph in overview['arabic-alphabet']['paragraphs'] for run in paragraph['runs'] for char in run['text']}
+    extended = [cp for cp in records['after']['codepoints'] if 0x600 <= cp <= 0x8ff
+                and unicodedata.category(chr(cp)).startswith('L') and cp not in known_arabic and cp != 0x640]
+    for offset in range(0, len(extended), 12):
+        chunk = extended[offset:offset + 12]
+        overview['arabic-alphabet']['paragraphs'].append(dict(label='Extended Arabic letters · ' + str(offset // 12 + 1),
+            lang='ar', dir='rtl', runs=[dict(text=' '.join(map(chr, chunk)))]))
+    groups = {}
+    for cp in records['after']['codepoints']:
+        char = chr(cp)
+        if unicodedata.category(char).startswith('C') or char.isspace():
+            continue
+        if 0x590 <= cp <= 0x5ff or 0xfb1d <= cp <= 0xfb4f:
+            group, lang, direction = 'Hebrew', 'he', 'rtl'
+        elif 0x600 <= cp <= 0x8ff or 0xfb50 <= cp <= 0xfdff or 0xfe70 <= cp <= 0xfeff:
+            group, lang, direction = 'Arabic', 'ar', 'rtl'
+        elif cp < 0x250 or 0x1e00 <= cp <= 0x1eff:
+            group, lang, direction = 'Latin', 'en', 'ltr'
+        else:
+            group, lang, direction = 'Symbols and other encoded glyphs', 'en', 'ltr'
+        groups.setdefault((group, lang, direction), []).append(cp)
+    repertoire = []
+    for (group, lang, direction), points in groups.items():
+        for start in range(0, len(points), 24):
+            chunk = points[start:start + 24]
+            # Dotted circles make combining marks visible without carrier collisions.
+            text = ' '.join(('\u25cc' if unicodedata.category(chr(cp)).startswith('M') else '') + chr(cp) for cp in chunk)
+            repertoire.append(dict(label=f'{group} · U+{chunk[0]:04X}–U+{chunk[-1]:04X}', lang=lang, dir=direction,
+                                   codepoints=chunk, runs=[dict(text=text)]))
+    overview['encoded-repertoire'] = dict(label='Encoded repertoire', overview=True, paragraphs=repertoire)
     default_reading = json.loads((Path(__file__).parent / 'reading-samples.json').read_text()) if evidence.get('study', {}).get('language', 'he') == 'he' else {}
-    (target / 'review-data.js').write_text('window.REVIEW_DATA = '+json.dumps({'study': evidence.get('study'), 'fonts': records, 'reading': {**default_reading, **evidence.get('reading', {})}}, ensure_ascii=False)+';\n')
+    (target / 'review-data.js').write_text('window.REVIEW_DATA = '+json.dumps({'study': evidence.get('study'), 'fonts': records, 'reading': {**default_reading, **evidence.get('reading', {}), **overview}}, ensure_ascii=False)+';\n')
     for name in ['index.html', 'review.css', 'review.js']:
         shutil.copy2(Path(__file__).parent / name, target / name)
     # Native browser reloads can otherwise mix cached scripts with fresh HTML.

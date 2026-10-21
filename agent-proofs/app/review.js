@@ -20,7 +20,7 @@ const inkContext = document.createElement('canvas').getContext('2d');
 const spacingUnit = () => parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--space'));
 const horizontalInset = () => spacingUnit() / 4;
 let mode = 'compare', before = false, loaded = false, alignmentFrame;
-let glyphSize = 128, readingSize = 24;
+let glyphSize = 128, readingSize = 24, focusedTitle = [];
 const clamp = (value, min, max, fallback) => Math.max(min, Math.min(max, Number(value) || fallback));
 function element(tag, text, className) {
   const e = document.createElement(tag);
@@ -34,6 +34,9 @@ function labelGlyphs() {
   if (study?.readingDefault) $('reading-sample').value = study.readingDefault;
   $('study-title').style.setProperty('--glyph-count', glyphs.length);
   $('sample').replaceChildren(...glyphs.map(g => new Option(glyphLabel(g), g.key)), ...['group', 'words', 'marks', 'latin'].map(key => new Option(presets[key][1], key)), new Option('Your Text', 'custom'));
+  for (const [key, corpus] of Object.entries(data.reading)) {
+    if (corpus.overview) $('sample').add(new Option(corpus.label, '@' + key));
+  }
   if (study) {
     $('sample').value = 'group';
     document.querySelector('.review-state').textContent = study.status;
@@ -52,6 +55,7 @@ function labelGlyphs() {
     document.querySelector(`#sample option[value=${glyph.key}]`).textContent = glyphLabel(glyph);
   }
   document.querySelector('#sample option[value=group]').textContent = glyphs.map(g => g.char).join(' ') + ' (' + presets.group[1] + ')';
+  focusedTitle = [...$('study-title').children].map(node => node.cloneNode(true));
 }
 // A single grid-aligned picker fronts the glyph and reading sample values.
 let pickerIndex = 0;
@@ -90,7 +94,14 @@ function openPicker(last = false) {
   highlightOption(last ? pickerSource().options.length - 1 : pickerSource().selectedIndex);
 }
 function chooseOption(index) {
-  pickerSource().selectedIndex = index;
+  const source = pickerSource();
+  source.selectedIndex = index;
+  if (source.value.startsWith('@')) {
+    $('reading-sample').value = source.value.slice(1);
+    source.value = 'group';
+    glyphSize = clamp($('size').value, 16, 320, 128);
+    mode = 'reading'; $('size').value = readingSize;
+  }
   closePicker(true);
   render();
 }
@@ -173,16 +184,28 @@ function panel(role, text, size) {
   panel.append(caption, specimen(role, text, size));
   return panel;
 }
-function readingPanel(role, size) {
+function missingCharacters(role, text) {
+  return [...new Set([...text].map(c => c.codePointAt(0)))].filter(cp =>
+    !data.fonts[role].codepoints.includes(cp) && ![10, 13, 9, 0x061c, 0x200c, 0x200d, 0x200e, 0x200f,
+      0x202a, 0x202b, 0x202c, 0x202d, 0x202e, 0x2066, 0x2067, 0x2068, 0x2069].includes(cp));
+}
+function readingPanel(role, size, paragraphs = readingParagraphs()) {
   const card = panel(role, '', size);
   card.querySelector('.sample-viewport').remove();
   const body = element('div', undefined, 'reading-body');
   body.style.fontFamily = `Review-${role}`; body.style.fontSize = size + 'px';
-  const missing = [...new Set([...activeText()].map(c => c.codePointAt(0)))].filter(cp => !data.fonts[role].codepoints.includes(cp) && ![10, 13, 9].includes(cp));
-  if (missing.length) body.append(element('p', 'Not rendered: missing ' + missing.map(cp => 'U+' + cp.toString(16).toUpperCase()).join(', ') + '.', 'missing'));
-  else readingParagraphs().forEach((paragraph, index) => {
+  paragraphs.forEach(paragraph => {
+    const text = paragraph.runs.map(run => run.text).join('');
+    const missing = missingCharacters(role, text);
+    if (missing.length) {
+      const note = element('details', undefined, 'coverage-note');
+      note.append(element('summary', 'Not covered by this font'), element('p', 'Missing ' + missing.map(cp => 'U+' + cp.toString(16).toUpperCase().padStart(4, '0')).join(', '), 'missing'));
+      body.append(note); return;
+    }
     const p = element('p'); p.lang = paragraph.lang; p.dir = paragraph.dir;
-    if (index === 0) { const marker = element('span', undefined, 'baseline-mark'); marker.setAttribute('aria-hidden', 'true'); p.append(marker); }
+    if (!body.querySelector('.baseline-mark')) {
+      const marker = element('span', undefined, 'baseline-mark'); marker.setAttribute('aria-hidden', 'true'); p.append(marker);
+    }
     for (const run of paragraph.runs) {
       if (run.dir || (run.lang && run.lang !== paragraph.lang)) {
         const isolated = element('bdi', run.text); isolated.dir = run.dir || 'auto'; isolated.lang = run.lang; p.append(isolated);
@@ -195,9 +218,10 @@ function readingPanel(role, size) {
 function alignReading(row) {
   const bodies = [...row.querySelectorAll('.reading-body')], unit = spacingUnit();
   const metrics = bodies.map(body => {
-    const marker = body.querySelector('.baseline-mark'), first = body.querySelector('p');
-    body.style.paddingTop = unit + 'px'; first.style.marginTop = '0px';
+    const marker = body.querySelector('.baseline-mark'), first = marker?.closest('p');
+    body.style.paddingTop = unit + 'px';
     if (!marker) return null;
+    first.style.marginTop = '0px';
     const style = getComputedStyle(body);
     inkContext.font = `${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
     inkContext.direction = first.dir === 'ltr' ? 'ltr' : 'rtl';
@@ -340,6 +364,12 @@ function syncScroll(row) {
 }
 function render() {
   const reading = mode === 'reading';
+  const corpus = reading && data.reading[$('reading-sample').value];
+  const overview = Boolean(corpus?.overview);
+  $('study-title').replaceChildren(...(overview
+    ? [element('span', corpus.label, 'glyph-name')]
+    : focusedTitle.map(node => node.cloneNode(true))));
+  $('study-title').style.setProperty('--glyph-count', overview ? 1 : glyphs.length);
   $('size').max = $('size-slider').max = reading ? 72 : 320;
   const size = clamp($('size').value, 16, reading ? 72 : 320, reading ? 24 : 128), weight = clamp($('weight').value, 400, 700, 400);
   $('size-slider').value = size; $('weight-slider').value = weight;
@@ -369,11 +399,22 @@ function render() {
   proof.replaceChildren();
   const selectedRoles = roles();
   if (reading) {
-    const row = element('div', undefined, 'comparison-grid reading-grid');
-    row.style.setProperty('--columns', selectedRoles.length);
-    row.classList.toggle('many-references', selectedRoles.length > 4);
-    selectedRoles.forEach(role => row.append(readingPanel(role, size)));
-    proof.append(row); scheduleAlignment(); return;
+    const groups = overview ? corpus.paragraphs.map(paragraph => [paragraph]) : [readingParagraphs()];
+    groups.forEach((paragraphs, index) => {
+      const section = element('section', undefined, overview ? 'overview-section' : '');
+      if (overview) {
+        section.id = 'overview-section-' + index;
+        const heading = element('h2', paragraphs[0].label, 'overview-label');
+        heading.id = section.id + '-title';
+        section.setAttribute('aria-labelledby', heading.id); section.append(heading);
+      }
+      const row = element('div', undefined, 'comparison-grid reading-grid');
+      row.style.setProperty('--columns', selectedRoles.length);
+      row.classList.toggle('many-references', selectedRoles.length > 4);
+      selectedRoles.forEach(role => row.append(readingPanel(role, size, paragraphs)));
+      section.append(row); proof.append(section);
+    });
+    scheduleAlignment(); return;
   }
   if (mode === 'waterfall') {
     const row = element('div', undefined, 'comparison-grid waterfall-grid');

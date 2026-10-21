@@ -25,8 +25,8 @@ without starting a server:
 .venv/bin/python agent-proofs/serve.py --check
 ```
 
-Current case: [ARB-005](../cases/arabic-005/README.md), Beh bases with Regular and Bold proofs.
-Served files are under `agent-proofs/cases/arabic-005/round-dots/working/`.
+Current case: [ARB-006](../cases/arabic-006/README.md), autonomous Arabic first pass.
+Served files are under `agent-proofs/cases/arabic-006/batches/01-dal-reh/working/`.
 Previous Hebrew snapshots remain in their case folders.
 
 ## Arabic base-form samples
@@ -40,6 +40,41 @@ only have the joining forms their script behavior supports; do not manufacture
 four forms with presentation characters. Keep `language: "ar"` and RTL proofing.
 ARB-005 demonstrates this using the existing study configuration, without a
 layout change.
+
+## Whole-font views and image inspection
+
+The Sample picker includes **Arabic alphabet**, **Arabic joining forms**,
+**All scripts**, and **Encoded repertoire**. Selecting one opens Text mode;
+Compare returns to the focused case. Alphabet samples include extended Arabic
+letters found in the Working font. Encoded repertoire enumerates its printable
+cmap, with dotted-circle carriers for marks; it is not an inventory of unencoded
+components or every contextual alternate. Joining samples provide that separate
+context. All scripts covers Latin, Hebrew, Arabic, numerals and mixed runs.
+
+Each section repeats Before, Working and the four Arabic references at one size.
+References without coverage show a collapsed missing-codepoint explanation;
+never interpret a system-font fallback as a reference drawing. Weight remains
+adjustable, including both endpoints.
+
+For visual inspection, prefer bounded images over a very tall screenshot that
+shrinks every glyph. Use browser screenshots for interactive layout and browser
+shaping. Use DesignBot for fixed-size raster details, including images shared
+in chat. Render both endpoints separately with the same em size and baselines:
+
+```sh
+.venv/bin/python agent-proofs/app/render-detail.py \
+  --proof-dir agent-proofs/cases/arabic-006/batches/01-dal-reh/working \
+  --output agent-proofs/cases/arabic-006/batches/01-dal-reh/detail-700.png \
+  --text 'بد د بر ر' --title 'Dal and Reh' --weight 700
+```
+
+The runner verifies all six font hashes and sample coverage, selects the exact
+Plex endpoint, invokes DesignBot with `--raw`, and writes a JSON receipt beside
+the PNG. The Rust recipe isolates font contexts, checks actual ink bounds and
+keeps one shared size. Reduce `--size` for a longer sample; do not independently
+fit fonts. This diagnostic uses the current neutral dark palette. It complements
+the interactive proof and curve-comb/continuity checks; an image alone cannot
+prove contour correctness or human acceptance.
 
 ## Mode names
 
