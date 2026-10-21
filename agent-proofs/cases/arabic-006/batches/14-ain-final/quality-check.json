@@ -1,0 +1,94 @@
+{
+  "limits": "Sampled within- and between-contour crossings. Outer/counter forms; sampled intersections complement compiled raster inspection. Curvature transitions are reported, not hidden.",
+  "glyphs": [
+    {
+      "name": "ain-ar.fina",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            848.0,
+            384.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.005208333333333333,
+          "curvature_out": 0.009166666666666667,
+          "relative_jump": 0.4318181818181819
+        },
+        {
+          "contour": 0,
+          "point": [
+            272.0,
+            384.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.009166666666666667,
+          "curvature_out": 0.005208333333333333,
+          "relative_jump": 0.4318181818181819
+        },
+        {
+          "contour": 0,
+          "point": [
+            64.0,
+            -128.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.002238292011019284,
+          "curvature_out": 0.0030381944444444445,
+          "relative_jump": 0.26328217237308144
+        },
+        {
+          "contour": 0,
+          "point": [
+            224.0,
+            -128.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.005787037037037037,
+          "curvature_out": -0.004166666666666666,
+          "relative_jump": 0.28000000000000014
+        },
+        {
+          "contour": 1,
+          "point": [
+            464.0,
+            336.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.08333333333333333,
+          "curvature_out": -0.16666666666666666,
+          "relative_jump": 0.5
+        },
+        {
+          "contour": 1,
+          "point": [
+            656.0,
+            336.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.16666666666666666,
+          "curvature_out": -0.08333333333333333,
+          "relative_jump": 0.5
+        }
+      ]
+    }
+  ]
+}

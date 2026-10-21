@@ -90,6 +90,12 @@ batches and exclude any shared donor that could change this human work.
   completed. All Regular and Beh sources unchanged. Final/isolated forms remain
   unfinished. See [medial evidence](batches/13-ain-medial/README.md).
 
+- Batch 14: Bold final Ain/Ghain repaired; reversing shelf and tangent kinks
+  removed, 160-unit bowl extrema/terminal, 176-unit join, matched 912 advances
+  and centered Ghain dot. 434 shaping comparisons, 400/550/700 reference rasters,
+  large/marked proofs and preflight completed. Regular and Beh unchanged.
+  See [final evidence](batches/14-ain-final/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -103,8 +109,8 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    than the other forms; a named exception is needed for that construction.
    Final Lam is repaired in batch 08. Lam–Alef still has structural issues
    involving green Regular drawings; keep that follow-up open.
-3. Tcheh base and dot first pass is saved in batch 11. Next: Bold Ain/Ghain final,
-   then isolated construction. Initials and medials are saved in batches 12–13. Regular Jeem final dot collision and Khah dot
+3. Tcheh base and dot first pass is saved in batch 11. Next: Bold Ain/Ghain isolated
+   construction. Initials, medials and finals are saved in batches 12–14. Regular Jeem final dot collision and Khah dot
    heights remain placement follow-ups; preserve protected base drawings.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
@@ -145,9 +151,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 13 Bold Ain/Ghain medial is
+Final Lam is applied after Eli’s named Regular green exception. Batch 14 Bold Ain/Ghain final is
 the current Working proof.
-Next bounded repair: Bold final Ain/Ghain, then isolated. Beh and its component donors are
+Next bounded repair: Bold isolated Ain/Ghain. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.
