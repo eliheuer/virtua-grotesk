@@ -18,6 +18,10 @@ are saved per batch; full source hashes detect concurrent editor changes.
 - Batch 02: Bold Waw isolated/final and two inherited wrapper advances applied.
   Both endpoint raster sheets inspected; build/preflight and 133 shaping checks
   passed. See [Waw evidence](batches/02-waw/README.md).
+- Batch 03: Bold Noon / ghunna shared bowls and two wrapper advances applied.
+  Raster inspection exposed and resolved the final dot/stem collision. Both
+  endpoint sheets inspected; build/preflight and 161 shaping checks passed.
+  See [Noon evidence](batches/03-noon/README.md).
 - All Regular drawings, all green drawings and Eli's manual hamza are preserved.
 - The full Arabic first pass is **in progress**, not complete or human-approved.
 
@@ -29,7 +33,7 @@ its descendants even when their files do not change; protect green descendants.
 The old `scripts/arabic_*` builders contain historical color semantics and
 Bold-equals-Regular recipes. Do not run them wholesale.
 
-1. Noon / ghunna bowls; Feh and Qaf heads/tails.
+1. Feh and Qaf heads/tails.
 2. Meem, Lam and Lam–Alef; keep joining bar heights consistent.
 3. Hah/Jeem/Khah and Ain/Ghain: head, counter and descender construction.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
@@ -70,7 +74,9 @@ for a genuine unresolved dependency/decision, not routine application approval.
 The thread heartbeat `virtua-arabic-first-pass` is active at 20-minute intervals
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Next bounded family: Noon / ghunna bowls and their component descendants.
+Next bounded family: Feh and Qaf heads/tails and their component descendants.
+Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
+and remains a recorded follow-up for the placement pass.
 
 The live proof now includes Arabic alphabet, joining forms, all-script samples
 and the Working font's encoded repertoire. Fixed DesignBot detail PNGs and their
