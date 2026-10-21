@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="jeem-ar.init" format="2">
-	<advance width="668"/>
+	<advance width="784"/>
 	<outline>
 		<component base="hah-ar.init"/>
-		<component base="dotbelow-ar" xOffset="200"/>
+		<component base="dotbelow-ar" xOffset="216" yOffset="0"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

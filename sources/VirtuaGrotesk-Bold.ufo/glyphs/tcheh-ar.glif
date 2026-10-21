@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tcheh-ar" format="2">
 	<unicode hex="0686"/>
-	<advance width="864"/>
+	<advance width="784"/>
 	<outline>
 		<component base="hah-ar"/>
 		<component base="threedotsdowncenter-ar" xOffset="254" yOffset="574"/>
@@ -9,9 +9,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
