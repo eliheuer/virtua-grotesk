@@ -1,0 +1,57 @@
+{
+  "renderer": "DesignBot --raw",
+  "weight": 700,
+  "size_px_em": 100,
+  "text": "بك ك",
+  "title": "Kaf / final",
+  "dimensions": [
+    1600,
+    1120
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "family": "Virtua Grotesk",
+      "file": "fonts/before-b3822d46ea12.ttf",
+      "sha256": "b3822d46ea126ea099c52c2366f76e8d99196d737bf0143a1d06bd93b2cd2843",
+      "rendered_weight": 700
+    },
+    {
+      "role": "after",
+      "family": "Virtua Grotesk",
+      "file": "fonts/after-eb997d4be389.ttf",
+      "sha256": "eb997d4be389f20526aa08e750c78ba22ee777ad65adebae76293d4294f2676d",
+      "rendered_weight": 700
+    },
+    {
+      "role": "rubik",
+      "family": "Rubik",
+      "file": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "rendered_weight": 700
+    },
+    {
+      "role": "noto",
+      "family": "Noto Sans Arabic",
+      "file": "fonts/noto-63111b5b2e07.ttf",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "rendered_weight": 700
+    },
+    {
+      "role": "plex",
+      "family": "IBM Plex Sans Arabic",
+      "file": "fonts/plex-691e0c891a38.ttf",
+      "sha256": "691e0c891a38637ae6bbdb69700f8042cb0724a137bee615068ffdb92244f61f",
+      "rendered_weight": 700
+    },
+    {
+      "role": "readex",
+      "family": "Readex Pro",
+      "file": "fonts/readex-268bba7e1e8f.ttf",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "rendered_weight": 700
+    }
+  ],
+  "recipe_sha256": "ded54aa1b72a6926b0d2fb52273cb14fc31fa9a285200886a2c2459a8bf0d03b",
+  "image_sha256": "5778a6fae485896ca4f4d54e9c1bd024c517de6d0b916d8812d573b2644d6192"
+}

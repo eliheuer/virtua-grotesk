@@ -134,6 +134,13 @@ batches and exclude any shared donor that could change this human work.
   completed. Beh/manual hamza unchanged. The Regular trough and high dots remain
   a recorded refinement; see [Tah/Zah evidence](batches/19-tah-zah/README.md).
 
+- **Batch 20 — Bold Kaf isolated/final:** bowl reversals and malformed cuts
+  repaired; inner signs made smaller and open; final baseline joins continuously.
+  All Regular and Beh sources unchanged. 679 shaping comparisons, 400/550/700
+  four-reference rasters, large/word/join/marked proofs and preflight completed.
+  Initial/medial Kaf remain structurally unlike the references; Regular initial
+  is green. See [Kaf evidence](batches/20-kaf-isolated-final/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -154,7 +161,9 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    pending. Sad/Dad Bold first pass is saved in batch 18 and Tah/Zah in batch 19.
    Orange Regular Tah/Zah trough/dot heights remain a refinement; preserve
    the current exact evidence when preparing that follow-up.
-5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
+5. Keheh/Gaf bases next. Kaf isolated/final Bold repair is in batch 20;
+   initial/medial contextual construction remains unresolved. Regular initial
+   Kaf is green; preserve it. Then Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
 6. Reconcile duplicated Beh-family outlines (Teh/Peh/Tteh/Yeh extensions)
    with the shared roots; inspect separately drawn Dal/Reh variants too.
 7. Dot groups and wrapper placements after base silhouettes stabilize.
@@ -196,9 +205,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 19 Bold Tah/Zah
-four-form repair is the current Working proof.
-Next bounded repair: Kaf/Keheh/Gaf base forms. Beh and its component donors are
+Final Lam is applied after Eli’s named Regular green exception. Batch 20 Bold Kaf
+isolated/final repair is the current Working proof.
+Next bounded repair: independent Keheh/Gaf base forms. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.
