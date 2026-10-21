@@ -157,6 +157,16 @@ batches and exclude any shared donor that could change this human work.
   are retained explicitly and remain on the attachment queue. See
   [isolated-form evidence](batches/22-keheh-gaf-isolated/README.md).
 
+- **Batch 23 — initial/medial Keheh/Gaf, both masters:** replaced the wrong
+  upright Kaf/internal sign and shared S-like Gaf donor with the angled family
+  head and separate bar. Fourteen sources; initial/medial advances 704/832 and
+  23/21-point bases. Four three-dot wrappers have advance-only fixes. All other
+  sources, Beh18 and manual hamza unchanged. 805 shaping comparisons, full rows
+  at 400/550/700, endpoint word/medial/marked proofs, large details and preflight.
+  Gaf propagated anchors preserved explicitly; their excessive height and 143
+  inherited grid findings remain scoped in the
+  [joining-form evidence](batches/23-keheh-gaf-joining/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -177,12 +187,13 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    pending. Sad/Dad Bold first pass is saved in batch 18 and Tah/Zah in batch 19.
    Orange Regular Tah/Zah trough/dot heights remain a refinement; preserve
    the current exact evidence when preparing that follow-up.
-5. Keheh/Gaf initial/medial and the shared Gaf bar donor next.
+5. Heh/Goal/Doachashmee next, then Yeh/Maksura/Barree variants.
+   Keheh/Gaf initial/medial and the shared bar are repaired in batch 23.
    Isolated forms and local wrappers are repaired in batch 22.
    Both final forms are repaired in batch 21; the separate three-dot final
-   Keheh and the old hamza-like Gaf donor remain follow-ups. Kaf isolated/final Bold repair is in batch 20;
+   Keheh remains a base follow-up; Gaf attachment remains later work. Kaf isolated/final Bold repair is in batch 20;
    initial/medial contextual construction remains unresolved. Regular initial
-   Kaf is green; preserve it. Then Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
+   Kaf is green; preserve it.
 6. Reconcile duplicated Beh-family outlines (Teh/Peh/Tteh/Yeh extensions)
    with the shared roots; inspect separately drawn Dal/Reh variants too.
 7. Dot groups and wrapper placements after base silhouettes stabilize.
@@ -224,9 +235,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 22 Keheh/Gaf
-isolated-form repair in both masters is the current Working proof.
-Next bounded repair: Keheh/Gaf initial/medial and the shared Gaf donor. Beh and its component donors are
+Final Lam is applied after Eli’s named Regular green exception. Batch 23 Keheh/Gaf
+joining-form repair in both masters is the current Working proof.
+Next bounded repair: Heh/Goal/Doachashmee. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.

@@ -1,0 +1,26 @@
+<glyph name="gafsarkashabove-ar" format="2">
+	<advance width="448" />
+	<outline><contour>
+			<point x="16.0" y="592.0" type="line" />
+			<point x="432.0" y="832.0" type="line" />
+			<point x="448.0" y="848.0" type="line" />
+			<point x="448.0" y="864.0" type="line" />
+			<point x="432.0" y="880.0" type="line" />
+			<point x="16.0" y="640.0" type="line" />
+			<point x="0.0" y="624.0" type="line" />
+			<point x="0.0" y="608.0" type="line" />
+		</contour>
+	</outline><anchor name="bottom" x="136" y="600" />
+	<anchor name="bottomDots" x="136" y="600" />
+	<anchor name="topDots" x="136" y="840" />
+	<anchor name="top" x="137" y="888" />
+	<anchor name="_topDots" x="137" y="488" />
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

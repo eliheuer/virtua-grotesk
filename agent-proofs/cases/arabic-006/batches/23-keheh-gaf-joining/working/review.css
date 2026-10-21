@@ -1,0 +1,147 @@
+@font-face{font-family:ReviewLabels;src:url('fonts/labels.ttf?v=ffea320f2265') format('truetype');font-weight:400;font-display:swap}
+/* Spacing contract: the page margin is U. Every layout gap uses U or a subdivision. */
+:root{--light-paper:#a8a8a8;--light-ink:#2e2e2e;--dark-paper:#181818;--dark-ink:#dedede;--paper:var(--light-paper);--ink:var(--light-ink);--weight:400;--space:32px;--half:calc(var(--space)/2);--quarter:calc(var(--space)/4);--eighth:calc(var(--space)/8);--double:calc(var(--space)*2);--field:var(--space);--rule:2px;--margin:var(--space);--gutter:var(--half);--headline:40px;--ui:14px;color-scheme:light}
+/* The viewport scrollbar takes its theme from html, not body. */
+:root{--scroll-thumb:#707070;scrollbar-width:thin;scrollbar-color:var(--scroll-thumb) var(--paper)}
+:root:has(body.dark){--paper:var(--dark-paper);--ink:var(--dark-ink);--scroll-thumb:#666;color-scheme:dark}
+*{box-sizing:border-box;scrollbar-width:thin;scrollbar-color:var(--scroll-thumb) var(--paper)}
+/* Fallback for WebKit versions without standard scrollbar styling. */
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track,::-webkit-scrollbar-corner{background:var(--paper)}
+::-webkit-scrollbar-thumb{background:var(--scroll-thumb);border:2px solid var(--paper);border-radius:999px}
+body{margin:0;background:var(--paper);color:var(--ink);font:var(--ui)/1.4 ReviewLabels,Arial,sans-serif;font-synthesis:none}
+body.dark{--paper:var(--dark-paper);--ink:var(--dark-ink);color-scheme:dark}
+button,input,select,textarea{font:inherit;color:inherit;border-radius:0}
+button,select,input[type=number],textarea{background:var(--paper)}
+button,select,textarea{border:0}button{cursor:pointer}a{color:inherit}
+button:disabled,input:disabled{opacity:.45;cursor:default}
+:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+input[type=checkbox]{appearance:none;-webkit-appearance:none;display:inline-grid;place-content:center;border:1px solid var(--ink);width:12px;height:12px;margin:0;background:transparent;flex:none}
+input[type=checkbox]:checked::before{content:'';box-sizing:border-box;width:5px;height:3px;border-left:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink);transform:rotate(-45deg)}
+input[type=number]{appearance:textfield;-moz-appearance:textfield;border:0;border-bottom:1px solid var(--ink);width:100%;padding:0 0 var(--quarter);text-align:left;font-size:var(--ui);line-height:calc(var(--field) - var(--quarter))}
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.masthead{position:relative;display:flex;align-items:center;justify-content:space-between;gap:var(--space);max-width:1664px;margin:auto;padding:var(--space)}
+.masthead::after{content:"";position:absolute;inset-inline:var(--space);bottom:0;height:var(--rule);background:var(--ink);border-radius:var(--rule)}
+.brand,h1{font-size:var(--headline);font-weight:400;line-height:1.05;letter-spacing:-.025em;margin:0;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+.brand{text-decoration:none}.view-options{display:flex;gap:var(--half);flex:none}
+.view-options label,.check{display:flex;align-items:center;gap:var(--quarter);font-size:var(--ui);line-height:1.25;cursor:pointer}
+main{position:relative;max-width:1664px;margin:auto;padding:0 var(--space)}
+.intro{padding:var(--space) 0}
+.view-bar{display:flex;align-items:baseline;justify-content:space-between;gap:var(--space);border-block:var(--rule) solid transparent;padding-top:var(--half)}
+nav{display:flex;align-self:stretch;align-items:stretch;gap:var(--space)}nav button{position:relative;display:flex;align-items:baseline;padding:0 0 var(--half);border:0;border-bottom:2px solid transparent;background:transparent;font-size:var(--ui);line-height:1.25;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+.mode-label{display:block;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+/* Stretch tabs to the bar's lower edge; paint the marker over the shared rule. */
+nav button[aria-pressed=true]::after{content:"";position:absolute;inset-inline:0;bottom:-4px;height:4px;border-radius:var(--rule);background:var(--ink)}
+.view-bar .check{align-items:baseline;padding-bottom:var(--half);border-bottom:2px solid transparent}.view-bar .check span{text-box-trim:trim-both;text-box-edge:cap alphabetic}.view-bar .check input{align-self:center}
+.controls{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:var(--gutter);row-gap:var(--half);padding:var(--half) 0 var(--quarter)}
+.sample-control{grid-column:span 2}.sample-control,.axis-control{min-width:0;display:grid;grid-template-rows:max-content var(--field) minmax(var(--half),max-content);row-gap:var(--quarter);font-size:var(--ui);line-height:1.25}
+/* The popup shares the field width, type and spacing; no platform accent or shadow. */
+.sample-picker{position:relative;min-width:0}
+#sample-trigger{display:flex;align-items:center;justify-content:space-between;gap:var(--half);width:100%;height:var(--field);padding:0 0 var(--quarter);border-bottom:1px solid var(--ink);text-align:left;line-height:1.25}
+#sample-value{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.picker-chevron{width:6px;height:6px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);transform:translate(-2px,-2px) rotate(45deg);flex:none}
+#sample-trigger[aria-expanded=true] .picker-chevron{transform:translate(-2px,1px) rotate(225deg)}
+#sample-menu{position:absolute;inset-inline:0;top:100%;z-index:5;border:1px solid var(--ink);background:var(--paper);padding:var(--quarter) 0;max-height:min(50vh,360px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--ink) var(--paper)}
+#sample-menu:focus-visible{outline:none}
+.picker-option{position:relative;padding:var(--half) var(--space) var(--half) var(--half);cursor:pointer;line-height:1.25;overflow-wrap:anywhere}
+.picker-option[aria-selected=true]::after{content:'';position:absolute;right:var(--half);top:calc(50% - 3px);width:7px;height:4px;border-left:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(-45deg)}
+.picker-option.active{color:var(--paper);background:var(--ink)}
+.control-caption{display:contents}
+input[type=range]{appearance:none;-webkit-appearance:none;width:100%;height:var(--half);background:transparent;margin:0;cursor:pointer}
+input[type=range]::-webkit-slider-runnable-track{height:var(--rule);border-radius:var(--rule);background:var(--ink)}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:7px;height:13px;background:var(--ink);margin-top:-5.5px}
+input[type=range]::-moz-range-track{height:var(--rule);border-radius:var(--rule);background:var(--ink)}
+input[type=range]::-moz-range-thumb{width:7px;height:13px;border:0;border-radius:0;background:var(--ink)}
+#fitted-size{grid-row:2;font-size:var(--ui);line-height:calc(var(--field) - var(--quarter));margin:0;padding-bottom:var(--quarter)}
+#fitted-size{border-bottom:1px solid var(--ink)}
+body.size-study #size-control{display:none}
+/* Custom copy is a defined section on the same margin and rule system. */
+#custom-wrap{display:grid;gap:var(--half);border-top:1px solid var(--ink);padding:var(--half) 0 var(--space);min-width:0}
+#custom-wrap label{display:block;font-size:var(--ui);line-height:1.25;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+#custom{display:block;box-sizing:border-box;width:100%;min-width:0;min-height:calc(var(--space)*4);max-height:calc(var(--space)*16);padding:var(--half);border:0;border-bottom:1px solid var(--ink);resize:none;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--ink) var(--paper);font-size:var(--ui);line-height:1.5;unicode-bidi:plaintext;text-align:start}
+#custom:focus-visible{outline:1px solid var(--ink);outline-offset:-1px}
+#switch-tools{display:flex;align-items:center;grid-row:3;min-width:0;height:var(--space)}
+.revision-control{display:flex;border:1px solid var(--ink);height:var(--space);width:100%;min-width:0}
+.revision-control button{flex:1 1 0;min-width:0;padding:0 var(--half);font-size:var(--ui);line-height:1.25}
+.revision-control button[aria-pressed=true]{color:var(--paper);background:var(--ink)}
+#status,#overflow-note{font-size:var(--ui);margin:0 0 var(--space);max-width:65ch}#status:empty{display:none}
+#proof{visibility:hidden}#proof.ready{visibility:visible}
+.proof-row{padding:0}.proof-row+.proof-row{border-top:1px solid var(--ink);padding-top:var(--space)}
+.row-label{font-size:var(--ui);margin:0 0 var(--half)}
+.comparison-grid{display:grid;grid-template-columns:repeat(var(--columns,4),minmax(0,1fr));gap:var(--space) var(--gutter)}
+.font-panel{min-width:0}.font-caption{border-top:1px solid var(--ink);padding-top:var(--half)}
+.font-panel h2{font-size:var(--ui);line-height:1.25;font-weight:400;margin:0;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+/* JS sets a shared ink field: U above the highest ink, U below the lowest ink. */
+.sample-viewport{position:relative;overflow-x:auto;overflow-y:hidden}
+.sample-line{position:relative;font-weight:var(--weight);font-variation-settings:'wght' var(--weight);font-synthesis:none;font-optical-sizing:none;font-kerning:normal;letter-spacing:0;line-height:1.1;white-space:pre;width:max-content;min-width:100%;text-align:left;unicode-bidi:plaintext}
+.baseline-mark{display:inline-block;width:0;height:0;padding:0;vertical-align:baseline}
+.missing{font-size:var(--ui);margin:var(--half) 0;overflow-wrap:anywhere}
+.layout-guides{display:none;position:absolute;inset:0 var(--space);pointer-events:none;z-index:2;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gutter);background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(var(--quarter) - 1px),color-mix(in srgb,var(--ink) 5%,transparent) calc(var(--quarter) - 1px),color-mix(in srgb,var(--ink) 5%,transparent) var(--quarter))}
+.layout-guides i{border-inline:1px solid color-mix(in srgb,var(--ink) 16%,transparent)}body.grid .layout-guides{display:grid}
+.comparison-grid.switch-references{grid-template-columns:repeat(var(--columns,3),minmax(0,1fr))}
+footer{display:grid;grid-template-columns:1fr auto;align-items:start;gap:var(--gutter);border-top:1px solid var(--ink);margin:0 0 var(--space);padding-top:var(--half);font-size:var(--ui);line-height:1.25}
+footer p{margin:0 0 var(--half)}.review-state{margin:0}details{text-align:right;min-width:0}summary{cursor:pointer}
+footer:has(details[open]){grid-template-columns:1fr}details[open]{text-align:left}details[open] summary{margin-bottom:var(--space)}
+#font-info p{overflow-wrap:anywhere}details>p{max-width:76ch}code{font-size:1em}
+.size-caption{display:flex;align-items:center;justify-content:space-between;gap:var(--quarter)}.fit-toggle{display:flex;align-items:center;gap:var(--quarter);cursor:pointer}.fit-toggle input{width:12px;height:12px}
+body.fit #size,body.fit #size-slider,body.size-study .fit-toggle{display:none}
+body.fit .sample-line,body.size-study .sample-line{white-space:pre-wrap;overflow-wrap:anywhere;width:auto;min-width:0}
+body.fit .sample-viewport,body.size-study .sample-viewport{padding-inline:var(--eighth)}
+[hidden]{display:none!important}
+@media(min-width:1100px){:root{--headline:48px}}
+@media(max-width:800px){:root{--space:24px;--headline:32px}}
+@media(max-width:599px){:root{--space:20px;--headline:28px}.masthead{flex-wrap:wrap;gap:var(--half)}.controls{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:var(--space)}.sample-control{grid-column:span 2;grid-template-rows:max-content var(--field)}.comparison-grid,.comparison-grid.switch-references,.layout-guides{grid-template-columns:repeat(2,minmax(0,1fr))}.comparison-grid.single{grid-template-columns:1fr}.comparison-grid.switch-references .font-panel:first-child{grid-column:span 2}.layout-guides i:nth-child(n+3){display:none}}
+@media(max-width:360px){footer{grid-template-columns:1fr;gap:var(--half)}details{text-align:left}}
+
+/* Reading uses natural paragraphs at a fixed shared size; never auto-fit a passage. */
+body.reading .fit-toggle{display:none}
+.reading-grid{grid-template-columns:repeat(var(--columns,4),minmax(0,1fr));gap:var(--space) var(--gutter)}
+.reading-body{font-weight:var(--weight);font-variation-settings:'wght' var(--weight);font-synthesis:none;font-optical-sizing:none;font-kerning:normal;letter-spacing:0;line-height:1.5;padding-block:var(--space);overflow-wrap:break-word;hyphens:none}
+.reading-body p{margin:0 0 var(--half);white-space:pre-wrap;text-align:start}
+.reading-body p:last-child{margin-bottom:0}
+.reading-grid .font-caption{position:sticky;top:0;z-index:1;background:var(--paper)}
+@media(max-width:1199px){.reading-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:599px){.reading-grid{grid-template-columns:1fr}.view-bar{flex-wrap:wrap;row-gap:var(--half)}nav{gap:var(--half)}}
+
+/* Identity cells reflow as whole columns; names wrap without changing the type scale. */
+.glyph-heading{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));column-gap:var(--gutter);row-gap:var(--space)}
+.glyph-identity{display:grid;grid-template-rows:1fr auto;min-width:0;align-items:start;gap:var(--quarter)}
+.glyph-name{min-width:0;white-space:normal;overflow-wrap:anywhere}
+.glyph-unicode{font-size:var(--ui);line-height:1.25;letter-spacing:0}
+
+/* Keep the Toggle shortcut in the mode bar, outside the proof spacing. */
+#toggle-hint{margin:0 0 var(--half) auto;font-size:var(--ui);line-height:1.25;white-space:nowrap;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+@media(max-width:599px){.view-bar:has(#toggle-hint:not([hidden])) nav{flex-basis:100%}#toggle-hint{margin-left:0;margin-right:auto}}
+
+/* Waterfall is a continuous stack per font, labeled once above the largest run. */
+body.size-study .controls{grid-template-columns:repeat(2,minmax(0,1fr))}
+body.size-study .sample-control{grid-column:span 1;grid-template-rows:max-content var(--field)}
+.waterfall-stack{min-width:0}
+@media(max-width:599px){body.size-study .controls{grid-template-columns:1fr}}
+
+/* Shared 2px rules with round ends; inset to existing content margins. */
+.view-bar,.font-caption,footer,#custom-wrap{position:relative}
+.font-caption,footer,#custom-wrap{border-top:var(--rule) solid transparent}
+.view-bar::before,.view-bar::after,.font-caption::before,footer::before,#custom-wrap::before{content:"";position:absolute;inset-inline:0;height:var(--rule);background:var(--ink);border-radius:var(--rule);pointer-events:none}
+.view-bar::before,.font-caption::before,footer::before,#custom-wrap::before{top:calc(-1 * var(--rule))}
+.view-bar::after{bottom:calc(-1 * var(--rule))}
+/* A capsule background also works on native inputs, which cannot host pseudos. */
+input[type=number],#sample-trigger,#fitted-size,#custom{border-bottom:0;background-image:radial-gradient(circle at 1px 1px,var(--ink) 1px,transparent 1px),linear-gradient(var(--ink),var(--ink)),radial-gradient(circle at 1px 1px,var(--ink) 1px,transparent 1px);background-size:2px 2px,calc(100% - 2px) 2px,2px 2px;background-position:left bottom,center bottom,right bottom;background-repeat:no-repeat}
+#custom:focus-visible{outline-width:var(--rule);outline-offset:calc(-1 * var(--rule))}
+
+/* Keep the Virtua pair together and reference panels readable when six families are shown. */
+.sample-line,.reading-body{font-synthesis:none}
+@media(max-width:1439px){
+ .comparison-grid.many-references{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .comparison-grid.many-references.switch-references .font-panel:first-child{grid-column:span 2}
+}
+@media(max-width:599px){.reading-grid.many-references{grid-template-columns:1fr}}
+
+/* Whole-font proofs are independently named/capturable, on the same margin grid. */
+.overview-section{margin-block:0 var(--space);scroll-margin-top:var(--half)}
+.overview-label{font:400 var(--ui)/1.4 ReviewLabels,Arial,sans-serif;margin:0 0 var(--half)}
+.overview-section .font-caption{position:relative;top:auto}
+.reading-body .missing{font:400 var(--ui)/1.4 ReviewLabels,Arial,sans-serif;font-variation-settings:normal}
+
+.reading-body .coverage-note{font:400 var(--ui)/1.4 ReviewLabels,Arial,sans-serif;font-variation-settings:normal;text-align:left;padding-block:var(--half)}
+.reading-body .coverage-note p{margin-top:var(--half);overflow-wrap:anywhere}
