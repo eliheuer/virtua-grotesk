@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Virtua Grotesk — Live Review</title>
+<link rel="stylesheet" href="review.css?v=4e25bc22f6aa">
+<script src="review-data.js?v=3e3ccebdb7f6" defer></script>
+<script src="review.js?v=f56ffdf8cc3f" defer></script>
+</head>
+<body class="dark">
+<header class="masthead">
+ <a class="brand" href="#main">Virtua Grotesk</a>
+ <div class="view-options"><label><input id="grid" type="checkbox">Grid</label><label><input id="dark" type="checkbox" checked>Dark</label></div>
+</header>
+<main id="main">
+ <div class="layout-guides" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+ <div class="intro"><h1 id="study-title" class="glyph-heading">He, Het and Tav</h1></div>
+ <div class="view-bar"><nav aria-label="Review mode"><button data-mode="compare" aria-pressed="true"><span class="mode-label">Compare</span></button><button data-mode="switch" aria-pressed="false"><span class="mode-label">Toggle</span></button><button data-mode="waterfall" aria-pressed="false"><span class="mode-label">Waterfall</span></button><button data-mode="reading" aria-pressed="false"><span class="mode-label">Text</span></button></nav><p id="toggle-hint" hidden>Press B to toggle</p><label class="check"><input id="references" type="checkbox" checked><span>References</span></label></div>
+ <section class="controls" aria-label="Proof settings">
+  <div class="sample-control"><label id="sample-title" for="sample">Sample</label><select id="sample" hidden><option value="he">He · ה</option><option value="het">Het · ח</option><option value="tav">Tav · ת</option><option value="group">He, Het and Tav</option><option value="words">Words</option><option value="marks">Marks</option><option value="latin">Latin and Hebrew</option><option value="custom">Your Text</option></select><select id="reading-sample" aria-label="Reading sample" hidden><option value="hebrew">Hebrew Text</option><option value="mixed">Latin and Hebrew</option><option value="custom">Your Text</option></select><div class="sample-picker"><button id="sample-trigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="sample-menu" aria-labelledby="sample-title sample-value"><span id="sample-value"></span><span class="picker-chevron" aria-hidden="true"></span></button><div id="sample-menu" role="listbox" aria-labelledby="sample-title" tabindex="-1" hidden></div></div><div id="switch-tools" hidden><div class="revision-control" role="group" aria-label="Virtua revision" title="Toggle revision (B)"><button id="show-before" aria-pressed="false">Before</button><button id="show-after" aria-pressed="true">Applied</button></div></div></div>
+  <div class="axis-control"><div class="control-caption"><label for="weight">Weight</label><input id="weight" type="number" min="400" max="700" value="400" step="1"></div><input id="weight-slider" aria-label="Weight slider" type="range" min="400" max="700" value="400" step="1"></div>
+  <div id="size-control" class="axis-control"><div class="control-caption"><div class="size-caption"><label for="size">Size</label><label class="fit-toggle" title="Fill the available columns at one shared font size"><input id="fit" type="checkbox" checked>Fit</label></div><output id="fitted-size" aria-label="Fitted size in pixels">128</output><input id="size" type="number" min="16" max="320" step="1" value="128"></div><input id="size-slider" aria-label="Size slider" type="range" min="16" max="320" value="128" step="1"></div>
+ </section>
+ <section id="custom-wrap" aria-label="Custom text editor" hidden><label for="custom">Your Text</label><textarea id="custom" rows="3" dir="auto" spellcheck="false">היה חיה תחיה</textarea></section>
+ <p id="status" role="status">Loading and verifying font files…</p>
+ <p id="overflow-note" hidden>Scroll samples to see the full text.</p>
+ <section id="proof" aria-label="Font comparison" aria-busy="true"></section>
+ <footer><p class="review-state">Applied · Weight Provisional</p><details><summary>Review Details</summary><p id="study-id">Hebrew · Study 02</p><p id="sample-label">He · U+05D4</p><p id="scale-label">128 px · Weight 400</p><p id="study-note">He, het and tav are applied in both masters. Weight remains provisional; grading is unchanged.</p><p>Live browser text at equal em size and zero added tracking. Reference weights are not optical matches. Text mode uses natural paragraph wrapping, line spacing 1.5 and equal-width columns.</p><div id="font-info"></div><p>Native OpenType shaping and rasterization; fonts are verified before display. Fit fills the available column width using one shared em size for every font. It grows when columns widen and is independent of the fixed size setting. Long text wraps at the minimum size. Toggle revisions share the same fitting measurement. Press B to toggle between Before and Working when not editing a field. Samples are baseline-aligned within each comparison row. Rendering may differ from DesignBot.</p><p>Inspired by <a href="https://github.com/googlefonts/diffenator3">Diffenator’s browser proofing</a>. This design-review interface does not replace release QA.</p></details></footer>
+</main>
+</body>
+</html>

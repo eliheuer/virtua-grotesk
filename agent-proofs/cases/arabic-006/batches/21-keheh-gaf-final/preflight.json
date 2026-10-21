@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "compiled_snapshot": "b089f3f31121ea991f660e233cfb728a2ddb14a123c697fd3dd1a994a85dc861",
+  "preflight_font": "56b61baab7b2216ed32ffc830e8642a3908a2ca6339445a057902609aa6c6912",
+  "difference": "head modified timestamp and checksum only; table identity verified by verify.py",
+  "source_changes": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/gaf-ar.fina.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/keheh-ar.fina.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/gaf-ar.fina.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/keheh-ar.fina.glif"
+  ],
+  "reserved_beh_files": 18,
+  "shaping_comparisons": 728
+}

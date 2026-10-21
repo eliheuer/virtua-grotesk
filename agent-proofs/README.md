@@ -91,12 +91,13 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/20-kaf-isolated-final/working/`.
-Bold isolated/final Kaf bowls and inner signs repaired. All Regular, Beh and
-manual hamza sources unchanged. 679 shaping comparisons, 400/550/700
-four-reference rasters, large/word/join/marked proofs and preflight completed.
-Kaf initial/medial construction remains unresolved; Regular initial is green.
-Next: independent Keheh/Gaf bases. Human review and attachment remain pending.
+Current proof: `cases/arabic-006/batches/21-keheh-gaf-final/working/`.
+Final Keheh/Gaf now have angled heads and Gaf's separate upper bar in both
+masters. Four source files changed; Beh, green sources and manual hamza preserved.
+728 shaping comparisons and endpoint/intermediate rasters checked; Readex lacks
+U+06A9/U+06AF and its panel is explicitly unavailable. Other forms remain old.
+Next: isolated Keheh/Gaf and local wrappers, then initial/medial. Human review,
+attachment and the protected Kaf structural follow-up remain pending.
 Regular medial Meem and
 Lam–Alef remain protected follow-ups. Eli is editing Beh (`ببب ب`): reserve
 those forms in both masters and every recursive donor, including dots. Check
