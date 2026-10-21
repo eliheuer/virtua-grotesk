@@ -91,10 +91,11 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/08-lam-final/working/`, the applied final Lam
-repair in both masters with all four references. Eli granted the named Regular
-green exception; build, preflight and 70 shaping comparisons passed.
-Next: Meem. Eli is editing Beh (`ببب ب`): reserve those forms in both masters
+Current proof: `cases/arabic-006/batches/09-meem/working/`, the four Bold Meem
+forms with all four references. Build/preflight and 287 shaping checks passed;
+400/550/700 and large compiled rasters inspected. Regular medial remains an
+explicit green-source construction follow-up.
+Next: Hah/Jeem/Khah. Eli is editing Beh (`ببب ب`): reserve those forms in both masters
 and every recursive component donor, including dots. Check live hashes before
 each write and preserve human saves. Working drafts are not human-approved.
 

@@ -34,7 +34,9 @@ for role in ('before', 'after', 'rubik', 'noto', 'plex', 'readex'):
     if digest != face['sha256']:
         raise ValueError(f'Snapshot hash mismatch: {path}')
     with TTFont(path) as tt:
-        missing = sorted({ord(c) for c in args.text if not c.isspace()} - set(tt.getBestCmap()))
+        # Joining controls are shaping instructions, not visible glyph coverage.
+        required = {ord(c) for c in args.text if not c.isspace() and ord(c) not in (0x200C, 0x200D)}
+        missing = sorted(required - set(tt.getBestCmap()))
         if missing:
             raise ValueError(f'{role} lacks {missing}; do not substitute fallback fonts')
     label = font['label'] if role in ('before', 'after') else font['family']

@@ -1,0 +1,87 @@
+{
+  "limits": "Sampled within-contour crossings only. Medial positive contours intentionally overlap; final compiled union and counters require raster inspection. Curvature transitions are reported, not hidden.",
+  "glyphs": [
+    {
+      "name": "meem-ar",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "warnings": [],
+      "non_G2_curve_joins": []
+    },
+    {
+      "name": "meem-ar.fina",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "warnings": [],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            736.0,
+            240.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.003333333333333333,
+          "curvature_out": 0.0030864197530864196,
+          "relative_jump": 1.925925925925926
+        }
+      ]
+    },
+    {
+      "name": "meem-ar.init",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "warnings": [],
+      "non_G2_curve_joins": []
+    },
+    {
+      "name": "meem-ar.medi",
+      "within_contour_crossings": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": [
+        "c0 segment 0: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 1: 1 sampled curvature sign change(s); inspect intent"
+      ],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            592.0,
+            176.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.11458333333333333,
+          "curvature_out": -0.03166666666666666,
+          "relative_jump": 1.2763636363636364
+        },
+        {
+          "contour": 0,
+          "point": [
+            16.0,
+            176.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.03166666666666666,
+          "curvature_out": 0.11458333333333333,
+          "relative_jump": 1.2763636363636364
+        }
+      ]
+    }
+  ]
+}

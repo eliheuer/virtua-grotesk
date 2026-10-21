@@ -56,6 +56,10 @@ batches and exclude any shared donor that could change this human work.
   **Applied** after Eli explicitly approved both masters including green Regular;
   active-source build, preflight and 70 shaping checks passed.
   See [candidate evidence](batches/08-lam-final/README.md).
+- Batch 09: four Bold Meem forms repaired; final advance gap closed, medial
+  shoulders raised and joined. 287 shaping checks, 400/550/700 plus large raster
+  inspection and preflight. Green Regular medial construction remains a
+  follow-up; see [Meem evidence](batches/09-meem/README.md).
 - Regular final Lam changed under Eli’s named green exception. Other green
   drawings and Eli’s manual hamza are preserved.
 - The full Arabic first pass is **in progress**, not complete or human-approved.
@@ -69,10 +73,10 @@ The old `scripts/arabic_*` builders contain historical color semantics and
 Bold-equals-Regular recipes. Do not run them wholesale.
 
 1. Feh/Qaf repair is ready for later human review; preserve its evidence.
-2. Meem: inspect all four Bold forms and their protected Regular counterparts;
-   preserve Beh's reserved donors. Lam batch 07 repairs isolated/initial/medial.
-   Final Lam is now repaired under the approved exception. Lam–Alef still has
-   structural issues involving green Regular drawings; keep that follow-up open.
+2. Meem Bold first pass is saved in batch 09. Green Regular medial sits lower
+   than the other forms; a named exception is needed for that construction.
+   Final Lam is repaired in batch 08. Lam–Alef still has structural issues
+   involving green Regular drawings; keep that follow-up open.
 3. Hah/Jeem/Khah and Ain/Ghain: head, counter and descender construction.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
@@ -113,9 +117,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 08 is
-the current Working proof; the next verified batch may replace it deliberately.
-Next bounded family: Meem. Beh and its component donors are
+Final Lam is applied after Eli’s named Regular green exception. Batch 09 Meem is
+the current Working proof.
+Next bounded family: Hah/Jeem/Khah. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.

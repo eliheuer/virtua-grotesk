@@ -1,0 +1,62 @@
+{
+  "font_sha256": "35fedd0cce14299ac877213fabc2361d6c373817f1b4566e007718714727489e",
+  "samples": [
+    {
+      "weight": 400,
+      "counter_center": [
+        256.0,
+        52.0
+      ],
+      "inside_ink": false
+    },
+    {
+      "weight": 450,
+      "counter_center": [
+        264.0,
+        86.0
+      ],
+      "inside_ink": false
+    },
+    {
+      "weight": 500,
+      "counter_center": [
+        272.0,
+        120.0
+      ],
+      "inside_ink": false
+    },
+    {
+      "weight": 550,
+      "counter_center": [
+        280.0,
+        154.0
+      ],
+      "inside_ink": false
+    },
+    {
+      "weight": 600,
+      "counter_center": [
+        288.0,
+        188.0
+      ],
+      "inside_ink": false
+    },
+    {
+      "weight": 650,
+      "counter_center": [
+        296.0,
+        222.0
+      ],
+      "inside_ink": false
+    },
+    {
+      "weight": 700,
+      "counter_center": [
+        304.0,
+        256.0
+      ],
+      "inside_ink": false
+    }
+  ],
+  "limits": "Counter-center probes complement but do not replace whole-contour/raster inspection."
+}
