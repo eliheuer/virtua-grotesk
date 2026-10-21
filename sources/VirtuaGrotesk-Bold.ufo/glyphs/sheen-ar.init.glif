@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="sheen-ar.init" format="2">
-	<advance width="864"/>
+	<advance width="896"/>
 	<outline>
 		<component base="seen-ar.init"/>
-		<component base="threedotsupabove-ar" xOffset="200" yOffset="-208"/>
+		<component base="threedotsupabove-ar" xOffset="232" yOffset="-160"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

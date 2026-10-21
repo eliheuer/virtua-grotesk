@@ -1,0 +1,617 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "seen-ar.init",
+      "points": 51,
+      "advance": 896.0,
+      "bounds": [
+        -16,
+        0,
+        832,
+        384
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottom].x",
+          "value": 420.0
+        },
+        {
+          "field": "anchor[top].x",
+          "value": 420.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 896.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "3": 3,
+        "2": 18,
+        "1": 29
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "63c46ae6225dff70ddd38ce33b821ac6981490f8f7bb545b2bbae85c51f06a2d"
+    },
+    {
+      "glyph": "seen-ar.medi",
+      "points": 62,
+      "advance": 928.0,
+      "bounds": [
+        -16,
+        0,
+        928,
+        384
+      ],
+      "failures": [
+        {
+          "field": "anchor[topDots].y",
+          "value": 426.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 928.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 0.0,
+          "popcount": 0
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 24,
+        "1": 33,
+        "3": 1,
+        "0": 1
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "e55398aef6700db149207bd1530dea552d41634506ee04954a59b98540c6b583"
+    }
+  ]
+}

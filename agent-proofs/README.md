@@ -91,13 +91,14 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/15-ain-isolated/working/`. Bold isolated
-Ain/Ghain now have cleaned head/bowl curves, 16-unit terminal cuts and matched
-advances. 455 shaping checks, 400/550/700 reference rasters and preflight completed.
-All four Bold forms have first-pass repairs; human review is still pending.
-The marked proof retains an existing isolated Ain/fatha collision for the later
-attachment pass. All Regular sources and Beh dependencies are unchanged.
-Next: Seen/Sheen base forms. Regular medial Meem and
+Current proof: `cases/arabic-006/batches/16-seen-teeth/working/`. Bold Seen/Sheen
+initial and medial teeth now have real Bold weight, consistent joins, matched
+wrapper advances and centered local dot groups. Endpoint/intermediate reference
+rasters, large details, shaping and preflight checks completed. Regular and all
+Beh dependencies remain unchanged. Final/isolated forms are still unfinished;
+final Sheen's existing width gap and marked Seen's low fatha are explicit findings.
+Next: Seen/Sheen final and isolated forms, then the remaining base families.
+Regular medial Meem and
 Lam–Alef remain protected follow-ups. Eli is editing Beh (`ببب ب`): reserve
 those forms in both masters and every recursive donor, including dots. Check
 live hashes before each write and preserve human saves. Working drafts are not
@@ -224,7 +225,7 @@ current machine. Relative links keep the guide usable in another checkout.
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/15-ain-isolated/working/`; raster and browser evidence in its parent batch folder |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/16-seen-teeth/working/`; raster and browser evidence in its parent batch folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

@@ -1,0 +1,37 @@
+{
+  "limits": "Sampled within- and between-contour crossings. Outer/counter forms; sampled intersections complement compiled raster inspection. Curvature transitions are reported, not hidden.",
+  "glyphs": [
+    {
+      "name": "seen-ar.init",
+      "within_contour_crossings": [
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            608.0,
+            0.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.0,
+          "curvature_out": 0.00257201646090535,
+          "relative_jump": 1.0
+        }
+      ]
+    },
+    {
+      "name": "seen-ar.medi",
+      "within_contour_crossings": [
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": []
+    }
+  ]
+}

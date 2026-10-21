@@ -26,7 +26,7 @@ without starting a server:
 ```
 
 Current case: [ARB-006](../cases/arabic-006/README.md), autonomous Arabic first pass.
-Served files are under `agent-proofs/cases/arabic-006/batches/15-ain-isolated/working/`.
+Served files are under `agent-proofs/cases/arabic-006/batches/16-seen-teeth/working/`.
 Previous Hebrew snapshots remain in their case folders.
 
 ## Arabic base-form samples
