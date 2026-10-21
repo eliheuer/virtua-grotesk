@@ -9,14 +9,13 @@ Baseline checkpoint: `05b8d2e1`, including Beh bases, circular single dots,
 scrollbar repair and the updated authorization. Before fonts and exact sources
 are saved per batch; full source hashes detect concurrent editor changes.
 
-## Quality hold — 2026-10-21
+## Quality hold resolved for continuation — 2026-10-21
 
-Eli rejected the latest 700 proof as lumpy/broken. The agent paused the recurring
-run to diagnose the failed visual gate. Repair and re-evaluate the current
-Feh/Qaf proof before continuing the queue; batch 04 is not a successful visual
-checkpoint. See its human-rejection record. No font sources were changed during
-this diagnosis. Standing drawing authorization remains; the pause is a quality
-hold, not a user withdrawal of authorization.
+Batch 04 was rejected; batch 05 fixed crossings and joining defects, and batch
+06 corrects the medial loop after further feedback. Endpoint/intermediate
+raster inspection and source checks are complete. Eli explicitly requested
+resuming independent base-family work without awaiting his feedback. Human
+review remains pending; this does not approve the drawings or mark them green.
 
 ## Concurrent human editing — 2026-10-21
 
@@ -47,6 +46,8 @@ batches and exclude any shared donor that could change this human work.
   donors. 308 shaping comparisons, scoped regression checks and preflight pass.
   Final visual review remains incomplete at the requested Git checkpoint.
   See [repair evidence](batches/05-feh-qaf-repair/README.md).
+- Batch 06: medial Feh/Qaf and final Feh loop revised, with 400/550/700 raster
+  inspection, 210 shaping checks and preflight. See [loop evidence](batches/06-medial-loop/README.md).
 - All Regular drawings, all green drawings and Eli's manual hamza are preserved.
 - The full Arabic first pass is **in progress**, not complete or human-approved.
 
@@ -58,8 +59,7 @@ its descendants even when their files do not change; protect green descendants.
 The old `scripts/arabic_*` builders contain historical color semantics and
 Bold-equals-Regular recipes. Do not run them wholesale.
 
-1. Complete final visual review of batch 05 Feh/Qaf repair, including 550.
-   Keep the recurring run paused until the repair review is resolved.
+1. Feh/Qaf repair is ready for later human review; preserve its evidence.
 2. Meem, Lam and Lam–Alef; keep joining bar heights consistent.
 3. Hah/Jeem/Khah and Ain/Ghain: head, counter and descender construction.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
@@ -97,11 +97,11 @@ for a genuine unresolved dependency/decision, not routine application approval.
 
 ## Continuation and proof tools
 
-The thread heartbeat `virtua-arabic-first-pass` is paused for the quality hold;
+The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed authorization;
 its configured recurrence is 20 minutes
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Next action: finish batch 05 visual review; Beh and its component donors are
+Next bounded family: Bold Lam, then Meem. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.

@@ -1,0 +1,18 @@
+{
+  "recipe": "harness/designbot/glyph_canvas.rs",
+  "recipe_sha256": "93a7d471bace4ca09e9b8d62bf0a7373bd68855c19d1481a953b87ba6725dea8",
+  "renders": [
+    {
+      "image": "medial-large.png",
+      "sha256": "6b19eb37fb3383c109ac483253a9aa220421ca667db30b9a9edb1947628d7643",
+      "source": "sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.medi.glif",
+      "source_sha256": "5ca0e54a20d66090869742ebbee97bd6fdb3a65a3e38f6c080d56590b5a37951"
+    },
+    {
+      "image": "final-large.png",
+      "sha256": "fd69a2e346f2e59c3501458714001ae5cc35548237cf19acc5f474c543e3c5a6",
+      "source": "sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.fina.glif",
+      "source_sha256": "e7c8c12af194f8774bd32bc9c3fee7ae35d1613982089d5bebdae60ed0404690"
+    }
+  ]
+}

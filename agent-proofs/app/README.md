@@ -26,7 +26,7 @@ without starting a server:
 ```
 
 Current case: [ARB-006](../cases/arabic-006/README.md), autonomous Arabic first pass.
-Served files are under `agent-proofs/cases/arabic-006/batches/03-noon/working/`.
+Served files are under `agent-proofs/cases/arabic-006/batches/06-medial-loop/working/`.
 Previous Hebrew snapshots remain in their case folders.
 
 ## Arabic base-form samples
@@ -69,7 +69,8 @@ in chat. Render both endpoints separately with the same em size and baselines:
 ```
 
 The runner verifies all six font hashes and sample coverage, selects the exact
-Plex endpoint, invokes DesignBot with `--raw`, and writes a JSON receipt beside
+Plex endpoint (or explicitly labels its nearest supplied static weight for an
+intermediate request), invokes DesignBot with `--raw`, and writes a JSON receipt beside
 the PNG. The Rust recipe isolates font contexts, checks actual ink bounds and
 keeps one shared size. Reduce `--size` for a longer sample; do not independently
 fit fonts. This diagnostic uses the current neutral dark palette. It complements

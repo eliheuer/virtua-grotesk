@@ -1,0 +1,29 @@
+{
+  "reason": "Avoid a pinched pedestal: widen the lower connection to 224 and use 8-unit chamfer landings",
+  "replacements_at_medial_origin": {
+    "(776, 176)": [
+      832,
+      176
+    ],
+    "(776, 184)": [
+      824,
+      184
+    ],
+    "(864, 184)": [
+      856,
+      184
+    ],
+    "(664, 184)": [
+      616,
+      184
+    ],
+    "(664, 176)": [
+      608,
+      176
+    ],
+    "(576, 184)": [
+      584,
+      184
+    ]
+  }
+}

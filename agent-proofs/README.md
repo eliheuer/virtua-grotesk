@@ -85,18 +85,15 @@ Progress and the remaining queue live in
 
 ## Current handoff — 2026-10-21
 
-**Quality hold:** Eli rejected the latest 700 proof as lumpy/broken. The agent
-paused the autonomous heartbeat for diagnosis. Fix and re-evaluate the current
-Feh/Qaf proof before moving to another family; see ARB-006 batch 04 rejection.
+Eli renewed autonomous continuation after the Feh/Qaf repair. Batch 06 has
+400/550/700 raster inspection, curve/shaping checks and preflight; it remains a
+working draft for later human review. Continue bounded independent families.
 
-Current case: [ARB-006 — Autonomous Arabic first pass](cases/arabic-006/README.md).
-Batches 01–04 cover Bold Dal/Reh, Waw, Noon and initial/medial Feh–Qaf heads.
-Current proof: `cases/arabic-006/batches/05-feh-qaf-repair/working/`, with all four
-references and saved endpoint raster sheets. Batch 05 repairs Feh/Qaf; final
-visual review remains pending. Eli is editing Beh (`ببب ب`): reserve those forms
-in both masters and their recursive component donors, including shared dots.
-All Regular sources and manual Bold hamza remain unchanged. See the current
-case for the exact queue and unresolved visible defects.
+Current case: [ARB-006](cases/arabic-006/README.md).
+Current proof: `cases/arabic-006/batches/06-medial-loop/working/`, with all four
+references. Next: Bold Lam, then Meem. Eli is editing Beh (`ببب ب`): reserve
+those forms in both masters and every recursive component donor, including dots.
+Check live hashes before each write and preserve human saves.
 
 ### Earlier Beh checkpoint
 Checkpoint `211c3b8d` is pushed and preserves the accepted Fathatan repair and
@@ -219,7 +216,7 @@ current machine. Relative links keep the guide usable in another checkout.
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/05-feh-qaf-repair/working/`; raster and browser evidence in its parent batch folder |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/06-medial-loop/working/`; raster and browser evidence in its parent batch folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

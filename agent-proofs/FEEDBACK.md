@@ -444,3 +444,15 @@ Reserve those four Beh forms in both masters and their recursive component
 donors. Continue only independent work after checking shared dependencies and
 current hashes. This reservation preserves manual editing; it is not a green
 grade or visual approval of the Feh/Qaf repair.
+
+## Medial Feh/Qaf and independent continuation — 2026-10-21
+
+Eli identifies a medial Feh/Qaf problem visible against the four references and
+asks to finish this repair, then continue independent Arabic base families
+without waiting for feedback while he draws Beh. Agent interpretation: the
+medial circular head sits too broadly on the bar; the references narrow the
+lower loop into the joining stroke and taper the counter. Batch 06 tests that
+relationship, not a copied outline or newly confirmed universal style rule.
+Beh's four forms and recursive component donors remain reserved in both masters.
+The previous autonomous quality hold may end once the repair is checked; human
+review remains pending and autonomous continuation does not assign approval.
