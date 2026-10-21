@@ -91,12 +91,12 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/12-ain-initial/working/`. Bold initial
-Ain and Ghain now have clean tangent turns, an open aperture and matching advances.
-385 shaping checks and 400/550/700 raster inspection completed with all four
-references. This is initial-only: the medial/final loops and isolated Bold head
-remain visibly unfinished. All Regular source bytes and Beh dependencies are unchanged.
-Next: Bold medial Ain/Ghain, then final and isolated. Regular medial Meem and
+Current proof: `cases/arabic-006/batches/13-ain-medial/working/`. Bold medial
+Ain and Ghain now have heavier joining bars, a cleaner open counter and matching
+advances. 413 shaping checks and 400/550/700 raster inspection completed with all
+four references. Initials were repaired in batch 12; final and isolated Bold
+forms remain unfinished. All Regular source bytes and Beh dependencies are unchanged.
+Next: Bold final Ain/Ghain, then isolated. Regular medial Meem and
 Lam–Alef remain protected follow-ups. Eli is editing Beh (`ببب ب`): reserve
 those forms in both masters and every recursive donor, including dots. Check
 live hashes before each write and preserve human saves. Working drafts are not
@@ -223,7 +223,7 @@ current machine. Relative links keep the guide usable in another checkout.
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/12-ain-initial/working/`; raster and browser evidence in its parent batch folder |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/13-ain-medial/working/`; raster and browser evidence in its parent batch folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |
