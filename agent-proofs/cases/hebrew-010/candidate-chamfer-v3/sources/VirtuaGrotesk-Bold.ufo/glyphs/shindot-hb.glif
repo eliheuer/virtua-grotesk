@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="shindot-hb" format="2">
+	<unicode hex="05C1"/>
+	<outline>
+		<contour>
+			<point x="104" y="672" type="line"/>
+			<point x="120" y="688" type="line"/>
+			<point x="120" y="752" type="line"/>
+			<point x="104" y="768" type="line"/>
+			<point x="40" y="768" type="line"/>
+			<point x="24" y="752" type="line"/>
+			<point x="24" y="688" type="line"/>
+			<point x="40" y="672" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbShin" x="68" y="576"/>
+	<anchor name="hbCantAfterHolam" x="106" y="576"/>
+	<anchor name="hbCantBeforeHolam" x="32" y="576"/>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>

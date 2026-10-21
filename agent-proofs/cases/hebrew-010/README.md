@@ -7,7 +7,8 @@ whole-font grading, then a possible overnight Arabic run (2026-10-20).
 
 The 16 Bold marks below are blue repair targets. The standing Hebrew drawing
 authorization covers bounded repairs preserving their existing construction.
-Regular counterparts are purple and were **not changed**. Meteg (U+05BD) and
+Fifteen Regular counterparts are purple; Qamats Qatan is orange. All Regular
+counterparts were **not changed** in v2. Meteg (U+05BD) and
 Rafe (U+05BF) are uncolored in Bold and excluded. No grading changed.
 
 | Bold mark | Active GLIF |
@@ -111,3 +112,75 @@ scope. Arabic has not been modified here; no overnight automation has been
 created or started. Completion, native-reader approval and onboarding readiness
 remain separate outcomes. Meteg/Rafe and cantillation beyond the selected
 modern-Hebrew stress tests are also not silently approved by this pass.
+
+## Correction 03 — marks must share the family construction
+
+Eli rejected the stylistic mismatch visible in the proof: the marks should have
+the same chamfers and drawing language as the main glyphs (2026-10-20). V2
+addressed weight and clearance while retaining round dots and uncut bar corners;
+passing those checks did not make it stylistically correct.
+
+Proposed v3 scope: the same 16 marks listed above, in Regular and Bold, prepared
+on detached copies. Use 16-unit exposed cuts and 8-unit tight junction cuts,
+with straight-sided dot bodies; preserve anchors, spacing, base glyphs and grades.
+Regular protected marks need a named exception before installation; no active
+mark source changes are authorized by this record alone. Existing v2 remains
+the active drawing until the detached comparison is reviewed.
+
+Measured construction donor: green Regular H, outer `(80,16) → (96,0)`
+and internal `(180,352) → (188,360)`; these give 16-unit and 8-unit straight
+cuts. DESIGN.md establishes the same absolute cuts across weights. Period
+has a related cut-square silhouette but is yellow, so it is not an approved
+donor. Exact new dot dimensions remain a proposal.
+
+### Detached v3 evidence and pending installation
+
+`candidate-chamfer-v3/` holds 32 proposed GLIFs; `before-chamfer-v3/` preserves
+the active originals. `chamfer-v3.json` records all active-source hashes and
+the exact candidate pair. No active UFO file changed during this trial.
+
+Dots use 64-unit cut squares in Regular; Bold retains v2's 80/96-unit envelopes.
+All have 16-unit cuts. Bars retain their established structure with exposed
+16-unit cuts and 8-unit internal junctions. Regular outlines are deliberately
+adapted to the 8-grid; anchors, metrics and metadata are byte-preserved.
+The splayed Qamats Qatan stem remains, with short axis-aligned terminal landings.
+This is proposed geometry, not final grading or a universal mark-size rule.
+
+The detached gftools build succeeded. `chamfer-validation.json` verifies matching
+master structures, all new points on 8, unchanged active sources and metadata,
+and compiled changes confined to the marks/dependents at seven weights with
+no advance changes. `chamfer-audit-v3.json`: 3,837 sequences, zero intersections.
+`chamfer-hebrew-check.json`: zero smoke-check failures.
+The strict grid reports each have 34 findings, all in preserved existing anchors;
+none are new outline coordinates. They are retained honestly, not normalized
+away to obtain a passing gate.
+
+The proof at `chamfer-v3/` is shown on port 60272 with Candidate clearly labeled
+detached. `chamfer-regular-v3.jpg` and `chamfer-bold-v3.jpg` record the browser
+comparison. Full release QA has not been rerun for this uninstalled candidate.
+
+Pending exception: replace the protected Regular outlines of Sheva, Hataf Segol,
+Hataf Patah, Hataf Qamats, Hiriq, Tsere, Segol, Patah, Qamats, Holam, Holam Haser,
+Qubuts, Dagesh, Shin Dot and Sin Dot. The same trial includes orange Regular
+Qamats Qatan and all 16 blue Bold counterparts. Leave all grades unchanged.
+
+### V3 applied — 2026-10-20
+
+Eli explicitly approved applying these marks and changed the ongoing policy to
+protect **only green**. Purple retains its good-composite meaning but no longer
+requires a protection exception. This supersedes the pending request above and
+the earlier protection notes; all saved source colors remain untouched.
+
+The exact 32 GLIFs were hash-checked and installed into active Regular/Bold.
+`chamfer-v3-applied.json` records the receipt and verifies unrelated source bytes
+are unchanged. `validate_chamfer.py --applied` checks the installed state,
+metadata, compatibility and seven-weight compiled scope. `make preflight` passed.
+`chamfer-applied-equivalence.json` verifies that the applied build differs from
+the tested detached font only by the head timestamp/checksum; all geometry and
+shaping tables match. Thus the candidate's 3,837 collision screens and 423
+canonical-equivalence contexts apply to the installed geometry.
+
+The current live proof is `applied-v3/`; evidence is `evidence-applied-v3.json`.
+Before and detached trial snapshots remain available. Full Fontspector has not
+been rerun for this construction change. Approval to apply is not green grading
+or release approval. Whole-font human grading is next.

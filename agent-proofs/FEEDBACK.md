@@ -272,3 +272,19 @@ presentation forms named in [HEB-009](cases/hebrew-009/README.md) in both master
 from current bases and existing marks. Preserve standalone mark drawings and
 all grades. This closes the named purple-protection exception only; it is not
 blanket permission to revise protected marks or infer human grading.
+
+HEB-010 correction 03 (2026-10-20): marks must share the main glyphs' chamfers
+and machined construction. Eli flagged the round dots and uncut bars in v2.
+Weight, grid and collision checks alone missed this stylistic mismatch. See
+[the bounded detached trial](cases/hebrew-010/README.md#correction-03--marks-must-share-the-family-construction);
+this does not silently waive protected source grades.
+
+## Color-policy revision — 2026-10-20
+
+Eli explicitly changed the policy: only green glyphs are protected going forward.
+Purple continues to mean a good composite, but is editable within authorized
+work without a protection exception. Preserve green donors and all existing
+review colors. Earlier dated purple-protection notes are historical and are
+superseded by this decision. This does not grant blanket replacement permission
+for orange/yellow or classify uncolored glyphs. Eli also explicitly approved
+applying HEB-010's chamfered 16-mark candidate in both masters.

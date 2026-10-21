@@ -68,7 +68,17 @@ promote measured lessons into DESIGN.md and the shared skills.
 ## Current handoff — 2026-10-20
 
 Current case: [HEB-010 — marks and spacing](cases/hebrew-010/README.md).
-The proof at `cases/hebrew-010/working-v2/` serves port 60272. V2 adjusts 16
+
+Latest: Eli approved the chamfered 16-mark candidate in both masters and changed
+the policy so **only green is protected**. Purple still means a good composite,
+now editable within authorized work without a protection exception. The active
+Regular/Bold UFOs contain the exact v3 candidate; `cases/hebrew-010/applied-v3/`
+is the current proof on port 60272. Build/preflight and scope checks pass. The
+applied font has the same geometry/shaping tables as the collision-tested trial.
+No grades, anchors, metrics, base letters or unrelated sources changed.
+Next is Eli's grading pass before defining the Arabic overnight scope.
+
+The previous active-source proof is preserved at `cases/hebrew-010/working-v2/`. V2 adjusts 16
 blue Bold marks, preserving all Regular and other source bytes, anchors and
 grades. The first trial’s clearance failures are retained; the refined trial
 passes 3,837 collision screens, 423 marked-form contexts, seven-weight compiled
@@ -77,8 +87,7 @@ scope checks, curve lint and preflight. Full offline QA stays at 1 failure /
 
 Eli accepted the responsive heading fix as readable. Compare/Toggle and Text
 now support the marks-and-spacing study; the case-specific text corpus adds
-pointed probes without replacing the existing running-text passages. The current
-Bold trial has been visually inspected by the agent and awaits Eli’s verdict.
+pointed probes without replacing the existing running-text passages. The former v2 trial is superseded by the approved chamfer construction above.
 
 HEB-008 v7 and manual correction lessons were saved in `df38c4a`.
 HEB-009’s 29 marked forms in both masters were saved in `e58edac`. Their source
@@ -88,7 +97,7 @@ base letters, including Zayin, Gimel and Regular Final Tsadi, remain unchanged.
 Next: Eli’s whole-font grading pass, then use the saved grades and exact source
 hashes to define the allowed Arabic overnight scope. No agent grading, Arabic
 edit, overnight schedule, or public release has happened in HEB-010. Bold Meteg
-and Rafe remain uncolored and untouched; protected Regular marks remain intact.
+and Rafe remain uncolored and untouched; Regular marks now have the explicitly approved v3 construction.
 
 HEB-001 through HEB-005 are approved and applied: Dalet/Resh, He/Het/Tav,
 Bet/Kaf/Final Kaf, Pe/Final Pe, and Mem/Final Mem/Samekh (13 of 27 base letters/final forms in this

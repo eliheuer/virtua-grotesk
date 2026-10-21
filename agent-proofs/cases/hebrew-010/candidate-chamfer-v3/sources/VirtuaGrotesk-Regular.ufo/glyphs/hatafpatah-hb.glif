@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hatafpatah-hb" format="2">
+	<unicode hex="05B2"/>
+	<outline>
+		<contour>
+			<point x="168" y="-80" type="line"/>
+			<point x="184" y="-64" type="line"/>
+			<point x="184" y="-40" type="line"/>
+			<point x="168" y="-24" type="line"/>
+			<point x="48" y="-24" type="line"/>
+			<point x="32" y="-40" type="line"/>
+			<point x="32" y="-64" type="line"/>
+			<point x="48" y="-80" type="line"/>
+		</contour>
+		<contour>
+			<point x="264" y="-80" type="line"/>
+			<point x="280" y="-64" type="line"/>
+			<point x="280" y="-32" type="line"/>
+			<point x="264" y="-16" type="line"/>
+			<point x="232" y="-16" type="line"/>
+			<point x="216" y="-32" type="line"/>
+			<point x="216" y="-64" type="line"/>
+			<point x="232" y="-80" type="line"/>
+		</contour>
+		<contour>
+			<point x="264" y="-176" type="line"/>
+			<point x="280" y="-160" type="line"/>
+			<point x="280" y="-128" type="line"/>
+			<point x="264" y="-112" type="line"/>
+			<point x="232" y="-112" type="line"/>
+			<point x="216" y="-128" type="line"/>
+			<point x="216" y="-160" type="line"/>
+			<point x="232" y="-176" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbBottom" x="160" y="0"/>
+	<anchor name="hbMeteg" x="-24" y="0"/>
+	<anchor name="hbCantLeftVowel" x="32" y="0"/>
+	<anchor name="hbCantRightVowel" x="288" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

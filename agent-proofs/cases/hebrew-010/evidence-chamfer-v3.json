@@ -1,0 +1,134 @@
+{
+  "description": "HEB-010 v2: Bold mark weight and compact compound-vowel repair; Regular unchanged.",
+  "fonts": {
+    "after": {
+      "path": "chamfer-v3/fonts/candidate.ttf",
+      "sha256": "dc256d5f2594c1666777136ead02c2c14413c598c539f2f0a48698b06a06891f",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Candidate"
+    },
+    "rubik": {
+      "path": "working-v2/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "working-v2/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "working-v2/fonts/after-102dfb6e2f08.ttf",
+      "sha256": "102dfb6e2f0843b05b811e526d3c0707dc0dfc28a82ceb54499caf7a222c12b4",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 10",
+    "status": "Chamfer trial · Detached from active sources",
+    "note": "Detached construction trial for the 16 HEB-010 marks in both weights. Straight-sided dots and bar terminals use 16-unit cuts, tight junctions use 8. Anchors, widths, base letters and grades are preserved. Active UFOs remain unchanged; protected Regular marks require an exception before installation.",
+    "glyphs": [
+      {
+        "key": "patah",
+        "char": "בַ",
+        "name": "Bet with Patah"
+      },
+      {
+        "key": "qamats",
+        "char": "בָ",
+        "name": "Bet with Qamats"
+      },
+      {
+        "key": "hiriq",
+        "char": "בִ",
+        "name": "Bet with Hiriq"
+      }
+    ],
+    "presets": {
+      "group": [
+        "בַ בָ בִ",
+        "Vowels"
+      ],
+      "words": [
+        "בְ בֱ בֲ בֳ בֵ בֶ בֹ בֻ",
+        "Other vowels"
+      ],
+      "marks": [
+        "בְּ בִּ שָּׁ שִּׂ וּ וֹ ךָ ןִ ףִ ץִ",
+        "Combined marks and finals"
+      ],
+      "latin": [
+        "בב בג בז גב זב זז נב כב ךב רר דד וו יי",
+        "Close pairs"
+      ]
+    }
+  },
+  "reading": {
+    "marks": {
+      "label": "Marks and spacing",
+      "paragraphs": [
+        {
+          "lang": "he",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "בַ בָ בִ בֵ בֶ בְ בֱ בֲ בֳ בֹ בֻ בּ וּ וֹ שָׁ שִׂ שָּׁ שִּׂ ךָ ךְ םִ ןִ ףִ ץִ"
+            }
+          ]
+        },
+        {
+          "lang": "he",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "שָׁלוֹם עִבְרִית בְּרֵאשִׁית. שָׁלוֹם, שָׁלוֹם! עִבְרִית — בְּרֵאשִׁית. שָׁלוֹם עִבְרִית בְּרֵאשִׁית."
+            }
+          ]
+        },
+        {
+          "lang": "he",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "בב בג בז גב זב זז נב כב ךב רר דד וו יי. אבגדהוזחטיכלמנסעפצקרשת ךםןףץ. א׳ ב׳ ג׳ ד״ר צה״ל בית־ספר 0123456789."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

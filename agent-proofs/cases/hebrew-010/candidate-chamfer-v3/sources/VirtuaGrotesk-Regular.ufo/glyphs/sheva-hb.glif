@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="sheva-hb" format="2">
+	<unicode hex="05B0"/>
+	<outline>
+		<contour>
+			<point x="64" y="-80" type="line"/>
+			<point x="80" y="-64" type="line"/>
+			<point x="80" y="-32" type="line"/>
+			<point x="64" y="-16" type="line"/>
+			<point x="32" y="-16" type="line"/>
+			<point x="16" y="-32" type="line"/>
+			<point x="16" y="-64" type="line"/>
+			<point x="32" y="-80" type="line"/>
+		</contour>
+		<contour>
+			<point x="64" y="-176" type="line"/>
+			<point x="80" y="-160" type="line"/>
+			<point x="80" y="-128" type="line"/>
+			<point x="64" y="-112" type="line"/>
+			<point x="32" y="-112" type="line"/>
+			<point x="16" y="-128" type="line"/>
+			<point x="16" y="-160" type="line"/>
+			<point x="32" y="-176" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbBottom" x="52" y="0"/>
+	<anchor name="hbMeteg" x="-44" y="0"/>
+	<anchor name="hbCantLeftVowel" x="14" y="0"/>
+	<anchor name="hbCantRightVowel" x="90" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

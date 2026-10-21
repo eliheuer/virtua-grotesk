@@ -68,7 +68,9 @@ permission to start a drawing batch. Follow [the approval workflow](AGENTS.md#so
 propose named glyphs and masters, wait for Eli's approval, prepare a reversible
 scratch candidate, and show proofs before applying it when only candidate work
 was approved. Explicit approval can override a color restriction for those named
-glyphs only. Green and purple edits require that explicit exception.
+glyphs only. Only green edits require a protection exception (Eli, 2026-10-20).
+Standing Hebrew/Arabic authorization in AGENTS.md still applies; purple is no
+longer protected.
 
 | Color | Meaning | Editing and reference use |
 | --- | --- | --- |
@@ -77,12 +79,12 @@ glyphs only. Green and purple edits require that explicit exception.
 | Yellow | Better drawing, but still needs work. | Edit without overwriting. Not good enough to use as reference material. |
 | Green | Good drawing; frozen by default. | Use as reference material. Changes require Eli's explicit approval naming the glyph and master. |
 | Blue | Composite drawing with a problem that needs attention and judgment to resolve. | Inspect the composite and fix the problem. It is not an approved reference. |
-| Purple | Good composite drawing; frozen by default, like green. | Use as reference material. Changes require Eli's explicit approval naming the glyph and master. |
+| Purple | Good composite drawing; editable, not frozen. | May be used as reference material. Edit within authorized work without a protection exception; preserve any green component donors. |
 | Pink | Composite drawing needing a small amount of work, less than blue. | Edits are welcome. Do not use as reference material. |
 
 Blue describes a composite needing attention; it does not mean “AI-generated.”
 Only red explicitly permits replacement or overwriting.
-When editing a composite, preserve any green or purple component glyphs it uses.
+When editing a composite, preserve any green component glyphs it uses.
 Uncolored or unfamiliar labels do not grant automatic editing or reference permission; clarify their meaning first.
 Human grading determines approval; AI tools must not change review colors automatically.
 Leave new candidates ungraded unless Eli specifies a review color.

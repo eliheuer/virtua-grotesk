@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="segol-hb" format="2">
+	<unicode hex="05B6"/>
+	<outline>
+		<contour>
+			<point x="80" y="-104" type="line"/>
+			<point x="96" y="-88" type="line"/>
+			<point x="96" y="-24" type="line"/>
+			<point x="80" y="-8" type="line"/>
+			<point x="16" y="-8" type="line"/>
+			<point x="0" y="-24" type="line"/>
+			<point x="0" y="-88" type="line"/>
+			<point x="16" y="-104" type="line"/>
+		</contour>
+		<contour>
+			<point x="144" y="-216" type="line"/>
+			<point x="160" y="-200" type="line"/>
+			<point x="160" y="-136" type="line"/>
+			<point x="144" y="-120" type="line"/>
+			<point x="80" y="-120" type="line"/>
+			<point x="64" y="-136" type="line"/>
+			<point x="64" y="-200" type="line"/>
+			<point x="80" y="-216" type="line"/>
+		</contour>
+		<contour>
+			<point x="208" y="-104" type="line"/>
+			<point x="224" y="-88" type="line"/>
+			<point x="224" y="-24" type="line"/>
+			<point x="208" y="-8" type="line"/>
+			<point x="144" y="-8" type="line"/>
+			<point x="128" y="-24" type="line"/>
+			<point x="128" y="-88" type="line"/>
+			<point x="144" y="-104" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbBottom" x="106" y="0"/>
+	<anchor name="hbMeteg" x="-54" y="0"/>
+	<anchor name="hbCantLeftVowel" x="14" y="0"/>
+	<anchor name="hbCantRightVowel" x="198" y="0"/>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>
