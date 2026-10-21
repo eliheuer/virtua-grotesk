@@ -1,0 +1,53 @@
+{
+  "limits": "Sampled within-contour crossings only. Single-contour forms; sampled intersections complement compiled raster inspection. Curvature transitions are reported, not hidden.",
+  "glyphs": [
+    {
+      "name": "ain-ar.init",
+      "within_contour_crossings": [
+        0
+      ],
+      "warnings": [],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            192.0,
+            272.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.006802721088435373,
+          "curvature_out": -0.013333333333333332,
+          "relative_jump": 0.489795918367347
+        },
+        {
+          "contour": 0,
+          "point": [
+            272.0,
+            496.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.003255208333333333,
+          "curvature_out": 0.00257201646090535,
+          "relative_jump": 0.20987654320987648
+        },
+        {
+          "contour": 0,
+          "point": [
+            32.0,
+            272.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.0030864197530864196,
+          "curvature_out": 0.006944444444444444,
+          "relative_jump": 0.5555555555555556
+        }
+      ]
+    }
+  ]
+}

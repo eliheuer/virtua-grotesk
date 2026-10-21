@@ -1,0 +1,14 @@
+Bold ain-ar.init: join (288,176) smooth; G1line; tangent angle 0.000 deg; signed curvature 0 -> -0.00651042; relative jump 100.0%
+Bold ain-ar.init: join (192,272) smooth; G1; tangent angle 0.000 deg; signed curvature -0.00680272 -> -0.0133333; relative jump 49.0%
+Bold ain-ar.init: join (272,336) smooth; G2; tangent angle 0.000 deg; signed curvature -0.00694444 -> -0.00694444; relative jump 0.0%
+Bold ain-ar.init: join (352,272) corner: review intent; G0; tangent angle 45.000 deg; signed curvature -0.0133333 -> 0; relative jump 100.0%
+Bold ain-ar.init: join (512,272) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0 -> 0.00360082; relative jump 100.0%
+Bold ain-ar.init: join (272,496) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00325521 -> 0.00257202; relative jump 21.0%
+Bold ain-ar.init: join (32,272) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00308642 -> 0.00694444; relative jump 55.6%
+Bold ain-ar.init: join (88,184) corner: review intent; G0; tangent angle 75.964 deg; signed curvature 0.0154557 -> 0; relative jump 100.0%
+Bold ain-ar.init:
+  contour 0: crest (272,496) off-center x by +120
+  contour 0: crest (192,272) off-center x by +40
+  contour 0: crest (32,272) off-center y by -112
+  contour 0: crest (272,336) off-center y by -48
+1 glyphs flagged
