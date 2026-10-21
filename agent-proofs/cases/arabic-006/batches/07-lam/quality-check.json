@@ -1,0 +1,61 @@
+{
+  "limits": "20% curvature jump at smooth cubic/cubic joins in these revised heads; return aspect <=2; sampled proper segment crossings. Not release or human approval.",
+  "glyphs": [
+    {
+      "name": "lam-ar",
+      "before": {
+        "faults": [],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "lam-ar.init",
+      "before": {
+        "faults": [
+          "c0 segment 6: 1 sampled curvature sign change(s); inspect intent",
+          {
+            "join": [
+              60.0,
+              200.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "lam-ar.medi",
+      "before": {
+        "faults": [
+          "c0 segment 9: 1 sampled curvature sign change(s); inspect intent",
+          "c0 segment 15: 1 sampled curvature sign change(s); inspect intent",
+          {
+            "join": [
+              292.0,
+              200.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    }
+  ],
+  "new_faults": 0,
+  "previous_faults": 5
+}

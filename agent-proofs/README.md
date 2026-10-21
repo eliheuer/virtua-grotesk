@@ -85,15 +85,16 @@ Progress and the remaining queue live in
 
 ## Current handoff — 2026-10-21
 
-Eli renewed autonomous continuation after the Feh/Qaf repair. Batch 06 has
-400/550/700 raster inspection, curve/shaping checks and preflight; it remains a
-working draft for later human review. Continue bounded independent families.
+Eli renewed autonomous continuation after the Feh/Qaf repair. Batch 07 repairs
+Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
+252 shaping checks and preflight. Final Lam and Lam–Alef remain structurally
+unresolved; see the case before drawing conclusions from the full joined string.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/06-medial-loop/working/`, with all four
-references. Next: Bold Lam, then Meem. Eli is editing Beh (`ببب ب`): reserve
-those forms in both masters and every recursive component donor, including dots.
-Check live hashes before each write and preserve human saves.
+Current proof: `cases/arabic-006/batches/07-lam/working/`, with all four references.
+Next: Meem. Eli is editing Beh (`ببب ب`): reserve those forms in both masters
+and every recursive component donor, including dots. Check live hashes before
+each write and preserve human saves. Working drafts are not human-approved.
 
 ### Earlier Beh checkpoint
 Checkpoint `211c3b8d` is pushed and preserves the accepted Fathatan repair and

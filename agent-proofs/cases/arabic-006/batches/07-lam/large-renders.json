@@ -1,0 +1,25 @@
+{
+  "renderer": "designbot --raw harness/designbot/glyph_canvas.rs -- glyphbox sources/VirtuaGrotesk-Bold.ufo <glyph>",
+  "scale": "1 px per font unit; 1536 square",
+  "images": [
+    {
+      "glyph": "lam-ar",
+      "source_sha256": "e7520be1142dda626136bc465eba8d713eb572cb32bde52fc6b7146e7e21fc19",
+      "png": "lam-ar-large.png",
+      "png_sha256": "645b6ca1033aa60cfad935e9b7a925aec9befb9368e3862238a5a71e9e3f0419"
+    },
+    {
+      "glyph": "lam-ar.init",
+      "source_sha256": "ccf838a97aa65ee516a2062576372d52abd3d7f5d45b82b6688d9d122cfe3805",
+      "png": "lam-ar.init-large.png",
+      "png_sha256": "bb6f17b7830d39caf15dbc3ce3c8eefefb8549a4375d2ce861763321183abbe6"
+    },
+    {
+      "glyph": "lam-ar.medi",
+      "source_sha256": "0c7fb059e95c4e68239137f5db76f18c9159f53efb6bff8ddfe47812250be4ff",
+      "png": "lam-ar.medi-large.png",
+      "png_sha256": "37e5194e324cfd3a75a199a1f89b1155ebafe454171153e829dc2762cd889060"
+    }
+  ],
+  "note": "Concurrent DesignBot calls reused temporary state and one output was missing/misidentified. Initial and medial were rerendered sequentially and visually matched to their source shapes. Run raw DesignBot sequentially."
+}

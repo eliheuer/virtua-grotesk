@@ -48,6 +48,9 @@ batches and exclude any shared donor that could change this human work.
   See [repair evidence](batches/05-feh-qaf-repair/README.md).
 - Batch 06: medial Feh/Qaf and final Feh loop revised, with 400/550/700 raster
   inspection, 210 shaping checks and preflight. See [loop evidence](batches/06-medial-loop/README.md).
+- Batch 07: Bold Lam isolated/initial/medial repaired with five wrapper advances;
+  252 shaping checks, 400/550/700 and large raster inspection, preflight.
+  Final Lam and Lam–Alef structure remain unresolved; see [Lam evidence](batches/07-lam/README.md).
 - All Regular drawings, all green drawings and Eli's manual hamza are preserved.
 - The full Arabic first pass is **in progress**, not complete or human-approved.
 
@@ -60,14 +63,11 @@ The old `scripts/arabic_*` builders contain historical color semantics and
 Bold-equals-Regular recipes. Do not run them wholesale.
 
 1. Feh/Qaf repair is ready for later human review; preserve its evidence.
-2. Bold Lam isolated/initial/medial: isolated currently retains Regular's 96-unit
-   stroke and its 488 advance is narrower than the outline's x=584 extent;
-   initial/medial have distorted inner curves and 34×8 cap cuts. Repair these
-   independent forms first, inspecting inherited Lam–Alef composites. Final
-   Lam's green Regular skeleton has no descending bowl (visible in all four
-   references); changing that topology requires a named green exception, so
-   preserve it and continue to independent Meem work rather than blocking.
-   Keep joining bar heights consistent.
+2. Meem: inspect all four Bold forms and their protected Regular counterparts;
+   preserve Beh's reserved donors. Lam batch 07 repairs isolated/initial/medial.
+   Final Lam and Lam–Alef still have wrong skeletons; green Regular structure
+   needs a named exception before compatible structural repair. Keep these open
+   while proceeding independently, not marked as completed families.
 3. Hah/Jeem/Khah and Ain/Ghain: head, counter and descender construction.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
@@ -108,7 +108,7 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 20 minutes
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Next bounded family: Bold Lam, then Meem. Beh and its component donors are
+Next bounded family: Meem. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.

@@ -1,0 +1,24 @@
+{
+  "result": "artifacts present",
+  "blocking_master_mismatches": 0,
+  "source_guard": "only eight declared Bold files changed; all 18 reserved Beh files unchanged",
+  "checked_sources": {
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam-ar.glif": "e7520be1142dda626136bc465eba8d713eb572cb32bde52fc6b7146e7e21fc19",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam-ar.init.glif": "ccf838a97aa65ee516a2062576372d52abd3d7f5d45b82b6688d9d122cfe3805",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam-ar.medi.glif": "0c7fb059e95c4e68239137f5db76f18c9159f53efb6bff8ddfe47812250be4ff",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam_alef-ar.fina.glif": "220dab3bad10172ae4e5d0ce76b74c2ca5ca7ad2de620db7fa0c18a8ea9b1b66",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam_alefH_amzaabove-ar.fina.glif": "752f479ab8bba63aee45ae69ac4821775c84c7022ecf2bf15a56a3187ae8ee02",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam_alefH_amzabelow-ar.fina.glif": "72f8df45b6a0c0bb676b9d083c74c3d6b56fdb833fe0ec9bd13f779f36fab503",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam_alefM_adda-ar.fina.glif": "13f28531a545e81ef2766213087dfd88dac7111b30a96af6798a0dce01fe641b",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/lam_alefW_asla-ar.fina.glif": "2176d8e148dfba0f87e1d51c436b77c86a597bea30ead843fcb31d88c8dd35e9"
+  },
+  "build_artifacts": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "9f3b95a9f49ba2c87c7027eda3135c4aae35eb4f2916809868e17a0c1a9b9903",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "71a7573a7903bf473f7e71384010a2310905bf7e409887fb2262d167417b7af9",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "a902c0308ed61cefd5f2ad8f879f2b3f7e59da61af3461893c565bc3a98b672c",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "ab05b1e2fd03d320498d21f3f4e14a08c4d0c4b1fb1062e95261c2a442bf4d95",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "2baf566f79a8340824cff210a716957769692aa73d567c89434c42d6b2ced630"
+  },
+  "proof_font_sha256": "422013fc719562d6a4654f40fa90c8cb708fe4bdff24dc1340f26186fca947f9",
+  "limits": "Preflight is artifact presence, not release approval. Eight existing off-grid anchors retained. Lam final and Lam\u2013Alef design unresolved."
+}
