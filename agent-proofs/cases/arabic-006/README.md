@@ -96,6 +96,13 @@ batches and exclude any shared donor that could change this human work.
   large/marked proofs and preflight completed. Regular and Beh unchanged.
   See [final evidence](batches/14-ain-final/README.md).
 
+- Batch 15: Bold isolated Ain/Ghain repaired; reversing inner curve and
+  tangent kinks removed, 16-unit terminal cuts and matched 784 advances.
+  455 shaping comparisons, 400/550/700 reference rasters, large/marked proofs
+  and preflight completed. Existing Ain/fatha collision is recorded for the
+  attachment pass. Regular and Beh unchanged. See
+  [isolated evidence](batches/15-ain-isolated/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -109,15 +116,17 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    than the other forms; a named exception is needed for that construction.
    Final Lam is repaired in batch 08. Lam–Alef still has structural issues
    involving green Regular drawings; keep that follow-up open.
-3. Tcheh base and dot first pass is saved in batch 11. Next: Bold Ain/Ghain isolated
-   construction. Initials, medials and finals are saved in batches 12–14. Regular Jeem final dot collision and Khah dot
+3. Tcheh base and dot first pass is saved in batch 11. Bold Ain/Ghain four-form repairs
+   are saved in batches 12–15, pending human review. Regular Jeem final dot collision and Khah dot
    heights remain placement follow-ups; preserve protected base drawings.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
 6. Reconcile duplicated Beh-family outlines (Teh/Peh/Tteh/Yeh extensions)
    with the shared roots; inspect separately drawn Dal/Reh variants too.
 7. Dot groups and wrapper placements after base silhouettes stabilize.
-8. Diacritics, composite attachment, stacking and spacing; Arabic/Farsi digits,
+8. Diacritics, composite attachment, stacking and spacing. Isolated Ain/fatha
+   collides at the existing top anchor (Bold y392); preserve the batch 15 marked
+   proof for this repair. Arabic/Farsi digits,
    punctuation and remaining signs. Keep script uncertainties explicit.
 9. Whole-script proof and technical QA, then hand back for human edits/grading.
 
@@ -151,9 +160,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 14 Bold Ain/Ghain final is
+Final Lam is applied after Eli’s named Regular green exception. Batch 15 Bold isolated Ain/Ghain is
 the current Working proof.
-Next bounded repair: Bold isolated Ain/Ghain. Beh and its component donors are
+Next bounded repair: Seen/Sheen base forms. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.

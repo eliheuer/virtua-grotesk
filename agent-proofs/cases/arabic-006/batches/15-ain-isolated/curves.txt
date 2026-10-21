@@ -1,0 +1,21 @@
+Bold ain-ar: join (416,-240) smooth; G1line; tangent angle 0.000 deg; signed curvature 0.00133333 -> 0; relative jump 100.0%
+Bold ain-ar: join (416,-80) smooth; G1line; tangent angle 0.000 deg; signed curvature 0 -> -0.00148148; relative jump 100.0%
+Bold ain-ar: join (224,0) smooth; G1; tangent angle 0.000 deg; signed curvature -0.0208333 -> -0.0153061; relative jump 26.5%
+Bold ain-ar: join (416,96) smooth; G1line; tangent angle 0.000 deg; signed curvature -0.00185185 -> 0; relative jump 100.0%
+Bold ain-ar: join (448,256) smooth; G1line; tangent angle 0.000 deg; signed curvature 0 -> -0.00911458; relative jump 100.0%
+Bold ain-ar: join (352,384) smooth; G1; tangent angle 0.000 deg; signed curvature -0.00411523 -> -0.0133333; relative jump 69.1%
+Bold ain-ar: join (416,448) smooth; G2; tangent angle 0.000 deg; signed curvature -0.015625 -> -0.015625; relative jump 0.0%
+Bold ain-ar: join (480,384) corner: review intent; G0; tangent angle 45.000 deg; signed curvature -0.0133333 -> 0; relative jump 100.0%
+Bold ain-ar: join (640,384) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0 -> 0.00390625; relative jump 100.0%
+Bold ain-ar: join (416,608) smooth; G2; tangent angle 0.000 deg; signed curvature 0.00390625 -> 0.00390625; relative jump 0.0%
+Bold ain-ar: join (192,384) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00390625 -> 0.00462963; relative jump 15.6%
+Bold ain-ar: join (240,272) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0.00368285 -> 0; relative jump 100.0%
+Bold ain-ar: join (224,256) smooth; G1line; tangent angle 0.000 deg; signed curvature 0 -> 0.0116667; relative jump 100.0%
+Bold ain-ar: join (64,0) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00257202 -> 0.00395833; relative jump 35.0%
+Bold ain-ar:
+  contour 0: crest (416,608) off-center x by +176
+  contour 0: crest (224,0) off-center x by -16
+  contour 0: crest (64,0) off-center y by -304
+  contour 0: crest (416,448) off-center y by +144
+  contour 0: tension break at (352,384) ratio 3.2
+1 glyphs flagged
