@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dad-ar.fina" format="2">
-	<advance width="1904"/>
+	<advance width="1624"/>
 	<outline>
 		<component base="sad-ar.fina"/>
-		<component base="dotabove-ar" xOffset="1052" yOffset="-112"/>
+		<component base="dotabove-ar" xOffset="1056" yOffset="-128"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
