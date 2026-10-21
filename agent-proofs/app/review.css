@@ -71,7 +71,7 @@ body.size-study #size-control{display:none}
 .missing{font-size:var(--ui);margin:var(--half) 0;overflow-wrap:anywhere}
 .layout-guides{display:none;position:absolute;inset:0 var(--space);pointer-events:none;z-index:2;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--gutter);background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(var(--quarter) - 1px),color-mix(in srgb,var(--ink) 5%,transparent) calc(var(--quarter) - 1px),color-mix(in srgb,var(--ink) 5%,transparent) var(--quarter))}
 .layout-guides i{border-inline:1px solid color-mix(in srgb,var(--ink) 16%,transparent)}body.grid .layout-guides{display:grid}
-.comparison-grid.switch-references{grid-template-columns:repeat(3,minmax(0,1fr))}
+.comparison-grid.switch-references{grid-template-columns:repeat(var(--columns,3),minmax(0,1fr))}
 footer{display:grid;grid-template-columns:1fr auto;align-items:start;gap:var(--gutter);border-top:1px solid var(--ink);margin:0 0 var(--space);padding-top:var(--half);font-size:var(--ui);line-height:1.25}
 footer p{margin:0 0 var(--half)}.review-state{margin:0}details{text-align:right;min-width:0}summary{cursor:pointer}
 footer:has(details[open]){grid-template-columns:1fr}details[open]{text-align:left}details[open] summary{margin-bottom:var(--space)}
@@ -121,3 +121,11 @@ body.size-study .sample-control{grid-column:span 1;grid-template-rows:max-conten
 /* A capsule background also works on native inputs, which cannot host pseudos. */
 input[type=number],#sample-trigger,#fitted-size,#custom{border-bottom:0;background-image:radial-gradient(circle at 1px 1px,var(--ink) 1px,transparent 1px),linear-gradient(var(--ink),var(--ink)),radial-gradient(circle at 1px 1px,var(--ink) 1px,transparent 1px);background-size:2px 2px,calc(100% - 2px) 2px,2px 2px;background-position:left bottom,center bottom,right bottom;background-repeat:no-repeat}
 #custom:focus-visible{outline-width:var(--rule);outline-offset:calc(-1 * var(--rule))}
+
+/* Keep the Virtua pair together and reference panels readable when six families are shown. */
+.sample-line,.reading-body{font-synthesis:none}
+@media(max-width:1439px){
+ .comparison-grid.many-references{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .comparison-grid.many-references.switch-references .font-panel:first-child{grid-column:span 2}
+}
+@media(max-width:599px){.reading-grid.many-references{grid-template-columns:1fr}}

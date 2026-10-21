@@ -1,0 +1,202 @@
+{
+  "description": "ARB-001: Bold Alef isolated and final construction trial, green Regular unchanged.",
+  "fonts": {
+    "before": {
+      "path": "assets/before.ttf",
+      "sha256": "990030085de21def0ebf82227bc977758d33b7a315d84c34062c31295045135d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    },
+    "after": {
+      "path": "assets/after.ttf",
+      "sha256": "2088940d76b6a9aa5af49a1b7f62e6a9b5ab11083616ccff001605b2939f092e",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "assets/rubik.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "assets/noto.ttf",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "family": "Noto Sans Arabic",
+      "axes": {
+        "wght": [
+          100.0,
+          400.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "plex": {
+      "family": "IBM Plex Sans Arabic",
+      "label": "Reference",
+      "faces": [
+        {
+          "path": "assets/plex-400.ttf",
+          "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+          "axes": {},
+          "weight": 400
+        },
+        {
+          "path": "assets/plex-500.ttf",
+          "sha256": "b8363ab9f733dfa4f8e96b8b2102c24b5cf4110fb96d1d3d9a9412f6fb49cf74",
+          "axes": {},
+          "weight": 500
+        },
+        {
+          "path": "assets/plex-600.ttf",
+          "sha256": "597bd5502e5997be4414e4c9c88834b30ff3784250c84f20bce2b20e53ebd467",
+          "axes": {},
+          "weight": 600
+        },
+        {
+          "path": "assets/plex-700.ttf",
+          "sha256": "691e0c891a38637ae6bbdb69700f8042cb0724a137bee615068ffdb92244f61f",
+          "axes": {},
+          "weight": 700
+        }
+      ]
+    },
+    "readex": {
+      "path": "assets/readex.ttf",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "axes": {
+        "wght": [
+          160.0,
+          400.0,
+          700.0
+        ],
+        "HEXP": [
+          0.0,
+          0.0,
+          100.0
+        ]
+      },
+      "family": "Readex Pro",
+      "label": "Reference"
+    }
+  },
+  "study": {
+    "id": "Arabic · Study 01",
+    "language": "ar",
+    "readingDefault": "arabic",
+    "status": "Bold Alef · Working trial",
+    "note": "Two Bold Alef forms changed; Regular is unchanged. Purple means AI work awaiting human review. Joining and mark samples include unfinished neighboring forms and derived Alef composites. References use native shaping at equal em size; Noto width remains 100. IBM Plex uses static 400/500/600/700 faces with native CSS weight matching; intermediate values are not interpolated. Readex HEXP stays at default 0.",
+    "glyphs": [
+      {
+        "key": "alef",
+        "char": "ا",
+        "name": "Alef"
+      }
+    ],
+    "presets": {
+      "group": [
+        "ا ـا",
+        "Isolated and final"
+      ],
+      "words": [
+        "با اب باب كتاب",
+        "Joining contexts"
+      ],
+      "marks": [
+        "اَ اِ اُ اْ بَا",
+        "Marks"
+      ],
+      "latin": [
+        "H I ا با",
+        "Latin and Arabic"
+      ]
+    }
+  },
+  "reading": {
+    "arabic": {
+      "label": "Arabic text",
+      "paragraphs": [
+        {
+          "lang": "ar",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "هذا كتاب جديد. في الكتاب كلمات وحروف. هنا باب وهناك دار."
+            }
+          ]
+        },
+        {
+          "lang": "ar",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "باب دار نار كتاب سلام. باب دار نار كتاب سلام."
+            }
+          ]
+        }
+      ]
+    },
+    "joining": {
+      "label": "Joining and marks",
+      "paragraphs": [
+        {
+          "lang": "ar",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "ا ـا با اب باب بابا كتاب دار نار سلام"
+            }
+          ]
+        },
+        {
+          "lang": "ar",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "بَاب كِتَاب سَلَام اَ اِ اُ اْ أ إ آ ٱ"
+            }
+          ]
+        }
+      ]
+    },
+    "mixed": {
+      "label": "Arabic and Latin",
+      "paragraphs": [
+        {
+          "lang": "ar",
+          "dir": "auto",
+          "runs": [
+            {
+              "text": "Virtua 400 / 700 — باب كتاب سلام — 0123456789 — ٠١٢٣٤٥٦٧٨٩"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

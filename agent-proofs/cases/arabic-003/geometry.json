@@ -1,0 +1,144 @@
+{
+  "interpolation_checks": [
+    {
+      "weight": 400,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 425,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 450,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 475,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 500,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 525,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 550,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 575,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 600,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 625,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 650,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 675,
+      "sampled_crossings": []
+    },
+    {
+      "weight": 700,
+      "sampled_crossings": []
+    }
+  ],
+  "bold_join_audit": [
+    {
+      "contour": 0,
+      "point": [
+        136.0,
+        904.0
+      ],
+      "smooth": true,
+      "angle": 0.0,
+      "classification": "G1line"
+    },
+    {
+      "contour": 0,
+      "point": [
+        88.0,
+        952.0
+      ],
+      "smooth": true,
+      "angle": 0.0,
+      "classification": "G1"
+    },
+    {
+      "contour": 0,
+      "point": [
+        120.0,
+        984.0
+      ],
+      "smooth": true,
+      "angle": 0.0,
+      "classification": "G2"
+    },
+    {
+      "contour": 0,
+      "point": [
+        152.0,
+        952.0
+      ],
+      "smooth": false,
+      "angle": 45.000000000000306,
+      "classification": "G0"
+    },
+    {
+      "contour": 0,
+      "point": [
+        208.0,
+        960.0
+      ],
+      "smooth": false,
+      "angle": 44.999999999999844,
+      "classification": "G0"
+    },
+    {
+      "contour": 0,
+      "point": [
+        112.0,
+        1056.0
+      ],
+      "smooth": true,
+      "angle": 0.0,
+      "classification": "G2"
+    },
+    {
+      "contour": 0,
+      "point": [
+        16.0,
+        960.0
+      ],
+      "smooth": true,
+      "angle": 0.0,
+      "classification": "G2"
+    },
+    {
+      "contour": 0,
+      "point": [
+        40.0,
+        912.0
+      ],
+      "smooth": false,
+      "angle": 45.0,
+      "classification": "G0"
+    }
+  ],
+  "bold_curve_lint": [
+    "contour 0: crest (112,1056) off-center x by +44",
+    "contour 0: crest (88,952) off-center x by +20",
+    "contour 0: crest (16,960) off-center y by -44",
+    "contour 0: crest (120,984) off-center y by -20"
+  ]
+}

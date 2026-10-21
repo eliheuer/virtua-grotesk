@@ -65,40 +65,33 @@ mean final visual approval, green grading, or release readiness. Preserve manual
 corrections and unrelated edits. Keep recording exact correction pairs and
 promote measured lessons into DESIGN.md and the shared skills.
 
-## Current handoff — 2026-10-20
+## Current handoff — 2026-10-21
 
-Current case: [HEB-010 — marks and spacing](cases/hebrew-010/README.md).
+Current case: [ARB-003 — Bold Hamza Above](cases/arabic-003/README.md).
+Eli completed grading in `4318e7a1` and requested short interactive Arabic loops.
+Only green is frozen; purple marks AI work awaiting human review. No unattended
+run has started. Retain Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro.
 
-Latest: Eli approved the chamfered 16-mark candidate in both masters and changed
-the policy so **only green is protected**. Purple is now retired with no special semantic meaning. Approved composites
-that Eli wants to freeze use green, just like approved outlines. Legacy purple
-labels are not automatically promoted to green. The active
-Regular/Bold UFOs contain the exact v3 candidate; `cases/hebrew-010/applied-v3/`
-is the current proof on port 60272. Build/preflight and scope checks pass. The
-applied font has the same geometry/shaping tables as the collision-tested trial.
-No grades, anchors, metrics, base letters or unrelated sources changed.
-Next is Eli's grading pass before defining the Arabic overnight scope.
+Eli saved a manual Bold hamza correction on 2026-10-21. Exact AI/human sources,
+29 moved-point measurements and font snapshots are preserved in
+`cases/arabic-003/manual-correction-01/`. Only that root Bold outline changed;
+Regular and every other source file are unchanged. It narrows/lightens the base
+and adjusts several turns with unequal handles, preserving 16/8-unit cuts,
+axis tangencies and the 40-unit aperture. DESIGN.md and the editing/drawing
+skills now link this counterexample to a universal square/equal-handle recipe.
+Eli confirmed reduced inflation/mass and identified basic curve issues. The
+[curve-quality workflow](../.agents/skills/draw-outline/references/curve-quality.md)
+now adds signed comb/continuity review; the case retains an exact diagnostic
+comparison. No new drawing changes were made during that research.
 
-The previous active-source proof is preserved at `cases/hebrew-010/working-v2/`. V2 adjusts 16
-blue Bold marks, preserving all Regular and other source bytes, anchors and
-grades. The first trial’s clearance failures are retained; the refined trial
-passes 3,837 collision screens, 423 marked-form contexts, seven-weight compiled
-scope checks, curve lint and preflight. Full offline QA stays at 1 failure /
-28 warnings. Numerical checks are not visual grading or release approval.
+Current proof: `cases/arabic-003/manual-correction-01/working/`, **AI draft**
+versus **Your edit**, with all four references. Original ARB-003 snapshots remain
+unchanged. The saved purple label and anchors are preserved, not auto-graded or
+normalized. Existing Fathatan overlap and Dammatan placement issues remain a
+separate next small loop. No autonomous run has begun.
 
-Eli accepted the responsive heading fix as readable. Compare/Toggle and Text
-now support the marks-and-spacing study; the case-specific text corpus adds
-pointed probes without replacing the existing running-text passages. The former v2 trial is superseded by the approved chamfer construction above.
-
-HEB-008 v7 and manual correction lessons were saved in `df38c4a`.
-HEB-009’s 29 marked forms in both masters were saved in `e58edac`. Their source
-components now follow the Bold mark edits automatically. All accepted/manual
-base letters, including Zayin, Gimel and Regular Final Tsadi, remain unchanged.
-
-Next: Eli’s whole-font grading pass, then use the saved grades and exact source
-hashes to define the allowed Arabic overnight scope. No agent grading, Arabic
-edit, overnight schedule, or public release has happened in HEB-010. Bold Meteg
-and Rafe remain uncolored and untouched; Regular marks now have the explicitly approved v3 construction.
+Previous Hebrew evidence remains at `cases/hebrew-010/applied-v3/`; manual
+correction lessons and exact snapshots remain in their original case folders.
 
 HEB-001 through HEB-005 are approved and applied: Dalet/Resh, He/Het/Tav,
 Bet/Kaf/Final Kaf, Pe/Final Pe, and Mem/Final Mem/Samekh (13 of 27 base letters/final forms in this

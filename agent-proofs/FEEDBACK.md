@@ -213,6 +213,7 @@ drew, not permission to reproduce every detail across the family.
 | HEB-006 correction 02 | Zayin Bold, machined, geometric turn, square extent, equal handles, weight adaptation | [Case](cases/hebrew-006/README.md#manual-correction-02--bold-geometric-turn-2026-10-20): v3 → saved Bold; only three points changed | Human correction recorded; next reuse not yet tested |
 | HEB-007 correction 01 | Gimel, foot, tangent continuation, terminal landings, inner shelf, chamfer landing | [Case](cases/hebrew-007/README.md#manual-correction-01--regular-gimel-2026-10-20): exact saved Regular and v3 source; measured join angles | V4 Bold transfer accepted as good enough for continuation; no final grading |
 | HEB-008 correction 01 | Final Tsadi, quarter-turn, equal handles, tangent landing, diagonal terminal, junction cut | [Case and measured pair](cases/hebrew-008/README.md#manual-correction-01--regular-final-tsadi) | Human Regular preserved; v7 transfer accepted as better and requested for commit, without grading |
+| ARB-003 correction 01 | Bold hamza, mark mass, base projection, unequal handles, preserve aperture | [Exact AI/human pair and measurements](cases/arabic-003/README.md#manual-correction-01--bold-hamza-above) | Human correction preserved; Eli confirmed mass/inflation and curve issues; signed comb/continuity lesson recorded; no new grade |
 
 For each new manual correction, preserve the starting revision/source and saved
 GLIF, identify the actual geometric/spacing changes separately from editor
@@ -298,3 +299,45 @@ or protection, and must not be automatically converted to green. Composites
 Eli chooses to freeze will be graded green. This supersedes earlier statements
 that purple means a good composite; historical case records retain their context.
 No source colors or drawings changed as part of this policy update.
+
+## Arabic short-loop handoff — 2026-10-21
+
+Eli completed human grading in commit `4318e7a1` and requested short Arabic
+loops, approximately one codepoint at a time, before deciding to leave an
+unattended all-day run. Start with ARB-001 Bold Alef isolated/final; preserve
+green Regular. No background run is authorized to start yet.
+
+Following Eli's request for an AI/unreviewed color and the agreed grading-pass
+convention, purple now means AI-drawn or substantially redrawn and not yet
+reviewed/edited by a human. This supersedes its retirement and old composite
+meaning. Human review replaces purple with the appropriate assessment; green
+remains the only frozen grade. Existing colors are not bulk-reclassified.
+
+## Arabic proof accommodations — 2026-10-21
+
+Eli requested script-specific proofing: Rubik plus Noto Sans Arabic, with OFL
+references preferred for portability. ARB-001 adds Arabic language tags and
+joining/mark/running-text probes while preserving the established layout.
+Tajawal and Readex Pro are optional reference suggestions, not approved donors.
+Evidence: [ARB-001](cases/arabic-001/README.md).
+
+Eli selected IBM Plex Sans Arabic and Readex Pro as the two additional Arabic
+references (2026-10-21). Maintain the four-reference set with Rubik and Noto Sans
+Arabic, using the differences to inform decisions rather than copying one design.
+
+## Continue short Arabic loops — 2026-10-21
+
+Eli accepted the expanded proof setup and requested the next small Arabic loop,
+keeping all four reference families. Continue interactive review until Eli says
+the process is ready for unattended work. ARB-002 repairs only two Bold U+0623
+composites; existing hamza outline defects remain explicitly open. This is not
+a new human glyph grade. See [ARB-002](cases/arabic-002/README.md).
+
+## Bold hamza construction — 2026-10-21
+
+Eli requested: “fix the Bold hamza next, keep it clean and machined with our
+chamfers, and show me in the proof with all 4 references.” ARB-003 repairs the
+Bold U+0654 donor only, preserving Regular and other source files. The existing
+19 component dependents inherit its outline. Exact 96/32/48-unit turn sizes are
+trial choices, not confirmed style rules. Keep human review before proceeding.
+Evidence and source pairs: [ARB-003](cases/arabic-003/README.md).

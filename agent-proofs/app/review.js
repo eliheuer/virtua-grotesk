@@ -2,6 +2,7 @@
 const $ = id => document.getElementById(id);
 const data = window.REVIEW_DATA;
 const study = data.study;
+const studyLanguage = study?.language || 'he';
 const glyphs = study?.glyphs || [
   {key: 'he', char: 'ה', name: 'He'}, {key: 'het', char: 'ח', name: 'Het'}, {key: 'tav', char: 'ת', name: 'Tav'}
 ];
@@ -30,6 +31,7 @@ function element(tag, text, className) {
 function labelGlyphs() {
   $('study-title').replaceChildren();
   $('reading-sample').replaceChildren(...Object.entries(data.reading).map(([key, corpus]) => new Option(corpus.label, key)), new Option('Your Text', 'custom'));
+  if (study?.readingDefault) $('reading-sample').value = study.readingDefault;
   $('study-title').style.setProperty('--glyph-count', glyphs.length);
   $('sample').replaceChildren(...glyphs.map(g => new Option(glyphLabel(g), g.key)), ...['group', 'words', 'marks', 'latin'].map(key => new Option(presets[key][1], key)), new Option('Your Text', 'custom'));
   if (study) {
@@ -43,7 +45,7 @@ function labelGlyphs() {
   for (const glyph of glyphs) {
     const identity = element('span', undefined, 'glyph-identity');
     const name = element('span', undefined, 'glyph-name');
-    const letter = element('bdi', glyph.char); letter.dir = 'rtl'; letter.lang = 'he';
+    const letter = element('bdi', glyph.char); letter.dir = 'rtl'; letter.lang = studyLanguage;
     name.append(letter, document.createTextNode(` (${glyph.name})`));
     identity.append(name, element('span', codepoint(glyph.char), 'glyph-unicode'));
     $('study-title').append(identity);
@@ -136,7 +138,7 @@ new ResizeObserver(entries => {
 }).observe($('custom-wrap'));
 function readingParagraphs() {
   return $('reading-sample').value === 'custom'
-    ? $('custom').value.split(/\n\s*\n/).map(text => ({lang: 'he', dir: 'auto', runs: [{text}]}))
+    ? $('custom').value.split(/\n\s*\n/).map(text => ({lang: studyLanguage, dir: 'auto', runs: [{text}]}))
     : data.reading[$('reading-sample').value].paragraphs;
 }
 function activeText() {
@@ -145,7 +147,7 @@ function activeText() {
 }
 function roles() {
   const virtua = !data.fonts.before ? ['after'] : mode === 'switch' ? [before ? 'before' : 'after'] : ['before', 'after'];
-  return $('references').checked ? [...virtua, 'rubik', 'noto'] : virtua;
+  return $('references').checked ? [...virtua, ...Object.keys(data.fonts).filter(role => !['before', 'after'].includes(role))] : virtua;
 }
 function specimen(role, text, size) {
   const box = element('div', undefined, 'sample-viewport');
@@ -158,7 +160,7 @@ function specimen(role, text, size) {
   const line = element('div', undefined, 'sample-line');
   line.style.fontFamily = `Review-${role}`;
   line.style.fontSize = size + 'px';
-  line.lang = 'he'; line.dir = 'auto';
+  line.lang = studyLanguage; line.dir = 'auto';
   const marker = element('span', undefined, 'baseline-mark'); marker.setAttribute('aria-hidden', 'true');
   line.append(marker, document.createTextNode(text)); box.append(line);
   return box;
@@ -369,12 +371,14 @@ function render() {
   if (reading) {
     const row = element('div', undefined, 'comparison-grid reading-grid');
     row.style.setProperty('--columns', selectedRoles.length);
+    row.classList.toggle('many-references', selectedRoles.length > 4);
     selectedRoles.forEach(role => row.append(readingPanel(role, size)));
     proof.append(row); scheduleAlignment(); return;
   }
   if (mode === 'waterfall') {
     const row = element('div', undefined, 'comparison-grid waterfall-grid');
     row.style.setProperty('--columns', selectedRoles.length);
+    row.classList.toggle('many-references', selectedRoles.length > 4);
     selectedRoles.forEach(role => row.append(waterfallPanel(role)));
     proof.append(row); scheduleAlignment(); return;
   }
@@ -382,9 +386,10 @@ function render() {
     const section = element('section', undefined, 'proof-row');
     const row = element('div', undefined, 'comparison-grid');
     row.style.setProperty('--columns', selectedRoles.length);
+    row.classList.toggle('many-references', selectedRoles.length > 4);
     row.dataset.size = rowSize;
     row.classList.toggle('single', selectedRoles.length === 1);
-    row.classList.toggle('switch-references', mode === 'switch' && selectedRoles.length === 3);
+    row.classList.toggle('switch-references', mode === 'switch' && selectedRoles.length > 1);
     for (const role of selectedRoles) row.append(panel(role, activeText(), rowSize));
     section.append(row); proof.append(section); syncScroll(row);
   }
@@ -410,17 +415,19 @@ document.addEventListener('keydown', event => {
 new ResizeObserver(scheduleAlignment).observe(proof);
 async function loadFonts() {
   try {
-    await Promise.all(Object.entries(data.fonts).map(async ([role, font]) => {
+    await Promise.all(Object.entries(data.fonts).flatMap(([role, family]) => (family.faces || [family]).map(async font => {
       const response = await fetch(font.url);
-      if (!response.ok) throw new Error(`${font.family}: HTTP ${response.status}`);
+      if (!response.ok) throw new Error(`${family.family}: HTTP ${response.status}`);
       const bytes = await response.arrayBuffer();
       const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(b => b.toString(16).padStart(2, '0')).join('');
-      if (hash !== font.sha256) throw new Error(`${font.family}: font hash differs from the review snapshot`);
-      const face = new FontFace(`Review-${role}`, bytes, { weight: '400 700', style: 'normal' });
+      if (hash !== font.sha256) throw new Error(`${family.family}: font hash differs from the review snapshot`);
+      const face = new FontFace(`Review-${role}`, bytes, { weight: font.weight || '400 700', style: 'normal' });
       await face.load(); document.fonts.add(face);
-    }));
+    })));
     for (const font of Object.values(data.fonts)) {
-      const p = element('p'); p.append(element('strong', `${font.family} · ${font.label}`), element('br'), element('code', font.sha256)); $('font-info').append(p);
+      const p = element('p'); p.append(element('strong', `${font.family} · ${font.label}`));
+      for (const face of font.faces || [font]) p.append(element('br'), element('code', `${face.weight || '400 700'} · ${face.sha256}`));
+      $('font-info').append(p);
     }
     loaded = true; proof.classList.add('ready'); proof.setAttribute('aria-busy', 'false'); $('status').textContent = ''; render();
   } catch (error) {

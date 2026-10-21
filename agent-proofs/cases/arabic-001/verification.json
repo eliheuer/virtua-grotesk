@@ -1,0 +1,5175 @@
+{
+  "changed_source_files": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/alef-ar.fina.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/alef-ar.glif"
+  ],
+  "compiled_outline_or_width_changes": {
+    "400": [
+      "uni0627.fina",
+      "uni0623.fina",
+      "uni0625.fina",
+      "uni0622.fina",
+      "uni0671.fina",
+      "uni06440627.fina",
+      "uni06440623.fina",
+      "uni06440625.fina",
+      "uni06440622.fina",
+      "uni06440671.fina"
+    ],
+    "550": [
+      "uni0627",
+      "uni0627.fina",
+      "uni0623",
+      "uni0623.fina",
+      "uni0625",
+      "uni0625.fina",
+      "uni0622",
+      "uni0622.fina",
+      "uni0671",
+      "uni0671.fina",
+      "uni06440627.fina",
+      "uni06440623.fina",
+      "uni06440625.fina",
+      "uni06440622.fina",
+      "uni06440671.fina"
+    ],
+    "700": [
+      "uni0627",
+      "uni0627.fina",
+      "uni0623",
+      "uni0623.fina",
+      "uni0625",
+      "uni0625.fina",
+      "uni0622",
+      "uni0622.fina",
+      "uni0671",
+      "uni0671.fina",
+      "uni06440627.fina",
+      "uni06440623.fina",
+      "uni06440625.fina",
+      "uni06440622.fina",
+      "uni06440671.fina"
+    ]
+  },
+  "shaping": [
+    {
+      "weight": 400,
+      "text": "ا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 238,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "ـا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 320,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 320,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 293,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 276,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640.init",
+            "cluster": 0,
+            "advance": 470,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "با",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 293,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 268,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              31,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 269,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "اب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 922,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 1,
+            "advance": 0,
+            "offset": [
+              410,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 1,
+            "advance": 993,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 238,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "باب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 922,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 293,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 268,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 2,
+            "advance": 0,
+            "offset": [
+              410,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 2,
+            "advance": 993,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              31,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 269,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "بابا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 2,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 2,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 3,
+            "advance": 293,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 2,
+            "advance": 268,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 293,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 268,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 2,
+            "advance": 0,
+            "offset": [
+              31,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 2,
+            "advance": 269,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              31,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 269,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "كتاب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni062A.medi",
+            "cluster": 1,
+            "advance": 408,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 688,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni062A.medi",
+            "cluster": 1,
+            "advance": 408,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 688,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 922,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 2,
+            "advance": 293,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE98",
+            "cluster": 1,
+            "advance": 320,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEDB",
+            "cluster": 0,
+            "advance": 451,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 3,
+            "advance": 0,
+            "offset": [
+              410,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 3,
+            "advance": 993,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "twodotshorizontalabovear",
+            "cluster": 1,
+            "advance": 0,
+            "offset": [
+              54,
+              -180
+            ]
+          },
+          {
+            "name": "uni066E.medi.wide",
+            "cluster": 1,
+            "advance": 373,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 412,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "بَاب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              28,
+              -172
+            ]
+          },
+          {
+            "name": "uni0628.init",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              28,
+              -172
+            ]
+          },
+          {
+            "name": "uni0628.init",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 922,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 2,
+            "advance": 293,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -90,
+              -3
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 268,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 3,
+            "advance": 0,
+            "offset": [
+              410,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 3,
+            "advance": 993,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -35,
+              -54
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              31,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 269,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "اَ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -4,
+              176
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -4,
+              176
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -55,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -47,
+              256
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 238,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "اِ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              0,
+              -8
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              0,
+              -8
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -54,
+              5
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -10,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 238,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "اُ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -122,
+              220
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -122,
+              220
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -55,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -59,
+              256
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 238,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "اْ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -4,
+              192
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -4,
+              192
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 216,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -55,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -12,
+              256
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 238,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "أ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0654",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -16,
+              126
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 235,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "إ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0655",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              23,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 235,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "آ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0653",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -57,
+              126
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 235,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "ٱ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "waslaar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -73,
+              126
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 235,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 400,
+      "text": "سلام",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 592,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni06440627.fina",
+            "cluster": 1,
+            "advance": 672,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 808,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 592,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni06440627.fina",
+            "cluster": 1,
+            "advance": 672,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 808,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 582,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEFC",
+            "cluster": 1,
+            "advance": 645,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEB3",
+            "cluster": 0,
+            "advance": 828,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 484,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina.rlig.2",
+            "cluster": 2,
+            "advance": 379,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0644.medi.rlig",
+            "cluster": 1,
+            "advance": 220,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 784,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "ا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 254,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "ـا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 274,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 338,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 338,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 306,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 284,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640.init",
+            "cluster": 0,
+            "advance": 492,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "با",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 274,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 306,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 278,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              29,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "اب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 919,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 1,
+            "advance": 0,
+            "offset": [
+              407,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 1,
+            "advance": 1007,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 254,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "باب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 274,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 919,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 306,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 278,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 2,
+            "advance": 0,
+            "offset": [
+              407,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 2,
+            "advance": 1007,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              29,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "بابا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 274,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 2,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 274,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 2,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 3,
+            "advance": 306,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 2,
+            "advance": 278,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 306,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 278,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 2,
+            "advance": 0,
+            "offset": [
+              29,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 2,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              29,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "كتاب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 274,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni062A.medi",
+            "cluster": 1,
+            "advance": 412,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 712,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni062A.medi",
+            "cluster": 1,
+            "advance": 412,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 712,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 919,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 2,
+            "advance": 306,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE98",
+            "cluster": 1,
+            "advance": 320,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEDB",
+            "cluster": 0,
+            "advance": 487,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 3,
+            "advance": 0,
+            "offset": [
+              407,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 3,
+            "advance": 1007,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "twodotshorizontalabovear",
+            "cluster": 1,
+            "advance": 0,
+            "offset": [
+              52,
+              -146
+            ]
+          },
+          {
+            "name": "uni066E.medi.wide",
+            "cluster": 1,
+            "advance": 390,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 431,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "بَاب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 274,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              30,
+              -152
+            ]
+          },
+          {
+            "name": "uni0628.init",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              30,
+              -152
+            ]
+          },
+          {
+            "name": "uni0628.init",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 919,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 2,
+            "advance": 306,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -84,
+              -3
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 278,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 3,
+            "advance": 0,
+            "offset": [
+              407,
+              -23
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 3,
+            "advance": 1007,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -28,
+              -26
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              29,
+              -3
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 291,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "اَ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -2,
+              196
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              18,
+              196
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -49,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -37,
+              264
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 254,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "اِ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              2,
+              -28
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              20,
+              -28
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -46,
+              5
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -3,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 254,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "اُ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -120,
+              229
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -100,
+              229
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -49,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -55,
+              264
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 254,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "اْ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -2,
+              206
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              18,
+              206
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 256,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -49,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -8,
+              264
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 254,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "أ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0654",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -19,
+              134
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 252,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "إ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0655",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              25,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 252,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "آ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0653",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -56,
+              134
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 252,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "ٱ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 303,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "waslaar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -73,
+              134
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 252,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 550,
+      "text": "سلام",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 708,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni06440627.fina",
+            "cluster": 1,
+            "advance": 672,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 808,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 708,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni06440627.fina",
+            "cluster": 1,
+            "advance": 672,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 808,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 631,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEFC",
+            "cluster": 1,
+            "advance": 656,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEB3",
+            "cluster": 0,
+            "advance": 836,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 513,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina.rlig.2",
+            "cluster": 2,
+            "advance": 396,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0644.medi.rlig",
+            "cluster": 1,
+            "advance": 240,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 860,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "ا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 273,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "ـا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 292,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 356,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 336,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 356,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 313,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640",
+            "cluster": 0,
+            "advance": 289,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 318,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0640.init",
+            "cluster": 0,
+            "advance": 519,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "با",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 292,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 336,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 313,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 285,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 318,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              27,
+              -2
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 317,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "اب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 1,
+            "advance": 918,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 1,
+            "advance": 0,
+            "offset": [
+              405,
+              -22
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 1,
+            "advance": 1024,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 273,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "باب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 292,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 336,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 2,
+            "advance": 918,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 313,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 285,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 2,
+            "advance": 0,
+            "offset": [
+              405,
+              -22
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 2,
+            "advance": 1024,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 318,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              27,
+              -2
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 317,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "بابا",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 292,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 2,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 292,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 336,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 2,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 336,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "behar.init.ctr",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uniFE8E",
+            "cluster": 3,
+            "advance": 313,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 2,
+            "advance": 285,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 1,
+            "advance": 313,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 285,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0627.fina",
+            "cluster": 3,
+            "advance": 318,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 2,
+            "advance": 0,
+            "offset": [
+              27,
+              -2
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 2,
+            "advance": 317,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 1,
+            "advance": 318,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              27,
+              -2
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 317,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "كتاب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 292,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni062A.medi",
+            "cluster": 1,
+            "advance": 416,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 736,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 336,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni062A.medi",
+            "cluster": 1,
+            "advance": 416,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 736,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 918,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 2,
+            "advance": 313,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE98",
+            "cluster": 1,
+            "advance": 320,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEDB",
+            "cluster": 0,
+            "advance": 510,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 3,
+            "advance": 0,
+            "offset": [
+              405,
+              -22
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 3,
+            "advance": 1024,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 318,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "twodotshorizontalabovear",
+            "cluster": 1,
+            "advance": 0,
+            "offset": [
+              50,
+              -106
+            ]
+          },
+          {
+            "name": "uni066E.medi.wide",
+            "cluster": 1,
+            "advance": 409,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0643.init",
+            "cluster": 0,
+            "advance": 454,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "بَاب",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 292,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              32,
+              -132
+            ]
+          },
+          {
+            "name": "uni0628.init",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 944,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 336,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              32,
+              -132
+            ]
+          },
+          {
+            "name": "uni0628.init",
+            "cluster": 0,
+            "advance": 288,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0628",
+            "cluster": 3,
+            "advance": 918,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFE8E",
+            "cluster": 2,
+            "advance": 313,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -79,
+              -3
+            ]
+          },
+          {
+            "name": "uniFE91",
+            "cluster": 0,
+            "advance": 285,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "dotbelowar",
+            "cluster": 3,
+            "advance": 0,
+            "offset": [
+              405,
+              -22
+            ]
+          },
+          {
+            "name": "uni066E",
+            "cluster": 3,
+            "advance": 1024,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina",
+            "cluster": 2,
+            "advance": 318,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -19,
+              6
+            ]
+          },
+          {
+            "name": "dotbelowar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              27,
+              -2
+            ]
+          },
+          {
+            "name": "uni066E.init",
+            "cluster": 0,
+            "advance": 317,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "اَ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              0,
+              216
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              40,
+              216
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -44,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni064E",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -25,
+              274
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 273,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "اِ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              4,
+              -48
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              40,
+              -48
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -41,
+              5
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0650",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              5,
+              0
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 273,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "اُ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -118,
+              238
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -78,
+              238
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -44,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni064F",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -49,
+              274
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 273,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "اْ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              0,
+              220
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              40,
+              220
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 296,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -44,
+              227
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0652",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -2,
+              274
+            ]
+          },
+          {
+            "name": "uni0627",
+            "cluster": 0,
+            "advance": 273,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "أ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0623",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0654",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -21,
+              144
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 271,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "إ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0625",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0655",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              28,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 271,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "آ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0622",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0653",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -53,
+              144
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 271,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "ٱ",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 224,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0671",
+            "cluster": 0,
+            "advance": 311,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "waslaar",
+            "cluster": 0,
+            "advance": 0,
+            "offset": [
+              -72,
+              144
+            ]
+          },
+          {
+            "name": "uni0627.short",
+            "cluster": 0,
+            "advance": 271,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "weight": 700,
+      "text": "سلام",
+      "fonts": {
+        "before": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 824,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni06440627.fina",
+            "cluster": 1,
+            "advance": 672,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 808,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "after": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 824,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni06440627.fina",
+            "cluster": 1,
+            "advance": 672,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 808,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "rubik": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 661,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEFC",
+            "cluster": 1,
+            "advance": 662,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uniFEB3",
+            "cluster": 0,
+            "advance": 841,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ],
+        "noto": [
+          {
+            "name": "uni0645",
+            "cluster": 3,
+            "advance": 548,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0627.fina.rlig.2",
+            "cluster": 2,
+            "advance": 417,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0644.medi.rlig",
+            "cluster": 1,
+            "advance": 264,
+            "offset": [
+              0,
+              0
+            ]
+          },
+          {
+            "name": "uni0633.init",
+            "cluster": 0,
+            "advance": 950,
+            "offset": [
+              0,
+              0
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "Regular GLIF bytes, compiled bounds and advances are unchanged. Joint cubic-to-quadratic conversion changes the Regular final-Alef approximation and its dependent composites; compiled outlines are not byte-identical.",
+    "Derived Alef composites retain old component placements and advances; their inherited changes need a separate repair loop. No release approval."
+  ]
+}

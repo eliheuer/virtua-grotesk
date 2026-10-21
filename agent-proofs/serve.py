@@ -10,7 +10,7 @@ from urllib.error import URLError
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-CURRENT = ROOT / 'agent-proofs/cases/hebrew-010/applied-v3'
+CURRENT = ROOT / 'agent-proofs/cases/arabic-003/manual-correction-01/working'
 
 
 def main():
@@ -26,11 +26,12 @@ def main():
                 raise ValueError(f'Missing {name}')
         fonts = json.loads((folder / 'live-fonts.json').read_text())
         for role, font in fonts.items():
-            path = (folder / font['url']).resolve()
-            if not path.is_relative_to(folder):
-                raise ValueError(f'{role}: font path is outside the review folder')
-            if hashlib.sha256(path.read_bytes()).hexdigest() != font['sha256']:
-                raise ValueError(f'{role}: font differs from the recorded snapshot')
+            for face in font.get('faces', [font]):
+                path = (folder / face['url']).resolve()
+                if not path.is_relative_to(folder):
+                    raise ValueError(f'{role}: font path is outside the review folder')
+                if hashlib.sha256(path.read_bytes()).hexdigest() != face['sha256']:
+                    raise ValueError(f'{role}: font differs from the recorded snapshot')
     except (OSError, ValueError, KeyError) as error:
         parser.exit(1, f'Review assets are not ready: {error}\nRead agent-proofs/app/README.md.\nDo not substitute current fonts for missing before/candidate snapshots.\n')
     print(f'Verified {len(fonts)} review font snapshots: {folder}', flush=True)

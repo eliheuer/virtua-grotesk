@@ -16,7 +16,7 @@ make proof-web
 ```
 
 Open the printed localhost URL (currently `http://127.0.0.1:60272/`). The launcher
-verifies the four local font snapshots, reuses the matching server if already
+verifies the local font snapshots, reuses the matching server if already
 running, and otherwise serves only the review folder. It does not build fonts,
 edit sources, or silently replace the before/applied snapshots. To validate
 without starting a server:
@@ -25,10 +25,9 @@ without starting a server:
 .venv/bin/python agent-proofs/serve.py --check
 ```
 
-Current case: [HEB-004](../cases/hebrew-004/README.md), pe and final pe.
-Its served files are under `agent-proofs/cases/hebrew-004/baseline/`.
-The preceding HEB-002 comparison remains in `cases/hebrew-002/layout-v3/`;
-its `image-viewer.html` is the superseded PNG viewer.
+Current case: [ARB-003](../cases/arabic-003/README.md), Bold Hamza Above, manual correction 01.
+Served files are under `agent-proofs/cases/arabic-003/manual-correction-01/working/`.
+Previous Hebrew snapshots remain in their case folders.
 
 ## Mode names
 
@@ -325,3 +324,27 @@ preparation time. The Text picker uses those corpus labels and retains Your Text
 Glyph identities containing a base plus combining marks show every Unicode
 codepoint, not just the first character (HEB-010). This changes metadata and
 samples, not the specimen’s shaping, spacing or type scale.
+
+## Script-specific studies
+
+Set `study.language` (e.g. `ar`) and `study.readingDefault`. Specimen and
+custom-text language tags follow the study. For non-Hebrew studies, provide the
+`reading` corpus explicitly; Hebrew defaults are not injected. Supply all four
+preset keys (`group`, `words`, `marks`, `latin`) with script-appropriate probes.
+Arabic cases should expose contextual joining, real words, marks, and mixed
+Arabic/Latin/numeral runs. Alef has isolated/final forms; do not invent initial
+or medial Alef forms. Keep native shaping and zero added tracking.
+
+Reference roles are optional and font names come from the evidence manifest.
+Arabic uses Rubik and Noto Sans Arabic, with local font snapshots and OFL texts.
+Noto's width axis stays at its native default 100; weight follows the shared
+control. Same numerical weight does not imply visually matched darkness.
+Historical Hebrew cases continue to use their own frozen Noto Sans Hebrew.
+
+ARB-001 now includes four Arabic references: Rubik, Noto Sans Arabic, IBM Plex
+Sans Arabic and Readex Pro. Additional reference keys are discovered from the
+manifest. A family can provide `faces`, each with `path`, `sha256` and `weight`,
+for genuine static weights; otherwise the existing single-file record is used.
+Static families use native CSS weight matching, with synthesis disabled. Every
+face is hashed independently. Six-panel comparisons reflow to two columns below
+1440px; narrow Text remains one column. Historical four-panel layouts are intact.

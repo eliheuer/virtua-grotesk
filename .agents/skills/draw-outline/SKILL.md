@@ -30,6 +30,9 @@ Before writing any XML, describe the plan:
 - Reference glyphs being used for consistency
 
 ### Step 2: Draw the Outline
+For curves, read [Curve quality](references/curve-quality.md) and follow its
+comb/continuity workflow before accepting a candidate.
+
 Write the `.glif` XML following all rules below. Then do the same for the second master.
 
 ### Step 3: Register & Validate
@@ -49,11 +52,11 @@ These rules apply to every outline in this project. Violating them will cause re
 
 **Minimum points necessary.** Use the fewest points that accurately describe the shape. Extra points make editing harder and can cause interpolation problems. A typical circle-like curve needs just 4 on-curve points (at the extremes) and 8 off-curve handles.
 
-**Inflection points.** Where a curve changes from clockwise to counter-clockwise curvature (like the spine of `s`), add an on-curve point at the inflection. At an inflection point, one handle points into the shape and the other points out. Missing inflection points cause kinks during interpolation.
+**Inflections.** Inspect signed curvature for reversals. Keep intended S-curves; remove unintended reversals in a convex turn. A cubic can contain an inflection without a node there. Split only when it improves control or is required downstream, and keep master structure compatible; splitting alone does not prevent interpolation defects.
 
 ### Curve Construction
 
-**The magic triangle.** Every curve segment (two on-curve points + two off-curve handles) must fit inside the triangle formed by the on-curve points and the intersection of the extended handle lines. Handles must never cross each other or escape this triangle — doing so creates cusps or self-intersections.
+**Handle-ray triangle.** For an ordinary convex turn with intersecting handle rays, inspect handle positions relative to their intersection. This is not a universal validity test: parallel tangents and intended inflections need separate analysis. Check actual curvature and intersections instead of inferring a cusp from handle layout alone.
 
 ```
         handle B₁
@@ -71,7 +74,7 @@ These rules apply to every outline in this project. Violating them will cause re
 
 **Smooth connections.** Where two curve segments meet and should flow smoothly, the on-curve point between them must have its two handles exactly 180 degrees apart (collinear). This is a "smooth" node. If the handles are not collinear, it's a "corner" node and creates a visible angle.
 
-**Curve tension.** Handle length controls curve tension. Longer handles = fuller curve, shorter handles = flatter curve. For a roughly circular arc, handles should be about 55% of the distance to the next on-curve point (the "four-thirds" rule for approximating circles).
+**Curve tension.** Handle length controls curve tension. Longer handles = fuller curve, shorter handles = flatter curve. For a circular 90-degree arc, the standard cubic approximation uses handles of about 0.552285 times the radius (not the endpoint chord). This is a circular construction, not a default tension for Virtua turns. Inspect curvature and mass instead of forcing equal handles.
 
 ### Path Direction & Structure
 
@@ -255,3 +258,14 @@ fixed as weight changes. Do not assume an unmarked curve/line join is an
 intentional corner: inspect its geometry. Preserve human smooth flags/source
 bytes even when geometry is tangent. Exact 64/128 handles are local evidence,
 not universal radii; distinguish the requested transfer trial from approval.
+
+### Do not equate machined with equal handles
+
+Before reusing the square-turn examples, consult
+[ARB-003 correction 01](../../../agent-proofs/cases/arabic-003/README.md#manual-correction-01--bold-hamza-above).
+Eli narrowed/lightened the hamza base and changed square inner turns to unequal
+handle lengths while preserving axis tangency and the 16/8-unit cuts. Compare
+bar mass, terminal projection, curve extent and each handle independently.
+Equal handles are a construction choice, not a quality gate; a source passing
+grid and tangent checks can still have poor proportions. Keep these local
+human ratios as evidence rather than applying them wholesale to new marks.

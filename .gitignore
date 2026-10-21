@@ -151,3 +151,29 @@ documentation/proofs/images/*.png
 
 !agent-proofs/cases/hebrew-010/applied-v3/fonts/
 !agent-proofs/cases/hebrew-010/applied-v3/fonts/*.ttf
+
+# Retain the first Arabic loop and portable proof references.
+!agent-proofs/cases/arabic-001/assets/*.ttf
+!agent-proofs/cases/arabic-001/before-fonts/*.ttf
+!agent-proofs/cases/arabic-001/working/fonts/
+!agent-proofs/cases/arabic-001/working/fonts/*.ttf
+!agent-proofs/cases/arabic-001/*.jpg
+
+# ARB-002 exact comparison snapshots and browser evidence.
+!agent-proofs/cases/arabic-002/assets/*.ttf
+!agent-proofs/cases/arabic-002/working/fonts/
+!agent-proofs/cases/arabic-002/working/fonts/*.ttf
+!agent-proofs/cases/arabic-002/*.jpg
+
+# ARB-003 Bold hamza exact font snapshots and review evidence.
+!agent-proofs/cases/arabic-003/assets/*.ttf
+!agent-proofs/cases/arabic-003/working/fonts/
+!agent-proofs/cases/arabic-003/working/fonts/*.ttf
+!agent-proofs/cases/arabic-003/*.jpg
+
+# ARB-003 human correction pair, fonts and proof evidence.
+!agent-proofs/cases/arabic-003/manual-correction-01/assets/*.ttf
+!agent-proofs/cases/arabic-003/manual-correction-01/working/fonts/
+!agent-proofs/cases/arabic-003/manual-correction-01/working/fonts/*.ttf
+!agent-proofs/cases/arabic-003/manual-correction-01/*.jpg
+!agent-proofs/cases/arabic-003/manual-correction-01/*.png

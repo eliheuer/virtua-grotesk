@@ -69,8 +69,8 @@ propose named glyphs and masters, wait for Eli's approval, prepare a reversible
 scratch candidate, and show proofs before applying it when only candidate work
 was approved. Explicit approval can override a color restriction for those named
 glyphs only. Only green edits require a protection exception (Eli, 2026-10-20).
-Standing Hebrew/Arabic authorization in AGENTS.md still applies. Purple is
-retired: existing purple labels carry no approval, reference, or protection meaning.
+Standing Hebrew/Arabic authorization in AGENTS.md still applies. Purple now identifies AI-drawn or substantially redrawn glyphs awaiting human
+review. It carries no approval, reference, or protection status.
 
 | Color | Meaning | Editing and reference use |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ retired: existing purple labels carry no approval, reference, or protection mean
 | Yellow | Better drawing, but still needs work. | Edit without overwriting. Not good enough to use as reference material. |
 | Green | Approved glyph, whether an outline or composite; frozen by default. | Use as reference material. Changes require Eli's explicit approval naming the glyph and master. |
 | Blue | Composite drawing with a problem that needs attention and judgment to resolve. | Inspect the composite and fix the problem. It is not an approved reference. |
-| Purple (retired) | No current semantic meaning. | Existing labels do not imply approval or reference status. Edit within authorized scope; use green when Eli approves and freezes a composite. |
+| Purple | AI-drawn or substantially redrawn; not yet reviewed or edited by a human. | Editable within authorized scope; not an approved reference. Human review replaces purple with the appropriate grade. Git/proof records retain provenance. |
 | Pink | Composite drawing needing a small amount of work, less than blue. | Edits are welcome. Do not use as reference material. |
 
 Blue describes a composite needing attention; it does not mean “AI-generated.”

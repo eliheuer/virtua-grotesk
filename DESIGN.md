@@ -64,6 +64,28 @@ do not merely stretch handles to reach the stem. The exact radii, equal-handle
 choice and landing lengths are glyph-specific evidence. The Bold/Shin reuse
 is a trial awaiting Eli's review, not a new universal style rule.
 
+### Bounded curves are not always equal-handle curves
+
+[ARB-003 manual correction 01](agent-proofs/cases/arabic-003/README.md#manual-correction-01--bold-hamza-above)
+is a counterexample to treating square extents and equal handles as a universal
+recipe for machined character. Eli kept the Bold hamza's 16/8-unit cuts, axis
+tangencies and 40-unit aperture, but narrowed its base from 288 to 256, reduced
+its bar from 88 to 80, and adjusted the curves locally. The inner upper turns
+keep 32×32 extents with horizontal handles shortened 24→16 and vertical handles
+remaining 24. The lower inner turn keeps 48×48 extents with handles changing
+32/32→32/24. The outer left upper turn becomes 96×88 with 64/56 handles.
+
+These are measured human edits, not new default dimensions. Review overall
+mass, terminal projection and local contour flow alongside tangent/grid checks.
+Do not force this correction back to equal handles or square extents, and do
+not infer that every other glyph should use these ratios. Eli confirmed the
+excess mass/inflation and also identified basic curve issues (2026-10-21).
+His correction removes a lower-left curvature reversal and matches curvature
+at the inner join, while retaining an outer-shoulder curvature jump. Use signed
+combs and join continuity together; neither equal handles nor an all-G2 score
+defines machined character. Follow the
+[curve-quality workflow](.agents/skills/draw-outline/references/curve-quality.md).
+
 ## The power-of-two grid
 
 Everything in this font is drawn against powers of two.

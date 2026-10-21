@@ -1,5 +1,10 @@
 # Arabic grammar constants
 
+> Historical measurements, not the current drawing contract. Eli regraded the
+> font in `4318e7a1` (2026-10-21); current approved Regular Alef has an 88-unit
+> stem, and Bold has distinct drawings. Measure current green sources and read
+> `agent-proofs/README.md` before applying any values below.
+
 Measured from the 70 green (Eli-approved) Arabic glyphs in
 `VirtuaGrotesk-Regular.ufo` by `scripts/arabic_measure.py`
 (raw data: `build/arabic-measure.json`). These numbers are the style

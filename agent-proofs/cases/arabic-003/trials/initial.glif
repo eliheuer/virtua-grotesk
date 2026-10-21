@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hamzaabove-ar" format="2">
+	<unicode hex="0654"/>
+	<outline>
+		<contour>
+			<point x="-16" y="816" type="line"/>
+			<point x="240" y="816" type="line"/>
+			<point x="256" y="832" type="line"/>
+			<point x="256" y="888" type="line"/>
+			<point x="240" y="904" type="line"/>
+			<point x="136" y="904" type="line" smooth="yes"/>
+			<point x="104" y="904"/>
+			<point x="88" y="920"/>
+			<point x="88" y="952" type="curve" smooth="yes"/>
+			<point x="88" y="976"/>
+			<point x="96" y="984"/>
+			<point x="120" y="984" type="curve" smooth="yes"/>
+			<point x="144" y="984"/>
+			<point x="152" y="976"/>
+			<point x="152" y="952" type="curve"/>
+			<point x="160" y="944" type="line"/>
+			<point x="192" y="944" type="line"/>
+			<point x="208" y="960" type="line"/>
+			<point x="208" y="1024"/>
+			<point x="176" y="1056"/>
+			<point x="112" y="1056" type="curve" smooth="yes"/>
+			<point x="48" y="1056"/>
+			<point x="16" y="1024"/>
+			<point x="16" y="960" type="curve" smooth="yes"/>
+			<point x="16" y="944"/>
+			<point x="24" y="928"/>
+			<point x="40" y="912" type="curve"/>
+			<point x="40" y="904" type="line"/>
+			<point x="-16" y="904" type="line"/>
+			<point x="-32" y="888" type="line"/>
+			<point x="-32" y="832" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="112" y="816"/>
+	<anchor name="bottomDots" x="112" y="816"/>
+	<anchor name="topDots" x="112" y="1056"/>
+	<anchor name="top" x="112" y="1104"/>
+	<anchor name="_top" x="112" y="768"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>
