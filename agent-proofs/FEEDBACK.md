@@ -95,7 +95,7 @@ slider-band spacing. Existing page margins and shared UI type remain.
    Check interpolation, inherited forms, marks, and reading-size texture.
 5. Record the outcome: accepted/revised/rejected, which sources actually changed,
    tests and visual review, unresolved issues, and the next bounded question.
-   Passing QA never assigns green/purple; final grading stays with Eli.
+   Passing QA never assigns green; final grading stays with Eli. Purple is retired.
 6. Promote confirmed reusable lessons to the right owner: this table for workflow
    preferences; DESIGN.md for agreed design rules; the relevant glyph worklog for
    local decisions; a skill/script for a demonstrated repeatable procedure. Link
@@ -288,3 +288,13 @@ review colors. Earlier dated purple-protection notes are historical and are
 superseded by this decision. This does not grant blanket replacement permission
 for orange/yellow or classify uncolored glyphs. Eli also explicitly approved
 applying HEB-010's chamfered 16-mark candidate in both masters.
+
+### Purple retired — supersedes the earlier color-policy revision
+
+Eli clarified on 2026-10-20 that purple should lose its special semantic
+meaning entirely. Green is the single approved/frozen label for both outlines
+and composites. Existing purple labels do not confer approval, reference status
+or protection, and must not be automatically converted to green. Composites
+Eli chooses to freeze will be graded green. This supersedes earlier statements
+that purple means a good composite; historical case records retain their context.
+No source colors or drawings changed as part of this policy update.

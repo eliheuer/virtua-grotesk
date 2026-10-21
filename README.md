@@ -69,17 +69,17 @@ propose named glyphs and masters, wait for Eli's approval, prepare a reversible
 scratch candidate, and show proofs before applying it when only candidate work
 was approved. Explicit approval can override a color restriction for those named
 glyphs only. Only green edits require a protection exception (Eli, 2026-10-20).
-Standing Hebrew/Arabic authorization in AGENTS.md still applies; purple is no
-longer protected.
+Standing Hebrew/Arabic authorization in AGENTS.md still applies. Purple is
+retired: existing purple labels carry no approval, reference, or protection meaning.
 
 | Color | Meaning | Editing and reference use |
 | --- | --- | --- |
 | Red | Bad, replaceable, or no drawing. | OK to overwrite or replace. Do not use as reference material. |
 | Orange | Bad drawing, but contains useful information worth preserving. | Edits are welcome; do not overwrite the drawing. Do not use as reference material. |
 | Yellow | Better drawing, but still needs work. | Edit without overwriting. Not good enough to use as reference material. |
-| Green | Good drawing; frozen by default. | Use as reference material. Changes require Eli's explicit approval naming the glyph and master. |
+| Green | Approved glyph, whether an outline or composite; frozen by default. | Use as reference material. Changes require Eli's explicit approval naming the glyph and master. |
 | Blue | Composite drawing with a problem that needs attention and judgment to resolve. | Inspect the composite and fix the problem. It is not an approved reference. |
-| Purple | Good composite drawing; editable, not frozen. | May be used as reference material. Edit within authorized work without a protection exception; preserve any green component donors. |
+| Purple (retired) | No current semantic meaning. | Existing labels do not imply approval or reference status. Edit within authorized scope; use green when Eli approves and freezes a composite. |
 | Pink | Composite drawing needing a small amount of work, less than blue. | Edits are welcome. Do not use as reference material. |
 
 Blue describes a composite needing attention; it does not mean “AI-generated.”

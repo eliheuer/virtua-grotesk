@@ -94,10 +94,11 @@ measure and propose without resolving them by editing sources.
   ask again if the repair needs broader changes. Reuse approval already given for
   the same scope; do not ask repeatedly.
 - Follow the canonical [semantic colors](README.md#semantic-colors) before selecting targets or references.
-  Only green drawings are frozen by default (Eli, 2026-10-20). Editing or removing
+  Only green glyphs—outlines or composites—are frozen by default (Eli, 2026-10-20). Editing or removing
   green glyphs requires explicit approval naming those glyphs and masters.
-  Purple means a good composite and is editable within authorized work; it no
-  longer requires a protection exception. Preserve green component donors.
+  Purple is retired and has no approval, reference, or protection meaning.
+  Composites Eli wants to freeze use green. Do not automatically convert legacy
+  purple labels to green; preserve green component donors.
 - Colors describe the default scope of an approved edit, not blanket authorization.
   Only red permits overwriting or replacement without an explicit exception.
   Orange and yellow permit edits while preserving the existing drawing; neither is reference material.

@@ -70,8 +70,9 @@ promote measured lessons into DESIGN.md and the shared skills.
 Current case: [HEB-010 — marks and spacing](cases/hebrew-010/README.md).
 
 Latest: Eli approved the chamfered 16-mark candidate in both masters and changed
-the policy so **only green is protected**. Purple still means a good composite,
-now editable within authorized work without a protection exception. The active
+the policy so **only green is protected**. Purple is now retired with no special semantic meaning. Approved composites
+that Eli wants to freeze use green, just like approved outlines. Legacy purple
+labels are not automatically promoted to green. The active
 Regular/Bold UFOs contain the exact v3 candidate; `cases/hebrew-010/applied-v3/`
 is the current proof on port 60272. Build/preflight and scope checks pass. The
 applied font has the same geometry/shaping tables as the collision-tested trial.
