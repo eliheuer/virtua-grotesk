@@ -85,7 +85,14 @@ Progress and the remaining queue live in
 
 ## Current handoff — 2026-10-21
 
-Current case: [ARB-005 — Beh base forms](cases/arabic-005/README.md).
+Current case: [ARB-006 — Autonomous Arabic first pass](cases/arabic-006/README.md).
+Batches 01–04 cover Bold Dal/Reh, Waw, Noon and initial/medial Feh–Qaf heads.
+Current proof: `cases/arabic-006/batches/04-feh-qaf-heads/working/`, with all four
+references and saved endpoint raster sheets. Next: isolated/final Feh and Qaf.
+All Regular sources and manual Bold hamza remain unchanged. See the current
+case for the exact queue and unresolved visible defects.
+
+### Earlier Beh checkpoint
 Checkpoint `211c3b8d` is pushed and preserves the accepted Fathatan repair and
 base-forms-first direction; `d23f1bed` preserves the manual Bold hamza correction
 and curve-tool lessons. Eli has now authorized an autonomous Arabic first pass;
@@ -97,7 +104,7 @@ are shown at 400. The four bases feed 41 Bold dependent glyphs; their inherited
 changes are recorded and none is green. Dots, marks, anchors, wrappers and
 features are unchanged. New Bold root drawings are purple, pending human review.
 
-Current proof: `cases/arabic-005/round-dots/working/`, **Before / Working**, with Rubik,
+Earlier proof: `cases/arabic-005/round-dots/working/`, **Before / Working**, with Rubik,
 Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro. Default sample **ببب ب**
 shows all four forms through real shaping. Inspect 400 and 700, plus intermediate
 weights; saved screenshots cover both endpoints and related-base context.
@@ -110,7 +117,7 @@ silently normalizing them. This is an applied working trial awaiting feedback.
 Eli judged the base trial better, then requested near-circular Arabic letter
 dots on the grid. The [round-dot correction](cases/arabic-005/round-dots/README.md)
 updates only the two Bold single-dot donors; green Regular and the base trial
-are preserved. Current Before is the previous Beh trial; Working adds the dot
+are preserved. That proof’s Before is the previous Beh trial; Working adds the dot
 correction. Build/preflight and 147 shaping comparisons passed for this later
 revision. Multi-dot drawings and existing placement issues are deferred.
 
@@ -199,14 +206,14 @@ current machine. Relative links keep the guide usable in another checkout.
 | Session entry, source permissions, agent behavior | [AGENTS.md](../AGENTS.md) |
 | Drawing rules and unresolved design contracts | [DESIGN.md](../DESIGN.md) |
 | Confirmed user preferences and case index | [Design review and feedback](FEEDBACK.md) |
-| Current accepted review and next priority | [ARB-005](cases/arabic-005/README.md); Beh base forms; manual Arabic correction in [ARB-003](cases/arabic-003/README.md) |
+| Current accepted review and next priority | [ARB-006](cases/arabic-006/README.md); autonomous Arabic queue; manual Arabic correction in [ARB-003](cases/arabic-003/README.md) |
 | Latin measurements and OPEN human decisions | [Design worklog](../documentation/design-pass-worklog.md) |
 | UI implementation, spacing contract, recovery instructions | [Web-proof guide](app/README.md) |
 | Editable web UI | `agent-proofs/app/index.html`, `review.css`, `review.js` |
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-005/round-dots/working/`; screenshots in its parent case folder |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/04-feh-qaf-heads/working/`; raster and browser evidence in its parent batch folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

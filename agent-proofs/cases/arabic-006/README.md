@@ -22,6 +22,10 @@ are saved per batch; full source hashes detect concurrent editor changes.
   Raster inspection exposed and resolved the final dot/stem collision. Both
   endpoint sheets inspected; build/preflight and 161 shaping checks passed.
   See [Noon evidence](batches/03-noon/README.md).
+- Batch 04: Bold initial/medial Feh–Qaf shared heads and 14 wrapper advances
+  applied. Four endpoint raster sheets, two source-scale renders and the 550
+  browser proof inspected; build/preflight and 217 shaping checks passed.
+  See [shared-head evidence](batches/04-feh-qaf-heads/README.md).
 - All Regular drawings, all green drawings and Eli's manual hamza are preserved.
 - The full Arabic first pass is **in progress**, not complete or human-approved.
 
@@ -33,7 +37,8 @@ its descendants even when their files do not change; protect green descendants.
 The old `scripts/arabic_*` builders contain historical color semantics and
 Bold-equals-Regular recipes. Do not run them wholesale.
 
-1. Feh and Qaf heads/tails.
+1. Feh and Qaf isolated/final heads and tails. Initial/medial shared heads are
+   drafted; isolated counters and final Qaf connection remain visibly defective.
 2. Meem, Lam and Lam–Alef; keep joining bar heights consistent.
 3. Hah/Jeem/Khah and Ain/Ghain: head, counter and descender construction.
 4. Seen/Sheen, Sad/Dad and Tah/Zah: teeth and loop families.
@@ -74,7 +79,7 @@ for a genuine unresolved dependency/decision, not routine application approval.
 The thread heartbeat `virtua-arabic-first-pass` is active at 20-minute intervals
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Next bounded family: Feh and Qaf heads/tails and their component descendants.
+Next bounded family: Feh and Qaf isolated/final bases and their descendants.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.
 

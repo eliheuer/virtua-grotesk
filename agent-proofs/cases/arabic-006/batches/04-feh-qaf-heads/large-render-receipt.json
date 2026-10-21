@@ -1,0 +1,16 @@
+{
+  "renderer": "DesignBot glyph_canvas --raw",
+  "recipe_sha256": "93a7d471bace4ca09e9b8d62bf0a7373bd68855c19d1481a953b87ba6725dea8",
+  "images": {
+    "initial-large.png": {
+      "sha256": "789d6144ed24841c78a080e75af21f478777a98a74de90377d9da4e296bbf6ab",
+      "source": "sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.init.glif",
+      "source_sha256": "0ad32644a358046ea3f25a5901231dce3fff3f748abf43776681d09f7081cabf"
+    },
+    "medial-large.png": {
+      "sha256": "1d5ef9d6f3ab553151dce927fdf0b492539c0f6aeafbe57e482407c0be3df07b",
+      "source": "sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.medi.glif",
+      "source_sha256": "90a51e5b43d1a98f3699e4c825c549f96efd7c569cf7d136286863311a1c7649"
+    }
+  }
+}
