@@ -1,0 +1,57 @@
+{
+  "renderer": "DesignBot --raw",
+  "weight": 550,
+  "size_px_em": 112,
+  "text": "ششش ش",
+  "title": "Sheen final and isolated repair · 550",
+  "dimensions": [
+    1600,
+    1120
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "family": "Virtua Grotesk",
+      "file": "fonts/before-83f082d9e3f8.ttf",
+      "sha256": "83f082d9e3f84d4b4e5996e0895e097b351f739fa637f4b2957a96c9601bb134",
+      "rendered_weight": 550
+    },
+    {
+      "role": "after",
+      "family": "Virtua Grotesk",
+      "file": "fonts/after-2a2fa0344a80.ttf",
+      "sha256": "2a2fa0344a803979ecf39f0e13369e94e7cd98123762622d3e8281793ea92db3",
+      "rendered_weight": 550
+    },
+    {
+      "role": "rubik",
+      "family": "Rubik",
+      "file": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "rendered_weight": 550
+    },
+    {
+      "role": "noto",
+      "family": "Noto Sans Arabic",
+      "file": "fonts/noto-63111b5b2e07.ttf",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "rendered_weight": 550
+    },
+    {
+      "role": "plex",
+      "family": "IBM Plex Sans Arabic",
+      "file": "fonts/plex-b8363ab9f733.ttf",
+      "sha256": "b8363ab9f733dfa4f8e96b8b2102c24b5cf4110fb96d1d3d9a9412f6fb49cf74",
+      "rendered_weight": 500
+    },
+    {
+      "role": "readex",
+      "family": "Readex Pro",
+      "file": "fonts/readex-268bba7e1e8f.ttf",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "rendered_weight": 550
+    }
+  ],
+  "recipe_sha256": "ded54aa1b72a6926b0d2fb52273cb14fc31fa9a285200886a2c2459a8bf0d03b",
+  "image_sha256": "9a96a459f559033581bd328b1e1e7aa3f7c6111594192db16fd62a49751b429c"
+}

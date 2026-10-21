@@ -110,6 +110,13 @@ batches and exclude any shared donor that could change this human work.
   incomplete U+069C dot construction remain explicit. See
   [teeth evidence](batches/16-seen-teeth/README.md).
 
+- Batch 17: Bold Seen/Sheen final and isolated forms repaired with consistent
+  teeth/bowl weight and matched wrapper advances. Two orange Regular final
+  wrappers have advance-only gap corrections; drawings and grades unchanged.
+  525 shaping checks, 400/550/700 four-reference rasters, large/word/marked
+  proofs and preflight completed. Beh preserved. See
+  [bowl evidence](batches/17-seen-bowls/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -126,8 +133,8 @@ Bold-equals-Regular recipes. Do not run them wholesale.
 3. Tcheh base and dot first pass is saved in batch 11. Bold Ain/Ghain four-form repairs
    are saved in batches 12–15, pending human review. Regular Jeem final dot collision and Khah dot
    heights remain placement follow-ups; preserve protected base drawings.
-4. Seen/Sheen final and isolated forms: match the repaired Bold initial/medial
-   teeth, fix final Sheen advance gap and local dots. Then Sad/Dad and Tah/Zah.
+4. Seen/Sheen Bold first-pass bases are saved in batches 16–17; human review
+   pending. Continue with Sad/Dad, then Tah/Zah base families.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
 6. Reconcile duplicated Beh-family outlines (Teh/Peh/Tteh/Yeh extensions)
    with the shared roots; inspect separately drawn Dal/Reh variants too.
@@ -170,9 +177,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 16 Bold Seen/Sheen initial and medial teeth is
+Final Lam is applied after Eli’s named Regular green exception. Batch 17 Bold Seen/Sheen final and isolated repair is
 the current Working proof.
-Next bounded repair: Bold Seen/Sheen final and isolated forms. Beh and its component donors are
+Next bounded repair: Sad/Dad base forms. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.
