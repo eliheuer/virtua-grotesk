@@ -1,0 +1,213 @@
+{
+  "limits": "Sampled within-contour crossings only. Medial positive contours intentionally overlap; final compiled union and counters require raster inspection. Curvature transitions are reported, not hidden.",
+  "glyphs": [
+    {
+      "name": "hah-ar",
+      "within_contour_crossings": [
+        0
+      ],
+      "warnings": [
+        "c0 segment 11: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 18: 1 sampled curvature sign change(s); inspect intent"
+      ],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            208.0,
+            -48.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.007523148148148148,
+          "curvature_out": -0.006925207756232687,
+          "relative_jump": 0.07948007670999359
+        },
+        {
+          "contour": 0,
+          "point": [
+            240.0,
+            480.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.004557291666666666,
+          "curvature_out": 0.0025951557093425604,
+          "relative_jump": 0.43054869006426094
+        },
+        {
+          "contour": 0,
+          "point": [
+            288.0,
+            336.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.006944444444444444,
+          "curvature_out": -0.006172839506172839,
+          "relative_jump": 0.1111111111111111
+        },
+        {
+          "contour": 0,
+          "point": [
+            48.0,
+            -64.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.004132231404958678,
+          "curvature_out": 0.0033275462962962963,
+          "relative_jump": 0.1947337962962963
+        }
+      ]
+    },
+    {
+      "name": "hah-ar.fina",
+      "within_contour_crossings": [
+        0
+      ],
+      "warnings": [
+        "c0 segment 18: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 25: 1 sampled curvature sign change(s); inspect intent"
+      ],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            192.0,
+            -72.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.0075,
+          "curvature_out": -0.006296296296296296,
+          "relative_jump": 0.1604938271604938
+        },
+        {
+          "contour": 0,
+          "point": [
+            240.0,
+            480.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.004557291666666666,
+          "curvature_out": 0.0025951557093425604,
+          "relative_jump": 0.43054869006426094
+        },
+        {
+          "contour": 0,
+          "point": [
+            288.0,
+            336.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.006944444444444444,
+          "curvature_out": -0.006172839506172839,
+          "relative_jump": 0.1111111111111111
+        },
+        {
+          "contour": 0,
+          "point": [
+            32.0,
+            -88.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.004476584022038568,
+          "curvature_out": 0.0030381944444444445,
+          "relative_jump": 0.3213141025641026
+        }
+      ]
+    },
+    {
+      "name": "hah-ar.init",
+      "within_contour_crossings": [
+        0
+      ],
+      "warnings": [
+        "c0 segment 0: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 6: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 13: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 15: 1 sampled curvature sign change(s); inspect intent"
+      ],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            240.0,
+            480.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.004557291666666666,
+          "curvature_out": 0.0025951557093425604,
+          "relative_jump": 0.43054869006426094
+        },
+        {
+          "contour": 0,
+          "point": [
+            288.0,
+            336.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.006944444444444444,
+          "curvature_out": -0.006172839506172839,
+          "relative_jump": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "name": "hah-ar.medi",
+      "within_contour_crossings": [
+        0
+      ],
+      "warnings": [
+        "c0 segment 0: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 13: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 20: 1 sampled curvature sign change(s); inspect intent",
+        "c0 segment 22: 1 sampled curvature sign change(s); inspect intent"
+      ],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            240.0,
+            480.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.004557291666666666,
+          "curvature_out": 0.0025951557093425604,
+          "relative_jump": 0.43054869006426094
+        },
+        {
+          "contour": 0,
+          "point": [
+            288.0,
+            336.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.006944444444444444,
+          "curvature_out": -0.006172839506172839,
+          "relative_jump": 0.1111111111111111
+        }
+      ]
+    }
+  ]
+}

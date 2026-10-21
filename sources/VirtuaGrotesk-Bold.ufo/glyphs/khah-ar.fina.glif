@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="khah-ar.fina" format="2">
-	<advance width="960"/>
+	<advance width="832"/>
 	<outline>
 		<component base="hah-ar.fina"/>
-		<component base="dotabove-ar" xOffset="78" yOffset="-46"/>
+		<component base="dotabove-ar" xOffset="200" yOffset="-48"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -10,7 +10,7 @@ from urllib.error import URLError
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-CURRENT = ROOT / 'agent-proofs/cases/arabic-006/batches/09-meem/working'
+CURRENT = ROOT / 'agent-proofs/cases/arabic-006/batches/10-hah-family/working'
 
 
 def main():
