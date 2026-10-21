@@ -110,3 +110,23 @@ documentation/proofs/images/*.png
 
 !agent-proofs/cases/hebrew-007/working-v2/fonts/
 !agent-proofs/cases/hebrew-007/working-v2/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-007/working-v3/fonts/
+!agent-proofs/cases/hebrew-007/working-v3/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-007/working-v4/fonts/
+!agent-proofs/cases/hebrew-007/working-v4/fonts/*.ttf
+
+# Retain exact HEB-008 review fonts for restart recovery.
+!agent-proofs/cases/hebrew-008/working-v2/fonts/
+!agent-proofs/cases/hebrew-008/working-v2/fonts/*.ttf
+!agent-proofs/cases/hebrew-008/working-v4/fonts/
+!agent-proofs/cases/hebrew-008/working-v4/fonts/*.ttf
+!agent-proofs/cases/hebrew-008/working-v5/fonts/
+!agent-proofs/cases/hebrew-008/working-v5/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-008/working-v6/fonts/
+!agent-proofs/cases/hebrew-008/working-v6/fonts/*.ttf
+
+!agent-proofs/cases/hebrew-008/working-v7/fonts/
+!agent-proofs/cases/hebrew-008/working-v7/fonts/*.ttf

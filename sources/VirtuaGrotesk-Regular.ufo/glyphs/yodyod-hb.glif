@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yodyod-hb" format="2">
 	<unicode hex="05F2"/>
-	<advance width="438"/>
-	<anchor name="hbRafe" x="219" y="672"/>
-	<anchor name="hbMeteg" x="219" y="0"/>
-	<anchor name="hbCantAbove" x="216" y="576"/>
-	<anchor name="hbCantAboveLeft" x="56" y="576"/>
-	<anchor name="hbCantAboveRight" x="384" y="576"/>
-	<anchor name="hbCantBelow" x="216" y="0"/>
-	<anchor name="hbCantBelowRight" x="216" y="0"/>
+	<advance width="432"/>
 	<outline>
 		<contour>
-			<point x="142" y="274" type="line"/>
-			<point x="142" y="576" type="line"/>
-			<point x="56" y="576" type="line"/>
-			<point x="56" y="274" type="line"/>
+			<point x="88" y="240" type="line"/>
+			<point x="152" y="240" type="line"/>
+			<point x="168" y="256" type="line"/>
+			<point x="168" y="560" type="line"/>
+			<point x="152" y="576" type="line"/>
+			<point x="88" y="576" type="line"/>
+			<point x="72" y="560" type="line"/>
+			<point x="72" y="256" type="line"/>
 		</contour>
 		<contour>
-			<point x="382" y="274" type="line"/>
-			<point x="382" y="576" type="line"/>
-			<point x="296" y="576" type="line"/>
-			<point x="296" y="274" type="line"/>
+			<point x="280" y="240" type="line"/>
+			<point x="344" y="240" type="line"/>
+			<point x="360" y="256" type="line"/>
+			<point x="360" y="560" type="line"/>
+			<point x="344" y="576" type="line"/>
+			<point x="280" y="576" type="line"/>
+			<point x="264" y="560" type="line"/>
+			<point x="264" y="256" type="line"/>
 		</contour>
 	</outline>
+	<anchor name="hbRafe" x="216" y="672"/>
+	<anchor name="hbMeteg" x="216" y="0"/>
+	<anchor name="hbCantAbove" x="216" y="576"/>
+	<anchor name="hbCantAboveLeft" x="72" y="576"/>
+	<anchor name="hbCantAboveRight" x="360" y="576"/>
+	<anchor name="hbCantBelow" x="216" y="0"/>
+	<anchor name="hbCantBelowRight" x="216" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

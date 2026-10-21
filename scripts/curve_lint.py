@@ -169,11 +169,32 @@ def node_continuity(conts):
             out.append(dict(x=b[0][0], y=b[0][1], level=level, value=val))
     return out
 
+def join_audit(conts):
+    """Report every line/curve or curve/curve join, including unmarked corners.
+
+    An unmarked angle is review evidence, not an automatic design defect.
+    Smooth flags cannot establish whether the intended construction is correct.
+    """
+    rows=[]
+    for ci,cont in enumerate(conts):
+        segs=all_segments(cont)
+        for i,b in enumerate(segs):
+            a=segs[i-1]
+            if a[4] and b[4]: continue
+            incoming=_sub(a[3],a[2]); outgoing=_sub(b[1],b[0])
+            angle=math.degrees(math.atan2(abs(_cross(incoming,outgoing)),
+                               sum(x*y for x,y in zip(incoming,outgoing))))
+            rows.append(dict(contour=ci, point=b[0], smooth=b[5], angle=angle,
+                             classification=classify_join(a,b)[0]))
+    return rows
+
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('master',choices=['Regular','Bold'])
     ap.add_argument('glyphs',nargs='*')
     ap.add_argument('--all',action='store_true')
+    ap.add_argument('--joins',action='store_true',help='Audit all curve joins, including unmarked corners; human intent still requires review')
     a=ap.parse_args()
     gdir=f'sources/VirtuaGrotesk-{a.master}.ufo/glyphs'
     names=a.glyphs
@@ -186,6 +207,13 @@ def main():
         path=f'{gdir}/{fn}.glif'
         if not os.path.exists(path): continue
         issues=lint_glyph(path,g)
+        if a.joins:
+            for row in join_audit(parse(open(path).read())):
+                x,y=row['point']
+                kind='smooth' if row['smooth'] else 'corner: review intent'
+                print(f'{a.master} {g}: join ({x:g},{y:g}) {kind}; tangent angle {row["angle"]:.3f} deg')
+                if row['classification']=='kink':
+                    issues.append(f'marked smooth join ({x:g},{y:g}) has a tangent kink')
         if issues:
             bad+=1
             print(f'{a.master} {g}:')

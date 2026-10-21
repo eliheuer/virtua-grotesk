@@ -231,3 +231,27 @@ Follow the standing authorization in `agent-proofs/README.md`: as of 2026-10-20,
 new Hebrew drawing batches go directly into active masters after preserving a
 baseline; no repeated application question is needed. Retain technical checks,
 proofs, exact manual corrections, source-color protections and human grading.
+
+### Audit joins by intended construction
+
+For curve/terminal work, run `scripts/curve_lint.py <Master> <glyphs> --joins`.
+The default CLI checks crest/tension only. The join audit exposes unmarked
+line/curve corners as well as marked-smooth kinks; inspect the former instead
+of assuming a missing smooth flag is deliberate. Do not round intentional
+corners automatically. Distinguish tangent continuation, a short straight
+landing before a chamfer, and an intentional shelf. See
+[HEB-007 correction 01](../../../agent-proofs/cases/hebrew-007/README.md#manual-correction-01--regular-gimel-2026-10-20)
+for the exact Regular example and pending Bold transfer test. Align cyclic
+contour order before comparing point indices; preserve manual optical edits.
+
+### Transfer bounded turns, not stretched handles
+
+For branch/diagonal joins, read [HEB-008 Final Tsadi correction 01](../../../agent-proofs/cases/hebrew-008/README.md#manual-correction-01--regular-final-tsadi).
+The human edit separates axis-tangent turns from straight shelves, junction cuts
+and terminal landings; equal handle pairs replace a sweep stretched directly
+to the diagonal. Before transferring, record each turn's endpoints, extents,
+handle directions/lengths and adjoining flats. Choose which alignments stay
+fixed as weight changes. Do not assume an unmarked curve/line join is an
+intentional corner: inspect its geometry. Preserve human smooth flags/source
+bytes even when geometry is tangent. Exact 64/128 handles are local evidence,
+not universal radii; distinguish the requested transfer trial from approval.
