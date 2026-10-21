@@ -1,0 +1,1385 @@
+{
+  "fonts": {
+    "before": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/hebrew-008/before.ttf",
+      "sha256": "8bb06706638e66c6db91e65dcd7e49a5c5148f74a488b49d75a5f6204fdbf344"
+    },
+    "working": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "e38a34944099b0c9fc5df2057e2254981ac18822ed3385978a13f0a48c8c3777"
+    }
+  },
+  "source_scope": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/geresh-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/samekh-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/qof-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/tet-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finaltsadi-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/tsadi-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/yodyod-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/alef-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/gershayim-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/ayin-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/shin-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/geresh-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/samekh-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/qof-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/tet-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finaltsadi-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/tsadi-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/yodyod-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/alef-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/gershayim-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/ayin-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/shin-hb.glif"
+  ],
+  "colors_and_unicode_preserved": true,
+  "compiled_changes": {
+    "400": {
+      "outlines": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "uniFB1F",
+        "uniFB20",
+        "yodyodhb"
+      ],
+      "widths": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "yodyodhb"
+      ]
+    },
+    "450": {
+      "outlines": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "uniFB1F",
+        "uniFB20",
+        "yodyodhb"
+      ],
+      "widths": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "yodyodhb"
+      ]
+    },
+    "500": {
+      "outlines": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "uniFB1F",
+        "uniFB20",
+        "yodyodhb"
+      ],
+      "widths": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "yodyodhb"
+      ]
+    },
+    "550": {
+      "outlines": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "uniFB1F",
+        "uniFB20",
+        "yodyodhb"
+      ],
+      "widths": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "yodyodhb"
+      ]
+    },
+    "600": {
+      "outlines": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "uniFB1F",
+        "uniFB20",
+        "yodyodhb"
+      ],
+      "widths": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "yodyodhb"
+      ]
+    },
+    "650": {
+      "outlines": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "uniFB1F",
+        "uniFB20",
+        "yodyodhb"
+      ],
+      "widths": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "yodyodhb"
+      ]
+    },
+    "700": {
+      "outlines": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "uniFB1F",
+        "uniFB20",
+        "yodyodhb"
+      ],
+      "widths": [
+        "alefhb",
+        "ayinhb",
+        "finaltsadihb",
+        "gereshhb",
+        "gershayimhb",
+        "shinhb",
+        "tethb",
+        "tsadihb",
+        "yodyodhb"
+      ]
+    }
+  },
+  "mark_pairs": 6076,
+  "collisions": [
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "טְ",
+      "area": 28.31,
+      "glyphs": [
+        "shevahb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "טֱ",
+      "area": 25.76,
+      "glyphs": [
+        "hatafsegolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "טֶ",
+      "area": 1.96,
+      "glyphs": [
+        "segolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "ךֱ",
+      "area": 508.79,
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "סְ",
+      "area": 246.22,
+      "glyphs": [
+        "shevahb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "סֱ",
+      "area": 247.71,
+      "glyphs": [
+        "hatafsegolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "סֶ",
+      "area": 179.75,
+      "glyphs": [
+        "segolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "סֻ",
+      "area": 0.09,
+      "glyphs": [
+        "qubutshb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "עּ",
+      "area": 405.43,
+      "glyphs": [
+        "dageshhb",
+        "ayinhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "ץּ",
+      "area": 2505.44,
+      "glyphs": [
+        "dageshhb",
+        "finaltsadihb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "קֱ",
+      "area": 1636.64,
+      "glyphs": [
+        "hatafsegolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "קֲ",
+      "area": 800.0,
+      "glyphs": [
+        "hatafpatahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "קֳ",
+      "area": 800.0,
+      "glyphs": [
+        "hatafqamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 400,
+      "text": "קֻ",
+      "area": 34.27,
+      "glyphs": [
+        "qubutshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "טְ",
+      "area": 28.31,
+      "glyphs": [
+        "shevahb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "טֱ",
+      "area": 25.76,
+      "glyphs": [
+        "hatafsegolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "טֶ",
+      "area": 1.96,
+      "glyphs": [
+        "segolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "ךֱ",
+      "area": 508.79,
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "סְ",
+      "area": 246.72,
+      "glyphs": [
+        "shevahb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "סֱ",
+      "area": 248.43,
+      "glyphs": [
+        "hatafsegolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "סֶ",
+      "area": 192.03,
+      "glyphs": [
+        "segolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "סֻ",
+      "area": 2.0,
+      "glyphs": [
+        "qubutshb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "עּ",
+      "area": 405.43,
+      "glyphs": [
+        "dageshhb",
+        "ayinhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "ץּ",
+      "area": 2505.44,
+      "glyphs": [
+        "dageshhb",
+        "finaltsadihb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "קֱ",
+      "area": 2224.83,
+      "glyphs": [
+        "hatafsegolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "קֲ",
+      "area": 1200.0,
+      "glyphs": [
+        "hatafpatahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "קֳ",
+      "area": 1200.0,
+      "glyphs": [
+        "hatafqamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 450,
+      "text": "קֻ",
+      "area": 358.18,
+      "glyphs": [
+        "qubutshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "טְ",
+      "area": 28.31,
+      "glyphs": [
+        "shevahb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "טֱ",
+      "area": 25.76,
+      "glyphs": [
+        "hatafsegolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "טֶ",
+      "area": 1.96,
+      "glyphs": [
+        "segolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "ךֱ",
+      "area": 508.79,
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "סְ",
+      "area": 247.22,
+      "glyphs": [
+        "shevahb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "סֱ",
+      "area": 248.67,
+      "glyphs": [
+        "hatafsegolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "סֶ",
+      "area": 203.75,
+      "glyphs": [
+        "segolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "סֻ",
+      "area": 7.64,
+      "glyphs": [
+        "qubutshb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "עּ",
+      "area": 405.43,
+      "glyphs": [
+        "dageshhb",
+        "ayinhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "ץּ",
+      "area": 2505.44,
+      "glyphs": [
+        "dageshhb",
+        "finaltsadihb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "קֱ",
+      "area": 2812.83,
+      "glyphs": [
+        "hatafsegolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "קֲ",
+      "area": 1600.0,
+      "glyphs": [
+        "hatafpatahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "קֳ",
+      "area": 1600.0,
+      "glyphs": [
+        "hatafqamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "קֻ",
+      "area": 826.23,
+      "glyphs": [
+        "qubutshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 500,
+      "text": "קׇ",
+      "area": 192.0,
+      "glyphs": [
+        "qamatsqatanhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "טְ",
+      "area": 28.31,
+      "glyphs": [
+        "shevahb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "טֱ",
+      "area": 25.76,
+      "glyphs": [
+        "hatafsegolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "טֶ",
+      "area": 1.96,
+      "glyphs": [
+        "segolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "ךֱ",
+      "area": 508.79,
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "סְ",
+      "area": 247.66,
+      "glyphs": [
+        "shevahb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "סֱ",
+      "area": 249.31,
+      "glyphs": [
+        "hatafsegolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "סֶ",
+      "area": 214.85,
+      "glyphs": [
+        "segolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "סֻ",
+      "area": 11.46,
+      "glyphs": [
+        "qubutshb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "עּ",
+      "area": 405.43,
+      "glyphs": [
+        "dageshhb",
+        "ayinhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "ץּ",
+      "area": 2505.44,
+      "glyphs": [
+        "dageshhb",
+        "finaltsadihb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "קֱ",
+      "area": 3374.17,
+      "glyphs": [
+        "hatafsegolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "קֲ",
+      "area": 2000.0,
+      "glyphs": [
+        "hatafpatahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "קֳ",
+      "area": 2000.0,
+      "glyphs": [
+        "hatafqamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "קֵ",
+      "area": 94.92,
+      "glyphs": [
+        "tserehb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "קֶ",
+      "area": 95.64,
+      "glyphs": [
+        "segolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "קֻ",
+      "area": 1370.9,
+      "glyphs": [
+        "qubutshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 550,
+      "text": "קׇ",
+      "area": 576.0,
+      "glyphs": [
+        "qamatsqatanhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "טְ",
+      "area": 28.31,
+      "glyphs": [
+        "shevahb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "טֱ",
+      "area": 25.76,
+      "glyphs": [
+        "hatafsegolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "טֶ",
+      "area": 1.96,
+      "glyphs": [
+        "segolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "ךֱ",
+      "area": 508.79,
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "סְ",
+      "area": 248.06,
+      "glyphs": [
+        "shevahb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "סֱ",
+      "area": 249.89,
+      "glyphs": [
+        "hatafsegolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "סֶ",
+      "area": 225.38,
+      "glyphs": [
+        "segolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "סֻ",
+      "area": 15.51,
+      "glyphs": [
+        "qubutshb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "עּ",
+      "area": 405.43,
+      "glyphs": [
+        "dageshhb",
+        "ayinhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "ץּ",
+      "area": 2505.44,
+      "glyphs": [
+        "dageshhb",
+        "finaltsadihb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "קֱ",
+      "area": 4132.62,
+      "glyphs": [
+        "hatafsegolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "קֲ",
+      "area": 2400.0,
+      "glyphs": [
+        "hatafpatahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "קֳ",
+      "area": 2400.0,
+      "glyphs": [
+        "hatafqamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "קֵ",
+      "area": 462.77,
+      "glyphs": [
+        "tserehb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "קֶ",
+      "area": 469.31,
+      "glyphs": [
+        "segolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "קֻ",
+      "area": 1952.6,
+      "glyphs": [
+        "qubutshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 600,
+      "text": "קׇ",
+      "area": 960.0,
+      "glyphs": [
+        "qamatsqatanhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "טְ",
+      "area": 28.31,
+      "glyphs": [
+        "shevahb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "טֱ",
+      "area": 25.76,
+      "glyphs": [
+        "hatafsegolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "טֶ",
+      "area": 1.96,
+      "glyphs": [
+        "segolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "ךֱ",
+      "area": 508.79,
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "סְ",
+      "area": 248.46,
+      "glyphs": [
+        "shevahb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "סֱ",
+      "area": 250.05,
+      "glyphs": [
+        "hatafsegolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "סֶ",
+      "area": 235.41,
+      "glyphs": [
+        "segolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "סֻ",
+      "area": 23.41,
+      "glyphs": [
+        "qubutshb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "עּ",
+      "area": 405.43,
+      "glyphs": [
+        "dageshhb",
+        "ayinhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "ץּ",
+      "area": 2505.44,
+      "glyphs": [
+        "dageshhb",
+        "finaltsadihb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קֱ",
+      "area": 4956.56,
+      "glyphs": [
+        "hatafsegolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קֲ",
+      "area": 2800.0,
+      "glyphs": [
+        "hatafpatahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קֳ",
+      "area": 3016.0,
+      "glyphs": [
+        "hatafqamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קֵ",
+      "area": 949.63,
+      "glyphs": [
+        "tserehb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קֶ",
+      "area": 967.16,
+      "glyphs": [
+        "segolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קַ",
+      "area": 416.0,
+      "glyphs": [
+        "patahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קָ",
+      "area": 200.0,
+      "glyphs": [
+        "qamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קֻ",
+      "area": 2543.34,
+      "glyphs": [
+        "qubutshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 650,
+      "text": "קׇ",
+      "area": 1344.0,
+      "glyphs": [
+        "qamatsqatanhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "טְ",
+      "area": 28.31,
+      "glyphs": [
+        "shevahb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "טֱ",
+      "area": 25.76,
+      "glyphs": [
+        "hatafsegolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "טֶ",
+      "area": 1.96,
+      "glyphs": [
+        "segolhb",
+        "tethb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "ךֱ",
+      "area": 508.79,
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "סְ",
+      "area": 248.81,
+      "glyphs": [
+        "shevahb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "סֱ",
+      "area": 250.58,
+      "glyphs": [
+        "hatafsegolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "סֶ",
+      "area": 244.9,
+      "glyphs": [
+        "segolhb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "סֻ",
+      "area": 27.78,
+      "glyphs": [
+        "qubutshb",
+        "samekhhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "עּ",
+      "area": 405.43,
+      "glyphs": [
+        "dageshhb",
+        "ayinhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "ץּ",
+      "area": 2505.44,
+      "glyphs": [
+        "dageshhb",
+        "finaltsadihb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קֱ",
+      "area": 5589.26,
+      "glyphs": [
+        "hatafsegolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קֲ",
+      "area": 3200.0,
+      "glyphs": [
+        "hatafpatahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קֳ",
+      "area": 3848.0,
+      "glyphs": [
+        "hatafqamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קֵ",
+      "area": 1502.73,
+      "glyphs": [
+        "tserehb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קֶ",
+      "area": 1534.41,
+      "glyphs": [
+        "segolhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קַ",
+      "area": 832.0,
+      "glyphs": [
+        "patahhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קָ",
+      "area": 600.0,
+      "glyphs": [
+        "qamatshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קֻ",
+      "area": 3118.16,
+      "glyphs": [
+        "qubutshb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קּ",
+      "area": 97.72,
+      "glyphs": [
+        "dageshhb",
+        "qofhb"
+      ]
+    },
+    {
+      "role": "before",
+      "weight": 700,
+      "text": "קׇ",
+      "area": 1728.0,
+      "glyphs": [
+        "qamatsqatanhb",
+        "qofhb"
+      ]
+    }
+  ]
+}

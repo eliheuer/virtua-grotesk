@@ -1,0 +1,70 @@
+./build.sh
+Building Virtua Grotesk fonts with gftools builder...
+[1/15] instantiateUfo
+fontmake -i Virtua Grotesk Medium -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[2/15] instantiateUfo
+fontmake -i Virtua Grotesk SemiBold -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[3/15] instantiateUfo
+fontmake -i Virtua Grotesk Regular -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[4/15] instantiateUfo
+fontmake -i Virtua Grotesk Bold -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[5/15] buildVariable
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpjk6r_x2m -o variable -m VirtuaGrotesk.designspace --filter ...
+[6/15] fix
+gftools-fix-font -o ../fonts/variable/VirtuaGrotesk[wght].ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpjk6r_x2m
+[7/15] gftools-gen-stat --inplace  -- '../fonts/variable/VirtuaGrotesk[wght].ttf' && touch /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpmdssy462.buildStatstamp
+['../fonts/variable/VirtuaGrotesk[wght].ttf']
+Saving font to ../fonts/variable/VirtuaGrotesk[wght].ttf
+[8/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmph8567ir0 -o ttf -u instance_ufos/VirtuaGrotesk-Medium.ufo.json --filter ...
+[9/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp_3dsis99 -o ttf -u instance_ufos/VirtuaGrotesk-SemiBold.ufo.json --filter ...
+[10/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpk4y7pdpf -o ttf -u instance_ufos/VirtuaGrotesk-Bold.ufo.json --filter ...
+[11/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpfy20uxyv -o ttf -u instance_ufos/VirtuaGrotesk-Regular.ufo.json --filter ...
+[12/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-Medium.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmph8567ir0
+[13/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-SemiBold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp_3dsis99
+[14/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-Bold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpk4y7pdpf
+[15/15] fix
+gftools-fix-font -o ../fonts/ttf/VirtuaGrotesk-Regular.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpfy20uxyv
+
+Build complete! Fonts are in the fonts/ directory:
+fonts/variable/VirtuaGrotesk[wght].ttf
+fonts/ttf/VirtuaGrotesk-Bold.ttf
+fonts/ttf/VirtuaGrotesk-Medium.ttf
+fonts/ttf/VirtuaGrotesk-Regular.ttf
+fonts/ttf/VirtuaGrotesk-SemiBold.ttf
+./scripts/check_gf_fonts.sh full
+QA mode: full; network: offline; reports: out/qa/hebrew-008
+ttf: googlefonts/metadata/unreachable_subsetting WARN [unreachable-subsetting unreachable-subsetting unreachable-subsetting unreachable-subsetting]
+VirtuaGrotesk-Bold.ttf: outline_colinear_vectors WARN [found-colinear-vectors]
+VirtuaGrotesk-Bold.ttf: outline_direction WARN [ccw-outer-contour]
+VirtuaGrotesk-Bold.ttf: outline_jaggy_segments WARN [found-jaggy-segments]
+VirtuaGrotesk-Bold.ttf: overlapping_path_segments WARN [overlapping-path-segments]
+VirtuaGrotesk-Bold.ttf: outline_semi_vertical WARN [found-semi-vertical]
+VirtuaGrotesk-Bold.ttf: googlefonts/glyphsets/shape_languages WARN [warning-language-shaping]
+VirtuaGrotesk-Bold.ttf: contour_count WARN [contour-count]
+VirtuaGrotesk-Medium.ttf: contour_count WARN [contour-count]
+VirtuaGrotesk-Medium.ttf: googlefonts/glyphsets/shape_languages WARN [warning-language-shaping]
+VirtuaGrotesk-Medium.ttf: outline_colinear_vectors WARN [found-colinear-vectors]
+VirtuaGrotesk-Medium.ttf: outline_jaggy_segments WARN [found-jaggy-segments]
+VirtuaGrotesk-Medium.ttf: outline_semi_vertical WARN [found-semi-vertical]
+VirtuaGrotesk-Regular.ttf: outline_colinear_vectors WARN [found-colinear-vectors]
+VirtuaGrotesk-Regular.ttf: contour_count WARN [contour-count]
+VirtuaGrotesk-Regular.ttf: googlefonts/glyphsets/shape_languages WARN [warning-language-shaping]
+VirtuaGrotesk-Regular.ttf: googlefonts/repo/dirname_matches_nameid_1 FAIL [mismatch]
+VirtuaGrotesk-SemiBold.ttf: googlefonts/glyphsets/shape_languages WARN [warning-language-shaping]
+VirtuaGrotesk-SemiBold.ttf: contour_count WARN [contour-count]
+VirtuaGrotesk-SemiBold.ttf: outline_colinear_vectors WARN [found-colinear-vectors]
+VirtuaGrotesk-SemiBold.ttf: outline_jaggy_segments WARN [found-jaggy-segments]
+VirtuaGrotesk-SemiBold.ttf: overlapping_path_segments WARN [overlapping-path-segments]
+VirtuaGrotesk-SemiBold.ttf: outline_semi_vertical WARN [found-semi-vertical]
+variable: googlefonts/metadata/unreachable_subsetting WARN [unreachable-subsetting]
+VirtuaGrotesk[wght].ttf: contour_count WARN [contour-count]
+VirtuaGrotesk[wght].ttf: googlefonts/glyphsets/shape_languages WARN [warning-language-shaping]
+Markdown report written to out/qa/hebrew-008/fontspector.md
+make: *** [qa-full] Error 1

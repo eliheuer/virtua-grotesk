@@ -1,0 +1,95 @@
+{
+  "description": "HEB-008 v7: preserved human Regular Final Tsadi, transfer to Bold Final Tsadi and both Shins.",
+  "fonts": {
+    "after": {
+      "path": "working-v7/fonts/after-5c012703c870.ttf",
+      "sha256": "5c012703c8703e97cd38fc1b9a14ddfbfc48173c7fffe53619efdff5f87db094",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "working-v7/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "working-v7/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "working-v7/fonts/before-6468ef543758.ttf",
+      "sha256": "6468ef5437584bd558c401a4b9f4788ffdb54ef23d8f86c6639ffaf975e60356",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 08 · Revision 7",
+    "status": "Working drawings · review pending",
+    "note": "Regular Final Tsadi is Eli’s exact saved correction. Bold Final Tsadi and both Shins transfer its bounded turns, straight landings and junction cuts. Before is the preceding agent v6; Working includes the human Regular edit. Transfer trial awaits review.",
+    "glyphs": [
+      {
+        "key": "shin",
+        "char": "ש",
+        "name": "Shin"
+      },
+      {
+        "key": "finaltsadi",
+        "char": "ץ",
+        "name": "Final Tsadi"
+      }
+    ],
+    "presets": {
+      "group": [
+        "שץ",
+        "Shin and Final Tsadi"
+      ],
+      "words": [
+        "שמש שקט שירים עץ ארץ קיץ חוץ",
+        "Words"
+      ],
+      "marks": [
+        "שָׁ שִׂ שּ ץָ ץֶ",
+        "Marks"
+      ],
+      "latin": [
+        "H n ש ץ",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

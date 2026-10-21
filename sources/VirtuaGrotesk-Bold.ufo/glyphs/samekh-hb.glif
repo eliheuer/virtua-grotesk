@@ -2,16 +2,6 @@
 <glyph name="samekh-hb" format="2">
 	<unicode hex="05E1"/>
 	<advance width="704"/>
-	<anchor name="hbBottom" x="352" y="0"/>
-	<anchor name="hbCenter" x="352" y="288"/>
-	<anchor name="hbHolam" x="16" y="576"/>
-	<anchor name="hbRafe" x="352" y="672"/>
-	<anchor name="hbMeteg" x="352" y="0"/>
-	<anchor name="hbCantAbove" x="352" y="576"/>
-	<anchor name="hbCantAboveLeft" x="16" y="576"/>
-	<anchor name="hbCantAboveRight" x="664" y="576"/>
-	<anchor name="hbCantBelow" x="352" y="0"/>
-	<anchor name="hbCantBelowRight" x="352" y="0"/>
 	<outline>
 		<contour>
 			<point x="352" y="-16" type="curve" smooth="yes"/>
@@ -50,6 +40,16 @@
 			<point x="424" y="128"/>
 		</contour>
 	</outline>
+	<anchor name="hbBottom" x="352" y="-32"/>
+	<anchor name="hbCenter" x="352" y="288"/>
+	<anchor name="hbHolam" x="16" y="576"/>
+	<anchor name="hbRafe" x="352" y="672"/>
+	<anchor name="hbMeteg" x="352" y="-32"/>
+	<anchor name="hbCantAbove" x="352" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="664" y="576"/>
+	<anchor name="hbCantBelow" x="352" y="-32"/>
+	<anchor name="hbCantBelowRight" x="352" y="-32"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>

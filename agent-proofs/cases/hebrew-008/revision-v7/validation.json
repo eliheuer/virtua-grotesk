@@ -1,0 +1,71 @@
+{
+  "fonts": {
+    "before": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/hebrew-008/working-v6/fonts/after-6468ef543758.ttf",
+      "sha256": "6468ef5437584bd558c401a4b9f4788ffdb54ef23d8f86c6639ffaf975e60356"
+    },
+    "working": {
+      "path": "/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "5c012703c8703e97cd38fc1b9a14ddfbfc48173c7fffe53619efdff5f87db094"
+    }
+  },
+  "source_scope": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/finaltsadi-hb.glif",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/shin-hb.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/shin-hb.glif"
+  ],
+  "colors_and_unicode_preserved": true,
+  "compiled_changes": {
+    "400": {
+      "outlines": [
+        "finaltsadihb",
+        "shinhb"
+      ],
+      "widths": []
+    },
+    "450": {
+      "outlines": [
+        "finaltsadihb",
+        "shinhb"
+      ],
+      "widths": []
+    },
+    "500": {
+      "outlines": [
+        "finaltsadihb",
+        "shinhb"
+      ],
+      "widths": []
+    },
+    "550": {
+      "outlines": [
+        "finaltsadihb",
+        "shinhb"
+      ],
+      "widths": []
+    },
+    "600": {
+      "outlines": [
+        "finaltsadihb",
+        "shinhb"
+      ],
+      "widths": []
+    },
+    "650": {
+      "outlines": [
+        "finaltsadihb",
+        "shinhb"
+      ],
+      "widths": []
+    },
+    "700": {
+      "outlines": [
+        "finaltsadihb",
+        "shinhb"
+      ],
+      "widths": []
+    }
+  },
+  "mark_pairs": 6076,
+  "collisions": []
+}

@@ -1,0 +1,90 @@
+{
+  "description": "HEB-007 v4: saved human Regular plus Bold transfer test. Before is v3; Regular is never edited by this adaptation.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-8bb06706638e.ttf",
+      "sha256": "8bb06706638e66c6db91e65dcd7e49a5c5148f74a488b49d75a5f6204fdbf344",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-f0557cb1ed4b.ttf",
+      "sha256": "f0557cb1ed4b8c9ba3f8fefa87a80af29c9ed552e777a5d6c81121a1bedd175d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 07 · Gimel",
+    "status": "Regular hand edit · Bold transfer test",
+    "note": "Before shows agent v3. At 400, Working shows Eli’s exact saved Regular. At 700, Working shows the Bold transfer test. Both active masters are compatible; Regular remains byte-unchanged. Human acceptance of Bold is pending.",
+    "glyphs": [
+      {
+        "key": "gimel",
+        "char": "ג",
+        "name": "Gimel"
+      }
+    ],
+    "presets": {
+      "group": [
+        "ג",
+        "Gimel"
+      ],
+      "words": [
+        "גג גל גן רגל דגל",
+        "Words"
+      ],
+      "marks": [
+        "גָ גֶ גִ גּ",
+        "Marks"
+      ],
+      "latin": [
+        "H ג n",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

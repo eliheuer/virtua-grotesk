@@ -1,0 +1,95 @@
+{
+  "description": "HEB-008 v6: Rubik-structure revision of Shin and Final Tsadi in both masters.",
+  "fonts": {
+    "after": {
+      "path": "working-v6/fonts/after-6468ef543758.ttf",
+      "sha256": "6468ef5437584bd558c401a4b9f4788ffdb54ef23d8f86c6639ffaf975e60356",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "working-v6/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "working-v6/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "working-v6/fonts/before-e38a34944099.ttf",
+      "sha256": "e38a34944099b0c9fc5df2057e2254981ac18822ed3385978a13f0a48c8c3777",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 08 · Revision 6",
+    "status": "Working drawings · review pending",
+    "note": "Shin: upright left stem and rounded lower bowl. Final Tsadi: continuous diagonal descender. Both masters updated; other drawings preserved. Before is the preceding working font.",
+    "glyphs": [
+      {
+        "key": "shin",
+        "char": "ש",
+        "name": "Shin"
+      },
+      {
+        "key": "finaltsadi",
+        "char": "ץ",
+        "name": "Final Tsadi"
+      }
+    ],
+    "presets": {
+      "group": [
+        "שץ",
+        "Shin and Final Tsadi"
+      ],
+      "words": [
+        "שמש שקט שירים עץ ארץ קיץ חוץ",
+        "Words"
+      ],
+      "marks": [
+        "שָׁ שִׂ שּ ץָ ץֶ",
+        "Marks"
+      ],
+      "latin": [
+        "H n ש ץ",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

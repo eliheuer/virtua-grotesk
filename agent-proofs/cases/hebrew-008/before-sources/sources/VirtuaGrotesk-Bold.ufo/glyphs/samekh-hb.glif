@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="samekh-hb" format="2">
+	<unicode hex="05E1"/>
+	<advance width="704"/>
+	<outline>
+		<contour>
+			<point x="352" y="-16" type="curve" smooth="yes"/>
+			<point x="544" y="-16"/>
+			<point x="664" y="104"/>
+			<point x="664" y="288" type="curve" smooth="yes"/>
+			<point x="664" y="472"/>
+			<point x="544" y="576"/>
+			<point x="352" y="576" type="curve" smooth="yes"/>
+			<point x="32" y="576" type="line"/>
+			<point x="16" y="560" type="line"/>
+			<point x="16" y="448" type="line"/>
+			<point x="32" y="432" type="line"/>
+			<point x="64" y="432" type="line"/>
+			<point x="72" y="424" type="line"/>
+			<point x="48" y="392"/>
+			<point x="40" y="344"/>
+			<point x="40" y="288" type="curve" smooth="yes"/>
+			<point x="40" y="104"/>
+			<point x="160" y="-16"/>
+		</contour>
+		<contour>
+			<point x="352" y="128" type="curve" smooth="yes"/>
+			<point x="280" y="128"/>
+			<point x="240" y="184"/>
+			<point x="240" y="288" type="curve" smooth="yes"/>
+			<point x="240" y="368"/>
+			<point x="256" y="408"/>
+			<point x="272" y="424" type="curve"/>
+			<point x="280" y="432" type="line"/>
+			<point x="352" y="432" type="line" smooth="yes"/>
+			<point x="424" y="432"/>
+			<point x="464" y="392"/>
+			<point x="464" y="288" type="curve" smooth="yes"/>
+			<point x="464" y="184"/>
+			<point x="424" y="128"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="352" y="0"/>
+	<anchor name="hbCenter" x="352" y="288"/>
+	<anchor name="hbHolam" x="16" y="576"/>
+	<anchor name="hbRafe" x="352" y="672"/>
+	<anchor name="hbMeteg" x="352" y="0"/>
+	<anchor name="hbCantAbove" x="352" y="576"/>
+	<anchor name="hbCantAboveLeft" x="16" y="576"/>
+	<anchor name="hbCantAboveRight" x="664" y="576"/>
+	<anchor name="hbCantBelow" x="352" y="0"/>
+	<anchor name="hbCantBelowRight" x="352" y="0"/>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>

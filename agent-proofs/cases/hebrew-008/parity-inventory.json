@@ -1,0 +1,2022 @@
+{
+  "reference": {
+    "path": "agent-proofs/cases/hebrew-008/working-v2/fonts/rubik-1b3a7437ba2a.ttf",
+    "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "codepoints": 76
+  },
+  "missing": [],
+  "source_records": [
+    {
+      "codepoint": "U+05B0",
+      "name": "HEBREW POINT SHEVA",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/sheva-hb.glif",
+          "sha256": "1d4947b0da0987920f93d7417be6d16884c7fec4a41b4f29922cc578876d650d",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/sheva-hb.glif",
+          "sha256": "5783a7c4ee0eed402178ca73f2070179eb89d09410eef91adbbdd16fdad52bc0",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B1",
+      "name": "HEBREW POINT HATAF SEGOL",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hatafsegol-hb.glif",
+          "sha256": "33da3266de541105c12f84168b7f786d623b668ac039996e90ed206256a01365",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 5,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hatafsegol-hb.glif",
+          "sha256": "61331c39da6df2643e7f4f925c7432e93c7268995cd193f3b283f438377fe6bd",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 5,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B2",
+      "name": "HEBREW POINT HATAF PATAH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hatafpatah-hb.glif",
+          "sha256": "b1ec0d7849f9069609aa04a8758c32ec03d70216f6a6878b64b21c6d50356653",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hatafpatah-hb.glif",
+          "sha256": "7c71632fe7d17ee028e60d243abca08a2ae548033c2218446d4a5e4aca0b396d",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B3",
+      "name": "HEBREW POINT HATAF QAMATS",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hatafqamats-hb.glif",
+          "sha256": "bda14463b1c044037d89b7fd568e5823e167c3861d5929f1a8199251af7d2f47",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hatafqamats-hb.glif",
+          "sha256": "3394812683f357353fa5cca602de6a136849a9b2fefcd897395cb276048c4c10",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B4",
+      "name": "HEBREW POINT HIRIQ",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hiriq-hb.glif",
+          "sha256": "a233e0f2bb1c7cd086134ad241820f711c04cfca50a99dde91b3b2a4e934b336",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hiriq-hb.glif",
+          "sha256": "b344aa30d18a58c366af59074c05e4d94a32d3db9d49caff8bca760b0bda5d22",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B5",
+      "name": "HEBREW POINT TSERE",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tsere-hb.glif",
+          "sha256": "f9993a537eb781598f609d2023af8d58a4e6ed886f2bf89b48bfd0c86b0d7a4e",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tsere-hb.glif",
+          "sha256": "473c25417f8092ef4ae58d288fc39e2a2680e9949ecfc76d9c2a0bd318ee7c19",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B6",
+      "name": "HEBREW POINT SEGOL",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/segol-hb.glif",
+          "sha256": "cfcf1fb4e0fc99d354c6c643397e2e3f4cb158428e7cf0484873a493f4439b9f",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/segol-hb.glif",
+          "sha256": "2f1ea7d18ff714444ffb84bc8d07a990b82bd76b11f25b070107d117e0c02144",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B7",
+      "name": "HEBREW POINT PATAH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/patah-hb.glif",
+          "sha256": "e2f4b67e5f5beeea60f941e4ee6f4185b3416a2009c6b5fb91bf7bdeaf789a0e",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/patah-hb.glif",
+          "sha256": "8787b6a75d4f9cd1be2d7fdb6781762566ef99a54c88e484429527fd75ca3f2d",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B8",
+      "name": "HEBREW POINT QAMATS",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qamats-hb.glif",
+          "sha256": "6953c2f8eeafdf58d5ded6ff9ae39b939272663fda343c29b258e7c31d6e0183",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qamats-hb.glif",
+          "sha256": "d805d1a5bb2b4746f98c037504bc14c17ad3cd12028e5686d2ffef0e4b8f2b9e",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05B9",
+      "name": "HEBREW POINT HOLAM",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/holam-hb.glif",
+          "sha256": "20127d1185651557d81bcfe34b34977ebce362549c9d4b0f1b256f19bebb3124",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/holam-hb.glif",
+          "sha256": "bcc21db0773f5991907a0418e4739c8d2539cd6d1fe47f26ed242813accec677",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05BA",
+      "name": "HEBREW POINT HOLAM HASER FOR VAV",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/holamhaser-hb.glif",
+          "sha256": "6699e84b8cca973faffce573077080ad8fee93b56975e782db33312b403e0c0d",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/holamhaser-hb.glif",
+          "sha256": "cb029732ab81126985e8ef7b5a1104ca64002b86674e692cf09415d2393afd90",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05BB",
+      "name": "HEBREW POINT QUBUTS",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qubuts-hb.glif",
+          "sha256": "da3709ddf6db018179c31d08332f310154808b6c26e775bebb02150268e2c0da",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qubuts-hb.glif",
+          "sha256": "0558b6f794e2ed0b171e9cb81a544aafe855a324de79ba7b649e9a7033280e89",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05BC",
+      "name": "HEBREW POINT DAGESH OR MAPIQ",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/dagesh-hb.glif",
+          "sha256": "965d35f35f7b7671ef2a16d14aa11ccefd3ba2664c32ccdac7756cde4a15b41b",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/dagesh-hb.glif",
+          "sha256": "afabcdeb0ff42059a2341715f71f3d24a368d837c17bf5186a6e848ad72de13a",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05BE",
+      "name": "HEBREW PUNCTUATION MAQAF",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/maqaf-hb.glif",
+          "sha256": "54bc046fb34e145be90c1c1857a42cc871c60787e630c9496311791e40f75f33",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/maqaf-hb.glif",
+          "sha256": "c37e86b08145249076099fa3a24982a3e82585f0b3cd7f7820c6fb6a52d0465b",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05C1",
+      "name": "HEBREW POINT SHIN DOT",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shindot-hb.glif",
+          "sha256": "c1d0cc0ce0a5f3b305c85d397a84c1199d1578d33e07b2eb5ba84c0665008348",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shindot-hb.glif",
+          "sha256": "4f5525494916d86bbfbc6ed2aaeab05072eec38109fe84fc3dfc1c31d5da31a4",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05C2",
+      "name": "HEBREW POINT SIN DOT",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/sindot-hb.glif",
+          "sha256": "5780bb943838c9ddf425f9808dfd5471e83e9994822e5e853f2d5cc2578b4923",
+          "label": "purple",
+          "color": "0.54,0.44,0.88,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/sindot-hb.glif",
+          "sha256": "bcec2209b22c3e00cf2963084ce0c78d8db45831fb3de8772a0b4930306446ad",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05C7",
+      "name": "HEBREW POINT QAMATS QATAN",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qamatsqatan-hb.glif",
+          "sha256": "64ee1d6e7dfa89aeb267c97082d03534151e8dd57aada7551d1c0cf23bd372a5",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qamatsqatan-hb.glif",
+          "sha256": "81435b40ff136fc20008e73f5917eaffb9b9edc4f05a158bb4eb84980201cf46",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D0",
+      "name": "HEBREW LETTER ALEF",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/alef-hb.glif",
+          "sha256": "1fd54decd2036b5c0a14d9873499d1a14a04969e0d088518eddc5e9a928a4a1b",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/alef-hb.glif",
+          "sha256": "874b371eb2832b49422d171c73806ab653b0d4181a747064cd11d8bc348ff85e",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D1",
+      "name": "HEBREW LETTER BET",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/bet-hb.glif",
+          "sha256": "2e34fedc467c8ac43521b168216954df1049d4f058713dfaead1a3ed349b6e9d",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/bet-hb.glif",
+          "sha256": "f11628d0c3fa9fafbb1affd64e443ddb431730dec2725c2dada5411a3b7fabd1",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D2",
+      "name": "HEBREW LETTER GIMEL",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/gimel-hb.glif",
+          "sha256": "045f988671a2a514b24f4cf36e7481c127d516250bca1d7b86e849fd73162197",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/gimel-hb.glif",
+          "sha256": "760e81703e9db2def34b1424f92090e8c16fd56153fbe9ce509ef9811d4f11ab",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D3",
+      "name": "HEBREW LETTER DALET",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/dalet-hb.glif",
+          "sha256": "821513ef9d6a1f17ce9b2f4f3f333f20078405152994457bb79c6d0f9efb0cfb",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/dalet-hb.glif",
+          "sha256": "f61ea55b3d800ab41116a78bf6bc5e13d6ef821b4bef6a706ef63ae3e6d9fe70",
+          "label": null,
+          "color": "1,0.29,0.24,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D4",
+      "name": "HEBREW LETTER HE",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/he-hb.glif",
+          "sha256": "6cbf406045cfc56d25bdfa46e53188cbaa5956e0e64e1199094ae2cac1d0aa00",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/he-hb.glif",
+          "sha256": "be370eec2e02b04f7a9346f150e070c4f8d3bf5c2873d84471002c859665c5d9",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D5",
+      "name": "HEBREW LETTER VAV",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/vav-hb.glif",
+          "sha256": "84c21cae5d9fc4ef6b3924f3656fa4c5b3fa1737ff1be2e4d5a10df57be10574",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/vav-hb.glif",
+          "sha256": "0b5132377542c7f00173da46e7514497d4d0eeb1331a62f3556bec3e12779fdf",
+          "label": null,
+          "color": "1,0.29,0.24,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D6",
+      "name": "HEBREW LETTER ZAYIN",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif",
+          "sha256": "f1a1659624a317814e4ce80eb2b211d4a80e0ec2e12ada3b482bd0cdfc8f1171",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif",
+          "sha256": "aae09cc12e03fff790b9f835e2dd5d7aef15b295b74858ac9adfa05267667342",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D7",
+      "name": "HEBREW LETTER HET",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/het-hb.glif",
+          "sha256": "2bffa91bd312d2d8001b2d0a3153a8d0e8da116086c84d02dc85f85d79cd8d09",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/het-hb.glif",
+          "sha256": "98954b76a96b5fa93bb3f2537067559fdc62ab3374028c52a385178c02ef1657",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D8",
+      "name": "HEBREW LETTER TET",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tet-hb.glif",
+          "sha256": "05df0cddd15b50c481b9fb03839b73c67c8d7607c55e5fd7c335f0b8970fc03d",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tet-hb.glif",
+          "sha256": "930f053a0fb98ff2afd77ff9acff930904530e73582fffef190df8209e9dcb79",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05D9",
+      "name": "HEBREW LETTER YOD",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/yod-hb.glif",
+          "sha256": "1e90449bb9fda3543b182fddcaddd422bc9c18a7d98978a6e587158982c1e432",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/yod-hb.glif",
+          "sha256": "915a58c9c79d5b7d07a12958deac074ba429545a4f35dcfb61a065461fc722e7",
+          "label": null,
+          "color": "1,0.29,0.24,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05DA",
+      "name": "HEBREW LETTER FINAL KAF",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkaf-hb.glif",
+          "sha256": "bd96f49cc7a0ac1c704b09d3c936f409f424112b9a70e5f24a6f297cd9be8518",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkaf-hb.glif",
+          "sha256": "9787752c15a3f7d4eb17e70c3891976e3678b862c6dae2b6b31ffa4f1b4b47d2",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05DB",
+      "name": "HEBREW LETTER KAF",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-hb.glif",
+          "sha256": "d9b6ad6a2504ada75e37fe6ae8dd520b898e75d594e14a006ee02de6c10cb1d5",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-hb.glif",
+          "sha256": "9694b589565f05bd6bf0368402e3bec6d46c67bb0fb519703b2ecbf3972d4049",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05DC",
+      "name": "HEBREW LETTER LAMED",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/lamed-hb.glif",
+          "sha256": "e7fbc5bef8fb43e8682edaacb4982467998f69f68d399bde51595676ec1ae208",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/lamed-hb.glif",
+          "sha256": "a49340efa7ac39074f32ee35516e1faeada67b22b95c0cf7d75d51bf8c719046",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05DD",
+      "name": "HEBREW LETTER FINAL MEM",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalmem-hb.glif",
+          "sha256": "2792f98e3d660eefe6d4ad02a02cbd8f347cafb2b4bc2f795ed19e0c5f269e96",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalmem-hb.glif",
+          "sha256": "4daab79068a1e64f421f9abcafb5ec0449d98373275e87650a23d0e4f4952c73",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05DE",
+      "name": "HEBREW LETTER MEM",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/mem-hb.glif",
+          "sha256": "8c9e63ef1703dc464c211e283082ccae7ecdca7d517a1e98128d08363038b087",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/mem-hb.glif",
+          "sha256": "69267880f6986d44b5cdb49115c427f23a5d6e026ca37d120b54905fe9962f8a",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05DF",
+      "name": "HEBREW LETTER FINAL NUN",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalnun-hb.glif",
+          "sha256": "350355417847e2593fa416f23a04af8049944cd386350bcbb422201d94bd01d0",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalnun-hb.glif",
+          "sha256": "9639ce747d4985627b12185d6439d2ffacf35bcbb0554e92e5864f6137f115af",
+          "label": null,
+          "color": "1,0.29,0.24,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E0",
+      "name": "HEBREW LETTER NUN",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/nun-hb.glif",
+          "sha256": "dd63ec08e3b7011ddc5d87a96e0859ff0475112dbb40ed142463e993ae9db07b",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/nun-hb.glif",
+          "sha256": "e8ff41aa417c226fe8972621674efc459cfbf0019faa6aa3d9299a384be94a8f",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E1",
+      "name": "HEBREW LETTER SAMEKH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/samekh-hb.glif",
+          "sha256": "63ddf50b7aae6b45be9f3f281362a26b0404c6d1125b267c317f73d79d5d0179",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/samekh-hb.glif",
+          "sha256": "1a3d9a3666911071522bc318aa6bd6dfec6b4900323fa1b6a17ca0e26b76bd81",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E2",
+      "name": "HEBREW LETTER AYIN",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/ayin-hb.glif",
+          "sha256": "1ed09f1fadc1788f0426f0b3ba2f456070cf2b5f09700cb19dfbc9fe0a04aebf",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/ayin-hb.glif",
+          "sha256": "7ac8e5c90a7016db130566e1c579924caa6b46e4c0303a478838e65e646c1090",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E3",
+      "name": "HEBREW LETTER FINAL PE",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalpe-hb.glif",
+          "sha256": "1ed8f841a6bb2ee1b18da84c2a5d37f75f2140621c8acac828a8d2fa27079653",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalpe-hb.glif",
+          "sha256": "5045072301868b4e74ece540d87690bf1a5d8ad4de1c628c0f3e7260a745eb6a",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E4",
+      "name": "HEBREW LETTER PE",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/pe-hb.glif",
+          "sha256": "bfc999ef99dc23714fbe2b1f2b3673134cdc8de916abe3ea5b55011446556949",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/pe-hb.glif",
+          "sha256": "49cb2d13d59d83802e6bef9b78a1ac2678929a254de9b2776eaf6233b7c3c59e",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E5",
+      "name": "HEBREW LETTER FINAL TSADI",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finaltsadi-hb.glif",
+          "sha256": "e487477f95434b14b46516de23c9d2acf423bba8a7fe3ba8585af501c7e51803",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finaltsadi-hb.glif",
+          "sha256": "02201fe47519aebe369dab25cd842a9b3a9942a77602277280d8181c3209572d",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E6",
+      "name": "HEBREW LETTER TSADI",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tsadi-hb.glif",
+          "sha256": "4b183545b1db83181bb73966a8e207a86eefb47a664c543ec9c4b735e8146dde",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tsadi-hb.glif",
+          "sha256": "63d26d9118b57d3b63f0e10136e88bdd0172bbab66787b50159e6e3580a6e3ba",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E7",
+      "name": "HEBREW LETTER QOF",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qof-hb.glif",
+          "sha256": "821ae0011f644136c284b8c18f2ac4211525287d7f5f8bd9eca06580925f468e",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qof-hb.glif",
+          "sha256": "111599516896c20a084fa2e8d111d8a26fac45e8a8a0de2d88b99950adeb4c56",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E8",
+      "name": "HEBREW LETTER RESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/resh-hb.glif",
+          "sha256": "088625a67a9ec37493101191b4eb89bcb77c455cb53e806f62ad1f40ed349b87",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/resh-hb.glif",
+          "sha256": "c0ad4cf030a555d85580a47e951603164dfb7d614e831343c9c5dc03ea89d24e",
+          "label": null,
+          "color": "1,0.29,0.24,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05E9",
+      "name": "HEBREW LETTER SHIN",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shin-hb.glif",
+          "sha256": "bde27f5a2ef5c0117eafa0ea332e6d61e2b436f728f0605c997509c03fe74fdb",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shin-hb.glif",
+          "sha256": "8818c194f20d67320fef7bb9c381a855861bf9af114e539bbe38bc8d532cd492",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05EA",
+      "name": "HEBREW LETTER TAV",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tav-hb.glif",
+          "sha256": "b02c231a44a3273176224b248fabe4b2b6c06fa98a11578d06e56eb0ef513111",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tav-hb.glif",
+          "sha256": "7b492b0c49a67920f9aaac1cb7b3acb8ea24ee981fc74adf93f9136100f46212",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05F2",
+      "name": "HEBREW LIGATURE YIDDISH DOUBLE YOD",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/yodyod-hb.glif",
+          "sha256": "4b2b596acce60fae61db44fc22abd3086029501a1db313abd761b4501ae1f06a",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 0,
+          "components": [
+            "yod-hb",
+            "yod-hb"
+          ]
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/yodyod-hb.glif",
+          "sha256": "3df38f8d3fe5b869170bf3189f0a23e7727ae1402d57ca66c5d227068616e58f",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 0,
+          "components": [
+            "yod-hb",
+            "yod-hb"
+          ]
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05F3",
+      "name": "HEBREW PUNCTUATION GERESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/geresh-hb.glif",
+          "sha256": "4375a57c6dcf8cd787a9c7d806e6167087d0c856f2421532e20a1206305b2d12",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 1,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/geresh-hb.glif",
+          "sha256": "60c36c734f08a28384afbea37fac750233a99bbd48d2b8cfaa50658cf2aedabf",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 1,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+05F4",
+      "name": "HEBREW PUNCTUATION GERSHAYIM",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/gershayim-hb.glif",
+          "sha256": "29a3e5e76254619936e1868e5e241392ef49fbf2d0ecf475b3c72bfc93c7857d",
+          "label": "orange",
+          "color": "1,0.5,0,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/gershayim-hb.glif",
+          "sha256": "9a179aa41bc9f91b470316f24ae50c8aad27db3bda411e4d789d15523660ed7c",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": false,
+      "canonical_decomposition": []
+    },
+    {
+      "codepoint": "U+FB2A",
+      "name": "HEBREW LETTER SHIN WITH SHIN DOT",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shinshindot-hb.glif",
+          "sha256": "4f11158b2215b22edff3215d8340dc96d84331b0bd64d39f17134a8475ad351f",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shinshindot-hb.glif",
+          "sha256": "2f28e993121395c92280f2a6c02fa876a6c0f9eec585586ff4e7cc20913afab2",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E9",
+        "U+05C1"
+      ]
+    },
+    {
+      "codepoint": "U+FB2B",
+      "name": "HEBREW LETTER SHIN WITH SIN DOT",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shinsindot-hb.glif",
+          "sha256": "cda67c12a5d563b71c0d10661edbd37ed60b7a74fcb370ce4c29b4cb1703a2b2",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shinsindot-hb.glif",
+          "sha256": "b648502559a3cfa395318d08aec2ad24c21d9d2411a55e3f92da1335fb47d42b",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E9",
+        "U+05C2"
+      ]
+    },
+    {
+      "codepoint": "U+FB2C",
+      "name": "HEBREW LETTER SHIN WITH DAGESH AND SHIN DOT",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shindageshshindot-hb.glif",
+          "sha256": "1c2229451908e98b840b1a08f9a05d1c0cb381a5a4674d525b805a6de4ba1eeb",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shindageshshindot-hb.glif",
+          "sha256": "785fd4c5c164d1789afd7813e13be11df078c02c36260b2b0ba775f4c51ffd33",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E9",
+        "U+05BC",
+        "U+05C1"
+      ]
+    },
+    {
+      "codepoint": "U+FB2D",
+      "name": "HEBREW LETTER SHIN WITH DAGESH AND SIN DOT",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shindageshsindot-hb.glif",
+          "sha256": "07cf9493f054d06e517693a8fe783b0f3b9c2dc24a51c0de64d541aa2640c915",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shindageshsindot-hb.glif",
+          "sha256": "7cfbbbd503e11148498b71f342551a9470ff79d5d59df801a4a6c36102093294",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E9",
+        "U+05BC",
+        "U+05C2"
+      ]
+    },
+    {
+      "codepoint": "U+FB2E",
+      "name": "HEBREW LETTER ALEF WITH PATAH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/alefpatah-hb.glif",
+          "sha256": "a2be1fa28977f00575ae8d1a132da7021527e8735db1bc11f0aad72cdfb26998",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/alefpatah-hb.glif",
+          "sha256": "231cd9194a9ac0a21bc24dc1baeb98b2c84e685e594fb1374a9e83e92879b793",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D0",
+        "U+05B7"
+      ]
+    },
+    {
+      "codepoint": "U+FB2F",
+      "name": "HEBREW LETTER ALEF WITH QAMATS",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/alefqamats-hb.glif",
+          "sha256": "33e04175d4116cfa5156919f8f76af9aec1219021702afd2c3d034283e71131e",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/alefqamats-hb.glif",
+          "sha256": "d33c7dfd839c38b99f6f3965f0ae663a47f1a59b51b8a7325ce9d7ba48c9fde7",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D0",
+        "U+05B8"
+      ]
+    },
+    {
+      "codepoint": "U+FB30",
+      "name": "HEBREW LETTER ALEF WITH MAPIQ",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/alefdagesh-hb.glif",
+          "sha256": "d7bd34bd4904739337bf82d4fc9c93a5a8baeeed4d449d493eb55e98e8077b16",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/alefdagesh-hb.glif",
+          "sha256": "0f2071494d05b511a69d804b01b726887b70881fa96c8820a24fff90d0d89cb8",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D0",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB31",
+      "name": "HEBREW LETTER BET WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/betdagesh-hb.glif",
+          "sha256": "2193ebd098d434b2c43d621e3f13ee25a5d8f0b61d12619b7145c17e8a12a204",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/betdagesh-hb.glif",
+          "sha256": "4eda4e05bd446115b23de45893c4b9c34fcb4bbdb242262ed63f6f3e6819fcea",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D1",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB32",
+      "name": "HEBREW LETTER GIMEL WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/gimeldagesh-hb.glif",
+          "sha256": "3833986e3f46c8776438c7ab7cfabfaf8ec12982c6641abe9e7805e36e15a8c8",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/gimeldagesh-hb.glif",
+          "sha256": "82f53d62ec6c1139e8761e30f2804beb50b68a5047b521f4ec6cffcc22738d1b",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D2",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB33",
+      "name": "HEBREW LETTER DALET WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/daletdagesh-hb.glif",
+          "sha256": "a493b793bfa150fadce104b335c83d141f327fca43d5361557e0037e834b5a2c",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/daletdagesh-hb.glif",
+          "sha256": "78a27985ff28f2fe73413f8180f4c06470faeebb6eafdf296bc16673eb2634f9",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D3",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB34",
+      "name": "HEBREW LETTER HE WITH MAPIQ",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hedagesh-hb.glif",
+          "sha256": "62f57ad592ae0673af5b68ced24301f0ba0290d425c7ebfd63a1e22d73092347",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hedagesh-hb.glif",
+          "sha256": "fc9bbf0d5b434af439166a5ccdef8299910c506a5db7432e6d031f90112b9a56",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D4",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB35",
+      "name": "HEBREW LETTER VAV WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/vavdagesh-hb.glif",
+          "sha256": "f18f31f61430d2616a247dc44093d5dd6447ce16aa7c8c3ce44c707f1a6bd2d0",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/vavdagesh-hb.glif",
+          "sha256": "ce7bcc127f1d84b3f839abe85be502cd4f196f6fdb8480e60af6b399a2a2f618",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D5",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB36",
+      "name": "HEBREW LETTER ZAYIN WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/zayindagesh-hb.glif",
+          "sha256": "4cf3e44fd57c0f6ca72434b2c4491113a5bf1485b2581de11d87ddfae288729e",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayindagesh-hb.glif",
+          "sha256": "bc288f18c53586ab19be7d08f40f0f6ab2b7ea79f50c407f95b93be6befeb35f",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D6",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB38",
+      "name": "HEBREW LETTER TET WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tetdagesh-hb.glif",
+          "sha256": "679de8271c8a7398cbdd809153ab5977945c984041cbfa1780109004fc0cd1e4",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tetdagesh-hb.glif",
+          "sha256": "8bfce7fececa7e6f79d8d14aedc3185f82d1958e9bd751c7fe12628324fe78f1",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D8",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB39",
+      "name": "HEBREW LETTER YOD WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/yoddagesh-hb.glif",
+          "sha256": "388bc946ff164c6a58b8818cbe3b4d478decde934625e08de2f9ab2a5587542a",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/yoddagesh-hb.glif",
+          "sha256": "2fc2136c8818ca6f855910591a171a60227a9d24d34b40de9709ad6bb646a976",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D9",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB3A",
+      "name": "HEBREW LETTER FINAL KAF WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalkafdagesh-hb.glif",
+          "sha256": "48dbd95b3aa44a3c020c85fba46b08bc8242b748175ad996f8c8a447858b848e",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalkafdagesh-hb.glif",
+          "sha256": "bf4f36d0bb2f237de47fb24d84d3821c72da40e731b0414295f683f133d14c8a",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05DA",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB3B",
+      "name": "HEBREW LETTER KAF WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/kafdagesh-hb.glif",
+          "sha256": "c1121b7544d5fa0b42fba2a9150fb46bd2fd6ba1a5ed5ed3c4f004a1738dae26",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/kafdagesh-hb.glif",
+          "sha256": "a0c857b26ef6caa756e22466fed1e8abb671d77f78dbff1403bddfedd9b43ace",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05DB",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB3C",
+      "name": "HEBREW LETTER LAMED WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/lameddagesh-hb.glif",
+          "sha256": "7592ee041b1246faa40cacff8fffb35de2cc6d84069349d094319ded8b0dcb38",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/lameddagesh-hb.glif",
+          "sha256": "eba6a7c2583413b1caa8472c23e80251698e560f35df761aa4bfbdb2944f7121",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05DC",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB3E",
+      "name": "HEBREW LETTER MEM WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/memdagesh-hb.glif",
+          "sha256": "71a828c9dbf5ca369e0f0bb1181cdb20d0c4ba61a835512ac4d850ee6f4bd203",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/memdagesh-hb.glif",
+          "sha256": "33410068d5242e41ab9003c68d496998e1ea9f2b19ba94d254646c03e798be28",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05DE",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB40",
+      "name": "HEBREW LETTER NUN WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/nundagesh-hb.glif",
+          "sha256": "f094e53aadf33c9e400fc390fcde219bd9d3bb5c7123c61fc5ce6dfd067a207e",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/nundagesh-hb.glif",
+          "sha256": "c5ef53e01dec48b9591fef9016a8129b97eb1d7e65ba8b301c217557e015723a",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E0",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB41",
+      "name": "HEBREW LETTER SAMEKH WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/samekhdagesh-hb.glif",
+          "sha256": "bfa13904199e26900f74cb7e063ba2697a94897e297f8d7774d01a86d761959b",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/samekhdagesh-hb.glif",
+          "sha256": "20984d507d97bcf8b655c1079c180bef7ee484a31a1a399182d8d9e87f7c6ecb",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E1",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB43",
+      "name": "HEBREW LETTER FINAL PE WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/finalpedagesh-hb.glif",
+          "sha256": "a997881ce0bbe67aa3c90b2c04e12c6e147647ee5abd38e1509bf6528f77c29d",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/finalpedagesh-hb.glif",
+          "sha256": "f959292ac4784b6eb671158ba6c62cff849e61162fa515b1aafd017fed66b4fb",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E3",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB44",
+      "name": "HEBREW LETTER PE WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/pedagesh-hb.glif",
+          "sha256": "a6d310478a00953949ab42444efc2f016ee942857b2bba997ab4ad701d830d38",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/pedagesh-hb.glif",
+          "sha256": "cbcb277ddf83ee69aee45685a7830e3d19fe87e8d6eb575f9054d0960c628c36",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E4",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB46",
+      "name": "HEBREW LETTER TSADI WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tsadidagesh-hb.glif",
+          "sha256": "a10593d6abf9ce46d0d97bb660fd9fef58e801d6f1ea782dcb886c01bf6eb494",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tsadidagesh-hb.glif",
+          "sha256": "ad49d7f19bbaa672a1b45921d77f69eafe818a8233665ba2787a0e4fcc31fa2e",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E6",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB47",
+      "name": "HEBREW LETTER QOF WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qofdagesh-hb.glif",
+          "sha256": "bcf2016458048eed5c5ced4acad11eef2773ae53d3df08e23dd4e3da07330da2",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 3,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qofdagesh-hb.glif",
+          "sha256": "1b303fd6492f32feb63c4b5b5fdde8a5546660d18610bb17a4738fed74003fba",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 3,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E7",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB48",
+      "name": "HEBREW LETTER RESH WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/reshdagesh-hb.glif",
+          "sha256": "1ac77e0d351bd7557bfe3a9fd7cca5674a3997a765b57fccd61d4dc679b89fef",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/reshdagesh-hb.glif",
+          "sha256": "ebb652908b61268d73d4adf1edf8b7a3b38c183b4c6d25c5663a2ceab5ce634d",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E8",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB49",
+      "name": "HEBREW LETTER SHIN WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shindagesh-hb.glif",
+          "sha256": "9ea6a44bf7d485b2840ad6ab417233545b095e87a56ed62a2a904e63438d6110",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shindagesh-hb.glif",
+          "sha256": "724181df72d10c6e3e90a12c28ad9601cb0ae59d5dc3a0e190241e1647da50b7",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05E9",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB4A",
+      "name": "HEBREW LETTER TAV WITH DAGESH",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tavdagesh-hb.glif",
+          "sha256": "c7759c504005dee4c642495b855df1a4d9d51c8f2865214a0b2203bd304f5ed3",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tavdagesh-hb.glif",
+          "sha256": "3d52fad6cf53688afe140a99e4cb79ec11a54f6ec7cf1b4f20eab05c4fd28096",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05EA",
+        "U+05BC"
+      ]
+    },
+    {
+      "codepoint": "U+FB4B",
+      "name": "HEBREW LETTER VAV WITH HOLAM",
+      "covered": true,
+      "sources": {
+        "Regular": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/vavholam-hb.glif",
+          "sha256": "ebf2b9ea1c97fae1613c38ee7207c2204e68da023ae88f15abef60ea512bc53b",
+          "label": "purple",
+          "color": "0.5,0,1,1",
+          "contours": 2,
+          "components": []
+        },
+        "Bold": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/vavholam-hb.glif",
+          "sha256": "f6d690db220f5105f1b174f604daf9a5e2d31bd9d6b789e839ed98530662e074",
+          "label": null,
+          "color": "0.27,0.44,1,1",
+          "contours": 2,
+          "components": []
+        }
+      },
+      "same_master_outline": true,
+      "canonical_decomposition": [
+        "U+05D5",
+        "U+05B9"
+      ]
+    }
+  ],
+  "reference_and_manual_hashes": {
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/H_.glif": "bcf627603388d23921e31e52e6508746f489817b07ef39843b2d6e8bc14acdbb",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/n.glif": "a58c9477dc6b6c2470dabd5909e7ab4fd3cdf742b0b82ed490673ae2b3d4da78",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/o.glif": "8d0efd02fb6c9e375ef812f712ae1a71d637ce03ceb2a61bf2734a46d94f150f",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/O_.glif": "cbd16beb443e04573c05c6a0e23a7cb01db2660aeb2238d3892b972fabb59f61",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/gimel-hb.glif": "045f988671a2a514b24f4cf36e7481c127d516250bca1d7b86e849fd73162197",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif": "f1a1659624a317814e4ce80eb2b211d4a80e0ec2e12ada3b482bd0cdfc8f1171",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/yod-hb.glif": "1e90449bb9fda3543b182fddcaddd422bc9c18a7d98978a6e587158982c1e432",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/H_.glif": "cbd23af7102b0c6ba6443e7c9c9d7e5c0b3af26abed0ae6a0446d033f30b0fe8",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/n.glif": "9981b7d6cc0d1446f74c26378eca34a55f0a0761ba2b7f526e8464c233468f28",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/o.glif": "d13fc73af40d3735bf3f35846117d20f695c5a7057270cec9edac11247f71b19",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/O_.glif": "ce865ae7339c2889d3874f5cc8ee685862cc3a0a176f92ed80004d56e3291bcb",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/gimel-hb.glif": "760e81703e9db2def34b1424f92090e8c16fd56153fbe9ce509ef9811d4f11ab",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif": "aae09cc12e03fff790b9f835e2dd5d7aef15b295b74858ac9adfa05267667342",
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/yod-hb.glif": "915a58c9c79d5b7d07a12958deac074ba429545a4f35dcfb61a065461fc722e7"
+  },
+  "protected_work": "Purple Hebrew marks/presentation forms and uncolored Bold equivalents remain untouched; explicit exception requested and pending."
+}

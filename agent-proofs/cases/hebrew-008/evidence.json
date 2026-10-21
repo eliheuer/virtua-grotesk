@@ -1,0 +1,115 @@
+{
+  "description": "HEB-008: remaining six Hebrew base letters, compatible Regular and Bold working drawings.",
+  "fonts": {
+    "after": {
+      "path": "working-v2/fonts/after-f6611a9db826.ttf",
+      "sha256": "f6611a9db8266c7f43562dc4a947f965cd5bff7ac00b3397d7b4d2dc880681aa",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "working-v2/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "working-v2/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "working-v2/fonts/before-8bb06706638e.ttf",
+      "sha256": "8bb06706638e66c6db91e65dcd7e49a5c5148f74a488b49d75a5f6204fdbf344",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 08",
+    "status": "Working drawings · review pending",
+    "note": "Tet, Ayin, Alef, Tsadi, Final Tsadi and Shin in both active masters. All 27 base letters now have a weight-development pass. Marks and presentation forms remain under review; this is not a release-ready claim.",
+    "glyphs": [
+      {
+        "key": "tet",
+        "char": "ט",
+        "name": "Tet"
+      },
+      {
+        "key": "ayin",
+        "char": "ע",
+        "name": "Ayin"
+      },
+      {
+        "key": "alef",
+        "char": "א",
+        "name": "Alef"
+      },
+      {
+        "key": "tsadi",
+        "char": "צ",
+        "name": "Tsadi"
+      },
+      {
+        "key": "finaltsadi",
+        "char": "ץ",
+        "name": "Final Tsadi"
+      },
+      {
+        "key": "shin",
+        "char": "ש",
+        "name": "Shin"
+      }
+    ],
+    "presets": {
+      "group": [
+        "טעאצץש",
+        "Six letters"
+      ],
+      "words": [
+        "איש עץ שקט טעם ארץ שמש",
+        "Words"
+      ],
+      "marks": [
+        "טַ עָ אִ צֵ ץָ שָׁ שִׂ",
+        "Marks"
+      ],
+      "latin": [
+        "H n ט ע א צ ץ ש",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

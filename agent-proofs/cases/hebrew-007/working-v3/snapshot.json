@@ -1,0 +1,90 @@
+{
+  "description": "HEB-007 v3: left-sweeping Gimel foot in both active masters, versus committed v2.",
+  "fonts": {
+    "after": {
+      "path": "fonts/after-f0557cb1ed4b.ttf",
+      "sha256": "f0557cb1ed4b8c9ba3f8fefa87a80af29c9ed552e777a5d6c81121a1bedd175d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "fonts/before-93c5958477bf.ttf",
+      "sha256": "93c5958477bf4aef0baa5c11c775295d2ea43c486c0b23433b927b31cd917369",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 07 · Gimel",
+    "status": "Foot direction trial · Applied to sources",
+    "note": "Before is the previous downward-leg Gimel. Working uses a left-sweeping foot in Regular and Bold, following the requested Rubik/Noto direction. Head, main stem, width and anchors are unchanged.",
+    "glyphs": [
+      {
+        "key": "gimel",
+        "char": "ג",
+        "name": "Gimel"
+      }
+    ],
+    "presets": {
+      "group": [
+        "ג",
+        "Gimel"
+      ],
+      "words": [
+        "גג גל גן רגל דגל",
+        "Words"
+      ],
+      "marks": [
+        "גָ גֶ גִ גּ",
+        "Marks"
+      ],
+      "latin": [
+        "H ג n",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

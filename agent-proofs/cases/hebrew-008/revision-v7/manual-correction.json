@@ -1,0 +1,115 @@
+{
+  "human_sha256": "fe47da63758724e06d310d830e1799cffd2dd546d45bddea423dbaebbff69751",
+  "old_points": 20,
+  "human_points": 25,
+  "width": 560,
+  "outer_turn": {
+    "start": [
+      328,
+      240
+    ],
+    "end": [
+      528,
+      448
+    ],
+    "handles": [
+      [
+        456,
+        240
+      ],
+      [
+        528,
+        320
+      ]
+    ],
+    "extent": [
+      200,
+      208
+    ],
+    "handle_lengths": [
+      128,
+      128
+    ]
+  },
+  "inner_turn": {
+    "start": [
+      432,
+      448
+    ],
+    "end": [
+      328,
+      336
+    ],
+    "handles": [
+      [
+        432,
+        384
+      ],
+      [
+        392,
+        336
+      ]
+    ],
+    "extent": [
+      104,
+      112
+    ],
+    "handle_lengths": [
+      64,
+      64
+    ]
+  },
+  "inner_landing": [
+    [
+      328,
+      336
+    ],
+    [
+      256,
+      336
+    ]
+  ],
+  "lower_join": [
+    [
+      312,
+      232
+    ],
+    [
+      320,
+      240
+    ],
+    [
+      328,
+      240
+    ]
+  ],
+  "terminal_landings": [
+    [
+      [
+        504,
+        -176
+      ],
+      [
+        504,
+        -160
+      ]
+    ],
+    [
+      [
+        40,
+        560
+      ],
+      [
+        40,
+        544
+      ]
+    ]
+  ],
+  "unchanged": [
+    "advance",
+    "anchors",
+    "Unicode",
+    "review color"
+  ],
+  "interpretation": "Separate turns, tangent landings, junction cuts and terminal landings. Shared turn endpoint x and equal handle pairs are measured local construction, not a universal radius or proof of exact circularity."
+}

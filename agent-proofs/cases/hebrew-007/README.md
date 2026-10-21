@@ -71,3 +71,98 @@ Review focus: Gimel's foot/main-stroke balance, Lamed's return weight, Qof's
 clearance and counter, then marks and spacing in words. Protected standalone
 marked forms are unchanged and do not necessarily inherit these new bases.
 Next drawing group: Tet and Ayin; then Alef, Tsadi, Final Tsadi and Shin.
+
+## Gimel foot-direction trial — v3, 2026-10-20
+
+Eli requested trying a foot that sweeps the other way, as in Rubik and Noto,
+before making manual edits. V3 replaces the separate downward left leg with a
+continuous leftward sweep and a chamfered vertical terminal in both masters.
+The first 15 points (head and main-stem approach), advances, anchors and colors
+are unchanged; Lamed, Qof and both manual Zayins remain unchanged. Both Gimels
+have matching 26-point topology. This is a requested trial, not final acceptance.
+
+`gimel-sweep.py` reproduces the scoped change from frozen v2, refuses a changed
+source baseline and is dry-run unless `--write` is passed. Exact new GLIFs and
+hashes are in `working-v3-sources/` and `application-v3.json`. The current browser
+proof is `working-v3/`, with v2 as Before, v3 as Working, plus Rubik and Noto.
+Large Regular and Bold screenshots were inspected and saved there. The v2 proof
+remains intact. `evidence-v3.json` and the proof's `snapshot.json` use portable
+paths to the frozen binaries.
+
+Root preflight, 8-grid check, curve lint in both masters and compiled Hebrew
+checks pass. See `preflight-v3.log`, `grid-v3.json`, `hebrew-qa-v3.json`.
+The prior `draw.py` describes v2; use the scoped v3 script for this foot trial.
+
+## Manual correction 01 — Regular Gimel, 2026-10-20
+
+Eli redrew Regular after the v3 foot-direction trial and requested a Bold
+transfer test. `hand-edit-01-Regular-gimel.glif` preserves the latest saved
+30-point outline exactly (including a further save that added the outer stem's
+short vertical landing). The contour start moved; comparing raw point indices
+without aligning contour order would misidentify the changes.
+
+### Measured changes, not inferred intent
+
+| Feature | Agent v3 Regular | Eli's saved Regular |
+| --- | --- | --- |
+| Stem → upper foot | (208,256) departs toward (176,192), unmarked corner | Departs toward (224,194), marked smooth |
+| Tangent turn at that join | 40.601 degrees | 0.434 degrees (near-tangent optical correction) |
+| Upper foot arrival | Curve arrives directly at chamfer start (32,96) | Curve ends at (64,96), with horizontal handle (160,96), then a 32-unit flat to (32,96) |
+| Lower foot departure | Curve leaves chamfer end (32,0) directly | 32-unit flat to (64,0), horizontal handle (152,0) |
+| Lower curve / inner leg | Curve ends at (240,128), then straight into leg | Handle (210,44) → (232,128), then 8-unit flat to (240,128) |
+| Outer stem / baseline cut | Diagonal runs straight to (368,16) | Added (368,32), then 16-unit vertical run to (368,16) |
+
+The 16-unit terminal chamfers, head, advance 392 and anchors remain intact.
+The user retains optical 2-grid coordinates (210,44) and (224,194); do not snap
+these to the machine grid. Exact hashes and all curve-join angles are recorded
+in `hand-edit-01-comparison.json`. Short flats isolate curves from chamfers; the
+upper join now continues the stem before turning left. Eli explicitly confirmed that the 8-unit inner shelf is deliberate and must
+remain. Preserve it in this Gimel construction; this does not establish a
+family-wide shelf rule or approve the rest of the Bold transfer.
+
+### Bold transfer test — v4
+
+Only active Bold was edited. Regular is byte-identical to the saved correction.
+Bold follows Regular's 30-point order, segment types and smooth flags.
+It retains the pre-test Bold head, advance 488, anchors and color, and carries:
+
+- 32-unit horizontal landings at the terminal top and bottom, at x=32…64;
+- foot-top y=168 (chosen to match existing Bold horizontal bars; v3 was 192);
+- upper sweep (184,280) → handles (200,216), (152,168) → (64,168), with
+  exact tangent continuation from the preceding 1:4 stem slope;
+- lower sweep (64,0) → handles (160,0), (224,56) → (248,144), then an
+  8-unit flat to (256,144);
+- the new vertical landing at x=464, y=32…16 before the baseline chamfer.
+
+These are provisional transfer choices, not a claim that the lesson has already
+been learned successfully. Eli's verdict or next correction will test them.
+`adapt-bold-v4.py` is dry-run-first and guards both live sources against changes;
+`application-v4.json` and `working-v4-sources/` record the installed result.
+
+### Why the previous check missed it; process change
+
+The default `curve_lint.py` CLI checks crest centering and curve-to-curve tension.
+It did not invoke its existing geometric continuity routines. Even those routines
+treat unmarked points as intended corners. Therefore an "all clean" result did
+not validate the line-to-curve construction I presented as checked.
+
+New optional `--joins` output reports tangent angles at every line/curve and
+curve/curve join, including unmarked corners, and flags marked-smooth kinks.
+Unmarked corners are review evidence, never automatic failures or permission to
+round them. A historical regression check confirms the old unmarked 40.6-degree
+join is now visible in the audit; the saved near-tangent edit is under 0.5 degrees.
+The intentional shelf corners remain visible instead of being smoothed away.
+
+Checks: root preflight passed; global master compatibility has zero blockers;
+compiled Hebrew checks report zero failures. All Bold draft points/anchors are
+on 8; Regular's intentional 2-grid edits are preserved. New join audits are in
+`join-audit-regular-v4.txt` and `join-audit-bold-v4.txt`. Browser screenshots at
+400/550/700 are in `working-v4/`. Before is frozen v3; Working at 400 is Eli's
+Regular and at 700 is the Bold test. This is pending human review, not approval.
+
+## Continuation verdict — 2026-10-20
+
+Eli said Gimel v4 was “good enough for now” and asked to move on and finish
+Hebrew. Retain both masters as the working baseline, including the deliberate
+8-unit flat. This accepts continuation, not green grading or release readiness.
+The next case is [HEB-008](../hebrew-008/README.md).

@@ -37,6 +37,33 @@ universal radius, circular-arc formula or reason to square off approved bowls.
 When adapting weight, decide which alignments stay fixed instead of translating
 all curve points with a thicker bar. Human-corrected examples govern that choice.
 
+### Curve joins and terminal landings — measured Gimel example
+
+[HEB-007 Regular correction 01](agent-proofs/cases/hebrew-007/README.md#manual-correction-01--regular-gimel-2026-10-20)
+adds straight landings between foot curves and terminal chamfers, continues the
+stem tangent into the upper sweep, and retains a small intentional inner shelf.
+Distinguish a smooth join, a flat landing and a deliberate corner before placing
+handles. Inspect joins even when a source omits `smooth="yes"`; an unmarked
+corner is not evidence of design intent. Use `curve_lint.py ... --joins` plus a
+large render. Preserve the saved optical coordinates; the 32-unit landings and
+8-unit shelf are local evidence, not universal dimensions. Bold v4 was accepted as good enough for continuation; it was not graded green.
+
+### Bounded turns and straight landings — Final Tsadi example
+
+[HEB-008 correction 01](agent-proofs/cases/hebrew-008/README.md#manual-correction-01--regular-final-tsadi)
+provides another measured human example. Regular Final Tsadi's arm becomes two
+axis-tangent turns with paired 128/128 and 64/64 handles, shared horizontal
+endpoint alignment, an explicit inner shelf, and an 8-unit cut plus landing
+before the outer curve. Its diagonal terminals gain short vertical landings
+between the long diagonal and the chamfers. This reinforces the Gimel lesson:
+turns, joining flats and chamfers are separate construction decisions.
+
+For related transfers, identify those boundaries before placing handles.
+Changing weight may reduce an inner turn while leaving outer alignments fixed;
+do not merely stretch handles to reach the stem. The exact radii, equal-handle
+choice and landing lengths are glyph-specific evidence. The Bold/Shin reuse
+is a trial awaiting Eli's review, not a new universal style rule.
+
 ## The power-of-two grid
 
 Everything in this font is drawn against powers of two.

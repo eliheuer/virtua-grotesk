@@ -1,0 +1,115 @@
+{
+  "description": "HEB-008: remaining six Hebrew base letters, compatible Regular and Bold working drawings.",
+  "fonts": {
+    "after": {
+      "path": "working-v4/fonts/after-e52e7f2e6d85.ttf",
+      "sha256": "e52e7f2e6d85ca6577f9b1f7c672511abc1b75fd77a21046dc8074a4180ce89d",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Working"
+    },
+    "rubik": {
+      "path": "working-v4/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "working-v4/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    },
+    "before": {
+      "path": "working-v4/fonts/before-8bb06706638e.ttf",
+      "sha256": "8bb06706638e66c6db91e65dcd7e49a5c5148f74a488b49d75a5f6204fdbf344",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Before"
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 08",
+    "status": "Working drawings · review pending",
+    "note": "Six remaining base-letter pairs, double Yod, geresh/gershayim and revised mark anchors are in active sources. No marks overlap base ink in the 6,076 tested combinations. Protected presentation forms and mark designs remain pending; working drawings are not release approval.",
+    "glyphs": [
+      {
+        "key": "tet",
+        "char": "ט",
+        "name": "Tet"
+      },
+      {
+        "key": "ayin",
+        "char": "ע",
+        "name": "Ayin"
+      },
+      {
+        "key": "alef",
+        "char": "א",
+        "name": "Alef"
+      },
+      {
+        "key": "tsadi",
+        "char": "צ",
+        "name": "Tsadi"
+      },
+      {
+        "key": "finaltsadi",
+        "char": "ץ",
+        "name": "Final Tsadi"
+      },
+      {
+        "key": "shin",
+        "char": "ש",
+        "name": "Shin"
+      }
+    ],
+    "presets": {
+      "group": [
+        "טעאצץש",
+        "Six letters"
+      ],
+      "words": [
+        "איש עץ שקט טעם ארץ שמש ײ ג׳ ד״ר",
+        "Words and punctuation"
+      ],
+      "marks": [
+        "טּ עָ אִ צּ ץָ שּ שָׁ שִׂ",
+        "Marks"
+      ],
+      "latin": [
+        "H n ט ע א צ ץ ש",
+        "Latin and Hebrew"
+      ]
+    }
+  }
+}

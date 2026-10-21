@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="geresh-hb" format="2">
+	<unicode hex="05F3"/>
+	<advance width="224"/>
+	<outline>
+		<contour>
+			<point x="32" y="432" type="line"/>
+			<point x="144" y="432" type="line"/>
+			<point x="160" y="448" type="line"/>
+			<point x="208" y="592" type="line"/>
+			<point x="192" y="608" type="line"/>
+			<point x="80" y="608" type="line"/>
+			<point x="64" y="592" type="line"/>
+			<point x="16" y="448" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.27,0.44,1,1</string>
+		</dict>
+	</lib>
+</glyph>

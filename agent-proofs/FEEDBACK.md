@@ -211,6 +211,8 @@ drew, not permission to reproduce every detail across the family.
 | HEB-005 Samekh v3 → v5 | bowl, curve tension, cleanup, preserve skeleton | [Case](cases/hebrew-005/README.md): restrained handles, rejected rectangular redesign retained | Approved in both masters; exact geometry remains glyph-specific |
 | HEB-006 correction 01 | Zayin, neck, head/stem, tangent, chamfer, asymmetric junction | [Case and exact saved Regular](cases/hebrew-006/README.md#elis-saved-regular-zayin-correction--2026-10-20): committed v2 → Eli’s hand edit | V3 transferred structure, but Eli corrected its tall right turn; see correction 02 |
 | HEB-006 correction 02 | Zayin Bold, machined, geometric turn, square extent, equal handles, weight adaptation | [Case](cases/hebrew-006/README.md#manual-correction-02--bold-geometric-turn-2026-10-20): v3 → saved Bold; only three points changed | Human correction recorded; next reuse not yet tested |
+| HEB-007 correction 01 | Gimel, foot, tangent continuation, terminal landings, inner shelf, chamfer landing | [Case](cases/hebrew-007/README.md#manual-correction-01--regular-gimel-2026-10-20): exact saved Regular and v3 source; measured join angles | V4 Bold transfer accepted as good enough for continuation; no final grading |
+| HEB-008 correction 01 | Final Tsadi, quarter-turn, equal handles, tangent landing, diagonal terminal, junction cut | [Case and measured pair](cases/hebrew-008/README.md#manual-correction-01--regular-final-tsadi) | Human Regular preserved; v7 transfer accepted as better and requested for commit, without grading |
 
 For each new manual correction, preserve the starting revision/source and saved
 GLIF, identify the actual geometric/spacing changes separately from editor
@@ -248,3 +250,18 @@ active masters under standing authorization. The first rendered pass caught
 a Bold Qof stroke collision and an uneven Bold Gimel foot; v2 corrects these.
 This is agent verification, not a new human-approved rule. See the case for
 exact source snapshots and remaining reader/marked-form review.
+
+HEB-007 Gimel direction trial (2026-10-20): Eli requested trying a left-sweeping
+foot like Rubik/Noto instead of the separate downward left leg, in both masters.
+V3 implements this while preserving the head, main-stem approach and metrics.
+Record as a requested alternative pending feedback, not a universal design rule.
+
+HEB-007 clarification (2026-10-20): Eli explicitly confirmed the 8-unit flat
+between Gimel’s lower foot curve and main stem is intentional: keep it.
+Do not smooth this shelf away. This confirms the local construction detail,
+not the entire Bold v4 trial or a rule for unrelated glyphs.
+
+HEB-008 revision v6 (2026-10-20): Eli rejects the current Shin and Final Tsadi
+forms and requests constructions closer to Rubik. This specifically authorizes
+revising those two letters in both masters; it is not a generic instruction to
+replace other Hebrew designs. See the [case](cases/hebrew-008/README.md#revision-v6--shin-and-final-tsadi).
