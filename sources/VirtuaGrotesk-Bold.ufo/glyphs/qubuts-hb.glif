@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qubuts-hb" format="2">
 	<unicode hex="05BB"/>
+	<outline>
+		<contour>
+			<point x="32" y="-104" type="curve" smooth="yes"/>
+			<point x="64" y="-104"/>
+			<point x="80" y="-88"/>
+			<point x="80" y="-56" type="curve" smooth="yes"/>
+			<point x="80" y="-24"/>
+			<point x="64" y="-8"/>
+			<point x="32" y="-8" type="curve" smooth="yes"/>
+			<point x="0" y="-8"/>
+			<point x="-16" y="-24"/>
+			<point x="-16" y="-56" type="curve" smooth="yes"/>
+			<point x="-16" y="-88"/>
+			<point x="0" y="-104"/>
+		</contour>
+		<contour>
+			<point x="128" y="-168" type="curve" smooth="yes"/>
+			<point x="160" y="-168"/>
+			<point x="176" y="-152"/>
+			<point x="176" y="-120" type="curve" smooth="yes"/>
+			<point x="176" y="-88"/>
+			<point x="160" y="-72"/>
+			<point x="128" y="-72" type="curve" smooth="yes"/>
+			<point x="96" y="-72"/>
+			<point x="80" y="-88"/>
+			<point x="80" y="-120" type="curve" smooth="yes"/>
+			<point x="80" y="-152"/>
+			<point x="96" y="-168"/>
+		</contour>
+		<contour>
+			<point x="224" y="-232" type="curve" smooth="yes"/>
+			<point x="256" y="-232"/>
+			<point x="272" y="-216"/>
+			<point x="272" y="-184" type="curve" smooth="yes"/>
+			<point x="272" y="-152"/>
+			<point x="256" y="-136"/>
+			<point x="224" y="-136" type="curve" smooth="yes"/>
+			<point x="192" y="-136"/>
+			<point x="176" y="-152"/>
+			<point x="176" y="-184" type="curve" smooth="yes"/>
+			<point x="176" y="-216"/>
+			<point x="192" y="-232"/>
+		</contour>
+	</outline>
 	<anchor name="_hbBottom" x="128" y="0"/>
 	<anchor name="hbMeteg" x="-56" y="0"/>
 	<anchor name="hbCantLeftVowel" x="14" y="0"/>
 	<anchor name="hbCantRightVowel" x="240" y="0"/>
-	<outline>
-		<contour>
-			<point x="52" y="-82" type="curve" smooth="yes"/>
-			<point x="71" y="-82"/>
-			<point x="88" y="-66"/>
-			<point x="88" y="-44" type="curve" smooth="yes"/>
-			<point x="88" y="-24"/>
-			<point x="72" y="-8"/>
-			<point x="50" y="-8" type="curve" smooth="yes"/>
-			<point x="29" y="-8"/>
-			<point x="14" y="-24"/>
-			<point x="14" y="-44" type="curve" smooth="yes"/>
-			<point x="14" y="-66"/>
-			<point x="31" y="-82"/>
-		</contour>
-		<contour>
-			<point x="126" y="-132" type="curve" smooth="yes"/>
-			<point x="147" y="-132"/>
-			<point x="164" y="-115"/>
-			<point x="164" y="-96" type="curve" smooth="yes"/>
-			<point x="164" y="-75"/>
-			<point x="147" y="-58"/>
-			<point x="126" y="-58" type="curve" smooth="yes"/>
-			<point x="105" y="-58"/>
-			<point x="88" y="-75"/>
-			<point x="88" y="-96" type="curve" smooth="yes"/>
-			<point x="88" y="-116"/>
-			<point x="106" y="-132"/>
-		</contour>
-		<contour>
-			<point x="202" y="-182" type="curve" smooth="yes"/>
-			<point x="222" y="-182"/>
-			<point x="240" y="-165"/>
-			<point x="240" y="-144" type="curve" smooth="yes"/>
-			<point x="240" y="-124"/>
-			<point x="223" y="-106"/>
-			<point x="202" y="-106" type="curve" smooth="yes"/>
-			<point x="180" y="-106"/>
-			<point x="164" y="-124"/>
-			<point x="164" y="-144" type="curve" smooth="yes"/>
-			<point x="164" y="-166"/>
-			<point x="181" y="-182"/>
-		</contour>
-	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
