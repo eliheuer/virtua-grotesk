@@ -1,0 +1,1683 @@
+{
+  "fonts": {
+    "after": {
+      "path": "fonts/variable/VirtuaGrotesk[wght].ttf",
+      "sha256": "92aeedea2d2253b1750aa12f84a6b9646c083f8876247e47bd4dcf41fd721af3"
+    },
+    "rubik": {
+      "path": "agent-proofs/cases/hebrew-009/working-v1/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+    },
+    "noto": {
+      "path": "agent-proofs/cases/hebrew-009/working-v1/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88"
+    }
+  },
+  "marks": [
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B0",
+      "bounds_1024": [
+        14.0,
+        -182.0,
+        90.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B1",
+      "bounds_1024": [
+        14.0,
+        -182.0,
+        300.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B2",
+      "bounds_1024": [
+        32.0,
+        -182.0,
+        288.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B3",
+      "bounds_1024": [
+        32.0,
+        -182.0,
+        288.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B4",
+      "bounds_1024": [
+        32.0,
+        -164.0,
+        106.0,
+        -90.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B5",
+      "bounds_1024": [
+        32.0,
+        -164.0,
+        216.0,
+        -90.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B6",
+      "bounds_1024": [
+        14.0,
+        -182.0,
+        198.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B7",
+      "bounds_1024": [
+        32.0,
+        -110.0,
+        192.0,
+        -58.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B8",
+      "bounds_1024": [
+        32.0,
+        -164.0,
+        186.0,
+        -60.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05B9",
+      "bounds_1024": [
+        32.0,
+        680.0,
+        106.0,
+        754.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05BA",
+      "bounds_1024": [
+        32.0,
+        680.0,
+        106.0,
+        754.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05BB",
+      "bounds_1024": [
+        14.0,
+        -182.0,
+        240.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05BC",
+      "bounds_1024": [
+        32.0,
+        294.0,
+        108.0,
+        368.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05BD",
+      "bounds_1024": [
+        -24.0,
+        -208.0,
+        24.0,
+        -48.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05BF",
+      "bounds_1024": [
+        -128.0,
+        0.0,
+        128.0,
+        48.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05C1",
+      "bounds_1024": [
+        32.0,
+        680.0,
+        106.0,
+        754.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05C2",
+      "bounds_1024": [
+        32.0,
+        680.0,
+        106.0,
+        754.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 400,
+      "codepoint": "U+05C7",
+      "bounds_1024": [
+        32.0,
+        -182.0,
+        234.0,
+        -48.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B0",
+      "bounds_1024": [
+        8.0,
+        -216.0,
+        104.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B1",
+      "bounds_1024": [
+        -16.0,
+        -216.0,
+        336.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B2",
+      "bounds_1024": [
+        0.0,
+        -216.0,
+        320.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B3",
+      "bounds_1024": [
+        0.0,
+        -216.0,
+        320.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B4",
+      "bounds_1024": [
+        24.0,
+        -176.0,
+        120.0,
+        -80.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B5",
+      "bounds_1024": [
+        16.0,
+        -176.0,
+        240.0,
+        -80.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B6",
+      "bounds_1024": [
+        0.0,
+        -216.0,
+        224.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B7",
+      "bounds_1024": [
+        16.0,
+        -120.0,
+        208.0,
+        -56.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B8",
+      "bounds_1024": [
+        16.0,
+        -176.0,
+        208.0,
+        -48.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05B9",
+      "bounds_1024": [
+        24.0,
+        672.0,
+        120.0,
+        768.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05BA",
+      "bounds_1024": [
+        24.0,
+        672.0,
+        120.0,
+        768.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05BB",
+      "bounds_1024": [
+        -16.0,
+        -232.0,
+        272.0,
+        -8.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05BC",
+      "bounds_1024": [
+        24.0,
+        288.0,
+        120.0,
+        384.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05BD",
+      "bounds_1024": [
+        -32.0,
+        -208.0,
+        32.0,
+        -48.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05BF",
+      "bounds_1024": [
+        -144.0,
+        0.0,
+        144.0,
+        64.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05C1",
+      "bounds_1024": [
+        24.0,
+        672.0,
+        120.0,
+        768.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05C2",
+      "bounds_1024": [
+        24.0,
+        672.0,
+        120.0,
+        768.0
+      ]
+    },
+    {
+      "role": "after",
+      "weight": 700,
+      "codepoint": "U+05C7",
+      "bounds_1024": [
+        8.0,
+        -200.0,
+        264.0,
+        -40.0
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B0",
+      "bounds_1024": [
+        -38.59,
+        -262.59,
+        39.62,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B1",
+      "bounds_1024": [
+        -170.24,
+        -262.78,
+        171.26,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B2",
+      "bounds_1024": [
+        -194.24,
+        -262.59,
+        195.26,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B3",
+      "bounds_1024": [
+        -195.26,
+        -262.59,
+        193.6,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B4",
+      "bounds_1024": [
+        -38.59,
+        -156.42,
+        39.62,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B5",
+      "bounds_1024": [
+        -102.78,
+        -156.42,
+        107.07,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B6",
+      "bounds_1024": [
+        -102.78,
+        -262.78,
+        107.07,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B7",
+      "bounds_1024": [
+        -126.98,
+        -143.93,
+        131.07,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B8",
+      "bounds_1024": [
+        -126.98,
+        -253.95,
+        131.07,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05B9",
+      "bounds_1024": [
+        -38.02,
+        545.79,
+        40.19,
+        622.08
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05BA",
+      "bounds_1024": [
+        -110.27,
+        545.79,
+        -32.06,
+        622.08
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05BB",
+      "bounds_1024": [
+        -88.38,
+        -278.59,
+        155.84,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05BC",
+      "bounds_1024": [
+        -26.5,
+        288.0,
+        49.79,
+        364.29
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05C1",
+      "bounds_1024": [
+        -115.07,
+        538.11,
+        -38.78,
+        614.4
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05C2",
+      "bounds_1024": [
+        2.94,
+        538.11,
+        79.23,
+        614.4
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 400,
+      "codepoint": "U+05C7",
+      "bounds_1024": [
+        -126.98,
+        -253.95,
+        131.07,
+        -80.13
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B0",
+      "bounds_1024": [
+        -49.79,
+        -289.92,
+        50.82,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B1",
+      "bounds_1024": [
+        -189.95,
+        -290.56,
+        190.98,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B2",
+      "bounds_1024": [
+        -198.27,
+        -289.92,
+        199.3,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B3",
+      "bounds_1024": [
+        -199.3,
+        -289.92,
+        198.53,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B4",
+      "bounds_1024": [
+        -49.79,
+        -172.54,
+        50.82,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B5",
+      "bounds_1024": [
+        -118.02,
+        -172.54,
+        122.75,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B6",
+      "bounds_1024": [
+        -118.02,
+        -290.56,
+        122.75,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B7",
+      "bounds_1024": [
+        -126.98,
+        -166.78,
+        131.07,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B8",
+      "bounds_1024": [
+        -126.98,
+        -261.12,
+        131.07,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05B9",
+      "bounds_1024": [
+        -47.87,
+        545.79,
+        52.74,
+        640.0
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05BA",
+      "bounds_1024": [
+        -121.47,
+        545.79,
+        -20.86,
+        640.0
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05BB",
+      "bounds_1024": [
+        -141.69,
+        -297.86,
+        177.79,
+        -78.34
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05BC",
+      "bounds_1024": [
+        -9.47,
+        279.04,
+        84.73,
+        373.25
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05C1",
+      "bounds_1024": [
+        -137.47,
+        520.19,
+        -43.26,
+        614.4
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05C2",
+      "bounds_1024": [
+        43.26,
+        520.19,
+        137.47,
+        614.4
+      ]
+    },
+    {
+      "role": "rubik",
+      "weight": 700,
+      "codepoint": "U+05C7",
+      "bounds_1024": [
+        -126.98,
+        -261.12,
+        131.07,
+        -78.34
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B0",
+      "bounds_1024": [
+        55.3,
+        -226.69,
+        112.51,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B1",
+      "bounds_1024": [
+        55.94,
+        -226.69,
+        326.27,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B2",
+      "bounds_1024": [
+        53.12,
+        -226.69,
+        329.86,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B3",
+      "bounds_1024": [
+        53.12,
+        -226.69,
+        330.5,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B4",
+      "bounds_1024": [
+        55.94,
+        -128.77,
+        113.15,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B5",
+      "bounds_1024": [
+        55.3,
+        -128.77,
+        218.75,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B6",
+      "bounds_1024": [
+        55.94,
+        -226.69,
+        224.13,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B7",
+      "bounds_1024": [
+        53.12,
+        -120.7,
+        233.09,
+        -80.9
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B8",
+      "bounds_1024": [
+        53.12,
+        -218.88,
+        233.73,
+        -80.9
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05B9",
+      "bounds_1024": [
+        55.94,
+        680.19,
+        113.15,
+        737.41
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05BA",
+      "bounds_1024": [
+        55.94,
+        680.19,
+        113.15,
+        737.41
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05BB",
+      "bounds_1024": [
+        55.94,
+        -226.69,
+        269.57,
+        -71.55
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05BC",
+      "bounds_1024": [
+        55.94,
+        278.02,
+        113.15,
+        335.23
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05BD",
+      "bounds_1024": [
+        53.12,
+        -229.89,
+        92.54,
+        -70.66
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05BF",
+      "bounds_1024": [
+        53.12,
+        689.54,
+        254.85,
+        729.34
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05C1",
+      "bounds_1024": [
+        56.19,
+        679.55,
+        113.41,
+        736.77
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05C2",
+      "bounds_1024": [
+        55.94,
+        680.19,
+        113.15,
+        737.41
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 400,
+      "codepoint": "U+05C7",
+      "bounds_1024": [
+        53.12,
+        -183.68,
+        181.25,
+        -80.9
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B0",
+      "bounds_1024": [
+        61.44,
+        -242.43,
+        129.79,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B1",
+      "bounds_1024": [
+        61.7,
+        -242.43,
+        375.04,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B2",
+      "bounds_1024": [
+        55.04,
+        -242.43,
+        377.09,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B3",
+      "bounds_1024": [
+        55.04,
+        -242.43,
+        377.34,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B4",
+      "bounds_1024": [
+        61.7,
+        -138.75,
+        130.05,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B5",
+      "bounds_1024": [
+        61.44,
+        -138.75,
+        252.16,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B6",
+      "bounds_1024": [
+        61.7,
+        -242.43,
+        253.7,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B7",
+      "bounds_1024": [
+        55.04,
+        -131.84,
+        263.42,
+        -77.82
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B8",
+      "bounds_1024": [
+        55.04,
+        -235.01,
+        263.68,
+        -77.82
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05B9",
+      "bounds_1024": [
+        61.7,
+        688.64,
+        130.05,
+        756.99
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05BA",
+      "bounds_1024": [
+        61.7,
+        688.64,
+        130.05,
+        756.99
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05BB",
+      "bounds_1024": [
+        61.7,
+        -242.43,
+        324.1,
+        -70.4
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05BC",
+      "bounds_1024": [
+        61.7,
+        276.48,
+        130.05,
+        344.83
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05BD",
+      "bounds_1024": [
+        55.04,
+        -243.71,
+        108.29,
+        -73.73
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05BF",
+      "bounds_1024": [
+        55.04,
+        696.06,
+        290.56,
+        750.08
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05C1",
+      "bounds_1024": [
+        61.18,
+        688.38,
+        129.54,
+        756.74
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05C2",
+      "bounds_1024": [
+        61.7,
+        688.64,
+        130.05,
+        756.99
+      ]
+    },
+    {
+      "role": "noto",
+      "weight": 700,
+      "codepoint": "U+05C7",
+      "bounds_1024": [
+        55.04,
+        -202.5,
+        218.11,
+        -77.82
+      ]
+    }
+  ],
+  "source_permissions": {
+    "Regular": {
+      "U+05BB": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qubuts-hb.glif",
+        "sha256": "da3709ddf6db018179c31d08332f310154808b6c26e775bebb02150268e2c0da",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05BA": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/holamhaser-hb.glif",
+        "sha256": "6699e84b8cca973faffce573077080ad8fee93b56975e782db33312b403e0c0d",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B2": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hatafpatah-hb.glif",
+        "sha256": "b1ec0d7849f9069609aa04a8758c32ec03d70216f6a6878b64b21c6d50356653",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B7": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/patah-hb.glif",
+        "sha256": "e2f4b67e5f5beeea60f941e4ee6f4185b3416a2009c6b5fb91bf7bdeaf789a0e",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B3": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hatafqamats-hb.glif",
+        "sha256": "bda14463b1c044037d89b7fd568e5823e167c3861d5929f1a8199251af7d2f47",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B5": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tsere-hb.glif",
+        "sha256": "f9993a537eb781598f609d2023af8d58a4e6ed886f2bf89b48bfd0c86b0d7a4e",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05C1": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/shindot-hb.glif",
+        "sha256": "c1d0cc0ce0a5f3b305c85d397a84c1199d1578d33e07b2eb5ba84c0665008348",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B1": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hatafsegol-hb.glif",
+        "sha256": "33da3266de541105c12f84168b7f786d623b668ac039996e90ed206256a01365",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B0": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/sheva-hb.glif",
+        "sha256": "1d4947b0da0987920f93d7417be6d16884c7fec4a41b4f29922cc578876d650d",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B6": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/segol-hb.glif",
+        "sha256": "cfcf1fb4e0fc99d354c6c643397e2e3f4cb158428e7cf0484873a493f4439b9f",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05BC": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/dagesh-hb.glif",
+        "sha256": "965d35f35f7b7671ef2a16d14aa11ccefd3ba2664c32ccdac7756cde4a15b41b",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05C7": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qamatsqatan-hb.glif",
+        "sha256": "64ee1d6e7dfa89aeb267c97082d03534151e8dd57aada7551d1c0cf23bd372a5",
+        "color": "1,0.5,0,1",
+        "label": "orange"
+      },
+      "U+05B9": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/holam-hb.glif",
+        "sha256": "20127d1185651557d81bcfe34b34977ebce362549c9d4b0f1b256f19bebb3124",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05BF": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/uni05B_F_.glif",
+        "sha256": "299c4a0aecba959ac5ef4179250e6db086fda44abb18f6d21695e145ec195cca",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05BD": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/uni05B_D_.glif",
+        "sha256": "dbfd9a74335b2622548d0adb93f9df39dd8a9e67c47033488f6fac15ecf04f53",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B8": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/qamats-hb.glif",
+        "sha256": "6953c2f8eeafdf58d5ded6ff9ae39b939272663fda343c29b258e7c31d6e0183",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05C2": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/sindot-hb.glif",
+        "sha256": "5780bb943838c9ddf425f9808dfd5471e83e9994822e5e853f2d5cc2578b4923",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      },
+      "U+05B4": {
+        "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hiriq-hb.glif",
+        "sha256": "a233e0f2bb1c7cd086134ad241820f711c04cfca50a99dde91b3b2a4e934b336",
+        "color": "0.54,0.44,0.88,1",
+        "label": "purple"
+      }
+    },
+    "Bold": {
+      "U+05BB": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qubuts-hb.glif",
+        "sha256": "f310f5ff8ccc8b4c5c2588b4edb1736a91cadbb256dd83126e96df906c963c14",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05BA": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/holamhaser-hb.glif",
+        "sha256": "5aba5e2d4e024e7bbc4c170193bbd29d4341c22445207588ef09f25153f59ec1",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B2": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hatafpatah-hb.glif",
+        "sha256": "1b51edc839d4228ee5ee6ffe4b36f262612eb0909f9041df1a3cca55168fe54b",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B7": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/patah-hb.glif",
+        "sha256": "1d9aa27c0a62ae3161e51deaf5c99ee4b9e6dde80efc3adf4c1e35c99d0d5efa",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B3": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hatafqamats-hb.glif",
+        "sha256": "00acb556d4bed095cb2596742bfbfc6dbbdb15709fa6fc4fe95090ebe38fffb3",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B5": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tsere-hb.glif",
+        "sha256": "fae5fa4316041856a2c54547eec001c6fa1e0033a75e676275e3e84176383fcd",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05C1": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/shindot-hb.glif",
+        "sha256": "28f46ec6d600ed78e3eab6a0ccdc19fbbb59505e935ae3f3456fe1b46073c48a",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B1": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hatafsegol-hb.glif",
+        "sha256": "57eb9e26bb0b483578ae0764a115b96fc36ca0ea23cb85f8ff11986583903c75",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B0": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/sheva-hb.glif",
+        "sha256": "c51df772e6cee21353f023dbb70fa0429d98af369a43b57c4504c85a3d772a6e",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B6": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/segol-hb.glif",
+        "sha256": "f73176b2cc2f411f0159c60cb6ab21724bf78bf60059014dee0bea7715e90197",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05BC": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/dagesh-hb.glif",
+        "sha256": "4ce092e72394a551d93f0e83233d5feaba741055ea1f46cb59f07942f9c8b4b3",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05C7": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qamatsqatan-hb.glif",
+        "sha256": "a57775daf8cb3773ee4274b0e0a99c74bfea00dbc44c8ebf562523add21b3f23",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B9": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/holam-hb.glif",
+        "sha256": "95c5d5bd8dce0e6206efbd1dd33fb2351494ca750b02c34fbf71b969e328d426",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05BF": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/uni05B_F_.glif",
+        "sha256": "c9fc7d45e47d5d5d952dcbac8141be5c8c53cc798caa82450edf58f8fcc82f7f",
+        "color": null,
+        "label": null
+      },
+      "U+05BD": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/uni05B_D_.glif",
+        "sha256": "3ad7ff96453b711465158986e0fd227a5dff8d5d43b7a4e2519366e160553f4a",
+        "color": null,
+        "label": null
+      },
+      "U+05B8": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qamats-hb.glif",
+        "sha256": "7aa44b41a6bfa7e933bdda56c468be336f3f6a5dffa7ae31d6391db7412b5640",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05C2": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/sindot-hb.glif",
+        "sha256": "e229a500b25b2fdcaf9e2bc250db0eb5b13327f004ea2a86274d9aad5b8f441a",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      },
+      "U+05B4": {
+        "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hiriq-hb.glif",
+        "sha256": "02d9e2c0132fb9c5fb25bf6dc9105d0a23a68b919877b0c23fb7c33ae8034536",
+        "color": "0.27,0.44,1,1",
+        "label": null
+      }
+    }
+  },
+  "shaped_sequences": {
+    "400": 1279,
+    "550": 1279,
+    "700": 1279
+  },
+  "outline_intersections": [
+    {
+      "weight": 550,
+      "kind": "mark",
+      "text": "ךֱ",
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ],
+      "area": 836.139
+    },
+    {
+      "weight": 700,
+      "kind": "mark",
+      "text": "גּ",
+      "glyphs": [
+        "dageshhb",
+        "gimelhb"
+      ],
+      "area": 646.597
+    },
+    {
+      "weight": 700,
+      "kind": "mark",
+      "text": "זּ",
+      "glyphs": [
+        "dageshhb",
+        "zayinhb"
+      ],
+      "area": 48.237
+    },
+    {
+      "weight": 700,
+      "kind": "mark",
+      "text": "ךֱ",
+      "glyphs": [
+        "hatafsegolhb",
+        "finalkafhb"
+      ],
+      "area": 3906.651
+    },
+    {
+      "weight": 700,
+      "kind": "mark",
+      "text": "ךֲ",
+      "glyphs": [
+        "hatafpatahhb",
+        "finalkafhb"
+      ],
+      "area": 708.092
+    },
+    {
+      "weight": 700,
+      "kind": "mark",
+      "text": "ךֳ",
+      "glyphs": [
+        "hatafqamatshb",
+        "finalkafhb"
+      ],
+      "area": 708.092
+    },
+    {
+      "weight": 700,
+      "kind": "mark",
+      "text": "צּ",
+      "glyphs": [
+        "dageshhb",
+        "tsadihb"
+      ],
+      "area": 333.513
+    },
+    {
+      "weight": 700,
+      "kind": "stack",
+      "text": "גְּ",
+      "glyphs": [
+        "dageshhb",
+        "gimelhb"
+      ],
+      "area": 646.597
+    },
+    {
+      "weight": 700,
+      "kind": "stack",
+      "text": "גִּ",
+      "glyphs": [
+        "dageshhb",
+        "gimelhb"
+      ],
+      "area": 646.597
+    },
+    {
+      "weight": 700,
+      "kind": "stack",
+      "text": "זְּ",
+      "glyphs": [
+        "dageshhb",
+        "zayinhb"
+      ],
+      "area": 48.237
+    },
+    {
+      "weight": 700,
+      "kind": "stack",
+      "text": "זִּ",
+      "glyphs": [
+        "dageshhb",
+        "zayinhb"
+      ],
+      "area": 48.237
+    },
+    {
+      "weight": 700,
+      "kind": "stack",
+      "text": "צְּ",
+      "glyphs": [
+        "dageshhb",
+        "tsadihb"
+      ],
+      "area": 333.513
+    },
+    {
+      "weight": 700,
+      "kind": "stack",
+      "text": "צִּ",
+      "glyphs": [
+        "dageshhb",
+        "tsadihb"
+      ],
+      "area": 333.513
+    }
+  ],
+  "spacing_screen": [
+    {
+      "weight": 400,
+      "closest_by_bbox": [
+        {
+          "text": "בב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "בז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "גב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "גז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "זב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "זז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "ךב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "ךז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "כב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "כז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "נב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "נז",
+          "bbox_gap": 32.0
+        }
+      ]
+    },
+    {
+      "weight": 550,
+      "closest_by_bbox": [
+        {
+          "text": "בב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "בז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "גב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "גז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "זב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "זז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "ךב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "ךז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "כב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "כז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "נב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "נז",
+          "bbox_gap": 32.0
+        }
+      ]
+    },
+    {
+      "weight": 700,
+      "closest_by_bbox": [
+        {
+          "text": "בב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "בז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "גב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "גז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "זב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "זז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "ךב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "ךז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "כב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "כז",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "נב",
+          "bbox_gap": 32.0
+        },
+        {
+          "text": "נז",
+          "bbox_gap": 32.0
+        }
+      ]
+    }
+  ],
+  "note": "Bounds gaps and outline intersections are diagnostics, not optical spacing grades. Audit does not modify sources."
+}

@@ -1,0 +1,121 @@
+{
+  "description": "HEB-010: current Hebrew marks, combinations and spacing; read-only grading preparation.",
+  "fonts": {
+    "after": {
+      "path": "baseline/fonts/after-dd336336bc1a.ttf",
+      "sha256": "dd336336bc1a3b65bda21e5dd7a5dee588dee671361bf81a35a6a4cc52c105dc",
+      "family": "Virtua Grotesk",
+      "axes": {
+        "wght": [
+          400.0,
+          400.0,
+          700.0
+        ]
+      },
+      "label": "Current"
+    },
+    "rubik": {
+      "path": "baseline/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "family": "Rubik",
+      "axes": {
+        "wght": [
+          300.0,
+          300.0,
+          900.0
+        ]
+      }
+    },
+    "noto": {
+      "path": "baseline/fonts/noto-7ef36a2c3593.ttf",
+      "sha256": "7ef36a2c3593758cdb622e1bdef4f84523e92fbc3ccc667438dd80ff54c2de88",
+      "family": "Noto Sans Hebrew",
+      "axes": {
+        "wght": [
+          100.0,
+          100.0,
+          900.0
+        ],
+        "wdth": [
+          62.5,
+          100.0,
+          100.0
+        ]
+      }
+    }
+  },
+  "study": {
+    "id": "Hebrew · Study 10",
+    "status": "Marks and spacing · review",
+    "note": "Current sources, unchanged. Compare mark texture at 400 and 700. The sample menu includes vowels, combined marks and close letter pairs. Text mode adds Marks and spacing probes alongside the existing Hebrew paragraphs. No automatic grading.",
+    "glyphs": [
+      {
+        "key": "patah",
+        "char": "בַ",
+        "name": "Bet with Patah"
+      },
+      {
+        "key": "qamats",
+        "char": "בָ",
+        "name": "Bet with Qamats"
+      },
+      {
+        "key": "hiriq",
+        "char": "בִ",
+        "name": "Bet with Hiriq"
+      }
+    ],
+    "presets": {
+      "group": [
+        "בַ בָ בִ",
+        "Vowels"
+      ],
+      "words": [
+        "בְ בֱ בֲ בֳ בֵ בֶ בֹ בֻ",
+        "Other vowels"
+      ],
+      "marks": [
+        "בְּ בִּ שָּׁ שִּׂ וּ וֹ ךָ ןִ ףִ ץִ",
+        "Combined marks and finals"
+      ],
+      "latin": [
+        "בב בג בז גב זב זז נב כב ךב רר דד וו יי",
+        "Close pairs"
+      ]
+    }
+  },
+  "reading": {
+    "marks": {
+      "label": "Marks and spacing",
+      "paragraphs": [
+        {
+          "lang": "he",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "בַ בָ בִ בֵ בֶ בְ בֱ בֲ בֳ בֹ בֻ בּ וּ וֹ שָׁ שִׂ שָּׁ שִּׂ ךָ ךְ םִ ןִ ףִ ץִ"
+            }
+          ]
+        },
+        {
+          "lang": "he",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "שָׁלוֹם עִבְרִית בְּרֵאשִׁית. שָׁלוֹם, שָׁלוֹם! עִבְרִית — בְּרֵאשִׁית. שָׁלוֹם עִבְרִית בְּרֵאשִׁית."
+            }
+          ]
+        },
+        {
+          "lang": "he",
+          "dir": "rtl",
+          "runs": [
+            {
+              "text": "בב בג בז גב זב זז נב כב ךב רר דד וו יי. אבגדהוזחטיכלמנסעפצקרשת ךםןףץ. א׳ ב׳ ג׳ ד״ר צה״ל בית־ספר 0123456789."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -5,7 +5,7 @@ const study = data.study;
 const glyphs = study?.glyphs || [
   {key: 'he', char: 'ה', name: 'He'}, {key: 'het', char: 'ח', name: 'Het'}, {key: 'tav', char: 'ת', name: 'Tav'}
 ];
-const codepoint = char => 'U+' + char.codePointAt(0).toString(16).toUpperCase().padStart(4, '0');
+const codepoint = text => [...text].map(char => 'U+' + char.codePointAt(0).toString(16).toUpperCase().padStart(4, '0')).join(' · ');
 const glyphLabel = glyph => `${glyph.char} (${glyph.name}) · ${codepoint(glyph.char)}`;
 const presets = {
   ...Object.fromEntries(glyphs.map(glyph => [glyph.key, [glyph.char, glyphLabel(glyph)]])),
@@ -29,6 +29,7 @@ function element(tag, text, className) {
 }
 function labelGlyphs() {
   $('study-title').replaceChildren();
+  $('reading-sample').replaceChildren(...Object.entries(data.reading).map(([key, corpus]) => new Option(corpus.label, key)), new Option('Your Text', 'custom'));
   $('study-title').style.setProperty('--glyph-count', glyphs.length);
   $('sample').replaceChildren(...glyphs.map(g => new Option(glyphLabel(g), g.key)), ...['group', 'words', 'marks', 'latin'].map(key => new Option(presets[key][1], key)), new Option('Your Text', 'custom'));
   if (study) {

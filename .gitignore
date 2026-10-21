@@ -136,3 +136,12 @@ documentation/proofs/images/*.png
 !agent-proofs/cases/hebrew-009/working-v1/fonts/*.ttf
 !agent-proofs/cases/hebrew-009/before-fonts/
 !agent-proofs/cases/hebrew-009/before-fonts/*.ttf
+
+# HEB-010 reference proof and accepted layout evidence.
+!agent-proofs/cases/hebrew-009/heading-layout-fixed.jpg
+!agent-proofs/cases/hebrew-010/baseline/fonts/
+!agent-proofs/cases/hebrew-010/baseline/fonts/*.ttf
+!agent-proofs/cases/hebrew-010/*.jpg
+
+!agent-proofs/cases/hebrew-010/working-v2/fonts/
+!agent-proofs/cases/hebrew-010/working-v2/fonts/*.ttf

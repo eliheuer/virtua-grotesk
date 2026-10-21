@@ -105,3 +105,20 @@ Next: niqqud texture, combined marks, punctuation and running-text spacing,
 then Eli’s whole-font grading pass. No new standalone-mark drawing permission
 is implied by this exception. An unattended Arabic run can follow a defined
 scope and reference set from that grading pass; it has not been scheduled.
+
+## Heading overflow correction — 2026-10-20
+
+Eli reported colliding long glyph names in the live specimen (22:02 screenshot).
+The old `white-space: nowrap` heading rule lets names paint across adjacent
+columns. Repair the responsive identity grid and name wrapping, retaining
+full names, Unicode, the shared headline/UI sizes and established page margins.
+This is a proof-layout correction only, not a font drawing change.
+
+Applied in the canonical `app/review.css` and regenerated the current proof.
+Identity cells now use a responsive minimum-width grid; long names wrap inside
+their cell and Unicode labels align at each row’s bottom. The shared type scale
+and page margins remain. Browser DOM checks found no cell/page overflow at
+333, 711 and 1333 CSS pixels (viewport requests 360, 768 and 1440 under the
+browser’s current scaling). The normal-width browser screenshot was visually
+inspected and retained in `heading-layout-fixed.jpg`; measurements are in
+`heading-layout-checks.json`. The temporary viewport override was reset.

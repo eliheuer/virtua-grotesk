@@ -35,7 +35,7 @@ def main():
             records[role] = dict(family=record['family'], label=label,
                                  url=f'fonts/{name}', sha256=digest,
                                  codepoints=sorted(font.getBestCmap()), axes=record['axes'])
-    (target / 'review-data.js').write_text('window.REVIEW_DATA = '+json.dumps({'study': evidence.get('study'), 'fonts': records, 'reading': json.loads((Path(__file__).parent / 'reading-samples.json').read_text())}, ensure_ascii=False)+';\n')
+    (target / 'review-data.js').write_text('window.REVIEW_DATA = '+json.dumps({'study': evidence.get('study'), 'fonts': records, 'reading': {**json.loads((Path(__file__).parent / 'reading-samples.json').read_text()), **evidence.get('reading', {})}}, ensure_ascii=False)+';\n')
     for name in ['index.html', 'review.css', 'review.js']:
         shutil.copy2(Path(__file__).parent / name, target / name)
     # Native browser reloads can otherwise mix cached scripts with fresh HTML.

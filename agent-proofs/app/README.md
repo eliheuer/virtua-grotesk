@@ -311,3 +311,17 @@ stroke and inset tick. Menu label positions and the content margin are unchanged
 
 P044 (2026-10-19): Open proofs in dark mode by default, including the initial
 HTML paint. The Dark checkbox still allows switching to the neutral light palette.
+
+## Long glyph identities
+
+HEB-009’s marked forms exposed overflow from unwrapped descriptive names.
+All study headings now use responsive identity columns (minimum 16rem, capped
+by available width). Names wrap within their cell at the shared headline size;
+Unicode labels align beneath each row. Narrow views reflow whole identities.
+See HEB-009’s heading correction for the rendered check and exact widths.
+
+Case evidence may supply a `reading` map to add or override named corpora at
+preparation time. The Text picker uses those corpus labels and retains Your Text.
+Glyph identities containing a base plus combining marks show every Unicode
+codepoint, not just the first character (HEB-010). This changes metadata and
+samples, not the specimen’s shaping, spacing or type scale.

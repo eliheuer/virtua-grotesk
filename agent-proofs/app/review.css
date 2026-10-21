@@ -96,11 +96,10 @@ body.reading .fit-toggle{display:none}
 @media(max-width:1199px){.reading-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:599px){.reading-grid{grid-template-columns:1fr}.view-bar{flex-wrap:wrap;row-gap:var(--half)}nav{gap:var(--half)}}
 
-.glyph-heading{display:grid;grid-template-columns:repeat(var(--glyph-count,3),minmax(0,1fr));gap:var(--gutter)}
-.glyph-identity{display:flex;flex-direction:column;align-items:start;gap:var(--quarter)}
-.glyph-name{white-space:nowrap}
-/* Larger review groups wrap identities without shrinking the shared heading size. */
-.glyph-heading:has(.glyph-identity:nth-child(4)){grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr))}
+/* Identity cells reflow as whole columns; names wrap without changing the type scale. */
+.glyph-heading{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));column-gap:var(--gutter);row-gap:var(--space)}
+.glyph-identity{display:grid;grid-template-rows:1fr auto;min-width:0;align-items:start;gap:var(--quarter)}
+.glyph-name{min-width:0;white-space:normal;overflow-wrap:anywhere}
 .glyph-unicode{font-size:var(--ui);line-height:1.25;letter-spacing:0}
 
 /* Keep the Toggle shortcut in the mode bar, outside the proof spacing. */

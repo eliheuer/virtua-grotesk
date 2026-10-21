@@ -1,0 +1,18 @@
+{
+  "frozen_sha256": "102dfb6e2f0843b05b811e526d3c0707dc0dfc28a82ceb54499caf7a222c12b4",
+  "final_preflight_sha256": "8f7dd2264a247ee515e7f2394193ee1668bf72c2141e22351a2af877bdefbe62",
+  "different_tables": [
+    "head"
+  ],
+  "head_changes": {
+    "checkSumAdjustment": [
+      533536647,
+      533536321
+    ],
+    "modified": [
+      3875404424,
+      3875404587
+    ]
+  },
+  "all_other_tables_identical": true
+}
