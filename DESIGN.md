@@ -226,6 +226,16 @@ masters** (measured from the drawings: 16-unit cuts in Regular and Bold
 alike, with 8-unit cuts at small junctions) — it reads relatively smaller
 as the weight increases, which is the intended optical effect.
 
+### Marks belong to the same drawing system
+
+Eli confirmed in [HEB-010 correction 03](agent-proofs/cases/hebrew-010/README.md#correction-03--marks-must-share-the-family-construction)
+that Hebrew marks must share the main glyphs' chamfers and machined character.
+Do not retain generic round dots or uncut rectangular bars merely to preserve
+legacy topology. Plan matching master construction, inspect terminals beside
+green letter geometry, then check mark weight and attachment clearance.
+The specific replacement shapes remain subject to review and source protection;
+this is not a rule to polygonize every smooth curve in the font.
+
 ## Reference glyphs: O H n o (the classical anchor)
 
 ### Applying the drawing style across scripts

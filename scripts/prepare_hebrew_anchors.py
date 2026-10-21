@@ -2,7 +2,7 @@
 """Prepare Hebrew anchor candidates in a NEW scratch source directory.
 
 Never writes active sources. Review rendered attachment, then explicitly port
-selected GLIFs; purple source glyphs need owner approval before replacement.
+selected GLIFs; only green source glyphs need a protection exception (2026-10-20).
 No Rubik outlines or coordinates are copied. Placement uses Virtua bounds and
 its existing dagesh composites. Blue candidates still require optical review.
 """
