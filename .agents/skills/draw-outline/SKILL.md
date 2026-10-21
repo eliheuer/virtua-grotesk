@@ -269,3 +269,14 @@ bar mass, terminal projection, curve extent and each handle independently.
 Equal handles are a construction choice, not a quality gate; a source passing
 grid and tangent checks can still have poor proportions. Keep these local
 human ratios as evidence rather than applying them wholesale to new marks.
+
+### Required raster proof gate — 2026-10-21
+
+Eli made fixed raster inspection a core part of Arabic drawing work. After each
+bounded batch, render 400 and 700 with `agent-proofs/app/render-detail.py`, using
+Before, Working, Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro.
+Inspect the actual PNGs, record visible findings, and fix observed faults before
+advancing. Use shorter/larger details or reading-size context as needed. Keep
+PNGs and hash receipts beside source snapshots. Browser proofs, curve diagnostics
+and compiled shaping remain complementary; command success is not visual review
+or a human grade. See `agent-proofs/FEEDBACK.md#raster-proof-gate--2026-10-21`.

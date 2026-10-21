@@ -74,3 +74,14 @@ long mixed Latin–Hebrew text at multiple sizes beside Rubik and Noto, then Ara
 Record accepted corrections and their scope; do not treat proposed optical
 patterns as established rules. Check bidi order and font selection before using
 future mixed-script text to diagnose spacing.
+
+### Required raster proof gate — 2026-10-21
+
+Eli made fixed raster inspection a core part of Arabic drawing work. After each
+bounded batch, render 400 and 700 with `agent-proofs/app/render-detail.py`, using
+Before, Working, Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro.
+Inspect the actual PNGs, record visible findings, and fix observed faults before
+advancing. Use shorter/larger details or reading-size context as needed. Keep
+PNGs and hash receipts beside source snapshots. Browser proofs, curve diagnostics
+and compiled shaping remain complementary; command success is not visual review
+or a human grade. See `agent-proofs/FEEDBACK.md#raster-proof-gate--2026-10-21`.
