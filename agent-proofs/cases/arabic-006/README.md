@@ -167,6 +167,16 @@ batches and exclude any shared donor that could change this human work.
   inherited grid findings remain scoped in the
   [joining-form evidence](batches/23-keheh-gaf-joining/README.md).
 
+- **Batch 24 — Bold isolated/final Heh:** aligned bowl handles and opened the
+  pinched counters; restored final stem and cuts, with 160-unit extremum weights
+  and 176-unit incoming join. Advances576/608; final Teh Marbuta advance-only
+  correction704→608. Three files; all Regular, Beh18 and manual hamza unchanged.
+  840 shaping comparisons,400/550/700 all-four-reference rasters, large and
+  endpoint full-form/word/marked proofs and preflight. Six inherited Bold grid
+  findings remain anchors/dot offsets. Initial/medial Heh still need repair;
+  the marked proof retains an old Beh damma / adjacent Teh Marbuta dot collision.
+  See [bowl repair evidence](batches/24-heh-bowls/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -187,7 +197,9 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    pending. Sad/Dad Bold first pass is saved in batch 18 and Tah/Zah in batch 19.
    Orange Regular Tah/Zah trough/dot heights remain a refinement; preserve
    the current exact evidence when preparing that follow-up.
-5. Heh/Goal/Doachashmee next, then Yeh/Maksura/Barree variants.
+5. Bold Heh initial/medial next; preserve green Regular counterparts.
+   Isolated/final Bold Heh are repaired in batch 24. Then Goal/Doachashmee,
+   followed by Yeh/Maksura/Barree variants.
    Keheh/Gaf initial/medial and the shared bar are repaired in batch 23.
    Isolated forms and local wrappers are repaired in batch 22.
    Both final forms are repaired in batch 21; the separate three-dot final
@@ -235,9 +247,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 23 Keheh/Gaf
-joining-form repair in both masters is the current Working proof.
-Next bounded repair: Heh/Goal/Doachashmee. Beh and its component donors are
+Final Lam is applied after Eli’s named Regular green exception. Batch 24 Bold Heh
+isolated/final repair is the current Working proof.
+Next bounded repair: Bold Heh initial/medial, then Goal/Doachashmee. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.
