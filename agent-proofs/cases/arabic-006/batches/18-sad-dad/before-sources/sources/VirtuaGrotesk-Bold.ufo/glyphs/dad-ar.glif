@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dad-ar" format="2">
+	<unicode hex="0636"/>
+	<advance width="1840"/>
+	<outline>
+		<component base="sad-ar"/>
+		<component base="dotabove-ar" xOffset="1052" yOffset="-112"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -91,15 +91,14 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/17-seen-bowls/working/`. Bold Seen/Sheen
-final and isolated forms now match the repaired initial/medial teeth and join
-weight. The final wrapper gap is closed at both endpoints; two orange Regular
-wrappers have advance-only corrections, with their drawings and grades preserved.
-525 shaping checks, endpoint/intermediate reference rasters, large/word proofs
-and preflight completed. All Beh dependencies and manual hamza are unchanged.
-All four Bold forms have first-pass repairs, pending human review. Initial/medial
-fatha placement and U+069C's missing below dots remain later follow-ups.
-Next: Sad/Dad base forms, then Tah/Zah.
+Current proof: `cases/arabic-006/batches/18-sad-dad/working/`. All four Bold Sad/Dad
+forms now have consistent head/bowl weights and open counters. Dad wrapper gaps
+are closed in both masters; Regular ink and grades are preserved (advance-only
+wrapper edits and two collinear points in isolated Sad). 581 shaping comparisons,
+400/550/700 four-reference rasters, large details and preflight completed.
+Beh and manual hamza are unchanged. Mark placement remains a later pass;
+Sad final's inherited top anchor is visibly displaced. Human review is pending.
+Next: Tah/Zah base forms.
 Regular medial Meem and
 Lam–Alef remain protected follow-ups. Eli is editing Beh (`ببب ب`): reserve
 those forms in both masters and every recursive donor, including dots. Check
