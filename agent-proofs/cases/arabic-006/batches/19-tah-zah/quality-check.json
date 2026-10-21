@@ -1,0 +1,73 @@
+{
+  "limits": "Sampled within- and between-contour crossings. Outer/counter forms; sampled intersections complement compiled raster inspection. Curvature transitions are reported, not hidden.",
+  "glyphs": [
+    {
+      "name": "tah-ar",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": []
+    },
+    {
+      "name": "tah-ar.fina",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            928.0,
+            224.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.0,
+          "curvature_out": 0.00257201646090535,
+          "relative_jump": 1.0
+        }
+      ]
+    },
+    {
+      "name": "tah-ar.init",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": []
+    },
+    {
+      "name": "tah-ar.medi",
+      "within_contour_crossings": [
+        0,
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            928.0,
+            224.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.0,
+          "curvature_out": 0.00257201646090535,
+          "relative_jump": 1.0
+        }
+      ]
+    }
+  ]
+}

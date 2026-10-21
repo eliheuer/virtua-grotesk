@@ -126,6 +126,14 @@ batches and exclude any shared donor that could change this human work.
   Sad final's inherited top anchor is displaced; attachment remains deferred.
   See [Sad/Dad evidence](batches/18-sad-dad/README.md).
 
+- **Batch 19 — Bold Tah/Zah four-form repair:** counters opened, stems/caps
+  regularized, stem/bowl trough replaced with a direct machined connection and
+  local Zah dots lowered/centered. Three collinear Regular additions preserve
+  geometry; isolated Regular Zah advance matches Tah. 637 shaping comparisons,
+  endpoint/intermediate reference rasters, large/word/marked proofs and preflight
+  completed. Beh/manual hamza unchanged. The Regular trough and high dots remain
+  a recorded refinement; see [Tah/Zah evidence](batches/19-tah-zah/README.md).
+
 ## Remaining queue
 
 Use `inventory.py` / `inventory.json` to check exact names, source grades and
@@ -143,7 +151,9 @@ Bold-equals-Regular recipes. Do not run them wholesale.
    are saved in batches 12–15, pending human review. Regular Jeem final dot collision and Khah dot
    heights remain placement follow-ups; preserve protected base drawings.
 4. Seen/Sheen Bold first-pass bases are saved in batches 16–17; human review
-   pending. Sad/Dad Bold first pass is saved in batch 18; continue with Tah/Zah.
+   pending. Sad/Dad Bold first pass is saved in batch 18 and Tah/Zah in batch 19.
+   Orange Regular Tah/Zah trough/dot heights remain a refinement; preserve
+   the current exact evidence when preparing that follow-up.
 5. Kaf/Keheh/Gaf and Heh/Goal/Doachashmee, Yeh/Maksura/Barree variants.
 6. Reconcile duplicated Beh-family outlines (Teh/Peh/Tteh/Yeh extensions)
    with the shared roots; inspect separately drawn Dal/Reh variants too.
@@ -186,9 +196,9 @@ The thread heartbeat `virtua-arabic-first-pass` resumes under Eli’s renewed au
 its configured recurrence is 5 minutes (Eli requested tighter unattended continuation)
 for continuation while Eli works on the editor. Keep it quiet except meaningful
 milestones, completion or blockers; the queue above remains the durable handoff.
-Final Lam is applied after Eli’s named Regular green exception. Batch 18 Bold Sad/Dad
+Final Lam is applied after Eli’s named Regular green exception. Batch 19 Bold Tah/Zah
 four-form repair is the current Working proof.
-Next bounded repair: Tah/Zah base forms. Beh and its component donors are
+Next bounded repair: Kaf/Keheh/Gaf base forms. Beh and its component donors are
 reserved for Eli.
 Preserve green Regular initial/medial Feh bases. Regular Noon final dot is low
 and remains a recorded follow-up for the placement pass.
