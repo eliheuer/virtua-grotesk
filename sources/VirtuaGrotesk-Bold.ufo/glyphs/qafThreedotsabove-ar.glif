@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qafThreedotsabove-ar" format="2">
 	<unicode hex="06A8"/>
-	<advance width="880"/>
+	<advance width="944"/>
 	<outline>
 		<component base="qafDotless-ar"/>
-		<component base="threedotsupabove-ar" xOffset="392" yOffset="32"/>
+		<component base="threedotsupabove-ar" xOffset="408" yOffset="-128"/>
 	</outline>
 	<lib>
 		<dict>

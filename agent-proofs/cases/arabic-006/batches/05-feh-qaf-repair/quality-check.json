@@ -1,0 +1,617 @@
+{
+  "limits": "20% curvature jump at smooth cubic/cubic joins in these revised heads; return aspect <=2; sampled proper segment crossings. Not release or human approval.",
+  "glyphs": [
+    {
+      "name": "fehDotless-ar",
+      "before": {
+        "faults": [
+          "c1 segment 8: 1 sampled curvature sign change(s); inspect intent",
+          "c1 segment 10: 1 sampled curvature sign change(s); inspect intent",
+          {
+            "join": [
+              628.0,
+              384.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4842550353154521
+          },
+          {
+            "join": [
+              696.0,
+              460.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5662943303964321
+          },
+          {
+            "join": [
+              788.0,
+              320.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              736.0,
+              324.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              956.0,
+              192.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              696.0,
+              620.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.3401345221003192
+          },
+          {
+            "join": [
+              460.0,
+              384.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.24670429159419874
+          },
+          {
+            "join": [
+              736.0,
+              172.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              788.0,
+              176.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              196.0,
+              192.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "sampled_proper_crossings": 2
+          }
+        ],
+        "sampled_crossings": 2
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "fehDotless-ar.fina",
+      "before": {
+        "faults": [
+          "c0 segment 14: 1 sampled curvature sign change(s); inspect intent",
+          {
+            "join": [
+              688.0,
+              -10.0
+            ],
+            "class": "undefined",
+            "relative_jump": null
+          },
+          {
+            "join": [
+              688.0,
+              -10.0
+            ],
+            "class": "undefined",
+            "relative_jump": null
+          },
+          {
+            "join": [
+              916.0,
+              224.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.0029755239422610655
+          },
+          {
+            "join": [
+              688.0,
+              436.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.35789864641033187
+          },
+          {
+            "join": [
+              460.0,
+              224.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5808680451743158
+          },
+          {
+            "join": [
+              28.0,
+              176.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              688.0,
+              140.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.6364114575511501
+          },
+          {
+            "join": [
+              628.0,
+              208.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.39445542674466044
+          },
+          {
+            "join": [
+              688.0,
+              276.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.6364114575511501
+          },
+          {
+            "join": [
+              748.0,
+              208.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.39445542674466044
+          },
+          {
+            "sampled_proper_crossings": 2
+          }
+        ],
+        "sampled_crossings": 2
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "fehDotless-ar.init",
+      "before_return": {
+        "extent": [
+          136.0,
+          32.0
+        ],
+        "aspect": 4.25
+      },
+      "before": {
+        "faults": [
+          {
+            "join": [
+              256.0,
+              672.0
+            ],
+            "class": "G1",
+            "relative_jump": 0.2505190311418685
+          },
+          {
+            "join": [
+              32.0,
+              448.0
+            ],
+            "class": "G1",
+            "relative_jump": 0.37099327265532256
+          },
+          {
+            "stretched_return": 4.25
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after_return": {
+        "extent": [
+          64.0,
+          64.0
+        ],
+        "aspect": 1.0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "fehDotless-ar.medi",
+      "before": {
+        "faults": [
+          {
+            "join": [
+              496.0,
+              328.0
+            ],
+            "class": "G1",
+            "relative_jump": 0.625
+          },
+          {
+            "join": [
+              48.0,
+              328.0
+            ],
+            "class": "G1",
+            "relative_jump": 0.625
+          },
+          {
+            "join": [
+              200.0,
+              328.0
+            ],
+            "class": "G1",
+            "relative_jump": 0.4375
+          },
+          {
+            "join": [
+              344.0,
+              328.0
+            ],
+            "class": "G1",
+            "relative_jump": 0.4375
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "qafDotless-ar",
+      "before": {
+        "faults": [
+          {
+            "join": [
+              548.0,
+              200.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4581732060376987
+          },
+          {
+            "join": [
+              616.0,
+              276.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5662943303964321
+          },
+          {
+            "join": [
+              708.0,
+              136.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              656.0,
+              150.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              876.0,
+              -16.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              616.0,
+              436.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.3401345221003192
+          },
+          {
+            "join": [
+              380.0,
+              200.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.1918676083790767
+          },
+          {
+            "join": [
+              720.0,
+              -16.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              608.0,
+              -124.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              290.0,
+              -130.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              196.0,
+              0.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              288.0,
+              -284.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "qafDotless-ar.fina",
+      "before": {
+        "faults": [
+          {
+            "join": [
+              480.0,
+              -8.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              480.0,
+              112.0
+            ],
+            "class": "kink",
+            "relative_jump": 1.0
+          },
+          {
+            "join": [
+              256.0,
+              384.0
+            ],
+            "class": "G1",
+            "relative_jump": 0.29101700973240285
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "threedotsupabove-ar",
+      "before": {
+        "faults": [
+          {
+            "join": [
+              88.0,
+              628.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              204.0,
+              736.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              88.0,
+              844.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              -28.0,
+              736.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              376.0,
+              628.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              492.0,
+              736.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              376.0,
+              844.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              260.0,
+              736.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              232.0,
+              836.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              348.0,
+              944.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              232.0,
+              1052.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              116.0,
+              944.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    },
+    {
+      "name": "twodotshorizontalabove-ar",
+      "before": {
+        "faults": [
+          {
+            "join": [
+              24.0,
+              660.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              140.0,
+              768.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              24.0,
+              876.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              -92.0,
+              768.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              280.0,
+              660.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              396.0,
+              768.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          },
+          {
+            "join": [
+              280.0,
+              876.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.5531333189129614
+          },
+          {
+            "join": [
+              164.0,
+              768.0
+            ],
+            "class": "kink",
+            "relative_jump": 0.4537104682203285
+          }
+        ],
+        "sampled_crossings": 0
+      },
+      "after": {
+        "faults": [],
+        "sampled_crossings": 0
+      }
+    }
+  ],
+  "new_faults": 0,
+  "previous_faults": 67
+}

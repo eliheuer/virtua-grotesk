@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="veh-ar" format="2">
+	<unicode hex="06A4"/>
+	<advance width="864"/>
+	<outline>
+		<component base="fehDotless-ar"/>
+		<component base="threedotsupabove-ar" xOffset="260" yOffset="16"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>orange</string>
+			<key>public.markColor</key>
+			<string>1,0.5,0,1</string>
+		</dict>
+	</lib>
+</glyph>

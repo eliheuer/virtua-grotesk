@@ -421,3 +421,26 @@ larger sample or reading-size context when the overview hides the issue. Record
 what was seen and fix observed defects before advancing. Retain PNGs and hash
 receipts beside the source pair. This accepts the proofing method and continuation;
 it does not automatically green-grade the preceding Dal/Reh drawings.
+
+## Bold Arabic visual gate failure — 2026-10-21
+
+Eli rejected the 700 proof as "lumpy broken" and asked why the basic drawing
+guidelines did not catch it. Exact scope: the displayed ARB-006 batch 04
+Feh/Qaf proof, not an approval/rejection grade for every earlier Arabic batch.
+The agent had inspected the images but accepted pinched proportions and
+curvature jumps, and deferred inherited visible breakage to a later batch.
+Technical compatibility, grid, build and shaping passes did not establish
+drawing quality. The rules already required rejecting visible faults.
+See the [measured failure record](cases/arabic-006/batches/04-feh-qaf-heads/README.md#human-rejection-and-failed-review-gate--2026-10-21).
+Do not use the rejected drawings as approved style donors. No manual correction
+was supplied in this feedback, and no source colors or outlines were changed.
+
+## Repair checkpoint and concurrent Beh editing — 2026-10-21
+
+Eli authorized fixing the rejected Bold forms, then requested committing and
+pushing the current progress. Batch 05 records the repair and remaining visual
+review. The component editor repair is finished; Eli will now edit `ببب ب`.
+Reserve those four Beh forms in both masters and their recursive component
+donors. Continue only independent work after checking shared dependencies and
+current hashes. This reservation preserves manual editing; it is not a green
+grade or visual approval of the Feh/Qaf repair.

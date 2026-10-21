@@ -1,0 +1,50 @@
+{
+  "reason": "Reduce medial/final bottom mass: counter floor 256 to 192, crown 560 to 496; preserve 160-unit top/side weight and bar176. Reprofile clipped lower arcs.",
+  "changes": [
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.fina.glif",
+      "before": "6ac28052666499f2b8ba3f2141b0ef9c99967a20d5827a03e1cacff8c343beeb",
+      "after": "8dd4d8e7b1bf6369a0da361a59ef2d2b01eb17d97b098256ef9cc337851a0e5e"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/fehD_otless-ar.medi.glif",
+      "before": "183a1af1a8cd01bee1d5d075975b6ce944ac139f4ea1ce9362dcbe34c69a7bb1",
+      "after": "73685f29b92673a83e70d8ce87fdf8b9d5051b129276e5372b5d6de2589e1905"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qafThreedotsabove-ar.medi.glif",
+      "before": "8bac460d76b4d8384f67bf60d7242e2e35012351cbacf2101755f58b9a731156",
+      "after": "385168c934accb34bf5f2c78a36dad9c019d8aa523cdae963430b1c4b3ad37c0"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qaf-ar.medi.glif",
+      "before": "202e865a2fada68555ba30aa77d43234c60abde9fcd0e59099accde5c5efc40d",
+      "after": "2bb3b8665a9ddba66b6a7c43b2e68d3518dc2c64f5c66c650742ddd4b0ddef8d"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/feh-ar.fina.glif",
+      "before": "df331750ba59b3116e4b066a26c760216017af465791f58c8b036f72fec505a1",
+      "after": "6c4baee6149f840d5df3158b3386081db394448ffd5db63dd3a75864c43f9e86"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/feh-ar.medi.glif",
+      "before": "e12701cd3a06ee00ff6a81ac280645a0072c0399f93266dae0286ff3348d69d1",
+      "after": "d939e466e2a552080eb34c9f69e58c465983a3a412e29f0d8801541ef923772e"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/veh-ar.fina.glif",
+      "before": "dd5e8de208ad48afe1e8ae05ba2ab665b7750b405ddbcbf8ef594c21dd772cf8",
+      "after": "5a847dbba33ffc70982e7015d51589a5a70e6f1331ff62ceded6ec8b172e8b8f"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/veh-ar.medi.glif",
+      "before": "7b8daba8e8e07c0bbbf88735b6a787bc405cbe57e183dae75106c7e566dde16e",
+      "after": "90fe266a5b45ba8d0cface408b691688c6b29ab669c4cd34f722148743b0c13e"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/qafDotabove-ar.medi.glif",
+      "before": "26e841d553767b3fbc509f6c7ec4c6bbd9a2c63e68cf8bf34d3b8f98c038b83d",
+      "after": "89106054378890d8beadf05f901c0c83d3e00b11cd0de1a1bc114a5917218acb"
+    }
+  ]
+}

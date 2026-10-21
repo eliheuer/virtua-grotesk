@@ -1,6 +1,44 @@
 # Batch 04 — Bold initial / medial Feh and Qaf heads
 
-Baseline `1f7dc7f6`. Applied working drawings; human review remains pending.
+Baseline `1f7dc7f6`. Applied working drawings; **Eli rejected the 700 proof**
+on 2026-10-21 as "lumpy broken". Do not treat the technical checkpoint
+`dfcb2bb0` as a successful visual gate or a construction donor. Sources are
+retained unchanged for diagnosis; no rollback or human recoloring was performed.
+
+## Human rejection and failed review gate — 2026-10-21
+
+Eli asked why the basic drawing guidelines did not catch the bad 700 result.
+The requirements already existed in DESIGN.md (curve smoothness before numeric
+simplicity), the curve-quality reference (inspect curvature and opposing edges),
+and the raster gate (fix visible faults before advancing). The agent did not
+enforce them and overstated the significance of passing technical checks.
+
+Measured faults in the new drawings:
+
+- Medial outer side joins at (496,328) and (48,328) are tangent-continuous but
+  jump between curvature 0.0104167 and 0.00390625: a 2.67x ratio / 62.5% relative
+  jump. The report exposed this; zero warnings only meant no sampled sign
+  reversals or zero speed. It did not certify fair curves. The prior claim
+  that the remaining G1 jumps were deliberate was unsupported.
+- Initial return runs 136 units horizontally but only 32 vertically, with
+  controls (352,208), (352,192), (312,176), (216,176). Peak sampled curvature
+  is about 0.10422. The long flattened turn ends in a tight pinch. The flat
+  shelf-to-bar opening shrank from 144 to 48 units (248-104 versus 224-176).
+  Calling this merely a later human-review point was a failed visual decision.
+- Existing isolated/final counter artifacts and Qaf connection failure stayed
+  plainly visible in the combined sample. They predate this batch, but leaving
+  them queued does not make the displayed four-form result visually acceptable.
+
+No new human-approved geometry or universal curvature threshold follows from
+this rejection. Repair must explicitly examine mass, aperture, curvature jumps
+and joined silhouettes, including defects inherited from unchanged neighbors.
+Treat geometric/build/shaping results separately from drawing acceptance. The
+autonomous heartbeat was paused by the agent for this quality review; the user
+has not withdrawn the standing drawing authorization.
+
+The remainder below is the original batch record. Its positive visual verdict
+is superseded by this rejection; source measurements and technical results
+remain historical evidence.
 
 Rebuilt the red Bold `fehDotless-ar.init` and `fehDotless-ar.medi` shared
 heads on the 8-unit grid. Regular's green bases remain byte-identical. The
