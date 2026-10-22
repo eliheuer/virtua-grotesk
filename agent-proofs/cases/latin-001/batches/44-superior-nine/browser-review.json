@@ -1,0 +1,33 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "before": "69ccfd0d0ef509fb6211332752a215c342a106daec2d1cca6cacc1b978a24d57",
+    "after": "83bd591242894d163ab8fb29c09680c97e01e6d3e5f54d13325894b463184e2c",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "images": {
+    "browser/stock-rubik-400.png": "49cfb296a7cd479e5217b01d1edb13b55c65514b964e8a9e1c07af23a7623887",
+    "browser/stock-rubik-550.png": "9a2b1b41c7c0c70b7779463ae938a8265ee588187e8e9e3985d4f8a5d6ffdc4f",
+    "browser/stock-rubik-700.png": "790263d5231202ba6259a5cd54362f5f2b46147a150fbc3634c8db4fd8a6b0b1",
+    "browser/stock-virtua-400.png": "b194df3ff9e1b951057472b10b9020e1fb7aa8047f67c325a325bb34c2817619",
+    "browser/stock-virtua-550.png": "03bd1e07a3ab77c00d1e9c8a8460fa9e3c0559686c06405af6c69d2efa1fdbb1",
+    "browser/stock-virtua-700.png": "894f89949d51c78fb2e0cd383b286f2310c038a485d19d30bc68653b074a33fa",
+    "browser/target-rubik-400.png": "ef30145540e31367bb82b810f217ea14c9ce3cb02072cf2ccbf1cd52c6b6ff9e",
+    "browser/target-rubik-550.png": "1eea8621f75333bf2c3b56f9de2a162fda6c50b7d0514a6f2824e19d627f7e61",
+    "browser/target-rubik-700.png": "9b87110020ab0cff247bddab2b718deb2de97bcf713475cda144eeb5323222f4",
+    "browser/target-virtua-400.png": "9e976261f889a4cc9ba236a9a9e69afd5e9e69cd89e04d4ac71a105303e79e7d",
+    "browser/target-virtua-550.png": "1014b3e58288ed9ea4f5b85595774672107c9220c8a179a7bb685d01800591c9",
+    "browser/target-virtua-700.png": "01c48186a26ad67acb6839a3716ce3211ff981f3b4fc0b866aa8728e7d5cadc3"
+  },
+  "scope": "Actual IAB Diffenator same-text supplement and first stock viewport; Old Virtua/New Rubik, slider governs weight. Twelve screenshots inspected alongside whole rasters,224px endpoints and signed comb.",
+  "findings": [
+    "Regular lighter than Rubik; curved lower hook follows protected Virtua nine.",
+    "Counter and lower aperture visible at sampled sizes; Bold terminal mass, shoulder curvature, family balance and default pairs remain human review.",
+    "Dense Bold and uneven stock spacing persist; generic superior marks retain right fallback."
+  ],
+  "human_approval": false
+}

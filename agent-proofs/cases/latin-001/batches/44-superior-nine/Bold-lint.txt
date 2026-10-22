@@ -1,0 +1,21 @@
+Bold ninesuperior: join (200,776) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00688705 -> 0.00405093; relative jump 41.2%
+Bold ninesuperior: join (40,648) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00823045 -> 0.0075; relative jump 8.9%
+Bold ninesuperior: join (192,504) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00666667 -> 0.015625; relative jump 57.3%
+Bold ninesuperior: join (264,544) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0 -> 0; relative jump 0.0%
+Bold ninesuperior: join (272,544) corner: review intent; G0; tangent angle 90.000 deg; signed curvature 0 -> -0.00520833; relative jump 100.0%
+Bold ninesuperior: join (192,448) smooth; G2; tangent angle 0.000 deg; signed curvature -0.00925926 -> -0.00925926; relative jump 0.0%
+Bold ninesuperior: join (144,472) corner: review intent; G0; tangent angle 18.435 deg; signed curvature -0.0223607 -> 0; relative jump 100.0%
+Bold ninesuperior: join (56,464) corner: review intent; G0; tangent angle 9.462 deg; signed curvature 0 -> 0.0114783; relative jump 100.0%
+Bold ninesuperior: join (192,376) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00416667 -> 0.00578704; relative jump 28.0%
+Bold ninesuperior: join (360,584) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00292969 -> 0.00382653; relative jump 23.4%
+Bold ninesuperior: join (192,704) smooth; G2; tangent angle 0.000 deg; signed curvature -0.01 -> -0.01; relative jump 0.0%
+Bold ninesuperior: join (272,640) smooth; G2; tangent angle 0.000 deg; signed curvature -0.0166667 -> -0.0166667; relative jump 0.0%
+Bold ninesuperior: join (192,576) smooth; G2; tangent angle 0.000 deg; signed curvature -0.01 -> -0.01; relative jump 0.0%
+Bold ninesuperior: join (128,640) smooth; G2; tangent angle 0.000 deg; signed curvature -0.01 -> -0.01; relative jump 0.0%
+Bold ninesuperior:
+  contour 0: crest (192,376) off-center x by -8
+  contour 0: crest (40,648) off-center y by +72
+  contour 0: crest (360,584) off-center y by +8
+  contour 1: crest (192,704) off-center x by -8
+  contour 1: crest (192,576) off-center x by -8
+1 glyphs flagged

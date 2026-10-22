@@ -685,3 +685,22 @@ and pairs remain human review. No sups/kerning/ordinary aliases. Online package
 only differs; unreachable warning adds math-only U2076, remainder12→13. No
 exclusions/false subset declarations. Gap331:182Cyrl/47Common/102Arab. Next
 superior9 then7/8; local only/no push, Arabic60272 unchanged.
+
+
+## Batch44 · Superior nine
+
+[Evidence](batches/44-superior-nine/README.md): purple U2079 both masters,29+12
+compatible points from protected nine, not a rotated-six alias. Advances360/400,
+40 bearings, left bowl56/88, crown/lower hook48/72; all new values on8/grid0.
+Six source files;1835 others/every old GLIF/Arabic/green source unchanged.
+125 scoped checks,4520 old VF/3615 static exact ink/advance comparisons,54
+subsets/NFD,27 Latin plus2 helpers, unchanged216 baseline failures and preflight
+complete. Twelve cubics/ten tangent joins per master; documented G1 jumps and
+four G0 shelf/terminal joins, no sampled reversals/proper crossings. Whole
+400/550/700,224px details/comb and12 actual Diffenator screenshots inspected.
+Regular lighter than Rubik; Bold terminal mass, shoulder transition, family
+balance/default pairs remain human review. No sups/kerning/ordinary aliases.
+Online package12FAIL10WARN159PASS10INFO40SKIP: FAILs exact unchanged from43;
+unreachable warning adds math-only U2079, remainder13→14. No exclusions or
+false subset declarations. Gap330:182Cyrl/46Common/102Arab. Next superior7
+then8; local only/no push. Arabic60272 unchanged.
