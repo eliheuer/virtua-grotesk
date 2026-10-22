@@ -1,0 +1,141 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": true,
+  "results": [
+    {
+      "glyph": "strokeshortcomb",
+      "points": 8,
+      "advance": 0.0,
+      "bounds": [
+        -256,
+        -48,
+        256,
+        48
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 0.0,
+          "popcount": 0
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 480.0,
+          "popcount": 4
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 256.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 256.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "0": 1,
+        "1": 7,
+        "4": 1
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-short-stroke-rbf2132u/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "7a0f1b303e6a7478197bc2bdd1107e3ce2216e8d09327c310b3f9d5c82ed46fa"
+    },
+    {
+      "glyph": "strokeshortcomb.narrow",
+      "points": 8,
+      "advance": 0.0,
+      "bounds": [
+        -128,
+        -48,
+        128,
+        48
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 0.0,
+          "popcount": 0
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 224.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 128.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "0": 1,
+        "1": 7,
+        "3": 1
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-short-stroke-rbf2132u/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "01b99693120b3c7863b41cbfa6bf277b9fc3a200b946e87849fb466efa16d671"
+    }
+  ]
+}

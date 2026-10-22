@@ -1,0 +1,69 @@
+Building Virtua Grotesk fonts with gftools builder...
+[1/15] instantiateUfo
+fontmake -i Virtua Grotesk Medium -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[2/15] instantiateUfo
+fontmake -i Virtua Grotesk SemiBold -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[3/15] instantiateUfo
+fontmake -i Virtua Grotesk Regular -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[4/15] instantiateUfo
+fontmake -i Virtua Grotesk Bold -o ufo -m VirtuaGrotesk.designspace --ufo-structure=json --output-dir instance_ufos
+[5/15] buildVariable
+FAILED: [code=1] /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp4vn0wzp9
+/Users/eli/GH/repos/virtua-grotesk/.venv/bin/python -m gftools.jobrunner fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp4vn0wzp9 -o variable -m VirtuaGrotesk.designspace --filter ...
+
+Command failed:
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp4vn0wzp9 -o variable -m VirtuaGrotesk.designspace --filter ...
+
+INFO:fontmake.font_project:Loading 2 DesignSpace source UFOs
+INFO:fontmake.font_project:Building variable fonts /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp4vn0wzp9
+INFO:ufo2ft:Pre-processing glyphs
+INFO:ufo2ft.filters.propagateAnchors:Running interpolatable PropagateAnchorsIFilter
+INFO:ufo2ft.filters.propagateAnchors:Glyphs with propagated anchors: 419
+INFO:ufo2ft.filters:Running EraseOpenCornersFilter on VirtuaGrotesk-Bold
+INFO:ufo2ft.filters:Running interpolatable DecomposeComponentsIFilter
+INFO:fontTools.cu2qu.ufo:New spline lengths: 1: 58, 2: 1494, 3: 848, 4: 175, 5: 31, 6: 8, 7: 3
+INFO:ufo2ft:Building OpenType tables for VirtuaGrotesk-Regular
+INFO:ufo2ft:Building OpenType tables for VirtuaGrotesk-Bold
+INFO:ufo2ft:Building variable font: VirtuaGrotesk-VF
+INFO:fontTools.varLib:Axes:
+[{'axisLabels': [],
+  'axisOrdering': None,
+  'default': 400.0,
+  'hidden': False,
+  'labelNames': {'en': 'Weight'},
+  'map': [],
+  'maximum': 700.0,
+  'minimum': 400.0,
+  'name': 'Weight',
+  'tag': 'wght'}]
+INFO:fontTools.varLib:Internal master locations:
+[{'Weight': 400.0}, {'Weight': 700.0}]
+INFO:fontTools.varLib:Internal axis supports:
+{'Weight': [400.0, 400.0, 700.0]}
+INFO:fontTools.varLib:Normalized master locations:
+[{'Weight': 0.0}, {'Weight': 1.0}]
+INFO:fontTools.varLib:Index of base master: 0
+INFO:fontTools.varLib:Building variable font
+INFO:fontTools.varLib:Loading master fonts
+INFO:fontTools.varLib:Generating fvar
+INFO:fontTools.varLib:Building variations tables
+INFO:fontTools.varLib:Generating avar
+INFO:fontTools.varLib:No need for avar
+INFO:fontTools.varLib:Generating MVAR
+INFO:fontTools.varLib:Generating HVAR
+INFO:fontTools.varLib:Merging OpenType Layout tables
+fontmake: Error: In 'VirtuaGrotesk.designspace': Generating fonts from Designspace failed:
+
+Couldn't merge the fonts, because the glyph order was inconsistent between
+masters. This happened while performing the following operation:
+GPOS.table.LookupList.Lookup[0][0]
+
+[6/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp5xuac98l -o ttf -u instance_ufos/VirtuaGrotesk-SemiBold.ufo.json --filter ...
+[7/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpqv3yhufc -o ttf -u instance_ufos/VirtuaGrotesk-Bold.ufo.json --filter ...
+[8/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp708vlwm4 -o ttf -u instance_ufos/VirtuaGrotesk-Medium.ufo.json --filter ...
+[9/15] buildTTF
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpm3gxwj00 -o ttf -u instance_ufos/VirtuaGrotesk-Regular.ufo.json --filter ...
+ninja: build stopped: subcommand failed.

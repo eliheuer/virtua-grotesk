@@ -1,0 +1,35 @@
+{
+  "fonts": {
+    "before": "f28ea236083542f85010f82465ce09b6186aff581943304e0322a5454846a570",
+    "after": "3c435bca63250bacdbf9485d562801c09f3dc320520ea58ba475713fe6cb7596",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "browser": "Actual Diffenator3 IAB; Old=Virtua/New=Rubik; slider controls weight despite Regular menu label",
+  "scope": "Complete short-stroke same-text supplement and first stock mixed-text viewport at all three weights in both fonts. Plus 48px FreeType/RAQM full forms/words,224px endpoints and four static before/after mixed-script rows.",
+  "findings": [
+    "Initial 512-unit bar overhung narrow letters and was rejected. Final 256-unit contextual variant clears following n in i/j/l/f and fi/fl test contexts.",
+    "Overlay centered at Latin body height, separate from existing above/below marks. Rubik comparison has several default-position bars; those placements were not used as design targets.",
+    "Bold remains denser than Rubik and stock mixed-text spacing remains uneven. This is a sampled design review, not reader approval.",
+    "Non-Latin overlay attachment is not implemented; existing Arabic/Hebrew output without the new mark is protected.",
+    "Static outlines now derive from the VF, with standard overlap removal and integer serialization. Segment representations differ in 406/548/538/433 old glyphs at400/500/600/700; advances unchanged. Do not claim pixel or outline-record identity with old static binaries."
+  ],
+  "screenshots": {
+    "virtua-550.png": "18b78fab8ae49095fa5d2868da477a5e3a13f2fe12e6017e8da9553d264d5b1c",
+    "stock-virtua-400.png": "b95af36c77eee40c56e7ca38d8042538bfe419b4fb48cc244972b77f90c26c83",
+    "rubik-700.png": "dcb8f796c1fdfdc797a30aaeee845dd111746683bbf5705fcf7f19b1e357905f",
+    "stock-rubik-550.png": "1fcd8fc3240a223580e95c0974f0dd8e1512377b8a9a83354e25016aa5b75185",
+    "stock-virtua-700.png": "24ea19da35d2eb59ce847aa167f8313481578ec1021621f1544bda64fb4deea3",
+    "rubik-400.png": "edea1f197a087d0c283ba050225200d46d5f2a3406d1f1c505eff938b42237d9",
+    "rubik-550.png": "b4be08c6e8fd57a2917867b6028b8363d7d93e8f92e02447be284bb70f626664",
+    "virtua-700.png": "735a85eb9516614a34920a57ca8a75c2556b68b0e1c7ed9e5f786c862df0498c",
+    "stock-rubik-400.png": "49f7a11086e6b0f52d18a63e51e1b9d5a098da5e1240621377da269842812861",
+    "stock-virtua-550.png": "d40d5860d18d870c8b346b77afc1bbb9294c719663c5a540f57b23f2547cf212",
+    "stock-rubik-700.png": "de79db9ca523773a8674b4e2fb04b4826375ca7144e492b5f723846a558f2c8a",
+    "virtua-400.png": "bf7bf09cd0e5ca2b49fd0a2b188b5d62413df82936f45cfcc750cb708863d000"
+  }
+}

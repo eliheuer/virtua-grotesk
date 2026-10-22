@@ -22,7 +22,7 @@ echo "Building Virtua Grotesk fonts with gftools builder..."
 rm -rf build build.ninja .ninja_log fonts sources/build.ninja sources/.ninja_log sources/instance_ufos
 mkdir -p fonts/variable fonts/ttf
 
-gftools builder sources/config.yaml
+python scripts/build_source_snapshot.py sources/config.yaml
 
 built_fonts=()
 while IFS= read -r font_path; do

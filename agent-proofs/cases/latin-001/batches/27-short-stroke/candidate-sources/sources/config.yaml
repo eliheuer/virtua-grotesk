@@ -1,0 +1,26 @@
+sources:
+  - VirtuaGrotesk.designspace
+axisOrder:
+  - wght
+familyName: "Virtua Grotesk"
+outputDir: ../fonts
+buildOTF: false
+buildWebfont: false
+autohintTTF: false
+flattenComponents: false
+decomposeTransformedComponents: false
+
+# Keep static layout and outline interpolation consistent with the variable font.
+instances:
+  - familyName: "Virtua Grotesk"
+    styleName: "Regular"
+    coordinates: {wght: 400}
+  - familyName: "Virtua Grotesk"
+    styleName: "Medium"
+    coordinates: {wght: 500}
+  - familyName: "Virtua Grotesk"
+    styleName: "SemiBold"
+    coordinates: {wght: 600}
+  - familyName: "Virtua Grotesk"
+    styleName: "Bold"
+    coordinates: {wght: 700}

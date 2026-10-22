@@ -1,0 +1,14 @@
+Mode: package
+Network: online
+-p
+googlefonts
+--error-code-on
+fail
+--loglevel
+warn
+--succinct
+out/qa/2026-10-21-latin-overlay-package/ofl/virtuagrotesk/VirtuaGrotesk[wght].ttf
+out/qa/2026-10-21-latin-overlay-package/ofl/virtuagrotesk/METADATA.pb
+out/qa/2026-10-21-latin-overlay-package/ofl/virtuagrotesk/OFL.txt
+out/qa/2026-10-21-latin-overlay-package/ofl/virtuagrotesk/article/ARTICLE.en_us.html
+out/qa/2026-10-21-latin-overlay-package/ofl/virtuagrotesk/article/weight-specimen.svg

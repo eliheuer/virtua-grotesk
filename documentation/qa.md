@@ -3,6 +3,19 @@
 Run commands from the repository root. The canonical build is `make build`;
 `make build-fontc` is an alternate compiler path, not the release baseline.
 
+## Source snapshot and static layout
+
+`make build` uses `scripts/build_source_snapshot.py` to copy active sources into
+a temporary directory and normalize master glyph order there. This permits
+per-master explicit layout coordinates without reordering the editor's UFOs.
+`sources/config.yaml` names the four static instances; gftools derives them from
+the compiled VF, including GPOS interpolation and standard overlap removal.
+Do not revert to compiling Regular feature text independently for every static
+weight. Static contour records need not match the former UFO-instance build;
+compare against serialized VF instances and inspect mixed-script images.
+[LAT-001 batch27](../agent-proofs/cases/latin-001/batches/27-short-stroke/README.md)
+retains the initial failure, regression tests and before/after evidence.
+
 ## Tools
 
 `make setup` installs `requirements.txt` into `.venv`. Python requirements are

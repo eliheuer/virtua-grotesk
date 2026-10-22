@@ -1,0 +1,1530 @@
+{
+  "checks": 765,
+  "existing_glyph_geometry_comparisons": 4415,
+  "all_existing_ink_advances_unchanged": true,
+  "unchanged_existing_sources": 1790,
+  "new_codepoint": "U+0335",
+  "compiled_glyph_name": "strokeshortcomb",
+  "sampled_placements": [
+    {
+      "weight": 400,
+      "base": "A",
+      "overlay_bounds": [
+        104,
+        352,
+        616,
+        416
+      ],
+      "body_bounds": [
+        24,
+        0,
+        692,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "O",
+      "overlay_bounds": [
+        144,
+        352,
+        656,
+        416
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        744,
+        784
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "a",
+      "overlay_bounds": [
+        56,
+        256,
+        568,
+        320
+      ],
+      "body_bounds": [
+        48,
+        -16,
+        576,
+        592
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "o",
+      "overlay_bounds": [
+        64,
+        256,
+        576,
+        320
+      ],
+      "body_bounds": [
+        48,
+        -16,
+        592,
+        592
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "g",
+      "overlay_bounds": [
+        48,
+        256,
+        560,
+        320
+      ],
+      "body_bounds": [
+        48,
+        -216,
+        568,
+        592
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "h",
+      "overlay_bounds": [
+        40,
+        256,
+        552,
+        320
+      ],
+      "body_bounds": [
+        72,
+        0,
+        520,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "i",
+      "overlay_bounds": [
+        -8,
+        256,
+        248,
+        320
+      ],
+      "body_bounds": [
+        72,
+        0,
+        168,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "j",
+      "overlay_bounds": [
+        -48,
+        256,
+        208,
+        320
+      ],
+      "body_bounds": [
+        -24,
+        -200,
+        176,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u012f",
+      "overlay_bounds": [
+        -8,
+        256,
+        248,
+        320
+      ],
+      "body_bounds": [
+        24,
+        -208,
+        184,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u00e1",
+      "overlay_bounds": [
+        56,
+        256,
+        568,
+        320
+      ],
+      "body_bounds": [
+        48,
+        -16,
+        576,
+        832
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u0101",
+      "overlay_bounds": [
+        56,
+        256,
+        568,
+        320
+      ],
+      "body_bounds": [
+        48,
+        -16,
+        576,
+        736
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u0104",
+      "overlay_bounds": [
+        104,
+        352,
+        616,
+        416
+      ],
+      "body_bounds": [
+        24,
+        -208,
+        704,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u021f",
+      "overlay_bounds": [
+        40,
+        256,
+        552,
+        320
+      ],
+      "body_bounds": [
+        -24,
+        0,
+        520,
+        1024
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u017f",
+      "overlay_bounds": [
+        48,
+        256,
+        304,
+        320
+      ],
+      "body_bounds": [
+        24,
+        0,
+        320,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u0192",
+      "overlay_bounds": [
+        80,
+        256,
+        336,
+        320
+      ],
+      "body_bounds": [
+        32,
+        -256,
+        376,
+        768
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u0149",
+      "overlay_bounds": [
+        64,
+        256,
+        576,
+        320
+      ],
+      "body_bounds": [
+        48,
+        0,
+        600,
+        792
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u0138",
+      "overlay_bounds": [
+        64,
+        256,
+        576,
+        320
+      ],
+      "body_bounds": [
+        72,
+        0,
+        576,
+        576
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u0167",
+      "overlay_bounds": [
+        64,
+        256,
+        320,
+        320
+      ],
+      "body_bounds": [
+        32,
+        0,
+        344,
+        696
+      ]
+    },
+    {
+      "weight": 400,
+      "base": "\u25cc",
+      "overlay_bounds": [
+        48,
+        400,
+        560,
+        464
+      ],
+      "body_bounds": [
+        60,
+        184,
+        540,
+        680
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "A",
+      "overlay_bounds": [
+        114,
+        348,
+        626,
+        420
+      ],
+      "body_bounds": [
+        28,
+        0,
+        707,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "O",
+      "overlay_bounds": [
+        152,
+        348,
+        664,
+        420
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        760,
+        784
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "a",
+      "overlay_bounds": [
+        60,
+        252,
+        572,
+        324
+      ],
+      "body_bounds": [
+        52,
+        -16,
+        580,
+        592
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "o",
+      "overlay_bounds": [
+        72,
+        252,
+        584,
+        324
+      ],
+      "body_bounds": [
+        46,
+        -16,
+        610,
+        592
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "g",
+      "overlay_bounds": [
+        60,
+        252,
+        572,
+        324
+      ],
+      "body_bounds": [
+        46,
+        -222,
+        590,
+        592
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "h",
+      "overlay_bounds": [
+        50,
+        252,
+        562,
+        324
+      ],
+      "body_bounds": [
+        72,
+        0,
+        540,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "i",
+      "overlay_bounds": [
+        4,
+        252,
+        260,
+        324
+      ],
+      "body_bounds": [
+        72,
+        0,
+        192,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "j",
+      "overlay_bounds": [
+        -40,
+        252,
+        216,
+        324
+      ],
+      "body_bounds": [
+        -24,
+        -200,
+        196,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u012f",
+      "overlay_bounds": [
+        4,
+        252,
+        260,
+        324
+      ],
+      "body_bounds": [
+        44,
+        -212,
+        208,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u00e1",
+      "overlay_bounds": [
+        60,
+        252,
+        572,
+        324
+      ],
+      "body_bounds": [
+        52,
+        -16,
+        580,
+        832
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u0101",
+      "overlay_bounds": [
+        60,
+        252,
+        572,
+        324
+      ],
+      "body_bounds": [
+        52,
+        -16,
+        580,
+        740
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u0104",
+      "overlay_bounds": [
+        114,
+        348,
+        626,
+        420
+      ],
+      "body_bounds": [
+        28,
+        -212,
+        720,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u021f",
+      "overlay_bounds": [
+        50,
+        252,
+        562,
+        324
+      ],
+      "body_bounds": [
+        -18,
+        0,
+        540,
+        1024
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u017f",
+      "overlay_bounds": [
+        56,
+        252,
+        312,
+        324
+      ],
+      "body_bounds": [
+        26,
+        0,
+        334,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u0192",
+      "overlay_bounds": [
+        88,
+        252,
+        344,
+        324
+      ],
+      "body_bounds": [
+        36,
+        -256,
+        388,
+        768
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u0149",
+      "overlay_bounds": [
+        80,
+        252,
+        592,
+        324
+      ],
+      "body_bounds": [
+        44,
+        0,
+        636,
+        792
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u0138",
+      "overlay_bounds": [
+        72,
+        252,
+        584,
+        324
+      ],
+      "body_bounds": [
+        72,
+        0,
+        592,
+        576
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u0167",
+      "overlay_bounds": [
+        68,
+        252,
+        324,
+        324
+      ],
+      "body_bounds": [
+        30,
+        0,
+        356,
+        706
+      ]
+    },
+    {
+      "weight": 475,
+      "base": "\u25cc",
+      "overlay_bounds": [
+        48,
+        396,
+        560,
+        468
+      ],
+      "body_bounds": [
+        58,
+        182,
+        542,
+        682
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "A",
+      "overlay_bounds": [
+        124,
+        344,
+        636,
+        424
+      ],
+      "body_bounds": [
+        32,
+        0,
+        722,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "O",
+      "overlay_bounds": [
+        160,
+        344,
+        672,
+        424
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        776,
+        784
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "a",
+      "overlay_bounds": [
+        64,
+        248,
+        576,
+        328
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        584,
+        592
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "o",
+      "overlay_bounds": [
+        80,
+        248,
+        592,
+        328
+      ],
+      "body_bounds": [
+        44,
+        -16,
+        628,
+        592
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "g",
+      "overlay_bounds": [
+        72,
+        248,
+        584,
+        328
+      ],
+      "body_bounds": [
+        44,
+        -228,
+        612,
+        592
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "h",
+      "overlay_bounds": [
+        60,
+        248,
+        572,
+        328
+      ],
+      "body_bounds": [
+        72,
+        0,
+        560,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "i",
+      "overlay_bounds": [
+        16,
+        248,
+        272,
+        328
+      ],
+      "body_bounds": [
+        72,
+        0,
+        216,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "j",
+      "overlay_bounds": [
+        -32,
+        248,
+        224,
+        328
+      ],
+      "body_bounds": [
+        -24,
+        -200,
+        216,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u012f",
+      "overlay_bounds": [
+        16,
+        248,
+        272,
+        328
+      ],
+      "body_bounds": [
+        64,
+        -216,
+        232,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u00e1",
+      "overlay_bounds": [
+        64,
+        248,
+        576,
+        328
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        584,
+        832
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u0101",
+      "overlay_bounds": [
+        64,
+        248,
+        576,
+        328
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        584,
+        744
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u0104",
+      "overlay_bounds": [
+        124,
+        344,
+        636,
+        424
+      ],
+      "body_bounds": [
+        32,
+        -216,
+        736,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u021f",
+      "overlay_bounds": [
+        60,
+        248,
+        572,
+        328
+      ],
+      "body_bounds": [
+        -12,
+        0,
+        560,
+        1024
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u017f",
+      "overlay_bounds": [
+        64,
+        248,
+        320,
+        328
+      ],
+      "body_bounds": [
+        28,
+        0,
+        348,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u0192",
+      "overlay_bounds": [
+        96,
+        248,
+        352,
+        328
+      ],
+      "body_bounds": [
+        40,
+        -256,
+        400,
+        768
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u0149",
+      "overlay_bounds": [
+        96,
+        248,
+        608,
+        328
+      ],
+      "body_bounds": [
+        40,
+        0,
+        672,
+        792
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u0138",
+      "overlay_bounds": [
+        80,
+        248,
+        592,
+        328
+      ],
+      "body_bounds": [
+        72,
+        0,
+        608,
+        576
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u0167",
+      "overlay_bounds": [
+        72,
+        248,
+        328,
+        328
+      ],
+      "body_bounds": [
+        28,
+        0,
+        368,
+        716
+      ]
+    },
+    {
+      "weight": 550,
+      "base": "\u25cc",
+      "overlay_bounds": [
+        48,
+        392,
+        560,
+        472
+      ],
+      "body_bounds": [
+        56,
+        180,
+        544,
+        684
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "A",
+      "overlay_bounds": [
+        134,
+        340,
+        646,
+        428
+      ],
+      "body_bounds": [
+        36,
+        0,
+        737,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "O",
+      "overlay_bounds": [
+        168,
+        340,
+        680,
+        428
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        792,
+        784
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "a",
+      "overlay_bounds": [
+        68,
+        244,
+        580,
+        332
+      ],
+      "body_bounds": [
+        60,
+        -16,
+        588,
+        592
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "o",
+      "overlay_bounds": [
+        88,
+        244,
+        600,
+        332
+      ],
+      "body_bounds": [
+        42,
+        -16,
+        646,
+        592
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "g",
+      "overlay_bounds": [
+        84,
+        244,
+        596,
+        332
+      ],
+      "body_bounds": [
+        42,
+        -234,
+        634,
+        592
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "h",
+      "overlay_bounds": [
+        70,
+        244,
+        582,
+        332
+      ],
+      "body_bounds": [
+        72,
+        0,
+        580,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "i",
+      "overlay_bounds": [
+        28,
+        244,
+        284,
+        332
+      ],
+      "body_bounds": [
+        72,
+        0,
+        240,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "j",
+      "overlay_bounds": [
+        -24,
+        244,
+        232,
+        332
+      ],
+      "body_bounds": [
+        -24,
+        -200,
+        236,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u012f",
+      "overlay_bounds": [
+        28,
+        244,
+        284,
+        332
+      ],
+      "body_bounds": [
+        72,
+        -220,
+        256,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u00e1",
+      "overlay_bounds": [
+        68,
+        244,
+        580,
+        332
+      ],
+      "body_bounds": [
+        60,
+        -16,
+        588,
+        832
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u0101",
+      "overlay_bounds": [
+        68,
+        244,
+        580,
+        332
+      ],
+      "body_bounds": [
+        60,
+        -16,
+        588,
+        748
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u0104",
+      "overlay_bounds": [
+        134,
+        340,
+        646,
+        428
+      ],
+      "body_bounds": [
+        36,
+        -220,
+        752,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u021f",
+      "overlay_bounds": [
+        70,
+        244,
+        582,
+        332
+      ],
+      "body_bounds": [
+        -6,
+        0,
+        580,
+        1024
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u017f",
+      "overlay_bounds": [
+        72,
+        244,
+        328,
+        332
+      ],
+      "body_bounds": [
+        30,
+        0,
+        362,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u0192",
+      "overlay_bounds": [
+        104,
+        244,
+        360,
+        332
+      ],
+      "body_bounds": [
+        44,
+        -256,
+        412,
+        768
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u0149",
+      "overlay_bounds": [
+        112,
+        244,
+        624,
+        332
+      ],
+      "body_bounds": [
+        36,
+        0,
+        708,
+        792
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u0138",
+      "overlay_bounds": [
+        88,
+        244,
+        600,
+        332
+      ],
+      "body_bounds": [
+        72,
+        0,
+        624,
+        576
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u0167",
+      "overlay_bounds": [
+        76,
+        244,
+        332,
+        332
+      ],
+      "body_bounds": [
+        26,
+        0,
+        380,
+        726
+      ]
+    },
+    {
+      "weight": 625,
+      "base": "\u25cc",
+      "overlay_bounds": [
+        48,
+        388,
+        560,
+        476
+      ],
+      "body_bounds": [
+        54,
+        178,
+        546,
+        686
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "A",
+      "overlay_bounds": [
+        144,
+        336,
+        656,
+        432
+      ],
+      "body_bounds": [
+        40,
+        0,
+        752,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "O",
+      "overlay_bounds": [
+        176,
+        336,
+        688,
+        432
+      ],
+      "body_bounds": [
+        56,
+        -16,
+        808,
+        784
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "a",
+      "overlay_bounds": [
+        72,
+        240,
+        584,
+        336
+      ],
+      "body_bounds": [
+        64,
+        -16,
+        592,
+        592
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "o",
+      "overlay_bounds": [
+        96,
+        240,
+        608,
+        336
+      ],
+      "body_bounds": [
+        40,
+        -16,
+        664,
+        592
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "g",
+      "overlay_bounds": [
+        96,
+        240,
+        608,
+        336
+      ],
+      "body_bounds": [
+        40,
+        -240,
+        656,
+        592
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "h",
+      "overlay_bounds": [
+        80,
+        240,
+        592,
+        336
+      ],
+      "body_bounds": [
+        72,
+        0,
+        600,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "i",
+      "overlay_bounds": [
+        40,
+        240,
+        296,
+        336
+      ],
+      "body_bounds": [
+        72,
+        0,
+        264,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "j",
+      "overlay_bounds": [
+        -16,
+        240,
+        240,
+        336
+      ],
+      "body_bounds": [
+        -24,
+        -200,
+        256,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u012f",
+      "overlay_bounds": [
+        40,
+        240,
+        296,
+        336
+      ],
+      "body_bounds": [
+        72,
+        -224,
+        280,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u00e1",
+      "overlay_bounds": [
+        72,
+        240,
+        584,
+        336
+      ],
+      "body_bounds": [
+        64,
+        -16,
+        592,
+        832
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u0101",
+      "overlay_bounds": [
+        72,
+        240,
+        584,
+        336
+      ],
+      "body_bounds": [
+        64,
+        -16,
+        592,
+        752
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u0104",
+      "overlay_bounds": [
+        144,
+        336,
+        656,
+        432
+      ],
+      "body_bounds": [
+        40,
+        -224,
+        768,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u021f",
+      "overlay_bounds": [
+        80,
+        240,
+        592,
+        336
+      ],
+      "body_bounds": [
+        0,
+        0,
+        600,
+        1024
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u017f",
+      "overlay_bounds": [
+        80,
+        240,
+        336,
+        336
+      ],
+      "body_bounds": [
+        32,
+        0,
+        376,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u0192",
+      "overlay_bounds": [
+        112,
+        240,
+        368,
+        336
+      ],
+      "body_bounds": [
+        48,
+        -256,
+        424,
+        768
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u0149",
+      "overlay_bounds": [
+        128,
+        240,
+        640,
+        336
+      ],
+      "body_bounds": [
+        32,
+        0,
+        744,
+        792
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u0138",
+      "overlay_bounds": [
+        96,
+        240,
+        608,
+        336
+      ],
+      "body_bounds": [
+        72,
+        0,
+        640,
+        576
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u0167",
+      "overlay_bounds": [
+        80,
+        240,
+        336,
+        336
+      ],
+      "body_bounds": [
+        24,
+        0,
+        392,
+        736
+      ]
+    },
+    {
+      "weight": 700,
+      "base": "\u25cc",
+      "overlay_bounds": [
+        48,
+        384,
+        560,
+        480
+      ],
+      "body_bounds": [
+        52,
+        176,
+        548,
+        688
+      ]
+    }
+  ]
+}

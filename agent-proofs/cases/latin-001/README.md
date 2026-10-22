@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312. Next the three remaining overlay marks U0335/U0337/U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Next the two remaining overlay marks U0337/U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -387,3 +387,25 @@ than Rubik; dense Bold and longer-text spacing remain review items. No canonical
 substitution of g+U0312 to ģ. Zero grid findings; compatible convex contours.
 Rubik gap now349:182 Cyrillic,3 combining,62 Common,102 Arabic presentation forms.
 Next U0335/U0337/U0338 overlays. Purple pending review; local only/no push.
+
+## Batch27 · Short stroke overlay and build consistency
+
+[Batch27](batches/27-short-stroke/README.md) adds U0335 plus a contextual narrow
+variant, both masters, with Latin body-centered GPOS and preserved ordinary-mark
+positions. Whole-image review rejected the wide-only narrow-letter trial. Eleven
+source files;1790 other existing sources and every old GLIF unchanged, including
+Arabic326/master and green131/74. All new points/anchors on8, zero grid findings.
+765 scoped checks,4415 exact old VF ink/advance comparisons,20 Latin methods and
+2 build-helper tests pass;216 baseline Hebrew failures persist with no numerical
+regression. Full images400/550/700,224px endpoints, actual Diffenator supplement
+and stock first view, plus four-weight static comparisons inspected.
+
+Per-master feature positions exposed different master glyph orders and an old
+static-build limitation. Build now normalizes order only in a temporary source
+copy and derives statics from the VF. All static advances preserved; standard
+overlap removal/serialization changes old static contour records, not source
+outlines. Complete new static geometry matches serialized VF instances. This is
+not a claim of old-static pixel equality. Full online final-package QA remains
+10 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP. No exclusions or subset changes. Rubik
+gap348:182 Cyrillic,2 combining,62 Common,102 Arabic presentation forms. Pending
+human review; local only. Next U0337/U0338 and independent symbols/blockers.

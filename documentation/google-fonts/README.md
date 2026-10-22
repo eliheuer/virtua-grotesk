@@ -77,7 +77,7 @@ shows no new failures; this does not waive the existing failures.
 | Historical early Latin VF package | 10 | 8 | 160 | 10 | 41 |
 | Batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
-| Current batch25 package after breve winding repair | 10 | 9 | 160 | 10 | 40 |
+| Current batch27 package after short stroke overlay | 10 | 9 | 160 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -1294,3 +1294,20 @@ Full package QA counts above are from batch25, before this addition. Rubik cmap
 gap now349 (182 Cyrillic,3 combining,62 Common,102 Arabic presentation forms),
 not language counts. Compact mark proportions, dense Bold and spacing remain
 human-review items. No new release approval, push, or publication.
+
+### Latin batch27 · Overlay and static-layout build
+
+[LAT-001 batch27](../../agent-proofs/cases/latin-001/batches/27-short-stroke/README.md)
+adds U0335 and a narrow variant with Latin-only body attachment. All old GLIFs,
+Arabic and green sources unchanged.765 scoped checks,4415 exact old VF geometry
+comparisons,20 Latin methods and2 build-helper tests pass;216 known Hebrew
+failures remain. Whole rasters, Diffenator400/550/700 and enlarged endpoints
+inspected. Full online package remains10 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP.
+
+The build now copies sources before normalizing master glyph order, then derives
+four static fonts from the VF so explicit GPOS positions interpolate. Static
+contour records change through standard overlap removal/serialization; widths
+are unchanged and geometry matches serialized VF instances. Four-weight static
+mixed-script before/after proofs retained; no broad visual certification.
+Remaining Rubik cmap gap348:182 Cyrillic,2 combining,62 Common,102 Arabic
+presentation forms. No push, metadata changes or release publication.
