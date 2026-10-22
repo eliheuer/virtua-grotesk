@@ -8,7 +8,7 @@ languagesystem latn dflt;
 @FIGURES_TABULAR = [zero.tf one.tf two.tf three.tf four.tf five.tf six.tf seven.tf eight.tf nine.tf];
 @SOFT_DOTTED_BASES = [i j];
 @SOFT_DOTTED_DOTLESS = [idotless jdotless];
-@SOFT_DOTTED_ABOVE_MARKS = [acutecomb gravecomb circumflexcomb tildecomb macroncomb brevecomb dotaccentcomb dieresiscomb ringcomb hungarumlautcomb caroncomb];
+@SOFT_DOTTED_ABOVE_MARKS = [acutecomb gravecomb circumflexcomb tildecomb macroncomb brevecomb dotaccentcomb dieresiscomb ringcomb hungarumlautcomb caroncomb commaturnedabovecomb];
 
 feature aalt {
 # automatic

@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "A̒ a̒ G̒ g̒ · ģ g̒",
+      "i̒ j̒ į̒ · h̒ l̒ f̒",
+      "i̧̒ j̦̒ · ģ̒",
+      "g̒́ a̒̈ · g̒̒",
+      "b̒ d̒ k̒ · O̒ o̒",
+      "ģ ģ́ · Ģ Ķ Ļ Ņ"
+    ],
+    "words": [
+      "g̒a g̒e g̒i g̒o g̒u",
+      "ag̒a eg̒e ig̒i og̒o ug̒u",
+      "i̒n j̒a į̒n · h̒a f̒i l̒a",
+      "g̒́a a̒̈na · i̧̒na j̦̒a",
+      "ģimene · kuģis · ģeogrāfija",
+      "Ģimene · Ķīlis · ļaudis · ņemt"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "945b76f3c222168609eb0641e1030b8800836793ffca643c649b59488528ba54"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "4f35c1ee549234e775bb45ab63d1c850e7bd5b70d296ad0c16d155db3052adb6"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "518efe0a0d4455af7bb3efc1a6a7aa17eefb51f94565e811382cf394b674d7b8"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "4c406a1f96fa9def7022b69487a3c0906d1b5b71f74615bd65d1720611e747ad"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "03e7dd0dbe554c1d0c9df196844ca95eaffc0cfbc14af1163804f7a23065c828"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "603a812d0bbf06a6d9b549cd2f48503ead2234509035898903ca25f4b3787b34"
+    }
+  ],
+  "fonts": {
+    "before": "9010ebd88a8969c625cd1b61e999cd8b51436d78b0ac11a5122807fab3d755de",
+    "after": "5a6522014d9e56f9edb49bc0b88b49cc231adaa24a56f4a629ce7351e9c71c38",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

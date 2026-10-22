@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "PASS": 6
+  },
+  "results": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": {
+      "Outline Checks": [
+        {
+          "check_id": "outline_direction",
+          "check_name": "Check the direction of the outermost contour in each glyph",
+          "check_rationale": "In TrueType fonts, the outermost contour of a glyph should be oriented clockwise, while the inner contours should be oriented counter-clockwise. Getting the path direction wrong can lead to rendering issues in some software.",
+          "filename": "fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Outline Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        }
+      ],
+      "Opentype Specification Checks": [
+        {
+          "check_id": "opentype/GDEF_mark_chars",
+          "check_name": "Check mark characters are in GDEF mark glyph class.",
+          "check_rationale": "Mark characters should be in the GDEF mark glyph class.",
+          "filename": "fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Opentype Specification Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        },
+        {
+          "check_id": "opentype/GDEF_non_mark_chars",
+          "check_name": "Check GDEF mark glyph class doesn't have characters that are not marks.",
+          "check_rationale": "Glyphs in the GDEF mark glyph class become non-spacing and may be repositioned if they have mark anchors.\n\nOnly combining mark glyphs should be in that class. Any non-mark glyph must not be in that class, in particular spacing glyphs.",
+          "filename": "fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Opentype Specification Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        },
+        {
+          "check_id": "opentype/GDEF_spacing_marks",
+          "check_name": "Check glyphs in mark glyph class are non-spacing.",
+          "check_rationale": "Glyphs in the GDEF mark glyph class should be non-spacing.\n\nSpacing glyphs in the GDEF mark glyph class may have incorrect anchor positioning that was only intended for building composite glyphs during design.",
+          "filename": "fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Opentype Specification Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        }
+      ],
+      "Shaping Checks": [
+        {
+          "check_id": "dotted_circle",
+          "check_name": "Ensure dotted circle glyph is present and can attach marks.",
+          "check_rationale": "The dotted circle character (U+25CC) is inserted by shaping engines before mark glyphs which do not have an associated base, especially in the context of broken syllabic clusters.\n\nFor fonts containing combining marks, it is recommended that the dotted circle character be included so that these isolated marks can be displayed properly; for fonts supporting complex scripts, this should be considered mandatory.\n\nAdditionally, when a dotted circle glyph is present, it should be able to display all marks correctly, meaning that it should contain anchors for all attaching marks.\n\nA fontmake filter can be used to automatically add a dotted_circle to a font:\n\nfontmake --filter 'DottedCircleFilter(pre=True)' --filter '...'",
+          "filename": "fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Shaping Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        },
+        {
+          "check_id": "soft_dotted",
+          "check_name": "Ensure soft_dotted characters lose their dot when combined with marks that\nreplace the dot.",
+          "check_rationale": "An accent placed on characters with a \"soft dot\", like i or j, causes the dot to disappear. An explicit dot above can be added where required. See \"Diacritics on i and j\" in Section 7.1, \"Latin\" in The Unicode Standard.\n\nCharacters with the Soft_Dotted property are listed in https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt\n\nSee also: https://googlefonts.github.io/gf-guide/diacritics.html#soft-dotted-glyphs",
+          "filename": "fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Shaping Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        }
+      ]
+    }
+  }
+}

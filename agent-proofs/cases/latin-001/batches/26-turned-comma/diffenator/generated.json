@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/26-turned-comma/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch26/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/26-turned-comma/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/26-turned-comma/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch26/comparison"
+    ]
+  ],
+  "supplement_text": "g̒a g̒e g̒i g̒o g̒u · i̒n j̒a į̒n · h̒a f̒i l̒a · g̒́a a̒̈na · i̧̒na j̦̒a · ģimene kuģis ģeogrāfija · Ģimene Ķīlis ļaudis ņemt",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "5a6522014d9e56f9edb49bc0b88b49cc231adaa24a56f4a629ce7351e9c71c38",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch26/virtua/diff3proof.html": "4eb8f0b71b4add14c02170775aea12e98a9b1623a794d904ac400d19222570bc",
+    "out/review-latin-d2513094/batch26/comparison/diff3proof.html": "abfeb1abfdbe32e4ced2195bea99e97451bef6d5254c7973403c088618844414",
+    "out/review-latin-d2513094/batch26/comparison/turned-comma.html": "3fa9eed52175d82e4c21f298ea091f2892ef482d1708fd7c866fa6274fd5d88d"
+  }
+}

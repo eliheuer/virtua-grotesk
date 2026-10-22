@@ -423,9 +423,12 @@
 		<string>napostrophe</string>
 		<string>fi</string>
 		<string>fl</string>
+		<string>commaturnedabovecomb</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>commaturnedabovecomb</key>
+		<string>mark</string>
 		<key>fi</key>
 		<string>ligature</string>
 		<key>fl</key>

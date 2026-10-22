@@ -1,0 +1,35 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "old": "Virtua",
+  "new": "Rubik",
+  "scope": "Full same-text turned-comma supplement and first stock coverage viewport in both fonts. Stock coverage omits U0312. Slider value determines weight despite Regular menu label.",
+  "findings": [
+    "New mark is smaller and lighter than Rubik, matching existing Virtua Latvian comma construction.",
+    "Soft dots disappear; new mark and upper stacks remain separate in sampled contexts.",
+    "Rubik overlaps the synthetic acute stack; Virtua has separate stacking. This is not a canonical Latvian spelling assertion.",
+    "Existing Bold density and uneven longer-text spacing remain for human review.",
+    "Generic g+U0312 is not canonical decomposition of \u0123 and retains generic protected base anchors."
+  ],
+  "fonts": {
+    "after": "5a6522014d9e56f9edb49bc0b88b49cc231adaa24a56f4a629ce7351e9c71c38",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "screenshots": {
+    "virtua-550.png": "b850ad46ed422e2ab971e4ce78997bbe2432d0544e33cf7d0d66ced8f3ef0dc9",
+    "stock-virtua-400.png": "231316d9a979f863eeb18db6c52339451606ed785d9e7585d6509ed901dd93f7",
+    "rubik-700.png": "f6c82487e7ab04557a56b17be4e98f54116179de797656ac64e85499f965b1a2",
+    "stock-rubik-550.png": "c328bb7ded2f9b9b63cc7786c72b71d5da512cb17bf59085ed8ba52df0a5db61",
+    "stock-virtua-700.png": "65432af7629770937e60c8f087787191b4b16ac498e21960ab8f5fe1eb17e7d9",
+    "rubik-400.png": "3e645739f3476763dbde8128cf96a19c172bc8e039b35e42e544584c6d694f6a",
+    "rubik-550.png": "88a631d9a0ce206cf1eae244f4ec324c636f38f06fe00360c082a11b1c71abfd",
+    "virtua-700.png": "c655e96294517653d1eafbc8fda2438f459ecb0a49a4044a380d6fb9776adea2",
+    "stock-rubik-400.png": "56074e10e67ab12ba75da5629bd074ceb721905c69ae3f6a5d556cb781fcc7ae",
+    "stock-virtua-550.png": "3dbb52da11dd814f2888fb1874b9569b4f38e13bf87ba41007371d0244af189b",
+    "stock-rubik-700.png": "78de519a2f643df0d9d2d61d48e976477e8071f18c29cd03e7a90a592924e6f0",
+    "virtua-400.png": "fde935316439abb8e6c6de0039f6ba37bccf1231e0d35fe96097abfbe4a4091a"
+  }
+}

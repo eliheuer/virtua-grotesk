@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="commaturnedabovecomb" format="2">
+	<unicode hex="0312"/>
+	<advance width="0"/>
+	<outline>
+		<contour>
+			<point x="192" y="776" type="line"/>
+			<point x="128" y="776" type="line"/>
+			<point x="112" y="760" type="line"/>
+			<point x="80" y="632" type="line"/>
+			<point x="96" y="616" type="line"/>
+			<point x="160" y="616" type="line"/>
+			<point x="176" y="632" type="line"/>
+			<point x="208" y="760" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_top" x="144" y="576"/>
+	<anchor name="top" x="144" y="800"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

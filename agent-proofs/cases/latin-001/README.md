@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Next the four remaining combining marks U0312/U0335/U0337/U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312. Next the three remaining overlay marks U0335/U0337/U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -370,3 +370,20 @@ traversal despite exact geometry; no pixel identity claimed. Fresh full online
 unexcluded package QA10 FAIL/9 WARN/160 PASS: outline_direction now passes.
 Other serving-set/protected/human findings remain. Next four combining marks,
 then common symbols. Local only; no visual approval or push.
+
+## Batch26 · Turned comma above
+
+[Batch26](batches/26-turned-comma/README.md) adds U+0312 in both masters as
+compatible eight-point commaaccent-derived180° diagonals, with zero advance and
+incoming/outgoing top anchors. Soft-dotted class handles i/j/iogonek and
+intervening below marks. Eight source files; all1,789 other existing sources,
+all existing GLIFs, Arabic and green sources unchanged.165 scoped checks,
+4,410 old ink/advance comparisons,18 Latin methods, unchanged216 Hebrew baseline
+failures and preflight complete. Six focused Fontspector checks pass; full
+package10 FAIL/9 WARN evidence remains batch25 and predates this addition.
+Whole400/550/700 forms/words,224px details and actual Diffenator target/stock
+viewport comparisons inspected against Rubik. New marks remain lighter/smaller
+than Rubik; dense Bold and longer-text spacing remain review items. No canonical
+substitution of g+U0312 to ģ. Zero grid findings; compatible convex contours.
+Rubik gap now349:182 Cyrillic,3 combining,62 Common,102 Arabic presentation forms.
+Next U0335/U0337/U0338 overlays. Purple pending review; local only/no push.

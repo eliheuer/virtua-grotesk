@@ -1,0 +1,75 @@
+{
+  "contours": [
+    {
+      "weight": 400,
+      "strictly_convex": true,
+      "cross_products": [
+        512.0,
+        512.0,
+        1536.0,
+        2560.0,
+        512.0,
+        512.0,
+        1536.0,
+        2560.0
+      ]
+    },
+    {
+      "weight": 475,
+      "strictly_convex": true,
+      "cross_products": [
+        640.0,
+        640.0,
+        1536.0,
+        2560.0,
+        640.0,
+        640.0,
+        1536.0,
+        2560.0
+      ]
+    },
+    {
+      "weight": 550,
+      "strictly_convex": true,
+      "cross_products": [
+        768.0,
+        768.0,
+        1536.0,
+        2560.0,
+        768.0,
+        768.0,
+        1536.0,
+        2560.0
+      ]
+    },
+    {
+      "weight": 625,
+      "strictly_convex": true,
+      "cross_products": [
+        896.0,
+        896.0,
+        1536.0,
+        2560.0,
+        896.0,
+        896.0,
+        1536.0,
+        2560.0
+      ]
+    },
+    {
+      "weight": 700,
+      "strictly_convex": true,
+      "cross_products": [
+        1024.0,
+        1024.0,
+        1536.0,
+        2560.0,
+        1024.0,
+        1024.0,
+        1536.0,
+        2560.0
+      ]
+    }
+  ],
+  "limits": "Eight intentional line corners; no cubic continuity metric applies."
+}
