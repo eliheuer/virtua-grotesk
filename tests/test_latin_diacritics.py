@@ -331,3 +331,31 @@ class LatinDiacriticsTests(unittest.TestCase):
                                 buf=hb.Buffer();buf.add_str(base+marks);buf.guess_segment_properties();hb.shape(hf,buf)
                                 names=[font.getGlyphName(g.codepoint) for g in buf.glyph_infos]
                                 self.assertEqual(names[0],{'i':'idotless','j':'jdotless','į':'dotlessiogonek'}[base])
+
+    def test_short_stroke_overlay_centers_and_preserves_accents(self):
+        for path,font in self.fonts():
+            data=path.read_bytes();name=font.getBestCmap()[0x335]
+            self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs[name],3)
+            self.assertEqual(font['hmtx'][name][0],0)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for base in ['a','o','h','i','j','á','ā','ą','ȟ','A','O','Ą']:
+                    with self.subTest(font=path.name,weight=w,base=base):
+                        advance,boxes=shaped(font,data,base+'̵',w)
+                        self.assertEqual(advance,shaped(font,data,base,w)[0])
+                        self.assertEqual(len(boxes),2)
+                        self.assertAlmostEqual((boxes[1][1]+boxes[1][3])/2,384 if base.isupper() else 288,delta=1)
+                        if base=='o':
+                            self.assertAlmostEqual((boxes[1][0]+boxes[1][2])/2,320+(w-400)/300*32,delta=1)
+                        for mark in ['́','̧','̒']:
+                            _,combined=shaped(font,data,base+'̵'+mark,w)
+                            _,ordinary=shaped(font,data,base+mark,w)
+                            self.assertEqual(sorted(combined[:1]+combined[2:]),sorted(ordinary))
+
+    def test_short_overlay_narrow_letters_do_not_touch_following_n(self):
+        for path,font in self.fonts():
+            data=path.read_bytes()
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for base in ['i','j','l','f','fi','fl','ﬁ','ﬂ']:
+                    with self.subTest(font=path.name,weight=w,base=base):
+                        _,boxes=shaped(font,data,base+'̵n',w)
+                        self.assertGreaterEqual(boxes[-1][0]-boxes[-2][2],16)

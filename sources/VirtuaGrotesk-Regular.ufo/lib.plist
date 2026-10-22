@@ -424,9 +424,15 @@
 		<string>fi</string>
 		<string>fl</string>
 		<string>commaturnedabovecomb</string>
+		<string>strokeshortcomb</string>
+		<string>strokeshortcomb.narrow</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>strokeshortcomb</key>
+		<string>mark</string>
+		<key>strokeshortcomb.narrow</key>
+		<string>mark</string>
 		<key>commaturnedabovecomb</key>
 		<string>mark</string>
 		<key>fi</key>
