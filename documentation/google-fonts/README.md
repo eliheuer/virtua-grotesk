@@ -49,7 +49,10 @@ source bytes remain unchanged. Batch05 rounds both breve bowls and adds Bold
 weight in four GLIFs, with90 shaping checks and whole-image review at three
 weights; all other source bytes unchanged. Batch06 repairs both tilde waves and
 stack anchors in four GLIFs, with90 shaping checks, whole-image review and zero
-grid findings; all other source bytes unchanged. All216 pre-existing Hebrew regression subcases still fail
+grid findings; all other source bytes unchanged. Batch07 corrects twenty Latvian
+composite constructions and adds canonical fallback in both feature files.205
+scoped comparisons and four Latin tests pass, with whole images at three weights;
+comma donor weight remains unfinished. All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 
