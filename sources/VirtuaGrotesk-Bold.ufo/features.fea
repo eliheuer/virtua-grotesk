@@ -576,18 +576,19 @@ feature liga {
 @LATIN_NARROW_OVERLAY_BASES = [I Iacute Ibreve Icircumflex Idieresis Idotaccent Igrave Imacron Iogonek Itilde dotlessiogonek f fi fl florin i iacute ibreve icircumflex idieresis idotless igrave ij imacron iogonek itilde j jcircumflex jdotless l lacute lcaron lcommaaccent ldot longs r racute rcaron rcedilla t tbar tcaron tcedilla tcommaaccent];
 feature ccmp {
 	lookup LATIN_NARROW_OVERLAY {
-		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow];
+		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow slashlongcomb slashlongcomb.narrow];
 		sub @LATIN_NARROW_OVERLAY_BASES strokeshortcomb' by strokeshortcomb.narrow;
 		sub @LATIN_NARROW_OVERLAY_BASES slashshortcomb' by slashshortcomb.narrow;
+		sub @LATIN_NARROW_OVERLAY_BASES slashlongcomb' by slashlongcomb.narrow;
 	} LATIN_NARROW_OVERLAY;
 } ccmp;
 
 # Short-stroke overlay: body centers, independent of top/bottom accents.
-markClass [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow] <anchor 0 0> @LATIN_STROKE_OVERLAY;
+markClass [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow slashlongcomb slashlongcomb.narrow] <anchor 0 0> @LATIN_STROKE_OVERLAY;
 feature mark {
 	# Automatic Code
 	lookup LATIN_STROKE_BASES {
-		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow];
+		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow slashlongcomb slashlongcomb.narrow];
 		pos base A <anchor 400 384> mark @LATIN_STROKE_OVERLAY;
 		pos base AE <anchor 544 384> mark @LATIN_STROKE_OVERLAY;
 		pos base AEacute <anchor 544 384> mark @LATIN_STROKE_OVERLAY;
@@ -868,8 +869,21 @@ feature mark {
 		pos base zdotaccent <anchor 304 288> mark @LATIN_STROKE_OVERLAY;
 	} LATIN_STROKE_BASES;
 	lookup LATIN_STROKE_LIGATURES {
-		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow];
+		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow slashlongcomb slashlongcomb.narrow];
 		pos ligature fi <anchor 216 288> mark @LATIN_STROKE_OVERLAY ligComponent <anchor 488 288> mark @LATIN_STROKE_OVERLAY;
 		pos ligature fl <anchor 216 288> mark @LATIN_STROKE_OVERLAY ligComponent <anchor 536 288> mark @LATIN_STROKE_OVERLAY;
 	} LATIN_STROKE_LIGATURES;
+} mark;
+
+# Long-solidus negation on existing mathematical bases; no outline changes.
+markClass slashlongcomb <anchor 0 0> @MATH_LONG_SOLIDUS;
+feature mark {
+	lookup MATH_LONG_SOLIDUS_BASES {
+		lookupflag UseMarkFilteringSet [slashlongcomb];
+		pos base equal <anchor 304 352> mark @MATH_LONG_SOLIDUS;
+		pos base less <anchor 304 352> mark @MATH_LONG_SOLIDUS;
+		pos base greater <anchor 304 352> mark @MATH_LONG_SOLIDUS;
+		pos base plus <anchor 304 352> mark @MATH_LONG_SOLIDUS;
+		pos base minus <anchor 304 304> mark @MATH_LONG_SOLIDUS;
+	} MATH_LONG_SOLIDUS_BASES;
 } mark;

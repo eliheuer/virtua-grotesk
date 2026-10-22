@@ -77,7 +77,8 @@ shows no new failures; this does not waive the existing failures.
 | Historical early Latin VF package | 10 | 8 | 160 | 10 | 41 |
 | Batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
-| Current batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
+| Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
+| Current batch29 package after long slash overlay | 12 | 9 | 160 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -1323,3 +1324,22 @@ inspected. Generic Bold counter fragments and terminal projection remain optical
 review items. Full online package unchanged10 FAIL/9 WARN/160 PASS/10 INFO/40
 SKIP. Remaining Rubik gap347:182 Cyrillic,1 combining,62 Common,102 Arabic
 presentation forms. Next long slash/negation behavior; local only, no push.
+
+### LAT-001 batch29 · Long slash and negation fallback
+
+[Batch29](../../agent-proofs/cases/latin-001/batches/29-long-slash/README.md) adds
+U0338 plus narrow form and bounded Latin/math attachment in both masters.
+All old GLIFs, Arabic and green sources remain unchanged.775 scoped comparisons,
+4435 old VF and3547 old static ink/advance checks,22 Latin methods plus2 helper
+tests, unchanged216 Hebrew failures and preflight complete. Whole400/550/700
+and enlarged/browser comparisons with Rubik inspected. Narrow Bold slash
+visibility, dense bases and generic counter fragments still need human review.
+Encoded ≠/≮/≯ render through canonical fallback; no new corresponding cmap entries.
+Rubik Latin/combining cmap gaps are zero, not full language coverage.
+
+Fresh online package12 FAIL/9 WARN adds two serving-subset blockers to the
+previous10: Central Mazahua poster sm U0338, Ticuna masthead partial U1EBC/U1EBD.
+The added mark makes more sample strings testable; prior cmap/ink/shaping is
+preserved. Existing U0302/U0331/U1EBC/U1EBD issues remain. No metadata/exclusions
+changed.346 encodings remain missing:182 Cyrillic,62 Common,102 Arabic presentation
+forms. Next independent mathematical symbols and technical preparation; no push.
