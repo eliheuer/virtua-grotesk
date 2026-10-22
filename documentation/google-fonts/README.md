@@ -79,7 +79,7 @@ shows no new failures; this does not waive the existing failures.
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 | Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
 | Batch33 package after broken bar | 12 | 9 | 160 | 10 | 40 |
-| Current batch45 package after superior seven | 12 | 10 | 159 | 10 | 40 |
+| Current batch46 package after superior eight | 12 | 10 | 159 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -94,14 +94,15 @@ Arabic warnings remain reserved for Eli. Next independent common symbols; combin
 
 Current package failures are serving-set reachability for U+0302, U+0331, U+0338
 and U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
-Current input hashes/full reports are retained in batch45/qa-online. The baseline
-revision isa73c05d5 plus the six hashed source changes in batch45/final-identity.json.
+Current input hashes/full reports are retained in batch46/qa-online. The baseline
+revision isfa3be6c9 plus the six hashed source changes in batch46/final-identity.json.
 Batch45 failure records are exact unchanged from44; the earlier43 Ticuna bullet-order-only delta remains recorded.
 Batch40 adds U+2070 to the existing unreachable-subsetting warning: installed
 gfsubsets assigns it only to math. Batch41 adds U+2074 to that same warning,
 with remainder10→11; batch42 adds U+2075 (also math only), remainder11→12.
 Batch43 adds U+2076 (math only), remainder12→13; batch44 adds U+2079, remainder13→14.
 Batch45 adds U+2077 (math only), remainder14→15.
+Batch46 adds U+2078 (math only), remainder15→16.
 No unrelated subset is declared to hide these findings.
 New soft_hyphen WARN recommends omitting U+00AD. Its local compatibility encoding
 is not an approved release exception; retain/omit disposition remains open.
@@ -110,8 +111,8 @@ The QA package uses the scratch VF; active tables match except head timestamps. 
 metadata/source-delivery choices and artwork. The older loose-font failure was
 the ttf directory name; no fresh five-binary online result is claimed here.
 
-The pinned Rubik comparison after batch45 finds zero missing Latin or combining
-codepoints,182 Cyrillic,45 Common symbols and102 Arabic presentation forms.
+The pinned Rubik comparison after batch46 finds zero missing Latin or combining
+codepoints,182 Cyrillic,44 Common symbols and102 Arabic presentation forms.
 These are encoded-character differences, not language counts or visual approval.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
@@ -1625,3 +1626,23 @@ No sups/kerning/ordinary aliases. Online package12FAIL10WARN159PASS10INFO40SKIP:
 FAILs exact unchanged from44; unreachable warning adds math-only U2077, remainder
 14→15. No exclusions/false declarations. Gap329:182Cyrl/45Common/102Arab. Next
 superior8; local only/no push. Arabic60272 unchanged.
+
+
+### LAT-001 batch46 · Superior eight
+
+[Evidence](../../agent-proofs/cases/latin-001/batches/46-superior-eight/README.md): purple U2078 both masters,26+12+12 compatible points from
+protected eight. Advances368/416,40 bearings, lower side weights56/88,
+crown/bottom48/72; all new values on8/grid0. Six source files;1839 others/every
+old GLIF/Arabic/green source unchanged.125 scoped checks,4530 old VF/3623 static
+exact ink/advance comparisons,54 subsets/NFD,27 Latin plus2 helpers, exact216
+baseline failures and preflight complete.16 cubics/master,8G2/6G1 tangent joins
+plus four G0 waist shelves. Bold upper counter55.6% curvature jumps remain;
+no sampled reversals/crossings. Lint off-center crest findings reflect unequal
+bowls; not automatically corrected. Whole400/550/700,224px details/comb and12
+actual Diffenator views inspected. Both counters open; Regular lighter than
+Rubik, shallow Bold upper counter/central mass and family balance remain human
+review. Encoded superior0–9 drafts complete; no sups/kerning/ordinary aliases.
+Online package12FAIL10WARN159PASS10INFO40SKIP: FAILs exact unchanged from45;
+unreachable warning adds math-only U2078, remainder15→16. No exclusions/false
+declarations. Gap328:182Cyrl/44Common/102Arab. Next complete-family/sups behavior
+assessment, then independent Common gaps. Local only/no push; Arabic60272 unchanged.

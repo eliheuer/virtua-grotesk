@@ -722,3 +722,23 @@ No sups/kerning/ordinary aliases. Online package12FAIL10WARN159PASS10INFO40SKIP:
 FAILs exact unchanged from44; unreachable warning adds math-only U2077, remainder
 14→15. No exclusions/false declarations. Gap329:182Cyrl/45Common/102Arab. Next
 superior8; local only/no push. Arabic60272 unchanged.
+
+
+### Batch46 · Superior eight
+
+[Evidence](batches/46-superior-eight/README.md): purple U2078 both masters,26+12+12 compatible points from
+protected eight. Advances368/416,40 bearings, lower side weights56/88,
+crown/bottom48/72; all new values on8/grid0. Six source files;1839 others/every
+old GLIF/Arabic/green source unchanged.125 scoped checks,4530 old VF/3623 static
+exact ink/advance comparisons,54 subsets/NFD,27 Latin plus2 helpers, exact216
+baseline failures and preflight complete.16 cubics/master,8G2/6G1 tangent joins
+plus four G0 waist shelves. Bold upper counter55.6% curvature jumps remain;
+no sampled reversals/crossings. Lint off-center crest findings reflect unequal
+bowls; not automatically corrected. Whole400/550/700,224px details/comb and12
+actual Diffenator views inspected. Both counters open; Regular lighter than
+Rubik, shallow Bold upper counter/central mass and family balance remain human
+review. Encoded superior0–9 drafts complete; no sups/kerning/ordinary aliases.
+Online package12FAIL10WARN159PASS10INFO40SKIP: FAILs exact unchanged from45;
+unreachable warning adds math-only U2078, remainder15→16. No exclusions/false
+declarations. Gap328:182Cyrl/44Common/102Arab. Next complete-family/sups behavior
+assessment, then independent Common gaps. Local only/no push; Arabic60272 unchanged.
