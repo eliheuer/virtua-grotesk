@@ -4,12 +4,14 @@
 	<advance width="870"/>
 	<outline>
 		<component base="N"/>
-		<component base="cedilla" xOffset="278"/>
+		<component base="commaaccent" xOffset="272"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -1,0 +1,112 @@
+{
+  "Regular": {
+    "consumers": [
+      "Gcommaaccent",
+      "Kcommaaccent",
+      "Lcommaaccent",
+      "Ncommaaccent",
+      "Rcedilla",
+      "gcommaaccent",
+      "kcommaaccent",
+      "lcommaaccent",
+      "ncommaaccent",
+      "rcedilla"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "Gcommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Kcommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Lcommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Ncommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Rcedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "gcommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "kcommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "lcommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "ncommaaccent": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "rcedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      }
+    }
+  },
+  "Bold": {
+    "consumers": [
+      "Gcommaaccent",
+      "Kcommaaccent",
+      "Lcommaaccent",
+      "Ncommaaccent",
+      "Rcedilla",
+      "gcommaaccent",
+      "kcommaaccent",
+      "lcommaaccent",
+      "ncommaaccent",
+      "rcedilla"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "Gcommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Kcommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Lcommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Ncommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Rcedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "gcommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "kcommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "lcommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "ncommaaccent": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "rcedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      }
+    }
+  }
+}

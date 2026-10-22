@@ -50,6 +50,16 @@ feature ccmp {
 		sub AE acutecomb by AEacute;
 		sub ae acutecomb by aeacute;
 		sub j circumflexcomb by jcircumflex;
+		sub G cedillacomb by Gcommaaccent;
+		sub g cedillacomb by gcommaaccent;
+		sub K cedillacomb by Kcommaaccent;
+		sub k cedillacomb by kcommaaccent;
+		sub L cedillacomb by Lcommaaccent;
+		sub l cedillacomb by lcommaaccent;
+		sub N cedillacomb by Ncommaaccent;
+		sub n cedillacomb by ncommaaccent;
+		sub R cedillacomb by Rcedilla;
+		sub r cedillacomb by rcedilla;
 	} ccmp_latin_extended;
 
 	# Preserve precomposed tilde spacing when a web subset omits their cmap entries.

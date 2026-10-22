@@ -1,0 +1,73 @@
+{
+  "shaping_checks": 205,
+  "changed_compiled_ink": {
+    "400": [
+      "Rcedilla",
+      "rcedilla",
+      "Gcommaaccent",
+      "Kcommaaccent",
+      "Lcommaaccent",
+      "Ncommaaccent",
+      "gcommaaccent",
+      "kcommaaccent",
+      "lcommaaccent",
+      "ncommaaccent"
+    ],
+    "475": [
+      "Rcedilla",
+      "rcedilla",
+      "Gcommaaccent",
+      "Kcommaaccent",
+      "Lcommaaccent",
+      "Ncommaaccent",
+      "gcommaaccent",
+      "kcommaaccent",
+      "lcommaaccent",
+      "ncommaaccent"
+    ],
+    "550": [
+      "Rcedilla",
+      "rcedilla",
+      "Gcommaaccent",
+      "Kcommaaccent",
+      "Lcommaaccent",
+      "Ncommaaccent",
+      "gcommaaccent",
+      "kcommaaccent",
+      "lcommaaccent",
+      "ncommaaccent"
+    ],
+    "625": [
+      "Rcedilla",
+      "rcedilla",
+      "Gcommaaccent",
+      "Kcommaaccent",
+      "Lcommaaccent",
+      "Ncommaaccent",
+      "gcommaaccent",
+      "kcommaaccent",
+      "lcommaaccent",
+      "ncommaaccent"
+    ],
+    "700": [
+      "Rcedilla",
+      "rcedilla",
+      "Gcommaaccent",
+      "Kcommaaccent",
+      "Lcommaaccent",
+      "Ncommaaccent",
+      "gcommaaccent",
+      "kcommaaccent",
+      "lcommaaccent",
+      "ncommaaccent"
+    ]
+  },
+  "unchanged_source_files": 1757,
+  "after_sha256": "6edb9659fb3747a7abd6ab15ac9972af0b28098bb02c88de2049169e507c90de",
+  "notes": [
+    "Twenty non-green composites and two Latin feature files only. All Arabic recursive sources, green bases and donors unchanged.",
+    "Advances and base components unchanged; new component offsets and explicit anchors on 8.",
+    "Latvian NFC/NFD and missing-cmap fallback agree at five weights. Above/below stacks clear.",
+    "Existing comma donor is light at Bold and remains a separate drawing follow-up."
+  ]
+}

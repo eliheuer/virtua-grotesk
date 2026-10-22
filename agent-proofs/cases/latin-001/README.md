@@ -101,12 +101,21 @@ inspection before application. Whole400/550/700 word/stack proofs and enlarged
 endpoint letters inspected;90 shaping checks, Latin tests and preflight complete,
 with zero new failures. Zero grid findings; intentional S inflections documented.
 
+[Batch07](batches/07-latvian-marks/README.md) corrects twenty Latvian wrappers
+that used cedillas, including the mark incorrectly under ģ. Existing comma
+components now supply detached below marks and the rotated above mark on ģ;
+base/donor ink and advances are unchanged. Two Latin ccmp additions preserve
+canonical web fallback.205 scoped checks, four Latin tests, endpoint/intermediate
+whole images and preflight complete; zero new failures. The small, light comma
+donor remains unfinished, especially at700. Independent FreeType/RAQM images
+verify deep extra marks that were faint/missing in a DesignBot raster.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Bottom marks (cedilla/ogonek/comma-below), then alternate carons. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Comma-accent weight/terminal repair, then cedilla/ogonek and alternate carons. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions

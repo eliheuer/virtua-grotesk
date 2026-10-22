@@ -3,6 +3,7 @@ import io
 import os
 from pathlib import Path
 import unittest
+import unicodedata
 from fontTools.ttLib import TTFont
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.transformPen import TransformPen
@@ -62,3 +63,28 @@ class LatinDiacriticsTests(unittest.TestCase):
                     with self.subTest(font=path.name,weight=w,char=c):
                         self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs.get(font.getBestCmap()[ord(c)]),1)
                         self.assertEqual(shaped(font,path.read_bytes(),c,w),shaped(fallback,stream.getvalue(),c,w))
+
+    def test_latvian_construction_and_canonical_fallback(self):
+        letters='ĢģĶķĻļŅņŖŗ'
+        for path,font in self.fonts():
+            fallback=TTFont(path)
+            for table in fallback['cmap'].tables:
+                if table.isUnicode():
+                    for char in letters:table.cmap.pop(ord(char),None)
+            stream=io.BytesIO();fallback.save(stream)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for char in letters:
+                    with self.subTest(font=path.name,weight=w,char=char):
+                        expected=shaped(font,path.read_bytes(),char,w)
+                        self.assertEqual(expected,shaped(font,path.read_bytes(),unicodedata.normalize('NFD',char),w))
+                        self.assertEqual(expected,shaped(fallback,stream.getvalue(),char,w))
+                with self.subTest(font=path.name,weight=w,char='ģ'):
+                    base=shaped(font,path.read_bytes(),'g',w)[1][0]
+                    composite=shaped(font,path.read_bytes(),'ģ',w)[1][0]
+                    # The mark is above g; a cedilla underneath its descender fails.
+                    self.assertEqual(base[1],composite[1])
+                    self.assertGreater(composite[3],base[3])
+                    for text in ['ģ́','ģ̦']:
+                        _,bounds=shaped(font,path.read_bytes(),text,w)
+                        gap=bounds[1][1]-bounds[0][3] if text=='ģ́' else bounds[0][1]-bounds[1][3]
+                        self.assertGreaterEqual(gap,16)

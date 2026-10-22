@@ -1,0 +1,1285 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 10,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "Gcommaaccent",
+      "points": 0,
+      "advance": 824.0,
+      "bounds": [
+        56,
+        -192,
+        768,
+        784
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[3].y",
+          "value": 30.0
+        },
+        {
+          "field": "component[0].contour[0].point[20].x",
+          "value": 554.0
+        },
+        {
+          "field": "component[0].contour[0].point[22].x",
+          "value": 276.0
+        },
+        {
+          "field": "component[0].contour[0].point[23].x",
+          "value": 158.0
+        },
+        {
+          "field": "component[0].contour[0].point[23].y",
+          "value": 206.0
+        },
+        {
+          "field": "component[0].contour[0].point[24].x",
+          "value": 158.0
+        },
+        {
+          "field": "component[0].contour[0].point[25].x",
+          "value": 158.0
+        },
+        {
+          "field": "component[0].contour[0].point[25].y",
+          "value": 554.0
+        },
+        {
+          "field": "component[0].contour[0].point[26].x",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[0].point[28].x",
+          "value": 514.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 824.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 56.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "3": 2
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "d3d9a0802f8ee1097ce4bc806f247b2dd33940057d40db2f6457ee217dc58239"
+    },
+    {
+      "glyph": "gcommaaccent",
+      "points": 0,
+      "advance": 634.0,
+      "bounds": [
+        48,
+        -216,
+        568,
+        768
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 634.0
+        },
+        {
+          "field": "component[0].contour[0].point[0].x",
+          "value": 182.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].y",
+          "value": -100.0
+        },
+        {
+          "field": "component[0].contour[0].point[11].y",
+          "value": 564.0
+        },
+        {
+          "field": "component[0].contour[0].point[12].x",
+          "value": 366.0
+        },
+        {
+          "field": "component[0].contour[0].point[19].x",
+          "value": 292.0
+        },
+        {
+          "field": "component[0].contour[0].point[21].y",
+          "value": 38.0
+        },
+        {
+          "field": "component[0].contour[0].point[26].x",
+          "value": 394.0
+        },
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": -132.0
+        },
+        {
+          "field": "component[0].contour[0].point[27].y",
+          "value": -132.0
+        },
+        {
+          "field": "component[0].contour[0].point[28].x",
+          "value": 242.0
+        },
+        {
+          "field": "component[0].contour[0].point[28].y",
+          "value": -132.0
+        },
+        {
+          "field": "component[0].contour[0].point[29].x",
+          "value": 186.0
+        },
+        {
+          "field": "component[0].contour[0].point[30].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[0].contour[0].point[31].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[0].contour[0].point[35].x",
+          "value": 94.0
+        },
+        {
+          "field": "component[0].contour[0].point[35].y",
+          "value": -150.0
+        },
+        {
+          "field": "component[0].contour[1].point[0].x",
+          "value": 406.0
+        },
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 108.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 108.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 108.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 146.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 146.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 146.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 406.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 418.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 190.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 308.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 308.0
+        },
+        {
+          "field": "component[1].xScale",
+          "value": -1.0,
+          "reason": "Transformed component requires decomposed review"
+        },
+        {
+          "field": "component[1].yScale",
+          "value": -1.0,
+          "reason": "Transformed component requires decomposed review"
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 66.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 634.0,
+          "popcount": 6
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 66.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "6": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "ea4eade30ed3f9d6b15984359607d4feee5746a1b0f213da4824bb2e5f684763"
+    },
+    {
+      "glyph": "Kcommaaccent",
+      "points": 0,
+      "advance": 732.0,
+      "bounds": [
+        80,
+        -192,
+        716,
+        768
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 732.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 732.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].x",
+          "value": 326.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 380.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].x",
+          "value": 334.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 380.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].x",
+          "value": 638.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].x",
+          "value": 700.0
+        },
+        {
+          "field": "component[0].contour[0].point[9].x",
+          "value": 716.0
+        },
+        {
+          "field": "component[0].contour[0].point[10].x",
+          "value": 716.0
+        },
+        {
+          "field": "component[0].contour[0].point[11].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[0].point[12].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[0].point[16].x",
+          "value": 604.0
+        },
+        {
+          "field": "component[0].contour[0].point[17].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[0].contour[0].point[17].y",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[0].point[18].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[18].y",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[0].point[19].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[20].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 370.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 370.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 732.0,
+          "popcount": 6
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "6": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "a82695767ad97975bf7aca9081d58c549ac6a41c9581a66eda1345a41e4d13a6"
+    },
+    {
+      "glyph": "kcommaaccent",
+      "points": 0,
+      "advance": 616.0,
+      "bounds": [
+        72,
+        -192,
+        572,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].advance.width",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].x",
+          "value": 278.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].x",
+          "value": 286.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].x",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].x",
+          "value": 556.0
+        },
+        {
+          "field": "component[0].contour[0].point[9].x",
+          "value": 572.0
+        },
+        {
+          "field": "component[0].contour[0].point[10].x",
+          "value": 572.0
+        },
+        {
+          "field": "component[0].contour[0].point[11].x",
+          "value": 350.0
+        },
+        {
+          "field": "component[0].contour[0].point[12].x",
+          "value": 350.0
+        },
+        {
+          "field": "component[0].contour[0].point[13].x",
+          "value": 540.0
+        },
+        {
+          "field": "component[0].contour[0].point[14].x",
+          "value": 540.0
+        },
+        {
+          "field": "component[0].contour[0].point[15].x",
+          "value": 524.0
+        },
+        {
+          "field": "component[0].contour[0].point[16].x",
+          "value": 484.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 44.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 616.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 44.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 1,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "473297408843c7146b8c94f8f6d476181955d32acc735e80b6a556ce8b2678b7"
+    },
+    {
+      "glyph": "Lcommaaccent",
+      "points": 0,
+      "advance": 608.0,
+      "bounds": [
+        80,
+        -192,
+        584,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[9].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 332.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 332.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 608.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "7bb14ba93ddb219ad2b072a6ebbb7255ac3810267bfc810baab558f1d1342993"
+    },
+    {
+      "glyph": "lcommaaccent",
+      "points": 0,
+      "advance": 272.0,
+      "bounds": [
+        72,
+        -192,
+        248,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 272.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "2": 3
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "7d7a83cd795d074e2d501443589aa10b830d32615c93ed481521e52d66d4d297"
+    },
+    {
+      "glyph": "Ncommaaccent",
+      "points": 0,
+      "advance": 774.0,
+      "bounds": [
+        80,
+        -192,
+        696,
+        768
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 774.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[0].contour[0].point[11].x",
+          "value": 612.0
+        },
+        {
+          "field": "component[0].contour[0].point[12].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[0].point[13].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 78.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 774.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 78.0,
+          "popcount": 4
+        }
+      ],
+      "popcount_histogram": {
+        "4": 2,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "88a6b8a3dfee83507924ba1a4b13984add5b86d36abd88294c0a589eb38d2874"
+    },
+    {
+      "glyph": "ncommaaccent",
+      "points": 0,
+      "advance": 608.0,
+      "bounds": [
+        72,
+        -192,
+        520,
+        592
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 508.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 608.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 88.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "3": 2,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "cb1baf19a8f0c6f129ff707ae72c0d573ae4f058108341fe38a7efff1abab4e5"
+    },
+    {
+      "glyph": "Rcedilla",
+      "points": 0,
+      "advance": 668.0,
+      "bounds": [
+        80,
+        -192,
+        608,
+        768
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 668.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 668.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].x",
+          "value": 380.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].x",
+          "value": 460.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 508.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 524.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 340.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 342.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 60.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 60.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 668.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 60.0,
+          "popcount": 4
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "2": 1,
+        "4": 1
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "ae3180c96f08473bc3f80072d3f2f62f18b5996228dd82dc9d3438b2120e6239"
+    },
+    {
+      "glyph": "rcedilla",
+      "points": 0,
+      "advance": 368.0,
+      "bounds": [
+        72,
+        -192,
+        344,
+        576
+      ],
+      "failures": [
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 92.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": 92.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 368.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "88d7e7f12112746ac5835ad82046287eb9b32ea77f6662bc174d0e88814ef65e"
+    }
+  ]
+}
