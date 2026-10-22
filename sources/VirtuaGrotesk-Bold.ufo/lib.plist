@@ -468,9 +468,12 @@
 		<string>onesuperior</string>
 		<string>twosuperior</string>
 		<string>threesuperior</string>
+		<string>zerosuperior</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>zerosuperior</key>
+		<string>base</string>
 		<key>onesuperior</key>
 		<string>base</string>
 		<key>twosuperior</key>

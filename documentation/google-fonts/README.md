@@ -79,7 +79,7 @@ shows no new failures; this does not waive the existing failures.
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 | Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
 | Batch33 package after broken bar | 12 | 9 | 160 | 10 | 40 |
-| Current batch39 package after superior digits | 12 | 10 | 159 | 10 | 40 |
+| Current batch40 package after superior zero | 12 | 10 | 159 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -94,8 +94,10 @@ Arabic warnings remain reserved for Eli. Next independent common symbols; combin
 
 Current package failures are serving-set reachability for U+0302, U+0331, U+0338
 and U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
-Current input hashes/full reports are retained in batch39/qa-online. The baseline
-revision is a40087a6 plus the ten hashed source changes in batch39/final-identity.json.
+Current input hashes/full reports are retained in batch40/qa-online. The baseline
+revision is2ed51259 plus the six hashed source changes in batch40/final-identity.json.
+Batch40 adds U+2070 to the existing unreachable-subsetting warning: installed
+gfsubsets assigns it only to math. No unrelated subset is declared to hide it.
 New soft_hyphen WARN recommends omitting U+00AD. Its local compatibility encoding
 is not an approved release exception; retain/omit disposition remains open.
 Earlier batch reports remain historical evidence.
@@ -103,8 +105,8 @@ The QA package uses the scratch VF; active tables match except head timestamps. 
 metadata/source-delivery choices and artwork. The older loose-font failure was
 the ttf directory name; no fresh five-binary online result is claimed here.
 
-The pinned Rubik comparison after batch39 finds zero missing Latin or combining
-codepoints,182 Cyrillic,51 Common symbols and102 Arabic presentation forms.
+The pinned Rubik comparison after batch40 finds zero missing Latin or combining
+codepoints,182 Cyrillic,50 Common symbols and102 Arabic presentation forms.
 These are encoded-character differences, not language counts or visual approval.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
@@ -1516,3 +1518,21 @@ ordinary-size alias. Online unexcluded package12FAIL10WARN159PASS10INFO40SKIP,
 exact failures/no new semantic warnings. Gap335:182Cyrl/51Common/102Arab.
 Next remaining superior0/4–9 construction/figure-family inspection, then bounded
 extension and Common gaps. Human approval/release blockers remain; local/no push.
+
+
+### LAT-001 batch40 · Superior zero
+
+[Evidence](../../agent-proofs/cases/latin-001/batches/40-superior-zero/README.md): purple U2070 in both masters,
+two12-point oval contours from protected zero construction. Advances368/416,
+40 bearings, cardinal side weights56/88 and vertical48/80; all new values on8.
+Six source files;1827 others/every old GLIF/Arabic/green bytes unchanged.125 scoped
+checks,4500 old VF/3599 old static exact ink/advance comparisons,54 real subsets,
+27 Latin plus2 helpers, unchanged216 baseline failures and preflight complete.
+Eight G2 joins/master; no sampled reversals/proper crossings at five weights.
+Whole400/550/700,224px details/comb and12 actual Diffenator images inspected.
+Oval width/counter, partial-family weight and default spacing remain human review;
+generic marks retain right fallback, no sups feature. Online package12FAIL10WARN
+159PASS10INFO40SKIP; FAILs exact unchanged but unreachable-subsetting warning
+expands by U2070 (installed gfsubsets: math only). No exclusions or unrelated
+subset declaration. Gap334:182Cyrl/50Common/102Arab. Inventory0/4–9 frozen; next
+bounded superior4/5, then6–9. Local only/no push; Arabic60272 unchanged.
