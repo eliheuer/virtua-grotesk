@@ -1,0 +1,37 @@
+Bold onesuperior: join (144,752) corner: review intent; G0; tangent angle 35.538 deg; signed curvature 0 -> -0.0148107; relative jump 100.0%
+Bold onesuperior: join (48,688) corner: review intent; G0; tangent angle 45.000 deg; signed curvature -0.0104167 -> 0; relative jump 100.0%
+Bold twosuperior: join (168,472) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0 -> -0.166667; relative jump 100.0%
+Bold twosuperior: join (216,512) smooth; G1; tangent angle 0.000 deg; signed curvature -0.00372678 -> 0.00326093; relative jump 187.5%
+Bold twosuperior: join (320,656) smooth; G2; tangent angle 0.000 deg; signed curvature 0.00651042 -> 0.00651042; relative jump 0.0%
+Bold twosuperior: join (184,776) smooth; G1; tangent angle 0.000 deg; signed curvature 0.00405093 -> 0.00583333; relative jump 30.6%
+Bold twosuperior: join (40,640) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0.00666667 -> 0; relative jump 100.0%
+Bold twosuperior: join (128,640) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0 -> -0.0104167; relative jump 100.0%
+Bold twosuperior: join (184,704) smooth; G1; tangent angle 0.000 deg; signed curvature -0.0133333 -> -0.015625; relative jump 14.7%
+Bold twosuperior: join (232,656) smooth; G1; tangent angle 0.000 deg; signed curvature -0.0185185 -> -0.00666667; relative jump 64.0%
+Bold twosuperior: join (168,560) smooth; G1; tangent angle 0.000 deg; signed curvature -0.00496904 -> 0.00298142; relative jump 160.0%
+Bold twosuperior: join (40,408) smooth; G1line; tangent angle 0.000 deg; signed curvature 0.0138889 -> 0; relative jump 100.0%
+Bold twosuperior:
+  contour 0: crest (184,776) off-center x by -60
+  contour 0: crest (216,512) off-center x by -28
+  contour 0: crest (168,560) off-center y by -84
+  contour 0: crest (320,656) off-center y by +12
+  contour 0: tension break at (232,656) ratio 2.7
+Bold threesuperior: join (192,376) smooth; G2; tangent angle 0.000 deg; signed curvature 0.00416667 -> 0.00416667; relative jump 0.0%
+Bold threesuperior: join (344,496) smooth; G1; tangent angle 0.000 deg; signed curvature 0.0075 -> 0.0104167; relative jump 28.0%
+Bold threesuperior: join (280,592) corner: review intent; G0; tangent angle 80.538 deg; signed curvature 0.0148107 -> 0; relative jump 100.0%
+Bold threesuperior: join (280,600) corner: review intent; G0; tangent angle 75.964 deg; signed curvature 0 -> 0.0154557; relative jump 100.0%
+Bold threesuperior: join (336,680) smooth; G1; tangent angle 0.000 deg; signed curvature 0.01 -> 0.0117188; relative jump 14.7%
+Bold threesuperior: join (192,776) smooth; G2; tangent angle 0.000 deg; signed curvature 0.00411523 -> 0.00416667; relative jump 1.2%
+Bold threesuperior: join (56,672) corner: review intent; G0; tangent angle 0.000 deg; signed curvature 0.00911458 -> 0; relative jump 100.0%
+Bold threesuperior: join (136,656) corner: review intent; G0; tangent angle 45.000 deg; signed curvature 0 -> -0.015625; relative jump 100.0%
+Bold threesuperior: join (192,712) smooth; G1; tangent angle 0.000 deg; signed curvature -0.015625 -> -0.0185185; relative jump 15.6%
+Bold threesuperior: join (240,672) smooth; G1; tangent angle 0.000 deg; signed curvature -0.0277778 -> -0.00520833; relative jump 81.2%
+Bold threesuperior: join (200,624) smooth; G1line; tangent angle 0.000 deg; signed curvature -0.0104167 -> 0; relative jump 100.0%
+Bold threesuperior: join (200,560) corner: review intent; G0; tangent angle 0.000 deg; signed curvature 0 -> -0.0260417; relative jump 100.0%
+Bold threesuperior: join (248,496) smooth; G1; tangent angle 0.000 deg; signed curvature -0.0185185 -> -0.0277778; relative jump 33.3%
+Bold threesuperior: join (192,448) smooth; G1; tangent angle 0.000 deg; signed curvature -0.015625 -> -0.01; relative jump 36.0%
+Bold threesuperior: join (120,504) corner: review intent; G0; tangent angle 30.964 deg; signed curvature -0.0107001 -> 0; relative jump 100.0%
+Bold threesuperior: join (40,488) corner: review intent; G0; tangent angle 6.340 deg; signed curvature 0 -> 0.00751922; relative jump 100.0%
+Bold threesuperior:
+  contour 0: tension break at (240,672) ratio 4.9
+2 glyphs flagged

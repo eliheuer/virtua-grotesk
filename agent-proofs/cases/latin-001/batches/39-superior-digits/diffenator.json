@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/39-superior-digits/assets/after.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/39-superior-digits/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch39/comparison"
+  ],
+  "supplement_text": "¹ ² ³ · x¹ x² x³ · 10¹ 10² 10³ · Area 10 m², volume 20 m³. Text¹ text² text³ · notes¹²³ · 1¹ 2² 3³ · 123 · București¹ ģimene² doğa³",
+  "note": "Stock controls, labeled substituted text. Old Virtua/New Rubik.",
+  "html_sha256": "52a9d5cd81ee8659dd58c6623b3bb0731fadcdc2e427dc843c5c28b07dc3d9a4"
+}

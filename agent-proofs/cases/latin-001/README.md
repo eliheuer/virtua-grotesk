@@ -597,3 +597,21 @@ No source/build/preflight/new full-QA claim; batch37 package12FAIL10WARN and216
 baseline Hebrew failures remain. Gap338 unchanged. Next bounded encoded1/2/3
 superior drafts; preserve Virtua curved flag/rounded three and all green donors.
 Local evidence only; Arabic60272 unchanged; no push.
+
+
+## Batch39 · Encoded superior digits
+
+[Evidence](batches/39-superior-digits/README.md): purple onesuperior/twosuperior/
+threesuperior in both masters,16/35/50-point compatible contours derived from
+unchanged protected figures. Ten source files;1821 others/every old GLIF/Arabic
+and green bytes preserved. Advances232/264,328/352,352/376, all new values on8.
+Initial two tangent kinks rejected; final G1 diagonal joins and open counters.
+145 scoped checks,4485 old VF and3587 static exact ink/advance comparisons,54 real
+subset/NFD cases,27 Latin plus2 helpers, exact216 baseline failures and preflight
+complete. Whole400/550/700,224px details/comb and12 actual Diffenator target/stock
+views inspected against Rubik. Regular2/3 lighter than Rubik; weight balance,
+default pairs and right-side generic accents remain review. No sups feature or
+ordinary-size alias. Online unexcluded package12FAIL10WARN159PASS10INFO40SKIP,
+exact failures/no new semantic warnings. Gap335:182Cyrl/51Common/102Arab.
+Next remaining superior0/4–9 construction/figure-family inspection, then bounded
+extension and Common gaps. Human approval/release blockers remain; local/no push.

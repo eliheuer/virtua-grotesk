@@ -438,9 +438,18 @@
 		<string>brokenbar</string>
 		<string>softhyphen</string>
 		<string>currency</string>
+		<string>onesuperior</string>
+		<string>twosuperior</string>
+		<string>threesuperior</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>onesuperior</key>
+		<string>base</string>
+		<key>twosuperior</key>
+		<string>base</string>
+		<key>threesuperior</key>
+		<string>base</string>
 		<key>currency</key>
 		<string>base</string>
 		<key>softhyphen</key>

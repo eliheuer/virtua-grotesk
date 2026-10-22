@@ -1,0 +1,1 @@
+Initial half-scale/grid draft. Full rasters were legible, but join audit found unintended diagonal tangent kinks in twosuperior (0.76/1.25 degrees Regular,2.60/2.12 Bold). Rejected before active application. Final handles align on shared slope1/2 in both masters, preserving intended S-direction change between segments. Other figures unchanged.

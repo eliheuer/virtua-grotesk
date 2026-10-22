@@ -1,0 +1,38 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "font_mapping": {
+    "Old": "Virtua candidate",
+    "New": "Pinned Rubik"
+  },
+  "scope": "Actual Diffenator3 same-text supplement and first stock mixed-text viewport; 12 screenshots inspected. Slider value governs weight despite Regular menu label. No exhaustive language or native-reader approval.",
+  "fonts": {
+    "before": "a291a8f7cd67f0525b97420b34e98e418fca0305fa71ddb46e3742917f245f51",
+    "after": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "screenshots": {
+    "stock-rubik-400.png": "566afeb119a07114ea072e6e2e40def5a36d246c7a5802644886aca13a4b02c2",
+    "stock-rubik-550.png": "2a78ceb51c78da15b3ce1dff9110ceca81897af5b342dd8cae78be7782a8733a",
+    "stock-rubik-700.png": "3d92503483bf6b3a4af0c22994ab9b9261fd3f76370956e4b493a804ce0eab80",
+    "stock-virtua-400.png": "f1db1b004f717e66b1bc6f67b3f19a88434223f1a3105b3e402d59864f191589",
+    "stock-virtua-550.png": "7d19819ba2bae07e054f8b246bd6b5ab604dd483a49f6efa88e28047b710a126",
+    "stock-virtua-700.png": "cba1dd668244ab77e2de4c35e8337e5196a462742ff4063d32386deea7f459ad",
+    "target-rubik-400.png": "c302a554c9c39653c1fc96eb5720447d87fa94be657a444cda9e7a66a4603001",
+    "target-rubik-550.png": "d0e6a558bbb29ce3daa7413f25bbaf780dc44c93526099e3d64e0ccd1f8d5307",
+    "target-rubik-700.png": "e7da33ad9aa5f136c86d5bc984956ed274fd5c252395e1a4051b22e79513f673",
+    "target-virtua-400.png": "e82ed8d7f032f2d75ad318f2de9c08d0081cb52192b28946b1e41f13f5fe98d7",
+    "target-virtua-550.png": "6b93911be60e1464f09887c39dcba65506e48c4869de7bac82b8521ce2cd5150",
+    "target-virtua-700.png": "7f541aa3f2293c5358116804c264283aa7b662fad4c32018d26a0e7d95e41804"
+  },
+  "observations": [
+    "Superscript 1/2/3 read clearly in exponents, footnote markers and square/cubic units at sampled weights.",
+    "Virtua keeps curved one flag and rounded three top; Regular two/three appear lighter than Rubik.",
+    "Bold counters remain open, but weight balance with ordinary figures and default pairs await human review.",
+    "Stock longer text remains unevenly spaced and dense at Bold; this batch does not repair those protected bases.",
+    "Generic marks on superior digits use right-side fallback; no dedicated superior mark anchors or sups feature."
+  ]
+}

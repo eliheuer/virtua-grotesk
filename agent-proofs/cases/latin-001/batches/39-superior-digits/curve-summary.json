@@ -1,0 +1,60 @@
+{
+  "glyph_masters": [
+    {
+      "source": "VirtuaGrotesk-Regular.ufo/glyphs/onesuperior.glif",
+      "join_classes": {
+        "G0": 2,
+        "G1": 0,
+        "G2": 0
+      },
+      "warnings": []
+    },
+    {
+      "source": "VirtuaGrotesk-Bold.ufo/glyphs/onesuperior.glif",
+      "join_classes": {
+        "G0": 2,
+        "G1": 0,
+        "G2": 0
+      },
+      "warnings": []
+    },
+    {
+      "source": "VirtuaGrotesk-Regular.ufo/glyphs/twosuperior.glif",
+      "join_classes": {
+        "G0": 3,
+        "G1": 5,
+        "G2": 1
+      },
+      "warnings": []
+    },
+    {
+      "source": "VirtuaGrotesk-Bold.ufo/glyphs/twosuperior.glif",
+      "join_classes": {
+        "G0": 3,
+        "G1": 5,
+        "G2": 1
+      },
+      "warnings": []
+    },
+    {
+      "source": "VirtuaGrotesk-Regular.ufo/glyphs/threesuperior.glif",
+      "join_classes": {
+        "G0": 7,
+        "G1": 6,
+        "G2": 2
+      },
+      "warnings": []
+    },
+    {
+      "source": "VirtuaGrotesk-Bold.ufo/glyphs/threesuperior.glif",
+      "join_classes": {
+        "G0": 7,
+        "G1": 6,
+        "G2": 2
+      },
+      "warnings": []
+    }
+  ],
+  "five_weight_crossings": 0,
+  "note": "Two diagonal joins revised from the first snapped trial to exact G1 at both masters. Three line-to-curve joins at (184,568)/(200,560) have zero tangent angle but the diagnostic calls them G0 because the inherited point is not smooth-labeled; no tangent kink there. Intentional terminal cuts and bowl crotch retain G0; curvature jumps at other G1 joins remain documented, not claimed G2."
+}

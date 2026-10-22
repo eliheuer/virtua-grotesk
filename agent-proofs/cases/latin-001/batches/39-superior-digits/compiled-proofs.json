@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "¹ ² ³ · ¹²³",
+      "x¹ x² x³ · H¹ H² H³",
+      "10¹ 10² 10³ · 2² 3³",
+      "¹¹ ²² ³³ · ¹²³¹²³",
+      "¹́ ²̧ ³́ · ¹²³",
+      "1¹ 2² 3³ · 123"
+    ],
+    "words": [
+      "Area 10 m² · volume 20 m³",
+      "Text¹ text² text³ · notes¹²³",
+      "x¹ + x² + x³ = 14",
+      "10¹ 10² 10³ · 123",
+      "București¹ ģimene² doğa³",
+      "București ģimene doğa Ŧŧ ﬁﬂ"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "50efe0d35a7e9927f03dcf25811768fd698d8a5f10a3aa67332c77692ecedf58"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "f5fdcc560564a33429649e355322d46d463b7767c68fbafae41aadd6aba6407f"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "dc3f07e305c214a6225b91565acd40cf1f287be07f21cd170159a6c74088f1ed"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "f451d032a7d250fd6bbeab26c69ffe29b50764428115f96f6aa418539b39f35d"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "4d680c43a217f4e055f5ec70157271a6731da539d31f4edf22acbb2f13848d0f"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "b00eea2cab378b91497b17e1fa2bb3321a80d9727fa5edaf30965143c561e330"
+    }
+  ],
+  "fonts": {
+    "before": "a291a8f7cd67f0525b97420b34e98e418fca0305fa71ddb46e3742917f245f51",
+    "after": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

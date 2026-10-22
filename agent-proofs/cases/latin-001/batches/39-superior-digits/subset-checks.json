@@ -1,0 +1,384 @@
+{
+  "cases": 54,
+  "rows": [
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "sha256": "898daea81dce6413d8d1a13d5f3248c16eaa74169af8460d449bc8e1f2ab5f27",
+      "weight": 700,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "sha256": "898daea81dce6413d8d1a13d5f3248c16eaa74169af8460d449bc8e1f2ab5f27",
+      "weight": 700,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "sha256": "898daea81dce6413d8d1a13d5f3248c16eaa74169af8460d449bc8e1f2ab5f27",
+      "weight": 700,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "sha256": "898daea81dce6413d8d1a13d5f3248c16eaa74169af8460d449bc8e1f2ab5f27",
+      "weight": 700,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "sha256": "898daea81dce6413d8d1a13d5f3248c16eaa74169af8460d449bc8e1f2ab5f27",
+      "weight": 700,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "sha256": "898daea81dce6413d8d1a13d5f3248c16eaa74169af8460d449bc8e1f2ab5f27",
+      "weight": 700,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "sha256": "cf60405b0b9e0aa5cf767fbc965616fb40bfe040b1719e0280ec6e482f37cef9",
+      "weight": 500,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "sha256": "cf60405b0b9e0aa5cf767fbc965616fb40bfe040b1719e0280ec6e482f37cef9",
+      "weight": 500,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "sha256": "cf60405b0b9e0aa5cf767fbc965616fb40bfe040b1719e0280ec6e482f37cef9",
+      "weight": 500,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "sha256": "cf60405b0b9e0aa5cf767fbc965616fb40bfe040b1719e0280ec6e482f37cef9",
+      "weight": 500,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "sha256": "cf60405b0b9e0aa5cf767fbc965616fb40bfe040b1719e0280ec6e482f37cef9",
+      "weight": 500,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "sha256": "cf60405b0b9e0aa5cf767fbc965616fb40bfe040b1719e0280ec6e482f37cef9",
+      "weight": 500,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "sha256": "a7ef2b123a487437843f0ae1f7af3f9b02907d50d4501f6c9e91b41e95e1e670",
+      "weight": 400,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "sha256": "a7ef2b123a487437843f0ae1f7af3f9b02907d50d4501f6c9e91b41e95e1e670",
+      "weight": 400,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "sha256": "a7ef2b123a487437843f0ae1f7af3f9b02907d50d4501f6c9e91b41e95e1e670",
+      "weight": 400,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "sha256": "a7ef2b123a487437843f0ae1f7af3f9b02907d50d4501f6c9e91b41e95e1e670",
+      "weight": 400,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "sha256": "a7ef2b123a487437843f0ae1f7af3f9b02907d50d4501f6c9e91b41e95e1e670",
+      "weight": 400,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "sha256": "a7ef2b123a487437843f0ae1f7af3f9b02907d50d4501f6c9e91b41e95e1e670",
+      "weight": 400,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "sha256": "4f33790bcc87b158c01ab29fc92052aad8d8a7c7137d0b54915c19f7c4f80386",
+      "weight": 600,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "sha256": "4f33790bcc87b158c01ab29fc92052aad8d8a7c7137d0b54915c19f7c4f80386",
+      "weight": 600,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "sha256": "4f33790bcc87b158c01ab29fc92052aad8d8a7c7137d0b54915c19f7c4f80386",
+      "weight": 600,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "sha256": "4f33790bcc87b158c01ab29fc92052aad8d8a7c7137d0b54915c19f7c4f80386",
+      "weight": 600,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "sha256": "4f33790bcc87b158c01ab29fc92052aad8d8a7c7137d0b54915c19f7c4f80386",
+      "weight": 600,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "sha256": "4f33790bcc87b158c01ab29fc92052aad8d8a7c7137d0b54915c19f7c4f80386",
+      "weight": 600,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 400,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 475,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 550,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 625,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 700,
+      "text": "\u00b9\u00b2\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 400,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 475,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 550,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 625,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 700,
+      "text": "x\u00b9 x\u00b2 x\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 400,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 475,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 550,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 625,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 700,
+      "text": "10\u00b9 10\u00b2 10\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 400,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 475,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 550,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 625,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 700,
+      "text": "Area 10 m\u00b2, volume 20 m\u00b3.",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 400,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 475,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 550,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 625,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 700,
+      "text": "Text\u00b9 text\u00b2 text\u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 400,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 475,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 550,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 625,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "sha256": "0b17253ce4d484e0f6fa998af6522fa9ba1272e90f43f40f96565c9b73fc9f18",
+      "weight": 700,
+      "text": "\u00b9\u0301 \u00b2\u0327 \u00b3",
+      "subset_and_NFD_equal": true
+    }
+  ],
+  "scope": "Encoded glyphs survive text subsets and NFD. NFKD loses superior semantics; no sups feature or ordinary-digit substitution added."
+}
