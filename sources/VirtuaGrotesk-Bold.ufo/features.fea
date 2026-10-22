@@ -75,6 +75,11 @@ feature ccmp {
 		sub T caroncomb by Tcaron;
 	} ccmp_latin_extended;
 
+	lookup ccmp_hcaron {
+		lookupflag UseMarkFilteringSet [caroncomb];
+		sub h caroncomb by hcaron;
+	} ccmp_hcaron;
+
 	# Preserve precomposed tilde spacing when a web subset omits their cmap entries.
 	lookup ccmp_latin_tilde {
 		lookupflag 0;
@@ -135,12 +140,14 @@ lookup ccmp_soft_dotted_ligature_0;
 lookup ccmp_soft_dotted_context_1;
 lookup ccmp_latin_tilde;
 lookup ccmp_latin_extended;
+lookup ccmp_hcaron;
 script latn;
 language dflt;
 lookup ccmp_soft_dotted_ligature_0;
 lookup ccmp_soft_dotted_context_1;
 lookup ccmp_latin_tilde;
 lookup ccmp_latin_extended;
+lookup ccmp_hcaron;
 script arab;
 lookup ccmp_arab_2;
 } ccmp;

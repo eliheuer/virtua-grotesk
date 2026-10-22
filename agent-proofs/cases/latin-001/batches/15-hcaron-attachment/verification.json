@@ -1,0 +1,65 @@
+{
+  "checks": 135,
+  "unchanged_source_files": 1775,
+  "changed_compiled_ink": [
+    "hcaron"
+  ],
+  "geometry": [
+    {
+      "weight": 400,
+      "stem_clearance": 62,
+      "mark_bounds": [
+        -24.0,
+        830,
+        256.0,
+        1024
+      ],
+      "advance": 584.0
+    },
+    {
+      "weight": 475,
+      "stem_clearance": 62.5,
+      "mark_bounds": [
+        -18.0,
+        830.5,
+        272.0,
+        1024
+      ],
+      "advance": 606.0
+    },
+    {
+      "weight": 550,
+      "stem_clearance": 63,
+      "mark_bounds": [
+        -12.0,
+        831,
+        288.0,
+        1024
+      ],
+      "advance": 628.0
+    },
+    {
+      "weight": 625,
+      "stem_clearance": 63.5,
+      "mark_bounds": [
+        -6.0,
+        831.5,
+        304.0,
+        1024
+      ],
+      "advance": 650.0
+    },
+    {
+      "weight": 700,
+      "stem_clearance": 64,
+      "mark_bounds": [
+        0.0,
+        832,
+        320.0,
+        1024
+      ],
+      "advance": 672.0
+    }
+  ],
+  "after_sha256": "11433193b9e74548a01c3f4552f9edaa7d8bb618146dc8c64385645428bdd872"
+}

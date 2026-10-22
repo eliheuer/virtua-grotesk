@@ -1,0 +1,32 @@
+{
+  "Regular": {
+    "consumers": [
+      "hcaron"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "hcaron": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      }
+    },
+    "suspicious": []
+  },
+  "Bold": {
+    "consumers": [
+      "hcaron"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "hcaron": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      }
+    },
+    "suspicious": []
+  }
+}

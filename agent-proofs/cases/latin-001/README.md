@@ -173,12 +173,22 @@ new advances/target bearings on8. The hcaron width-only trial was withdrawn afte
 whole images exposed its existing ascender collision; both sources unchanged.
 Narrow I/l and off8 K/c/k/t exceptions are measured and deferred. Local only.
 
+[Batch15](batches/15-hcaron-attachment/README.md) clears hcaron's ascender
+collision in both masters using local offsets, explicit stack anchors and a
+base-matching Regular advance. Two GLIFs plus two feature files; all1775 other
+sources/Arabic/green/base/donor bytes and grades unchanged. A narrow mark-filtered
+composition handles intervening cedilla in missing-cmap fallback. Whole400/550/700
+and enlarged endpoints inspected; Rubik lacks U+021F, explicitly unavailable,
+with supported decomposed rows retained.135 scoped checks, nine Latin methods,
+unchanged216 baseline failures and preflight complete.23 inherited donor-grid
+findings remain. Mark proportions remain for human review. Local only.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Repair hcaron attachment in both masters: its existing mark overlaps the ascender; inspect local placement, stack anchors and canonical fallback. Rubik lacks U+021F; show unavailable. Then continue narrow I/l and off8 K/c/k/t spacing exceptions measured in batch14, preserving base geometry. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue narrow I/l and off8 K/c/k/t spacing exceptions measured in batch14, preserving base geometry and accent overhangs. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions

@@ -1160,3 +1160,15 @@ mismatches105→0 across125 samples; generic/compound mark issues remain unresol
 The hcaron trial was withdrawn after visual review exposed the existing mark
 collision with its ascender. Repair that attachment next, then measured narrow
 I/l and off8 K/c/k/t spacing exceptions. Local only; no push or release approval.
+
+## Hcaron attachment checkpoint — 2026-10-21
+
+LAT-001 [batch15](../../agent-proofs/cases/latin-001/batches/15-hcaron-attachment/README.md)
+repairs the caron/ascender collision in both weights with62/64-unit clearance,
+local stack anchors and base-matching spacing. A dedicated mark-filtered
+composition handles tested intervening-mark fallback. Two GLIFs and two feature
+files only; all1775 other source files and all grades preserved.135 scoped
+checks, nine Latin tests, whole400/550/700 plus enlarged images and preflight
+completed; the same216 baseline failures remain. Rubik lacks U+021F: unavailable
+is explicit, with separate supported decomposed comparisons.23 inherited grid
+findings remain in unchanged donors/base. Local only; human review pending.

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/hcaron.glif",
+    "glyph": "hcaron",
+    "master": "Regular",
+    "before": "7101b761e9ce45ed072eae6cd601c552db2721cf1b5033161d3e6714e60a7a32",
+    "after": "36612737fb43a7b3d5486547c5afecba45e47173fdc7f684b1ea7979a6f59efe",
+    "kind": "local mark over ascender, explicit stack anchors, base advance; preserve geometry and grade"
+  },
+  {
+    "path": "sources/VirtuaGrotesk-Regular.ufo/features.fea",
+    "master": "Regular",
+    "before": "12526f5c0b9164189db854229c1415973e59488349dc176621d4de67312add06",
+    "after": "4804446106a3ed722ff84a55678327c320e04f4e2ea6de8b4616543155b40c12",
+    "kind": "canonical hcaron fallback"
+  },
+  {
+    "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/hcaron.glif",
+    "glyph": "hcaron",
+    "master": "Bold",
+    "before": "07abff126c312a347b8e24c9133766e4e1ddbed10d56a9acc1545215d564bc26",
+    "after": "cd44b1ff2cf473a63ac264525657422cf023295c1dac684c13a352425c066ebb",
+    "kind": "local mark over ascender, explicit stack anchors, base advance; preserve geometry and grade"
+  },
+  {
+    "path": "sources/VirtuaGrotesk-Bold.ufo/features.fea",
+    "master": "Bold",
+    "before": "12526f5c0b9164189db854229c1415973e59488349dc176621d4de67312add06",
+    "after": "4804446106a3ed722ff84a55678327c320e04f4e2ea6de8b4616543155b40c12",
+    "kind": "canonical hcaron fallback"
+  }
+]
