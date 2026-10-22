@@ -1,0 +1,26 @@
+{
+  "weight": 550,
+  "size": 48,
+  "texts": [
+    "Água, café, verão, ação.",
+    "Māori kūmara. Größere Wörter."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "73e32b7eecfa956b8d9b3a5cca42a24e1021abd2bdb2df4f4496d8431447c64f",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "ec8761a0d14f17330a7bac3919149368bdd16f9e5df206cd83b8c5e0caf29f25",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "2d9f2a143a0786ea1f2d1ac13e18d1f96293e5f8445e3c86cbe06e5650f24cec"
+}

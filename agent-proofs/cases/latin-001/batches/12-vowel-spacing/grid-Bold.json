@@ -1,0 +1,3308 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 31,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "aacute",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 12.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "ce5b068a172ccd57488aff116aba41d43819a34a36c0e642e97b0d368d32dcf6"
+    },
+    {
+      "glyph": "abreve",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        816
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "c1c2a0611a6ccbab8b35e4a1411865556c05e41f01693aedc065b43f4dc37139"
+    },
+    {
+      "glyph": "acircumflex",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 116.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 420.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "3efe9027e734afab0f0bfb5ea46dc8dae0efd94cc59a816e0b3098242696e367"
+    },
+    {
+      "glyph": "adieresis",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[7].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[1].point[0].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[3].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[4].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[5].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[6].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[7].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": -44.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "d4215e2225dd87fd67a428d02a9e47171cee1499656c6adf64461a1a682ea0f4"
+    },
+    {
+      "glyph": "agrave",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "1d2bc36458437723f679feb5951bed013506d2a398d5c7e9cb647d816f0eb2e2"
+    },
+    {
+      "glyph": "amacron",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        752
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].y",
+          "value": 756.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "230bc90377e2b645e3f3d9df8cd0c8b6accd0d1992a0ac9c5d18ead60e473b78"
+    },
+    {
+      "glyph": "aogonek",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -224,
+        608,
+        592
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "da2e584eaa8b44e3bb24bd450e9ad0ba4be10398f0b5e4b6d2e58ebec4889127"
+    },
+    {
+      "glyph": "aring",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 178.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "5fec82a9dec6fad01ac099cd6866ed40852631fb8fa03881620e65b160165ec2"
+    },
+    {
+      "glyph": "atilde",
+      "points": 0,
+      "advance": 632.0,
+      "bounds": [
+        64,
+        -16,
+        592,
+        784
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 632.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "5bfef7d83037c671da7548ce7767047468a4bc9bf4323b9036d658a4e808c7f3"
+    },
+    {
+      "glyph": "eacute",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -16,
+        616,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 12.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "ba10b92c24e651bf7e91fdb89d0ded296dfafcb3aca8a8076b4b520243d02b44"
+    },
+    {
+      "glyph": "ecaron",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -16,
+        616,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 116.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 420.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "8c4bfdb7bdf1fd1241fdbfcd994de6565d265ad6f955209916300048b8de532f"
+    },
+    {
+      "glyph": "ecircumflex",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -16,
+        616,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 116.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 420.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "21569e8b5dc1501615f3b0246c0a0eb1a49d1df20ddf33a673984ffd87eaad35"
+    },
+    {
+      "glyph": "edieresis",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -16,
+        616,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[7].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[1].point[0].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[3].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[4].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[5].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[6].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[7].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": -44.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "31f65d440df9b358f57354a00c72c8e51084e8b1692a74a802179fdd63e43564"
+    },
+    {
+      "glyph": "edotaccent",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -16,
+        616,
+        720
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "f2dcc3608a2bbf4fcbddc6a2c458250b20b6daa4b74f882607036c474be3ed82"
+    },
+    {
+      "glyph": "egrave",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -16,
+        616,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "870788497bc71825d5f84745c8b028c6cc854a1769c8eb0b60870eef9073836f"
+    },
+    {
+      "glyph": "emacron",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -16,
+        616,
+        752
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].y",
+          "value": 756.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "4986c9804c3723f00cef07c5e05aada1ecd156974ff25e70519ea697a9780d5b"
+    },
+    {
+      "glyph": "eogonek",
+      "points": 0,
+      "advance": 656.0,
+      "bounds": [
+        40,
+        -224,
+        616,
+        592
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 656.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "2b08f926073d39a02b0f867a61d46450e48231d3a09252157ad91611e03f9975"
+    },
+    {
+      "glyph": "oacute",
+      "points": 0,
+      "advance": 704.0,
+      "bounds": [
+        40,
+        -16,
+        664,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 12.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 704.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "f85030d2f348d68cbce9e8fe510c3c62aea5e21191339320496fcb4c48838a2f"
+    },
+    {
+      "glyph": "ocircumflex",
+      "points": 0,
+      "advance": 704.0,
+      "bounds": [
+        40,
+        -16,
+        664,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 140.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 420.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 704.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "d1a6e0ae8796c008141e5c05839b2235635e39cfa99e7a0fda2f3e9ffdda2af6"
+    },
+    {
+      "glyph": "odieresis",
+      "points": 0,
+      "advance": 704.0,
+      "bounds": [
+        40,
+        -16,
+        664,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 172.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[7].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[1].point[0].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[3].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[4].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[5].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[6].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[7].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": -44.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 704.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "4cf56c05347e89865e1914ca892984640ca8a8f1fca9e47ca0063b6cf4c026da"
+    },
+    {
+      "glyph": "ograve",
+      "points": 0,
+      "advance": 704.0,
+      "bounds": [
+        40,
+        -16,
+        664,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 188.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 704.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "04204aaa4e0a75b77a3a8e37fd02bb15a8cacd0bddd64c0f2eefb47f5138eceb"
+    },
+    {
+      "glyph": "ohungarumlaut",
+      "points": 0,
+      "advance": 704.0,
+      "bounds": [
+        40,
+        -16,
+        664,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 116.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].contour[0].point[7].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[8].y",
+          "value": 670.0
+        },
+        {
+          "field": "component[1].contour[0].point[9].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].contour[1].point[0].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].x",
+          "value": 292.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].x",
+          "value": 308.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].contour[1].point[6].x",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].contour[1].point[7].x",
+          "value": 284.0
+        },
+        {
+          "field": "component[1].contour[1].point[8].y",
+          "value": 670.0
+        },
+        {
+          "field": "component[1].contour[1].point[9].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 228.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 704.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "37b201ed14ec851eb3bbdc66e06daddf559406dcfc359f8a33ce5c512c526b0c"
+    },
+    {
+      "glyph": "otilde",
+      "points": 0,
+      "advance": 704.0,
+      "bounds": [
+        40,
+        -16,
+        664,
+        784
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 468.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 468.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 704.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "a03b95b146623e5beb17e0bfc32c7eac7352232ea4b05a383d6918f16d59bf79"
+    },
+    {
+      "glyph": "uacute",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -16,
+        648,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 196.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 12.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "f338b7895d3d6bc71b9179dfc8aba57e3a3fef7d3060f82549279fa789a66b55"
+    },
+    {
+      "glyph": "ucircumflex",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -16,
+        648,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 420.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "4d39ec1a70ff61adc8587954d8f98eeddb021cf91addc4c4abd8b5df889679ee"
+    },
+    {
+      "glyph": "udieresis",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -16,
+        648,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": -28.0
+        },
+        {
+          "field": "component[1].contour[0].point[7].x",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].contour[1].point[0].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[3].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[4].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[1].contour[1].point[5].x",
+          "value": 388.0
+        },
+        {
+          "field": "component[1].contour[1].point[6].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].contour[1].point[7].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].left_sidebearing",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": -44.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "44676109dac9097227635084d6891ada41f67e459d1cd9279eed266e793c05f4"
+    },
+    {
+      "glyph": "ugrave",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -16,
+        648,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 196.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 164.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "a303a6100d1325ab43aa5bbd7252957603d2a50ff6b45532e6fafc84111b3920"
+    },
+    {
+      "glyph": "uhungarumlaut",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -16,
+        648,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 116.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].contour[0].point[7].x",
+          "value": 108.0
+        },
+        {
+          "field": "component[1].contour[0].point[8].y",
+          "value": 670.0
+        },
+        {
+          "field": "component[1].contour[0].point[9].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].contour[1].point[0].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].x",
+          "value": 292.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].y",
+          "value": 638.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].x",
+          "value": 308.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].contour[1].point[6].x",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].contour[1].point[7].x",
+          "value": 284.0
+        },
+        {
+          "field": "component[1].contour[1].point[8].y",
+          "value": 670.0
+        },
+        {
+          "field": "component[1].contour[1].point[9].y",
+          "value": 654.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 228.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "2610801b6fa677aab379ecb8a50789abb3e80d78008c8427460a924b895ac80b"
+    },
+    {
+      "glyph": "umacron",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -16,
+        648,
+        752
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[1].anchor[top].y",
+          "value": 756.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "83adc429921301003e970ee2b6f7f21d5eb9a32d5b281f957d0fe6fc1b67b34f"
+    },
+    {
+      "glyph": "uogonek",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -224,
+        664,
+        576
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 56.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 1,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "718ef3bab2da70af13749c6212144f60be4065b5c70f670648df7a626e8c6d80"
+    },
+    {
+      "glyph": "uring",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        72,
+        -16,
+        648,
+        832
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 210.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-vowel-spacing-w0kjwklm/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "662137613298908cfa8d122a9f5ac3996e5babe38141a236712b1591f38c3f5e"
+    }
+  ]
+}

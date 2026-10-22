@@ -1,0 +1,803 @@
+{
+  "before": [
+    {
+      "weight": 400,
+      "glyph": "aacute",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "abreve",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "acircumflex",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "adieresis",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "agrave",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "amacron",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "aring",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "atilde",
+      "full": 592,
+      "fallback": 608
+    },
+    {
+      "weight": 400,
+      "glyph": "eacute",
+      "full": 620,
+      "fallback": 624
+    },
+    {
+      "weight": 400,
+      "glyph": "ecaron",
+      "full": 620,
+      "fallback": 624
+    },
+    {
+      "weight": 400,
+      "glyph": "ecircumflex",
+      "full": 620,
+      "fallback": 624
+    },
+    {
+      "weight": 400,
+      "glyph": "edieresis",
+      "full": 620,
+      "fallback": 624
+    },
+    {
+      "weight": 400,
+      "glyph": "edotaccent",
+      "full": 620,
+      "fallback": 624
+    },
+    {
+      "weight": 400,
+      "glyph": "egrave",
+      "full": 620,
+      "fallback": 624
+    },
+    {
+      "weight": 400,
+      "glyph": "emacron",
+      "full": 620,
+      "fallback": 624
+    },
+    {
+      "weight": 400,
+      "glyph": "oacute",
+      "full": 648,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "ocircumflex",
+      "full": 648,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "odieresis",
+      "full": 648,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "ograve",
+      "full": 648,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "ohungarumlaut",
+      "full": 648,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "otilde",
+      "full": 648,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "uacute",
+      "full": 600,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "ucircumflex",
+      "full": 600,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "udieresis",
+      "full": 600,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "ugrave",
+      "full": 600,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "uhungarumlaut",
+      "full": 600,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "umacron",
+      "full": 600,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "uring",
+      "full": 600,
+      "fallback": 592
+    },
+    {
+      "weight": 475,
+      "glyph": "aacute",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "abreve",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "acircumflex",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "adieresis",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "agrave",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "amacron",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "aring",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "atilde",
+      "full": 592,
+      "fallback": 614
+    },
+    {
+      "weight": 475,
+      "glyph": "oacute",
+      "full": 648,
+      "fallback": 656
+    },
+    {
+      "weight": 475,
+      "glyph": "ocircumflex",
+      "full": 648,
+      "fallback": 656
+    },
+    {
+      "weight": 475,
+      "glyph": "odieresis",
+      "full": 648,
+      "fallback": 656
+    },
+    {
+      "weight": 475,
+      "glyph": "ograve",
+      "full": 648,
+      "fallback": 656
+    },
+    {
+      "weight": 475,
+      "glyph": "ohungarumlaut",
+      "full": 648,
+      "fallback": 656
+    },
+    {
+      "weight": 475,
+      "glyph": "otilde",
+      "full": 648,
+      "fallback": 656
+    },
+    {
+      "weight": 475,
+      "glyph": "uacute",
+      "full": 618,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "ucircumflex",
+      "full": 618,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "udieresis",
+      "full": 618,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "ugrave",
+      "full": 618,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "uhungarumlaut",
+      "full": 618,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "umacron",
+      "full": 618,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "uring",
+      "full": 618,
+      "fallback": 624
+    },
+    {
+      "weight": 550,
+      "glyph": "aacute",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "abreve",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "acircumflex",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "adieresis",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "agrave",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "amacron",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "aring",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "atilde",
+      "full": 592,
+      "fallback": 620
+    },
+    {
+      "weight": 550,
+      "glyph": "eacute",
+      "full": 644,
+      "fallback": 640
+    },
+    {
+      "weight": 550,
+      "glyph": "ecaron",
+      "full": 644,
+      "fallback": 640
+    },
+    {
+      "weight": 550,
+      "glyph": "ecircumflex",
+      "full": 644,
+      "fallback": 640
+    },
+    {
+      "weight": 550,
+      "glyph": "edieresis",
+      "full": 644,
+      "fallback": 640
+    },
+    {
+      "weight": 550,
+      "glyph": "edotaccent",
+      "full": 644,
+      "fallback": 640
+    },
+    {
+      "weight": 550,
+      "glyph": "egrave",
+      "full": 644,
+      "fallback": 640
+    },
+    {
+      "weight": 550,
+      "glyph": "emacron",
+      "full": 644,
+      "fallback": 640
+    },
+    {
+      "weight": 550,
+      "glyph": "oacute",
+      "full": 648,
+      "fallback": 672
+    },
+    {
+      "weight": 550,
+      "glyph": "ocircumflex",
+      "full": 648,
+      "fallback": 672
+    },
+    {
+      "weight": 550,
+      "glyph": "odieresis",
+      "full": 648,
+      "fallback": 672
+    },
+    {
+      "weight": 550,
+      "glyph": "ograve",
+      "full": 648,
+      "fallback": 672
+    },
+    {
+      "weight": 550,
+      "glyph": "ohungarumlaut",
+      "full": 648,
+      "fallback": 672
+    },
+    {
+      "weight": 550,
+      "glyph": "otilde",
+      "full": 648,
+      "fallback": 672
+    },
+    {
+      "weight": 550,
+      "glyph": "uacute",
+      "full": 636,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "ucircumflex",
+      "full": 636,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "udieresis",
+      "full": 636,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "ugrave",
+      "full": 636,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "uhungarumlaut",
+      "full": 636,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "umacron",
+      "full": 636,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "uring",
+      "full": 636,
+      "fallback": 656
+    },
+    {
+      "weight": 625,
+      "glyph": "aacute",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "abreve",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "acircumflex",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "adieresis",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "agrave",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "amacron",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "aring",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "atilde",
+      "full": 592,
+      "fallback": 626
+    },
+    {
+      "weight": 625,
+      "glyph": "eacute",
+      "full": 656,
+      "fallback": 648
+    },
+    {
+      "weight": 625,
+      "glyph": "ecaron",
+      "full": 656,
+      "fallback": 648
+    },
+    {
+      "weight": 625,
+      "glyph": "ecircumflex",
+      "full": 656,
+      "fallback": 648
+    },
+    {
+      "weight": 625,
+      "glyph": "edieresis",
+      "full": 656,
+      "fallback": 648
+    },
+    {
+      "weight": 625,
+      "glyph": "edotaccent",
+      "full": 656,
+      "fallback": 648
+    },
+    {
+      "weight": 625,
+      "glyph": "egrave",
+      "full": 656,
+      "fallback": 648
+    },
+    {
+      "weight": 625,
+      "glyph": "emacron",
+      "full": 656,
+      "fallback": 648
+    },
+    {
+      "weight": 625,
+      "glyph": "oacute",
+      "full": 648,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "ocircumflex",
+      "full": 648,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "odieresis",
+      "full": 648,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "ograve",
+      "full": 648,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "ohungarumlaut",
+      "full": 648,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "otilde",
+      "full": 648,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "uacute",
+      "full": 654,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "ucircumflex",
+      "full": 654,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "udieresis",
+      "full": 654,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "ugrave",
+      "full": 654,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "uhungarumlaut",
+      "full": 654,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "umacron",
+      "full": 654,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "uring",
+      "full": 654,
+      "fallback": 688
+    },
+    {
+      "weight": 700,
+      "glyph": "aacute",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "abreve",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "acircumflex",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "adieresis",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "agrave",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "amacron",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "aring",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "atilde",
+      "full": 592,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "eacute",
+      "full": 668,
+      "fallback": 656
+    },
+    {
+      "weight": 700,
+      "glyph": "ecaron",
+      "full": 668,
+      "fallback": 656
+    },
+    {
+      "weight": 700,
+      "glyph": "ecircumflex",
+      "full": 668,
+      "fallback": 656
+    },
+    {
+      "weight": 700,
+      "glyph": "edieresis",
+      "full": 668,
+      "fallback": 656
+    },
+    {
+      "weight": 700,
+      "glyph": "edotaccent",
+      "full": 668,
+      "fallback": 656
+    },
+    {
+      "weight": 700,
+      "glyph": "egrave",
+      "full": 668,
+      "fallback": 656
+    },
+    {
+      "weight": 700,
+      "glyph": "emacron",
+      "full": 668,
+      "fallback": 656
+    },
+    {
+      "weight": 700,
+      "glyph": "oacute",
+      "full": 648,
+      "fallback": 704
+    },
+    {
+      "weight": 700,
+      "glyph": "ocircumflex",
+      "full": 648,
+      "fallback": 704
+    },
+    {
+      "weight": 700,
+      "glyph": "odieresis",
+      "full": 648,
+      "fallback": 704
+    },
+    {
+      "weight": 700,
+      "glyph": "ograve",
+      "full": 648,
+      "fallback": 704
+    },
+    {
+      "weight": 700,
+      "glyph": "ohungarumlaut",
+      "full": 648,
+      "fallback": 704
+    },
+    {
+      "weight": 700,
+      "glyph": "otilde",
+      "full": 648,
+      "fallback": 704
+    },
+    {
+      "weight": 700,
+      "glyph": "uacute",
+      "full": 672,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "ucircumflex",
+      "full": 672,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "udieresis",
+      "full": 672,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "ugrave",
+      "full": 672,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "uhungarumlaut",
+      "full": 672,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "umacron",
+      "full": 672,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "uring",
+      "full": 672,
+      "fallback": 720
+    }
+  ],
+  "after": []
+}

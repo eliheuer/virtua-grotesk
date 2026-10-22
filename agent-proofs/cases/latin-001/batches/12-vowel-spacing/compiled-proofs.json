@@ -1,0 +1,30 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "rows": [
+    "a á ă â ä à ā ą å ã a",
+    "e é ě ê ë ė è ē ę e",
+    "o ó ô ö ò ő õ o",
+    "u ú û ü ù ű ū ų ů u",
+    "na ná ne né no nó nu nú",
+    "nana nána nene néne nono nóno nunu núnu"
+  ],
+  "images": [
+    {
+      "weight": 400,
+      "sha256": "6b3aafacd4c8240e3280a3ca2c1877fe817a05033ab2bb56a35cf952beef9b7c"
+    },
+    {
+      "weight": 550,
+      "sha256": "8927c75178fc066b2df222a4b6a520714de1ac364fd88b2da1132e5eb586ff24"
+    },
+    {
+      "weight": 700,
+      "sha256": "c77e63a37a4bb4cba74d561ade4869359523f09c6b0423aae9d506c6d9484f67"
+    }
+  ],
+  "fonts": {
+    "before": "73e32b7eecfa956b8d9b3a5cca42a24e1021abd2bdb2df4f4496d8431447c64f",
+    "after": "ec8761a0d14f17330a7bac3919149368bdd16f9e5df206cd83b8c5e0caf29f25",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

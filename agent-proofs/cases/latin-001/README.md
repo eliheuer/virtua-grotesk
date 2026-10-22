@@ -144,12 +144,22 @@ sources and wrapper grades are unchanged. Twelve GLIFs plus two feature files,
 images, and preflight completed. The same216 baseline failures remain. Side-mark
 proportions and conservative pair spacing await manual review.
 
+[Batch12](batches/12-vowel-spacing/README.md) matches31 lowercase a/e/o/u accent
+wrapper advances to their current bases in both masters (62 GLIFs). All ink,
+placements, grades and kerning remain exact; all1717 other source files unchanged.
+Whole400/550/700 form/word images and enlarged endpoints inspected.500 scoped
+checks, eight Latin tests, unchanged216 baseline failures and preflight complete.
+Basic missing-cmap advance differences fall133→0 across155 samples; separate
+mark-placement/compound-accent subset findings remain. All new widths on8;
+1185 inherited closure-grid findings retained. Bold e proportions remain a
+protected base review issue, not approved by this spacing correction.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Independent precomposed/base spacing discrepancies (item3), then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue independent precomposed/base spacing discrepancies: uppercase and consonant/i families remain after batch12 lowercase a/e/o/u. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
