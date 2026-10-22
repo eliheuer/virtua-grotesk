@@ -78,7 +78,7 @@ shows no new failures; this does not waive the existing failures.
 | Batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 | Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
-| Current batch29 package after long slash overlay | 12 | 9 | 160 | 10 | 40 |
+| Current batch30 package after not-equal encoding | 12 | 9 | 160 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -89,7 +89,7 @@ cursor behavior still needs platform testing. [Batch25](../../agent-proofs/cases
 then fixes breve winding in two donor GLIFs without moving geometry:4,410 exact
 compiled glyph comparisons,17 Latin methods, unchanged baseline failures and
 whole-image/Diffenator review completed. Outline direction now passes; protected
-Arabic warnings remain reserved for Eli. Next missing combining marks and symbols.
+Arabic warnings remain reserved for Eli. Next independent common symbols; combining cmap gaps are closed as first drafts.
 
 Current package failures are serving-set reachability for U+0302, U+0331 and
 U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
@@ -1343,3 +1343,19 @@ The added mark makes more sample strings testable; prior cmap/ink/shaping is
 preserved. Existing U0302/U0331/U1EBC/U1EBD issues remain. No metadata/exclusions
 changed.346 encodings remain missing:182 Cyrillic,62 Common,102 Arabic presentation
 forms. Next independent mathematical symbols and technical preparation; no push.
+
+### LAT-001 batch30 · Not-equal encoding
+
+Adds U2260 in both masters using the exact existing equal-plus-long-slash
+construction, offset304,352/advance600. Six source files; all1805 other source
+files, every old GLIF and Arabic/green donors unchanged.90 scoped checks,4445
+old VF and3555 old static ink/advance comparisons,23 Latin methods and2 helper
+methods pass;216 Hebrew baseline failures remain. Encoded/NFD and real-subset
+fallback checked. Whole400/550/700 and224px images plus actual Diffenator target
+and stock first viewport inspected against Rubik. New values on8;16 inherited
+Bold equal-point grid findings retained. Generic math accent placement remains
+at the right, unchanged; dense Bold and spacing need human review. Preflight and
+active/scratch identity except head complete. Fresh online unexcluded package
+12 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP remains blocked on serving-set reachability.
+Remaining Rubik gap345 encodings:182 Cyrillic,61 Common,102 Arabic presentation
+forms. Next independent ≤/≥/±/¬. Local checkpoint only; no release or push.

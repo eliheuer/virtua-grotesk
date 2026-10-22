@@ -1,0 +1,38 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "views": [
+    "same-text not-equal supplement",
+    "stock first viewport"
+  ],
+  "old": "Virtua candidate",
+  "new": "Rubik",
+  "font_hashes": {
+    "rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "before.ttf": "0e694cb131bc0d63e2ace374758d58c99576d58f86f99c62b3be6edb5032d7dc",
+    "after.ttf": "b427475c1d2d379bdb24512f587c112ce0d0325d36699bf0b8c95e20150f1a41"
+  },
+  "screenshots": {
+    "stock-virtua-400.png": "8919e96baa8f16a87ad9d990c0e4a418373bf1821882e355ad1b99f531d8bf44",
+    "target-virtua-550.png": "1105c1e951aa1f12893eb19616d1d8ad180d29120b06e328af521944fae531ca",
+    "target-rubik-400.png": "2dcf2fc3290e74ae56958ee146eedf835e3a2f59839da398bd3926bd3f960635",
+    "stock-rubik-550.png": "8414cc6283be43b2809dd59b234e0ac2230e84ae447b83942faf62dda8e7ad13",
+    "stock-virtua-700.png": "88cfbcbd21dd65a80ddc35d78cba2659a2c6d0b2d43735f1bcf83c87c7509cbb",
+    "target-rubik-700.png": "9ae1e2ab9248998cdd9493b0f368eccbb8fae3a2258f6b7151d3b389a5bad6e9",
+    "target-virtua-700.png": "0b36ce89207d50a8003a91f9b6f4b9bfd7c7d4290a7cec3102275cfd1ae68983",
+    "stock-rubik-400.png": "d52c0efc2b35c4809bb23856e036606b87ac01110f7a34b53ce88c7e3d1a235b",
+    "target-rubik-550.png": "ff96bc81891ffc7e2277f957daae9749a96d6207240c3807fe0d79d3ff316e51",
+    "target-virtua-400.png": "9a7dd20233656e01744996c12010aa58d6d41245d50fc1e1e8deea56b4a6a923",
+    "stock-virtua-550.png": "40d498b428823b50c140f54cad99ec67642199c924742f75a765e66f2eed0fd3",
+    "stock-rubik-700.png": "63d960e585ed9693f4d9b058acd2d66eaa8ebab77ec0eedf85a2ca095b4820c5"
+  },
+  "findings": [
+    "Encoded and decomposed not-equal have the same complete silhouette. Slash is longer and less steep than Rubik; clipped ends remain clear.",
+    "Dense Bold and uneven mixed-text spacing remain for human review.",
+    "Above/below marks after mathematical symbols retain existing generic right-side placement, not centered attachment.",
+    "Sampled scope only, no exhaustive language or native-reader approval."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 1,
+  "passed": true,
+  "results": [
+    {
+      "glyph": "notequal",
+      "points": 0,
+      "advance": 600.0,
+      "bounds": [
+        48,
+        16,
+        552,
+        688
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 600.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 48.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "c52e617f0c8fc957451fa6c5e227e23d6a0e9fbc875f0c315a29753bbd9fb2b2"
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 1,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "notequal",
+      "points": 0,
+      "advance": 600.0,
+      "bounds": [
+        40,
+        16,
+        568,
+        688
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[0].y",
+          "value": 170.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].y",
+          "value": 154.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].y",
+          "value": 154.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].y",
+          "value": 170.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 270.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 286.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 286.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 270.0
+        },
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 434.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 418.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 418.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 434.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].y",
+          "value": 534.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 550.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 550.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 534.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 600.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "c52e617f0c8fc957451fa6c5e227e23d6a0e9fbc875f0c315a29753bbd9fb2b2"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "= ≠ ≠ · ≠ ≠ ≠",
+      "= ≠ + − < >",
+      "0 ≠ O · 1 ≠ I · 2 ≠ 3",
+      "A ≠ B · x ≠ y · a ≠ b",
+      "≠́ ≠̧ · ≠́ ≠̧",
+      "≠≠ == ≠= =≠"
+    ],
+    "words": [
+      "1 + 1 ≠ 3 · 2 ≠ 3",
+      "x ≠ y · x = y · a + b",
+      "10 ≠ 100 · 0 ≠ O · 1 ≠ l",
+      "A ≠ B · x ≠ y",
+      "≠ x ≠ y ≠ z ≠",
+      "București ģimene doğa Ŧŧ ﬁﬂ"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "8abdad1f23ebd8e3d3bf29b635c00cf1f2b6a0f51d9549143550f8fa884edb23"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "5cd4945dece284b8c0b36fa221b45335cf245927bba2b110517ff953fb35b312"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "e7dfdf9c504b9a6d5539f71d010fa830f0847e15ea563fb78af6e476ebec210c"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "7d425af453d132633d7f064ac0a7de9e56aedad0f8208319d8c5e86497141318"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "18b8eca9591980104c822044274eb9eb90aea2eef7739f1a243714793c6291ff"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "5bca6d0c85841de4586f3cdbfcccfe916b538f0be97a4e33d5e41ee13bc41e8a"
+    }
+  ],
+  "fonts": {
+    "before": "0e694cb131bc0d63e2ace374758d58c99576d58f86f99c62b3be6edb5032d7dc",
+    "after": "b427475c1d2d379bdb24512f587c112ce0d0325d36699bf0b8c95e20150f1a41",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

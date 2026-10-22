@@ -1,0 +1,31 @@
+Building Virtua Grotesk fonts with gftools builder...
+[1/11] buildVariable
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpj0q2v757 -o variable -m VirtuaGrotesk.designspace --filter ...
+[2/11] fix
+gftools-fix-font -o /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpj0q2v757
+[3/11] gftools-gen-stat --inplace  -- '/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf' && touch /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp31y9cbup.buildStatstamp
+['/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf']
+Saving font to /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf
+[4/11] genStatic
+gftools-gen-static /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk Regular --coordinates wght=400 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpauhff44t
+[5/11] genStatic
+gftools-gen-static /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk Bold --coordinates wght=700 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmprl7fea3d
+[6/11] genStatic
+gftools-gen-static /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk Medium --coordinates wght=500 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp54h2phtn
+[7/11] genStatic
+gftools-gen-static /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk SemiBold --coordinates wght=600 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmple_91kav
+[8/11] fix
+gftools-fix-font -o /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/ttf/VirtuaGrotesk-Regular.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpauhff44t
+[9/11] fix
+gftools-fix-font -o /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/ttf/VirtuaGrotesk-Bold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmprl7fea3d
+[10/11] fix
+gftools-fix-font -o /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/ttf/VirtuaGrotesk-Medium.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp54h2phtn
+[11/11] fix
+gftools-fix-font -o /private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-notequal-vhggo5g7/fonts/ttf/VirtuaGrotesk-SemiBold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmple_91kav
+
+Build complete! Fonts are in the fonts/ directory:
+fonts/variable/VirtuaGrotesk[wght].ttf
+fonts/ttf/VirtuaGrotesk-Bold.ttf
+fonts/ttf/VirtuaGrotesk-Medium.ttf
+fonts/ttf/VirtuaGrotesk-Regular.ttf
+fonts/ttf/VirtuaGrotesk-SemiBold.ttf

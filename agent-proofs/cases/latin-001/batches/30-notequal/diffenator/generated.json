@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/30-notequal/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch30/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/30-notequal/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/30-notequal/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch30/comparison"
+    ]
+  ],
+  "supplement_text": "1 + 1 ≠ 3 · 2 ≠ 3 · x ≠ y · x = y · A ≠ B · A ≠ B · 10 ≠ 100 · 0 ≠ O · 1 ≠ l · ≠́ ≠̧ · ≠́ ≠̧ · București ģimene doğa Ŧŧ ﬁﬂ",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "b427475c1d2d379bdb24512f587c112ce0d0325d36699bf0b8c95e20150f1a41",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch30/virtua/diff3proof.html": "022a0e012b647125094fec68753df563feaf79b075d316f8cbf3ad1a6db8fefa",
+    "out/review-latin-d2513094/batch30/comparison/diff3proof.html": "62e14b511b779419acdf13e560f7a553e8a89879fccc6ce37addfadd34ada558",
+    "out/review-latin-d2513094/batch30/comparison/notequal.html": "54eea7d7240a4a61865d01b9defb5c50293e1f6f716bece5098f8255054b43b7"
+  }
+}

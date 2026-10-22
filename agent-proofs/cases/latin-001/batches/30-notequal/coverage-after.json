@@ -1,0 +1,2780 @@
+{
+  "font": {
+    "path": "agent-proofs/cases/latin-001/batches/30-notequal/assets/after.ttf",
+    "sha256": "b427475c1d2d379bdb24512f587c112ce0d0325d36699bf0b8c95e20150f1a41",
+    "encoded": 676
+  },
+  "reference": {
+    "path": "agent-proofs/cases/latin-001/batches/30-notequal/assets/rubik.ttf",
+    "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "encoded": 885
+  },
+  "missing_by_script": {
+    "Zyyy": 61,
+    "Cyrl": 182,
+    "Arab": 102
+  },
+  "missing": [
+    {
+      "codepoint": "U+00A4",
+      "character": "¤",
+      "name": "CURRENCY SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00A6",
+      "character": "¦",
+      "name": "BROKEN BAR",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00AC",
+      "character": "¬",
+      "name": "NOT SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00AD",
+      "character": "­",
+      "name": "SOFT HYPHEN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00B1",
+      "character": "±",
+      "name": "PLUS-MINUS SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00B2",
+      "character": "²",
+      "name": "SUPERSCRIPT TWO",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00B3",
+      "character": "³",
+      "name": "SUPERSCRIPT THREE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00B5",
+      "character": "µ",
+      "name": "MICRO SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00B9",
+      "character": "¹",
+      "name": "SUPERSCRIPT ONE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00BC",
+      "character": "¼",
+      "name": "VULGAR FRACTION ONE QUARTER",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00BD",
+      "character": "½",
+      "name": "VULGAR FRACTION ONE HALF",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+00BE",
+      "character": "¾",
+      "name": "VULGAR FRACTION THREE QUARTERS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0400",
+      "character": "Ѐ",
+      "name": "CYRILLIC CAPITAL LETTER IE WITH GRAVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0401",
+      "character": "Ё",
+      "name": "CYRILLIC CAPITAL LETTER IO",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0402",
+      "character": "Ђ",
+      "name": "CYRILLIC CAPITAL LETTER DJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0403",
+      "character": "Ѓ",
+      "name": "CYRILLIC CAPITAL LETTER GJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0404",
+      "character": "Є",
+      "name": "CYRILLIC CAPITAL LETTER UKRAINIAN IE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0405",
+      "character": "Ѕ",
+      "name": "CYRILLIC CAPITAL LETTER DZE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0406",
+      "character": "І",
+      "name": "CYRILLIC CAPITAL LETTER BYELORUSSIAN-UKRAINIAN I",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0407",
+      "character": "Ї",
+      "name": "CYRILLIC CAPITAL LETTER YI",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0408",
+      "character": "Ј",
+      "name": "CYRILLIC CAPITAL LETTER JE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0409",
+      "character": "Љ",
+      "name": "CYRILLIC CAPITAL LETTER LJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+040A",
+      "character": "Њ",
+      "name": "CYRILLIC CAPITAL LETTER NJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+040B",
+      "character": "Ћ",
+      "name": "CYRILLIC CAPITAL LETTER TSHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+040C",
+      "character": "Ќ",
+      "name": "CYRILLIC CAPITAL LETTER KJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+040D",
+      "character": "Ѝ",
+      "name": "CYRILLIC CAPITAL LETTER I WITH GRAVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+040E",
+      "character": "Ў",
+      "name": "CYRILLIC CAPITAL LETTER SHORT U",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+040F",
+      "character": "Џ",
+      "name": "CYRILLIC CAPITAL LETTER DZHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0410",
+      "character": "А",
+      "name": "CYRILLIC CAPITAL LETTER A",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0411",
+      "character": "Б",
+      "name": "CYRILLIC CAPITAL LETTER BE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0412",
+      "character": "В",
+      "name": "CYRILLIC CAPITAL LETTER VE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0413",
+      "character": "Г",
+      "name": "CYRILLIC CAPITAL LETTER GHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0414",
+      "character": "Д",
+      "name": "CYRILLIC CAPITAL LETTER DE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0415",
+      "character": "Е",
+      "name": "CYRILLIC CAPITAL LETTER IE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0416",
+      "character": "Ж",
+      "name": "CYRILLIC CAPITAL LETTER ZHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0417",
+      "character": "З",
+      "name": "CYRILLIC CAPITAL LETTER ZE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0418",
+      "character": "И",
+      "name": "CYRILLIC CAPITAL LETTER I",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0419",
+      "character": "Й",
+      "name": "CYRILLIC CAPITAL LETTER SHORT I",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+041A",
+      "character": "К",
+      "name": "CYRILLIC CAPITAL LETTER KA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+041B",
+      "character": "Л",
+      "name": "CYRILLIC CAPITAL LETTER EL",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+041C",
+      "character": "М",
+      "name": "CYRILLIC CAPITAL LETTER EM",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+041D",
+      "character": "Н",
+      "name": "CYRILLIC CAPITAL LETTER EN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+041E",
+      "character": "О",
+      "name": "CYRILLIC CAPITAL LETTER O",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+041F",
+      "character": "П",
+      "name": "CYRILLIC CAPITAL LETTER PE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0420",
+      "character": "Р",
+      "name": "CYRILLIC CAPITAL LETTER ER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0421",
+      "character": "С",
+      "name": "CYRILLIC CAPITAL LETTER ES",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0422",
+      "character": "Т",
+      "name": "CYRILLIC CAPITAL LETTER TE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0423",
+      "character": "У",
+      "name": "CYRILLIC CAPITAL LETTER U",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0424",
+      "character": "Ф",
+      "name": "CYRILLIC CAPITAL LETTER EF",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0425",
+      "character": "Х",
+      "name": "CYRILLIC CAPITAL LETTER HA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0426",
+      "character": "Ц",
+      "name": "CYRILLIC CAPITAL LETTER TSE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0427",
+      "character": "Ч",
+      "name": "CYRILLIC CAPITAL LETTER CHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0428",
+      "character": "Ш",
+      "name": "CYRILLIC CAPITAL LETTER SHA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0429",
+      "character": "Щ",
+      "name": "CYRILLIC CAPITAL LETTER SHCHA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+042A",
+      "character": "Ъ",
+      "name": "CYRILLIC CAPITAL LETTER HARD SIGN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+042B",
+      "character": "Ы",
+      "name": "CYRILLIC CAPITAL LETTER YERU",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+042C",
+      "character": "Ь",
+      "name": "CYRILLIC CAPITAL LETTER SOFT SIGN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+042D",
+      "character": "Э",
+      "name": "CYRILLIC CAPITAL LETTER E",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+042E",
+      "character": "Ю",
+      "name": "CYRILLIC CAPITAL LETTER YU",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+042F",
+      "character": "Я",
+      "name": "CYRILLIC CAPITAL LETTER YA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0430",
+      "character": "а",
+      "name": "CYRILLIC SMALL LETTER A",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0431",
+      "character": "б",
+      "name": "CYRILLIC SMALL LETTER BE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0432",
+      "character": "в",
+      "name": "CYRILLIC SMALL LETTER VE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0433",
+      "character": "г",
+      "name": "CYRILLIC SMALL LETTER GHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0434",
+      "character": "д",
+      "name": "CYRILLIC SMALL LETTER DE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0435",
+      "character": "е",
+      "name": "CYRILLIC SMALL LETTER IE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0436",
+      "character": "ж",
+      "name": "CYRILLIC SMALL LETTER ZHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0437",
+      "character": "з",
+      "name": "CYRILLIC SMALL LETTER ZE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0438",
+      "character": "и",
+      "name": "CYRILLIC SMALL LETTER I",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0439",
+      "character": "й",
+      "name": "CYRILLIC SMALL LETTER SHORT I",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+043A",
+      "character": "к",
+      "name": "CYRILLIC SMALL LETTER KA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+043B",
+      "character": "л",
+      "name": "CYRILLIC SMALL LETTER EL",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+043C",
+      "character": "м",
+      "name": "CYRILLIC SMALL LETTER EM",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+043D",
+      "character": "н",
+      "name": "CYRILLIC SMALL LETTER EN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+043E",
+      "character": "о",
+      "name": "CYRILLIC SMALL LETTER O",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+043F",
+      "character": "п",
+      "name": "CYRILLIC SMALL LETTER PE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0440",
+      "character": "р",
+      "name": "CYRILLIC SMALL LETTER ER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0441",
+      "character": "с",
+      "name": "CYRILLIC SMALL LETTER ES",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0442",
+      "character": "т",
+      "name": "CYRILLIC SMALL LETTER TE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0443",
+      "character": "у",
+      "name": "CYRILLIC SMALL LETTER U",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0444",
+      "character": "ф",
+      "name": "CYRILLIC SMALL LETTER EF",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0445",
+      "character": "х",
+      "name": "CYRILLIC SMALL LETTER HA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0446",
+      "character": "ц",
+      "name": "CYRILLIC SMALL LETTER TSE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0447",
+      "character": "ч",
+      "name": "CYRILLIC SMALL LETTER CHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0448",
+      "character": "ш",
+      "name": "CYRILLIC SMALL LETTER SHA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0449",
+      "character": "щ",
+      "name": "CYRILLIC SMALL LETTER SHCHA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+044A",
+      "character": "ъ",
+      "name": "CYRILLIC SMALL LETTER HARD SIGN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+044B",
+      "character": "ы",
+      "name": "CYRILLIC SMALL LETTER YERU",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+044C",
+      "character": "ь",
+      "name": "CYRILLIC SMALL LETTER SOFT SIGN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+044D",
+      "character": "э",
+      "name": "CYRILLIC SMALL LETTER E",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+044E",
+      "character": "ю",
+      "name": "CYRILLIC SMALL LETTER YU",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+044F",
+      "character": "я",
+      "name": "CYRILLIC SMALL LETTER YA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0450",
+      "character": "ѐ",
+      "name": "CYRILLIC SMALL LETTER IE WITH GRAVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0451",
+      "character": "ё",
+      "name": "CYRILLIC SMALL LETTER IO",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0452",
+      "character": "ђ",
+      "name": "CYRILLIC SMALL LETTER DJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0453",
+      "character": "ѓ",
+      "name": "CYRILLIC SMALL LETTER GJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0454",
+      "character": "є",
+      "name": "CYRILLIC SMALL LETTER UKRAINIAN IE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0455",
+      "character": "ѕ",
+      "name": "CYRILLIC SMALL LETTER DZE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0456",
+      "character": "і",
+      "name": "CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0457",
+      "character": "ї",
+      "name": "CYRILLIC SMALL LETTER YI",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0458",
+      "character": "ј",
+      "name": "CYRILLIC SMALL LETTER JE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0459",
+      "character": "љ",
+      "name": "CYRILLIC SMALL LETTER LJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+045A",
+      "character": "њ",
+      "name": "CYRILLIC SMALL LETTER NJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+045B",
+      "character": "ћ",
+      "name": "CYRILLIC SMALL LETTER TSHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+045C",
+      "character": "ќ",
+      "name": "CYRILLIC SMALL LETTER KJE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+045D",
+      "character": "ѝ",
+      "name": "CYRILLIC SMALL LETTER I WITH GRAVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+045E",
+      "character": "ў",
+      "name": "CYRILLIC SMALL LETTER SHORT U",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+045F",
+      "character": "џ",
+      "name": "CYRILLIC SMALL LETTER DZHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0462",
+      "character": "Ѣ",
+      "name": "CYRILLIC CAPITAL LETTER YAT",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0463",
+      "character": "ѣ",
+      "name": "CYRILLIC SMALL LETTER YAT",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+046A",
+      "character": "Ѫ",
+      "name": "CYRILLIC CAPITAL LETTER BIG YUS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+046B",
+      "character": "ѫ",
+      "name": "CYRILLIC SMALL LETTER BIG YUS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0472",
+      "character": "Ѳ",
+      "name": "CYRILLIC CAPITAL LETTER FITA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0473",
+      "character": "ѳ",
+      "name": "CYRILLIC SMALL LETTER FITA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0474",
+      "character": "Ѵ",
+      "name": "CYRILLIC CAPITAL LETTER IZHITSA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0475",
+      "character": "ѵ",
+      "name": "CYRILLIC SMALL LETTER IZHITSA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0490",
+      "character": "Ґ",
+      "name": "CYRILLIC CAPITAL LETTER GHE WITH UPTURN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0491",
+      "character": "ґ",
+      "name": "CYRILLIC SMALL LETTER GHE WITH UPTURN",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0492",
+      "character": "Ғ",
+      "name": "CYRILLIC CAPITAL LETTER GHE WITH STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0493",
+      "character": "ғ",
+      "name": "CYRILLIC SMALL LETTER GHE WITH STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0494",
+      "character": "Ҕ",
+      "name": "CYRILLIC CAPITAL LETTER GHE WITH MIDDLE HOOK",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0495",
+      "character": "ҕ",
+      "name": "CYRILLIC SMALL LETTER GHE WITH MIDDLE HOOK",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0496",
+      "character": "Җ",
+      "name": "CYRILLIC CAPITAL LETTER ZHE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0497",
+      "character": "җ",
+      "name": "CYRILLIC SMALL LETTER ZHE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0498",
+      "character": "Ҙ",
+      "name": "CYRILLIC CAPITAL LETTER ZE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0499",
+      "character": "ҙ",
+      "name": "CYRILLIC SMALL LETTER ZE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+049A",
+      "character": "Қ",
+      "name": "CYRILLIC CAPITAL LETTER KA WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+049B",
+      "character": "қ",
+      "name": "CYRILLIC SMALL LETTER KA WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+049C",
+      "character": "Ҝ",
+      "name": "CYRILLIC CAPITAL LETTER KA WITH VERTICAL STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+049D",
+      "character": "ҝ",
+      "name": "CYRILLIC SMALL LETTER KA WITH VERTICAL STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04A0",
+      "character": "Ҡ",
+      "name": "CYRILLIC CAPITAL LETTER BASHKIR KA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04A1",
+      "character": "ҡ",
+      "name": "CYRILLIC SMALL LETTER BASHKIR KA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04A2",
+      "character": "Ң",
+      "name": "CYRILLIC CAPITAL LETTER EN WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04A3",
+      "character": "ң",
+      "name": "CYRILLIC SMALL LETTER EN WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04A4",
+      "character": "Ҥ",
+      "name": "CYRILLIC CAPITAL LIGATURE EN GHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04A5",
+      "character": "ҥ",
+      "name": "CYRILLIC SMALL LIGATURE EN GHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04AA",
+      "character": "Ҫ",
+      "name": "CYRILLIC CAPITAL LETTER ES WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04AB",
+      "character": "ҫ",
+      "name": "CYRILLIC SMALL LETTER ES WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04AE",
+      "character": "Ү",
+      "name": "CYRILLIC CAPITAL LETTER STRAIGHT U",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04AF",
+      "character": "ү",
+      "name": "CYRILLIC SMALL LETTER STRAIGHT U",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04B0",
+      "character": "Ұ",
+      "name": "CYRILLIC CAPITAL LETTER STRAIGHT U WITH STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04B1",
+      "character": "ұ",
+      "name": "CYRILLIC SMALL LETTER STRAIGHT U WITH STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04B6",
+      "character": "Ҷ",
+      "name": "CYRILLIC CAPITAL LETTER CHE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04B7",
+      "character": "ҷ",
+      "name": "CYRILLIC SMALL LETTER CHE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04B8",
+      "character": "Ҹ",
+      "name": "CYRILLIC CAPITAL LETTER CHE WITH VERTICAL STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04B9",
+      "character": "ҹ",
+      "name": "CYRILLIC SMALL LETTER CHE WITH VERTICAL STROKE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04BA",
+      "character": "Һ",
+      "name": "CYRILLIC CAPITAL LETTER SHHA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04BB",
+      "character": "һ",
+      "name": "CYRILLIC SMALL LETTER SHHA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04C0",
+      "character": "Ӏ",
+      "name": "CYRILLIC LETTER PALOCHKA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04C1",
+      "character": "Ӂ",
+      "name": "CYRILLIC CAPITAL LETTER ZHE WITH BREVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04C2",
+      "character": "ӂ",
+      "name": "CYRILLIC SMALL LETTER ZHE WITH BREVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04CB",
+      "character": "Ӌ",
+      "name": "CYRILLIC CAPITAL LETTER KHAKASSIAN CHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04CC",
+      "character": "ӌ",
+      "name": "CYRILLIC SMALL LETTER KHAKASSIAN CHE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04CF",
+      "character": "ӏ",
+      "name": "CYRILLIC SMALL LETTER PALOCHKA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D0",
+      "character": "Ӑ",
+      "name": "CYRILLIC CAPITAL LETTER A WITH BREVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D1",
+      "character": "ӑ",
+      "name": "CYRILLIC SMALL LETTER A WITH BREVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D2",
+      "character": "Ӓ",
+      "name": "CYRILLIC CAPITAL LETTER A WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D3",
+      "character": "ӓ",
+      "name": "CYRILLIC SMALL LETTER A WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D4",
+      "character": "Ӕ",
+      "name": "CYRILLIC CAPITAL LIGATURE A IE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D5",
+      "character": "ӕ",
+      "name": "CYRILLIC SMALL LIGATURE A IE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D6",
+      "character": "Ӗ",
+      "name": "CYRILLIC CAPITAL LETTER IE WITH BREVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D7",
+      "character": "ӗ",
+      "name": "CYRILLIC SMALL LETTER IE WITH BREVE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D8",
+      "character": "Ә",
+      "name": "CYRILLIC CAPITAL LETTER SCHWA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04D9",
+      "character": "ә",
+      "name": "CYRILLIC SMALL LETTER SCHWA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04DC",
+      "character": "Ӝ",
+      "name": "CYRILLIC CAPITAL LETTER ZHE WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04DD",
+      "character": "ӝ",
+      "name": "CYRILLIC SMALL LETTER ZHE WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04DE",
+      "character": "Ӟ",
+      "name": "CYRILLIC CAPITAL LETTER ZE WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04DF",
+      "character": "ӟ",
+      "name": "CYRILLIC SMALL LETTER ZE WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E2",
+      "character": "Ӣ",
+      "name": "CYRILLIC CAPITAL LETTER I WITH MACRON",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E3",
+      "character": "ӣ",
+      "name": "CYRILLIC SMALL LETTER I WITH MACRON",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E4",
+      "character": "Ӥ",
+      "name": "CYRILLIC CAPITAL LETTER I WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E5",
+      "character": "ӥ",
+      "name": "CYRILLIC SMALL LETTER I WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E6",
+      "character": "Ӧ",
+      "name": "CYRILLIC CAPITAL LETTER O WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E7",
+      "character": "ӧ",
+      "name": "CYRILLIC SMALL LETTER O WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E8",
+      "character": "Ө",
+      "name": "CYRILLIC CAPITAL LETTER BARRED O",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04E9",
+      "character": "ө",
+      "name": "CYRILLIC SMALL LETTER BARRED O",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04EE",
+      "character": "Ӯ",
+      "name": "CYRILLIC CAPITAL LETTER U WITH MACRON",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04EF",
+      "character": "ӯ",
+      "name": "CYRILLIC SMALL LETTER U WITH MACRON",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F0",
+      "character": "Ӱ",
+      "name": "CYRILLIC CAPITAL LETTER U WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F1",
+      "character": "ӱ",
+      "name": "CYRILLIC SMALL LETTER U WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F2",
+      "character": "Ӳ",
+      "name": "CYRILLIC CAPITAL LETTER U WITH DOUBLE ACUTE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F3",
+      "character": "ӳ",
+      "name": "CYRILLIC SMALL LETTER U WITH DOUBLE ACUTE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F4",
+      "character": "Ӵ",
+      "name": "CYRILLIC CAPITAL LETTER CHE WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F5",
+      "character": "ӵ",
+      "name": "CYRILLIC SMALL LETTER CHE WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F6",
+      "character": "Ӷ",
+      "name": "CYRILLIC CAPITAL LETTER GHE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F7",
+      "character": "ӷ",
+      "name": "CYRILLIC SMALL LETTER GHE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F8",
+      "character": "Ӹ",
+      "name": "CYRILLIC CAPITAL LETTER YERU WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+04F9",
+      "character": "ӹ",
+      "name": "CYRILLIC SMALL LETTER YERU WITH DIAERESIS",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+051A",
+      "character": "Ԛ",
+      "name": "CYRILLIC CAPITAL LETTER QA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+051B",
+      "character": "ԛ",
+      "name": "CYRILLIC SMALL LETTER QA",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+051C",
+      "character": "Ԝ",
+      "name": "CYRILLIC CAPITAL LETTER WE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+051D",
+      "character": "ԝ",
+      "name": "CYRILLIC SMALL LETTER WE",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0524",
+      "character": "Ԥ",
+      "name": "CYRILLIC CAPITAL LETTER PE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+0525",
+      "character": "ԥ",
+      "name": "CYRILLIC SMALL LETTER PE WITH DESCENDER",
+      "script": "Cyrl",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2020",
+      "character": "†",
+      "name": "DAGGER",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2021",
+      "character": "‡",
+      "name": "DOUBLE DAGGER",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2030",
+      "character": "‰",
+      "name": "PER MILLE SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2044",
+      "character": "⁄",
+      "name": "FRACTION SLASH",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2070",
+      "character": "⁰",
+      "name": "SUPERSCRIPT ZERO",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2074",
+      "character": "⁴",
+      "name": "SUPERSCRIPT FOUR",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2075",
+      "character": "⁵",
+      "name": "SUPERSCRIPT FIVE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2076",
+      "character": "⁶",
+      "name": "SUPERSCRIPT SIX",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2077",
+      "character": "⁷",
+      "name": "SUPERSCRIPT SEVEN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2078",
+      "character": "⁸",
+      "name": "SUPERSCRIPT EIGHT",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2079",
+      "character": "⁹",
+      "name": "SUPERSCRIPT NINE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+207D",
+      "character": "⁽",
+      "name": "SUPERSCRIPT LEFT PARENTHESIS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+207E",
+      "character": "⁾",
+      "name": "SUPERSCRIPT RIGHT PARENTHESIS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2080",
+      "character": "₀",
+      "name": "SUBSCRIPT ZERO",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2081",
+      "character": "₁",
+      "name": "SUBSCRIPT ONE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2082",
+      "character": "₂",
+      "name": "SUBSCRIPT TWO",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2083",
+      "character": "₃",
+      "name": "SUBSCRIPT THREE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2084",
+      "character": "₄",
+      "name": "SUBSCRIPT FOUR",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2085",
+      "character": "₅",
+      "name": "SUBSCRIPT FIVE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2086",
+      "character": "₆",
+      "name": "SUBSCRIPT SIX",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2087",
+      "character": "₇",
+      "name": "SUBSCRIPT SEVEN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2088",
+      "character": "₈",
+      "name": "SUBSCRIPT EIGHT",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2089",
+      "character": "₉",
+      "name": "SUBSCRIPT NINE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+208D",
+      "character": "₍",
+      "name": "SUBSCRIPT LEFT PARENTHESIS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+208E",
+      "character": "₎",
+      "name": "SUBSCRIPT RIGHT PARENTHESIS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+20AE",
+      "character": "₮",
+      "name": "TUGRIK SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+20B4",
+      "character": "₴",
+      "name": "HRYVNIA SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+20B8",
+      "character": "₸",
+      "name": "TENGE SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+20BD",
+      "character": "₽",
+      "name": "RUBLE SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2116",
+      "character": "№",
+      "name": "NUMERO SIGN",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+212E",
+      "character": "℮",
+      "name": "ESTIMATED SYMBOL",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2153",
+      "character": "⅓",
+      "name": "VULGAR FRACTION ONE THIRD",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2154",
+      "character": "⅔",
+      "name": "VULGAR FRACTION TWO THIRDS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+215B",
+      "character": "⅛",
+      "name": "VULGAR FRACTION ONE EIGHTH",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+215C",
+      "character": "⅜",
+      "name": "VULGAR FRACTION THREE EIGHTHS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+215D",
+      "character": "⅝",
+      "name": "VULGAR FRACTION FIVE EIGHTHS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+215E",
+      "character": "⅞",
+      "name": "VULGAR FRACTION SEVEN EIGHTHS",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2202",
+      "character": "∂",
+      "name": "PARTIAL DIFFERENTIAL",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2206",
+      "character": "∆",
+      "name": "INCREMENT",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+220F",
+      "character": "∏",
+      "name": "N-ARY PRODUCT",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2211",
+      "character": "∑",
+      "name": "N-ARY SUMMATION",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2215",
+      "character": "∕",
+      "name": "DIVISION SLASH",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+221A",
+      "character": "√",
+      "name": "SQUARE ROOT",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+221E",
+      "character": "∞",
+      "name": "INFINITY",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+222B",
+      "character": "∫",
+      "name": "INTEGRAL",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2248",
+      "character": "≈",
+      "name": "ALMOST EQUAL TO",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2264",
+      "character": "≤",
+      "name": "LESS-THAN OR EQUAL TO",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+2265",
+      "character": "≥",
+      "name": "GREATER-THAN OR EQUAL TO",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+25CA",
+      "character": "◊",
+      "name": "LOZENGE",
+      "script": "Zyyy",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": false
+    },
+    {
+      "codepoint": "U+FB57",
+      "character": "ﭗ",
+      "name": "ARABIC LETTER PEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB58",
+      "character": "ﭘ",
+      "name": "ARABIC LETTER PEH INITIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB59",
+      "character": "ﭙ",
+      "name": "ARABIC LETTER PEH MEDIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB7B",
+      "character": "ﭻ",
+      "name": "ARABIC LETTER TCHEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB7C",
+      "character": "ﭼ",
+      "name": "ARABIC LETTER TCHEH INITIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB7D",
+      "character": "ﭽ",
+      "name": "ARABIC LETTER TCHEH MEDIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB8B",
+      "character": "ﮋ",
+      "name": "ARABIC LETTER JEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB8F",
+      "character": "ﮏ",
+      "name": "ARABIC LETTER KEHEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB93",
+      "character": "ﮓ",
+      "name": "ARABIC LETTER GAF FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB94",
+      "character": "ﮔ",
+      "name": "ARABIC LETTER GAF INITIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB95",
+      "character": "ﮕ",
+      "name": "ARABIC LETTER GAF MEDIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FB9F",
+      "character": "ﮟ",
+      "name": "ARABIC LETTER NOON GHUNNA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FBFD",
+      "character": "ﯽ",
+      "name": "ARABIC LETTER FARSI YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FBFE",
+      "character": "ﯾ",
+      "name": "ARABIC LETTER FARSI YEH INITIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FBFF",
+      "character": "ﯿ",
+      "name": "ARABIC LETTER FARSI YEH MEDIAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC03",
+      "character": "ﰃ",
+      "name": "ARABIC LIGATURE YEH WITH HAMZA ABOVE WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC04",
+      "character": "ﰄ",
+      "name": "ARABIC LIGATURE YEH WITH HAMZA ABOVE WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC09",
+      "character": "ﰉ",
+      "name": "ARABIC LIGATURE BEH WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC0A",
+      "character": "ﰊ",
+      "name": "ARABIC LIGATURE BEH WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC0F",
+      "character": "ﰏ",
+      "name": "ARABIC LIGATURE TEH WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC10",
+      "character": "ﰐ",
+      "name": "ARABIC LIGATURE TEH WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC13",
+      "character": "ﰓ",
+      "name": "ARABIC LIGATURE THEH WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC14",
+      "character": "ﰔ",
+      "name": "ARABIC LIGATURE THEH WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC31",
+      "character": "ﰱ",
+      "name": "ARABIC LIGATURE FEH WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC32",
+      "character": "ﰲ",
+      "name": "ARABIC LIGATURE FEH WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC35",
+      "character": "ﰵ",
+      "name": "ARABIC LIGATURE QAF WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC36",
+      "character": "ﰶ",
+      "name": "ARABIC LIGATURE QAF WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC3D",
+      "character": "ﰽ",
+      "name": "ARABIC LIGATURE KAF WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC3E",
+      "character": "ﰾ",
+      "name": "ARABIC LIGATURE KAF WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC43",
+      "character": "ﱃ",
+      "name": "ARABIC LIGATURE LAM WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC44",
+      "character": "ﱄ",
+      "name": "ARABIC LIGATURE LAM WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC4F",
+      "character": "ﱏ",
+      "name": "ARABIC LIGATURE NOON WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC50",
+      "character": "ﱐ",
+      "name": "ARABIC LIGATURE NOON WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC64",
+      "character": "ﱤ",
+      "name": "ARABIC LIGATURE YEH WITH HAMZA ABOVE WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC65",
+      "character": "ﱥ",
+      "name": "ARABIC LIGATURE YEH WITH HAMZA ABOVE WITH ZAIN FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC67",
+      "character": "ﱧ",
+      "name": "ARABIC LIGATURE YEH WITH HAMZA ABOVE WITH NOON FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC68",
+      "character": "ﱨ",
+      "name": "ARABIC LIGATURE YEH WITH HAMZA ABOVE WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC69",
+      "character": "ﱩ",
+      "name": "ARABIC LIGATURE YEH WITH HAMZA ABOVE WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC6A",
+      "character": "ﱪ",
+      "name": "ARABIC LIGATURE BEH WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC6B",
+      "character": "ﱫ",
+      "name": "ARABIC LIGATURE BEH WITH ZAIN FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC6D",
+      "character": "ﱭ",
+      "name": "ARABIC LIGATURE BEH WITH NOON FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC6E",
+      "character": "ﱮ",
+      "name": "ARABIC LIGATURE BEH WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC6F",
+      "character": "ﱯ",
+      "name": "ARABIC LIGATURE BEH WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC70",
+      "character": "ﱰ",
+      "name": "ARABIC LIGATURE TEH WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC71",
+      "character": "ﱱ",
+      "name": "ARABIC LIGATURE TEH WITH ZAIN FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC74",
+      "character": "ﱴ",
+      "name": "ARABIC LIGATURE TEH WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC75",
+      "character": "ﱵ",
+      "name": "ARABIC LIGATURE TEH WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC76",
+      "character": "ﱶ",
+      "name": "ARABIC LIGATURE THEH WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC77",
+      "character": "ﱷ",
+      "name": "ARABIC LIGATURE THEH WITH ZAIN FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC79",
+      "character": "ﱹ",
+      "name": "ARABIC LIGATURE THEH WITH NOON FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC7A",
+      "character": "ﱺ",
+      "name": "ARABIC LIGATURE THEH WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC7B",
+      "character": "ﱻ",
+      "name": "ARABIC LIGATURE THEH WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC83",
+      "character": "ﲃ",
+      "name": "ARABIC LIGATURE KAF WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC84",
+      "character": "ﲄ",
+      "name": "ARABIC LIGATURE KAF WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC86",
+      "character": "ﲆ",
+      "name": "ARABIC LIGATURE LAM WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC87",
+      "character": "ﲇ",
+      "name": "ARABIC LIGATURE LAM WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC8A",
+      "character": "ﲊ",
+      "name": "ARABIC LIGATURE NOON WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC8B",
+      "character": "ﲋ",
+      "name": "ARABIC LIGATURE NOON WITH ZAIN FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC8D",
+      "character": "ﲍ",
+      "name": "ARABIC LIGATURE NOON WITH NOON FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC8E",
+      "character": "ﲎ",
+      "name": "ARABIC LIGATURE NOON WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC8F",
+      "character": "ﲏ",
+      "name": "ARABIC LIGATURE NOON WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC91",
+      "character": "ﲑ",
+      "name": "ARABIC LIGATURE YEH WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC92",
+      "character": "ﲒ",
+      "name": "ARABIC LIGATURE YEH WITH ZAIN FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC94",
+      "character": "ﲔ",
+      "name": "ARABIC LIGATURE YEH WITH NOON FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC95",
+      "character": "ﲕ",
+      "name": "ARABIC LIGATURE YEH WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FC96",
+      "character": "ﲖ",
+      "name": "ARABIC LIGATURE YEH WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FCFB",
+      "character": "ﳻ",
+      "name": "ARABIC LIGATURE SEEN WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FCFC",
+      "character": "ﳼ",
+      "name": "ARABIC LIGATURE SEEN WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FCFD",
+      "character": "ﳽ",
+      "name": "ARABIC LIGATURE SHEEN WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FCFE",
+      "character": "ﳾ",
+      "name": "ARABIC LIGATURE SHEEN WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FCFF",
+      "character": "ﳿ",
+      "name": "ARABIC LIGATURE HAH WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD00",
+      "character": "ﴀ",
+      "name": "ARABIC LIGATURE HAH WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD01",
+      "character": "ﴁ",
+      "name": "ARABIC LIGATURE JEEM WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD02",
+      "character": "ﴂ",
+      "name": "ARABIC LIGATURE JEEM WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD03",
+      "character": "ﴃ",
+      "name": "ARABIC LIGATURE KHAH WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD04",
+      "character": "ﴄ",
+      "name": "ARABIC LIGATURE KHAH WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD05",
+      "character": "ﴅ",
+      "name": "ARABIC LIGATURE SAD WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD06",
+      "character": "ﴆ",
+      "name": "ARABIC LIGATURE SAD WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD07",
+      "character": "ﴇ",
+      "name": "ARABIC LIGATURE DAD WITH ALEF MAKSURA ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD08",
+      "character": "ﴈ",
+      "name": "ARABIC LIGATURE DAD WITH YEH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD0D",
+      "character": "ﴍ",
+      "name": "ARABIC LIGATURE SHEEN WITH REH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD0E",
+      "character": "ﴎ",
+      "name": "ARABIC LIGATURE SEEN WITH REH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD0F",
+      "character": "ﴏ",
+      "name": "ARABIC LIGATURE SAD WITH REH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD10",
+      "character": "ﴐ",
+      "name": "ARABIC LIGATURE DAD WITH REH ISOLATED FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD17",
+      "character": "ﴗ",
+      "name": "ARABIC LIGATURE SEEN WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD18",
+      "character": "ﴘ",
+      "name": "ARABIC LIGATURE SEEN WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD19",
+      "character": "ﴙ",
+      "name": "ARABIC LIGATURE SHEEN WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD1A",
+      "character": "ﴚ",
+      "name": "ARABIC LIGATURE SHEEN WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD1B",
+      "character": "ﴛ",
+      "name": "ARABIC LIGATURE HAH WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD1C",
+      "character": "ﴜ",
+      "name": "ARABIC LIGATURE HAH WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD1D",
+      "character": "ﴝ",
+      "name": "ARABIC LIGATURE JEEM WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD1E",
+      "character": "ﴞ",
+      "name": "ARABIC LIGATURE JEEM WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD1F",
+      "character": "ﴟ",
+      "name": "ARABIC LIGATURE KHAH WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD20",
+      "character": "ﴠ",
+      "name": "ARABIC LIGATURE KHAH WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD21",
+      "character": "ﴡ",
+      "name": "ARABIC LIGATURE SAD WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD22",
+      "character": "ﴢ",
+      "name": "ARABIC LIGATURE SAD WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD23",
+      "character": "ﴣ",
+      "name": "ARABIC LIGATURE DAD WITH ALEF MAKSURA FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD24",
+      "character": "ﴤ",
+      "name": "ARABIC LIGATURE DAD WITH YEH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD29",
+      "character": "ﴩ",
+      "name": "ARABIC LIGATURE SHEEN WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD2A",
+      "character": "ﴪ",
+      "name": "ARABIC LIGATURE SEEN WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD2B",
+      "character": "ﴫ",
+      "name": "ARABIC LIGATURE SAD WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    },
+    {
+      "codepoint": "U+FD2C",
+      "character": "ﴬ",
+      "name": "ARABIC LIGATURE DAD WITH REH FINAL FORM",
+      "script": "Arab",
+      "canonical_decomposition_available": false,
+      "arabic_presentation_form": true
+    }
+  ],
+  "limits": "Cmap comparison only. Decomposition availability does not establish attachment, serving-subset reachability or reader approval. Presentation forms require a separate GSUB review; no automatic addition."
+}
