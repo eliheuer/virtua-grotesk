@@ -74,12 +74,19 @@ word/attachment rasters at400/550/700 and large details inspected.80 shaping che
 and three Latin tests pass; the same216 baseline Hebrew failures remain. This
 is a local pending-review draft, not a release approval.
 
+[Batch03](batches/03-chevron-accents/README.md) strengthens only the Bold
+circumflex/caron, with wider clipped apexes and thicker arms. Both Regular sources
+and all other source bytes stay unchanged. Whole-word/stacking proofs at400/550/700
+and224px/em detail inspected;90 shaping checks, Latin tests and preflight pass,
+with zero new failures versus the216-failure engineering baseline.
+
+Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
+The subsequent drawing checkpoints remain local.
+
 ## Next bounded work
 
-1. Bold circumflex/caron weight/terminal consistency,
-   using green Virtua Latin weight references and complete accented-word rasters.
-   Check full reverse component closure for green/manual dependencies first.
-2. Ring, breve, tilde, bottom marks and alternate carons; preserve the shared
+1. Ring and breve weight/construction, then tilde, bottom marks and alternate
+   carons. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 3. Existing precomposed widths differ from the base+mark fallback by up to
    tens of units. `verification.json` retains the measured sample differences.

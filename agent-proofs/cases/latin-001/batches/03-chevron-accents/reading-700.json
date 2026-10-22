@@ -1,0 +1,26 @@
+{
+  "weight": 700,
+  "size": 48,
+  "text": [
+    "Ĉu ĝi ŝanĝiĝas? Ĵaŭdo kaj ĥoro.",
+    "Český příběh. Šťastný deň. Même forêt."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "1e3c1747d3f5743ab8a38eeb9167ba70bb8b103253d0b209003bc943f54b6c50",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "65930c082c813fb8020d182b4df1a5667d912ed09a744e20e4a534ba84a97dea",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "af911a177d43f794eb5aa65dcd56714b58dc6a460cc248953a4cefb2a142e9f4"
+}

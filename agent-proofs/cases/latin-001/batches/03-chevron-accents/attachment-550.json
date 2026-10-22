@@ -1,0 +1,26 @@
+{
+  "weight": 550,
+  "size": 64,
+  "text": [
+    "â ĉ ê ĝ ĥ î ĵ ô ŝ û   č ě ň ř š ž",
+    "Â Ĉ Ê Ĝ Ĥ Î Ĵ Ô Ŝ Û   Č Ě Ň Ř Š Ž"
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "1e3c1747d3f5743ab8a38eeb9167ba70bb8b103253d0b209003bc943f54b6c50",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "65930c082c813fb8020d182b4df1a5667d912ed09a744e20e4a534ba84a97dea",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "c0ef93842e1eb44a8d831ac5e153143a20132669549e005f2e4d440a5a9a9ea7"
+}
