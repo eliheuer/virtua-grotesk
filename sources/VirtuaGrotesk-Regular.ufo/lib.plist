@@ -437,9 +437,12 @@
 		<string>logicalnot</string>
 		<string>brokenbar</string>
 		<string>softhyphen</string>
+		<string>currency</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>currency</key>
+		<string>base</string>
 		<key>softhyphen</key>
 		<string>base</string>
 		<key>brokenbar</key>

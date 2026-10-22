@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "¤ ¤¤ · $ ¤ €",
+      "H¤H O¤O · 0¤0",
+      "¤10 10¤ · ¤100.00",
+      "a¤b c¤d · ¤ ¤",
+      "¤́ ¤̧ · ¤ ¤",
+      "¤0 ¤1 ¤2 ¤8"
+    ],
+    "words": [
+      "Total ¤100.00 · tax ¤8.00",
+      "Pay ¤10 or ¤20 today.",
+      "¤ 0 1 2 3 4 5 6 7 8 9",
+      "USD $10 · EUR €10 · ¤10",
+      "București ¤ ģimene ¤ doğa",
+      "București ģimene doğa Ŧŧ ﬁﬂ"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "234b918e429883df4b1d3ec703dee13b8cd68991e9f96b78ff1a231beb7f9e0a"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "2ba91dc95adf9f27ec2a26d79299213868ddb32ec4e9fcb10c97f128edbe70c9"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "5f85be38f4a56cc7ad864714f1b20474f1113583f011c3cc8b3e635448fc501d"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "44d0a1123262f5f9dd7ade9627e0f9b37b4de4b612e8bd65047437b3e66a8b87"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "881f37a71063b094aacc095e64d053e021a41723e593074bd8cbd0fb7c0cf94c"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "504416f3cc01e27b6a14f0acd2f1e88e558317eb62588fbb968ded1700d0810c"
+    }
+  ],
+  "fonts": {
+    "before": "3623758a068e4b832288bfcb0688b00aff5332f6ca332cccdadc132859043ee8",
+    "after": "4e2775d51a14c17c64b780776027418c43c57bf287a4d9cad7986a5969fac929",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

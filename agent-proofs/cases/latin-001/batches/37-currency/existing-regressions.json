@@ -1,0 +1,2174 @@
+{
+  "before": {
+    "tests": 16,
+    "failures": [
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x593'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x594'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x595'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x597'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x598'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59a'})",
+        "message": "28 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59c'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59d'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59e'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59f'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5a0'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5a1'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5a8'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5ab'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5ac'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5ad'})",
+        "message": "28 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5af'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5c4'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0xfb1e'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x592'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x593'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x594'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x595'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x597'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x598'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x599'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59a'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59c'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59d'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59f'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a0'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a1'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a8'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a9'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ab'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ac'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ad'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ae'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5af'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5c4'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0xfb1e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x593'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x594'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x595'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x597'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x598'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59c'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59d'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59e'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59f'})",
+        "message": "29.0 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5a0'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5a1'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5a8'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5ab'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5ac'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5af'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5c4'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0xfb1e'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x592'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x593'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x594'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x595'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x597'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x598'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x599'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59a'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59c'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59d'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59e'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59f'})",
+        "message": "23.0 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a0'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a1'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a8'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a9'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ab'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ac'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ad'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ae'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5af'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5c4'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0xfb1e'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x592'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x593'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x594'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x595'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x597'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x598'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x599'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59a'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59c'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59d'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59f'})",
+        "message": "18.0 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a0'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a1'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a8'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a9'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ab'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ac'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ad'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ae'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5af'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5c4'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0xfb1e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 400, 'sample': '\ufb4c'})",
+        "message": "532 != 544 within 1 delta (12 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 400, 'sample': '\ufb4d'})",
+        "message": "460 != 480 within 1 delta (20 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 400, 'sample': '\ufb4e'})",
+        "message": "556 != 600 within 1 delta (44 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'sample': '\ufb4c'})",
+        "message": "532 != 592 within 1 delta (60 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'sample': '\ufb4d'})",
+        "message": "460 != 528 within 1 delta (68 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'sample': '\ufb4e'})",
+        "message": "556 != 696 within 1 delta (140 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'sample': '\ufb4c'})",
+        "message": "532 != 640 within 1 delta (108 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'sample': '\ufb4d'})",
+        "message": "460 != 576 within 1 delta (116 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'sample': '\ufb4e'})",
+        "message": "556 != 792 within 1 delta (236 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Regular.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 544 within 1 delta (12 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Regular.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 480 within 1 delta (20 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Regular.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 600 within 1 delta (44 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 576 within 1 delta (44 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 512 within 1 delta (52 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 664 within 1 delta (108 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 608 within 1 delta (76 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 544 within 1 delta (84 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 728 within 1 delta (172 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 640 within 1 delta (108 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 576 within 1 delta (116 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 792 within 1 delta (236 difference)"
+      }
+    ]
+  },
+  "after": {
+    "tests": 16,
+    "failures": [
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x593'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x594'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x595'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x597'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x598'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59a'})",
+        "message": "28 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59c'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59d'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59e'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x59f'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5a0'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5a1'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5a8'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5ab'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5ac'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5ad'})",
+        "message": "28 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5af'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0x5c4'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'cp': '0xfb1e'})",
+        "message": "26 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x592'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x593'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x594'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x595'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x597'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x598'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x599'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59a'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59c'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59d'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x59f'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a0'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a1'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a8'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5a9'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ab'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ac'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ad'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5ae'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5af'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0x5c4'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'cp': '0xfb1e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x593'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x594'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x595'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x597'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x598'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59c'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59d'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59e'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x59f'})",
+        "message": "29.0 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5a0'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5a1'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5a8'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5ab'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5ac'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5af'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0x5c4'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'cp': '0xfb1e'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x592'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x593'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x594'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x595'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x597'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x598'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x599'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59a'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59c'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59d'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59e'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x59f'})",
+        "message": "23.0 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a0'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a1'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a8'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5a9'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ab'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ac'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ad'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5ae'})",
+        "message": "29 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5af'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0x5c4'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'cp': '0xfb1e'})",
+        "message": "23 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x592'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x593'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x594'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x595'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x597'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x598'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x599'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59a'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59c'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59d'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x59f'})",
+        "message": "18.0 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a0'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a1'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a8'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5a9'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ab'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ac'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ad'})",
+        "message": "16 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5ae'})",
+        "message": "24 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5af'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0x5c4'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_cantillation_clears_points_on_correct_side",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'cp': '0xfb1e'})",
+        "message": "18 not greater than or equal to 30"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 400, 'sample': '\ufb4c'})",
+        "message": "532 != 544 within 1 delta (12 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 400, 'sample': '\ufb4d'})",
+        "message": "460 != 480 within 1 delta (20 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 400, 'sample': '\ufb4e'})",
+        "message": "556 != 600 within 1 delta (44 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'sample': '\ufb4c'})",
+        "message": "532 != 592 within 1 delta (60 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'sample': '\ufb4d'})",
+        "message": "460 != 528 within 1 delta (68 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 550, 'sample': '\ufb4e'})",
+        "message": "556 != 696 within 1 delta (140 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d0', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05d1', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05db', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e4', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05e2', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'base': '\u05ea', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'sample': '\ufb4c'})",
+        "message": "532 != 640 within 1 delta (108 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'sample': '\ufb4d'})",
+        "message": "460 != 576 within 1 delta (116 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk[wght].ttf', 'weight': 700, 'sample': '\ufb4e'})",
+        "message": "556 != 792 within 1 delta (236 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Regular.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 544 within 1 delta (12 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Regular.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 480 within 1 delta (20 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Regular.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 600 within 1 delta (44 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 576 within 1 delta (44 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 512 within 1 delta (52 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Medium.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 664 within 1 delta (108 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b7'})",
+        "message": "21 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5bb'})",
+        "message": "19 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5c7'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 608 within 1 delta (76 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 544 within 1 delta (84 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-SemiBold.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 728 within 1 delta (172 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d0', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05d1', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05db', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e4', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05e2', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b5'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b6'})",
+        "message": "22 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b7'})",
+        "message": "16 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5b8'})",
+        "message": "20 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5bb'})",
+        "message": "8 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'base': '\u05ea', 'vowel': '0x5c7'})",
+        "message": "12 not greater than or equal to 24"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'sample': '\ufb4c'})",
+        "message": "532 != 640 within 1 delta (108 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'sample': '\ufb4d'})",
+        "message": "460 != 576 within 1 delta (116 difference)"
+      },
+      {
+        "test": "test_hebrew_meteg_clearance_and_nun_dot",
+        "params": "_OrderedChainMap({'font': 'VirtuaGrotesk-Bold.ttf', 'weight': None, 'sample': '\ufb4e'})",
+        "message": "556 != 792 within 1 delta (236 difference)"
+      }
+    ]
+  },
+  "new_failures": [],
+  "resolved_failures": []
+}

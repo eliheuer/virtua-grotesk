@@ -1,0 +1,31 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "after": "4e2775d51a14c17c64b780776027418c43c57bf287a4d9cad7986a5969fac929",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "inspected_screenshots": {
+    "browser/currency-virtua-550.png": "5fcfb1eeffdca8d74028a0b4408086b85e1029d600c37d2af52aea39e904835d",
+    "browser/stock-virtua-400.png": "c69301561adf1a2c4a68819e0a1f5a6844a41b7f781dc4fe14381c138d4e01ea",
+    "browser/currency-rubik-400.png": "e5949ceb4ff8166d29d68b72483800f3132aead57e5231afb0f46cf42fd5f2ff",
+    "browser/stock-rubik-550.png": "d7a9c3d6ea77cc00abf00452d04de07d86fab879c0ca0541204058241640b900",
+    "browser/stock-virtua-700.png": "ff75fa97e952b219e97540514d14b97d799a3aaaa1511b4e0b34cbe160c2dd4f",
+    "browser/currency-rubik-700.png": "9546fb4586bbb66c2d05cf67715eab6c0fbed5b863437feaed57e8bb1304bc36",
+    "browser/currency-virtua-700.png": "22595a2d36ce7f8cd6e666f4a729b0b11a01f42101f0a034a31bc0f8c7c10128",
+    "browser/stock-rubik-400.png": "379ac8a9f14b082fa4a5aa24539121e5cfcd5d010a33bc05e97026b02b15ddab",
+    "browser/currency-rubik-550.png": "3156b9f2f6eff7342a292b32651c714db7ce28d3f146824bce9f274676fec524",
+    "browser/stock-virtua-550.png": "2e546c00314f1edc68addd04c4b3ce572cdc50575c393aae44d97c4657c7ecd2",
+    "browser/currency-virtua-400.png": "a7f37257b3a045fe75f742b4fde7b901f6ef3cc33bb47e7196068779c34f163d",
+    "browser/stock-rubik-700.png": "cbf8d0b89f2bca14bc348fa90f145654dd5cebd24cb54c9cb4c2e5a34fbe7f41"
+  },
+  "scope": "Actual Diffenator stock first viewport and labeled currency supplement, Virtua/Rubik at each weight. Slider governs weight despite Regular menu label. No exhaustive language/native-reader approval.",
+  "findings": [
+    "Open currency counter across axis; clipped arms visible.",
+    "Currency smaller/compact and sits slightly higher relative to figures than Rubik.",
+    "Bold remains dense, stock spacing uneven; generic currency accents use right-side fallback."
+  ]
+}

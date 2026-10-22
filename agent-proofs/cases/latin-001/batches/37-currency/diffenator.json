@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/37-currency/assets/after.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/37-currency/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch37/comparison"
+  ],
+  "supplement_text": "¤ ¤¤ H¤H O¤O 0¤0 · Total ¤100.00 · tax ¤8.00. Pay ¤10 or ¤20 today. USD $10 · EUR €10 · ¤10. București ģimene doğa Ŧŧ ﬁﬂ",
+  "note": "Stock controls, labeled substituted text. Old Virtua/New Rubik.",
+  "html_sha256": "4850be3468c479d53fdc582ddaee7f8b6ea14a3ad56deae522d282c02fcbb2e7"
+}
