@@ -1,0 +1,22 @@
+{
+  "scope": "Stock coverage first viewport in Virtua at400/550/700 includes e\u0192e; labeled florin supplement uses stock Diffenator controls in Virtua and Rubik at400/550/700,25 CSS px. Stock context report generated, not exhaustively inspected.",
+  "images": {
+    "florin-rubik-550.png": "0fad051f17d6cb96f2a91cc63b68212d769734e00c72c5ef69f1cb495359d7ac",
+    "stock-virtua-400.png": "5ffc4a4d85f7081a26273fa114e4eea9d9eefcdcc85035d5e429a3577ef4a13e",
+    "stock-virtua-700.png": "0def5861ebe61cfe487d2ad70fb82c7a7230fed3b0eac22314d02507cd0183a4",
+    "florin-virtua-550.png": "2224d1b9ad26c397c768c99165f829ed13a27e9c40e666abf1e41d8f0623c798",
+    "florin-virtua-400.png": "91bd774b79f589722eb36d8692d134b4259d71553d93989e3c583d846b15621b",
+    "florin-rubik-700.png": "0f54c2cff2efed6f9da2d17b3653d991cdd4422e22fe889fa27375ff99f50c44",
+    "florin-virtua-700.png": "476a4021cc0eef58507b8dedb2ec27bc0569decab256754bb46d5ad99ec81260",
+    "stock-virtua-550.png": "cbbbe872c8bf6cc5383feb9b4a040cca15e52f88b8b6b0faf6a7c3728e666b70",
+    "florin-rubik-400.png": "409fd8a66b8325b84ae0f8905ff7b6c97ed221d40e7906ba606031e72b5d6d7e"
+  },
+  "findings": [
+    "The descending left hook distinguishes \u0192 from f at all three inspected weights.",
+    "Currency strings and letter pairs stay separated in the tested samples; no dedicated kerning is added.",
+    "Bold is denser than Rubik, following the existing green f stem. The short head, hook weight and pair spacing need human optical review.",
+    "Marks above and below clear the tested florin; no clipping-metric change is needed.",
+    "Stock mixed text still shows uneven spacing and unresolved marks elsewhere. This new glyph does not fix those issues.",
+    "Old=Virtua/New=Rubik; manually set slider weights400/550/700, dropdown may still say Regular."
+  ]
+}

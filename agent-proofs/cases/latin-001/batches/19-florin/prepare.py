@@ -1,0 +1,84 @@
+"""Reproduce this bounded draft only against its frozen pre-edit hashes."""
+from pathlib import Path
+import hashlib,json,plistlib,re,shutil,subprocess,tempfile,xml.etree.ElementTree as E
+C=Path(__file__).resolve().parent;R=C.parents[4]
+sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+if not (C/'baseline.json').exists():
+ S=Path(tempfile.mkdtemp(prefix='virtua-latin-florin-'));(S/'sources').mkdir()
+ for p in (R/'sources').iterdir():
+  if p.name in ['VirtuaGrotesk-Regular.ufo','VirtuaGrotesk-Bold.ufo']:shutil.copytree(p,S/'sources'/p.name)
+  elif p.is_file():shutil.copy2(p,S/'sources'/p.name)
+ for n in ['build.sh','Makefile','OFL.txt']:shutil.copy2(R/n,S/n)
+ shutil.copytree(R/'scripts',S/'scripts');(S/'.venv').symlink_to(R/'.venv')
+ (C/'assets').mkdir(exist_ok=True)
+ for n,src in [('before',R/'fonts/variable/VirtuaGrotesk[wght].ttf'),('rubik',C.parents[1]/'assets/rubik.ttf')]:shutil.copy2(src,C/'assets'/f'{n}.ttf')
+ shutil.copytree(R/'fonts',C/'baseline-fonts')
+ sources={str(p.relative_to(R)):sha(p) for p in (R/'sources').rglob('*') if p.is_file() and 'archive' not in p.parts and 'instance_ufos' not in p.parts}
+ (C/'baseline.json').write_text(json.dumps({'head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=R,text=True).strip(),'scratch':str(S),'sources':sources},indent=2)+'\n')
+
+b=json.loads((C/'baseline.json').read_text());S=Path(b['scratch']);assert all(sha(R/p)==h for p,h in b['sources'].items())
+changes=[];dependencies={}
+def stage(rel,text):
+ p=R/rel;before=sha(p) if p.exists() else None
+ if before:
+  assert before==b['sources'][rel]
+  q=C/'before-sources'/rel;q.parent.mkdir(parents=True,exist_ok=True);q.write_bytes(p.read_bytes())
+ q=C/'candidate-sources'/rel;q.parent.mkdir(parents=True,exist_ok=True);q.write_text(text);(S/rel).write_text(text)
+ changes.append({'path':rel,'before':before,'after':sha(q)})
+for master in ['Regular','Bold']:
+ root=R/f'sources/VirtuaGrotesk-{master}.ufo';d=root/'glyphs';idx=plistlib.loads((d/'contents.plist').read_bytes());rr={n:E.parse(d/f).getroot() for n,f in idx.items()};deps={n:{x.get('base') for x in r.findall('outline/component')} for n,r in rr.items()}
+ arab={n for n,r in rr.items() if '-ar' in n or any(0x600<=int(u.get('hex'),16)<=0x6ff or 0xfb50<=int(u.get('hex'),16)<=0xfeff for u in r.findall('unicode'))}
+ while True:
+  new=arab|set().union(*(deps[n] for n in arab))
+  if new==arab:break
+  arab=new
+ consumers={'f'}
+ while True:
+  new=consumers|{n for n,v in deps.items() if v&consumers}
+  if new==consumers:break
+  consumers=new
+ grades={}
+ for n,r in rr.items():
+  lib=r.find('lib/dict')
+  if lib is None:continue
+  g=plistlib.loads(b'<plist>'+E.tostring(lib)+b'</plist>');rgba=[float(v) for v in g.get('public.markColor','0,0,0,0').split(',')]
+  if g.get('com.runebender.markLabel')=='green' or (rgba[1]>.6 and rgba[1]>rgba[0] and rgba[1]>rgba[2]):grades[n]=sha(d/idx[n])
+ assert 'f' in grades and 'florin' not in idx
+ dependencies[master]={'arabic_reserved':{n:sha(d/idx[n]) for n in sorted(arab)},'unchanged_f_consumers':sorted(consumers),'green_hashes':grades,'targets':['florin'],'existing_target_consumers':[]}
+ old=(d/idx['f']).read_text();snap=C/'donor-sources'/str((d/idx['f']).relative_to(R));snap.parent.mkdir(parents=True,exist_ok=True);snap.write_text(old)
+ # One contour: rotate the f head180 degrees for the descending left hook.
+ # Preserve both head cubics. Bold inner hook translates8 left to meet the
+ # existing lower stem104 rather than its upper112; curve controls move together.
+ points=rr['f'].findall('outline/contour/point');assert len(points)==32
+ import copy
+ tail=[copy.deepcopy(p) for p in points[12:24]]
+ sx=408 if master=='Bold' else 320;shift=16 if master=='Bold' else 32
+ for i,p in enumerate(tail):
+  x=sx-int(p.get('x'));y=512-int(p.get('y'))
+  if master=='Bold' and i<4:x-=8
+  p.set('x',str(x));p.set('y',str(y))
+ top=[copy.deepcopy(p) for p in points[4:]]
+ # Only the new glyph's inherited off8 crossbar tip is extended4 to the grid.
+ for i in [2,3,4,5]:top[i].set('x',str(int(top[i].get('x'))+4))
+ for p in tail+top:p.set('x',str(int(p.get('x'))+shift))
+ def point(p):return '\t\t\t<point '+ ' '.join(f'{k}="{p.get(k)}"' for k in ['x','y','type','smooth'] if p.get(k) is not None)+'/>'
+ text=old.replace('name="f"','name="florin"').replace('hex="0066"','hex="0192"')
+ text=re.sub(r'\t\t<contour>.*?</contour>','\t\t<contour>\n'+'\n'.join(point(p) for p in tail+top)+'\n\t\t</contour>',text,flags=re.S)
+ width=456 if master=='Bold' else 408;topx=336 if master=='Bold' else 296;bottom=184 if master=='Bold' else 136
+ text=re.sub(r'<advance width="[^"]+"/>',f'<advance width="{width}"/>',text)
+ text=re.sub(r'<anchor name="top" x="[^"]+" y="[^"]+"/>',f'<anchor name="top" x="{topx}" y="768"/>',text)
+ text=re.sub(r'<anchor name="bottom" x="[^"]+" y="[^"]+"/>',f'<anchor name="bottom" x="{bottom}" y="-256"/>',text)
+ text=re.sub(r'\t<lib>.*?</lib>','''\t<lib>
+\t\t<dict>
+\t\t\t<key>com.runebender.markLabel</key>
+\t\t\t<string>purple</string>
+\t\t\t<key>public.markColor</key>
+\t\t\t<string>0.54,0.44,0.88,1</string>
+\t\t</dict>
+\t</lib>''',text,flags=re.S)
+ stage(str((d/'florin.glif').relative_to(R)),text)
+ p=d/'contents.plist';stage(str(p.relative_to(R)),p.read_text().replace('</dict>','\t<key>florin</key>\n\t<string>florin.glif</string>\n</dict>'))
+ p=root/'lib.plist';text=p.read_text();match=re.search(r'(<key>public.glyphOrder</key>\s*<array>)(.*?)(\n\t</array>)',text,re.S);assert match
+ text=text[:match.end(2)]+'\n\t\t<string>florin</string>'+text[match.end(2):]
+ text=text.replace('<key>public.openTypeCategories</key>\n\t<dict>','<key>public.openTypeCategories</key>\n\t<dict>\n\t\t<key>florin</key>\n\t\t<string>base</string>');stage(str(p.relative_to(R)),text)
+(C/'changes.json').write_text(json.dumps(changes,indent=2)+'\n');(C/'dependencies.json').write_text(json.dumps(dependencies,indent=2)+'\n');print(S)

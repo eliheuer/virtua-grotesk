@@ -1,0 +1,245 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 1,
+  "passed": true,
+  "results": [
+    {
+      "glyph": "florin",
+      "points": 40,
+      "advance": 408.0,
+      "bounds": [
+        32,
+        -256,
+        376,
+        768
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 408.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 608.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 18,
+        "1": 23,
+        "3": 1
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-florin-0rlz7n5g/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "3370643c6f43487b130bc572e4279af20b9b2bfdc6e7dab49d6242d6c16fd626"
+    }
+  ]
+}

@@ -418,9 +418,12 @@
 		<string>Tbar</string>
 		<string>tbar</string>
 		<string>longs</string>
+		<string>florin</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>florin</key>
+		<string>base</string>
 		<key>longs</key>
 		<string>base</string>
 		<key>Tbar</key>

@@ -1,0 +1,32 @@
+{
+  "Regular:florin": {
+    "advance": 408,
+    "advance_popcount": 4,
+    "points": 40,
+    "green_f_curves_unchanged": true,
+    "descending_rotated_hook": true,
+    "bounds": [
+      32,
+      -256,
+      376,
+      768
+    ],
+    "left_bearing": 32,
+    "right_bearing": 32.0
+  },
+  "Bold:florin": {
+    "advance": 456,
+    "advance_popcount": 4,
+    "points": 40,
+    "green_f_curves_unchanged": true,
+    "descending_rotated_hook": true,
+    "bounds": [
+      48,
+      -256,
+      424,
+      768
+    ],
+    "left_bearing": 48,
+    "right_bearing": 32.0
+  }
+}

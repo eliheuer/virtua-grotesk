@@ -1208,3 +1208,14 @@ actual Diffenator stock coverage and labeled long-s supplement inspected.
 Dense Bold, compact head and default pairs await optical review. Rubik Latin gap
 now five: ĸ ŉ ƒ ﬁ ﬂ. Remaining script/subset/release blockers are not waived.
 Local only; no push or release approval.
+
+## Florin coverage checkpoint — 2026-10-21
+
+LAT-001 [batch19](../../agent-proofs/cases/latin-001/batches/19-florin/README.md)
+adds ƒ in both masters with40-point f-derived contours and a descending left
+hook. Advances408/456; all new geometry/spacing on8, zero grid findings. All1781
+other sources and existing compiled ink/advances unchanged.95 scoped checks,
+12 Latin tests, exact216 baseline Hebrew failures and preflight complete.
+Whole400/550/700 and enlarged images plus actual Diffenator text inspected;
+compact head/hook weight/default pairs await human review. Rubik Latin gap now
+four: ĸ ŉ ﬁ ﬂ. Other script/subset/release blockers remain. Local only; no push.
