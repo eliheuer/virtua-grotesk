@@ -62,8 +62,8 @@ Windows-metric line spacing still needs platform testing. Batch10 rounds ogonek 
 and adds canonical ogonek composition.100 scoped comparisons, six Latin tests and
 whole400/550/700 images completed; no base/Arabic/green source changes. Independent
 RAQM proofs resolve a DesignBot decomposed-row discrepancy. Missing ogonek cmap
-plus acute still fails40 VF samples before/after and remains a serving-subset
-follow-up. Batch11 repairs alternate-caron donors/placements and the wrong
+plus acute originally failed40 VF samples; batch23 fixes those and expanded
+real-subset cases. Full-package serving-set reachability remains separate. Batch11 repairs alternate-caron donors/placements and the wrong
 uppercase Ť construction in12 GLIFs, with grid spacing and five canonical
 compositions/master.135 scoped checks, seven Latin tests and full images at three
 weights completed; optical spacing and reader review remain pending.
@@ -71,21 +71,31 @@ All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 
-| Current unexcluded online run | FAIL | WARN | PASS | INFO | SKIP |
+| Online unexcluded run | FAIL | WARN | PASS | INFO | SKIP |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Five active binaries | 1 | 29 | 529 | 39 | 294 |
-| Local VF package | 10 | 8 | 160 | 10 | 41 |
+| Historical early Latin five binaries | 1 | 29 | 529 | 39 | 294 |
+| Historical early Latin VF package | 10 | 8 | 160 | 10 | 41 |
+| Current batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
+| Current batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 
-The loose-font failure is the `ttf` directory name. Package failures are serving-
-subset reachability for U+0302, U+0331 and U+1EBC/U+1EBD, including newly exposed
-Aleut support. No exclusions or misleading subset declarations were added.
-Current local evidence: `out/qa/2026-10-21-latin-applied/` and
-`out/qa/2026-10-21-latin-package/`; compact findings and hashes are retained in
-LAT-001. Source revision before this batch is889ffa58; its final identities are
-in `final-identity.json`. The package is unpublished and carries provisional
-date/primary-script/source-delivery choices, with existing artwork pending approval.
+[Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
+refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
+in four GLIFs. Only GDEF/head bytes change; ink and shaping are unchanged.
+74 scoped checks,17 Latin tests, baseline Hebrew delta and preflight completed;
+actual Diffenator text and whole400/550/700 rasters inspected. Native editor
+cursor behavior still needs platform testing. Breve contour direction is the
+next independent repair; protected Arabic warnings remain reserved for Eli.
 
-The pinned official Rubik comparison now finds8 missing Latin codepoints,
+Current package failures are serving-set reachability for U+0302, U+0331 and
+U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
+Input hashes/full reports are retained in batch24/qa-before and qa-after. The
+baseline revision is fb5a64be plus the four hashed caret GLIF changes recorded
+in final-identity.json. The package is unpublished and retains provisional
+metadata/source-delivery choices and artwork. The older loose-font failure was
+the ttf directory name; no fresh five-binary online result is claimed here.
+
+The pinned official Rubik comparison after batch22 finds zero missing Latin
+script codepoints (not full language coverage),
 182 Cyrillic,4 inherited/common combining marks,62 common symbols and102 Arabic
 presentation forms. Those are encoded-character differences, not language counts.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
