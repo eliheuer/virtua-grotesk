@@ -1,0 +1,62 @@
+{
+  "pnum": [
+    {
+      "index": 29,
+      "type": 1,
+      "mapping": {
+        "zero.tf": "zero",
+        "one.tf": "one",
+        "two.tf": "two",
+        "three.tf": "three",
+        "four.tf": "four",
+        "five.tf": "five",
+        "six.tf": "six",
+        "seven.tf": "seven",
+        "eight.tf": "eight",
+        "nine.tf": "nine",
+        "parenleft.tf": "parenleft",
+        "parenright.tf": "parenright"
+      }
+    }
+  ],
+  "sups": [
+    {
+      "index": 19,
+      "type": 1,
+      "mapping": {
+        "zero": "uni2070",
+        "one": "uni00B9",
+        "two": "uni00B2",
+        "three": "uni00B3",
+        "four": "uni2074",
+        "five": "uni2075",
+        "six": "uni2076",
+        "seven": "uni2077",
+        "eight": "uni2078",
+        "nine": "uni2079",
+        "parenleft": "uni207D",
+        "parenright": "uni207E"
+      }
+    }
+  ],
+  "tnum": [
+    {
+      "index": 30,
+      "type": 1,
+      "mapping": {
+        "zero": "zero.tf",
+        "one": "one.tf",
+        "two": "two.tf",
+        "three": "three.tf",
+        "four": "four.tf",
+        "five": "five.tf",
+        "six": "six.tf",
+        "seven": "seven.tf",
+        "eight": "eight.tf",
+        "nine": "nine.tf",
+        "parenleft": "parenleft.tf",
+        "parenright": "parenright.tf"
+      }
+    }
+  ]
+}

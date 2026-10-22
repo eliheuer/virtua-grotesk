@@ -1,0 +1,174 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "virtua": {
+      "sha256": "968ab83bd8b4648e8f91b90247bd742cb330c7ce6da5500e44fe273d5bdd7b52",
+      "upm": 1024,
+      "features": {
+        "aalt": [
+          0,
+          1
+        ],
+        "calt": [
+          20
+        ],
+        "ccmp": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          15,
+          23
+        ],
+        "fina": [
+          18
+        ],
+        "init": [
+          16
+        ],
+        "liga": [
+          22
+        ],
+        "locl": [
+          2
+        ],
+        "medi": [
+          17
+        ],
+        "rclt": [],
+        "rlig": [
+          19
+        ],
+        "tnum": [
+          5
+        ]
+      },
+      "cmap": {
+        "U+2070": "zerosuperior",
+        "U+00B9": "onesuperior",
+        "U+00B2": "twosuperior",
+        "U+00B3": "threesuperior",
+        "U+2074": "foursuperior",
+        "U+2075": "fivesuperior",
+        "U+2076": "sixsuperior",
+        "U+2077": "sevensuperior",
+        "U+2078": "eightsuperior",
+        "U+2079": "ninesuperior"
+      }
+    },
+    "rubik": {
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "upm": 1000,
+      "features": {
+        "aalt": [
+          1,
+          2
+        ],
+        "case": [
+          31
+        ],
+        "ccmp": [
+          3,
+          5,
+          7,
+          8,
+          9,
+          9
+        ],
+        "dlig": [
+          36,
+          37
+        ],
+        "dnom": [
+          21
+        ],
+        "fina": [
+          34
+        ],
+        "frac": [
+          22,
+          23,
+          24
+        ],
+        "init": [
+          32
+        ],
+        "liga": [
+          38
+        ],
+        "locl": [
+          10
+        ],
+        "medi": [
+          33
+        ],
+        "numr": [
+          20
+        ],
+        "ordn": [
+          26,
+          28
+        ],
+        "pnum": [
+          29
+        ],
+        "rlig": [
+          35
+        ],
+        "rvrn": [],
+        "sinf": [
+          18
+        ],
+        "subs": [
+          17
+        ],
+        "sups": [
+          19
+        ],
+        "tnum": [
+          30
+        ],
+        "zero": [
+          39
+        ]
+      },
+      "cmap": {
+        "U+2070": "uni2070",
+        "U+00B9": "uni00B9",
+        "U+00B2": "uni00B2",
+        "U+00B3": "uni00B3",
+        "U+2074": "uni2074",
+        "U+2075": "uni2075",
+        "U+2076": "uni2076",
+        "U+2077": "uni2077",
+        "U+2078": "uni2078",
+        "U+2079": "uni2079"
+      }
+    }
+  },
+  "screenshots": {
+    "browser/controlled-400.png": "6095f4729f6a3a5eece0eb68f666a7264cc30211d515e06baf6995c720d6b2e1",
+    "browser/controlled-550.png": "c349066ca316a128d5e15583dc1d942e1c8877221ef481db1ffabf5ca52c3d86",
+    "browser/controlled-700.png": "b983b5b33deedb7c406674ea7af23bf2ca9022ddbf214882068b736957ee57c5",
+    "browser/target-rubik-400.png": "61e00a1852edeec181563c3485ad3b303db6cd793d480e7321f44aa02b7d0543",
+    "browser/target-rubik-550.png": "a48261e724e4f8851e78131673e44e30f7a946f92ce3b3fae92d8e3cdaf72873",
+    "browser/target-rubik-700.png": "2c46b118b8d514e6f56afc2ea68e4f89d49e7365df8df2accebf5b17ec95330b",
+    "browser/target-virtua-400.png": "10ff696dc237175789079741ac92d4e8a78b91d3838a34dbb80eb5f6cb375aa4",
+    "browser/target-virtua-550.png": "9c341a3c729212ace0996a780df68a6e38338643f014165e72bfed7a0f07d975",
+    "browser/target-virtua-700.png": "c0771b845eb7d3e359a5c75937ef272fd42b328db708ea4cbcbca11665e525ee"
+  },
+  "scope": "Three controlled actual-font pages and six Diffenator same-text views, all inspected. Five complete rasters inspected. Stock proof generated; same-font stock review in batch46 remains applicable and is not claimed newly reviewed here.",
+  "findings": [
+    "Virtua encoded0–9 work; sups on plain digits does not change their size. tnum+sups stays ordinary tabular. Rubik renders designed proportional superiors with either sups or tnum+sups.",
+    "Regular Virtua family lighter than Rubik; curved1/3/6/7/9 construction distinctive. Bold forms wider/heavier, eight upper counter shallow, family spacing uneven. All draft grades remain purple.",
+    "No CSS superscript simulation; feature settings operate on actual fonts. No human approval or exhaustive language review."
+  ],
+  "human_approval": false
+}

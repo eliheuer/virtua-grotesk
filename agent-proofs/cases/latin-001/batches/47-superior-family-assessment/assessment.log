@@ -1,0 +1,18 @@
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+meta NOT subset; don't know how to subset; dropped
+1845 sources; 60 full-font cases x 8 modes; 90 subset cases x 8 modes
+virtua dict_keys(['aalt', 'calt', 'ccmp', 'fina', 'init', 'liga', 'locl', 'medi', 'rclt', 'rlig', 'tnum'])
+default [('zero', 680), ('one', 384), ('two', 576), ('three', 636), ('four', 616), ('five', 612), ('six', 620), ('seven', 496), ('eight', 656), ('nine', 636)]
+sups [('zero', 680), ('one', 384), ('two', 576), ('three', 636), ('four', 616), ('five', 612), ('six', 620), ('seven', 496), ('eight', 656), ('nine', 636)]
+tnum_sups [('zero.tf', 664), ('one.tf', 664), ('two.tf', 664), ('three.tf', 664), ('four.tf', 664), ('five.tf', 664), ('six.tf', 664), ('seven.tf', 664), ('eight.tf', 664), ('nine.tf', 664)]
+rubik dict_keys(['aalt', 'case', 'ccmp', 'dlig', 'dnom', 'fina', 'frac', 'init', 'liga', 'locl', 'medi', 'numr', 'ordn', 'pnum', 'rlig', 'rvrn', 'sinf', 'subs', 'sups', 'tnum', 'zero'])
+default [('zero', 635), ('one', 428), ('two', 587), ('three', 601), ('four', 621), ('five', 594), ('six', 572), ('seven', 513), ('eight', 636), ('nine', 593)]
+sups [('uni2070', 366), ('uni00B9', 258), ('uni00B2', 341), ('uni00B3', 341), ('uni2074', 343), ('uni2075', 333), ('uni2076', 341), ('uni2077', 292), ('uni2078', 348), ('uni2079', 339)]
+tnum_sups [('uni2070', 366), ('uni00B9', 258), ('uni00B2', 341), ('uni00B3', 341), ('uni2074', 343), ('uni2075', 333), ('uni2076', 341), ('uni2077', 292), ('uni2078', 348), ('uni2079', 339)]

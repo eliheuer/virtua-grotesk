@@ -1646,3 +1646,21 @@ Online package12FAIL10WARN159PASS10INFO40SKIP: FAILs exact unchanged from45;
 unreachable warning adds math-only U2078, remainder15→16. No exclusions/false
 declarations. Gap328:182Cyrl/44Common/102Arab. Next complete-family/sups behavior
 assessment, then independent Common gaps. Local only/no push; Arabic60272 unchanged.
+
+
+### LAT-001 batch47 · Complete superior-family assessment
+
+[Evidence](../../agent-proofs/cases/latin-001/batches/47-superior-family-assessment/README.md) is read-only at6007487c:1845 sources/five active fonts exact,
+Arabic326/master and green131/74 preserved.30-member ordinary/tabular/superior
+reverse closure/master has no Arabic intersection.60 full-font cases x8 modes
+plus90 real-subset cases x8 modes at five weights retained. Encoded0–9 work;
+Virtua sups absent, tnum+sups yields ordinary tabular figures. Rubik sups and
+tnum+sups yield identical proportional superiors; default text subsets omit
+optional features, explicit retention preserves them. NFKD is not a repair.
+Whole48px400/550/700,224px details and9 actual controlled/Diffenator browser
+views inspected. Family weight/width/counter balance/default pairs await human
+review. Separate digit-only sups proposal maps ordinary and .tf inputs to the
+existing10 superior forms; not applied, no claim of tabular superiors/letters/
+numr/dnom/frac/subs. No build/preflight/new package QA; batch46 counts12FAIL10WARN,
+216 baseline Hebrew failures and gap328 unchanged. Next micro-sign U00B5
+assessment; feature proposal remains separate. Local only/no push, Arabic60272 unchanged.
