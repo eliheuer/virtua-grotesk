@@ -1,0 +1,80 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "before": "108158b68da2ddf3b59944b59a3401bef6ba6ed4e2f62968e711af25bf12f426",
+    "after": "c3c4e070705a19310395e7ca05cc1b47b6f4c080c02e8bb1ccb48b9c337ac8c5",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "measurements_exactly_equal_to_batch34": {
+    "400": [
+      {
+        "font": "virtua",
+        "manualHeight": 83.17708587646484,
+        "noneHeight": 41.58854293823242,
+        "nowrapWidth": 202.8819580078125,
+        "plainWidth": 202.8819580078125
+      },
+      {
+        "font": "rubik",
+        "manualHeight": 83.17708587646484,
+        "noneHeight": 41.58854293823242,
+        "nowrapWidth": 200.73785400390625,
+        "plainWidth": 200.73785400390625
+      }
+    ],
+    "550": [
+      {
+        "font": "virtua",
+        "manualHeight": 83.17708587646484,
+        "noneHeight": 41.58854293823242,
+        "nowrapWidth": 218.88021850585938,
+        "plainWidth": 218.88021850585938
+      },
+      {
+        "font": "rubik",
+        "manualHeight": 83.17708587646484,
+        "noneHeight": 41.58854293823242,
+        "nowrapWidth": 213.7413330078125,
+        "plainWidth": 213.7413330078125
+      }
+    ],
+    "700": [
+      {
+        "font": "virtua",
+        "manualHeight": 83.17708587646484,
+        "noneHeight": 41.58854293823242,
+        "nowrapWidth": 233.62847900390625,
+        "plainWidth": 233.62847900390625
+      },
+      {
+        "font": "rubik",
+        "manualHeight": 83.17708587646484,
+        "noneHeight": 41.58854293823242,
+        "nowrapWidth": 221.65798950195312,
+        "plainWidth": 221.65798950195312
+      }
+    ]
+  },
+  "inspected_images": {
+    "comparison-550.png": "53678371a74ad39fb92ff3b3fd2b090be581efd725c2d0bf7ef0c5c6c19fb155",
+    "diffenator-rubik-550.png": "54f0c383e1c3e04d3d792b3273cd9540a4610f75d34f6277c721ced6c3f78565",
+    "diffenator-virtua-400.png": "0861d4e83f3ef52cf13ef1cd865174fdeabe663c004980db46b5e0c1bc1159e5",
+    "stock-virtua-400.png": "b5efd12ee3879c4b0a8c204e8aca7547bb7765d618eb6ad8491660ebf40443fa",
+    "diffenator-virtua-700.png": "967da61ee6ea8ce86ae2529ae2a9d3d3668676861d8405d1d3339dd475b975c9",
+    "stock-rubik-550.png": "dd2f1694133e73c7da85bb1c6138863c17dcc7e60651a94f39f10f4dafa91b31",
+    "stock-virtua-700.png": "1ad5b0a9ae3869378691ab2f62425b5432fb87fc865f6d1f1dfc5ebfd08115e7",
+    "diffenator-rubik-700.png": "f149dc97d7a8d1678b7039b94d9622f351886d103327ca10456b3a557e76cdcf",
+    "comparison-700.png": "7461fa552e1c8c3a7c88d97484aa3f73269216c7f1466f1cfeb3ffed79581cc0",
+    "stock-rubik-400.png": "5defb44192fa2c920c49b45599d7445f0b90e02f5a9b5778be9b59a075969c29",
+    "stock-virtua-550.png": "b74820e9cb4564fd58f45608a2e90c03cdc49446416c141f1895f6f107de2b7a",
+    "comparison-400.png": "2113227992a8da437ef94ff4ae231d49c981bba2a59827c7b6c02cdcf83fdab5",
+    "diffenator-rubik-400.png": "64cbca09483b173f485eeda3135a1ebf8de0dd12e9aae12c9642ba946e8619f8",
+    "stock-rubik-700.png": "34dcd094d89b45641b9caecc83fb3d7a0b85dfa95967609ba40bc855613c8c76",
+    "diffenator-virtua-550.png": "63edf24772c56227099930dd49d285dbb8ae719b34ab42acceef1617f364a5e2"
+  },
+  "scope": "Actual Codex in-app browser, English manual/none/no-wrap; Diffenator same-text supplement and first stock coverage viewport in both fonts at400/550/700. Not exhaustive language approval. Existing light Bold hyphen, dense letters and uneven rhythm remain review findings."
+}

@@ -1,0 +1,79 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": true,
+  "results": [
+    {
+      "glyph": "softhyphen",
+      "points": 0,
+      "advance": 440.0,
+      "bounds": [
+        64,
+        256,
+        376,
+        344
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 440.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 2
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-softhyphen-qxrxkrgc/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "7295603c023a0db412107525f3348596879ae6bc8c8dfc01b18b1de75a5186ac"
+    },
+    {
+      "glyph": "softhyphen",
+      "points": 0,
+      "advance": 440.0,
+      "bounds": [
+        64,
+        248,
+        376,
+        336
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 440.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 2
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-softhyphen-qxrxkrgc/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "7295603c023a0db412107525f3348596879ae6bc8c8dfc01b18b1de75a5186ac"
+    }
+  ]
+}

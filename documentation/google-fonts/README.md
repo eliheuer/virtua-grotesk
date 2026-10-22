@@ -78,7 +78,8 @@ shows no new failures; this does not waive the existing failures.
 | Batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 | Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
-| Current batch33 package after broken bar | 12 | 9 | 160 | 10 | 40 |
+| Batch33 package after broken bar | 12 | 9 | 160 | 10 | 40 |
+| Current batch35 package after soft hyphen | 12 | 10 | 159 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -93,15 +94,17 @@ Arabic warnings remain reserved for Eli. Next independent common symbols; combin
 
 Current package failures are serving-set reachability for U+0302, U+0331, U+0338
 and U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
-Current input hashes/full reports are retained in batch33/qa-online. The baseline
-revision is429c0220 plus the six hashed source changes in batch33/final-identity.json.
+Current input hashes/full reports are retained in batch35/qa-online. The baseline
+revision isd1e3d44f plus the six hashed source changes in batch35/final-identity.json.
+New soft_hyphen WARN recommends omitting U+00AD. Its local compatibility encoding
+is not an approved release exception; retain/omit disposition remains open.
 Earlier batch reports remain historical evidence.
 The QA package uses the scratch VF; active tables match except head timestamps. The package is unpublished and retains provisional
 metadata/source-delivery choices and artwork. The older loose-font failure was
 the ttf directory name; no fresh five-binary online result is claimed here.
 
-The pinned Rubik comparison after batch33 finds zero missing Latin or combining
-codepoints,182 Cyrillic,56 Common symbols and102 Arabic presentation forms.
+The pinned Rubik comparison after batch35 finds zero missing Latin or combining
+codepoints,182 Cyrillic,55 Common symbols and102 Arabic presentation forms.
 These are encoded-character differences, not language counts or visual approval.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
@@ -1428,3 +1431,22 @@ dense Bold/uneven spacing remain review items. No source/build/QA result changes
 latest full online package stays batch33 at12 FAIL/9 WARN,216 Hebrew engineering
 failures remain, and Rubik cmap gap stays340. No new cross-platform/native-reader
 approval. Diagnostic font copies must never enter a release. Local only/no push.
+
+### LAT-001 batch35 · Encoded soft-hyphen compatibility
+
+[Evidence](../../agent-proofs/cases/latin-001/batches/35-soft-hyphen/README.md)
+adds two exact-hyphen U+00AD wrappers,440 advances, purple pending review. Six
+source files;1817 other files and every old glyph/Arabic/green source unchanged.
+209 scoped checks,4475 old VF and3579 old static ink/advance comparisons,27 Latin
+plus two helper methods, exact216 baseline failures and preflight complete.
+Whole400/550/700 and224px diagnostic ink, controlled browser line breaks and
+actual Diffenator supplement/stock first viewport inspected against Rubik.
+Browser behavior was already correct and remains identical to batch34.
+
+Full online package12 FAIL/10 WARN/159 PASS/10 INFO/40 SKIP. FAIL records are
+exactly unchanged; soft_hyphen changes PASS to WARN solely for encoding U+00AD.
+The official check recommends omission; compatibility versus omission is an
+unapproved release decision. Preserve this finding without exclusions or silent
+coverage changes. Rubik gap339:182 Cyrillic,55 Common,102 Arabic presentation
+forms. Dense Bold, light inherited Bold hyphen and uneven rhythm remain review
+items. Next separate U+2011 behavior assessment, then Common gaps. Local only.

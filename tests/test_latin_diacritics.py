@@ -509,3 +509,24 @@ class LatinDiacriticsTests(unittest.TestCase):
                 # No programming-language sequence substitution was introduced.
                 self.assertEqual(len(shaped(font,data,'<=',w)[1]),2)
                 self.assertEqual(len(shaped(font,data,'>=',w)[1]),2)
+
+    def test_soft_hyphen_default_ignorable_and_preserved_glyph(self):
+        from fontTools.pens.recordingPen import DecomposingRecordingPen
+        for path,font in self.fonts():
+            data=path.read_bytes()
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                with self.subTest(font=path.name,weight=w):
+                    name=font.getBestCmap()[0xAD]
+                    gs=font.getGlyphSet(location={'wght':w} if 'fvar' in font else None)
+                    a=DecomposingRecordingPen(gs);z=DecomposingRecordingPen(gs)
+                    gs[name].draw(a);gs[font.getBestCmap()[0x2D]].draw(z)
+                    self.assertEqual(a.value,z.value)
+                    self.assertEqual(gs[name].width,440)
+                    h=hb.Font(hb.Face(data));h.set_variations({'wght':w})
+                    def run(text,flags=0):
+                        b=hb.Buffer();b.add_str(text);b.guess_segment_properties();b.flags=flags;hb.shape(h,b)
+                        return [(font.getGlyphName(i.codepoint),p.x_advance,p.x_offset,p.y_offset) for i,p in zip(b.glyph_infos,b.glyph_positions)]
+                    for word,soft in [('cooperate','co\u00adoperate'),('office','of\u00adfice')]:
+                        actual=[x for x in run(soft) if x!=('space',0,0,0)]
+                        self.assertEqual(actual,run(word))
+                    self.assertEqual(run('\u00ad',hb.BufferFlags.PRESERVE_DEFAULT_IGNORABLES),[(name,440,0,0)])

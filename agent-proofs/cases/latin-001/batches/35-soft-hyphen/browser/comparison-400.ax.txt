@@ -1,0 +1,18 @@
+Browser tab: 2, Title: "Soft hyphen comparison 400", URL: "http://127.0.0.1:60273/batch35/comparison-400.html".
+0 AXWebArea Soft hyphen comparison 400, URL: 127.0.0.1:60273/batch35/comparison-400.html
+	1 heading U+00AD behavior · 400 · comparison, Value: 1
+		2 text U+00AD behavior · 400 · comparison
+	3 text Candidate softhyphen wrapper and pinned Rubik. English, manual hyphenation. Same fixture as batch34; normal fonts, no diagnostic cmap changes.
+	4 container
+		5 heading virtua, Value: 2
+			6 text virtua
+		7 text Manual wrap, U+00AD (160px) extra­ordinary Hyphens none, same U+00AD extra­ordinary Explicit hyphen + hard break extra-
+		8 text ordinary No wrap, U+00AD extra­ordinary No wrap, plain control extraordinary
+	9 container
+		10 heading rubik, Value: 2
+			11 text rubik
+		12 text Manual wrap, U+00AD (160px) extra­ordinary Hyphens none, same U+00AD extra­ordinary Explicit hyphen + hard break extra-
+		13 text ordinary No wrap, U+00AD extra­ordinary No wrap, plain control extraordinary
+	14 text [{"font":"virtua","manualHeight":83.17708587646484,"noneHeight":41.58854293823242,"nowrapWidth":202.8819580078125,"plainWidth":202.8819580078125},{"font":"rubik","manualHeight":83.17708587646484,"noneHeight":41.58854293823242,"nowrapWidth":200.73785400390625,"plainWidth":200.73785400390625}]
+
+The focused UI element is 0 AXWebArea Soft hyphen comparison 400, URL: 127.0.0.1:60273/batch35/comparison-400.html

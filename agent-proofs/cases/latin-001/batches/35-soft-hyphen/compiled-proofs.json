@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "H-H HH H-H",
+      "extra­ordinary extraordinary",
+      "co­operate cooperate",
+      "of­fice office",
+      "a-b a­b a-b",
+      "  "
+    ],
+    "words": [
+      "extraordinary · extra­ordinary",
+      "cooperate · co­operate",
+      "office · of­fice",
+      "work-flow · work­flow",
+      "București ģimene doğa",
+      "București ģimene doğa Ŧŧ ﬁﬂ"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "58a1f0dd5fb91d6ae2b993e3dcd76016543e796afe46b7f58091c4ae3e3942e6"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "32d614f8ca879b8554a2341e25501f9e4349c86017a59540a5da5f2d7ceeaff5"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "ded4bb3663890f6a5d24a6fb8ba6e68f5bd963e346ab3737d6c5bc36743f38d2"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "ad9eea517df31e232b7115c3cb43a3e0a36ce5a07e8a2ca93c785ea57dda5e11"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "6dca4e412bf7459f5f98c0c846067060786fb6160ce655b8b24988fb41ddf5ae"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "6a7181955538aff77a27c12bee324a9a1ae3646e7e732754c7231f09b31c6f38"
+    }
+  ],
+  "fonts": {
+    "before": "108158b68da2ddf3b59944b59a3401bef6ba6ed4e2f62968e711af25bf12f426",
+    "after": "c3c4e070705a19310395e7ca05cc1b47b6f4c080c02e8bb1ccb48b9c337ac8c5",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}
