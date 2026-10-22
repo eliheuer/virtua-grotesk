@@ -1,0 +1,33 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "before": "82ef0d1b9de07ed0041a7a1489dfb150d45136ea70b24ca1a7311a26e087bcb4",
+    "after": "d904402fbcca6d0d4c1b66ddb832522ff6f1ede406b8b1e2c2a9b461dea5e345",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "images": {
+    "browser/stock-rubik-400.png": "a768181ebaaae7527ac1711fd9ad46fc991fe1f432270024037ffd6088d73a35",
+    "browser/stock-rubik-550.png": "8ad98dc322dc6efde711069c732976dec3cde1fe19855e70c1f44ab14b61ae21",
+    "browser/stock-rubik-700.png": "3ab174c441b33cf9252c4e052adfdf091a4d3698f2f0cc0c2d1bd4830fceb37a",
+    "browser/stock-virtua-400.png": "bd5691fa0c620656b5b08b6f3f99b03055f82b26380eb629547620159e242e64",
+    "browser/stock-virtua-550.png": "f291eae9a6f1e0ff061533b453a44e5fe5b44b4a66b393b6394bd58fbe394c34",
+    "browser/stock-virtua-700.png": "1cc79990d0e0593e2ee1c37a53808c30ed2bba4c5775186643e96ec4309836fc",
+    "browser/target-rubik-400.png": "67f609a1fd85249930ad6ce11d0dc68e3f77ecd03b9b1a7644ce8d370f2fdc7f",
+    "browser/target-rubik-550.png": "bab7fe4b6988a345c71c36fc10b4debef38de80c36f8cac85ec108f586d72d8e",
+    "browser/target-rubik-700.png": "3d266d6d53057c712d50db846664ef2fc07368331a583200f9f2c11f528035dd",
+    "browser/target-virtua-400.png": "d608df7a252cfd926478663a9aaf09c01531ad64742d73bd72a6d3a5928be7e3",
+    "browser/target-virtua-550.png": "01170cf8879e8e068460b4c8ba002269e953333fa5104dce25e48d117886ee29",
+    "browser/target-virtua-700.png": "ce880b5ba136d761e59933255eb51c2782641ac693249a2b43079f6862e5660c"
+  },
+  "scope": "Actual IAB Diffenator supplement and first stock viewport at400550700; twelve images inspected alongside full rasters,224px details and comb. Old Virtua/New Rubik; slider governs weight.",
+  "findings": [
+    "Curved leg follows protected Virtua seven; Regular lighter than Rubik.",
+    "Head/leg balance, Bold mass, curve sweep and default family spacing remain human review.",
+    "Dense Bold/uneven stock spacing persist. Generic superior marks use right fallback. Long heading approaches fixed controls; target text unobstructed."
+  ],
+  "human_approval": false
+}

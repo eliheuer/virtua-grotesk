@@ -704,3 +704,21 @@ Online package12FAIL10WARN159PASS10INFO40SKIP: FAILs exact unchanged from43;
 unreachable warning adds math-only U2079, remainder13→14. No exclusions or
 false subset declarations. Gap330:182Cyrl/46Common/102Arab. Next superior7
 then8; local only/no push. Arabic60272 unchanged.
+
+
+## Batch45 · Superior seven
+
+[Evidence](batches/45-superior-seven/README.md): purple U2077 both masters,17
+compatible points from protected seven. Advances328/360,40 bearings, head48/72,
+leg64/96 before16-unit cuts; all new values on8/grid0. Six source files;1837
+others/every old GLIF/Arabic/green source unchanged.125 scoped checks,4525 old
+VF/3619 static exact ink/advance comparisons,54 subsets/NFD,27 Latin plus2
+helpers, unchanged216 baseline failures and preflight complete. Two cubics per
+master with four intentional G0 head/shelf/foot joins, no direct cubic joins;
+no sampled reversal warnings/proper crossings. Whole400/550/700,224px details/
+comb and12 actual Diffenator views inspected. Regular lighter than Rubik;
+curved leg, Bold head/leg balance and family default pairs remain human review.
+No sups/kerning/ordinary aliases. Online package12FAIL10WARN159PASS10INFO40SKIP:
+FAILs exact unchanged from44; unreachable warning adds math-only U2077, remainder
+14→15. No exclusions/false declarations. Gap329:182Cyrl/45Common/102Arab. Next
+superior8; local only/no push. Arabic60272 unchanged.
