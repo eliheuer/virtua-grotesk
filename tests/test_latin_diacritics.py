@@ -234,3 +234,20 @@ class LatinDiacriticsTests(unittest.TestCase):
                         self.assertEqual(actual,advance)
                         if mark=='̦':self.assertGreaterEqual(base[0][1]-bounds[-1][3],16)
                         else:self.assertGreaterEqual(bounds[-1][1]-base[0][3],16)
+
+    def test_apostrophe_n_component_and_marks(self):
+        for path,font in self.fonts():
+            data=path.read_bytes()
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                with self.subTest(font=path.name,weight=w):
+                    self.assertEqual(font.getBestCmap()[0x149], 'napostrophe')
+                    gs=font.getGlyphSet(location={'wght':w} if 'fvar' in font else None)
+                    shift=80+(w-400)/300*16
+                    self.assertAlmostEqual(gs['napostrophe'].width,gs['n'].width+shift,delta=1)
+                    adv,boxes=shaped(font,data,'ŉ',w)
+                    self.assertEqual(len(boxes),1)
+                    self.assertEqual(boxes[0][3],792)
+                    adv2,marked=shaped(font,data,'ŉ\u0301',w)
+                    self.assertEqual(adv,adv2)
+                    self.assertGreaterEqual(marked[1][1]-marked[0][3],16)
+                    self.assertEqual(len(shaped(font,data,'ʼn',w)[1]),2)
