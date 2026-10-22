@@ -520,3 +520,13 @@ manually drawing … get the whole things good enough”. Continue independent
 first-pass work without per-batch review requests, with whole-image inspection.
 This is a manual-editing handoff target, not final visual approval or release.
 Beh/Heh reservations and named-green-exception requirements remain in force.
+
+## Whole-alphabet handoff requested — 2026-10-21
+
+Eli: “keep going, and when the first pass is done show me the whole Arabic
+alphabet in both weights with all 4 references so we can see what still needs
+manual work.” Continue the finite first pass. Final handoff must include whole-
+alphabet400/700 images with Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and
+Readex Pro, plus joined positional contexts and an exact manual-work list.
+Unsupported extended characters must be marked unavailable, never replaced by
+fallback. Preserve Beh/Heh reservations, manual corrections and green protection.

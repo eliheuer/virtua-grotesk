@@ -384,3 +384,16 @@ findings retained. Live proof:batch33. Checkpoints31/32:bab08e8f.
 Next: remaining non-green extension wrapper join mismatches, then attachment
 collisions independent of reserved sources and whole-script/digit image review.
 Do not reattempt protected Maksura/Yeh, Kaf, Lam-Alef or human-reserved Heh.
+
+## Batch34 — Extension joining widths
+
+Twenty non-green wrapper advance fixes applied (19Regular, BoldYeh.init.ctr).
+Compiled ink unchanged at400/550/700;45 shaping comparisons and preflight pass.
+All34 reservations unchanged. Complete shaped rows inspected. Next immediately:
+fehDotmovedbelow-ar.fina and fehThreedotsbelow-ar.fina in both masters use the
+wrong Qaf bowl and their below-dots collide with it. Prepare a paired-master
+composition using the proper Feh final, preserving donors. Do not call these
+forms acceptable merely because their join widths now match. Tteh small-Tah
+marks are also absent/replaced with dots; retain as structural follow-up.
+Eli specifically wants the final whole alphabet in400/700 with all four refs,
+plus contextual forms and a concise manual-work list. First pass still active.
