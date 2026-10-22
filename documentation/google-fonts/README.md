@@ -1281,3 +1281,16 @@ Diffenator target review completed at400/550/700. GPOS filter-set reindexing is
 verified semantically identical. Fresh full package Fontspector is still required:
 this scoped repair does not resolve or waive all previous package failures.
 Local checkpoint only, not release approval.
+
+### Latin batch26 · Turned comma coverage
+
+[LAT-001 batch26](../../agent-proofs/cases/latin-001/batches/26-turned-comma/README.md)
+adds combining turned comma above U+0312 in both masters, including soft-dot
+removal and stacking. All existing GLIFs/Arabic/green sources are unchanged.
+165 scoped comparisons,4,410 existing ink/advance checks,18 Latin tests and six
+focused Fontspector checks pass;216 pre-existing Hebrew failures remain exact.
+Preflight and actual400/550/700 Diffenator plus enlarged raster review completed.
+Full package QA counts above are from batch25, before this addition. Rubik cmap
+gap now349 (182 Cyrillic,3 combining,62 Common,102 Arabic presentation forms),
+not language counts. Compact mark proportions, dense Bold and spacing remain
+human-review items. No new release approval, push, or publication.

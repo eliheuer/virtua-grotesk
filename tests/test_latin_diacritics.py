@@ -309,3 +309,25 @@ class LatinDiacriticsTests(unittest.TestCase):
                         self.assertEqual(values[0].Coordinate,round(288+(bold-288)*(w-400)/300))
                         self.assertGreater(values[0].Coordinate,0)
                         self.assertLess(values[0].Coordinate,instance['hmtx'][name][0])
+
+    def test_turned_comma_above_soft_dots_and_stacks(self):
+        for path,font in self.fonts():
+            data=path.read_bytes();name=font.getBestCmap()[0x312]
+            self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs[name],3)
+            self.assertEqual(font['hmtx'][name][0],0)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for base in ['a','g','h','i','j','į']:
+                    with self.subTest(font=path.name,weight=w,base=base):
+                        advance,boxes=shaped(font,data,base+'̒',w)
+                        self.assertEqual(len(boxes),2)
+                        self.assertGreaterEqual(boxes[1][1]-boxes[0][3],24)
+                        stacked,bb=shaped(font,data,base+'̒́',w)
+                        self.assertEqual(advance,stacked)
+                        self.assertGreaterEqual(bb[-1][1]-bb[-2][3],24)
+                        self.assertLessEqual(bb[-1][3],font['OS/2'].usWinAscent)
+                        if base in ['i','j','į']:
+                            for marks in ['̒','̧̒']:
+                                hf=hb.Font(hb.Face(data));hf.set_variations({'wght':w})
+                                buf=hb.Buffer();buf.add_str(base+marks);buf.guess_segment_properties();hb.shape(hf,buf)
+                                names=[font.getGlyphName(g.codepoint) for g in buf.glyph_infos]
+                                self.assertEqual(names[0],{'i':'idotless','j':'jdotless','į':'dotlessiogonek'}[base])
