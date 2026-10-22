@@ -1,0 +1,201 @@
+{
+  "before": [
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Aleut, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0302 (U+0302)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Amarakaeri, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster md sample text for language Chickasaw, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Guarani, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u1ebd (U+1EBD)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Yanomam\u00f6, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u1ebd (U+1EBD)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster md sample text for language Central Mazahua, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster sm sample text for language Central Mazahua, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0338 (U+0338)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Otomi, Mezquital, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Secoya, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster lg sample text for language Siona, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the masthead partial sample text for language Ticuna, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u1ebd (U+1EBD)\n* \u1ebc (U+1EBC)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Ticuna, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    }
+  ],
+  "after": [
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Aleut, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0302 (U+0302)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Amarakaeri, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster md sample text for language Chickasaw, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Guarani, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u1ebd (U+1EBD)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Yanomam\u00f6, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u1ebd (U+1EBD)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster md sample text for language Central Mazahua, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster sm sample text for language Central Mazahua, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0338 (U+0338)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Otomi, Mezquital, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Secoya, but although the font contained all the base exemplars for the language, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the poster lg sample text for language Siona, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the masthead partial sample text for language Ticuna, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u1ebc (U+1EBC)\n* \u1ebd (U+1EBD)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    },
+    {
+      "check": "googlefonts/tofu",
+      "result": {
+        "message": "The font has the following codepoints needed to render the specimen 16 sample text for language Ticuna, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* \u0331 (U+0331)",
+        "severity": "FAIL",
+        "code": "missing-subsetted"
+      }
+    }
+  ],
+  "identical": false,
+  "same_failures_after_bullet_order_normalization": true,
+  "difference": "Ticuna U1EBC/U1EBD bullet order only; raw results retained."
+}

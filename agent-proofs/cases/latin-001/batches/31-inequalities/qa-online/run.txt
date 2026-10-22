@@ -1,0 +1,14 @@
+Mode: package
+Network: online
+-p
+googlefonts
+--error-code-on
+fail
+--loglevel
+warn
+--succinct
+out/qa/2026-10-22-inequalities/ofl/virtuagrotesk/VirtuaGrotesk[wght].ttf
+out/qa/2026-10-22-inequalities/ofl/virtuagrotesk/METADATA.pb
+out/qa/2026-10-22-inequalities/ofl/virtuagrotesk/OFL.txt
+out/qa/2026-10-22-inequalities/ofl/virtuagrotesk/article/ARTICLE.en_us.html
+out/qa/2026-10-22-inequalities/ofl/virtuagrotesk/article/weight-specimen.svg

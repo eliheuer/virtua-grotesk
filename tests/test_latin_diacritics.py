@@ -437,3 +437,32 @@ class LatinDiacriticsTests(unittest.TestCase):
                         sa,sboxes=shaped(sf,sd,text,w)
                         self.assertEqual(adv,sa)
                         self.assertEqual(bounds(boxes),bounds(sboxes))
+
+    def test_inequality_symbols_keep_clear_lower_bars(self):
+        for path,font in self.fonts():
+            data=path.read_bytes()
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                gs=font.getGlyphSet(location={'wght':w} if 'fvar' in font else None)
+                for cp in [0x2264,0x2265]:
+                    with self.subTest(font=path.name,weight=w,cp=hex(cp)):
+                        name=font.getBestCmap()[cp]
+                        self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs.get(name),1)
+                        from fontTools.pens.recordingPen import DecomposingRecordingPen
+                        pen=DecomposingRecordingPen(gs);gs[name].draw(pen);contours=[]
+                        for op,pts in pen.value:
+                            if op=='moveTo':contours.append([pts[0]])
+                            elif op=='lineTo':contours[-1].append(pts[0])
+                        self.assertEqual(len(contours),2)
+                        contours.sort(key=lambda p:min(y for x,y in p))
+                        self.assertGreaterEqual(min(y for x,y in contours[1])-max(y for x,y in contours[0]),40)
+                        self.assertEqual(shaped(font,data,chr(cp),w)[0],600)
+                for base,encoded in [('≤','≰'),('≥','≱')]:
+                    with self.subTest(font=path.name,weight=w,negation=encoded):
+                        expected=shaped(font,data,base+'̸',w)
+                        self.assertEqual(shaped(font,data,encoded,w),expected)
+                        self.assertEqual(expected[0],600)
+                        self.assertLess(expected[1][1][1],expected[1][0][1])
+                        self.assertGreater(expected[1][1][3],expected[1][0][3])
+                # No programming-language sequence substitution was introduced.
+                self.assertEqual(len(shaped(font,data,'<=',w)[1]),2)
+                self.assertEqual(len(shaped(font,data,'>=',w)[1]),2)

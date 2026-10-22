@@ -78,7 +78,7 @@ shows no new failures; this does not waive the existing failures.
 | Batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 | Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
-| Current batch30 package after not-equal encoding | 12 | 9 | 160 | 10 | 40 |
+| Current batch31 package after inequalities | 12 | 9 | 160 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -91,19 +91,18 @@ compiled glyph comparisons,17 Latin methods, unchanged baseline failures and
 whole-image/Diffenator review completed. Outline direction now passes; protected
 Arabic warnings remain reserved for Eli. Next independent common symbols; combining cmap gaps are closed as first drafts.
 
-Current package failures are serving-set reachability for U+0302, U+0331 and
-U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
-Input hashes/full current reports are retained in batch25/qa-online; batch24
-reports remain historical comparison evidence. The current baseline revision is
-a2f6fe18 plus the two hashed breve GLIF changes in batch25/final-identity.json.
+Current package failures are serving-set reachability for U+0302, U+0331, U+0338
+and U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
+Current input hashes/full reports are retained in batch31/qa-online. The baseline
+revision is9bebce50 plus the ten hashed source changes in batch31/final-identity.json.
+Earlier batch reports remain historical evidence.
 The QA package uses the scratch VF; active tables match except head timestamps. The package is unpublished and retains provisional
 metadata/source-delivery choices and artwork. The older loose-font failure was
 the ttf directory name; no fresh five-binary online result is claimed here.
 
-The pinned official Rubik comparison after batch22 finds zero missing Latin
-script codepoints (not full language coverage),
-182 Cyrillic,4 inherited/common combining marks,62 common symbols and102 Arabic
-presentation forms. Those are encoded-character differences, not language counts.
+The pinned Rubik comparison after batch31 finds zero missing Latin or combining
+codepoints,182 Cyrillic,59 Common symbols and102 Arabic presentation forms.
+These are encoded-character differences, not language counts or visual approval.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
 Latin accent review, bottom-mark shapes, wrapper spacing on the dyadic grid,
@@ -1359,3 +1358,20 @@ active/scratch identity except head complete. Fresh online unexcluded package
 12 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP remains blocked on serving-set reachability.
 Remaining Rubik gap345 encodings:182 Cyrillic,61 Common,102 Arabic presentation
 forms. Next independent ≤/≥/±/¬. Local checkpoint only; no release or push.
+
+### LAT-001 batch31 · Inequalities
+
+Adds ≤/≥ in both masters with16+8-point line contours,600 advances and72 bearings,
+plus bounded long-slash math attachment at304,368 for canonical negation. Whole
+image review rejected excessive Bold mass and dangling slash before application.
+Ten source files; all1805 other sources and old glyphs/Arabic/green unchanged.
+160 scoped checks,4450 old VF and3559 old static ink/advance comparisons,24 Latin
+methods and2 helper methods pass;216 Hebrew baseline failures remain. Final
+400/550/700 images,224px endpoints and actual Diffenator target/stock compared
+with Rubik. Zero grid findings; compatible contours and five-weight winding/
+crossing checks complete. Preflight and active/scratch identity except head pass.
+New proportions, negated counter wedges and default pair spacing await human
+review. Online package12 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP unchanged in meaning;
+Ticuna failure bullet order differs only. No metadata/exclusion changes. Remaining
+343 Rubik encodings:182 Cyrillic,59 Common,102 Arabic presentation forms.
+Next ±/¬. Local only, no publication or push.

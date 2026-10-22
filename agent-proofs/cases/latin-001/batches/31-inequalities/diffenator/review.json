@@ -1,0 +1,38 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "views": [
+    "same-text inequalities supplement",
+    "stock first viewport"
+  ],
+  "old": "Virtua candidate",
+  "new": "Rubik",
+  "font_hashes": {
+    "rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "before.ttf": "1f08f8fa81890c9006659c23ca79f3d99a9b863cf2b73c99cadbf35e664cbeab",
+    "after.ttf": "26b8dcdd1e042636d81e7c58a965f72fb448ef560e3d795c2d4be88df84b85c8"
+  },
+  "screenshots": {
+    "stock-virtua-400.png": "b050bc2933c7234b0c3f3752802be9a911f69edc295e8b36b2f1b2ce6bcb41bf",
+    "target-virtua-550.png": "53d67aaae450a37233233a239d6b1e04263fedab477d9744253619139fbdc340",
+    "target-rubik-400.png": "e2d6d8d1e1d84c5278e5d7d5accaea1c174a94103a2b22b0089b6caa1a2e5cc9",
+    "stock-rubik-550.png": "be5dff033e791c946534136012774bbd689ae159d1f4f02a51fb937bce2b3637",
+    "stock-virtua-700.png": "47a0797d9b4b889c825eb771e2a376bf971a5aa1eba4a2b91db39aed8e08f0a0",
+    "target-rubik-700.png": "73a3c41912f1f3b5f6d417c057d8ca09b95c5ee64df826836b6eb5c5c9bb302c",
+    "target-virtua-700.png": "80d2605d83737a9a7e022e885da9868579f42d86e5194c6cd40e61dfde694077",
+    "stock-rubik-400.png": "35a67ac9f51c44827765813225e224218b21eeb3874fb542d658a1a65dab76e1",
+    "target-rubik-550.png": "8a02d0583bcfca20fddaba76e4c785b291665e71a83255d474f150eba68344ce",
+    "target-virtua-400.png": "6cec18e46050728f82a56de4abe013f61797e3f3f60dbf0e7b357038c632d7c7",
+    "stock-virtua-550.png": "f7c1b5a6b167bc4ddf6cd9691ce5ebd3f082d6c6a0dbf652e0c5d0cadecfc393",
+    "stock-rubik-700.png": "59060218551fe3f2bcd53772e2b5c265aec88666c9e4059f726be9f8df9495b2"
+  },
+  "findings": [
+    "Broader flatter chevrons than Rubik; separate bars remain visible at all three sampled weights.",
+    "Initial Bold mass reduced after whole-image review; existing less/greater remain unchanged.",
+    "Negation no longer dangles; intersecting slash creates small enclosed wedges requiring optical review. Generic above/below marks retain fallback placement.",
+    "Dense Bold and uneven stock text rhythm persist. Sampled scope only, no native-reader or whole-font approval."
+  ]
+}

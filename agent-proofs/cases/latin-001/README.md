@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Batch28 adds U0337 and batch29 adds U0338 with bounded math attachment. Batch30 adds encoded not-equal from the exact prior mathematical attachment. Next less-equal/greater-equal, plus-minus and not-sign after inspecting constructions/donors. Current online package QA is12 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Batch28 adds U0337 and batch29 adds U0338 with bounded math attachment. Batch30 adds encoded not-equal from the exact prior mathematical attachment. Batch31 adds less-equal/greater-equal with bounded long-slash negation. Next plus-minus and not-sign after inspecting constructions/donors. Current online package QA is12 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -216,7 +216,7 @@ and preserve green/human optical exceptions. See DESIGN.md#spacing.
    tens of units. `verification.json` retains the measured sample differences.
    Inspect wrapper metrics/kerning and word spacing before applying changes.
 4. No missing Latin-script codepoints in the pinned Rubik cmap comparison after batch22. This is not full language coverage or visual approval. Review encoded ligatures
-   separately from GSUB behavior. The remaining long combining slash, punctuation, fractions,
+   separately from GSUB behavior. The remaining punctuation, fractions,
    maths and currencies are also absent; use `coverage-after.json`.
 5. Full Rubik language coverage includes182 Cyrillic codepoints absent here.
    This is a separate drawing/reader-review phase, not a metadata toggle.
@@ -463,3 +463,20 @@ equal-point grid findings preserved. Active/scratch identity except head and
 preflight complete. Full online package12 FAIL/9 WARN unchanged. Remaining345
 encodings:182 Cyrillic,61 Common,102 Arabic presentation forms. Next ≤/≥/±/¬;
 local only, no push. Arabic live proof60272 unchanged.
+
+## Batch31 · Less-equal and greater-equal
+
+[Evidence](batches/31-inequalities/README.md): adds ≤/≥ in both masters with16+8
+line points,600 advances,72 bearings,72/112 lower bars and96/56 clear gaps.
+Whole-image review rejected heavy Bold fill and dangling negation; final lighter
+Bold and existing long-slash math lookup at304,368 address those observations.
+Ten source files;1805 other source files and all old GLIFs/Arabic/green unchanged.
+160 scoped checks,4450 old VF and3559 old static ink/advance checks,24 Latin
+methods and2 helper methods pass;216 baseline Hebrew failures unchanged.
+Whole400/550/700,224px details and actual Diffenator target/stock inspected.
+All new values on8, zero grid findings; five-weight winding/crossing checks pass.
+Negated wedge proportions, broader chevrons and pair spacing remain human review;
+generic math accents still use fallback. Active/scratch identity except head and
+preflight complete. Fresh online package12 FAIL/9 WARN unchanged semantically
+(Ticuna bullet order only). Remaining343 encodings:182 Cyrillic,59 Common,
+102 Arabic presentation forms. Next ±/¬; local only/no push, Arabic60272 preserved.
