@@ -1,0 +1,16 @@
+Browser tab: 2, Title: "Nonbreaking hyphen comparison 700", URL: "http://127.0.0.1:60273/batch36/comparison-700.html".
+1 AXWebArea Nonbreaking hyphen comparison 700, URL: 127.0.0.1:60273/batch36/comparison-700.html
+	2 heading U+2011 nonbreaking hyphen · 700 · comparison, Value: 1
+		3 text U+2011 nonbreaking hyphen · 700 · comparison
+	4 text Frozen Virtua cd4e4fd7 and pinned Rubik. Both lack U+2011 cmap. Browser fallback can differ from direct HarfBuzz. Diagnostic fonts are never candidates.
+	5 container
+		6 heading virtua, Value: 2
+			7 text virtua
+		8 text U+2011 nonbreaking · normal wrap extra‑ordinary U+2010 hyphen · normal wrap extra‐ordinary U+002D hyphen-minus · normal wrap extra-ordinary U+2011 no wrap extra‑ordinary U+2010 no wrap extra‐ordinary
+	9 container
+		10 heading rubik, Value: 2
+			11 text rubik
+		12 text U+2011 nonbreaking · normal wrap extra‑ordinary U+2010 hyphen · normal wrap extra‐ordinary U+002D hyphen-minus · normal wrap extra-ordinary U+2011 no wrap extra‑ordinary U+2010 no wrap extra‐ordinary
+	13 text [{"font":"virtua","nbHeight":36.3975715637207,"breakingHeight":72.7951431274414,"asciiHeight":72.7951431274414,"nbWidth":216.45834350585938,"hyWidth":216.45834350585938},{"font":"rubik","nbHeight":36.3975715637207,"breakingHeight":72.7951431274414,"asciiHeight":72.7951431274414,"nbWidth":207.3090362548828,"hyWidth":207.3090362548828}]
+
+The focused UI element is 1 AXWebArea Nonbreaking hyphen comparison 700, URL: 127.0.0.1:60273/batch36/comparison-700.html

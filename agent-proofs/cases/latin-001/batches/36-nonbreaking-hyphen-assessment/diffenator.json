@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/36-nonbreaking-hyphen-assessment/assets/virtua.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/36-nonbreaking-hyphen-assessment/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch36/comparison"
+  ],
+  "supplement_text": "extra‑ordinary extra‐ordinary extra-ordinary · Nonbreaking U+2011 is absent from both cmaps; browser fallback is visible here. a‑b a‐b a-b · București ģimene doğa Ŧŧ ﬁﬂ",
+  "note": "Stock controls, labeled substituted text. Does not exercise controlled wrapping; use the separate behavior fixture. Old Virtua/New Rubik.",
+  "html_sha256": "580f6e24d47704286f2e2d1a08ba12a56f9753a5180b632a478c31e10258c2f2"
+}

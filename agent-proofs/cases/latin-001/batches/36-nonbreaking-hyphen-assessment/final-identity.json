@@ -1,0 +1,146 @@
+{
+  "head": "cd4e4fd75d58da6cf09bb8f9d882f6e43d22f529",
+  "source_count_unchanged": 1823,
+  "active_font_hashes_unchanged": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "3623758a068e4b832288bfcb0688b00aff5332f6ca332cccdadc132859043ee8",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "15ec19e2c28a1a3787c477f11a7c36db38024a76dead5c6929cb8886a1c9b89e",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "06672e65e5dac2b887858f7916457e432307c879b6f5e13b72bb916247c16362",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "419d2d6aa51f9c7449be6a1838553d22ffb818c64501e423f47a9f94d0f22fc4",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "1cfe75cc573ada1819e282e1da500ae5db345fb9aff1468422931deb2c9952b3"
+  },
+  "probe_changed_tables": {
+    "probe-2011-H": [
+      "head",
+      "cmap"
+    ],
+    "probe-2010-H": [
+      "head",
+      "cmap"
+    ]
+  },
+  "browser_measurements": {
+    "comparison-700.ax.txt": [
+      {
+        "font": "virtua",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 216.45834350585938,
+        "hyWidth": 216.45834350585938
+      },
+      {
+        "font": "rubik",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 207.3090362548828,
+        "hyWidth": 207.3090362548828
+      }
+    ],
+    "diagnostic-550.ax.txt": [
+      {
+        "font": "probe-2011-H",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 212.84722900390625,
+        "hyWidth": 203.55035400390625
+      },
+      {
+        "font": "probe-2010-H",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 212.84722900390625,
+        "hyWidth": 212.84722900390625
+      }
+    ],
+    "comparison-550.ax.txt": [
+      {
+        "font": "virtua",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 203.55035400390625,
+        "hyWidth": 203.55035400390625
+      },
+      {
+        "font": "rubik",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 200.4600830078125,
+        "hyWidth": 200.4600830078125
+      }
+    ],
+    "diagnostic-700.ax.txt": [
+      {
+        "font": "probe-2011-H",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 226.73611450195312,
+        "hyWidth": 216.45834350585938
+      },
+      {
+        "font": "probe-2010-H",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 226.73611450195312,
+        "hyWidth": 226.73611450195312
+      }
+    ],
+    "comparison-400.ax.txt": [
+      {
+        "font": "virtua",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 189.54861450195312,
+        "hyWidth": 189.54861450195312
+      },
+      {
+        "font": "rubik",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 189.20140075683594,
+        "hyWidth": 189.20140075683594
+      }
+    ],
+    "diagnostic-400.ax.txt": [
+      {
+        "font": "probe-2011-H",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 197.86459350585938,
+        "hyWidth": 189.54861450195312
+      },
+      {
+        "font": "probe-2010-H",
+        "nbHeight": 36.3975715637207,
+        "breakingHeight": 72.7951431274414,
+        "asciiHeight": 72.7951431274414,
+        "nbWidth": 197.86459350585938,
+        "hyWidth": 197.86459350585938
+      }
+    ]
+  },
+  "inspected_screenshots": {
+    "browser/comparison-550.png": "e938926c27c1600abc347155e2ec088710962a0ae2f2327fef78b0cc73d6784d",
+    "browser/diffenator-rubik-550.png": "b5194426ba580cedb8af84a84ed8b05c0eb31247c8b9e63f4dda3694bf969794",
+    "browser/diffenator-virtua-400.png": "6add954a84e7715c73165b26f3bbdf81b5759da0937130ab2ed2ccd5762a75ba",
+    "browser/diagnostic-550.png": "103403c67e72a81b8223deca53dd982171adc3e6e15053c58d52ae004864675e",
+    "browser/diffenator-virtua-700.png": "f917872e8f0072d0fd79caaea731083887688c9ad059371ddfdac213a5fa02fd",
+    "browser/diagnostic-700.png": "8d173e154555147eb8421d3bf01e348910f93fff45594585f58c20996e3e7e01",
+    "browser/diffenator-rubik-700.png": "74594841dd52ffdf322f50d203dfb85d537d68f405b3066e21e36c7b3058ebba",
+    "browser/comparison-700.png": "5ae61ea1539fbcc1dd81d8604c82c2742eb97587bcd538b9026771d1ce283e33",
+    "browser/diagnostic-400.png": "d58bd40e897c4b7534e8df720819bec2a59d35414b7b5b8c68425c28a90f857b",
+    "browser/comparison-400.png": "b15690b3f3126c1367d59f420f99c75f324622b1d854e3f2afe960edea5b478a",
+    "browser/diffenator-rubik-400.png": "31835792724cf90a07103cd81d3e145614ad3b0f6891e54be75e3284fd2677e7",
+    "browser/diffenator-virtua-550.png": "318e77d9aae4d776f30ffa32394c71502c0efe6ccb087a8cb19d6a44ba287741"
+  },
+  "scope": "One Codex in-app browser; English; weights400/550/700. Twelve screenshots inspected. Controlled fixture28px/160px; six actual Diffenator supplement views. No cross-platform/native-reader approval."
+}

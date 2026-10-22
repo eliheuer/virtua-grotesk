@@ -1,0 +1,16 @@
+Browser tab: 2, Title: "Nonbreaking hyphen diagnostic 400", URL: "http://127.0.0.1:60273/batch36/diagnostic-400.html".
+1 AXWebArea Nonbreaking hyphen diagnostic 400, URL: 127.0.0.1:60273/batch36/diagnostic-400.html
+	2 heading U+2011 nonbreaking hyphen · 400 · diagnostic, Value: 1
+		3 text U+2011 nonbreaking hyphen · 400 · diagnostic
+	4 text Frozen Virtua cd4e4fd7 and pinned Rubik. Both lack U+2011 cmap. Browser fallback can differ from direct HarfBuzz. Diagnostic fonts are never candidates.
+	5 container
+		6 heading probe-2011-H, Value: 2
+			7 text probe-2011-H
+		8 text U+2011 nonbreaking · normal wrap extra‑ordinary U+2010 hyphen · normal wrap extra‐ordinary U+002D hyphen-minus · normal wrap extra-ordinary U+2011 no wrap extra‑ordinary U+2010 no wrap extra‐ordinary
+	9 container
+		10 heading probe-2010-H, Value: 2
+			11 text probe-2010-H
+		12 text U+2011 nonbreaking · normal wrap extra‑ordinary U+2010 hyphen · normal wrap extra‐ordinary U+002D hyphen-minus · normal wrap extra-ordinary U+2011 no wrap extra‑ordinary U+2010 no wrap extra‐ordinary
+	13 text [{"font":"probe-2011-H","nbHeight":36.3975715637207,"breakingHeight":72.7951431274414,"asciiHeight":72.7951431274414,"nbWidth":197.86459350585938,"hyWidth":189.54861450195312},{"font":"probe-2010-H","nbHeight":36.3975715637207,"breakingHeight":72.7951431274414,"asciiHeight":72.7951431274414,"nbWidth":197.86459350585938,"hyWidth":197.86459350585938}]
+
+The focused UI element is 1 AXWebArea Nonbreaking hyphen diagnostic 400, URL: 127.0.0.1:60273/batch36/diagnostic-400.html
