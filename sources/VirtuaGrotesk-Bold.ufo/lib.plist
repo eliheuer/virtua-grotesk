@@ -463,9 +463,12 @@
 		<string>plusminus</string>
 		<string>logicalnot</string>
 		<string>brokenbar</string>
+		<string>softhyphen</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>softhyphen</key>
+		<string>base</string>
 		<key>brokenbar</key>
 		<string>base</string>
 		<key>plusminus</key>
