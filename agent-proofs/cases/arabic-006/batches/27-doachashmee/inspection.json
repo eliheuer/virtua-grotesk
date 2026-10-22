@@ -1,0 +1,236 @@
+{
+  "Regular": {
+    "sources": {
+      "hehDoachashmee-ar": {
+        "sha256": "75b51212bd42565c6d94581fba6b9c9ef995ea99da04b25462667c1ee85f4a1d",
+        "contours": [
+          18,
+          12
+        ],
+        "lib": [
+          [
+            "key",
+            "com.runebender.markLabel"
+          ],
+          [
+            "string",
+            "orange"
+          ],
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "1,0.5,0,1"
+          ]
+        ],
+        "consumers": []
+      },
+      "hehDoachashmee-ar.fina": {
+        "sha256": "eb3c240aa4c060a2c5566a9c0b26bc2a3a9a7de2ba83a75eb02dfa2094059401",
+        "contours": [
+          12,
+          26
+        ],
+        "lib": [
+          [
+            "key",
+            "com.runebender.markLabel"
+          ],
+          [
+            "string",
+            "orange"
+          ],
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "1,0.5,0,1"
+          ]
+        ],
+        "consumers": []
+      },
+      "hehDoachashmee-ar.init": {
+        "sha256": "a24cb5a0d02eb1d9991264ca155fc8f97c7a288d7e5c77c122490e7ee26d7cc2",
+        "contours": [
+          27,
+          12,
+          12
+        ],
+        "lib": [
+          [
+            "key",
+            "com.runebender.markLabel"
+          ],
+          [
+            "string",
+            "orange"
+          ],
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "1,0.5,0,1"
+          ]
+        ],
+        "consumers": []
+      },
+      "hehDoachashmee-ar.medi": {
+        "sha256": "be064100f4091030a2f21e22c03424df891842ff4f8ca45624d58bb0d248e886",
+        "contours": [
+          12,
+          12,
+          32
+        ],
+        "lib": [
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "0.09,0.72,0.44,1"
+          ]
+        ],
+        "consumers": []
+      }
+    },
+    "reserved": {
+      "beh-ar": "ac31de0948cae7e0b72f5f7c84c1793b451c0d2b18d3f0d19aec8f74271ce603",
+      "beh-ar.fina": "1da3545234f17457a632007a466c08fefab55ae01273c4493c1186307f6a5a3a",
+      "beh-ar.init": "d3588a9af316ca8f3c1c5660e9c5fdb2daeca9cb8fdef30cb7c79a373d618bd0",
+      "beh-ar.medi": "809025e3c2884bb3b3cb97dba75513072a4920b6f29fbc41e81b2c6c0887b8f7",
+      "behDotless-ar": "e4fe4d64a8c91950654abdbf9fcb155265b5e8466a465cc5acea0ceb030bcdf9",
+      "behDotless-ar.fina": "d8670eaff6e40815048d663de6d3043b9deebeb8fda1075e670a48bfc0565f81",
+      "behDotless-ar.init": "cc602b1731df8ee58695fa61d1aaa6097b799a94422a1b655185f99bf7713dbc",
+      "behDotless-ar.medi": "7576a84766e518b95be8d4c5b4c618c60e81e4c0ce3ccec136c9656e8c91f38a",
+      "dotbelow-ar": "80df2925ac726186fa7f9be646807e64bc859664a14dd9273a7b3ebb128df67e"
+    }
+  },
+  "Bold": {
+    "sources": {
+      "hehDoachashmee-ar": {
+        "sha256": "4c649a170d42e9899f5d96fdbdf03cec486a814cc49cc2ad91d3c12a33be1979",
+        "contours": [
+          18,
+          12
+        ],
+        "lib": [
+          [
+            "key",
+            "com.runebender.markLabel"
+          ],
+          [
+            "string",
+            "red"
+          ],
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "1,0,0,1"
+          ]
+        ],
+        "consumers": []
+      },
+      "hehDoachashmee-ar.fina": {
+        "sha256": "e65a7cd7af0275cb152f0116ddf3621f1ee9acab1445c5f2b41fc94c49249127",
+        "contours": [
+          12,
+          26
+        ],
+        "lib": [
+          [
+            "key",
+            "com.runebender.markLabel"
+          ],
+          [
+            "string",
+            "red"
+          ],
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "1,0,0,1"
+          ]
+        ],
+        "consumers": []
+      },
+      "hehDoachashmee-ar.init": {
+        "sha256": "53cb4d89b21e88ed9aa8081bece8eb581e8b0f7ea8ea1fe4d7293eb7e866f92b",
+        "contours": [
+          27,
+          12,
+          12
+        ],
+        "lib": [
+          [
+            "key",
+            "com.runebender.markLabel"
+          ],
+          [
+            "string",
+            "red"
+          ],
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "1,0,0,1"
+          ]
+        ],
+        "consumers": []
+      },
+      "hehDoachashmee-ar.medi": {
+        "sha256": "e4255ae2bf2cc65a1c3774a4c19efb4059bc53d4c7710589d322e0630e3c3a40",
+        "contours": [
+          12,
+          12,
+          32
+        ],
+        "lib": [
+          [
+            "key",
+            "com.runebender.markLabel"
+          ],
+          [
+            "string",
+            "red"
+          ],
+          [
+            "key",
+            "public.markColor"
+          ],
+          [
+            "string",
+            "1,0,0,1"
+          ]
+        ],
+        "consumers": []
+      }
+    },
+    "reserved": {
+      "beh-ar": "7d375fded73cd6aa64f02231af745f29f7218608b0d69ee1ad6650473190daa7",
+      "beh-ar.fina": "793690afc168256caa7a112191b0d8ea0e9c040f931aaf739e56683b0dcd79c7",
+      "beh-ar.init": "a959d1c17df7610f65f7d2972f934e883dce389c2a22b861b4ac63c816f8cda9",
+      "beh-ar.medi": "b9eb1fbba2117b0d8f11519152cf8d9c1fd8e9055271f071456e541ea376cd7c",
+      "behDotless-ar": "70ff59125aabd628b6d6a8e5b1c590b58585bb4186268de0809f6c5b8e21df57",
+      "behDotless-ar.fina": "ed11c391c3a6818c4bc1bce5f861ae844f14a626077d44e7159ae81b46ff7623",
+      "behDotless-ar.init": "09deac601174d864452ec6ddb825b68da36c109da1b7fa70ec154e1abeca7235",
+      "behDotless-ar.medi": "63b116d0d62fb317f457b4861f5c50699828ed5b98aa28e40353cfbd9e868eba",
+      "dotbelow-ar": "ff65c3d5be010f346e04d9e7acc64f7a09eafcffa8b06772f0d11dd0751ff0ab"
+    }
+  }
+}

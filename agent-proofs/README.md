@@ -91,15 +91,13 @@ Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
 a separate structural follow-up.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/26-goal-bowls/working/`.
-Bold isolated Heh Goal now has an open, tangent counter and clean cap cuts.
-Three Bold files changed, including matching composite advances and local hamza
-clearance; all Regular, Beh and manual hamza bytes remain unchanged.896 shaping
-comparisons,400/550/700 rasters, large details and preflight checked. All four
-reference slots remain; Rubik and Readex lack these characters and are explicitly
-unavailable. A final Goal trial was withdrawn after reference inspection exposed
-an open-terminal structural mismatch. Initial/medial Goal also need structural
-review, with green Regular protected. Next: Doachashmee, then Yeh/Maksura/Barree.
+Current proof: `cases/arabic-006/batches/27-doachashmee/working/`.
+Bold medial Doachashmee now has cleaner loop counters and a consistent joining
+band. One Bold source changed; all Regular, Beh and manual hamza bytes remain
+unchanged. 875 shaping comparisons,400/550/700 rasters, large details and preflight
+checked. Rubik and Readex lack U+06BE and are explicitly unavailable. The other
+three Doachashmee forms require structural repair against the covered references;
+Goal's joining-form repair also remains open. Next: Yeh/Maksura/Barree.
 Regular medial Meem and
 Lam–Alef remain protected follow-ups. Eli is editing Beh (`ببب ب`): reserve
 those forms in both masters and every recursive donor, including dots. Check
@@ -227,7 +225,7 @@ current machine. Relative links keep the guide usable in another checkout.
 | Running-text presets | `agent-proofs/app/reading-samples.json` |
 | Preparation and hash-checked asset copying | `agent-proofs/app/prepare.py` |
 | Local server and current case target | [agent-proofs/serve.py](serve.py), root `Makefile` target `proof-web` |
-| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/26-goal-bowls/working/`; raster and browser evidence in its parent batch folder |
+| Current generated page, fonts, screenshots | `agent-proofs/cases/arabic-006/batches/27-doachashmee/working/`; raster and browser evidence in its parent batch folder |
 | Current editable font | `sources/VirtuaGrotesk.designspace`, `sources/VirtuaGrotesk-Regular.ufo/`, `sources/VirtuaGrotesk-Bold.ufo/` |
 | Build, compiled shaping, proof and QA procedures | [Build and QA](../documentation/qa.md) |
 | Shared agent procedures | [.agents/skills/](../.agents/skills), starting with [render-specimen](../.agents/skills/render-specimen/SKILL.md) |

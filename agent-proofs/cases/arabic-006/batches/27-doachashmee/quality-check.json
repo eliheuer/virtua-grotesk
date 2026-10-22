@@ -1,0 +1,83 @@
+{
+  "limits": "Sampled within- and between-contour crossings. Outer/counter forms; sampled intersections complement compiled raster inspection. Curvature transitions are reported, not hidden.",
+  "glyphs": [
+    {
+      "master": "Bold",
+      "name": "hehDoachashmee-ar.medi",
+      "within_contour_crossings": [
+        0,
+        0,
+        0
+      ],
+      "all_contour_crossings": 0,
+      "warnings": [],
+      "non_G2_curve_joins": [
+        {
+          "contour": 0,
+          "point": [
+            368.0,
+            -192.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.008503401360544217,
+          "curvature_out": -0.0075,
+          "relative_jump": 0.11799999999999994
+        },
+        {
+          "contour": 1,
+          "point": [
+            432.0,
+            256.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": -0.011574074074074073,
+          "curvature_out": -0.015625,
+          "relative_jump": 0.2592592592592593
+        },
+        {
+          "contour": 2,
+          "point": [
+            368.0,
+            -352.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.0035416666666666665,
+          "curvature_out": 0.0033436213991769547,
+          "relative_jump": 0.055918663761800984
+        },
+        {
+          "contour": 2,
+          "point": [
+            624.0,
+            -112.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.004036908881199538,
+          "curvature_out": 0.004629629629629629,
+          "relative_jump": 0.12802768166089967
+        },
+        {
+          "contour": 2,
+          "point": [
+            592.0,
+            256.0
+          ],
+          "smooth": true,
+          "angle": 0.0,
+          "classification": "G1",
+          "curvature_in": 0.006510416666666666,
+          "curvature_out": 0.00360082304526749,
+          "relative_jump": 0.4469135802469135
+        }
+      ]
+    }
+  ]
+}
