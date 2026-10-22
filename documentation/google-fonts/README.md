@@ -1135,3 +1135,15 @@ The same216 Hebrew baseline failures remain; fresh release Fontspector is still
 pending. All1717 other source files, including Arabic and green bases, unchanged.
 Uppercase/consonant/i spacing and existing mark-placement failures remain queued.
 Local pending-review progress only, without push or publication.
+
+## Uppercase accent spacing checkpoint — 2026-10-21
+
+LAT-001 [batch13](../../agent-proofs/cases/latin-001/batches/13-uppercase-spacing/README.md)
+corrects66 uppercase-wrapper advances to their current bases, preserving all ink,
+placements, grades and kerning. Whole400/550/700 and enlarged endpoint images
+inspected;815 scoped comparisons, eight Latin tests and preflight complete.
+Basic missing-cmap advance differences fall201→0 across260 samples. Existing
+216 Hebrew failures and separate mark-placement/compound-accent subset blockers
+remain.1080 inherited grid findings include Bold R's60-unit optical bearing;
+all new advances on8. All1713 other sources including Arabic/green bases unchanged.
+Lowercase consonant/i and uppercase I/K spacing remain next. Local only; no push.

@@ -154,12 +154,21 @@ mark-placement/compound-accent subset findings remain. All new widths on8;
 1185 inherited closure-grid findings retained. Bold e proportions remain a
 protected base review issue, not approved by this spacing correction.
 
+[Batch13](batches/13-uppercase-spacing/README.md) corrects21 Regular/45 Bold
+uppercase accent advances (66 GLIFs;52 characters) to their current bases.
+All ink/layout tables/placements/grades are unchanged; all1713 other sources
+preserved. Whole400/550/700 and enlarged endpoint proofs inspected;815 scoped
+checks, eight Latin tests, unchanged216 baseline failures and preflight complete.
+Basic missing-cmap advance mismatches fall201→0 across260 samples.1080 inherited
+grid findings remain, including Bold R's60-unit optical right bearing. Rubik's
+missing U+0162 is explicit; supported T/U rows retain the comparison.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Continue independent precomposed/base spacing discrepancies: uppercase and consonant/i families remain after batch12 lowercase a/e/o/u. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue independent precomposed/base spacing discrepancies: lowercase consonant/i families and uppercase I/K exceptions remain after batches12–13. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions

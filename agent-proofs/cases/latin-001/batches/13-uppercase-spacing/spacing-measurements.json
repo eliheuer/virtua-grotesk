@@ -1,0 +1,1666 @@
+{
+  "400:Dcaron": {
+    "before_advance": 764.0,
+    "after_advance": 768.0,
+    "base": "D",
+    "bounds": [
+      80,
+      0,
+      712,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 52.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 2,
+    "right_bearing_on8": true
+  },
+  "400:Nacute": {
+    "before_advance": 774.0,
+    "after_advance": 776.0,
+    "base": "N",
+    "bounds": [
+      80,
+      0,
+      696,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 78.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ncaron": {
+    "before_advance": 774.0,
+    "after_advance": 776.0,
+    "base": "N",
+    "bounds": [
+      80,
+      0,
+      696,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 78.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ncommaaccent": {
+    "before_advance": 774.0,
+    "after_advance": 776.0,
+    "base": "N",
+    "bounds": [
+      80,
+      -200,
+      696,
+      768
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 78.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ntilde": {
+    "before_advance": 774.0,
+    "after_advance": 776.0,
+    "base": "N",
+    "bounds": [
+      80,
+      0,
+      696,
+      976
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 78.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Oacute": {
+    "before_advance": 864.0,
+    "after_advance": 800.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      744,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ocircumflex": {
+    "before_advance": 864.0,
+    "after_advance": 800.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      744,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Odieresis": {
+    "before_advance": 864.0,
+    "after_advance": 800.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      744,
+      960
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ograve": {
+    "before_advance": 864.0,
+    "after_advance": 800.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      744,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ohungarumlaut": {
+    "before_advance": 864.0,
+    "after_advance": 800.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      744,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Otilde": {
+    "before_advance": 864.0,
+    "after_advance": 800.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      744,
+      976
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Sacute": {
+    "before_advance": 664.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      40,
+      -16,
+      664,
+      1024
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 0.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Scaron": {
+    "before_advance": 664.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      40,
+      -16,
+      664,
+      1024
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 0.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Scedilla": {
+    "before_advance": 664.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      40,
+      -224,
+      664,
+      784
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 0.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Scommaaccent": {
+    "before_advance": 664.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      40,
+      -200,
+      664,
+      784
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 0.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Tcedilla": {
+    "before_advance": 632.0,
+    "after_advance": 680.0,
+    "base": "T",
+    "bounds": [
+      32,
+      -224,
+      648,
+      768
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": -16.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "400:Tcommaaccent": {
+    "before_advance": 648.0,
+    "after_advance": 680.0,
+    "base": "T",
+    "bounds": [
+      32,
+      -200,
+      648,
+      768
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": 0.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "400:Yacute": {
+    "before_advance": 736.0,
+    "after_advance": 608.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      584,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 152.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ycircumflex": {
+    "before_advance": 736.0,
+    "after_advance": 608.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      584,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 152.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ydieresis": {
+    "before_advance": 736.0,
+    "after_advance": 608.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      584,
+      960
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 152.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Ygrave": {
+    "before_advance": 736.0,
+    "after_advance": 608.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      584,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 152.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Aacute": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Abreve": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      992
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Acircumflex": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Adieresis": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      960
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Agrave": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Amacron": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      928
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Aogonek": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      -208,
+      704,
+      768
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 12.0,
+    "right_bearing_after": 12.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": false
+  },
+  "400:Aring": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      1008
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Atilde": {
+    "before_advance": 716.0,
+    "after_advance": 716.0,
+    "base": "A",
+    "bounds": [
+      24,
+      0,
+      692,
+      976
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Gbreve": {
+    "before_advance": 824.0,
+    "after_advance": 824.0,
+    "base": "G",
+    "bounds": [
+      56,
+      -16,
+      768,
+      992
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Gcommaaccent": {
+    "before_advance": 824.0,
+    "after_advance": 824.0,
+    "base": "G",
+    "bounds": [
+      56,
+      -200,
+      768,
+      784
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Gdotaccent": {
+    "before_advance": 824.0,
+    "after_advance": 824.0,
+    "base": "G",
+    "bounds": [
+      56,
+      -16,
+      768,
+      912
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Lacute": {
+    "before_advance": 608.0,
+    "after_advance": 608.0,
+    "base": "L",
+    "bounds": [
+      80,
+      0,
+      584,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Lcommaaccent": {
+    "before_advance": 608.0,
+    "after_advance": 608.0,
+    "base": "L",
+    "bounds": [
+      80,
+      -200,
+      584,
+      768
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Racute": {
+    "before_advance": 668.0,
+    "after_advance": 668.0,
+    "base": "R",
+    "bounds": [
+      80,
+      0,
+      608,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 60.0,
+    "right_bearing_after": 60.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": false
+  },
+  "400:Rcaron": {
+    "before_advance": 668.0,
+    "after_advance": 668.0,
+    "base": "R",
+    "bounds": [
+      80,
+      0,
+      608,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 60.0,
+    "right_bearing_after": 60.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": false
+  },
+  "400:Uacute": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      672,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Ucircumflex": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      672,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Udieresis": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      672,
+      960
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Ugrave": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      672,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Uhungarumlaut": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      672,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Umacron": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      672,
+      928
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Uogonek": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -208,
+      672,
+      768
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Uring": {
+    "before_advance": 744.0,
+    "after_advance": 744.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      672,
+      1008
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 72.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "400:Wacute": {
+    "before_advance": 1016.0,
+    "after_advance": 1016.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      984,
+      1024
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 7,
+    "right_bearing_on8": true
+  },
+  "400:Wcircumflex": {
+    "before_advance": 1016.0,
+    "after_advance": 1016.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      984,
+      1024
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 7,
+    "right_bearing_on8": true
+  },
+  "400:Wdieresis": {
+    "before_advance": 1016.0,
+    "after_advance": 1016.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      984,
+      960
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 7,
+    "right_bearing_on8": true
+  },
+  "400:Wgrave": {
+    "before_advance": 1016.0,
+    "after_advance": 1016.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      984,
+      1024
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 7,
+    "right_bearing_on8": true
+  },
+  "400:Zacute": {
+    "before_advance": 656.0,
+    "after_advance": 656.0,
+    "base": "Z",
+    "bounds": [
+      24,
+      0,
+      632,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Zcaron": {
+    "before_advance": 656.0,
+    "after_advance": 656.0,
+    "base": "Z",
+    "bounds": [
+      24,
+      0,
+      632,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "400:Zdotaccent": {
+    "before_advance": 656.0,
+    "after_advance": 656.0,
+    "base": "Z",
+    "bounds": [
+      24,
+      0,
+      632,
+      912
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 24.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Dcaron": {
+    "before_advance": 812.0,
+    "after_advance": 816.0,
+    "base": "D",
+    "bounds": [
+      80,
+      0,
+      760,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 52.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Nacute": {
+    "before_advance": 870.0,
+    "after_advance": 824.0,
+    "base": "N",
+    "bounds": [
+      80,
+      0,
+      744,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 126.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "700:Ncaron": {
+    "before_advance": 870.0,
+    "after_advance": 824.0,
+    "base": "N",
+    "bounds": [
+      80,
+      0,
+      744,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 126.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "700:Ncommaaccent": {
+    "before_advance": 870.0,
+    "after_advance": 824.0,
+    "base": "N",
+    "bounds": [
+      80,
+      -200,
+      744,
+      768
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 126.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "700:Ntilde": {
+    "before_advance": 870.0,
+    "after_advance": 824.0,
+    "base": "N",
+    "bounds": [
+      80,
+      0,
+      744,
+      976
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 126.0,
+    "right_bearing_after": 80.0,
+    "advance_popcount": 5,
+    "right_bearing_on8": true
+  },
+  "700:Oacute": {
+    "before_advance": 864.0,
+    "after_advance": 864.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      808,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Ocircumflex": {
+    "before_advance": 864.0,
+    "after_advance": 864.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      808,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Odieresis": {
+    "before_advance": 864.0,
+    "after_advance": 864.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      808,
+      960
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Ograve": {
+    "before_advance": 864.0,
+    "after_advance": 864.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      808,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Ohungarumlaut": {
+    "before_advance": 864.0,
+    "after_advance": 864.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      808,
+      1024
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Otilde": {
+    "before_advance": 864.0,
+    "after_advance": 864.0,
+    "base": "O",
+    "bounds": [
+      56,
+      -16,
+      808,
+      976
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 56.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Sacute": {
+    "before_advance": 712.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      16,
+      -16,
+      680,
+      1024
+    ],
+    "left_bearing": 16,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Scaron": {
+    "before_advance": 712.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      16,
+      -16,
+      680,
+      1024
+    ],
+    "left_bearing": 16,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Scedilla": {
+    "before_advance": 712.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      16,
+      -256,
+      680,
+      784
+    ],
+    "left_bearing": 16,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Scommaaccent": {
+    "before_advance": 712.0,
+    "after_advance": 704.0,
+    "base": "S",
+    "bounds": [
+      16,
+      -200,
+      680,
+      784
+    ],
+    "left_bearing": 16,
+    "right_bearing_before": 32.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Tcedilla": {
+    "before_advance": 648.0,
+    "after_advance": 648.0,
+    "base": "T",
+    "bounds": [
+      8,
+      -256,
+      640,
+      768
+    ],
+    "left_bearing": 8,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 8.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Tcommaaccent": {
+    "before_advance": 632.0,
+    "after_advance": 648.0,
+    "base": "T",
+    "bounds": [
+      8,
+      -200,
+      640,
+      768
+    ],
+    "left_bearing": 8,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 8.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Yacute": {
+    "before_advance": 752.0,
+    "after_advance": 784.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      760,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Ycircumflex": {
+    "before_advance": 752.0,
+    "after_advance": 784.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      760,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Ydieresis": {
+    "before_advance": 752.0,
+    "after_advance": 784.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      760,
+      960
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Ygrave": {
+    "before_advance": 752.0,
+    "after_advance": 784.0,
+    "base": "Y",
+    "bounds": [
+      24,
+      0,
+      760,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Aacute": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      1024
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Abreve": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      1008
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Acircumflex": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      1024
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Adieresis": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      960
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Agrave": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      1024
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Amacron": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      944
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Aogonek": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      -224,
+      768,
+      768
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Aring": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      1024
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Atilde": {
+    "before_advance": 760.0,
+    "after_advance": 792.0,
+    "base": "A",
+    "bounds": [
+      40,
+      0,
+      752,
+      976
+    ],
+    "left_bearing": 40,
+    "right_bearing_before": 8.0,
+    "right_bearing_after": 40.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Gbreve": {
+    "before_advance": 872.0,
+    "after_advance": 840.0,
+    "base": "G",
+    "bounds": [
+      56,
+      -16,
+      784,
+      1008
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 88.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Gcommaaccent": {
+    "before_advance": 872.0,
+    "after_advance": 840.0,
+    "base": "G",
+    "bounds": [
+      56,
+      -200,
+      784,
+      784
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 88.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Gdotaccent": {
+    "before_advance": 872.0,
+    "after_advance": 840.0,
+    "base": "G",
+    "bounds": [
+      56,
+      -16,
+      784,
+      912
+    ],
+    "left_bearing": 56,
+    "right_bearing_before": 88.0,
+    "right_bearing_after": 56.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Lacute": {
+    "before_advance": 656.0,
+    "after_advance": 640.0,
+    "base": "L",
+    "bounds": [
+      80,
+      0,
+      616,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 40.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 2,
+    "right_bearing_on8": true
+  },
+  "700:Lcommaaccent": {
+    "before_advance": 656.0,
+    "after_advance": 640.0,
+    "base": "L",
+    "bounds": [
+      80,
+      -200,
+      616,
+      768
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": 40.0,
+    "right_bearing_after": 24.0,
+    "advance_popcount": 2,
+    "right_bearing_on8": true
+  },
+  "700:Racute": {
+    "before_advance": 716.0,
+    "after_advance": 784.0,
+    "base": "R",
+    "bounds": [
+      80,
+      0,
+      724,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 60.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": false
+  },
+  "700:Rcaron": {
+    "before_advance": 716.0,
+    "after_advance": 784.0,
+    "base": "R",
+    "bounds": [
+      80,
+      0,
+      724,
+      1024
+    ],
+    "left_bearing": 80,
+    "right_bearing_before": -8.0,
+    "right_bearing_after": 60.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": false
+  },
+  "700:Uacute": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      720,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Ucircumflex": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      720,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Udieresis": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      720,
+      960
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Ugrave": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      720,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Uhungarumlaut": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      720,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Umacron": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      720,
+      944
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Uogonek": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -224,
+      720,
+      768
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Uring": {
+    "before_advance": 840.0,
+    "after_advance": 792.0,
+    "base": "U",
+    "bounds": [
+      72,
+      -16,
+      720,
+      1024
+    ],
+    "left_bearing": 72,
+    "right_bearing_before": 120.0,
+    "right_bearing_after": 72.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Wacute": {
+    "before_advance": 1112.0,
+    "after_advance": 1176.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      1144,
+      1024
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": -32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Wcircumflex": {
+    "before_advance": 1112.0,
+    "after_advance": 1176.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      1144,
+      1024
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": -32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Wdieresis": {
+    "before_advance": 1112.0,
+    "after_advance": 1176.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      1144,
+      960
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": -32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Wgrave": {
+    "before_advance": 1112.0,
+    "after_advance": 1176.0,
+    "base": "W",
+    "bounds": [
+      32,
+      0,
+      1144,
+      1024
+    ],
+    "left_bearing": 32,
+    "right_bearing_before": -32.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 4,
+    "right_bearing_on8": true
+  },
+  "700:Zacute": {
+    "before_advance": 684.0,
+    "after_advance": 704.0,
+    "base": "Z",
+    "bounds": [
+      24,
+      0,
+      672,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 12.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Zcaron": {
+    "before_advance": 684.0,
+    "after_advance": 704.0,
+    "base": "Z",
+    "bounds": [
+      24,
+      0,
+      672,
+      1024
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 12.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  },
+  "700:Zdotaccent": {
+    "before_advance": 684.0,
+    "after_advance": 704.0,
+    "base": "Z",
+    "bounds": [
+      24,
+      0,
+      672,
+      912
+    ],
+    "left_bearing": 24,
+    "right_bearing_before": 12.0,
+    "right_bearing_after": 32.0,
+    "advance_popcount": 3,
+    "right_bearing_on8": true
+  }
+}

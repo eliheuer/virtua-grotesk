@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "capitals1": [
+      "A Á Ă Â Ä À Ā Ą Å Ã A",
+      "D Ď D   G Ğ Ģ Ġ G",
+      "L Ĺ Ļ L   N Ń Ň Ņ Ñ N",
+      "O Ó Ô Ö Ò Ő Õ O",
+      "NANA NÁNA NONO NÓNO",
+      "LÁLA LALA   OOO ÓÓÓ"
+    ],
+    "capitals2": [
+      "R Ŕ Ř R   S Ś Š Ş Ș S",
+      "T Ţ Ț T   U Ú Û Ü Ù Ű Ū Ų Ů U",
+      "W Ẃ Ŵ Ẅ Ẁ W",
+      "Y Ý Ŷ Ÿ Ỳ Y   Z Ź Ž Ż Z",
+      "YAYA YÁYÁ  RARA ŔAŔA",
+      "UUU ÚÚÚ  SSS ŚŚŚ  WWW ŴŴŴ"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "capitals1",
+      "sha256": "02d0b1bf08bc7d5f01e8243281154a566de6cd26e8032542cf1121e4cff156af"
+    },
+    {
+      "weight": 550,
+      "kind": "capitals1",
+      "sha256": "2ae97f605c6d90ec8542b1cd862c8362a04506daab5fc7d1698ed77acb360f9a"
+    },
+    {
+      "weight": 700,
+      "kind": "capitals1",
+      "sha256": "708ba4b00f01368b860676ea2f1ac840725f34371c979162d5c7a1d8fab8ef51"
+    },
+    {
+      "weight": 400,
+      "kind": "capitals2",
+      "sha256": "8b7369f55627bd84f42b9b46d57cc751f7ed96f17d84fdbcd03f2827d49122c4"
+    },
+    {
+      "weight": 550,
+      "kind": "capitals2",
+      "sha256": "8a63509e6a6a2467169877c4bf1a6113fd086a72addda25a8ca2712b5f66bca2"
+    },
+    {
+      "weight": 700,
+      "kind": "capitals2",
+      "sha256": "e4213671474af5433ea9f006ea34bc090f71c2ed4b0f9b8d3a910e1f1571d8b3"
+    }
+  ],
+  "fonts": {
+    "before": "0f220e9130438a984f6d620dca0349e09f5153e447875da9566d3ca342e2ec14",
+    "after": "8effe1d6aa08094a3af6bd149e2883595024f31983699b335a1524918e9fcb2f",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

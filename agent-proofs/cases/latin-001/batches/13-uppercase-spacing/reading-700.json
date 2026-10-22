@@ -1,0 +1,26 @@
+{
+  "weight": 700,
+  "size": 48,
+  "texts": [
+    "ÁGUA. ÓPERA. ÜBER. ŘEKA.",
+    "ŚWIAT. ŹRÓDŁO. ŴYDDFA."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "0f220e9130438a984f6d620dca0349e09f5153e447875da9566d3ca342e2ec14",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "8effe1d6aa08094a3af6bd149e2883595024f31983699b335a1524918e9fcb2f",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "b53aa4923440c38c11e44d748ab8c0ef9a9559866215e47c0bb7897123b911cb"
+}
