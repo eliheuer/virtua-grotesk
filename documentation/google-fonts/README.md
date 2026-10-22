@@ -6,7 +6,10 @@ and its artifacts are historical evidence.
 
 ## Release scope
 
-Eli confirmed **Latin, Arabic, and Hebrew** for the first release on September 9.
+Eli confirmed **Latin, Arabic, and Hebrew** on September 9. On October 21 he
+requested Rubik-level quality and language coverage, which also requires
+**Cyrillic and extended Cyrillic**. The current build still covers only the
+original three scripts; do not declare Cyrillic in package metadata yet.
 The family is upright, wght 400–700, with Regular, Medium, SemiBold, and Bold
 instances. Italic remains a [separate proposal](../goal-google-fonts-launch.md).
 Do not drop Hebrew or Arabic from the export or metadata to reduce QA findings.
@@ -20,7 +23,46 @@ The reusable [chat proof workflow](../qa.md#chat-proof-workflow) and
 `scripts/proof_compare.py` let subsequent sessions generate comparable shaped
 before/after proofs. Historical `out/qa/` evidence remains local and ignored.
 
-## Current evidence — 2026-10-18
+## Current preparation — 2026-10-21
+
+Arabic handoff `889ffa58` is committed and pushed for Eli's manual drawing.
+The recurring Arabic pass is paused; source changes now focus on independent
+Latin and release work. [LAT-001](../../agent-proofs/cases/latin-001/README.md)
+records exact snapshots, source changes, raster review, tests and the next queue.
+The previous dated sections below are historical evidence.
+
+Applied thirteen Regular combining-offset fixes, stack-anchor propagation,
+ten missing Latin composites in both masters, and a measured Windows clipping
+ascent of1488. Typographic line spacing and all Arabic GLIFs remain unchanged.
+Three new Latin regression tests and240 scoped comparisons pass; build and
+preflight complete. All216 pre-existing Hebrew regression subcases still fail
+(105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
+shows no new failures; this does not waive the existing failures.
+
+| Current unexcluded online run | FAIL | WARN | PASS | INFO | SKIP |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Five active binaries | 1 | 29 | 529 | 39 | 294 |
+| Local VF package | 10 | 8 | 160 | 10 | 41 |
+
+The loose-font failure is the `ttf` directory name. Package failures are serving-
+subset reachability for U+0302, U+0331 and U+1EBC/U+1EBD, including newly exposed
+Aleut support. No exclusions or misleading subset declarations were added.
+Current local evidence: `out/qa/2026-10-21-latin-applied/` and
+`out/qa/2026-10-21-latin-package/`; compact findings and hashes are retained in
+LAT-001. Source revision before this batch is889ffa58; its final identities are
+in `final-identity.json`. The package is unpublished and carries provisional
+date/primary-script/source-delivery choices, with existing artwork pending approval.
+
+The pinned official Rubik comparison now finds8 missing Latin codepoints,
+182 Cyrillic,4 inherited/common combining marks,62 common symbols and102 Arabic
+presentation forms. Those are encoded-character differences, not language counts.
+Cyrillic requires actual drawing and reader review. Arabic presentation forms
+need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
+Latin Bold accent weight, ring/breve/bottom-mark shapes, wrapper spacing,
+Hebrew regression repair, Arabic manual review, CI and package provenance remain
+open. **The family is not ready for submission or publication.**
+
+## Historical evidence — 2026-10-18
 
 **Not ready for Google Fonts release.** Engineering repairs and all 54 formerly
 blank Hebrew glyph drafts are applied under Eli's authorization. Every encoded

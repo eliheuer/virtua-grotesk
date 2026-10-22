@@ -37,6 +37,21 @@ sub @FIGURES_PROPORTIONAL by @FIGURES_TABULAR;
 
 feature ccmp {
 # automatic
+	lookup ccmp_latin_extended {
+		lookupflag 0;
+		sub C circumflexcomb by Ccircumflex;
+		sub c circumflexcomb by ccircumflex;
+		sub G circumflexcomb by Gcircumflex;
+		sub g circumflexcomb by gcircumflex;
+		sub H circumflexcomb by Hcircumflex;
+		sub h circumflexcomb by hcircumflex;
+		sub J circumflexcomb by Jcircumflex;
+		sub jdotless circumflexcomb by jcircumflex;
+		sub AE acutecomb by AEacute;
+		sub ae acutecomb by aeacute;
+		sub j circumflexcomb by jcircumflex;
+	} ccmp_latin_extended;
+
 	# Preserve precomposed tilde spacing when a web subset omits their cmap entries.
 	lookup ccmp_latin_tilde {
 		lookupflag 0;
@@ -96,11 +111,13 @@ language dflt;
 lookup ccmp_soft_dotted_ligature_0;
 lookup ccmp_soft_dotted_context_1;
 lookup ccmp_latin_tilde;
+lookup ccmp_latin_extended;
 script latn;
 language dflt;
 lookup ccmp_soft_dotted_ligature_0;
 lookup ccmp_soft_dotted_context_1;
 lookup ccmp_latin_tilde;
+lookup ccmp_latin_extended;
 script arab;
 lookup ccmp_arab_2;
 } ccmp;
