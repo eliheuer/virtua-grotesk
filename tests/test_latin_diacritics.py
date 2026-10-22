@@ -103,12 +103,32 @@ class LatinDiacriticsTests(unittest.TestCase):
                         with self.subTest(font=path.name,weight=w,char=char,suffix=suffix):
                             expected=shaped(font,path.read_bytes(),char+suffix,w)
                             self.assertEqual(expected,shaped(font,path.read_bytes(),unicodedata.normalize('NFD',char)+suffix,w))
-                            # With an acute and a missing ogonek cmap entry, HarfBuzz
-                            # may recompose to Aacute+ogonek before GSUB. That separate
-                            # serving-subset failure is retained in LAT-001 batch10's
-                            # subset-accent-followup.json, not claimed fixed here.
-                            if suffix!='́':
-                                self.assertEqual(expected,shaped(fallback,stream.getvalue(),char+suffix,w))
+                            # Above/below glyph ordering can differ after normalization,
+                            # but positioned ink and advance must match.
+                            actual=shaped(fallback,stream.getvalue(),char+suffix,w)
+                            self.assertEqual(expected[0],actual[0])
+                            self.assertEqual(sorted(expected[1]),sorted(actual[1]))
+
+
+    def test_ogonek_stacks_survive_real_subsetting(self):
+        from fontTools import subset
+        letters='ĄąĘęĮįŲų'
+        for path,font in self.fonts():
+            fallback=TTFont(path)
+            options=subset.Options(); options.layout_features=['*']
+            sub=subset.Subsetter(options=options)
+            sub.populate(unicodes=set(font.getBestCmap())-set(map(ord,letters)))
+            sub.subset(fallback)
+            stream=io.BytesIO(); fallback.save(stream)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for char in letters:
+                    for suffix in ['́','̀','̂','̃','̄','̆','̇','̈','̊','̋','̌','́́','̧́']:
+                        for text in [char+suffix,unicodedata.normalize('NFD',char+suffix)]:
+                            with self.subTest(font=path.name,weight=w,text=text):
+                                expected=shaped(font,path.read_bytes(),text,w)
+                                actual=shaped(fallback,stream.getvalue(),text,w)
+                                self.assertEqual(expected[0],actual[0])
+                                self.assertEqual(sorted(expected[1]),sorted(actual[1]))
 
     def test_accented_letters_keep_base_advances(self):
         # Stale wrapper widths made accented words uneven and subset fallback reflow.

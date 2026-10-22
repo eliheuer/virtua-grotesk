@@ -1254,3 +1254,15 @@ new pair spacing, dense Bold and f+fi/f+fl rhythm await human review. The pinned
 Rubik Latin-script cmap gap is now zero, but350 other encodings and substantial
 script/shaping/subset/release work remain. No full language-coverage claim.
 Local only; no push or publication.
+
+## Ogonek serving-fallback repair — 2026-10-21
+
+LAT-001 [batch23](../../agent-proofs/cases/latin-001/batches/23-ogonek-subset/README.md)
+fixes the recorded forty ogonek-plus-acute normalization cases. Expanded real
+subset tests fall870to0 failures across1,200 encoded/NFD cases;16 Latin methods
+pass and the same216 Hebrew baseline failures remain. Only two feature files
+change; all glyph drawings/metrics/grades preserved. Whole raster and actual
+Diffenator target review completed at400/550/700. GPOS filter-set reindexing is
+verified semantically identical. Fresh full package Fontspector is still required:
+this scoped repair does not resolve or waive all previous package failures.
+Local checkpoint only, not release approval.
