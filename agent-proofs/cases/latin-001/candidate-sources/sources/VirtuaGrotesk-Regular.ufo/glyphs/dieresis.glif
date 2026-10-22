@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dieresis" format="2">
+	<unicode hex="00A8"/>
+	<advance width="360"/>
+	<outline>
+		<contour>
+			<point x="40" y="680" type="line"/>
+			<point x="56" y="664" type="line"/>
+			<point x="120" y="664" type="line"/>
+			<point x="136" y="680" type="line"/>
+			<point x="136" y="752" type="line"/>
+			<point x="120" y="768" type="line"/>
+			<point x="56" y="768" type="line"/>
+			<point x="40" y="752" type="line"/>
+		</contour>
+		<contour>
+			<point x="224" y="680" type="line"/>
+			<point x="240" y="664" type="line"/>
+			<point x="304" y="664" type="line"/>
+			<point x="320" y="680" type="line"/>
+			<point x="320" y="752" type="line"/>
+			<point x="304" y="768" type="line"/>
+			<point x="240" y="768" type="line"/>
+			<point x="224" y="752" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_top" x="180" y="576"/>
+	<anchor name="top" x="180" y="800"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>orange</string>
+			<key>public.markColor</key>
+			<string>1,0.5,0,1</string>
+		</dict>
+	</lib>
+</glyph>

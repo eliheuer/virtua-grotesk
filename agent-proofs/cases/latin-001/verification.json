@@ -1,0 +1,489 @@
+{
+  "checks": 240,
+  "existing_changed_ink": {
+    "400": [
+      "acutecomb",
+      "brevecomb",
+      "caroncomb",
+      "cedillacomb",
+      "circumflexcomb",
+      "commaaccentcomb",
+      "dieresiscomb",
+      "dotaccentcomb",
+      "gravecomb",
+      "hungarumlautcomb",
+      "macroncomb",
+      "ogonekcomb",
+      "ringcomb"
+    ],
+    "475": [
+      "acutecomb",
+      "brevecomb",
+      "caroncomb",
+      "cedillacomb",
+      "circumflexcomb",
+      "commaaccentcomb",
+      "dieresiscomb",
+      "dotaccentcomb",
+      "gravecomb",
+      "hungarumlautcomb",
+      "macroncomb",
+      "ogonekcomb",
+      "ringcomb"
+    ],
+    "550": [
+      "acutecomb",
+      "brevecomb",
+      "caroncomb",
+      "cedillacomb",
+      "circumflexcomb",
+      "commaaccentcomb",
+      "dieresiscomb",
+      "dotaccentcomb",
+      "gravecomb",
+      "hungarumlautcomb",
+      "macroncomb",
+      "ogonekcomb",
+      "ringcomb"
+    ],
+    "625": [
+      "acutecomb",
+      "brevecomb",
+      "caroncomb",
+      "cedillacomb",
+      "circumflexcomb",
+      "commaaccentcomb",
+      "dieresiscomb",
+      "dotaccentcomb",
+      "gravecomb",
+      "hungarumlautcomb",
+      "macroncomb",
+      "ogonekcomb",
+      "ringcomb"
+    ],
+    "700": []
+  },
+  "sources_preserved": 1706,
+  "after_sha256": "bdc7a68c48aec730fd7e79cd63a8c402d63e470b0a9fd652267758fddabd17fa",
+  "legacy_normalization": [
+    {
+      "weight": 400,
+      "char": "\u00e1",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u00e0",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u00e2",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u00e3",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u0101",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u0103",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u0117",
+      "bounds_delta": 0,
+      "advance_delta": -4
+    },
+    {
+      "weight": 400,
+      "char": "\u00e4",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u00e5",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u0151",
+      "bounds_delta": 0,
+      "advance_delta": 8
+    },
+    {
+      "weight": 400,
+      "char": "\u010d",
+      "bounds_delta": 0,
+      "advance_delta": -14
+    },
+    {
+      "weight": 400,
+      "char": "\u00e7",
+      "bounds_delta": 0,
+      "advance_delta": -14
+    },
+    {
+      "weight": 400,
+      "char": "\u0105",
+      "bounds_delta": 0,
+      "advance_delta": -16
+    },
+    {
+      "weight": 400,
+      "char": "\u0146",
+      "bounds_delta": 0,
+      "advance_delta": 16
+    },
+    {
+      "weight": 475,
+      "char": "\u00e1",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u00e0",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u00e2",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u00e3",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u0101",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u0103",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u00e4",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u00e5",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u0151",
+      "bounds_delta": 0,
+      "advance_delta": -8
+    },
+    {
+      "weight": 475,
+      "char": "\u010d",
+      "bounds_delta": 0,
+      "advance_delta": -10
+    },
+    {
+      "weight": 475,
+      "char": "\u00e7",
+      "bounds_delta": 0,
+      "advance_delta": -10
+    },
+    {
+      "weight": 475,
+      "char": "\u0105",
+      "bounds_delta": 0,
+      "advance_delta": -22
+    },
+    {
+      "weight": 475,
+      "char": "\u0146",
+      "bounds_delta": 0,
+      "advance_delta": 2
+    },
+    {
+      "weight": 550,
+      "char": "\u00e1",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u00e0",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u00e2",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u00e3",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u0101",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u0103",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u0117",
+      "bounds_delta": 0,
+      "advance_delta": 4
+    },
+    {
+      "weight": 550,
+      "char": "\u00e4",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u00e5",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u0151",
+      "bounds_delta": 0,
+      "advance_delta": -24
+    },
+    {
+      "weight": 550,
+      "char": "\u010d",
+      "bounds_delta": 0,
+      "advance_delta": -5
+    },
+    {
+      "weight": 550,
+      "char": "\u00e7",
+      "bounds_delta": 0,
+      "advance_delta": -5
+    },
+    {
+      "weight": 550,
+      "char": "\u0105",
+      "bounds_delta": 0,
+      "advance_delta": -28
+    },
+    {
+      "weight": 550,
+      "char": "\u0146",
+      "bounds_delta": 0,
+      "advance_delta": -12
+    },
+    {
+      "weight": 625,
+      "char": "\u00e1",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u00e0",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u00e2",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u00e3",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u0101",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u0103",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u0117",
+      "bounds_delta": 0,
+      "advance_delta": 8
+    },
+    {
+      "weight": 625,
+      "char": "\u00e4",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u00e5",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u0151",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 625,
+      "char": "\u010d",
+      "bounds_delta": 0,
+      "advance_delta": -1
+    },
+    {
+      "weight": 625,
+      "char": "\u00e7",
+      "bounds_delta": 0,
+      "advance_delta": -1
+    },
+    {
+      "weight": 625,
+      "char": "\u0105",
+      "bounds_delta": 0,
+      "advance_delta": -34
+    },
+    {
+      "weight": 625,
+      "char": "\u0146",
+      "bounds_delta": 0,
+      "advance_delta": -26
+    },
+    {
+      "weight": 700,
+      "char": "\u00e1",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u00e0",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u00e2",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u00e3",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u0101",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u0103",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u0117",
+      "bounds_delta": 0,
+      "advance_delta": 12
+    },
+    {
+      "weight": 700,
+      "char": "\u00e4",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u00e5",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u0151",
+      "bounds_delta": 0,
+      "advance_delta": -56
+    },
+    {
+      "weight": 700,
+      "char": "\u010d",
+      "bounds_delta": 0,
+      "advance_delta": 4
+    },
+    {
+      "weight": 700,
+      "char": "\u00e7",
+      "bounds_delta": 0,
+      "advance_delta": 4
+    },
+    {
+      "weight": 700,
+      "char": "\u0105",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    },
+    {
+      "weight": 700,
+      "char": "\u0146",
+      "bounds_delta": 0,
+      "advance_delta": -40
+    }
+  ],
+  "notes": [
+    "Existing grades and point coordinates unchanged.",
+    "No Arabic or Hebrew source edit.",
+    "New J/h accent positioning does not repair inherited base anchors."
+  ]
+}

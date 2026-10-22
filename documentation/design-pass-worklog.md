@@ -1380,3 +1380,15 @@ was resolved by this change. Proofs at 400/550/700 and the final results are in
 `out/qa/2026-10-18/applied-subset-source-fixes/`; anchor proofs and backups are in
 `applied-tilde-anchors/`. Thirteen regression tests and structural compatibility
 pass; official package QA remains 10 FAIL / 6 WARN. No upstream PR was made.
+
+### Latin attachment and coverage foundation — 2026-10-21
+
+[LAT-001](../agent-proofs/cases/latin-001/README.md) fixes thirteen Regular
+combining component offsets and adds outgoing anchors to fourteen spacing marks
+in both masters. These preserve the existing shapes/grades while correcting
+precomposed-plus-mark stacking. A separate reversed-Nun anchor compensates the
+shared dot translation; Hebrew ink remains unchanged. Ten missing Latin
+composites reuse existing drawings; J/h hats align to the tall stems. No A–Z/a–z
+base outlines were edited and no OPEN Latin proportion decision was resolved.
+Widths inherited from green c/j remain off8. Existing precomposed/base advance
+differences and underweight Bold marks remain measured follow-ups.

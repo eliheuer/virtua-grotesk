@@ -66,9 +66,10 @@ tolerates QA failures so it can finish reports; it is not a release gate.
 ## Drawing and spacing
 
 Check source colors and unresolved decisions before editing. Keep both masters
-compatible; preserve green and purple reference drawings unless explicitly
-authorized. Leave new outline drafts orange and composite drafts blue; neither
-color is approval or a claim of drawing quality.
+compatible; preserve green drawings and their inherited geometry unless explicitly
+authorized. Purple identifies new AI drawings awaiting human review; preserve
+existing human grades for engineering-only repairs. No automated grade establishes
+visual approval or reference status.
 After edits, inspect the compiled fonts and actual rendered proofs. For curves:
 
 ```sh
@@ -133,7 +134,7 @@ An older proof or passing check is not evidence for subsequently edited sources.
 4. Inspect actual PNGs, show selected comparisons inline in chat, and describe
    visible changes and unresolved limitations. Use an absolute Markdown image
    path in Codex. Separate technical validation, agent visual inspection, and
-   Eli's drawing approval. Keep drafts unapproved; never grade green/purple.
+   Eli's drawing approval. Keep drafts unapproved; never assign green; new AI drawings use purple under Eli’s convention.
 5. Run compatibility, curve and compiled-shaping checks appropriate to the edit.
    Apply only the authorized files after checking the active source hashes still
    match the baseline. Preserve backups. Rebuild active sources, compare with the

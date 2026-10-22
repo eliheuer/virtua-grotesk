@@ -1,0 +1,26 @@
+{
+  "weight": 400,
+  "size": 48,
+  "text": [
+    "À bientôt. Šťastný deň. Gdańsk. São Tomé.",
+    "Français, čeština, íslenska, português, latviešu."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "b5c8c827f1fb3dfcf20316c0715b9c335c5cb95ff2520ef3b5e2258c190c5b00",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "bdc7a68c48aec730fd7e79cd63a8c402d63e470b0a9fd652267758fddabd17fa",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "2f1235bf855b598318b22048d399865752a6438b6d96cd928e2c726744aa61ca"
+}

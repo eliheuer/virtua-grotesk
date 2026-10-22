@@ -1,0 +1,37 @@
+{
+  "weight": 400,
+  "size": 64,
+  "text": [
+    "Ĉ ĉ  Ĝ ĝ  Ĥ ĥ  Ĵ ĵ  Ǽ ǽ",
+    "Ĉu ĝi ŝanĝiĝas?  Ĵaŭdo kaj ĥoro."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "b5c8c827f1fb3dfcf20316c0715b9c335c5cb95ff2520ef3b5e2258c190c5b00",
+      "missing_cmap": [
+        264,
+        265,
+        284,
+        285,
+        292,
+        293,
+        308,
+        309,
+        508,
+        509
+      ]
+    },
+    {
+      "role": "after",
+      "sha256": "bdc7a68c48aec730fd7e79cd63a8c402d63e470b0a9fd652267758fddabd17fa",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "d1baaf2515c03945c763352dac70bad294ce7f42960d3b7d567de52938833b08"
+}

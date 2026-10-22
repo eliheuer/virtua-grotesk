@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="aeacute" format="2">
+	<unicode hex="01FD"/>
+	<advance width="880"/>
+	<outline>
+		<component base="a"/>
+		<component base="e" xOffset="304"/>
+		<component base="acute" xOffset="304" yOffset="0"/>
+	</outline>
+	<anchor name="top" x="464" y="864"/>
+	<anchor name="bottom" x="464" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

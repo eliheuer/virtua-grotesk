@@ -530,3 +530,12 @@ alphabet400/700 images with Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and
 Readex Pro, plus joined positional contexts and an exact manual-work list.
 Unsupported extended characters must be marked unavailable, never replaced by
 fallback. Preserve Beh/Heh reservations, manual corrections and green protection.
+
+## Latin and release preparation — 2026-10-21
+
+Eli requested pushing the Arabic handoff, then independent Latin-diacritic and
+Google Fonts preparation while he reviews Arabic. Target quality and language
+coverage is Rubik. Preserve all Arabic drawings/editor saves and existing green
+geometry. LAT-001 records the first attachment/coverage batch and remaining
+work. Rubik parity includes Cyrillic; it does not authorize silently expanding
+the weight range or adding italic. Whole-image inspection remains mandatory.

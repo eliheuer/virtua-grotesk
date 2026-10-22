@@ -101,6 +101,15 @@ Its Before is the frozen pre-batch01 font; Working is the batch36 snapshot.
 Further editor saves need a fresh build and proof; do not resume automatic
 source edits merely because old queue entries remain in the historical log.
 
+### Parallel Latin and release work
+
+Eli requested independent Latin diacritics and Google Fonts preparation while
+he reviews Arabic. [LAT-001](cases/latin-001/README.md) holds the current Latin
+repair, pinned Rubik coverage comparison and next bounded work. Keep the Arabic
+live proof and all Arabic source drawings available for his manual edits.
+The canonical release checklist remains
+[Google Fonts onboarding](../documentation/google-fonts/README.md).
+
 ### Earlier Beh checkpoint
 Checkpoint `211c3b8d` is pushed and preserves the accepted Fathatan repair and
 base-forms-first direction; `d23f1bed` preserves the manual Bold hamza correction

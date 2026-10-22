@@ -405,9 +405,39 @@
 		<string>uni02BB</string>
 		<string>eng</string>
 		<string>Eng</string>
+		<string>Ccircumflex</string>
+		<string>ccircumflex</string>
+		<string>Gcircumflex</string>
+		<string>gcircumflex</string>
+		<string>Hcircumflex</string>
+		<string>hcircumflex</string>
+		<string>Jcircumflex</string>
+		<string>jcircumflex</string>
+		<string>AEacute</string>
+		<string>aeacute</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>Ccircumflex</key>
+		<string>base</string>
+		<key>ccircumflex</key>
+		<string>base</string>
+		<key>Gcircumflex</key>
+		<string>base</string>
+		<key>gcircumflex</key>
+		<string>base</string>
+		<key>Hcircumflex</key>
+		<string>base</string>
+		<key>hcircumflex</key>
+		<string>base</string>
+		<key>Jcircumflex</key>
+		<string>base</string>
+		<key>jcircumflex</key>
+		<string>base</string>
+		<key>AEacute</key>
+		<string>base</string>
+		<key>aeacute</key>
+		<string>base</string>
 		<key>A</key>
 		<string>base</string>
 		<key>AE</key>
