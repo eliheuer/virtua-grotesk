@@ -431,9 +431,15 @@
 		<string>slashlongcomb</string>
 		<string>slashlongcomb.narrow</string>
 		<string>notequal</string>
+		<string>lessequal</string>
+		<string>greaterequal</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>lessequal</key>
+		<string>base</string>
+		<key>greaterequal</key>
+		<string>base</string>
 		<key>notequal</key>
 		<string>base</string>
 		<key>slashlongcomb</key>

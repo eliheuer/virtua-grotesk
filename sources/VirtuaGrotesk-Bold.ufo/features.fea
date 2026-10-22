@@ -885,5 +885,7 @@ feature mark {
 		pos base greater <anchor 304 352> mark @MATH_LONG_SOLIDUS;
 		pos base plus <anchor 304 352> mark @MATH_LONG_SOLIDUS;
 		pos base minus <anchor 304 304> mark @MATH_LONG_SOLIDUS;
+		pos base lessequal <anchor 304 368> mark @MATH_LONG_SOLIDUS;
+		pos base greaterequal <anchor 304 368> mark @MATH_LONG_SOLIDUS;
 	} MATH_LONG_SOLIDUS_BASES;
 } mark;
