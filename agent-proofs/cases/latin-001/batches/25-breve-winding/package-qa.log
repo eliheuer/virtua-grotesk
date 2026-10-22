@@ -1,0 +1,21 @@
+./scripts/check_gf_fonts.sh package "out/qa/2026-10-21-latin-breve-package/ofl/virtuagrotesk"
+QA mode: package; network: online; reports: out/qa/2026-10-21-latin-breve-package/report
+virtuagrotesk: googlefonts/tofu FAIL [missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted]
+virtuagrotesk: googlefonts/axes_match ERROR [ERROR]
+virtuagrotesk: googlefonts/metadata/subsets_correct ERROR [ERROR]
+virtuagrotesk: googlefonts/metadata/unreachable_subsetting WARN [unreachable-subsetting]
+METADATA.pb: googlefonts/metadata/broken_links FAIL [broken-links]
+METADATA.pb: googlefonts/metadata/designer_profiles ERROR [ERROR]
+VirtuaGrotesk[wght].ttf: googlefonts/cjk_vertical_metrics ERROR [ERROR]
+VirtuaGrotesk[wght].ttf: googlefonts/version_bump ERROR [ERROR]
+VirtuaGrotesk[wght].ttf: googlefonts/vertical_metrics ERROR [ERROR]
+VirtuaGrotesk[wght].ttf: googlefonts/vertical_metrics_regressions ERROR [ERROR]
+VirtuaGrotesk[wght].ttf: googlefonts/glyphsets/shape_languages WARN [warning-language-shaping]
+VirtuaGrotesk[wght].ttf: contour_count WARN [contour-count]
+VirtuaGrotesk[wght].ttf: fontdata_namecheck ERROR [ERROR]
+VirtuaGrotesk[wght].ttf: interpolation_issues WARN [interpolation-issue]
+VirtuaGrotesk[wght].ttf: outline_alignment_miss WARN [found-misalignments]
+VirtuaGrotesk[wght].ttf: overlapping_path_segments WARN [overlapping-path-segments]
+ARTICLE.en_us.html: googlefonts/description/broken_links FAIL [broken-links]
+Markdown report written to out/qa/2026-10-21-latin-breve-package/report/fontspector.md
+make: *** [qa-package] Error 1

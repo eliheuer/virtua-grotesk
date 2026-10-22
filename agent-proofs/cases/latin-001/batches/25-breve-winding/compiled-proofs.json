@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "Ă Ĕ Ĭ Ŏ Ŭ Ğ   ă ĕ ĭ ŏ ŭ ğ",
+      "Ă Ĕ Ĭ Ŏ Ŭ Ğ",
+      "ă ĕ ĭ ŏ ŭ ğ",
+      "Ắ Ĕ̈ Ĭ̌ Ŏ́ Ŭ̈ Ğ̌",
+      "ắ ĕ̈ ĭ̌ ŏ́ ŭ̈ ğ̌",
+      "ă̦ ḝ ĭ̦ ŏ̧ ŭ̦ ģ̆"
+    ],
+    "words": [
+      "București · pădure · învăța",
+      "Türkçe · dağ · doğa · yağmur",
+      "Ğa Ğe Ği Ğo Ğu · ğa ğe ği ğo ğu",
+      "Ăn Ĕn Ĭn Ŏn Ŭn · ăna ĕne ĭni",
+      "Ắ Ĕ̈ Ĭ̌ Ŏ́ Ŭ̈ Ğ̌",
+      "ắ ĕ̈ ĭ̌ ŏ́ ŭ̈ ğ̌"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "8fc93b3903060fba010e26755abba6258fd861b189233be79c9619a28892627b"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "fcf1571cf254c22d48ff79372bc001e87bc01a17faa617e519c272571af73c79"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "b12743cb6223323ff278c0cee2dcb78f77577db9c92bb2af0acb66f1786428c1"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "de6a195fc05457a4602006627125fcc839d240c44e97f284d046f059634fcdc9"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "c18f32fa0c699dfb641023f35e124d032305ad092464ee74f6868530242d56c8"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "6eed5b6a301a52817614b8e67916b8671139306316213f4f134e89062c592e9a"
+    }
+  ],
+  "fonts": {
+    "before": "e8355e784e851733e3924a34e02dfb85da584d0ebf43ad9e6544487ad9a1a9ba",
+    "after": "0e0dc97b09d87ace6a5528d61d60489564bf4d9f2e588d2ce861eecf25a22765",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

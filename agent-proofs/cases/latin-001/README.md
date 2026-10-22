@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Batch24 fresh package QA flags breve-family contour direction: inspect both donor windings and full protected consumer closure, then repair direction without moving geometry if permitted. Next the four remaining combining marks and independent common-symbol gaps. Current package QA is10 FAIL/10 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Next the four remaining combining marks U0312/U0335/U0337/U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -356,3 +356,17 @@ resolved. Remaining tofu failures concern serving-set reachability, separately
 from batch23's fixed normalization cases. Full current reports retained. Breve
 contour direction is the next concrete independent repair; other protected and
 human findings remain open. Local only; no push or visual/release approval.
+
+## Batch25 · Breve winding
+
+[Batch25](batches/25-breve-winding/README.md) reverses only Regular/Bold breve
+contour traversal, preserving exact geometry, placement and grades. Two GLIFs,
+14 consumers/master,1793 other sources and all Arabic/green sources unchanged.
+78 scoped checks plus4,410 exact compiled geometry comparisons at five weights;
+17 Latin methods, unchanged216 baseline Hebrew failures and preflight complete.
+Whole400/550/700 and224px endpoint proofs plus actual Diffenator target/stock
+viewport images reviewed against Rubik. Raster pixels differ with changed
+traversal despite exact geometry; no pixel identity claimed. Fresh full online
+unexcluded package QA10 FAIL/9 WARN/160 PASS: outline_direction now passes.
+Other serving-set/protected/human findings remain. Next four combining marks,
+then common symbols. Local only; no visual approval or push.

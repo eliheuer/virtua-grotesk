@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/25-breve-winding/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch25/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/25-breve-winding/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/25-breve-winding/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch25/comparison"
+    ]
+  ],
+  "supplement_text": "Ă Ĕ Ĭ Ŏ Ŭ Ğ · ă ĕ ĭ ŏ ŭ ğ · pădure învăța · dağ doğa yağmur · Ắ Ĕ̈ Ĭ̌ Ŏ́ Ŭ̈ Ğ̌ · ắ ĕ̈ ĭ̌ ŏ́ ŭ̈ ğ̌",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "0e0dc97b09d87ace6a5528d61d60489564bf4d9f2e588d2ce861eecf25a22765",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch25/virtua/diff3proof.html": "4eb8f0b71b4add14c02170775aea12e98a9b1623a794d904ac400d19222570bc",
+    "out/review-latin-d2513094/batch25/comparison/diff3proof.html": "3328df13278e43a9576a6f3888410297b59185997baa672038ece6da1dbe409e",
+    "out/review-latin-d2513094/batch25/comparison/breve.html": "2817ba7fb0d4028403c54456b84474d0238a3f906ed4a3176f1224a3d151a044"
+  }
+}

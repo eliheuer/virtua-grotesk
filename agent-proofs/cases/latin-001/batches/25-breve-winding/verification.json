@@ -1,0 +1,25 @@
+{
+  "checks": 78,
+  "source_signed_areas": {
+    "Regular": {
+      "before": -23859.20000000001,
+      "after": 23859.20000000001
+    },
+    "Bold": {
+      "before": -36486.399999999994,
+      "after": 36486.39999999998
+    }
+  },
+  "exact_reverse_twice": true,
+  "unchanged_source_files": 1793,
+  "changed_vf_tables": [
+    "head",
+    "glyf",
+    "gvar"
+  ],
+  "changed_compiled_glyphs": [
+    "breve"
+  ],
+  "layout_metrics_tables_unchanged": true,
+  "source_patterns_compatible": true
+}

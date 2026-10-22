@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "PASS": 1
+  },
+  "results": {
+    "/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-breve-winding-h3m1ofyn/fonts/variable/VirtuaGrotesk[wght].ttf": {
+      "Outline Checks": [
+        {
+          "check_id": "outline_direction",
+          "check_name": "Check the direction of the outermost contour in each glyph",
+          "check_rationale": "In TrueType fonts, the outermost contour of a glyph should be oriented clockwise, while the inner contours should be oriented counter-clockwise. Getting the path direction wrong can lead to rendering issues in some software.",
+          "filename": "/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-breve-winding-h3m1ofyn/fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Outline Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        }
+      ]
+    }
+  }
+}

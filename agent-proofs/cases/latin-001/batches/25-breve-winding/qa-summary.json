@@ -1,0 +1,20 @@
+{
+  "before": {
+    "SKIP": 40,
+    "PASS": 159,
+    "INFO": 10,
+    "WARN": 10,
+    "FAIL": 10
+  },
+  "after": {
+    "SKIP": 40,
+    "PASS": 160,
+    "INFO": 10,
+    "WARN": 9,
+    "FAIL": 10
+  },
+  "online_unexcluded": true,
+  "fixed_check": "outline_direction",
+  "package_font": "0e0dc97b09d87ace6a5528d61d60489564bf4d9f2e588d2ce861eecf25a22765",
+  "initial_restricted_network_attempt": "retained separately; network errors are not font regressions or a completed online QA result. Online rerun completed."
+}

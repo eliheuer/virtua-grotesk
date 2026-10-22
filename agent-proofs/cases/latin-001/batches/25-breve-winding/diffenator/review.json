@@ -1,0 +1,37 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "after": "0e0dc97b09d87ace6a5528d61d60489564bf4d9f2e588d2ce861eecf25a22765",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "Old": "Virtua",
+  "New": "Rubik",
+  "target_url": "http://127.0.0.1:60273/batch25/comparison/breve.html",
+  "stock_url": "http://127.0.0.1:60273/batch25/comparison/diff3proof.html",
+  "scope": "Targeted whole supplement and first viewport of stock mixed-text coverage at three weights in both fonts; not exhaustive language/native-reader approval. Slider governs weight despite Regular menu label.",
+  "observations": [
+    "Breve counter remains open in both weights, with unchanged rounded bottom and clipped terminals. Placements and stacked mark clearances retain baseline geometry.",
+    "Bold remains dense, especially base stems/counters. Breve proportions and cap weight remain human review rather than approved by this winding repair.",
+    "Stock viewport retains uneven spacing, including around \u0142 and marks. No spacing change in this batch.",
+    "FreeType/RAQM pixels differ despite exact compiled undirected segment geometry across five weights; no pixel identity claimed.",
+    "Arabic proof60272 and sources unchanged."
+  ],
+  "screenshots": {
+    "virtua550.png": "26b2038d13377aa2acca05021df12fc3ec290ff212f657bf411689465488137f",
+    "stock-rubik700.png": "ceaf31665d38a691464be64a7c5d81d7ab805d19a93722c1246858197acf9b7b",
+    "stock-virtua400.png": "098ebf56b6e4ea7d96f71637cc67537895f8a7a088edbd19726a7fbc4ac6c590",
+    "stock-virtua700.png": "238fb755ae89c1e76273e237518719ce8b5f0469a310c6aceb48336e5168b903",
+    "stock-rubik400.png": "f6384ce7689158b8d2243ba6705f0da18344399348b139a313518bf0c3e20bea",
+    "rubik550.png": "f0e20e76c57ae8b3ceb8b602e47558e26d2cacfa323e8943f4e9b5161f355673",
+    "rubik400.png": "7b75a8cd2e7e15c952cda50e6bf6229ff18e139ea11e8e09fb1b12c02350c6f5",
+    "stock-rubik550.png": "eac14451057a53b8963af0d10520b9f92ab098874b6ce51c11ce31395d17cc2b",
+    "virtua700.png": "2d2dc0f3021f18b1d56e80d3469a8c7ad325fe4d7dbf482db1a2c5512b7e6052",
+    "rubik700.png": "fa81a4a893dcb6203d79c6671273c42af35d7e04f0de89f32a9f98bf343a73ca",
+    "stock-virtua550.png": "098cd262664396af9c24c7e0594904fa65b186b67280ac397a23cc55aa982a2d",
+    "virtua400.png": "9b8fd28c218d0fbbe6e9202954568a1145926d058c885f6df2dbb4d0387969f8"
+  }
+}
