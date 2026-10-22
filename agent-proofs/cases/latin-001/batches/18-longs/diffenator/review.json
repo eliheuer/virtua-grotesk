@@ -1,0 +1,22 @@
+{
+  "scope": "Stock coverage first viewport in Virtua at400/550/700; explicitly labeled long-s supplement using stock Diffenator controls in Virtua and Rubik at400/550/700,25 CSS px. Stock context report generated, not exhaustively inspected.",
+  "images": {
+    "stock-virtua-400.png": "0087973ca8b413ea358e497c1f45822aaf04136ca12e67e4c303cdf6100804da",
+    "longs-rubik-550.png": "05be029b15ea587e997e6d9a19e1e10b9ee11799f9e23778ef640bb5eb669c9e",
+    "longs-virtua-400.png": "a30a1fb7dd32283560fecaf442e3779d0d3a65dbed7ae85e76410b13b3c4d698",
+    "stock-virtua-700.png": "dac737f916af8da5028c4d81ad0bee7493f77b8af6137703f3cae7b268755214",
+    "longs-virtua-700.png": "ae2cfd7617ab065d568e55a61835ed535d01948d82f8db4d28b009018b4836bb",
+    "longs-rubik-700.png": "a9105e0d578f266e4ed48319345bc525731bdfde0496e05a5c9f8d143914f3e2",
+    "longs-virtua-550.png": "be97ee1ae2cdc7ece57f23560c40553887e167f63893dc510fc314a6e84bd252",
+    "longs-rubik-400.png": "14fcf561247c036fee3d2b20d531dc1484540aa488e80d42de2f1e8515097473",
+    "stock-virtua-550.png": "006fe6bcc47974d977c7c775e059b464424f03b8b3281e1dfa889274d6e6cadc"
+  },
+  "findings": [
+    "Long s has an f-derived head and left arm without a right crossbar; no visible mark collisions in the tested supplement.",
+    "Virtua Bold stem remains denser than Rubik; it preserves the approved f geometry. Short head proportions and default pairs need human optical review.",
+    "Virtua long-s words wrap earlier than Rubik at550/700; font widths and default pairs differ. No requirement to match reference outlines or widths.",
+    "Stock coverage text omits U017F; supplement is necessary to inspect the new form.",
+    "Old=Virtua/New=Rubik. The dropdown remains Regular after slider changes; actual slider weights400/550/700 were inspected.",
+    "Stock report is sampled coverage, not native-reader or full-language approval."
+  ]
+}

@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Continue independent Latin coverage: inspect long s/florin constructions and protected f donors before drafting; then kra, apostrophe-n and fi/fl. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue independent Latin coverage: inspect florin constructions and protected f donors before drafting; long s is added in batch18; then kra, apostrophe-n and fi/fl. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -215,7 +215,7 @@ and preserve green/human optical exceptions. See DESIGN.md#spacing.
 3. Existing precomposed widths differ from the base+mark fallback by up to
    tens of units. `verification.json` retains the measured sample differences.
    Inspect wrapper metrics/kerning and word spacing before applying changes.
-4. Remaining Rubik Latin codepoints: ĸ ŉ ſ ƒ ﬁ ﬂ (batch17 coverage-after.json). Review encoded ligatures
+4. Remaining Rubik Latin codepoints: ĸ ŉ ƒ ﬁ ﬂ (batch18 coverage-after.json). Review encoded ligatures
    separately from GSUB behavior. Four combining marks, punctuation, fractions,
    maths and currencies are also absent; use `coverage-after.json`.
 5. Full Rubik language coverage includes182 Cyrillic codepoints absent here.
@@ -254,3 +254,17 @@ clipping; this is not exhaustive language or native-reader approval. Literal
 cmap diagnosis. The instance dropdown stays Regular after manual slider changes;
 actual recorded slider values set the weight. Use this actual Diffenator view
 alongside enlarged drawing proofs on subsequent meaningful checkpoints.
+
+## Batch18 · Long s coverage and Diffenator review
+
+[Batch18](batches/18-longs/README.md) adds ſ in both masters with24-point contours
+derived from unchanged green f, removing the right arm. Advances344/400 and all
+new geometry/anchors/bearings are on8; zero grid findings. Six new/registration
+files; all1779 other existing sources and all existing compiled ink/advances
+unchanged.90 scoped checks,11 Latin methods, exact216 Hebrew baseline failures and
+preflight complete. Whole400/550/700 rasters and224px endpoints inspected.
+Actual Diffenator stock coverage and a labeled same-text long-s supplement were
+inspected at400/550/700 against Rubik. The short f-derived head, dense Bold stem
+and default pair spacing remain review items. Four tangent G1 joins/master retain
+curvature jumps; no sampled reversals/proper crossings at five weights. No visual
+approval or push. Rubik Latin gap is now five; next inspect florin.

@@ -1,0 +1,32 @@
+{
+  "Regular:longs": {
+    "advance": 344,
+    "advance_popcount": 4,
+    "points": 24,
+    "green_f_curves_unchanged": true,
+    "right_arm_removed": true,
+    "bounds": [
+      24,
+      0,
+      320,
+      768
+    ],
+    "left_bearing": 24,
+    "right_bearing": 24.0
+  },
+  "Bold:longs": {
+    "advance": 400,
+    "advance_popcount": 3,
+    "points": 24,
+    "green_f_curves_unchanged": true,
+    "right_arm_removed": true,
+    "bounds": [
+      32,
+      0,
+      376,
+      768
+    ],
+    "left_bearing": 32,
+    "right_bearing": 24.0
+  }
+}

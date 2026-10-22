@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/18-longs/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch18/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/18-longs/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/18-longs/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch18/comparison"
+    ]
+  ],
+  "supplement_text": "f ſ s · ſſ ſf ſi ſl ſt · ſa ſe ſi ſo ſu · aſa eſe iſi oſo · ſame ſin ſtill · ſo ſuch · eſſe aſſa ſaſſa · safe ſafe · still ſtill · suit ſuit · ſ́ ſ̈ ſ̌ ſ̂́ ſ̦ ſ̧́",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "a823a17a17d25b7600f68f88b50d5f50dd4980c4e4aacaf961cd8ec4cc2b5b76",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch18/virtua/diff3proof.html": "25f18cc981b383cc5cc3df711763c0bc72b6649d54c69614ea497eb48e86682a",
+    "out/review-latin-d2513094/batch18/comparison/diff3proof.html": "2928501b721559de9d3d6947a6a86fdfceba5de91688a873a346a89b85265d80",
+    "out/review-latin-d2513094/batch18/comparison/longs.html": "0867b1bd5df9c700f61d2f01abd42a4d2e9fe840c59164e42140fd26b93cfc29"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "weight": 700,
+  "size": 48,
+  "texts": [
+    "ſa ſe ſi ſo ſu   aſa eſe iſi oſo",
+    "ſame ſin ſtill   ſſ ſf fi ſi   ſo ſuch"
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "9c5e85e1195f97ab16703b693110b51e55e22659c8509c6b24de73d421e3c79b",
+      "missing_cmap": [
+        383
+      ]
+    },
+    {
+      "role": "after",
+      "sha256": "a823a17a17d25b7600f68f88b50d5f50dd4980c4e4aacaf961cd8ec4cc2b5b76",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "c6ba44a310036933fabc14d0bc9d5caad7b1319279dc0d86d94df02a2fb8d466"
+}

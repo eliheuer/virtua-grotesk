@@ -189,3 +189,18 @@ class LatinDiacriticsTests(unittest.TestCase):
                             self.assertGreaterEqual(len(bounds),2)
                             self.assertGreaterEqual(bounds[-1][1]-base[0][3],16)
                             self.assertLessEqual(max(b[3] for b in bounds),font['OS/2'].usWinAscent)
+
+    def test_long_s_coverage_and_mark_attachment(self):
+        # Historical long s is encoded independently, without replacing ordinary s.
+        for path,font in self.fonts():
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                with self.subTest(font=path.name,weight=w):
+                    name=font.getBestCmap()[0x17f]
+                    self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs.get(name),1)
+                    advance,base=shaped(font,path.read_bytes(),'ſ',w)
+                    self.assertNotEqual(base,shaped(font,path.read_bytes(),'s',w)[1])
+                    for marks in ['́','̈','̌','̂́','̧́']:
+                        actual,bounds=shaped(font,path.read_bytes(),'ſ'+marks,w)
+                        self.assertEqual(actual,advance)
+                        self.assertGreaterEqual(bounds[-1][1]-base[0][3],16)
+                        self.assertLessEqual(max(b[3] for b in bounds),font['OS/2'].usWinAscent)
