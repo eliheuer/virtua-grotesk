@@ -1,0 +1,160 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 1,
+  "passed": true,
+  "results": [
+    {
+      "glyph": "kgreenlandic",
+      "points": 23,
+      "advance": 664.0,
+      "bounds": [
+        72,
+        0,
+        640,
+        576
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 664.0,
+          "popcount": 4
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 160.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 120.0,
+          "popcount": 4
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 120.0,
+          "popcount": 4
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 152.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 3,
+        "1": 15,
+        "2": 6,
+        "3": 2
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-kra-8l39zuzs/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "dfdde911f84d7f69b1705a2b6cf159c917e958c7c140b5da2f840e80198c5478"
+    }
+  ]
+}

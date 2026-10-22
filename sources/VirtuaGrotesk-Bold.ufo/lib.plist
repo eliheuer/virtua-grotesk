@@ -446,9 +446,12 @@
 		<string>tbar</string>
 		<string>longs</string>
 		<string>florin</string>
+		<string>kgreenlandic</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>kgreenlandic</key>
+		<string>base</string>
 		<key>florin</key>
 		<string>base</string>
 		<key>longs</key>

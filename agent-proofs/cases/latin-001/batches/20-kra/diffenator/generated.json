@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/20-kra/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch20/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/20-kra/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/20-kra/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch20/comparison"
+    ]
+  ],
+  "supplement_text": "k ĸ K · ĸĸ kĸ ĸk ĸi ĸl ĸt · ĸa ĸe ĸi ĸo ĸu · aĸa eĸe iĸi oĸo · ĸaĸa ĸiĸi · aĸu iĸa uĸa · kaka ĸaĸa · kiki ĸiĸi · ĸ́ ĸ̈ ĸ̌ ĸ̂́ ĸ̦ ĸ̧́",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "7f8e371110f46effc5ef810dd3f69185a5c4c71c7f247380966de6f874f51919",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch20/virtua/diff3proof.html": "588de01edf2dac0ca61390beeb30c0ba95deec590c1e5dcb0ea21a6e8f750e99",
+    "out/review-latin-d2513094/batch20/comparison/diff3proof.html": "e3e5f4f0385f2f3ebb31fd2dd8b6883694b5446c3ae05e4fd292cf9e8ffb5e3c",
+    "out/review-latin-d2513094/batch20/comparison/kgreenlandic.html": "07b86757010ed9d84bee4eeb3e9cb68eb618d3d1889aabf3ee36d54f7fb35fd9"
+  }
+}

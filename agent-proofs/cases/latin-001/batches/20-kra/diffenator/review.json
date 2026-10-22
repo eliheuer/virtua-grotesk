@@ -1,0 +1,23 @@
+{
+  "scope": "Actual stock Diffenator coverage first viewport in Virtua at400/550/700. Stock coverage omits U0138; labeled same-text kra supplement inspected in Virtua and Rubik at400/550/700. Stock context report generated, not exhaustively inspected.",
+  "images": {
+    "rubik-400.png": "cc50d45553aab01f98b0ada6642e16d781195ed2bc2f3d2bbe2c4b625e2b645f",
+    "rubik-550.png": "cc28152643a7e824dc7cefcba8e29b4477c0ce48ebf3eda00e27057bed512b38",
+    "rubik-700.png": "59c766d9b441efcfc9810b8acfe3d545080ec841bd5a036706cbfb4fd730ba9e",
+    "stock-virtua-400.png": "1cf815aaae8c9b3ecd254e5fa5a3caa71e29709a63091122fc766b18e6bbc0fd",
+    "stock-virtua-550.png": "6d1da0b636746e0e3c38f3920a425db8302ebcdc28e60fb51982e0741089b002",
+    "stock-virtua-700.png": "f01e35b4dc579a42857b03faab31ae7cf3c26acb734d3eb96a4ab860d1d1f513",
+    "virtua-400.png": "9df6ebfbccadd49584287efa8b5db789552cfb85b8e7293325a47041872d1e90",
+    "virtua-550.png": "48873f892966e17f8bc6f6a810179aa05eefcedc9f671fccb26ae543e5c8c65d",
+    "virtua-700.png": "41edfc7db6dc0db48dd02c07c65fe200b4809bee8b14bcc4b2a492608ebba243"
+  },
+  "findings": [
+    "Kra has the x-height k structure at all three weights, unlike the ascender of ordinary k.",
+    "Whole outlines show straight diagonal arms, clipped terminals and open branch spaces. No curves are present in this glyph.",
+    "Bold retains the dense stem and diagonal junction of Virtua green k; its mass is heavier than Rubik. This and default pair rhythm remain human optical-review items.",
+    "Tested acute/dieresis/caron/circumflex and bottom marks remain separated; generic mark coverage is not exhaustive.",
+    "New glyph geometry uses the eight-unit grid; original green k optical coordinates and widths remain unchanged.",
+    "Stock mixed text still has uneven spacing and unresolved mark issues elsewhere. Literal [Missing] is part of stock sample text, not itself a cmap diagnosis.",
+    "Old=Virtua/New=Rubik; actual slider400/550/700 despite dropdown still reading Regular."
+  ]
+}

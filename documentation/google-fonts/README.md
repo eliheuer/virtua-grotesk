@@ -1219,3 +1219,14 @@ other sources and existing compiled ink/advances unchanged.95 scoped checks,
 Whole400/550/700 and enlarged images plus actual Diffenator text inspected;
 compact head/hook weight/default pairs await human review. Rubik Latin gap now
 four: ĸ ŉ ﬁ ﬂ. Other script/subset/release blockers remain. Local only; no push.
+
+## Kra coverage checkpoint — 2026-10-21
+
+LAT-001 [batch20](../../agent-proofs/cases/latin-001/batches/20-kra/README.md)
+adds ĸ in both masters with23-point x-height k constructions, advances600/664
+and all new geometry/spacing on8. Zero grid findings; all1783 other source files
+and existing compiled ink/advances unchanged.95 scoped checks,13 Latin methods,
+exact216 baseline Hebrew failures and preflight complete. Whole400/550/700,
+enlarged endpoints and actual Diffenator text inspected against Rubik. Dense Bold
+branch and default pairs need human optical review. Rubik Latin gap now three:
+ŉ ﬁ ﬂ. Other script/subset/release blockers remain. Local only; no push.

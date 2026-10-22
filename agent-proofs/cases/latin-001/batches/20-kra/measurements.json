@@ -1,0 +1,32 @@
+{
+  "Regular:kgreenlandic": {
+    "advance": 600,
+    "advance_popcount": 4,
+    "points": 23,
+    "donor_k_unchanged": true,
+    "stem_shortened": 192,
+    "bounds": [
+      72,
+      0,
+      576,
+      576
+    ],
+    "left_bearing": 72,
+    "right_bearing": 24.0
+  },
+  "Bold:kgreenlandic": {
+    "advance": 664,
+    "advance_popcount": 4,
+    "points": 23,
+    "donor_k_unchanged": true,
+    "stem_shortened": 192,
+    "bounds": [
+      72,
+      0,
+      640,
+      576
+    ],
+    "left_bearing": 72,
+    "right_bearing": 24.0
+  }
+}
