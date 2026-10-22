@@ -1,0 +1,865 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 12,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "fehDotmovedbelow-ar",
+      "points": 0,
+      "advance": 961.0,
+      "bounds": [
+        64,
+        -256,
+        920,
+        592
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 961.0
+        },
+        {
+          "field": "anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 961.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].y",
+          "value": 308.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].y",
+          "value": 446.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 634.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].x",
+          "value": 828.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 580.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 252.0
+        },
+        {
+          "field": "component[0].contour[1].point[20].x",
+          "value": 250.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 41.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 68.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].y",
+          "value": -220.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].y",
+          "value": -132.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[8].x",
+          "value": 68.0
+        },
+        {
+          "field": "component[1].contour[0].point[9].y",
+          "value": -132.0
+        },
+        {
+          "field": "component[1].contour[0].point[11].y",
+          "value": -220.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 41.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 961.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 41.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "e8c26312dfcd7a8fa6ab51217ed1696952ee64e400cc79addf70dce9f435e567"
+    },
+    {
+      "glyph": "fehDotmovedbelow-ar.fina",
+      "points": 0,
+      "advance": 976.0,
+      "bounds": [
+        64,
+        -256,
+        976,
+        408
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 644.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].x",
+          "value": 732.0
+        },
+        {
+          "field": "component[1].contour[0].point[0].x",
+          "value": 68.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[3].y",
+          "value": -220.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].y",
+          "value": -132.0
+        },
+        {
+          "field": "component[1].contour[0].point[6].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[1].contour[0].point[8].x",
+          "value": 68.0
+        },
+        {
+          "field": "component[1].contour[0].point[9].y",
+          "value": -132.0
+        },
+        {
+          "field": "component[1].contour[0].point[11].y",
+          "value": -220.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 976.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 0.0,
+          "popcount": 0
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "0": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "507db9e6cdc1e74fe53a7c0ae18eb17be51c9da041e3e3d05eabb36e2ddd0ace"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar",
+      "points": 0,
+      "advance": 961.0,
+      "bounds": [
+        64,
+        -256,
+        920,
+        592
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 961.0
+        },
+        {
+          "field": "anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 961.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].y",
+          "value": 308.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].y",
+          "value": 446.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 634.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].x",
+          "value": 828.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 580.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 252.0
+        },
+        {
+          "field": "component[0].contour[1].point[20].x",
+          "value": 250.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 41.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 41.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 961.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 41.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "9963d8a277cb936c0193af220f172ad8f192f5f51f53df3e45494ef6e32dd7d3"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar.fina",
+      "points": 0,
+      "advance": 976.0,
+      "bounds": [
+        64,
+        -256,
+        976,
+        408
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 644.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].x",
+          "value": 732.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 976.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 0.0,
+          "popcount": 0
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 1,
+        "0": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "b55f13f51957b420b6d1ba51e22a7057a039b21c66585528918f28bcaca0e305"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar.init",
+      "points": 0,
+      "advance": 480.0,
+      "bounds": [
+        -16,
+        -256,
+        440,
+        624
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].y",
+          "value": 20.0
+        },
+        {
+          "field": "component[0].contour[0].point[0].x",
+          "value": 180.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 460.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 350.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].x",
+          "value": 114.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 546.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].y",
+          "value": 314.0
+        },
+        {
+          "field": "component[0].contour[1].point[22].x",
+          "value": 314.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].y",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 480.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "dc4c812ac9742ed5589c004ff6ccf1981fc10b3f6c21bd23290f0cdb380c251e"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar.medi",
+      "points": 0,
+      "advance": 512.0,
+      "bounds": [
+        -16,
+        -256,
+        512,
+        472
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].y",
+          "value": 20.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[0].point[13].y",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].y",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 512.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 0.0,
+          "popcount": 0
+        }
+      ],
+      "popcount_histogram": {
+        "1": 2,
+        "0": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "3fafe0f93fb657a97523cdb36bf10516b5cfe8a91f87f08e80496c3f87670fea"
+    },
+    {
+      "glyph": "fehDotmovedbelow-ar",
+      "points": 0,
+      "advance": 1024.0,
+      "bounds": [
+        32,
+        -304,
+        960,
+        704
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "anchor[topDots].y",
+          "value": 620.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].anchor[topDots].y",
+          "value": 620.0
+        },
+        {
+          "field": "component[1].anchor[_bottomDots].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[bottom].y",
+          "value": -306.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 1024.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "1": 3
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "a6c877410a783eb24a0b5cc710559ca627d61c44fe3681cb1c402b3993fa1339"
+    },
+    {
+      "glyph": "fehDotmovedbelow-ar.fina",
+      "points": 0,
+      "advance": 1056.0,
+      "bounds": [
+        32,
+        -304,
+        1056,
+        584
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].y",
+          "value": -10.0
+        },
+        {
+          "field": "anchor[topDots].y",
+          "value": 436.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].y",
+          "value": -10.0
+        },
+        {
+          "field": "component[0].anchor[topDots].y",
+          "value": 436.0
+        },
+        {
+          "field": "component[1].anchor[_bottomDots].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[bottom].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].anchor[bottom].y",
+          "value": -306.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 1056.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 0.0,
+          "popcount": 0
+        }
+      ],
+      "popcount_histogram": {
+        "2": 1,
+        "1": 1,
+        "0": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "df09b1dfe313fdb88d363244ba573287f1a88d8c384c13b24579ec0420faa20c"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar",
+      "points": 0,
+      "advance": 1024.0,
+      "bounds": [
+        32,
+        -312,
+        960,
+        704
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "anchor[topDots].y",
+          "value": 620.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].anchor[topDots].x",
+          "value": 492.0
+        },
+        {
+          "field": "component[0].anchor[topDots].y",
+          "value": 620.0
+        },
+        {
+          "field": "component[1].anchor[_topDots].y",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].anchor[top].y",
+          "value": 540.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 1024.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "1": 3
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "a183015cb3c9c31becde3db697f0d444be55881507b13a20f7dc9b60bda61446"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar.fina",
+      "points": 0,
+      "advance": 1056.0,
+      "bounds": [
+        32,
+        -312,
+        1056,
+        584
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].y",
+          "value": -10.0
+        },
+        {
+          "field": "anchor[topDots].y",
+          "value": 436.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].y",
+          "value": -10.0
+        },
+        {
+          "field": "component[0].anchor[topDots].y",
+          "value": 436.0
+        },
+        {
+          "field": "component[1].anchor[_topDots].y",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].anchor[top].y",
+          "value": 540.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 1056.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 0.0,
+          "popcount": 0
+        }
+      ],
+      "popcount_histogram": {
+        "2": 1,
+        "1": 1,
+        "0": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "8b38be689e0b943a15c52a7304a2f076d2eba2f55c1feddedd0cc4b2136fa1db"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar.init",
+      "points": 0,
+      "advance": 544.0,
+      "bounds": [
+        -16,
+        -312,
+        512,
+        704
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].x",
+          "value": 228.0
+        },
+        {
+          "field": "component[1].anchor[_topDots].y",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].anchor[top].y",
+          "value": 540.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 544.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "2": 1,
+        "1": 2
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "1784ead73e141074f58bae49c9269f49ebc71e16835f8294d193ed99d8074c2c"
+    },
+    {
+      "glyph": "fehThreedotsbelow-ar.medi",
+      "points": 0,
+      "advance": 568.0,
+      "bounds": [
+        -16,
+        -312,
+        568,
+        584
+      ],
+      "failures": [
+        {
+          "field": "anchor[bottomDots].x",
+          "value": 306.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 306.0
+        },
+        {
+          "field": "component[0].anchor[bottomDots].x",
+          "value": 306.0
+        },
+        {
+          "field": "component[1].anchor[_topDots].y",
+          "value": -44.0
+        },
+        {
+          "field": "component[1].anchor[top].y",
+          "value": 540.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 568.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 0.0,
+          "popcount": 0
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "1": 1,
+        "0": 1
+      },
+      "passed": false,
+      "ufo": "/private/tmp/virtua-feh-below-h8kmpurn/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "f9465c8b58d96ae138fbf5fba96cedfff8e5b1c80847fd70b12b7428ac64f651"
+    }
+  ]
+}

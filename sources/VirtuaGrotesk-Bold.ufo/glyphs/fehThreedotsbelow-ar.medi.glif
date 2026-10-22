@@ -3,14 +3,18 @@
 	<advance width="568"/>
 	<outline>
 		<component base="fehDotless-ar.medi"/>
-		<component base="threedotsdownbelow-ar" xOffset="74" yOffset="-22"/>
+		<component base="threedotsdowncenter-ar" xOffset="40" yOffset="-520"/>
 	</outline>
+	<anchor name="bottom" x="272" y="-376"/>
+	<anchor name="bottomDots" x="306" y="24"/>
+	<anchor name="top" x="272" y="664"/>
+	<anchor name="topDots" x="304" y="432"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

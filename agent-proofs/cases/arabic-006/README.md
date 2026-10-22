@@ -397,3 +397,19 @@ forms acceptable merely because their join widths now match. Tteh small-Tah
 marks are also absent/replaced with dots; retain as structural follow-up.
 Eli specifically wants the final whole alphabet in400/700 with all four refs,
 plus contextual forms and a concise manual-work list. First pass still active.
+
+## Batch35 — Feh below-dot construction
+
+Applied12 wrappers: isolated/final fehDotmovedbelow-ar and all four
+fehThreedotsbelow-ar forms in both masters. Wrong Qaf bases replaced with the
+existing Feh bases; below-dots clear the bowl, and all three-dot groups use the
+same corrected small round donor. Whole-image inspection caught and corrected
+the initial/medial size mismatch before application. No shared donor modified.
+50 shaping comparisons at five weights, whole400/550/700 rows, enlarged endpoints
+and preflight completed; all34 reservations and non-target bytes unchanged.
+102 inherited grid findings retained. Live proof is batch35.
+Next: Tteh's wrong plain-dot component should be the small-Tah mark; inspect all
+four reference forms and consumers before correction. Then prioritize whole
+core alphabet, words, marks and digit plates over further niche extension polish.
+The final handoff must show the whole alphabet at400/700 with all four references
+and a concise exact manual-work list. First pass remains active, not approved.
