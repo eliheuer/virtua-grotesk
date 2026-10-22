@@ -1702,3 +1702,26 @@ exact FAILs unchanged/no new semantic warnings. Greek mu remains absent; no
 normalization substitution. Gap327:182Cyrl/43Common/102Arab. Next fraction-slash/
 encoded-fraction construction and feature assessment; sups proposal separate.
 Local only/no push; Arabic60272 unchanged.
+
+
+### LAT-001 batch50 · Fraction assessment
+
+[Evidence](../../agent-proofs/cases/latin-001/batches/50-fractions-assessment/README.md) is read-only atbef4a002: all1847 sources/five active fonts exact,
+Arabic326/master and green131/74 preserved.39-member figure/slash reverse closure
+per master has no Arabic intersection. Slash grades yellow/orange; green x/seven
+provide diagonal construction references, Bold X is orange.70 direct cases x8
+modes plus120 real-subset cases x8 modes and10 feature-control probes retained.
+Virtua lacks U2044/U00BC/U00BD/U00BE and frac/numr/dnom; NFKD is not a repair.
+Rubik U2044 invokes numr/dnom even with frac off; disabling all three restores
+ordinary figures. ASCII frac is optional and changes date/multi-slash runs when
+applied globally. Default fontTools subsets retain frac/numr/dnom, unlike optional
+sups/tnum; explicit retention restores those sampled effects. Rubik superior/
+numerator outlines and advances match50 digit/weight cases; not automatic
+permission to reuse Virtua superiors. Whole400/550/700,224px endpoints and9 actual
+controlled/Diffenator views inspected. Browser fallback unidentified; Diffenator
+shows absent Virtua boxes. No drawing/feature change/build/preflight/new QA.
+Batch49 package12FAIL10WARN,216 Hebrew baseline failures and gap327 unchanged.
+Next bounded purple fraction U2044 scratch draft using green Virtua construction,
+then dedicated fraction figures/encoded forms after position/clearance review;
+no partial feature, ordinary-slash alias or blind superior reuse. Local only/
+no push; Arabic60272 unchanged.
