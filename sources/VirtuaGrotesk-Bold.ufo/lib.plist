@@ -460,9 +460,15 @@
 		<string>notequal</string>
 		<string>lessequal</string>
 		<string>greaterequal</string>
+		<string>plusminus</string>
+		<string>logicalnot</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>plusminus</key>
+		<string>base</string>
+		<key>logicalnot</key>
+		<string>base</string>
 		<key>lessequal</key>
 		<string>base</string>
 		<key>greaterequal</key>
