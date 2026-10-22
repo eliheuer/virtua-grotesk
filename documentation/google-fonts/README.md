@@ -1146,4 +1146,17 @@ Basic missing-cmap advance differences fall201→0 across260 samples. Existing
 216 Hebrew failures and separate mark-placement/compound-accent subset blockers
 remain.1080 inherited grid findings include Bold R's60-unit optical bearing;
 all new advances on8. All1713 other sources including Arabic/green bases unchanged.
-Lowercase consonant/i and uppercase I/K spacing remain next. Local only; no push.
+Lowercase consonant/i spacing continues in batch14 below. Local only; no push.
+
+## Lowercase consonant spacing checkpoint — 2026-10-21
+
+LAT-001 [batch14](../../agent-proofs/cases/latin-001/batches/14-consonant-spacing/README.md)
+corrects45 wrapper advances across25 characters, preserving all compiled ink,
+layout tables, grades and1734 other source files. New advances and target
+bearings are on8;1037 inherited closure-grid findings remain. Whole400/550/700
+and enlarged endpoint images inspected;415 scoped checks, eight Latin methods,
+exact216 baseline failures and preflight complete. Basic missing-cmap advance
+mismatches105→0 across125 samples; generic/compound mark issues remain unresolved.
+The hcaron trial was withdrawn after visual review exposed the existing mark
+collision with its ascender. Repair that attachment next, then measured narrow
+I/l and off8 K/c/k/t spacing exceptions. Local only; no push or release approval.
