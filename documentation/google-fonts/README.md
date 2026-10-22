@@ -77,7 +77,7 @@ shows no new failures; this does not waive the existing failures.
 | Historical early Latin VF package | 10 | 8 | 160 | 10 | 41 |
 | Batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
-| Current batch27 package after short stroke overlay | 10 | 9 | 160 | 10 | 40 |
+| Current batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -1311,3 +1311,15 @@ are unchanged and geometry matches serialized VF instances. Four-weight static
 mixed-script before/after proofs retained; no broad visual certification.
 Remaining Rubik cmap gap348:182 Cyrillic,2 combining,62 Common,102 Arabic
 presentation forms. No push, metadata changes or release publication.
+
+### Latin batch28 · Short slash coverage
+
+[LAT-001 batch28](../../agent-proofs/cases/latin-001/batches/28-short-slash/README.md)
+adds U0337 plus a narrow variant with existing Latin body attachment. All prior
+GLIFs and Arabic/green drawings unchanged.770 scoped comparisons,4425 old VF
+and3539 old static glyph comparisons,21 Latin tests and preflight completed;
+216 known Hebrew failures unchanged. Whole images and Diffenator400/550/700
+inspected. Generic Bold counter fragments and terminal projection remain optical
+review items. Full online package unchanged10 FAIL/9 WARN/160 PASS/10 INFO/40
+SKIP. Remaining Rubik gap347:182 Cyrillic,1 combining,62 Common,102 Arabic
+presentation forms. Next long slash/negation behavior; local only, no push.

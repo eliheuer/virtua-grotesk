@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/28-short-slash/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch28/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/28-short-slash/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/28-short-slash/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch28/comparison"
+    ]
+  ],
+  "supplement_text": "a̷na o̷no h̷ah i̷ni t̷at · á̷na ó̷no ā̷na ą̷na · b̷ab d̷ad p̷ap g̷ag · A̷VA O̷TO H̷AH I̷NI · fi̷ fl̷ ﬁ̷ ﬂ̷ · București ģimene doğa Ŧŧ ﬁﬂ",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "329b6ad5bdd86faafe7397a1cc4ff0dd0a1b4618fc0c60df824ba1f7829021d3",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch28/virtua/diff3proof.html": "4eb8f0b71b4add14c02170775aea12e98a9b1623a794d904ac400d19222570bc",
+    "out/review-latin-d2513094/batch28/comparison/short-slash.html": "e82abc698f4a291f9269f12c0c1c9b2bcf9533b01614ab8a5b65db919784aeee",
+    "out/review-latin-d2513094/batch28/comparison/diff3proof.html": "5276b35c3483181249f300fe6eee7af2ef5bbd7f494c5b3f98661bf98384be7c"
+  }
+}

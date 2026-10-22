@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Next the two remaining overlay marks U0337/U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Batch28 adds U0337. Next the remaining long overlay U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -216,7 +216,7 @@ and preserve green/human optical exceptions. See DESIGN.md#spacing.
    tens of units. `verification.json` retains the measured sample differences.
    Inspect wrapper metrics/kerning and word spacing before applying changes.
 4. No missing Latin-script codepoints in the pinned Rubik cmap comparison after batch22. This is not full language coverage or visual approval. Review encoded ligatures
-   separately from GSUB behavior. Four combining marks, punctuation, fractions,
+   separately from GSUB behavior. The remaining long combining slash, punctuation, fractions,
    maths and currencies are also absent; use `coverage-after.json`.
 5. Full Rubik language coverage includes182 Cyrillic codepoints absent here.
    This is a separate drawing/reader-review phase, not a metadata toggle.
@@ -409,3 +409,20 @@ not a claim of old-static pixel equality. Full online final-package QA remains
 10 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP. No exclusions or subset changes. Rubik
 gap348:182 Cyrillic,2 combining,62 Common,102 Arabic presentation forms. Pending
 human review; local only. Next U0337/U0338 and independent symbols/blockers.
+
+## Batch28 · Short slash overlay
+
+[Batch28](batches/28-short-slash/README.md) adds U0337 and a contextual narrow
+variant in both masters. Eight-point45-degree diagonals with clipped ends,
+67.9/90.5 normal weights, default bounds±264/272, narrow±136/144. Initial short,
+heavy trial rejected by whole-image review. Existing Latin body GPOS extended;
+all existing anchors/GLIFs/metrics/kerning unchanged. Ten source files,1795 other
+existing source bytes preserved including Arabic326/master and green131/74.
+770 scoped checks,4425 exact old VF and3539 exact old static glyph comparisons,
+21 Latin methods, unchanged216 baseline failures and preflight complete.
+Whole400/550/700 forms/words,224px details and actual Diffenator supplement/stock
+first view inspected. Zero grid findings; convex at five weights. Generic Bold
+counter fragments, varying terminal projection and overall density remain human
+review items. Full online package stays10 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP.
+Rubik gap347:182 Cyrillic,1 combining,62 Common,102 Arabic presentation forms.
+Next U0338 with negation normalization/symbol attachment checks. Local only.

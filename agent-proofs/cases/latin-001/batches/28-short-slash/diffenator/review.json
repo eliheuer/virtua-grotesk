@@ -1,0 +1,35 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "after": "329b6ad5bdd86faafe7397a1cc4ff0dd0a1b4618fc0c60df824ba1f7829021d3",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "active_font_identity": "../final-identity.json",
+  "scope": "Actual browser screenshots: target same-text supplement and first stock mixed-text viewport, both Virtua and Rubik at all three weights. No exhaustive language review.",
+  "findings": [
+    "Revised short diagonals read more clearly than rejected heavy/short trial.",
+    "Bold generic a overlay leaves small counter fragments; terminal projection varies with base shape.",
+    "Narrow letter and following-n test contexts remain separated.",
+    "Virtua Bold remains dense; stock mixed-text spacing is uneven.",
+    "Rubik attachment behavior is reference evidence, not a target for copying outlines or fallback."
+  ],
+  "screenshots": {
+    "rubik-400.png": "916098c7b08c1cca5b63dbb9558b6bdc25d09d5cea598c7a20ec3a3467da09df",
+    "rubik-550.png": "79a783d7a4d33d40d24690163583cf25efe154e22d3e81d33d3a860cfa3d3025",
+    "rubik-700.png": "639c5ffaa8875b437831ecf266cb7ca4a25661fc5be633b89c0b066bcc338f77",
+    "stock-rubik-400.png": "a4b6413128b56127cb0c6e8b4a56af85cd982efdadb18b859132ef51b87457f4",
+    "stock-rubik-550.png": "876ef60d6c75be853faa3aca1551fc2930b69903b20e1046016cbed9b94d0f8a",
+    "stock-rubik-700.png": "163f85c7c3671b12c18739d6f3d7b75e2aa9e8120c75a26fdbac5de12fc4319d",
+    "stock-virtua-400.png": "190e278f83e28217ea09f7f30b615308218213e297b5e625a3b232883ecb1f5c",
+    "stock-virtua-550.png": "076f6af997529d2e45978b0b704968e7e7881be2807037f4811fd7c91146f436",
+    "stock-virtua-700.png": "b4c988250f8edd3b08cdb01618d5ac2612c118d3fbebe16a564d81bdc56b439d",
+    "virtua-400.png": "70d05cc33e5c5a7afebf932dfae76ba6349d0a86e0be3aea16d7dadfa64c267d",
+    "virtua-550.png": "f9ae86d068e7622bff8973283a833f7ae19ae3e1913e80675d536a652a369e88",
+    "virtua-700.png": "973ef991e38969de0b4f8185b1be9f80f7f985dbab2720191d93c56893f110c9"
+  },
+  "approval": "AI review only; new drawings remain purple pending Eli review."
+}

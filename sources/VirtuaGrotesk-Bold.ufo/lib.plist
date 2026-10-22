@@ -453,9 +453,15 @@
 		<string>commaturnedabovecomb</string>
 		<string>strokeshortcomb</string>
 		<string>strokeshortcomb.narrow</string>
+		<string>slashshortcomb</string>
+		<string>slashshortcomb.narrow</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>slashshortcomb</key>
+		<string>mark</string>
+		<key>slashshortcomb.narrow</key>
+		<string>mark</string>
 		<key>strokeshortcomb</key>
 		<string>mark</string>
 		<key>strokeshortcomb.narrow</key>

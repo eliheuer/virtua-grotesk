@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="slashshortcomb.narrow" format="2">
+	<advance width="0"/>
+	<outline>
+		<contour>
+			<point x="-120" y="-40" type="line"/>
+			<point x="-120" y="-72" type="line"/>
+			<point x="-72" y="-120" type="line"/>
+			<point x="-40" y="-120" type="line"/>
+			<point x="120" y="40" type="line"/>
+			<point x="120" y="72" type="line"/>
+			<point x="72" y="120" type="line"/>
+			<point x="40" y="120" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_overlay" x="0" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>
