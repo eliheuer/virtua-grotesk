@@ -29,6 +29,8 @@ Arabic handoff `889ffa58` is committed and pushed for Eli's manual drawing.
 The recurring Arabic pass is paused; source changes now focus on independent
 Latin and release work. [LAT-001](../../agent-proofs/cases/latin-001/README.md)
 records exact snapshots, source changes, raster review, tests and the next queue.
+The attachment/coverage checkpoint1e8dd28e is also pushed with Eli’s approval.
+Subsequent accent drawing batches remain local.
 The previous dated sections below are historical evidence.
 
 Applied thirteen Regular combining-offset fixes, stack-anchor propagation,
@@ -38,7 +40,9 @@ Three new Latin regression tests and240 scoped comparisons pass; build and
 preflight complete. Subsequent LAT-001 batch02 strengthens acute/grave and
 macron ink in four donor GLIFs, with endpoint/intermediate whole-word rasters and
 80 scoped shaping checks. Its full-suite delta is zero; the existing online QA
-counts below precede this drawing batch and are not a fresh certification. All216 pre-existing Hebrew regression subcases still fail
+counts below precede these drawing batches and are not a fresh certification.
+Batch03 adds two Bold chevron donor repairs with90 scoped shaping checks, whole
+word/stack rasters and a224px/em detail; all Regular/Arabic sources are unchanged. All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 
