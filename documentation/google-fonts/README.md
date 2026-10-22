@@ -35,7 +35,10 @@ Applied thirteen Regular combining-offset fixes, stack-anchor propagation,
 ten missing Latin composites in both masters, and a measured Windows clipping
 ascent of1488. Typographic line spacing and all Arabic GLIFs remain unchanged.
 Three new Latin regression tests and240 scoped comparisons pass; build and
-preflight complete. All216 pre-existing Hebrew regression subcases still fail
+preflight complete. Subsequent LAT-001 batch02 strengthens acute/grave and
+macron ink in four donor GLIFs, with endpoint/intermediate whole-word rasters and
+80 scoped shaping checks. Its full-suite delta is zero; the existing online QA
+counts below precede this drawing batch and are not a fresh certification. All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 

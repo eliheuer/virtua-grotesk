@@ -4,16 +4,16 @@
 	<advance width="300"/>
 	<outline>
 		<contour>
-			<point x="96" y="638" type="line"/>
-			<point x="140" y="638" type="line"/>
-			<point x="156" y="654" type="line"/>
-			<point x="248" y="800" type="line"/>
-			<point x="248" y="816" type="line"/>
-			<point x="232" y="832" type="line"/>
-			<point x="148" y="832" type="line"/>
-			<point x="132" y="816" type="line"/>
-			<point x="80" y="670" type="line"/>
-			<point x="80" y="654" type="line"/>
+			<point x="64" y="640" type="line"/>
+			<point x="176" y="640" type="line"/>
+			<point x="192" y="656" type="line"/>
+			<point x="288" y="800" type="line"/>
+			<point x="288" y="816" type="line"/>
+			<point x="272" y="832" type="line"/>
+			<point x="160" y="832" type="line"/>
+			<point x="144" y="816" type="line"/>
+			<point x="48" y="672" type="line"/>
+			<point x="48" y="656" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="_top" x="164" y="576"/>
@@ -21,9 +21,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
