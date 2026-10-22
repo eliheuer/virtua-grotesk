@@ -443,9 +443,12 @@
 		<string>threesuperior</string>
 		<string>zerosuperior</string>
 		<string>foursuperior</string>
+		<string>fivesuperior</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>fivesuperior</key>
+		<string>base</string>
 		<key>foursuperior</key>
 		<string>base</string>
 		<key>zerosuperior</key>

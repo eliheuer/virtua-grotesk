@@ -650,3 +650,20 @@ No sups/kerning/ordinary aliases. Online package12FAIL10WARN159PASS10INFO40SKIP:
 FAILs exact unchanged, unreachable warning expands by U2074 (math only), no
 concealment/exclusion. Gap333:182Cyrl/49Common/102Arab. Next superior5 then6–9;
 local only/no push, Arabic60272 unchanged.
+
+
+## Batch42 · Superior five
+
+[Evidence](batches/42-superior-five/README.md): purple U2075 both masters,
+40-point contour from protected five construction. Advances352/392,40 bearings,
+right bowl56/88 and bottom48/72; all new values on8, grid0. Six source files;
+1831 others/every old GLIF/Arabic/green source unchanged.125 scoped checks,
+4510 old VF/3607 static exact ink/advance comparisons,54 real subsets,27 Latin
+plus2 helpers, exact216 baseline failures and preflight complete. Eight cubics,
+six tangent joins/master with retained curvature jumps, no sampled reversals or
+proper crossings. Whole400/550/700,224px details/comb and12 actual Diffenator
+views inspected. Regular lighter than Rubik; Bold head/shoulder mass, family
+weight/default pairs and generic right-side marks remain human review.
+Online package12FAIL10WARN159PASS10INFO40SKIP: FAILs exact unchanged; unreachable
+warning adds U2075 (math only), no exclusions/false declarations. Gap332:
+182Cyrl/48Common/102Arab. Next superior6/9 then7/8; no partial sups. Local/no push.

@@ -79,7 +79,7 @@ shows no new failures; this does not waive the existing failures.
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 | Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
 | Batch33 package after broken bar | 12 | 9 | 160 | 10 | 40 |
-| Current batch41 package after superior four | 12 | 10 | 159 | 10 | 40 |
+| Current batch42 package after superior five | 12 | 10 | 159 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -94,11 +94,12 @@ Arabic warnings remain reserved for Eli. Next independent common symbols; combin
 
 Current package failures are serving-set reachability for U+0302, U+0331, U+0338
 and U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
-Current input hashes/full reports are retained in batch41/qa-online. The baseline
-revision is6e91588a plus the six hashed source changes in batch41/final-identity.json.
+Current input hashes/full reports are retained in batch42/qa-online. The baseline
+revision ise6d9e160 plus the six hashed source changes in batch42/final-identity.json.
 Batch40 adds U+2070 to the existing unreachable-subsetting warning: installed
 gfsubsets assigns it only to math. Batch41 adds U+2074 to that same warning,
-with remainder10→11. No unrelated subset is declared to hide these findings.
+with remainder10→11; batch42 adds U+2075 (also math only), remainder11→12.
+No unrelated subset is declared to hide these findings.
 New soft_hyphen WARN recommends omitting U+00AD. Its local compatibility encoding
 is not an approved release exception; retain/omit disposition remains open.
 Earlier batch reports remain historical evidence.
@@ -106,8 +107,8 @@ The QA package uses the scratch VF; active tables match except head timestamps. 
 metadata/source-delivery choices and artwork. The older loose-font failure was
 the ttf directory name; no fresh five-binary online result is claimed here.
 
-The pinned Rubik comparison after batch41 finds zero missing Latin or combining
-codepoints,182 Cyrillic,49 Common symbols and102 Arabic presentation forms.
+The pinned Rubik comparison after batch42 finds zero missing Latin or combining
+codepoints,182 Cyrillic,48 Common symbols and102 Arabic presentation forms.
 These are encoded-character differences, not language counts or visual approval.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
@@ -1552,3 +1553,17 @@ Counter and partial-family weight/default spacing remain human review. Package
 math-only unreachable serving encoding. No exclusions/false subset declarations.
 Gap333 encodings:182 Cyrillic/49 Common/102 Arabic presentation forms. Next
 superior5 then6–9; no partial sups or ordinary-digit aliases. Local only/no push.
+
+
+### LAT-001 batch42 · Superior five
+
+[Batch42](../../agent-proofs/cases/latin-001/batches/42-superior-five/README.md)
+adds U2075 both masters:40 compatible points from unchanged green five,352/392
+advances,40 bearings, grid0. Six source files/1831 others unchanged;125 scoped
+checks,4510 VF/3607 static comparisons,54 real subsets,27 Latin plus2 helpers,
+exact216 baseline failures and preflight complete. Whole400/550/700,224px detail,
+signed comb and actual Diffenator views inspected. Tangent joins retain documented
+curvature jumps; no sampled reversals/crossings. Optical family balance remains
+human review. Package12FAIL10WARN159PASS10INFO40SKIP: exact FAILs unchanged,
+unreachable warning expands by math-only U2075. No exclusions/subset changes.
+Gap332:182Cyrl/48Common/102Arab. Next superior6/9 then7/8; local only/no push.
