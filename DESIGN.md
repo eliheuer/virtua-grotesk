@@ -438,3 +438,21 @@ Bold master starts red and gets lane-2 transferred from Eli's bold
 reference image like any glyph; (3) one `<sub>` line in the designspace.
 Both glyphs must each stay master-compatible with themselves — the
 compat gate handles this with no special cases.
+
+## Whole-image acceptance before advancing
+
+Eli reaffirmed this gate after rejecting the Heh/Doachashmee proof on 2026-10-21
+([feedback](agent-proofs/FEEDBACK.md#heh-whole-image-rejection-and-focused-retry--2026-10-21)).
+Inspect the complete raster without nodes, combs or diagnostic overlays before
+calling a candidate an improvement worth carrying forward. Look at the full
+silhouette, counter shapes, distribution of ink, terminals and joined rhythm,
+then compare the same forms in the reference fonts and the established green
+Virtua drawings. Correct script construction comes before local curve fitting.
+
+A clear bump, pinched counter, accidental notch, swollen join or wrong positional
+form rejects the displayed candidate even if numerical tests pass. Do not move
+on by listing these faults as future refinements. Identify which source causes
+them; if protection blocks the repair, keep the family visibly unresolved and
+prepare a separate reviewable candidate. Review normal reading size as well as
+large details and both endpoint/intermediate weights. Technical verification,
+agent visual inspection and Eli's approval are three distinct states.

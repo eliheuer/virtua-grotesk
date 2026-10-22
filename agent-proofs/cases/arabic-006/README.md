@@ -289,3 +289,45 @@ The live proof now includes Arabic alphabet, joining forms, all-script samples
 and the Working font's encoded repertoire. Fixed DesignBot detail PNGs and their
 font-hash receipts live with batch 01; use the shared app/render-detail.py runner
 for later batches. Preserve current before/working identity when updating proofs.
+
+## Quality hold and focused Heh retry — 2026-10-21
+
+Eli rejected the batch27 four-form drawing as visibly bumpy and structurally wrong.
+Automation is PAUSED. Earlier technical pass counts and "repaired" labels do not
+establish acceptable drawing quality. Batch28 Maksura has baseline proof assets
+only and no source edits. Do not continue the queue until this hold is explicitly
+lifted. Focused retry: identify the intended Heh family, compare complete forms
+and their negative spaces against references and live green Virtua construction,
+then prepare and inspect a coherent whole-image candidate. Preserve green source
+protection and Beh's reservation. Human review is still required.
+
+## Human Heh handoff — 2026-10-21
+
+Eli chose to draw the pictured Doachashmee himself because the retry was taking
+too long, and authorized moving to other Arabic bases. Reserve both masters of
+ordinary Heh and Doachashmee, all four forms and recursive component donors,
+alongside the existing Beh reservation. `human-reservations.json` records the
+handoff hashes; always preserve newer editor saves. Batch29 remains scratch-only
+and unapplied. The automation remains paused; this handoff permits focused work
+on independent bases, not automatic resumption of the old broad queue.
+
+The whole-image gate rejected the proposed next Maksura smoothing loop before
+editing: its vertical right terminal is structurally unlike the returning bowl
+in all four references. Batch28 still contains baseline assets only. Next focused
+candidate: final three-dot Keheh, whose separate old Kaf construction lacks its
+dots and differs from its other forms. Inspect that complete form before applying
+anything. Do not treat the existing purple Keheh base as human-approved.
+
+## Final three-dot Keheh — 2026-10-21
+
+Eli explicitly authorized the final three-dot Keheh in both weights and required
+whole-image inspection with all four reference slots. Batch30 applies only
+`kehehThreedotsabove-ar.fina` in Regular and Bold: existing angled final Keheh
+base plus existing three-dot component, width960. Whole-row inspection caught
+and corrected an initially too-high dot group. Both endpoints,550, large details
+and joined contexts inspected; component compatibility,30 shaping comparisons,
+compiled-change scope and scratch preflight passed. Rubik/Readex lack U+0763 and
+are shown unavailable. Dots remain large/widely spaced; old top anchor below
+dot crown remains attachment work. This is a working draft, not human approval.
+Heh/Doachashmee, Beh, manual hamza and all donor source bytes remain unchanged.
+The live proof is batch30. Automation stays paused.

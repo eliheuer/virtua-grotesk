@@ -470,3 +470,45 @@ Eli explicitly approved applying `lam-ar.fina` in Regular and Bold, including
 the green Regular exception. Applied the exact reviewed candidate, kept its
 purple review grade, and preserved all 18 reserved Beh dependency files. This
 exception does not authorize changing other green Lam or Lam–Alef forms.
+
+## Heh whole-image rejection and focused retry — 2026-10-21
+
+Eli stopped the autonomous run after the Doachashmee four-form 700 proof: bumpy
+curves, incorrect construction and poor joins were visible beside the references.
+The run is paused. He authorized a focused Heh retry to establish adequate drawing
+context and skill before broader work resumes. Confirmed requirement: before
+calling a drawing good, inspect it as a whole rendered image and establish that
+it is drawn correctly. Local diagnostic passes cannot excuse visible faults in
+another form of the same displayed family. Retain the rejected proof and exact
+source state; do not treat previous "repaired" labels as visual acceptance.
+
+## Human Heh handoff — 2026-10-21
+
+Eli chose to draw the pictured Doachashmee himself because the retry was taking
+too long, and authorized moving to other Arabic bases. Reserve both masters of
+ordinary Heh and Doachashmee, all four forms and recursive component donors,
+alongside the existing Beh reservation. `human-reservations.json` records the
+handoff hashes; always preserve newer editor saves. Batch29 remains scratch-only
+and unapplied. The automation remains paused; this handoff permits focused work
+on independent bases, not automatic resumption of the old broad queue.
+
+The whole-image gate rejected the proposed next Maksura smoothing loop before
+editing: its vertical right terminal is structurally unlike the returning bowl
+in all four references. Batch28 still contains baseline assets only. Next focused
+candidate: final three-dot Keheh, whose separate old Kaf construction lacks its
+dots and differs from its other forms. Inspect that complete form before applying
+anything. Do not treat the existing purple Keheh base as human-approved.
+
+## Final three-dot Keheh — 2026-10-21
+
+Eli explicitly authorized the final three-dot Keheh in both weights and required
+whole-image inspection with all four reference slots. Batch30 applies only
+`kehehThreedotsabove-ar.fina` in Regular and Bold: existing angled final Keheh
+base plus existing three-dot component, width960. Whole-row inspection caught
+and corrected an initially too-high dot group. Both endpoints,550, large details
+and joined contexts inspected; component compatibility,30 shaping comparisons,
+compiled-change scope and scratch preflight passed. Rubik/Readex lack U+0763 and
+are shown unavailable. Dots remain large/widely spaced; old top anchor below
+dot crown remains attachment work. This is a working draft, not human approval.
+Heh/Doachashmee, Beh, manual hamza and all donor source bytes remain unchanged.
+The live proof is batch30. Automation stays paused.
