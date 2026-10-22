@@ -236,3 +236,21 @@ Use `.venv/bin/python scripts/reference_coverage.py --font FONT --reference
 REFERENCE --output REPORT` for the pinned cmap comparison. Run
 `python -m unittest tests.test_latin_diacritics` after a fresh build.
 `VIRTUA_FONT_QA_ROOT` can point those tests at a scratch build.
+
+## Diffenator browser review — d2513094
+
+At Eli's request, generated stock Diffenator3 1.1.4 context proofs for Virtua and
+pinned Rubik, plus a two-font coverage-text comparison. Local interactive URL:
+<http://127.0.0.1:60273/comparison/diff3proof.html> (Old=Virtua, New=Rubik).
+Generated reports are in `out/review-latin-d2513094/`; exact commands, binary
+hashes and captured browser images are in
+[review.json](diffenator-d2513094/review.json). No source/font changes.
+
+Inspected identical mixed coverage text at400/550/700 and Virtua Romanian and
+Latvian context panels at400/700. Bold is visibly denser than Rubik; long-text
+spacing still needs pair-level review. Tested marks are visible without line
+clipping; this is not exhaustive language or native-reader approval. Literal
+`[Missing]` occurs in the stock text in both views and is not itself a missing
+cmap diagnosis. The instance dropdown stays Regular after manual slider changes;
+actual recorded slider values set the weight. Use this actual Diffenator view
+alongside enlarged drawing proofs on subsequent meaningful checkpoints.

@@ -1,0 +1,40 @@
+{
+  "source_revision": "d25130943b6926329134bad4ad41cd218b33e74c",
+  "tool": "diff3proof 1.1.4",
+  "inputs": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "9c5e85e1195f97ab16703b693110b51e55e22659c8509c6b24de73d421e3c79b",
+    "agent-proofs/cases/latin-001/assets/rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "commands": [
+    ".venv/bin/diff3proof 'fonts/variable/VirtuaGrotesk[wght].ttf' --output out/review-latin-d2513094/virtua",
+    ".venv/bin/diff3proof agent-proofs/cases/latin-001/assets/rubik.ttf --output out/review-latin-d2513094/rubik",
+    ".venv/bin/diff3proof 'fonts/variable/VirtuaGrotesk[wght].ttf' agent-proofs/cases/latin-001/assets/rubik.ttf --sample-mode cover --output out/review-latin-d2513094/comparison"
+  ],
+  "generated_reports": {
+    "out/review-latin-d2513094/virtua/diff3proof.html": "108ecdb392da79a4018425a0bb3ad687a169e2fbd381c33478af1af15aac3381",
+    "out/review-latin-d2513094/rubik/diff3proof.html": "2f9dbd413589fbd48ed180ba43038ee9eb168f2fa0ba4c4f7956242ceb594545",
+    "out/review-latin-d2513094/comparison/diff3proof.html": "90fa70890d289994282dfa998bb455ea7264de1b8a321c33f287050f7d03f553"
+  },
+  "inspected_screenshots": {
+    "virtua-romanian-400.png": "e018df02d456230b0a6f3a222962184617989efd3e87c1ed83ba1c341c0c7754",
+    "rubik-cover-550.png": "885d5e2ea2b57874d003661a82f5cdbc214582a83302e252cb17b918ff3b99d4",
+    "virtua-cover-700.png": "e04758de6f5a76851f15fe512da691de4c0b3c173669c992d9c053a168f9c6b9",
+    "virtua-latvian-400.png": "80fdaa129d2cb9924d34f5a5230c6160b09a62e036f97432727f50f5599251e9",
+    "virtua-romanian-700.png": "2c9da6fe01e20139eaabed385d8bc49ac39c0b24cddf09676ac138f2bed833c4",
+    "virtua-latvian-700.png": "154d6a9edfa373657fc2769023e1392e04d1b34b361e1862dc304b7409ae050b",
+    "virtua-cover-400.png": "8a28cd0923b72586530d4a0065f16407df5aab43e86d81b20ebb4457a281cc69",
+    "virtua-cover-550.png": "8c4998199119f562635e0cdf8d9c171ad792345df997e39d75d6c8fd433a4c43",
+    "rubik-cover-700.png": "e0e03cf1ab6d6ee659fa2d820023645ae46b703a3fad68e7894d2d69c07f6570",
+    "rubik-cover-400.png": "79137d33390c3c07bdf10466afcc8217c825903d6465c5cad6de432b56e3d4f6"
+  },
+  "renderer": "Codex in-app browser; stock Diffenator3 HTML; 25 CSS px",
+  "scope": "Identical coverage text first viewport in Virtua/Rubik at400/550/700; additional Virtua Romanian and Latvian context panels at400/700. Not an exhaustive script/language review.",
+  "findings": [
+    "Virtua Bold appears denser and has different wrapping than Rubik at equal size and weight coordinate; this alone is not a requirement to match Rubik weight.",
+    "Word spacing remains uneven in some longer mixed coverage samples; follow with measured pair proofs before editing.",
+    "Tested Romanian and Latvian accents are visible and line spacing contains them; full-language/native-reader review remains pending.",
+    "Stock coverage text contains literal [Missing] in both font views. Do not treat this as a newly diagnosed missing cmap glyph or silent fallback.",
+    "Old/New are stock comparison labels: Old=Virtua, New=Rubik, not chronological revisions.",
+    "The stock instance dropdown remains Regular when manually moving the axis slider; recorded slider values control actual weight."
+  ]
+}

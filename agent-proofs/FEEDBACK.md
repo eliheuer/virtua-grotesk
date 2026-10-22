@@ -549,3 +549,12 @@ powers-of-two sums without making higher counts errors. Apply the same rule to
 new advances and spacing offsets under DESIGN.md. Preserve human2-grid optical
 exceptions and green source geometry. Inspect full words before accepting spacing.
 This is a spacing constraint, not approval to alter protected glyphs.
+
+## Diffenator comparison is part of acceptance — 2026-10-21
+
+Eli requested checking the actual Diffenator preview used in Google Fonts QA,
+with Rubik in the same preview as reference. Keep whole-image/word proofs, and
+also inspect stock Diffenator language-context and coverage views at400/550/700.
+This is an additional visual check, not permission to copy Rubik outlines or
+change protected geometry. See LAT-001 `diffenator-d2513094/review.json` for the
+first inspected browser comparison and its limits.
