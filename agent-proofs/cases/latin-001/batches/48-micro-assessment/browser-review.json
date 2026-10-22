@@ -1,0 +1,30 @@
+{
+  "font_hashes": {
+    "virtua": "968ab83bd8b4648e8f91b90247bd742cb330c7ce6da5500e44fe273d5bdd7b52",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "screenshots": {
+    "controlled-400.png": "074d17df978106da79c5ea66b41b6ac9f797ed3ceb1aff92eb1bc7918566747b",
+    "controlled-550.png": "dc3144dd5c2cf24687be5be544fbe6a48bdff8b4e4395ea88c3774c0725b12c3",
+    "controlled-700.png": "e7b644a3feb12d58c488d691b36f397bf03cf289aaea92732f9953d487fb37ac",
+    "diffenator-rubik-400.png": "6a27033c0e84aa914e98ff0e8710e8c9899cf37c6c700c54fdd4d39051b7b419",
+    "diffenator-rubik-550.png": "ba205778fcc7c2d970d81b26202f54b3ff26143c8bd9845c685d6fd382366766",
+    "diffenator-rubik-700.png": "7adba89ac8ba26e095689678304aa9ad0e298e1e8037022474c8e3d9dbbaa8da",
+    "diffenator-virtua-400.png": "a604de725ed207cb4cbf742f849082239a5a7a0263f4767c4d7a2c805215cf7b",
+    "diffenator-virtua-550.png": "89ce25a92540bd4f13a58a51c155baa2702705b77ef5d92ad8e0d6034618438c",
+    "diffenator-virtua-700.png": "0bb52675f7f1ada18b6fc8719a5b33bb4ca6c8fcd3ca8d3fe7de20b9dc1c3bca"
+  },
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "scope": "Three controlled browser fixtures and six actual Diffenator same-text views; five whole/detail rasters inspected. Stock proof generated; unchanged batch46 stock review referenced, not repeated.",
+  "observations": [
+    "Controlled Virtua micro uses visibly slanted fallback ink; actual fallback font not identified. Greek mu fallback visible in both columns; not cmap coverage.",
+    "Diffenator Virtua micro/Greek mu display boxes; Rubik micro works, Greek mu displays boxes. Slider controls actual weight despite Regular menu label.",
+    "Rubik micro has upright left descender and a u-like open bowl/right upright. Protected Virtua u/p provide body and descender references; Rubik outline was not copied.",
+    "Virtua Bold u remains dense; no new glyph exists here to approve. Generic Rubik cedilla is displaced to the right."
+  ],
+  "arabic_proof": "60272 unchanged"
+}
