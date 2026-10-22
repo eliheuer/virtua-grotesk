@@ -1,0 +1,22 @@
+{
+  "scope": "Stock coverage first viewport in Virtua at400/550/700; stock sample omits U0149. Labeled apostrophe-n supplement inspected in Virtua and Rubik at400/550/700. Stock context report generated but not exhaustively reviewed.",
+  "images": {
+    "rubik-400.png": "cdbe29b5258bb72df4890f867c186fd69bed99b887e7e219f4fc35e9ca781646",
+    "rubik-550.png": "f97d9023558d86f012a93c956d230a9307f40dd17ed023d1606b28601e2217c8",
+    "rubik-700.png": "18bb348fcf30e7325ae5a69f0095c446b0f3eef1b5f9baf5900ef8bc2f6a5970",
+    "stock-virtua-400.png": "4a00d01ab20565d9a27c96c67f5210a8235567a366b05805d8b949a415e8213d",
+    "stock-virtua-550.png": "6c2f2149ef3107e0de1ceebf1d6862666a1e13517a1d82a629315cf5ce1f9734",
+    "stock-virtua-700.png": "d79701068f2aaff5a32f2ba406da1ebe7d95a18164a946ce21412c6e69735d4f",
+    "virtua-400.png": "2b0d5923164825815cf5adae7c9470039a853e1e8ff83774a4be8d18fcacd888",
+    "virtua-550.png": "c61b57c8b5a50715a2f3ea7d2d750ccf573282697e9b4d60431fe250a1ff26da",
+    "virtua-700.png": "21820f0d20c7830d5a6f6a9db147310aed1961978429d74f24aba5a3df25c59b"
+  },
+  "findings": [
+    "Small diagonal apostrophe above-left of unchanged n, separated by40 units vertically at all five measured weights.",
+    "Virtua mark is lighter and farther left than Rubik. Optical balance and default spacing remain for human review.",
+    "Dense Bold n and asymmetric inherited shoulder remain exact green donor geometry.",
+    "Tested top/bottom/stack marks clear; this does not imply exhaustive combining-mark support.",
+    "Stock mixed text still exposes uneven spacing and dense Bold; neither is approved by this new coverage.",
+    "Old=Virtua/New=Rubik; actual slider values400/550/700 despite Regular dropdown label."
+  ]
+}

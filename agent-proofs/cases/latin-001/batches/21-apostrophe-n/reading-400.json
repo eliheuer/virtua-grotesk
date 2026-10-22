@@ -1,0 +1,28 @@
+{
+  "weight": 400,
+  "size": 48,
+  "texts": [
+    "ŉ appel   ŉ nuwe dag   ŉ boek",
+    "n ŉ ’n ʼn   ŉa ŉe ŉi ŉo ŉu"
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "a63aaa736c75f9da82bd33908f0e7cd91d6da970d80bec9efb56f349bbb81651",
+      "missing_cmap": [
+        329
+      ]
+    },
+    {
+      "role": "after",
+      "sha256": "19f408155a966983089e6babad9a1bfcf1928f0d384e1d5c7f36395a4c9b1376",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "954f195ba1c2db84f5cdcc2618e13345e8891652b09ae40ba6ae6b921a883598"
+}

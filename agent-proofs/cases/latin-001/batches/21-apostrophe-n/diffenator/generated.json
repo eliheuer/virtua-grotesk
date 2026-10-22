@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/21-apostrophe-n/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch21/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/21-apostrophe-n/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/21-apostrophe-n/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch21/comparison"
+    ]
+  ],
+  "supplement_text": "n ŉ ’n ʼn · ŉŉ ŉi ŉl ŉt · ŉa ŉe ŉi ŉo ŉu · ŉ appel · ŉ nuwe dag · ŉ boek · ŉ́ ŉ̈ ŉ̌ ŉ̂́ ŉ̦ ŉ̧́",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "19f408155a966983089e6babad9a1bfcf1928f0d384e1d5c7f36395a4c9b1376",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch21/virtua/diff3proof.html": "d19324d9de05d40cfcfc64c6c8f23dfca6b6ea3b60016849baac7b0958359f3a",
+    "out/review-latin-d2513094/batch21/comparison/napostrophe.html": "cabe7531b5d04a240b03bed4f66090a572a883134bbb623c48727ade42c604b8",
+    "out/review-latin-d2513094/batch21/comparison/diff3proof.html": "f0e523c1b0f77e818d6d53fdf943ccef1cd8df5b590de256dd8c2a0d94ba1024"
+  }
+}

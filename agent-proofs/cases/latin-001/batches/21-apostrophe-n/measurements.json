@@ -1,0 +1,44 @@
+{
+  "Regular:napostrophe": {
+    "advance": 672,
+    "advance_popcount": 3,
+    "local_points": 8,
+    "n_offset": 80,
+    "donor_n_unchanged": true,
+    "mark_bbox_y": [
+      632,
+      792
+    ],
+    "n_bbox_top": 592,
+    "vertical_gap": 40,
+    "bounds": [
+      48,
+      0,
+      600,
+      792
+    ],
+    "left_bearing": 48,
+    "right_bearing": 72.0
+  },
+  "Bold:napostrophe": {
+    "advance": 816,
+    "advance_popcount": 4,
+    "local_points": 8,
+    "n_offset": 96,
+    "donor_n_unchanged": true,
+    "mark_bbox_y": [
+      632,
+      792
+    ],
+    "n_bbox_top": 592,
+    "vertical_gap": 40,
+    "bounds": [
+      32,
+      0,
+      744,
+      792
+    ],
+    "left_bearing": 32,
+    "right_bearing": 72.0
+  }
+}

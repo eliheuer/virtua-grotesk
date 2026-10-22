@@ -1230,3 +1230,15 @@ exact216 baseline Hebrew failures and preflight complete. Whole400/550/700,
 enlarged endpoints and actual Diffenator text inspected against Rubik. Dense Bold
 branch and default pairs need human optical review. Rubik Latin gap now three:
 ŉ ﬁ ﬂ. Other script/subset/release blockers remain. Local only; no push.
+
+## Apostrophe-n coverage checkpoint — 2026-10-21
+
+LAT-001 [batch21](../../agent-proofs/cases/latin-001/batches/21-apostrophe-n/README.md)
+adds ŉ in both masters, preserving green n components and all donors. Local
+apostrophe has40-unit crown clearance; advances672/816, all new values on8.
+Six inherited n grid findings retained. All1785 other sources and all old compiled
+ink/advances unchanged.95 scoped checks,14 Latin methods, exact216 baseline Hebrew
+failures and preflight complete. Whole400/550/700,224px endpoint and actual
+Diffenator images inspected against Rubik; lighter/farther-left mark and dense
+Bold remain for optical review. Latin cmap gap now ﬁ ﬂ; other release/script/subset
+blockers remain. No forced compatibility-text substitution. Local only; no push.

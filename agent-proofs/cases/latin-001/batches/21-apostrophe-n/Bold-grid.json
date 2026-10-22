@@ -1,0 +1,107 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 1,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "napostrophe",
+      "points": 8,
+      "advance": 816.0,
+      "bounds": [
+        32,
+        0,
+        744,
+        792
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 452.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 816.0,
+          "popcount": 4
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "1": 11,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-napostrophe-j5jfc05_/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "2e6e73f55c798603ee8c8dd9cc6704f4caca7d728ce869be35ce105a17b594b5"
+    }
+  ]
+}
