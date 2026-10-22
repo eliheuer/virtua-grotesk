@@ -85,24 +85,21 @@ Progress and the remaining queue live in
 
 ## Current handoff — 2026-10-21
 
-Eli renewed autonomous continuation after the Feh/Qaf repair. Batch 07 repairs
-Bold Lam isolated/initial/medial, with endpoint/intermediate raster inspection,
-252 shaping checks and preflight. Batch 08 applies the approved final Lam repair in both masters. Lam–Alef remains
-a separate structural follow-up.
+The autonomous Arabic base-letter pass is at its finite manual-review checkpoint.
+Latest drawing checkpoint: `650b557a`, batch36 Tteh. The whole-script review still
+shows substantial structural and optical defects; this is not visual approval.
+The recurring task is paused. Preserve Beh, ordinary Heh and Doachashmee Heh in
+both masters and their recursive donors, all green sources and manual hamza.
 
 Current case: [ARB-006](cases/arabic-006/README.md).
-Current proof: `cases/arabic-006/batches/27-doachashmee/working/`.
-Bold medial Doachashmee now has cleaner loop counters and a consistent joining
-band. One Bold source changed; all Regular, Beh and manual hamza bytes remain
-unchanged. 875 shaping comparisons,400/550/700 rasters, large details and preflight
-checked. Rubik and Readex lack U+06BE and are explicitly unavailable. The other
-three Doachashmee forms require structural repair against the covered references;
-Goal's joining-form repair also remains open. Next: Yeh/Maksura/Barree.
-Regular medial Meem and
-Lam–Alef remain protected follow-ups. Eli is editing Beh (`ببب ب`): reserve
-those forms in both masters and every recursive donor, including dots. Check
-live hashes before each write and preserve human saves. Working drafts are not
-human-approved.
+Current proof: `cases/arabic-006/handoff/working/`.
+[Whole alphabet, joining sheets and manual drawing priorities](cases/arabic-006/handoff/README.md)
+include400/700 with all four references and additional550, word, mark and digit
+plates. The existing live proof opens at<http://127.0.0.1:60272/> and supports
+Arabic alphabet, Arabic joining forms, All scripts and Encoded repertoire.
+Its Before is the frozen pre-batch01 font; Working is the batch36 snapshot.
+Further editor saves need a fresh build and proof; do not resume automatic
+source edits merely because old queue entries remain in the historical log.
 
 ### Earlier Beh checkpoint
 Checkpoint `211c3b8d` is pushed and preserves the accepted Fathatan repair and

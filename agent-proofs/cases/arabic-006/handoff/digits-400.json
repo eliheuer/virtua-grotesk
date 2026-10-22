@@ -1,0 +1,58 @@
+{
+  "fonts": [
+    {
+      "role": "after",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/arabic-006/batches/36-tteh/working/fonts/after-11cf1a31805b.ttf",
+      "sha256": "11cf1a31805b5dc4013a81d38f4a131d56c652b539d368ad73a6f83fff8563df",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "rubik",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/arabic-006/batches/36-tteh/working/fonts/rubik-1b3a7437ba2a.ttf",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "noto",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/arabic-006/batches/36-tteh/working/fonts/noto-63111b5b2e07.ttf",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "plex",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/arabic-006/batches/36-tteh/working/fonts/plex-6f611412270a.ttf",
+      "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "readex",
+      "path": "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/arabic-006/batches/36-tteh/working/fonts/readex-268bba7e1e8f.ttf",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "rendered_weight": 400,
+      "missing": [
+        1776,
+        1777,
+        1778,
+        1779,
+        1780,
+        1781,
+        1782,
+        1783,
+        1784,
+        1785
+      ]
+    }
+  ],
+  "lines": [
+    "٠ ١ ٢ ٣ ٤ ٥ ٦ ٧ ٨ ٩",
+    "۰ ۱ ۲ ۳ ۴ ۵ ۶ ۷ ۸ ۹"
+  ],
+  "weight": 400,
+  "size": 88,
+  "image_sha256": "49eee32c8a115438667687d1bc5b47d09c9559f857577afc0a4376ebcaa07f89",
+  "recipe_sha256": "6da0e1c1edc27c5b5658a6ac681b64941269383a9307552dcc31489ebb66c63e"
+}

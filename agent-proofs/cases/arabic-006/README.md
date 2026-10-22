@@ -424,3 +424,24 @@ advances. Whole400/550/700, enlarged endpoint and marked joining images inspecte
 malformed shared smallHighTah donor/Rreh remain unchanged and need manual repair.
 Rubik/Readex explicitly unavailable. Inherited Beh curves are not approved.
 Next: whole-alphabet, joining, word, mark and digit image review for finite handoff.
+
+## Whole-script handoff — after batch36
+
+Tteh is checkpointed at650b557a. The finite autonomous drawing pass is now at
+manual handoff; recurrence paused. This supersedes historical next-batch queue
+instructions above. [Handoff images and exact manual priorities](handoff/README.md)
+contain22 inspected plates: whole28-letter alphabet and every joining family at
+400/700, word/mark/digit sheets at400/550/700, plus selected extensions. All four
+reference slots are present; missing coverage is explicit. Readex Arabic digits
+are shown; its Persian row is unavailable. Numeric cells avoid a DesignBot
+all-numeric string stacking problem also present in reference-font rendering.
+54 whole-sheet shaping checks found no missing Working glyphs. Active source
+hashes match the captured baseline plus the eight Tteh changes; all34 reserved
+files unchanged. Preflight/master compatibility remains tied to batch36.
+
+The images visibly retain wrong Yeh/Maksura, contextual Arabic Kaf, Lam-Alef,
+Heh/Doachashmee and Goal constructions; uneven bowl/tooth proportions; crowded
+dots; mark collisions and malformed numeral shapes. These are not approved.
+The handoff lists exact protection and ownership. Do not equate the finite pass
+ending with a finished font. Live proof is now `handoff/working`, with actual
+pre-batch01 Before and batch36 Working. No release/publication work authorized.
