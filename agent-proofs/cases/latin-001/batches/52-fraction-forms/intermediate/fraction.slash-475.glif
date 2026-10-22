@@ -1,0 +1,23 @@
+<glyph name="fraction.slash" format="2">
+	<advance width="264" />
+	<outline>
+		<contour>
+			<point x="-172.0" y="0.0" type="line" />
+			<point x="-116.0" y="0.0" type="line" />
+			<point x="-100.0" y="16.0" type="line" />
+			<point x="452.0" y="752.0" type="line" />
+			<point x="436.0" y="768.0" type="line" />
+			<point x="380.0" y="768.0" type="line" />
+			<point x="364.0" y="752.0" type="line" />
+			<point x="-188.0" y="16.0" type="line" />
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

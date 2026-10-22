@@ -1,0 +1,3462 @@
+{
+  "cases": 378,
+  "note": "Unsupported U2044 contexts remain baseline-equivalent, not covered. Optional features were not added.",
+  "rows": [
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 475,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 550,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 625,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk[wght].ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Bold.ttf",
+      "weight": 700,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Medium.ttf",
+      "weight": 500,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-Regular.ttf",
+      "weight": 400,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼½¾",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼½¾",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼½¾",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼½¾",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼½¾",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼½¾",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼½¾",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {},
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "numr": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "dnom": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "sups": 1
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "¼́ ½̧ ¾̈",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "encoded_idempotent": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1/4 1/2 3/4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1/4 1/2 3/4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1234567890",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1234567890",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1234567890",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1234567890",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1234567890",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1234567890",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1234567890",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "1⁄4 1⁄2 3⁄4",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {},
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "numr": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "dnom": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "tnum": 1,
+        "frac": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "sups": 1
+      },
+      "baseline_equal": true
+    },
+    {
+      "font": "VirtuaGrotesk-SemiBold.ttf",
+      "weight": 600,
+      "text": "ببب שָׁלוֹם µm fi fl",
+      "features": {
+        "frac": 0,
+        "numr": 0,
+        "dnom": 0
+      },
+      "baseline_equal": true
+    }
+  ]
+}

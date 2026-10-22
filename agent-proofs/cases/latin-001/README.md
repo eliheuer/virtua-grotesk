@@ -839,3 +839,23 @@ denominator2/4 and encoded-fraction scratch layout; keep U2044 inactive until
 coherent integration or safe fallback resolves collisions. No partial features,
 blind superior reuse or ordinary-slash alias. Local only/no push; Arabic60272
 unchanged. See evidence for both trials and exact hashes.
+
+
+### Batch52 · Fraction forms scratch review
+
+[Evidence](batches/52-fraction-forms/README.md) prepares dedicated numerator1/3, denominator2/4, an unencoded slash and
+encoded¼½¾ wrappers on scratch only. All1847 active sources/five fonts remain
+exact; Arabic326/master and green131/74 preserved. Green four-donor closure is
+clear of Arabic. Contours reconstructed from green recipes39/41; one shifts8
+and gains16 advance, denominators sit at0. No superior component donors, U2044,
+partial fraction features, anchors or kerning.20 scratch source files only;
+all new values on8/grid0. Quarter832/896, half808/864, three-quarters936/992.
+45 component-pair intersections clear at five weights.145 scoped checks,4540 old
+VF/3631 static comparisons,54 subsets/NFD,378 feature cases and28 Latin methods
+pass;216 Hebrew failures unchanged. Whole400/550/700,224px endpoints, signed
+combs and15 browser views inspected. Regular2/3 lighter than Rubik; Bold mass,
+widths and mixed-number rhythm remain human review. G0 cuts/G1 curvature jumps
+remain documented; no all-G2 claim. No active build/preflight/full QA: batch49
+package12FAIL10WARN and active gap327 unchanged. **Scratch preparation is ready
+for review; pause at this checkpoint.** No application/push; U2044 and full
+fraction features remain separate. Arabic60272 unchanged.

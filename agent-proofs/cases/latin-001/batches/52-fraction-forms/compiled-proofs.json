@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "¼ ½ ¾ · ¼½¾",
+      "1¼ 1½ 1¾ · 12¾",
+      "H¼H H½H H¾H",
+      "¼́ ½̈ ¾̧",
+      "¼ + ½ = ¾",
+      "1/4 1/2 3/4"
+    ],
+    "words": [
+      "A quarter: ¼ of the whole",
+      "Measure 1½ kg · ¾ litre",
+      "Length 2¼ m · ½ inch",
+      "¼ cup + ½ cup = ¾ cup",
+      "București ģimene doğa Ŧŧ ﬁﬂ",
+      "0123456789 · ¹²³⁴"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "5b50f1f55084c777b2fe4de3969ffcfb50fe8ca6bd418e74e267d7981838409e"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "5e417ff52d26d469d52c9cc1835e577faa51dae058c77e3c01be9e808a7a30a3"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "9a3030c7243813570136b92db2489ddfcee5d626d15af13164420d63911be618"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "9a9b065ba9a6a295f18a31761a504b14d22e4cd0d7c2453f1b8ee03151eb159e"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "ffab40a8e0dd202e8ee7202dcf3f75e5b622ffa8c90385ce22ec7e18e41d4fd2"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "9b5f260d1baa3fab4113c427f5051c1c5f5c176c19c31ea12eb433beeb86a208"
+    }
+  ],
+  "fonts": {
+    "before": "c379055ea6669a8af13e67658e98bffc6379fdb0d1577c8793b3e7c8168e8716",
+    "after": "888db761910b4d5ff7568dfacb4a667a99318137876c827c4f06422691310c90",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

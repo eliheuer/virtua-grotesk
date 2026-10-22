@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/52-fraction-forms/assets/after.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/52-fraction-forms/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch52/comparison"
+  ],
+  "supplement_text": "¼ ½ ¾ · ¼½¾ · 1¼ 1½ 1¾ · H¼H H½H H¾H · ¼́ ½̈ ¾̧ · 1/4 1/2 3/4 · ¼ cup + ½ cup = ¾ cup · București ģimene doğa Ŧŧ ﬁﬂ",
+  "note": "Stock controls, labeled substituted text. Old Virtua/New Rubik.",
+  "html_sha256": "f8faf6b0b3affb8222bd67f5edf0181c4762145e8d55ac7abff99d535d2e747a"
+}

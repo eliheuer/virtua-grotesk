@@ -1,0 +1,13 @@
+{
+  "checks": 145,
+  "existing_glyph_geometry_comparisons": 4540,
+  "all_existing_ink_advances_unchanged": true,
+  "unchanged_existing_sources": 1843,
+  "new_codepoints": [
+    "U+00BC",
+    "U+00BD",
+    "U+00BE"
+  ],
+  "U2044_absent": true,
+  "feature_scope": "No frac/numr/dnom/sups or U2044; encoded fraction wrappers only on scratch."
+}

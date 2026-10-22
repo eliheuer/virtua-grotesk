@@ -1,0 +1,43 @@
+<glyph name="four.dnom" format="2">
+	<advance width="352" />
+	<outline>
+		<contour>
+			<point x="224.0" y="0.0" type="line" />
+			<point x="256.0" y="0.0" type="line" />
+			<point x="272.0" y="16.0" type="line" />
+			<point x="272.0" y="78.0" type="line" />
+			<point x="280.0" y="86.0" type="line" />
+			<point x="312.0" y="86.0" type="line" />
+			<point x="328.0" y="102.0" type="line" />
+			<point x="328.0" y="124.0" type="line" />
+			<point x="312.0" y="140.0" type="line" />
+			<point x="280.0" y="140.0" type="line" />
+			<point x="272.0" y="148.0" type="line" />
+			<point x="272.0" y="368.0" type="line" />
+			<point x="256.0" y="384.0" type="line" />
+			<point x="226.0" y="384.0" type="line" />
+			<point x="32.0" y="134.0" type="line" />
+			<point x="32.0" y="102.0" type="line" />
+			<point x="48.0" y="86.0" type="line" />
+			<point x="200.0" y="86.0" type="line" />
+			<point x="208.0" y="78.0" type="line" />
+			<point x="208.0" y="16.0" type="line" />
+		</contour>
+		<contour>
+			<point x="112.0" y="140.0" type="line" />
+			<point x="112.0" y="148.0" type="line" />
+			<point x="200.0" y="274.0" type="line" />
+			<point x="208.0" y="274.0" type="line" />
+			<point x="208.0" y="148.0" type="line" />
+			<point x="200.0" y="140.0" type="line" />
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,0 +1,76 @@
+[
+  {
+    "glyph": "one.numr",
+    "weight": 400,
+    "joins": {
+      "G0": 2
+    }
+  },
+  {
+    "glyph": "one.numr",
+    "weight": 700,
+    "joins": {
+      "G0": 2
+    }
+  },
+  {
+    "glyph": "two.dnom",
+    "weight": 400,
+    "joins": {
+      "G0": 3,
+      "G1": 5,
+      "G2": 1,
+      "G1line": 1
+    }
+  },
+  {
+    "glyph": "two.dnom",
+    "weight": 700,
+    "joins": {
+      "G0": 3,
+      "G1": 5,
+      "G2": 1,
+      "G1line": 1
+    }
+  },
+  {
+    "glyph": "three.numr",
+    "weight": 400,
+    "joins": {
+      "G1": 6,
+      "G0": 7,
+      "G2": 2,
+      "G1line": 1
+    }
+  },
+  {
+    "glyph": "three.numr",
+    "weight": 700,
+    "joins": {
+      "G2": 2,
+      "G1": 6,
+      "G0": 7,
+      "G1line": 1
+    }
+  },
+  {
+    "glyph": "four.dnom",
+    "weight": 400,
+    "joins": {}
+  },
+  {
+    "glyph": "four.dnom",
+    "weight": 700,
+    "joins": {}
+  },
+  {
+    "glyph": "fraction.slash",
+    "weight": 400,
+    "joins": {}
+  },
+  {
+    "glyph": "fraction.slash",
+    "weight": 700,
+    "joins": {}
+  }
+]
