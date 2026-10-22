@@ -79,7 +79,7 @@ shows no new failures; this does not waive the existing failures.
 | Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
 | Batch28 package after short slash overlay | 10 | 9 | 160 | 10 | 40 |
 | Batch33 package after broken bar | 12 | 9 | 160 | 10 | 40 |
-| Current batch42 package after superior five | 12 | 10 | 159 | 10 | 40 |
+| Current batch43 package after superior six | 12 | 10 | 159 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
@@ -94,11 +94,13 @@ Arabic warnings remain reserved for Eli. Next independent common symbols; combin
 
 Current package failures are serving-set reachability for U+0302, U+0331, U+0338
 and U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
-Current input hashes/full reports are retained in batch42/qa-online. The baseline
-revision ise6d9e160 plus the six hashed source changes in batch42/final-identity.json.
+Current input hashes/full reports are retained in batch43/qa-online. The baseline
+revision is0e404516 plus the six hashed source changes in batch43/final-identity.json.
+Failure meaning is unchanged; Ticuna U1EBC/U1EBD bullet order differs only, with raw delta retained.
 Batch40 adds U+2070 to the existing unreachable-subsetting warning: installed
 gfsubsets assigns it only to math. Batch41 adds U+2074 to that same warning,
 with remainder10→11; batch42 adds U+2075 (also math only), remainder11→12.
+Batch43 adds U+2076 (math only), remainder12→13.
 No unrelated subset is declared to hide these findings.
 New soft_hyphen WARN recommends omitting U+00AD. Its local compatibility encoding
 is not an approved release exception; retain/omit disposition remains open.
@@ -107,8 +109,8 @@ The QA package uses the scratch VF; active tables match except head timestamps. 
 metadata/source-delivery choices and artwork. The older loose-font failure was
 the ttf directory name; no fresh five-binary online result is claimed here.
 
-The pinned Rubik comparison after batch42 finds zero missing Latin or combining
-codepoints,182 Cyrillic,48 Common symbols and102 Arabic presentation forms.
+The pinned Rubik comparison after batch43 finds zero missing Latin or combining
+codepoints,182 Cyrillic,47 Common symbols and102 Arabic presentation forms.
 These are encoded-character differences, not language counts or visual approval.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
@@ -1567,3 +1569,21 @@ curvature jumps; no sampled reversals/crossings. Optical family balance remains
 human review. Package12FAIL10WARN159PASS10INFO40SKIP: exact FAILs unchanged,
 unreachable warning expands by math-only U2075. No exclusions/subset changes.
 Gap332:182Cyrl/48Common/102Arab. Next superior6/9 then7/8; local only/no push.
+
+
+### LAT-001 batch43 · Superior six
+
+[Evidence](../../agent-proofs/cases/latin-001/batches/43-superior-six/README.md): purple U2076 both masters,29+12
+compatible points from protected six. Advances360/400,40 bearings, bowl56/88
+and bottom48/72; new values on8/grid0. Six source files;1833 others/every old
+GLIF/Arabic/green byte unchanged.125 scoped checks,4515 old VF/3611 static
+exact ink/advance comparisons,54 subsets,27 Latin plus2 helpers, unchanged216
+baseline failures and preflight complete. Twelve cubics/ten tangent joins per
+master, documented G1 curvature jumps; no sampled reversals/proper crossings.
+Whole400/550/700,224px details/comb and12 actual Diffenator views inspected.
+Regular lighter than Rubik; curved hook, Bold shoulder/head mass, family weight
+and pairs remain human review. No sups/kerning/ordinary aliases. Online package
+12FAIL10WARN159PASS10INFO40SKIP: failure meaning unchanged, Ticuna bullet order
+only differs; unreachable warning adds math-only U2076, remainder12→13. No
+exclusions/false subset declarations. Gap331:182Cyrl/47Common/102Arab. Next
+superior9 then7/8; local only/no push, Arabic60272 unchanged.

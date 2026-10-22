@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/43-superior-six/assets/after.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/43-superior-six/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch43/comparison"
+  ],
+  "supplement_text": "⁶ ⁰ ¹ ² ³ ⁴ ⁵ · x⁶ x¹ x² x³ · 10⁶ 10¹ 10² 10³ · Powers: 2⁶ = 64. Text⁶ text¹ text² text³ · notes⁶¹²³ · 0⁶ 1¹ 2² 3³ · 0123 · București⁶ ģimene¹ doğa²",
+  "note": "Stock controls, labeled substituted text. Old Virtua/New Rubik.",
+  "html_sha256": "838e0de8cecc7025d8d256911dc0fa96f029575cf76e7455bf7d6e4e75413a33"
+}

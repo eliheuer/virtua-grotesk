@@ -1,0 +1,33 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "before": "8eac3df7d3ce1c419625e2558a56b42842c13f6bde9136c218beed4f77abfe30",
+    "after": "0c9d63a00b0c1d3d626f03688ee2e9b99e613662ba391c436808fc028374035b",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "images": {
+    "browser/stock-rubik-400.png": "182f1f514dc92d60b95f28c285ed4b8cd900467bf56ce728da87704dc1e4a59e",
+    "browser/stock-rubik-550.png": "b3d01ac1e2c9a68a8390c6479960bd33def24dbeacff0df8eda2503a4e50896d",
+    "browser/stock-rubik-700.png": "7ae1af68aac050adfd504ef00653157ead1730627ab8f0395dcef017c7ec1011",
+    "browser/stock-virtua-400.png": "816ef8d89c727d71513890c3b63de94a8278796992206bcf59dcd21bb28f1cc0",
+    "browser/stock-virtua-550.png": "cfa3dab5ff96f08fff93208049ee23148798eb06d78521c515073db1f42beeaa",
+    "browser/stock-virtua-700.png": "ef0e28232d2880ff625b0c1474648b5d048d89ce4d64b8160ef281c9cc04292d",
+    "browser/target-rubik-400.png": "c88c43a94d40a9ad6a18c2ada55cc7d25324e7113b9cf8d3764dfad4716705df",
+    "browser/target-rubik-550.png": "3965db1d4e831aa9a66a1ff373108c1e2a7f5b6ff0622937318e5fa214b6a6dd",
+    "browser/target-rubik-700.png": "0c063dd99cd73fcafeb6aa484293ece862f533afa0c93536fcea09035901c318",
+    "browser/target-virtua-400.png": "2bf004d3696b4e258e02461650371a05de0ddf012c052179b23a1aa7d94bfe8d",
+    "browser/target-virtua-550.png": "8cb42ecd117b29166f657fff318cefc268af3b98ab59f030e73f82129476106a",
+    "browser/target-virtua-700.png": "7ce1fd84c8af2295ca53870fb88e59e3f6b0a8193fad72420092ba23e6ae72fd"
+  },
+  "scope": "Actual IAB Diffenator same-text supplement and first stock viewport; Old Virtua/New Rubik, slider governs weight. All twelve screenshots inspected alongside full rasters and enlarged endpoints.",
+  "findings": [
+    "Regular six lighter than Rubik; curved hook follows Virtua donor.",
+    "Counter and hook visible at sampled sizes; Bold hook/shoulder mass and family balance remain human review.",
+    "Dense Bold and uneven stock spacing persist. Generic marks retain right fallback."
+  ],
+  "human_approval": false
+}

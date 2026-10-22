@@ -667,3 +667,21 @@ weight/default pairs and generic right-side marks remain human review.
 Online package12FAIL10WARN159PASS10INFO40SKIP: FAILs exact unchanged; unreachable
 warning adds U2075 (math only), no exclusions/false declarations. Gap332:
 182Cyrl/48Common/102Arab. Next superior6/9 then7/8; no partial sups. Local/no push.
+
+
+## Batch43 · Superior six
+
+[Evidence](batches/43-superior-six/README.md): purple U2076 both masters,29+12
+compatible points from protected six. Advances360/400,40 bearings, bowl56/88
+and bottom48/72; new values on8/grid0. Six source files;1833 others/every old
+GLIF/Arabic/green byte unchanged.125 scoped checks,4515 old VF/3611 static
+exact ink/advance comparisons,54 subsets,27 Latin plus2 helpers, unchanged216
+baseline failures and preflight complete. Twelve cubics/ten tangent joins per
+master, documented G1 curvature jumps; no sampled reversals/proper crossings.
+Whole400/550/700,224px details/comb and12 actual Diffenator views inspected.
+Regular lighter than Rubik; curved hook, Bold shoulder/head mass, family weight
+and pairs remain human review. No sups/kerning/ordinary aliases. Online package
+12FAIL10WARN159PASS10INFO40SKIP: failure meaning unchanged, Ticuna bullet order
+only differs; unreachable warning adds math-only U2076, remainder12→13. No
+exclusions/false subset declarations. Gap331:182Cyrl/47Common/102Arab. Next
+superior9 then7/8; local only/no push, Arabic60272 unchanged.

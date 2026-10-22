@@ -1,0 +1,32 @@
+test_accented_letters_keep_base_advances (tests.test_latin_diacritics.LatinDiacriticsTests.test_accented_letters_keep_base_advances) ... ok
+test_alternate_carons_and_canonical_fallback (tests.test_latin_diacritics.LatinDiacriticsTests.test_alternate_carons_and_canonical_fallback) ... ok
+test_apostrophe_n_component_and_marks (tests.test_latin_diacritics.LatinDiacriticsTests.test_apostrophe_n_component_and_marks) ... ok
+test_below_mark_stacks_fit_windows_clipping_metrics (tests.test_latin_diacritics.LatinDiacriticsTests.test_below_mark_stacks_fit_windows_clipping_metrics) ... ok
+test_broken_bar_remains_separate_from_vertical_line (tests.test_latin_diacritics.LatinDiacriticsTests.test_broken_bar_remains_separate_from_vertical_line) ... ok
+test_combining_ink_matches_spacing_donors (tests.test_latin_diacritics.LatinDiacriticsTests.test_combining_ink_matches_spacing_donors) ... ok
+test_crossed_t_coverage_and_mark_attachment (tests.test_latin_diacritics.LatinDiacriticsTests.test_crossed_t_coverage_and_mark_attachment) ... ok
+test_florin_descender_and_mark_attachment (tests.test_latin_diacritics.LatinDiacriticsTests.test_florin_descender_and_mark_attachment) ... ok
+test_hcaron_ascender_attachment_and_fallback (tests.test_latin_diacritics.LatinDiacriticsTests.test_hcaron_ascender_attachment_and_fallback) ... ok
+test_inequality_symbols_keep_clear_lower_bars (tests.test_latin_diacritics.LatinDiacriticsTests.test_inequality_symbols_keep_clear_lower_bars) ... ok
+test_kra_xheight_and_mark_attachment (tests.test_latin_diacritics.LatinDiacriticsTests.test_kra_xheight_and_mark_attachment) ... ok
+test_latvian_construction_and_canonical_fallback (tests.test_latin_diacritics.LatinDiacriticsTests.test_latvian_construction_and_canonical_fallback) ... ok
+test_long_s_coverage_and_mark_attachment (tests.test_latin_diacritics.LatinDiacriticsTests.test_long_s_coverage_and_mark_attachment) ... ok
+test_long_solidus_overlay_negation_and_attachment (tests.test_latin_diacritics.LatinDiacriticsTests.test_long_solidus_overlay_negation_and_attachment) ... ok
+test_new_composites_survive_missing_cmap_fallback (tests.test_latin_diacritics.LatinDiacriticsTests.test_new_composites_survive_missing_cmap_fallback) ... ok
+test_notequal_encoding_and_missing_cmap_fallback (tests.test_latin_diacritics.LatinDiacriticsTests.test_notequal_encoding_and_missing_cmap_fallback) ... ok
+test_ogonek_construction_survives_canonical_fallback (tests.test_latin_diacritics.LatinDiacriticsTests.test_ogonek_construction_survives_canonical_fallback) ... ok
+test_ogonek_stacks_survive_real_subsetting (tests.test_latin_diacritics.LatinDiacriticsTests.test_ogonek_stacks_survive_real_subsetting) ... ok
+test_plusminus_lower_bar_stays_separate_and_not_sign_is_visible (tests.test_latin_diacritics.LatinDiacriticsTests.test_plusminus_lower_bar_stays_separate_and_not_sign_is_visible) ... ok
+test_precomposed_and_multi_mark_stacks_clear (tests.test_latin_diacritics.LatinDiacriticsTests.test_precomposed_and_multi_mark_stacks_clear) ... ok
+test_short_overlay_narrow_letters_do_not_touch_following_n (tests.test_latin_diacritics.LatinDiacriticsTests.test_short_overlay_narrow_letters_do_not_touch_following_n) ... ok
+test_short_slash_overlay_placement_and_neighbor_clearance (tests.test_latin_diacritics.LatinDiacriticsTests.test_short_slash_overlay_placement_and_neighbor_clearance) ... ok
+test_short_stroke_overlay_centers_and_preserves_accents (tests.test_latin_diacritics.LatinDiacriticsTests.test_short_stroke_overlay_centers_and_preserves_accents) ... ok
+test_soft_hyphen_default_ignorable_and_preserved_glyph (tests.test_latin_diacritics.LatinDiacriticsTests.test_soft_hyphen_default_ignorable_and_preserved_glyph) ... ok
+test_standard_f_ligatures_and_mark_components (tests.test_latin_diacritics.LatinDiacriticsTests.test_standard_f_ligatures_and_mark_components) ... ok
+test_standard_ligature_carets_interpolate (tests.test_latin_diacritics.LatinDiacriticsTests.test_standard_ligature_carets_interpolate) ... ok
+test_turned_comma_above_soft_dots_and_stacks (tests.test_latin_diacritics.LatinDiacriticsTests.test_turned_comma_above_soft_dots_and_stacks) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 2.795s
+
+OK
