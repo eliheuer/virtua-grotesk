@@ -1450,3 +1450,17 @@ unapproved release decision. Preserve this finding without exclusions or silent
 coverage changes. Rubik gap339:182 Cyrillic,55 Common,102 Arabic presentation
 forms. Dense Bold, light inherited Bold hyphen and uneven rhythm remain review
 items. Next separate U+2011 behavior assessment, then Common gaps. Local only.
+
+### LAT-001 batch36 · Nonbreaking-hyphen behavior
+
+[Assessment](../../agent-proofs/cases/latin-001/batches/36-nonbreaking-hyphen-assessment/README.md)
+leaves all1823 sources/five active fonts exact.80 shaping and30 subset samples,
+plus12 actual browser/Diffenator images at400/550/700, distinguish U+2011 line
+breaking from glyph coverage. Virtua uses existing U+2010 fallback; text-only
+subsets can omit it and expose .notdef. Retaining U+2010 restores the sampled
+Virtua fallback. Both pinned cmaps lack U+2011; Rubik browser fallback supplies
+ink despite direct HarfBuzz .notdef. No alias or serving declaration added;
+optional direct-cmap/subset support remains a separate scope decision.
+Package counts remain batch35 at12 FAIL/10 WARN,216 Hebrew failures remain,
+and Rubik gap339 is unchanged. No new build/full-QA or cross-platform approval.
+Next generic currency U+00A4 reference/donor assessment, then Common symbols.
