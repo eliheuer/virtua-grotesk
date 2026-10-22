@@ -42,7 +42,10 @@ macron ink in four donor GLIFs, with endpoint/intermediate whole-word rasters an
 80 scoped shaping checks. Its full-suite delta is zero; the existing online QA
 counts below precede these drawing batches and are not a fresh certification.
 Batch03 adds two Bold chevron donor repairs with90 scoped shaping checks, whole
-word/stack rasters and a224px/em detail; all Regular/Arabic sources are unchanged. All216 pre-existing Hebrew regression subcases still fail
+word/stack rasters and a224px/em detail; all Regular/Arabic sources are unchanged.
+Batch04 repairs both ring donors and their outgoing stack anchors in four GLIFs,
+with90 shaping checks and full endpoint/intermediate image review. All other
+source bytes remain unchanged. All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 
@@ -65,7 +68,7 @@ The pinned official Rubik comparison now finds8 missing Latin codepoints,
 presentation forms. Those are encoded-character differences, not language counts.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
-Latin Bold accent weight, ring/breve/bottom-mark shapes, wrapper spacing,
+Latin accent review, breve/tilde/bottom-mark shapes, wrapper spacing on the dyadic grid,
 Hebrew regression repair, Arabic manual review, CI and package provenance remain
 open. **The family is not ready for submission or publication.**
 
