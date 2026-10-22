@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/33-brokenbar/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch33/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/33-brokenbar/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/33-brokenbar/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch33/comparison"
+    ]
+  ],
+  "supplement_text": "alpha ¦ beta ¦ gamma · one¦two left¦right · H|H H¦H I|I I¦I · a¦b c¦d 0¦1 · ¦¦ ¦| |¦ · București ¦ ģimene ¦ doğa Ŧŧ ﬁﬂ",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "b2ff989ad2809e735e27c133d157fe272211f9bc9c0d638c814441209970bf8f",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch33/virtua/diff3proof.html": "4579755093ac78204033ce7907b0917f75e362c94751510484ddb4399cc9d88f",
+    "out/review-latin-d2513094/batch33/comparison/brokenbar.html": "47d0d64780872df5b2d15ef16add1b711a807721f49ce17da698e46793e5a2a0",
+    "out/review-latin-d2513094/batch33/comparison/diff3proof.html": "21e739ee8458a4cba0a100d07263f5e4081e08e56a3cce0bbf3dd38ea23c6b0b"
+  }
+}

@@ -462,9 +462,12 @@
 		<string>greaterequal</string>
 		<string>plusminus</string>
 		<string>logicalnot</string>
+		<string>brokenbar</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>brokenbar</key>
+		<string>base</string>
 		<key>plusminus</key>
 		<string>base</string>
 		<key>logicalnot</key>

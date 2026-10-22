@@ -438,6 +438,27 @@ class LatinDiacriticsTests(unittest.TestCase):
                         self.assertEqual(adv,sa)
                         self.assertEqual(bounds(boxes),bounds(sboxes))
 
+    def test_broken_bar_remains_separate_from_vertical_line(self):
+        from fontTools.pens.recordingPen import DecomposingRecordingPen
+        for path,font in self.fonts():
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                with self.subTest(font=path.name,weight=w):
+                    gs=font.getGlyphSet(location={'wght':w} if 'fvar' in font else None)
+                    name=font.getBestCmap()[0xA6]
+                    self.assertNotEqual(name,font.getBestCmap()[0x7C])
+                    pen=DecomposingRecordingPen(gs);gs[name].draw(pen)
+                    contours=[]
+                    for op,points in pen.value:
+                        if op=='moveTo':contours.append(list(points))
+                        elif op=='lineTo':contours[-1].extend(points)
+                    self.assertEqual(len(contours),2)
+                    ranges=sorted((min(y for x,y in c),max(y for x,y in c)) for c in contours)
+                    self.assertGreaterEqual(ranges[1][0]-ranges[0][1],160)
+                    advance,boxes=shaped(font,path.read_bytes(),'¦¦',w)
+                    self.assertEqual(advance,640)
+                    self.assertEqual(len(boxes),2)
+                    self.assertGreater(boxes[1][0]-boxes[0][2],100)
+
     def test_plusminus_lower_bar_stays_separate_and_not_sign_is_visible(self):
         from fontTools.pens.recordingPen import DecomposingRecordingPen
         for path,font in self.fonts():

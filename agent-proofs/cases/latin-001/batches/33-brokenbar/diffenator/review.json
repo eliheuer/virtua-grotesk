@@ -1,0 +1,38 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "views": [
+    "same-text supplement",
+    "stock first viewport"
+  ],
+  "fonts": {
+    "after": "b2ff989ad2809e735e27c133d157fe272211f9bc9c0d638c814441209970bf8f",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "images": {
+    "stock-virtua-400.png": "11da6430e657b1461eb44f68ff0e611f5fcd2a1ca94367284343620f7ec547df",
+    "target-virtua-550.png": "4b11f53182837ed5c4ca3b55754736bfcb8040fc1acef11f8cf4041320baf548",
+    "target-rubik-400.png": "bc7ca95ad53f269a4cb74b85c0a17c3ef7d8528c4daf93a2ec0cafb34e7ee6d7",
+    "stock-rubik-550.png": "b28ae685dbc047c5ef06cf055aabbd86cd4359ed96a412a2b439e755414e27b2",
+    "stock-virtua-700.png": "f6e1821772b332de96ec6ce1226c8f4388b985fc85187578a4672b701070da74",
+    "target-rubik-700.png": "63276999708781c8306da4076b5f4f702bebefbf14e7655220a4954013d877e0",
+    "target-virtua-700.png": "e8fdcd42443441c3349a9ed4c0a550e7ce76e039cb27ce123758ae99238e83b6",
+    "stock-rubik-400.png": "cda718f4267a1ec185e447b40e1154ee7509fae36ca6d55141dfb7aafb309175",
+    "target-rubik-550.png": "2a19cc3ce31939844680267664eeb6dd0b44e1a88ff0e37135781411cb6097f8",
+    "target-virtua-400.png": "2e95c799afb5a48c446f39b27ccae6c1836b4a078b5849c77dcf137a7eb16e0a",
+    "stock-virtua-550.png": "b641313bc954a6c7b373e6997b357fb28ca74f6ece4b68c2b347098f229a77fd",
+    "stock-rubik-700.png": "61b6ad0b17659a61444c9bd19c298129a242b2b59293deb234a29d2082c40717"
+  },
+  "findings": [
+    "New broken bar has a clear192-unit separation at all sampled weights.",
+    "It is taller and more widely broken than Rubik; it shares the existing Virtua bar vertical span and has16-unit thicker strokes.",
+    "Default spacing, height and mass remain human optical review.",
+    "Generic mark attachment retains right-side fallback; this is not an attachment-system extension.",
+    "Stock first viewport remains dense and uneven at Bold; no exhaustive language or native-reader review."
+  ],
+  "slider_controls_weight_despite_regular_label": true,
+  "arabic_live_proof_unchanged": true
+}
