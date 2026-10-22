@@ -1,0 +1,3 @@
+# Batch41 · Superior four
+
+Authorized scope: new foursuperior U2074, Regular and Bold only. Draw-outline/build-font/google-fonts-qa workflows continue. New purple 20+6 line contours reuse the closed four construction, preserving green donor bytes. Flat alignment384–768; stems56/88, bars48/72, advances352/384 and32-unit bearings. Exposed cuts16, internal joins8. Counter and diagonal mass must be inspected beside existing superior0/1/2/3 at400/550/700 and224px. No sups/kerning/anchors. No ordinary figure edits. Batch40 already supplies seven-donor reference inventory; recompute closure and hashes now.

@@ -633,3 +633,20 @@ generic marks retain right fallback, no sups feature. Online package12FAIL10WARN
 expands by U2070 (installed gfsubsets: math only). No exclusions or unrelated
 subset declaration. Gap334:182Cyrl/50Common/102Arab. Inventory0/4–9 frozen; next
 bounded superior4/5, then6–9. Local only/no push; Arabic60272 unchanged.
+
+
+## Batch41 · Superior four
+
+[Evidence](batches/41-superior-four/README.md): purple U2074 both masters,
+20+6 line contours from protected four construction. Advances352/384,32 bearings,
+stems56/88, bars48/72, new values on8 and grid0. Six source files;1829 others and
+all previous GLIF/Arabic/green sources unchanged.125 scoped checks,4505 VF/3603
+static exact old ink/advance comparisons,54 real subsets,27 Latin plus2 helpers,
+unchanged216 baseline failures and preflight complete. Complete400/550/700,
+224px details and12 actual Diffenator target/stock screenshots inspected.
+Counter open at sampled sizes; lighter Regular diagonal, small-size Bold counter,
+partial-family weight/default pairs and generic right-side accents remain review.
+No sups/kerning/ordinary aliases. Online package12FAIL10WARN159PASS10INFO40SKIP:
+FAILs exact unchanged, unreachable warning expands by U2074 (math only), no
+concealment/exclusion. Gap333:182Cyrl/49Common/102Arab. Next superior5 then6–9;
+local only/no push, Arabic60272 unchanged.

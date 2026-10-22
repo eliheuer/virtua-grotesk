@@ -1,0 +1,3711 @@
+{
+  "before": {
+    "SKIP": 40,
+    "PASS": 159,
+    "INFO": 10,
+    "WARN": 10,
+    "FAIL": 12
+  },
+  "after": {
+    "SKIP": 40,
+    "PASS": 159,
+    "INFO": 10,
+    "WARN": 10,
+    "FAIL": 12
+  },
+  "fail_error_records_exactly_unchanged": true,
+  "new_warnings": [
+    {
+      "check": "googlefonts/metadata/unreachable_subsetting",
+      "message": "out/qa/2026-10-22-superior-four/ofl/virtuagrotesk/VirtuaGrotesk[wght].ttf: The following codepoints supported by the font are not covered by any subsets defined in the font's metadata file, and will never be served. You can solve this by either manually adding additional subset declarations to METADATA.pb, or by editing the glyphset definitions.\n\n* U+02D8 BREVE: try adding one of: canadian-aboriginal, yi\n* U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi\n* U+02DB OGONEK: try adding one of: canadian-aboriginal, yi\n* U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, cherokee, coptic, tifinagh\n* U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh\n* U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan\n* U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage\n* U+030C COMBINING CARON: try adding one of: cherokee, tai-le\n* U+0312 COMBINING TURNED COMMA ABOVE: try adding math\n... and 11 others\n\nOr you can add the above codepoints to one of the subsets supported by the font: arabic, hebrew, latin, latin-ext, menu",
+      "severity": "WARN",
+      "code": "unreachable-subsetting"
+    }
+  ],
+  "removed_warnings": [
+    {
+      "check": "googlefonts/metadata/unreachable_subsetting",
+      "message": "out/qa/2026-10-22-superior-zero/ofl/virtuagrotesk/VirtuaGrotesk[wght].ttf: The following codepoints supported by the font are not covered by any subsets defined in the font's metadata file, and will never be served. You can solve this by either manually adding additional subset declarations to METADATA.pb, or by editing the glyphset definitions.\n\n* U+02D8 BREVE: try adding one of: yi, canadian-aboriginal\n* U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi\n* U+02DB OGONEK: try adding one of: yi, canadian-aboriginal\n* U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, math, tifinagh\n* U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic\n* U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan\n* U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage\n* U+030C COMBINING CARON: try adding one of: cherokee, tai-le\n* U+0312 COMBINING TURNED COMMA ABOVE: try adding math\n... and 10 others\n\nOr you can add the above codepoints to one of the subsets supported by the font: arabic, hebrew, latin, latin-ext, menu",
+      "severity": "WARN",
+      "code": "unreachable-subsetting"
+    }
+  ],
+  "raw_changed_warning_records": {
+    "after": [
+      {
+        "check": "contour_count",
+        "message": "This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are\n     inferred from the typical amounts of contours observed in a\n     large collection of reference font families. The divergences\n     listed below may simply indicate a significantly different\n     design on some of your glyphs. On the other hand, some of these\n     may flag actual bugs in the font such as glyphs mapped to an\n     incorrect codepoint. Please consider reviewing the design and\n     codepoint assignment of these to make sure they are correct.\n\n\n    The following glyphs do not have the recommended number of contours:\n* uni0645.medi (unencoded): found 4, expected one of: [2]\n* uni0647.init (unencoded): found 2, expected one of: [1, 3]\n* uni0654064C (unencoded): found 5, expected one of: [3, 6]\n* perMillear (U+0609): found 6, expected one of: [0, 4]",
+        "severity": "WARN",
+        "code": "contour-count",
+        "metadata": [
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0645.medi",
+              "glyph_id": 165,
+              "actual": {
+                "contour_count": 4,
+                "codepoint": null
+              },
+              "expected": {
+                "allowed_counts": [
+                  2
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0647.init",
+              "glyph_id": 176,
+              "actual": {
+                "contour_count": 2,
+                "codepoint": null
+              },
+              "expected": {
+                "allowed_counts": [
+                  1,
+                  3
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064C",
+              "glyph_id": 295,
+              "actual": {
+                "contour_count": 5,
+                "codepoint": null
+              },
+              "expected": {
+                "allowed_counts": [
+                  3,
+                  6
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "perMillear",
+              "glyph_id": 713,
+              "actual": {
+                "contour_count": 6,
+                "codepoint": 1545
+              },
+              "expected": {
+                "allowed_counts": [
+                  0,
+                  4
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          }
+        ]
+      },
+      {
+        "check": "googlefonts/metadata/unreachable_subsetting",
+        "message": "out/qa/2026-10-22-superior-four/ofl/virtuagrotesk/VirtuaGrotesk[wght].ttf: The following codepoints supported by the font are not covered by any subsets defined in the font's metadata file, and will never be served. You can solve this by either manually adding additional subset declarations to METADATA.pb, or by editing the glyphset definitions.\n\n* U+02D8 BREVE: try adding one of: canadian-aboriginal, yi\n* U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi\n* U+02DB OGONEK: try adding one of: canadian-aboriginal, yi\n* U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, cherokee, coptic, tifinagh\n* U+0306 COMBINING BREVE: try adding one of: old-permic, tifinagh\n* U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan\n* U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage\n* U+030C COMBINING CARON: try adding one of: cherokee, tai-le\n* U+0312 COMBINING TURNED COMMA ABOVE: try adding math\n... and 11 others\n\nOr you can add the above codepoints to one of the subsets supported by the font: arabic, hebrew, latin, latin-ext, menu",
+        "severity": "WARN",
+        "code": "unreachable-subsetting"
+      },
+      {
+        "check": "outline_alignment_miss",
+        "message": "The following glyphs have on-curve points which have potentially incorrect y coordinates:\n\n* - S (U+0053): X=481.5,Y=-2.5 (should be at baseline 0?)\n* - b (U+0062): X=254,Y=2.5 (should be at baseline 0?)\n* - d (U+0064): X=386,Y=2.5 (should be at baseline 0?)\n* - uni066E.fina: X=963.5,Y=2.5 (should be at baseline 0?)\n* - uni066E.fina: X=788.5,Y=2.5 (should be at baseline 0?)\n* - uni066E.medi: X=289.5,Y=2.5 (should be at baseline 0?)\n* - uni066E.medi: X=122.5,Y=2.5 (should be at baseline 0?)\n* - uni0628.fina: X=963.5,Y=2.5 (should be at baseline 0?)\n* - uni0628.fina: X=788.5,Y=2.5 (should be at baseline 0?)\n... and 88 others",
+        "severity": "WARN",
+        "code": "found-misalignments",
+        "metadata": [
+          {
+            "GlyphProblem": {
+              "glyph_name": "S (U+0053)",
+              "glyph_id": 20,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "b (U+0062)",
+              "glyph_id": 31,
+              "position": [
+                254.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "d (U+0064)",
+              "glyph_id": 33,
+              "position": [
+                386.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.fina",
+              "glyph_id": 70,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.fina",
+              "glyph_id": 70,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.medi",
+              "glyph_id": 71,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.medi",
+              "glyph_id": 71,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.fina",
+              "glyph_id": 74,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.fina",
+              "glyph_id": 74,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.medi",
+              "glyph_id": 75,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.medi",
+              "glyph_id": 75,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.fina",
+              "glyph_id": 78,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.fina",
+              "glyph_id": 78,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.medi",
+              "glyph_id": 79,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.medi",
+              "glyph_id": 79,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.fina",
+              "glyph_id": 82,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.fina",
+              "glyph_id": 82,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.medi",
+              "glyph_id": 83,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.medi",
+              "glyph_id": 83,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0633 (U+0633)",
+              "glyph_id": 105,
+              "position": [
+                237.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0633.fina",
+              "glyph_id": 106,
+              "position": [
+                444.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0633.fina",
+              "glyph_id": 106,
+              "position": [
+                204.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0634 (U+0634)",
+              "glyph_id": 109,
+              "position": [
+                237.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0634.fina",
+              "glyph_id": 110,
+              "position": [
+                444.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0634.fina",
+              "glyph_id": 110,
+              "position": [
+                204.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0643.fina",
+              "glyph_id": 156,
+              "position": [
+                822.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0643.fina",
+              "glyph_id": 156,
+              "position": [
+                620.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0643.medi",
+              "glyph_id": 157,
+              "position": [
+                502.0,
+                1.5
+              ],
+              "actual": {
+                "y": 1.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0644.medi",
+              "glyph_id": 161,
+              "position": [
+                295.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0644.medi",
+              "glyph_id": 161,
+              "position": [
+                120.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0646.medi",
+              "glyph_id": 169,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0646.medi",
+              "glyph_id": 169,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni064A.medi",
+              "glyph_id": 187,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni064A.medi",
+              "glyph_id": 187,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0626.medi",
+              "glyph_id": 191,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0626.medi",
+              "glyph_id": 191,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440627.fina",
+              "glyph_id": 195,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440627.fina",
+              "glyph_id": 195,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440623.fina",
+              "glyph_id": 197,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440623.fina",
+              "glyph_id": 197,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440625.fina",
+              "glyph_id": 199,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440625.fina",
+              "glyph_id": 199,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440622.fina",
+              "glyph_id": 201,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440622.fina",
+              "glyph_id": 201,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440671.fina",
+              "glyph_id": 203,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440671.fina",
+              "glyph_id": 203,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni061F (U+061F)",
+              "glyph_id": 239,
+              "position": [
+                400.0,
+                767.0
+              ],
+              "actual": {
+                "y": 767.0
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "question (U+003F)",
+              "glyph_id": 250,
+              "position": [
+                160.0,
+                767.0
+              ],
+              "actual": {
+                "y": 767.0
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064F",
+              "glyph_id": 294,
+              "position": [
+                206.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064C",
+              "glyph_id": 295,
+              "position": [
+                206.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064E",
+              "glyph_id": 296,
+              "position": [
+                224.0,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni064C (U+064C)",
+              "glyph_id": 302,
+              "position": [
+                324.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0651064F",
+              "glyph_id": 312,
+              "position": [
+                206.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scircumflex (U+015C)",
+              "glyph_id": 372,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Sacute (U+015A)",
+              "glyph_id": 481,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scaron (U+0160)",
+              "glyph_id": 482,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scedilla (U+015E)",
+              "glyph_id": 483,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scommaaccent (U+0218)",
+              "glyph_id": 484,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "alefMaksuraar.medi",
+              "glyph_id": 514,
+              "position": [
+                299.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "alefMaksuraar.medi",
+              "glyph_id": 514,
+              "position": [
+                110.0,
+                1.0
+              ],
+              "actual": {
+                "y": 1.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "at (U+0040)",
+              "glyph_id": 527,
+              "position": [
+                157.5,
+                2.0
+              ],
+              "actual": {
+                "y": 2.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.fina",
+              "glyph_id": 532,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.fina",
+              "glyph_id": 532,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.medi",
+              "glyph_id": 534,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.medi",
+              "glyph_id": 534,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "copyright (U+00A9)",
+              "glyph_id": 557,
+              "position": [
+                302.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "copyright (U+00A9)",
+              "glyph_id": 557,
+              "position": [
+                625.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "dcaron (U+010F)",
+              "glyph_id": 562,
+              "position": [
+                386.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "dcroat (U+0111)",
+              "glyph_id": 563,
+              "position": [
+                386.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "farsiYehar.medi",
+              "glyph_id": 589,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "farsiYehar.medi",
+              "glyph_id": 589,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "germandbls (U+00DF)",
+              "glyph_id": 616,
+              "position": [
+                331.5,
+                -254.5
+              ],
+              "actual": {
+                "y": -254.5
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "jehar.fina",
+              "glyph_id": 659,
+              "position": [
+                562.5,
+                2.0
+              ],
+              "actual": {
+                "y": 2.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "pehar.fina",
+              "glyph_id": 710,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "pehar.fina",
+              "glyph_id": 710,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "registered (U+00AE)",
+              "glyph_id": 731,
+              "position": [
+                302.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "registered (U+00AE)",
+              "glyph_id": 731,
+              "position": [
+                625.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "rrehar.fina",
+              "glyph_id": 737,
+              "position": [
+                562.5,
+                2.0
+              ],
+              "actual": {
+                "y": 2.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "seenSixdotsar (U+069C)",
+              "glyph_id": 745,
+              "position": [
+                237.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "seenSixdotsar.fina",
+              "glyph_id": 746,
+              "position": [
+                444.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "seenSixdotsar.fina",
+              "glyph_id": 746,
+              "position": [
+                204.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.fina",
+              "glyph_id": 777,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.fina",
+              "glyph_id": 777,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.medi",
+              "glyph_id": 779,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.medi",
+              "glyph_id": 779,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.fina",
+              "glyph_id": 781,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.fina",
+              "glyph_id": 781,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.medi",
+              "glyph_id": 783,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.medi",
+              "glyph_id": 783,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.fina",
+              "glyph_id": 795,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.fina",
+              "glyph_id": 795,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.medi",
+              "glyph_id": 797,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.medi",
+              "glyph_id": 797,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.fina",
+              "glyph_id": 799,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.fina",
+              "glyph_id": 799,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.medi",
+              "glyph_id": 801,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.medi",
+              "glyph_id": 801,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          }
+        ]
+      }
+    ],
+    "before": [
+      {
+        "check": "contour_count",
+        "message": "This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are\n     inferred from the typical amounts of contours observed in a\n     large collection of reference font families. The divergences\n     listed below may simply indicate a significantly different\n     design on some of your glyphs. On the other hand, some of these\n     may flag actual bugs in the font such as glyphs mapped to an\n     incorrect codepoint. Please consider reviewing the design and\n     codepoint assignment of these to make sure they are correct.\n\n\n    The following glyphs do not have the recommended number of contours:\n* uni0645.medi (unencoded): found 4, expected one of: [2]\n* uni0647.init (unencoded): found 2, expected one of: [1, 3]\n* uni0654064C (unencoded): found 5, expected one of: [3, 6]\n* perMillear (U+0609): found 6, expected one of: [0, 4]",
+        "severity": "WARN",
+        "code": "contour-count",
+        "metadata": [
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0645.medi",
+              "glyph_id": 165,
+              "actual": {
+                "contour_count": 4,
+                "codepoint": null
+              },
+              "expected": {
+                "allowed_counts": [
+                  2
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0647.init",
+              "glyph_id": 176,
+              "actual": {
+                "contour_count": 2,
+                "codepoint": null
+              },
+              "expected": {
+                "allowed_counts": [
+                  1,
+                  3
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064C",
+              "glyph_id": 295,
+              "actual": {
+                "contour_count": 5,
+                "codepoint": null
+              },
+              "expected": {
+                "allowed_counts": [
+                  3,
+                  6
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "perMillear",
+              "glyph_id": 712,
+              "actual": {
+                "contour_count": 6,
+                "codepoint": 1545
+              },
+              "expected": {
+                "allowed_counts": [
+                  0,
+                  4
+                ]
+              },
+              "message": "Unexpected contour count"
+            }
+          }
+        ]
+      },
+      {
+        "check": "googlefonts/metadata/unreachable_subsetting",
+        "message": "out/qa/2026-10-22-superior-zero/ofl/virtuagrotesk/VirtuaGrotesk[wght].ttf: The following codepoints supported by the font are not covered by any subsets defined in the font's metadata file, and will never be served. You can solve this by either manually adding additional subset declarations to METADATA.pb, or by editing the glyphset definitions.\n\n* U+02D8 BREVE: try adding one of: yi, canadian-aboriginal\n* U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi\n* U+02DB OGONEK: try adding one of: yi, canadian-aboriginal\n* U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, math, tifinagh\n* U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic\n* U+030A COMBINING RING ABOVE: try adding one of: syriac, duployan\n* U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage\n* U+030C COMBINING CARON: try adding one of: cherokee, tai-le\n* U+0312 COMBINING TURNED COMMA ABOVE: try adding math\n... and 10 others\n\nOr you can add the above codepoints to one of the subsets supported by the font: arabic, hebrew, latin, latin-ext, menu",
+        "severity": "WARN",
+        "code": "unreachable-subsetting"
+      },
+      {
+        "check": "outline_alignment_miss",
+        "message": "The following glyphs have on-curve points which have potentially incorrect y coordinates:\n\n* - S (U+0053): X=481.5,Y=-2.5 (should be at baseline 0?)\n* - b (U+0062): X=254,Y=2.5 (should be at baseline 0?)\n* - d (U+0064): X=386,Y=2.5 (should be at baseline 0?)\n* - uni066E.fina: X=963.5,Y=2.5 (should be at baseline 0?)\n* - uni066E.fina: X=788.5,Y=2.5 (should be at baseline 0?)\n* - uni066E.medi: X=289.5,Y=2.5 (should be at baseline 0?)\n* - uni066E.medi: X=122.5,Y=2.5 (should be at baseline 0?)\n* - uni0628.fina: X=963.5,Y=2.5 (should be at baseline 0?)\n* - uni0628.fina: X=788.5,Y=2.5 (should be at baseline 0?)\n... and 88 others",
+        "severity": "WARN",
+        "code": "found-misalignments",
+        "metadata": [
+          {
+            "GlyphProblem": {
+              "glyph_name": "S (U+0053)",
+              "glyph_id": 20,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "b (U+0062)",
+              "glyph_id": 31,
+              "position": [
+                254.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "d (U+0064)",
+              "glyph_id": 33,
+              "position": [
+                386.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.fina",
+              "glyph_id": 70,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.fina",
+              "glyph_id": 70,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.medi",
+              "glyph_id": 71,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni066E.medi",
+              "glyph_id": 71,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.fina",
+              "glyph_id": 74,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.fina",
+              "glyph_id": 74,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.medi",
+              "glyph_id": 75,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0628.medi",
+              "glyph_id": 75,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.fina",
+              "glyph_id": 78,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.fina",
+              "glyph_id": 78,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.medi",
+              "glyph_id": 79,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062A.medi",
+              "glyph_id": 79,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.fina",
+              "glyph_id": 82,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.fina",
+              "glyph_id": 82,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.medi",
+              "glyph_id": 83,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni062B.medi",
+              "glyph_id": 83,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0633 (U+0633)",
+              "glyph_id": 105,
+              "position": [
+                237.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0633.fina",
+              "glyph_id": 106,
+              "position": [
+                444.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0633.fina",
+              "glyph_id": 106,
+              "position": [
+                204.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0634 (U+0634)",
+              "glyph_id": 109,
+              "position": [
+                237.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0634.fina",
+              "glyph_id": 110,
+              "position": [
+                444.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0634.fina",
+              "glyph_id": 110,
+              "position": [
+                204.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0643.fina",
+              "glyph_id": 156,
+              "position": [
+                822.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0643.fina",
+              "glyph_id": 156,
+              "position": [
+                620.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0643.medi",
+              "glyph_id": 157,
+              "position": [
+                502.0,
+                1.5
+              ],
+              "actual": {
+                "y": 1.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0644.medi",
+              "glyph_id": 161,
+              "position": [
+                295.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0644.medi",
+              "glyph_id": 161,
+              "position": [
+                120.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0646.medi",
+              "glyph_id": 169,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0646.medi",
+              "glyph_id": 169,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni064A.medi",
+              "glyph_id": 187,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni064A.medi",
+              "glyph_id": 187,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0626.medi",
+              "glyph_id": 191,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0626.medi",
+              "glyph_id": 191,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440627.fina",
+              "glyph_id": 195,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440627.fina",
+              "glyph_id": 195,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440623.fina",
+              "glyph_id": 197,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440623.fina",
+              "glyph_id": 197,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440625.fina",
+              "glyph_id": 199,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440625.fina",
+              "glyph_id": 199,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440622.fina",
+              "glyph_id": 201,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440622.fina",
+              "glyph_id": 201,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440671.fina",
+              "glyph_id": 203,
+              "position": [
+                551.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni06440671.fina",
+              "glyph_id": 203,
+              "position": [
+                376.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni061F (U+061F)",
+              "glyph_id": 239,
+              "position": [
+                400.0,
+                767.0
+              ],
+              "actual": {
+                "y": 767.0
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "question (U+003F)",
+              "glyph_id": 250,
+              "position": [
+                160.0,
+                767.0
+              ],
+              "actual": {
+                "y": 767.0
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064F",
+              "glyph_id": 294,
+              "position": [
+                206.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064C",
+              "glyph_id": 295,
+              "position": [
+                206.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0654064E",
+              "glyph_id": 296,
+              "position": [
+                224.0,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni064C (U+064C)",
+              "glyph_id": 302,
+              "position": [
+                324.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "uni0651064F",
+              "glyph_id": 312,
+              "position": [
+                206.5,
+                1022.0
+              ],
+              "actual": {
+                "y": 1022.0
+              },
+              "expected": {
+                "y": 1024.0,
+                "line_name": "ascender"
+              },
+              "message": "Point should be on ascender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scircumflex (U+015C)",
+              "glyph_id": 372,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Sacute (U+015A)",
+              "glyph_id": 480,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scaron (U+0160)",
+              "glyph_id": 481,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scedilla (U+015E)",
+              "glyph_id": 482,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "Scommaaccent (U+0218)",
+              "glyph_id": 483,
+              "position": [
+                481.5,
+                -2.5
+              ],
+              "actual": {
+                "y": -2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "alefMaksuraar.medi",
+              "glyph_id": 513,
+              "position": [
+                299.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "alefMaksuraar.medi",
+              "glyph_id": 513,
+              "position": [
+                110.0,
+                1.0
+              ],
+              "actual": {
+                "y": 1.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "at (U+0040)",
+              "glyph_id": 526,
+              "position": [
+                157.5,
+                2.0
+              ],
+              "actual": {
+                "y": 2.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.fina",
+              "glyph_id": 531,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.fina",
+              "glyph_id": 531,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.medi",
+              "glyph_id": 533,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "beehar.medi",
+              "glyph_id": 533,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "copyright (U+00A9)",
+              "glyph_id": 556,
+              "position": [
+                302.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "copyright (U+00A9)",
+              "glyph_id": 556,
+              "position": [
+                625.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "dcaron (U+010F)",
+              "glyph_id": 561,
+              "position": [
+                386.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "dcroat (U+0111)",
+              "glyph_id": 562,
+              "position": [
+                386.0,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "farsiYehar.medi",
+              "glyph_id": 588,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "farsiYehar.medi",
+              "glyph_id": 588,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "germandbls (U+00DF)",
+              "glyph_id": 615,
+              "position": [
+                331.5,
+                -254.5
+              ],
+              "actual": {
+                "y": -254.5
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "jehar.fina",
+              "glyph_id": 658,
+              "position": [
+                562.5,
+                2.0
+              ],
+              "actual": {
+                "y": 2.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "pehar.fina",
+              "glyph_id": 709,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "pehar.fina",
+              "glyph_id": 709,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "registered (U+00AE)",
+              "glyph_id": 730,
+              "position": [
+                302.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "registered (U+00AE)",
+              "glyph_id": 730,
+              "position": [
+                625.5,
+                767.5
+              ],
+              "actual": {
+                "y": 767.5
+              },
+              "expected": {
+                "y": 768.0,
+                "line_name": "cap-height"
+              },
+              "message": "Point should be on cap-height line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "rrehar.fina",
+              "glyph_id": 736,
+              "position": [
+                562.5,
+                2.0
+              ],
+              "actual": {
+                "y": 2.0
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "seenSixdotsar (U+069C)",
+              "glyph_id": 744,
+              "position": [
+                237.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "seenSixdotsar.fina",
+              "glyph_id": 745,
+              "position": [
+                444.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "seenSixdotsar.fina",
+              "glyph_id": 745,
+              "position": [
+                204.0,
+                -254.0
+              ],
+              "actual": {
+                "y": -254.0
+              },
+              "expected": {
+                "y": -256.0,
+                "line_name": "descender"
+              },
+              "message": "Point should be on descender line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.fina",
+              "glyph_id": 776,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.fina",
+              "glyph_id": 776,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.medi",
+              "glyph_id": 778,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehRingar.medi",
+              "glyph_id": 778,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.fina",
+              "glyph_id": 780,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.fina",
+              "glyph_id": 780,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.medi",
+              "glyph_id": 782,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "tehThreedotsdownar.medi",
+              "glyph_id": 782,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.fina",
+              "glyph_id": 794,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.fina",
+              "glyph_id": 794,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.medi",
+              "glyph_id": 796,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehar.medi",
+              "glyph_id": 796,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.fina",
+              "glyph_id": 798,
+              "position": [
+                963.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.fina",
+              "glyph_id": 798,
+              "position": [
+                788.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.medi",
+              "glyph_id": 800,
+              "position": [
+                289.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          },
+          {
+            "GlyphProblem": {
+              "glyph_name": "ttehehar.medi",
+              "glyph_id": 800,
+              "position": [
+                122.5,
+                2.5
+              ],
+              "actual": {
+                "y": 2.5
+              },
+              "expected": {
+                "y": 0.0,
+                "line_name": "baseline"
+              },
+              "message": "Point should be on baseline line"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "normalization": "Package directory normalized, glyph_id omitted and suggestion order sorted for WARN comparison; names/geometry/positions/messages preserved. Old glyph ink and advances verified exactly in verification.json.",
+  "disposition": "One existing unreachable-subsetting warning expands by one encoding: U2074. Installed gfsubsets diagnostic retained separately. Failure records unchanged; soft-hyphen policy warning remains. No exclusions or metadata changes."
+}

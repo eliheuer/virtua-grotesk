@@ -1,0 +1,37 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "mapping": {
+    "Old": "Virtua candidate",
+    "New": "Rubik"
+  },
+  "scope": "Actual same-text supplement and first stock mixed-text viewport in both fonts. Stock sample differs from batch40, not a before-after pixel comparison. Slider controls weight despite Regular menu label.",
+  "font_hashes": {
+    "before": "7aab7be80fb5a129d2df0d4c9ad0db9dc82cb18c435c065ea46a7490ff554b76",
+    "after": "c7e9bcd9f0d28d322db4f156bd679e8a31176bb8313edb5fde5dce8c1cd6a059",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "screenshots": {
+    "stock-rubik-400.png": "434177e9eb7c085423dda590a9fed6435e74ce93ff5818b2fe9e178c31a085c7",
+    "stock-rubik-550.png": "cec791f837f4f314f4557c8229e9bfb879304dfc166840573245322d24920dfc",
+    "stock-rubik-700.png": "ae29cc31f0d6264ca903576140eda2594a63de2dab8836e4d3f492547335a17a",
+    "stock-virtua-400.png": "9da338e1eb9f796b1d72327b513496b7fb65f72394fa27fc2073ddb0a09a665c",
+    "stock-virtua-550.png": "4529b7b15406022155459c5f1fc4f09d2a0880d97f2a19fac7513ca9b8cb4898",
+    "stock-virtua-700.png": "73018b9bf6d3197eb7d62e5651fcc7bb121842a97c9a69a82f2d89697f60499c",
+    "target-rubik-400.png": "835032566b66627543ac9650a8568a4047dfac80219d33c003f3a3c6763f6e28",
+    "target-rubik-550.png": "22ba729054d59818d3a9a6746de1d6b011ff0175a7f3336b0d8abf6f6eb6be9a",
+    "target-rubik-700.png": "8f2c44400780dada9dbf7c52ae3c52b60e0b39c47dabfb7649a4e6fac6da6bdb",
+    "target-virtua-400.png": "deef999a7d7605fc17ad7399c095863e6db348f5bf00fbdaed9c32aab3495fca",
+    "target-virtua-550.png": "bbc2ea98af7edd17579d109a7369ccefa7b72b2011d1afd3bc34f99434e3458d",
+    "target-virtua-700.png": "a447a67804c66b820390e731f2d7b1302a991961da0f5e73edea94f56e91e702"
+  },
+  "observations": [
+    "Four retains recognizable closed triangular construction and visible counter in both endpoints. Regular diagonal is lighter than upright and lighter than Rubik; deliberate16-unit caps visible enlarged.",
+    "Bold counter remains open at reviewed sizes, but small-size closure risk and diagonal/upright balance remain optical review.",
+    "Existing partial superior family and default pairs need human review. No dedicated mark positioning or sups.",
+    "Stock Bold remains dense and longer-text spacing uneven. No exhaustive language or native-reader approval."
+  ]
+}

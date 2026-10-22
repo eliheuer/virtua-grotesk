@@ -1,0 +1,14 @@
+./scripts/check_gf_fonts.sh package "out/qa/2026-10-22-superior-four/ofl/virtuagrotesk"
+QA mode: package; network: online; reports: agent-proofs/cases/latin-001/batches/41-superior-four/qa-online
+virtuagrotesk: googlefonts/tofu FAIL [missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted missing-subsetted]
+virtuagrotesk: googlefonts/metadata/subsets_correct WARN [unsupported-subset unsupported-subset]
+virtuagrotesk: googlefonts/metadata/unreachable_subsetting WARN [unreachable-subsetting]
+METADATA.pb: googlefonts/metadata/designer_profiles WARN [profile-not-found]
+VirtuaGrotesk[wght].ttf: contour_count WARN [contour-count]
+VirtuaGrotesk[wght].ttf: interpolation_issues WARN [interpolation-issue]
+VirtuaGrotesk[wght].ttf: soft_hyphen WARN [softhyphen]
+VirtuaGrotesk[wght].ttf: outline_alignment_miss WARN [found-misalignments]
+VirtuaGrotesk[wght].ttf: overlapping_path_segments WARN [overlapping-path-segments]
+VirtuaGrotesk[wght].ttf: googlefonts/glyphsets/shape_languages WARN [warning-language-shaping]
+Markdown report written to agent-proofs/cases/latin-001/batches/41-superior-four/qa-online/fontspector.md
+make: *** [qa-package] Error 1

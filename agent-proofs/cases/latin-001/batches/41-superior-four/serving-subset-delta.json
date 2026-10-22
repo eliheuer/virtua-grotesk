@@ -1,0 +1,19 @@
+{
+  "installed_gfsubsets": "/Users/eli/GH/repos/virtua-grotesk/.venv/lib/python3.13/site-packages/gfsubsets/__init__.py",
+  "declared_subsets": [
+    "arabic",
+    "hebrew",
+    "latin",
+    "latin-ext",
+    "menu"
+  ],
+  "new_unreachable_encodings": [
+    {
+      "codepoint": "U+2074",
+      "subsets": [
+        "math"
+      ]
+    }
+  ],
+  "disposition": "Keep the warning. No unrelated math declaration or glyph removal. Encoded cmap and real text subsets work; serving-set reachability remains unresolved."
+}
