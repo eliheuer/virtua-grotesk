@@ -1,0 +1,207 @@
+{
+  "400": {
+    "convex_nonintersecting": true,
+    "minimum_corner_cross": 512.0,
+    "nominal_horizontal_weight": 64.0,
+    "generic_g_comma_below": {
+      "before": {
+        "bounds": [
+          [
+            48,
+            -216,
+            568,
+            592
+          ],
+          [
+            260,
+            -192,
+            356,
+            -40
+          ]
+        ],
+        "vertical_gap": -176
+      },
+      "after": {
+        "bounds": [
+          [
+            48,
+            -216,
+            568,
+            592
+          ],
+          [
+            264,
+            -200,
+            360,
+            -40
+          ]
+        ],
+        "vertical_gap": -176
+      }
+    }
+  },
+  "475": {
+    "convex_nonintersecting": true,
+    "minimum_corner_cross": 640.0,
+    "nominal_horizontal_weight": 72.0,
+    "generic_g_comma_below": {
+      "before": {
+        "bounds": [
+          [
+            46,
+            -222,
+            590,
+            592
+          ],
+          [
+            270,
+            -192,
+            366,
+            -40
+          ]
+        ],
+        "vertical_gap": -182
+      },
+      "after": {
+        "bounds": [
+          [
+            46,
+            -222,
+            590,
+            592
+          ],
+          [
+            270,
+            -200,
+            374,
+            -40
+          ]
+        ],
+        "vertical_gap": -182
+      }
+    }
+  },
+  "550": {
+    "convex_nonintersecting": true,
+    "minimum_corner_cross": 768.0,
+    "nominal_horizontal_weight": 80.0,
+    "generic_g_comma_below": {
+      "before": {
+        "bounds": [
+          [
+            44,
+            -228,
+            612,
+            592
+          ],
+          [
+            280,
+            -192,
+            376,
+            -40
+          ]
+        ],
+        "vertical_gap": -188
+      },
+      "after": {
+        "bounds": [
+          [
+            44,
+            -228,
+            612,
+            592
+          ],
+          [
+            276,
+            -200,
+            388,
+            -40
+          ]
+        ],
+        "vertical_gap": -188
+      }
+    }
+  },
+  "625": {
+    "convex_nonintersecting": true,
+    "minimum_corner_cross": 896.0,
+    "nominal_horizontal_weight": 88.0,
+    "generic_g_comma_below": {
+      "before": {
+        "bounds": [
+          [
+            42,
+            -234,
+            634,
+            592
+          ],
+          [
+            290,
+            -192,
+            386,
+            -40
+          ]
+        ],
+        "vertical_gap": -194
+      },
+      "after": {
+        "bounds": [
+          [
+            42,
+            -234,
+            634,
+            592
+          ],
+          [
+            282,
+            -200,
+            402,
+            -40
+          ]
+        ],
+        "vertical_gap": -194
+      }
+    }
+  },
+  "700": {
+    "convex_nonintersecting": true,
+    "minimum_corner_cross": 1024.0,
+    "nominal_horizontal_weight": 96.0,
+    "generic_g_comma_below": {
+      "before": {
+        "bounds": [
+          [
+            40,
+            -240,
+            656,
+            592
+          ],
+          [
+            300,
+            -192,
+            396,
+            -40
+          ]
+        ],
+        "vertical_gap": -200
+      },
+      "after": {
+        "bounds": [
+          [
+            40,
+            -240,
+            656,
+            592
+          ],
+          [
+            288,
+            -200,
+            416,
+            -40
+          ]
+        ],
+        "vertical_gap": -200
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 1,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "commaaccent",
+      "points": 8,
+      "advance": 260.0,
+      "bounds": [
+        96,
+        -200,
+        192,
+        -40
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "anchor[_bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "anchor[bottom].x",
+          "value": 140.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 68.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 260.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 68.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "2": 3,
+        "1": 9
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-comma-m_rsf3yd/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "c3b9b9a2098fc838a2b2ac039d399887644b13d7c7d03c38e53cd59f8f244626"
+    }
+  ]
+}
