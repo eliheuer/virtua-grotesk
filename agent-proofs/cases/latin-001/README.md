@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Batch28 adds U0337. Next the remaining long overlay U0338 and independent common-symbol gaps. Current online package QA is10 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Batch28 adds U0337 and batch29 adds U0338 with bounded math attachment. Next independent common-symbol gaps, starting mathematical symbols after inspecting constructions/donors. Current online package QA is12 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -426,3 +426,23 @@ counter fragments, varying terminal projection and overall density remain human
 review items. Full online package stays10 FAIL/9 WARN/160 PASS/10 INFO/40 SKIP.
 Rubik gap347:182 Cyrillic,1 combining,62 Common,102 Arabic presentation forms.
 Next U0338 with negation normalization/symbol attachment checks. Local only.
+
+## Batch29 · Long solidus overlay and bounded math attachment
+
+[Evidence](batches/29-long-slash/README.md): U0338 plus narrow variant, two masters,
+new Latin/body and equal/less/greater/plus/minus attachment. Ten source files;
+all1799 other sources/every old GLIF, Arabic326/master and green131/74 unchanged.
+Eight-point convex clipped contours, default672/narrow448 heights, zero grid
+findings. Steep first narrow trial and wider collision trial rejected; final
+following-n checks pass. Narrow Bold tips remain subtle; generic counter fragments
+and not-less triangular counter remain human-review findings. Whole400/550/700,
+224px endpoint and actual Diffenator target/stock images inspected with Rubik.
+775 scoped comparisons,4435 exact old VF and3547 old static ink/advance checks;
+22 Latin methods plus2 build helper tests, unchanged216 baseline Hebrew failures,
+active/scratch identity except head and preflight completed. Encoded ≠/≮/≯ match
+NFD at five VF weights and all statics, but their cmap entries remain absent.
+Online unexcluded package12 FAIL/9 WARN: two new exposed serving gaps (Central
+Mazahua U0338, Ticuna U1EBC/U1EBD). No exclusions or false subset claims.
+Rubik Latin/combining cmap gaps zero;346 encodings remain (182Cyrl,62Common,
+102Arabic presentation forms). Not language/visual approval. Next common math
+symbols, then independent release work. Local only; Arabic60272 unchanged.

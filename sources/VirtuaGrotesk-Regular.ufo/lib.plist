@@ -428,9 +428,15 @@
 		<string>strokeshortcomb.narrow</string>
 		<string>slashshortcomb</string>
 		<string>slashshortcomb.narrow</string>
+		<string>slashlongcomb</string>
+		<string>slashlongcomb.narrow</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>slashlongcomb</key>
+		<string>mark</string>
+		<key>slashlongcomb.narrow</key>
+		<string>mark</string>
 		<key>slashshortcomb</key>
 		<string>mark</string>
 		<key>slashshortcomb.narrow</key>

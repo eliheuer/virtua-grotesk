@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "A̸ O̸ H̸ I̸ · a̸ o̸ h̸ i̸",
+      "b̸ d̸ p̸ q̸ g̸ · t̸ l̸ f̸",
+      "á̸ ā̸ ą̸ ŏ̸ · Á̸ Ā̸ Ą̸",
+      "í̸ j̸̧ · o̸̒́ · á̸̧",
+      "fi̸ fl̸ ﬁ̸ ﬂ̸ · f̸i f̸l",
+      "≠ ≮ ≯ +̸ −̸"
+    ],
+    "words": [
+      "a̸na o̸no h̸ah i̸ni t̸at",
+      "á̸na ó̸no · ā̸na ą̸na",
+      "b̸ab d̸ad p̸ap q̸aq g̸ag",
+      "A̸VA O̸TO H̸AH I̸NI",
+      "f̸i fi̸ f̸l fl̸ · ﬁ̸ ﬂ̸",
+      "2 ≠ 3 · 2 ≮ 1 · 3 ≯ 4"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "27ea84327b68544b2331d4722510b3097aca89ed403e9d37a1508792ebcff3aa"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "fa2da76623f4f2a549514929358d43bf10d1d34d5d0aa62c34c089b71dd9a1db"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "506cd4d12d571b44c05e7c145c6bfbcad02839abb8ac6ec009487847c9227657"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "a2c69d7365a70896f155b0411f78efa270ab607981fec6de16c963a4f6f1762a"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "6eac47ea991ae5550970a3ca4d114833412b11f2b677dbe35b8c5a195217c61f"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "c65703eff4c8a3a4dce3c4ac838bb152dca124e592b06c18982571c62ef0ffd6"
+    }
+  ],
+  "fonts": {
+    "before": "20fd60b9b3b28937e50a52d1749243b8b3a645803cb19037158e8697ede2c583",
+    "after": "cd2a6275e11ae831a531aa108fd804e8efef423e3706d0c52e2f21686d4b254d",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

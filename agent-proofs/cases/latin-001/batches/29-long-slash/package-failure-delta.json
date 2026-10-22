@@ -1,0 +1,22 @@
+{
+  "before_count": 10,
+  "after_count": 12,
+  "new": [
+    {
+      "check": "googlefonts/tofu",
+      "code": "missing-subsetted",
+      "message": "The font has the following codepoints needed to render the poster md sample text for language Central Mazahua, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* ̱ (U+0331)"
+    },
+    {
+      "check": "googlefonts/tofu",
+      "code": "missing-subsetted",
+      "message": "The font has the following codepoints needed to render the poster sm sample text for language Central Mazahua, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* ̸ (U+0338)"
+    },
+    {
+      "check": "googlefonts/tofu",
+      "code": "missing-subsetted",
+      "message": "The font has the following codepoints needed to render the masthead partial sample text for language Ticuna, but although the font contained all the codepoints for the sample text, tofu will still be produced because the codepoints do not appear in any of the subsets arabic, hebrew, latin-ext, latin:\n\n* ẽ (U+1EBD)\n* Ẽ (U+1EBC)"
+    }
+  ],
+  "reason": "Adding U0338 enables additional samples: two net new serving-set failures, Central Mazahua poster sm (U0338) and Ticuna masthead partial (U1EBC/U1EBD). Central Mazahua poster md (U0331) only changed explanatory wording. No loss of prior cmap/ink/shaping. Subset policy remains unresolved; no exclusions or unrelated declarations."
+}

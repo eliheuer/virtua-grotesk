@@ -1,0 +1,33 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "after": "cd2a6275e11ae831a531aa108fd804e8efef423e3706d0c52e2f21686d4b254d",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "scope": "Actual browser same-text supplement and first viewport of stock coverage proof in Virtua/Rubik. Not exhaustive language or reader approval.",
+  "findings": [
+    "Long slash crosses mathematical bases instead of following them.",
+    "Narrow form is still subtle on heavy Bold stems; default a combinations retain small counter fragments.",
+    "Stock mixed-text remains dense and uneven in Bold.",
+    "Rubik has following/fallback placement on several generic combinations; this was not copied."
+  ],
+  "screenshots": {
+    "rubik-400.png": "88308033dd9f1dbe1b89a7fb9cb2604ef2bf65d4a269b4ffc87db13d688a96f7",
+    "rubik-550.png": "02705a028bb5e5c590e9d7f0c62c7756fc88cf1d751dea47480bf108b19a3b92",
+    "rubik-700.png": "ee920ae3b4094bc09ddf6f9645482663fb72864356159a0eea943ecfe319ce0e",
+    "stock-rubik-400.png": "2843a62811b237c59f7446b513c11d0101dd42b1d63b860b3b9e72664fe3af61",
+    "stock-rubik-550.png": "b90eac99e84cce0f811cca7d1db171e1fc6539c14374d7c21c166c8002621d43",
+    "stock-rubik-700.png": "e7d5093272cc5e8a6906e7c11ec9990bd4130650ff6e1ae8b29e9c2e828c5507",
+    "stock-virtua-400.png": "6e98444e18414c8f74485ad8046225529787262fc77a343b18618c4adc991e47",
+    "stock-virtua-550.png": "84b9231a60e98f0f0b9002a7c5fa35926148da63fcedd9f4f01bbb4303bba8df",
+    "stock-virtua-700.png": "8fab46f38f6820cc7e408d73ee865d101c21eaeb2eda2e892d68b8d9e21a364b",
+    "virtua-400.png": "e3e5751c169cb11f209a1383b3de861b6f45aa1095dbd1f606eadce4f0561dd3",
+    "virtua-550.png": "12c8a5dbd94d9a65a9c2bb505453e409efc0f04ee857e1b2133ebd7345f1b5ff",
+    "virtua-700.png": "11d50c102965ed67a1681131b02fb63f06bcab735256ae43d20daa09b8c6dfeb"
+  },
+  "approval": "Purple pending human review."
+}
