@@ -97,6 +97,21 @@ Existing green optical geometry must not be snapped automatically. The older
 inventory cautiously, never its inferred color as editing permission.
 `make review-rubik` makes a comparison proof; override `RUBIK_FONT` as needed.
 Rubik is a reference, not an acceptance standard for Virtua's design.
+Eli reaffirmed on2026-10-21 that the actual Diffenator browser preview must be
+part of visual review, with a matching Rubik proof. Generate context proofs and
+a same-text comparison, then inspect400/550/700 in the browser:
+
+```sh
+.venv/bin/diff3proof 'fonts/variable/VirtuaGrotesk[wght].ttf' --output out/review
+.venv/bin/diff3proof /path/to/Rubik.ttf --output out/review-rubik
+.venv/bin/diff3proof 'fonts/variable/VirtuaGrotesk[wght].ttf' /path/to/Rubik.ttf --sample-mode cover --output out/review-comparison
+```
+
+In the stock comparison, Old/New identify first/second inputs, not design
+approval. Record actual slider weights; the instance dropdown can remain stale
+after a manual slider change. Keep full-language review and native-reader review
+separate from a sampled browser inspection.
+
 
 For regression comparisons:
 
