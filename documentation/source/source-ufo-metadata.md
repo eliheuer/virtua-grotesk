@@ -6,8 +6,8 @@ This report records metadata from the active UFO sources. Use it with `documenta
 
 | UFO | Family | Style | Version | Glyphs | features.fea |
 | --- | --- | --- | --- | ---: | --- |
-| `sources/VirtuaGrotesk-Regular.ufo` | Virtua Grotesk | Regular | 1.0 | 882 | yes |
-| `sources/VirtuaGrotesk-Bold.ufo` | Virtua Grotesk | Bold | 1.0 | 882 | yes |
+| `sources/VirtuaGrotesk-Regular.ufo` | Virtua Grotesk | Regular | 1.0 | 883 | yes |
+| `sources/VirtuaGrotesk-Bold.ufo` | Virtua Grotesk | Bold | 1.0 | 883 | yes |
 
 ## Metrics
 
