@@ -1,0 +1,92 @@
+{
+  "shaping_checks": 90,
+  "changed_compiled_ink": {
+    "400": [
+      "Itilde",
+      "itilde",
+      "Utilde",
+      "utilde",
+      "Etilde",
+      "etilde",
+      "Atilde",
+      "Ntilde",
+      "Otilde",
+      "atilde",
+      "ntilde",
+      "otilde",
+      "tilde",
+      "tildecomb"
+    ],
+    "475": [
+      "Itilde",
+      "itilde",
+      "Utilde",
+      "utilde",
+      "Etilde",
+      "etilde",
+      "Atilde",
+      "Ntilde",
+      "Otilde",
+      "atilde",
+      "ntilde",
+      "otilde",
+      "tilde",
+      "tildecomb"
+    ],
+    "550": [
+      "Itilde",
+      "itilde",
+      "Utilde",
+      "utilde",
+      "Etilde",
+      "etilde",
+      "Atilde",
+      "Ntilde",
+      "Otilde",
+      "atilde",
+      "ntilde",
+      "otilde",
+      "tilde",
+      "tildecomb"
+    ],
+    "625": [
+      "Itilde",
+      "itilde",
+      "Utilde",
+      "utilde",
+      "Etilde",
+      "etilde",
+      "Atilde",
+      "Ntilde",
+      "Otilde",
+      "atilde",
+      "ntilde",
+      "otilde",
+      "tilde",
+      "tildecomb"
+    ],
+    "700": [
+      "Itilde",
+      "itilde",
+      "Utilde",
+      "utilde",
+      "Etilde",
+      "etilde",
+      "Atilde",
+      "Ntilde",
+      "Otilde",
+      "atilde",
+      "ntilde",
+      "otilde",
+      "tilde",
+      "tildecomb"
+    ]
+  },
+  "unchanged_source_files": 1775,
+  "after_sha256": "c542ddf7c9dcfc872bd7a108efdac9d67ebe5b31b236ec0367024f9d23aae1a7",
+  "notes": [
+    "All non-target source bytes preserved, including Arabic recursive donors and green sources.",
+    "Incoming anchors and advances unchanged; outgoing tilde stack anchors adjusted. All new points on 8.",
+    "Shape/position equality, stack and below-mark clearance at five weights."
+  ]
+}

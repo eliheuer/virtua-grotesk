@@ -94,13 +94,19 @@ letters inspected.90 shaping checks, three Latin tests, five-weight curve/outlin
 checks and preflight complete; no new failures against the216-failure baseline.
 The round bowl and visible cap cuts await human review.
 
+[Batch06](batches/06-tilde/README.md) replaces both angular tilde donors with
+rounded waves, broad terminal landings and Bold weight. Four source GLIFs;
+all other source bytes unchanged. A pinched-terminal trial was rejected by image
+inspection before application. Whole400/550/700 word/stack proofs and enlarged
+endpoint letters inspected;90 shaping checks, Latin tests and preflight complete,
+with zero new failures. Zero grid findings; intentional S inflections documented.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Tilde weight/construction, then bottom marks and alternate
-   carons. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Bottom marks (cedilla/ogonek/comma-below), then alternate carons. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
