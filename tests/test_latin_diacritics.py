@@ -151,3 +151,25 @@ class LatinDiacriticsTests(unittest.TestCase):
                     with self.subTest(font=path.name,weight=w,text=text):
                         _,bounds=shaped(font,path.read_bytes(),text,w)
                         self.assertGreaterEqual(min(b[1] for b in bounds if b),-font['OS/2'].usWinDescent)
+
+    def test_hcaron_ascender_attachment_and_fallback(self):
+        for path,font in self.fonts():
+            fallback=TTFont(path)
+            for table in fallback['cmap'].tables:
+                if table.isUnicode():table.cmap.pop(0x21f,None)
+            stream=io.BytesIO();fallback.save(stream)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                with self.subTest(font=path.name,weight=w):
+                    gs=font.getGlyphSet(location={'wght':w} if 'fvar' in font else None)
+                    # The existing mark's local y translation is verified in compiled ink.
+                    pen=BoundsPen(gs);gs['hcaron'].draw(pen)
+                    self.assertGreaterEqual(pen.bounds[3],1024)
+                    self.assertEqual(shaped(font,path.read_bytes(),'ȟ',w)[0],shaped(font,path.read_bytes(),'h',w)[0])
+                    for text in ['ȟ','ȟ́','ȟ̌','ḩ̌']:
+                        expected=shaped(font,path.read_bytes(),text,w)
+                        self.assertEqual(expected,shaped(font,path.read_bytes(),unicodedata.normalize('NFD',text),w))
+                        self.assertEqual(expected,shaped(fallback,stream.getvalue(),text,w))
+                    for text in ['ȟ́','ȟ̌']:
+                        _,bb=shaped(font,path.read_bytes(),text,w)
+                        self.assertGreaterEqual(bb[-1][1]-bb[0][3],32)
+                        self.assertLessEqual(max(b[3] for b in bb),font['OS/2'].usWinAscent)
