@@ -1,0 +1,266 @@
+{
+  "application": "REJECTED as standalone encoded slash",
+  "reason": "Narrow negative bearings require coherent fraction-layout behavior. Numeric preservation passes do not override visible default collisions.",
+  "rows": [
+    {
+      "weight": 400,
+      "text": "1⁄4",
+      "glyphs": [
+        "one",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        6997.333343505859,
+        0.0
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "1⁄2",
+      "glyphs": [
+        "one",
+        "fraction",
+        "two"
+      ],
+      "adjacent_intersection_areas": [
+        6997.333343505859,
+        5294.780979553854
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "3⁄4",
+      "glyphs": [
+        "three",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        8677.404157510648,
+        0.0
+      ]
+    },
+    {
+      "weight": 400,
+      "text": "H⁄H",
+      "glyphs": [
+        "H",
+        "fraction",
+        "H"
+      ],
+      "adjacent_intersection_areas": [
+        7776.0,
+        7776.0
+      ]
+    },
+    {
+      "weight": 475,
+      "text": "1⁄4",
+      "glyphs": [
+        "one",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        7722.666015625,
+        0.0
+      ]
+    },
+    {
+      "weight": 475,
+      "text": "1⁄2",
+      "glyphs": [
+        "one",
+        "fraction",
+        "two"
+      ],
+      "adjacent_intersection_areas": [
+        7722.666015625,
+        5672.543579498926
+      ]
+    },
+    {
+      "weight": 475,
+      "text": "3⁄4",
+      "glyphs": [
+        "three",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        9225.224921911955,
+        0.0
+      ]
+    },
+    {
+      "weight": 475,
+      "text": "H⁄H",
+      "glyphs": [
+        "H",
+        "fraction",
+        "H"
+      ],
+      "adjacent_intersection_areas": [
+        8661.333312988281,
+        8661.33203125
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "1⁄4",
+      "glyphs": [
+        "one",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        8448.00033569336,
+        0.0
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "1⁄2",
+      "glyphs": [
+        "one",
+        "fraction",
+        "two"
+      ],
+      "adjacent_intersection_areas": [
+        8448.00033569336,
+        6068.585760196051
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "3⁄4",
+      "glyphs": [
+        "three",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        9797.22788160046,
+        0.0
+      ]
+    },
+    {
+      "weight": 550,
+      "text": "H⁄H",
+      "glyphs": [
+        "H",
+        "fraction",
+        "H"
+      ],
+      "adjacent_intersection_areas": [
+        9471.99935913086,
+        9471.998046875
+      ]
+    },
+    {
+      "weight": 625,
+      "text": "1⁄4",
+      "glyphs": [
+        "one",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        9173.33332824707,
+        0.0
+      ]
+    },
+    {
+      "weight": 625,
+      "text": "1⁄2",
+      "glyphs": [
+        "one",
+        "fraction",
+        "two"
+      ],
+      "adjacent_intersection_areas": [
+        9173.33332824707,
+        6483.063942114508
+      ]
+    },
+    {
+      "weight": 625,
+      "text": "3⁄4",
+      "glyphs": [
+        "three",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        10392.988356297215,
+        0.0
+      ]
+    },
+    {
+      "weight": 625,
+      "text": "H⁄H",
+      "glyphs": [
+        "H",
+        "fraction",
+        "H"
+      ],
+      "adjacent_intersection_areas": [
+        10282.6669921875,
+        10282.671875
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "1⁄4",
+      "glyphs": [
+        "one",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        9898.666015625,
+        0.0
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "1⁄2",
+      "glyphs": [
+        "one",
+        "fraction",
+        "two"
+      ],
+      "adjacent_intersection_areas": [
+        9898.666015625,
+        6916.03827007612
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "3⁄4",
+      "glyphs": [
+        "three",
+        "fraction",
+        "four"
+      ],
+      "adjacent_intersection_areas": [
+        11012.175270037105,
+        0.0
+      ]
+    },
+    {
+      "weight": 700,
+      "text": "H⁄H",
+      "glyphs": [
+        "H",
+        "fraction",
+        "H"
+      ],
+      "adjacent_intersection_areas": [
+        11093.33334350586,
+        11093.3330078125
+      ]
+    }
+  ]
+}

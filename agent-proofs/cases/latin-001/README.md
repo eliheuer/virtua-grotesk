@@ -821,3 +821,21 @@ Next bounded purple fraction U2044 scratch draft using green Virtua construction
 then dedicated fraction figures/encoded forms after position/clearance review;
 no partial feature, ordinary-slash alias or blind superior reuse. Local only/
 no push; Arabic60272 unchanged.
+
+
+### Batch51 · Fraction slash scratch — not applied
+
+[Evidence](batches/51-fraction-slash/README.md) prepares purple fraction U2044 only on scratch; **not applied**.
+Revised compatible8-point slope4/3 contour,264 advance,64/89.6 normal widths,
+−184/−200 bearings, new values on8/grid0. Heavy first trial rejected. Whole
+400/550/700 rasters,224px endpoints and12 actual browser views reveal ordinary
+figure collisions despite passing preservation checks. Diagnostic assembled
+fractions clear but are not approved numerator/denominator forms.165 scoped
+checks,4540 old VF/3631 static comparisons,54 subsets/NFD and28 Latin methods
+pass;216 baseline failures unchanged. All1847 active sources/five fonts exact,
+Arabic326/master and green131/74 preserved. No active build/preflight/new full QA;
+batch49 package12FAIL10WARN and gap327 unchanged. Next dedicated numerator1/3,
+denominator2/4 and encoded-fraction scratch layout; keep U2044 inactive until
+coherent integration or safe fallback resolves collisions. No partial features,
+blind superior reuse or ordinary-slash alias. Local only/no push; Arabic60272
+unchanged. See evidence for both trials and exact hashes.

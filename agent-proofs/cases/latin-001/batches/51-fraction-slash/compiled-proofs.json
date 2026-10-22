@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "⁄ ⁄⁄⁄ · / \\",
+      "1⁄4 1⁄2 3⁄4",
+      "H⁄H ⁄H H⁄",
+      "⁄́ ⁄̈ ⁄̧ ⁄̱",
+      "¹⁄⁴ ¹⁄² ³⁄⁴",
+      "1/4 1/2 3/4"
+    ],
+    "words": [
+      "Fraction slash: ⁄",
+      "1⁄4 1⁄2 3⁄4 · no frac feature",
+      "Ratio: 12⁄345 · 1/2/3",
+      "Text ⁄ figures ⁄ forms",
+      "București ģimene doğa Ŧŧ ﬁﬂ",
+      "0 1 2 3 4 5 6 7 8 9"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "fd32dfbf10b0227129fcacd6e09a3b4d6668929cc06b3d8cc3c46e837f9af916"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "d4e4d4b0e9648d8d4c87afcb1962bd53d2773b47bb424fc8c2fef532ceb28c04"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "44453cb68e126843ffeb998cc367bd52dc1ab3c3a5514b7d090b5fd35bc81b25"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "2ae0a4c5b8832b9d02c4e42b45e16446bd02060729fec5786964131f49a6d7fd"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "b949de7f666360322b1c7421878771003bf29e270ac1335c001805daae1a5bb0"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "34f8c5b14cc1cb8a3647cc6250cdf1dd7f440fcec88f7f614b1904f9fbcfdf3a"
+    }
+  ],
+  "fonts": {
+    "before": "c379055ea6669a8af13e67658e98bffc6379fdb0d1577c8793b3e7c8168e8716",
+    "after": "902d775987ccd049e81f2170d2a213e07414af35936d2e9f7a4be8f5fdc3337f",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "source_revision": "a3436ead2527a562f13803949da1a67f7ca3cba6",
+  "disposition": "scratch only; standalone application rejected due to ordinary-figure collisions",
+  "active_sources_unchanged": 1847,
+  "active_fonts_unchanged": {
+    "variable/VirtuaGrotesk[wght].ttf": "c379055ea6669a8af13e67658e98bffc6379fdb0d1577c8793b3e7c8168e8716",
+    "ttf/VirtuaGrotesk-Bold.ttf": "eee1bb7075d1a0ac81a88dc96d267b095b897b3b09f60c5057f3c4ac375aa6d2",
+    "ttf/VirtuaGrotesk-Medium.ttf": "76ac03124b43febcb5ef9e76a38f7fd6280f1b85bd9d279725f81c74fe89ec5a",
+    "ttf/VirtuaGrotesk-Regular.ttf": "55883f96e734adac0fc40773c2ad67810989ad84115035b4e73bd8e509256a38",
+    "ttf/VirtuaGrotesk-SemiBold.ttf": "67ea59a5213fe0557ccc4fb5c3b8fb77e5e70f0adbf85c33bb8be540bfe08824"
+  },
+  "compatible_contours": [
+    [
+      "contour",
+      [
+        "line",
+        "line",
+        "line",
+        "line",
+        "line",
+        "line",
+        "line",
+        "line"
+      ]
+    ]
+  ],
+  "candidate_assets": {
+    "rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "before.ttf": "c379055ea6669a8af13e67658e98bffc6379fdb0d1577c8793b3e7c8168e8716",
+    "after.ttf": "902d775987ccd049e81f2170d2a213e07414af35936d2e9f7a4be8f5fdc3337f"
+  },
+  "browser_screenshots": {
+    "diffenator-rubik-550.png": "1a9cb3fd5990c97905d8b434bf57589263b84e681483557c3603cd4b608da835",
+    "diffenator-virtua-400.png": "0107afad020c05ce7d6703874ed82173cb943dcb74a19a9c738995ff35f2effe",
+    "controlled-400.png": "57d27e726a7250934210cfe09365be9d6f1eda1670871a41cc01f65b5523bc03",
+    "stock-700.png": "2988d4e7c4a833bafd735d644115c03f818d52f0a14c58c978eb49481a6dfd9a",
+    "diffenator-virtua-700.png": "d30bb49587248f7d80990d8d00e95c804df2e455e7265a3f91902760ebef85e4",
+    "stock-400.png": "f747b2f99eb38c7df41cdba4e6a8e119b975e3ca16d4f885b2bb9b96bf7dd2bd",
+    "controlled-700.png": "782c50cf37f5ce13579b0ec34fab8dbec7cc8cc27f735822b7957c7e4008a411",
+    "stock-550.png": "f76b28e90668836d80aa09d02adfccd10e42ee02c1ac5f0de451b79776c3da68",
+    "diffenator-rubik-700.png": "f053b91e8fbe459c6f4b81689cdcde38dfdb47f0a4ad2671fa025677368dfdd4",
+    "controlled-550.png": "7fd45d37748010baabf6c3f0c5f11c01ef0a3c2b73cf0d626966992c149ac310",
+    "diffenator-rubik-400.png": "e0ab637fd5102bf28a7b17174cd4e7ecf1130c22ce6c849db59d89e61f3b9fb7",
+    "diffenator-virtua-550.png": "40934b98cefd3db02e11ce975e2534e1a43e9cfe92aa85ab13953363f204ea1b"
+  },
+  "rasters": {
+    "forms-550.png": "d4e4d4b0e9648d8d4c87afcb1962bd53d2773b47bb424fc8c2fef532ceb28c04",
+    "detail-400.png": "188e1ea2ffc705446290b8c0370974e725979281dcaddd11be85f61c1b038577",
+    "layout-550.png": "82c9878af5f7688cfd5c132705b57a6bde19585d5ef6b0c4b1b5e6c64e3b7f57",
+    "words-550.png": "b949de7f666360322b1c7421878771003bf29e270ac1335c001805daae1a5bb0",
+    "detail-700.png": "5f91253844f77db68c36930b383a5fc0e154eb432639cd21f4f71775fdb52807",
+    "words-400.png": "2ae0a4c5b8832b9d02c4e42b45e16446bd02060729fec5786964131f49a6d7fd",
+    "forms-700.png": "44453cb68e126843ffeb998cc367bd52dc1ab3c3a5514b7d090b5fd35bc81b25",
+    "layout-400.png": "9ab41d02c1e2706314a290679db9be228dedb845c5357f6011ec3a5f40026a2d",
+    "words-700.png": "34f8c5b14cc1cb8a3647cc6250cdf1dd7f440fcec88f7f614b1904f9fbcfdf3a",
+    "forms-400.png": "fd32dfbf10b0227129fcacd6e09a3b4d6668929cc06b3d8cc3c46e837f9af916",
+    "layout-700.png": "54a32032193ed4e3f21684893e0a4ba4a6f9308e7f2256ac3bb260dd82ff8a5b"
+  },
+  "visual_scope": "11 complete rasters, 3 controlled browser trials, 6 Diffenator target views, 3 stock first viewports; 400/550/700 and 224px raster endpoints",
+  "pdf": "Generated sequentially with raw DesignBot; not visually inspected as a complete PDF",
+  "no_active_build_preflight_or_new_full_package_qa": true,
+  "browser_cache_correction": "Initial revised browser captures reused the earlier font cache. Added candidate SHA to font URLs, reloaded and reinspected all candidate and stock views; current captures supersede those. Rubik bytes unchanged.",
+  "served_assets": {
+    "new-rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "old-after.ttf": "902d775987ccd049e81f2170d2a213e07414af35936d2e9f7a4be8f5fdc3337f"
+  },
+  "comparison_html": {
+    "fraction-slash.html": "de40bdac31426386f0769f9ce10cb6cd978190ffdde708b38e235d46fd1637af",
+    "diff3proof.html": "fdda6869246e428b59ffc42e4b6f35aac5f672d3bdb17494e8fb31d225044e54"
+  }
+}
