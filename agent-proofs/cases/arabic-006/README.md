@@ -369,3 +369,18 @@ hamza/Beh-dot collision; green Jeem initial/medial and reserved Beh metrics rema
 Live proof:batch32. Next independent cleanup: missing U069C below-dot group and
 non-green extension wrappers, followed by whole-alphabet/word images and a finite
 manual handoff. The first pass is not yet complete or visually approved.
+
+## Batch33 — Six-dot Seen composition
+
+All four seenSixdots-ar wrappers in both masters now contain six small round
+dots: upward triangle above and downward triangle below, with Seen bases and
+all shared donors untouched. Regular initial/medial advances match the base.
+Whole400/550/700 rows, enlarged endpoints and joining context inspected;50
+shaping comparisons, local dot curvature/intersection checks and preflight pass.
+Rubik/Readex explicitly unavailable forU069C. All34 human reservations unchanged.
+The inherited Regular Seen underside cusps and Bold tooth/bowl proportions remain
+review issues; this composition fix does not approve them.124 inherited grid
+findings retained. Live proof:batch33. Checkpoints31/32:bab08e8f.
+Next: remaining non-green extension wrapper join mismatches, then attachment
+collisions independent of reserved sources and whole-script/digit image review.
+Do not reattempt protected Maksura/Yeh, Kaf, Lam-Alef or human-reserved Heh.
