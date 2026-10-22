@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hehGoalHamzaabove-ar" format="2">
 	<unicode hex="06C2"/>
-	<advance width="448"/>
+	<advance width="576"/>
 	<outline>
 		<component base="hehGoal-ar"/>
-		<component base="hamzaabove-ar" xOffset="112" yOffset="-336"/>
+		<component base="hamzaabove-ar" xOffset="176" yOffset="-224"/>
 	</outline>
 	<lib>
 		<dict>

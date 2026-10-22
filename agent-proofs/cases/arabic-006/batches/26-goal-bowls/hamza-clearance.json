@@ -1,0 +1,26 @@
+{
+  "working_sha256": "80b8969c3a99a326eeae38c1c6230475b3728d8643c27b9bd4b964b4977daf45",
+  "checks": [
+    {
+      "weight": 400,
+      "vertical_clearance": 80.0
+    },
+    {
+      "weight": 475,
+      "vertical_clearance": 80.0
+    },
+    {
+      "weight": 550,
+      "vertical_clearance": 80.0
+    },
+    {
+      "weight": 625,
+      "vertical_clearance": 80.0
+    },
+    {
+      "weight": 700,
+      "vertical_clearance": 80.0
+    }
+  ],
+  "scope": "Conservative complete cap-to-hamza bounding-box gap; donor unchanged."
+}

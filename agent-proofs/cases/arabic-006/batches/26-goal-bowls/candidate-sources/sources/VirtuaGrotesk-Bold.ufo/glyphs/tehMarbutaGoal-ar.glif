@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tehMarbutaGoal-ar" format="2">
+	<unicode hex="06C3"/>
+	<advance width="576"/>
+	<outline>
+		<component base="hehGoal-ar"/>
+		<component base="twodotshorizontalabove-ar" xOffset="72" yOffset="-138"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
+</glyph>

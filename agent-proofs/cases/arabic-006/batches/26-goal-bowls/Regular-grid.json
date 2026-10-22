@@ -1,0 +1,483 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 3,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "hehGoal-ar",
+      "points": 30,
+      "advance": 448.0,
+      "bounds": [
+        32,
+        0,
+        416,
+        416
+      ],
+      "failures": [
+        {
+          "field": "contour[0].point[1].y",
+          "value": 90.0
+        },
+        {
+          "field": "contour[0].point[2].x",
+          "value": 116.0
+        },
+        {
+          "field": "contour[0].point[4].x",
+          "value": 332.0
+        },
+        {
+          "field": "contour[0].point[5].y",
+          "value": 90.0
+        },
+        {
+          "field": "contour[0].point[13].y",
+          "value": 374.0
+        },
+        {
+          "field": "contour[0].point[14].x",
+          "value": 254.0
+        },
+        {
+          "field": "contour[0].point[16].x",
+          "value": 106.0
+        },
+        {
+          "field": "contour[0].point[17].y",
+          "value": 326.0
+        },
+        {
+          "field": "contour[1].point[1].y",
+          "value": 158.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 448.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 118.0,
+          "popcount": 5
+        },
+        {
+          "name": "handle.x",
+          "value": 108.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.x",
+          "value": 108.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.y",
+          "value": 118.0,
+          "popcount": 5
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 14.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 46.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.x",
+          "value": 102.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.y",
+          "value": 118.0,
+          "popcount": 5
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 176.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 208.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 152.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 50.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "3": 13,
+        "5": 3,
+        "4": 4,
+        "1": 11,
+        "2": 5
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "4d017d7fed9f674f5cce5ebb0b04d268b70955f0090343d963449366feb838e3"
+    },
+    {
+      "glyph": "hehGoalHamzaabove-ar",
+      "points": 0,
+      "advance": 448.0,
+      "bounds": [
+        32,
+        0,
+        416,
+        688
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].y",
+          "value": 90.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 116.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 332.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 90.0
+        },
+        {
+          "field": "component[0].contour[0].point[13].y",
+          "value": 374.0
+        },
+        {
+          "field": "component[0].contour[0].point[14].x",
+          "value": 254.0
+        },
+        {
+          "field": "component[0].contour[0].point[16].x",
+          "value": 106.0
+        },
+        {
+          "field": "component[0].contour[0].point[17].y",
+          "value": 326.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 158.0
+        },
+        {
+          "field": "component[1].contour[0].point[9].y",
+          "value": 958.0
+        },
+        {
+          "field": "component[1].contour[0].point[10].x",
+          "value": 100.0
+        },
+        {
+          "field": "component[1].contour[0].point[12].x",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].contour[0].point[13].y",
+          "value": 958.0
+        },
+        {
+          "field": "component[1].contour[0].point[22].y",
+          "value": 986.0
+        },
+        {
+          "field": "component[1].contour[0].point[24].y",
+          "value": 930.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 448.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "1": 2
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "d13dfc7ffc5f9d23e969bd11e7f9203bf1733ccf35ea722406edc7a793209879"
+    },
+    {
+      "glyph": "tehMarbutaGoal-ar",
+      "points": 0,
+      "advance": 448.0,
+      "bounds": [
+        32,
+        0,
+        488,
+        688
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[1].y",
+          "value": 90.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 116.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 332.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 90.0
+        },
+        {
+          "field": "component[0].contour[0].point[13].y",
+          "value": 374.0
+        },
+        {
+          "field": "component[0].contour[0].point[14].x",
+          "value": 254.0
+        },
+        {
+          "field": "component[0].contour[0].point[16].x",
+          "value": 106.0
+        },
+        {
+          "field": "component[0].contour[0].point[17].y",
+          "value": 326.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 158.0
+        },
+        {
+          "field": "component[1].contour[0].point[1].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[2].y",
+          "value": 724.0
+        },
+        {
+          "field": "component[1].contour[0].point[4].y",
+          "value": 812.0
+        },
+        {
+          "field": "component[1].contour[0].point[5].x",
+          "value": 132.0
+        },
+        {
+          "field": "component[1].contour[0].point[7].x",
+          "value": 44.0
+        },
+        {
+          "field": "component[1].contour[0].point[8].y",
+          "value": 812.0
+        },
+        {
+          "field": "component[1].contour[0].point[10].y",
+          "value": 724.0
+        },
+        {
+          "field": "component[1].contour[0].point[11].x",
+          "value": 44.0
+        },
+        {
+          "field": "component[1].contour[1].point[1].x",
+          "value": 380.0
+        },
+        {
+          "field": "component[1].contour[1].point[2].y",
+          "value": 724.0
+        },
+        {
+          "field": "component[1].contour[1].point[4].y",
+          "value": 812.0
+        },
+        {
+          "field": "component[1].contour[1].point[5].x",
+          "value": 380.0
+        },
+        {
+          "field": "component[1].contour[1].point[7].x",
+          "value": 292.0
+        },
+        {
+          "field": "component[1].contour[1].point[8].y",
+          "value": 812.0
+        },
+        {
+          "field": "component[1].contour[1].point[10].y",
+          "value": 724.0
+        },
+        {
+          "field": "component[1].contour[1].point[11].x",
+          "value": 292.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 448.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "1": 1,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "40c0dcbb145912923ccb2be1b81a7523dc6eb11eaaca622a8e142d50b626c6dd"
+    }
+  ]
+}
