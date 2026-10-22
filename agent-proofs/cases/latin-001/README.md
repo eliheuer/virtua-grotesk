@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Continue with the four remaining combining marks and current serving-subset/package diagnostics, then independent common-symbol gaps. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch24 fresh package QA flags breve-family contour direction: inspect both donor windings and full protected consumer closure, then repair direction without moving geometry if permitted. Next the four remaining combining marks and independent common-symbol gaps. Current package QA is10 FAIL/10 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -342,3 +342,17 @@ Mark output order can differ without changing positioned ink. Existing Bold/hook
 proportions remain for human review. This is not a clean package QA result or
 full serving-subset approval. Next combining gaps and current package diagnostics.
 Local only; no push.
+
+## Batch24 · Ligature carets and refreshed package QA
+
+[Batch24](batches/24-package-qa/README.md) adds only fi/fl caret_1 anchors in
+both masters (288/288 Regular,344/360 Bold). Four GLIFs;1791 other source files,
+Arabic326/master, green131/74, all ink/metrics/layout bytes unchanged.74 scoped
+checks,17 Latin methods, exact216 baseline Hebrew failures and preflight complete.
+Whole400/550/700 rasters,224px caret diagnostic and actual Diffenator comparison
+with Rubik inspected; native editor cursor behavior not tested. Fresh online
+unexcluded package QA improves10 FAIL/11 WARN to10 FAIL/10 WARN; caret warning
+resolved. Remaining tofu failures concern serving-set reachability, separately
+from batch23's fixed normalization cases. Full current reports retained. Breve
+contour direction is the next concrete independent repair; other protected and
+human findings remain open. Local only; no push or visual/release approval.

@@ -1,0 +1,46 @@
+{
+  "installed_gfsubsets": "2025.11.4",
+  "declared_subsets": [
+    "arabic",
+    "hebrew",
+    "latin",
+    "latin-ext",
+    "menu"
+  ],
+  "codepoints": {
+    "U+0302": {
+      "assigned_subsets": [
+        "cherokee",
+        "coptic",
+        "math",
+        "tifinagh"
+      ],
+      "in_declared_subsets": false
+    },
+    "U+0331": {
+      "assigned_subsets": [
+        "caucasian-albanian",
+        "cherokee",
+        "gothic",
+        "sunuwar",
+        "syriac",
+        "thai",
+        "tifinagh"
+      ],
+      "in_declared_subsets": false
+    },
+    "U+1EBC": {
+      "assigned_subsets": [
+        "vietnamese"
+      ],
+      "in_declared_subsets": false
+    },
+    "U+1EBD": {
+      "assigned_subsets": [
+        "vietnamese"
+      ],
+      "in_declared_subsets": false
+    }
+  },
+  "finding": "Current GF subset definitions do not serve these encoded characters in declared scripts. They exist in the font. Do not add false Cherokee/math/Vietnamese support or remove character coverage to hide the failures. Retain for upstream subset-policy review; no issue posted."
+}

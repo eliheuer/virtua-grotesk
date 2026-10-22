@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "PASS": 1
+  },
+  "results": {
+    "/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-ligature-carets-w8u7hgln/fonts/variable/VirtuaGrotesk[wght].ttf": {
+      "Universal Profile Checks": [
+        {
+          "check_id": "ligature_carets",
+          "check_name": "Are there caret positions declared for every ligature?",
+          "check_rationale": "All ligatures in a font must have corresponding caret (text cursor) positions defined in the GDEF table, otherwhise, users may experience issues with caret rendering.\n\nIf using GlyphsApp or UFOs, ligature carets can be defined as anchors with names starting with `caret_`. These can be compiled with fontmake as of version v2.4.0.",
+          "filename": "/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-ligature-carets-w8u7hgln/fonts/variable/VirtuaGrotesk[wght].ttf",
+          "section": "Universal Profile Checks",
+          "subresults": [
+            {
+              "severity": "PASS"
+            }
+          ],
+          "worst_status": "PASS",
+          "hotfix_available": false,
+          "sourcefix_available": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "renderer": "FreeType/RAQM with explicit diagnostic GDEF lines; not a native text-editor cursor test",
+  "records": [
+    {
+      "weight": 400,
+      "glyph": "fi",
+      "caret": 288,
+      "before_after_pixels_equal": true
+    },
+    {
+      "weight": 400,
+      "glyph": "fl",
+      "caret": 288,
+      "before_after_pixels_equal": true
+    },
+    {
+      "weight": 550,
+      "glyph": "fi",
+      "caret": 316,
+      "before_after_pixels_equal": true
+    },
+    {
+      "weight": 550,
+      "glyph": "fl",
+      "caret": 324,
+      "before_after_pixels_equal": true
+    },
+    {
+      "weight": 700,
+      "glyph": "fi",
+      "caret": 344,
+      "before_after_pixels_equal": true
+    },
+    {
+      "weight": 700,
+      "glyph": "fl",
+      "caret": 360,
+      "before_after_pixels_equal": true
+    }
+  ],
+  "image_sha256": "179d4a1921e38961dc8c2b4d00b7a22c98822dc875b77ce5fe49897e987b85ef"
+}

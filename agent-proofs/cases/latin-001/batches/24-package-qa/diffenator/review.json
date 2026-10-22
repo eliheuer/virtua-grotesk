@@ -1,0 +1,29 @@
+{
+  "url": "http://127.0.0.1:60273/batch24/comparison/ligatures.html",
+  "fonts": {
+    "after": "2c6c8b5256714b2dcdace038cf0d20ee10378593d6b3b4482489b9aad5cca2f5",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "Old": "Virtua",
+  "New": "Rubik",
+  "scope": "Actual browser same-text supplement; stock reports generated. Slider governs weight despite Regular menu label. Not exhaustive stock/language review.",
+  "screenshots": {
+    "virtua550.png": "c783d8a49dd068d61479ec88db12896e4fa979c5b71296eaf308f96e246515ac",
+    "rubik550.png": "4065168a05bef4fb091278bc57adfd321daac007669d13497f6149ea149e8ac7",
+    "rubik400.png": "94c536b9a99f7745e11610be449bc58bfa3c7a9d77ca84ffdb3334346872976f",
+    "virtua700.png": "a952a6183ad404f87189b14905e3d1fb6bdc4e2b9b98dd0dd865bbcacceaf447",
+    "rubik700.png": "f8e8fb59ab4110b9ad0a6fcaed94f6f6fedc6a10885ea2b76aab1e5ccb7b0466",
+    "virtua400.png": "e062e49997a450582ed28c18258299f562b3402e5f817c51711062b18606625f"
+  },
+  "observations": [
+    "Fi/fl silhouettes and mark placements unchanged, supported by exact compiled drawing/layout table equality.",
+    "Bold remains denser than Rubik; f+fi/f+fl spacing and head proportions remain for optical review.",
+    "Rubik encoded-ligature above marks appear to the right in these samples; reference is not treated as a universal placement specification.",
+    "Caret-map diagnostic shows carets between stems at 400/550/700. No native text-editor cursor test."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "tool": "diff3proof 1.1.4",
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/24-package-qa/assets/after.ttf",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch24/virtua"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/24-package-qa/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/24-package-qa/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch24/comparison"
+    ]
+  ],
+  "supplement_text": "fi ﬁ fl ﬂ · fine ﬁne · flow ﬂow · office ofﬁce · affix afﬁx · affluence afﬂuence · fí fi̦ f́i · fĺ fl̦ f́l · ﬁ́ ﬁ̈ ﬁ̌ ﬂ́ ﬂ̈ ﬁ̦ ﬂ̧́",
+  "supplement": "Stock HTML font controls with explicitly replaced sample text and heading; original stock reports unchanged.",
+  "fonts": {
+    "after": "2c6c8b5256714b2dcdace038cf0d20ee10378593d6b3b4482489b9aad5cca2f5",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch24/virtua/diff3proof.html": "4f56bc63962c9d1e7c1203fe52cf3daa83e82c0d656cd20d8c0a8a06aef33b73",
+    "out/review-latin-d2513094/batch24/comparison/ligatures.html": "9690442f79bdb6c096d9ed7e6467e77c5b77fdda7a2b04babfa3530292520a6e",
+    "out/review-latin-d2513094/batch24/comparison/diff3proof.html": "725d0522dacfbb715c44120d0dd70b601426791369a6f23c0f9d1e774f9d7a6d"
+  }
+}

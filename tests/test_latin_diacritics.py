@@ -294,3 +294,18 @@ class LatinDiacriticsTests(unittest.TestCase):
                         advance2,below=shaped(font,data,name+'\u0326',w)
                         self.assertEqual(advance,advance2)
                         self.assertGreaterEqual(below[0][1]-below[-1][3],16)
+
+    def test_standard_ligature_carets_interpolate(self):
+        from fontTools.varLib.instancer import instantiateVariableFont
+        for path,font in self.fonts():
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                instance=instantiateVariableFont(font,{'wght':w},inplace=False) if 'fvar' in font else font
+                carets=instance['GDEF'].table.LigCaretList
+                for name,bold in [('fi',344),('fl',360)]:
+                    with self.subTest(font=path.name,weight=w,ligature=name):
+                        self.assertIn(name,carets.Coverage.glyphs)
+                        values=carets.LigGlyph[carets.Coverage.glyphs.index(name)].CaretValue
+                        self.assertEqual(len(values),1)
+                        self.assertEqual(values[0].Coordinate,round(288+(bold-288)*(w-400)/300))
+                        self.assertGreater(values[0].Coordinate,0)
+                        self.assertLess(values[0].Coordinate,instance['hmtx'][name][0])
