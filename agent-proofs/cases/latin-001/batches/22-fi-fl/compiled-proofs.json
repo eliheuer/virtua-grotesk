@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "fi ﬁ fl ﬂ   ffi fﬁ ffl fﬂ",
+      "fine ﬁne   flow ﬂow   office ofﬁce",
+      "afﬁx afﬂuent   fi fl ﬁ ﬂ",
+      "ﬁ́ ﬁ̈ ﬁ̌ ﬂ́ ﬂ̈   ﬁ̦ ﬂ̧́",
+      "fí fi̦ f́i   fĺ fl̦ f́l",
+      "fifi ﬁﬁ flfl ﬂﬂ   Aﬁ Vﬂ Tﬁ Lﬂ"
+    ],
+    "words": [
+      "fine flow office affix affluence",
+      "fifty flying flexible reflection",
+      "fi fl ffi ffl   fifi flfl",
+      "fí fí fî fî fĺ f́i f́l",
+      "film floral flagship final finish",
+      "Afi Vfl Tfi Lfl   afia oflo ifli"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "481b6c9c9c642c3db71afc244dd1f7b75e848e300035015c4f6fe7c2d21ca59f"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "2a5944572e8886c754fd29768005ec43cd63bbeefbf4c6f29555a5dbfc811455"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "9db99e3e33168f71a44419ad49b6ae720b3fbb3d13465a0e58ba23e0a17c9ce4"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "943e50cfe02aa7aa925fab3205c2cb0a989f870c6b63d5d4cf188a2aa2d82499"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "e16c7ae531a8c8798c25358bb45d80f1c5d05e0d12628f7900041f28c45108b2"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "117293c1e8d3dc7e9e41651a335335a5f5bc458f8338c031fa0d18abc15111f6"
+    }
+  ],
+  "fonts": {
+    "before": "677db55c863eca0ac8b69a3f881e0dcdca56ab29c7477ac709157ab0fb61feb4",
+    "after": "dde325465c777843b8a5726841ba269d715862a4c1dc978a43089031922b1047",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

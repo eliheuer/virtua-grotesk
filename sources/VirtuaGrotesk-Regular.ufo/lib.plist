@@ -421,9 +421,15 @@
 		<string>florin</string>
 		<string>kgreenlandic</string>
 		<string>napostrophe</string>
+		<string>fi</string>
+		<string>fl</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>fi</key>
+		<string>ligature</string>
+		<key>fl</key>
+		<string>ligature</string>
 		<key>napostrophe</key>
 		<string>base</string>
 		<key>kgreenlandic</key>

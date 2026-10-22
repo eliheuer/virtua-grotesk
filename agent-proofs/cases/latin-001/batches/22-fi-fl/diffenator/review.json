@@ -1,0 +1,28 @@
+{
+  "scope": "Stock first viewport and labeled same-text fi/fl supplement in Virtua/Rubik at400/550/700, not exhaustive language approval",
+  "fonts": {
+    "after": "dde325465c777843b8a5726841ba269d715862a4c1dc978a43089031922b1047",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "images": {
+    "rubik-400.png": "d8a3ff6732f42b5f8fd3a27a0f71028634a296019a77451bfd08b9173a89f6ce",
+    "rubik-550.png": "4065168a05bef4fb091278bc57adfd321daac007669d13497f6149ea149e8ac7",
+    "rubik-700.png": "2b26d34b53ddd5275983002fad39acf1150091c45454e77269ddef6ebe900ab7",
+    "stock-400.png": "9ad288f1d14f5009690decfc6b8913edb9eec85a5fc2086ea345dad3349952cb",
+    "stock-550.png": "8769338a5e45eefc0beb7fdcd02721ead5dc6dfcd9c870dffb628f16691fa970",
+    "stock-700.png": "e640a3e9f41eb0a5a4aa77167804516ece06b9a516a2728130f860b0bcc32995",
+    "stock-rubik-400.png": "1cadf61ba57f070d1d6dfe1e8df7dfa4bb4935107ae419615e453a249a24b208",
+    "stock-rubik-550.png": "b7389b5ce0040e35bebb7d39189eb036e6c9d6f9c92774b76ab39fa6639693cc",
+    "stock-rubik-700.png": "aab230392ab05122e0b470c1d2c9fb3c3ee6e30840a6d4d5176b7fa86dde6f31",
+    "virtua-400.png": "1ff2a772acdbc814c31eccce705cc61adb8be949104a8e10a37f6e995212b31c",
+    "virtua-550.png": "c783d8a49dd068d61479ec88db12896e4fa979c5b71296eaf308f96e246515ac",
+    "virtua-700.png": "0ab06f20c0179c73a3a3fbff27fb0c8af7a5c1a2a4986280ea103e71dbaad01d"
+  },
+  "findings": [
+    "Rejected initial Bold fl closed aperture; final opening remains visible.",
+    "Bold text is denser than Rubik, with uneven inherited spacing.",
+    "No separate ffi/ffl; f+fi/f+fl rhythm and new pair spacing require optical review.",
+    "Encoded ligature marks and intervening-mark non-ligation inspected separately.",
+    "Slider values400/550/700 govern weight despite Regular dropdown label."
+  ]
+}

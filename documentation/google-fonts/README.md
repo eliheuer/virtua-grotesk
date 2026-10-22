@@ -1242,3 +1242,15 @@ failures and preflight complete. Whole400/550/700,224px endpoint and actual
 Diffenator images inspected against Rubik; lighter/farther-left mark and dense
 Bold remain for optical review. Latin cmap gap now ﬁ ﬂ; other release/script/subset
 blockers remain. No forced compatibility-text substitution. Local only; no push.
+
+## Fi/fl checkpoint — 2026-10-21
+
+LAT-001 [batch22](../../agent-proofs/cases/latin-001/batches/22-fi-fl/README.md)
+adds ﬁ/ﬂ and standard ligation in both masters, preserving all existing drawings.
+A closed Bold fl aperture was caught and revised before application. Whole raster
+and actual Diffenator reviews400/550/700 completed;165 scoped checks,15 Latin tests,
+unchanged216 baseline Hebrew failures and preflight complete. All new values on8;
+new pair spacing, dense Bold and f+fi/f+fl rhythm await human review. The pinned
+Rubik Latin-script cmap gap is now zero, but350 other encodings and substantial
+script/shaping/subset/release work remain. No full language-coverage claim.
+Local only; no push or publication.

@@ -1,0 +1,29 @@
+{
+  "weight": 400,
+  "size": 48,
+  "texts": [
+    "fine ﬁne   flow ﬂow   office ofﬁce",
+    "fi ﬁ fl ﬂ   ffi fﬁ   ffl fﬂ"
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "677db55c863eca0ac8b69a3f881e0dcdca56ab29c7477ac709157ab0fb61feb4",
+      "missing_cmap": [
+        64257,
+        64258
+      ]
+    },
+    {
+      "role": "after",
+      "sha256": "dde325465c777843b8a5726841ba269d715862a4c1dc978a43089031922b1047",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "f008e57c09bbeebfcfb0cc4e48750d7e0cf88c57770eb7df8a568c35de60fe50"
+}

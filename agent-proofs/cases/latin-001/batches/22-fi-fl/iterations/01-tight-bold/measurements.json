@@ -1,0 +1,70 @@
+{
+  "Regular:fi": {
+    "advance": 528,
+    "advance_popcount": 2,
+    "points": 40,
+    "second_stem_offset": 288,
+    "second_stem_left": 360,
+    "crossbar_right": 392,
+    "intentional_overlap": 32,
+    "bounds": [
+      24,
+      0,
+      456,
+      768
+    ],
+    "left_bearing": 24,
+    "right_bearing": 72.0
+  },
+  "Regular:fl": {
+    "advance": 560,
+    "advance_popcount": 3,
+    "points": 48,
+    "second_stem_offset": 288,
+    "second_stem_left": 360,
+    "crossbar_right": 392,
+    "intentional_overlap": 32,
+    "bounds": [
+      24,
+      0,
+      536,
+      768
+    ],
+    "left_bearing": 24,
+    "right_bearing": 24.0
+  },
+  "Bold:fi": {
+    "advance": 624,
+    "advance_popcount": 4,
+    "points": 40,
+    "second_stem_offset": 288,
+    "second_stem_left": 360,
+    "crossbar_right": 392,
+    "intentional_overlap": 32,
+    "bounds": [
+      32,
+      0,
+      552,
+      768
+    ],
+    "left_bearing": 32,
+    "right_bearing": 72.0
+  },
+  "Bold:fl": {
+    "advance": 608,
+    "advance_popcount": 3,
+    "points": 48,
+    "second_stem_offset": 288,
+    "second_stem_left": 360,
+    "crossbar_right": 392,
+    "intentional_overlap": 32,
+    "bounds": [
+      32,
+      0,
+      584,
+      768
+    ],
+    "left_bearing": 32,
+    "right_bearing": 24.0
+  }
+}

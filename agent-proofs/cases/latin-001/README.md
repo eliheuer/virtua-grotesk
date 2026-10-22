@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Continue independent Latin coverage: inspect fi/fl constructions, dot/crossbar clearance and protected donors. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue with the four remaining combining marks and serving-subset normalization, then independent common-symbol gaps. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -215,7 +215,7 @@ and preserve green/human optical exceptions. See DESIGN.md#spacing.
 3. Existing precomposed widths differ from the base+mark fallback by up to
    tens of units. `verification.json` retains the measured sample differences.
    Inspect wrapper metrics/kerning and word spacing before applying changes.
-4. Remaining Rubik Latin codepoints: ﬁ ﬂ (batch21 coverage-after.json). Review encoded ligatures
+4. No missing Latin-script codepoints in the pinned Rubik cmap comparison after batch22. This is not full language coverage or visual approval. Review encoded ligatures
    separately from GSUB behavior. Four combining marks, punctuation, fractions,
    maths and currencies are also absent; use `coverage-after.json`.
 5. Full Rubik language coverage includes182 Cyrillic codepoints absent here.
@@ -310,3 +310,18 @@ Inherited n G1/G0 joins remain; no sampled proper crossings/profile warnings.
 No forced substitution of ʼn/’n; compatibility decomposition is not canonical.
 Rubik Latin gap now two: ﬁ ﬂ. Next fi/fl, then independent release blockers.
 Local only; no visual approval or push.
+
+## Batch22 · Fi/fl coverage and shaping
+
+[Batch22](batches/22-fi-fl/README.md) adds ﬁ/ﬂ in both masters and standard liga
+with numbered mark anchors. The first Bold fl trial was rejected for a closed
+upper aperture; final openings40/48 remain visible. Advances fi528/656, fl560/672;
+all new values on8, zero grid findings. Ten source files; all1785 other sources,
+Arabic/green donors and old compiled glyph ink/advances unchanged.165 scoped checks,
+15 Latin methods, exact216 baseline failures and preflight complete. Whole images
+and actual Diffenator stock/supplement at400/550/700 inspected against Rubik.
+Source overlap is intentional; diagnostic union has one contour at five weights.
+Dense Bold, new pair spacing and f+fi/f+fl rhythm remain for review. Pinned Rubik
+Latin cmap gap is zero;182 Cyrillic,4 combining,62 common and102 Arabic presentation
+encodings remain. Next combining/subset normalization and independent release
+blockers. Local only; no visual approval or push.

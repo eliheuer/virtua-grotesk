@@ -389,3 +389,18 @@ lookup calt_arab_dots {
 	sub @AR_TAIL_BELOW_PREV yeh-ar.init' by yeh-ar.init.ctr;
 } calt_arab_dots;
 } calt;
+
+# Latin standard ligatures; intervening marks prevent replacement.
+feature liga {
+	lookup LATIN_F_LIGATURES {
+		lookupflag 0;
+		sub f i by fi;
+		sub f l by fl;
+	} LATIN_F_LIGATURES;
+	script DFLT;
+	language dflt;
+	lookup LATIN_F_LIGATURES;
+	script latn;
+	language dflt;
+	lookup LATIN_F_LIGATURES;
+} liga;
