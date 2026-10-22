@@ -471,9 +471,12 @@
 		<string>zerosuperior</string>
 		<string>foursuperior</string>
 		<string>fivesuperior</string>
+		<string>sixsuperior</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>sixsuperior</key>
+		<string>base</string>
 		<key>fivesuperior</key>
 		<string>base</string>
 		<key>foursuperior</key>
