@@ -391,9 +391,11 @@ class LatinDiacriticsTests(unittest.TestCase):
                         self.assertEqual(shaped(font,data,encoded,w),shaped(font,data,base+'̸',w))
                         advance,boxes=shaped(font,data,encoded,w)
                         self.assertEqual(advance,shaped(font,data,base,w)[0])
-                        self.assertLess(boxes[1][1],boxes[0][1])
-                        self.assertGreater(boxes[1][3],boxes[0][3])
-                        self.assertAlmostEqual((boxes[1][0]+boxes[1][2])/2,(boxes[0][0]+boxes[0][2])/2,delta=4)
+                        body=shaped(font,data,base,w)[1][0]
+                        self.assertLess(boxes[-1][1],body[1])
+                        self.assertGreater(boxes[-1][3],body[3])
+                        if len(boxes)==2:
+                            self.assertAlmostEqual((boxes[1][0]+boxes[1][2])/2,(body[0]+body[2])/2,delta=4)
                 for base in ['a','o','h','i','j','á','ā','ą','A','O','Ą']:
                     with self.subTest(font=path.name,weight=w,base=base):
                         advance,boxes=shaped(font,data,base+'̸',w)
@@ -407,3 +409,31 @@ class LatinDiacriticsTests(unittest.TestCase):
                     with self.subTest(font=path.name,weight=w,narrow=base):
                         _,boxes=shaped(font,data,base+'̸n',w)
                         self.assertGreaterEqual(boxes[-1][0]-boxes[-2][2],16)
+
+    def test_notequal_encoding_and_missing_cmap_fallback(self):
+        for path,font in self.fonts():
+            data=path.read_bytes();name=font.getBestCmap()[0x2260]
+            self.assertEqual(font['hmtx'][name][0],font['hmtx'][font.getBestCmap()[ord('=')]][0])
+            # Remove only the encoding: HarfBuzz must still render canonical NFD.
+            fallback=TTFont(io.BytesIO(data))
+            for table in fallback['cmap'].tables:
+                if table.isUnicode():table.cmap.pop(0x2260,None)
+            buf=io.BytesIO();fallback.save(buf);fd=buf.getvalue()
+            from fontTools import subset
+            options=subset.Options();options.layout_features=['*'];options.glyph_names=True
+            sf=TTFont(io.BytesIO(data));ss=subset.Subsetter(options=options)
+            ss.populate(text='≠A B1 + 3');ss.subset(sf)
+            sb=io.BytesIO();sf.save(sb);sd=sb.getvalue()
+            self.assertNotIn(0x2260,sf.getBestCmap())
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for text in ['≠','A ≠ B','1 + 1 ≠ 3']:
+                    with self.subTest(font=path.name,weight=w,text=text):
+                        self.assertEqual(shaped(font,data,text,w),shaped(font,data,unicodedata.normalize('NFD',text),w))
+                        adv,boxes=shaped(font,data,text,w);fa,fb=shaped(fallback,fd,text,w)
+                        self.assertEqual(adv,fa)
+                        # Split fallback components have the same total ink bounds.
+                        bounds=lambda seq:(min(b[0] for b in seq if b),min(b[1] for b in seq if b),max(b[2] for b in seq if b),max(b[3] for b in seq if b))
+                        self.assertEqual(bounds(boxes),bounds(fb))
+                        sa,sboxes=shaped(sf,sd,text,w)
+                        self.assertEqual(adv,sa)
+                        self.assertEqual(bounds(boxes),bounds(sboxes))

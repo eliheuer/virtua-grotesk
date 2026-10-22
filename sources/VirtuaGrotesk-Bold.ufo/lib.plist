@@ -457,9 +457,12 @@
 		<string>slashshortcomb.narrow</string>
 		<string>slashlongcomb</string>
 		<string>slashlongcomb.narrow</string>
+		<string>notequal</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>notequal</key>
+		<string>base</string>
 		<key>slashlongcomb</key>
 		<string>mark</string>
 		<key>slashlongcomb.narrow</key>
