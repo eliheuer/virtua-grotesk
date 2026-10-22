@@ -1,0 +1,26 @@
+{
+  "weight": 400,
+  "size": 48,
+  "text": [
+    "Ångström. Små gröna träd.",
+    "Dům a kůň. Åse går på tå."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "0639e7d8891cde79eb316db64a12297a1d421c2ba3b0f5da30077b6440f3e38e",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "d3a19b5e94b575adae5bfd7f234073041af82f2c6d41f4675ed49f6ca90be9e1",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "e57af8535a50a90e5790ee192d185b2a748e8701b47ce3ea2c7afc03ee1ff0af"
+}

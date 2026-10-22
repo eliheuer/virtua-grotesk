@@ -1,0 +1,480 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 4,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "ring",
+      "points": 24,
+      "advance": 300.0,
+      "bounds": [
+        64,
+        640,
+        240,
+        816
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 60.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 300.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 60.0,
+          "popcount": 4
+        }
+      ],
+      "popcount_histogram": {
+        "4": 2,
+        "2": 8,
+        "3": 8,
+        "1": 9
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ring-n35hvh9g/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "79a378670a6f51ce7b9e858843cb1ed694307f2c7af689602ef192d23b563cbd"
+    },
+    {
+      "glyph": "ringcomb",
+      "points": 0,
+      "advance": 0.0,
+      "bounds": [
+        64,
+        640,
+        240,
+        816
+      ],
+      "failures": [
+        {
+          "field": "anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[0].anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 60.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 0.0,
+          "popcount": 0
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 240.0,
+          "popcount": 4
+        }
+      ],
+      "popcount_histogram": {
+        "0": 1,
+        "1": 1,
+        "4": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ring-n35hvh9g/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "3b9e5451534c386a55ce5b2797483ad303b0ce23299e944044725d197369e8fe"
+    },
+    {
+      "glyph": "ring",
+      "points": 24,
+      "advance": 300.0,
+      "bounds": [
+        56,
+        640,
+        248,
+        832
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 300.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 52.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "3": 10,
+        "2": 16
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ring-n35hvh9g/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "585572fc8351f440512944834aa169ea320f77877eab3561fa85dd6d4e1d5bcc"
+    },
+    {
+      "glyph": "ringcomb",
+      "points": 0,
+      "advance": 0.0,
+      "bounds": [
+        56,
+        640,
+        248,
+        832
+      ],
+      "failures": [
+        {
+          "field": "anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 300.0
+        },
+        {
+          "field": "component[0].anchor[_top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 150.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 0.0,
+          "popcount": 0
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 248.0,
+          "popcount": 5
+        }
+      ],
+      "popcount_histogram": {
+        "0": 1,
+        "3": 1,
+        "5": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ring-n35hvh9g/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "20505922f2fcbd96bc9c4d1fdb16860efb64d64cef617fe6141833f7a206ec4f"
+    }
+  ]
+}

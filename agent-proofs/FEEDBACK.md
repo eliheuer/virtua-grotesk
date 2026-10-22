@@ -539,3 +539,13 @@ coverage is Rubik. Preserve all Arabic drawings/editor saves and existing green
 geometry. LAT-001 records the first attachment/coverage batch and remaining
 work. Rubik parity includes Cyrillic; it does not authorize silently expanding
 the weight range or adding italic. Whole-image inspection remains mandatory.
+
+## Spacing uses the same dyadic system — 2026-10-21
+
+Eli: “for spacing remember we want to stay on the powers of two grid for that
+also”, linking [his grid article](https://elih.net/blog/virtua-grotesk/). Confirmed:
+sidebearings/kerning use the8-unit structural grid; measurement popcount describes
+powers-of-two sums without making higher counts errors. Apply the same rule to
+new advances and spacing offsets under DESIGN.md. Preserve human2-grid optical
+exceptions and green source geometry. Inspect full words before accepting spacing.
+This is a spacing constraint, not approval to alter protected glyphs.

@@ -1,0 +1,52 @@
+{
+  "shaping_checks": 90,
+  "changed_compiled_ink": {
+    "400": [
+      "Aring",
+      "Uring",
+      "aring",
+      "ring",
+      "ringcomb",
+      "uring"
+    ],
+    "475": [
+      "Aring",
+      "Uring",
+      "aring",
+      "ring",
+      "ringcomb",
+      "uring"
+    ],
+    "550": [
+      "Aring",
+      "Uring",
+      "aring",
+      "ring",
+      "ringcomb",
+      "uring"
+    ],
+    "625": [
+      "Aring",
+      "Uring",
+      "aring",
+      "ring",
+      "ringcomb",
+      "uring"
+    ],
+    "700": [
+      "Aring",
+      "Uring",
+      "aring",
+      "ring",
+      "ringcomb",
+      "uring"
+    ]
+  },
+  "unchanged_source_files": 1775,
+  "after_sha256": "dfe6a2ef1116057f6fc08271155059f13fd9b37ee33c9ccc9127cef45710cffb",
+  "notes": [
+    "All non-target source bytes preserved, including Arabic recursive donors and green sources.",
+    "Incoming anchors and advances unchanged; outgoing ring stack anchors raised. All new points on 8.",
+    "Shape/position equality, stack and below-mark clearance at five weights."
+  ]
+}

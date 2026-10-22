@@ -80,14 +80,25 @@ and all other source bytes stay unchanged. Whole-word/stacking proofs at400/550/
 and224px/em detail inspected;90 shaping checks, Latin tests and preflight pass,
 with zero new failures versus the216-failure engineering baseline.
 
+[Batch04](batches/04-ring-accent/README.md) replaces the square ring accent in
+both masters with round contours and raises outgoing stack anchors. Four GLIFs;
+all other source bytes unchanged. Whole attachment/reading rasters at400/550/700
+and enlarged endpoint proofs inspected;90 shaping checks, three Latin tests and
+preflight complete. The same216 pre-existing Hebrew failures remain, with no new
+failures. Ring proportions/weight await human review.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Ring and breve weight/construction, then tilde, bottom marks and alternate
+1. Breve weight/construction, then tilde, bottom marks and alternate
    carons. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
+2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
+sidebearings, advances and kerning. New machine values on8; record decompositions
+and preserve green/human optical exceptions. See DESIGN.md#spacing.
+
 3. Existing precomposed widths differ from the base+mark fallback by up to
    tens of units. `verification.json` retains the measured sample differences.
    Inspect wrapper metrics/kerning and word spacing before applying changes.
