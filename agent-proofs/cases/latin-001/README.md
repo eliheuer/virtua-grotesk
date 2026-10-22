@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Continue with the four remaining combining marks and serving-subset normalization, then independent common-symbol gaps. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue with the four remaining combining marks and current serving-subset/package diagnostics, then independent common-symbol gaps. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -222,7 +222,7 @@ and preserve green/human optical exceptions. See DESIGN.md#spacing.
    This is a separate drawing/reader-review phase, not a metadata toggle.
    The102 missing Arabic codepoints are presentation forms; compare GSUB and
    legacy text behavior before adding redundant forms. Leave Arabic sources to Eli.
-6. Diagnose the216 existing Hebrew regressions, serving-subset failures (including batch10 ogonek-plus-acute missing-cmap normalization), fresh
+6. Diagnose the216 existing Hebrew regressions, serving-subset failures (batch23 fixes the recorded batch10 ogonek normalization failure; other subset failures remain), fresh
    interpolation/outline warnings, CI reproducibility and package provenance.
    Green exceptions require named approval; never suppress checks to pass.
 
@@ -325,3 +325,20 @@ Dense Bold, new pair spacing and f+fi/f+fl rhythm remain for review. Pinned Rubi
 Latin cmap gap is zero;182 Cyrillic,4 combining,62 common and102 Arabic presentation
 encodings remain. Next combining/subset normalization and independent release
 blockers. Local only; no visual approval or push.
+
+## Batch23 · Ogonek subset normalization
+
+[Batch23](batches/23-ogonek-subset/README.md) repairs the recorded batch10
+normalization failure using two feature files only. Contextual decomposition and
+ogonek-only filtered recomposition preserve local hooks when accented vowel
+normalization bypasses the absent ogonek cmap. All1793 other sources/GLIFs,
+Arabic/green/manual donors and compiled drawing/metrics bytes unchanged. Forty
+original acute failures fixed; expanded cmap failures435to0/600 samples and real
+subset failures870to0/1200 encoded/NFD cases.3,995 preservation comparisons,
+16 Latin methods, exact216 baseline Hebrew failures and preflight complete.
+GPOS changes only in filter-set indices, verified by remapping. Whole400/550/700
+and160px endpoint images and actual Diffenator NFD text inspected against Rubik.
+Mark output order can differ without changing positioned ink. Existing Bold/hook
+proportions remain for human review. This is not a clean package QA result or
+full serving-subset approval. Next combining gaps and current package diagnostics.
+Local only; no push.

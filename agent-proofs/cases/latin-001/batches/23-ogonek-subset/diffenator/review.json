@@ -1,0 +1,30 @@
+{
+  "scope": "NFD supplements at400/550/700 in working subset/full and Rubik; failing subset400 screenshot. Stock reports generated, not exhaustively reviewed.",
+  "fonts": {
+    "before-subset.ttf": "5e18dbb553614546af8c1480e6f84a18326dbe8f363eff865e71cbbdd26d39ba",
+    "after-subset.ttf": "0214d76bc902e467ec71e09c0287271260ec3d0cc69f38ff5780e34175fe0b26",
+    "after-fallback.ttf": "051241224a1c34cc0ca00c4e0bcbc185b87330d60b2bcc052cd2a1cb406e9ee8",
+    "before-fallback.ttf": "91ddda368af1c5e5f22c60bcdcd8499e854f22c82f0d480d7a63446995f3c02e",
+    "rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "before.ttf": "1fb885273f19574039ac7343af415358362eeda8b0a4942408a2b55a3fb97391",
+    "after.ttf": "64aef7bb162c143be017a502d756079ba30c5eb521657a083bc5fae46a09acfe"
+  },
+  "images": {
+    "virtua-550.png": "8d303ec46db8ab9ec36ce6eb72253cd4b2a63c75bd8155898f69b6ec9eb768a7",
+    "subset-before-400.png": "f015b9f66e7a2ea295b29e7b1ff3480d674cadc3935ee0f7bb3e67ee31969788",
+    "subset-after-400.png": "823d5ce9aa79bd6985ac58844bd1fdb3cda459049faf6f4b3b340207c36feeec",
+    "rubik-700.png": "960b50a21ba1a65d62cea583337b5435e2a313ddb54eb5c75649773fda78b564",
+    "subset-after-700.png": "c61b5d61facfb8499f356540933d9549429f2123ac25e720eaddb7be83f0604b",
+    "rubik-400.png": "e6558835480117bbb6d63896e682f0113d686a88fe31b81ad2c25b8b32aba044",
+    "rubik-550.png": "22df525920f0de8a841e272144c4ca5414dcf726993b54ff6a31a6c285fbc750",
+    "virtua-700.png": "962500cd28fc79e28a13d5070e8fe35fbcccb27f0071889c8744754c91adfd4c",
+    "subset-after-550.png": "8823f1ed942dd03178e267833c5e22fc5fdab5209a1323d3942e54d6410670a5",
+    "virtua-400.png": "bd3a1083e4dbc07a11ebc2d84107f19c9ab8a7564b082aec1590c8e91338e01f"
+  },
+  "findings": [
+    "Subset ogonek placement now matches existing full-font constructions.",
+    "Bold density and hook proportions remain unchanged and unapproved.",
+    "NFD text uses codepoints present in the subsets to avoid browser fallback.",
+    "Actual weight sliders400/550/700; Regular dropdown stale."
+  ]
+}

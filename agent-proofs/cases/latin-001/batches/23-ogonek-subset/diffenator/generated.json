@@ -1,0 +1,38 @@
+{
+  "commands": [
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/23-ogonek-subset/assets/before-subset.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/23-ogonek-subset/assets/after-subset.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch23/subset"
+    ],
+    [
+      "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/23-ogonek-subset/assets/after.ttf",
+      "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/23-ogonek-subset/assets/rubik.ttf",
+      "--sample-mode",
+      "cover",
+      "--output",
+      "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch23/comparison"
+    ]
+  ],
+  "text": "Ą́ ą́ Ę́ ę́ Į́ į́ Ų́ ų́ · aą́a eę́e iį́i uų́u · Ą̂ ą̈ Ę̀ ę̄ Į̌ į̃ Ų̊ ų̆ · Ą̧́ ą̧́ į̇ į̈ Ų́́ ų́́",
+  "fonts": {
+    "before-subset.ttf": "5e18dbb553614546af8c1480e6f84a18326dbe8f363eff865e71cbbdd26d39ba",
+    "after-subset.ttf": "0214d76bc902e467ec71e09c0287271260ec3d0cc69f38ff5780e34175fe0b26",
+    "after-fallback.ttf": "051241224a1c34cc0ca00c4e0bcbc185b87330d60b2bcc052cd2a1cb406e9ee8",
+    "before-fallback.ttf": "91ddda368af1c5e5f22c60bcdcd8499e854f22c82f0d480d7a63446995f3c02e",
+    "rubik.ttf": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+    "before.ttf": "1fb885273f19574039ac7343af415358362eeda8b0a4942408a2b55a3fb97391",
+    "after.ttf": "64aef7bb162c143be017a502d756079ba30c5eb521657a083bc5fae46a09acfe"
+  },
+  "reports": {
+    "out/review-latin-d2513094/batch23/subset/diff3proof.html": "5002a646eb203b51f97af74405ddb4797c74db896bcd90730cf4eb421db23a8e",
+    "out/review-latin-d2513094/batch23/subset/ogonek.html": "6167685bf779fc14686e3229f0a92d5b3ae377d82a5d3554cdc3bce32372ab8a",
+    "out/review-latin-d2513094/batch23/comparison/diff3proof.html": "cdbad6f7594a97cd1e38afff1ef24ad783851661eb960d250f34d086c31d006f",
+    "out/review-latin-d2513094/batch23/comparison/ogonek.html": "0aaa982411ec35483361b763a622db3cdb3ba0e1eadd5c057a9b8708012f450c"
+  }
+}
