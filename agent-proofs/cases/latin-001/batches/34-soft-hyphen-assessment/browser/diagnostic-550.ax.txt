@@ -1,0 +1,23 @@
+Browser tab: 2, Title: "Soft hyphen diagnostic 550", URL: "http://127.0.0.1:60273/batch34/diagnostic-550.html".
+1 AXWebArea Soft hyphen diagnostic 550, URL: 127.0.0.1:60273/batch34/diagnostic-550.html
+	2 heading U+00AD behavior · 550 · diagnostic, Value: 1
+		3 text U+00AD behavior · 550 · diagnostic
+	4 text Frozen Virtua 9359e981 and pinned Rubik. English, manual hyphenation. Diagnostic fonts change cmap only and are not candidates.
+	5 container
+		6 heading probe-ad-hyphen, Value: 2
+			7 text probe-ad-hyphen
+		8 text Manual wrap, U+00AD (160px) extra­ordinary Hyphens none, same U+00AD extra­ordinary Explicit hyphen + hard break extra-
+		9 text ordinary
+	10 container
+		11 heading probe-ad-H, Value: 2
+			12 text probe-ad-H
+		13 text Manual wrap, U+00AD (160px) extra­ordinary Hyphens none, same U+00AD extra­ordinary Explicit hyphen + hard break extra-
+		14 text ordinary
+	15 container
+		16 heading probe-2010-H, Value: 2
+			17 text probe-2010-H
+		18 text Manual wrap, U+00AD (160px) extra­ordinary Hyphens none, same U+00AD extra­ordinary Explicit hyphen + hard break extra-
+		19 text ordinary
+	20 text [{"font":"probe-ad-hyphen","manualHeight":83.17708587646484,"noneHeight":41.58854293823242,"nowrapWidth":null,"plainWidth":null},{"font":"probe-ad-H","manualHeight":83.17708587646484,"noneHeight":41.58854293823242,"nowrapWidth":null,"plainWidth":null},{"font":"probe-2010-H","manualHeight":83.17708587646484,"noneHeight":41.58854293823242,"nowrapWidth":null,"plainWidth":null}]
+
+The focused UI element is 1 AXWebArea Soft hyphen diagnostic 550, URL: 127.0.0.1:60273/batch34/diagnostic-550.html

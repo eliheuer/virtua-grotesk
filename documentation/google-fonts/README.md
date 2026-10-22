@@ -1412,3 +1412,19 @@ failure records unchanged. Remaining340 Rubik encodings:182 Cyrillic,56 Common,
 102 Arabic presentation forms. Next soft-hyphen default-ignorable shaping and
 actual browser line-break assessment; no encoding/behavior claim yet. Purple,
 local only; no push or release approval.
+
+### LAT-001 batch34 · Soft-hyphen behavior assessment
+
+[Read-only evidence](../../agent-proofs/cases/latin-001/batches/34-soft-hyphen-assessment/README.md)
+uses exact batch33 active fonts; all1821 sources and five active font hashes
+unchanged.75 shaping cases and actual English browser comparisons400/550/700
+confirm hidden unbroken U+00AD, unchanged width and discretionary visible
+hyphens in the sampled browser. Cmap-only probes identify U+2010 as the displayed
+Virtua break glyph. Missing U+00AD remains exposed when default ignorables are
+explicitly preserved; an exact-hyphen compatibility wrapper is the next bounded
+candidate, not a fix for the already working sampled browser behavior.
+Diffenator same-text Virtua/Rubik views at all three weights were inspected;
+dense Bold/uneven spacing remain review items. No source/build/QA result changes:
+latest full online package stays batch33 at12 FAIL/9 WARN,216 Hebrew engineering
+failures remain, and Rubik cmap gap stays340. No new cross-platform/native-reader
+approval. Diagnostic font copies must never enter a release. Local only/no push.

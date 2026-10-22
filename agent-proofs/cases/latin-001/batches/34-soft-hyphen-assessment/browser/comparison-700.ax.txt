@@ -1,0 +1,18 @@
+Browser tab: 2, Title: "Soft hyphen comparison 700", URL: "http://127.0.0.1:60273/batch34/comparison-700.html".
+1 AXWebArea Soft hyphen comparison 700, URL: 127.0.0.1:60273/batch34/comparison-700.html
+	2 heading U+00AD behavior · 700 · comparison, Value: 1
+		3 text U+00AD behavior · 700 · comparison
+	4 text Frozen Virtua 9359e981 and pinned Rubik. English, manual hyphenation. Diagnostic fonts change cmap only and are not candidates.
+	5 container
+		6 heading virtua, Value: 2
+			7 text virtua
+		8 text Manual wrap, U+00AD (160px) extra­ordinary Hyphens none, same U+00AD extra­ordinary Explicit hyphen + hard break extra-
+		9 text ordinary No wrap, U+00AD extra­ordinary No wrap, plain control extraordinary
+	10 container
+		11 heading rubik, Value: 2
+			12 text rubik
+		13 text Manual wrap, U+00AD (160px) extra­ordinary Hyphens none, same U+00AD extra­ordinary Explicit hyphen + hard break extra-
+		14 text ordinary No wrap, U+00AD extra­ordinary No wrap, plain control extraordinary
+	15 text [{"font":"virtua","manualHeight":83.17708587646484,"noneHeight":41.58854293823242,"nowrapWidth":233.62847900390625,"plainWidth":233.62847900390625},{"font":"rubik","manualHeight":83.17708587646484,"noneHeight":41.58854293823242,"nowrapWidth":221.65798950195312,"plainWidth":221.65798950195312}]
+
+The focused UI element is 1 AXWebArea Soft hyphen comparison 700, URL: 127.0.0.1:60273/batch34/comparison-700.html

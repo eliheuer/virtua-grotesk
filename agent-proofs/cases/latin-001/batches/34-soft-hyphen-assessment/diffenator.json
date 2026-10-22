@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/34-soft-hyphen-assessment/assets/virtua.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/34-soft-hyphen-assessment/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch34/comparison"
+  ],
+  "supplement_text": "extra­ordinary extraordinary co­operate cooperate of­fice office · Extra­ordinary work needs careful comparison. Co­operate with the reader: no visible hyphen inside an unbroken word. București ģimene doğa Ŧŧ ﬁﬂ",
+  "note": "Stock controls, labeled substituted text. Does not exercise controlled wrapping; use the separate behavior fixture. Old Virtua/New Rubik.",
+  "html_sha256": "d7fdd305cda936f87cc3ed95ac2ba991629497308492592a6f75ecb7127e17bb"
+}

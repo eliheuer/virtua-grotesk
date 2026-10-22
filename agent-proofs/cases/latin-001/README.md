@@ -206,7 +206,7 @@ pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ
 
 ## Next bounded work
 
-1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Batch28 adds U0337 and batch29 adds U0338 with bounded math attachment. Batch30 adds encoded not-equal from the exact prior mathematical attachment. Batch31 adds less-equal/greater-equal with bounded long-slash negation. Batch32 adds plus-minus and not-sign. Batch33 adds broken bar U00A6. Next soft-hyphen behavior assessment and remaining Common symbols. Inspect protected donors and actual line-breaking before claiming soft-hyphen support. Current online package QA is12 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Batch25 fixes breve contour direction without moving geometry; do not redo it. Batch26 adds U0312 and batch27 adds U0335 with a narrow variant. Batch28 adds U0337 and batch29 adds U0338 with bounded math attachment. Batch30 adds encoded not-equal from the exact prior mathematical attachment. Batch31 adds less-equal/greater-equal with bounded long-slash negation. Batch32 adds plus-minus and not-sign. Batch33 adds broken bar U00A6. Batch34 assesses soft-hyphen shaping and actual browser line breaking without source edits. Next prepare U+00AD as an exact existing-hyphen compatibility wrapper and test default/preserved ignorables, subsets and the retained browser fixtures; do not describe it as a repair to the already working sampled browser behavior. Then remaining Common symbols. Current online package QA is12 FAIL/9 WARN; serving-set mappings need a separate coverage/policy decision, not false subset declarations. Fi/fl are complete in batch22; retain optical pair-spacing review. Long s/florin/kra/apostrophe-n are added in batches18–21; do not redo them. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -516,3 +516,18 @@ Online unexcluded Fontspector12FAIL9WARN160PASS10INFO40SKIP, exact failure
 records unchanged. Remaining340 Rubik encodings:182 Cyrillic,56 Common,
 102 Arabic presentation forms. Purple/local only/no push; Arabic60272 unchanged.
 Next soft-hyphen shaping/line-break assessment, then independent Common gaps.
+
+## Batch34 · Soft-hyphen behavior assessment
+
+[Evidence](batches/34-soft-hyphen-assessment/README.md) freezes revision9359e981;
+all1821 sources and all five active font hashes unchanged.75 shaping cases and
+actual English manual/disabled/no-wrap browser comparisons at400/550/700 show
+U+00AD already behaves correctly in this browser despite the absent cmap entry.
+Three diagnostic cmap-only probes isolate U+2010 as Virtua's displayed break
+glyph; diagnostic binaries are not source/release candidates. Preserved-ignorable
+HarfBuzz output still exposes missing U+00AD, unlike Rubik. Six actual Diffenator
+Virtua/Rubik screenshots and six controlled browser screenshots inspected.
+No new drawing, build, preflight or whole-suite claim. Current12 FAIL/9 WARN
+package QA and216 Hebrew engineering failures remain; gap340 unchanged. Next
+encoded U+00AD compatibility wrapper using the exact unchanged hyphen, then
+independent Common gaps. Arabic60272 untouched; local evidence only.
