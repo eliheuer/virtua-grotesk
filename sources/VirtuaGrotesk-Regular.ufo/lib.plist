@@ -447,9 +447,12 @@
 		<string>sixsuperior</string>
 		<string>ninesuperior</string>
 		<string>sevensuperior</string>
+		<string>eightsuperior</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>eightsuperior</key>
+		<string>base</string>
 		<key>sevensuperior</key>
 		<string>base</string>
 		<key>ninesuperior</key>
