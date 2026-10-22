@@ -1122,3 +1122,16 @@ and unpublished; its date and source metadata are not final release values.
 Some guide pages still refer to FontBakery. Use the current QA page and the
 installed Fontspector CLI for commands. Recheck the official pages at submission;
 this document is not a replacement for Google Fonts review.
+
+## Latin vowel spacing checkpoint — 2026-10-21
+
+LAT-001 [batch12](../../agent-proofs/cases/latin-001/batches/12-vowel-spacing/README.md)
+corrects62 lowercase vowel-wrapper advances to their current bases, without any
+outline, component, anchor, grade or kerning edits. All new widths on8; whole
+400/550/700 images and enlarged endpoints inspected.500 scoped checks, eight
+Latin test methods and preflight complete. Basic missing-cmap advance mismatches
+fall133→0 across155 samples; no claim of complete subset shaping repair.
+The same216 Hebrew baseline failures remain; fresh release Fontspector is still
+pending. All1717 other source files, including Arabic and green bases, unchanged.
+Uppercase/consonant/i spacing and existing mark-placement failures remain queued.
+Local pending-review progress only, without push or publication.

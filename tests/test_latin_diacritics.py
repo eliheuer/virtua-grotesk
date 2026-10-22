@@ -110,6 +110,23 @@ class LatinDiacriticsTests(unittest.TestCase):
                             if suffix!='́':
                                 self.assertEqual(expected,shaped(fallback,stream.getvalue(),char+suffix,w))
 
+    def test_accented_vowels_keep_base_advances(self):
+        # Stale wrapper widths made accented words uneven and subset fallback reflow.
+        letters='áăâäàāąåãéěêëėèēęóôöòőõúûüùűūųů'
+        for path,font in self.fonts():
+            fallback=TTFont(path)
+            for table in fallback['cmap'].tables:
+                if table.isUnicode():
+                    for char in letters:table.cmap.pop(ord(char),None)
+            stream=io.BytesIO();fallback.save(stream)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for char in letters:
+                    base=unicodedata.normalize('NFD',char)[0]
+                    with self.subTest(font=path.name,weight=w,char=char):
+                        advance=shaped(font,path.read_bytes(),base,w)[0]
+                        self.assertEqual(shaped(font,path.read_bytes(),char,w)[0],advance)
+                        self.assertEqual(shaped(fallback,stream.getvalue(),char,w)[0],advance)
+
     def test_alternate_carons_and_canonical_fallback(self):
         letters='ĽďľŤť'
         for path,font in self.fonts():
