@@ -1,0 +1,15 @@
+Mode: package
+Network: offline
+-p
+googlefonts
+--error-code-on
+fail
+--loglevel
+warn
+--succinct
+--skip-network
+out/qa/2026-10-22-plusminus-notsign/ofl/virtuagrotesk/VirtuaGrotesk[wght].ttf
+out/qa/2026-10-22-plusminus-notsign/ofl/virtuagrotesk/METADATA.pb
+out/qa/2026-10-22-plusminus-notsign/ofl/virtuagrotesk/OFL.txt
+out/qa/2026-10-22-plusminus-notsign/ofl/virtuagrotesk/article/ARTICLE.en_us.html
+out/qa/2026-10-22-plusminus-notsign/ofl/virtuagrotesk/article/weight-specimen.svg

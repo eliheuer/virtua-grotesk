@@ -1,0 +1,19 @@
+{
+  "reason": "Initial online QA escalation rejected for possible unspecified font upload. Read-only inspection of official installed-version source established actual requests; evidence-backed retry approved and completed.",
+  "source": "https://github.com/fonttools/fontspector/tree/fontspector-v1.9.0",
+  "source_files": {
+    "profile-googlefonts/src/network_conditions.rs": "868ed15c7d0eb4e86b9c7984ffb5d0d6908a72736392a69eb58b3d9ea913c725",
+    "profile-googlefonts/src/checks/googlefonts/axes_match.rs": "61693d25ed2972ec4443f28432fe8fe3cea6994989a24ec35da39d51396aa94f",
+    "profile-universal/src/checks/fontdata_namecheck.rs": "2c03770ec42c1f67b8447a9d5c811b7d30e5e419e29de5491ff4299e92ce316b",
+    "profile-googlefonts/src/checks/googlefonts/metadata/broken_links.rs": "1cbad8cb782dfc6d74205137e08333ccde43c20398175aa883bde7baba6859cb",
+    "profile-googlefonts/src/checks/googlefonts/description/broken_links.rs": "f8a620cc6dbe8976c87e3e7fb927617e77489ed9f4e170e92c2cd06fb21a2e41"
+  },
+  "requests": [
+    "GET fonts.google.com/metadata/fonts and optional family download manifest/public font files",
+    "GET raw.githubusercontent.com/google/fonts/master/catalog/designers/...",
+    "HEAD public repository links from metadata/article: https://github.com/eliheuer/virtua-grotesk",
+    "Namecheck code POSTs only public family name as q to http://namecheck.fontdata.com/api/; no font or package payload"
+  ],
+  "font_package_upload_found": false,
+  "source_archive_sha256": "3361795a9b7a60548f5f519b7fcf92bfbcadaff0684541ad031a2d60a8320ba7"
+}

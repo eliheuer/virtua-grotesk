@@ -1,0 +1,20 @@
+{
+  "before": {
+    "SKIP": 43,
+    "PASS": 157,
+    "INFO": 10,
+    "WARN": 8,
+    "FAIL": 12,
+    "ERROR": 1
+  },
+  "after": {
+    "SKIP": 43,
+    "PASS": 157,
+    "INFO": 10,
+    "WARN": 8,
+    "FAIL": 12,
+    "ERROR": 1
+  },
+  "same_failure_and_error_meaning": true,
+  "network_disabled_axes_match_error": "Inherited Fontspector offline behavior, not a new source failure; online run supersedes this diagnostic."
+}

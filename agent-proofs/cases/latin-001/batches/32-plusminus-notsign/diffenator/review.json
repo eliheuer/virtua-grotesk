@@ -1,0 +1,38 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "views": [
+    "same-text supplement",
+    "stock first viewport"
+  ],
+  "fonts": {
+    "after": "297427ec2ca7030416bba9e7d79ba2bb8d6679ee37f6d1c4d617334e276b0a2a",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "images": {
+    "stock-virtua-400.png": "395323d1b3a12f320654a7a16b6be4cc8b2c7a8f9615155537a3127735c99ab2",
+    "target-virtua-550.png": "f49a9718660d232f66bf20517b3f4b18d05fec636b947977d99888907fb95dde",
+    "target-rubik-400.png": "c5cee08c2898153bb3f6d5642fa22d62cb82bc9d22180ea352235ce82d430706",
+    "stock-rubik-550.png": "a1a432f850599492a74fb2e559d2aeaeb15500587ce5767974ebf672bda541c9",
+    "stock-virtua-700.png": "16ac55e8379acdb6543c1dd4b0ec727fc9ccf7be20be2236d990733710b0940f",
+    "target-rubik-700.png": "04dbe15d169674dfa6e67e9b7d9242c4013f93083eda78f4af06db0401737382",
+    "target-virtua-700.png": "da2d7d9416c5dcdb20566defb9a6bb62281d14d35b4b20347b6672cc5d3eaf5b",
+    "stock-rubik-400.png": "6557aa08e3fd1c53198ec781b1e8d094b9a55a35f61d04cc90fbd0920807fccf",
+    "target-rubik-550.png": "5858ab71167267560c31887c41b8d028d15719f0d9a605b6cf0fe5ae89c86aad",
+    "target-virtua-400.png": "0b19aa1433987705961d5f837473025a3a320ea0388fe97913c8529b1e9c39ca",
+    "stock-virtua-550.png": "67a10afd086692373045554242e64e87a783a5895d0c7958269a37b6ab47738a",
+    "stock-rubik-700.png": "54fd4d211ab12b09312206e2cd3764028044fb747ae464c5146e4bda025ef525"
+  },
+  "findings": [
+    "Plus-minus separate lower bar remains visible; its cross is more compact than Rubik.",
+    "Not-sign short descending right leg is visible at reading size.",
+    "New symbols are lighter than the dense Bold alphabet; overall weight and default pair spacing remain optical review.",
+    "Generic above/below marks retain right-side math fallback; no extended attachment promised.",
+    "Stock mixed-text spacing remains uneven and Bold dense; only first viewport sampled, not full language or reader approval."
+  ],
+  "slider_controls_weight_despite_regular_label": true,
+  "arabic_live_proof_unchanged": true
+}

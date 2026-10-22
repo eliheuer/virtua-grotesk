@@ -438,6 +438,28 @@ class LatinDiacriticsTests(unittest.TestCase):
                         self.assertEqual(adv,sa)
                         self.assertEqual(bounds(boxes),bounds(sboxes))
 
+    def test_plusminus_lower_bar_stays_separate_and_not_sign_is_visible(self):
+        from fontTools.pens.recordingPen import DecomposingRecordingPen
+        for path,font in self.fonts():
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                gs=font.getGlyphSet(location={'wght':w} if 'fvar' in font else None)
+                with self.subTest(font=path.name,weight=w):
+                    name=font.getBestCmap()[0xB1]
+                    pen=DecomposingRecordingPen(gs);gs[name].draw(pen)
+                    contours=[]
+                    for op,points in pen.value:
+                        if op=='moveTo':contours.append(list(points))
+                        elif op=='lineTo':contours[-1].extend(points)
+                    self.assertEqual(len(contours),2)
+                    ranges=sorted((min(y for x,y in c),max(y for x,y in c)) for c in contours)
+                    self.assertGreaterEqual(ranges[1][0]-ranges[0][1],40)
+                    for text in ['±','¬']:
+                        advance,boxes=shaped(font,path.read_bytes(),text,w)
+                        self.assertEqual(advance,600)
+                        self.assertEqual(len(boxes),1)
+                        self.assertGreater(boxes[0][3]-boxes[0][1],160)
+                        self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs.get(font.getBestCmap()[ord(text)],1),1)
+
     def test_inequality_symbols_keep_clear_lower_bars(self):
         for path,font in self.fonts():
             data=path.read_bytes()
