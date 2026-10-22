@@ -1,0 +1,4582 @@
+[
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 400,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 475,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 550,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 625,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 700,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 400,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 528,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 475,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 565,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 550,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 602,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 625,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 639,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "x¹ x² x³",
+    "weight": 700,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 256,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 676,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": ".notdef",
+          "advance": 600,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 400,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 384,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 576,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 636,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 384,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 576,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 636,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 475,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 404,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 594,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 649,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 404,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 594,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 649,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 550,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 424,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 612,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 662,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 424,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 612,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 662,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 625,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 444,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 630,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 675,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 444,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 630,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 675,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 700,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 464,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 688,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 464,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 688,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 400,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 384,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 576,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 636,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 384,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 576,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 636,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 475,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 404,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 594,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 649,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 404,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 594,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 649,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 550,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 424,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 612,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 662,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 424,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 612,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 662,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 625,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 444,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 630,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 675,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 444,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 630,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 675,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "virtua",
+    "text": "123",
+    "weight": 700,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 464,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 688,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 464,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 688,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 400,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 258,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 258,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 475,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 271,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 347,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 346,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 271,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 347,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 346,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 550,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 351,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 349,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 351,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 349,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 625,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 287,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 353,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 352,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 287,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 353,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 352,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 700,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 294,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 356,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 354,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 294,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 356,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 354,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 400,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 258,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 258,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 245,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 539,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 475,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 271,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 347,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 346,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 271,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 347,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 233,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 557,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 346,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 550,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 351,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 349,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 351,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 225,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 569,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 349,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 625,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 287,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 353,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 352,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 287,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 353,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 219,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 579,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 352,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "x¹ x² x³",
+    "weight": 700,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 294,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 356,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 354,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B9",
+          "advance": 294,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 356,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "space",
+          "advance": 213,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "x",
+          "advance": 588,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 354,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 400,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 428,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 587,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 601,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 428,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 587,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 601,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 475,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 454,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 611,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 623,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 454,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 611,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 623,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 550,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 471,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 626,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 637,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 471,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 626,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 637,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 625,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 638,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 638,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 700,
+    "layout_policy": "default",
+    "features_requested": [
+      "BUZZ",
+      "Buzz",
+      "HARF",
+      "Harf",
+      "abvf",
+      "abvm",
+      "abvs",
+      "akhn",
+      "blwf",
+      "blwm",
+      "blws",
+      "calt",
+      "ccmp",
+      "cfar",
+      "chws",
+      "cjct",
+      "clig",
+      "cswh",
+      "curs",
+      "dist",
+      "dnom",
+      "fin2",
+      "fin3",
+      "fina",
+      "frac",
+      "half",
+      "haln",
+      "halt",
+      "init",
+      "isol",
+      "jalt",
+      "kern",
+      "liga",
+      "ljmo",
+      "locl",
+      "ltra",
+      "ltrm",
+      "mark",
+      "med2",
+      "medi",
+      "mkmk",
+      "mset",
+      "nukt",
+      "numr",
+      "palt",
+      "pref",
+      "pres",
+      "pstf",
+      "psts",
+      "rand",
+      "rclt",
+      "rkrf",
+      "rlig",
+      "rphf",
+      "rtla",
+      "rtlm",
+      "rvrn",
+      "stch",
+      "tjmo",
+      "valt",
+      "vatu",
+      "vchw",
+      "vert",
+      "vhal",
+      "vjmo",
+      "vkrn",
+      "vpal",
+      "vrt2"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 497,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 650,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 659,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "one",
+          "advance": 497,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 650,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 659,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 400,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 428,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 587,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 601,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "uni00B9",
+          "advance": 258,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 341,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 475,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 454,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 611,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 623,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "uni00B9",
+          "advance": 271,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 347,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 346,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 550,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 471,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 626,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 637,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "uni00B9",
+          "advance": 280,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 351,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 349,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 625,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 484,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 638,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 648,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "uni00B9",
+          "advance": 287,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 353,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 352,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  },
+  {
+    "font": "rubik",
+    "text": "123",
+    "weight": 700,
+    "layout_policy": "all-features",
+    "features_requested": [
+      "*"
+    ],
+    "modes": {
+      "default": [
+        {
+          "glyph": "one",
+          "advance": 497,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "two",
+          "advance": 650,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "three",
+          "advance": 659,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "sups": [
+        {
+          "glyph": "uni00B9",
+          "advance": 294,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B2",
+          "advance": 356,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "glyph": "uni00B3",
+          "advance": 354,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    }
+  }
+]

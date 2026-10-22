@@ -1,0 +1,35 @@
+{
+  "renderer": "Pillow FreeType/RAQM; absent cmap rows explicitly unavailable, no fallback",
+  "images": [
+    {
+      "path": "forms-400.png",
+      "sha256": "e7a0f5960ebc8527e461edde9e75846813c26f1656520e1896f24acedefbaecd",
+      "weight": 400,
+      "size": 48
+    },
+    {
+      "path": "forms-550.png",
+      "sha256": "9bed507e0994203b8550f7bb3f9311a274c4cdc09d789c2c954a8cbdb9119f4d",
+      "weight": 550,
+      "size": 48
+    },
+    {
+      "path": "forms-700.png",
+      "sha256": "d6cf4483bc784094ad615e40bc9f1a7f508406169879b4937ccd5f347760fe10",
+      "weight": 700,
+      "size": 48
+    },
+    {
+      "path": "detail-400.png",
+      "sha256": "a7d1f921ff7152730bd6a0f1d5765b923cc2c59ccbff09ae238ef2d476061a31",
+      "weight": 400,
+      "size": 224
+    },
+    {
+      "path": "detail-700.png",
+      "sha256": "20baa0d08ba4a31f28ef188d647cec6d34dc032914d138ddc4d36724ad561969",
+      "weight": 700,
+      "size": 224
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/38-superior-digit-assessment/assets/virtua.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/38-superior-digit-assessment/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch38/comparison"
+  ],
+  "supplement_text": "123 101 202 303 · x¹ x² x³ · 10¹ 10² 10³ · ¹²³ · Note: Virtua has no encoded superior digits; any displayed superior ink in Old is browser fallback, not Virtua coverage. New is Rubik. București ģimene doğa Ŧŧ ﬁﬂ",
+  "note": "Stock controls and coverage proof plus labeled same-text supplement. Old Virtua/New Rubik; missing coverage explicitly labeled. No new candidate.",
+  "html_sha256": "a54d6ca2f3239efc8a198839e15e645221d40e8827484988919c3f305cc397bb"
+}

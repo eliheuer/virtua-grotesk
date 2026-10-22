@@ -1,0 +1,36 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "virtua": "a291a8f7cd67f0525b97420b34e98e418fca0305fa71ddb46e3742917f245f51",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "inspected_screenshots": {
+    "browser/controlled-400.png": "e90895592efebac996c6530a638f58d5ab9d69f745253dce3db12b59df8caba7",
+    "browser/controlled-550.png": "5fdc35160445daf95f70c858f94cbb75f11045a08a2ec7e327cc346cdc027eff",
+    "browser/controlled-700.png": "7188734893a715f33dde899c5d9d14c44ae6f58843cbf8fc5a13d7781e820cae",
+    "browser/stock-rubik-400.png": "ff3d5b955e3862b9e8a8fc31b67161aee4598886c175e0977645867087d9e4a1",
+    "browser/stock-rubik-550.png": "42fe87b1c23fcdd366ad2cef8b2c560a388d7a84ee170aacc14ced3ce24dd0b1",
+    "browser/stock-rubik-700.png": "0981e9890b08866a89fa0be7403d62e8a19be3b5cb37b96722778694912a6ec1",
+    "browser/stock-virtua-400.png": "8fe4e95cc6956f72161289795ea4f04d21d65b9178473641b0e9e01b635552ad",
+    "browser/stock-virtua-550.png": "78cd432ed08327eed0a0b79d3b6cce57dc9f47ca7d381592e0219231abccf706",
+    "browser/stock-virtua-700.png": "748eda23d826db2377e6a1726f9d06650779a499ae33c1d8e91c3e4bc81e881c",
+    "browser/target-rubik-400.png": "dfdd8245f7499187b8645c9c03413c383ef27d753728e44565222bb31a0af805",
+    "browser/target-rubik-550.png": "90eddad7953e062cce56360ccaf4593b7345598b67ae0bb5fb402d40e6a82d07",
+    "browser/target-rubik-700.png": "90dd461b1cc9bb5a5c6ba448420ceb72eaf7f4668d3539cd78d5b8823ee1238f",
+    "browser/target-virtua-400.png": "7ac9d8447c3e654d52f966bbb2d52d64b91db91e5006de9e1f1e476871bc7023",
+    "browser/target-virtua-550.png": "cdad5faffe81959f38c6e6524eb6ba41f00a05fae971a129e64c3aa498fe955e",
+    "browser/target-virtua-700.png": "ae2671527be354370a9579543cf55ad5de8a7f79902a15512e357f43c5bef31e"
+  },
+  "scope": "Three controlled fixtures plus Diffenator target and stock first viewport in Virtua/Rubik. Slider weight governs despite Regular menu label. No exhaustive language or native-reader approval.",
+  "findings": [
+    "Controlled Virtua encoded superscripts display fallback ink; actual fallback font unidentified.",
+    "Diffenator Virtua encoded targets display missing-glyph boxes; Rubik encoded superiors visible.",
+    "Virtua sups remains ordinary figures; Rubik sups gives designed superior glyphs.",
+    "Preserve Virtua curved one flag and rounded three upper bowl; Rubik is comparison only.",
+    "Dense Bold and uneven stock spacing remain review issues."
+  ]
+}

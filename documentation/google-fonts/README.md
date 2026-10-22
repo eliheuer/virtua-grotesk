@@ -1478,3 +1478,23 @@ Full online unexcluded package remains12FAIL10WARN159PASS10INFO40SKIP; exact
 FAILs unchanged and no new semantic warnings. Soft-hyphen policy choice remains
 open. Rubik gap338 (182 Cyrillic/54 Common/102 Arabic presentation forms).
 Next superior-digit donor and U00B9/U00B2/U00B3 coverage assessment. Local only.
+
+
+### LAT-001 batch38 · Superior-digit assessment
+
+[Batch38](../../agent-proofs/cases/latin-001/batches/38-superior-digit-assessment/README.md)
+freezes4a940d06: all1825 source files and five active font hashes unchanged.
+There are no existing superior/numerator donors or encoded U00B9/U00B2/U00B3;
+all ordinary1/2/3 donors are protected green.60 direct cases in four feature
+modes and40 real-subset cases in two modes separate encoded coverage, optional
+sups and subset retention. NFKD removes the superior distinction; do not alias
+ordinary figures. Pinned Rubik supplies encoded/sups forms, but default
+fontTools layout subsetting drops sups for plain123 unless retained.
+Five complete raster images and15 actual browser/Diffenator images inspected
+at400/550/700, including224px endpoints. Controlled Virtua text uses unidentified
+fallback superior ink; Diffenator shows missing-glyph boxes. Next prepare new
+encoded superior1/2/3 drafts from Virtua figure construction, preserving every
+donor; a full sups family is separate. No build/preflight/new full-QA claim.
+Current batch37 package12FAIL10WARN159PASS10INFO40SKIP,216 Hebrew baseline
+failures, soft-hyphen policy choice and338 Rubik encoding gaps remain unchanged.
+Local only; no push, grading or release approval.
