@@ -1,0 +1,20 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "fonts": {
+    "virtua": "c379055ea6669a8af13e67658e98bffc6379fdb0d1577c8793b3e7c8168e8716",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "raster_images": {
+    "fractions-400.png": "9691025decd41453682ac1de9ba8b4535ca58dda25d67a4644845fb97c0cbcbe",
+    "detail-400.png": "4d9a89ddb567fefc7250ae99d3788fade54ca7fce2a9cd716bb923439a22f4f5",
+    "fractions-700.png": "cdd54efd8c79761547d45ebd77690deb7ed7a3876e2aba2a6ecddf8a41164118",
+    "detail-700.png": "6834e072209971f294f43522e1a9ebcf39c7dd436795d826c7ff7e9c61d63946",
+    "fractions-550.png": "e2e903b736f20502c1000ff8bfb2ef507345a7249859187ef59968414a2fc48c"
+  },
+  "supplement": "¼ ½ ¾ · 1⁄4 1⁄2 3⁄4 · 1/4 1/2 3/4 · ¹²³⁴ · 12⁄345 · H¼ H½ H¾ · ¼́ ½̧",
+  "scope": "No font/source changes. Pillow FreeType RAQM feature controls; actual browser review recorded separately. Missing cmap in Virtua may invoke unidentified browser fallback."
+}

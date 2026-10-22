@@ -1,0 +1,30 @@
+{
+  "fonts": {
+    "virtua": "c379055ea6669a8af13e67658e98bffc6379fdb0d1577c8793b3e7c8168e8716",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "screenshots": {
+    "controlled-400.png": "77f2b51973f0109cf6d78973da28ffc6e450dd29cbe35ba616690e1544a6ff37",
+    "controlled-550.png": "a8cb9159a53d53076134d71b6df09dc7f9662af552e264a8b3d7cccd34bfc438",
+    "controlled-700.png": "25dbd842da5d79f0beffcf6dd971bce48d0b0db4849bd40bdaf2e3284cee8741",
+    "diffenator-rubik-400.png": "f7a3bfa85b8abc13ba89fac43667b6e2ac1aba7e495a0526242369540007bebf",
+    "diffenator-rubik-550.png": "e515c00f27eddba20ac0507b48b4d518d886f8fee712aea26f621731241d0f36",
+    "diffenator-rubik-700.png": "2df110836e5c2a0411db7be39d4641c8ca69265cc7e606a69bfe00269768bb10",
+    "diffenator-virtua-400.png": "fa4119288f3d73109326ed96b20b04a2ef03b2d69bba9864abc55f33e63b3424",
+    "diffenator-virtua-550.png": "f3fb1d2cfdba26dfe8356fa404e8de5b1bb2fba25aed1be4be7701a14af37fcc",
+    "diffenator-virtua-700.png": "a00ba3ab9884a1b358c371f5d90a531cde6729b8817ec02a7e85e1a22c665eae"
+  },
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "scope": "Three controlled browser fixtures, six actual Diffenator target views, five whole/detail rasters inspected. Stock proof generated; unchanged batch49 stock review referenced, not repeated.",
+  "observations": [
+    "Controlled Virtua encoded fractions show serif fallback ink; actual fallback font unidentified. U2044 sequences retain large figures. No cmap coverage claim.",
+    "Diffenator Old=Virtua shows boxes for absent fractions/slash. New=Rubik renders fraction sequences and encoded forms. Slider controls weight despite Regular menu label.",
+    "Rubik fractions use broad slash overhang/nesting. Whole-run frac also changes multi-slash contexts; generic marks use fallback positioning.",
+    "Regular Virtua superior 2/3 lighter than Rubik; Bold family mass/default spacing await human review. No new outlines or features created."
+  ],
+  "arabic_proof": "60272 unchanged"
+}
