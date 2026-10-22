@@ -75,22 +75,27 @@ shows no new failures; this does not waive the existing failures.
 | --- | ---: | ---: | ---: | ---: | ---: |
 | Historical early Latin five binaries | 1 | 29 | 529 | 39 | 294 |
 | Historical early Latin VF package | 10 | 8 | 160 | 10 | 41 |
-| Current batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
-| Current batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
+| Batch24 package before caret repair | 10 | 11 | 158 | 10 | 40 |
+| Batch24 package after caret repair | 10 | 10 | 159 | 10 | 40 |
+| Current batch25 package after breve winding repair | 10 | 9 | 160 | 10 | 40 |
 
 [Batch24](../../agent-proofs/cases/latin-001/batches/24-package-qa/README.md)
 refreshes Fontspector1.9.0 against the current VF and fixes missing fi/fl carets
 in four GLIFs. Only GDEF/head bytes change; ink and shaping are unchanged.
 74 scoped checks,17 Latin tests, baseline Hebrew delta and preflight completed;
 actual Diffenator text and whole400/550/700 rasters inspected. Native editor
-cursor behavior still needs platform testing. Breve contour direction is the
-next independent repair; protected Arabic warnings remain reserved for Eli.
+cursor behavior still needs platform testing. [Batch25](../../agent-proofs/cases/latin-001/batches/25-breve-winding/README.md)
+then fixes breve winding in two donor GLIFs without moving geometry:4,410 exact
+compiled glyph comparisons,17 Latin methods, unchanged baseline failures and
+whole-image/Diffenator review completed. Outline direction now passes; protected
+Arabic warnings remain reserved for Eli. Next missing combining marks and symbols.
 
 Current package failures are serving-set reachability for U+0302, U+0331 and
 U+1EBC/U+1EBD. No exclusions or misleading subset declarations were added.
-Input hashes/full reports are retained in batch24/qa-before and qa-after. The
-baseline revision is fb5a64be plus the four hashed caret GLIF changes recorded
-in final-identity.json. The package is unpublished and retains provisional
+Input hashes/full current reports are retained in batch25/qa-online; batch24
+reports remain historical comparison evidence. The current baseline revision is
+a2f6fe18 plus the two hashed breve GLIF changes in batch25/final-identity.json.
+The QA package uses the scratch VF; active tables match except head timestamps. The package is unpublished and retains provisional
 metadata/source-delivery choices and artwork. The older loose-font failure was
 the ttf directory name; no fresh five-binary online result is claimed here.
 
