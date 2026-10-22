@@ -87,12 +87,19 @@ and enlarged endpoint proofs inspected;90 shaping checks, three Latin tests and
 preflight complete. The same216 pre-existing Hebrew failures remain, with no new
 failures. Ring proportions/weight await human review.
 
+[Batch05](batches/05-breve/README.md) rounds the faceted breve bowl in both
+masters, adds Bold weight and raises outgoing stack anchors. Four GLIFs only;
+all other source bytes unchanged. Whole400/550/700 images and enlarged endpoint
+letters inspected.90 shaping checks, three Latin tests, five-weight curve/outline
+checks and preflight complete; no new failures against the216-failure baseline.
+The round bowl and visible cap cuts await human review.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Breve weight/construction, then tilde, bottom marks and alternate
+1. Tilde weight/construction, then bottom marks and alternate
    carons. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for

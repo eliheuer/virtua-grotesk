@@ -1,0 +1,156 @@
+{
+  "Regular": {
+    "consumers": [
+      "Abreve",
+      "Ebreve",
+      "Gbreve",
+      "Ibreve",
+      "Obreve",
+      "Ubreve",
+      "abreve",
+      "breve",
+      "brevecomb",
+      "ebreve",
+      "gbreve",
+      "ibreve",
+      "obreve",
+      "ubreve"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "Abreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Ebreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Gbreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Ibreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Obreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Ubreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "abreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "breve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "brevecomb": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "ebreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "gbreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "ibreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "obreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "ubreve": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      }
+    }
+  },
+  "Bold": {
+    "consumers": [
+      "Abreve",
+      "Ebreve",
+      "Gbreve",
+      "Ibreve",
+      "Obreve",
+      "Ubreve",
+      "abreve",
+      "breve",
+      "brevecomb",
+      "ebreve",
+      "gbreve",
+      "ibreve",
+      "obreve",
+      "ubreve"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "Abreve": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Ebreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Gbreve": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Ibreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Obreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Ubreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "abreve": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "breve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "brevecomb": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "ebreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "gbreve": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "ibreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "obreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "ubreve": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      }
+    }
+  }
+}
