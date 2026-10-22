@@ -110,6 +110,23 @@ class LatinDiacriticsTests(unittest.TestCase):
                             if suffix!='́':
                                 self.assertEqual(expected,shaped(fallback,stream.getvalue(),char+suffix,w))
 
+    def test_alternate_carons_and_canonical_fallback(self):
+        letters='ĽďľŤť'
+        for path,font in self.fonts():
+            fallback=TTFont(path)
+            for table in fallback['cmap'].tables:
+                if table.isUnicode():
+                    for char in letters:table.cmap.pop(ord(char),None)
+            stream=io.BytesIO();fallback.save(stream)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for char in letters:
+                    with self.subTest(font=path.name,weight=w,char=char):
+                        expected=shaped(font,path.read_bytes(),char,w)
+                        self.assertEqual(expected,shaped(font,path.read_bytes(),unicodedata.normalize('NFD',char),w))
+                        self.assertEqual(expected,shaped(fallback,stream.getvalue(),char,w))
+                        _,bounds=shaped(font,path.read_bytes(),char+'́',w)
+                        self.assertGreaterEqual(bounds[-1][1]-bounds[0][3],16)
+
     def test_below_mark_stacks_fit_windows_clipping_metrics(self):
         for path,font in self.fonts():
             for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):

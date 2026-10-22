@@ -1,0 +1,113 @@
+{
+  "at": "2026-10-22T04:38:57.142315+00:00",
+  "changes": [
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/caroncomb.alt.glif",
+      "glyph": "caroncomb.alt",
+      "master": "Regular",
+      "before": "a3f5965769875077b90672f2f004d39a03145ccd99c6f7936787fcc7d3ee55be",
+      "after": "aeafb453a3fcc378e769c641eb8edd9daa4bea9afff047cfc68626e7e9a22594"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/caroncomb.alt.glif",
+      "glyph": "caroncomb.alt",
+      "master": "Bold",
+      "before": "b079f21652f7f6d26f5863435e8c109d5ffd63eb25487080bc1bfd79d9324d69",
+      "after": "0015b4dcc4f70a32d5de086cc4118f0c20742140fdf737dc268490089aba9296"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/L_caron.glif",
+      "glyph": "Lcaron",
+      "master": "Regular",
+      "before": "00f6a601eb3f3316a259ecc5977e3f84cf5e89ae53bd248a8fbbe2bcea9ea00a",
+      "after": "698a6c0c9e180bde261c759d53deb9acb0a8aa30b809e34cfbc8d63d87d4dbd5",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/dcaron.glif",
+      "glyph": "dcaron",
+      "master": "Regular",
+      "before": "e6315781de97b514f4fe03ddc09e21bae86ef40a84f4768fba5c41f7763c495b",
+      "after": "6b6b63361bc744708848a59e291749f3b12ae5302a8e1f3fda62e2e869270e74",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/lcaron.glif",
+      "glyph": "lcaron",
+      "master": "Regular",
+      "before": "44e0a8937525f2cb516f9f16f11aa7c0d1cc451fe35ab85f4e80854934a75539",
+      "after": "50ac88fc71a5d520e5b21bb374fed80898a1f1baaa03ed6083f691368e57b008",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/tcaron.glif",
+      "glyph": "tcaron",
+      "master": "Regular",
+      "before": "51d2477765b245e7b6a8378df8d217e0e927848dfcfbfef8d796f51d2fbb324a",
+      "after": "8c4417be244ac2976f5a03ddca8c306a75514c49a8a4e397e5c15b0dc551d9c6",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/T_caron.glif",
+      "glyph": "Tcaron",
+      "master": "Regular",
+      "before": "6c9d1156400e1d02127757203623b9beb00a991321b9c50da7eb9caa2f08fc90",
+      "after": "f917b818fad0b58e9598ab0faefdef028f1e81a20a60d2d4d14577f3a9fff14c",
+      "kind": "correct uppercase caron component; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/features.fea",
+      "master": "Regular",
+      "before": "a5b44a9d5db01967359615a43fad557a172d82ff40637db5e394af0dcf2a98de",
+      "after": "12526f5c0b9164189db854229c1415973e59488349dc176621d4de67312add06",
+      "kind": "five canonical caron compositions"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/L_caron.glif",
+      "glyph": "Lcaron",
+      "master": "Bold",
+      "before": "da1a237445400b357c52990708c2b84638c644102359443fae06569ea146475c",
+      "after": "9cd29fa2fd5a7420b272b26ec9b9cb34ec3edfdf76918dd8568f1b085dff50e6",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/dcaron.glif",
+      "glyph": "dcaron",
+      "master": "Bold",
+      "before": "9380b982868626ca41b824f66859791b49ac7d5e8f26b3a51d6a8fd95d294db0",
+      "after": "89cb969d9ea117d1fa97e71ef5c912741b147ac1a0cd19982236edf317941073",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/lcaron.glif",
+      "glyph": "lcaron",
+      "master": "Bold",
+      "before": "b993a623bd5795ce992bed6d9fdfb79c931f41c39fc907cc799de9bdd8036f4d",
+      "after": "8dfd1a713beb011aba4da783cdc8462b3c15de5cb397e3b1523df77ab0108c62",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/tcaron.glif",
+      "glyph": "tcaron",
+      "master": "Bold",
+      "before": "f6836108b9524303f5b359d84ddeb441869f85aac799e205ed360d67d9994dec",
+      "after": "ecf885cb164a5ec5dfcb92a679d9035fc7f9c7bd1a964a4da6faf563fc054748",
+      "kind": "local side mark placement and grid spacing; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/T_caron.glif",
+      "glyph": "Tcaron",
+      "master": "Bold",
+      "before": "0ab463ed7fbbf8d760453b83c3daeb7471c511aa58391e8499137b62e4510623",
+      "after": "8c397bd85189848d34e3a91c5f0f8cbe66a469d8fb33f35efc16c02983ad1b8e",
+      "kind": "correct uppercase caron component; base/grade preserved"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/features.fea",
+      "master": "Bold",
+      "before": "a5b44a9d5db01967359615a43fad557a172d82ff40637db5e394af0dcf2a98de",
+      "after": "12526f5c0b9164189db854229c1415973e59488349dc176621d4de67312add06",
+      "kind": "five canonical caron compositions"
+    }
+  ]
+}

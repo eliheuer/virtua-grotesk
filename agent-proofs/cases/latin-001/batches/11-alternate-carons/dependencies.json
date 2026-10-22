@@ -1,0 +1,79 @@
+{
+  "Regular": {
+    "consumers": [
+      "Lcaron",
+      "Tcaron",
+      "caroncomb.alt",
+      "dcaron",
+      "lcaron",
+      "tcaron"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "tcaron": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "caroncomb.alt": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "dcaron": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Tcaron": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Lcaron": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "lcaron": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      }
+    },
+    "suspicious": []
+  },
+  "Bold": {
+    "consumers": [
+      "Lcaron",
+      "Tcaron",
+      "caroncomb.alt",
+      "dcaron",
+      "lcaron",
+      "tcaron"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "tcaron": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "caroncomb.alt": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "dcaron": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Tcaron": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Lcaron": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "lcaron": {
+        "public.markColor": "1,0.29,0.24,1"
+      }
+    },
+    "suspicious": []
+  }
+}

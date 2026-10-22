@@ -1,0 +1,410 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 6,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "Lcaron",
+      "points": 0,
+      "advance": 640.0,
+      "bounds": [
+        80,
+        0,
+        616,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 348.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 348.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 640.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "2": 3
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-altcaron-eiuapff_/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "9cd29fa2fd5a7420b272b26ec9b9cb34ec3edfdf76918dd8568f1b085dff50e6"
+    },
+    {
+      "glyph": "Tcaron",
+      "points": 0,
+      "advance": 648.0,
+      "bounds": [
+        8,
+        0,
+        640,
+        1024
+      ],
+      "failures": [
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 324.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 324.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 420.0
+        },
+        {
+          "field": "component[1].anchor[_top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].anchor[top].x",
+          "value": 212.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 648.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 8.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "1": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-altcaron-eiuapff_/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "8c397bd85189848d34e3a91c5f0f8cbe66a469d8fb33f35efc16c02983ad1b8e"
+    },
+    {
+      "glyph": "caroncomb.alt",
+      "points": 8,
+      "advance": 260.0,
+      "bounds": [
+        80,
+        608,
+        208,
+        768
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 260.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 52.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "2": 2,
+        "1": 10,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-altcaron-eiuapff_/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "0015b4dcc4f70a32d5de086cc4118f0c20742140fdf737dc268490089aba9296"
+    },
+    {
+      "glyph": "dcaron",
+      "points": 0,
+      "advance": 840.0,
+      "bounds": [
+        40,
+        -16,
+        808,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[18].x",
+          "value": 284.0
+        },
+        {
+          "field": "component[0].contour[0].point[19].x",
+          "value": 148.0
+        },
+        {
+          "field": "component[0].contour[1].point[0].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[1].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[7].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 452.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 840.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-altcaron-eiuapff_/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "89cb969d9ea117d1fa97e71ef5c912741b147ac1a0cd19982236edf317941073"
+    },
+    {
+      "glyph": "lcaron",
+      "points": 0,
+      "advance": 440.0,
+      "bounds": [
+        72,
+        0,
+        408,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 440.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-altcaron-eiuapff_/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "8dfd1a713beb011aba4da783cdc8462b3c15de5cb397e3b1523df77ab0108c62"
+    },
+    {
+      "glyph": "tcaron",
+      "points": 0,
+      "advance": 488.0,
+      "bounds": [
+        24,
+        0,
+        456,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 488.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-altcaron-eiuapff_/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "ecf885cb164a5ec5dfcb92a679d9035fc7f9c7bd1a964a4da6faf563fc054748"
+    }
+  ]
+}

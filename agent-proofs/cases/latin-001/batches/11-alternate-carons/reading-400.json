@@ -1,0 +1,26 @@
+{
+  "weight": 400,
+  "size": 48,
+  "text": [
+    "Ľudia. Ďalší. Ľahký.",
+    "Ďateľ. Ťažký. Mať. Loď."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "43aff93d531d187ddcbf89f2156bb99d81c87caa6ef87a37c2a1904c2b98df99",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "cf12fe5ed0f0aba6c988245dc895b6597c430c66dd992877e1ee66de925024e9",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "8da9724a8f51402d2e79b137dec46b7c941d58e79b57efa4a8ba0bbf4a3dbb1e"
+}

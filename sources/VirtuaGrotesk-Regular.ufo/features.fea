@@ -68,6 +68,11 @@ feature ccmp {
 		sub i ogonekcomb by iogonek;
 		sub U ogonekcomb by Uogonek;
 		sub u ogonekcomb by uogonek;
+		sub L caroncomb by Lcaron;
+		sub d caroncomb by dcaron;
+		sub l caroncomb by lcaron;
+		sub t caroncomb by tcaron;
+		sub T caroncomb by Tcaron;
 	} ccmp_latin_extended;
 
 	# Preserve precomposed tilde spacing when a web subset omits their cmap entries.

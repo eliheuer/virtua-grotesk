@@ -1,0 +1,124 @@
+{
+  "shaping_checks": 135,
+  "changed_compiled_ink": {
+    "400": [
+      "Lcaron",
+      "Tcaron",
+      "caroncomb.alt",
+      "dcaron",
+      "lcaron",
+      "tcaron"
+    ],
+    "475": [
+      "Lcaron",
+      "Tcaron",
+      "caroncomb.alt",
+      "dcaron",
+      "lcaron",
+      "tcaron"
+    ],
+    "550": [
+      "Lcaron",
+      "Tcaron",
+      "caroncomb.alt",
+      "dcaron",
+      "lcaron",
+      "tcaron"
+    ],
+    "625": [
+      "Lcaron",
+      "Tcaron",
+      "caroncomb.alt",
+      "dcaron",
+      "lcaron",
+      "tcaron"
+    ],
+    "700": [
+      "Lcaron",
+      "Tcaron",
+      "caroncomb.alt",
+      "dcaron",
+      "lcaron",
+      "tcaron"
+    ]
+  },
+  "unchanged_source_files": 1765,
+  "after_sha256": "73e32b7eecfa956b8d9b3a5cca42a24e1021abd2bdb2df4f4496d8431447c64f",
+  "geometry": [
+    {
+      "weight": 400,
+      "convex": true,
+      "upper_stem_gaps": {
+        "Lcaron": 44.0,
+        "dcaron": 32.0,
+        "lcaron": 32.0,
+        "tcaron": 40.0
+      },
+      "mark_y_bounds": [
+        608.0,
+        768.0
+      ]
+    },
+    {
+      "weight": 475,
+      "convex": true,
+      "upper_stem_gaps": {
+        "Lcaron": 45.0,
+        "dcaron": 32.0,
+        "lcaron": 32.0,
+        "tcaron": 38.0
+      },
+      "mark_y_bounds": [
+        608.0,
+        768.0
+      ]
+    },
+    {
+      "weight": 550,
+      "convex": true,
+      "upper_stem_gaps": {
+        "Lcaron": 46.0,
+        "dcaron": 32.0,
+        "lcaron": 32.0,
+        "tcaron": 36.0
+      },
+      "mark_y_bounds": [
+        608.0,
+        768.0
+      ]
+    },
+    {
+      "weight": 625,
+      "convex": true,
+      "upper_stem_gaps": {
+        "Lcaron": 47.0,
+        "dcaron": 32.0,
+        "lcaron": 32.0,
+        "tcaron": 34.0
+      },
+      "mark_y_bounds": [
+        608.0,
+        768.0
+      ]
+    },
+    {
+      "weight": 700,
+      "convex": true,
+      "upper_stem_gaps": {
+        "Lcaron": 48.0,
+        "dcaron": 32.0,
+        "lcaron": 32.0,
+        "tcaron": 32.0
+      },
+      "mark_y_bounds": [
+        608.0,
+        768.0
+      ]
+    }
+  ],
+  "notes": [
+    "Twelve GLIFs and two Latin feature files only; all base/green/Arabic source bytes unchanged.",
+    "64/96-unit clipped alternate marks; upper-stem clearance at least32. All new points/offsets/widths on8.",
+    "Corrected uppercase T to ordinary caron; NFC/NFD/basic missing-cmap agree. Above stacks clear. Whole images reviewed separately."
+  ]
+}
