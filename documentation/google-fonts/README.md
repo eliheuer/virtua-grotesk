@@ -1195,3 +1195,16 @@ failures and preflight complete. New geometry/anchors/outer spacing on8;21 inher
 component findings remain. New crossed forms still need dedicated pair kerning;
 blind T/t inheritance would create bar collisions. Pinned Rubik Latin gap now six:
 ĸ ŉ ſ ƒ ﬁ ﬂ. No human approval, push or release claim.
+
+## Long s coverage checkpoint — 2026-10-21
+
+LAT-001 [batch18](../../agent-proofs/cases/latin-001/batches/18-longs/README.md)
+adds ſ with exact green f head curves and left arm, removing the right arm in new
+purple24-point contours. Advances344/400, points/anchors/bearings on8; zero grid
+findings. All existing GLIFs and compiled ink/advances unchanged;1779 other source
+files preserved.90 scoped checks,11 Latin tests, unchanged216 baseline Hebrew
+failures and preflight complete. Whole400/550/700 and enlarged endpoint images,
+actual Diffenator stock coverage and labeled long-s supplement inspected.
+Dense Bold, compact head and default pairs await optical review. Rubik Latin gap
+now five: ĸ ŉ ƒ ﬁ ﬂ. Remaining script/subset/release blockers are not waived.
+Local only; no push or release approval.

@@ -444,9 +444,12 @@
 		<string>aeacute</string>
 		<string>Tbar</string>
 		<string>tbar</string>
+		<string>longs</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>longs</key>
+		<string>base</string>
 		<key>Tbar</key>
 		<string>base</string>
 		<key>tbar</key>
