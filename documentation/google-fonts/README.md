@@ -1664,3 +1664,21 @@ existing10 superior forms; not applied, no claim of tabular superiors/letters/
 numr/dnom/frac/subs. No build/preflight/new package QA; batch46 counts12FAIL10WARN,
 216 baseline Hebrew failures and gap328 unchanged. Next micro-sign U00B5
 assessment; feature proposal remains separate. Local only/no push, Arabic60272 unchanged.
+
+
+### LAT-001 batch48 · Micro-sign assessment
+
+[Evidence](../../agent-proofs/cases/latin-001/batches/48-micro-assessment/README.md) is read-only at607ab7aa: all1845 sources/five active fonts exact,
+Arabic326/master and green131/74 preserved. Green u/p reverse closure14/master
+has no Arabic intersection; exact donor files retained. Virtua lacks U00B5/U03BC;
+Rubik supports only U00B5. NFD preserves micro; NFKD/casefold become unsupported
+Greek mu, not a repair.70 direct cases x4 modes plus30 real-subset cases retained;
+matching .notdef is not coverage. Whole48px400/550/700,224px details and9 actual
+controlled/Diffenator views inspected. Controlled fallback ink is unidentified;
+Diffenator shows boxes for unsupported characters. Rubik micro has upright left
+descender/u-like bowl; construction proposal uses protected Virtua u/p only.
+No source edits/build/preflight/new QA; batch46 package12FAIL10WARN,216 baseline
+failures and gap328 unchanged. Next bounded purple mu U00B5 in both masters,
+with donor bytes frozen, scratch union/weight/attachment review and no Greek
+alias/NFKD substitution. Separate sups proposal remains unapplied. Local only/
+no push; Arabic60272 unchanged.
