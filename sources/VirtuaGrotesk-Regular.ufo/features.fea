@@ -576,17 +576,18 @@ feature liga {
 @LATIN_NARROW_OVERLAY_BASES = [I Iacute Ibreve Icircumflex Idieresis Idotaccent Igrave Imacron Iogonek Itilde dotlessiogonek f fi fl florin i iacute ibreve icircumflex idieresis idotless igrave ij imacron iogonek itilde j jcircumflex jdotless l lacute lcaron lcommaaccent ldot longs r racute rcaron rcedilla t tbar tcaron tcedilla tcommaaccent];
 feature ccmp {
 	lookup LATIN_NARROW_OVERLAY {
-		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow];
+		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow];
 		sub @LATIN_NARROW_OVERLAY_BASES strokeshortcomb' by strokeshortcomb.narrow;
+		sub @LATIN_NARROW_OVERLAY_BASES slashshortcomb' by slashshortcomb.narrow;
 	} LATIN_NARROW_OVERLAY;
 } ccmp;
 
 # Short-stroke overlay: body centers, independent of top/bottom accents.
-markClass [strokeshortcomb strokeshortcomb.narrow] <anchor 0 0> @LATIN_STROKE_OVERLAY;
+markClass [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow] <anchor 0 0> @LATIN_STROKE_OVERLAY;
 feature mark {
 	# Automatic Code
 	lookup LATIN_STROKE_BASES {
-		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow];
+		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow];
 		pos base A <anchor 360 384> mark @LATIN_STROKE_OVERLAY;
 		pos base AE <anchor 512 384> mark @LATIN_STROKE_OVERLAY;
 		pos base AEacute <anchor 512 384> mark @LATIN_STROKE_OVERLAY;
@@ -867,7 +868,7 @@ feature mark {
 		pos base zdotaccent <anchor 280 288> mark @LATIN_STROKE_OVERLAY;
 	} LATIN_STROKE_BASES;
 	lookup LATIN_STROKE_LIGATURES {
-		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow];
+		lookupflag UseMarkFilteringSet [strokeshortcomb strokeshortcomb.narrow slashshortcomb slashshortcomb.narrow];
 		pos ligature fi <anchor 184 288> mark @LATIN_STROKE_OVERLAY ligComponent <anchor 408 288> mark @LATIN_STROKE_OVERLAY;
 		pos ligature fl <anchor 184 288> mark @LATIN_STROKE_OVERLAY ligComponent <anchor 448 288> mark @LATIN_STROKE_OVERLAY;
 	} LATIN_STROKE_LIGATURES;
