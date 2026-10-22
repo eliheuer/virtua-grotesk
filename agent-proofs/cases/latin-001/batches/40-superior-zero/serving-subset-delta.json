@@ -1,0 +1,20 @@
+{
+  "installed_gfsubsets": "/Users/eli/GH/repos/virtua-grotesk/.venv/lib/python3.13/site-packages/gfsubsets/__init__.py",
+  "declared_subsets": [
+    "arabic",
+    "hebrew",
+    "latin",
+    "latin-ext",
+    "menu"
+  ],
+  "new_unreachable_encodings": [
+    {
+      "codepoint": "U+2070",
+      "subsets": [
+        "math"
+      ]
+    }
+  ],
+  "disposition": "Keep the warning. No unrelated math subset declaration or glyph removal. Direct encoded/text-subset support works; serving-set reachability remains separate and unresolved.",
+  "diagnostic_note": "Installed gfsubsets reports no menu glyphset; menu contributes no codepoints to this local union. The independent Fontspector warning expands by one as well."
+}

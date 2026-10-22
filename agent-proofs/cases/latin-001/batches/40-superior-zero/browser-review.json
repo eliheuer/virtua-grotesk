@@ -1,0 +1,37 @@
+{
+  "weights": [
+    400,
+    550,
+    700
+  ],
+  "mapping": {
+    "Old": "Virtua candidate",
+    "New": "Rubik"
+  },
+  "scope": "Actual same-text supplement plus first stock mixed-text viewport in both fonts. Stock sampled text differs from batch39; not a before/after pixel comparison. Slider controls weight despite Regular menu label.",
+  "font_hashes": {
+    "before": "2092fede53c2b9c2ad911b49e13b157f6c1a1428cf1f8420c23decd8f092cdb4",
+    "after": "69cbfc52bcf173d61cdf4f3854363e6bafe344f334cc71ad9ea8046d0b8b3b0d",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "screenshots": {
+    "stock-rubik-400.png": "f9b420c924ba92d3276cab37947f2c9c439a5301073e2020a68dea382f694696",
+    "stock-rubik-550.png": "020c423fc76e822ef07129d925d9a7046309836f86aaf7cda48f6966a77ca763",
+    "stock-rubik-700.png": "0d847768db184a07188b389b840d86848ce363a6b640ebaf964a10edab4afa88",
+    "stock-virtua-400.png": "f24e868e0d1038aec7b23135ce58ea1a33d3d09def5347d2fa9f34525451804d",
+    "stock-virtua-550.png": "88ab2ee27c75693dd7e155dc870d2d6eef4b9484c236d1dc00c8f86d2c052b90",
+    "stock-virtua-700.png": "537c1932fa741d0ea5a59b1b60237254108128f80dd05d34e0db4e28127860fe",
+    "target-rubik-400.png": "031978090b631396cd370b1b6095d65a27684d672dc159784756ebb7f5f8ca35",
+    "target-rubik-550.png": "63ed7848a40912139bb2e7758ab5b64367e5c5780fe6e6c1aff5fccccf0d7d9c",
+    "target-rubik-700.png": "c94d0bdbc671a9dc32da26744d5c2385a6bc89f92b3077117cb7e71f55096c4b",
+    "target-virtua-400.png": "35d7dd9b771836c474fbbceea0f91afc64e932f115e8eea3f2b26b0e9fb78066",
+    "target-virtua-550.png": "126b18cd50090e5936cab3a5083ed8f177d35131325c7f201579e628b014aed0",
+    "target-virtua-700.png": "7630c034711a1c784868cca6d58c6fa0b2ef2b8c1dde87fbe410ccb740d2d0a9"
+  },
+  "observations": [
+    "Zero remains recognizable and open in exponents and beside existing superior1/2/3.",
+    "Virtua oval is rounder-sided than Rubik; Regular stroke appears lighter. Bold outer width and counter are generous compared with Rubik.",
+    "Zero/one/two/three optical weight and default pairs still need human review; no dedicated mark attachment or sups feature.",
+    "Stock spacing uneven and Bold dense; no exhaustive language/native-reader approval."
+  ]
+}

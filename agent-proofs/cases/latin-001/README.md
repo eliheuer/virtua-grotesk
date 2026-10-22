@@ -615,3 +615,21 @@ ordinary-size alias. Online unexcluded package12FAIL10WARN159PASS10INFO40SKIP,
 exact failures/no new semantic warnings. Gap335:182Cyrl/51Common/102Arab.
 Next remaining superior0/4–9 construction/figure-family inspection, then bounded
 extension and Common gaps. Human approval/release blockers remain; local/no push.
+
+
+## Batch40 · Superior zero
+
+[Evidence](batches/40-superior-zero/README.md): purple U2070 in both masters,
+two12-point oval contours from protected zero construction. Advances368/416,
+40 bearings, cardinal side weights56/88 and vertical48/80; all new values on8.
+Six source files;1827 others/every old GLIF/Arabic/green bytes unchanged.125 scoped
+checks,4500 old VF/3599 old static exact ink/advance comparisons,54 real subsets,
+27 Latin plus2 helpers, unchanged216 baseline failures and preflight complete.
+Eight G2 joins/master; no sampled reversals/proper crossings at five weights.
+Whole400/550/700,224px details/comb and12 actual Diffenator images inspected.
+Oval width/counter, partial-family weight and default spacing remain human review;
+generic marks retain right fallback, no sups feature. Online package12FAIL10WARN
+159PASS10INFO40SKIP; FAILs exact unchanged but unreachable-subsetting warning
+expands by U2070 (installed gfsubsets: math only). No exclusions or unrelated
+subset declaration. Gap334:182Cyrl/50Common/102Arab. Inventory0/4–9 frozen; next
+bounded superior4/5, then6–9. Local only/no push; Arabic60272 unchanged.
