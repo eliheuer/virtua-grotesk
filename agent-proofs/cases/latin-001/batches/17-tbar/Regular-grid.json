@@ -1,0 +1,219 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "Tbar",
+      "points": 8,
+      "advance": 680.0,
+      "bounds": [
+        32,
+        0,
+        648,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[0].x",
+          "value": 290.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 306.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 374.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 390.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 390.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].x",
+          "value": 398.0
+        },
+        {
+          "field": "component[0].contour[0].point[14].x",
+          "value": 282.0
+        },
+        {
+          "field": "component[0].contour[0].point[15].x",
+          "value": 290.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 284.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 284.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 680.0,
+          "popcount": 4
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 392.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "1": 7,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-tbar-y7tkc58k/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "9b5d6ce7fa276e17472f720db318c02e16b6453ff9c8dfe2115545d599590b2d"
+    },
+    {
+      "glyph": "tbar",
+      "points": 8,
+      "advance": 376.0,
+      "bounds": [
+        32,
+        0,
+        344,
+        696
+      ],
+      "failures": [
+        {
+          "field": "component[0].advance.width",
+          "value": 372.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 324.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 340.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 340.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].x",
+          "value": 324.0
+        },
+        {
+          "field": "component[0].contour[0].point[12].x",
+          "value": 324.0
+        },
+        {
+          "field": "component[0].contour[0].point[13].x",
+          "value": 340.0
+        },
+        {
+          "field": "component[0].contour[0].point[14].x",
+          "value": 340.0
+        },
+        {
+          "field": "component[0].contour[0].point[15].x",
+          "value": 324.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 376.0,
+          "popcount": 5
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 280.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 7,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-tbar-y7tkc58k/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "93b2c7b3cd10b4bac3a109a2e518f5c71557d7430479b656d58b41a62637bfbe"
+    }
+  ]
+}

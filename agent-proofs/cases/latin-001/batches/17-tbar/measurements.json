@@ -1,0 +1,82 @@
+{
+  "Regular:Tbar": {
+    "advance": 680,
+    "advance_popcount": 4,
+    "bar_bounds": [
+      128,
+      304,
+      552,
+      400
+    ],
+    "convex_bar": true,
+    "base_unchanged": true,
+    "bounds": [
+      32,
+      0,
+      648,
+      768
+    ],
+    "left_bearing": 32,
+    "right_bearing": 32.0
+  },
+  "Regular:tbar": {
+    "advance": 376,
+    "advance_popcount": 5,
+    "bar_bounds": [
+      32,
+      288,
+      344,
+      352
+    ],
+    "convex_bar": true,
+    "base_unchanged": true,
+    "bounds": [
+      32,
+      0,
+      344,
+      696
+    ],
+    "left_bearing": 32,
+    "right_bearing": 32.0
+  },
+  "Bold:Tbar": {
+    "advance": 648,
+    "advance_popcount": 3,
+    "bar_bounds": [
+      112,
+      288,
+      536,
+      416
+    ],
+    "convex_bar": true,
+    "base_unchanged": true,
+    "bounds": [
+      8,
+      0,
+      640,
+      768
+    ],
+    "left_bearing": 8,
+    "right_bearing": 8.0
+  },
+  "Bold:tbar": {
+    "advance": 416,
+    "advance_popcount": 3,
+    "bar_bounds": [
+      24,
+      248,
+      392,
+      344
+    ],
+    "convex_bar": true,
+    "base_unchanged": true,
+    "bounds": [
+      24,
+      0,
+      392,
+      736
+    ],
+    "left_bearing": 24,
+    "right_bearing": 24.0
+  }
+}

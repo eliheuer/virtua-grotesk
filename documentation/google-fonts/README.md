@@ -1183,3 +1183,15 @@ failures and preflight complete. Basic missing-cmap differences25→20 across30
 samples: zero at700, retained at lower weights with Regular optical exceptions.
 91 inherited grid findings remain. I/l overhangs and off8 K/c/k/t base decisions
 remain open. Continue independent Latin coverage next. Local only; no push.
+
+## Crossed T/t coverage checkpoint — 2026-10-21
+
+LAT-001 [batch17](../../agent-proofs/cases/latin-001/batches/17-tbar/README.md)
+adds Ŧ/ŧ in both masters with local clipped bars over unchanged green T/t
+components. Four new GLIFs plus four registration plists; all1775 other source
+files and Arabic/green drawings unchanged. Full400/550/700 and enlarged endpoint
+images inspected;130 scoped checks, ten Latin tests, unchanged216 Hebrew baseline
+failures and preflight complete. New geometry/anchors/outer spacing on8;21 inherited
+component findings remain. New crossed forms still need dedicated pair kerning;
+blind T/t inheritance would create bar collisions. Pinned Rubik Latin gap now six:
+ĸ ŉ ſ ƒ ﬁ ﬂ. No human approval, push or release claim.

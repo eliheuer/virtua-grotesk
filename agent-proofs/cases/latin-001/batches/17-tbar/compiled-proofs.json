@@ -1,0 +1,35 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "T Ŧ T   t ŧ t   ŦŦŦ ŧŧŧ",
+      "Ŧa ŧa Ŧe ŧe Ŧo ŧo Ŧu ŧu",
+      "Taŧa Ŧaŧa   tette ŧeŧŧe   aŧa oŧo",
+      "Ŧ́ ŧ́ Ŧ̈ ŧ̈ Ŧ̌ ŧ̌   Ŧ̦ ŧ̦",
+      "Ŧ̂́ ŧ̂́ Ŧ̧́ ŧ̧́",
+      "TAT ŦAŦ   tot ŧoŧ   tin ŧin"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "42e5ba6dc16e0d1204dd426f0dd16a0fc022d0b30f0700154a71a5940d175d9f"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "e14b4bea4d49e8313752bf75af5231399ad2e064ae5792cf835aca9e474891e4"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "475cc0599da3aa6db11979fe127d6d5aa533e99a3fe380bb6d59090a6233e5fc"
+    }
+  ],
+  "fonts": {
+    "before": "ae6bb8f417419dc0804803e7d70c6d4859f9dda5c87564e9d429b7e27d1651f5",
+    "after": "d144d89a294797dfd807c8be89bd6a1cc6aac2a880c23f1ccaf9740410e52c98",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

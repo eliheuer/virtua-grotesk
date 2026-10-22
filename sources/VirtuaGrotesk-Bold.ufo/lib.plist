@@ -442,9 +442,15 @@
 		<string>jcircumflex</string>
 		<string>AEacute</string>
 		<string>aeacute</string>
+		<string>Tbar</string>
+		<string>tbar</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>Tbar</key>
+		<string>base</string>
+		<key>tbar</key>
+		<string>base</string>
 		<key>Ccircumflex</key>
 		<string>base</string>
 		<key>ccircumflex</key>

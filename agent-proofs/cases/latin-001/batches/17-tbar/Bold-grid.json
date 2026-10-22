@@ -1,0 +1,150 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "Tbar",
+      "points": 8,
+      "advance": 648.0,
+      "bounds": [
+        8,
+        0,
+        640,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 324.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 324.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 648.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 392.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 8.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "3": 2,
+        "1": 6,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-tbar-y7tkc58k/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "3fa155e46cb2105426e30b1a429ea4260fa85ac5aea0773bf3676fba1bafa158"
+    },
+    {
+      "glyph": "tbar",
+      "points": 8,
+      "advance": 416.0,
+      "bounds": [
+        24,
+        0,
+        392,
+        736
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 416.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 336.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 24.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "3": 2,
+        "1": 5,
+        "2": 2
+      },
+      "passed": true,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-tbar-y7tkc58k/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "e3d735ded43a2470bd6c5bf0e5d6964a657a708971f808ef7ec2e123997de698"
+    }
+  ]
+}

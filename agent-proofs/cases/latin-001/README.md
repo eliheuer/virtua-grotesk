@@ -194,9 +194,19 @@ exceptions are unchanged.91 inherited grid findings remain. Local only.
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
+[Batch17](batches/17-tbar/README.md) adds Ŧ/ŧ in both masters as unchanged green
+T/t components plus eight-point clipped bars. Four new GLIFs and four registration
+plists; all1775 other existing source files preserved, including326 Arabic
+donors/master. New geometry/anchors/outer spacing on8. Whole400/550/700 and224px
+endpoint proofs inspected against Rubik;130 scoped checks, ten Latin methods,
+unchanged216 baseline failures and preflight complete.21 inherited component-grid
+findings remain. New forms use default spacing: T/t kerning must not be copied
+blindly because the added bars change collision clearance. Local only, purple
+pending human review. Pinned Rubik Latin gap now six codepoints: ĸ ŉ ſ ƒ ﬁ ﬂ.
+
 ## Next bounded work
 
-1. Continue independent Latin coverage, beginning Tbar/tbar constructions after inspecting current Rubik forms and protected donors. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue independent Latin coverage: inspect long s/florin constructions and protected f donors before drafting; then kra, apostrophe-n and fi/fl. Tbar/tbar are added in batch17; retain their separate pair-spacing follow-up. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -205,7 +215,7 @@ and preserve green/human optical exceptions. See DESIGN.md#spacing.
 3. Existing precomposed widths differ from the base+mark fallback by up to
    tens of units. `verification.json` retains the measured sample differences.
    Inspect wrapper metrics/kerning and word spacing before applying changes.
-4. Remaining Rubik Latin codepoints: ĸ ŉ Ŧ ŧ ſ ƒ ﬁ ﬂ. Review encoded ligatures
+4. Remaining Rubik Latin codepoints: ĸ ŉ ſ ƒ ﬁ ﬂ (batch17 coverage-after.json). Review encoded ligatures
    separately from GSUB behavior. Four combining marks, punctuation, fractions,
    maths and currencies are also absent; use `coverage-after.json`.
 5. Full Rubik language coverage includes182 Cyrillic codepoints absent here.
