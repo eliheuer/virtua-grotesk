@@ -110,9 +110,9 @@ class LatinDiacriticsTests(unittest.TestCase):
                             if suffix!='́':
                                 self.assertEqual(expected,shaped(fallback,stream.getvalue(),char+suffix,w))
 
-    def test_accented_vowels_keep_base_advances(self):
+    def test_accented_letters_keep_base_advances(self):
         # Stale wrapper widths made accented words uneven and subset fallback reflow.
-        letters='áăâäàāąåãéěêëėèēęóôöòőõúûüùűūųů'
+        letters='áăâäàāąåãéěêëėèēęóôöòőõúûüùűūųůÁĂÂÄÀĀĄÅÃĎĞĢĠĹĻŃŇŅÑÓÔÖÒŐÕŔŘŚŠŞȘŢȚÚÛÜÙŰŪŲŮẂŴẄẀÝŶŸỲŹŽŻ'
         for path,font in self.fonts():
             fallback=TTFont(path)
             for table in fallback['cmap'].tables:
