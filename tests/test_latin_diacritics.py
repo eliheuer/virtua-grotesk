@@ -112,7 +112,7 @@ class LatinDiacriticsTests(unittest.TestCase):
 
     def test_accented_letters_keep_base_advances(self):
         # Stale wrapper widths made accented words uneven and subset fallback reflow.
-        letters='áăâäàāąåãéěêëėèēęóôöòőõúûüùűūųůÁĂÂÄÀĀĄÅÃĎĞĢĠĹĻŃŇŅÑÓÔÖÒŐÕŔŘŚŠŞȘŢȚÚÛÜÙŰŪŲŮẂŴẄẀÝŶŸỲŹŽŻ'
+        letters='áăâäàāąåãéěêëėèēęóôöòőõúûüùűūųůÁĂÂÄÀĀĄÅÃĎĞĢĠĹĻŃŇŅÑÓÔÖÒŐÕŔŘŚŠŞȘŢȚÚÛÜÙŰŪŲŮẂŴẄẀÝŶŸỲŹŽŻğģġįńňņñŕřśšşșẃŵẅẁýŷÿỳźžż'
         for path,font in self.fonts():
             fallback=TTFont(path)
             for table in fallback['cmap'].tables:

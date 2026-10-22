@@ -1,0 +1,35 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "g ğ ģ ġ g   n ń ň ņ ñ n",
+      "i į i   ni nį ni   įį įi iį",
+      "r ŕ ř r   s ś š ş ș s",
+      "w ẃ ŵ ẅ ẁ w   y ý ŷ ÿ ỳ y",
+      "z ź ž ż z   nana ñaña",
+      "sasa śaśa   wawa ŵaŵa   yaya ýayá"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "119b56cd4631ba40af74c9ef54cb3cb4607ad97a6f40c6ad633095062c1da2bf"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "4ac758e2ab2333a67b3bb7c2d6ca24229c1f833a2c13adf4652efbde12ed4dc1"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "7fdece9103cf8e15944702a1875142d53d9cfded20b9c9e0f6926457d4fc3585"
+    }
+  ],
+  "fonts": {
+    "before": "2a2add6a7f7b81d35528649fddfd21348109d751863f81554989438be3b8af05",
+    "after": "7129ff22b7e0f33fa37865e9963632d9dedcfadae4ed55031f57214072f1aacb",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

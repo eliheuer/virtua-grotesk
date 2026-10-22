@@ -1,0 +1,635 @@
+{
+  "before": [
+    {
+      "weight": 400,
+      "glyph": "gbreve",
+      "full": 634,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "gdotaccent",
+      "full": 634,
+      "fallback": 640
+    },
+    {
+      "weight": 400,
+      "glyph": "nacute",
+      "full": 608,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "ncaron",
+      "full": 608,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "ntilde",
+      "full": 608,
+      "fallback": 592
+    },
+    {
+      "weight": 400,
+      "glyph": "sacute",
+      "full": 552,
+      "fallback": 560
+    },
+    {
+      "weight": 400,
+      "glyph": "scaron",
+      "full": 552,
+      "fallback": 560
+    },
+    {
+      "weight": 400,
+      "glyph": "scedilla",
+      "full": 552,
+      "fallback": 560
+    },
+    {
+      "weight": 400,
+      "glyph": "scommaaccent",
+      "full": 552,
+      "fallback": 560
+    },
+    {
+      "weight": 400,
+      "glyph": "wacute",
+      "full": 824,
+      "fallback": 856
+    },
+    {
+      "weight": 400,
+      "glyph": "wcircumflex",
+      "full": 824,
+      "fallback": 856
+    },
+    {
+      "weight": 400,
+      "glyph": "wdieresis",
+      "full": 824,
+      "fallback": 856
+    },
+    {
+      "weight": 400,
+      "glyph": "wgrave",
+      "full": 824,
+      "fallback": 856
+    },
+    {
+      "weight": 400,
+      "glyph": "yacute",
+      "full": 614,
+      "fallback": 616
+    },
+    {
+      "weight": 400,
+      "glyph": "ycircumflex",
+      "full": 614,
+      "fallback": 616
+    },
+    {
+      "weight": 400,
+      "glyph": "ydieresis",
+      "full": 614,
+      "fallback": 616
+    },
+    {
+      "weight": 400,
+      "glyph": "ygrave",
+      "full": 614,
+      "fallback": 616
+    },
+    {
+      "weight": 475,
+      "glyph": "gbreve",
+      "full": 652,
+      "fallback": 662
+    },
+    {
+      "weight": 475,
+      "glyph": "gdotaccent",
+      "full": 652,
+      "fallback": 662
+    },
+    {
+      "weight": 475,
+      "glyph": "nacute",
+      "full": 626,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "ncaron",
+      "full": 626,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "ntilde",
+      "full": 626,
+      "fallback": 624
+    },
+    {
+      "weight": 475,
+      "glyph": "sacute",
+      "full": 570,
+      "fallback": 572
+    },
+    {
+      "weight": 475,
+      "glyph": "scaron",
+      "full": 570,
+      "fallback": 572
+    },
+    {
+      "weight": 475,
+      "glyph": "scedilla",
+      "full": 570,
+      "fallback": 572
+    },
+    {
+      "weight": 475,
+      "glyph": "scommaaccent",
+      "full": 570,
+      "fallback": 572
+    },
+    {
+      "weight": 475,
+      "glyph": "wacute",
+      "full": 842,
+      "fallback": 860
+    },
+    {
+      "weight": 475,
+      "glyph": "wcircumflex",
+      "full": 842,
+      "fallback": 860
+    },
+    {
+      "weight": 475,
+      "glyph": "wdieresis",
+      "full": 842,
+      "fallback": 860
+    },
+    {
+      "weight": 475,
+      "glyph": "wgrave",
+      "full": 842,
+      "fallback": 860
+    },
+    {
+      "weight": 475,
+      "glyph": "yacute",
+      "full": 630,
+      "fallback": 620
+    },
+    {
+      "weight": 475,
+      "glyph": "ycircumflex",
+      "full": 630,
+      "fallback": 620
+    },
+    {
+      "weight": 475,
+      "glyph": "ydieresis",
+      "full": 630,
+      "fallback": 620
+    },
+    {
+      "weight": 475,
+      "glyph": "ygrave",
+      "full": 630,
+      "fallback": 620
+    },
+    {
+      "weight": 475,
+      "glyph": "racute",
+      "full": 384,
+      "fallback": 392
+    },
+    {
+      "weight": 475,
+      "glyph": "rcaron",
+      "full": 384,
+      "fallback": 392
+    },
+    {
+      "weight": 475,
+      "glyph": "zacute",
+      "full": 571,
+      "fallback": 573
+    },
+    {
+      "weight": 475,
+      "glyph": "zcaron",
+      "full": 571,
+      "fallback": 573
+    },
+    {
+      "weight": 475,
+      "glyph": "zdotaccent",
+      "full": 571,
+      "fallback": 573
+    },
+    {
+      "weight": 550,
+      "glyph": "gbreve",
+      "full": 670,
+      "fallback": 684
+    },
+    {
+      "weight": 550,
+      "glyph": "gdotaccent",
+      "full": 670,
+      "fallback": 684
+    },
+    {
+      "weight": 550,
+      "glyph": "nacute",
+      "full": 644,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "ncaron",
+      "full": 644,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "ntilde",
+      "full": 644,
+      "fallback": 656
+    },
+    {
+      "weight": 550,
+      "glyph": "sacute",
+      "full": 588,
+      "fallback": 584
+    },
+    {
+      "weight": 550,
+      "glyph": "scaron",
+      "full": 588,
+      "fallback": 584
+    },
+    {
+      "weight": 550,
+      "glyph": "scedilla",
+      "full": 588,
+      "fallback": 584
+    },
+    {
+      "weight": 550,
+      "glyph": "scommaaccent",
+      "full": 588,
+      "fallback": 584
+    },
+    {
+      "weight": 550,
+      "glyph": "wacute",
+      "full": 860,
+      "fallback": 864
+    },
+    {
+      "weight": 550,
+      "glyph": "wcircumflex",
+      "full": 860,
+      "fallback": 864
+    },
+    {
+      "weight": 550,
+      "glyph": "wdieresis",
+      "full": 860,
+      "fallback": 864
+    },
+    {
+      "weight": 550,
+      "glyph": "wgrave",
+      "full": 860,
+      "fallback": 864
+    },
+    {
+      "weight": 550,
+      "glyph": "yacute",
+      "full": 646,
+      "fallback": 624
+    },
+    {
+      "weight": 550,
+      "glyph": "ycircumflex",
+      "full": 646,
+      "fallback": 624
+    },
+    {
+      "weight": 550,
+      "glyph": "ydieresis",
+      "full": 646,
+      "fallback": 624
+    },
+    {
+      "weight": 550,
+      "glyph": "ygrave",
+      "full": 646,
+      "fallback": 624
+    },
+    {
+      "weight": 550,
+      "glyph": "racute",
+      "full": 400,
+      "fallback": 416
+    },
+    {
+      "weight": 550,
+      "glyph": "rcaron",
+      "full": 400,
+      "fallback": 416
+    },
+    {
+      "weight": 550,
+      "glyph": "zacute",
+      "full": 578,
+      "fallback": 582
+    },
+    {
+      "weight": 550,
+      "glyph": "zcaron",
+      "full": 578,
+      "fallback": 582
+    },
+    {
+      "weight": 550,
+      "glyph": "zdotaccent",
+      "full": 578,
+      "fallback": 582
+    },
+    {
+      "weight": 625,
+      "glyph": "gbreve",
+      "full": 688,
+      "fallback": 706
+    },
+    {
+      "weight": 625,
+      "glyph": "gdotaccent",
+      "full": 688,
+      "fallback": 706
+    },
+    {
+      "weight": 625,
+      "glyph": "nacute",
+      "full": 662,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "ncaron",
+      "full": 662,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "ntilde",
+      "full": 662,
+      "fallback": 688
+    },
+    {
+      "weight": 625,
+      "glyph": "sacute",
+      "full": 606,
+      "fallback": 596
+    },
+    {
+      "weight": 625,
+      "glyph": "scaron",
+      "full": 606,
+      "fallback": 596
+    },
+    {
+      "weight": 625,
+      "glyph": "scedilla",
+      "full": 606,
+      "fallback": 596
+    },
+    {
+      "weight": 625,
+      "glyph": "scommaaccent",
+      "full": 606,
+      "fallback": 596
+    },
+    {
+      "weight": 625,
+      "glyph": "wacute",
+      "full": 878,
+      "fallback": 868
+    },
+    {
+      "weight": 625,
+      "glyph": "wcircumflex",
+      "full": 878,
+      "fallback": 868
+    },
+    {
+      "weight": 625,
+      "glyph": "wdieresis",
+      "full": 878,
+      "fallback": 868
+    },
+    {
+      "weight": 625,
+      "glyph": "wgrave",
+      "full": 878,
+      "fallback": 868
+    },
+    {
+      "weight": 625,
+      "glyph": "yacute",
+      "full": 662,
+      "fallback": 628
+    },
+    {
+      "weight": 625,
+      "glyph": "ycircumflex",
+      "full": 662,
+      "fallback": 628
+    },
+    {
+      "weight": 625,
+      "glyph": "ydieresis",
+      "full": 662,
+      "fallback": 628
+    },
+    {
+      "weight": 625,
+      "glyph": "ygrave",
+      "full": 662,
+      "fallback": 628
+    },
+    {
+      "weight": 625,
+      "glyph": "racute",
+      "full": 416,
+      "fallback": 440
+    },
+    {
+      "weight": 625,
+      "glyph": "rcaron",
+      "full": 416,
+      "fallback": 440
+    },
+    {
+      "weight": 625,
+      "glyph": "zacute",
+      "full": 585,
+      "fallback": 591
+    },
+    {
+      "weight": 625,
+      "glyph": "zcaron",
+      "full": 585,
+      "fallback": 591
+    },
+    {
+      "weight": 625,
+      "glyph": "zdotaccent",
+      "full": 585,
+      "fallback": 591
+    },
+    {
+      "weight": 700,
+      "glyph": "gbreve",
+      "full": 706,
+      "fallback": 728
+    },
+    {
+      "weight": 700,
+      "glyph": "gdotaccent",
+      "full": 706,
+      "fallback": 728
+    },
+    {
+      "weight": 700,
+      "glyph": "nacute",
+      "full": 680,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "ncaron",
+      "full": 680,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "ntilde",
+      "full": 680,
+      "fallback": 720
+    },
+    {
+      "weight": 700,
+      "glyph": "sacute",
+      "full": 624,
+      "fallback": 608
+    },
+    {
+      "weight": 700,
+      "glyph": "scaron",
+      "full": 624,
+      "fallback": 608
+    },
+    {
+      "weight": 700,
+      "glyph": "scedilla",
+      "full": 624,
+      "fallback": 608
+    },
+    {
+      "weight": 700,
+      "glyph": "scommaaccent",
+      "full": 624,
+      "fallback": 608
+    },
+    {
+      "weight": 700,
+      "glyph": "wacute",
+      "full": 896,
+      "fallback": 872
+    },
+    {
+      "weight": 700,
+      "glyph": "wcircumflex",
+      "full": 896,
+      "fallback": 872
+    },
+    {
+      "weight": 700,
+      "glyph": "wdieresis",
+      "full": 896,
+      "fallback": 872
+    },
+    {
+      "weight": 700,
+      "glyph": "wgrave",
+      "full": 896,
+      "fallback": 872
+    },
+    {
+      "weight": 700,
+      "glyph": "yacute",
+      "full": 678,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "ycircumflex",
+      "full": 678,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "ydieresis",
+      "full": 678,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "ygrave",
+      "full": 678,
+      "fallback": 632
+    },
+    {
+      "weight": 700,
+      "glyph": "racute",
+      "full": 432,
+      "fallback": 464
+    },
+    {
+      "weight": 700,
+      "glyph": "rcaron",
+      "full": 432,
+      "fallback": 464
+    },
+    {
+      "weight": 700,
+      "glyph": "zacute",
+      "full": 592,
+      "fallback": 600
+    },
+    {
+      "weight": 700,
+      "glyph": "zcaron",
+      "full": 592,
+      "fallback": 600
+    },
+    {
+      "weight": 700,
+      "glyph": "zdotaccent",
+      "full": 592,
+      "fallback": 600
+    }
+  ],
+  "after": []
+}
