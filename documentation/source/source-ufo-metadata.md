@@ -13,8 +13,8 @@ This report records metadata from the active UFO sources. Use it with `documenta
 
 | UFO | UPM | Ascender | Descender | x-height | Cap height | Typo asc/desc/gap | Win asc/desc | hhea asc/desc/gap |
 | --- | ---: | ---: | ---: | ---: | ---: | --- | --- | --- |
-| `sources/VirtuaGrotesk-Regular.ufo` | 1024 | 768 | -256 | 576 | 768 | 1024/-256/0 | 1488/512 | 1024/-256/0 |
-| `sources/VirtuaGrotesk-Bold.ufo` | 1024 | 768 | -256 | 576 | 768 | 1024/-256/0 | 1488/512 | 1024/-256/0 |
+| `sources/VirtuaGrotesk-Regular.ufo` | 1024 | 768 | -256 | 576 | 768 | 1024/-256/0 | 1488/576 | 1024/-256/0 |
+| `sources/VirtuaGrotesk-Bold.ufo` | 1024 | 768 | -256 | 576 | 768 | 1024/-256/0 | 1488/576 | 1024/-256/0 |
 
 ## License and Embedding
 
