@@ -58,7 +58,12 @@ checks. Generic g+U0326 descender attachment remains unresolved. Batch09 rounds
 cedilla hooks and updates bottom anchors, with90 scoped checks, five Latin tests
 and complete images. Its deeper stacks exposed clipping, fixed by Windows
 descent512→576 in both masters; typographic metrics stay unchanged. Legacy
-Windows-metric line spacing still needs platform testing. All216 pre-existing Hebrew regression subcases still fail
+Windows-metric line spacing still needs platform testing. Batch10 rounds ogonek hooks, fixes fourteen local placements (including detached Ą),
+and adds canonical ogonek composition.100 scoped comparisons, six Latin tests and
+whole400/550/700 images completed; no base/Arabic/green source changes. Independent
+RAQM proofs resolve a DesignBot decomposed-row discrepancy. Missing ogonek cmap
+plus acute still fails40 VF samples before/after and remains a serving-subset
+follow-up. All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 
