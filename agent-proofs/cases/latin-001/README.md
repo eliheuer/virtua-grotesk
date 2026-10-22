@@ -126,12 +126,22 @@ Whole400/550/700 and enlarged endpoint images, five-weight signed profiles,
 90 scoped checks, five Latin tests and preflight complete; no new baseline
 failures. Hook depth/neck proportions remain for human review.
 
+[Batch10](batches/10-ogonek/README.md) rounds and weights both ogonek hooks,
+repairs fourteen local wrapper attachments (including detached Ą), and adds eight
+canonical compositions per master. Eighteen GLIFs plus two feature files; all
+base/Arabic/green source bytes unchanged. Whole400/550/700 and enlarged endpoint
+images inspected;100 scoped checks, six Latin tests and preflight complete, with
+no new failures against the216-failure engineering baseline. Independent RAQM
+images confirm canonical output where DesignBot's decomposed row differs. A
+separate existing missing-cmap plus acute failure remains (40 VF samples before
+and after); retain it on the serving-subset queue. Hook proportions need review.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Ogonek, then alternate carons. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Alternate carons. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions
@@ -147,7 +157,7 @@ and preserve green/human optical exceptions. See DESIGN.md#spacing.
    This is a separate drawing/reader-review phase, not a metadata toggle.
    The102 missing Arabic codepoints are presentation forms; compare GSUB and
    legacy text behavior before adding redundant forms. Leave Arabic sources to Eli.
-6. Diagnose the216 existing Hebrew regressions, serving-subset failures, fresh
+6. Diagnose the216 existing Hebrew regressions, serving-subset failures (including batch10 ogonek-plus-acute missing-cmap normalization), fresh
    interpolation/outline warnings, CI reproducibility and package provenance.
    Green exceptions require named approval; never suppress checks to pass.
 

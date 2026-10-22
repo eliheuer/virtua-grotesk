@@ -1,0 +1,83 @@
+{
+  "synthetic_stack_clipping": {
+    "sample": "b+U0328+U0328",
+    "min_y": -480,
+    "win_descent": 576,
+    "status": "Within unchanged Windows clipping descent576"
+  },
+  "shaping_checks": 100,
+  "changed_compiled_ink": {
+    "400": [
+      "Aogonek",
+      "Eogonek",
+      "Iogonek",
+      "Uogonek",
+      "aogonek",
+      "dotlessiogonek",
+      "eogonek",
+      "iogonek",
+      "ogonek",
+      "ogonekcomb",
+      "uogonek"
+    ],
+    "475": [
+      "Aogonek",
+      "Eogonek",
+      "Iogonek",
+      "Uogonek",
+      "aogonek",
+      "dotlessiogonek",
+      "eogonek",
+      "iogonek",
+      "ogonek",
+      "ogonekcomb",
+      "uogonek"
+    ],
+    "550": [
+      "Aogonek",
+      "Eogonek",
+      "Iogonek",
+      "Uogonek",
+      "aogonek",
+      "dotlessiogonek",
+      "eogonek",
+      "iogonek",
+      "ogonek",
+      "ogonekcomb",
+      "uogonek"
+    ],
+    "625": [
+      "Aogonek",
+      "Eogonek",
+      "Iogonek",
+      "Uogonek",
+      "aogonek",
+      "dotlessiogonek",
+      "eogonek",
+      "iogonek",
+      "ogonek",
+      "ogonekcomb",
+      "uogonek"
+    ],
+    "700": [
+      "Aogonek",
+      "Eogonek",
+      "Iogonek",
+      "Uogonek",
+      "aogonek",
+      "dotlessiogonek",
+      "eogonek",
+      "iogonek",
+      "ogonek",
+      "ogonekcomb",
+      "uogonek"
+    ]
+  },
+  "unchanged_source_files": 1759,
+  "after_sha256": "43aff93d531d187ddcbf89f2156bb99d81c87caa6ef87a37c2a1904c2b98df99",
+  "notes": [
+    "All non-target source bytes preserved, including Arabic recursive donors and green sources.",
+    "Incoming anchors and advances unchanged; outgoing ogonek bottom stack anchors adjusted. All new points on 8.",
+    "Shape/position equality, stack and below-mark clearance at five weights."
+  ]
+}

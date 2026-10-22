@@ -1,0 +1,893 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 11,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "Aogonek",
+      "points": 0,
+      "advance": 760.0,
+      "bounds": [
+        40,
+        -224,
+        768,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[5].x",
+          "value": 524.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].x",
+          "value": 532.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 396.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 396.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 760.0,
+          "popcount": 6
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 8.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "6": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "c28d2dd6a78d68dbf85ab43c764590394a7d0f088f14fb4c7212e50707c5649d"
+    },
+    {
+      "glyph": "Eogonek",
+      "points": 0,
+      "advance": 720.0,
+      "bounds": [
+        80,
+        -224,
+        688,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 720.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "a248e78e8ede287bd231edc5402c1a1022a0f6ef22e134de6c437f89a00f0902"
+    },
+    {
+      "glyph": "Iogonek",
+      "points": 0,
+      "advance": 360.0,
+      "bounds": [
+        80,
+        -224,
+        288,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 360.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "a1bf2d0d59bc60648b2d03ab6376de10c6eee570dd29d051dfbf9c376afb4e9d"
+    },
+    {
+      "glyph": "Uogonek",
+      "points": 0,
+      "advance": 840.0,
+      "bounds": [
+        72,
+        -224,
+        720,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[0].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 396.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 588.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].y",
+          "value": 68.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 260.0
+        },
+        {
+          "field": "component[0].contour[0].point[9].y",
+          "value": 276.0
+        },
+        {
+          "field": "component[0].contour[0].point[10].y",
+          "value": 196.0
+        },
+        {
+          "field": "component[0].contour[0].point[11].x",
+          "value": 476.0
+        },
+        {
+          "field": "component[0].contour[0].point[12].x",
+          "value": 396.0
+        },
+        {
+          "field": "component[0].contour[0].point[13].x",
+          "value": 316.0
+        },
+        {
+          "field": "component[0].contour[0].point[14].y",
+          "value": 196.0
+        },
+        {
+          "field": "component[0].contour[0].point[15].y",
+          "value": 276.0
+        },
+        {
+          "field": "component[0].contour[0].point[20].y",
+          "value": 260.0
+        },
+        {
+          "field": "component[0].contour[0].point[21].y",
+          "value": 68.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 396.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 396.0
+        },
+        {
+          "field": "component[1].xOffset",
+          "value": 276.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 840.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 120.0,
+          "popcount": 4
+        }
+      ],
+      "popcount_histogram": {
+        "4": 2,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "5a6f9b9c68e01377f90e1a6643e72cd2d7944b7668bee64cf34c49954492c619"
+    },
+    {
+      "glyph": "aogonek",
+      "points": 0,
+      "advance": 592.0,
+      "bounds": [
+        64,
+        -224,
+        608,
+        592
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[26].y",
+          "value": 498.0
+        },
+        {
+          "field": "component[0].contour[1].point[2].x",
+          "value": 234.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[4].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].x",
+          "value": 204.0
+        },
+        {
+          "field": "component[0].contour[1].point[5].y",
+          "value": 268.0
+        },
+        {
+          "field": "component[0].contour[1].point[8].x",
+          "value": 404.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].x",
+          "value": 412.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 592.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 16.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "1": 2
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "c998d33e0e1c9899f53a4cf8ca367fcd85cb5ec0c80f453e20c452de3db29fc3"
+    },
+    {
+      "glyph": "dotlessiogonek",
+      "points": 0,
+      "advance": 312.0,
+      "bounds": [
+        60,
+        -224,
+        264,
+        576
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[0].x",
+          "value": 76.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 252.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 252.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].x",
+          "value": 76.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].x",
+          "value": 60.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].x",
+          "value": 60.0
+        },
+        {
+          "field": "component[0].anchor[top].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 156.0
+        },
+        {
+          "field": "component[0].left_sidebearing",
+          "value": 60.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 60.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        },
+        {
+          "field": "left_sidebearing",
+          "value": 60.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 312.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 60.0,
+          "popcount": 4
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 48.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "4": 2,
+        "2": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "4d0a03bba3e7457783fd55202f491e702f7ce0d506580d2989e143441be1b6b5"
+    },
+    {
+      "glyph": "eogonek",
+      "points": 0,
+      "advance": 668.0,
+      "bounds": [
+        40,
+        -224,
+        616,
+        592
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 668.0
+        },
+        {
+          "field": "component[0].contour[0].point[1].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[0].contour[0].point[2].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[3].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[0].point[4].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[5].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 452.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].x",
+          "value": 596.0
+        },
+        {
+          "field": "component[0].contour[1].point[3].y",
+          "value": 50.0
+        },
+        {
+          "field": "component[0].contour[1].point[9].y",
+          "value": 140.0
+        },
+        {
+          "field": "component[0].contour[1].point[10].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[11].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[12].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[13].y",
+          "value": 172.0
+        },
+        {
+          "field": "component[0].contour[1].point[14].x",
+          "value": 236.0
+        },
+        {
+          "field": "component[0].contour[1].point[15].x",
+          "value": 244.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 52.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 668.0,
+          "popcount": 5
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 52.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "2": 1,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "d2016ac327acc9ac6d8a9e987cbaef95b4d713dd9df716591db48a8d54d2faaa"
+    },
+    {
+      "glyph": "iogonek",
+      "points": 0,
+      "advance": 312.0,
+      "bounds": [
+        72,
+        -224,
+        280,
+        768
+      ],
+      "failures": [
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 312.0,
+          "popcount": 4
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "4": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "ee8a195f95c65104bed0bbc33cce65ad6c14b42ff434aca0fc6cb75588a271fb"
+    },
+    {
+      "glyph": "ogonek",
+      "points": 20,
+      "advance": 260.0,
+      "bounds": [
+        48,
+        -224,
+        224,
+        0
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 260.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 36.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "2": 6,
+        "1": 22
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "b13dfa0038d44ae147bcdcfd56fff1ab7346e7ec53ce2b93442b68f99803ac63"
+    },
+    {
+      "glyph": "ogonekcomb",
+      "points": 0,
+      "advance": 0.0,
+      "bounds": [
+        48,
+        -224,
+        224,
+        0
+      ],
+      "failures": [
+        {
+          "field": "component[0].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 0.0,
+          "popcount": 0
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 224.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "0": 1,
+        "2": 1,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "cbbbbab00751871ed88466fffab5af68b83061c6df75f1d3e2a2d710de18fe7e"
+    },
+    {
+      "glyph": "uogonek",
+      "points": 0,
+      "advance": 672.0,
+      "bounds": [
+        72,
+        -224,
+        664,
+        576
+      ],
+      "failures": [
+        {
+          "field": "component[0].contour[0].point[6].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[7].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[0].contour[0].point[8].y",
+          "value": 124.0
+        },
+        {
+          "field": "component[1].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[1].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 672.0,
+          "popcount": 3
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 8.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "3": 1,
+        "2": 1,
+        "1": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-ogonek-s39vsqcp/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "a6bdba3ab2d86e7eb44c59587344d826923290b2af62a79d2442ba6d6207fa86"
+    }
+  ]
+}

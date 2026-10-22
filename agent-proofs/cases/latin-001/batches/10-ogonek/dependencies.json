@@ -1,0 +1,124 @@
+{
+  "Regular": {
+    "consumers": [
+      "Aogonek",
+      "Eogonek",
+      "Iogonek",
+      "Uogonek",
+      "aogonek",
+      "dotlessiogonek",
+      "eogonek",
+      "iogonek",
+      "ogonek",
+      "ogonekcomb",
+      "uogonek"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "uogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "aogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "dotlessiogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Uogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "eogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "ogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "iogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "ogonekcomb": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Iogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Eogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Aogonek": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      }
+    },
+    "suspicious": []
+  },
+  "Bold": {
+    "consumers": [
+      "Aogonek",
+      "Eogonek",
+      "Iogonek",
+      "Uogonek",
+      "aogonek",
+      "dotlessiogonek",
+      "eogonek",
+      "iogonek",
+      "ogonek",
+      "ogonekcomb",
+      "uogonek"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "uogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "aogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "dotlessiogonek": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Uogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "eogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "ogonek": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "iogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "ogonekcomb": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Iogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Eogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "Aogonek": {
+        "public.markColor": "1,0.29,0.24,1"
+      }
+    },
+    "suspicious": []
+  }
+}

@@ -89,10 +89,31 @@ class LatinDiacriticsTests(unittest.TestCase):
                         gap=bounds[1][1]-bounds[0][3] if text=='ģ́' else bounds[0][1]-bounds[1][3]
                         self.assertGreaterEqual(gap,16)
 
+    def test_ogonek_construction_survives_canonical_fallback(self):
+        letters='ĄąĘęĮįŲų'
+        for path,font in self.fonts():
+            fallback=TTFont(path)
+            for table in fallback['cmap'].tables:
+                if table.isUnicode():
+                    for char in letters:table.cmap.pop(ord(char),None)
+            stream=io.BytesIO();fallback.save(stream)
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for char in letters:
+                    for suffix in ['', '́', '̨']:
+                        with self.subTest(font=path.name,weight=w,char=char,suffix=suffix):
+                            expected=shaped(font,path.read_bytes(),char+suffix,w)
+                            self.assertEqual(expected,shaped(font,path.read_bytes(),unicodedata.normalize('NFD',char)+suffix,w))
+                            # With an acute and a missing ogonek cmap entry, HarfBuzz
+                            # may recompose to Aacute+ogonek before GSUB. That separate
+                            # serving-subset failure is retained in LAT-001 batch10's
+                            # subset-accent-followup.json, not claimed fixed here.
+                            if suffix!='́':
+                                self.assertEqual(expected,shaped(fallback,stream.getvalue(),char+suffix,w))
+
     def test_below_mark_stacks_fit_windows_clipping_metrics(self):
         for path,font in self.fonts():
             for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
-                for text in ['b̧̧','Ç̧','ģ̧','ģ̦']:
+                for text in ['b̧̧','Ç̧','ģ̧','ģ̦','b̨̨','Ą̨','į́']:
                     with self.subTest(font=path.name,weight=w,text=text):
                         _,bounds=shaped(font,path.read_bytes(),text,w)
                         self.assertGreaterEqual(min(b[1] for b in bounds if b),-font['OS/2'].usWinDescent)
