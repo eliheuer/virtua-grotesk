@@ -1,0 +1,50 @@
+{
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "7cb1f40c18f58bc4185f78cf78506df0a0a77f6a34bf749aedfa2049e8de9998",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "after",
+      "sha256": "a3a086f8f678a1d81037a53f300e5fb637bca85416f3bee014b261db4fad5391",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "rendered_weight": 400,
+      "missing": [
+        1746
+      ]
+    },
+    {
+      "role": "noto",
+      "sha256": "63111b5b2e074dd48cc67692e0a2726d86ee94c1c37fe8598257b7b4e87e869e",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "plex",
+      "sha256": "6f611412270a132bbac838da9259d4c68569b4175f3b3b8fa3fa36a30b56dab9",
+      "rendered_weight": 400,
+      "missing": []
+    },
+    {
+      "role": "readex",
+      "sha256": "268bba7e1e8f3b14d798b3fb0e40ebaa3fc39308c9ac0020e2faf6df181cc30e",
+      "rendered_weight": 400,
+      "missing": [
+        1746
+      ]
+    }
+  ],
+  "text": "\u0628\u06d2 \u06d2",
+  "weight": 400,
+  "size": 144,
+  "image_sha256": "66f905e4ac847b2927634fe5b8749c6f7efb6abc62697b3526bab995d01f4ef1",
+  "recipe_sha256": "e558eac73ac4c6c7ba6e420225c8083313045f9d0fd6f9ce3a2aae1405b6caf2",
+  "notes": "Missing coverage is recorded per panel; no fallback."
+}

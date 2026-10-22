@@ -512,3 +512,11 @@ are shown unavailable. Dots remain large/widely spaced; old top anchor below
 dot crown remains attachment work. This is a working draft, not human approval.
 Heh/Doachashmee, Beh, manual hamza and all donor source bytes remain unchanged.
 The live proof is batch30. Automation stays paused.
+
+## Renewed Arabic first pass — 2026-10-21
+
+Eli: “get the arabic in a good enough state … I am going to have to do some
+manually drawing … get the whole things good enough”. Continue independent
+first-pass work without per-batch review requests, with whole-image inspection.
+This is a manual-editing handoff target, not final visual approval or release.
+Beh/Heh reservations and named-green-exception requirements remain in force.

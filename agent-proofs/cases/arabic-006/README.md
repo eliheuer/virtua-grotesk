@@ -331,3 +331,41 @@ are shown unavailable. Dots remain large/widely spaced; old top anchor below
 dot crown remains attachment work. This is a working draft, not human approval.
 Heh/Doachashmee, Beh, manual hamza and all donor source bytes remain unchanged.
 The live proof is batch30. Automation stays paused.
+
+## Renewed first-pass scope — 2026-10-21
+
+Eli asked to get the whole Arabic to a good-enough state for his manual drawing.
+Resume independent bounded repairs and whole-script image review; the 5-minute
+continuation is active again. This does not lift green protection or the Beh/Heh
+reservations, and does not approve the rejected Doachashmee candidate. Prioritize
+wrong skeletons, broken joins, missing dots and visible curve faults. Stop after
+a finite first pass and hand back a concise list of protected/unresolved forms.
+Current next batch:31 Yeh Barree isolated/final, inspecting actual references
+before changing either master. Batch30 is the last applied proof/checkpoint.
+
+## Batch31 — Yeh Barree isolated/final
+
+Applied in both masters: isolated left return and connected final lower bowl,
+replacing identical disconnected L constructions. Four sources,960/704 widths,
+22/20point contours. Whole400/550/700 images, enlarged endpoints and joined
+contexts inspected;30 shaping comparisons, sampled intersections at five weights
+and preflight passed. Noto/Plex available; Rubik/Readex unavailable forU06D2.
+The angular isolated terminal and width remain human-review choices. Twelve
+inherited anchor grid findings and misplaced top832,320 remain attachment work.
+All green/Beh34/Heh/manualhamza source bytes preserved. Next: mismatched advances
+in non-green component wrappers, which leave visible gaps or excess overlaps.
+Do not modify reserved Beh source files or donors; inspect each wrapper closure.
+
+## Batch32 — Core wrapper joining widths
+
+Nineteen advance-only corrections in non-green wrappers are applied. The
+Regular final Jeem gap is closed; initial Ghain/Khah/Noon/Qaf/Feh/Sheen/Theh and
+selected Yeh/Waw/Alef composites now match their existing joining bases. All
+compiled ink is identical at400/550/700;30 shaping comparisons and scratch
+preflight passed. Whole-row rasters inspected against all four references.
+All34 reserved files, all other source bytes and human grades are unchanged.
+The proof visibly retains wrong Yeh returns, crowded Theh dots and Alef-below-
+hamza/Beh-dot collision; green Jeem initial/medial and reserved Beh metrics remain.
+Live proof:batch32. Next independent cleanup: missing U069C below-dot group and
+non-green extension wrappers, followed by whole-alphabet/word images and a finite
+manual handoff. The first pass is not yet complete or visually approved.
