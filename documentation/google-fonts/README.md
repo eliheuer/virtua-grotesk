@@ -1172,3 +1172,14 @@ checks, nine Latin tests, whole400/550/700 plus enlarged images and preflight
 completed; the same216 baseline failures remain. Rubik lacks U+021F: unavailable
 is explicit, with separate supported decomposed comparisons.23 inherited grid
 findings remain in unchanged donors/base. Local only; human review pending.
+
+## Bold c/k/t spacing checkpoint — 2026-10-21
+
+LAT-001 [batch16](../../agent-proofs/cases/latin-001/batches/16-bold-ckt-spacing/README.md)
+corrects six Bold accent advances to their on8 bases, preserving all compiled
+ink/layout/grades and1773 other source files. Whole400/550/700 and enlarged
+images inspected;130 scoped checks, nine Latin tests, unchanged216 baseline
+failures and preflight complete. Basic missing-cmap differences25→20 across30
+samples: zero at700, retained at lower weights with Regular optical exceptions.
+91 inherited grid findings remain. I/l overhangs and off8 K/c/k/t base decisions
+remain open. Continue independent Latin coverage next. Local only; no push.

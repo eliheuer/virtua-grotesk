@@ -183,12 +183,20 @@ with supported decomposed rows retained.135 scoped checks, nine Latin methods,
 unchanged216 baseline failures and preflight complete.23 inherited donor-grid
 findings remain. Mark proportions remain for human review. Local only.
 
+[Batch16](batches/16-bold-ckt-spacing/README.md) matches six Bold c/k/t
+accent advances to their on8 bases. All ink/layout/grades and1773 other source
+files including every Regular source remain exact. Whole400/550/700 and enlarged
+endpoint proofs inspected;130 scoped checks, nine Latin tests, unchanged216
+baseline failures and preflight complete. Missing-cmap advance differences25→20
+across30 samples: zero at700, retained below700 because Regular optical-width
+exceptions are unchanged.91 inherited grid findings remain. Local only.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Continue narrow I/l and off8 K/c/k/t spacing exceptions measured in batch14, preserving base geometry and accent overhangs. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Continue independent Latin coverage, beginning Tbar/tbar constructions after inspecting current Rubik forms and protected donors. Narrow I/l and off8 K/c/k/t spacing exceptions remain measured in batch14; batch16 fixes only the six safe Bold c/k/t wrappers. Preserve base geometry/overhangs and keep these exceptions open for review. Hcaron attachment is repaired in batch15; do not redo it. Preserve intentional alternate-caron side spacing. Then remaining Latin coverage. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions

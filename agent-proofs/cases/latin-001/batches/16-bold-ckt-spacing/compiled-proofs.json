@@ -1,0 +1,35 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "c ć č ç ċ c   k ķ k   t ț t",
+      "caca ćaća čača çaça   ķaķa țața",
+      "kaka ķaķa   tata țața   cići čičí",
+      "caça çaça   ceče čeče   cīņa",
+      "ķēde ķēniņš   țară ține   țață",
+      "c ć č ç ċ   k ķ   t ț   h ȟ"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "eba425eeb66ad6fe0badbaeefcc4be1d7c149f8771b078e8aff3f1810ff07ebf"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "56c975b6640b5062bb31c6bf7918eaf24e307ba6644cc9183bc309bc88e0d9ae"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "f630b9d3b2117fa53f00e54f89ba9078a50b09542fe1942ef92e8b63de5f2756"
+    }
+  ],
+  "fonts": {
+    "before": "11433193b9e74548a01c3f4552f9edaa7d8bb618146dc8c64385645428bdd872",
+    "after": "dc4d7f735ebe7f79baa22353b01800394e629197fcd0e307d094794bc13eb8c3",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}
