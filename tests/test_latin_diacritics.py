@@ -173,3 +173,19 @@ class LatinDiacriticsTests(unittest.TestCase):
                         _,bb=shaped(font,path.read_bytes(),text,w)
                         self.assertGreaterEqual(bb[-1][1]-bb[0][3],32)
                         self.assertLessEqual(max(b[3] for b in bb),font['OS/2'].usWinAscent)
+
+    def test_crossed_t_coverage_and_mark_attachment(self):
+        # Newly encoded letters must remain GPOS bases at every shipped weight.
+        for path,font in self.fonts():
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                for char in 'Ŧŧ':
+                    with self.subTest(font=path.name,weight=w,char=char):
+                        name=font.getBestCmap()[ord(char)]
+                        self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs.get(name),1)
+                        advance,base=shaped(font,path.read_bytes(),char,w)
+                        for marks in ['́','̈','̌','̂́','̧́']:
+                            actual,bounds=shaped(font,path.read_bytes(),char+marks,w)
+                            self.assertEqual(actual,advance)
+                            self.assertGreaterEqual(len(bounds),2)
+                            self.assertGreaterEqual(bounds[-1][1]-base[0][3],16)
+                            self.assertLessEqual(max(b[3] for b in bounds),font['OS/2'].usWinAscent)
