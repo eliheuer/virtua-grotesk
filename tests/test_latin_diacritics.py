@@ -251,3 +251,26 @@ class LatinDiacriticsTests(unittest.TestCase):
                     self.assertEqual(adv,adv2)
                     self.assertGreaterEqual(marked[1][1]-marked[0][3],16)
                     self.assertEqual(len(shaped(font,data,'ʼn',w)[1]),2)
+
+    def test_standard_f_ligatures_and_mark_components(self):
+        for path,font in self.fonts():
+            data=path.read_bytes()
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                def glyph_names(text,features=None):
+                    h=hb.Font(hb.Face(data));h.set_variations({'wght':w})
+                    b=hb.Buffer();b.add_str(text);b.guess_segment_properties();hb.shape(h,b,features or {})
+                    return [font.getGlyphName(g.codepoint) for g in b.glyph_infos]
+                for encoded,name in [('ﬁ','fi'),('ﬂ','fl')]:
+                    with self.subTest(font=path.name,weight=w,ligature=name):
+                        self.assertEqual(font.getBestCmap()[ord(encoded)],name)
+                        self.assertEqual(font['GDEF'].table.GlyphClassDef.classDefs[name],2)
+                        self.assertEqual(glyph_names(name),[name])
+                        self.assertEqual(glyph_names(name,{'liga':False}),list(name))
+                        self.assertNotIn(name,glyph_names('f\u0301'+name[1]))
+                        self.assertEqual(shaped(font,data,name,w),shaped(font,data,encoded,w))
+                        advance,boxes=shaped(font,data,encoded+'\u0301',w)
+                        self.assertGreaterEqual(boxes[1][1]-boxes[0][3],16)
+                        self.assertGreater(boxes[1][0],boxes[0][0]+200)
+                        advance2,below=shaped(font,data,name+'\u0326',w)
+                        self.assertEqual(advance,advance2)
+                        self.assertGreaterEqual(below[0][1]-below[-1][3],16)
