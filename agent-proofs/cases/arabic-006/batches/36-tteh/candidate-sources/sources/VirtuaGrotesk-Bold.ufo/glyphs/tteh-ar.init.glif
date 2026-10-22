@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tteh-ar.init" format="2">
+	<advance width="288"/>
+	<outline>
+		<component base="behDotless-ar.init"/>
+		<contour>
+			<point x="24" y="504" type="line"/>
+			<point x="184" y="504" type="line" smooth="yes"/>
+			<point x="240" y="504"/>
+			<point x="272" y="536"/>
+			<point x="272" y="584" type="curve" smooth="yes"/>
+			<point x="272" y="632"/>
+			<point x="240" y="664"/>
+			<point x="184" y="664" type="curve" smooth="yes"/>
+			<point x="104" y="664" type="line"/>
+			<point x="104" y="736" type="line"/>
+			<point x="96" y="744" type="line"/>
+			<point x="56" y="744" type="line"/>
+			<point x="48" y="736" type="line"/>
+			<point x="48" y="560" type="line"/>
+			<point x="24" y="560" type="line"/>
+			<point x="16" y="552" type="line"/>
+			<point x="16" y="512" type="line"/>
+		</contour>
+		<contour>
+			<point x="104" y="560" type="line"/>
+			<point x="104" y="608" type="line"/>
+			<point x="184" y="608" type="line" smooth="yes"/>
+			<point x="208" y="608"/>
+			<point x="216" y="600"/>
+			<point x="216" y="584" type="curve" smooth="yes"/>
+			<point x="216" y="568"/>
+			<point x="208" y="560"/>
+			<point x="184" y="560" type="curve" smooth="yes"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="144" y="792"/>
+	<anchor name="bottom" x="0" y="16"/>
+	<anchor name="topDots" x="144" y="744"/>
+	<anchor name="bottomDots" x="124" y="18"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

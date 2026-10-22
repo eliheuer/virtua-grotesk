@@ -413,3 +413,14 @@ four reference forms and consumers before correction. Then prioritize whole
 core alphabet, words, marks and digit plates over further niche extension polish.
 The final handoff must show the whole alphabet at400/700 with all four references
 and a concise exact manual-work list. First pass remains active, not approved.
+
+## Batch36 — Tteh small Tah
+
+Eight wrappers applied in both masters. Correct small Tah replaces ordinary dots;
+initial uses the matching existing BehDotless base. All shared donors and34
+reservations unchanged. Local17/9point contours, clear counters and matching
+advances. Whole400/550/700, enlarged endpoint and marked joining images inspected;
+50 shaping comparisons, signed curvature and scratch preflight checked. The
+malformed shared smallHighTah donor/Rreh remain unchanged and need manual repair.
+Rubik/Readex explicitly unavailable. Inherited Beh curves are not approved.
+Next: whole-alphabet, joining, word, mark and digit image review for finite handoff.
