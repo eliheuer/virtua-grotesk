@@ -26,11 +26,11 @@ This report records metadata from the built variable and static TTFs. It is gene
 
 | Font | OS/2 Typo asc/desc/gap | OS/2 Win asc/desc | hhea asc/desc/gap |
 | --- | --- | --- | --- |
-| `fonts/variable/VirtuaGrotesk[wght].ttf` | 1024/-256/0 | 1488/512 | 1024/-256/0 |
-| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | 1024/-256/0 | 1488/512 | 1024/-256/0 |
-| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | 1024/-256/0 | 1488/512 | 1024/-256/0 |
-| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | 1024/-256/0 | 1488/512 | 1024/-256/0 |
-| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | 1024/-256/0 | 1488/512 | 1024/-256/0 |
+| `fonts/variable/VirtuaGrotesk[wght].ttf` | 1024/-256/0 | 1488/576 | 1024/-256/0 |
+| `fonts/ttf/VirtuaGrotesk-Regular.ttf` | 1024/-256/0 | 1488/576 | 1024/-256/0 |
+| `fonts/ttf/VirtuaGrotesk-Medium.ttf` | 1024/-256/0 | 1488/576 | 1024/-256/0 |
+| `fonts/ttf/VirtuaGrotesk-SemiBold.ttf` | 1024/-256/0 | 1488/576 | 1024/-256/0 |
+| `fonts/ttf/VirtuaGrotesk-Bold.ttf` | 1024/-256/0 | 1488/576 | 1024/-256/0 |
 
 ## License Strings
 

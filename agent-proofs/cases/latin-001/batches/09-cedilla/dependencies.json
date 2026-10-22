@@ -1,0 +1,100 @@
+{
+  "Regular": {
+    "consumers": [
+      "Ccedilla",
+      "Scedilla",
+      "Tcedilla",
+      "ccedilla",
+      "cedilla",
+      "cedillacomb",
+      "scedilla",
+      "tcedilla"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "tcedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Scedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Ccedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "ccedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "scedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "cedillacomb": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "Tcedilla": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "cedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      }
+    },
+    "suspicious": []
+  },
+  "Bold": {
+    "consumers": [
+      "Ccedilla",
+      "Scedilla",
+      "Tcedilla",
+      "ccedilla",
+      "cedilla",
+      "cedillacomb",
+      "scedilla",
+      "tcedilla"
+    ],
+    "green": [],
+    "arabic_intersection": [],
+    "arabic_reserved_count": 326,
+    "grades": {
+      "tcedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Scedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Ccedilla": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "ccedilla": {
+        "public.markColor": "1,0.29,0.24,1"
+      },
+      "scedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "cedillacomb": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "Tcedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "cedilla": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      }
+    },
+    "suspicious": []
+  }
+}

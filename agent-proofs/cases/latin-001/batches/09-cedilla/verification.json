@@ -1,0 +1,68 @@
+{
+  "synthetic_stack_clipping": {
+    "sample": "b+U0327+U0327",
+    "min_y": -544,
+    "win_descent": 576,
+    "status": "Windows clipping descent raised512to576 to contain this-544 stack; typographic metrics unchanged"
+  },
+  "shaping_checks": 90,
+  "changed_compiled_ink": {
+    "400": [
+      "Tcedilla",
+      "tcedilla",
+      "Ccedilla",
+      "Scedilla",
+      "ccedilla",
+      "cedilla",
+      "cedillacomb",
+      "scedilla"
+    ],
+    "475": [
+      "Tcedilla",
+      "tcedilla",
+      "Ccedilla",
+      "Scedilla",
+      "ccedilla",
+      "cedilla",
+      "cedillacomb",
+      "scedilla"
+    ],
+    "550": [
+      "Tcedilla",
+      "tcedilla",
+      "Ccedilla",
+      "Scedilla",
+      "ccedilla",
+      "cedilla",
+      "cedillacomb",
+      "scedilla"
+    ],
+    "625": [
+      "Tcedilla",
+      "tcedilla",
+      "Ccedilla",
+      "Scedilla",
+      "ccedilla",
+      "cedilla",
+      "cedillacomb",
+      "scedilla"
+    ],
+    "700": [
+      "Tcedilla",
+      "tcedilla",
+      "Ccedilla",
+      "Scedilla",
+      "ccedilla",
+      "cedilla",
+      "cedillacomb",
+      "scedilla"
+    ]
+  },
+  "unchanged_source_files": 1773,
+  "after_sha256": "ae579d351934e3d7be964126d94ebb1a5304b74216ae34ee9652f03b73ef8ea3",
+  "notes": [
+    "All non-target source bytes preserved, including Arabic recursive donors and green sources.",
+    "Incoming anchors and advances unchanged; outgoing cedilla bottom stack anchors adjusted. All new points on 8.",
+    "Shape/position equality, stack and below-mark clearance at five weights."
+  ]
+}

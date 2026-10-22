@@ -1,0 +1,253 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "cedilla",
+      "points": 25,
+      "advance": 260.0,
+      "bounds": [
+        32,
+        -256,
+        240,
+        0
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "anchor[_bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "anchor[bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 260.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 20.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "2": 4,
+        "3": 4,
+        "1": 21
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-cedilla-locj5un0/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "f8e70f62667d07d52b508e75bff3845b5e0edf2eed06e243287f6d7dcf0a4643"
+    },
+    {
+      "glyph": "cedillacomb",
+      "points": 0,
+      "advance": 0.0,
+      "bounds": [
+        32,
+        -256,
+        240,
+        0
+      ],
+      "failures": [
+        {
+          "field": "anchor[_bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "anchor[bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[0].anchor[_bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 20.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 0.0,
+          "popcount": 0
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 240.0,
+          "popcount": 4
+        }
+      ],
+      "popcount_histogram": {
+        "0": 1,
+        "1": 1,
+        "4": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-cedilla-locj5un0/sources/VirtuaGrotesk-Bold.ufo",
+      "sha256": "22e0bd0ef13131b7988b17b4fd6118c2e19215c9cdb6fc35e07ef70717be4689"
+    }
+  ]
+}

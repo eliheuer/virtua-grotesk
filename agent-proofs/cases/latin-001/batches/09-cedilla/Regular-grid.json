@@ -1,0 +1,242 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": false,
+  "results": [
+    {
+      "glyph": "cedilla",
+      "points": 25,
+      "advance": 260.0,
+      "bounds": [
+        64,
+        -224,
+        224,
+        0
+      ],
+      "failures": [
+        {
+          "field": "advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "anchor[_bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "anchor[bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 260.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 36.0,
+          "popcount": 2
+        }
+      ],
+      "popcount_histogram": {
+        "2": 7,
+        "1": 20
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-cedilla-locj5un0/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "cfb32860271a93bd0a488a4e0d27c24bfb982dbcb05d069045c9785eecdef542"
+    },
+    {
+      "glyph": "cedillacomb",
+      "points": 0,
+      "advance": 0.0,
+      "bounds": [
+        64,
+        -224,
+        224,
+        0
+      ],
+      "failures": [
+        {
+          "field": "anchor[_bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "anchor[bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "component[0].advance.width",
+          "value": 260.0
+        },
+        {
+          "field": "component[0].anchor[_bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "component[0].anchor[bottom].x",
+          "value": 134.0
+        },
+        {
+          "field": "component[0].right_sidebearing",
+          "value": 36.0
+        }
+      ],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 0.0,
+          "popcount": 0
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 224.0,
+          "popcount": 3
+        }
+      ],
+      "popcount_histogram": {
+        "0": 1,
+        "1": 1,
+        "3": 1
+      },
+      "passed": false,
+      "ufo": "/private/var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/virtua-latin-cedilla-locj5un0/sources/VirtuaGrotesk-Regular.ufo",
+      "sha256": "b5387e9eacf0275c59522b305272436fbde3442ccce774a649d2ccad47648fe5"
+    }
+  ]
+}

@@ -118,12 +118,20 @@ four Latin tests and preflight complete, with no new baseline failures.
 The inherited generic g+U0326 descender collision remains; Latvian ģ is separate
 and retains clear stacking. Eight inherited metric/anchor grid findings remain.
 
+[Batch09](batches/09-cedilla/README.md) replaces the faceted cedilla donors with
+rounded48/64-unit hooks and updates outgoing bottom anchors. Four GLIFs plus
+two Windows clipping-descent fields (512→576) contain the newly deeper stacks;
+typographic metrics stay unchanged. All1773 other source bytes are preserved.
+Whole400/550/700 and enlarged endpoint images, five-weight signed profiles,
+90 scoped checks, five Latin tests and preflight complete; no new baseline
+failures. Hook depth/neck proportions remain for human review.
+
 Eli approved pushing attachment/coverage commit1e8dd28e; it is now on origin/main.
 The subsequent drawing checkpoints remain local.
 
 ## Next bounded work
 
-1. Cedilla, then ogonek and alternate carons. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
+1. Ogonek, then alternate carons. Generic g+U0326 still collides inside its descender; preserve the green base while diagnosing attachment. Preserve the rotated ģ placement introduced in batch07. Check full reverse closure for green/Arabic dependencies and preserve the shared
    reversed-Nun calibration when changing any dot geometry or anchors.
 2. Spacing constraint reaffirmed by Eli: use the powers-of-two system for
 sidebearings, advances and kerning. New machine values on8; record decompositions

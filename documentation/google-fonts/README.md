@@ -54,7 +54,11 @@ composite constructions and adds canonical fallback in both feature files.205
 scoped comparisons and four Latin tests pass, with whole images at three weights;
 batch08 then repairs both comma-accent donor weights/terminals in two GLIFs.
 Its220 scoped comparisons, four Latin tests and complete images pass the local
-checks. Generic g+U0326 descender attachment remains unresolved. All216 pre-existing Hebrew regression subcases still fail
+checks. Generic g+U0326 descender attachment remains unresolved. Batch09 rounds
+cedilla hooks and updates bottom anchors, with90 scoped checks, five Latin tests
+and complete images. Its deeper stacks exposed clipping, fixed by Windows
+descent512→576 in both masters; typographic metrics stay unchanged. Legacy
+Windows-metric line spacing still needs platform testing. All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 

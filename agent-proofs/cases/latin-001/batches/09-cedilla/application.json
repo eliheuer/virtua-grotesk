@@ -1,0 +1,45 @@
+{
+  "at": "2026-10-22T04:19:49.656307+00:00",
+  "changes": [
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/cedilla.glif",
+      "glyph": "cedilla",
+      "master": "Regular",
+      "before": "043b2fe6b2f604fa407da738771500f6b1d57e63a0f0d9366563df299a64db92",
+      "after": "cfb32860271a93bd0a488a4e0d27c24bfb982dbcb05d069045c9785eecdef542"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/cedillacomb.glif",
+      "glyph": "cedillacomb",
+      "master": "Regular",
+      "before": "b6a9ea8f6574b2df039f6df0f92e00588cef42aa3f0be1454cf08781a9580101",
+      "after": "b5387e9eacf0275c59522b305272436fbde3442ccce774a649d2ccad47648fe5"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/cedilla.glif",
+      "glyph": "cedilla",
+      "master": "Bold",
+      "before": "043b2fe6b2f604fa407da738771500f6b1d57e63a0f0d9366563df299a64db92",
+      "after": "f8e70f62667d07d52b508e75bff3845b5e0edf2eed06e243287f6d7dcf0a4643"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/cedillacomb.glif",
+      "glyph": "cedillacomb",
+      "master": "Bold",
+      "before": "657500a6648f6c32efd520259c0f1dfc5f9d623c90622e8df03b731801d5fd63",
+      "after": "22e0bd0ef13131b7988b17b4fd6118c2e19215c9cdb6fc35e07ef70717be4689"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/fontinfo.plist",
+      "master": "Regular",
+      "before": "42ef9caa88a0c0bb8174fb5ece8e1b4dd1a0831d257928deb721ca82103f24be",
+      "after": "d33fcfbdd4c5ec95237d725c4ba758fff97f0fa7fe78c3a7b2b2d19891ccba6b"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/fontinfo.plist",
+      "master": "Bold",
+      "before": "7e9d060c4733bed9272215c5f3644e278da1ee5d73ad4c9294059d34cb36b6c6",
+      "after": "1fc2d9af9e9a198392bb6c662a50bde9df6c2f9033e7404c32ab27be17e360df"
+    }
+  ]
+}
