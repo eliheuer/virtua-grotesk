@@ -47,7 +47,9 @@ Batch04 repairs both ring donors and their outgoing stack anchors in four GLIFs,
 with90 shaping checks and full endpoint/intermediate image review. All other
 source bytes remain unchanged. Batch05 rounds both breve bowls and adds Bold
 weight in four GLIFs, with90 shaping checks and whole-image review at three
-weights; all other source bytes unchanged. All216 pre-existing Hebrew regression subcases still fail
+weights; all other source bytes unchanged. Batch06 repairs both tilde waves and
+stack anchors in four GLIFs, with90 shaping checks, whole-image review and zero
+grid findings; all other source bytes unchanged. All216 pre-existing Hebrew regression subcases still fail
 (105 cantillation clearance,111 meteg/composition). Frozen-baseline comparison
 shows no new failures; this does not waive the existing failures.
 
@@ -70,7 +72,7 @@ The pinned official Rubik comparison now finds8 missing Latin codepoints,
 presentation forms. Those are encoded-character differences, not language counts.
 Cyrillic requires actual drawing and reader review. Arabic presentation forms
 need a GSUB/legacy-text assessment; they are not an automatic new-glyph queue.
-Latin accent review, tilde/bottom-mark shapes, wrapper spacing on the dyadic grid,
+Latin accent review, bottom-mark shapes, wrapper spacing on the dyadic grid,
 Hebrew regression repair, Arabic manual review, CI and package provenance remain
 open. **The family is not ready for submission or publication.**
 
