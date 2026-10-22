@@ -1,0 +1,26 @@
+{
+  "weight": 400,
+  "size": 48,
+  "text": [
+    "Été à Montréal. À bientôt. Mājas.",
+    "Árvíz. Příliš žluťoučký kůň. Ōtautahi."
+  ],
+  "fonts": [
+    {
+      "role": "before",
+      "sha256": "bdc7a68c48aec730fd7e79cd63a8c402d63e470b0a9fd652267758fddabd17fa",
+      "missing_cmap": []
+    },
+    {
+      "role": "after",
+      "sha256": "5a16152081b52d43acb600984c0ac06d6d19bf82e65fd51c5645bbbdccf7ae63",
+      "missing_cmap": []
+    },
+    {
+      "role": "rubik",
+      "sha256": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88",
+      "missing_cmap": []
+    }
+  ],
+  "image_sha256": "416b614e4facfe70267945cde54f67a9665054ced9fa238390a036238c0aaa27"
+}

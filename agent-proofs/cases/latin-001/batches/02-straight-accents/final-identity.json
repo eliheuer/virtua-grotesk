@@ -1,0 +1,54 @@
+{
+  "source_baseline": "1e8dd28e23844828ea4fc50c977ebf4834b2cef4",
+  "fonts": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "1e3c1747d3f5743ab8a38eeb9167ba70bb8b103253d0b209003bc943f54b6c50",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "11fa294b09ddedcacd7e57fab5914ad724a16e0e13404919c9963a50179a29f5",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "a64f3a8246572fe1495abd4793d3b976481d6db29eb2939dbcf8637938395b81",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "3d8f0d3f044cde886915bb293102e14a5e5f7ee07f2c47f80e29298fa7682da7",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "8f158a290805431d793706b5b7b15c6f0233dbfaf382be75feb1c2542ee25e7a"
+  },
+  "inspected_rasters": {
+    "reading-400.png": "416b614e4facfe70267945cde54f67a9665054ced9fa238390a036238c0aaa27",
+    "below-700.png": "558ce05c1b93555d1f2d3fd77d274c865ed29c20e3497f14eeb4b81f73ef926b",
+    "attachment-550.png": "4e7eb2ec515cfce296c667fe443e5073bc0038825bdaee359ecdd2d3716b1453",
+    "reading-700.png": "0822c2ef005899ee944f4d4dcda1ee8548b35ed894262c07b2924259847eebfb",
+    "below-400.png": "fc1d30adf2c06df0660474b51146bb23d66d37c6efca6cb89617c6ba906d3801",
+    "detail-700.png": "c86e354c99c4b59dedf1429be75db239ff6ecb857c0378eff16da01046b5ef37",
+    "attachment-400.png": "55048f31b011030e60162d37be2b66b2acfd79afb697959075c184faf0a9e9de",
+    "reading-550.png": "fc50059a27c4d8620a7dee21915e8084a998efa35af26103ecfccf6d171fe657",
+    "attachment-700.png": "02c8e48413688fdd25aa9f0010283c5faa1f07d4714a0c517ddd6678cee28498"
+  },
+  "preflight_exit": 0,
+  "source_changes": [
+    {
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/macron.glif",
+      "glyph": "macron",
+      "master": "Regular",
+      "before": "18205888717f735bba39ac162fef1a709bcba14aa6e0380dc627724fed4f8d5c",
+      "after": "90f401142a21618e19eec9fd4a7f920fbc9da9f265cfaaa718374ab9a3651daa"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/acute.glif",
+      "glyph": "acute",
+      "master": "Bold",
+      "before": "56118d9cd9c57af5aea64bf0b92c63e4e82b2e67b7cdf48532f872e30c14c12f",
+      "after": "b778880d4a53819010ce31e8e43d658b6525b25a5f7a505dd593d54b2963f369"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/grave.glif",
+      "glyph": "grave",
+      "master": "Bold",
+      "before": "d047ff398464d77f8cf651e4e212a08cd3bb6e93b80f580088787ae5521a0f1a",
+      "after": "00fe48d6cdf90be8192bcf71a84e0b0767ce3302d2fd6ce9a4ae3fd768e3ba30"
+    },
+    {
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/macron.glif",
+      "glyph": "macron",
+      "master": "Bold",
+      "before": "677654f00aa70951fc42a087379421559f169936baee993707b8c2fd61fcd3e1",
+      "after": "254abeb3cc25cf9113386c0255794c981c1899781e5cfd62841afa713637243e"
+    }
+  ],
+  "proof_candidate_sha256": "5a16152081b52d43acb600984c0ac06d6d19bf82e65fd51c5645bbbdccf7ae63",
+  "candidate_and_active_tables_identical_except_head": true
+}

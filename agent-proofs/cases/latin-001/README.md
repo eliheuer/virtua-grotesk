@@ -65,9 +65,18 @@ it. `qa-summary.json` and retained argument/hash receipts describe the checks.
 The local package is `out/qa/2026-10-21-latin-package/ofl/virtuagrotesk`; metadata
 primary script/date, source delivery and article licensing remain provisional.
 
+## Subsequent drawing batches
+
+[Batch02](batches/02-straight-accents/README.md) strengthens Bold acute/grave and
+redraws both macrons with64/96-unit bars and clipped ends. Four source GLIFs only;
+all green/Arabic/other source bytes and all anchors/advances preserved. Complete
+word/attachment rasters at400/550/700 and large details inspected.80 shaping checks
+and three Latin tests pass; the same216 baseline Hebrew failures remain. This
+is a local pending-review draft, not a release approval.
+
 ## Next bounded work
 
-1. Bold acute/grave, circumflex/caron and macron weight/terminal consistency,
+1. Bold circumflex/caron weight/terminal consistency,
    using green Virtua Latin weight references and complete accented-word rasters.
    Check full reverse component closure for green/manual dependencies first.
 2. Ring, breve, tilde, bottom marks and alternate carons; preserve the shared
