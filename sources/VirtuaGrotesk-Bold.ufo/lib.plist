@@ -475,9 +475,12 @@
 		<string>ninesuperior</string>
 		<string>sevensuperior</string>
 		<string>eightsuperior</string>
+		<string>mu</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
+		<key>mu</key>
+		<string>base</string>
 		<key>eightsuperior</key>
 		<string>base</string>
 		<key>sevensuperior</key>

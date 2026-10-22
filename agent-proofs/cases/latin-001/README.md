@@ -778,3 +778,23 @@ failures and gap328 unchanged. Next bounded purple mu U00B5 in both masters,
 with donor bytes frozen, scratch union/weight/attachment review and no Greek
 alias/NFKD substitution. Separate sups proposal remains unapplied. Local only/
 no push; Arabic60272 unchanged.
+
+
+### Batch49 · Micro sign
+
+[Evidence](batches/49-micro/README.md) adds purple mu U00B5 both masters: unchanged green u component plus
+8-point clipped left descender,592/720 advance,72 bearings,96/192 strokes.
+Initial−256 trial rejected; final−200 matches protected p. New top anchors
+296/360,576 and bottom120/168,−200. All new values on8; three inherited Bold u
+y124 grid findings preserved. Six source files;1841 others/every old GLIF,
+Arabic326/master and green131/74 unchanged.125 scoped checks,4535 old VF/3627
+static ink/advance comparisons,54 subsets/NFD,28 Latin plus2 helpers pass;
+216 Hebrew failures unchanged. Five-weight diagnostic union is one contour with an open aperture;
+all curves inherited, signed comb reviewed. Whole400/550/700,224px details and12
+actual Diffenator views inspected. Bold heel/body mass, default pairs and macron
+below overhang remain human review. Active/scratch tables match except head;
+sequential DesignBot/preflight complete. Online package12FAIL10WARN159PASS10INFO40SKIP,
+exact FAILs unchanged/no new semantic warnings. Greek mu remains absent; no
+normalization substitution. Gap327:182Cyrl/43Common/102Arab. Next fraction-slash/
+encoded-fraction construction and feature assessment; sups proposal separate.
+Local only/no push; Arabic60272 unchanged.

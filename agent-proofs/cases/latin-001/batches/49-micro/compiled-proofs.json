@@ -1,0 +1,58 @@
+{
+  "renderer": "Pillow FreeType/RAQM",
+  "pages": {
+    "forms": [
+      "µ µµµ · u p up pu",
+      "µu uµ µp pµ · Hµ µH",
+      "µ́ µ̈ µ̧ µ̱",
+      "µ̧́ µ̧́ · µµµ",
+      "10 µm 25 µg 5 µs 4 µF",
+      "up pu uu pp"
+    ],
+    "words": [
+      "Micro: 10 µm, 25 µg",
+      "Time: 5 µs · Capacitance: 4 µF",
+      "µm µg µs µF · µm µg µs µF",
+      "București µm ģimene doğa",
+      "10 µm = 0.01 mm",
+      "București ģimene doğa Ŧŧ ﬁﬂ"
+    ]
+  },
+  "images": [
+    {
+      "weight": 400,
+      "kind": "forms",
+      "sha256": "33de781eab7d9702d2825c1fe457f9fbdc4da1c7e2c17346d9c1620af1cacb15"
+    },
+    {
+      "weight": 550,
+      "kind": "forms",
+      "sha256": "118f0830ca8d80e86ae331e9c3fcbf7b60627338362cf8e224b1275ab55c7e0b"
+    },
+    {
+      "weight": 700,
+      "kind": "forms",
+      "sha256": "c05a0e9d7e0979285b7c8f6db0593dac311c8b8a32ca9ffb19f71c7e2aa0f9dc"
+    },
+    {
+      "weight": 400,
+      "kind": "words",
+      "sha256": "fe1bc82a41222229a4ac81ada7c30b91b202e4a2e36d962fc2c23acf7aaadf62"
+    },
+    {
+      "weight": 550,
+      "kind": "words",
+      "sha256": "c3f46ad6a07845c18fcff77c59706c736f404b7d27860039165c2df6b9086ea4"
+    },
+    {
+      "weight": 700,
+      "kind": "words",
+      "sha256": "580c79cc22b1120231fcc094767b26aa92e6a0aeb753b45d4a846e791774104b"
+    }
+  ],
+  "fonts": {
+    "before": "968ab83bd8b4648e8f91b90247bd742cb330c7ce6da5500e44fe273d5bdd7b52",
+    "after": "72d2512225a2e47880f6a751604c505be6e13530ea1a88e77cd98d4bdce6349e",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  }
+}

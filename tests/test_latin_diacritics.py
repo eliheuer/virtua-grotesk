@@ -530,3 +530,26 @@ class LatinDiacriticsTests(unittest.TestCase):
                         actual=[x for x in run(soft) if x!=('space',0,0,0)]
                         self.assertEqual(actual,run(word))
                     self.assertEqual(run('\u00ad',hb.BufferFlags.PRESERVE_DEFAULT_IGNORABLES),[(name,440,0,0)])
+
+    def test_micro_sign_body_and_descender_attachment(self):
+        # A u-like body needs its own lower anchor at the new descender.
+        for path,font in self.fonts():
+            data=path.read_bytes()
+            self.assertEqual(font.getBestCmap().get(0xB5),'mu')
+            self.assertNotIn(0x3BC,font.getBestCmap())
+            for w in ([400,475,550,625,700] if 'fvar' in font else [font['OS/2'].usWeightClass]):
+                with self.subTest(font=path.name,weight=w):
+                    advance,base=shaped(font,data,'µ',w)
+                    self.assertEqual(advance,shaped(font,data,'u',w)[0])
+                    self.assertEqual(base[0][1],-200)
+                    for mark in ['́','̈']:
+                        a,bb=shaped(font,data,'µ'+mark,w)
+                        self.assertEqual(a,advance)
+                        self.assertGreaterEqual(bb[1][1]-bb[0][3],48)
+                    for mark in ['̦','̱']:
+                        a,bb=shaped(font,data,'µ'+mark,w)
+                        self.assertEqual(a,advance)
+                        self.assertGreaterEqual(bb[0][1]-bb[1][3],40)
+                    a,bb=shaped(font,data,'µ̧',w)
+                    self.assertEqual(a,advance)
+                    self.assertEqual(bb[1][3],bb[0][1])

@@ -1,0 +1,29 @@
+{
+  "fonts": {
+    "before": "968ab83bd8b4648e8f91b90247bd742cb330c7ce6da5500e44fe273d5bdd7b52",
+    "after": "72d2512225a2e47880f6a751604c505be6e13530ea1a88e77cd98d4bdce6349e",
+    "rubik": "1b3a7437ba2af80e465e773ed60c5036d1ba6ace492d89046dbcf18fb31e4e88"
+  },
+  "screenshots": {
+    "stock-rubik-400.png": "fe0f1e11705c1ce8abdf9c47659da70f52ed202b0915afec65d370785dccf95b",
+    "stock-rubik-550.png": "4784b93a8a0a8276f6d44adc1f52288aa7021955a2e4f045dc17abbf1cd7fc25",
+    "stock-rubik-700.png": "d12cc95675bb107f7f67e819fdd404f881c5f6f2daac663da4d2e1a374525303",
+    "stock-virtua-400.png": "7fc4a29ac472cd4a3002f49a720f1b4aa7394670f6ed130f80650e2095981ef5",
+    "stock-virtua-550.png": "9bdd2a1b3d781c6b5cbcd23298502720ce2ff166c1adb473aff67a75c47a0853",
+    "stock-virtua-700.png": "6666639f70e13c2f2352970652eb6228d7278ffe45814a20f496be6ae9f7f824",
+    "target-rubik-400.png": "54a43b7de6e5e63383ca841dadbe110cb5b907b16f084b148c1df841ef277848",
+    "target-rubik-550.png": "902b0f2a089202546a9cf23dc0e47c8542fa458a925f45c96dd1e77db487d40d",
+    "target-rubik-700.png": "e7239a93f3728ae28e64e75a0caa8f2a097e16bf3d2a67a60536277c13d3afc8",
+    "target-virtua-400.png": "98a659594265d1fc626ba994ab06ca14fd9df4b9dfa7de6f9514e7d6a993a31c",
+    "target-virtua-550.png": "84524e315ed326ee7a591db88e71b1375a3e1f3312c67b9f134ecb8782af8dd1",
+    "target-virtua-700.png": "8a64e2aec21a99b148edc6cacfb7a0e10a4aea77a4684bea61cf591d54f22c72"
+  },
+  "scope": "Six same-text target and six first-stock-viewport views; actual browser text400/550/700. Not exhaustive script or reader approval.",
+  "observations": [
+    "New upright micro matches protected u construction, clipped descender now aligned with p at−200. Initial −256 trial rejected and retained.",
+    "Open top/bowl remains legible at sampled sizes; Bold body and heel mass are heavy, following unchanged u. Width/default µm/µg/µs/µF rhythm requires human optical review.",
+    "Acute/dieresis attach above body; cedilla touches descender and comma/macron below clear it. Rubik lacks U0331 and is shown unavailable or as a box in Diffenator.",
+    "Stock mixed text retains dense Bold and uneven spacing; no changes to Arabic or its60272 proof."
+  ],
+  "slider_note": "Old=Virtua candidate, New=Rubik; slider controls weight despite Regular menu label."
+}

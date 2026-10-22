@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/Users/eli/GH/repos/virtua-grotesk/.venv/bin/diff3proof",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/49-micro/assets/after.ttf",
+    "/Users/eli/GH/repos/virtua-grotesk/agent-proofs/cases/latin-001/batches/49-micro/assets/rubik.ttf",
+    "--sample-mode",
+    "cover",
+    "--output",
+    "/Users/eli/GH/repos/virtua-grotesk/out/review-latin-d2513094/batch49/comparison"
+  ],
+  "supplement_text": "µ µµµ · 10 µm 25 µg 5 µs 4 µF · µu uµ µp pµ · µ́ µ̈ µ̧ µ̱ · u p up pu · București ģimene doğa Ŧŧ ﬁﬂ",
+  "note": "Stock controls, labeled substituted text. Old Virtua/New Rubik.",
+  "html_sha256": "171364b82853e610cdfb6451b0c39f23c67b8b1ff5c253410c2d1441c733f319"
+}

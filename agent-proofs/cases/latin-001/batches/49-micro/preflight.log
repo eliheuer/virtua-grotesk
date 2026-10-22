@@ -1,0 +1,41 @@
+./build.sh
+Building Virtua Grotesk fonts with gftools builder...
+[1/11] buildVariable
+fontmake --output-path /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmph67onvnx -o variable -m VirtuaGrotesk.designspace --filter ...
+[2/11] fix
+gftools-fix-font -o /Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmph67onvnx
+[3/11] gftools-gen-stat --inplace  -- '/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf' && touch /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpkhcczisx.buildStatstamp
+['/Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf']
+Saving font to /Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf
+[4/11] genStatic
+gftools-gen-static /Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk Regular --coordinates wght=400 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpcvsjhmuj
+[5/11] genStatic
+gftools-gen-static /Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk Bold --coordinates wght=700 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpybpy0ie6
+[6/11] genStatic
+gftools-gen-static /Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk Medium --coordinates wght=500 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp6567zwfq
+[7/11] genStatic
+gftools-gen-static /Users/eli/GH/repos/virtua-grotesk/fonts/variable/VirtuaGrotesk[wght].ttf Virtua Grotesk SemiBold --coordinates wght=600 -o /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpuy3gkxrf
+[8/11] fix
+gftools-fix-font -o /Users/eli/GH/repos/virtua-grotesk/fonts/ttf/VirtuaGrotesk-Bold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpybpy0ie6
+[9/11] fix
+gftools-fix-font -o /Users/eli/GH/repos/virtua-grotesk/fonts/ttf/VirtuaGrotesk-Regular.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpcvsjhmuj
+[10/11] fix
+gftools-fix-font -o /Users/eli/GH/repos/virtua-grotesk/fonts/ttf/VirtuaGrotesk-Medium.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmp6567zwfq
+[11/11] fix
+gftools-fix-font -o /Users/eli/GH/repos/virtua-grotesk/fonts/ttf/VirtuaGrotesk-SemiBold.ttf /var/folders/w6/vwy8hp0s2m5c70vrm124dmch0000gn/T/tmpuy3gkxrf
+
+Build complete! Fonts are in the fonts/ directory:
+fonts/variable/VirtuaGrotesk[wght].ttf
+fonts/ttf/VirtuaGrotesk-Bold.ttf
+fonts/ttf/VirtuaGrotesk-Medium.ttf
+fonts/ttf/VirtuaGrotesk-Regular.ttf
+fonts/ttf/VirtuaGrotesk-SemiBold.ttf
+designbot proof "fonts/variable/VirtuaGrotesk[wght].ttf" --output documentation/proofs/proof.pdf
+Proofing fonts/variable/VirtuaGrotesk[wght].ttf → documentation/proofs/proof.pdf
+✓ Wrote documentation/proofs/proof.pdf
+./.venv/bin/python scripts/run_reports.py
++ /Users/eli/GH/repos/virtua-grotesk/.venv/bin/python scripts/report_source_metadata.py sources/VirtuaGrotesk-Regular.ufo sources/VirtuaGrotesk-Bold.ufo documentation/source/source-ufo-metadata.md
++ /Users/eli/GH/repos/virtua-grotesk/.venv/bin/python scripts/report_master_compatibility.py sources/VirtuaGrotesk-Regular.ufo sources/VirtuaGrotesk-Bold.ufo documentation/source/master-compatibility.md
++ /Users/eli/GH/repos/virtua-grotesk/.venv/bin/python scripts/report_generated_font_metadata.py fonts/variable/VirtuaGrotesk[wght].ttf fonts/ttf/VirtuaGrotesk-Regular.ttf fonts/ttf/VirtuaGrotesk-Medium.ttf fonts/ttf/VirtuaGrotesk-SemiBold.ttf fonts/ttf/VirtuaGrotesk-Bold.ttf documentation/source/generated-font-metadata.md
+./.venv/bin/python scripts/preflight.py
+preflight artifacts present
