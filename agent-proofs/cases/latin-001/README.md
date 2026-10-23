@@ -1,5 +1,32 @@
 # LAT-001 · Attachment and coverage foundation
 
+## Autonomous work stopped — Eli, 2026-10-22
+
+After reviewing the active work, Eli confirmed that green glyphs were preserved
+but reported “massive quality and drawing problems everywhere.” He explicitly
+requested completely stopping the timed tasks. Automation
+`virtua-arabic-first-pass` has been deleted, not merely paused.
+Do not resume autonomous drawing, apply scratch candidates, or recreate scheduled
+work without new explicit authorization. Eli wants more work on the harness,
+skills and context files before considering another overnight run. Existing
+numerical checks and recorded agent visual inspections did not establish the
+drawing quality he expected. No individual new drawing is approved by this review.
+
+The preceding concern was whether green-graded glyphs had been edited. A fresh
+read-only audit found all131 Regular and74 Bold green GLIFs, detected by label
+or RGBA, byte-identical to Latin handoff1e8dd28e; their recursive component
+dependencies also match. No commits since that handoff touched those files.
+All1847 active source files and five fonts still match the batch52 before
+snapshot. This finding covers that interval; it is not a claim about all earlier
+project history. The fraction preview contains separate scratch small figures,
+not replacements for the protected ordinary figures. Eli subsequently accepted
+that the green glyphs were untouched; his outstanding concern is the quality of
+the other drawings broadly, not a named green-glyph alteration.
+
+Review order: applied accent drawings and attachment/spacing; added Latin and
+ligatures; Common symbols and superior figures; scratch-only fractions; then
+release/build findings. Applied pending-review work is not human-approved work.
+
 Eli requested committing/pushing the Arabic handoff, then autonomous work on
 Latin diacritics and Google Fonts readiness toward Rubik quality/language coverage.
 Arabic handoff `889ffa58` was pushed before this work. All Arabic GLIFs, their

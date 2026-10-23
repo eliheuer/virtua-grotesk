@@ -26,6 +26,15 @@ and `hebrew-002/` folders to `agent-proofs/cases/`, and the old browser-review
 folder to `agent-proofs/app/`. Current commands and maintained links use the
 new locations. This relocation changes no font drawings or proof layout.
 
+## Current supervised drawing review — 2026-10-23
+
+[AT-001](cases/at-001/README.md): smaller italic a with a double spiral.
+Eli judges the broad redraw “better, but still bad” and explicitly authorized
+applying this exact candidate, rebuilding and pushing it for hand editing. The
+active at masters now contain it, still purple. The case retains negative
+examples, the comparison and application receipts. This is not visual approval. The timed task remains stopped;
+do not resume the earlier autonomous queues.
+
 ## Resume in a new session
 
 Open the Virtua repository and say:

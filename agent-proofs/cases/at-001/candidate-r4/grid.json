@@ -1,0 +1,1195 @@
+{
+  "policy": "Machine drafts on 8; popcount descriptive; no grading or mutation",
+  "glyph_masters": 2,
+  "passed": true,
+  "results": [
+    {
+      "glyph": "at",
+      "points": 88,
+      "advance": 944.0,
+      "bounds": [
+        40,
+        -112,
+        912,
+        784
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 944.0,
+          "popcount": 5
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 152.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 152.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 192.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 184.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.y",
+          "value": 208.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 208.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 232.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.y",
+          "value": 224.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 224.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 192.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 112.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 168.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 168.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 192.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 200.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 176.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 168.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 112.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 112.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "5": 1,
+        "1": 41,
+        "2": 41,
+        "3": 29,
+        "4": 2
+      },
+      "passed": true,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/.glyph-ai-runs/at-double-spiral-2026-10-23/revision4/trace/VirtuaGrotesk-Regular.ufo",
+      "sha256": "723dc17894ae940f3bd3c4b3b77c4a44782aa4fdedda45b7c59aa2a8560a256f"
+    },
+    {
+      "glyph": "at",
+      "points": 88,
+      "advance": 952.0,
+      "bounds": [
+        40,
+        -112,
+        920,
+        784
+      ],
+      "failures": [],
+      "measurements": [
+        {
+          "name": "advance",
+          "value": 952.0,
+          "popcount": 6
+        },
+        {
+          "name": "handle.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 24.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 160.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 152.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 192.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 192.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 216.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.x",
+          "value": 208.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 240.0,
+          "popcount": 4
+        },
+        {
+          "name": "handle.y",
+          "value": 224.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 224.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 192.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 128.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 112.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 112.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 168.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 176.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 176.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 192.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 176.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 136.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 136.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 144.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.y",
+          "value": 96.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 72.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 104.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 88.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 80.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.x",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.y",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "handle.y",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "handle.x",
+          "value": 32.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 56.0,
+          "popcount": 3
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 16.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.x",
+          "value": 48.0,
+          "popcount": 2
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 8.0,
+          "popcount": 1
+        },
+        {
+          "name": "adjacent_oncurve_span.y",
+          "value": 64.0,
+          "popcount": 1
+        },
+        {
+          "name": "left_sidebearing",
+          "value": 40.0,
+          "popcount": 2
+        },
+        {
+          "name": "right_sidebearing",
+          "value": 32.0,
+          "popcount": 1
+        }
+      ],
+      "popcount_histogram": {
+        "6": 1,
+        "1": 45,
+        "2": 42,
+        "3": 24,
+        "4": 2
+      },
+      "passed": true,
+      "ufo": "/Users/eli/GH/repos/virtua-grotesk/.glyph-ai-runs/at-double-spiral-2026-10-23/revision4/trace/VirtuaGrotesk-Bold.ufo",
+      "sha256": "d4f09976efca107b1404696c725b7456eefc11ab773394cb0aa445034d4e495e"
+    }
+  ]
+}

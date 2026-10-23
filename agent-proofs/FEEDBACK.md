@@ -1,5 +1,106 @@
 # Design review and feedback
 
+## Supervised double-spiral at-sign request — 2026-10-23
+
+Eli requested a new @ in the existing style, with a smaller central a and a
+continuous tail spiraling around it twice instead of once. He explicitly asked
+for OpenAI image generation followed by img2bez tracing under the grid described
+in his Virtua blog post. This is one supervised glyph experiment, not permission
+to restart the deleted automation or resume the earlier completion queue.
+
+Regular at is red; Bold at is orange. Both originals are preserved. Candidate
+images, exact before files, traces and reproduction notes are in
+`.glyph-ai-runs/at-double-spiral-2026-10-23/`; all work remains on scratch.
+The current candidate is not a new general weight rule or human-approved grade.
+
+### Correction 01 — retain italic a and smooth the spiral
+
+Eli says the double-spiral direction is promising, but the little a lost its
+iconic italic slant and the loops look lumpy. Preserve the overall form while
+restoring that slant and smoothing the curves. Scope: scratch at in Regular
+and Bold only; no active-source application or general design approval.
+Exact first-candidate GLIFs and revised proofs are retained under the same run
+packet in `revision2/`. Engineering passes did not establish smooth drawing.
+Revision 2 restores the local italic stem and smooths traced spiral handles;
+compiled 400/550/700 comparison is ready in `revision2/review.png`. Active
+sources remain unchanged; this refinement still awaits Eli’s visual verdict.
+
+### Correction 02 — uneven stroke mass still rejected
+
+Eli rejected revision 2 as still very lumpy, while saying everything else is
+good. Preserve the smaller italic a and double-spiral direction; this is not
+approval of stroke distribution or a final grade. His new reference is
+`/Users/eli/Desktop/Screenshot 2026-10-23 at 11.05.31 AM.png`.
+He asks for basic type-design research, use of RuneBender's curvature and
+continuity tools, and actual visual judgment of smooth, even apparent weight.
+
+Diagnosis: revision 2 optimized individual-edge curvature and join mismatch
+without opposing-edge stroke-width constraints, and fixed every traced spiral
+on-curve. That did not resolve the visible swelling. Agent statements that the
+loops were smooth overstated the result. Research and local normal-width
+samples are in `.glyph-ai-runs/at-double-spiral-2026-10-23/weight-diagnosis/`.
+Regular upper-right original-source samples span 67.6–71.9 units, revision 2
+63.6–73.5; these are local geometric samples, not whole-glyph extrema or an
+optical grade. No new drawing or active-source changes in this research pass.
+The next proposed repair treats both sides as one stroke, preserves the agreed
+form, and judges the filled result before accepting numerical diagnostics.
+
+### Correction 03 — paired stroke refinement authorized on scratch
+
+Eli explicitly requests fixing at Regular/Bold by working on both sides of the
+strokes together, preserving the smaller italic a and double spiral. Tools must
+allow optical corrections rather than force mathematical perfection. Show the
+scratch version before application. New packet `revision3/` preserves revision
+2 exactly. Active-source application is not authorized.
+Revision 3 now has a paired-edge scratch fitting tool with editable directional
+weight targets and preserved junction/terminal transitions. It keeps the central
+a and counter exact, preserves the double-spiral route, and changes both sides
+of the loop together. Compiled comparison at 400/550/700 is in
+`revision3/review.png`; visual approval is pending. No active sources changed.
+
+### Correction 04 — redraw broad flow; revision 3 rejected
+
+Eli again rejects the broad curves as lumpy. He authorizes a substantial scratch
+redraw of at Regular/Bold, retaining the smaller italic a and double spiral,
+using his supplied original-at screenshot as the smoothness standard. Preserve
+the overall idea, not the trace's flat/tight-bend pattern. Show scratch before
+application. He also requests incorporating the learning into skills/harness.
+Revision 3 is rejected for broad flow, despite improved width diagnostics.
+No claim of acceptance or self-training may be inferred from a new agent pass.
+The new packet is `revision4/`; exact rejected sources remain retained.
+
+Revision 4 is now retained in [AT-001](cases/at-001/README.md), with the original,
+two human-rejected source pairs, the new paired broad-curve redraw, compiled
+proof and hash-bound verdicts. Central a/counter unchanged; active sources exact.
+The new candidate awaits Eli’s review; do not label it accepted training data.
+
+### Correction 05 — apply for hand editing, not visual approval
+
+Eli says “looks better, but still bad.” He explicitly requests applying this
+exact candidate, rebuilding Virtua, updating the business card's bundled font,
+and committing/pushing Virtua. He intends to edit the drawing by hand afterward.
+The at pair was applied without further drawing changes; purple grades remain.
+Only those two of1847 source files changed. The business-card PDF now visibly
+uses the double-spiral at; the existing blob edit is preserved. Record r4 as
+quality-rejected/applied-for-manual-editing, not an accepted training example.
+[Application evidence](cases/at-001/application/verification.json).
+
+## Autonomous run stopped after quality review — 2026-10-22
+
+Eli confirmed that the green glyphs were untouched, then reported “massive
+quality and drawing problems everywhere” and requested completely stopping the
+timed tasks. The Virtua Latin/release automation was deleted. This supersedes
+earlier unattended-continuation instructions: do not restart or recreate it
+without new explicit authorization. Active sources and scratch evidence are
+preserved for review; this is not a request to revert or regrade glyphs.
+
+Eli wants more work on the harness, skills and context files before another
+overnight run. Passing engineering checks and agent-recorded raster/browser
+inspection did not establish acceptable drawing quality. Specific design
+corrections and harness changes still need to be worked through with him;
+do not invent glyph-specific rules from this general rejection. See
+[LAT-001 review status](cases/latin-001/README.md).
+
 This is the persistent record for Eli's propose → feedback → revise loop.
 The [Virtua Design Review entry point](README.md) connects this record to the
 current handoff, drawing rules, live proof, agent procedures and recovery paths.

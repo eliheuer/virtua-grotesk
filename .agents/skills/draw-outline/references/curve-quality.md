@@ -101,3 +101,48 @@ Primary external references (read 2026-10-21; no plugin code copied):
   Borrow geometric diagnostics, not the tutorial's calligraphic silhouette.
 - [Curvatura](https://github.com/linusromer/curvatura): related harmonization,
   Tunni and inflection tools; consult its docs for operation details.
+
+## Paired-edge weight: failed double-spiral at experiment, 2026-10-23
+
+Eli rejected the second at candidate as lumpy despite its clean sampled tangent
+checks. The local optimizer penalized individual-edge curvature and join jumps,
+but not opposing-edge width; it fixed all traced spiral on-curves. The failure
+is recorded in [feedback correction 02](../../../../agent-proofs/FEEDBACK.md).
+
+For a nominally monoline curved stroke, diagnose three different things:
+
+1. Each edge's flow over the full turn, using signed combs and plain silhouette.
+2. Adjacent-segment transitions, using continuity checks.
+3. The relationship between opposing edges: visible ink weight and white-space
+   rhythm, supported by width measurements perpendicular to the stroke.
+
+Do not infer item 3 from items 1 and 2. Pair the intended opposing branches
+explicitly in spirals; arbitrary nearest-edge distances can cross a white gap
+or hit another turn. Constant geometric width is a useful construction starting
+point, not a replacement for optical correction or filled-text inspection.
+Preserve the agreed form, not every accidental traced node. A visible swelling
+is grounds to reject a candidate even if grid, compatibility and joins pass.
+See the primary Glyphs harmonization and good-path guidance linked above.
+
+## Broad flow is a separate review — AT-001, 2026-10-23
+
+Eli rejected the paired-width revision too. [AT-001](../../../../agent-proofs/cases/at-001/README.md)
+retains the rejected source pairs, his reference context and the r4 redraw.
+Eli called r4 “better, but still bad” and authorized application for hand editing;
+application does not make it a positive optical example. A locally fair, evenly thick stroke can still follow a visibly poor path.
+
+Before optimizing joins, compare the full filled silhouette with the selected
+reference. Identify flat sections, tight bends, swelling and white-space rhythm.
+If fixed traced points preserve those defects, reconstruct the broad sweep on
+scratch within the named scope. Preserve the agreed identity/topology, not every
+traced node. Then check opposing edges together, adjacent joins, extrema and grid.
+Reinspect the complete glyph and actual words after snapping: independently
+rounding two edges can change stroke weight even when every point is on-grid.
+
+Use `harness/paired_stroke_report.py` with explicit, hash-bound cubic pairing.
+It retains ambiguous or missing normal intersections and supplies no optical
+pass threshold. Local width ranges, continuity labels and curvature variance
+cannot replace the filled proof. Directional weight, junction relief and terminal
+taper are explicit design choices; do not minimize them away to get a score.
+Record human verdicts with exact snapshots. Pending candidates are not accepted
+training examples; updating these instructions does not train model weights.

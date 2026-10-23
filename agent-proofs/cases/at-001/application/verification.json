@@ -1,0 +1,47 @@
+{
+  "source_files_changed": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/at.glif",
+    "sources/VirtuaGrotesk-Regular.ufo/glyphs/at.glif"
+  ],
+  "other_sources_exact": 1845,
+  "compiled_glyph_weight_comparisons": 4540,
+  "candidate_matches_active_at_five_weights": true,
+  "old_non_at_outlines_and_advances_exact": true,
+  "contact_shaping": [
+    {
+      "weight": 400,
+      "glyphs": 12,
+      "advance": 5612
+    },
+    {
+      "weight": 475,
+      "glyphs": 12,
+      "advance": 5771
+    },
+    {
+      "weight": 550,
+      "glyphs": 12,
+      "advance": 5930
+    },
+    {
+      "weight": 625,
+      "glyphs": 12,
+      "advance": 6089
+    },
+    {
+      "weight": 700,
+      "glyphs": 12,
+      "advance": 6248
+    }
+  ],
+  "card_font_sha256": "a67dd4b0a8f7465791cddae8dbd1b1a3d5926adf0cfbadd71904e9a77b83032e",
+  "card_pdf_sha256": "5b03a5747a6e9284420bf6b03cc179339da6515f40fd85925bfcca36d66ee2ba",
+  "blob_human_save_preserved": true,
+  "fonts": {
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "2cd7f0dbf6a31a251f9406251f7f6ceae9b0dab735666b2e2445d3570871725d",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf": "d149499e5fd58470e3f8b596427f456a8b64040bb08badf7ffa2162d4b1932ef",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf": "7e157b86cebe86e7545fc70f938c4f588792d09beb9d95f2a44fd501885182cf",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf": "a67dd4b0a8f7465791cddae8dbd1b1a3d5926adf0cfbadd71904e9a77b83032e",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf": "dbab5472970d16b809cdbf55fc9ce28aca230d2a1307f299c19875e3ecba2db8"
+  }
+}

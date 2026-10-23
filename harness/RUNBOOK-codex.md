@@ -9,13 +9,12 @@ Crawl-phase scope: single glyphs, Regular master quality first, a human
 reviews every result. Do not batch, do not loop, do not touch glyphs you were
 not asked about.
 
-**Division of labor (do not invert it):** the image model supplies *drawing*
-only — shape and style. Everything measurable — scale, vertical placement,
-stroke weight, spacing — is deterministically derived, corrected, or gated by
-you and the tools. A human-supplied image is **shape intent**, never weight or
-placement ground truth; the weight/style ground truth is the font's **green
-glyphs**. Never ask the human for a "better" image to fix weight or placement
-— the pipeline fixes those.
+**Division of labor:** generated images supply a proposal, not a quality verdict.
+Green glyphs govern the font's construction unless Eli names a different local
+reference. A human-selected example can explicitly set the optical standard.
+Measurements help diagnose scale, weight and spacing; they cannot establish
+that a drawing looks even or smooth. Keep generation, tracing, scratch repair,
+human review and authorized application separate.
 
 ## Context you must load
 
@@ -193,16 +192,38 @@ Read the traced glifs from `$RUN/trace/…ufo/glyphs/` and correct against
 - Snap near-metric on-curve points exactly to baseline/x-height/cap
   (± overshoot 16 for curves), near-H/V lines exactly axial, near-45°
   chamfer segments exactly 45°.
-- All coordinates even (grid 2); key measurements onto the power-of-two
-  ladder (2, 4, 8, 16, 32, 64, 96, 128, 160 …) where the shape allows.
+- New machine-draft coordinates and spacing on8, including handles; run
+  `scripts/draft_grid_check.py`. Preserve approved human optical exceptions.
+  A grid2 tracing configuration alone does not satisfy the draft gate.
 - Chamfers: every sharp straight-straight corner gets the 16-unit bevel
   (scaled up in Bold). Curves: on-curve extrema with on-axis handles.
-- **Normalize the weight — measured, not eyeballed.** Measure perpendicular
-  distance between parallel edges of a representative stem. If off the
-  master's ladder (~96 R / ~160+ B) by more than ~4 units, correct it:
-  offset the contours by half the difference (this font is monolinear and
-  gains weight inward — thicken toward the counters, keep the outer
-  silhouette where DESIGN.md says it stays). Re-measure after.
+- **Review apparent weight as well as measured thickness.** Work on opposing
+  boundaries together, with explicit branch pairing. Set local optical intent
+  from the approved reference: horizontal/vertical balance, junction relief and
+  terminal taper. Do not force constant width, equal handles, or a generic stem
+  ladder across every curve. Preserve silhouette where the glyph contract says
+  it stays; broaden scratch reconstruction only within the named approval.
+
+### Broad-curve gate — AT-001 correction, 2026-10-23
+
+Read [AT-001](../agent-proofs/cases/at-001/README.md) before repairing lumpy
+organic curves. Revision2 passed local diagnostics yet looked lumpy; revision3
+improved widths yet retained poor broad flow. Neither is an accepted example.
+
+1. Compare the complete filled reference, rejected draft and candidate at equal
+   scale, then actual text sizes. Describe the visible flattening, swelling or
+   abrupt bend before choosing a repair. Keep the agreed topology and identity.
+2. Review the whole turn independently of individual joins. If traced nodes
+   lock in the defect, redraw the broad path within the authorized scratch
+   scope; do not keep tuning handles against a bad raster just to lower error.
+3. Diagnose joins with the signed comb and opposing-edge mass with
+   `harness/paired_stroke_report.py`. Explicit pair plans carry source hashes
+   and optical intent. Missing/ambiguous measurements remain visible; ranges
+   have no automatic pass threshold. Reinspect after grid snapping.
+4. Keep exact rejected/accepted pairs and reviewer identity. The r4 at redraw
+   was judged “better, but still bad” and applied for hand editing at Eli’s
+   request: no positive optical label or model-training claim.
+
 
 Verify numerically after adjusting (and again after porting, per master):
 
@@ -238,7 +259,10 @@ style: **dark mode — dark gray background (~#202020–#2a2a2a), light gray ink
 Typographic Style layout (modular grid, flush-left, generous margins, no
 decoration). Iterate steps 5–6 until shape, weight, and spacing sit right.
 
-### 8. Port into the real sources (repo style)
+### 8. Port only within explicit active-application authorization (repo style)
+
+Scratch approval is not application approval. Stop at the proof when the user
+requests review before applying; the commands below then use scratch paths.
 
 a. Write the final outlines into
    `sources/VirtuaGrotesk-{Regular,Bold}.ufo/glyphs/<name>.glif` as
@@ -251,8 +275,9 @@ b. **Only if the glyph is new**: register it in three places per master —
 
 ### 9. Mark colors (the human's control channel)
 
-- Both masters traced from real per-master generations → **blue**
-  `0.27,0.44,1,1` ("AI output, awaiting grading").
+- Follow current `README.md` semantic colors. Under Eli’s requested convention,
+  new AI drawings are **purple**, awaiting human review. Blue identifies a
+  composite needing diagnosis; it is not an AI-output grade.
 - A Bold that is only a structure copy / placeholder → keep/set **red**
   `1,0.29,0.24,1`.
 - Never set green — only the human promotes to green.
@@ -275,5 +300,5 @@ spacing must match the neighbors. `make test` must show no new FAILs
 One glyph per run. Summarize: generation attempts and what each gate
 measured, what you adjusted and which DESIGN.md rule justified it, the
 report.json gates, and the review image paths. Commit only if asked; plain
-message. The human grades the blue glyph in Runebender (`make runebender`) —
+message. The human grades the candidate in Runebender —
 their color change is the verdict, and the next run re-reads it.

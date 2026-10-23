@@ -1,0 +1,52 @@
+{
+  "glyph": "at",
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "active_application_authorized": true,
+  "reference_scope": "Eli selected original at screenshot for smoothness and apparent weight; not a green grade or a target for single-loop topology.",
+  "judgments": {
+    "rejected-r2": {
+      "reviewer": "Eli",
+      "verdict": "rejected",
+      "reason": "Still very lumpy; smaller italic a and double spiral otherwise good."
+    },
+    "rejected-r3": {
+      "reviewer": "Eli",
+      "verdict": "rejected",
+      "reason": "Still lumpy despite paired width refinement."
+    },
+    "candidate-r4": {
+      "reviewer": "Eli",
+      "verdict": "better, but still bad",
+      "application": "explicitly authorized and applied for manual editing",
+      "reason": "Visual quality still unsatisfactory; user will edit by hand."
+    }
+  },
+  "files": {
+    "README.md": "e86f3619a2da4c9b7207d2861d6548ac3f18ad4b0a7051f42e63691ad7ae6726",
+    "initial-reference.png": "bbb31eac0b551ceb79eed9c25eca04bb56bcae8bb8fa26445f3042d2cb889c7b",
+    "original/Bold-at.glif": "9706dfe4ce1cc9ba96faa76b465f97ac8855e54be5bf930c22e373e12f2a669e",
+    "original/Regular-at.glif": "c0d03df0657e0643d2bba89fdf8e091efeed7025c782eabb9348bc95a39673d2",
+    "candidate-r4/Regular-widths.json": "c726c92286c0ba08f0d2c4f607091e00963c0fc4b917adaf6cc4f32d9e1c9bd7",
+    "candidate-r4/Bold-widths.json": "10033d17cceacee74d14e2bac0ca6233345bdcd101e44cdbf46ed3c989f0b92a",
+    "candidate-r4/Bold-at.glif": "d4f09976efca107b1404696c725b7456eefc11ab773394cb0aa445034d4e495e",
+    "candidate-r4/review.png": "68265508aef15694c817423b1056e15d1389d65ebd4d14addbf7d230b87e7f36",
+    "candidate-r4/checks.json": "5ba60a2802605da0089853ba8ebcd0518d74a326a211f1e65e925a7839fc008c",
+    "candidate-r4/Regular-pairs.json": "f4f3e6d1c302872eb43a877325d369672ae7feb57e7c6e2902c17796330ecc37",
+    "candidate-r4/comb.png": "c388ac98028cc46ad1e1a21f496e02715673c2066a9b0c352aa6951681ea8de8",
+    "candidate-r4/grid.json": "0fe04b4a0fcfe10934080ced61ddb0b079def33cdd278634ab0eddb3519551c3",
+    "candidate-r4/Bold-pairs.json": "1e937649296f16def10eecdf791d03045942a363f0a72acc32cd22f63a1a2fc5",
+    "candidate-r4/Regular-at.glif": "723dc17894ae940f3bd3c4b3b77c4a44782aa4fdedda45b7c59aa2a8560a256f",
+    "candidate-r4/redraw.json": "a16d6bd76027ff874b46969f452ae12af3560c2b13018e7436e58b073b84bcbb",
+    "candidate-r4/interpolation-crossings.json": "d75f58d23b9150250a6e5ddb6d5ecffeadbba9a8dcd8abfdadb16591c5ea5f02",
+    "rejected-r3/Bold-at.glif": "e522594d97f565ad6998676a496cde87449aeac109325cf98cc3bc3e949f058f",
+    "rejected-r3/Regular-at.glif": "5378f5a11db30f8a300a922bbccaa2e435cbd6e2ba03606aa50950da5668789d",
+    "rejected-r2/Bold-at.glif": "cd0a9018f0d9523e6a0d4f3a23cbc7375f4a81c5d4aa484f669e3584aa5921a1",
+    "rejected-r2/Regular-at.glif": "40385da74412a84c598f23810c927b7b2897e5b507aecdedeb5145af872fa5a0",
+    "application/preflight.log": "02fb0e3d36d9caf6f1ea3545a73b3df1e38e59925544f4e9f8603400615650de",
+    "application/verification.json": "cc0fdc8e4582051fcf96bb6ad471195e00ff94b50c3fa751179f23529d0acea8",
+    "application/application.json": "03f54e83f7afc23f465c099dbcd9abb37715a518975a400e6167e47c4455c701"
+  }
+}

@@ -494,3 +494,50 @@ slope) — a slight arm taper toward the apex is acceptable; don't "fix" it.
   compatibility check catch both; never skip them on unions.
 - Dollar params from the n$ sheet: bar 64/104 wide, y -96..848, centered
   on the S ink; body = the green S verbatim.
+
+## 2026-10-23 — Double-spiral @ correction (Eli)
+
+- The first OpenAI/img2bez candidate kept the requested smaller a and double
+  spiral, but lost the a's iconic italic slant. Eli explicitly requires that
+  slant to survive. Preserve characteristic subform angles when changing size
+  or surrounding topology; include them explicitly in image prompts.
+- Eli also rejected lumpy/bumpy loops despite compatible masters and a clean
+  draft grid. Smooth the traced curves while preserving the overall form;
+  absence of sampled reversals is not evidence of satisfactory curvature.
+- Scope is this scratch at experiment in both masters, not a universal italic
+  angle or permission to alter other glyphs. Evidence and feedback:
+  `agent-proofs/FEEDBACK.md`, supervised double-spiral correction 01; exact
+  first-candidate sources and revised proofs in
+  `.glyph-ai-runs/at-double-spiral-2026-10-23/revision2/`.
+
+## 2026-10-23 — @ revision 2 still lumpy (Eli)
+
+- Eli says everything else is good, but rejects the uneven weight/lumpiness.
+  Retain the smaller italic a and double spiral; do not record this as drawing
+  approval. See `agent-proofs/FEEDBACK.md`, correction 02.
+- The agent's individual-edge curvature optimization omitted opposing-edge
+  thickness and locked every traced spiral node. Local geometric inspection
+  confirms width variation remains; clean joins and absence of reversals did
+  not justify describing the result as smooth.
+- Before a next candidate, inspect the filled stroke as a whole, pair opposing
+  edges, and diagnose their thickness together. Use combs/continuity to locate
+  faults, not to overrule visible uneven mass. Preserve overall form without
+  freezing trace errors. Research, exact source hashes and measured comparisons:
+  `.glyph-ai-runs/at-double-spiral-2026-10-23/weight-diagnosis/`.
+
+## 2026-10-23 — at: paired widths did not repair broad flow
+
+**Correction:** Eli rejected revision3 as still lumpy after the width-aware
+repair. He authorized redrawing the broad spiral while preserving the smaller
+italic a, double-loop topology and scratch-only boundary. The selected original
+at supplies the smoothness standard. Keep r2 and r3 as negative examples.
+
+**Lesson:** accepted identity does not freeze accidental traced turning points.
+Review whole-turn flow separately from paired mass and adjacent joins. When
+local smoothing keeps failing, reconstruct the broad path within scope, then
+recheck both edges after grid rounding. Neither constant width nor all-G2 is
+an optical target. [AT-001](../../../agent-proofs/cases/at-001/README.md) retains
+hash-bound rejected examples and r4, which Eli judged “better, but still bad”
+and asked to apply for hand editing. No positive optical label exists. Canonical workflow: `harness/RUNBOOK-codex.md` broad-curve gate and
+`draw-outline/references/curve-quality.md`. The new read-only width diagnostic
+requires explicit branch pairs and never grades or edits the source.
