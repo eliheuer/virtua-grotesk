@@ -3,7 +3,6 @@
 	<unicode hex="0679"/>
 	<advance width="944"/>
 	<outline>
-		<component base="behDotless-ar"/>
 		<contour>
 			<point x="360" y="352" type="line"/>
 			<point x="520" y="352" type="line" smooth="yes"/>
@@ -34,6 +33,7 @@
 			<point x="544" y="400"/>
 			<point x="520" y="400" type="curve" smooth="yes"/>
 		</contour>
+		<component base="behDotless-ar"/>
 	</outline>
 	<anchor name="top" x="472" y="624"/>
 	<anchor name="topDots" x="472" y="576"/>

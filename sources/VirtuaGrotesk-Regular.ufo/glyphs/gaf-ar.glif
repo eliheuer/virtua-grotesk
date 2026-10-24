@@ -3,7 +3,6 @@
 	<unicode hex="06AF"/>
 	<advance width="960"/>
 	<outline>
-		<component base="keheh-ar"/>
 		<contour>
 			<point x="464" y="592" type="line"/>
 			<point x="880" y="832" type="line"/>
@@ -14,6 +13,7 @@
 			<point x="448" y="624" type="line"/>
 			<point x="448" y="608" type="line"/>
 		</contour>
+		<component base="keheh-ar"/>
 	</outline>
 	<anchor name="bottom" x="447" y="854"/>
 	<anchor name="bottomDots" x="447" y="854"/>

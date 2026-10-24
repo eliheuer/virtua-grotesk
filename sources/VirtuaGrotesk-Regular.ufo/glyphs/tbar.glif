@@ -3,7 +3,6 @@
 	<unicode hex="0167"/>
 	<advance width="376"/>
 	<outline>
-		<component base="t"/>
 		<contour>
 			<point x="48" y="288" type="line"/>
 			<point x="328" y="288" type="line"/>
@@ -14,6 +13,7 @@
 			<point x="32" y="336" type="line"/>
 			<point x="32" y="304" type="line"/>
 		</contour>
+		<component base="t"/>
 	</outline>
 	<anchor name="top" x="168" y="696"/>
 	<anchor name="bottom" x="168" y="0"/>
