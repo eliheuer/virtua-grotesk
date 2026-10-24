@@ -8,6 +8,8 @@
 	<string>A_.glif</string>
 	<key>AE</key>
 	<string>A_E.glif</string>
+	<key>AEacute</key>
+	<string>A_E_acute.glif</string>
 	<key>Aacute</key>
 	<string>A_acute.glif</string>
 	<key>Abreve</key>
@@ -38,6 +40,8 @@
 	<string>C_caron.glif</string>
 	<key>Ccedilla</key>
 	<string>C_cedilla.glif</string>
+	<key>Ccircumflex</key>
+	<string>C_circumflex.glif</string>
 	<key>Cdotaccent</key>
 	<string>C_dotaccent.glif</string>
 	<key>D</key>
@@ -124,6 +128,8 @@
 	<string>G_breve.glif</string>
 	<key>Gcaron</key>
 	<string>G_caron.glif</string>
+	<key>Gcircumflex</key>
+	<string>G_circumflex.glif</string>
 	<key>Gcommaaccent</key>
 	<string>G_commaaccent.glif</string>
 	<key>Gdotaccent</key>
@@ -136,6 +142,8 @@
 	<string>H_bar.glif</string>
 	<key>Hcaron</key>
 	<string>H_caron.glif</string>
+	<key>Hcircumflex</key>
+	<string>H_circumflex.glif</string>
 	<key>I</key>
 	<string>I_.glif</string>
 	<key>IJ</key>
@@ -160,6 +168,8 @@
 	<string>I_tilde.glif</string>
 	<key>J</key>
 	<string>J_.glif</string>
+	<key>Jcircumflex</key>
+	<string>J_circumflex.glif</string>
 	<key>K</key>
 	<string>K_.glif</string>
 	<key>Kcaron</key>
@@ -240,6 +250,8 @@
 	<string>S_commaaccent.glif</string>
 	<key>T</key>
 	<string>T_.glif</string>
+	<key>Tbar</key>
+	<string>T_bar.glif</string>
 	<key>Tcaron</key>
 	<string>T_caron.glif</string>
 	<key>Tcedilla</key>
@@ -324,6 +336,8 @@
 	<string>adieresis.glif</string>
 	<key>ae</key>
 	<string>ae.glif</string>
+	<key>aeacute</key>
+	<string>aeacute.glif</string>
 	<key>agrave</key>
 	<string>agrave.glif</string>
 	<key>ain-ar</key>
@@ -454,6 +468,8 @@
 	<string>breve.glif</string>
 	<key>brevecomb</key>
 	<string>brevecomb.glif</string>
+	<key>brokenbar</key>
+	<string>brokenbar.glif</string>
 	<key>bullet</key>
 	<string>bullet.glif</string>
 	<key>c</key>
@@ -470,6 +486,8 @@
 	<string>ccaron.glif</string>
 	<key>ccedilla</key>
 	<string>ccedilla.glif</string>
+	<key>ccircumflex</key>
+	<string>ccircumflex.glif</string>
 	<key>cdotaccent</key>
 	<string>cdotaccent.glif</string>
 	<key>cedilla</key>
@@ -492,8 +510,12 @@
 	<string>commaaccent.glif</string>
 	<key>commaaccentcomb</key>
 	<string>commaaccentcomb.glif</string>
+	<key>commaturnedabovecomb</key>
+	<string>commaturnedabovecomb.glif</string>
 	<key>copyright</key>
 	<string>copyright.glif</string>
+	<key>currency</key>
+	<string>currency.glif</string>
 	<key>d</key>
 	<string>d.glif</string>
 	<key>dad-ar</key>
@@ -580,6 +602,8 @@
 	<string>eight_tf.glif</string>
 	<key>eightFarsi-ar</key>
 	<string>eightFarsi-ar.glif</string>
+	<key>eightsuperior</key>
+	<string>eightsuperior.glif</string>
 	<key>ellipsis</key>
 	<string>ellipsis.glif</string>
 	<key>emacron</key>
@@ -650,6 +674,8 @@
 	<string>fehThreedotsbelow-ar.init.glif</string>
 	<key>fehThreedotsbelow-ar.medi</key>
 	<string>fehThreedotsbelow-ar.medi.glif</string>
+	<key>fi</key>
+	<string>fi.glif</string>
 	<key>finalkaf-hb</key>
 	<string>finalkaf-hb.glif</string>
 	<key>finalkafdagesh-hb</key>
@@ -672,6 +698,12 @@
 	<string>five_tf.glif</string>
 	<key>fiveFarsi-ar</key>
 	<string>fiveFarsi-ar.glif</string>
+	<key>fivesuperior</key>
+	<string>fivesuperior.glif</string>
+	<key>fl</key>
+	<string>fl.glif</string>
+	<key>florin</key>
+	<string>florin.glif</string>
 	<key>four</key>
 	<string>four.glif</string>
 	<key>four-ar</key>
@@ -680,6 +712,8 @@
 	<string>four_tf.glif</string>
 	<key>fourFarsi-ar</key>
 	<string>fourFarsi-ar.glif</string>
+	<key>foursuperior</key>
+	<string>foursuperior.glif</string>
 	<key>fullStop-ar</key>
 	<string>fullStop-ar.glif</string>
 	<key>g</key>
@@ -700,6 +734,8 @@
 	<string>gbreve.glif</string>
 	<key>gcaron</key>
 	<string>gcaron.glif</string>
+	<key>gcircumflex</key>
+	<string>gcircumflex.glif</string>
 	<key>gcommaaccent</key>
 	<string>gcommaaccent.glif</string>
 	<key>gdotaccent</key>
@@ -728,6 +764,8 @@
 	<string>gravecomb.glif</string>
 	<key>greater</key>
 	<string>greater.glif</string>
+	<key>greaterequal</key>
+	<string>greaterequal.glif</string>
 	<key>guillemetleft</key>
 	<string>guillemetleft.glif</string>
 	<key>guillemetright</key>
@@ -776,6 +814,8 @@
 	<string>hbar.glif</string>
 	<key>hcaron</key>
 	<string>hcaron.glif</string>
+	<key>hcircumflex</key>
+	<string>hcircumflex.glif</string>
 	<key>he-hb</key>
 	<string>he-hb.glif</string>
 	<key>hedagesh-hb</key>
@@ -852,6 +892,8 @@
 	<string>itilde.glif</string>
 	<key>j</key>
 	<string>j.glif</string>
+	<key>jcircumflex</key>
+	<string>jcircumflex.glif</string>
 	<key>jdotless</key>
 	<string>jdotless.glif</string>
 	<key>jeem-ar</key>
@@ -906,6 +948,8 @@
 	<string>kehehThreedotsabove-ar.init.glif</string>
 	<key>kehehThreedotsabove-ar.medi</key>
 	<string>kehehThreedotsabove-ar.medi.glif</string>
+	<key>kgreenlandic</key>
+	<string>kgreenlandic.glif</string>
 	<key>khah-ar</key>
 	<string>khah-ar.glif</string>
 	<key>khah-ar.fina</key>
@@ -958,6 +1002,12 @@
 	<string>ldot.glif</string>
 	<key>less</key>
 	<string>less.glif</string>
+	<key>lessequal</key>
+	<string>lessequal.glif</string>
+	<key>logicalnot</key>
+	<string>logicalnot.glif</string>
+	<key>longs</key>
+	<string>longs.glif</string>
 	<key>lslash</key>
 	<string>lslash.glif</string>
 	<key>m</key>
@@ -988,12 +1038,16 @@
 	<string>miniK_eheh-ar.glif</string>
 	<key>minus</key>
 	<string>minus.glif</string>
+	<key>mu</key>
+	<string>mu.glif</string>
 	<key>multiply</key>
 	<string>multiply.glif</string>
 	<key>n</key>
 	<string>n.glif</string>
 	<key>nacute</key>
 	<string>nacute.glif</string>
+	<key>napostrophe</key>
+	<string>napostrophe.glif</string>
 	<key>ncaron</key>
 	<string>ncaron.glif</string>
 	<key>ncommaaccent</key>
@@ -1006,6 +1060,8 @@
 	<string>nine_tf.glif</string>
 	<key>nineFarsi-ar</key>
 	<string>nineFarsi-ar.glif</string>
+	<key>ninesuperior</key>
+	<string>ninesuperior.glif</string>
 	<key>noon-ar</key>
 	<string>noon-ar.glif</string>
 	<key>noon-ar.fina</key>
@@ -1020,6 +1076,8 @@
 	<string>noonghunna-ar.glif</string>
 	<key>noonghunna-ar.fina</key>
 	<string>noonghunna-ar.fina.glif</string>
+	<key>notequal</key>
+	<string>notequal.glif</string>
 	<key>ntilde</key>
 	<string>ntilde.glif</string>
 	<key>numbersign</key>
@@ -1058,6 +1116,8 @@
 	<string>one_tf.glif</string>
 	<key>oneFarsi-ar</key>
 	<string>oneFarsi-ar.glif</string>
+	<key>onesuperior</key>
+	<string>onesuperior.glif</string>
 	<key>ordfeminine</key>
 	<string>ordfeminine.glif</string>
 	<key>ordmasculine</key>
@@ -1110,6 +1170,8 @@
 	<string>periodcentered.loclCAT.case.glif</string>
 	<key>plus</key>
 	<string>plus.glif</string>
+	<key>plusminus</key>
+	<string>plusminus.glif</string>
 	<key>q</key>
 	<string>q.glif</string>
 	<key>qaf-ar</key>
@@ -1256,6 +1318,8 @@
 	<string>seven_tf.glif</string>
 	<key>sevenFarsi-ar</key>
 	<string>sevenFarsi-ar.glif</string>
+	<key>sevensuperior</key>
+	<string>sevensuperior.glif</string>
 	<key>shadda-ar</key>
 	<string>shadda-ar.glif</string>
 	<key>shaddaAlefabove-ar</key>
@@ -1308,18 +1372,34 @@
 	<string>six_tf.glif</string>
 	<key>sixFarsi-ar</key>
 	<string>sixFarsi-ar.glif</string>
+	<key>sixsuperior</key>
+	<string>sixsuperior.glif</string>
 	<key>slash</key>
 	<string>slash.glif</string>
+	<key>slashlongcomb</key>
+	<string>slashlongcomb.glif</string>
+	<key>slashlongcomb.narrow</key>
+	<string>slashlongcomb.narrow.glif</string>
+	<key>slashshortcomb</key>
+	<string>slashshortcomb.glif</string>
+	<key>slashshortcomb.narrow</key>
+	<string>slashshortcomb.narrow.glif</string>
 	<key>smallHighTah-ar</key>
 	<string>smallHighTah-ar.glif</string>
 	<key>smallHighThreeDots-ar</key>
 	<string>smallHighThreeDots-ar.glif</string>
 	<key>smallHighZain-ar</key>
 	<string>smallHighZain-ar.glif</string>
+	<key>softhyphen</key>
+	<string>softhyphen.glif</string>
 	<key>space</key>
 	<string>space.glif</string>
 	<key>sterling</key>
 	<string>sterling.glif</string>
+	<key>strokeshortcomb</key>
+	<string>strokeshortcomb.glif</string>
+	<key>strokeshortcomb.narrow</key>
+	<string>strokeshortcomb.narrow.glif</string>
 	<key>sukun-ar</key>
 	<string>sukun-ar.glif</string>
 	<key>t</key>
@@ -1336,6 +1416,8 @@
 	<string>tav-hb.glif</string>
 	<key>tavdagesh-hb</key>
 	<string>tavdagesh-hb.glif</string>
+	<key>tbar</key>
+	<string>tbar.glif</string>
 	<key>tcaron</key>
 	<string>tcaron.glif</string>
 	<key>tcedilla</key>
@@ -1420,6 +1502,8 @@
 	<string>threedotsupabove-ar.glif</string>
 	<key>threedotsupbelow-ar</key>
 	<string>threedotsupbelow-ar.glif</string>
+	<key>threesuperior</key>
+	<string>threesuperior.glif</string>
 	<key>tilde</key>
 	<string>tilde.glif</string>
 	<key>tildecomb</key>
@@ -1464,6 +1548,8 @@
 	<string>twodotsverticalabove-ar.glif</string>
 	<key>twodotsverticalbelow-ar</key>
 	<string>twodotsverticalbelow-ar.glif</string>
+	<key>twosuperior</key>
+	<string>twosuperior.glif</string>
 	<key>u</key>
 	<string>u.glif</string>
 	<key>uacute</key>
@@ -1740,93 +1826,7 @@
 	<string>zero_tf.glif</string>
 	<key>zeroFarsi-ar</key>
 	<string>zeroFarsi-ar.glif</string>
-	<key>Ccircumflex</key>
-	<string>C_circumflex.glif</string>
-	<key>ccircumflex</key>
-	<string>ccircumflex.glif</string>
-	<key>Gcircumflex</key>
-	<string>G_circumflex.glif</string>
-	<key>gcircumflex</key>
-	<string>gcircumflex.glif</string>
-	<key>Hcircumflex</key>
-	<string>H_circumflex.glif</string>
-	<key>hcircumflex</key>
-	<string>hcircumflex.glif</string>
-	<key>Jcircumflex</key>
-	<string>J_circumflex.glif</string>
-	<key>jcircumflex</key>
-	<string>jcircumflex.glif</string>
-	<key>AEacute</key>
-	<string>A_E_acute.glif</string>
-	<key>aeacute</key>
-	<string>aeacute.glif</string>
-	<key>Tbar</key>
-	<string>T_bar.glif</string>
-	<key>tbar</key>
-	<string>tbar.glif</string>
-	<key>longs</key>
-	<string>longs.glif</string>
-	<key>florin</key>
-	<string>florin.glif</string>
-	<key>kgreenlandic</key>
-	<string>kgreenlandic.glif</string>
-	<key>napostrophe</key>
-	<string>napostrophe.glif</string>
-	<key>fi</key>
-	<string>fi.glif</string>
-	<key>fl</key>
-	<string>fl.glif</string>
-	<key>commaturnedabovecomb</key>
-	<string>commaturnedabovecomb.glif</string>
-	<key>strokeshortcomb</key>
-	<string>strokeshortcomb.glif</string>
-	<key>strokeshortcomb.narrow</key>
-	<string>strokeshortcomb.narrow.glif</string>
-	<key>slashshortcomb</key>
-	<string>slashshortcomb.glif</string>
-	<key>slashshortcomb.narrow</key>
-	<string>slashshortcomb.narrow.glif</string>
-	<key>slashlongcomb</key>
-	<string>slashlongcomb.glif</string>
-	<key>slashlongcomb.narrow</key>
-	<string>slashlongcomb.narrow.glif</string>
-	<key>notequal</key>
-	<string>notequal.glif</string>
-	<key>lessequal</key>
-	<string>lessequal.glif</string>
-	<key>greaterequal</key>
-	<string>greaterequal.glif</string>
-	<key>plusminus</key>
-	<string>plusminus.glif</string>
-	<key>logicalnot</key>
-	<string>logicalnot.glif</string>
-	<key>brokenbar</key>
-	<string>brokenbar.glif</string>
-	<key>softhyphen</key>
-	<string>softhyphen.glif</string>
-	<key>currency</key>
-	<string>currency.glif</string>
-	<key>onesuperior</key>
-	<string>onesuperior.glif</string>
-	<key>twosuperior</key>
-	<string>twosuperior.glif</string>
-	<key>threesuperior</key>
-	<string>threesuperior.glif</string>
 	<key>zerosuperior</key>
 	<string>zerosuperior.glif</string>
-	<key>foursuperior</key>
-	<string>foursuperior.glif</string>
-	<key>fivesuperior</key>
-	<string>fivesuperior.glif</string>
-	<key>sixsuperior</key>
-	<string>sixsuperior.glif</string>
-	<key>ninesuperior</key>
-	<string>ninesuperior.glif</string>
-	<key>sevensuperior</key>
-	<string>sevensuperior.glif</string>
-	<key>eightsuperior</key>
-	<string>eightsuperior.glif</string>
-	<key>mu</key>
-	<string>mu.glif</string>
 </dict>
 </plist>

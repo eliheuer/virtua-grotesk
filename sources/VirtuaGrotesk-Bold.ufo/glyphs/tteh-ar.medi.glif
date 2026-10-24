@@ -2,7 +2,6 @@
 <glyph name="tteh-ar.medi" format="2">
 	<advance width="416"/>
 	<outline>
-		<component base="behDotless-ar.medi"/>
 		<contour>
 			<point x="88" y="408" type="line"/>
 			<point x="248" y="408" type="line" smooth="yes"/>
@@ -33,6 +32,7 @@
 			<point x="272" y="464"/>
 			<point x="248" y="464" type="curve" smooth="yes"/>
 		</contour>
+		<component base="behDotless-ar.medi"/>
 	</outline>
 	<anchor name="bottomDots" x="240" y="24"/>
 	<anchor name="top" x="208" y="696"/>

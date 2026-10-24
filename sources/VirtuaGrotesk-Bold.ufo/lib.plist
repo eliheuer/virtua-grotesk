@@ -479,97 +479,11 @@
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
-		<key>mu</key>
-		<string>base</string>
-		<key>eightsuperior</key>
-		<string>base</string>
-		<key>sevensuperior</key>
-		<string>base</string>
-		<key>ninesuperior</key>
-		<string>base</string>
-		<key>sixsuperior</key>
-		<string>base</string>
-		<key>fivesuperior</key>
-		<string>base</string>
-		<key>foursuperior</key>
-		<string>base</string>
-		<key>zerosuperior</key>
-		<string>base</string>
-		<key>onesuperior</key>
-		<string>base</string>
-		<key>twosuperior</key>
-		<string>base</string>
-		<key>threesuperior</key>
-		<string>base</string>
-		<key>currency</key>
-		<string>base</string>
-		<key>softhyphen</key>
-		<string>base</string>
-		<key>brokenbar</key>
-		<string>base</string>
-		<key>plusminus</key>
-		<string>base</string>
-		<key>logicalnot</key>
-		<string>base</string>
-		<key>lessequal</key>
-		<string>base</string>
-		<key>greaterequal</key>
-		<string>base</string>
-		<key>notequal</key>
-		<string>base</string>
-		<key>slashlongcomb</key>
-		<string>mark</string>
-		<key>slashlongcomb.narrow</key>
-		<string>mark</string>
-		<key>slashshortcomb</key>
-		<string>mark</string>
-		<key>slashshortcomb.narrow</key>
-		<string>mark</string>
-		<key>strokeshortcomb</key>
-		<string>mark</string>
-		<key>strokeshortcomb.narrow</key>
-		<string>mark</string>
-		<key>commaturnedabovecomb</key>
-		<string>mark</string>
-		<key>fi</key>
-		<string>ligature</string>
-		<key>fl</key>
-		<string>ligature</string>
-		<key>napostrophe</key>
-		<string>base</string>
-		<key>kgreenlandic</key>
-		<string>base</string>
-		<key>florin</key>
-		<string>base</string>
-		<key>longs</key>
-		<string>base</string>
-		<key>Tbar</key>
-		<string>base</string>
-		<key>tbar</key>
-		<string>base</string>
-		<key>Ccircumflex</key>
-		<string>base</string>
-		<key>ccircumflex</key>
-		<string>base</string>
-		<key>Gcircumflex</key>
-		<string>base</string>
-		<key>gcircumflex</key>
-		<string>base</string>
-		<key>Hcircumflex</key>
-		<string>base</string>
-		<key>hcircumflex</key>
-		<string>base</string>
-		<key>Jcircumflex</key>
-		<string>base</string>
-		<key>jcircumflex</key>
-		<string>base</string>
-		<key>AEacute</key>
-		<string>base</string>
-		<key>aeacute</key>
-		<string>base</string>
 		<key>A</key>
 		<string>base</string>
 		<key>AE</key>
+		<string>base</string>
+		<key>AEacute</key>
 		<string>base</string>
 		<key>Aacute</key>
 		<string>base</string>
@@ -600,6 +514,8 @@
 		<key>Ccaron</key>
 		<string>base</string>
 		<key>Ccedilla</key>
+		<string>base</string>
+		<key>Ccircumflex</key>
 		<string>base</string>
 		<key>Cdotaccent</key>
 		<string>base</string>
@@ -643,6 +559,8 @@
 		<string>base</string>
 		<key>Gcaron</key>
 		<string>base</string>
+		<key>Gcircumflex</key>
+		<string>base</string>
 		<key>Gcommaaccent</key>
 		<string>base</string>
 		<key>Gdotaccent</key>
@@ -654,6 +572,8 @@
 		<key>Hbar</key>
 		<string>base</string>
 		<key>Hcaron</key>
+		<string>base</string>
+		<key>Hcircumflex</key>
 		<string>base</string>
 		<key>I</key>
 		<string>base</string>
@@ -678,6 +598,8 @@
 		<key>Itilde</key>
 		<string>base</string>
 		<key>J</key>
+		<string>base</string>
+		<key>Jcircumflex</key>
 		<string>base</string>
 		<key>K</key>
 		<string>base</string>
@@ -758,6 +680,8 @@
 		<key>Scommaaccent</key>
 		<string>base</string>
 		<key>T</key>
+		<string>base</string>
+		<key>Tbar</key>
 		<string>base</string>
 		<key>Tcaron</key>
 		<string>base</string>
@@ -840,6 +764,8 @@
 		<key>adieresis</key>
 		<string>base</string>
 		<key>ae</key>
+		<string>base</string>
+		<key>aeacute</key>
 		<string>base</string>
 		<key>agrave</key>
 		<string>base</string>
@@ -937,6 +863,8 @@
 		<string>base</string>
 		<key>brevecomb</key>
 		<string>mark</string>
+		<key>brokenbar</key>
+		<string>base</string>
 		<key>c</key>
 		<string>base</string>
 		<key>cacute</key>
@@ -948,6 +876,8 @@
 		<key>ccaron</key>
 		<string>base</string>
 		<key>ccedilla</key>
+		<string>base</string>
+		<key>ccircumflex</key>
 		<string>base</string>
 		<key>cdotaccent</key>
 		<string>base</string>
@@ -961,6 +891,10 @@
 		<string>base</string>
 		<key>commaaccentcomb</key>
 		<string>mark</string>
+		<key>commaturnedabovecomb</key>
+		<string>mark</string>
+		<key>currency</key>
+		<string>base</string>
 		<key>d</key>
 		<string>base</string>
 		<key>dad-ar</key>
@@ -1025,6 +959,8 @@
 		<string>base</string>
 		<key>eight-ar</key>
 		<string>base</string>
+		<key>eightsuperior</key>
+		<string>base</string>
 		<key>emacron</key>
 		<string>base</string>
 		<key>eng</key>
@@ -1081,6 +1017,8 @@
 		<string>base</string>
 		<key>fehThreedotsbelow-ar.medi</key>
 		<string>base</string>
+		<key>fi</key>
+		<string>ligature</string>
 		<key>finalkaf-hb</key>
 		<string>base</string>
 		<key>finalkafdagesh-hb</key>
@@ -1099,9 +1037,17 @@
 		<string>base</string>
 		<key>fiveFarsi-ar</key>
 		<string>base</string>
+		<key>fivesuperior</key>
+		<string>base</string>
+		<key>fl</key>
+		<string>ligature</string>
+		<key>florin</key>
+		<string>base</string>
 		<key>four-ar</key>
 		<string>base</string>
 		<key>fourFarsi-ar</key>
+		<string>base</string>
+		<key>foursuperior</key>
 		<string>base</string>
 		<key>g</key>
 		<string>base</string>
@@ -1116,6 +1062,8 @@
 		<key>gbreve</key>
 		<string>base</string>
 		<key>gcaron</key>
+		<string>base</string>
+		<key>gcircumflex</key>
 		<string>base</string>
 		<key>gcommaaccent</key>
 		<string>base</string>
@@ -1137,6 +1085,8 @@
 		<string>base</string>
 		<key>gravecomb</key>
 		<string>mark</string>
+		<key>greaterequal</key>
+		<string>base</string>
 		<key>h</key>
 		<string>base</string>
 		<key>hah-ar</key>
@@ -1176,6 +1126,8 @@
 		<key>hbar</key>
 		<string>base</string>
 		<key>hcaron</key>
+		<string>base</string>
+		<key>hcircumflex</key>
 		<string>base</string>
 		<key>he-hb</key>
 		<string>base</string>
@@ -1249,6 +1201,8 @@
 		<string>base</string>
 		<key>j</key>
 		<string>base</string>
+		<key>jcircumflex</key>
+		<string>base</string>
 		<key>jdotless</key>
 		<string>base</string>
 		<key>jeem-ar</key>
@@ -1303,6 +1257,8 @@
 		<string>base</string>
 		<key>kehehThreedotsabove-ar.medi</key>
 		<string>base</string>
+		<key>kgreenlandic</key>
+		<string>base</string>
 		<key>khah-ar</key>
 		<string>base</string>
 		<key>khah-ar.fina</key>
@@ -1353,6 +1309,12 @@
 		<string>base</string>
 		<key>ldot</key>
 		<string>base</string>
+		<key>lessequal</key>
+		<string>base</string>
+		<key>logicalnot</key>
+		<string>base</string>
+		<key>longs</key>
+		<string>base</string>
 		<key>lslash</key>
 		<string>base</string>
 		<key>m</key>
@@ -1375,15 +1337,21 @@
 		<string>base</string>
 		<key>memdagesh-hb</key>
 		<string>base</string>
+		<key>mu</key>
+		<string>base</string>
 		<key>n</key>
 		<string>base</string>
 		<key>nacute</key>
+		<string>base</string>
+		<key>napostrophe</key>
 		<string>base</string>
 		<key>ncaron</key>
 		<string>base</string>
 		<key>ncommaaccent</key>
 		<string>base</string>
 		<key>nine-ar</key>
+		<string>base</string>
+		<key>ninesuperior</key>
 		<string>base</string>
 		<key>noon-ar</key>
 		<string>base</string>
@@ -1398,6 +1366,8 @@
 		<key>noonghunna-ar</key>
 		<string>base</string>
 		<key>noonghunna-ar.fina</key>
+		<string>base</string>
+		<key>notequal</key>
 		<string>base</string>
 		<key>ntilde</key>
 		<string>base</string>
@@ -1427,6 +1397,8 @@
 		<string>base</string>
 		<key>one-ar</key>
 		<string>base</string>
+		<key>onesuperior</key>
+		<string>base</string>
 		<key>ordfeminine</key>
 		<string>base</string>
 		<key>ordmasculine</key>
@@ -1454,6 +1426,8 @@
 		<key>peh-ar.medi</key>
 		<string>base</string>
 		<key>perMille-ar</key>
+		<string>base</string>
+		<key>plusminus</key>
 		<string>base</string>
 		<key>q</key>
 		<string>base</string>
@@ -1565,6 +1539,8 @@
 		<string>base</string>
 		<key>seven-ar</key>
 		<string>base</string>
+		<key>sevensuperior</key>
+		<string>base</string>
 		<key>shadda-ar</key>
 		<string>mark</string>
 		<key>shaddaAlefabove-ar</key>
@@ -1609,11 +1585,27 @@
 		<string>mark</string>
 		<key>six-ar</key>
 		<string>base</string>
+		<key>sixsuperior</key>
+		<string>base</string>
+		<key>slashlongcomb</key>
+		<string>mark</string>
+		<key>slashlongcomb.narrow</key>
+		<string>mark</string>
+		<key>slashshortcomb</key>
+		<string>mark</string>
+		<key>slashshortcomb.narrow</key>
+		<string>mark</string>
 		<key>smallHighTah-ar</key>
 		<string>mark</string>
 		<key>smallHighThreeDots-ar</key>
 		<string>mark</string>
 		<key>smallHighZain-ar</key>
+		<string>mark</string>
+		<key>softhyphen</key>
+		<string>base</string>
+		<key>strokeshortcomb</key>
+		<string>mark</string>
+		<key>strokeshortcomb.narrow</key>
 		<string>mark</string>
 		<key>sukun-ar</key>
 		<string>mark</string>
@@ -1630,6 +1622,8 @@
 		<key>tav-hb</key>
 		<string>base</string>
 		<key>tavdagesh-hb</key>
+		<string>base</string>
+		<key>tbar</key>
 		<string>base</string>
 		<key>tcaron</key>
 		<string>base</string>
@@ -1699,6 +1693,8 @@
 		<string>base</string>
 		<key>three-ar</key>
 		<string>base</string>
+		<key>threesuperior</key>
+		<string>base</string>
 		<key>tildecomb</key>
 		<string>mark</string>
 		<key>tsadi-hb</key>
@@ -1722,6 +1718,8 @@
 		<key>tteheh-ar.medi</key>
 		<string>base</string>
 		<key>two-ar</key>
+		<string>base</string>
+		<key>twosuperior</key>
 		<string>base</string>
 		<key>u</key>
 		<string>base</string>
@@ -1956,6 +1954,8 @@
 		<key>zdotaccent</key>
 		<string>base</string>
 		<key>zero-ar</key>
+		<string>base</string>
+		<key>zerosuperior</key>
 		<string>base</string>
 	</dict>
 	<key>public.postscriptNames</key>
