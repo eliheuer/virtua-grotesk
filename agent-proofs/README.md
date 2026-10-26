@@ -335,3 +335,23 @@ reading-size context when needed; fix visible faults before continuing.
 See [the raster workflow](app/README.md#whole-font-views-and-image-inspection).
 This is a core check alongside curve diagnostics and compiled shaping, not
 human grading or release approval.
+
+## Keeping review work tidy
+
+Commit source snapshots, review decisions, reproducible scripts and the selected
+proof evidence together. A commit preserves a candidate; it does not approve
+its design or authorize applying it. Do not leave unique review records
+untracked after checkpointing their README.
+
+Latin `batches/*/baseline-fonts-root/` directories are generated adapters
+containing machine-specific symlinks to `baseline-fonts/`. They are ignored;
+the regression scripts recreate them. Keep the underlying frozen baseline
+fonts according to each case's evidence policy. Do not blanket-ignore
+`agent-proofs/`, GLIF snapshots, or new human edits to hide a dirty worktree.
+
+Cleanup on 2026-10-25 preserved the two current hand-edited at sources unchanged
+and checkpointed 111 previously untracked Arabic review artifacts from
+batches 27–29. The batch 29 retry remains unapplied and human-reserved. Thirty-seven
+generated Latin adapters remain on disk but are excluded from Git status.
+No sources were redrawn, fonts rebuilt, or timed loops restarted by this cleanup.
+A clean worktree is a recovery point, not a claim that font quality is resolved.
