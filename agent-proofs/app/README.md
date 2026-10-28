@@ -25,9 +25,64 @@ without starting a server:
 .venv/bin/python agent-proofs/serve.py --check
 ```
 
-Current case: [ARB-006](../cases/arabic-006/README.md), autonomous Arabic first pass.
-Served files are under `agent-proofs/cases/arabic-006/batches/22-keheh-gaf-isolated/working/`.
+Historical fallback case: [ARB-006](../cases/arabic-006/README.md), Arabic first pass.
+The launcher prepares current UI assets in ignored `out/live-proof/`. It remembers
+an explicitly selected prepared snapshot in ignored `out/live-proof-selection.json`;
+without a selection it uses `agent-proofs/cases/arabic-006/handoff/working/`.
+To refresh saved drawings, build, prepare a new snapshot with verified font hashes,
+then restart the proof with `--snapshot <prepared-directory>`. Subsequent
+`make proof-web` runs keep that selection instead of reverting to the old handoff.
+This does not watch UFO saves or rebuild automatically. Historical archives stay unchanged.
 Previous Hebrew snapshots remain in their case folders.
+
+## Shared reference fonts
+
+The live proof and native Runebender both read `reference-fonts/` at the font project's nearest Git root.
+Outside Git, Runebender looks next to the opened font/designspace; an unsaved font has no references.
+Virtua ignores `/reference-fonts/` in Git.
+Put local TTF/OTF files there, with any license files; subdirectories and uppercase font extensions work too.
+Hidden paths, symlinks, webfonts and collections are skipped, and individual fonts are limited to 32 MiB.
+There are no downloaded or bundled defaults.
+This checkout has been seeded with the existing Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro choices and their licenses.
+Other checkouts need their own local files.
+
+Adding, replacing or removing files updates the open live proof about once a second, preserving its mode, text and controls.
+After deliberately preparing different Before/Working snapshots, reload the browser to review those revisions.
+Files are grouped by typographic family (legacy family when absent), OS/2 width class and italic/oblique flag.
+Families are sorted by that identity and identical bytes are deduplicated.
+Weights use the closest supplied weight, lower on a tie; variable weights are clamped to their range and win an otherwise exact static/variable tie.
+Remaining ties use filename order.
+Other reference axes stay at their own defaults, and no synthetic bold or italic is applied.
+A nearest-weight substitution is labeled, while missing character coverage withholds the specimen instead of displaying a system-font substitute.
+The References checkbox hides or shows these same choices in Compare, Toggle, Waterfall and Text; an empty folder hides the checkbox.
+Toggle changes only Before/Working, keeping the references fixed.
+
+The shared convention covers discovery and face selection, not identical rendering or revision sources across the browser and native editor.
+Runebender compares its open document and in-memory Before; this browser proof keeps the recorded Before/Working snapshots.
+Archived reviews remain untouched and reproducible, including their original reference bytes.
+Use `agent-proofs/serve.py --directory <archived-review>` to serve an archive explicitly.
+When preparing a new review, `app/prepare.py` uses the project reference folder by default and copies the selected reference files into the new snapshot.
+Use `--frozen-references` only to reproduce the reference list recorded in an existing evidence manifest.
+Continue to hash and retain those files with the evidence; the ignored live folder is not an archive.
+
+Use `http://127.0.0.1:60272/` for the current live proof. The temporary migration
+server on 60273 has been retired. `make proof-web` reuses a server only when its
+project, proof directory, implementation and font manifest match. If an older
+Virtua server occupies the port, identify and stop that proof process, then rerun
+the command; never stop an unrelated server or silently choose another port.
+`--port` remains available for intentional separate reviews.
+
+Only the generated live cache prunes obsolete `fonts/reference-<sha256>.ttf/otf`
+copies. Current manifest files and startup `review-data.js` references stay
+pinned, including Before/Working. Other obsolete copies get a five-minute grace
+period, measured from discovery and checked on reference polls. Startup references
+become eligible after a subsequent launch replaces the startup manifest. Cleanup
+skips symlinks, files whose bytes do not match their hash name, and incomplete
+manifests. Local originals, licenses, archive snapshots and unrelated files are
+never cleanup targets. The live cache remains disposable, not review evidence.
+
+Reference discovery tests: `.venv/bin/python -m unittest discover -s agent-proofs/app -p 'test_*.py'`.
+Weight selection tests: `node agent-proofs/app/test-reference-selection.cjs`.
 
 ## Arabic base-form samples
 
@@ -51,7 +106,7 @@ cmap, with dotted-circle carriers for marks; it is not an inventory of unencoded
 components or every contextual alternate. Joining samples provide that separate
 context. All scripts covers Latin, Hebrew, Arabic, numerals and mixed runs.
 
-Each section repeats Before, Working and the four Arabic references at one size.
+Each section repeats Before, Working and the locally selected reference families at one size.
 References without coverage show a collapsed missing-codepoint explanation;
 never interpret a system-font fallback as a reference drawing. Weight remains
 adjustable, including both endpoints.
@@ -68,10 +123,9 @@ in chat. Render both endpoints separately with the same em size and baselines:
   --text 'بد د بر ر' --title 'Dal and Reh' --weight 700
 ```
 
-The runner verifies all six font hashes and sample coverage, selects the exact
-Plex endpoint (or explicitly labels its nearest supplied static weight for an
-intermediate request), invokes DesignBot with `--raw`, and writes a JSON receipt beside
-the PNG. The Rust recipe isolates font contexts, checks actual ink bounds and
+The runner verifies every font hash and sample coverage, reads the reference families from the prepared manifest, and labels a nearest supplied static weight when needed.
+It accepts either new project-reference manifests or older frozen manifests, invokes DesignBot with `--raw`, and writes a JSON receipt beside the PNG.
+The Rust recipe grows by rows to fit the chosen families, isolates font contexts, checks actual ink bounds and
 keeps one shared size. Reduce `--size` for a longer sample; do not independently
 fit fonts. This diagnostic uses the current neutral dark palette. It complements
 the interactive proof and curve-comb/continuity checks; an image alone cannot

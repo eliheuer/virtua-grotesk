@@ -160,16 +160,36 @@ function roles() {
   const virtua = !data.fonts.before ? ['after'] : mode === 'switch' ? [before ? 'before' : 'after'] : ['before', 'after'];
   return $('references').checked ? [...virtua, ...Object.keys(data.fonts).filter(role => !['before', 'after'].includes(role))] : virtua;
 }
+function selectedReference(role) {
+  const family = data.fonts[role];
+  if (!family.reference) return null;
+  return ProofReferences.choose(family.faces, clamp($('weight').value, 400, 700, 400));
+}
+function fontStyle(role) {
+  const selected = selectedReference(role);
+  if (!selected) return {fontFamily: `Review-${role}`};
+  const axes = Object.entries(selected.face.axes).map(([tag, values]) =>
+    `"${tag}" ${tag === 'wght' ? selected.weight : values[1]}`);
+  return {fontFamily: `Reference-${selected.face.sha256}`, fontWeight: selected.variable ? String(selected.weight) : '400', fontStyle: 'normal',
+    fontVariationSettings: axes.join(', ') || 'normal'};
+}
+function referenceCaption(role) {
+  const selected = selectedReference(role);
+  const family = data.fonts[role];
+  if (!selected) return family.family;
+  const requested = clamp($('weight').value, 400, 700, 400);
+  return family.family + (selected.weight !== requested ? ` · ${selected.weight} (nearest supplied)` : '');
+}
 function specimen(role, text, size) {
   const box = element('div', undefined, 'sample-viewport');
   box.dir = 'auto';
-  const missing = [...new Set([...text].map(c => c.codePointAt(0)))].filter(cp => !data.fonts[role].codepoints.includes(cp) && ![10, 13, 9].includes(cp));
+  const missing = missingCharacters(role, text);
   if (missing.length) {
     box.append(element('p', 'Not rendered: missing ' + missing.map(cp => 'U+' + cp.toString(16).toUpperCase().padStart(4, '0')).join(', ') + '.', 'missing'));
     return box;
   }
   const line = element('div', undefined, 'sample-line');
-  line.style.fontFamily = `Review-${role}`;
+  Object.assign(line.style, fontStyle(role));
   line.style.fontSize = size + 'px';
   line.lang = studyLanguage; line.dir = 'auto';
   const marker = element('span', undefined, 'baseline-mark'); marker.setAttribute('aria-hidden', 'true');
@@ -179,21 +199,22 @@ function specimen(role, text, size) {
 function panel(role, text, size) {
   const panel = element('article', undefined, 'font-panel'); panel.dataset.role = role;
   const caption = element('header', undefined, 'font-caption');
-  const label = ['before', 'after'].includes(role) ? data.fonts[role].label : data.fonts[role].family;
+  const label = ['before', 'after'].includes(role) ? data.fonts[role].label : referenceCaption(role);
   caption.append(element('h2', label));
   panel.append(caption, specimen(role, text, size));
   return panel;
 }
 function missingCharacters(role, text) {
+  const coverage = selectedReference(role)?.face.codepoints || data.fonts[role].codepoints;
   return [...new Set([...text].map(c => c.codePointAt(0)))].filter(cp =>
-    !data.fonts[role].codepoints.includes(cp) && ![10, 13, 9, 0x061c, 0x200c, 0x200d, 0x200e, 0x200f,
+    !coverage.includes(cp) && ![10, 13, 9, 0x061c, 0x200c, 0x200d, 0x200e, 0x200f,
       0x202a, 0x202b, 0x202c, 0x202d, 0x202e, 0x2066, 0x2067, 0x2068, 0x2069].includes(cp));
 }
 function readingPanel(role, size, paragraphs = readingParagraphs()) {
   const card = panel(role, '', size);
   card.querySelector('.sample-viewport').remove();
   const body = element('div', undefined, 'reading-body');
-  body.style.fontFamily = `Review-${role}`; body.style.fontSize = size + 'px';
+  Object.assign(body.style, fontStyle(role)); body.style.fontSize = size + 'px';
   paragraphs.forEach(paragraph => {
     const text = paragraph.runs.map(run => run.text).join('');
     const missing = missingCharacters(role, text);
@@ -235,7 +256,7 @@ function alignReading(row) {
 function measureRun(role, text, size) {
   const probe = element('div', text, 'sample-line');
   probe.setAttribute('aria-hidden', 'true');
-  Object.assign(probe.style, {fontFamily: `Review-${role}`, fontSize: size + 'px',
+  Object.assign(probe.style, {...fontStyle(role), fontSize: size + 'px',
     position: 'fixed', visibility: 'hidden', whiteSpace: 'pre', width: 'max-content', minWidth: '0'});
   probe.dir = 'auto'; document.body.append(probe);
   const width = probe.getBoundingClientRect().width; probe.remove();
@@ -363,6 +384,7 @@ function syncScroll(row) {
   });
 }
 function render() {
+  $('references').closest('label').hidden = !Object.keys(data.fonts).some(role => !['before', 'after'].includes(role));
   const reading = mode === 'reading';
   const corpus = reading && data.reading[$('reading-sample').value];
   const overview = Boolean(corpus?.overview);
@@ -454,26 +476,81 @@ document.addEventListener('keydown', event => {
   }
 });
 new ResizeObserver(scheduleAlignment).observe(proof);
+const registeredReferences = new Map();
+async function verifiedBytes(font, family) {
+  const response = await fetch(font.url, {cache: 'no-store'});
+  if (!response.ok) throw new Error(`${family}: HTTP ${response.status}`);
+  const bytes = await response.arrayBuffer();
+  const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(b => b.toString(16).padStart(2, '0')).join('');
+  if (hash !== font.sha256) throw new Error(`${family}: font hash differs from the review snapshot`);
+  return bytes;
+}
+async function registerReferences(records) {
+  const valid = {}, errors = [];
+  for (const [role, family] of Object.entries(records)) {
+    const faces = [];
+    for (const font of family.faces) {
+      try {
+        if (!registeredReferences.has(font.sha256)) {
+          const bytes = await verifiedBytes(font, family.family);
+          // A distinct alias per real face avoids synthetic bold/italic and CSS weight matching.
+          const face = new FontFace(`Reference-${font.sha256}`, bytes, {
+            weight: font.axes.wght ? `${font.minWeight} ${font.maxWeight}` : '400', style: 'normal'});
+          await face.load(); document.fonts.add(face); registeredReferences.set(font.sha256, face);
+        }
+        faces.push(font);
+      } catch (error) { errors.push(error.message); }
+    }
+    if (faces.length) valid[role] = {...family, faces};
+  }
+  const used = new Set(Object.values(valid).flatMap(family => family.faces.map(face => face.sha256)));
+  for (const [hash, face] of registeredReferences) {
+    if (!used.has(hash)) { document.fonts.delete(face); registeredReferences.delete(hash); }
+  }
+  return {fonts: valid, errors};
+}
+function referenceStatus(errors) {
+  $('status').textContent = errors.length ? 'Reference fonts: ' + errors.join('; ') : '';
+  $('font-info').replaceChildren();
+  for (const font of Object.values(data.fonts)) {
+    const p = element('p'); p.append(element('strong', `${font.family} · ${font.label}`));
+    for (const face of font.faces || [font]) p.append(element('br'), element('code', `${face.path || face.weight || '400 700'} · ${face.sha256}`));
+    $('font-info').append(p);
+  }
+}
 async function loadFonts() {
   try {
-    await Promise.all(Object.entries(data.fonts).flatMap(([role, family]) => (family.faces || [family]).map(async font => {
-      const response = await fetch(font.url);
-      if (!response.ok) throw new Error(`${family.family}: HTTP ${response.status}`);
-      const bytes = await response.arrayBuffer();
-      const hash = [...new Uint8Array(await crypto.subtle.digest('SHA-256', bytes))].map(b => b.toString(16).padStart(2, '0')).join('');
-      if (hash !== font.sha256) throw new Error(`${family.family}: font hash differs from the review snapshot`);
-      const face = new FontFace(`Review-${role}`, bytes, { weight: font.weight || '400 700', style: 'normal' });
+    await Promise.all(Object.entries(data.fonts).filter(([, family]) => !family.reference).flatMap(([role, family]) => (family.faces || [family]).map(async font => {
+      const bytes = await verifiedBytes(font, family.family);
+      const face = new FontFace(`Review-${role}`, bytes, {weight: font.weight || '400 700', style: 'normal'});
       await face.load(); document.fonts.add(face);
     })));
-    for (const font of Object.values(data.fonts)) {
-      const p = element('p'); p.append(element('strong', `${font.family} · ${font.label}`));
-      for (const face of font.faces || [font]) p.append(element('br'), element('code', `${face.weight || '400 700'} · ${face.sha256}`));
-      $('font-info').append(p);
-    }
-    loaded = true; proof.classList.add('ready'); proof.setAttribute('aria-busy', 'false'); $('status').textContent = ''; render();
+    const references = await registerReferences(Object.fromEntries(Object.entries(data.fonts).filter(([, family]) => family.reference)));
+    data.fonts = {...Object.fromEntries(Object.entries(data.fonts).filter(([, family]) => !family.reference)), ...references.fonts};
+    loaded = true; proof.classList.add('ready'); proof.setAttribute('aria-busy', 'false');
+    referenceStatus([...(data.referenceErrors || []), ...references.errors]); render();
+    if (data.referenceEndpoint) setTimeout(refreshReferences, 1000);
   } catch (error) {
     $('status').textContent = 'Font verification failed. ' + error.message + '. Proofs are hidden to avoid showing fallback fonts.';
     proof.setAttribute('aria-busy', 'false');
   }
+}
+async function refreshReferences() {
+  try {
+    const response = await fetch(data.referenceEndpoint, {cache: 'no-store'});
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const manifest = await response.json();
+    if (manifest.revision !== data.referenceRevision) {
+      const references = await registerReferences(manifest.fonts);
+      data.fonts = {...Object.fromEntries(Object.entries(data.fonts).filter(([role]) => ['before', 'after'].includes(role))), ...references.fonts};
+      // Retry a transient file/font load failure on the next poll.
+      data.referenceRevision = references.errors.length ? null : manifest.revision;
+      referenceStatus([...manifest.errors, ...references.errors]); render();
+    }
+  } catch (error) {
+    data.referenceRevision = null;
+    $('status').textContent = 'Reference refresh failed: ' + error.message;
+  }
+  setTimeout(refreshReferences, 1000);
 }
 labelGlyphs(); render(); loadFonts();

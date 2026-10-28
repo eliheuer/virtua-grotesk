@@ -7,17 +7,21 @@ from pathlib import Path
 import shutil
 import unicodedata
 from fontTools.ttLib import TTFont
+from reference_fonts import collect, reference_directory
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--evidence', type=Path, required=True)
     parser.add_argument('--output-dir', type=Path, required=True)
+    parser.add_argument('--frozen-references', action='store_true', help='Reproduce the references recorded in the evidence instead of project-local choices')
     args = parser.parse_args()
     evidence = json.loads(args.evidence.read_text())
     target = args.output_dir.resolve()
     (target / 'fonts').mkdir(parents=True, exist_ok=True)
     records = {}
     for role, record in evidence['fonts'].items():
+        if role not in ('before', 'after') and not args.frozen_references:
+            continue
         label = record.get('label', {'before': 'Before', 'after': 'Applied'}.get(role, 'Reference'))
         faces = []
         coverage = None
@@ -45,6 +49,11 @@ def main():
             records[role]['faces'] = faces
         else:
             records[role].update(faces[0])
+    if not args.frozen_references:
+        references = collect(reference_directory(args.evidence), target)
+        if references['errors']:
+            raise ValueError('Reference fonts: ' + '; '.join(references['errors']))
+        records.update(references['fonts'])
     overview = json.loads((Path(__file__).parent / 'overview-samples.json').read_text())
     # Inventory the actual Working font, not a guessed alphabet or system fallback.
     known_arabic = {ord(char) for paragraph in overview['arabic-alphabet']['paragraphs'] for run in paragraph['runs'] for char in run['text']}
@@ -79,7 +88,7 @@ def main():
     overview['encoded-repertoire'] = dict(label='Encoded repertoire', overview=True, paragraphs=repertoire)
     default_reading = json.loads((Path(__file__).parent / 'reading-samples.json').read_text()) if evidence.get('study', {}).get('language', 'he') == 'he' else {}
     (target / 'review-data.js').write_text('window.REVIEW_DATA = '+json.dumps({'study': evidence.get('study'), 'fonts': records, 'reading': {**default_reading, **evidence.get('reading', {}), **overview}}, ensure_ascii=False)+';\n')
-    for name in ['index.html', 'review.css', 'review.js']:
+    for name in ['index.html', 'review.css', 'review.js', 'reference-selection.js']:
         shutil.copy2(Path(__file__).parent / name, target / name)
     # Native browser reloads can otherwise mix cached scripts with fresh HTML.
     css_path = target / 'review.css'
@@ -88,7 +97,7 @@ def main():
     index_path = target / 'index.html'
     html = index_path.read_text()
     html = html.replace('between Before and Applied', 'between Before and ' + records['after']['label'])
-    for name in ['review.css', 'review.js', 'review-data.js']:
+    for name in ['review.css', 'review.js', 'review-data.js', 'reference-selection.js']:
         version = hashlib.sha256((target / name).read_bytes()).hexdigest()[:12]
         html = html.replace('"' + name + '"', '"' + name + '?v=' + version + '"')
     index_path.write_text(html)

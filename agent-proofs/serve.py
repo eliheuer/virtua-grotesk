@@ -6,20 +6,60 @@ import hashlib
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 from pathlib import Path
+import sys
+import threading
+sys.path.insert(0, str(Path(__file__).resolve().parent / "app"))
+from reference_fonts import prepare_live
 from urllib.error import URLError
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
 CURRENT = ROOT / 'agent-proofs/cases/arabic-006/handoff/working'
+SELECTION = ROOT / 'out/live-proof-selection.json'
+
+
+def selected_snapshot(requested=None):
+    if requested is not None:
+        return requested.resolve()
+    if SELECTION.exists():
+        return (ROOT / json.loads(SELECTION.read_text())['snapshot']).resolve()
+    return CURRENT
+
+
+def server_identity(folder, live):
+    """Distinguish this server implementation from an older frozen proof."""
+    sources = [Path(__file__), ROOT / 'agent-proofs/app/reference_fonts.py']
+    return dict(project=str(ROOT), directory=str(folder), live=live,
+                implementation=hashlib.sha256(b''.join(p.read_bytes() for p in sources)).hexdigest())
+
+
+def matching_server(url, fonts, identity):
+    try:
+        with urlopen(url + 'proof-server.json', timeout=2) as response:
+            if json.load(response) != identity:
+                return False
+        with urlopen(url + 'live-fonts.json', timeout=2) as response:
+            return json.load(response) == fonts
+    except (URLError, OSError, ValueError):
+        return False
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--directory', type=Path, default=CURRENT)
+    parser.add_argument('--directory', type=Path, help="Serve a frozen archive explicitly; default uses the current live UI and project references")
+    parser.add_argument('--snapshot', type=Path, help='Use and remember a prepared Before/Working snapshot for the live proof')
     parser.add_argument('--port', type=int, default=60272)
     parser.add_argument('--check', action='store_true', help='Validate local assets without starting a server')
     args = parser.parse_args()
-    folder = args.directory.resolve()
+    if args.directory and args.snapshot:
+        parser.error('--directory and --snapshot are mutually exclusive')
+    cache = None
+    if args.directory:
+        folder = args.directory.resolve()
+    else:
+        folder = ROOT / 'out/live-proof'
+        snapshot = selected_snapshot(args.snapshot)
+        cache = prepare_live(snapshot, folder, ROOT)
     try:
         for name in ['index.html', 'review.css', 'review.js', 'review-data.js', 'fonts/labels.ttf']:
             if not (folder / name).is_file():
@@ -35,26 +75,54 @@ def main():
     except (OSError, ValueError, KeyError) as error:
         parser.exit(1, f'Review assets are not ready: {error}\nRead agent-proofs/app/README.md.\nDo not substitute current fonts for missing before/candidate snapshots.\n')
     print(f'Verified {len(fonts)} review font snapshots: {folder}', flush=True)
+    if args.snapshot:
+        SELECTION.parent.mkdir(parents=True, exist_ok=True)
+        temporary = SELECTION.with_suffix('.partial')
+        temporary.write_text(json.dumps({'snapshot': str(snapshot)}) + '\n')
+        temporary.replace(SELECTION)
     if args.check:
         return
     if not 1 <= args.port <= 65535:
         parser.error('--port must be between 1 and 65535')
     url = f'http://127.0.0.1:{args.port}/'
+    identity = server_identity(folder, cache is not None)
+    if matching_server(url, fonts, identity):
+        print(f'Existing live review: {url}\nReuse it; no duplicate server started.')
+        return
+    lock = threading.Lock()
+    class Handler(SimpleHTTPRequestHandler):
+        def log_request(self, code='-', size='-'):
+            if not (self.path.split('?')[0] == '/references.json' and code == 200):
+                super().log_request(code, size)
+        def end_headers(self):
+            self.send_header('Cache-Control', 'no-store')
+            super().end_headers()
+        def do_GET(self):
+            endpoint = self.path.split('?')[0]
+            if endpoint == '/proof-server.json':
+                data = json.dumps(identity).encode()
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Content-Length', str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+            elif cache is not None and endpoint == '/references.json':
+                with lock:
+                    data = json.dumps(cache.get()).encode()
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Content-Length', str(len(data)))
+                self.end_headers()
+                self.wfile.write(data)
+            else:
+                super().do_GET()
     try:
-        with urlopen(url + 'live-fonts.json', timeout=2) as response:
-            remote_fonts = json.load(response)
-        with urlopen(url, timeout=2) as response:
-            page = response.read().decode('utf-8')
-        if remote_fonts == fonts and 'Virtua Grotesk — Live Review' in page:
-            print(f'Existing live review: {url}\nReuse it; no duplicate server started.')
-            return
-    except (URLError, OSError, ValueError):
-        pass
-    try:
-        server = ThreadingHTTPServer(('127.0.0.1', args.port), partial(SimpleHTTPRequestHandler, directory=str(folder)))
+        server = ThreadingHTTPServer(('127.0.0.1', args.port), partial(Handler, directory=str(folder)))
     except OSError as error:
-        parser.exit(1, f'Could not start the review: {error}\nUse --port with another free port; do not stop an unrelated server.\n')
-    print(f'Live review: {url}\nServing the frozen review; this command does not rebuild fonts. Ctrl-C stops this server.', flush=True)
+        parser.exit(1, f'Could not start the review at {url}: {error}\n'
+                    'If this port hosts an older Virtua proof, stop that verified proof process and rerun this command.\n'
+                    'Do not stop an unrelated server. Use --port only for an intentional separate review.\n')
+    print(f'Live review: {url}\nServing frozen Before/Working; live references follow reference-fonts/. This command does not rebuild fonts. Ctrl-C stops this server.', flush=True)
     try:
         server.serve_forever()
     except KeyboardInterrupt:
