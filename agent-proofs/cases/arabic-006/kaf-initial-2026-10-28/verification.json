@@ -1,0 +1,121 @@
+{
+  "active_source_files_unchanged": 3134,
+  "scratch_changed_files": [
+    "VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.init.glif"
+  ],
+  "compatible": true,
+  "geometry_samples": [
+    {
+      "weight": 400,
+      "sampled_proper_crossings": [],
+      "signed_area": 171386.47382551432
+    },
+    {
+      "weight": 475,
+      "sampled_proper_crossings": [],
+      "signed_area": 207885.94106378034
+    },
+    {
+      "weight": 550,
+      "sampled_proper_crossings": [],
+      "signed_area": 244071.9346384555
+    },
+    {
+      "weight": 625,
+      "sampled_proper_crossings": [],
+      "signed_area": 279944.45454953983
+    },
+    {
+      "weight": 700,
+      "sampled_proper_crossings": [],
+      "signed_area": 315503.5007970333
+    }
+  ],
+  "old_glyph_comparisons": [
+    {
+      "font": "VF",
+      "weight": 400,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 475,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 550,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 625,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 700,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "Regular",
+      "weight": 400,
+      "unchanged_outline_and_advance": 906,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "Medium",
+      "weight": 500,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "SemiBold",
+      "weight": 600,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    },
+    {
+      "font": "Bold",
+      "weight": 700,
+      "unchanged_outline_and_advance": 907,
+      "changed_outline_only": [
+        "uni0643.init"
+      ]
+    }
+  ],
+  "shaping_cases": 252,
+  "grid_findings": [
+    {
+      "glyph": "kaf-ar.init",
+      "failures": []
+    }
+  ],
+  "grid_note": "Bold candidate all values on8. Green Regular remains byte-identical, including inherited optical values.",
+  "visual_status": "Awaiting Eli review; scratch only",
+  "font_hashes": {
+    "before-fonts/variable/VirtuaGrotesk[wght].ttf": "59076661e210022035f203cb815c3c6d7f47312bc944bc673dc6917d12b650fe",
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "7b6b3117371d45f90ad313c9899b0e8fb21774f9e55f889c8c2eab02f2d25003"
+  }
+}

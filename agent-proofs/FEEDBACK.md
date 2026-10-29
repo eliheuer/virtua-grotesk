@@ -1,5 +1,32 @@
 # Design review and feedback
 
+## Preserve S-like Kaf — 2026-10-28
+
+Eli wants the rounded, playful S-like Kaf retained, with weight and connections
+matched to Virtua. Angular comparison fonts do not override this direction.
+The current scratch trial is Bold initial Kaf only; green Regular stays exact.
+[Canonical design rule](../DESIGN.md#kaf-keeps-its-s-like-character--confirmed-2026-10-28)
+and [scope/authorization](cases/arabic-006/README.md#s-like-initial-kaf-direction--2026-10-28).
+
+## Preserve final Yeh construction — 2026-10-28
+
+Eli explicitly says final Yeh is designed as it stands and asks to skip it.
+Scope: `yeh-ar.fina`, Regular and Bold. Preserve the raised returning form;
+the proposed descending reference-like replacement is withdrawn. Reference
+differences alone do not justify changing this intentional design. No grade
+change or approval of other Yeh variants is implied.
+[Exact review decision](cases/arabic-006/README.md#final-yeh-review-closed--preserve-intended-design-2026-10-28).
+
+## Arabic medial Kaf joining correction — 2026-10-28
+
+Eli identified a raised joining bar in the scratch candidate. Measured cause:
+Regular Kaf104 versus neighboring Beh96; Bold already176 on both. The local
+correction aligns Regular to96 without moving the head or editing the neighbors.
+For future joining drafts, measure both connection edges in the actual neighbor
+forms before choosing stroke weight; a shaping-position pass does not catch an
+ink-height step. Corrected candidate still awaits visual review. See
+[ARB-006 correction01](cases/arabic-006/README.md#correction-01--align-the-connecting-horizontal-2026-10-28).
+
 ## Supervised double-spiral at-sign request — 2026-10-23
 
 Eli requested a new @ in the existing style, with a smaller central a and a
@@ -659,3 +686,10 @@ also inspect stock Diffenator language-context and coverage views at400/550/700.
 This is an additional visual check, not permission to copy Rubik outlines or
 change protected geometry. See LAT-001 `diffenator-d2513094/review.json` for the
 first inspected browser comparison and its limits.
+
+## Initial Kaf accepted — 2026-10-29
+
+Eli approved the reviewed S-like Bold initial Kaf and requested committing the
+work and proceeding toward a visually finished Arabic set. Exact candidate
+applied; Regular green unchanged. This approves this drawing, not other forms
+or automatic green grading. Next Seen review is inspection only.

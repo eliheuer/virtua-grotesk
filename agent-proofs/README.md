@@ -26,6 +26,20 @@ and `hebrew-002/` folders to `agent-proofs/cases/`, and the old browser-review
 folder to `agent-proofs/app/`. Current commands and maintained links use the
 new locations. This relocation changes no font drawings or proof layout.
 
+## Current supervised Arabic review — 2026-10-29
+
+[ARB-006](cases/arabic-006/README.md#accepted-initial-kaf-application--2026-10-29):
+Eli approved the S-like Bold initial Kaf; the exact candidate is applied,
+rebuilt and verified. Green Regular and all other sources remain unchanged.
+The earlier medial-Kaf candidate is retained as unapplied evidence; final Yeh
+is intentional. Timed work stays stopped.
+
+The live proof now shows current isolated Seen at700 with the four references,
+inspection only. Next proposed focus: Bold Seen's teeth-to-bowl transition and
+flat lower band. No Seen edit is approved or prepared. Regular initial/medial
+Seen are green and protected. Preserve the geometric design; reference slant
+is not itself a defect.
+
 ## Current supervised drawing review — 2026-10-23
 
 [AT-001](cases/at-001/README.md): smaller italic a with a double spiral.

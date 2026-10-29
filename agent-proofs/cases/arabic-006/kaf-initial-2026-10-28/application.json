@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-29",
+  "glyph": "kaf-ar.init",
+  "master": "Bold",
+  "before": "42ec9f481b63cd4f7a2e3a6cd072c3e5cfc268ddb24159db5ed5d5dca06cd34d",
+  "applied": "c01956162fa2f9a9584a08a16a0eec38d36781f7fe446e668253d4419e8f5fef",
+  "unchanged_source_count": 3133,
+  "status": "User approved and applied; build and preflight passed",
+  "active_matches_reviewed_fonts_except_head": [
+    "fonts/variable/VirtuaGrotesk[wght].ttf",
+    "fonts/ttf/VirtuaGrotesk-Bold.ttf",
+    "fonts/ttf/VirtuaGrotesk-Medium.ttf",
+    "fonts/ttf/VirtuaGrotesk-Regular.ttf",
+    "fonts/ttf/VirtuaGrotesk-SemiBold.ttf"
+  ],
+  "source_changed_files": [
+    "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.init.glif"
+  ]
+}

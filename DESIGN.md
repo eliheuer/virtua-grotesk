@@ -258,6 +258,19 @@ green letter geometry, then check mark weight and attachment clearance.
 The specific replacement shapes remain subject to review and source protection;
 this is not a rule to polygonize every smooth curve in the font.
 
+### Kaf keeps its S-like character — confirmed 2026-10-28
+
+Eli prefers the rounded, playful, old-style S-like Kaf over the angular
+construction in the comparison fonts. Preserve that design intent when
+balancing weight, curves and connections; matching a reference skeleton is
+not the goal. Current authorized trial: **Bold `kaf-ar.init` only**, on scratch,
+strengthening both stroke edges together while retaining open inner spaces and
+the S-like flow. Its connecting bar should match the existing Bold joins at
+176 units with baseline0. Regular initial Kaf is green and remains untouched.
+This does not authorize changes to other Kaf forms, promote the earlier angular
+medial candidate, or approve active application. See the
+[recorded direction and scope](agent-proofs/cases/arabic-006/README.md#s-like-initial-kaf-direction--2026-10-28).
+
 ### Arabic letter dots are near-circular
 
 Eli clarified on 2026-10-21 that Arabic letter dots should be close to perfect

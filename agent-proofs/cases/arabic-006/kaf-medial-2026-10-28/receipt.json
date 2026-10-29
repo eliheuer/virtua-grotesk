@@ -1,0 +1,292 @@
+{
+  "status": "scratch-only; awaiting human review; not approved for application",
+  "scope": {
+    "Regular": {
+      "target": "kaf-ar.medi",
+      "source": "sources/VirtuaGrotesk-Regular.ufo/glyphs/kaf-ar.medi.glif",
+      "before_sha256": "1c0b0e1d378a410cde81798f73271f2fe32803bca545a70f139bba253648e081",
+      "candidate_sha256": "3c3f10659a6c2c36a6267cc1708525917849d8de8bfafc9766a000eb9ff869e7",
+      "before_grade": {
+        "com.runebender.markLabel": "orange",
+        "public.markColor": "1,0.5,0,1"
+      },
+      "reverse_component_closure": [
+        "kaf-ar.medi"
+      ],
+      "reserved_closure_count": 17,
+      "reserved_intersection": [],
+      "donors": {
+        "x": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/x.glif",
+          "sha256": "1d07d823c8fe4eb8045061e4ce54016ef346a19c5a655efd3db26a5e039739a5",
+          "lib": {
+            "com.runebender.markLabel": "green",
+            "public.markColor": "0.09,0.72,0.44,1"
+          }
+        },
+        "u": {
+          "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/u.glif",
+          "sha256": "e5037705dce6dae464745d2320a5e35c1e05ac053698bd2c47b4636b07ad5fba",
+          "lib": {
+            "public.markColor": "0.09,0.72,0.44,1"
+          }
+        }
+      },
+      "advance_preserved": 808,
+      "anchors_preserved": [
+        {
+          "name": "bottomDots",
+          "x": "364",
+          "y": "0"
+        },
+        {
+          "name": "topDots",
+          "x": "364",
+          "y": "768"
+        },
+        {
+          "name": "top",
+          "x": "432",
+          "y": "784"
+        },
+        {
+          "name": "bottom",
+          "x": "320",
+          "y": "0"
+        }
+      ],
+      "point_count": 22
+    },
+    "Bold": {
+      "target": "kaf-ar.medi",
+      "source": "sources/VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.medi.glif",
+      "before_sha256": "6bb29a8ea3894a4f3b4cc88649cd7e804c6b8566df7a538930c129eb26f9170a",
+      "candidate_sha256": "890c312f04a05de84ae8b467ba1760ca969009b61178a41361729e2a26026852",
+      "before_grade": {
+        "com.runebender.markLabel": "red",
+        "public.markColor": "1,0,0,1"
+      },
+      "reverse_component_closure": [
+        "kaf-ar.medi"
+      ],
+      "reserved_closure_count": 17,
+      "reserved_intersection": [],
+      "donors": {
+        "x": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/x.glif",
+          "sha256": "58cf292324269b5856b54497e29e41ee4b7be2f7bf17d2b7ae52ac8fbf527e31",
+          "lib": {
+            "org.fontgarden.transfer": "glyph-transfer v2 lambda 1.0 <- image crop-x.png",
+            "public.markColor": "0.09,0.72,0.44,1"
+          }
+        },
+        "u": {
+          "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/u.glif",
+          "sha256": "494cd08ed9dd41e858011b949b941a7404c1ca72fd1b0fb3acf7fbb862821989",
+          "lib": {
+            "public.markColor": "0.09,0.72,0.44,1"
+          }
+        }
+      },
+      "advance_preserved": 844,
+      "anchors_preserved": [
+        {
+          "name": "bottomDots",
+          "x": "364",
+          "y": "-22"
+        },
+        {
+          "name": "topDots",
+          "x": "364",
+          "y": "768"
+        },
+        {
+          "name": "top",
+          "x": "432",
+          "y": "784"
+        },
+        {
+          "name": "bottom",
+          "x": "320",
+          "y": "0"
+        }
+      ],
+      "point_count": 22
+    }
+  },
+  "active_source_files_unchanged": 3134,
+  "before_vf_sha256": "59076661e210022035f203cb815c3c6d7f47312bc944bc673dc6917d12b650fe",
+  "candidate_vf_sha256": "aae0f77daba42b7d032180d0c1a866e70c4c5356f52323f8069a36ca69511af7",
+  "verification": {
+    "active_source_files_unchanged": 3134,
+    "scratch_changed_files": [
+      "VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.medi.glif",
+      "VirtuaGrotesk-Regular.ufo/glyphs/kaf-ar.medi.glif"
+    ],
+    "compatible": true,
+    "geometry_samples": [
+      {
+        "weight": 400,
+        "sampled_proper_crossings": [],
+        "signed_area": 173664.1210949421
+      },
+      {
+        "weight": 475,
+        "sampled_proper_crossings": [],
+        "signed_area": 198087.72695428133
+      },
+      {
+        "weight": 550,
+        "sampled_proper_crossings": [],
+        "signed_area": 221915.33281362057
+      },
+      {
+        "weight": 625,
+        "sampled_proper_crossings": [],
+        "signed_area": 245146.9386729598
+      },
+      {
+        "weight": 700,
+        "sampled_proper_crossings": [],
+        "signed_area": 267782.54453229904
+      }
+    ],
+    "old_glyph_comparisons": [
+      {
+        "font": "VF",
+        "weight": 400,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 475,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 550,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 625,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 700,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "Regular",
+        "weight": 400,
+        "unchanged_outline_and_advance": 906,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "Medium",
+        "weight": 500,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "SemiBold",
+        "weight": 600,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "Bold",
+        "weight": 700,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      }
+    ],
+    "shaping_cases": 180,
+    "grid_findings": [
+      {
+        "glyph": "kaf-ar.medi",
+        "failures": [
+          {
+            "field": "anchor[bottomDots].x",
+            "value": 364.0
+          },
+          {
+            "field": "anchor[topDots].x",
+            "value": 364.0
+          }
+        ]
+      },
+      {
+        "glyph": "kaf-ar.medi",
+        "failures": [
+          {
+            "field": "advance.width",
+            "value": 844.0
+          },
+          {
+            "field": "contour[0].point[1].x",
+            "value": 844.0
+          },
+          {
+            "field": "contour[0].point[2].x",
+            "value": 844.0
+          },
+          {
+            "field": "anchor[bottomDots].x",
+            "value": 364.0
+          },
+          {
+            "field": "anchor[bottomDots].y",
+            "value": -22.0
+          },
+          {
+            "field": "anchor[topDots].x",
+            "value": 364.0
+          }
+        ]
+      }
+    ],
+    "grid_note": "Existing anchors and Bold 844 advance/right boundary retained. No other off-eight drawing points. Grid findings remain explicit; not a clean-grid claim.",
+    "visual_status": "Awaiting Eli review; scratch only",
+    "font_hashes": {
+      "before-fonts/variable/VirtuaGrotesk[wght].ttf": "59076661e210022035f203cb815c3c6d7f47312bc944bc673dc6917d12b650fe",
+      "fonts/variable/VirtuaGrotesk[wght].ttf": "aae0f77daba42b7d032180d0c1a866e70c4c5356f52323f8069a36ca69511af7"
+    }
+  },
+  "review_artifacts": "out/arabic-kaf-medial-candidate (ignored, disposable)",
+  "visual_scope": [
+    "400/550/700 joined Beh-Kaf-Beh and words plus marked context in DesignBot rasters",
+    "224 px/em single medial endpoint rasters",
+    "browser comparison 400/550/700 and Bold words; signed endpoint comb"
+  ],
+  "open_design_questions": [
+    "Bold stroke mass",
+    "length of flat joining bar",
+    "angle and upper elbow; deliberate cuts retain G0 corners and G1 curvature jumps"
+  ],
+  "release_qa": "No new full Fontspector or active-source preflight claim"
+}

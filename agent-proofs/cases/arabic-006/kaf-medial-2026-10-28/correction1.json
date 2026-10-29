@@ -1,0 +1,199 @@
+{
+  "status": "scratch only, awaiting review",
+  "regular_before_sha256": "3c3f10659a6c2c36a6267cc1708525917849d8de8bfafc9766a000eb9ff869e7",
+  "regular_after_sha256": "5b7c6707d0e35698f3f184af40043f4d0529379cbbe48953e0ee432976bd1437",
+  "bold_unchanged": true,
+  "joins": [
+    {
+      "weight": 400,
+      "kaf_join_top": 96.0,
+      "beh_join_top": 96.0,
+      "baseline": 0
+    },
+    {
+      "weight": 475,
+      "kaf_join_top": 116.0,
+      "beh_join_top": 116.0,
+      "baseline": 0
+    },
+    {
+      "weight": 550,
+      "kaf_join_top": 136.0,
+      "beh_join_top": 136.0,
+      "baseline": 0
+    },
+    {
+      "weight": 625,
+      "kaf_join_top": 156.0,
+      "beh_join_top": 156.0,
+      "baseline": 0
+    },
+    {
+      "weight": 700,
+      "kaf_join_top": 176.0,
+      "beh_join_top": 176.0,
+      "baseline": 0
+    }
+  ],
+  "vf_sha256": "113b626ac681b2239b7384746307169bb78cfd3a5d23317da2b5f5a6a1a694cb",
+  "verification": {
+    "active_source_files_unchanged": 3134,
+    "scratch_changed_files": [
+      "VirtuaGrotesk-Bold.ufo/glyphs/kaf-ar.medi.glif",
+      "VirtuaGrotesk-Regular.ufo/glyphs/kaf-ar.medi.glif"
+    ],
+    "compatible": true,
+    "geometry_samples": [
+      {
+        "weight": 400,
+        "sampled_proper_crossings": [],
+        "signed_area": 168230.52695417404
+      },
+      {
+        "weight": 475,
+        "sampled_proper_crossings": [],
+        "signed_area": 194086.9317149073
+      },
+      {
+        "weight": 550,
+        "sampled_proper_crossings": [],
+        "signed_area": 219297.73623150587
+      },
+      {
+        "weight": 625,
+        "sampled_proper_crossings": [],
+        "signed_area": 243862.9405039698
+      },
+      {
+        "weight": 700,
+        "sampled_proper_crossings": [],
+        "signed_area": 267782.54453229904
+      }
+    ],
+    "old_glyph_comparisons": [
+      {
+        "font": "VF",
+        "weight": 400,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 475,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 550,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 625,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "VF",
+        "weight": 700,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "Regular",
+        "weight": 400,
+        "unchanged_outline_and_advance": 906,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "Medium",
+        "weight": 500,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "SemiBold",
+        "weight": 600,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      },
+      {
+        "font": "Bold",
+        "weight": 700,
+        "unchanged_outline_and_advance": 907,
+        "changed_outline_only": [
+          "uni0643.medi"
+        ]
+      }
+    ],
+    "shaping_cases": 180,
+    "grid_findings": [
+      {
+        "glyph": "kaf-ar.medi",
+        "failures": [
+          {
+            "field": "anchor[bottomDots].x",
+            "value": 364.0
+          },
+          {
+            "field": "anchor[topDots].x",
+            "value": 364.0
+          }
+        ]
+      },
+      {
+        "glyph": "kaf-ar.medi",
+        "failures": [
+          {
+            "field": "advance.width",
+            "value": 844.0
+          },
+          {
+            "field": "contour[0].point[1].x",
+            "value": 844.0
+          },
+          {
+            "field": "contour[0].point[2].x",
+            "value": 844.0
+          },
+          {
+            "field": "anchor[bottomDots].x",
+            "value": 364.0
+          },
+          {
+            "field": "anchor[bottomDots].y",
+            "value": -22.0
+          },
+          {
+            "field": "anchor[topDots].x",
+            "value": 364.0
+          }
+        ]
+      }
+    ],
+    "grid_note": "Existing anchors and Bold 844 advance/right boundary retained. No other off-eight drawing points. Grid findings remain explicit; not a clean-grid claim.",
+    "visual_status": "Awaiting Eli review; scratch only",
+    "font_hashes": {
+      "before-fonts/variable/VirtuaGrotesk[wght].ttf": "59076661e210022035f203cb815c3c6d7f47312bc944bc673dc6917d12b650fe",
+      "fonts/variable/VirtuaGrotesk[wght].ttf": "113b626ac681b2239b7384746307169bb78cfd3a5d23317da2b5f5a6a1a694cb"
+    }
+  }
+}

@@ -1,5 +1,65 @@
 # ARB-006 — Autonomous Arabic first pass
 
+## Supervised review resumed — 2026-10-28
+
+Current scope supersedes the historical autonomous authorization below: refresh
+the proof, compare references, and propose one glyph before changing outlines.
+No drawing approval or timed-loop restart is implied.
+
+The saved UFOs were rebuilt into the VF and four statics; all 3,134 source-file
+hashes remained unchanged. Current VF SHA-256:
+`59076661e210022035f203cb815c3c6d7f47312bc944bc673dc6917d12b650fe`.
+The live proof retains the previous handoff as Before and labels the fresh build
+Current saved drawings. Reproducible local review inputs and renders are in
+ignored `out/arabic-review-current/`; these are disposable review artifacts, not
+a durable backup or correction pair.
+
+**Proposed first target, awaiting Eli's decision:** `kaf-ar.medi` in Regular
+(orange) and Bold (red). Neither target has components or component consumers.
+Basic alphabet and joining-form sheets were inspected at 400/700 against IBM
+Plex Sans Arabic, Noto Sans Arabic, Readex Pro and Rubik; the selected medial
+form was also inspected at 400/550/700 and in `مكتب مكتبة` at the endpoints.
+Virtua's upright with a separate internal stroke differs from the diagonal
+connecting construction in all four references; the internal stroke nearly
+closes in Bold. Proposed direction: review the medial structure, open space and
+entry/exit transitions while retaining Virtua's weight and terminal language.
+This is a design proposal, not a native-reader verdict or outline approval.
+Yeh/Maksura and Heh also need review, but green donors and human reservations
+must be respected. No glyph, grade, feature or metric was changed in this review.
+
+## Medial Kaf scratch candidate — 2026-10-28
+
+Eli answered “yes please” to preparing `kaf-ar.medi` in Regular and Bold on
+scratch and showing it before application. This approves only that preparation.
+The initial target proposal above is now superseded by this bounded approval;
+active application and final visual grading remain unapproved.
+
+The candidate replaces the upright/internal stroke with a single connected
+22-point diagonal contour, two cubic transitions and a level joining bar.
+Advances 808/844 and all anchors are exact; only candidate grades are purple.
+Green x/u supplied construction and weight guidance, not copied reference-font
+outlines. No other glyphs or component donors changed. Exact before/candidate
+GLIFs and a compact receipt are retained in [the source pair](kaf-medial-2026-10-28/receipt.json).
+Large binaries, screenshots and disposable scripts remain in ignored
+`out/arabic-kaf-medial-candidate/` to avoid adding build copies to Git.
+
+Compiled comparison is open at http://127.0.0.1:60272/ with **Current saved
+drawings** versus **Scratch candidate · Not applied**. Complete joined forms,
+words and marks were inspected at 400/550/700; enlarged endpoint silhouettes
+and signed curvature combs were inspected. Bold's weight, the flat bar's length,
+and the angular upper turn remain design questions for Eli. G1 transitions
+retain curvature jumps; numerical checks do not approve their appearance.
+
+Both masters are compatible. Five sampled weights have no proper contour
+crossings; 8,162 non-target outline/advance comparisons and 180 shaping samples
+are unchanged. All 3,134 active source hashes remain exact. The grid-8 report
+retains inherited anchor exceptions and Bold's 844-unit advance/boundary;
+it is not a zero-findings result. Scratch binaries were built with the canonical
+snapshot/VF-instancing path; metadata fixing completed after copying the missing
+scratch OFL. No active build, full package QA or release-readiness claim.
+
+## Historical autonomous handoff — superseded
+
 Eli authorized this pass on 2026-10-21 while repairing Runebender component
 editing. Do not wait for per-batch feedback. Apply reversible working drawings
 in the active UFOs; retain human grading for the later review. No publication
@@ -445,3 +505,99 @@ dots; mark collisions and malformed numeral shapes. These are not approved.
 The handoff lists exact protection and ownership. Do not equate the finite pass
 ending with a finished font. Live proof is now `handoff/working`, with actual
 pre-batch01 Before and batch36 Working. No release/publication work authorized.
+
+## Correction 01 — align the connecting horizontal, 2026-10-28
+
+Eli: “the kaf is slightly taller and not meeting the horizontal like of the
+connecting letters.” Screenshot: `Screenshot 2026-10-28 at 1.29.17 PM.png`.
+The visible step corresponds to the Regular scratch bar at y104 versus the
+current Beh joining edges at y96. Both baselines are y0. Bold matches at y176.
+Interpretation: correct the joining stroke height, not the overall head height.
+Scope remains scratch medial Kaf only: lower Regular's bar and its horizontal
+curve handle by8, retain the8-unit inner cut, preserve Bold and every active
+source. This is a local measured join correction, not a universal Arabic weight
+rule. The original candidate source pair remains preserved; no application or
+visual approval is implied.
+
+Correction 01 rebuilt successfully on scratch. The corrected upper joining edge
+is96/116/136/156/176 at400/475/550/625/700, matching the existing Beh join
+interpolation; baseline remains0. Compiled shaping and non-target regression
+checks pass again. Both tangent endpoints remain aligned; the Regular grid
+report retains only the two inherited x364 anchor findings. Joined rasters and
+actual browser text were reinspected at400/550; Bold's candidate source is
+byte-identical. Exact corrected Regular and updated receipt are retained in
+`kaf-medial-2026-10-28/correction1-Regular.glif` and `correction1.json`.
+The live proof is refreshed; active sources remain unchanged. No final visual
+approval or full package QA claim.
+
+## Final Yeh review closed — preserve intended design, 2026-10-28
+
+Eli: “lets skip this one, it is designed the way i have it, next”. Exact scope:
+`yeh-ar.fina` Regular and Bold. The raised return is intentional; the agent's
+proposal to replace it with a descending reference-like bowl is withdrawn.
+Do not infer that difference from reference fonts is a defect. No outlines,
+metrics, anchors or grades changed. Reference comparison only; local assets in
+`out/arabic-yeh-final-review/`. This is not a blanket approval of all Yeh variants.
+
+Next comparison: `kaf-ar.init` Bold (red); Regular initial Kaf is green and
+remains protected. Inspect before proposing any drawing change. Corrected
+medial Kaf remains scratch-only and unapplied.
+
+## S-like initial Kaf direction — 2026-10-28
+
+Eli: “I want the more kind of S-like, silly, like old-style cuf” and asks to
+keep that design while matching the weight. He then requested that direction
+be logged and explicitly authorized a redraft in the live review toggle.
+Scope: `kaf-ar.init` Bold only, scratch candidate before application. Regular
+is green and fixed. Preserve the S-like flow and rounded turns; strengthen
+paired stroke edges, keep the inner spaces open and align the connecting bar
+to176 at baseline0. Preserve advance736, ink top680, anchors and36-point
+master correspondence. No neighboring glyph, grade or feature changes.
+The earlier angular medial Kaf remains unapplied and is not a template or
+accepted family direction. Final Yeh remains intentionally as drawn.
+
+Construction references: green Regular initial Kaf supplies the approved
+skeleton/topology; green Bold u supplies weight/axis-tangent turn conventions.
+Bold Latin s is orange and is not used as an approved donor. The initial trial
+uses160 top-bar and176 middle/side/joining weights, keeping the supplied S-like
+path with optical differences in its two openings rather than forcing symmetry.
+These dimensions are candidate choices, not a new universal Arabic weight rule.
+
+Scratch candidate is ready in the live Toggle at700 (press B). Small source
+pairs and verification: [kaf-initial-2026-10-28](kaf-initial-2026-10-28/).
+All3134 active source files stayed unchanged. Only scratch Bold initial Kaf
+changed; compatible masters,252 shaping cases and zero new grid findings.
+All unrelated compiled outlines/advances stayed identical in sampled weights.
+Regular source is exact; joint cubic-to-quadratic conversion changes the
+compiled Kaf representation even at400, so binary outline identity is not claimed.
+The candidate retains both S-like openings; heavy central turns and the narrow
+lower opening remain for Eli's visual review. No application or release QA claim.
+Live proof: http://127.0.0.1:60272/ ; separate stock Diffenator preview:
+http://127.0.0.1:60274/diff3proof/diff3proof.html . Full comparison report is
+http://127.0.0.1:60274/diffenator/diffenator.html . Old=saved, New=scratch.
+
+Workflow feedback: Eli wants quicker interactive Arabic review. Show one bounded
+scratch candidate after build, compatibility, shaping and focused visual checks;
+defer broad reports until an accepted group or explicit QA request. Preserve
+hash/color guards and the distinction between preparation and application.
+
+## Accepted initial Kaf application — 2026-10-29
+
+Eli: “this looks good. lets commit this work to the repo and move on”.
+Approval applies to the reviewed S-like Bold initial Kaf candidate only.
+Apply its exact bytes; preserve green Regular and all other source files.
+Purple remains the existing candidate grade; acceptance does not assign green.
+Earlier medial Kaf remains unapplied; final Yeh remains intentional.
+
+Application verification: canonical build and preflight passed. All five active
+fonts match reviewed scratch tables except head metadata. Exactly one of3134
+source files changed; all3133 others remain exact. This carries the reviewed
+252 shaping cases and scoped regression evidence to the active build without
+claiming whole-script QA or release readiness. Live applied Kaf inspected at700.
+
+Next live inspection: isolated Seen at700 with all four reference fonts. Its
+straight underside beneath the teeth meets the returning bowl in an abrupt
+step; inspect that transition and weight rhythm before choosing a correction.
+Bold forms are purple, Regular isolated/final orange, initial/medial green.
+No Seen drawing changed or candidate authorized. Reference slant is not a
+reason to replace Virtua's upright geometric character.
