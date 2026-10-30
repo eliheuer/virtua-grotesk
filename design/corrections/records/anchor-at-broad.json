@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "anchor-at-broad",
+  "kind": "correction",
+  "title": "2026-10-23 — at: paired widths did not repair broad flow",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "at"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "curve"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-at-broad.md",
+      "role": "Original review and feedback",
+      "sha256": "6ce78a71acf426f2d6904d9da5a97a78d794cb662b2be4f32f0fdeeef74a35e2"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-at-broad.md"
+}

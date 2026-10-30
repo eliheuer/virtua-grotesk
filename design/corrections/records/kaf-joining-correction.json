@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "kaf-joining-correction",
+  "kind": "correction",
+  "title": "Kaf connection-edge correction",
+  "status": "recorded-human-feedback",
+  "summary": "Compare both joining edges in real neighbor forms; shaping positions do not catch ink-height steps.",
+  "glyphs": [
+    "kaf-ar.medi",
+    "uni0643.medi"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [],
+  "tags": [
+    "joining"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Compare both joining edges in real neighbor forms; shaping positions do not catch ink-height steps.",
+  "application": "scratch only; no new application",
+  "visual_verdict": "not-approved",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-b12e72325cfc44e4.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "b12e72325cfc44e4639267fe462c5b12596a87d83a7ff371f30fb6a7e3589f12",
+      "source_path": "design/reviews/arabic-006/README.md"
+    }
+  ],
+  "pairs": []
+}

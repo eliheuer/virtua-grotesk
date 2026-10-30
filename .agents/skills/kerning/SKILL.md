@@ -10,6 +10,12 @@ Manage kerning pairs and groups in the UFO sources.
 ## Usage
 `/kerning <add|list|test|init-regular> [options]`
 
+Read [the design workflow](../../../design/README.md). Retrieve scoped context with
+`.venv/bin/python scripts/design_context.py --glyph <name> --operation kerning`;
+repeat --glyph for a bounded group. Save a JSON packet before edits and verify it
+immediately before applying. Read selected evidence, not the entire review archive.
+Current scope and stopped work come from `design/reviews/current.json` and the user.
+
 ## Actions
 
 ### `list`

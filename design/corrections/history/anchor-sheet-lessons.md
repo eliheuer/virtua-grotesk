@@ -1,0 +1,543 @@
+# Lessons — anchor-sheet glyph generation
+
+Running log of optical corrections and workflow findings. Newest first.
+Every entry: date, glyph(s), what was wrong, the rule, where it's encoded.
+These rules OUTRANK the generator formulas — when in doubt, match the
+latest graded (green) example of the same construction.
+
+---
+
+## 2026-08-05 — the Arabic anchor system: dots and harakat are DIFFERENT slots
+
+**Wrong:** of 128 Arabic composites carrying a dot or mark, only 47 sat
+where their anchors said. 8 of the 14 marks had no attachment anchor at
+all, so placement fell back to a homegrown "mark ink centre + base anchor
++ 112" rule and drifted — some by over 1000 units. The anchors were
+decoration; the dots were free-floating.
+
+**Rubik's model, now adopted.** The idea worth stealing is that dots and
+vowel marks use SEPARATE slots:
+
+| slot | for | sits |
+|---|---|---|
+| `topDots` / `bottomDots` | the letter's own dots | close to the letter |
+| `top` / `bottom` | harakat | clear above/below everything |
+
+Marks carry the matching `_topDots` / `_bottomDots` / `_top` / `_bottom`,
+plus a plain `top`/`bottom` for stacking. A composite's stored offset is
+then exactly `base.slot - mark._slot`. In Rubik every pair checks out to
+the unit: teh-ar.init stores (-90,-194); base `topDots` (110,326) minus
+mark `_topDots` (200,520) is (-90,-194).
+
+The payoff is automatic: a composite inherits the base's slots but pushes
+its own `top` up past whatever it added, so a haraka clears the dots.
+`noon-ar.init`'s `top` ends at 720 and `theh-ar.init`'s at 896, against
+the dotless `behDotless-ar.init`'s 432 — exactly what Rubik does when it
+raises teh-ar.init's `top` from 520 to 556.
+
+**Derive the constant from GREEN, not from the reference.** The 112 gap is
+Virtua's own: `behDotless-ar.init` has `topDots` at y=448, and green
+`noon-ar.init` places dotabove-ar at yOffset −128, so its ink bottom lands
+at 688−128 = 560 = 448+112. So `_topDots` on a mark = (ink centre,
+ink_bottom − 112), and every green placement stays put.
+
+**Green is the source of truth.** The script never moves an existing
+anchor — it only adds missing ones — and when recomputing would shift a
+green composite it keeps the offset and REPORTS the drift instead. 16 of
+those surfaced; they are Eli's graded optical corrections, not bugs.
+
+**Two traps:**
+
+- **The base/mark anchor pair is wrong for MARK-ON-MARK.** Applied between
+  two marks (dammatan = damma over damma) it threw the second one to
+  y=1516 against a 1094 ceiling. Stacking marks needs its own tight rule
+  plus an envelope clamp.
+- **A below-dot must not drag the `top` anchor sideways.** Setting a
+  composite's `top` from its resolved ink centre moved beh-ar.init's `top`
+  x from 144 to 54, because the below-dot widened the bbox. Keep the
+  base's x, move only y.
+
+**Pipeline order matters:** `embolden` then `arabic_anchors` then build.
+Emboldening regenerates Bold glyphs and can drop an anchor (dad-ar lost
+`bottomDots` that way, and fontmake rejects masters with differing anchor
+sets), so the anchor pass has to run last.
+
+## 2026-08-04 — a spliced tail must join TANGENTIALLY (Eli correction)
+
+**Wrong:** `seen-ar`'s tail met the teeth with a square step. The tail run
+turned 90 degrees straight off the junction — the bowl's inner wall ran
+vertically up and hit the bar top at a hard corner, and the outer wall did
+the same at the baseline. The letter read as two pieces butted together
+rather than one stroke. Eli spotted it instantly; Rubik's seen shows the
+tail flowing out of the teeth as a single continuous stroke.
+
+**Rule / encoded:** check the donor's TANGENTS at the splice point and
+match them. Green `seen-ar.init` arrives at (0,0) from a control at (56,0)
+and leaves (0,104) toward a control at (64,104) — both horizontal. So the
+replacement must leave horizontally and return horizontally, with both
+junction points marked smooth. `seen_tail_run` now does: bar bends down a
+120-radius quarter, round U, vertical left wall, terminal at 432 (level
+with the teeth, so all four verticals of seen line up).
+
+**Two supporting rules from the same fix:**
+
+- **Tie the construction constants to each other, not to separate
+  guesses.** Setting the bowl's side-wall height independently of the
+  bend radius put a visible dent in the outer edge. The side walls turn
+  into the bowl at the SAME y as the bar's bend, and the inner curve
+  turns at the same y as the outer — that is what makes the stroke a true
+  constant-width offset round a U.
+- **Check proportion against the reference numerically.** The first
+  attempt's bowl was 40% deeper than Rubik's equivalent (scaled for cap
+  height). Render both at the same size and compare before calling it
+  done.
+
+**And the bug the fix exposed — NEVER ASSUME A DONOR'S DIRECTION.**
+`scripts/normalize_winding.py` reverses blue contours to get outer-CCW.
+A reversed donor arrives at the stub's LAST point first, so the naive
+`d[:i0] + run + d[i104+1:]` splice silently produced just the run —
+`seen-ar.fina` lost all its teeth and `sad-ar` lost its loop, with no
+error. Worse, it fails quietly: the glyph is still valid, just wrong.
+`orient_to_stub()` now rotates and if needed reverses the donor so the
+stub always runs forward from index 0, and returns the stub's end index
+because the stub is 4 points in the beh/seen idiom but 6 in hah/ain
+(they step in from the bar first). All four splice helpers use it.
+
+**Corollary:** reversing an outer contour without reversing its counter
+flips their relative winding and the counter stops cutting — sad's loop
+filled in solid. Running `normalize_winding.py` after any splice fixes
+this by nesting parity; make it part of the pipeline, not an afterthought.
+
+## 2026-08-04 — even terminals: don't borrow a tooth height (Eli correction)
+
+**Wrong:** the isolated `behDotless-ar` (beh boat) rose to 288 on the left
+and **432** on the right. 432 is the height of the *joining tooth* in
+`behDotless-ar.init/.medi`, and it got borrowed for the isolated form's
+right terminal because that number was already in the family. The result
+was lopsided — one end a tall tooth, the other a short tip.
+
+**Eli's fix:** drop the right terminal to **288**, so both ends match and
+the boat is exactly mirror symmetric about its centre. His words: *"this
+kind of neo-grotesk design needs to be simpler and more even and
+geometric."*
+
+**Rule / encoded:** a free-standing terminal on an isolated boat or cup
+rises to **288**, with a 16-chamfer and a 64 flat, and BOTH ends of a
+symmetric form use it. **432 is a TOOTH height, not a terminal height** —
+teeth belong to joining forms (beh.init/medi) and to seen/sad, where the
+teeth are the letter's identity. Never reach for a number just because it
+exists elsewhere in the family; ask what that number *means* first.
+
+Same mistake, same fix, found by grepping the family for terminal-flat
+heights: `noonghunna-ar` (right lip 432 → 288, now a symmetric cup) and
+`behDotless-ar.fina`, which had a whole medial-style tooth in the middle
+of a FINAL form. A final beh has no tooth at all — it is the isolated boat
+with its right terminal replaced by the joining bar. Rubik confirms:
+its `behDotless-ar.fina` is 342 tall with no tooth.
+
+**Generalisation worth keeping:** after any correction, grep the family for
+the *number* that was wrong, not just the glyph. One probe over all
+boat/cup glyphs ("what are the terminal-flat heights?") surfaced both other
+offenders immediately.
+
+**Also:** Runebender writes `<unicode>` BEFORE `<advance>`; the generator
+now matches, so regenerating a glyph does not churn against a Runebender
+save. After encoding a correction, verify the generator reproduces the
+human's file **byte for byte** before propagating — otherwise the next
+regeneration quietly reverts the correction.
+
+## 2026-08-04 — emboldening a script by outline offset
+
+**Validate the weight model against known-good output first.** Before
+pointing the emboldener at the Arabic, it was run on the Latin Regular and
+compared to the real, hand-drawn Latin Bold. It reproduced every stroke
+class to within 4 units, which is what made it trustworthy. If a transform
+can be checked against something already correct in the same repo, check it
+there before using it where you cannot tell.
+
+**Measure the font's own weight rule, don't import the reference's.** Rubik
+was the reference for *behaviour* (does the silhouette grow or does the
+counter shrink? do zones rise with weight?), but every number came from
+Virtua's own Latin Regular → Bold. Rubik's Light→Black is a far wider range
+than 400→700, so its ratios were never transferable.
+
+**Absolute offsets don't transfer between scripts of different size.** The
+Latin's dx 48 / dy 36 made a Black out of the Arabic, because these Arabic
+forms are ~25% shorter than the Latin (tooth 432 vs x-height 576). Scaling
+the offset by the height ratio was the fix. Render 3–4 variants and look;
+the right weight is a five-minute comparison, not an argument.
+
+**Use the build's own filter as the oracle.** ufo2ft runs
+`EraseOpenCornersFilter`, which DELETES points where an outline doubles
+back. A generated Bold with open corners therefore stops matching the
+Regular's point count and the build dies with "different number of
+segments" and no useful location. Rather than guess which corners are
+unsafe, import `glyphsLib.filters.eraseOpenCorners.EraseOpenCornersPen`,
+run it on the candidate, and back the offset off for that glyph until it
+reports nothing. Same trick applies to any generated-geometry pass: if a
+build-time filter can silently change your output, run it yourself first.
+
+**Coincident points are landmines for any offset.** Several green glyphs
+repeat a point at a notch vertex. Offset the copies independently and the
+zero-length segment between them reverses — an open corner. Give coincident
+points a shared displacement. This one fix took `ain-ar.medi` from ×0.10
+(effectively unbolded) back to full weight.
+
+**Winding cannot be assumed, even inside one script.** The green Arabic
+mixes CW and CCW outer contours, so a fixed normal direction emboldened
+half the set and *thinned* the other half. Decide per contour from its own
+signed area plus nesting depth.
+
+**Component offsets may differ between masters — use that.** Bold marks are
+bigger, so composites built with the Regular's offsets dropped below the
+descent limit. Nudging the mark component in Bold only is legal and is the
+right fix; it does not touch the skeleton.
+
+## 2026-08-04 — Arabic completion: derive from green, don't trace the reference
+
+**The finding that made the pass cheap.** A 244-glyph "Arabic cleanup"
+was not 244 drawings. It was ~30 skeletons plus rules, because Arabic is
+a component script and the green set already contained the init/medi form
+of nearly every family. Before generating anything, classify:
+
+1. **recompose** — skeleton + mark component (133 glyphs here)
+2. **derive** — a scripted edit on a donor: splice off a joining bar, swap
+   a stub for a tail, copy a sibling form (52)
+3. **skeleton** — genuinely new drawing (43)
+4. **symbol** — parametric digits/punctuation (21)
+
+`scripts/arabic_lanes.py` is the pattern: a rule table over glyph names
+that must cover 100% of targets and shouts about anything unmatched. Write
+the manifest before the first outline; it turns "a huge amount of work"
+into a work-list with a cost per item.
+
+**Two reference roles, never mixed.** Rubik supplied topology and
+proportion only (which way a tail sweeps, how deep a bowl goes, what the
+positional-form inventory is). The green in-font glyphs supplied every
+number. Tracing a rendered reference of a different typeface would have
+imported its style and maximized cleanup — the opposite of the goal.
+
+**Recover the placement rule from the graded examples, don't invent it.**
+Reading five green composites showed one consistent convention (mark ink
+centre → base `topDots`/`bottomDots` anchor x; above-mark ink bottom at
+anchor y + 112). Encoding that one rule generated 133 composites. Any time
+several graded glyphs share a construction, the rule is in there — measure
+it out before hand-tuning offsets.
+
+**Splice helpers beat per-glyph drawing.** `_bowl_replacing_stub` swaps a
+donor's left joining stub for a tail for ANY donor that arrives on the bar
+bottom at (jx, 0) and leaves on the bar top at (jx, 104). Once a family's
+init/medi is green, its isol/fina cost is one function call. Generalize on
+the joint, not on the letter.
+
+**Splice bug that costs an hour if you don't gate it:** a replacement run's
+first point must inherit the *type* of the donor point it replaces. Give it
+`type="curve"` when the preceding donor point is a line and you produce a
+curve segment with zero off-curve points; cu2qu then dies with a bare
+`IndexError: list index out of range` and no glyph name. `scripts/glif_lint.py`
+now names it, along with nested components and master mismatches. **Run
+glif_lint before make build** — it is seconds instead of minutes and it
+tells you which glyph.
+
+**Google Fonts rejects nested components.** Generated composites nest
+easily (mark over a ligature, tanwin built from two harakat). Flatten one
+level at write time (`arabic_recompose.flatten()`), not afterwards.
+
+**Auto-placement must be clamped to the font's vertical envelope.** Stacking
+marks by an anchor rule happily produced ink at y = −1176 against a declared
+WinDescent of 438, which fails `family/win_ascent_and_descent`. Read
+`openTypeOS2WinAscent`/`WinDescent` from fontinfo and clamp. Also: for a
+glyph with a deep bowl (hah, jeem, ain, qaf) the below-dot belongs INSIDE
+the bowl, so the `bottomDots` anchor goes at the bowl's inner edge, not at
+the ink bottom — anchoring at the ink bottom pushes the dot below the tail.
+
+**Verify in shaped words, not just glyph sheets.** Per-glyph renders looked
+fine while positional forms and mark attachment were still unproven.
+`harness/designbot/arabic_words.rs` renders real words from the BUILT
+variable font — that is what caught that everything actually joins. For any
+script with contextual shaping, this render is the gate, not the sheet.
+
+**Winding normalization is free quality.** `scripts/normalize_winding.py`
+fixes outer-CCW/holes-CW by nesting parity as a mechanical edit (shapes
+verified unchanged) and only touches blue files, so green stays untouched.
+It cut `outline_direction` warnings by two thirds. Note the reverse must be
+segment-aware: in glif order a point's type marks the segment ENDING at it,
+so a naive `reversed()` corrupts curves. There is a round-trip test for it.
+
+## 2026-07-29 — dollar must use uppercase S (Eli correction)
+
+**Wrong:** the first flattened dollar used lowercase `s` exactly (Regular
+advance 560, body bounds x 40..520 / y -16..592), so the body sat at x-height
+and the -96..848 bar looked much too long. The `n$` sheet clearly specifies a
+cap-height dollar body: about 4/3 the `n` height.
+
+**Cause:** `symbol_gen._read_glyph("S")` guessed `S.glif`; on the
+case-insensitive macOS filesystem that resolved to `s.glif`. UFO glyph names
+must be resolved through `contents.plist` (`S` -> `S_.glif`), never by guessed
+filenames. The same rule protects uppercase `C` and `R` donors.
+
+**Rule / encoded:** dollar = the real green uppercase `S` verbatim + centered
+64/104 bar, y -96..848, cubic-aware union. `symbol_gen._read_glyph` now uses
+`contents.plist`; `gen_dollar` unions and removes the two Bold-only sliver
+structures so both masters are 3 contours with 45/7/7 points and identical
+point types. Regular advance/bounds are 704 / x 40..664; Bold 704 /
+x 16..680.
+
+## 2026-07-28 — chevron tips need a flat (Eli correction)
+
+**Glyphs:** less, greater (first generated batch).
+**Wrong:** generated tips ended edge → 16u bevel → vertical face; the tip
+read too pointy.
+**Rule:** diagonal-arm tips land on a **16u axis-aligned flat** before the
+bevel: outer edge → 16u flat → 16u bevel → face. Same anatomy as V/W/v
+baseline terminals. Applies to any arm tip on a line-grammar glyph.
+**Encoded:** `symbol_gen.chevron_left` (TIP_FLAT), round-trips Eli's
+corrected files exactly.
+**Also noted:** Eli kept the notch at its original x (182/322) rather than
+the strict inner-parallel recomputation (194 would match the new outer
+slope) — a slight arm taper toward the apex is acceptable; don't "fix" it.
+
+## 2026-07-28 — pilot findings (n < = > sheet)
+
+- **Anchor calibration works**: n px-height ↔ 592u gave scale + baseline;
+  symbol stroke measured from the sheet (71.2) matched the system-derived
+  expectation (hyphen 88 × HN 64/80 = 70.4) within 1u. Always run this
+  cross-check; agreement = trust the sheet.
+- **The sheet is authoritative**: the pilot sheet was NOT Helvetica Neue
+  (HN math axis ≈ 282 vs the sheet's 352). Refs fill gaps (e.g. Bold
+  stroke ratio when no Bold sheet exists); they never override the sheet.
+- **Math class values set**: axis 352, stroke 72/132, advance 600,
+  equal-bar centers ±100 R / ±132 B (gap≈1.78×bar R, ≈1×bar B, per HN).
+- **Bold hyphen is unbolded** (88 = Regular value) — on the red list; do
+  not use it as the Bold symbol-class anchor until fixed.
+
+## 2026-07-28 — second batch (n [ \ ] ^ _ ` sheet)
+
+- **Mirror-partner rule**: when a glyph's mirror or family partner already
+  exists green, DERIVE it instead of tracing: backslash := slash mirrored
+  in its advance; greater := less mirrored. Encoded in
+  `symbol_gen._mirror_of_source`.
+- **Mark components mirror about the INK CENTER, not the advance**: grave
+  := acute mirrored about acute's ink center (164), which also matched the
+  old grave's center — so every grave-composite's xOffset stayed valid.
+  Accent-family consistency (grave matches acute) OUTRANKS the sheet.
+- **Sheets give ink, not spacing**: glyph boxes/strokes come from the
+  sheet; advances and sidebearings come from class rules or refs (a sheet
+  cannot express its font's sidebearings).
+- **Always check winding**: first caret came out clockwise and rendered
+  invisible in the strict checker. `symbol_gen.write()` now asserts CCW
+  (positive signed area) on every contour.
+- Underscore: kept the sheet's floating width (ink 464 in adv 600) over
+  HN's tiling sb-0 convention; HN also never boldens underscore — followed
+  (72 both masters). Flag for Eli's grade.
+- Also red-listed: acute (and the whole accent-mark set) is UNBOLDED —
+  Bold == Regular. Bolding the marks is a future batch; grave inherits
+  this (kept consistent with acute rather than "fixed" alone).
+
+## 2026-07-28 — third batch (n { | } ~ ¡ ¢ sheet) + START RULE
+
+- **START RULE (Eli)**: contour start points go at the LOWER-LEFT on-curve
+  point (min y, then min x). Now automatic: `symbol_gen.normalize_start`
+  runs in `write()`. Applies to all future generation; existing graded
+  glyphs left as-is until a cleanup pass.
+- **Rotation vs mirror winding**: 180-degree rotation PRESERVES winding
+  (transform in order, no reversal); mirrors REVERSE it (reverse the list
+  and shift segment types incoming->outgoing). Encoded as
+  `reverse_contour` / `mirror`; the write() assertion catches mistakes.
+- Derivations this batch: exclamdown := exclam rotated 180 about its
+  advance center, top seated at 656 (family consistency with exclam over
+  the sheet's taller proportions); cent := c + lc-stem bar (96/192)
+  through the ink center, y -96..656 per sheet.
+- First CURVED generations: braces (chevron-style beak + cubic hooks,
+  bracket band -128..848) and tilde (cubic S centerline, vertical stroke
+  offset, center 370 per sheet). Generator now supports typed points
+  (line/curve/offcurve, smooth) — expect these to need Eli polish; log
+  the corrections here when they land.
+
+## 2026-07-28 — tilde rebuild + extrema rule (Eli correction)
+
+- **EXTREMA RULE (the img2bez discipline)**: on-curve points go AT the
+  extremes — every curve extremum (crest, trough, side extreme) is an
+  on-curve point with an axis-aligned tangent; segments between extrema
+  are monotonic. The first tilde put on-curves mid-slope and was "close
+  to unusable." Any parametric curve construction must place extrema
+  first, then fill in handles. For curved shapes too complex to
+  parametrize confidently, DELEGATE to img2bez on a calibrated sheet crop
+  (it gets extrema right by construction) — that is the preferred path
+  for organic/curvy glyphs.
+- **START RULE clarified**: lower-left = leftmost first, lowest tiebreak
+  (min x, then min y). Min-y-first wrongly started the tilde at its
+  trough. All generator glyphs regenerated with the corrected rule.
+
+## 2026-07-29 — G2 rule + terminal anatomy (Eli's tilde edit, saved)
+
+- **G2 RULE**: smooth curve-curve joints target G2 (curvature match), not
+  just G1. New gate: `scripts/curve_continuity.py` classifies every joint
+  (corner / line<->curve / G1 / G2 / KINK) with the same math as
+  Runebender web's continuity overlay; exit 0 required before showing.
+  Runebender web has harmonize->G2 / balance handles / optimize for hand
+  fixes; Eli's graded tilde measures G2 within 1-4% at every smooth.
+- **Wave/terminal anatomy** (from the graded tilde, now in
+  gen_asciitilde): terminal = face + 16u bevel + 16u flat; the curve
+  LEAVES the flat at a deliberate corner (steep takeoff), and ENTERS the
+  opposite terminal's 45-degree bevel TANGENTIALLY (last handle at exactly
+  45, joint marked smooth). No pointy meets anywhere — where a curve
+  would come to a point, there is always a flat.
+- **Derive Bold by per-side offset**: same x-skeleton, bottom-path y -30,
+  top-path y +30 (stroke 72->132) — continuity classes carry over
+  unchanged (identical checker output for both masters).
+
+## 2026-07-29 — fourth batch (n £ ¥ § ¨ © ª sheet)
+
+- **Multi-part glyphs in sheets**: declare span counts explicitly
+  (`dieresis:2`) — a smallest-gap merge heuristic merged the wrong pair
+  (crowded £¥). Explicit beats clever.
+- **Scaled donors preserve G2**: copyright's inner c (green c x0.74) and
+  ordfeminine (a x0.87) pass the continuity gate untouched — scaling
+  preserves G-class, so derive-by-scale is a first-class construction.
+- **Auto-harmonize**: `symbol_gen.harmonize_g2()` scales adjacent handle
+  lengths toward matched endpoint curvature (kappa = 2/3 d/l^2), the CLI
+  twin of Runebender's harmonize->G2; sterling's hook apexes went G1->G2
+  automatically.
+- **Winding rules generalized**: outer CCW, counters CW, decided by
+  point-in-polygon nesting parity (bbox tests misclassify overlapped ink
+  like yen's bars; parity handles ring-inside-ring-inside-c).
+- **Degenerate curve types break the build**: a type="curve" point with no
+  offcurves compiles in sources but crashes overlap removal on instances.
+  (Candidate: assert in glif() that curve points have 2 offcurves.)
+- Values: dieresis = two i-tittles at mark-center 180, gap 88/64;
+  yen ink 600/adv 664, bars 72/112 at sheet positions; copyright ring
+  dia 832 stroke 44/80 + c x0.74; ordfeminine = a x0.87 seated at 256;
+  sterling v1 straight base (sheet wave = upgrade candidate), currency
+  sb 32. **section DEFERRED** — proposed as the img2bez pilot (too curvy
+  to parametrize honestly; current placeholder is two overlaid S
+  components).
+
+## 2026-07-29 — yen fix + section: first img2bez glyph + THE PIPELINE
+
+- **Mirror the donor's topology**: yen v1 routed the outer arm edges into
+  the notch and the arms crossed like a bowtie. When a structural cousin
+  exists green (Y), copy its PATH ORDER, not just its measurements.
+- **SECTION = first img2bez glyph.** Recipe that worked: clean crop
+  (paste the span onto WHITE — blind padding bled neighbor ink into the
+  trace), synthetic Bold via morphological dilation (PIL MinFilter; size
+  27 kept the counters open, 39 sealed one -> contour mismatch), then
+  `img2bez masters --fit " -208:784"` with the anchor-calibrated band.
+  Report: compatible, 62 pts/master. lowConfidence=true -> review flag.
+- **THE PIPELINE (Eli)**: TRACE (img2bez, problems fixed UPSTREAM there,
+  not papered over in the harness) -> STYLE REFIT (harness rules today;
+  virtua-12m as a learned style-transfer/refit stage tomorrow) -> VERIFY
+  (gates) -> Eli grades.
+- **Refit v1 failure**: running harmonize_g2 naively over traced output
+  corrupted it (assumes generator-clean cubic structure; also bypassed
+  the winding checks by writing directly). Refit needs its own careful
+  pass; traced G1 joints are ACCEPTED for now (blue = review).
+- **img2bez UPSTREAM backlog** (from today): (1) normalize contour
+  orientation on output — it emitted outer contours CW; UFO wants outer
+  CCW/holes CW (fixed by hand this once); (2) `sheet` mode: anchor
+  calibration + span segmentation + name:N built in; (3) synthetic-bold
+  option (dilate with counter-preservation guard); (4) optional G2
+  harmonization / style-refit hooks, or at least extrema+continuity
+  report in the trace JSON.
+
+## 2026-07-29 — img2bez upstream fixes #1 and #2 SHIPPED (b5cb87d)
+
+- img2bez now writes surgically (only the target .glif + contents entry
+  for new glyphs) and normalizes winding on output (outer CCW/holes CW by
+  nesting parity, with a type-shifting Contour::reverse). Verified on the
+  section retrace: 2 files touched (was 638), correct winding unaided.
+  Three regression tests in img2bez.
+- Remaining upstream: sheet mode (anchor calibration + segmentation),
+  synthetic-bold with counter guard, extrema/point-economy on traces
+  (section's bottom missed an extremum and wastes points), continuity
+  report in trace JSON, and normalize_start order (img2bez uses
+  bottom-then-left; the font's START RULE is left-then-bottom).
+- **section is marked ORANGE** (Eli's review): raw trace lacks Virtua's
+  chamfer terminals and runs light — the STYLE-REFIT stage (harness rules
+  / virtua-12m, possibly built on img2bez font/refit.rs which already
+  does structure-preserving raster refits) is the missing piece and the
+  next build.
+
+## 2026-07-29 — lane-1 derivation batch (no sheets needed)
+
+- Eight glyphs derived without reference images: plus (math-grammar
+  cross, 8-fillets at concave junctions), periodcentered (period at axis
+  352), ordmasculine (o x0.87, twin of ordfeminine), questiondown
+  (question rotated, top 656), dollar (S + 64/104 bar, -88..856), euro
+  (C + two bars from x8; Bold bar centers +-90, +-60 overlapped),
+  registered (ring + R x0.68; 0.60 read spindly), nbspace (advance =
+  space).
+- **Donor copies must keep donor point order** (write(normalize=False)):
+  normalize_start rotated Regular-S and Bold-S to different indices and
+  broke master compatibility in dollar. Parametric glyphs still
+  normalize (identical structure both masters by construction).
+- Containment for winding = ALL on-curve points inside (single-probe
+  misread euro's overlapping bars as nested).
+
+## 2026-07-29 — THE FLAT RULE (Eli) + dollar done right
+
+- **FLAT RULE: no overlapping contours in sources, ever.** The viewer sees
+  figure and ground; the sources must be the same flat form. Compose from
+  donors, then UNION (booleanOperations, cubic-aware) and clean. This
+  supersedes the overlay constructions — dollar rebuilt this way;
+  yen, euro, cent, sterling, registered still carry overlays and need the
+  same flattening pass (queued).
+- **Union recipe**: build overlapped construction in a scratch defcon
+  glyph -> BooleanOperationManager.union -> extract typed points -> round
+  to 2-grid -> write with donor order (normalize=False) -> gates.
+- **Union hazards found on dollar**: (1) masters can flatten to DIFFERENT
+  structures (Regular got an 8u sliver segment + extra point where Bold's
+  curve landed directly on the bar edge) — diff the masters' on-curve
+  sequences and merge slivers so counts match; (2) grid-rounding after
+  union can tilt a smooth point past tangency (the 4.3-degree kink) —
+  the sliver merge fixed both at once. The continuity gate + fontmake
+  compatibility check catch both; never skip them on unions.
+- Dollar params from the n$ sheet: bar 64/104 wide, y -96..848, centered
+  on the S ink; body = the green S verbatim.
+
+## 2026-10-23 — Double-spiral @ correction (Eli)
+
+- The first OpenAI/img2bez candidate kept the requested smaller a and double
+  spiral, but lost the a's iconic italic slant. Eli explicitly requires that
+  slant to survive. Preserve characteristic subform angles when changing size
+  or surrounding topology; include them explicitly in image prompts.
+- Eli also rejected lumpy/bumpy loops despite compatible masters and a clean
+  draft grid. Smooth the traced curves while preserving the overall form;
+  absence of sampled reversals is not evidence of satisfactory curvature.
+- Scope is this scratch at experiment in both masters, not a universal italic
+  angle or permission to alter other glyphs. Evidence and feedback:
+  `agent-proofs/FEEDBACK.md`, supervised double-spiral correction 01; exact
+  first-candidate sources and revised proofs in
+  `.glyph-ai-runs/at-double-spiral-2026-10-23/revision2/`.
+
+## 2026-10-23 — @ revision 2 still lumpy (Eli)
+
+- Eli says everything else is good, but rejects the uneven weight/lumpiness.
+  Retain the smaller italic a and double spiral; do not record this as drawing
+  approval. See `agent-proofs/FEEDBACK.md`, correction 02.
+- The agent's individual-edge curvature optimization omitted opposing-edge
+  thickness and locked every traced spiral node. Local geometric inspection
+  confirms width variation remains; clean joins and absence of reversals did
+  not justify describing the result as smooth.
+- Before a next candidate, inspect the filled stroke as a whole, pair opposing
+  edges, and diagnose their thickness together. Use combs/continuity to locate
+  faults, not to overrule visible uneven mass. Preserve overall form without
+  freezing trace errors. Research, exact source hashes and measured comparisons:
+  `.glyph-ai-runs/at-double-spiral-2026-10-23/weight-diagnosis/`.
+
+## 2026-10-23 — at: paired widths did not repair broad flow
+
+**Correction:** Eli rejected revision3 as still lumpy after the width-aware
+repair. He authorized redrawing the broad spiral while preserving the smaller
+italic a, double-loop topology and scratch-only boundary. The selected original
+at supplies the smoothness standard. Keep r2 and r3 as negative examples.
+
+**Lesson:** accepted identity does not freeze accidental traced turning points.
+Review whole-turn flow separately from paired mass and adjacent joins. When
+local smoothing keeps failing, reconstruct the broad path within scope, then
+recheck both edges after grid rounding. Neither constant width nor all-G2 is
+an optical target. [AT-001](../../../agent-proofs/cases/at-001/README.md) retains
+hash-bound rejected examples and r4, which Eli judged “better, but still bad”
+and asked to apply for hand editing. No positive optical label exists. Canonical workflow: `harness/RUNBOOK-codex.md` broad-curve gate and
+`draw-outline/references/curve-quality.md`. The new read-only width diagnostic
+requires explicit branch pairs and never grades or edits the source.

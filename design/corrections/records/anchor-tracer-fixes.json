@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "anchor-tracer-fixes",
+  "kind": "correction",
+  "title": "2026-07-29 — img2bez upstream fixes #1 and #2 SHIPPED (b5cb87d)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [
+    "from-image"
+  ],
+  "tags": [
+    "tracing"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-tracer-fixes.md",
+      "role": "Original review and feedback",
+      "sha256": "5516d50025c683097e56697a3abac4153984d0ab3efe0c58d4fec3e87b95da0d"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-tracer-fixes.md"
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "id": "finaltsadi-regular-01",
+  "kind": "correction",
+  "title": "Final Tsadi construction correction",
+  "status": "recorded-human-feedback",
+  "summary": "Separate bounded turns, shelves, junction cuts and terminal landings; topology changes are valuable structural evidence.",
+  "glyphs": [
+    "finaltsadi-hb",
+    "shin-hb"
+  ],
+  "masters": [
+    "Regular"
+  ],
+  "scripts": [
+    "hebrew"
+  ],
+  "operations": [],
+  "tags": [
+    "landing",
+    "shelf",
+    "junction"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Separate bounded turns, shelves, junction cuts and terminal landings; topology changes are valuable structural evidence.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "recorded-correction",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-f8aa161668e00e9d.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "f8aa161668e00e9db80268e6d06201203b68eb2fbbe2d582b1b2c47f05182edc",
+      "source_path": "design/reviews/hebrew-008/README.md"
+    },
+    {
+      "path": "design/reviews/hebrew-008/revision-v7/agent-Regular-finaltsadi.glif",
+      "role": "Before",
+      "sha256": "61284759c37efac0394f514a9c13c1d2e5dcc77e7d2d287cd3b0c697372815e4"
+    },
+    {
+      "path": "design/reviews/hebrew-008/revision-v7/human-Regular-finaltsadi.glif",
+      "role": "Human correction",
+      "sha256": "fe47da63758724e06d310d830e1799cffd2dd546d45bddea423dbaebbff69751"
+    },
+    {
+      "path": "design/reviews/hebrew-008/revision-v7/manual-correction.json",
+      "role": "Measurements",
+      "sha256": "7aa7381dfbe445a04973e2e85706543b128a3e17388f16dd2d65c1d3bd4d74a5"
+    }
+  ],
+  "pairs": [
+    {
+      "master": "Regular",
+      "before": "design/reviews/hebrew-008/revision-v7/agent-Regular-finaltsadi.glif",
+      "after": "design/reviews/hebrew-008/revision-v7/human-Regular-finaltsadi.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    }
+  ]
+}

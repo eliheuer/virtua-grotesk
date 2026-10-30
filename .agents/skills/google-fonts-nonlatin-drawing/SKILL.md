@@ -3,190 +3,25 @@ name: google-fonts-nonlatin-drawing
 description: Finish missing non-Latin (e.g. Arabic) drawings for a Google Fonts submission while keeping masters compatible and script shaping intact.
 ---
 
-# /google-fonts-nonlatin-drawing
+# Non-Latin drawing for Google Fonts
 
-Finish missing non-Latin drawings for a Google Fonts submission while keeping
-source masters compatible, script behavior intact, and final outline decisions
-under human review. This skill is portable: `{{TOKEN}}` values are defined in
-`.agents/google-fonts-onboarding-checklists.md`; also replace source paths,
-script tags, glyphsets, and proof commands when copying it to another repo.
+Read [the design workflow](../../../design/README.md). Retrieve scoped context with
+`.venv/bin/python scripts/design_context.py --glyph <name> --operation draw`;
+repeat --glyph for a bounded group. Save a JSON packet before edits and verify it
+immediately before applying. Read selected evidence, not the entire review archive.
+Current scope and stopped work come from `design/reviews/current.json` and the user.
 
-## Usage
-`/google-fonts-nonlatin-drawing [audit|candidates|proof|review|all]`
+Use the onboarding checklist for release scope, then the applicable Arabic/Hebrew
+context and current case. A coverage gap is not permission to redraw every glyph.
+Inventory missing forms, source colors, recursive donors, anchors, substitutions
+and joining/mark dependencies. Choose a bounded authorized group.
 
-Default: `all`
+Use edit-glyph/draw-outline for source work and the image skills for supplied
+artwork. Preserve human corrections and named intent; external script references
+must not replace Virtua's construction. Keep both masters compatible.
 
-## Principles
-
-- Treat generated outlines as scaffolds, not final production drawings.
-- Prefer deterministic source reuse over model training for first-pass missing
-  glyphs. Reuse family-native bases, dots, marks, punctuation, components, and
-  spacing patterns before looking outside the family.
-- Use OFL reference fonts only as visual references or overlays. Do not copy
-  outlines into the submitted source unless the license, provenance, style fit,
-  and maintainer decision explicitly allow it.
-- Keep both masters structurally compatible. If one master gets a contour,
-  component, anchor, width, or glyph entry change, verify the corresponding
-  master immediately.
-- Separate mechanical coverage from drawing quality. A cmap can be complete
-  while shaping, marks, spacing, or script texture still need review.
-
-## Audit
-
-1. Identify the intended Google Fonts glyphset and first-submission script
-   scope.
-2. Generate or refresh reports for:
-   - missing codepoints,
-   - source glyph names needed in every master,
-   - positional forms and unencoded helpers,
-   - mark glyphs and dotted circle,
-   - anchors and `mark`/`mkmk`,
-   - shaping smoke strings,
-   - master compatibility,
-   - visual proof status.
-3. Translate codepoint gaps into source glyph work. For joining scripts, track
-   default, final, initial, medial, mark, ligature, and helper glyphs
-   separately.
-4. Record the stale baseline separately from current evidence so agents do not
-   keep solving already-closed gaps.
-
-## Candidate Generation
-
-Write or use a candidate script so it is safe to run repeatedly. It should
-accept a target source, a donor/reference source, a glyph selection, and an
-output path. Do not hard-code one donor family; Rubik, Noto, or another OFL
-source may be useful depending on the target design.
-
-```bash
-python scripts/build_nonlatin_candidate_glyphs.py --donor path/to/Donor.designspace --dry-run
-python scripts/build_nonlatin_candidate_glyphs.py --donor path/to/Donor.designspace --write
-```
-
-Requirements:
-
-- dry-run by default;
-- open every active UFO master;
-- create the same glyph names in every master;
-- assign Unicode only to encoded default glyphs;
-- keep positional forms and source helpers unencoded unless explicitly decided;
-- reuse existing family-native skeletons, marks, dots, anchors, and widths;
-- report auto-created, review-needed, hand-draw-needed, and compatibility-risk
-  buckets;
-- after write, rerun dry-run and expect no remaining creation or compatibility
-  risks.
-
-For compiled before/after chat proofs, use `scripts/proof_compare.py` and the
-[chat proof workflow](../../../documentation/qa.md#chat-proof-workflow). The
-tracked Hebrew sample file is a smoke set, not complete script validation.
-
-### Review-Then-Apply Workflow
-
-For replacement batches, prefer this split:
-
-1. Human marks glyphs needing replacement in the editor, usually with red
-   `public.markColor`.
-2. Agent builds a scratch candidate from those marks and an explicit donor
-   source. This can be previewed in ComfyUI/Runebender or with generated proofs.
-3. Human reviews the scratch result.
-4. Agent applies only the approved candidate glyphs back to production sources
-   with a surgical `.glif` copy. Do not save/rewrite whole UFOs just to copy
-   outlines.
-
-Retired donor-copy prototypes are available in Git history, not as active
-commands. If this workflow is needed again, implement a narrowly scoped
-candidate/apply script, document its inputs, and keep application dry-run-first.
-
-Guardrails for the apply step:
-
-- dry-run first; require `would-apply` for every selected master/glyph pair;
-- preserve existing mark colors by default so the human can approve/clear them;
-- select `status == candidate` from the candidate report, not every red glyph;
-- keep hand-drawn or approved glyphs unmarked or listed in an exclude file;
-- after write, check `git diff --name-only sources` and confirm only intended
-  `.glif` files changed and no untracked glyph files appeared;
-- open both source UFOs with the repo venv, rebuild, and rerun reports.
-
-## Reference Fonts
-
-Use references such as Rubik, Noto, or another OFL family as comparison data:
-
-- convert to UFO only when it helps inspect structure, anchors, glyph naming, or
-  shaping behavior;
-- normalize UPM mentally or in an overlay, then redraw in the target family's
-  construction;
-- compare proportions, joining logic, mark placement, and spacing rhythm;
-- do not let reference contour count alone dictate the target drawing.
-
-## Batch Order
-
-Use small batches with a build/report/preflight loop after each one:
-
-1. Shared punctuation and symbols with low shaping risk.
-2. Digits and numerals, checking rhythm and widths.
-3. Joining letters and their positional forms.
-4. Script punctuation and symbols.
-5. Marks, dotted circle, anchors, and mark-to-mark behavior.
-6. Final spacing, sidebearing, contour cleanup, and native-reader review.
-
-## Verification Loop
-
-After each batch:
-
-```bash
-./build.sh
-make reports
-make preflight
-```
-
-After shaping-sensitive work:
-
-```bash
-make preflight
-make review
-```
-
-Verify evidence, not intent:
-
-- no missing target codepoints unless explicitly accepted;
-- source glyphs exist in all masters;
-- master compatibility has no blocking mismatches;
-- shaping smoke tests pass with no `.notdef`;
-- dotted circle, marks, anchors, and `mark`/`mkmk` are ready or documented;
-- focused proof output is reviewed by a human;
-- broad proof rows have human statuses: `pass`, `fix-needed`, or `deferred`;
-- active source UFOs load in the editor intended for hand cleanup; if the
-  editor uses a stricter UFO loader than the build tooling, add a focused
-  loader check so syntax/editor issues do not block drawing sessions.
-
-## AI Assistance
-
-Use AI for triage and review acceleration:
-
-- batch grouping and priority sorting;
-- source reuse mapping suggestions;
-- proof comparison prompts;
-- finding likely glyph names or proof locations for fix-needed rows;
-- summarizing blockers into hand-cleanup lists.
-
-Keep temporary AI review files outside the active docs unless they are still
-being used. Do not ask AI to approve final Arabic or other script drawings without human
-visual review. When a row is uncertain, record `deferred` with the needed
-native-reader or script-specialist follow-up.
-
-### Active Virtua drawing workflow
-
-Follow the standing authorization in `agent-proofs/README.md`: as of 2026-10-20,
-new Hebrew drawing batches go directly into active masters after preserving a
-baseline; no repeated application question is needed. Retain technical checks,
-proofs, exact manual corrections, source-color protections and human grading.
-
-### Required raster proof gate — 2026-10-21
-
-Eli made fixed raster inspection a core part of Arabic drawing work. After each
-bounded batch, render 400 and 700 with `agent-proofs/app/render-detail.py`, using
-Before, Working, Rubik, Noto Sans Arabic, IBM Plex Sans Arabic and Readex Pro.
-Inspect the actual PNGs, record visible findings, and fix observed faults before
-advancing. Use shorter/larger details or reading-size context as needed. Keep
-PNGs and hash receipts beside source snapshots. Browser proofs, curve diagnostics
-and compiled shaping remain complementary; command success is not visual review
-or a human grade. See `agent-proofs/FEEDBACK.md#raster-proof-gate--2026-10-21`.
+Follow [design verification](../../../design/system/verification.md): build,
+compiled shaping at endpoints/intermediates, large and reading-size comparisons,
+marks/joining/bidi coverage and the Arabic raster proof gate. Retain exact before,
+candidate/applied sources, font hashes and visible findings. Distinguish application,
+human approval and release QA. Use google-fonts-qa for the latter.

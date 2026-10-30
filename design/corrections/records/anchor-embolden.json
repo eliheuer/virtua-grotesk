@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "anchor-embolden",
+  "kind": "correction",
+  "title": "2026-08-04 — emboldening a script by outline offset",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "*-ar*"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [
+    "weight-transfer"
+  ],
+  "tags": [
+    "weight-transfer"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-embolden.md",
+      "role": "Original review and feedback",
+      "sha256": "700b4c74a7b540fb83e2a476acacf3a5c04064c2db9b7bc9e5b71dd3ae245bd7"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-embolden.md"
+}

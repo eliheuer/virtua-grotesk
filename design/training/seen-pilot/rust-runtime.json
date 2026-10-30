@@ -1,0 +1,10 @@
+{
+  "binary_sha256": "ec1285d77b8a82abaf8ff776fcb99f316a1a4ea0fdd9a0990036747e93c812a2",
+  "invalid_exit": 4,
+  "invalid_result": {
+    "code": 4,
+    "error": "seen-ar: coordinate/advance 1504 outside model vocabulary [-512, 1280]; refusing to clip"
+  },
+  "valid_exit": 0,
+  "valid_prediction_unchanged": true
+}

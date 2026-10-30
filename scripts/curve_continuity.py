@@ -13,8 +13,9 @@ Classifies every on-curve joint in a glyph:
                curvatures match within tolerance
   KINK         smooth-marked joint whose tangents disagree — always a bug
 
-House targets (LESSONS.md): every smooth curve-curve joint should be G2;
-line->curve transitions must be tangent; no KINKs ever.
+Historical diagnostic targets only. Read design/constructions/curve-quality.md
+for current interpretation; an intended cut is not a failed smooth join, and
+human optical geometry must not be optimized solely to improve these labels.
 
     ./.venv/bin/python scripts/curve_continuity.py Regular asciitilde braceleft
     ./.venv/bin/python scripts/curve_continuity.py Bold --all-smooth-glyphs

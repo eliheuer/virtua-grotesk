@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "anchor-flat-rule",
+  "kind": "correction",
+  "title": "2026-07-29 — THE FLAT RULE (Eli) + dollar done right",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "dollar",
+    "section"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "terminal"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-flat-rule.md",
+      "role": "Original review and feedback",
+      "sha256": "2bb70bad161c6a12386fd7ec8aeb935411904b24a1b09661d01fb628866c3535"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-flat-rule.md"
+}

@@ -68,147 +68,177 @@ documentation/proofs/images/*.png
 !documentation/archive/release-audit-2026-09-07/*.png
 
 # Selected design-review evidence; raw scratch artifacts remain under out/.
-!agent-proofs/**/*.png
+!design/reviews/**/*.png
 
 # Frozen, licensed assets required to reopen the committed HEB-002 web proof.
-!agent-proofs/cases/hebrew-002/layout-v3/fonts/
-!agent-proofs/cases/hebrew-002/layout-v3/fonts/*.ttf
+!design/reviews/hebrew-002/layout-v3/fonts/
+!design/reviews/hebrew-002/layout-v3/fonts/*.ttf
 
 # Frozen HEB-003 baseline and licensed reference snapshots.
-!agent-proofs/cases/hebrew-003/baseline/fonts/
-!agent-proofs/cases/hebrew-003/baseline/fonts/*.ttf
+!design/reviews/hebrew-003/baseline/fonts/
+!design/reviews/hebrew-003/baseline/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-003/candidate-v2/fonts/
-!agent-proofs/cases/hebrew-003/candidate-v2/fonts/*.ttf
+!design/reviews/hebrew-003/candidate-v2/fonts/
+!design/reviews/hebrew-003/candidate-v2/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-004/baseline/fonts/
-!agent-proofs/cases/hebrew-004/baseline/fonts/*.ttf
+!design/reviews/hebrew-004/baseline/fonts/
+!design/reviews/hebrew-004/baseline/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-004/candidate-v1/fonts/
-!agent-proofs/cases/hebrew-004/candidate-v1/fonts/*.ttf
+!design/reviews/hebrew-004/candidate-v1/fonts/
+!design/reviews/hebrew-004/candidate-v1/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-005/candidate-v3/fonts/
-!agent-proofs/cases/hebrew-005/candidate-v3/fonts/*.ttf
+!design/reviews/hebrew-005/candidate-v3/fonts/
+!design/reviews/hebrew-005/candidate-v3/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-005/candidate-v4/fonts/
-!agent-proofs/cases/hebrew-005/candidate-v4/fonts/*.ttf
+!design/reviews/hebrew-005/candidate-v4/fonts/
+!design/reviews/hebrew-005/candidate-v4/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-005/candidate-v5/fonts/
-!agent-proofs/cases/hebrew-005/candidate-v5/fonts/*.ttf
+!design/reviews/hebrew-005/candidate-v5/fonts/
+!design/reviews/hebrew-005/candidate-v5/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-005/applied-v5/fonts/
-!agent-proofs/cases/hebrew-005/applied-v5/fonts/*.ttf
+!design/reviews/hebrew-005/applied-v5/fonts/
+!design/reviews/hebrew-005/applied-v5/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-006/candidate-v1/fonts/
-!agent-proofs/cases/hebrew-006/candidate-v1/fonts/*.ttf
+!design/reviews/hebrew-006/candidate-v1/fonts/
+!design/reviews/hebrew-006/candidate-v1/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-006/candidate-v2/fonts/
-!agent-proofs/cases/hebrew-006/candidate-v2/fonts/*.ttf
+!design/reviews/hebrew-006/candidate-v2/fonts/
+!design/reviews/hebrew-006/candidate-v2/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-006/candidate-v3/fonts/
-!agent-proofs/cases/hebrew-006/candidate-v3/fonts/*.ttf
+!design/reviews/hebrew-006/candidate-v3/fonts/
+!design/reviews/hebrew-006/candidate-v3/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-007/working-v2/fonts/
-!agent-proofs/cases/hebrew-007/working-v2/fonts/*.ttf
+!design/reviews/hebrew-007/working-v2/fonts/
+!design/reviews/hebrew-007/working-v2/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-007/working-v3/fonts/
-!agent-proofs/cases/hebrew-007/working-v3/fonts/*.ttf
+!design/reviews/hebrew-007/working-v3/fonts/
+!design/reviews/hebrew-007/working-v3/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-007/working-v4/fonts/
-!agent-proofs/cases/hebrew-007/working-v4/fonts/*.ttf
+!design/reviews/hebrew-007/working-v4/fonts/
+!design/reviews/hebrew-007/working-v4/fonts/*.ttf
 
 # Retain exact HEB-008 review fonts for restart recovery.
-!agent-proofs/cases/hebrew-008/working-v2/fonts/
-!agent-proofs/cases/hebrew-008/working-v2/fonts/*.ttf
-!agent-proofs/cases/hebrew-008/working-v4/fonts/
-!agent-proofs/cases/hebrew-008/working-v4/fonts/*.ttf
-!agent-proofs/cases/hebrew-008/working-v5/fonts/
-!agent-proofs/cases/hebrew-008/working-v5/fonts/*.ttf
+!design/reviews/hebrew-008/working-v2/fonts/
+!design/reviews/hebrew-008/working-v2/fonts/*.ttf
+!design/reviews/hebrew-008/working-v4/fonts/
+!design/reviews/hebrew-008/working-v4/fonts/*.ttf
+!design/reviews/hebrew-008/working-v5/fonts/
+!design/reviews/hebrew-008/working-v5/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-008/working-v6/fonts/
-!agent-proofs/cases/hebrew-008/working-v6/fonts/*.ttf
+!design/reviews/hebrew-008/working-v6/fonts/
+!design/reviews/hebrew-008/working-v6/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-008/working-v7/fonts/
-!agent-proofs/cases/hebrew-008/working-v7/fonts/*.ttf
+!design/reviews/hebrew-008/working-v7/fonts/
+!design/reviews/hebrew-008/working-v7/fonts/*.ttf
 
 # HEB-009 marked-form reconciliation evidence.
-!agent-proofs/cases/hebrew-009/working-v1/fonts/
-!agent-proofs/cases/hebrew-009/working-v1/fonts/*.ttf
-!agent-proofs/cases/hebrew-009/before-fonts/
-!agent-proofs/cases/hebrew-009/before-fonts/*.ttf
+!design/reviews/hebrew-009/working-v1/fonts/
+!design/reviews/hebrew-009/working-v1/fonts/*.ttf
+!design/reviews/hebrew-009/before-fonts/
+!design/reviews/hebrew-009/before-fonts/*.ttf
 
 # HEB-010 reference proof and accepted layout evidence.
-!agent-proofs/cases/hebrew-009/heading-layout-fixed.jpg
-!agent-proofs/cases/hebrew-010/baseline/fonts/
-!agent-proofs/cases/hebrew-010/baseline/fonts/*.ttf
-!agent-proofs/cases/hebrew-010/*.jpg
+!design/reviews/hebrew-009/heading-layout-fixed.jpg
+!design/reviews/hebrew-010/baseline/fonts/
+!design/reviews/hebrew-010/baseline/fonts/*.ttf
+!design/reviews/hebrew-010/*.jpg
 
-!agent-proofs/cases/hebrew-010/working-v2/fonts/
-!agent-proofs/cases/hebrew-010/working-v2/fonts/*.ttf
+!design/reviews/hebrew-010/working-v2/fonts/
+!design/reviews/hebrew-010/working-v2/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-010/chamfer-v3/fonts/
-!agent-proofs/cases/hebrew-010/chamfer-v3/fonts/*.ttf
+!design/reviews/hebrew-010/chamfer-v3/fonts/
+!design/reviews/hebrew-010/chamfer-v3/fonts/*.ttf
 
-!agent-proofs/cases/hebrew-010/applied-v3/fonts/
-!agent-proofs/cases/hebrew-010/applied-v3/fonts/*.ttf
+!design/reviews/hebrew-010/applied-v3/fonts/
+!design/reviews/hebrew-010/applied-v3/fonts/*.ttf
 
 # Retain the first Arabic loop and portable proof references.
-!agent-proofs/cases/arabic-001/assets/*.ttf
-!agent-proofs/cases/arabic-001/before-fonts/*.ttf
-!agent-proofs/cases/arabic-001/working/fonts/
-!agent-proofs/cases/arabic-001/working/fonts/*.ttf
-!agent-proofs/cases/arabic-001/*.jpg
+!design/reviews/arabic-001/assets/*.ttf
+!design/reviews/arabic-001/before-fonts/*.ttf
+!design/reviews/arabic-001/working/fonts/
+!design/reviews/arabic-001/working/fonts/*.ttf
+!design/reviews/arabic-001/*.jpg
 
 # ARB-002 exact comparison snapshots and browser evidence.
-!agent-proofs/cases/arabic-002/assets/*.ttf
-!agent-proofs/cases/arabic-002/working/fonts/
-!agent-proofs/cases/arabic-002/working/fonts/*.ttf
-!agent-proofs/cases/arabic-002/*.jpg
+!design/reviews/arabic-002/assets/*.ttf
+!design/reviews/arabic-002/working/fonts/
+!design/reviews/arabic-002/working/fonts/*.ttf
+!design/reviews/arabic-002/*.jpg
 
 # ARB-003 Bold hamza exact font snapshots and review evidence.
-!agent-proofs/cases/arabic-003/assets/*.ttf
-!agent-proofs/cases/arabic-003/working/fonts/
-!agent-proofs/cases/arabic-003/working/fonts/*.ttf
-!agent-proofs/cases/arabic-003/*.jpg
+!design/reviews/arabic-003/assets/*.ttf
+!design/reviews/arabic-003/working/fonts/
+!design/reviews/arabic-003/working/fonts/*.ttf
+!design/reviews/arabic-003/*.jpg
 
 # ARB-003 human correction pair, fonts and proof evidence.
-!agent-proofs/cases/arabic-003/manual-correction-01/assets/*.ttf
-!agent-proofs/cases/arabic-003/manual-correction-01/working/fonts/
-!agent-proofs/cases/arabic-003/manual-correction-01/working/fonts/*.ttf
-!agent-proofs/cases/arabic-003/manual-correction-01/*.jpg
-!agent-proofs/cases/arabic-003/manual-correction-01/*.png
+!design/reviews/arabic-003/manual-correction-01/assets/*.ttf
+!design/reviews/arabic-003/manual-correction-01/working/fonts/
+!design/reviews/arabic-003/manual-correction-01/working/fonts/*.ttf
+!design/reviews/arabic-003/manual-correction-01/*.jpg
+!design/reviews/arabic-003/manual-correction-01/*.png
 
 # ARB-004 exact before/working fonts and browser evidence.
-!agent-proofs/cases/arabic-004/assets/*.ttf
-!agent-proofs/cases/arabic-004/working/fonts/
-!agent-proofs/cases/arabic-004/working/fonts/*.ttf
-!agent-proofs/cases/arabic-004/*.png
+!design/reviews/arabic-004/assets/*.ttf
+!design/reviews/arabic-004/working/fonts/
+!design/reviews/arabic-004/working/fonts/*.ttf
+!design/reviews/arabic-004/*.png
 
 # ARB-005 exact source/font comparisons and curve/browser evidence.
-!agent-proofs/cases/arabic-005/assets/*.ttf
-!agent-proofs/cases/arabic-005/working/fonts/
-!agent-proofs/cases/arabic-005/working/fonts/*.ttf
-!agent-proofs/cases/arabic-005/*.png
-!agent-proofs/cases/arabic-005/*-comb.svg
+!design/reviews/arabic-005/assets/*.ttf
+!design/reviews/arabic-005/working/fonts/
+!design/reviews/arabic-005/working/fonts/*.ttf
+!design/reviews/arabic-005/*.png
+!design/reviews/arabic-005/*-comb.svg
 
 # ARB-005 circular-dot correction and exact comparison evidence.
-!agent-proofs/cases/arabic-005/round-dots/assets/*.ttf
-!agent-proofs/cases/arabic-005/round-dots/working/fonts/
-!agent-proofs/cases/arabic-005/round-dots/working/fonts/*.ttf
-!agent-proofs/cases/arabic-005/round-dots/*.png
-!agent-proofs/cases/arabic-005/round-dots/comb.svg
+!design/reviews/arabic-005/round-dots/assets/*.ttf
+!design/reviews/arabic-005/round-dots/working/fonts/
+!design/reviews/arabic-005/round-dots/working/fonts/*.ttf
+!design/reviews/arabic-005/round-dots/*.png
+!design/reviews/arabic-005/round-dots/comb.svg
 
 # ARB-006 reproducible autonomous batch evidence.
-!agent-proofs/cases/arabic-006/batches/*/assets/*.ttf
-!agent-proofs/cases/arabic-006/batches/*/working/fonts/
-!agent-proofs/cases/arabic-006/batches/*/working/fonts/*.ttf
-!agent-proofs/cases/arabic-006/batches/*/*.png
-!agent-proofs/cases/arabic-006/batches/*/*.jpg
-!agent-proofs/cases/arabic-006/batches/*/*-comb.svg
+!design/reviews/arabic-006/batches/*/assets/*.ttf
+!design/reviews/arabic-006/batches/*/working/fonts/
+!design/reviews/arabic-006/batches/*/working/fonts/*.ttf
+!design/reviews/arabic-006/batches/*/*.png
+!design/reviews/arabic-006/batches/*/*.jpg
+!design/reviews/arabic-006/batches/*/*-comb.svg
 
 # Local adapters generated by Latin regression scripts. Each contains a
 # machine-specific symlink to its batch's baseline-fonts; scripts recreate it.
-/agent-proofs/cases/latin-001/batches/*/baseline-fonts-root/
+/design/reviews/latin-001/batches/*/baseline-fonts-root/
 
 # Local proof references, shared by the live review and Runebender.
 /reference-fonts/
+
+# Portable selected proof and correction evidence.
+!design/reviews/**/proof/fonts/
+!design/reviews/**/proof/fonts/*.ttf
+!design/reviews/**/proof/fonts/*.otf
+!design/corrections/**/*.png
+!design/corrections/**/*.svg
+
+# Previously tracked evidence kept visible after its directory move.
+!design/reviews/arabic-006/handoff/working/fonts/
+!design/reviews/arabic-006/handoff/working/fonts/after-11cf1a31805b.ttf
+!design/reviews/arabic-006/handoff/working/fonts/before-4db9d7e1d3a7.ttf
+!design/reviews/arabic-006/handoff/working/fonts/labels.ttf
+!design/reviews/arabic-006/handoff/working/fonts/noto-63111b5b2e07.ttf
+!design/reviews/arabic-006/handoff/working/fonts/plex-597bd5502e59.ttf
+!design/reviews/arabic-006/handoff/working/fonts/plex-691e0c891a38.ttf
+!design/reviews/arabic-006/handoff/working/fonts/plex-6f611412270a.ttf
+!design/reviews/arabic-006/handoff/working/fonts/plex-b8363ab9f733.ttf
+!design/reviews/arabic-006/handoff/working/fonts/readex-268bba7e1e8f.ttf
+!design/reviews/arabic-006/handoff/working/fonts/rubik-1b3a7437ba2a.ttf
+!design/reviews/latin-001/batches/04-ring-accent/curve-comb.svg
+!design/reviews/latin-001/batches/05-breve/curve-comb.svg
+!design/reviews/latin-001/batches/06-tilde/curve-comb.svg
+!design/reviews/latin-001/batches/09-cedilla/curve-comb.svg
+!design/reviews/latin-001/batches/10-ogonek/curve-comb.svg
+!design/reviews/latin-001/batches/18-longs/Bold-comb.svg
+!design/reviews/latin-001/batches/18-longs/Regular-comb.svg
+!design/reviews/latin-001/batches/19-florin/Bold-comb.svg
+!design/reviews/latin-001/batches/19-florin/Regular-comb.svg
+!design/reviews/latin-001/batches/37-currency/curve-comb.svg

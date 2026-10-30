@@ -1,304 +1,69 @@
-# RUNBOOK — AI glyph completion (crawl phase)
+# Organic image to glyph
 
-Operating contract for a coding agent (Codex, Claude, or other) adding or
-regenerating **one glyph at a time** in this repo. The full system plan is
-`plans/ai-font-completion-harness.md`; the design contract every glyph must
-obey is the root **`DESIGN.md`**. Read both before your first glyph.
+Start with [design context](../design/README.md) and the glyph-ai-harness skill.
+Use anchor-sheet-glyphs when a sheet supplies calibration. Images are for an
+explicit image-generation/tracing task; existing source geometry is the preferred
+construction evidence for source edits. Never replace a requested trace with a
+hand-drawn approximation.
 
-Crawl-phase scope: single glyphs, Regular master quality first, a human
-reviews every result. Do not batch, do not loop, do not touch glyphs you were
-not asked about.
+## Prepare
 
-**Division of labor:** generated images supply a proposal, not a quality verdict.
-Green glyphs govern the font's construction unless Eli names a different local
-reference. A human-selected example can explicitly set the optical standard.
-Measurements help diagnose scale, weight and spacing; they cannot establish
-that a drawing looks even or smooth. Keep generation, tracing, scratch repair,
-human review and authorized application separate.
+Name glyphs/masters and retain authorization, baseline sources and supplied image
+provenance. Read the current case and selected corrections. Inspect actual green
+Virtua donors, including their current hashes and component geometry. Compare
+external references for script structure only.
 
-## Context you must load
-
-1. `DESIGN.md` — the power-of-two grid, 16-unit chamfers, metrics, curve and
-   spacing rules. Every adjustment you make is justified by this file.
-2. `AGENTS.md` — repo conventions, especially the source-editing footguns.
-3. `plans/ai-font-completion-harness.md` §3 (mark-color protocol) and the
-   canvas template spec (§4b).
-
-Hard rules (repeated from those files because agents skip links):
-
-- **Never modify a green glyph** (`public.markColor` = `0.09,0.72,0.44,1`).
-- **Never save the real UFOs through a font library** (defcon/ufoLib/norad
-  `font.save()`). Write `.glif` XML directly in repo style: tabs for
-  indentation, double-quoted attributes, no space before `/>`, attribute
-  order `x`, `y`, `type`, `smooth`.
-- Both masters must keep **identical contour/point structure** per glyph.
-- Rendering is **designbot (Rust)** — `designbot --render <script.rs>
-  --output <png>`; scripts may use the re-exported `norad`/`kurbo` and
-  `draw_path(BezPath)`. No Python for rendering.
-- Plain commit messages; no AI credit trailers.
-- Work goes in `.glyph-ai-runs/<glyph>/` (git-ignored). Never in `build/`.
-
-## Environment setup (once per session)
+`harness/designbot/glyph_canvas.rs` is the canonical source-render canvas. Use
+scripts/glyph_ai_harness.py render for current source renders. Existing canvas
+options can be inspected through the script/CLI; preserve a shared baseline and
+em scale. A canvas's full height is not the glyph's calibrated ink extent.
 
 ```sh
-export IMG2BEZ_LOG="$HOME/.img2bez/virtua-grotesk-traces.jsonl"
+make glyph-ai-inventory
+make glyph-ai-prepare TARGET=<glyph> REFERENCES="n,o" FIT=<bottom:top>
 ```
 
-`img2bez` is on PATH (`~/.cargo/bin/img2bez`). Check `img2bez masters --help`
-— it is authoritative over any flag list written here. `designbot` must be
-the **local** build (`cargo install --path designbot-cli` in
-`~/GH/repos/designbot`) — the GitHub build lacks the canvas APIs the
-toolchain script needs.
+FIT is required: derive bottom/top from the calibrated image and intended source
+metrics (e.g. baseline:xheight only when that is the actual ink band). Preparation
+requires a fresh run directory, both masters and verified green references. It
+saves context.md, context.json, rendered references, per-master prompts and the
+manifest. Read them before generating. Specify --out on the Python CLI for a fresh
+revision; never overwrite a previous proof packet.
 
-## The canvas template (the shared coordinate frame)
+## Generate and trace
 
-Every machine-facing image in the loop — style sheets, generation targets,
-returned generations — lives on one fixed canvas, so pixel↔font-unit mapping
-is **known, never guessed**:
-
-- **1536 × 1536 px, 1 font unit = 1 px.** Drawing band 1024 px tall
-  (ascender→descender), 256 px margin top and bottom.
-- Metric lines at fixed pixel rows: ascender & cap height **y=256** (they
-  share the 768 ceiling), x-height **y=448**, baseline **y=1024**,
-  descender **y=1280**.
-- Small solid fiducial squares in the four margin corners (drift check).
-- **Machine-facing images are light mode**: white background, black glyph
-  ink; template graphics (metric lines, fiducials, labels) in **pure green
-  `#00ff00`** — chroma-key style. The lines cross the drawing band and get
-  repainted by the model, so the key color must survive approximate
-  repainting: ink extraction keeps only dark, *desaturated* pixels and drops
-  anything saturated. Dark mode is only for images a human reviews (step 7).
-
-The mapping this buys: a pixel at row *y* is at font-unit
-`768 − (y − 256)`; the ink's pixel bbox gives exact `--target-height` /
-placement inputs for tracing. No `--fit` guessing.
-
-## The procedure: one glyph
-
-Inputs: a glyph name (e.g. `at`), and optionally a human sketch image
-(shape intent).
-
-### 1. Inspect the target
-
-- Read `sources/VirtuaGrotesk-{Regular,Bold}.ufo/glyphs/<name>.glif` if it
-  exists: note `public.markColor`, advance width, unicode. Red = replace the
-  outline, keep metrics as a starting point. Missing = register it later
-  (step 8b). Green = stop and report; wrong target.
-
-### 2. Prepare canvas assets (checked-in toolchain — never hand-roll)
-
-The coordinate frame is implemented **once**, in
-`harness/designbot/glyph_canvas.rs`. Use it for every canvas image; do not
-write your own renderer or do any px↔unit math (this is where run 2 failed).
-All commands run from the repo root; `RUN=.glyph-ai-runs/<name>`.
-
-- **Style sheet** per master — 6–10 green glyphs at true scale showing
-  style, weight, and how ink relates to the lines (pick load-bearing greens:
-  o n H O e s, plus any structurally close to the target; it warns on
-  non-green picks):
-
-  ```sh
-  designbot --render harness/designbot/glyph_canvas.rs \
-    --output "$RUN/style-Regular.png" -- \
-    sheet sources/VirtuaGrotesk-Regular.ufo o,n,H,O,e,s
-  ```
-
-- **Target canvas + mask** per master — registers the shape-intent image
-  into a vertical band as a light-gray ghost and writes the drawing-band
-  mask (transparent = editable):
-
-  ```sh
-  designbot --render harness/designbot/glyph_canvas.rs \
-    --output "$RUN/target-Regular.png" -- \
-    ghost <shape-intent.png> baseline:cap "$RUN/mask.png"
-  ```
-
-  Band by glyph class (zones or raw numbers): caps/figures `baseline:cap`,
-  lowercase `baseline:xheight`, descenders e.g. `-256:xheight`. If there is
-  no sketch, bootstrap: one unmasked generation on a bare `template` render
-  to get a shape draft, then feed that draft back as the ghost.
-- **Current-state render** of any source glyph (sanity view):
-  `... -- glyphbox sources/VirtuaGrotesk-Regular.ufo <name>`.
-
-### 3. Generate (OpenAI image API) — with the correction loop
-
-Call the image edit endpoint with: the target canvas as the base image, the
-mask, and the style sheet as a reference image. gpt-image-2 keeps input
-fidelity high automatically; on older models pass `input_fidelity: "high"`.
-Prompt essentials: "ink the light-gray ghost glyph in exactly the style and
-stroke weight of the reference sheet — monolinear geometric grotesk, 45°
-chamfered corners on straight junctions, open apertures; solid black ink,
-one glyph; change nothing outside the ghost; preserve all red guide lines
-and markers." Repeat the preserve-list on every iteration.
-
-Then **gate and self-correct — never ask the human**. One command runs the
-gates (interim Python; being ported to img2bez):
+Use the selected image tool with the reference renders and scoped context.
+Inspect the returned artwork and tune/regenerate poor forms before tracing. Save
+one image per master at generated/regular/<glyph>.png and generated/bold/<glyph>.png.
 
 ```sh
-./.venv/bin/python harness/canvas.py extract \
-  --image "$RUN/generated-Regular.png" --master Regular \
-  --out "$RUN/ink-Regular.png"
+.venv/bin/python scripts/glyph_ai_harness.py trace --run-dir .glyph-ai-runs/<glyph>
 ```
 
-It prints JSON: fiducial check, ink bbox in **font units**, the exact
-`--fit` band for tracing, measured stroke width vs the master's stem ladder
-(±15% gate), and — on a weight failure — a ready-made `correction_prompt`
-("same glyph, same skeleton, strokes ~N% thicker"). Exit code 2 = a gate
-failed → re-prompt with the correction (reuse the previous output as the new
-base image) and run extract again. Also sanity-check the ink's vertical
-band: a glyph in the wrong zones (e.g. a question mark plunging below
-baseline) → regenerate with the ghost/band fixed. Run `img2bez stats` on the
-extracted ink if sharpness is in doubt.
+The harness rechecks input hashes, copies both UFOs/designspace into a new scratch
+trace directory and runs img2bez masters. It refuses legacy packets and existing
+trace directories. It requires compatible=true, lowConfidence=false and strict
+source compatibility. Inspect the report's bounds, fit, advance, point counts,
+profile and warnings. Compatible topology can still be a bad drawing. Tune and
+retrace poor results into a fresh revision. IMG2BEZ_LOG may retain trace history.
 
-Budget: ~3 correction rounds. Still failing → stop and report with the
-attempts attached; do not trace a failing image.
+## Refit and review
 
-### 4. Trace
+Preserve the supplied form, broad path and counter rhythm. Apply the selected
+construction contract, 8-unit draft lattice and deliberate 16/8-unit cuts. Preserve
+human corrections; do not optimize every measurement to a low popcount. Check
+whole-glyph silhouette, opposing-edge weight, then joins and curvature. A smooth
+local join does not repair a lumpy overall path. Use the selected correction pairs
+and signed curve_profile with shared scale.
 
-- The extract step already wrote clean black-on-white ink
-  (`ink-<master>.png`) and printed the exact fit band — use them verbatim.
-- **Trace on a scratch copy — never point img2bez at `sources/`** (it
-  writes through norad, which reformats files):
+Run draft_grid_check on named scratch glyphs, strict master compatibility, curve
+checks and a build. Inspect endpoint/intermediate compiled shaping, actual large
+and reading-size proofs, marks and joins. Arabic also needs the raster gate in
+[verification](../design/system/verification.md). Record actual observations.
 
-```sh
-RUN=.glyph-ai-runs/<name>
-mkdir -p "$RUN/trace"
-cp -R sources/VirtuaGrotesk.designspace \
-      sources/VirtuaGrotesk-Regular.ufo \
-      sources/VirtuaGrotesk-Bold.ufo "$RUN/trace/"
-
-img2bez masters "$RUN/trace/VirtuaGrotesk.designspace" \
-  --glyph <name> --unicode <HEX> \
-  --image Regular="$RUN/ink-Regular.png" \
-  --image Bold="$RUN/ink-Bold.png" \
-  --fit <fit_band from the extract JSON — raw numbers, never zone guesses> \
-  --preserve-existing-metrics \
-  --fail-on-low-confidence \
-  --report "$RUN/report.json"
-```
-
-  Use each master's own `fit_band` from its extract output; remember round
-  forms overshoot 16.
-- Read `report.json`. Require `compatible: true`, no `lowConfidence`; check
-  per-master `points`, `bounds`, warnings. Bad trace → adjust flags
-  (`--profile`, `--mode`, `--corner-threshold`) or regenerate; do not
-  hand-fix a bad trace.
-
-### 5. Adjust per DESIGN.md
-
-Read the traced glifs from `$RUN/trace/…ufo/glyphs/` and correct against
-`DESIGN.md`, keeping both masters structurally identical:
-
-- Snap near-metric on-curve points exactly to baseline/x-height/cap
-  (± overshoot 16 for curves), near-H/V lines exactly axial, near-45°
-  chamfer segments exactly 45°.
-- New machine-draft coordinates and spacing on8, including handles; run
-  `scripts/draft_grid_check.py`. Preserve approved human optical exceptions.
-  A grid2 tracing configuration alone does not satisfy the draft gate.
-- Chamfers: every sharp straight-straight corner gets the 16-unit bevel
-  (scaled up in Bold). Curves: on-curve extrema with on-axis handles.
-- **Review apparent weight as well as measured thickness.** Work on opposing
-  boundaries together, with explicit branch pairing. Set local optical intent
-  from the approved reference: horizontal/vertical balance, junction relief and
-  terminal taper. Do not force constant width, equal handles, or a generic stem
-  ladder across every curve. Preserve silhouette where the glyph contract says
-  it stays; broaden scratch reconstruction only within the named approval.
-
-### Broad-curve gate — AT-001 correction, 2026-10-23
-
-Read [AT-001](../agent-proofs/cases/at-001/README.md) before repairing lumpy
-organic curves. Revision2 passed local diagnostics yet looked lumpy; revision3
-improved widths yet retained poor broad flow. Neither is an accepted example.
-
-1. Compare the complete filled reference, rejected draft and candidate at equal
-   scale, then actual text sizes. Describe the visible flattening, swelling or
-   abrupt bend before choosing a repair. Keep the agreed topology and identity.
-2. Review the whole turn independently of individual joins. If traced nodes
-   lock in the defect, redraw the broad path within the authorized scratch
-   scope; do not keep tuning handles against a bad raster just to lower error.
-3. Diagnose joins with the signed comb and opposing-edge mass with
-   `harness/paired_stroke_report.py`. Explicit pair plans carry source hashes
-   and optical intent. Missing/ambiguous measurements remain visible; ranges
-   have no automatic pass threshold. Reinspect after grid snapping.
-4. Keep exact rejected/accepted pairs and reviewer identity. The r4 at redraw
-   was judged “better, but still bad” and applied for hand editing at Eli’s
-   request: no positive optical label or model-training claim.
-
-
-Verify numerically after adjusting (and again after porting, per master):
-
-```sh
-./.venv/bin/python harness/canvas.py check --glyph <name> --master Regular
-```
-
-It reports yMin/yMax with the nearest metric zones, LSB/RSB, and the count
-of odd coordinates — every number should be explainable before you move on.
-
-### 6. Space it (sidebearings — do not skip)
-
-`--preserve-existing-metrics` keeps the *advance width*, not the spacing.
-Set spacing deliberately, by analogy:
-
-- Pick 2–3 structurally similar **green** glyphs (round → `o`/`O`/`zero`,
-  flat-sided → `n`/`H`) and read their LSB/RSB as the target range.
-- Set LSB and RSB on the power-of-two ladder (multiples of 8 typical);
-  round forms fit tighter. Advance = `LSB + outline width + RSB` — never
-  leave the outline touching the advance box edges. Both masters (Bold
-  slightly tighter).
-
-### 7. Render and look (designbot, dark mode)
-
-Render `$RUN/review-<master>.png` for the human: the adjusted glyph **with
-its metrics drawn** (advance-box sides, baseline, x-height, cap) plus 3–4
-green-marked reference glyphs at the same scale with their real advances.
-Draw all guide lines in **bright green `#18b86f`** (the Runebender palette
-green) — clearly distinct from the light-gray glyph ink, never the same
-color as the letterforms. Human-facing
-style: **dark mode — dark gray background (~#202020–#2a2a2a), light gray ink
-(~#c8c8c8–#e6e6e6), never pure black on white**; Swiss / International
-Typographic Style layout (modular grid, flush-left, generous margins, no
-decoration). Iterate steps 5–6 until shape, weight, and spacing sit right.
-
-### 8. Port only within explicit active-application authorization (repo style)
-
-Scratch approval is not application approval. Stop at the proof when the user
-requests review before applying; the commands below then use scratch paths.
-
-a. Write the final outlines into
-   `sources/VirtuaGrotesk-{Regular,Bold}.ufo/glyphs/<name>.glif` as
-   repo-style XML, preserving the file's `advance` (as updated in step 6),
-   `unicode`, and lib structure. Write atomically (temp file + rename) — the
-   Runebender server may be watching.
-b. **Only if the glyph is new**: register it in three places per master —
-   `glyphs/contents.plist`, `public.glyphOrder` in `lib.plist`, and the glif
-   file itself. Edit the plists surgically, matching existing tab formatting.
-
-### 9. Mark colors (the human's control channel)
-
-- Follow current `README.md` semantic colors. Under Eli’s requested convention,
-  new AI drawings are **purple**, awaiting human review. Blue identifies a
-  composite needing diagnosis; it is not an AI-output grade.
-- A Bold that is only a structure copy / placeholder → keep/set **red**
-  `1,0.29,0.24,1`.
-- Never set green — only the human promotes to green.
-
-### 10. Verify
-
-```sh
-make build      # must succeed
-make reports    # then check documentation/source/master-compatibility.md
-```
-
-Verify the **built** font: confirm cmap and advance width in the TTF; render
-a word context (e.g. `A@B name@example.com`) from `fonts/variable/*.ttf` with
-designbot at both weight extremes, dark-mode style, to `$RUN/` — weight and
-spacing must match the neighbors. `make test` must show no new FAILs
-(pre-existing excludes: `scripts/check_gf_fonts.sh`).
-
-### 11. Report and stop
-
-One glyph per run. Summarize: generation attempts and what each gate
-measured, what you adjusted and which DESIGN.md rule justified it, the
-report.json gates, and the review image paths. Commit only if asked; plain
-message. The human grades the candidate in Runebender —
-their color change is the verdict, and the next run re-reads it.
+Port only within named active-application authorization, after rechecking guards
+and source colors. Edit only relevant GLIF/plist entries in repository style;
+never save a whole active UFO. Preserve component donors, anchors, metrics and
+other work. Label new AI drawing purple, never green. Capture exact feedback,
+source pairs, proof hashes and approval/application state in design/reviews;
+index reusable lessons in design/corrections. A check pass is not human approval.

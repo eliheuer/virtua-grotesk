@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "kaf-initial-accepted",
+  "kind": "correction",
+  "title": "Accepted S-like Bold initial Kaf",
+  "status": "recorded-human-feedback",
+  "summary": "Preserve S-like openings and rounded turns while matching connection weight.",
+  "glyphs": [
+    "kaf-ar.init",
+    "uni0643.init"
+  ],
+  "masters": [
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [],
+  "tags": [
+    "curve",
+    "junction"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Preserve S-like openings and rounded turns while matching connection weight.",
+  "application": "exact Bold candidate approved and applied 2026-10-29",
+  "visual_verdict": "accepted",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-b12e72325cfc44e4.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "b12e72325cfc44e4639267fe462c5b12596a87d83a7ff371f30fb6a7e3589f12",
+      "source_path": "design/reviews/arabic-006/README.md"
+    },
+    {
+      "path": "design/reviews/arabic-006/kaf-initial-2026-10-28/before/Bold.glif",
+      "role": "Before",
+      "sha256": "42ec9f481b63cd4f7a2e3a6cd072c3e5cfc268ddb24159db5ed5d5dca06cd34d"
+    },
+    {
+      "path": "design/reviews/arabic-006/kaf-initial-2026-10-28/candidate/Bold.glif",
+      "role": "Accepted candidate",
+      "sha256": "c01956162fa2f9a9584a08a16a0eec38d36781f7fe446e668253d4419e8f5fef"
+    },
+    {
+      "path": "design/reviews/arabic-006/kaf-initial-2026-10-28/application.json",
+      "role": "Application receipt",
+      "sha256": "d1bb2ad0dcb49ca8038f634fe61efd0096a318405b959cbe7f31a9f5610fe35b"
+    }
+  ],
+  "pairs": [
+    {
+      "master": "Bold",
+      "before": "design/reviews/arabic-006/kaf-initial-2026-10-28/before/Bold.glif",
+      "after": "design/reviews/arabic-006/kaf-initial-2026-10-28/candidate/Bold.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    }
+  ]
+}

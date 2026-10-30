@@ -38,11 +38,13 @@ a public release for onboarding is still pending.
 
 ## Review and contribute
 
-Start with [Virtua Design Review](agent-proofs/README.md):
+Start with [Virtua design context](design/README.md):
 the central map, current handoff and new-session instructions for the font review
 loop. Its default comparison interface is the
 [live web proof](agent-proofs/app/README.md).
 
+- `make design-context GLYPH=seen-ar OPERATION=curve-repair`: retrieve scoped drawing context.
+- `make design-check`: validate correction evidence and current proof.
 - `make proof-web`: serve or reuse the live design-review interface.
 - `make test`: development Fontspector checks, with documented exclusions.
 - `make qa-full`: all configured Google Fonts profile checks, without exclusions.
@@ -69,7 +71,7 @@ propose named glyphs and masters, wait for Eli's approval, prepare a reversible
 scratch candidate, and show proofs before applying it when only candidate work
 was approved. Explicit approval can override a color restriction for those named
 glyphs only. Only green edits require a protection exception (Eli, 2026-10-20).
-Standing Hebrew/Arabic authorization in AGENTS.md still applies. Purple now identifies AI-drawn or substantially redrawn glyphs awaiting human
+Current scope and stopped work are recorded in `design/reviews/current.json`; dated standing grants do not restart a stopped queue. Purple now identifies AI-drawn or substantially redrawn glyphs awaiting human
 review. It carries no approval, reference, or protection status.
 
 | Color | Meaning | Editing and reference use |

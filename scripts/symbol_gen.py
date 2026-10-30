@@ -1,31 +1,24 @@
 #!/usr/bin/env python3
-"""Parametric generator for Virtua Grotesk line-grammar glyphs.
+"""Historical parametric symbol recipes, now emitted only into scratch output.
 
-Symbols (math, punctuation, arrows, PUA icons) are not traced — they are
-GENERATED from parameters using the house grammar, so system compliance is
-guaranteed by construction and both masters share point structure for free.
+Retrieve design_context.py --operation from-image before use. Existing recipes
+retain their measured historical 2-grid dimensions; they are not automatically
+compliant new 8-grid drafts. Inspect current green donors, adapt the named recipe,
+then check grid, master correspondence, builds and visible proofs. Generated GLIFs
+are purple and unapproved. This tool never installs files in active sources.
 
-The grammar (see .agents/skills/anchor-sheet-glyphs/ for the workflow and
-the running lessons log):
-  - 2-unit grid, every value even
-  - 16-unit 45-degree bevels on terminals and corners
-  - 8-unit flats on notches/crotches (4 each side of the meet point)
-  - TIP RULE (Eli, 2026-07-28): diagonal-arm tips land on a 16-unit
-    axis-aligned flat before the bevel — never a bare bevel-to-face point.
-    Anatomy: outer edge -> 16u flat -> 16u bevel -> face. Same as V/W/v
-    baseline terminals.
-  - stroke weights snap to the class palette; symbol (math) class:
-    Regular 72, Bold 132 (hyphen class: 88 / TBD-bold)
-  - math axis 352 (set from the n<=> anchor sheet, 2026-07-28)
+    .venv/bin/python scripts/symbol_gen.py equal --out out/symbol-candidate
 
-Use as a library or run to (re)generate specific glyphs:
-    ./.venv/bin/python scripts/symbol_gen.py equal
+The output contains per-master GLIFs; register/install into a scratch font only
+within the named task. Some paired recipes emit both family members.
 """
-import pathlib, plistlib, re, sys
+import argparse, json, pathlib, plistlib, re, sys
+from design_context import build_packet, markdown
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 MASTERS = ("Regular", "Bold")
-BLUE = "0.27,0.44,1,1"
+PURPLE = "0.54,0.44,0.88,1"
+OUTPUT_ROOT = None
 
 MATH_AXIS = 352
 MATH_STROKE = {"Regular": 72, "Bold": 132}
@@ -34,7 +27,7 @@ TIP_FLAT = 16
 NOTCH_FLAT = 8  # total; half each side of the meet line
 
 
-def glif(name, uni, adv, contours, color=BLUE):
+def glif(name, uni, adv, contours, color=PURPLE):
     L = ['<?xml version="1.0" encoding="UTF-8"?>',
          f'<glyph name="{name}" format="2">']
     if uni:
@@ -176,6 +169,8 @@ def write(master, name, uni, adv, contours, normalize=True):
     copied from a donor glyph: rotating each master to its own lower-left
     point can pick different indices and break master compatibility
     (dollar's S copy, 2026-07-29)."""
+    if OUTPUT_ROOT is None or not pathlib.Path(OUTPUT_ROOT).resolve().is_relative_to(REPO / "out"):
+        raise ValueError("Set OUTPUT_ROOT to a fresh scratch directory under out/; active-source writes are disabled")
     fixed, areas, boxes = [], [], []
     for pts in contours:
         pts = normalize_start(pts) if normalize else [_norm(pt) for pt in pts]
@@ -204,7 +199,10 @@ def write(master, name, uni, adv, contours, normalize=True):
         want_pos = depth % 2 == 0  # even nesting = ink (CCW), odd = counter (CW)
         assert (s > 0) == want_pos, (
             f"{name}: contour {i} winding wrong (signed area {s/2:.0f}, depth {depth})")
-    p = REPO / f"sources/VirtuaGrotesk-{master}.ufo/glyphs/{name}.glif"
+    p = pathlib.Path(OUTPUT_ROOT) / master / f"{name}.glif"
+    p.parent.mkdir(parents=True, exist_ok=True)
+    if p.exists():
+        raise ValueError(f"Preserve previous evidence; output already exists: {p}")
     p.write_text(glif(name, uni, adv, fixed))
     return p
 
@@ -721,7 +719,18 @@ GENERATORS = {"plus": gen_plus, "periodcentered": gen_periodcentered,
               "asciicircum": gen_asciicircum, "underscore": gen_underscore}
 
 if __name__ == "__main__":
-    targets = sys.argv[1:] or sorted(set(GENERATORS))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("targets", nargs="+", choices=sorted(GENERATORS))
+    parser.add_argument("--out", type=pathlib.Path, required=True)
+    args = parser.parse_args()
+    OUTPUT_ROOT = args.out.resolve()
+    if not OUTPUT_ROOT.is_relative_to(REPO / "out") or OUTPUT_ROOT.exists():
+        parser.error("--out must be a new directory under out/")
+    targets = args.targets
+    packet = build_packet(REPO, targets, list(MASTERS), "from-image")
+    OUTPUT_ROOT.mkdir(parents=True)
+    (OUTPUT_ROOT / "context.json").write_text(json.dumps(packet,indent=2)+"\n")
+    (OUTPUT_ROOT / "context.md").write_text(markdown(packet))
     done = set()
     for g in targets:
         fn = GENERATORS[g]

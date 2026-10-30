@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "arabic-round-dots",
+  "kind": "correction",
+  "title": "Arabic letter-dot direction",
+  "status": "recorded-human-feedback",
+  "summary": "Near-circular cubic letter dots; preserve approved Regular geometry and separate attachment decisions.",
+  "glyphs": [
+    "dot*-ar",
+    "*Dots*-ar"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [],
+  "tags": [
+    "letter-dot"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Near-circular cubic letter dots; preserve approved Regular geometry and separate attachment decisions.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "direction-confirmed; candidate-not-auto-approved",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-6710d3f219d1d157.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "6710d3f219d1d157e570928fc9e8a240a736809bb986fde55be6ed166ab375b0",
+      "source_path": "design/reviews/arabic-005/round-dots/README.md"
+    }
+  ],
+  "pairs": []
+}

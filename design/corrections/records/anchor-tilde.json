@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "anchor-tilde",
+  "kind": "correction",
+  "title": "2026-07-28 — tilde rebuild + extrema rule (Eli correction)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "asciitilde",
+    "tilde",
+    "tildecomb"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "latin",
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "curve"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-tilde.md",
+      "role": "Original review and feedback",
+      "sha256": "3aa1bfcfebdf6a1efd1b778a1fcf7cb73c14f38171db8ab612ce95fcf5806d4d"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-tilde.md"
+}

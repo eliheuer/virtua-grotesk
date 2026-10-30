@@ -1,0 +1,234 @@
+{
+  "config": {
+    "seed": 17,
+    "device": "cpu",
+    "torch": "2.13.0",
+    "parameters": 62792,
+    "max_steps": 3000,
+    "max_seconds": 120,
+    "input_features": [
+      9,
+      36,
+      8
+    ],
+    "points": 36,
+    "normalization": "TRAIN input mean/std floor0.01",
+    "output": "tanh *64, hard editable mask; nearest2-unit quantization for scratch reconstruction",
+    "task": "memorize nine TRAIN examples, not generalization"
+  },
+  "manifest_sha256": "a4135c690ecb830987fa6dd873a4e645508da71e20abe74eeb8f2397d9c76e19",
+  "examples_sha256": "fbe557c25a8223181da939924245601a72412e2e917e7d6167332d20e2b092ab",
+  "checkpoint_sha256": "184436f31b6e9122f4920c0b56f4b50c4c5d77fd26f7bc3d5ef8321a379092d9",
+  "script_sha256": "317e24d19ad3a7260dacb5996b53dd8abdbb53409b2dc3b8bae89c5cd30190e4",
+  "steps": 250,
+  "seconds": 0.21757674997206777,
+  "stop_reason": "all training residuals within0.5 units for3 checks",
+  "history": [
+    {
+      "step": 1,
+      "seconds": 0.011350999993737787,
+      "masked_mae": 6.934246063232422,
+      "max_error": 23.341064453125
+    },
+    {
+      "step": 25,
+      "seconds": 0.021807582990732044,
+      "masked_mae": 5.2614874839782715,
+      "max_error": 17.048564910888672
+    },
+    {
+      "step": 50,
+      "seconds": 0.03128683299291879,
+      "masked_mae": 4.833187580108643,
+      "max_error": 21.865428924560547
+    },
+    {
+      "step": 75,
+      "seconds": 0.04053308296715841,
+      "masked_mae": 4.127434253692627,
+      "max_error": 13.926142692565918
+    },
+    {
+      "step": 100,
+      "seconds": 0.04989624995505437,
+      "masked_mae": 3.324345588684082,
+      "max_error": 14.882684707641602
+    },
+    {
+      "step": 125,
+      "seconds": 0.059511124971322715,
+      "masked_mae": 1.4541987180709839,
+      "max_error": 6.897825241088867
+    },
+    {
+      "step": 150,
+      "seconds": 0.06881920795422047,
+      "masked_mae": 2.8540725708007812,
+      "max_error": 9.22062873840332
+    },
+    {
+      "step": 175,
+      "seconds": 0.07805995794478804,
+      "masked_mae": 0.45812928676605225,
+      "max_error": 2.409709930419922
+    },
+    {
+      "step": 200,
+      "seconds": 0.08736212499206886,
+      "masked_mae": 0.08665262162685394,
+      "max_error": 0.49869728088378906
+    },
+    {
+      "step": 225,
+      "seconds": 0.0968517079600133,
+      "masked_mae": 0.04212796315550804,
+      "max_error": 0.19715309143066406
+    },
+    {
+      "step": 250,
+      "seconds": 0.10649641597410664,
+      "masked_mae": 0.05560240149497986,
+      "max_error": 0.2579612731933594
+    }
+  ],
+  "metrics": [
+    {
+      "glyph": "behDotless-ar",
+      "mode": "noop",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 0.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "behDotless-ar",
+      "mode": "pinch",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 8.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "behDotless-ar",
+      "mode": "bulge",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 8.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "meem-ar",
+      "mode": "noop",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 0.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "meem-ar",
+      "mode": "pinch",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 8.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "meem-ar",
+      "mode": "bulge",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 8.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "reh-ar.fina",
+      "mode": "noop",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 0.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "reh-ar.fina",
+      "mode": "pinch",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 8.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    },
+    {
+      "glyph": "reh-ar.fina",
+      "mode": "bulge",
+      "exact_after_quantization": true,
+      "masked_mae": 0.0,
+      "unchanged_input_masked_mae": 8.0,
+      "max_error": 0.0,
+      "locked_deltas_zero": true
+    }
+  ],
+  "source_files_checked": 3135,
+  "changed_sources": [],
+  "validation_used": false,
+  "test_used": false,
+  "overnight_started": false,
+  "proof": {
+    "font_sha256": "6f40e2c29e6547865f08a27cb27b7d7425c887ddef1b7620462a60646c4e05b5",
+    "checkpoint_sha256": "184436f31b6e9122f4920c0b56f4b50c4c5d77fd26f7bc3d5ef8321a379092d9",
+    "predictions_sha256": "732f5d22e885cbc9148b888e00786afb81fca6bcc7d808ab9693612a1d858e83",
+    "compiled_outline_and_advance_matches": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "source_file_set_unchanged": true,
+  "first_attempt_source_guard_equal": true,
+  "tests_pass": 11,
+  "visual_review": {
+    "sizes_px": [
+      224,
+      48
+    ],
+    "modes": [
+      "pinch",
+      "bulge",
+      "noop"
+    ],
+    "glyphs": [
+      "behDotless-ar",
+      "meem-ar",
+      "reh-ar.fina"
+    ],
+    "scope": "All9 isolated samples in actual browser font; no Arabic shaping or held-out evaluation claim",
+    "screenshots": {
+      "bulge-top.png": "db35da9a8535993076c0e84e76f4cc58c85142b272b5b67bad28d32122bf2ce3",
+      "noop-top.png": "2087df2b65611cf54e0ab4ee14f7158cf2344ef67ad4ee64d46447d61feb19e6",
+      "pinch-top.png": "15f92a37a1fac3f2768c7d66985a6109e122e2dc4734155b717d59ca1e707ea2",
+      "bulge-bottom.png": "d1250161763efa936cd2b5be9c25f1da846195ff19f9769750221f233bf806aa",
+      "noop-bottom.png": "38e180847904af73e735b529f45821286073c875a256ad95d4f44d23636f024e",
+      "pinch-bottom.png": "1f05bce9e0484e1e2f5b8d9ee4f0c0fea8bdf3be8bc1583aef6b352803eaf05f"
+    }
+  },
+  "first_attempt": {
+    "steps": 250,
+    "status": "optimizer completed, checkpoint reload rejected TorchVersion metadata; retained locally",
+    "fix": "serialize version as plain string; successful second bounded run"
+  },
+  "checkpoint_path": "out/training-prep/regular-pilot-v2/checkpoint.pt",
+  "preview": "http://127.0.0.1:60272/masked-pilot/index.html",
+  "source_edit": false
+}

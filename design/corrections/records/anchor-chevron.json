@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "anchor-chevron",
+  "kind": "correction",
+  "title": "2026-07-28 — chevron tips need a flat (Eli correction)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "less",
+    "greater",
+    "guillemot*",
+    "guilsingl*"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "terminal"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-chevron.md",
+      "role": "Original review and feedback",
+      "sha256": "57970854434e49a14e5341fe7e3ef205425762a01b060eb07d55ff6a8103b220"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-chevron.md"
+}
