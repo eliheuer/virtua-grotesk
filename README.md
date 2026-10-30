@@ -60,15 +60,28 @@ AI tools have assisted with code, documentation, and candidate glyph generation.
 Source colors describe drawing quality, composite status, and what may be changed.
 See [AGENTS.md](AGENTS.md) before editing sources with an agent.
 
-## Interactive native editor and experimental model
+## Helper model workflow
 
-For supervised point editing and Agent Proof comparisons inside native Runebender,
-see the [portable native model workflow](documentation/native-model-workflow.md).
-The [Regular Arabic repair model](models/arabic-repair-hour-v1/README.md) is bundled
-in Git (148KiB,36,578 parameters). It runs locally on CPU and produces scratch
-proposals; it still fails held-out clean preservation and is not approved for
-automatic cleanup. The guide includes Linux setup, human/agent handoff and the
-required native MCP hooks and their Runebender commit.
+Use the local helper model with a coding agent and **native Runebender** to propose
+point edits, review them in Runebender's Agent Proof view, and take turns editing
+with the agent.
+
+**Start here:** [Helper model workflow guide](documentation/native-model-workflow.md).
+It covers Linux setup, model inference, the required MCP connection, scratch
+comparisons, and handing control between you and the agent.
+
+Give your agent this instruction:
+
+> Read AGENTS.md and the Helper model workflow section of README.md, then follow
+> documentation/native-model-workflow.md. Start with the bundled sample in a
+> scratch font in native Runebender. Keep Virtua's actual font unchanged and pause
+> for my review before further edits.
+
+The [Regular Arabic helper model](models/arabic-repair-hour-v1/README.md) is included
+in this repository (148 KiB, 36,578 parameters) and runs locally on CPU. It remains
+experimental: it changes clean held-out drawings and is not approved for automatic
+cleanup. Pull and build the required Runebender version as well as this repository;
+Pi needs an MCP bridge to control the editor.
 
 ## Semantic colors
 
