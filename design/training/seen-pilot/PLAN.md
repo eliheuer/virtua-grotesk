@@ -1,16 +1,55 @@
 # Regular Arabic repair pilot — review before further training
 
-Updated 2026-10-30. **The variable-length short pilot is complete and fails clean
-preservation. Do not start an overnight run of this setup. Active sources and
-built fonts remain unchanged.**
+Updated 2026-10-30. **Eli authorized a one-hour Regular-only experiment and
+native Runebender demo preparation. The prior pilot failed clean preservation;
+this run is experimental, not an approved final model. No automatic font cleanup.**
 
-[Current visual proof](http://127.0.0.1:60272/variable-pilot/index.html) ·
+[Current visual proof](http://127.0.0.1:60272/variable-pilot-v3/index.html) ·
 [Variable pilot receipt](variable-pilot-receipt.json).
 Earlier evidence: [adapter smoke](masked-smoke-receipt.json),
 [TRAIN memorization](regular-pilot-receipt.json),
 [fixed-size evaluation](evaluation-receipt.json).
 
-## Latest result
+## Longer controlled run:100,000 steps
+
+[Receipt](variable-pilot-v3-receipt.json). Same model, seeds, frozen training and
+identical evaluation bytes as v2. Completed100,000 steps in299.61 seconds under
+a900-second cap. Clean TRAIN preservation improved5/36→10/36; all3 clean Hah
+forms still changed. New corruptions improved18/18 versus input, none exact;
+mean error fell1.266→1.146. Hah probe mean error rose9.940→10.024. Extra training
+improves familiar recovery but has not established useful unseen-family repair.
+No automatic font cleanup or model promotion. All3140 source/font hashes unchanged.
+Comparison tool refuses mismatched evaluation inputs. Native scratch shape/point
+motions demonstrated independently through MCP; they were scripted, not learned.
+
+## Latest authorized run: updated greens, longer bounded training
+
+[Receipt](variable-pilot-v2-receipt.json). New frozen snapshot green-arabic-v4
+adds Regular kaf-ar, lam-ar and waw-ar:36 TRAIN drawings in10 families. Hah
+remains validation and Seen remains test. The snapshot generator retains its
+conservative proposed/not-authorized metadata; the separate receipt records Eli's
+explicit authorization for this bounded run without rewriting frozen bytes.
+
+Same architecture,50,000 steps,146.69 seconds; cap300 seconds. New corruption
+samples improved18/18, but none became exact. Clean TRAIN drawings preserved5/36;
+Hah clean preserved0/3. Hah probes improved6/21 and worsened15/21. The model is
+not approved for automatic cleanup. Data and training duration changed together;
+we cannot attribute gains to the three new drawings alone. Random evaluation
+draws also differ from v1. Source/font hash guard passes for all3140 files.
+Actual browser inspection covers clean initial Hah and Lam at224/48px; other
+samples received numerical and compiled-outline checks, not visual approval.
+
+The native MCP integration smoke test moved one point on a separate scratch Lam,
+verified duplicate-request idempotence and stale-read rejection, then undid it
+with exact contour/anchor/advance restoration and no disk writes. Reusable tool:
+`scripts/test_native_mcp_demo.py`; exact scratch-path restriction and35-second
+reply timeout. No native Rust changes, model-to-editor adapter or animation yet.
+A later rerun found an untitled session and a closed scratch window; null-project
+handling was corrected and the absent scratch was safely refused. Existing native
+repository edits remain untouched. Training outputs remain ignored; no push.
+
+## Earlier variable-length pilot (v1)
+
 
 The new shared-point model handles variable contour lengths without truncation,
 including the44/50-point Hah forms the old model could not process. It uses local
@@ -145,3 +184,22 @@ Pilot scripts: `scripts/variable_repair.py`, `scripts/train_variable_pilot.py`,
 Run artifacts: `out/training-prep/variable-pilot-v1`.
 The previous fixed-size model and its failed held-out evaluation remain available;
 the new pilot does not overwrite their checkpoints. No commit or push performed.
+
+
+## One-hour experiment and native demo — complete
+
+Eli explicitly requested a longer run on2026-10-30. Output:
+`out/training-prep/variable-hour-v1`; log beside it. Same frozen green-arabic-v4
+manifest and model/data/evaluation seeds as v3, freshly initialized; only duration
+changes. One-hour wall-clock cap, two-million-step ceiling, one CPU worker.
+A latest checkpoint and progress record are replaced atomically/every10000 steps
+(checkpoint atomic; progress JSON is diagnostic). Final evaluation uses the last
+checkpoint, never validation-selected. No test split, active-font writes, model
+installation or automatic approval. Familiar fitting is not unseen-family quality.
+
+Native demo uses editor_select_points and editor_review, with the existing
+review_proof capture of the native comparison/reference drawings. Human takeover
+means stop mutations, reread unsaved geometry, and discard stale proposals.
+No continuous unattended editing of active Arabic is approved by this demo setup.
+
+Final hour run completed1285746 steps in3600 seconds. Receipt: variable-hour-v1-receipt.json. All36 clean TRAIN drawings preserved, but all3 clean Hah drawings changed. Hah corrupted cases9 improved/12 worsened versus unchanged input; all21 improve versus the earlier100k model. No approval or installation. Final native scratch gallery: out/native-mcp-demo/hour-final/Heldout-Final.ufo; earlier/final/input/target variants retained on disk for24 Hah cases. Completion monitor deleted; no new training scheduled.

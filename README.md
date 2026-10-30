@@ -60,6 +60,16 @@ AI tools have assisted with code, documentation, and candidate glyph generation.
 Source colors describe drawing quality, composite status, and what may be changed.
 See [AGENTS.md](AGENTS.md) before editing sources with an agent.
 
+## Interactive native editor and experimental model
+
+For supervised point editing and Agent Proof comparisons inside native Runebender,
+see the [portable native model workflow](documentation/native-model-workflow.md).
+The [Regular Arabic repair model](models/arabic-repair-hour-v1/README.md) is bundled
+in Git (148KiB,36,578 parameters). It runs locally on CPU and produces scratch
+proposals; it still fails held-out clean preservation and is not approved for
+automatic cleanup. The guide includes Linux setup, human/agent handoff and the
+required native MCP hooks and their Runebender commit.
+
 ## Semantic colors
 
 Glyph colors are editing and reference permissions, not just progress indicators.

@@ -242,3 +242,6 @@ documentation/proofs/images/*.png
 !design/reviews/latin-001/batches/19-florin/Bold-comb.svg
 !design/reviews/latin-001/batches/19-florin/Regular-comb.svg
 !design/reviews/latin-001/batches/37-currency/curve-comb.svg
+
+# Isolated runtime for the portable experimental model.
+.venv-repair/

@@ -1,0 +1,140 @@
+{
+  "config": {
+    "schema": "virtua-variable-repair-v1",
+    "seed": 83,
+    "data_seed": 731,
+    "evaluation_seed": 919,
+    "max_steps": 50000,
+    "max_seconds": 300,
+    "batch_size": 24,
+    "lr": 0.001,
+    "clean_loss_weight": 2,
+    "normalization": "fixed1024 units; no corpus-dependent variance scaling",
+    "parameters": 36578,
+    "train_drawings": 36,
+    "train_families": 10,
+    "train_examples": 2196,
+    "heldout_drawings": 3,
+    "heldout_families": 1,
+    "train_points": [
+      8,
+      12,
+      14,
+      22,
+      24,
+      26,
+      28,
+      31,
+      32,
+      33,
+      34,
+      36,
+      38,
+      42,
+      46,
+      49,
+      51,
+      56,
+      60,
+      64,
+      68
+    ],
+    "heldout_points": [
+      50,
+      33,
+      44
+    ],
+    "torch": "2.13.0",
+    "output": "tanh*32, hard mask, nearest2; no confidence filter or hidden fallback"
+  },
+  "steps": 50000,
+  "training_seconds": 146.68583679100266,
+  "checkpoint_sha256": "200e6c816259e77caa5e950f0b12099c72da14660c1a0fec4bf2de5c35da5d8d",
+  "manifest_sha256": "578bb8b006339e0c4d9c3e8f16d69f1b502d502c6155c4340948309e9c702ebe",
+  "aggregates": {
+    "familiar-fixed-probes": {
+      "count": 21,
+      "exact": 1,
+      "improved": 14,
+      "worse": 7,
+      "tied": 0,
+      "mean_case_mae": 3.3928571201506115,
+      "mean_case_input_mae": 6.285714285714286
+    },
+    "hah-clean-wide": {
+      "count": 3,
+      "exact": 0,
+      "improved": 0,
+      "worse": 3,
+      "tied": 0,
+      "mean_case_mae": 17.072221755981445,
+      "mean_case_input_mae": 0.0
+    },
+    "hah-probes": {
+      "count": 21,
+      "exact": 0,
+      "improved": 6,
+      "worse": 15,
+      "tied": 0,
+      "mean_case_mae": 9.94047619047619,
+      "mean_case_input_mae": 6.285714285714286
+    },
+    "new-corruption-draw": {
+      "count": 18,
+      "exact": 0,
+      "improved": 18,
+      "worse": 0,
+      "tied": 0,
+      "mean_case_mae": 1.2662037014961243,
+      "mean_case_input_mae": 7.537037054697673
+    },
+    "train-clean-wide": {
+      "count": 36,
+      "exact": 5,
+      "improved": 0,
+      "worse": 31,
+      "tied": 5,
+      "mean_case_mae": 0.3117394196904368,
+      "mean_case_input_mae": 0.0
+    }
+  },
+  "protocol_sha256": "1219f7da05d989f7e87683391af17d8e58aa0d3cd6257829186b1083e74feee6",
+  "training_sha256": "f3f147042806dfb562ca849e0c6e758da5987b6d294f9b00157e079be970d953",
+  "evaluation_sha256": "8e93f8f75b34fc053013c21a1e46fca257e557cc544daa784bcac3daf34bdb49",
+  "font_source_files_unchanged": 3140,
+  "test_split_used": false,
+  "validation_used_for_training_or_checkpoint_selection": false,
+  "status": "failed-clean-preservation; experimental only",
+  "authorization": "Eli requested training on newly green drawings and concurrent MCP work,2026-10-30",
+  "new_training_glyphs": [
+    "kaf-ar",
+    "lam-ar",
+    "waw-ar"
+  ],
+  "run": "out/training-prep/variable-pilot-v2",
+  "visual_scope": [
+    "hah-ar.init clean-wide at224/48px",
+    "lam-ar clean-wide at224/48px"
+  ],
+  "screenshots": {
+    "hah-clean.png": "2115e36bea3a04e39ddbd96333d9fb771d219112141fbc8adebe9cdf61aa7d56",
+    "lam-clean.png": "e4dfb1abfc29fc572de750f11d65ced2a848f0ab075887bfbef6e9dcd18ab1ec"
+  },
+  "native_mcp": {
+    "receipt_sha256": "999d414dd4b8f606382136d20445a8b28db76e940fb0cf5635a4b585dc2c023c",
+    "passed": [
+      "scratch point movement",
+      "same-operation retry",
+      "stale-read rejection",
+      "exact undo",
+      "disk unchanged"
+    ],
+    "limitation": "No visual animation claim. Later rerun encountered closed scratch and unrelated untitled session; null project handled and absent scratch refused without mutation."
+  },
+  "limitations": [
+    "More steps and new data changed together; no causal attribution to new glyphs.",
+    "Evaluation random draws differ from v1; aggregate comparisons are not paired.",
+    "Hah development validation not blind final benchmark.",
+    "No model-driven editor application, overnight run, grading or active font edits."
+  ]
+}

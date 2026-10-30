@@ -1,0 +1,58 @@
+{
+  "checkpoint_sha256": "8dabecf4fd9da1d9eb0ad65fae11a460393383a2ce0c9e5228d225844e96edab",
+  "manifest_sha256": "578bb8b006339e0c4d9c3e8f16d69f1b502d502c6155c4340948309e9c702ebe",
+  "steps": 1285746,
+  "training_seconds": 3600.000647750043,
+  "aggregates": {
+    "familiar-fixed-probes": {
+      "count": 21,
+      "exact": 2,
+      "improved": 15,
+      "worse": 4,
+      "tied": 2,
+      "mean_case_mae": 2.9261904784611295,
+      "mean_case_input_mae": 6.285714285714286
+    },
+    "hah-clean-wide": {
+      "count": 3,
+      "exact": 0,
+      "improved": 0,
+      "worse": 3,
+      "tied": 0,
+      "mean_case_mae": 10.876388867696127,
+      "mean_case_input_mae": 0.0
+    },
+    "hah-probes": {
+      "count": 21,
+      "exact": 0,
+      "improved": 9,
+      "worse": 12,
+      "tied": 0,
+      "mean_case_mae": 7.035714285714286,
+      "mean_case_input_mae": 6.285714285714286
+    },
+    "new-corruption-draw": {
+      "count": 18,
+      "exact": 1,
+      "improved": 18,
+      "worse": 0,
+      "tied": 0,
+      "mean_case_mae": 1.6620370397965114,
+      "mean_case_input_mae": 7.537037054697673
+    },
+    "train-clean-wide": {
+      "count": 36,
+      "exact": 36,
+      "improved": 0,
+      "worse": 0,
+      "tied": 36,
+      "mean_case_mae": 0.0,
+      "mean_case_input_mae": 0.0
+    }
+  },
+  "bytes": 151285,
+  "parameters": 36578,
+  "status": "experimental; fails held-out clean preservation",
+  "runtime_tested": "2.13.0",
+  "sample_sha256": "53b8bee523d84f16ee1bc3f0135a0de5056382e42594fc85fc6226afbf74cf47"
+}
