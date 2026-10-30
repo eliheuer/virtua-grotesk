@@ -22,7 +22,7 @@ def main():
     for role, record in evidence['fonts'].items():
         if role not in ('before', 'after') and not args.frozen_references:
             continue
-        label = record.get('label', {'before': 'Before', 'after': 'Applied'}.get(role, 'Reference'))
+        label = record.get('label', {'before': 'Before', 'after': 'Candidate'}.get(role, 'Reference'))
         faces = []
         coverage = None
         for item in record.get('faces', [record]):

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "zayin-regular-01",
+  "kind": "correction",
+  "title": "Regular Zayin neck correction",
+  "status": "recorded-human-feedback",
+  "summary": "Distinguish a tangent continuation on one side from a deliberate cut on the other.",
+  "glyphs": [
+    "zayin-hb"
+  ],
+  "masters": [
+    "Regular"
+  ],
+  "scripts": [
+    "hebrew"
+  ],
+  "operations": [],
+  "tags": [
+    "junction",
+    "tangent",
+    "chamfer"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Distinguish a tangent continuation on one side from a deliberate cut on the other.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "recorded-correction",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-a24f97a0bf93fe7a.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "a24f97a0bf93fe7a46379cc2d5bd4582d8b8d037effbdc140af6c9d62e41ed6e",
+      "source_path": "design/reviews/hebrew-006/README.md"
+    },
+    {
+      "path": "design/reviews/hebrew-006/candidate-v2-sources/sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif",
+      "role": "Before",
+      "sha256": "a634052de5c5eaa7a9ed5d6284ceb7bd56e23a88403bd047908629143a56fc5c"
+    },
+    {
+      "path": "design/reviews/hebrew-006/hand-edit-01-Regular-zayin.glif",
+      "role": "Human correction",
+      "sha256": "f1a1659624a317814e4ce80eb2b211d4a80e0ec2e12ada3b482bd0cdfc8f1171"
+    }
+  ],
+  "pairs": [
+    {
+      "master": "Regular",
+      "before": "design/reviews/hebrew-006/candidate-v2-sources/sources/VirtuaGrotesk-Regular.ufo/glyphs/zayin-hb.glif",
+      "after": "design/reviews/hebrew-006/hand-edit-01-Regular-zayin.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    }
+  ],
+  "related": [
+    "zayin-bold-02"
+  ]
+}

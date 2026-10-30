@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "anchor-at-first",
+  "kind": "correction",
+  "title": "2026-10-23 — Double-spiral @ correction (Eli)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "at"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "curve"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-at-first.md",
+      "role": "Original review and feedback",
+      "sha256": "0d325bf7c18cce6b1b89746c21c1582a2dfdcc9d677b1e82d3071e3af0e753c9"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-at-first.md"
+}

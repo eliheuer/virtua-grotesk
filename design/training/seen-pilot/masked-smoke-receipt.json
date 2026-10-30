@@ -1,0 +1,32 @@
+{
+  "schema": "virtua-masked-repair-v1",
+  "manifest_sha256": "a4135c690ecb830987fa6dd873a4e645508da71e20abe74eeb8f2397d9c76e19",
+  "training_started": false,
+  "source_split": "train",
+  "examples": 9,
+  "independent_glyphs": 3,
+  "modes": [
+    "noop",
+    "pinch",
+    "bulge"
+  ],
+  "coordinates": [
+    -1024,
+    2048,
+    2
+  ],
+  "deltas": [
+    -64,
+    64,
+    2
+  ],
+  "recipe_sha256": "865f9a8ac003f5846372e3c64e874d1ab73236d78d875412d6a9f9f0d53fb934",
+  "examples_sha256": "fbe557c25a8223181da939924245601a72412e2e917e7d6167332d20e2b092ab",
+  "source_files_unchanged": 3135,
+  "tests_pass": 11,
+  "compiled_noop_outline_pairs_equal": 3,
+  "font_sha256": "bbf5a7a707e85811bae4480166406f564227cb84c96c7d8b8b051adbf402cb55",
+  "visual_review": "Input/mask/target isolated forms in browser, 224px and48px, all pinch and bulge rows; no-op identity also checked from compiled CFF",
+  "source_edit": false,
+  "optimizer_steps": 0
+}

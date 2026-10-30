@@ -1,0 +1,88 @@
+# Seen scratch review — 2026-10-29
+
+Eli approved preparing the proposed Seen correction: “sure, it should match
+this drawing style”, with his Arabic screenshot. Confirmed target: upright
+teeth, rounded U-shaped lobes, short cusp joins and small chamfers. This is
+style guidance for a local source-curve repair, not a request to trace a new
+silhouette or copy the other letters in the screenshot.
+
+Only isolated Bold seen-ar changed on scratch. Isolated sheen-ar and
+seenSixdots-ar inherit it; their source bytes remain unchanged. Regular
+(orange isolated), green joining forms, metrics, anchors and features are fixed.
+Existing 57-point topology retained. Thirteen underside points plus the right
+lobe handle restore rounded bottoms at y-16 and 8-unit joins at y64. Original
+160-unit uprights/inner curves remain. An initial right-lobe tangent mismatch
+was corrected before presentation. New coordinates on8; four inherited anchor
+grid findings preserved. No source application or final approval.
+
+Canonical scratch build passed. All3134 active files exact; scoped compiled
+outline changes limited to Seen and its two consumers. Advances/cmap/shaping
+unchanged in sampled checks; five-weight proper-crossing checks clear. Signed
+profile has no sampled reversal warnings; intentional cusp corners and G1
+curvature jumps remain. Exact check counts and font hashes in verification.json.
+
+Live Toggle at700 shows Before vs scratch;400/550/700 and160px forms inspected.
+The rounded underside now follows Eli's reference direction. The bowl-to-first-
+lobe join still needs Eli's optical judgment; passing checks is not acceptance.
+Big builds, logs and browser images stay ignored in out/arabic-seen-candidate/.
+No full Fontspector/preflight or whole-script quality claim.
+
+## Correction 01 — 2026-10-29
+
+Eli circled the bowl/first-tooth junction: “this part is awkward and needs to
+be fixed.” The first scratch narrows the throat to roughly80 units while
+adjacent stems are160. Preserve v1 as rejected. Revise the paired junction
+edges: move the outer join right/down and begin the inner bowl turn earlier,
+retaining the upright teeth and rounded lobes. Scratch only; no application.
+
+Revision2 is in revision2/: seven local point moves; outer join784,48 with
+8-unit landing, inner turn starts640,80. Build and306 shaping checks pass;
+active source hashes unchanged. Five-weight sampled intersections clear and
+no signed-profile reversal warnings. New Bold browser160px inspected: the
+throat no longer pinches into a thin upright strip, but v2 still awaits Eli's
+optical verdict. Live Toggle700; active sources unchanged.
+
+## Correction02 and application authorization
+
+Eli rejects the remaining Regular junction and lumpy Bold bottom curve. He
+explicitly authorizes isolated Seen in both masters, application, and subsequent
+manual editing if needed. Reconstruct paired broad bowl curves with horizontal
+bottom tangents and shared turning heights; preserve teeth, metrics and anchors.
+Prior v1/v2 are rejected, not positive training examples.
+
+## Revision3 applied
+
+Both isolated Seen masters applied by explicit authorization. Exact candidates and scoped verification are in `revision3/`; topology is58 points in each master. Paired broad bowl curves use shared turn heights and horizontal bottom tangents, retaining optical weight differences. All3132 other frozen source files unchanged. Build/preflight complete and five active fonts match scratch tables except head. Browser400/550/700 inspected; final optical approval remains with Eli. v1/v2 are rejected.
+
+## Correction03 — lower transition, both masters
+
+Eli rejected v3’s pinched cusps and bumps beneath the teeth and authorized a whole lower-transition revision in Regular and Bold, preserving upright teeth and overall design. v4 is a scratch candidate for live review, not applied or approved. Replace short sharp landings with tangent-connected curves and shallow underside modulation; preserve upper counters, broad left bowl, metrics and anchors.
+
+Revision4: 53 compatible points/master. Removed the two sharp landings; three tangent-connected curves form a shallow underside and continuous bowl transition. New underside rise is24 units rather than80. Teeth, upper counters, anchors and advances exact. Full scratch build,306 shaping comparisons and five-weight crossing checks pass; all3134 active source files remain exact at v3. Signed profiles retain intentional inflections along the new S transition; numerical checks are not optical approval. Browser Regular/Bold inspected at128px; remaining transition weight is for Eli’s review. Candidate only; no application.
+
+## Correction04 — v4 rejected as a stylistic regression
+
+Eli: “this is awful and a bad regression”; asks why the green Arabic construction and repository context did not prevent it. v4 is rejected, not an improvement or training-positive. It flattened the articulated underside into a shallow wave and replaced the bowl junction with a diagonal sweep. Green Regular seen-ar.init and seen-ar.medi are the relevant construction authorities: preserve the individual rounded lobes and deliberate small junctions, correcting local crowding without erasing articulation. DESIGN.md already requires live green donor runs and full-silhouette comparison before local curve fitting; the agent failed to enforce that existing gate. No further drawing or application in this review-only response. Active v3 remains unchanged.
+
+## Revision5 preparation — named Seen scope resumed
+
+Eli asks to fix Seen after the v4 rejection. Prepare both isolated masters, keeping active v3 untouched until review. Green Regular seen-ar.init/medi govern rounded lobes and small junctions. v3 first junction was at right tooth edge, crowding the lobe; v5 moves it toward tooth centre and raises inner bowl turn for room/weight, keeping articulated underside. Green references remain byte-exact. See revision5 packet for final evidence.
+
+### Revision5 visual failure — reference comparison
+
+Eli points out that reference-font comparison should expose the fault. Browser inspection at400/700 shows v5 narrowing sharply along the bowl’s right rise into the first tooth; the lower, steeper bowl makes it conspicuous. Moving the outer junction inward without an adequate paired inner-edge adjustment caused uneven weight. Candidate is not successful and must not be applied. Active v3 unchanged. Next diagnosis must compare paired bowl strokes and bowl proportions against references while retaining green Virtua articulation; no more coordinate-only iteration.
+
+## Revision6 — paired bowl repair, scratch only
+
+Eli authorizes repairing both bowl edges together in Regular/Bold, with external references for even apparent weight and green Seen for articulated construction. Preserve separate lobes; show scratch before application. Active v3 remains unchanged. v5 is a failed optical trial. Revision6 investigates paired bowl curves with optical thinning in Bold; diagnostics do not assign approval.
+
+### Revision6 rejected by Eli
+
+Eli calls v6 awful and asks why reference comparison did not prevent it. The inner offset fit raised the bowl turn to288 Regular/352 Bold, turning the first tooth’s left edge into a long leaning curve. This violates the upright-tooth intent even though local sampled stroke distances improved. Reject, do not apply or use as positive evidence. Active v3 remains unchanged. Stop coordinate fitting and further drawing pending human direction. Fixed DesignBot renders failed; browser400/550/700 and waterfall were inspected, but that inspection failed to reject the visible construction regression before presentation.
+
+### Local model scratch experiment — 2026-10-29
+
+Eli requested testing existing models before deciding on new training, with no
+font changes or retraining. [Results and proposed plan](model-test/README.md):
+21 outputs including range-controlled repeats and an H control; no usable Seen
+repair. Native inputs exposed silent tokenizer clipping. Active sources unchanged.

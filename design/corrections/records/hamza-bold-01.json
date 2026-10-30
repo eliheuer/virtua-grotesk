@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "hamza-bold-01",
+  "kind": "correction",
+  "title": "Hamza unequal-handle counterexample",
+  "status": "recorded-human-feedback",
+  "summary": "Eli preserved tangency and small cuts while narrowing the base and using unequal handles; do not optimize it into the Zayin recipe.",
+  "glyphs": [
+    "hamzaabove-ar",
+    "hamza-ar",
+    "hamzabelow-ar"
+  ],
+  "masters": [
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [],
+  "tags": [
+    "curve",
+    "weight",
+    "counterexample"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Eli preserved tangency and small cuts while narrowing the base and using unequal handles; do not optimize it into the Zayin recipe.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "recorded-correction",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-055badea4b7596a7.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "055badea4b7596a7b61ea5766f883dfb11121e789036a3b3d895ecb8c4979fce",
+      "source_path": "design/reviews/arabic-003/README.md"
+    },
+    {
+      "path": "design/reviews/arabic-003/manual-correction-01/ai.glif",
+      "role": "Before",
+      "sha256": "ffd7af529aee49368524a7e6b58d0771af21b8037899fbccfb27e53200b378df"
+    },
+    {
+      "path": "design/reviews/arabic-003/manual-correction-01/human.glif",
+      "role": "Human correction",
+      "sha256": "4c0525f8d3ab89eed41931a08f5b9ab3a90865e9d0a7e3ed0ccfec989f4cb668"
+    },
+    {
+      "path": "design/reviews/arabic-003/manual-correction-01/measurements.json",
+      "role": "Measurements",
+      "sha256": "7b42cb77371b9e83037c5f1aaa7bf90c688918b87f58895d8bac1f4226aaa762"
+    },
+    {
+      "path": "design/reviews/arabic-003/manual-correction-01/curve-profile.json",
+      "role": "Signed profile",
+      "sha256": "97e9adb017681dd82087ca982737f5887f01032078281b34187d7f688d454741"
+    }
+  ],
+  "pairs": [
+    {
+      "master": "Bold",
+      "before": "design/reviews/arabic-003/manual-correction-01/ai.glif",
+      "after": "design/reviews/arabic-003/manual-correction-01/human.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    }
+  ]
+}

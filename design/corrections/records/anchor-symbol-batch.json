@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "anchor-symbol-batch",
+  "kind": "correction",
+  "title": "2026-07-29 — fourth batch (n £ ¥ § ¨ © ª sheet)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "sterling",
+    "yen",
+    "section",
+    "dieresis",
+    "copyright",
+    "ordfeminine"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "calibration"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-symbol-batch.md",
+      "role": "Original review and feedback",
+      "sha256": "8274e72921d147ec756e877069dc9eb1a7bf35c7b711dc1b080857d40dbbd432"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-symbol-batch.md"
+}

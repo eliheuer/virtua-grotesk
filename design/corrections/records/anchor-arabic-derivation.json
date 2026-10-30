@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "anchor-arabic-derivation",
+  "kind": "correction",
+  "title": "2026-08-04 — Arabic completion: derive from green, don't trace the reference",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "*-ar*"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [
+    "draw",
+    "redraw",
+    "from-image"
+  ],
+  "tags": [
+    "donor"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-arabic-derivation.md",
+      "role": "Original review and feedback",
+      "sha256": "bcef07e41671f4e75c1b66d5cafa8be186b2e1855ee97b4a9de5e24a66fbd12f"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-arabic-derivation.md"
+}

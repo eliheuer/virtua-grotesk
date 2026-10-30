@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "metrics": {
+    "unitsPerEm": 1024,
+    "ascender": 768,
+    "capHeight": 768,
+    "xHeight": 576,
+    "descender": -256
+  },
+  "weight_axis": {
+    "tag": "wght",
+    "min": 400,
+    "max": 700
+  },
+  "grid": {
+    "source_floor": 2,
+    "new_machine_draft": 8,
+    "human_optical": 2,
+    "popcount": "descriptive; never a pass/fail quality score"
+  },
+  "chamfers": {
+    "exposed": 16,
+    "tight_junction": 8,
+    "shape": "straight 45-degree cut; preserve documented exceptions"
+  },
+  "colors": {
+    "red": {
+      "rgba": [
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0.29,
+          0.24,
+          1
+        ],
+        [
+          1,
+          0.3,
+          0.3,
+          1
+        ]
+      ],
+      "policy": "Replaceable only within authorized scope; never an approved reference."
+    },
+    "orange": {
+      "rgba": [
+        [
+          1,
+          0.5,
+          0,
+          1
+        ],
+        [
+          1,
+          0.6,
+          0.06,
+          1
+        ],
+        [
+          0.97,
+          0.58,
+          0.0,
+          1
+        ]
+      ],
+      "policy": "Edit while preserving useful existing construction; replacement requires explicit exception."
+    },
+    "yellow": {
+      "rgba": [
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0.86,
+          0.2,
+          1
+        ],
+        [
+          0.91,
+          0.79,
+          0.27,
+          1
+        ]
+      ],
+      "policy": "Edit without overwriting; not an approved reference."
+    },
+    "green": {
+      "rgba": [
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0.09,
+          0.72,
+          0.44,
+          1
+        ]
+      ],
+      "policy": "Approved source, including composites; frozen without named glyph/master approval."
+    },
+    "blue": {
+      "rgba": [
+        [
+          0.27,
+          0.44,
+          1,
+          1
+        ]
+      ],
+      "policy": "Composite requiring diagnosis; not AI provenance or approved reference."
+    },
+    "purple": {
+      "rgba": [
+        [
+          0.54,
+          0.44,
+          0.88,
+          1
+        ],
+        [
+          0.5,
+          0,
+          1,
+          1
+        ]
+      ],
+      "policy": "AI drawing pending human review; no approval or reference status."
+    },
+    "pink": {
+      "rgba": [],
+      "policy": "Composite requiring smaller edits; not approved reference. Unrecognized RGBA must be classified; an explicit pink label records meaning but is never a reference."
+    }
+  }
+}

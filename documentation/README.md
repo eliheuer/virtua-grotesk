@@ -2,11 +2,11 @@
 
 ## Working documents
 
-- [Virtua Design Review — start here](../agent-proofs/README.md): central workflow map, current handoff, new-session prompt and recovery information.
+- [Virtua Design Review — start here](../design/README.md): central workflow map, current handoff, new-session prompt and recovery information.
 - [Live web proof](../agent-proofs/app/README.md): default interactive review, launch command, code map and UI spacing contract.
 - [Design contract](../DESIGN.md): geometry, metrics, curves, and spacing.
-- [Design review and feedback](../agent-proofs/FEEDBACK.md): confirmed preferences, open proposals, and review evidence.
-- [Design worklog](design-pass-worklog.md): measurements and human decisions.
+- [Design review and feedback](../design/corrections/README.md): confirmed preferences, open proposals, and review evidence.
+- [Design worklog](../design/reviews/latin-worklog.md): measurements and human decisions.
 - [Build and QA](qa.md): setup, commands, proofs, and validation.
 - [Google Fonts onboarding](google-fonts/README.md): release scope and blockers.
 - [Source guides](source-guides/): UFO, designspace, and kerning editing.

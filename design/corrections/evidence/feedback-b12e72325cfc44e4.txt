@@ -601,3 +601,25 @@ step; inspect that transition and weight rhythm before choosing a correction.
 Bold forms are purple, Regular isolated/final orange, initial/medial green.
 No Seen drawing changed or candidate authorized. Reference slant is not a
 reason to replace Virtua's upright geometric character.
+
+## Seen rounded-lobe scratch review — 2026-10-29
+
+Eli approved a scratch revision matching his supplied upright, rounded Arabic
+style. [Source pairs and bounded review](seen-2026-10-29/README.md). Bold isolated
+Seen only; its two isolated dotted consumers inherit the preview. No active
+sources changed. Live Toggle700 is ready for approval; Regular/joining forms
+are unchanged.
+
+## Seen bowls v3 applied — 2026-10-29
+
+Eli authorized isolated `seen-ar` in Regular and Bold and direct application.
+Both inner and outer broad bowl curves now share turning heights and horizontal
+bottom tangents; teeth, advances and anchors are preserved. Both drawings are
+purple, awaiting human grading. Isolated Sheen and six-dot Seen inherit the
+component change; joining forms and all green sources remain unchanged.
+Exact before sources and revision3 are retained in
+[the Seen review](seen-2026-10-29/README.md). v1/v2 remain rejected examples.
+Build and preflight completed; active five-font tables match verified scratch
+except timestamps in head. 306 shaping cases and five-weight geometry checks
+passed. Browser silhouettes inspected at400/550/700. This is an applied working
+revision for manual review, not final optical approval or release QA.

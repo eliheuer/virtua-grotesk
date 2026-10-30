@@ -3,157 +3,29 @@ name: edit-glyph
 description: Read, display, and edit a glyph in the UFO sources. Use for inspecting or modifying an existing glyph's outline, advance width, or sidebearings.
 ---
 
-# /edit-glyph
+# Edit a glyph
 
-Read, display, and edit a glyph in the UFO sources.
+Read [the design workflow](../../../design/README.md). Retrieve scoped context with
+`.venv/bin/python scripts/design_context.py --glyph <name> --operation inspect`;
+repeat --glyph for a bounded group. Save a JSON packet before edits and verify it
+immediately before applying. Read selected evidence, not the entire review archive.
+Current scope and stopped work come from `design/reviews/current.json` and the user.
 
-## Usage
-`/edit-glyph <glyph-name> [--master regular|bold|both]`
+Use the operation matching the requested edit (spacing, components, curve-repair,
+weight-transfer, etc.). Default inspection covers both masters. Resolve filenames
+through each contents.plist; never guess GLIF filenames.
 
-Default master: `regular`
+1. Inspect exact sources and component dependencies. For ink bounds/sidebearings,
+   use a curve-aware bounds pen with components resolved; control-point extrema
+   are not ink bounds. Inspect the filled glyph before diagnosing optics.
+2. Reuse named authorization. Preserve before bytes and make a reversible candidate
+   unless active edits are already authorized. Keep application and approval separate.
+3. Edit XML/plists surgically. For LSB shifts, include contours, component offsets
+   and anchors as appropriate; changing width alone changes RSB. Check consumers.
+4. Match structural changes across masters. Use the selected construction contract,
+   live green geometry and exceptions, not a coordinate scale or generic curve recipe.
+5. Follow [verification](../../../design/system/verification.md), inspect compiled
+   forms, record feedback in the case, and index reusable correction evidence.
 
-## Instructions
-
-### Step 1: Locate the Glyph
-1. Read `sources/VirtuaGrotesk-Regular.ufo/glyphs/contents.plist`
-2. Find the `<key>` matching the glyph name
-3. The `<string>` value is the filename (e.g., `A_.glif`)
-4. If `--master both` or `--master bold`, also look up in the Bold master's contents.plist
-
-### Step 2: Read & Display Current State
-Read the `.glif` file(s) and present:
-- **Advance width**
-- **Number of contours** and points per contour
-- **Bounding box** (min/max x and y from all points)
-- **Sidebearings:** LSB = min(x), RSB = advance_width - max(x)
-- **Point listing** per contour (formatted as a table with x, y, type)
-
-If showing both masters, display side-by-side and highlight any structural differences.
-
-### Step 3: Wait for Edit Instructions
-Ask the user what they'd like to change. Common operations:
-
-**Change advance width:**
-Edit the `<advance width="N"/>` value.
-
-**Change left sidebearing:**
-Calculate delta = new_LSB - current_LSB. Add delta to ALL x-coordinates in the glyph. This shifts the entire glyph.
-
-**Change right sidebearing:**
-Calculate new_width = max(x) + desired_RSB. Update `<advance width>`.
-
-**Move specific points:**
-Edit the `x` and `y` attributes of specific `<point>` elements.
-
-**Scale the glyph:**
-Multiply all x,y coordinates by a factor. Recalculate advance width.
-
-### Step 4: Apply Edits
-1. Use the Edit tool to modify the `.glif` file(s)
-2. Ensure all coordinates remain integers (preferably multiples of 2)
-3. Preserve XML format and point order exactly
-
-### Step 5: Validate
-1. Re-read the edited file(s) to confirm changes
-2. If both masters were edited, verify structural compatibility:
-   - Same number of contours
-   - Same number of points per contour
-   - Same point types in same order
-3. Suggest: "Run `make reports` to refresh `documentation/source/master-compatibility.md`, or `make preflight` for a full build and gate"
-
-## Glyph Name Reference
-Common mappings: `A` → `A_.glif`, `a` → `a.glif`, `period` → `period.glif`, `comma` → `comma.glif`, `space` → `space.glif`, `zero`–`nine` for digits, `exclam`, `question`, `semicolon`, etc.
-
-For accented characters: `aacute`, `egrave`, `ntilde`, etc.
-
-For iterative design work, read
-[Design review and feedback](../../../agent-proofs/FEEDBACK.md)
-and the latest open review. Record Eli's correction, interpretation, exact scope,
-and proposal/application state before the next edit. Keep agent suggestions
-separate from confirmed rules. Reference comparisons use
-`scripts/proof_reference.py`; preserve selected evidence with the review.
-
-### Machine-draft grid gate
-
-Read the cross-script construction and lattice rules in `DESIGN.md`. For new
-or redrawn scratch outlines, run `scripts/draft_grid_check.py` on the named
-glyphs in both scratch UFOs. This checks all points/handles, anchors, advances
-and ink sidebearings on 8 and records descriptive measurement popcounts.
-Do not normalize green optical geometry or infer a human grade from QA.
-Retain the source/proof evidence and feedback in `agent-proofs/cases/`.
-
-### Learn from saved manual corrections
-
-Before revising a related form, search the
-[manual correction index](../../../agent-proofs/FEEDBACK.md#manual-correction-library)
-by glyph and construction (for example, tangent, chamfer, neck, bowl).
-Read the relevant source pair and its case notes, not just the lesson summary.
-Separate geometry changes from editor serialization or metadata changes.
-Treat the human-edited source as fixed when adapting another master; transfer
-construction relationships, not a blanket coordinate scale. Check point order,
-metrics, anchors and interpolated forms in scratch before presenting a candidate.
-
-For Zayin’s head/stem junction, HEB-006 correction 01 demonstrates a horizontal
-tangent on one side and an intentional small cut on the other. Do not interpret
-“chamfer corners” as adding bevels to smooth tangent joins. This is a local
-example, not a requirement to make all Hebrew junctions asymmetric.
-Record reuse and Eli’s verdict in the same case; promote repeated, confirmed
-patterns into DESIGN.md while retaining exceptions and rejected examples.
-
-HEB-006 correction 02 revises that transfer: the Bold candidate had the correct
-tangent/cut types but kept Regular’s tall transition, which Eli rejected as
-humanist. His Bold turns within a square extent with equal tangent handles,
-keeping the curve start at Regular’s y=376 as the head thickens. Before adapting
-weight, compare curve extents, straight-run lengths and handle relationships;
-choose fixed alignments explicitly. Neither lattice compliance nor matching
-point types establishes the intended machined character. Retrieve the exact
-[source pair and measurements](../../../agent-proofs/cases/hebrew-006/README.md#manual-correction-02--bold-geometric-turn-2026-10-20).
-Treat 56-unit extent and 40-unit handles as this example’s dimensions, not a
-generic corner recipe. Retain rejected candidates alongside human corrections.
-
-### Active Virtua drawing workflow
-
-Follow the standing authorization in `agent-proofs/README.md`: as of 2026-10-20,
-new Hebrew drawing batches go directly into active masters after preserving a
-baseline; no repeated application question is needed. Retain technical checks,
-proofs, exact manual corrections, source-color protections and human grading.
-
-### Audit joins by intended construction
-
-For curve/terminal work, run `scripts/curve_lint.py <Master> <glyphs> --joins`.
-The default CLI checks crest/tension only. The join audit exposes unmarked
-line/curve corners as well as marked-smooth kinks; inspect the former instead
-of assuming a missing smooth flag is deliberate. Do not round intentional
-corners automatically. Distinguish tangent continuation, a short straight
-landing before a chamfer, and an intentional shelf. See
-[HEB-007 correction 01](../../../agent-proofs/cases/hebrew-007/README.md#manual-correction-01--regular-gimel-2026-10-20)
-for the exact Regular example and pending Bold transfer test. Align cyclic
-contour order before comparing point indices; preserve manual optical edits.
-
-### Transfer bounded turns, not stretched handles
-
-For branch/diagonal joins, read [HEB-008 Final Tsadi correction 01](../../../agent-proofs/cases/hebrew-008/README.md#manual-correction-01--regular-final-tsadi).
-The human edit separates axis-tangent turns from straight shelves, junction cuts
-and terminal landings; equal handle pairs replace a sweep stretched directly
-to the diagonal. Before transferring, record each turn's endpoints, extents,
-handle directions/lengths and adjoining flats. Choose which alignments stay
-fixed as weight changes. Do not assume an unmarked curve/line join is an
-intentional corner: inspect its geometry. Preserve human smooth flags/source
-bytes even when geometry is tangent. Exact 64/128 handles are local evidence,
-not universal radii; distinguish the requested transfer trial from approval.
-
-For an explicit counterexample to equal-handle/square-turn generalization, read
-[ARB-003 correction 01](../../../agent-proofs/cases/arabic-003/README.md#manual-correction-01--bold-hamza-above).
-Compare contour mass and terminal projection as well as local handle lengths:
-the human hamza correction preserves tangency and chamfers while narrowing its
-base and using unequal handles. Do not "repair" that measured human geometry
-back to the earlier AI recipe merely to improve a generic numerical score.
-
-### Curve corrections
-
-Read [Curve quality](../draw-outline/references/curve-quality.md) before changing
-handles. Preserve an exact before snapshot and use `scripts/curve_profile.py`
-for a signed comb comparison at common scale, plus `curve_lint.py --joins`.
-Choose a local operation for the diagnosed fault; do not bulk Balance or
-Optimize a human correction. Recheck neighboring joins after changes and
-rounding, then verify interpolation and compiled context proofs.
+For new outlines use draw-outline; for an image use anchor-sheet-glyphs or the
+organic-image runbook. Do not substitute an imagined outline for the requested trace.

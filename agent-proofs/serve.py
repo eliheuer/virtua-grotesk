@@ -14,7 +14,7 @@ from urllib.error import URLError
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
-CURRENT = ROOT / 'agent-proofs/cases/arabic-006/handoff/working'
+STATE = ROOT / 'design/reviews/current.json'
 SELECTION = ROOT / 'out/live-proof-selection.json'
 
 
@@ -23,7 +23,7 @@ def selected_snapshot(requested=None):
         return requested.resolve()
     if SELECTION.exists():
         return (ROOT / json.loads(SELECTION.read_text())['snapshot']).resolve()
-    return CURRENT
+    return (ROOT / json.loads(STATE.read_text())['proof_snapshot']).resolve()
 
 
 def server_identity(folder, live):
@@ -59,7 +59,10 @@ def main():
     else:
         folder = ROOT / 'out/live-proof'
         snapshot = selected_snapshot(args.snapshot)
-        cache = prepare_live(snapshot, folder, ROOT)
+        try:
+            cache = prepare_live(snapshot, folder, ROOT)
+        except (OSError, ValueError, KeyError) as error:
+            parser.exit(1, f'Review snapshot unavailable: {error}\n')
     try:
         for name in ['index.html', 'review.css', 'review.js', 'review-data.js', 'fonts/labels.ttf']:
             if not (folder / name).is_file():
@@ -78,7 +81,7 @@ def main():
     if args.snapshot:
         SELECTION.parent.mkdir(parents=True, exist_ok=True)
         temporary = SELECTION.with_suffix('.partial')
-        temporary.write_text(json.dumps({'snapshot': str(snapshot)}) + '\n')
+        temporary.write_text(json.dumps({'snapshot': str(snapshot.relative_to(ROOT)) if snapshot.is_relative_to(ROOT) else str(snapshot)}) + '\n')
         temporary.replace(SELECTION)
     if args.check:
         return

@@ -25,6 +25,11 @@ jobs:
           sudo apt-get install -y libcairo2-dev pkg-config python3-dev
       - name: Install Python dependencies
         run: make setup
+      - name: Validate design context and proof tools
+        run: |
+          make design-check
+          .venv/bin/python -m unittest discover -s agent-proofs/app -p 'test_*.py' -v
+          node --test agent-proofs/app/test-reference-selection.cjs
       - name: Build fonts
         run: make build
       - name: Test QA entrypoints

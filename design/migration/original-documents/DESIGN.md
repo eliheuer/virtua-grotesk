@@ -1,0 +1,480 @@
+# DESIGN.md — The Virtua Grotesk Design System
+
+This is the canonical description of how Virtua Grotesk glyphs are drawn. It
+sits at the repo root because every part of the AI production pipeline
+consumes it: image-generation prompts quote it, tracing and placement snap to
+its grid, review gates check against it, and humans grade glyphs (mark colors
+in Runebender) by it. If a glyph contradicts this document, the glyph is
+wrong — or this document needs a deliberate edit.
+
+A longer prose companion lives at
+`documentation/source-guides/design-philosophy.md`; this file is the
+normative summary.
+
+## Identity
+
+Virtua Grotesk is a **geometric grotesk drawn on a power-of-two grid**, with
+**chamfered (beveled) corners** as its signature detail. It draws inspiration
+from the grid discipline of **Replica** (Norm, Lineto, 2008) — a font famous
+for committing to a coarse drawing grid and cut corners — reinterpreted here
+as a retro-futuristic, technical sans: 1980s computer-interface signage redrawn
+with modern precision. Strokes are monolinear; there is no thick/thin contrast.
+
+### Machined character — confirmed 2026-10-20
+
+Eli’s direction is clean neo-modernist, machined construction with mathematical
+precision, rather than loose or humanist transitions. Specify geometric
+relationships deliberately: straight-run boundaries, curve extents, tangent
+axes, handle lengths and chamfer sizes. Grid compliance and smooth tangency
+alone do not establish this character; a compliant curve can still be too
+elongated or soft for the intended form. Preserve the established skeleton.
+
+[HEB-006 Bold Zayin correction 02](agent-proofs/cases/hebrew-006/README.md#manual-correction-02--bold-geometric-turn-2026-10-20)
+is a measured example: a 56×104 transition with unequal handles became a 56×56
+turn with equal 40-unit handles, extending the straight stem. The local curve
+is balanced without making the whole glyph symmetric. These numbers are not a
+universal radius, circular-arc formula or reason to square off approved bowls.
+When adapting weight, decide which alignments stay fixed instead of translating
+all curve points with a thicker bar. Human-corrected examples govern that choice.
+
+### Curve joins and terminal landings — measured Gimel example
+
+[HEB-007 Regular correction 01](agent-proofs/cases/hebrew-007/README.md#manual-correction-01--regular-gimel-2026-10-20)
+adds straight landings between foot curves and terminal chamfers, continues the
+stem tangent into the upper sweep, and retains a small intentional inner shelf.
+Distinguish a smooth join, a flat landing and a deliberate corner before placing
+handles. Inspect joins even when a source omits `smooth="yes"`; an unmarked
+corner is not evidence of design intent. Use `curve_lint.py ... --joins` plus a
+large render. Preserve the saved optical coordinates; the 32-unit landings and
+8-unit shelf are local evidence, not universal dimensions. Bold v4 was accepted as good enough for continuation; it was not graded green.
+
+### Bounded turns and straight landings — Final Tsadi example
+
+[HEB-008 correction 01](agent-proofs/cases/hebrew-008/README.md#manual-correction-01--regular-final-tsadi)
+provides another measured human example. Regular Final Tsadi's arm becomes two
+axis-tangent turns with paired 128/128 and 64/64 handles, shared horizontal
+endpoint alignment, an explicit inner shelf, and an 8-unit cut plus landing
+before the outer curve. Its diagonal terminals gain short vertical landings
+between the long diagonal and the chamfers. This reinforces the Gimel lesson:
+turns, joining flats and chamfers are separate construction decisions.
+
+For related transfers, identify those boundaries before placing handles.
+Changing weight may reduce an inner turn while leaving outer alignments fixed;
+do not merely stretch handles to reach the stem. The exact radii, equal-handle
+choice and landing lengths are glyph-specific evidence. The Bold/Shin reuse
+is a trial awaiting Eli's review, not a new universal style rule.
+
+### Bounded curves are not always equal-handle curves
+
+[ARB-003 manual correction 01](agent-proofs/cases/arabic-003/README.md#manual-correction-01--bold-hamza-above)
+is a counterexample to treating square extents and equal handles as a universal
+recipe for machined character. Eli kept the Bold hamza's 16/8-unit cuts, axis
+tangencies and 40-unit aperture, but narrowed its base from 288 to 256, reduced
+its bar from 88 to 80, and adjusted the curves locally. The inner upper turns
+keep 32×32 extents with horizontal handles shortened 24→16 and vertical handles
+remaining 24. The lower inner turn keeps 48×48 extents with handles changing
+32/32→32/24. The outer left upper turn becomes 96×88 with 64/56 handles.
+
+These are measured human edits, not new default dimensions. Review overall
+mass, terminal projection and local contour flow alongside tangent/grid checks.
+Do not force this correction back to equal handles or square extents, and do
+not infer that every other glyph should use these ratios. Eli confirmed the
+excess mass/inflation and also identified basic curve issues (2026-10-21).
+His correction removes a lower-left curvature reversal and matches curvature
+at the inner join, while retaining an outer-shoulder curvature jump. Use signed
+combs and join continuity together; neither equal handles nor an all-G2 score
+defines machined character. Follow the
+[curve-quality workflow](.agents/skills/draw-outline/references/curve-quality.md).
+
+## The power-of-two grid
+
+Everything in this font is drawn against powers of two.
+
+- **UPM 1024** (= 2^10). All vertical metrics are power-of-two sums:
+  ascender 768, cap height 768, x-height 576, descender −256. Ascenders and
+  caps share one height — a single 768 (512+256) ceiling.
+- **Grid size 2 is the hard floor**: every outline coordinate is even.
+  New machine drafts use the 8-unit lattice below, including off-curve handles.
+  A tracing configuration of `--grid 2` alone does not satisfy the draft gate.
+- **Favored measurements: 2, 4, 8, 16, 32, 64, 128, 256…** Stem widths,
+  sidebearings, counters, overshoots, chamfers, and advance widths should land
+  on powers of two — or short sums of them (e.g. 96 = 64+32, 160 = 128+32) —
+  wherever the drawing allows.
+- **Optical corrections are allowed and expected** — the grid is the starting
+  point, not a cage. When an approved optical correction needs a 2-unit nudge
+  to look right, the eye wins. Corrections deviate *from* a power-of-two intent,
+  so they should be small, even-numbered, and never turn a
+  deliberate measurement (a 16-unit chamfer, a 96-unit stem) into an arbitrary
+  one.
+
+## The two lattices: division of labor
+
+The grid is hierarchical, and the hierarchy assigns the work:
+
+- **The 8-unit lattice is the machine's grid.** Advance widths,
+  sidebearings, stem and bar widths, chamfer sizes, and every offset a
+  tool fits or generates land on multiples of 8. Any tool that hands a
+  human a draft containing 2-grid noise is broken: a human grading
+  session must never include janitorial snapping. Run the explicit
+  `scripts/draft_grid_check.py` gate on each proposed glyph in both scratch
+  UFOs. `make lint-grid` is an older inventory: it does not enforce 8-grid
+  handles/points, and its legacy color classification is not authoritative.
+- **The 2-unit lattice is the human's grid.** Dropping from 8 to 2 is an
+  optical correction — a decision only biological eyes can make, in
+  Runebender, during grading. In a green glyph, every off-8 coordinate
+  is deliberate design data.
+- **Off the 2-grid is always an error**, for everyone.
+
+This is also the data strategy: because machine drafts are 8-disciplined,
+the diff between an orange draft and its human-approved green version
+isolates pure optical knowledge — labeled training data for a future
+optical-correction model. The machine proposes structure on 8; the human
+teaches optics on 2; the dataset is the difference.
+
+### What the mathematical checks establish
+
+Eli reaffirmed the [published system](https://elih.net/blog/virtua-grotesk/) on
+2026-10-19. Keep **position** and **measurement** separate: divisibility by 8
+checks a new point's lattice; popcount describes the binary decomposition of a
+distance, such as a handle length, stem width or sidebearing. For example,
+96 = 64+32 has popcount 2; 168 = 128+32+8 has popcount 3. The latter is not an
+automatic failure. Zero and non-integer measurements need explicit treatment;
+never silently round a measurement to improve its count.
+
+The draft gate checks every on/off-curve coordinate, anchor, advance and actual
+ink sidebearing on 8. It also checks component offsets and donors; scaled or
+rotated components require a decomposed review. Popcount is recorded without a
+pass/fail threshold. Kerning is separate and must be checked if edited. Run this
+on source masters; interpolated positions and compiled quadratic approximations
+need not remain on the source lattice at every weight.
+
+Passing this gate does **not** establish chamfer consistency, smoothness,
+readability or green approval. Follow it with curve lint, master compatibility,
+compiled shaping and visual review. Preserve the draft, hashes, proof and Eli's
+corrections so later approved green versions can form traceable training pairs.
+Do not automatically normalize existing green geometry or label it training-ready.
+
+### The lattice split is a curriculum, not a wall
+
+The end goal is automated type design: the systems should learn **how,
+why, and where** the human makes optical corrections and eventually make
+most of them automatically — balancing "stay on 8 by default" against
+"deviate to 2 where the corpus shows eyes would". The division of labor
+is therefore dynamic, governed by a trust ladder:
+
+1. **Stage 0 (now):** machine emits 8-only drafts; the human makes every
+   optical correction while grading. Each draft→green diff is captured
+   (font-garden-lab `optics/extract_deltas.py`).
+2. **Stage 1:** a model trained on those diffs *proposes* corrections in
+   drafts. Acceptance rate is measured per geometric category (junction
+   thinning, extreme overshoots, diagonal compensation, terminals…). The
+   honest baseline it must beat: predict zero corrections everywhere.
+3. **Stage 2:** categories with sustained high acceptance auto-apply in
+   drafts. Categories graduate one at a time, with evidence — never by
+   assumption (see the prefill post-mortem: models don't get deployed
+   outside the distribution they were graded on).
+
+Two things never automate: **green** (approval is a biological
+signature), and corrections with no precedent in the corpus (novel
+forms, whole-glyph proportion judgments). Nobody annotates "why" — the
+local geometry around each corrected point is the label, and the model
+learns the mapping the way sequence models always have.
+
+## Curve smoothness comes before popcount
+
+The power-of-two / low-popcount discipline exists for exactly one reason:
+to make the sources compress into training data a small model can learn
+efficiently. It is a **means, not the goal**, and it must never be pursued
+at the expense of curve continuity. A kink costs the model far more than a
+high-popcount coordinate ever saves.
+
+- **A high-popcount coordinate is not a defect — it is signal.** It marks
+  a place where an optical correction was needed. That tells the model
+  "something happened here," which is useful information, not noise to
+  scrub away. Do not blindly snap points toward round numbers to lower
+  popcount.
+- **If a "cleaner" number introduces a kink, a curvature jump, or a broken
+  tangent, the clean number is wrong.** The eye and the curve win.
+- **Priority order when they conflict:** (1) geometric continuity — G1
+  tangent everywhere a point is smooth, and G2 curvature continuity
+  wherever the design intends a smooth curve; then (2) correct optical
+  weight and proportion; then (3) low popcount / power-of-two values where
+  they cost nothing. **Popcount is the tiebreaker, never the master.**
+
+Continuity vocabulary (used by the tools): **G0** positional only (a
+corner — intended at sharp joins), **G1** tangent-continuous (handles
+collinear through a smooth point), **G2** curvature-continuous (no visible
+break in the curvature comb), **G3** curvature-derivative-continuous. Most
+smooth points in Virtua should be at least G1, and the reference curves
+(O H n o bowls and shoulders) should be G2.
+
+We therefore analyze curves for continuity and curvature alongside the
+grid metrics: `make grid-qa` / `make dashboard` report smoothness
+(curvature discontinuities, kinks) per glyph, and Runebender draws a
+curvature comb and continuity markers and offers harmonize / balance
+tools. **A glyph is not signed off until its curves are smooth, not merely
+until its numbers are round.**
+
+## Vertical metrics
+
+| zone | y | notes |
+|---|---|---|
+| ascender | 768 | shared with cap height |
+| cap height | 768 | round caps overshoot to 784 (+16) |
+| x-height | 576 | round lowercase overshoots to 592 (+16) |
+| baseline | 0 | round forms overshoot to −16 |
+| descender | −256 | |
+
+The OpenType line box follows the same numbers: hhea and typo ascender
+1024, descender −256, line gap 0. Ascender minus cap height equals the
+descender, so a line box centred on a field centres the capitals. The
+win metrics cover the tallest and deepest glyphs in the family, 1152 and
+512, so nothing clips on Windows.
+
+Overshoot is **16 units** — one grid quantum of the design, same as the
+chamfer. Flat forms (E, H, stems) sit exactly on the lines; only curves
+overshoot.
+
+## The 16-unit chamfer (non-negotiable)
+
+Every sharp corner where two straight segments meet gets a **45° bevel,
+16 units per side** in the Regular master. Coordinate pattern where a stem
+meets the baseline at x: `(x−16−stem, 0) → (x−16, 0) → (x, 16)`.
+
+Applies at stem–baseline and stem–cap junctions, crossbar ends (A H E),
+apexes (A), and open terminals. The chamfer is always a straight line
+segment, never a curve. **The chamfer stays the same absolute size in both
+masters** (measured from the drawings: 16-unit cuts in Regular and Bold
+alike, with 8-unit cuts at small junctions) — it reads relatively smaller
+as the weight increases, which is the intended optical effect.
+
+### Marks belong to the same drawing system
+
+Eli confirmed in [HEB-010 correction 03](agent-proofs/cases/hebrew-010/README.md#correction-03--marks-must-share-the-family-construction)
+that Hebrew marks must share the main glyphs' chamfers and machined character.
+Do not retain generic round dots or uncut rectangular bars merely to preserve
+legacy topology. Plan matching master construction, inspect terminals beside
+green letter geometry, then check mark weight and attachment clearance.
+The specific replacement shapes remain subject to review and source protection;
+this is not a rule to polygonize every smooth curve in the font.
+
+### Kaf keeps its S-like character — confirmed 2026-10-28
+
+Eli prefers the rounded, playful, old-style S-like Kaf over the angular
+construction in the comparison fonts. Preserve that design intent when
+balancing weight, curves and connections; matching a reference skeleton is
+not the goal. Current authorized trial: **Bold `kaf-ar.init` only**, on scratch,
+strengthening both stroke edges together while retaining open inner spaces and
+the S-like flow. Its connecting bar should match the existing Bold joins at
+176 units with baseline0. Regular initial Kaf is green and remains untouched.
+This does not authorize changes to other Kaf forms, promote the earlier angular
+medial candidate, or approve active application. See the
+[recorded direction and scope](agent-proofs/cases/arabic-006/README.md#s-like-initial-kaf-direction--2026-10-28).
+
+### Arabic letter dots are near-circular
+
+Eli clarified on 2026-10-21 that Arabic letter dots should be close to perfect
+circles, following the [published grid system](https://elih.net/blog/virtua-grotesk/).
+Do not transfer the Hebrew mark treatment into Arabic letter dots or introduce
+tilt, unequal width/height, or skewed extrema handles. Use four symmetric cubic
+quarters with horizontal/vertical tangent handles and equal radii, respecting
+the 8-unit machine grid. Preserve green human optical coordinates on the 2-grid.
+Circular dots have no sharp corners to chamfer. This specifies letter-dot shape;
+it is not an instruction to make every Arabic vowel mark circular.
+
+[ARB-005 dot correction](agent-proofs/cases/arabic-005/round-dots/README.md)
+records the first trial: Bold diameter 224, radius 112 and handles 64, all on 8.
+Those dimensions are a local candidate, not a mandated size for every dot or
+weight. Measure radial deviation and inspect at text size; a circle-like box
+alone does not establish circular curvature. Existing approved Regular dots
+and attachment placement are preserved.
+
+## Reference glyphs: O H n o (the classical anchor)
+
+### Applying the drawing style across scripts
+
+Eli reaffirmed on 2026-10-19 that Hebrew and Arabic must share the green Latin
+drawings' consistent chamfered construction, in the Replica-inspired direction
+described above. A recognizably Hebrew or Arabic skeleton is not sufficient if
+its terminals and joins lose Virtua's identity.
+
+- Read the **live green outlines**, not only a reference rendering or a numeric
+  table. Record the exact donor glyph, master and curve/corner run in the review.
+- Use **16-unit straight, 45-degree cuts at exposed straight corners**, staying
+  the same absolute size across masters. Green H/E demonstrate **8-unit cuts at
+  tight internal joins**. Do not round these cuts into soft corners or enlarge
+  them in proportion to Bold stroke weight.
+- Combine those straight cuts with deliberate smooth cubic shoulders and bowls.
+  The style is not a polygonal approximation of every curve. Preserve donor
+  tangents when reusing green geometry. At the current machine-draft stage,
+  adapt a donor's optical coordinates deliberately to 8 and recheck curves;
+  never alter the green donor. Exact optical reuse needs an explicit recorded
+  exception. Explain adaptations needed for the new letter's structure.
+- Rubik and Noto are references for script structure, distinction and reading
+  texture. They do not override Virtua's curves, chamfers or Latin weight model.
+- The accepted dalet/resh weight is **provisional**. Hebrew and Arabic need
+  optical review beside both Latin cases; do not turn one accepted trial into
+  an unqualified script-wide weight rule.
+
+The [HEB-002 review](agent-proofs/cases/hebrew-002/README.md) records
+the source measurements and the user-supplied outline screenshot. Measurements
+come from the UFOs; the screenshot communicates style, not calibrated dimensions.
+Keep future confirmed design principles here, local trial values and outcomes
+in the review, and reusable execution steps in `.agents/skills/`.
+
+### Core Latin references
+
+Traditional type-design method, adopted here as process: **get O, H,
+n, o right first — everything else derives from them.** H and O set
+the uppercase (flat stem/bar vs round stroke, flat vs round
+sidebearings, overshoot); n and o set the lowercase the same way.
+Every other Latin glyph inherits its stems, curve weights, spacing
+class, and overshoot from these four.
+
+Practical consequences:
+
+- These four glyphs get perfected on the grid system FIRST, in both
+  masters, before mass-grading or training runs — an error here
+  multiplies into the whole alphabet.
+- When any of the four changes, the Dimensions table below must be
+  re-measured in the same commit, and dependent glyphs re-checked
+  against it.
+- Agents evaluating or generating any Latin glyph should measure it
+  against the current O H n o, not against stale table values or
+  other unreviewed glyphs.
+
+## Stroke and weight model
+
+- **Monolinear**: stems, bars, and curves share one visual thickness.
+  The exact per-master values live in the Dimensions table below.
+- **Weight through counter reduction**: from Regular to Bold, round forms
+  keep an (often identical) outer contour and gain weight by shrinking the
+  counter inward. Straight forms thicken symmetrically inward. The silhouette
+  stays stable across the weight axis.
+- Bold optical shifts are allowed (e.g. Bold A's crossbar sits lower), but
+  structure never changes between masters.
+
+## Dimensions
+
+The canonical measured dimensions of each master — the equivalent of the
+Glyphs "Dimensions" widget, recorded here so agents and scripts have them as
+context. **These values are the targets when boldening, tracing, or fitting
+a glyph**: measure the work, then move points until its measurements match
+this table (reference images calibrate everything the table doesn't cover —
+optical weight distribution, never raw outlines).
+
+| measure | where measured | Regular | Bold |
+| --- | --- | --- | --- |
+| cap stem (H, I) | vertical stem @ y=600 | 104 | 200 |
+| cap bar (H) | crossbar @ x=center | 96 | 168 |
+| cap round (O) | bowl side @ extremum | 108 | 204 |
+| cap round horizontal (O) | crown/base @ extremum | 100 | 148 |
+| x-height stem (n, t) | vertical stem @ y=288 | 96 | 192 |
+| x-height round (o) | bowl side @ extremum | 100 | 196 |
+| x-height round horizontal (o, n crown) | crown/base @ extremum | 92 | 140 |
+| chamfer, primary | corner cut | 16 | 16 (same absolute size; reads smaller in Bold) |
+| chamfer, small | junction cut | 8 | 8 |
+
+Reading the table: the ladder values (96, 192, 168) are the *intent*; the
+off-ladder values are recorded **optical corrections**, governed by three
+rules: **curve = flat + 4 at the extremum, in both axes and both masters**
+(vertical: 96→100, 104→108, 192→196, 200→204; horizontal: 88→92, 96→100);
+**caps = lowercase + 8** (stems 96/104, corrections carried); and
+**Regular→Bold growth comes in quanta of 24**: curve horizontals +48,
+bars +72, verticals +96 — which is what keeps Medium and SemiBold on the
+grid (delta/3 stays a multiple of 8). Both are canonical: when boldening a lowercase stem the delta
+budget is 96 units (48 per side, symmetric inward per the counter-reduction
+rule); when drawing a new round, start from the ladder and let the eye add
+its correction, then record it here if it becomes a pattern.
+
+Values were measured by inside/outside scans on the sources at the stated
+heights (grid-2 exact). If a master's proportions are deliberately changed,
+re-measure and update this table in the same commit.
+
+## Curves
+
+- Round outer contours are built from **4 cubic segments** — on-curve points
+  at the exact N/S/E/W extrema, two off-curve handles per quadrant, handles
+  on-axis (horizontal or vertical) at the extrema.
+- Outer forms are precisely geometric (the O is a near-superellipse);
+  counters may be slightly organic for warmth.
+- UFO source winding: outer contour counter-clockwise, counters clockwise.
+  TrueType uses the opposite convention after compilation.
+- Generous counters and open apertures (c e s a) — this is not a closed
+  grotesk, even in Bold.
+
+## Spacing
+
+- Sidebearings balanced for symmetric letters; round forms fit tighter than
+  flat-sided forms (standard optical spacing).
+- Eli reaffirmed the [published dyadic system](https://elih.net/blog/virtua-grotesk/)
+  for spacing on2026-10-21. New machine sidebearings, advances, component spacing
+  offsets and kerning values use the8-unit grid. Choose recurring powers-of-two
+  intervals and short sums where the rhythm supports them:32,48=32+16,64,96=64+32.
+- Record the binary decomposition of proposed spacing measurements as well as
+  their grid compliance. Higher popcount is descriptive, not an automatic defect;
+  do not force every advance or kern to be a single power of two.
+- Preserve approved human optical corrections and protected inherited widths,
+  including off8 values. Name those exceptions rather than snapping green drawings.
+  Measure actual ink sidebearings (including components), then inspect complete
+  words at400/550/700; grid compliance alone does not establish good spacing.
+
+## Master compatibility (build constraint)
+
+Both masters must have **identical contour count, point count, point types,
+and point order** for every glyph — only coordinates and advance widths may
+differ. This is a hard requirement of the variable build, checked by
+`documentation/source/master-compatibility.md` (`make reports`).
+
+## What the AI pipeline takes from this document
+
+- **Image-generation prompts**: describe a monolinear geometric grotesk with
+  45° cut corners on every sharp junction, open apertures, generous counters,
+  no stroke contrast; one black glyph on white, drawn as if on a coarse grid.
+- **Trace + placement**: `--grid 2`; snap near-horizontal/vertical/45° lines
+  exactly; snap near-baseline/x-height/cap points to the metric lines;
+  chamfer segments must survive tracing as straight lines.
+- **Review gates**: check the 16-unit chamfers exist and are straight, curves
+  have on-axis extrema, coordinates are even, key measurements sit on or near
+  the power-of-two ladder, and the glyph's weight matches its master's stem
+  ladder (≈96 Regular / ≈160+ Bold) — *measured*, not eyeballed. Spacing is
+  deliberate: sidebearings referenced to structurally similar glyphs, never
+  zero, never an outline touching the advance-box edges.
+- **Human grading**: green means "this glyph obeys this document."
+
+## Bracket alternates (structure switches along the weight axis)
+
+Some glyphs change **structure** at the bold end, not just weight (the
+double-story `a` is the canonical grotesk case). The designspace
+mechanism (equivalent of Glyphs bracket layers): an unencoded `.bold`
+alternate glyph plus a `<rules processing="last">` substitution in
+`VirtuaGrotesk.designspace`, conditioned on the Weight axis. It compiles
+to `rclt` FeatureVariations in the variable font; fontmake bakes the
+swap into static instances at or above the switch point (600 unless a
+glyph demands otherwise).
+
+Workflow per bracket glyph: (1) Eli designs the alternate structure in
+the REGULAR master (e.g. `a.bold` drawn at regular weight — it anchors
+interpolation and is never shown below the switch); (2) the copy in the
+Bold master starts red and gets lane-2 transferred from Eli's bold
+reference image like any glyph; (3) one `<sub>` line in the designspace.
+Both glyphs must each stay master-compatible with themselves — the
+compat gate handles this with no special cases.
+
+## Whole-image acceptance before advancing
+
+Eli reaffirmed this gate after rejecting the Heh/Doachashmee proof on 2026-10-21
+([feedback](agent-proofs/FEEDBACK.md#heh-whole-image-rejection-and-focused-retry--2026-10-21)).
+Inspect the complete raster without nodes, combs or diagnostic overlays before
+calling a candidate an improvement worth carrying forward. Look at the full
+silhouette, counter shapes, distribution of ink, terminals and joined rhythm,
+then compare the same forms in the reference fonts and the established green
+Virtua drawings. Correct script construction comes before local curve fitting.
+
+A clear bump, pinched counter, accidental notch, swollen join or wrong positional
+form rejects the displayed candidate even if numerical tests pass. Do not move
+on by listing these faults as future refinements. Identify which source causes
+them; if protection blocks the repair, keep the family visibly unresolved and
+prepare a separate reviewable candidate. Review normal reading size as well as
+large details and both endpoint/intermediate weights. Technical verification,
+agent visual inspection and Eli's approval are three distinct states.

@@ -24,6 +24,7 @@ import xml.etree.ElementTree as ET
 
 from fontTools.pens.boundsPen import BoundsPen
 from ufoLib2 import Font
+from design_context import build_packet, color_state, read_json, verify_packet, markdown
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -33,15 +34,11 @@ MASTER_UFOS = {
 }
 DEFAULT_OUTPUT_ROOT = ROOT / ".glyph-ai-runs"
 
-GOOD_GREEN = (0.09, 0.72, 0.44, 1.0)
-RED_MARKS = {(1.0, 0.29, 0.24, 1.0), (1.0, 0.3, 0.3, 1.0)}
-ORANGE_MARKS = {(1.0, 0.6, 0.06, 1.0), (1.0, 0.86, 0.2, 1.0)}
+CONTRACT = read_json(ROOT / "design/system/contract.json")
 
 IMAGE_SIZE = 1536
 IMAGE_PADDING = 256
-GRID = 2
 DESIGN_CHAMFER = 16
-TRACE_CHAMFER = 0
 
 
 @dataclass(frozen=True)
@@ -74,32 +71,10 @@ def split_glyph_list(values: list[str] | None) -> list[str]:
     return glyphs
 
 
-def parse_mark_color(value: str | None) -> tuple[float, ...] | None:
-    if not value:
-        return None
-    try:
-        return tuple(round(float(part.strip()), 4) for part in value.split(","))
-    except ValueError:
-        return None
-
-
-def same_color(left: tuple[float, ...] | None, right: tuple[float, ...]) -> bool:
-    if left is None or len(left) != len(right):
-        return False
-    return all(abs(a - b) <= 0.015 for a, b in zip(left, right))
-
-
-def mark_role(mark_color: str | None) -> str:
-    color = parse_mark_color(mark_color)
-    if same_color(color, GOOD_GREEN):
-        return "good-reference"
-    if color in RED_MARKS:
-        return "red-mark"
-    if color in ORANGE_MARKS:
-        return "orange-mark"
-    if color:
-        return "marked"
-    return "unmarked"
+def mark_role(mark_color: str | None, label: str | None = None) -> str:
+    state = color_state({"public.markColor": mark_color,
+                         "com.runebender.markLabel": label}, CONTRACT)
+    return "good-reference" if state["reference_eligible"] else state["name"] + "-mark"
 
 
 def plist_value_after_key(dict_element: ET.Element, key_name: str) -> str | None:
@@ -131,7 +106,7 @@ def glif_record(master: str, ufo_path: Path, glyph_name: str, file_name: str) ->
         unicode=unicode_hex,
         width=width,
         mark_color=mark_color,
-        role=mark_role(mark_color),
+        role=mark_role(mark_color, plist_value_after_key(lib_dict, "com.runebender.markLabel") if lib_dict is not None else None),
         contours=contours,
         components=components,
         path=display_path(path),
@@ -165,7 +140,7 @@ def write_inventory(output_root: Path) -> tuple[Path, Path]:
     payload = {
         "schema": "virtua-grotesk.glyph-ai-inventory.v1",
         "generated_at": datetime.now(timezone.utc).isoformat(),
-        "green_good_reference": ",".join(str(part).rstrip("0").rstrip(".") for part in GOOD_GREEN),
+        "color_contract": "design/system/contract.json",
         "masters": {master: display_path(path) for master, path in MASTER_UFOS.items()},
         "records": records,
     }
@@ -177,7 +152,7 @@ def write_inventory(output_root: Path) -> tuple[Path, Path]:
         "",
         f"Generated: {payload['generated_at']}",
         "",
-        "Runebender green (`0.09,0.72,0.44,1`) is treated as the good-reference label.",
+        "Verified green variants in design/system/contract.json qualify as references; conflicting labels do not.",
         "Other colors are reported by color only; this harness does not assign design approval semantics to them.",
         "",
     ]
@@ -253,17 +228,6 @@ def render_glyph_png(master: str, glyph_name: str, output_path: Path) -> dict[st
     }
 
 
-def default_references(records_by_master: dict[str, dict[str, GlyphRecord]]) -> dict[str, list[str]]:
-    references: dict[str, list[str]] = {}
-    for master, master_records in records_by_master.items():
-        references[master] = [
-            record.glyph
-            for record in master_records.values()
-            if record.role == "good-reference" and record.glyph != "space"
-        ][:8]
-    return references
-
-
 def target_metadata(records_by_master: dict[str, dict[str, GlyphRecord]], target: str) -> dict[str, object]:
     per_master = {
         master: asdict(master_records[target])
@@ -333,100 +297,68 @@ def prompt_text(
     )
 
 
-def img2bez_command(
-    master: str,
-    target: str,
-    metadata: dict[str, object],
-    source_ufo: Path,
-    run_dir: Path,
-) -> list[str]:
-    generated = run_dir / "generated" / master / f"{target}.png"
-    scratch_ufo = run_dir / "trace" / source_ufo.name
-    command = [
-        "img2bez",
-        "--input",
-        display_path(generated),
-        "--output",
-        display_path(scratch_ufo),
-        "--name",
-        target,
-        "--grid",
-        str(GRID),
-        "--chamfer",
-        str(TRACE_CHAMFER),
-        "--profile",
-        "wild",
-        "--target-height",
-        "1088",
-        "--y-offset",
-        "-256",
-    ]
+def img2bez_command(target, metadata, run_dir):
+    command = ["img2bez", "masters", str(run_dir / "trace/VirtuaGrotesk.designspace"),
+               "--glyph", target, "--fit", metadata["fit"], "--profile", "wild",
+               "--fail-on-low-confidence", "--report", str(run_dir / "trace/report.json")]
+    for master in MASTER_UFOS:
+        command += ["--image", f"{master.title()}={run_dir / 'generated' / master / (target + '.png')}"]
     if metadata.get("unicode"):
-        command.extend(["--unicode", str(metadata["unicode"])])
+        command += ["--unicode", metadata["unicode"]]
     if metadata.get("width"):
-        command.extend(["--width", str(metadata["width"])])
+        command += ["--preserve-existing-metrics"]
     return command
 
 
-def shell_join(parts: list[str]) -> str:
-    return " ".join(shlex.quote(part) for part in parts)
+def shell_join(parts):
+    return " ".join(shlex.quote(str(part)) for part in parts)
 
 
-def write_trace_script(run_dir: Path, target: str, metadata: dict[str, object], masters: list[str]) -> Path:
-    lines = [
-        "#!/usr/bin/env bash",
-        "set -euo pipefail",
-        "",
-        "# This traces generated PNGs into scratch UFO copies under this run packet.",
-        "# Review and compatibility-check the scratch UFOs before promoting outlines to sources/.",
-        "",
-        f"RUN_DIR={shell_join([display_path(run_dir)])}",
-        "mkdir -p \"$RUN_DIR/trace\"",
-        "",
-    ]
-    for master in masters:
-        source_ufo = MASTER_UFOS[master]
-        scratch_ufo = run_dir / "trace" / source_ufo.name
-        generated = run_dir / "generated" / master / f"{target}.png"
-        lines.extend(
-            [
-                f"test -f {shell_join([display_path(generated)])}",
-                f"rm -rf {shell_join([display_path(scratch_ufo)])}",
-                f"cp -R {shell_join([display_path(source_ufo)])} {shell_join([display_path(scratch_ufo)])}",
-                shell_join(img2bez_command(master, target, metadata, source_ufo, run_dir)),
-                "",
-            ]
-        )
-    if set(masters) == {"regular", "bold"}:
-        report = run_dir / "trace" / "master-compatibility.md"
-        lines.extend(
-            [
-                "python scripts/report_master_compatibility.py \\",
-                f"  {shell_join([display_path(run_dir / 'trace' / MASTER_UFOS['regular'].name)])} \\",
-                f"  {shell_join([display_path(run_dir / 'trace' / MASTER_UFOS['bold'].name)])} \\",
-                f"  {shell_join([display_path(report)])}",
-                "",
-            ]
-        )
+def write_trace_script(run_dir, target, metadata, masters):
     script_path = run_dir / "trace-commands.sh"
-    script_path.write_text("\n".join(lines), encoding="utf-8")
+    script_path.write_text("#!/usr/bin/env bash\nset -euo pipefail\ncd " + shlex.quote(str(ROOT)) +
+                          "\nexec " + shell_join([sys.executable, "scripts/glyph_ai_harness.py", "trace", "--run-dir", str(run_dir.resolve())]) + "\n")
     script_path.chmod(0o755)
     return script_path
 
 
-def prepare_run(target: str, references: list[str], masters: list[str], run_dir: Path) -> Path:
+def prepare_run(target: str, references: list[str], masters: list[str], run_dir: Path, fit: str) -> Path:
+    if set(masters) != set(MASTER_UFOS):
+        raise SystemExit("Prepare both masters for compatible tracing; use render for single-master inspection")
+    if run_dir.exists() and any(run_dir.iterdir()):
+        raise SystemExit("Run directory is not empty; choose a fresh --out to preserve evidence")
+    packet = build_packet(ROOT, [target], [m.title() for m in masters], "from-image")
+    if not fit or ":" not in fit:
+        raise SystemExit("Supply the calibrated --fit bottom:top band")
     records_by_master = scan_sources()
-    default_reference_map = default_references(records_by_master)
+    default_reference_map = {m: [g["glyph"] for g in packet["references"]
+                                if g["master"] == m.title() and g.get("color", {}).get("reference_eligible")]
+                             for m in masters}
     reference_map = (
         {master: references for master in masters}
         if references
         else {master: default_reference_map[master] for master in masters}
     )
-    if not any(reference_map.values()):
-        raise SystemExit("No green references found. Mark good glyphs green in Runebender or pass --references.")
+    if not all(reference_map.values()):
+        raise SystemExit("Choose existing green construction references with --references; do not regrade sources")
+    selected_references = []
+    for master, names in reference_map.items():
+        for name in names:
+            if name not in records_by_master[master] or records_by_master[master][name].role != "good-reference":
+                raise SystemExit(f"{master}/{name}: not a verified green construction reference")
+        reference_packet = build_packet(ROOT, names, [master.title()], "inspect")
+        packet["guard_hashes"].update(reference_packet["guard_hashes"])
+        selected_references.extend(reference_packet["targets"])
 
     run_dir.mkdir(parents=True, exist_ok=True)
     (run_dir / "generated").mkdir(exist_ok=True)
+    (run_dir / "context.json").write_text(json.dumps(packet, indent=2) + "\n")
+    (run_dir / "context.md").write_text(markdown(packet))
+    # A deliberately unfilled construction study precedes fitting; not approval.
+    from construction_review import make_plan, render as render_construction
+    study = make_plan({**packet, "references": selected_references})
+    (run_dir / "construction.json").write_text(json.dumps(study, indent=2) + "\n")
+    (run_dir / "construction.html").write_text(render_construction(ROOT, study))
 
     rendered_references: list[dict[str, object]] = []
     rendered_current: dict[str, dict[str, object] | None] = {}
@@ -460,6 +392,7 @@ def prepare_run(target: str, references: list[str], masters: list[str], run_dir:
             rendered_current[master] = None
 
     metadata = target_metadata(records_by_master, target)
+    metadata["fit"] = fit
     prompt_paths: dict[str, str] = {}
     prompts_dir = run_dir / "prompts"
     prompts_dir.mkdir(exist_ok=True)
@@ -472,14 +405,15 @@ def prepare_run(target: str, references: list[str], masters: list[str], run_dir:
                 rendered_references,
                 rendered_current[master],
                 metadata,
-            ),
+            ) + "\nRead context.md for construction, corrections, exceptions and current source guards.\n",
             encoding="utf-8",
         )
         prompt_paths[master] = display_path(path)
 
     trace_script = write_trace_script(run_dir, target, metadata, masters)
     manifest = {
-        "schema": "virtua-grotesk.glyph-ai-run.v1",
+        "schema": "virtua-grotesk.glyph-ai-run.v2",
+        "context": "context.json",
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "target": metadata,
         "masters": masters,
@@ -489,8 +423,7 @@ def prepare_run(target: str, references: list[str], masters: list[str], run_dir:
         "prompts": prompt_paths,
         "trace_script": display_path(trace_script),
         "trace_commands": [
-            shell_join(img2bez_command(master, target, metadata, MASTER_UFOS[master], run_dir))
-            for master in masters
+            shell_join(img2bez_command(target, metadata, run_dir))
         ],
         "warnings": warnings,
     }
@@ -500,11 +433,11 @@ def prepare_run(target: str, references: list[str], masters: list[str], run_dir:
     readme = [
         f"# Glyph AI Run: `{target}`",
         "",
-        "1. Review `manifest.json` and the rendered green references.",
+        "1. Read `context.md`, `manifest.json` and the rendered green references; retain named authorization.",
         "2. Use each file in `prompts/` with OpenAI image generation.",
         "3. Save generated PNGs to `generated/<master>/<glyph>.png`.",
         "4. Run `./trace-commands.sh` to trace into scratch UFOs.",
-        "5. Review `trace/master-compatibility.md`, render proofs, then promote outlines only after compatibility is resolved.",
+        "5. Review the trace report, fit and compatibility. Refit to the 8-unit draft contract, check grid/curves, build and visually inspect. Apply only within named authorization; checks do not grade artwork.",
         "",
         f"Trace script: `{display_path(trace_script)}`",
         "",
@@ -522,37 +455,35 @@ def trace_run(run_dir: Path, img2bez: str) -> int:
     if not manifest_path.exists():
         raise SystemExit(f"Missing manifest: {display_path(manifest_path)}")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    if manifest.get("schema") != "virtua-grotesk.glyph-ai-run.v2":
+        raise SystemExit("Legacy packet: prepare a fresh context-aware packet before tracing")
+    packet = read_json(run_dir / "context.json")
+    changed = verify_packet(ROOT, packet)
+    if changed:
+        raise SystemExit("Context changed; regenerate the packet: " + ", ".join(changed))
     trace_dir = run_dir / "trace"
-    trace_dir.mkdir(exist_ok=True)
-
+    if trace_dir.exists():
+        raise SystemExit("Trace already exists; preserve it and use a new run directory")
     for master in manifest["masters"]:
-        source_ufo = MASTER_UFOS[master]
-        scratch_ufo = trace_dir / source_ufo.name
         generated = run_dir / "generated" / master / f"{manifest['target']['glyph']}.png"
         if not generated.exists():
             raise SystemExit(f"Missing generated image: {display_path(generated)}")
-        if scratch_ufo.exists():
-            shutil.rmtree(scratch_ufo)
-        shutil.copytree(source_ufo, scratch_ufo)
-        command = img2bez_command(master, manifest["target"]["glyph"], manifest["target"], source_ufo, run_dir)
-        command[0] = img2bez
-        command[command.index(display_path(scratch_ufo))] = str(scratch_ufo)
-        command[command.index(display_path(generated))] = str(generated)
-        print(shell_join(command))
-        subprocess.run(command, cwd=ROOT, check=True)
-
-    if set(manifest["masters"]) == {"regular", "bold"}:
-        subprocess.run(
-            [
-                sys.executable,
-                "scripts/report_master_compatibility.py",
-                str(trace_dir / MASTER_UFOS["regular"].name),
-                str(trace_dir / MASTER_UFOS["bold"].name),
-                str(trace_dir / "master-compatibility.md"),
-            ],
-            cwd=ROOT,
-            check=True,
-        )
+    trace_dir.mkdir()
+    for master in manifest["masters"]:
+        shutil.copytree(MASTER_UFOS[master], trace_dir / MASTER_UFOS[master].name)
+    shutil.copy2(ROOT / "sources/VirtuaGrotesk.designspace", trace_dir / "VirtuaGrotesk.designspace")
+    command = img2bez_command(manifest["target"]["glyph"], manifest["target"], run_dir.resolve())
+    command[0] = img2bez
+    subprocess.run(command, cwd=ROOT, check=True)
+    report = read_json(trace_dir / "report.json")
+    # Do not infer compatibility when the tracer returns an unfamiliar report.
+    if report.get("compatible") is not True or report.get("lowConfidence") is not False:
+        raise SystemExit("Trace report is incompatible, low-confidence or unknown; inspect before proceeding")
+    subprocess.run([sys.executable, "scripts/report_master_compatibility.py",
+                    str(trace_dir / MASTER_UFOS["regular"].name),
+                    str(trace_dir / MASTER_UFOS["bold"].name),
+                    str(trace_dir / "master-compatibility.md"), "--check"], cwd=ROOT, check=True)
+    print("Scratch trace only. Inspect fit, refit to the draft grid, build and review before any authorized application.")
     return 0
 
 
@@ -570,6 +501,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     prepare = subparsers.add_parser("prepare", help="prepare an AI/image/img2bez run packet")
     prepare.add_argument("--target", required=True)
+    prepare.add_argument("--fit", required=True, help="Calibrated bottom:top band in font units or metric zones; never guess")
     prepare.add_argument("--references", nargs="*", help="glyph names, comma- or space-separated")
     prepare.add_argument("--master", choices=MASTER_UFOS, action="append")
     prepare.add_argument("--out", type=Path)
@@ -599,7 +531,7 @@ def main(argv: list[str] | None = None) -> int:
         masters = args.master or list(MASTER_UFOS)
         references = split_glyph_list(args.references)
         run_dir = args.out or DEFAULT_OUTPUT_ROOT / args.target
-        manifest = prepare_run(args.target, references, masters, run_dir)
+        manifest = prepare_run(args.target, references, masters, run_dir, args.fit)
         print(f"Wrote {display_path(manifest)}")
         return 0
     if args.command == "trace":

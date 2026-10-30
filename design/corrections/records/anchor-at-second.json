@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "anchor-at-second",
+  "kind": "correction",
+  "title": "2026-10-23 — @ revision 2 still lumpy (Eli)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "at"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "paired-stroke"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-at-second.md",
+      "role": "Original review and feedback",
+      "sha256": "519550386e46a2a0742a16f91828fc7b88a168ab7ebc601ed475f336fb8fc7f1"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-at-second.md"
+}

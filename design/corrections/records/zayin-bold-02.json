@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "zayin-bold-02",
+  "kind": "correction",
+  "title": "Bold Zayin bounded turn",
+  "status": "recorded-human-feedback",
+  "summary": "Human correction changes a tall turn to a compact 56x56 extent with 40/40 handles; these dimensions are local.",
+  "glyphs": [
+    "zayin-hb"
+  ],
+  "masters": [
+    "Bold"
+  ],
+  "scripts": [
+    "hebrew"
+  ],
+  "operations": [],
+  "tags": [
+    "junction",
+    "weight-transfer"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Human correction changes a tall turn to a compact 56x56 extent with 40/40 handles; these dimensions are local.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "recorded-correction",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-a24f97a0bf93fe7a.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "a24f97a0bf93fe7a46379cc2d5bd4582d8b8d037effbdc140af6c9d62e41ed6e",
+      "source_path": "design/reviews/hebrew-006/README.md"
+    },
+    {
+      "path": "design/reviews/hebrew-006/candidate-v3-sources/sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif",
+      "role": "Rejected transfer",
+      "sha256": "5381b7e58ac5e67f16ebf9013527405d17ae9b429620d9342f4042308fd4c3b0"
+    },
+    {
+      "path": "design/reviews/hebrew-006/hand-edit-02-Bold-zayin.glif",
+      "role": "Human correction",
+      "sha256": "aae09cc12e03fff790b9f835e2dd5d7aef15b295b74858ac9adfa05267667342"
+    },
+    {
+      "path": "design/reviews/hebrew-006/hand-edit-02-comparison.json",
+      "role": "Measurements",
+      "sha256": "e5023f031a8684c1e7ae6c6452c71ea728dca3719392145e047e3d0b64bd5ee2"
+    }
+  ],
+  "pairs": [
+    {
+      "master": "Bold",
+      "before": "design/reviews/hebrew-006/candidate-v3-sources/sources/VirtuaGrotesk-Bold.ufo/glyphs/zayin-hb.glif",
+      "after": "design/reviews/hebrew-006/hand-edit-02-Bold-zayin.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    }
+  ],
+  "related": [
+    "hamza-bold-01"
+  ]
+}

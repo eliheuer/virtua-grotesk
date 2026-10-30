@@ -1,0 +1,46 @@
+diff --git a/glyphlab/tokenizer.py b/glyphlab/tokenizer.py
+index 4328b4c..0af82af 100644
+--- a/glyphlab/tokenizer.py
++++ b/glyphlab/tokenizer.py
+@@ -16,6 +16,7 @@ Sequence formats:
+ """
+ 
+ import os
++import math
+ 
+ from fontTools.ufoLib import UFOReader
+ from fontTools.pens.recordingPen import RecordingPen
+@@ -30,9 +31,16 @@ SPECIALS = ['PAD', 'BOS', 'EOS', 'SEP', 'MOVE', 'LINE', 'CURVE', 'CLOSE',
+ WEIGHT_TOKEN = {400: 'W400', 500: 'W500', 600: 'W600', 700: 'W700'}
+ 
+ 
++def checked_grid_value(v, lower, upper, kind):
++    """Reject unsupported inputs before quantization; never silently clip."""
++    if not math.isfinite(v) or not lower <= v <= upper:
++        raise ValueError(f'{kind} {v!r} outside model vocabulary [{lower}, {upper}]; '
++                         'use an explicitly versioned representation, not clipping')
++    return int(round(v / GRID)) * GRID
++
++
+ def snap(v):
+-    q = int(round(v / GRID)) * GRID
+-    return max(COORD_MIN, min(COORD_MAX, q))
++    return checked_grid_value(v, COORD_MIN, COORD_MAX, 'coordinate/advance')
+ 
+ 
+ class Vocab:
+@@ -63,12 +71,11 @@ class Vocab:
+         return COORD_MIN + (tok_id - self.coord_base) * GRID
+ 
+     def delta(self, v):
+-        q = int(round(v / GRID)) * GRID
+-        q = max(DELTA_MIN, min(DELTA_MAX, q))
++        q = checked_grid_value(v, DELTA_MIN, DELTA_MAX, "delta")
+         return self.delta_base + (q - DELTA_MIN) // GRID
+ 
+     def delta_value(self, tok_id):
+-        if tok_id < self.delta_base or tok_id >= len(self.tokens):
++        if tok_id < self.delta_base or tok_id >= self.delta_base + N_DELTAS:
+             return None
+         return DELTA_MIN + (tok_id - self.delta_base) * GRID
+ 

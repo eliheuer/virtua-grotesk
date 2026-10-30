@@ -18,7 +18,13 @@ class ServerIdentityTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             selection = Path(temp)/'selection.json'
             with patch.object(serve, 'SELECTION', selection):
-                self.assertEqual(serve.selected_snapshot(), serve.CURRENT)
+                state = json.loads(serve.STATE.read_text())
+                self.assertEqual(serve.selected_snapshot(), (serve.ROOT / state['proof_snapshot']).resolve())
+                # State changes must be read anew, not captured in a module constant.
+                state_file = Path(temp)/'current.json'
+                state_file.write_text(json.dumps({'proof_snapshot': 'another/proof'}))
+                with patch.object(serve, 'STATE', state_file):
+                    self.assertEqual(serve.selected_snapshot(), (serve.ROOT/'another/proof').resolve())
                 selection.write_text(json.dumps({'snapshot': temp}))
                 self.assertEqual(serve.selected_snapshot(), Path(temp).resolve())
                 self.assertEqual(serve.selected_snapshot(Path('/tmp/explicit')), Path('/tmp/explicit').resolve())

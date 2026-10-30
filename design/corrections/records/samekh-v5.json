@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "id": "samekh-v5",
+  "kind": "correction",
+  "title": "Samekh restrained refinement",
+  "status": "recorded-human-feedback",
+  "summary": "The rectangular redesign was rejected; preserve the skeleton and improve local tension.",
+  "glyphs": [
+    "samekh-hb"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "hebrew"
+  ],
+  "operations": [],
+  "tags": [
+    "bowl",
+    "curve"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "The rectangular redesign was rejected; preserve the skeleton and improve local tension.",
+  "application": "v5 applied in both masters; no automatic green grade",
+  "visual_verdict": "v5-approved; v4-rejected",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-3f333a817f6a46cc.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "3f333a817f6a46ccf71f15d1cf17797f1fece17177bc0a3527aace375a551280",
+      "source_path": "design/reviews/hebrew-005/README.md"
+    }
+  ],
+  "pairs": []
+}

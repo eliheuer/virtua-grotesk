@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-29",
+  "summary": "Seen v6 rejected: leaning bowl/first-tooth regression. Active v3 unresolved and unchanged. Drawing paused; timed queues stopped.",
+  "autonomous_drawing": "stopped",
+  "primary_review": "arabic-006",
+  "proof_snapshot": "out/arabic-seen-v6/snapshot",
+  "proof_verdict": "rejected",
+  "proof_label": "Seen v6 \u00b7 Rejected \u00b7 Not applied",
+  "work": [
+    {
+      "id": "seen",
+      "case": "design/reviews/arabic-006/seen-2026-10-29/README.md",
+      "glyphs": [
+        "seen-ar"
+      ],
+      "masters": [
+        "Regular",
+        "Bold"
+      ],
+      "active_revision": "v3",
+      "displayed_revision": "v6",
+      "application": "v3 applied; v4 not applied",
+      "visual_verdict": "v4/v5/v6 rejected; v3 unresolved",
+      "next_action": "Paused. No further candidate until human direction."
+    },
+    {
+      "id": "kaf",
+      "case": "design/reviews/arabic-006/README.md",
+      "glyphs": [
+        "kaf-ar.init"
+      ],
+      "masters": [
+        "Bold"
+      ],
+      "application": "approved exact candidate applied 2026-10-29",
+      "visual_verdict": "accepted within named scope"
+    },
+    {
+      "id": "at",
+      "case": "design/reviews/at-001/README.md",
+      "glyphs": [
+        "at"
+      ],
+      "masters": [
+        "Regular",
+        "Bold"
+      ],
+      "application": "r4 applied for human editing",
+      "visual_verdict": "better, but still bad; not approved"
+    },
+    {
+      "id": "latin-qa",
+      "case": "design/reviews/latin-001/README.md",
+      "glyphs": [],
+      "masters": [
+        "Regular",
+        "Bold"
+      ],
+      "application": "historical QA work; resume from handoff",
+      "visual_verdict": "no new approval"
+    }
+  ],
+  "active_sources": [
+    {
+      "glyph": "seen-ar",
+      "master": "Regular",
+      "path": "sources/VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif",
+      "sha256": "e07cf7a6958378c20e1ac5fb6be4290422c264adfea8406ff52d13fb4e67a165",
+      "state": "applied v3; unresolved optical issues"
+    },
+    {
+      "glyph": "seen-ar",
+      "master": "Bold",
+      "path": "sources/VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif",
+      "sha256": "361d66c154f61d18a7b74815ce7f967f9caa072747ab78fb55afc28f9987d01a",
+      "state": "applied v3; unresolved optical issues"
+    }
+  ]
+}

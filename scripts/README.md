@@ -35,3 +35,12 @@ step. The native and web launchers remain at the root for `make runebender*`.
 
 The retired report/packaging script collection is available in Git history.
 Do not restore it wholesale; extend the maintained commands only when needed.
+
+## Scoped design context
+
+`design_context.py --glyph <name> --operation <operation>` retrieves current source
+facts, construction rules and exact corrections. `--json --output out/context.json`
+saves input guards; `--verify out/context.json` refuses stale evidence. `--check`
+validates the library and portable proof. See [design/README.md](../design/README.md).
+`report_master_compatibility.py --check` makes blocking source differences fail;
+without --check its historical report-only interface is preserved.

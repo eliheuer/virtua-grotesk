@@ -1,192 +1,76 @@
 # Agent guidance
 
-Virtua Grotesk is an OFL variable font in development for Google Fonts.
-Use the [onboarding checklist](documentation/google-fonts/README.md) for release
-scope and remaining work.
-Dated audits are snapshots, not current build or review results.
+Virtua Grotesk is an OFL variable font. Start with the user's task, inspect the
+working tree, and preserve unrelated work. Use current files and evidence over
+dated prose. Complete authorized reversible work without repeated permission
+questions; reuse named approvals and preserve unresolved human decisions.
 
-Codex reads this file directly. Shared workflows live in `.agents/skills/`;
-`CLAUDE.md` and `.claude/skills` provide compatibility for Claude Code.
-Edit the canonical files, not separate model-specific copies.
+## Find the right context
 
-## Working style and scope
+- Drawing, spacing, components or curves: [design workflow](design/README.md),
+  then `.venv/bin/python scripts/design_context.py --glyph <name> --operation <operation>`.
+  Read its applicable construction rules, corrections, exceptions and live source
+  facts. The packet is context, not authorization. Save JSON guards before edits.
+- Current review and stopped work: `make design-status`, then the named case in
+  [design/reviews/current.json](design/reviews/current.json). Historical grants
+  and queues do not restart work. Record feedback before the next edit.
+- A–Z/a–z: also read [Latin worklog](design/reviews/latin-worklog.md); OPEN
+  decisions belong to Eli. Append measured decisions there.
+- Image references: use `anchor-sheet-glyphs` for calibrated sheets or
+  `glyph-ai-harness` for image generation/tracing. Follow their operational guides.
+- Release scope: [onboarding checklist](documentation/google-fonts/README.md)
+  and `google-fonts-onboarding`; binary/package checks: `google-fonts-qa`;
+  downstream preview: `google-fonts-packaging`; source checks: `font-qa`.
+- Interactive design review: `render-specimen`, `make proof-web`, and
+  [web proof guide](agent-proofs/app/README.md). Preserve the accepted layout.
 
-Use the user's requested outcome and current release scope to choose the work.
-Load the relevant skill and referenced evidence as needed; do not load the whole
-archive or every skill. Use current files and command results over dated prose.
-
-Complete authorized, reversible work without repeated permission questions.
-When a missing design, licensing, or release decision blocks one step, ask a
-focused question and continue independent work. Reuse decisions and approvals
-already given in the task. Review-only requests remain review-only; onboarding
-preparation does not authorize public messages or publication.
-
-Keep updates concise: outcome, evidence, remaining blockers. Do not create new
-checklists or reports that duplicate maintained ones. Preserve unresolved human
-choices through handoffs; distinguish proposed, verified, approved, and published.
-Use plain commit messages without agent self-credit or generated-by trailers.
-
-For onboarding/readiness use `$google-fonts-onboarding`; for binary or package
-checks use `$google-fonts-qa`; for a downstream preview use
-`$google-fonts-packaging`. Source-only checks belong to `$font-qa`.
-
-For iterative design review, start with `agent-proofs/README.md`
-(**Virtua Design Review**, the shared session handoff), then read
-`agent-proofs/FEEDBACK.md` and
-the latest open review. Record Eli's feedback and its exact scope in that review
-before continuing edits. Keep proposed rules separate from confirmed preferences;
-promote reusable lessons to their canonical document or skill with an evidence link.
-
-**Interactive proofing defaults to the live web proof.** Start with
-`agent-proofs/app/README.md` and `make proof-web`; use the
-`render-specimen` skill. Render actual fonts in the browser, not scaled specimen
-images. `make review` is the separate Diffenator3 QA report; `make proof` is the
-DesignBot print PDF.
-
-**Current handoff (2026-10-19): Eli is ready to move on from the intensive UI pass.**
-Resume through the central guide and current case; preserve the established proof
-layout. This does not approve a new drawing batch or resolve provisional weight.
-Record further corrections in the existing design-review records.
-
-## Standing drawing authorization — 2026-10-20
-
-Eli authorized continuing Hebrew development directly in the active Regular and
-Bold UFOs, then Arabic after Hebrew. Do not ask for per-batch application approval.
-Preserve a before snapshot, check source colors and current file hashes, make
-bounded compatible edits, rebuild and show the comparison with Rubik. Active
-sources are the working drawings visible in Runebender; application does not
-mean final visual approval, green grading, or release readiness. Preserve manual
-corrections and unrelated edits. Keep recording exact correction pairs and
-promote measured lessons into DESIGN.md and the shared skills.
-
-## Sources and design
-
-The active sources are `sources/VirtuaGrotesk.designspace` and the Regular
-and Bold UFOs beside it. The weight axis runs from 400 to 700. `sources/archive/`
-is historical material, not build input. Builds use `sources/config.yaml`.
-
-Read `DESIGN.md` before drawing. The font uses 16-unit chamfers, monolinear
-strokes, and smooth cubic curves. Weight gain generally reduces counters;
-follow the glyph-specific contract rather than assuming every outer contour
-is fixed.
-
-| Metric | Units |
-| --- | --- |
-| Units per em | 1024 |
-| Ascender | 832 |
-| Cap height | 768 |
-| x-height | 576 |
-| Descender | -256 |
-| Grid | 2; prefer even coordinates |
-
-Before touching A–Z or a–z, read `documentation/design-pass-worklog.md`.
-Append measurements and design decisions there. OPEN decisions belong to Eli;
-measure and propose without resolving them by editing sources.
+Shared procedural skills live in `.agents/skills/`; `CLAUDE.md` and
+`.claude/skills` are compatibility routes. Edit canonical files. Design knowledge
+belongs in `design/`, not copied into each skill. Do not read every skill or the
+whole review archive. [DESIGN.md](DESIGN.md) is the human-readable topic router.
 
 ## Source safety
 
-- Before adding or changing glyph drawings, name the exact glyphs and masters,
-  explain the proposed changes and their purpose, and wait for Eli's approval.
-  Approval applies only to that named scope, not nearby glyphs or a broader batch.
-  Prepare changes on a scratch copy with a reversible backup; show before/after
-  proofs and verify master compatibility and compiled shaping. Distinguish approval
-  to prepare a candidate from approval to apply it to the active sources. Stop and
-  ask again if the repair needs broader changes. Reuse approval already given for
-  the same scope; do not ask repeatedly.
-- Follow the canonical [semantic colors](README.md#semantic-colors) before selecting targets or references.
-  Only green glyphs—outlines or composites—are frozen by default (Eli, 2026-10-20). Editing or removing
-  green glyphs requires explicit approval naming those glyphs and masters.
-  Purple identifies new AI drawings awaiting human review; it does not grant
-  approval, reference status or protection. Label newly AI-drawn/redrawn work
-  purple under Eli's requested convention; never promote it to green. Human
-  review assigns the subsequent grade. Composites Eli wants frozen use green;
-  preserve green component donors.
-- Colors describe the default scope of an approved edit, not blanket authorization.
-  Only red permits overwriting or replacement without an explicit exception.
-  Orange and yellow permit edits while preserving the existing drawing; neither is reference material.
-  Blue means a composite needing diagnosis and repair; pink means a composite needing smaller edits.
-  Neither blue nor pink is approved reference material; blue does not mean AI output.
-- Uncolored glyphs are outside automatic completion work.
-  Classify unfamiliar colors before acting; never change review colors automatically.
-  Leave new candidates ungraded unless Eli specifies a review color.
-- Both masters must have matching contours, point counts, and point types.
-  Mirror structural changes and verify master compatibility.
-- Preserve unrelated work. Check the working tree and other worktrees before
-  starting a source batch.
-- Do not save whole UFOs with `defcon`/`ufoLib` `font.save()`: it reformats the
-  sources. Edit GLIF XML and plists surgically in their existing style (tabs,
-  double-quoted attributes, no space before `/>`, point attribute order
-  `x`, `y`, `type`, `smooth`).
-- Register new glyphs in each master's `glyphs/contents.plist`,
-  `public.glyphOrder` in `lib.plist`, and the GLIF file itself.
+Active inputs: `sources/VirtuaGrotesk.designspace`, Regular and Bold UFOs,
+`sources/config.yaml`. `sources/archive/` is historical. The weight axis is
+400–700. Shared metrics/grid/colors are in `design/system/contract.json`.
+New machine drafts use 8 units; preserve human optical corrections on 2.
 
-## Drawing from images
+Before drawing, identify exact glyphs, masters and purpose; reuse existing
+approval for that scope, otherwise obtain it. Candidate permission is distinct
+from active application. Preserve a before snapshot, inspect current colors and
+hashes, and recheck the context packet immediately before writing. Stop for a
+broader scope or unresolved human decision; continue independent work.
 
-Use `.agents/skills/anchor-sheet-glyphs/SKILL.md` and
-`harness/RUNBOOK-anchor-sheets.md` for reference sheets. Read the skill's
-`LESSONS.md` before generating; record Eli's corrections there. Calibrate
-pixel-to-font coordinates against a known green anchor. Use `symbol_gen.py`
-for line-grammar symbols and img2bez for organic outlines.
+Only green is frozen by default, including composites. A green change requires
+explicit named permission. Check recursive donors and consumers so a donor edit
+does not indirectly change a protected glyph. Red is replaceable within scope;
+orange/yellow retain useful drawing; blue/pink are composite repair states.
+Purple means AI drawing awaiting human review, not approval or reference status.
+Use Eli's purple convention for newly AI-drawn work; never assign green. Unknown
+colors require classification. Preserve reserved human edits regardless of color.
 
-For a single organic glyph, follow `harness/RUNBOOK-codex.md`: trace on a
-scratch copy, review against `DESIGN.md`, port in the repository's style,
-leave final color grading to Eli, and verify.
-Use `img2bez masters --help` for current flags.
-Do not replace tracing with a hand-drawn approximation.
+Both masters must have corresponding contour/point/component structure. Edit
+GLIF XML and plists surgically in existing style (tabs, double quotes, no space
+before `/>`, x/y/type/smooth attribute order). Never use whole-UFO `font.save()`.
+Register new glyphs in contents.plist and public.glyphOrder in both masters.
 
-Inspect the trace report before installation: `compatible` must be true;
-`lowConfidence` requires review or regeneration. Check bounds, advance,
-point counts, and profile. Tune and retrace poor results. Trace logging uses
-`IMG2BEZ_LOG` (normally `~/.img2bez/virtua-grotesk-traces.jsonl`).
+## Verification and handoff
 
-The broader harness design is in `plans/ai-font-completion-harness.md`.
-Runebender is the human visual review and final editing surface.
+Use `.venv/bin/python`. Follow [design verification](design/system/verification.md)
+and [QA](documentation/qa.md): source checks, build, compiled shaping, affected
+rendered proofs and preflight. After curve edits run `curve_lint.py --joins` and
+inspect large glyphs plus reading-size context. Inspect actual rendered output;
+command success is not visual review. Human approval and release readiness remain
+separate. Do not exclude Fontspector checks just to pass.
 
-## Commands
+`make help` lists commands. `make review` is Diffenator3 QA; `make proof` is the
+DesignBot PDF; `make specimen` is unimplemented. Preflight checks artifact presence,
+and skeleton tolerates QA failures; neither proves release readiness.
+When asked to open a font, use `runebender-serve <designspace-or-ufo> --open` and
+leave it running. Use the native editor only when explicitly requested.
 
-Run from the repository root. Use `.venv/bin/python` for Python tools.
-
-| Command | Purpose |
-| --- | --- |
-| `make setup` | Create the Python environment and install requirements. |
-| `make build` | Build the variable and four static TTFs into `fonts/`. |
-| `make proof` | Build and render the main PDF with designbot. |
-| `make proof-web` | Serve or reuse the live interface for interactive design review. |
-| `make review` | Build a Diffenator3 browser proof. |
-| `make reports` | Refresh source, built-font, and compatibility reports. |
-| `make preflight` | Build, proof, reports, and required-file checks. |
-| `make test` | Build and run the configured Fontspector checks. |
-| `make runebender` | Open the designspace with the native GPUI launcher. |
-| `make runebender-web` | Open the web editor in an app window. |
-| `make runebender-tab` | Open the web editor in a browser tab. |
-
-`make specimen` is an unimplemented marketing-specimen target; do not use it
-as a completed proof workflow. `make help` lists additional development tools.
-When explicitly asked to open a font in the web editor, use
-`runebender-serve <path> --open` and leave the server running for the session.
-Do not use the old `~/.cargo/bin/runebender` binary.
-
-## Verification and release
-
-Follow `documentation/qa.md`. After drawing, spacing, kerning,
-or feature changes, build and inspect the compiled fonts, render the affected
-forms, review proofs, and run preflight. After curve edits, also run
-`scripts/curve_lint.py <Master> <glyphs>` and inspect a large single-glyph render.
-Verify shaping with the built font, not just the feature source.
-
-The main proof is `designbot proof <font> --output <pdf>`; `make proof` uses
-the variable font. For harness renders, use `harness/designbot/glyph_canvas.rs`.
-For interactive before/after review, use the live web proof described in
-`agent-proofs/app/README.md` and `documentation/qa.md#live-browser-review`.
-`scripts/proof_compare.py` is an optional historical pixel-difference diagnostic.
-Read `documentation/proofs/PROOF_SPEC.md` for the print proof layout. Inspect actual
-rendered output before claiming visual review.
-
-Preflight only checks artifact presence. `make skeleton` tolerates QA failures;
-neither establishes release readiness. Do not add Fontspector exclusions to
-force a passing result. Review each existing exclusion and remove it when the
-check passes. Human grading remains separate from automated QA.
-
-Use `.agents/google-fonts-onboarding-checklists.md` and the onboarding, QA,
-and packaging skills for submission work. Keep release results tied to the
-source revision and built artifacts that were actually checked.
+Keep updates concise and scope-specific. Preserve proposed/verified/approved/
+published distinctions and evidence hashes in handoffs. Review-only means no
+edits; preparation does not authorize public messages or publication. Use plain
+commit messages without agent credit or generated-by trailers.

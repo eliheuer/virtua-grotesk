@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "anchor-derived-symbols",
+  "kind": "correction",
+  "title": "2026-07-29 — lane-1 derivation batch (no sheets needed)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "brokenbar",
+    "degree",
+    "plusminus",
+    "multiply",
+    "divide"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "construction"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-derived-symbols.md",
+      "role": "Original review and feedback",
+      "sha256": "f48acc469df2035c5f52a5ca7316b0650c415364cbfb33c2133bfd039fb41b67"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-derived-symbols.md"
+}

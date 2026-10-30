@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "id": "at-rejected",
+  "kind": "correction",
+  "title": "At-sign broad-flow rejection",
+  "status": "recorded-human-feedback",
+  "summary": "Paired width and continuity improvements did not repair lumpy broad curves; keep smaller italic a and double spiral.",
+  "glyphs": [
+    "at"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "curve",
+    "paired-stroke"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Paired width and continuity improvements did not repair lumpy broad curves; keep smaller italic a and double spiral.",
+  "application": "candidate r4 applied for manual editing",
+  "visual_verdict": "rejected",
+  "training_eligibility": "negative-example",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-e86f3619a2da4c9b.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "e86f3619a2da4c9b7207d2861d6548ac3f18ad4b0a7051f42e63691ad7ae6726",
+      "source_path": "design/reviews/at-001/README.md"
+    },
+    {
+      "path": "design/reviews/at-001/candidate-r4/Regular-at.glif",
+      "role": "Applied, visually rejected Regular",
+      "sha256": "723dc17894ae940f3bd3c4b3b77c4a44782aa4fdedda45b7c59aa2a8560a256f"
+    },
+    {
+      "path": "design/reviews/at-001/candidate-r4/Bold-at.glif",
+      "role": "Applied, visually rejected Bold",
+      "sha256": "d4f09976efca107b1404696c725b7456eefc11ab773394cb0aa445034d4e495e"
+    },
+    {
+      "path": "design/reviews/at-001/candidate-r4/review.png",
+      "role": "Comparison",
+      "sha256": "68265508aef15694c817423b1056e15d1389d65ebd4d14addbf7d230b87e7f36"
+    },
+    {
+      "path": "design/reviews/at-001/review.json",
+      "role": "Human verdicts",
+      "sha256": "c163e5ec8da739aecb68a1735cbe8c38ff59d3ccd2a5372f715fc4a816558aa1"
+    }
+  ],
+  "pairs": []
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "prefixes": {
+    "agent-proofs/cases/": "design/reviews/"
+  },
+  "files": {
+    "agent-proofs/README.md": "design/README.md",
+    "agent-proofs/FEEDBACK.md": "design/reviews/history/feedback-2026-10-29.md",
+    "documentation/design-pass-worklog.md": "design/reviews/latin-worklog.md",
+    "documentation/source-guides/design-philosophy.md": "design/system/design-philosophy-history.md"
+  },
+  "historical_receipts": "Retain original path and hash fields. Resolve paths through this mapping or compatibility symlinks."
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "id": "anchor-seen-splice",
+  "kind": "correction",
+  "title": "2026-08-04 — a spliced tail must join TANGENTIALLY (Eli correction)",
+  "status": "historical-observation",
+  "summary": "The historical Seen splice failure demonstrates the need to preserve donor tangents at the bowl/teeth connection; later v4 also shows that continuity alone must not erase lobes.",
+  "glyphs": [
+    "seen*-ar*",
+    "sheen-ar*"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [],
+  "tags": [
+    "junction",
+    "tangent"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-seen-splice.md",
+      "role": "Original review and feedback",
+      "sha256": "86bf8d7532316e9ed7023378019abe034e1e016f7b708081bcde4bcacb2766e3"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-seen-splice.md"
+}

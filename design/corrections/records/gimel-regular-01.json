@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "id": "gimel-regular-01",
+  "kind": "correction",
+  "title": "Gimel tangent and terminal landings",
+  "status": "recorded-human-feedback",
+  "summary": "Preserve the deliberate inner shelf and short landings; retain human optical coordinates.",
+  "glyphs": [
+    "gimel-hb"
+  ],
+  "masters": [
+    "Regular"
+  ],
+  "scripts": [
+    "hebrew"
+  ],
+  "operations": [],
+  "tags": [
+    "landing",
+    "shelf",
+    "tangent"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Preserve the deliberate inner shelf and short landings; retain human optical coordinates.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "recorded-correction",
+  "training_eligibility": "requires-curation",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-e2b749e1fd78415d.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "e2b749e1fd78415db73272b6b219a2981b903deb1c4e49fc5c9bea4c60680f67",
+      "source_path": "design/reviews/hebrew-007/README.md"
+    },
+    {
+      "path": "design/reviews/hebrew-007/working-v3-sources/sources/VirtuaGrotesk-Regular.ufo/glyphs/gimel-hb.glif",
+      "role": "Before",
+      "sha256": "2ac634c1b8ac978ca3008eaf897d51c6c7e8de2f5fa7bef45514c49ded984ffa"
+    },
+    {
+      "path": "design/reviews/hebrew-007/hand-edit-01-Regular-gimel.glif",
+      "role": "Human correction",
+      "sha256": "045f988671a2a514b24f4cf36e7481c127d516250bca1d7b86e849fd73162197"
+    },
+    {
+      "path": "design/reviews/hebrew-007/hand-edit-01-comparison.json",
+      "role": "Measurements",
+      "sha256": "1de17161222d28a4c8062fcc442a704da1d1078ff84b2985f39bf3730467ac29"
+    }
+  ],
+  "pairs": [
+    {
+      "master": "Regular",
+      "before": "design/reviews/hebrew-007/working-v3-sources/sources/VirtuaGrotesk-Regular.ufo/glyphs/gimel-hb.glif",
+      "after": "design/reviews/hebrew-007/hand-edit-01-Regular-gimel.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    }
+  ]
+}

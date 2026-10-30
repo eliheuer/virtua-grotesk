@@ -6,7 +6,7 @@ import tempfile
 import unittest
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
-from reference_fonts import ReferenceCache, reference_directory, prune_reference_cache, CACHE_GRACE_SECONDS
+from reference_fonts import prepare_live, ReferenceCache, reference_directory, prune_reference_cache, CACHE_GRACE_SECONDS
 
 
 def font(path, weight=400, family='Test', italic=False, characters=(65,)):
@@ -25,6 +25,29 @@ def font(path, weight=400, family='Test', italic=False, characters=(65,)):
 
 
 class ReferencesTest(unittest.TestCase):
+    def test_current_verdict_overlays_only_matching_snapshot(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp); snapshot=root/'proof'; (snapshot/'fonts').mkdir(parents=True)
+            font(snapshot/'fonts/drawing.ttf')
+            font(snapshot/'fonts/labels.ttf')
+            face={'url':'fonts/drawing.ttf','sha256':hashlib.sha256((snapshot/'fonts/drawing.ttf').read_bytes()).hexdigest(),'label':'Candidate'}
+            original='window.REVIEW_DATA = '+json.dumps({'fonts':{'before':face,'after':face}})+';\n'
+            (snapshot/'review-data.js').write_text(original)
+            state_path=root/'design/reviews/current.json';state_path.parent.mkdir(parents=True)
+            state={'proof_snapshot':'proof','proof_label':'Seen v4 · Rejected · Not applied','proof_verdict':'rejected','summary':'v3 active'}
+            state_path.write_text(json.dumps(state))
+            prepare_live(snapshot,root/'live',root)
+            raw=(root/'live/review-data.js').read_text()
+            data=json.loads(raw.split('=',1)[1].strip().removesuffix(';'))
+            self.assertEqual(data['fonts']['after']['label'],state['proof_label'])
+            self.assertEqual(data['study']['status'],state['proof_label'])
+            self.assertEqual(data['study']['note'],state['summary'])
+            self.assertEqual((snapshot/'review-data.js').read_text(),original)
+            state['proof_snapshot']='different';state_path.write_text(json.dumps(state))
+            prepare_live(snapshot,root/'other-live',root)
+            raw=(root/'other-live/review-data.js').read_text()
+            self.assertEqual(json.loads(raw.split('=',1)[1].strip().removesuffix(';'))['fonts']['after']['label'],'Candidate')
+
     def test_group_coverage_refresh_and_removal(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

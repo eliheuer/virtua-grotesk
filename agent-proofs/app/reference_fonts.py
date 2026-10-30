@@ -168,6 +168,14 @@ def prepare_live(snapshot, target, project):
     """Use frozen Before/Working with today's UI and local references; leave the archive untouched."""
     raw = (snapshot / 'review-data.js').read_text()
     data = json.loads(raw[raw.index('=') + 1:].strip().removesuffix(';'))
+    state_path = project / 'design/reviews/current.json'
+    if state_path.exists():
+        state = json.loads(state_path.read_text())
+        if snapshot.resolve() == (project / state['proof_snapshot']).resolve():
+            data['fonts']['after']['label'] = state['proof_label']
+            data.setdefault('study', {})['status'] = state['proof_label']
+            data['study']['note'] = state['summary']
+            data['reviewState'] = dict(verdict=state['proof_verdict'], summary=state['summary'])
     target.mkdir(parents=True, exist_ok=True)
     data['fonts'] = {key: value for key, value in data['fonts'].items() if key in ('before', 'after')}
     for record in data['fonts'].values():

@@ -1,0 +1,340 @@
+{
+  "training_authorized": false,
+  "snapshot_sha256": "a4135c690ecb830987fa6dd873a4e645508da71e20abe74eeb8f2397d9c76e19",
+  "snapshot": "out/training-prep/green-arabic-v3/manifest.json",
+  "summary": {
+    "eligible": 192,
+    "pairs": 70,
+    "by_master_split": {
+      "Regular/train": 106,
+      "Regular/validation": 7,
+      "Regular/test": 6,
+      "Bold/train": 65,
+      "Bold/validation": 4,
+      "Bold/test": 4
+    },
+    "pairs_by_split": {
+      "train": 62,
+      "validation": 4,
+      "test": 4
+    },
+    "legacy_out_of_range": 0,
+    "coordinate_and_advance_range": [
+      -424.0,
+      1176.0
+    ],
+    "groups": 54,
+    "excluded": 1634,
+    "arabic_by_master_split": {
+      "Regular/train": 33,
+      "Regular/validation": 3,
+      "Regular/test": 2
+    }
+  },
+  "policy": {
+    "shared_marks": [
+      "alefabove-ar",
+      "alefbelow-ar",
+      "damma-ar",
+      "dammatan-ar",
+      "dotabove-ar",
+      "dotbelow-ar",
+      "dotcenter-ar",
+      "fatha-ar",
+      "fathatan-ar",
+      "hamzaabove-ar",
+      "hamzabelow-ar",
+      "invertedDamma-ar",
+      "kasra-ar",
+      "kasratan-ar",
+      "madda-ar",
+      "noonGhunna-ar",
+      "shadda-ar",
+      "smallHighTah-ar",
+      "smallHighThreeDots-ar",
+      "smallHighZain-ar",
+      "sukun-ar",
+      "threedotsdownabove-ar",
+      "threedotsdownbelow-ar",
+      "threedotsdowncenter-ar",
+      "threedotsupabove-ar",
+      "threedotsupbelow-ar",
+      "twodotshorizontalabove-ar",
+      "twodotshorizontalbelow-ar",
+      "twodotsverticalabove-ar",
+      "twodotsverticalbelow-ar"
+    ],
+    "shared_mark_rule": "Reference only: excluded from body supervision; mark edges do not merge body families",
+    "test": "Seen/Sheen family",
+    "validation": "Hah/Jeem/Khah family",
+    "training": "Other Arabic body groups; deterministic grouped split for non-Arabic"
+  },
+  "arabic_selection": [
+    {
+      "glyph": "ain-ar.fina",
+      "master": "Regular",
+      "group": "db20bdbd4bad22d4",
+      "split": "train",
+      "sha256": "0e252ff431712b31879293b574ce6514041562828fcb54165a98414b5e11dc16"
+    },
+    {
+      "glyph": "ain-ar.init",
+      "master": "Regular",
+      "group": "db20bdbd4bad22d4",
+      "split": "train",
+      "sha256": "04f71554d59dd45603a302b4ac01b6d2b80e1ebbc30b36a519d071128ae994cc"
+    },
+    {
+      "glyph": "alef-ar",
+      "master": "Regular",
+      "group": "3770b07a7573ef97",
+      "split": "train",
+      "sha256": "5030df0c2aa60f2e18c958c2d1b9f7442d356f2f98417224bb51d4e18eee6951"
+    },
+    {
+      "glyph": "alef-ar.fina",
+      "master": "Regular",
+      "group": "3770b07a7573ef97",
+      "split": "train",
+      "sha256": "cfbe1ef678e98975e2e09275e39d7809ea0ed033cb4ee87d0e8dd5368b1f1c0b"
+    },
+    {
+      "glyph": "alefMaksura-ar",
+      "master": "Regular",
+      "group": "67f39347cbed071e",
+      "split": "train",
+      "sha256": "15dd31c83a95bbc73c44c8d351dd679b6843e88d4aac356f90a1257c98c44c18"
+    },
+    {
+      "glyph": "alefMaksura-ar.fina",
+      "master": "Regular",
+      "group": "67f39347cbed071e",
+      "split": "train",
+      "sha256": "ad740bcd4ed2ad0bb0e5492e1f8a7cdbadc0545cf1f7f562d485a0a1860ec12e"
+    },
+    {
+      "glyph": "behDotless-ar",
+      "master": "Regular",
+      "group": "67f39347cbed071e",
+      "split": "train",
+      "sha256": "e4fe4d64a8c91950654abdbf9fcb155265b5e8466a465cc5acea0ceb030bcdf9"
+    },
+    {
+      "glyph": "behDotless-ar.fina",
+      "master": "Regular",
+      "group": "67f39347cbed071e",
+      "split": "train",
+      "sha256": "d8670eaff6e40815048d663de6d3043b9deebeb8fda1075e670a48bfc0565f81"
+    },
+    {
+      "glyph": "behDotless-ar.init",
+      "master": "Regular",
+      "group": "67f39347cbed071e",
+      "split": "train",
+      "sha256": "cc602b1731df8ee58695fa61d1aaa6097b799a94422a1b655185f99bf7713dbc"
+    },
+    {
+      "glyph": "behDotless-ar.medi",
+      "master": "Regular",
+      "group": "67f39347cbed071e",
+      "split": "train",
+      "sha256": "7576a84766e518b95be8d4c5b4c618c60e81e4c0ce3ccec136c9656e8c91f38a"
+    },
+    {
+      "glyph": "dal-ar",
+      "master": "Regular",
+      "group": "d5c58b7479a07e81",
+      "split": "train",
+      "sha256": "ae144f313ffbb32e33169793bccd075f883262d3102b6fc5081e9e4f4c71d199"
+    },
+    {
+      "glyph": "dal-ar.fina",
+      "master": "Regular",
+      "group": "d5c58b7479a07e81",
+      "split": "train",
+      "sha256": "bc3038af221083863f67d09e94213c7f9ad6cd9a7cc51c0eae75951e03aee3b2"
+    },
+    {
+      "glyph": "ddal-ar.fina",
+      "master": "Regular",
+      "group": "d5c58b7479a07e81",
+      "split": "train",
+      "sha256": "0aa43d52860c05e306e786333bd4fdbd14eb43aff689cf2420c1ca5f9cc475f1"
+    },
+    {
+      "glyph": "farsiYeh-ar",
+      "master": "Regular",
+      "group": "67f39347cbed071e",
+      "split": "train",
+      "sha256": "b5e16d2c53a9f0791d9f46989d88be1c6a1c759f706038d8453ea7d15cc23fe8"
+    },
+    {
+      "glyph": "fehDotless-ar.init",
+      "master": "Regular",
+      "group": "b347b7a1dc67c7fc",
+      "split": "train",
+      "sha256": "75d5ff4fb6a75a6f836c723f3f01b34d2e6d336769c91180dceb825452a8eacc"
+    },
+    {
+      "glyph": "fehDotless-ar.medi",
+      "master": "Regular",
+      "group": "b347b7a1dc67c7fc",
+      "split": "train",
+      "sha256": "4a8266d2245f0c76da6413c8693fc3b70be1a930000c11f92fbf64d1ba4a1390"
+    },
+    {
+      "glyph": "hah-ar.fina",
+      "master": "Regular",
+      "group": "be46b916b752b433",
+      "split": "validation",
+      "sha256": "e7c1271cc769fb45eca91c76e38ff9fa5da9596e127abdf69edd2dd96f977bf3"
+    },
+    {
+      "glyph": "hah-ar.init",
+      "master": "Regular",
+      "group": "be46b916b752b433",
+      "split": "validation",
+      "sha256": "089b7160468f4a3c95d584fca437b8c65bcfc3400bffa786540a8feea0041fca"
+    },
+    {
+      "glyph": "hah-ar.medi",
+      "master": "Regular",
+      "group": "be46b916b752b433",
+      "split": "validation",
+      "sha256": "a4bd88a77ed9e5b5c109b39d7aa3a4e314007c230c535c9051269b8cd199fb02"
+    },
+    {
+      "glyph": "heh-ar.fina",
+      "master": "Regular",
+      "group": "09149a6d8066df41",
+      "split": "train",
+      "sha256": "2d1ac7816c8f9b23c807bc5399467fe0b700b7fa3651b9174a9a88b5e3dfe28b"
+    },
+    {
+      "glyph": "heh-ar.init",
+      "master": "Regular",
+      "group": "09149a6d8066df41",
+      "split": "train",
+      "sha256": "b135f3aa054734f238cee1c3ef39df930fb9ac8794ec10e85076d11828f92bdf"
+    },
+    {
+      "glyph": "heh-ar.medi",
+      "master": "Regular",
+      "group": "09149a6d8066df41",
+      "split": "train",
+      "sha256": "dee2922c533f2c3a406bc84b8ed021fb094c2816bad4a20989d6a445937fbeb6"
+    },
+    {
+      "glyph": "hehDoachashmee-ar.medi",
+      "master": "Regular",
+      "group": "09149a6d8066df41",
+      "split": "train",
+      "sha256": "be064100f4091030a2f21e22c03424df891842ff4f8ca45624d58bb0d248e886"
+    },
+    {
+      "glyph": "hehGoal-ar.init",
+      "master": "Regular",
+      "group": "09149a6d8066df41",
+      "split": "train",
+      "sha256": "395d5af5903d588c9adb099ce3cf39123938bed779b9dc80454820cc7a6ec01d"
+    },
+    {
+      "glyph": "hehGoal-ar.medi",
+      "master": "Regular",
+      "group": "09149a6d8066df41",
+      "split": "train",
+      "sha256": "aab10d851b7163c58f89434f344b0cdfa7329d80146edf769955c1eef0d77f72"
+    },
+    {
+      "glyph": "jeh-ar.fina",
+      "master": "Regular",
+      "group": "01fcb7c4d19d228e",
+      "split": "train",
+      "sha256": "9cecff1433ae1c7216c26ca964290d66f4303bdb90a42a4548dae15fa80c7842"
+    },
+    {
+      "glyph": "kaf-ar.fina",
+      "master": "Regular",
+      "group": "8ab5a0e5fba26c01",
+      "split": "train",
+      "sha256": "cf5418a94dba0ce3ec143e560899e006b05103211113c76d9c68ee88f4f06164"
+    },
+    {
+      "glyph": "kaf-ar.init",
+      "master": "Regular",
+      "group": "8ab5a0e5fba26c01",
+      "split": "train",
+      "sha256": "2b001b6c42d56bbb3d630c09add0e98e02827ef5df1f157ea4bce749e40456aa"
+    },
+    {
+      "glyph": "lam-ar.init",
+      "master": "Regular",
+      "group": "3770b07a7573ef97",
+      "split": "train",
+      "sha256": "6e40d0329857034400a081c5f9b1330a0e2a83fee8c7748d1d51b294ad077587"
+    },
+    {
+      "glyph": "lam-ar.medi",
+      "master": "Regular",
+      "group": "3770b07a7573ef97",
+      "split": "train",
+      "sha256": "7df525c775dffa5fbf55fd239a49796d10ae820585f8e097a70aa23881fd45b9"
+    },
+    {
+      "glyph": "meem-ar",
+      "master": "Regular",
+      "group": "45ccb66b41c41439",
+      "split": "train",
+      "sha256": "37eddcaa34004d04bdccf40db195ea4b7fa88b07212ab52cbfadddb516b67948"
+    },
+    {
+      "glyph": "meem-ar.fina",
+      "master": "Regular",
+      "group": "45ccb66b41c41439",
+      "split": "train",
+      "sha256": "fd514adf5b51834508914c9d8bb71aa58312af284c37c8ce1244044c92191f3b"
+    },
+    {
+      "glyph": "meem-ar.init",
+      "master": "Regular",
+      "group": "45ccb66b41c41439",
+      "split": "train",
+      "sha256": "7b610987eb815f25c426cb188ee232014ec5107e6255f651e21c9087507521c2"
+    },
+    {
+      "glyph": "meem-ar.medi",
+      "master": "Regular",
+      "group": "45ccb66b41c41439",
+      "split": "train",
+      "sha256": "ada84059a5c556719cb89c7d154e19323af77bc38478afd1504de6263a6e4560"
+    },
+    {
+      "glyph": "qafDotless-ar.fina",
+      "master": "Regular",
+      "group": "b347b7a1dc67c7fc",
+      "split": "train",
+      "sha256": "91ffaccbbead7f6303011723fa6996a8e34bfc9e3cb744e1cdb43858c3b2bcc7"
+    },
+    {
+      "glyph": "reh-ar.fina",
+      "master": "Regular",
+      "group": "01fcb7c4d19d228e",
+      "split": "train",
+      "sha256": "c0336be271ee83de2814c02aa78720b1330e6e8376d4df5f67b434e5206edfa6"
+    },
+    {
+      "glyph": "seen-ar.init",
+      "master": "Regular",
+      "group": "f7636c55e0ee425d",
+      "split": "test",
+      "sha256": "c4c6f4f283a1d23c58ca0070a46b804387cce497504ee23e20018e8cfea4c48c"
+    },
+    {
+      "glyph": "seen-ar.medi",
+      "master": "Regular",
+      "group": "f7636c55e0ee425d",
+      "split": "test",
+      "sha256": "35de200cf8fce3c480d83098fd1b13df15487138bb02753ade56f917261b7b69"
+    }
+  ]
+}

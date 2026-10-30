@@ -1,0 +1,157 @@
+{
+  "active_source_files_unchanged": 3134,
+  "scratch_changed_files": [
+    "VirtuaGrotesk-Bold.ufo/glyphs/seen-ar.glif",
+    "VirtuaGrotesk-Regular.ufo/glyphs/seen-ar.glif"
+  ],
+  "compatible": true,
+  "geometry_samples": [
+    {
+      "weight": 400,
+      "sampled_proper_crossings": [],
+      "signed_area": 259258.04317736626
+    },
+    {
+      "weight": 475,
+      "sampled_proper_crossings": [],
+      "signed_area": 290132.80079743266
+    },
+    {
+      "weight": 550,
+      "sampled_proper_crossings": [],
+      "signed_area": 318207.58771419525
+    },
+    {
+      "weight": 625,
+      "sampled_proper_crossings": [],
+      "signed_area": 343482.403927654
+    },
+    {
+      "weight": 700,
+      "sampled_proper_crossings": [],
+      "signed_area": 365957.249437809
+    }
+  ],
+  "old_glyph_comparisons": [
+    {
+      "font": "VF",
+      "weight": 400,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 475,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 550,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 625,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "VF",
+      "weight": 700,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "Regular",
+      "weight": 400,
+      "unchanged_outline_and_advance": 904,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "Medium",
+      "weight": 500,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "SemiBold",
+      "weight": 600,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    },
+    {
+      "font": "Bold",
+      "weight": 700,
+      "unchanged_outline_and_advance": 905,
+      "changed_outline_only": [
+        "uni0633",
+        "uni0634",
+        "seenSixdotsar"
+      ]
+    }
+  ],
+  "shaping_cases": 306,
+  "grid_findings": [
+    {
+      "glyph": "seen-ar",
+      "failures": [
+        {
+          "field": "anchor[bottomDots].y",
+          "value": -300.0
+        },
+        {
+          "field": "anchor[top].x",
+          "value": 892.0
+        },
+        {
+          "field": "anchor[topDots].x",
+          "value": 892.0
+        },
+        {
+          "field": "anchor[bottom].x",
+          "value": 892.0
+        }
+      ]
+    }
+  ],
+  "grid_note": "New coordinates on8; inherited anchors may be off8. Both masters revised by explicit approval; inherited anchor exceptions retained.",
+  "visual_status": "Awaiting Eli review; scratch only",
+  "font_hashes": {
+    "before-fonts/variable/VirtuaGrotesk[wght].ttf": "b1f0e5181a34a7360df5040835b70f47290502bfeeeaac7c133ee6129473d977",
+    "fonts/variable/VirtuaGrotesk[wght].ttf": "fc89ec6b614cb2ba82639ae50c59284cff94c382e4b55de4ccc90a885a1aeffb"
+  }
+}

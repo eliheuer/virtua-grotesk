@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import argparse
 from dataclasses import dataclass
 from pathlib import Path
 import plistlib
@@ -178,9 +179,13 @@ def markdown_report(regular_ufo: Path, bold_ufo: Path) -> str:
 
 
 def main(argv: list[str]) -> int:
-    regular_ufo = Path(argv[1]) if len(argv) > 1 else DEFAULT_REGULAR_UFO
-    bold_ufo = Path(argv[2]) if len(argv) > 2 else DEFAULT_BOLD_UFO
-    output_path = Path(argv[3]) if len(argv) > 3 else None
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("regular", type=Path, nargs="?", default=DEFAULT_REGULAR_UFO)
+    parser.add_argument("bold", type=Path, nargs="?", default=DEFAULT_BOLD_UFO)
+    parser.add_argument("output", type=Path, nargs="?")
+    parser.add_argument("--check", action="store_true", help="Exit nonzero for blocking mismatches")
+    args = parser.parse_args(argv[1:])
+    regular_ufo, bold_ufo, output_path = args.regular, args.bold, args.output
     try:
         report = markdown_report(regular_ufo, bold_ufo)
     except Exception as exc:
@@ -191,7 +196,8 @@ def main(argv: list[str]) -> int:
         output_path.write_text(report)
     else:
         print(report)
-    return 0
+    rows, _ = compatibility_rows(regular_ufo, bold_ufo)
+    return int(args.check and bool(rows))
 
 
 if __name__ == "__main__":

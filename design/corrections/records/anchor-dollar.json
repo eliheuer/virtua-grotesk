@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "anchor-dollar",
+  "kind": "correction",
+  "title": "2026-07-29 — dollar must use uppercase S (Eli correction)",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "dollar"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "construction"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-dollar.md",
+      "role": "Original review and feedback",
+      "sha256": "32007ccc4629c6d043b9426695475a1c4698b3731950f6552d98476d94244d52"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-dollar.md"
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "id": "anchor-arabic-attachments",
+  "kind": "correction",
+  "title": "2026-08-05 — the Arabic anchor system: dots and harakat are DIFFERENT slots",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "*-ar*"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [
+    "anchors",
+    "components"
+  ],
+  "tags": [
+    "attachment"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-arabic-attachments.md",
+      "role": "Original review and feedback",
+      "sha256": "c271e4c311be4648423ec8d9db54da765a27ea9ee91f534e7f5c4a9dd1d826de"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-arabic-attachments.md"
+}

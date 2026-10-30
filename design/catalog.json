@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "description": "Canonical routing metadata. Text lives at path; correction metadata lives in corrections/records. Do not duplicate records here.",
+  "records": [
+    {
+      "id": "identity",
+      "kind": "system",
+      "title": "Virtua construction",
+      "path": "design/system/identity.md",
+      "status": "current",
+      "summary": "Preserve the intended construction before optimizing coordinates.",
+      "always": true
+    },
+    {
+      "id": "grid",
+      "kind": "system",
+      "title": "Grid and metrics",
+      "path": "design/system/grid.md",
+      "status": "current",
+      "summary": "8-grid machine drafts; preserve documented human 2-grid optics.",
+      "always": true
+    },
+    {
+      "id": "source-safety",
+      "kind": "system",
+      "title": "Source protection",
+      "path": "design/system/source-safety.md",
+      "status": "current",
+      "summary": "Scopes, source colors and recursive component effects.",
+      "always": true
+    },
+    {
+      "id": "verification",
+      "kind": "procedure",
+      "title": "Proof and verification",
+      "path": "design/system/verification.md",
+      "status": "current",
+      "summary": "Separate technical checks, agent inspection and human approval.",
+      "always": true
+    },
+    {
+      "id": "references",
+      "kind": "reference",
+      "title": "Reference roles",
+      "path": "design/references/README.md",
+      "status": "current",
+      "summary": "Read actual approved Virtua geometry and distinguish external evidence.",
+      "always": true,
+      "reference_glyphs": [
+        "H",
+        "O",
+        "n",
+        "o"
+      ]
+    },
+    {
+      "id": "weight",
+      "kind": "system",
+      "title": "Weight construction",
+      "path": "design/system/weight.md",
+      "status": "current",
+      "summary": "Choose fixed alignments and inspect opposing edges.",
+      "operations": [
+        "draw",
+        "redraw",
+        "weight-transfer",
+        "curve-repair"
+      ],
+      "related": [
+        "zayin-bold-02",
+        "hamza-bold-01"
+      ]
+    },
+    {
+      "id": "spacing",
+      "kind": "system",
+      "title": "Spacing",
+      "path": "design/system/spacing.md",
+      "status": "current",
+      "summary": "Use dyadic spacing while preserving optical exceptions.",
+      "operations": [
+        "spacing",
+        "kerning"
+      ]
+    },
+    {
+      "id": "interpolation",
+      "kind": "system",
+      "title": "Master correspondence and alternates",
+      "path": "design/system/interpolation.md",
+      "status": "current",
+      "summary": "Keep each interpolating glyph compatible.",
+      "operations": [
+        "draw",
+        "redraw",
+        "weight-transfer",
+        "components"
+      ]
+    },
+    {
+      "id": "chamfers",
+      "kind": "construction",
+      "title": "Chamfers",
+      "path": "design/constructions/chamfers.md",
+      "status": "current",
+      "summary": "Distinguish straight cuts from smooth joins.",
+      "operations": [
+        "draw",
+        "redraw",
+        "from-image"
+      ],
+      "tags": [
+        "chamfer",
+        "terminal"
+      ]
+    },
+    {
+      "id": "turns",
+      "kind": "construction",
+      "title": "Turns and junctions",
+      "path": "design/constructions/turns-and-junctions.md",
+      "status": "current",
+      "summary": "Plan turns, landings and opposing edges before fitting.",
+      "operations": [
+        "curve-repair",
+        "weight-transfer"
+      ],
+      "tags": [
+        "junction",
+        "tangent",
+        "landing"
+      ],
+      "related": [
+        "zayin-bold-02",
+        "hamza-bold-01"
+      ]
+    },
+    {
+      "id": "curves",
+      "kind": "construction",
+      "title": "Curve diagnostics",
+      "path": "design/constructions/curve-quality.md",
+      "status": "current",
+      "summary": "Use signed combs and local tools within intended construction.",
+      "operations": [
+        "curve-repair",
+        "draw",
+        "redraw",
+        "weight-transfer"
+      ],
+      "tags": [
+        "curve"
+      ]
+    },
+    {
+      "id": "bowls",
+      "kind": "construction",
+      "title": "Bowl construction",
+      "path": "design/constructions/bowls.md",
+      "status": "current",
+      "summary": "Use o-derived geometry with glyph-specific exceptions.",
+      "glyphs": [
+        "b",
+        "d",
+        "p",
+        "q",
+        "g",
+        "a"
+      ],
+      "tags": [
+        "bowl"
+      ],
+      "scripts": [
+        "latin"
+      ],
+      "reference_glyphs": [
+        "d",
+        "o"
+      ],
+      "related": [
+        "samekh-v5"
+      ]
+    },
+    {
+      "id": "arabic-dots",
+      "kind": "construction",
+      "title": "Arabic letter dots",
+      "path": "design/constructions/round-dots.md",
+      "status": "current",
+      "summary": "Near-circular letter dots; local dimensions stay local.",
+      "glyphs": [
+        "dot*-ar",
+        "*Dots*-ar",
+        "*dots*-ar"
+      ],
+      "tags": [
+        "letter-dot"
+      ],
+      "scripts": [
+        "arabic"
+      ],
+      "related": [
+        "arabic-round-dots"
+      ]
+    },
+    {
+      "id": "latin",
+      "kind": "writing-system",
+      "title": "Latin context",
+      "path": "design/writing-systems/latin.md",
+      "status": "current",
+      "summary": "Writing-system constraints and evidence routing.",
+      "scripts": [
+        "latin"
+      ]
+    },
+    {
+      "id": "hebrew",
+      "kind": "writing-system",
+      "title": "Hebrew context",
+      "path": "design/writing-systems/hebrew.md",
+      "status": "current",
+      "summary": "Writing-system constraints and evidence routing.",
+      "scripts": [
+        "hebrew"
+      ]
+    },
+    {
+      "id": "arabic",
+      "kind": "writing-system",
+      "title": "Arabic context",
+      "path": "design/writing-systems/arabic.md",
+      "status": "current",
+      "summary": "Writing-system constraints and evidence routing.",
+      "scripts": [
+        "arabic"
+      ]
+    },
+    {
+      "id": "symbols",
+      "kind": "writing-system",
+      "title": "Symbols context",
+      "path": "design/writing-systems/symbols.md",
+      "status": "current",
+      "summary": "Writing-system constraints and evidence routing.",
+      "scripts": [
+        "symbols"
+      ]
+    },
+    {
+      "id": "seen",
+      "kind": "glyph",
+      "title": "Seen intent",
+      "path": "design/glyphs/seen.md",
+      "status": "current",
+      "summary": "Preserve individual lobes and deliberate junctions.",
+      "glyphs": [
+        "seen*-ar*",
+        "sheen-ar*",
+        "uni0633*",
+        "uni0634*"
+      ],
+      "tags": [
+        "junction",
+        "curve"
+      ],
+      "reference_glyphs": [
+        "seen-ar.init",
+        "seen-ar.medi"
+      ],
+      "related": [
+        "seen-v4-rejected",
+        "anchor-seen-splice"
+      ]
+    },
+    {
+      "id": "kaf",
+      "kind": "glyph",
+      "title": "S-like Kaf",
+      "path": "design/glyphs/kaf.md",
+      "status": "current",
+      "summary": "Preserve the named S-like character.",
+      "glyphs": [
+        "kaf-ar*",
+        "uni0643*"
+      ],
+      "tags": [
+        "curve",
+        "junction"
+      ],
+      "reference_glyphs": [
+        "kaf-ar.init"
+      ],
+      "related": [
+        "kaf-initial-accepted",
+        "kaf-joining-correction"
+      ]
+    },
+    {
+      "id": "final-yeh",
+      "kind": "glyph",
+      "title": "Final Yeh intent",
+      "path": "design/glyphs/final-yeh.md",
+      "status": "current",
+      "summary": "Preserve the intentional raised return.",
+      "glyphs": [
+        "yeh-ar.fina",
+        "uni064A.fina"
+      ],
+      "related": [
+        "final-yeh-preserve"
+      ]
+    },
+    {
+      "id": "at",
+      "kind": "glyph",
+      "title": "Double-spiral at",
+      "path": "design/glyphs/at.md",
+      "status": "current",
+      "summary": "Applied for hand editing; visual quality remains rejected.",
+      "glyphs": [
+        "at"
+      ],
+      "tags": [
+        "curve",
+        "paired-stroke"
+      ],
+      "related": [
+        "at-rejected"
+      ]
+    }
+  ]
+}

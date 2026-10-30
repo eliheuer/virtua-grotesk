@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "id": "seen-v4-rejected",
+  "kind": "correction",
+  "title": "Seen v4 stylistic regression",
+  "status": "recorded-human-feedback",
+  "summary": "A shallow continuous underside and diagonal bowl sweep erased the green Seen articulation despite engineering passes.",
+  "glyphs": [
+    "seen*-ar*",
+    "sheen-ar*",
+    "uni0633*",
+    "uni0634*"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "arabic"
+  ],
+  "operations": [],
+  "tags": [
+    "junction",
+    "curve",
+    "articulation"
+  ],
+  "limits": "Local evidence; do not generalize exact dimensions or infer new authorization.",
+  "human_feedback": "Eli: “this is awful and a bad regression”; asks why green Arabic construction and repository context did not prevent it.",
+  "interpretation": "A shallow continuous underside and diagonal bowl sweep erased the green Seen articulation despite engineering passes.",
+  "application": "v4 never applied; active isolated Seen remains v3",
+  "visual_verdict": "rejected",
+  "training_eligibility": "negative-example",
+  "evidence": [
+    {
+      "path": "design/corrections/evidence/feedback-635beb19f8a21cc3.txt",
+      "role": "Original review and feedback (frozen text; source_path identifies its original review)",
+      "sha256": "635beb19f8a21cc3f0d734f0a8c7ae31261d2a6e549f55a4a0a7c30929973c71",
+      "source_path": "design/reviews/arabic-006/seen-2026-10-29/README.md"
+    },
+    {
+      "path": "design/reviews/arabic-006/seen-2026-10-29/revision3/Regular.glif",
+      "role": "Applied v3 Regular; unresolved quality",
+      "sha256": "e07cf7a6958378c20e1ac5fb6be4290422c264adfea8406ff52d13fb4e67a165"
+    },
+    {
+      "path": "design/reviews/arabic-006/seen-2026-10-29/revision3/Bold.glif",
+      "role": "Applied v3 Bold; unresolved quality",
+      "sha256": "361d66c154f61d18a7b74815ce7f967f9caa072747ab78fb55afc28f9987d01a"
+    },
+    {
+      "path": "design/reviews/arabic-006/seen-2026-10-29/revision4/Regular.glif",
+      "role": "Rejected v4 Regular",
+      "sha256": "2a7434ffbaccc2211eb19d8a8d401ab4d0cc055c0cc4d7711767e44f66b5e0c1"
+    },
+    {
+      "path": "design/reviews/arabic-006/seen-2026-10-29/revision4/Bold.glif",
+      "role": "Rejected v4 Bold",
+      "sha256": "c86925a21b0776e1e653c582c4dd44a2d987d5c07db82ee142ba2657c3e807f5"
+    },
+    {
+      "path": "design/reviews/arabic-006/seen-2026-10-29/revision4/browser-400.png",
+      "role": "Rejected v4 Regular browser proof",
+      "sha256": "a8ee6304c7e530e238af1f515dd14a447ba3800b2533b5a7df08808e38761ac9"
+    },
+    {
+      "path": "design/reviews/arabic-006/seen-2026-10-29/revision4/browser-700.png",
+      "role": "Rejected v4 Bold browser proof",
+      "sha256": "c48943103d865df868060218a7cfb4cfbbae558e61a90065c887d135fec5df5d"
+    }
+  ],
+  "pairs": [
+    {
+      "master": "Regular",
+      "before": "design/reviews/arabic-006/seen-2026-10-29/revision3/Regular.glif",
+      "after": "design/reviews/arabic-006/seen-2026-10-29/revision4/Regular.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    },
+    {
+      "master": "Bold",
+      "before": "design/reviews/arabic-006/seen-2026-10-29/revision3/Bold.glif",
+      "after": "design/reviews/arabic-006/seen-2026-10-29/revision4/Bold.glif",
+      "topology": "inspect before pointwise comparison; retain raw order"
+    }
+  ],
+  "related": [
+    "anchor-seen-splice"
+  ]
+}

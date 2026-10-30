@@ -6,11 +6,14 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa qa-full qa-package test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: design-context design-check design-status help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa qa-full qa-package test reports lint-grid preflight scoreboard skeleton clean
 
 help:
 	@printf '%s\n' \
 		'Virtua Grotesk workflow:' \
+		'  make design-context GLYPH=name OPERATION=inspect  Retrieve drawing context' \
+		'  make design-check   Validate context routes and correction evidence' \
+		'  make design-status  Show current review and unresolved work' \
 		'  make setup          Create .venv and install requirements' \
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
@@ -107,8 +110,9 @@ glyph-ai-inventory:
 	$(PYTHON) scripts/glyph_ai_harness.py inventory
 
 glyph-ai-prepare:
+	@test -n "$(FIT)" || (printf '%s\n' 'Set FIT=<calibrated-bottom:top>' >&2; exit 2)
 	@test -n "$(TARGET)" || (printf '%s\n' 'Set TARGET=<glyph-name>' >&2; exit 2)
-	$(PYTHON) scripts/glyph_ai_harness.py prepare --target "$(TARGET)" $(if $(REFERENCES),--references "$(REFERENCES)",)
+	$(PYTHON) scripts/glyph_ai_harness.py prepare --target "$(TARGET)" --fit "$(FIT)" $(if $(REFERENCES),--references "$(REFERENCES)",)
 
 qa: build
 	./scripts/check_gf_fonts.sh development
@@ -176,3 +180,16 @@ arabic-sync:  ## Re-snap Arabic dots to their anchors, then re-sync Bold
 .PHONY: qa-hebrew
 qa-hebrew: build
 	$(PYTHON) scripts/check_hebrew.py "$(VARIABLE_FONT)" --json out/hebrew/qa.json --proof-dir out/hebrew/proofs
+
+# Context is read-only; JSON packets can be saved with scripts/design_context.py.
+MASTER ?= both
+OPERATION ?= inspect
+design-context:
+	@test -n "$(GLYPH)" || (echo 'Set GLYPH to the source glyph name'; exit 2)
+	$(PYTHON) scripts/design_context.py --glyph "$(GLYPH)" --master "$(MASTER)" --operation "$(OPERATION)"
+
+design-check:
+	$(PYTHON) scripts/design_context.py --check
+
+design-status:
+	$(PYTHON) scripts/design_context.py --status

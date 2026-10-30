@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "anchor-braces",
+  "kind": "correction",
+  "title": "2026-07-28 — third batch (n { | } ~ ¡ ¢ sheet) + START RULE",
+  "status": "historical-observation",
+  "summary": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "glyphs": [
+    "brace*",
+    "bar",
+    "asciitilde",
+    "exclamdown",
+    "cent"
+  ],
+  "masters": [
+    "Regular",
+    "Bold"
+  ],
+  "scripts": [
+    "symbols"
+  ],
+  "operations": [],
+  "tags": [
+    "calibration"
+  ],
+  "limits": "This historical excerpt may contain superseded command/color policy. The current source-safety and grid contract take precedence.",
+  "human_feedback": "See the linked original case for exact wording and scope.",
+  "interpretation": "Historical scoped lesson; inspect its date, exact evidence and applicability before reuse.",
+  "application": "See historical case; not a new application.",
+  "visual_verdict": "see-historical-record",
+  "training_eligibility": "not-approved",
+  "evidence": [
+    {
+      "path": "design/corrections/history/anchor-braces.md",
+      "role": "Original review and feedback",
+      "sha256": "9e07eadcb5cd5d1e944366692b0683b7e6a53dcb27d15fc9c93bb32879067cd3"
+    }
+  ],
+  "pairs": [],
+  "excerpt_path": "design/corrections/history/anchor-braces.md"
+}

@@ -1,0 +1,2330 @@
+{
+  "native": {
+    "model_files": {
+      "/Users/eli/.runebender/models/virtua-12m-sketch/weights.safetensors": "4ba0ceaf34da472f73e9863b97f64170ab7bac3d0c30cbe1bfe5889e008f28f5",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/config.json": "21b803082d04154e73a850e970d6d08fb77723e3eff542b67da42a6fe8430761",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/vocab.txt": "665214480af31f236e826e23e381c375cb2e591d67c744dcae2edf369f55b729",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/manifest.json": "a0b5ecb9565e86439a0355da93b2837a040fe6ec35a9e2e0d6a3d37135367142"
+    },
+    "runs": [
+      {
+        "revision": 4,
+        "master": "Regular",
+        "mode": "identity",
+        "input": "out/seen-model-test/v4-Regular-input.glif",
+        "input_hash": "2a7434ffbaccc2211eb19d8a8d401ab4d0cc055c0cc4d7711767e44f66b5e0c1",
+        "output": "out/seen-model-test/v4-Regular-identity.glif",
+        "output_hash": "3e05fb65aa43f798fd80e71d5337607b7a3cca76162e7b967b7badc051cb5259",
+        "seconds": 3.999882936477661,
+        "input_ops": 33,
+        "output_ops": 31,
+        "prefix_tokens": 148,
+        "output_tokens": 167,
+        "input_iou": 0.31010976314269206,
+        "heuristic_score": 35.32676578795341,
+        "codec_audit": {
+          "changed_coordinates": 9,
+          "max_change": 128.0,
+          "advance": 1504.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1408.0
+        }
+      },
+      {
+        "revision": 4,
+        "master": "Regular",
+        "mode": "faithful",
+        "input": "out/seen-model-test/v4-Regular-input.glif",
+        "input_hash": "2a7434ffbaccc2211eb19d8a8d401ab4d0cc055c0cc4d7711767e44f66b5e0c1",
+        "output": "out/seen-model-test/v4-Regular-faithful.glif",
+        "output_hash": "3e05fb65aa43f798fd80e71d5337607b7a3cca76162e7b967b7badc051cb5259",
+        "seconds": 2.4055898189544678,
+        "input_ops": 33,
+        "output_ops": 31,
+        "prefix_tokens": 148,
+        "output_tokens": 167,
+        "input_iou": 0.31010976314269206,
+        "heuristic_score": 35.32676578795341,
+        "codec_audit": {
+          "changed_coordinates": 9,
+          "max_change": 128.0,
+          "advance": 1504.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1408.0
+        }
+      },
+      {
+        "revision": 4,
+        "master": "Bold",
+        "mode": "identity",
+        "input": "out/seen-model-test/v4-Bold-input.glif",
+        "input_hash": "c86925a21b0776e1e653c582c4dd44a2d987d5c07db82ee142ba2657c3e807f5",
+        "output": "out/seen-model-test/v4-Bold-identity.glif",
+        "output_hash": "706715a568a3a91cd941188c97a264378a39c0a54c74e54d402f039bea962939",
+        "seconds": 2.361077070236206,
+        "input_ops": 33,
+        "output_ops": 33,
+        "prefix_tokens": 148,
+        "output_tokens": 165,
+        "input_iou": 0.4341648247552889,
+        "heuristic_score": 53.460600122587714,
+        "codec_audit": {
+          "changed_coordinates": 5,
+          "max_change": 96.0,
+          "advance": 1440.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1376.0
+        }
+      },
+      {
+        "revision": 4,
+        "master": "Bold",
+        "mode": "faithful",
+        "input": "out/seen-model-test/v4-Bold-input.glif",
+        "input_hash": "c86925a21b0776e1e653c582c4dd44a2d987d5c07db82ee142ba2657c3e807f5",
+        "output": "out/seen-model-test/v4-Bold-faithful.glif",
+        "output_hash": "706715a568a3a91cd941188c97a264378a39c0a54c74e54d402f039bea962939",
+        "seconds": 2.415795087814331,
+        "input_ops": 33,
+        "output_ops": 33,
+        "prefix_tokens": 148,
+        "output_tokens": 165,
+        "input_iou": 0.4341648247552889,
+        "heuristic_score": 53.460600122587714,
+        "codec_audit": {
+          "changed_coordinates": 5,
+          "max_change": 96.0,
+          "advance": 1440.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1376.0
+        }
+      },
+      {
+        "revision": 6,
+        "master": "Regular",
+        "mode": "identity",
+        "input": "out/seen-model-test/v6-Regular-input.glif",
+        "input_hash": "34bd3eb498e5bb0763c9186241da71cd5bb5256b6e52b78ce4da1aca038deb7d",
+        "output": "out/seen-model-test/v6-Regular-identity.glif",
+        "output_hash": "e25c9c2bed8cd637b182fa9a4272b8ef76644428c88ad0a13f99611f4d8da84a",
+        "seconds": 3.811058759689331,
+        "input_ops": 36,
+        "output_ops": 42,
+        "prefix_tokens": 161,
+        "output_tokens": 216,
+        "input_iou": 0.27197909862834746,
+        "heuristic_score": 29.82145175042753,
+        "codec_audit": {
+          "changed_coordinates": 9,
+          "max_change": 128.0,
+          "advance": 1504.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1408.0
+        }
+      },
+      {
+        "revision": 6,
+        "master": "Regular",
+        "mode": "faithful",
+        "input": "out/seen-model-test/v6-Regular-input.glif",
+        "input_hash": "34bd3eb498e5bb0763c9186241da71cd5bb5256b6e52b78ce4da1aca038deb7d",
+        "output": "out/seen-model-test/v6-Regular-faithful.glif",
+        "output_hash": "acd24fce1e9380ab55c3a8abba9cfed771db5a97eb9e4edea458be33bdf99d29",
+        "seconds": 2.363765001296997,
+        "input_ops": 36,
+        "output_ops": 28,
+        "prefix_tokens": 161,
+        "output_tokens": 158,
+        "input_iou": 0.26448505454030313,
+        "heuristic_score": 31.290610717188205,
+        "codec_audit": {
+          "changed_coordinates": 9,
+          "max_change": 128.0,
+          "advance": 1504.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1408.0
+        }
+      },
+      {
+        "revision": 6,
+        "master": "Bold",
+        "mode": "identity",
+        "input": "out/seen-model-test/v6-Bold-input.glif",
+        "input_hash": "4e9cfac63a1554ceeaafd646d6bc792c5b5763fd4cb377961c0afd32440a7d7b",
+        "output": "out/seen-model-test/v6-Bold-identity.glif",
+        "output_hash": "507560fa30486b561d218e8d2938e66a6ba681317738951231d89c80759d7176",
+        "seconds": 3.894995927810669,
+        "input_ops": 36,
+        "output_ops": 42,
+        "prefix_tokens": 161,
+        "output_tokens": 224,
+        "input_iou": 0.3480939545629573,
+        "heuristic_score": 43.40939545629573,
+        "codec_audit": {
+          "changed_coordinates": 5,
+          "max_change": 96.0,
+          "advance": 1440.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1376.0
+        }
+      },
+      {
+        "revision": 6,
+        "master": "Bold",
+        "mode": "faithful",
+        "input": "out/seen-model-test/v6-Bold-input.glif",
+        "input_hash": "4e9cfac63a1554ceeaafd646d6bc792c5b5763fd4cb377961c0afd32440a7d7b",
+        "output": "out/seen-model-test/v6-Bold-faithful.glif",
+        "output_hash": "507560fa30486b561d218e8d2938e66a6ba681317738951231d89c80759d7176",
+        "seconds": 4.102261781692505,
+        "input_ops": 36,
+        "output_ops": 42,
+        "prefix_tokens": 161,
+        "output_tokens": 224,
+        "input_iou": 0.3480939545629573,
+        "heuristic_score": 43.40939545629573,
+        "codec_audit": {
+          "changed_coordinates": 5,
+          "max_change": 96.0,
+          "advance": 1440.0,
+          "encoded_advance": 1280,
+          "min": -272.0,
+          "max": 1376.0
+        }
+      }
+    ],
+    "method": "Direct exact vector input; greedy raw decoder; no conform/grid postprocessing; not a critic or held-out benchmark",
+    "bolden_model_files": {
+      "/Users/eli/.runebender/models/virtua-12m-bolden/weights.safetensors": "797431ab079a39f8cc7f32cfc38160f6f3f20374a0825c36419206e31276f11c",
+      "/Users/eli/.runebender/models/virtua-12m-bolden/config.json": "1e13ab95e0c66c221f5276a54f5a62e82ac84fb27bf00b03f64acf9e8a4d2318",
+      "/Users/eli/.runebender/models/virtua-12m-bolden/vocab.txt": "fd7746df06fcc6fbb03ef3e6767779f9bbd458b1ee1f589de6f48041a1040872",
+      "/Users/eli/.runebender/models/virtua-12m-bolden/manifest.json": "075324830bf02cdfd08199c01ef40ee01a117bb6e7919a1dafa96a3535dc410e"
+    },
+    "bolden_runs": [
+      {
+        "advance_delta": -30,
+        "compatible": true,
+        "deltas": [
+          [
+            -54,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            18,
+            -16
+          ],
+          [
+            18,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            0
+          ],
+          [
+            -14,
+            24
+          ],
+          [
+            -14,
+            48
+          ],
+          [
+            -14,
+            48
+          ],
+          [
+            -14,
+            48
+          ],
+          [
+            -14,
+            48
+          ],
+          [
+            -22,
+            48
+          ],
+          [
+            -22,
+            48
+          ],
+          [
+            -22,
+            -48
+          ],
+          [
+            -22,
+            -48
+          ],
+          [
+            -22,
+            -48
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -22,
+            0
+          ],
+          [
+            -54,
+            0
+          ]
+        ],
+        "device": "cpu",
+        "glyph": "seen-ar",
+        "glyphs": [
+          {
+            "advance_delta": -30,
+            "compatible": true,
+            "deltas": [
+              [
+                -54,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                18,
+                -16
+              ],
+              [
+                18,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                0
+              ],
+              [
+                -14,
+                24
+              ],
+              [
+                -14,
+                48
+              ],
+              [
+                -14,
+                48
+              ],
+              [
+                -14,
+                48
+              ],
+              [
+                -14,
+                48
+              ],
+              [
+                -22,
+                48
+              ],
+              [
+                -22,
+                48
+              ],
+              [
+                -22,
+                -48
+              ],
+              [
+                -22,
+                -48
+              ],
+              [
+                -22,
+                -48
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -22,
+                0
+              ],
+              [
+                -54,
+                0
+              ]
+            ],
+            "fitted_strength": null,
+            "glyph": "seen-ar",
+            "moved": 54,
+            "points": 54
+          }
+        ],
+        "moved": 54,
+        "ok": true,
+        "points": 54,
+        "proposal": {
+          "glyphs": 1,
+          "layer": "com.runebender.proposal.bolden",
+          "source": "out/seen-model-test/v4-bolden.ufo"
+        },
+        "skipped": [],
+        "task": "bolden"
+      },
+      {
+        "advance_delta": -30,
+        "compatible": true,
+        "deltas": [
+          [
+            -54,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -42,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            32
+          ],
+          [
+            -30,
+            48
+          ],
+          [
+            -30,
+            48
+          ],
+          [
+            -30,
+            48
+          ],
+          [
+            -30,
+            48
+          ],
+          [
+            -30,
+            48
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -54,
+            0
+          ]
+        ],
+        "device": "cpu",
+        "glyph": "seen-ar",
+        "glyphs": [
+          {
+            "advance_delta": -30,
+            "compatible": true,
+            "deltas": [
+              [
+                -54,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -42,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                32
+              ],
+              [
+                -30,
+                48
+              ],
+              [
+                -30,
+                48
+              ],
+              [
+                -30,
+                48
+              ],
+              [
+                -30,
+                48
+              ],
+              [
+                -30,
+                48
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -54,
+                0
+              ]
+            ],
+            "fitted_strength": null,
+            "glyph": "seen-ar",
+            "moved": 59,
+            "points": 59
+          }
+        ],
+        "moved": 59,
+        "ok": true,
+        "points": 59,
+        "proposal": {
+          "glyphs": 1,
+          "layer": "com.runebender.proposal.bolden",
+          "source": "out/seen-model-test/v6-bolden.ufo"
+        },
+        "skipped": [],
+        "task": "bolden"
+      }
+    ],
+    "conditioning": {
+      "seen_name_known": false,
+      "unicode_slot": true,
+      "seen_unicode_known": true,
+      "device": "CPU with Metal runtime initialization outside sandbox",
+      "decode": "greedy, seed0; max_new700; no sampling sweep"
+    },
+    "source_preservation": {
+      "checked": 3135,
+      "changed": []
+    }
+  },
+  "scaled": {
+    "model_files": {
+      "/Users/eli/.runebender/models/virtua-12m-sketch/weights.safetensors": "4ba0ceaf34da472f73e9863b97f64170ab7bac3d0c30cbe1bfe5889e008f28f5",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/config.json": "21b803082d04154e73a850e970d6d08fb77723e3eff542b67da42a6fe8430761",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/vocab.txt": "665214480af31f236e826e23e381c375cb2e591d67c744dcae2edf369f55b729",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/manifest.json": "a0b5ecb9565e86439a0355da93b2837a040fe6ec35a9e2e0d6a3d37135367142"
+    },
+    "runs": [
+      {
+        "revision": 4,
+        "master": "Regular",
+        "mode": "identity",
+        "input": "out/seen-model-test/scaled/v4-Regular-input.glif",
+        "input_hash": "2a7434ffbaccc2211eb19d8a8d401ab4d0cc055c0cc4d7711767e44f66b5e0c1",
+        "output": "out/seen-model-test/scaled/v4-Regular-identity.glif",
+        "output_hash": "7f31cca291e207e50b7222b81ca92f6ec22d246777638ff050d99d99124e6118",
+        "seconds": 4.019951105117798,
+        "input_ops": 33,
+        "output_ops": 45,
+        "prefix_tokens": 148,
+        "output_tokens": 237,
+        "input_iou": 0.22377710539586484,
+        "heuristic_score": 18.531556693432638
+      },
+      {
+        "revision": 4,
+        "master": "Regular",
+        "mode": "faithful",
+        "input": "out/seen-model-test/scaled/v4-Regular-input.glif",
+        "input_hash": "2a7434ffbaccc2211eb19d8a8d401ab4d0cc055c0cc4d7711767e44f66b5e0c1",
+        "output": "out/seen-model-test/scaled/v4-Regular-faithful.glif",
+        "output_hash": "51fb973716b3c4e719af0d58d01d8d11c7235ade89dc1d0c7c76f77e74bc4b25",
+        "seconds": 0.644294023513794,
+        "input_ops": 33,
+        "output_ops": 16,
+        "prefix_tokens": 148,
+        "output_tokens": 58,
+        "input_iou": 0.2037883736120183,
+        "heuristic_score": 17.0455040278685
+      },
+      {
+        "revision": 4,
+        "master": "Bold",
+        "mode": "identity",
+        "input": "out/seen-model-test/scaled/v4-Bold-input.glif",
+        "input_hash": "c86925a21b0776e1e653c582c4dd44a2d987d5c07db82ee142ba2657c3e807f5",
+        "output": "out/seen-model-test/scaled/v4-Bold-identity.glif",
+        "output_hash": "ba16e2cd27f6d59836f2677a53ed59d730484475790e768e98a6fba16ba6699f",
+        "seconds": 1.3758411407470703,
+        "input_ops": 33,
+        "output_ops": 32,
+        "prefix_tokens": 148,
+        "output_tokens": 110,
+        "input_iou": 0.12683982683982684,
+        "heuristic_score": 10.183982683982684
+      },
+      {
+        "revision": 4,
+        "master": "Bold",
+        "mode": "faithful",
+        "input": "out/seen-model-test/scaled/v4-Bold-input.glif",
+        "input_hash": "c86925a21b0776e1e653c582c4dd44a2d987d5c07db82ee142ba2657c3e807f5",
+        "output": "out/seen-model-test/scaled/v4-Bold-faithful.glif",
+        "output_hash": "be3cffe5fb541c0ef57ebc76eb3d4f8d5453c5d90795573c48473ce9bd8b6bbe",
+        "seconds": 3.935609817504883,
+        "input_ops": 33,
+        "output_ops": 50,
+        "prefix_tokens": 148,
+        "output_tokens": 236,
+        "input_iou": 0.17808535178777393,
+        "heuristic_score": 15.53580790605012
+      },
+      {
+        "revision": 6,
+        "master": "Regular",
+        "mode": "identity",
+        "input": "out/seen-model-test/scaled/v6-Regular-input.glif",
+        "input_hash": "34bd3eb498e5bb0763c9186241da71cd5bb5256b6e52b78ce4da1aca038deb7d",
+        "output": "out/seen-model-test/scaled/v6-Regular-identity.glif",
+        "output_hash": "cc58b634997929b085c58bc4d8c697d6c42256456a2b61af49dc39ea8ac4ae68",
+        "seconds": 1.4580929279327393,
+        "input_ops": 36,
+        "output_ops": 25,
+        "prefix_tokens": 161,
+        "output_tokens": 109,
+        "input_iou": 0.18989405052974734,
+        "heuristic_score": 12.322738386308071
+      },
+      {
+        "revision": 6,
+        "master": "Regular",
+        "mode": "faithful",
+        "input": "out/seen-model-test/scaled/v6-Regular-input.glif",
+        "input_hash": "34bd3eb498e5bb0763c9186241da71cd5bb5256b6e52b78ce4da1aca038deb7d",
+        "output": "out/seen-model-test/scaled/v6-Regular-faithful.glif",
+        "output_hash": "b03823cafef8f235deede93a05a5db9743655fca7b99589d2620ae074f30b7dc",
+        "seconds": 2.1881299018859863,
+        "input_ops": 36,
+        "output_ops": 32,
+        "prefix_tokens": 161,
+        "output_tokens": 150,
+        "input_iou": 0.2098226466575716,
+        "heuristic_score": 15.98226466575716
+      },
+      {
+        "revision": 6,
+        "master": "Bold",
+        "mode": "identity",
+        "input": "out/seen-model-test/scaled/v6-Bold-input.glif",
+        "input_hash": "4e9cfac63a1554ceeaafd646d6bc792c5b5763fd4cb377961c0afd32440a7d7b",
+        "output": "out/seen-model-test/scaled/v6-Bold-identity.glif",
+        "output_hash": "e39234e9b4339b2edd97e9a7e12e11c9bc4207d2d0bc4e7874e2ef7a765bc4c3",
+        "seconds": 0.8851807117462158,
+        "input_ops": 36,
+        "output_ops": 15,
+        "prefix_tokens": 161,
+        "output_tokens": 71,
+        "input_iou": 0.1302844988035097,
+        "heuristic_score": 8.742735594636686
+      },
+      {
+        "revision": 6,
+        "master": "Bold",
+        "mode": "faithful",
+        "input": "out/seen-model-test/scaled/v6-Bold-input.glif",
+        "input_hash": "4e9cfac63a1554ceeaafd646d6bc792c5b5763fd4cb377961c0afd32440a7d7b",
+        "output": "out/seen-model-test/scaled/v6-Bold-faithful.glif",
+        "output_hash": "bacc8f336eeea9e18ce331f6f4681a9a92c327d30089689b4b0916983705a43e",
+        "seconds": 1.8301868438720703,
+        "input_ops": 36,
+        "output_ops": 32,
+        "prefix_tokens": 161,
+        "output_tokens": 126,
+        "input_iou": 0.16913229018492176,
+        "heuristic_score": 12.518067728169601
+      }
+    ],
+    "method": "Uniform scale 0.75, quantize to existing 2-unit vocabulary, restore output by inverse scale; no conform; greedy; not a critic or held-out benchmark",
+    "bolden_model_files": {
+      "/Users/eli/.runebender/models/virtua-12m-bolden/weights.safetensors": "797431ab079a39f8cc7f32cfc38160f6f3f20374a0825c36419206e31276f11c",
+      "/Users/eli/.runebender/models/virtua-12m-bolden/config.json": "1e13ab95e0c66c221f5276a54f5a62e82ac84fb27bf00b03f64acf9e8a4d2318",
+      "/Users/eli/.runebender/models/virtua-12m-bolden/vocab.txt": "fd7746df06fcc6fbb03ef3e6767779f9bbd458b1ee1f589de6f48041a1040872",
+      "/Users/eli/.runebender/models/virtua-12m-bolden/manifest.json": "075324830bf02cdfd08199c01ef40ee01a117bb6e7919a1dafa96a3535dc410e"
+    },
+    "bolden_runs": [
+      {
+        "advance_delta": -30,
+        "compatible": true,
+        "deltas": [
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -54,
+            -30
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -38,
+            0
+          ],
+          [
+            -38,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ]
+        ],
+        "device": "cpu",
+        "glyph": "seen-ar",
+        "glyphs": [
+          {
+            "advance_delta": -30,
+            "compatible": true,
+            "deltas": [
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -54,
+                -30
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -38,
+                0
+              ],
+              [
+                -38,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ]
+            ],
+            "fitted_strength": null,
+            "glyph": "seen-ar",
+            "moved": 54,
+            "points": 54
+          }
+        ],
+        "moved": 54,
+        "ok": true,
+        "points": 54,
+        "proposal": {
+          "glyphs": 1,
+          "layer": "com.runebender.proposal.bolden",
+          "source": "out/seen-model-test/scaled/v4-bolden.ufo"
+        },
+        "skipped": [],
+        "task": "bolden"
+      },
+      {
+        "advance_delta": -30,
+        "compatible": true,
+        "deltas": [
+          [
+            -54,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -46,
+            0
+          ],
+          [
+            -42,
+            0
+          ],
+          [
+            -42,
+            0
+          ],
+          [
+            -42,
+            0
+          ],
+          [
+            -42,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -66,
+            0
+          ],
+          [
+            -66,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            32
+          ],
+          [
+            -62,
+            48
+          ],
+          [
+            -54,
+            48
+          ],
+          [
+            -54,
+            48
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -66,
+            0
+          ],
+          [
+            -66,
+            0
+          ],
+          [
+            -66,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            32
+          ],
+          [
+            -62,
+            48
+          ],
+          [
+            -62,
+            56
+          ],
+          [
+            -62,
+            56
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -66,
+            0
+          ],
+          [
+            -66,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            0
+          ],
+          [
+            -70,
+            32
+          ],
+          [
+            -62,
+            48
+          ],
+          [
+            -6,
+            48
+          ],
+          [
+            50,
+            48
+          ],
+          [
+            58,
+            0
+          ],
+          [
+            66,
+            0
+          ],
+          [
+            66,
+            0
+          ],
+          [
+            66,
+            24
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            -16
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            -16
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -30,
+            0
+          ],
+          [
+            -54,
+            0
+          ],
+          [
+            -62,
+            0
+          ],
+          [
+            -54,
+            0
+          ]
+        ],
+        "device": "cpu",
+        "glyph": "seen-ar",
+        "glyphs": [
+          {
+            "advance_delta": -30,
+            "compatible": true,
+            "deltas": [
+              [
+                -54,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -46,
+                0
+              ],
+              [
+                -42,
+                0
+              ],
+              [
+                -42,
+                0
+              ],
+              [
+                -42,
+                0
+              ],
+              [
+                -42,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -66,
+                0
+              ],
+              [
+                -66,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                32
+              ],
+              [
+                -62,
+                48
+              ],
+              [
+                -54,
+                48
+              ],
+              [
+                -54,
+                48
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -66,
+                0
+              ],
+              [
+                -66,
+                0
+              ],
+              [
+                -66,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                32
+              ],
+              [
+                -62,
+                48
+              ],
+              [
+                -62,
+                56
+              ],
+              [
+                -62,
+                56
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -66,
+                0
+              ],
+              [
+                -66,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                0
+              ],
+              [
+                -70,
+                32
+              ],
+              [
+                -62,
+                48
+              ],
+              [
+                -6,
+                48
+              ],
+              [
+                50,
+                48
+              ],
+              [
+                58,
+                0
+              ],
+              [
+                66,
+                0
+              ],
+              [
+                66,
+                0
+              ],
+              [
+                66,
+                24
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                -16
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                -16
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -30,
+                0
+              ],
+              [
+                -54,
+                0
+              ],
+              [
+                -62,
+                0
+              ],
+              [
+                -54,
+                0
+              ]
+            ],
+            "fitted_strength": null,
+            "glyph": "seen-ar",
+            "moved": 59,
+            "points": 59
+          }
+        ],
+        "moved": 59,
+        "ok": true,
+        "points": 59,
+        "proposal": {
+          "glyphs": 1,
+          "layer": "com.runebender.proposal.bolden",
+          "source": "out/seen-model-test/scaled/v6-bolden.ufo"
+        },
+        "skipped": [],
+        "task": "bolden"
+      }
+    ]
+  },
+  "control": {
+    "model_files": {
+      "/Users/eli/.runebender/models/virtua-12m-sketch/weights.safetensors": "4ba0ceaf34da472f73e9863b97f64170ab7bac3d0c30cbe1bfe5889e008f28f5",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/config.json": "21b803082d04154e73a850e970d6d08fb77723e3eff542b67da42a6fe8430761",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/vocab.txt": "665214480af31f236e826e23e381c375cb2e591d67c744dcae2edf369f55b729",
+      "/Users/eli/.runebender/models/virtua-12m-sketch/manifest.json": "a0b5ecb9565e86439a0355da93b2837a040fe6ec35a9e2e0d6a3d37135367142"
+    },
+    "runs": [
+      {
+        "revision": 0,
+        "master": "Regular",
+        "mode": "identity",
+        "input": "out/seen-model-test/control/v0-Regular-input.glif",
+        "input_hash": "fee8bece5ac39b36137d6e6e7177fa04047b7be1edc5176fd40e521e74be6a79",
+        "output": "out/seen-model-test/control/v0-Regular-identity.glif",
+        "output_hash": "e8994bfd5997c1ab3b99c0a975af699d51d2910973f89c10f4befabe858d73d3",
+        "seconds": 0.5783770084381104,
+        "input_ops": 25,
+        "output_ops": 25,
+        "prefix_tokens": 80,
+        "output_tokens": 73,
+        "input_iou": 0.7970535177390259,
+        "heuristic_score": 93.70535177390259
+      }
+    ],
+    "method": "Direct exact vector input; greedy raw decoder; no conform/grid postprocessing; not a critic or held-out benchmark"
+  },
+  "final_source_check": {
+    "files": 3135,
+    "changed": []
+  }
+}
