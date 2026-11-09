@@ -6,14 +6,14 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: design-context design-check design-status help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa qa-full qa-package test reports lint-grid preflight scoreboard skeleton clean
+.PHONY: design-context design-check design-status help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab glyph-ai-inventory glyph-ai-prepare qa qa-full qa-package test reports lint-grid preflight status skeleton clean
 
 help:
 	@printf '%s\n' \
 		'Virtua Grotesk workflow:' \
 		'  make design-context GLYPH=name OPERATION=inspect  Retrieve drawing context' \
 		'  make design-check   Validate context routes and correction evidence' \
-		'  make design-status  Show current review and unresolved work' \
+		'  make status        Rewrite STATUS.md from mark colors (release target: all green)' \
 		'  make setup          Create .venv and install requirements' \
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
@@ -34,8 +34,7 @@ help:
 		'  make dashboard GLYPH=a  Live one-glyph design dashboard (re-renders on save)' \
 		'  make lint-grid      Check source outlines against the power-of-two grid' \
 		'  make metrics        Normalized metric comparison vs Inter/Geist (weight, spacing, proportion)' \
-		'  make scoreboard     Update documentation/scoreboard.md (source color inventory)' \
-		'  make skeleton       End-to-end loop: build + qa + reports + scoreboard (qa may fail while debt exists)' \
+		'  make skeleton       End-to-end loop: build + qa + reports + status (qa may fail while debt exists)' \
 		'  make preflight      Build, proof, reports, then check artifacts' \
 		'  make clean          Remove generated build outputs'
 
@@ -129,8 +128,8 @@ test: qa
 reports:
 	$(PYTHON) scripts/run_reports.py
 
-scoreboard:
-	$(PYTHON) scripts/scoreboard.py
+status:
+	$(PYTHON) scripts/status.py
 
 grid-qa:
 	$(PYTHON) scripts/grid_qa.py
@@ -157,12 +156,12 @@ metrics:
 
 # The end-to-end skeleton: prove the whole pipeline runs TODAY, debt and
 # all. qa failures are expected while debt exists (the leading "-" keeps
-# make going); the scoreboard headline is the progress metric.
+# make going); STATUS.md is the progress metric.
 skeleton: build
 	-./scripts/check_gf_fonts.sh
 	-$(PYTHON) scripts/grid_lint.py --quiet
 	$(PYTHON) scripts/run_reports.py
-	$(PYTHON) scripts/scoreboard.py
+	$(PYTHON) scripts/status.py
 
 preflight: build proof reports
 	$(PYTHON) scripts/preflight.py
@@ -191,5 +190,4 @@ design-context:
 design-check:
 	$(PYTHON) scripts/design_context.py --check
 
-design-status:
-	$(PYTHON) scripts/design_context.py --status
+design-status: status

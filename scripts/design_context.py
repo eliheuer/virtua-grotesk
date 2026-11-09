@@ -184,7 +184,10 @@ def correction_inventory(root):
 
 
 def current_state(root):
-    state = read_json(root / "design/reviews/current.json")
+    path = root / "design/reviews/current.json"
+    if not path.is_file():
+        return {"summary": "Review archive removed 2026-11-09; see STATUS.md.", "work": []}
+    state = read_json(path)
     state["active_source_status"] = [dict(item, matches_current=(local_path(root, item["path"]).is_file() and
                                       digest(local_path(root, item["path"])) == item["sha256"]))
                                      for item in state.get("active_sources", [])]
@@ -253,7 +256,8 @@ def build_packet(root, names, masters, operation):
     for p in (root / "sources").iterdir():
         if p.is_file() and p.name != '.DS_Store': guards[relative(root, p)] = digest(p)
     for key in ["design/catalog.json", "design/system/contract.json", "design/reviews/current.json"]:
-        guards[key] = digest(root / key)
+        if (root / key).is_file():
+            guards[key] = digest(root / key)
     for rid in selected:
         record = records[rid]
         if record.get("path"):
@@ -324,18 +328,19 @@ def validate_library(root):
             if not path.is_file(): errors.append(f"{rid}: missing evidence {evidence['path']}")
             elif evidence.get("sha256") and digest(path) != evidence["sha256"]:
                 errors.append(f"{rid}: evidence hash mismatch {evidence['path']}")
-    state = read_json(root / "design/reviews/current.json")
-    if state.get("schema_version") != 1: errors.append("Invalid current review schema")
+    state = current_state(root)
+    if state.get("work") and state.get("schema_version") != 1: errors.append("Invalid current review schema")
     for record in state.get("work", []):
         if not local_path(root, record["case"]).is_file(): errors.append(f"Missing current case: {record['case']}")
-    snapshot = local_path(root, state["proof_snapshot"])
-    if not (snapshot / "live-fonts.json").is_file(): errors.append("Current portable proof is missing")
-    else:
-        for role, record in read_json(snapshot / "live-fonts.json").items():
-            for face in record.get("faces", [record]):
-                path = (snapshot / face["url"]).resolve()
-                if not path.is_relative_to(snapshot) or not path.is_file() or digest(path) != face["sha256"]:
-                    errors.append(f"Current proof font mismatch: {role}")
+    if state.get("proof_snapshot"):
+        snapshot = local_path(root, state["proof_snapshot"])
+        if not (snapshot / "live-fonts.json").is_file(): errors.append("Current portable proof is missing")
+        else:
+            for role, record in read_json(snapshot / "live-fonts.json").items():
+                for face in record.get("faces", [record]):
+                    path = (snapshot / face["url"]).resolve()
+                    if not path.is_relative_to(snapshot) or not path.is_file() or digest(path) != face["sha256"]:
+                        errors.append(f"Current proof font mismatch: {role}")
     return errors
 
 
