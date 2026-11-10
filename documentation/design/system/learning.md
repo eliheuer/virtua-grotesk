@@ -17,7 +17,8 @@ each event.
 4. **Review.** Eli compares the glyph with the reference fonts in Runebender
    or `make proof-web`, then corrects it or marks it green. The correction is
    committed.
-5. **Interpret.** Classify the correction, as the next section describes.
+5. **Interpret.** Record the correction and count repeats, as the next
+   sections describe.
 
 ## The trace is the Git history
 
@@ -28,22 +29,50 @@ not copy drafts, corrections, hashes or receipts into files. To read a trace:
 git log --follow -p -- sources/VirtuaGrotesk-Regular.ufo/glyphs/<file>.glif
 ```
 
-Write the reason for a correction in the commit message.
+## Record a correction in the commit message
 
-## Three outcomes of a correction
+A commit that corrects a drawing has one line for each correction:
 
-Each correction has one of three outcomes. Each outcome has one location.
-If none applies, record nothing.
+```
+Correction: <topic>: <what was wrong, in one sentence>
+```
 
-| Outcome | Meaning | Location |
-| --- | --- | --- |
-| Exception | The correction applies to this glyph only, or the feedback is ambiguous. | A short record in [glyphs/](../glyphs/README.md), only if a later agent would repeat the error. |
-| Reusable decision | The same decision will occur in other glyphs. | A case in `tests/benchmark.toml`. The green drawing is the reference. |
-| System gap | A target, check or rule was wrong or absent. | A change to `sources/design.toml`, `scripts/check_design.py` or one rule document. |
+For example, `Correction: curves: the lower-left turn reversed its curvature`.
+The topics are in the `[lessons]` table of `sources/design.toml`. Each topic
+names one rule document. When Eli corrects a draft, the agent that commits
+the correction asks Eli what was wrong if the reason is not clear, then
+writes the line. No file is written.
 
-A correction is not a rule by default. Add a rule only when the same
-correction occurred in more than one glyph. When a rule changes, edit the
-rule document. Do not add a second document.
+## Turn repeated corrections into rules
+
+`make lessons` counts the correction lines by topic. A correction is
+recorded when its commit hash appears in the rule document of its topic.
+
+- One correction is not a rule. Leave it in the commit message.
+- When a topic has two or more unrecorded corrections of the same kind, the
+  agent proposes one rule entry in the rule document of that topic. Eli
+  approves it before it is committed.
+- When the same mistake occurs again, add the glyph and commit to the
+  existing entry. Do not write a second entry.
+
+A rule entry has this form:
+
+```markdown
+### Turns keep one direction of curvature
+
+A convex turn must not reverse its curvature. Read the comb before review.
+Seen in: hamzaabove-ar Bold (a1b2c3d4), at Regular (e5f6a7b8).
+```
+
+If a script can test the rule (a number, a range, a grid), put the value in
+`sources/design.toml` or the check in `scripts/check_design.py`, and keep only
+the reason in the rule document. If a correction shows a decision that a
+drafting method has to learn, add the glyph to `tests/benchmark.toml` when it
+is green. If a correction applies to one glyph only and a later agent would
+repeat the error, add one line to its record in [glyphs/](../glyphs/README.md).
+
+A rule document has at most 200 lines; the layout test enforces this. When a
+document is full, merge entries or move checkable values into scripts.
 
 ## Checks and their limits
 
