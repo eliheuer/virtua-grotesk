@@ -259,7 +259,7 @@ rendering mechanics.
 
 ### Live browser review
 
-Start with the [web-proof guide](../agent-proofs/app/README.md) and `make proof-web`.
+Start with the [web-proof guide](../scripts/proof-web/app/README.md) and `make proof-web`.
 It is the default interactive review path. It compares the current build with
 `reference-fonts/`.
 
@@ -267,11 +267,11 @@ Eli selected live font rendering on 2026-10-19 (P018), after the image viewer
 shrunk a 1600 px sheet into a roughly 455 px panel. For interactive reviews,
 render the actual fonts as text; do not fit a raster specimen page into the panel.
 Keep two grays, title case, Virtua labels and grid-based organization. Use the
-[margin-based spacing contract](../agent-proofs/app/README.md#spacing-contract-p022)
+[margin-based spacing contract](../scripts/proof-web/app/README.md#spacing-contract-p022)
 for layout gaps and balanced sample ink fields. Screenshots
 are evidence of a reviewed browser state, not the rendering mechanism.
 
-The initial HEB-002 implementation is in `agent-proofs/app/`.
+The initial HEB-002 implementation is in `scripts/proof-web/app/`.
 It supports comparison, in-place before/applied switching, size studies, running
 text in Reading, weight
 400–700 through numerical fields and sliders, custom text, reference fonts, dark mode and
@@ -288,7 +288,7 @@ Prepare from the exact reviewed font snapshot. The HEB-002 example below needs
 the files from branch `archive/agent-records-2026-11-09`:
 
 ```sh
-.venv/bin/python agent-proofs/app/prepare.py \
+.venv/bin/python scripts/proof-web/app/prepare.py \
   --evidence design/reviews/hebrew-002/layout-v3/snapshot.json \
   --output-dir design/reviews/hebrew-002/layout-v3
 .venv/bin/python -m http.server 60271 --bind 127.0.0.1 \

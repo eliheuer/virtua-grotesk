@@ -1,8 +1,11 @@
 """Geometry regressions for the read-only comb diagnostics (standard unittest)."""
 import math
 from pathlib import Path
+import sys
 import tempfile
 import unittest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 from curve_lint import all_segments, classify_join, join_audit
 from curve_profile import profile, read_contours, sample, svg
@@ -48,7 +51,7 @@ class CurveProfileTests(unittest.TestCase):
                 read_contours(p)
 
     def test_saved_correction_exposes_actual_failure(self):
-        case=Path(__file__).resolve().parents[1]/'agent-proofs/cases/arabic-003/manual-correction-01'
+        case=Path(__file__).resolve().parent/'fixtures/hamza-bold-correction'
         ai=profile(case/'ai.glif'); human=profile(case/'human.glif')
         self.assertEqual(sum(c['sampled_sign_changes'] for c in ai['curves']),1)
         self.assertEqual(sum(c['sampled_sign_changes'] for c in human['curves']),0)

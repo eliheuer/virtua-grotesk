@@ -11,7 +11,7 @@ green in both masters. Eli draws. Agents build, proof, measure and report.
   (branch `archive/agent-records-2026-11-09`). Take direction from Eli.
 - Active inputs: `sources/VirtuaGrotesk.designspace`, the Regular and Bold
   UFOs, `sources/config.yaml`. Metrics, grid and colors:
-  `design/system/contract.json`. `sources/archive/` is historical.
+  `documentation/design/system/contract.json`. `sources/archive/` is historical.
 
 ## Evaluation
 

@@ -27,8 +27,8 @@ jobs:
         run: make setup
       - name: Test proof tools
         run: |
-          .venv/bin/python -m unittest discover -s agent-proofs/app -p 'test_*.py' -v
-          node --test agent-proofs/app/test-reference-selection.cjs
+          .venv/bin/python -m unittest discover -s scripts/proof-web/app -p 'test_*.py' -v
+          node --test scripts/proof-web/app/test-reference-selection.cjs
       - name: Build fonts
         run: make build
       - name: Test QA entrypoints

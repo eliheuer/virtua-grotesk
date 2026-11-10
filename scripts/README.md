@@ -5,6 +5,8 @@ shell entrypoints. `make help` lists the maintained command interface.
 
 ## Build and validation
 
+- `build.sh`: the release build (`make build`). `build-fontc.sh`: the fontc build (`make build-fontc`).
+- `proof-web/`: the live comparison proof (`make proof-web`). See [proof-web/README.md](proof-web/README.md).
 - `fix_gf_metadata.py`: postprocesses compiled fonts; called by both build scripts.
 - `check_gf_fonts.sh`: development, full-font, and downstream-package QA.
 - `run_reports.py` and `report_*.py`: source, compatibility, and binary reports.
@@ -18,8 +20,8 @@ shell entrypoints. `make help` lists the maintained command interface.
 
 ## Drawing and source-writing utilities
 
-`anchor_sheet.py` and `symbol_gen.py` support the reference-sheet workflow in
-`harness/`.
+`anchor_sheet.py` and `symbol_gen.py` measure reference sheets and write
+candidate GLIFs under `out/`.
 
 The `arabic_*`, `latin_*`, `build_anchors.py`, `propagate_anchors.py`,
 `realign_components.py`, `fix_accent_offsets.py`, `embolden.py`,
@@ -31,7 +33,7 @@ copy for exploratory changes and preserve protected colors.
 
 `find_should_be_components.py` and `rubik_weight_deltas.py` are analysis aids.
 `refresh-ui-font.sh` is a local editor-development utility, not a font release
-step. The native and web launchers remain at the root for `make runebender*`.
+step.
 
 The retired report/packaging script collection is available in Git history.
 Do not restore it wholesale; extend the maintained commands only when needed.

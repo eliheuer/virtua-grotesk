@@ -140,7 +140,7 @@ traced node. Then check opposing edges together, adjacent joins, extrema and gri
 Reinspect the complete glyph and actual words after snapping: independently
 rounding two edges can change stroke weight even when every point is on-grid.
 
-Use `harness/paired_stroke_report.py` with explicit, hash-bound cubic pairing.
+Use `scripts/paired_stroke_report.py` with explicit, hash-bound cubic pairing.
 It retains ambiguous or missing normal intersections and supplies no optical
 pass threshold. Local width ranges, continuity labels and curvature variance
 cannot replace the filled proof. Directional weight, junction relief and terminal

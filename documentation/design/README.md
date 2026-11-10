@@ -2,7 +2,7 @@
 
 These documents describe how Virtua Grotesk is drawn. They are reference
 material for people and agents. They do not grant permission to edit a glyph;
-see [AGENTS.md](../AGENTS.md) for the source rules.
+see [AGENTS.md](../../AGENTS.md) for the source rules.
 
 | Topic | Documents |
 | --- | --- |

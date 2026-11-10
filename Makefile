@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender runebender-web runebender-tab qa qa-full qa-package test reports lint-grid preflight status skeleton clean
+.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender qa qa-full qa-package test reports lint-grid preflight status skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -18,9 +18,7 @@ help:
 		'  make proof-web      Build, then compare the fonts with reference-fonts/ in a browser' \
 		'  make review         Build a Diffenator3 QA browser proof' \
 		'  make specimen       (not implemented yet — marketing specimen is future work)' \
-		'  make runebender     Open the designspace in Runebender gpui (native)' \
-		'  make runebender-web Same source in Runebender web, chromeless app window' \
-		'  make runebender-tab Runebender web as a tab in your default browser' \
+		'  make runebender     Open the designspace in the Runebender web editor' \
 		'  make test-tools     Run the Python and JavaScript tool tests' \
 		'  make qa             Development Fontspector checks (documented exclusions)' \
 		'  make qa-hebrew      Check Hebrew coverage/attachment and render three weights' \
@@ -41,10 +39,10 @@ setup:
 	$(PYTHON) scripts/install_fontspector.py
 
 build:
-	./build.sh
+	./scripts/build.sh
 
 build-fontc:  ## Build with fontc (Rust) instead of fontmake
-	./build-fontc.sh
+	./scripts/build-fontc.sh
 
 # The built-in designbot print proof: introspects the variable font (axes,
 # instances, charset, metrics, features) and emits a color-managed multi-page
@@ -54,9 +52,9 @@ proof: build
 
 # Live comparison of the current build with reference-fonts/. To serve a
 # prepared Before/Working snapshot instead, run
-# $(PYTHON) agent-proofs/serve.py --snapshot <prepared-directory>.
+# $(PYTHON) scripts/proof-web/serve.py --snapshot <prepared-directory>.
 proof-web: build
-	$(PYTHON) agent-proofs/serve.py --current
+	$(PYTHON) scripts/proof-web/serve.py --current
 
 # Current Google Fonts browser proof renderer, distributed with Diffenator3.
 DIFFPROOF = ./.venv/bin/diff3proof
@@ -83,26 +81,10 @@ qa-diacritics: build
 specimen:
 	@echo "specimen: not implemented yet — see documentation/proofs/PROOF_SPEC.md (marketing specimen is future work)"; exit 1
 
-# Social media assets now live as co-located designbot scripts under
-# documentation/social-assets/ (render each with `designbot <script.rs>`);
-# the old batch target rendered a since-deleted script.
-
-# The native editor. Faster and the one being developed against, but it
-# is younger than the web build: no sketch layer (the raster brush), and
-# no font info editing. If it gets in the way, `make runebender-web` is
-# the same source in the editor that has more mileage on it.
+# Serves the editor at localhost:8765 with the designspace open. Edits to
+# the sources reload in the browser, and Cmd+S saves back to disk.
 runebender:
-	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-gpui.sh
-
-# The fallback: a chromeless app window on its own Chrome profile, the
-# editor and nothing else.
-runebender-web:
-	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" ./runebender-web.sh
-
-# The same server, opened as an ordinary tab in the default browser —
-# devtools, the address bar and your logged-in profile all to hand.
-runebender-tab:
-	RUNEBENDER_SOURCE="$(RUNEBENDER_SOURCE)" RUNEBENDER_OPEN_MODE=tab ./runebender-web.sh
+	runebender-serve "$(RUNEBENDER_SOURCE)" --open
 
 qa: build
 	./scripts/check_gf_fonts.sh development
@@ -174,5 +156,5 @@ qa-hebrew: build
 .PHONY: test-tools
 test-tools:
 	$(PYTHON) -m unittest discover -s tests
-	$(PYTHON) -m unittest discover -s agent-proofs/app -p 'test_*.py'
-	node --test agent-proofs/app/test-reference-selection.cjs
+	$(PYTHON) -m unittest discover -s scripts/proof-web/app -p 'test_*.py'
+	node --test scripts/proof-web/app/test-reference-selection.cjs

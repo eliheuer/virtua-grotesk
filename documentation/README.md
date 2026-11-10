@@ -2,8 +2,8 @@
 
 ## Working documents
 
-- [Design rules](../design/README.md): construction, grid, weight, spacing and script rules.
-- [Live web proof](../agent-proofs/app/README.md): the comparison with `reference-fonts/`.
+- [Design rules](design/README.md): construction, grid, weight, spacing and script rules.
+- [Live web proof](../scripts/proof-web/app/README.md): the comparison with `reference-fonts/`.
 - [Build and QA](qa.md): setup, commands, proofs and checks.
 - [Google Fonts onboarding](google-fonts/README.md): release scope and blockers.
 - [Helper model workflow](native-model-workflow.md): the local Arabic repair model with native Runebender.
@@ -18,7 +18,6 @@
 - [Artwork and licensing](artwork.md).
 - [README image scripts](readme-images/) and [social artwork](social-assets/).
 - [Hebrew plan](hebrew-support-plan.md) and [Italic proposal](goal-google-fonts-launch.md).
-- [Glyph harness](../harness/) and [pipeline design](../plans/ai-font-completion-harness.md).
 
 Run image scripts from the repository root so that font paths resolve. Build
 the fonts first. Rendered files are ignored by Git. Release artwork must be

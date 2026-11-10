@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MASTERS = ['Regular', 'Bold']
 OUT = ROOT / 'STATUS.md'
 SCRIPTS = ['Arabic', 'Hebrew', 'Latin and other']
-COLORS = json.loads((ROOT / 'design/system/contract.json').read_text())['colors']
+COLORS = json.loads((ROOT / 'documentation/design/system/contract.json').read_text())['colors']
 
 
 def color_name(value):

@@ -5,7 +5,7 @@ description: "Run quality assurance checks on the font sources: metrics consiste
 
 # Check source health
 
-Use [design verification](../../../design/system/verification.md) for the named
+Use [design verification](../../../documentation/design/system/verification.md) for the named
 source operation and documentation/qa.md for the complete QA workflow. These checks
 are not human grading or Google Fonts release readiness.
 

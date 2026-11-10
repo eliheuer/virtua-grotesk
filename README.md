@@ -26,7 +26,7 @@ On Linux, the Python dependencies also need Cairo development headers,
 `pkg-config`, and Python development headers. On macOS, install Cairo and
 `pkg-config` before setup if they are not already available.
 
-`build.sh` uses the pinned Python requirements and `sources/config.yaml`, then
+`scripts/build.sh` uses the pinned Python requirements and `sources/config.yaml`, then
 applies the repository's compiled-font metadata fixes. Outputs are:
 
 - `fonts/variable/VirtuaGrotesk[wght].ttf`
@@ -39,7 +39,7 @@ a public release for onboarding is still pending.
 ## Review and contribute
 
 Read [AGENTS.md](AGENTS.md) before you edit sources with an agent. The design
-rules are in [design/README.md](design/README.md). Progress is in
+rules are in [documentation/design/README.md](documentation/design/README.md). Progress is in
 [STATUS.md](STATUS.md).
 
 - `make status`: write STATUS.md from the mark colors in both masters.

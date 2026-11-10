@@ -12,6 +12,9 @@
 
 set -euo pipefail
 
+# Run from the repository root.
+cd "$(dirname "$0")/.."
+
 if [ -d ".venv" ]; then
     # shellcheck disable=SC1091
     source .venv/bin/activate

@@ -4,6 +4,9 @@
 
 set -euo pipefail
 
+# Run from the repository root.
+cd "$(dirname "$0")/.."
+
 if [ -d ".venv" ]; then
     source .venv/bin/activate
 fi
