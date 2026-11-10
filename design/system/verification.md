@@ -8,9 +8,10 @@ For curves, use `scripts/curve_lint.py <Master> <glyphs> --joins` and the signed
 
 Build the candidate with the repository build pipeline. Check compiled shaping,
 advances and affected components; inspect endpoints 400/700 and intermediate weights.
-Use `agent-proofs/app/prepare.py` and `make proof-web` for the live comparison.
-The proof renders actual verified fonts. Retain an explicit Candidate, Applied or
-Rejected label and the exact font hashes. `make review` is a separate Diffenator
+Use `make proof-web` to compare the current build with `reference-fonts/`. For a
+Before/Candidate comparison, prepare a snapshot with `agent-proofs/app/prepare.py`
+and serve it with `agent-proofs/serve.py --snapshot`. The proof renders actual
+verified fonts. `make review` is a separate Diffenator
 report, and `make proof` is the print PDF.
 
 For Arabic batches retain and inspect fixed 400/700 details with the recorded

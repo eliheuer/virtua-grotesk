@@ -1,7 +1,7 @@
 # Curve quality: inspect, diagnose, then alter
 
 Use for curved outlines and weight transfers. The trigger is
-[ARB-003 Bold hamza correction 01](../reviews/arabic-003/README.md#manual-correction-01--bold-hamza-above).
+ARB-003 Bold hamza correction 01 (`design/reviews/arabic-003/` on branch `archive/agent-records-2026-11-09`).
 Eli confirmed excess base mass/inflation and basic curve faults. Preserve his
 source; diagnostics guide new candidates, not automatic cleanup of his edit.
 
@@ -107,7 +107,8 @@ Primary external references (read 2026-10-21; no plugin code copied):
 Eli rejected the second at candidate as lumpy despite its clean sampled tangent
 checks. The local optimizer penalized individual-edge curvature and join jumps,
 but not opposing-edge width; it fixed all traced spiral on-curves. The failure
-is recorded in [feedback correction 02](../corrections/README.md).
+is recorded as feedback correction 02 in `design/corrections/` on
+branch `archive/agent-records-2026-11-09`.
 
 For a nominally monoline curved stroke, diagnose three different things:
 
@@ -126,8 +127,8 @@ See the primary Glyphs harmonization and good-path guidance linked above.
 
 ## Broad flow is a separate review — AT-001, 2026-10-23
 
-Eli rejected the paired-width revision too. [AT-001](../reviews/at-001/README.md)
-retains the rejected source pairs, his reference context and the r4 redraw.
+Eli rejected the paired-width revision too. AT-001 (`design/reviews/at-001/` on
+branch `archive/agent-records-2026-11-09`) retains the rejected source pairs, his reference context and the r4 redraw.
 Eli called r4 “better, but still bad” and authorized application for hand editing;
 application does not make it a positive optical example. A locally fair, evenly thick stroke can still follow a visibly poor path.
 

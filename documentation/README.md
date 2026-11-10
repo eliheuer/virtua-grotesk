@@ -2,31 +2,28 @@
 
 ## Working documents
 
-- [Virtua Design Review — start here](../design/README.md): central workflow map, current handoff, new-session prompt and recovery information.
-- [Live web proof](../agent-proofs/app/README.md): default interactive review, launch command, code map and UI spacing contract.
-- [Design contract](../DESIGN.md): geometry, metrics, curves, and spacing.
-- [Design review and feedback](../design/corrections/README.md): confirmed preferences, open proposals, and review evidence.
-- [Design worklog](../design/reviews/latin-worklog.md): measurements and human decisions.
-- [Build and QA](qa.md): setup, commands, proofs, and validation.
+- [Design rules](../design/README.md): construction, grid, weight, spacing and script rules.
+- [Live web proof](../agent-proofs/app/README.md): the comparison with `reference-fonts/`.
+- [Build and QA](qa.md): setup, commands, proofs and checks.
 - [Google Fonts onboarding](google-fonts/README.md): release scope and blockers.
-- [Source guides](source-guides/): UFO, designspace, and kerning editing.
+- [Helper model workflow](native-model-workflow.md): the local Arabic repair model with native Runebender.
+- [Source guides](source-guides/): UFO, designspace and kerning editing.
 - [Source reports](source/): generated metadata and compatibility reports,
-  plus Arabic design records. Check their dates before using measurements.
+  plus Arabic design records. Check their dates before you use a measurement.
 
 ## Artwork and plans
 
-- [Article draft](article/ARTICLE.en_us.html): the single Google Fonts About draft.
+- [Article draft](article/ARTICLE.en_us.html): the Google Fonts About text.
 - [Proof specification](proofs/PROOF_SPEC.md): current proof and specimen plans.
 - [Artwork and licensing](artwork.md).
 - [README image scripts](readme-images/) and [social artwork](social-assets/).
 - [Hebrew plan](hebrew-support-plan.md) and [Italic proposal](goal-google-fonts-launch.md).
 - [Glyph harness](../harness/) and [pipeline design](../plans/ai-font-completion-harness.md).
 
-Run image scripts from the repository root so font paths resolve. Build fonts
-first. Rendered files are generally ignored; selected release artwork must be
-explicitly included and licensed before packaging.
+Run image scripts from the repository root so that font paths resolve. Build
+the fonts first. Rendered files are ignored by Git. Release artwork must be
+added explicitly, with its license, before packaging.
 
-[Archive](archive/) contains historical reports and review evidence, including
-the September 7 release review. It is not an active worklist. Retired automation
-is recoverable from Git history; current scripts are described in
+Review records, worklogs and handoffs are on branch
+`archive/agent-records-2026-11-09`. Current scripts are described in
 [the script index](../scripts/README.md).

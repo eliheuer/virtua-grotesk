@@ -15,5 +15,5 @@ Inspect the whole filled drawing at large and reading sizes, then use diagnostic
 to investigate faults. Numerical improvement never establishes human approval.
 
 Measured Zayin, Gimel, Final Tsadi and hamza corrections are scoped examples.
-Their radii, handles and shelves are not universal formulas. Consult the relevant
-correction and its counterexamples when transferring construction.
+Their radii, handles and shelves are not universal formulas. The correction
+records and counterexamples are on branch `archive/agent-records-2026-11-09`.

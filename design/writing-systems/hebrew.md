@@ -10,5 +10,5 @@ Check base/mark and mark-to-mark attachment with actual compiled shaping at mult
 weights. Coverage alone does not establish drawing or attachment quality. The
 Hebrew-to-Latin optical weight relationship remains provisional.
 
-Retrieve relevant corrections by glyph and construction. The complete historical
-sequence is in `../reviews/hebrew-001/` through `../reviews/hebrew-010/`.
+The complete historical sequence is in `design/reviews/hebrew-001/` through
+`design/reviews/hebrew-010/` on branch `archive/agent-records-2026-11-09`.

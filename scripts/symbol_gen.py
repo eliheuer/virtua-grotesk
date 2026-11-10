@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Historical parametric symbol recipes, now emitted only into scratch output.
 
-Retrieve design_context.py --operation from-image before use. Existing recipes
-retain their measured historical 2-grid dimensions; they are not automatically
+Existing recipes retain their measured historical 2-grid dimensions; they are not automatically
 compliant new 8-grid drafts. Inspect current green donors, adapt the named recipe,
 then check grid, master correspondence, builds and visible proofs. Generated GLIFs
 are purple and unapproved. This tool never installs files in active sources.
@@ -13,7 +12,6 @@ The output contains per-master GLIFs; register/install into a scratch font only
 within the named task. Some paired recipes emit both family members.
 """
 import argparse, json, pathlib, plistlib, re, sys
-from design_context import build_packet, markdown
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 MASTERS = ("Regular", "Bold")
@@ -727,10 +725,7 @@ if __name__ == "__main__":
     if not OUTPUT_ROOT.is_relative_to(REPO / "out") or OUTPUT_ROOT.exists():
         parser.error("--out must be a new directory under out/")
     targets = args.targets
-    packet = build_packet(REPO, targets, list(MASTERS), "from-image")
     OUTPUT_ROOT.mkdir(parents=True)
-    (OUTPUT_ROOT / "context.json").write_text(json.dumps(packet,indent=2)+"\n")
-    (OUTPUT_ROOT / "context.md").write_text(markdown(packet))
     done = set()
     for g in targets:
         fn = GENERATORS[g]

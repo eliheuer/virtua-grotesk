@@ -3,7 +3,7 @@
 import argparse, collections, hashlib, json, shutil, unicodedata
 from pathlib import Path
 import xml.etree.ElementTree as ET
-import design_context as dc
+import source_inventory as dc
 ROOT=Path(__file__).resolve().parents[1]
 
 def build(root, out):

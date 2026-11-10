@@ -1,6 +1,6 @@
 # Source protection and authority
 
-A context packet supplies evidence, never authorization. The current user's
+Evidence never grants authorization. The current user's
 named scope and recorded unresolved decisions govern work. Historical grants
 and stopped queues do not restart drawing. Reuse authorization already given
 for the same scope; do not repeatedly ask for it.
@@ -15,7 +15,7 @@ within an authorized task. Orange/yellow preserve useful drawing. Blue/pink iden
 composite work; purple identifies unreviewed AI drawing. Unknown/conflicting colors
 need classification. Never assign green. New AI drawings use Eli's purple convention.
 
-Before writing, save an exact baseline and verify the packet's source hashes.
+Before writing, save an exact baseline of each file you will change.
 Preserve concurrent editor saves, metrics, anchors, features and unrelated files.
 Edit GLIF XML and plists surgically; never save an entire UFO with font.save().
 Preserve tabs, double quotes, no space before />, and x/y/type/smooth attribute order.

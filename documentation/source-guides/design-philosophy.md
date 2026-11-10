@@ -1,4 +1,4 @@
-# Design context moved
+# Design philosophy
 
-Start with [the design library](../../design/README.md). The previous philosophy
-text is preserved as [historical evidence](../../design/system/design-philosophy-history.md).
+The design rules are in [design/README.md](../../design/README.md). The earlier
+philosophy text is in [design-philosophy-history.md](../../design/system/design-philosophy-history.md).

@@ -3,9 +3,9 @@
 The grid makes consistent source geometry usable as learning data. Preserve exact
 source edits and human verdicts; renderings alone lose editable structure.
 
-Correction records in `../corrections/records/` identify draft, correction, source
-hashes, topology relationship, human feedback, application and review states.
-Keep point-delta pairs, structural edits and rejected examples distinct. A human
+The correction records (`design/corrections/records/` on branch `archive/agent-records-2026-11-09`)
+identify draft, correction, source hashes, topology relationship, human feedback,
+application and review states. Keep point-delta pairs, structural edits and rejected examples distinct. A human
 edit is not automatically a positive training pair; explicit approval and corpus
 curation are separate. Preserve contour alignment decisions and raw source bytes.
 

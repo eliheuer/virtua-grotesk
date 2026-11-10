@@ -14,6 +14,5 @@ Inspect recursive base/dot/mark dependencies and reserved human work. Letter-dot
 anchors and harakat anchors have separate roles. Preserve green inherited drawings.
 Do not copy Hebrew mark shapes into Arabic letter dots.
 
-Current drawing state and unresolved Seen review live in `../reviews/current.json`.
-Stopped autonomous queues remain stopped. Kaf and final Yeh have explicit glyph
-intent records; retrieve them before treating reference differences as defects.
+Progress is in `STATUS.md`. Kaf and final Yeh have glyph intent records in
+`design/glyphs/`; read them before treating reference differences as defects.

@@ -18,8 +18,8 @@ shell entrypoints. `make help` lists the maintained command interface.
 
 ## Drawing and source-writing utilities
 
-`glyph_ai_harness.py`, `anchor_sheet.py`, and `symbol_gen.py` support the
-reference-sheet workflow in `harness/`.
+`anchor_sheet.py` and `symbol_gen.py` support the reference-sheet workflow in
+`harness/`.
 
 The `arabic_*`, `latin_*`, `build_anchors.py`, `propagate_anchors.py`,
 `realign_components.py`, `fix_accent_offsets.py`, `embolden.py`,
@@ -36,11 +36,7 @@ step. The native and web launchers remain at the root for `make runebender*`.
 The retired report/packaging script collection is available in Git history.
 Do not restore it wholesale; extend the maintained commands only when needed.
 
-## Scoped design context
+## Source compatibility
 
-`design_context.py --glyph <name> --operation <operation>` retrieves current source
-facts, construction rules and exact corrections. `--json --output out/context.json`
-saves input guards; `--verify out/context.json` refuses stale evidence. `--check`
-validates the library and portable proof. See [design/README.md](../design/README.md).
 `report_master_compatibility.py --check` makes blocking source differences fail;
 without --check its historical report-only interface is preserved.

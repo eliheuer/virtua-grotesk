@@ -38,27 +38,25 @@ a public release for onboarding is still pending.
 
 ## Review and contribute
 
-Start with [Virtua design context](design/README.md):
-the central map, current handoff and new-session instructions for the font review
-loop. Its default comparison interface is the
-[live web proof](agent-proofs/app/README.md).
+Read [AGENTS.md](AGENTS.md) before you edit sources with an agent. The design
+rules are in [design/README.md](design/README.md). Progress is in
+[STATUS.md](STATUS.md).
 
-- `make design-context GLYPH=seen-ar OPERATION=curve-repair`: retrieve scoped drawing context.
-- `make design-check`: validate correction evidence and current proof.
-- `make proof-web`: serve or reuse the live design-review interface.
+- `make status`: write STATUS.md from the mark colors in both masters.
+- `make proof-web`: build, then compare the fonts with `reference-fonts/` in a browser.
+- `make lint-grid` and `make grid-qa`: check outlines against the 8-unit grid.
 - `make test`: development Fontspector checks, with documented exclusions.
 - `make qa-full`: all configured Google Fonts profile checks, without exclusions.
 - `make review`: a separate Diffenator3 QA browser proof.
-- `make proof`: the main PDF, requiring the separately installed designbot CLI.
-- `make help`: editor and other development commands.
+- `make proof`: the main PDF. This target needs the designbot CLI.
+- `make help`: all other commands.
 
-See [QA and tool setup](documentation/qa.md), the [design contract](DESIGN.md),
-and the [documentation index](documentation/README.md). Report problems or
-propose changes through [GitHub issues](https://github.com/eliheuer/virtua-grotesk/issues).
+See [QA and tool setup](documentation/qa.md) and the
+[documentation index](documentation/README.md). Report problems or propose
+changes in [GitHub issues](https://github.com/eliheuer/virtua-grotesk/issues).
 
 AI tools have assisted with code, documentation, and candidate glyph generation.
 Source colors describe drawing quality, composite status, and what may be changed.
-See [AGENTS.md](AGENTS.md) before editing sources with an agent.
 
 ## Helper model workflow
 
@@ -88,14 +86,10 @@ Pi needs an MCP bridge to control the editor.
 Glyph colors are editing and reference permissions, not just progress indicators.
 The same meanings apply to people and AI tools.
 
-For AI edits, these are defaults within a specifically approved scope, not
-permission to start a drawing batch. Follow [the approval workflow](AGENTS.md#source-safety):
-propose named glyphs and masters, wait for Eli's approval, prepare a reversible
-scratch candidate, and show proofs before applying it when only candidate work
-was approved. Explicit approval can override a color restriction for those named
-glyphs only. Only green edits require a protection exception (Eli, 2026-10-20).
-Current scope and stopped work are recorded in `design/reviews/current.json`; dated standing grants do not restart a stopped queue. Purple now identifies AI-drawn or substantially redrawn glyphs awaiting human
-review. It carries no approval, reference, or protection status.
+For AI edits, these meanings apply only inside a scope that Eli names: the
+glyphs and the masters. Eli gives the verdict, and only Eli assigns green.
+Purple identifies AI-drawn or substantially redrawn glyphs that wait for human
+review. Purple gives no approval, reference or protection status.
 
 | Color | Meaning | Editing and reference use |
 | --- | --- | --- |

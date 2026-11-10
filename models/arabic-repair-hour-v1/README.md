@@ -12,7 +12,7 @@ Training:36 green Regular Arabic drawings in10 families, synthetic perturbations
 and clean controls;1,285,746 steps in one hour. Hah was excluded from training but
 repeatedly inspected as a development holdout; it is not a fresh blind benchmark.
 Seen test data was not used in this run. See manifest.json and the maintained
-[training plan](../../design/training/seen-pilot/PLAN.md).
+[training plan](../training/seen-pilot/PLAN.md).
 
 Final results:36/36 clean TRAIN drawings preserved;0/3 clean Hah drawings
 preserved;9/21 corrupted Hah examples improved and12 worsened versus unchanged

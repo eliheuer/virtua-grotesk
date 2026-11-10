@@ -1,9 +1,9 @@
 # Reference roles
 
 A green Virtua source is a construction reference; read the exact GLIF and a filled
-render, recording the donor master and run. The context command rechecks current
-grades and hashes and lists component dependencies. A non-green donor is not an
-approved reference even if an old note called it one.
+render, recording the donor master. Check its current mark color in both masters
+and its component dependencies. A non-green donor is not an approved reference
+even if an old note called it one.
 
 External font families explain script structure and reading texture. Local binaries
 remain in project-root `reference-fonts/`; the proof discovers them there. Frozen
