@@ -23,8 +23,9 @@ LAYOUT = [
     '.gitignore', 'AGENTS.md', 'AUTHORS.txt', 'CONTRIBUTORS.txt', 'Makefile',
     'OFL.txt', 'README.md', 'STATUS.md', 'requirements.in', 'requirements.txt',
     '.github/workflows/*.yaml',
-    # Agent skills: one directory per skill.
-    '.agents/skills/*/SKILL.md', '.agents/skills/*/agents/openai.yaml',
+    # Agent files: skills, task contracts, and the OMP rules link to AGENTS.md.
+    '.agents/README.md', '.agents/skills/*/SKILL.md', '.agents/skills/*/agents/openai.yaml',
+    '.agents/tasks/*.md', '.omp/RULES.md',
     # Sources.
     'sources/README.md', 'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
     'sources/design.toml',

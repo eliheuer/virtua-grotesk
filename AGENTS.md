@@ -31,6 +31,13 @@ The full description is in
    benchmark case or a change to the specification. Do not add worklogs,
    reports, receipts or handoff files to the repository.
 
+## Long and unattended tasks
+
+Task contracts are in `.agents/tasks/`: goal, acceptance, constraints and the
+report. Run a contract in a separate checkout, on its own branch. After any
+agent edits glyphs, run `make check-changes`. It fails when a green glyph
+changed or a changed contour glyph is not purple.
+
 ## What belongs in the repository
 
 The repository holds sources, tools, tests and maintained documents. It does

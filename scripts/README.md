@@ -27,6 +27,9 @@ shell entrypoints. `make help` lists the maintained command interface.
 - `benchmark.py`: scores a drafting pipeline on the held-out green glyphs in
   `tests/benchmark.toml` (`make benchmark RUN=...`).
 - `status.py`: writes `STATUS.md` from the mark colors (`make status`).
+- `check_changes.py`: checks source changes against a base revision: no green
+  glyph changed, changed contour glyphs are purple, and optional before and
+  after proof sheets (`make check-changes`).
 
 The loop that uses them is in
 [documentation/design/system/learning.md](../documentation/design/system/learning.md).

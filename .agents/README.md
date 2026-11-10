@@ -1,29 +1,27 @@
-# Agent workflows
+# Agent files
 
-Codex discovers repository skills in `.agents/skills/`. `AGENTS.md` carries
-shared project constraints; each `SKILL.md` carries its specific workflow.
-Claude Code uses the same files through `.claude/skills` and `CLAUDE.md`.
+`AGENTS.md` at the repository root is the guide for every agent. Codex, Claude
+Code and OMP read it.
 
-| Work | Skill |
+| Directory | Content |
 | --- | --- |
-| Onboarding audit, release readiness, coordinating remaining work | [google-fonts-onboarding](skills/google-fonts-onboarding/SKILL.md) |
-| Compiled-font or package QA, coverage and proof evidence | [google-fonts-qa](skills/google-fonts-qa/SKILL.md) |
-| Downstream package preview and submission preparation | [google-fonts-packaging](skills/google-fonts-packaging/SKILL.md) |
-| Source metrics, kerning, and master compatibility | [font-qa](skills/font-qa/SKILL.md) |
+| `skills/` | Procedures that an agent loads by name, for example `build-font`. Codex, Claude Code and OMP find them here. |
+| `tasks/` | Task contracts for long or unattended runs: goal, acceptance, constraints, and the report to give at the end. |
 
-Invoke a skill with `$google-fonts-onboarding` or describe the task naturally.
-Skill descriptions identify when to use each workflow; only load supporting
-references when they help the task. The onboarding skills' `agents/openai.yaml`
-files provide Codex UI labels and starting prompts, not another instruction copy.
+`.omp/RULES.md` is a link to `AGENTS.md`. OMP gives rules to its subagents,
+but not `AGENTS.md`, so the link gives subagents the same rules.
 
-Project status and decisions live in [the onboarding checklist](../documentation/google-fonts/README.md).
-The [shared procedure](google-fonts-onboarding-checklists.md) is reusable;
-[official references](google-fonts-official-reference-map.md) supply specifications.
-All command and code paths in these skills are relative to the repository root.
+## Run a task with OMP
 
-This layout follows [OpenAI's skill documentation](https://learn.chatgpt.com/docs/build-skills)
-and [AGENTS.md guidance](https://learn.chatgpt.com/docs/agent-configuration/agents-md).
-Instructions emphasize clear scope, evidence, and follow-through, consistent with
-[the Astra model guidance](https://developers.openai.com/api/docs/guides/latest-model)
-checked on 2026-09-09. Model choice remains a Codex task setting; these font
-workflows do not require a model-specific config or API key.
+Use a separate checkout, so that an unattended run cannot change your working
+tree:
+
+```sh
+git worktree add ../virtua-grotesk-omp main
+cd ../virtua-grotesk-omp
+omp -p --wait-async --max-time 60m \
+  "Do the task in .agents/tasks/glyph-drafts.md for: acute caron circumflex, Regular."
+```
+
+Then review the branch, the report and the proof sheets in `out/review/`.
+`scripts/check_changes.py` checks the source changes of any run.

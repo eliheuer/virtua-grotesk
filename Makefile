@@ -6,13 +6,14 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender qa qa-full qa-package test reports lint-grid preflight status check-design queue benchmark skeleton clean
+.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender qa qa-full qa-package test reports lint-grid preflight status check-design queue check-changes benchmark skeleton clean
 
 help:
 	@printf '%s\n' \
 		'Virtua Grotesk workflow:' \
 		'  make status        Rewrite STATUS.md from mark colors (release target: all green)' \
 		'  make queue          Rank the glyphs that most composites wait on' \
+		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
 		'  make check-design GLYPHS="n a"  Check glyphs against the design targets' \
 		'  make benchmark RUN=dir  Score redrawn held-out glyphs against the green drawings' \
 		'  make setup          Create .venv and install requirements' \
@@ -114,6 +115,11 @@ check-design:
 
 queue:
 	$(PYTHON) scripts/check_design.py --queue
+
+# Check source changes since BASE (default main). Usage: make check-changes BASE=main GLYPHS="a e"
+BASE ?= main
+check-changes:
+	$(PYTHON) scripts/check_changes.py --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
 
 # Usage: make benchmark RUN=out/benchmark/run-1   (prepare it first; see scripts/benchmark.py)
 benchmark:
