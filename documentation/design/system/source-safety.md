@@ -10,7 +10,7 @@ component donors and affected consumers: editing a non-green donor can change a
 protected green drawing. A green change needs explicit glyph/master permission.
 Reserved human edits also remain protected regardless of color.
 
-Color meanings and known variants live in `contract.json`. Red permits replacement
+Color meanings and known variants live in `sources/design.toml`. Red permits replacement
 within an authorized task. Orange/yellow preserve useful drawing. Blue/pink identify
 composite work; purple identifies unreviewed AI drawing. Unknown/conflicting colors
 need classification. Eli approves contour glyphs; a composite follows `check_design.py --ready`. New AI drawings use purple.

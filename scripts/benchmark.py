@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Score a drafting pipeline on green glyphs that it has not seen.
 
-The cases are in tests/benchmark.json. Each case is a green glyph in one
+The cases are in tests/benchmark.toml. Each case is a green glyph in one
 master. The drawing in sources/ is the reference.
 
     benchmark.py prepare out/benchmark/run-1    copy the sources without the
@@ -29,6 +29,7 @@ import plistlib
 import re
 import shutil
 import sys
+import tomllib
 from pathlib import Path
 
 import numpy as np
@@ -38,7 +39,7 @@ from fontTools.ufoLib.glifLib import readGlyphFromString
 from PIL import Image, ImageChops, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
-CASES = ROOT / 'tests/benchmark.json'
+CASES = ROOT / 'tests/benchmark.toml'
 RED = '1,0,0,1'
 SCALE = 0.25          # raster pixels per font unit
 ORIGIN = (512, 512)   # font units left of and below the glyph origin
@@ -137,7 +138,7 @@ def glif_path(ufo, name):
 
 
 def cases():
-    return json.loads(CASES.read_text())['cases']
+    return tomllib.loads(CASES.read_text())['cases']
 
 
 def prepare(out):

@@ -1,7 +1,7 @@
 # Grid and metrics
 
-`contract.json` is the machine-readable owner of shared metrics, palette and
-source-grid rules. The em is 1024; ascender/caps 768, x-height 576, descender -256.
+`sources/design.toml` holds the grid values and the mark colors that scripts read.
+The em is 1024; ascender/caps 768, x-height 576, descender -256.
 Source drawing metrics are distinct from font line-box and clipping metrics.
 Read current fontinfo when changing engineering metrics.
 

@@ -7,7 +7,7 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Topic | Documents |
 | --- | --- |
 | Character and construction | [Identity](system/identity.md) |
-| Metrics, 8/2 grid, popcount | [Grid](system/grid.md), [contract.json](system/contract.json) |
+| Metrics, 8/2 grid, popcount | [Grid](system/grid.md), [design.toml](../../sources/design.toml) |
 | Weight and spacing | [Weight](system/weight.md), [Spacing](system/spacing.md) |
 | Interpolation and source topology | [Interpolation](system/interpolation.md) |
 | Source protection | [Source safety](system/source-safety.md) |
@@ -19,7 +19,7 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Checks, benchmark and how corrections are recorded | [Learning loop](system/learning.md) |
 | Earlier design philosophy | [History](system/design-philosophy-history.md) |
 
-`system/contract.json` is the machine-readable contract for metrics, grid,
+`sources/design.toml` holds the values that scripts read: grid, chamfers,
 stroke targets and mark colors. `make status` and `make check-design` read it.
 
 The review records, correction library and context retrieval tool that these

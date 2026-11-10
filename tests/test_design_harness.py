@@ -32,9 +32,9 @@ class Benchmark(unittest.TestCase):
         self.assertEqual((row['iou'], row['moved']), (0.0, 'no outline'))
 
     def test_cases_are_green_in_the_sources(self):
-        import json
+        import tomllib
         import source_inventory
-        contract = json.loads(check_design.CONTRACT.read_text())
+        contract = tomllib.loads(check_design.CONTRACT.read_text())
         data = {m: source_inventory.load_master(check_design.ROOT, m, contract)
                 for m in check_design.MASTERS}
         for case in benchmark.cases():

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Freeze a conservative green-only pilot corpus. Does not train or alter sources."""
 import argparse, collections, hashlib, json, shutil, unicodedata
+import tomllib
 from pathlib import Path
 import xml.etree.ElementTree as ET
 import source_inventory as dc
@@ -8,7 +9,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def build(root, out):
     if out.exists(): raise ValueError('Output already exists; choose a new snapshot')
-    contract=dc.read_json(root/'documentation/design/system/contract.json')
+    contract=tomllib.loads((root/'sources/design.toml').read_text())
     masters={m:dc.load_master(root,m,contract) for m in ('Regular','Bold')}
     # Shared marks do not carry letter-body supervision in this pilot.
     shared_marks={n for records in masters.values() for n,r in records.items()

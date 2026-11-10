@@ -12,7 +12,7 @@ each event.
    or in the source with a purple mark. The draft is committed before Eli
    edits it.
 3. **Measure.** `make check-design GLYPHS="..."` compares the draft with the
-   targets in [contract.json](contract.json). Correct the findings before
+   targets in [design.toml](../../../sources/design.toml). Correct the findings before
    review. A pass is a filter, not approval.
 4. **Review.** Eli compares the glyph with the reference fonts in Runebender
    or `make proof-web`, then corrects it or marks it green. The correction is
@@ -38,8 +38,8 @@ If none applies, record nothing.
 | Outcome | Meaning | Location |
 | --- | --- | --- |
 | Exception | The correction applies to this glyph only, or the feedback is ambiguous. | A short record in [glyphs/](../glyphs/README.md), only if a later agent would repeat the error. |
-| Reusable decision | The same decision will occur in other glyphs. | A case in `tests/benchmark.json`. The green drawing is the reference. |
-| System gap | A target, check or rule was wrong or absent. | A change to `contract.json`, `scripts/check_design.py` or one rule document. |
+| Reusable decision | The same decision will occur in other glyphs. | A case in `tests/benchmark.toml`. The green drawing is the reference. |
+| System gap | A target, check or rule was wrong or absent. | A change to `sources/design.toml`, `scripts/check_design.py` or one rule document. |
 
 A correction is not a rule by default. Add a rule only when the same
 correction occurred in more than one glyph. When a rule changes, edit the
@@ -63,7 +63,7 @@ Arabic and Bold Latin. Add targets for Bold Arabic and Hebrew with
 
 ## Benchmark
 
-`scripts/benchmark.py` hides the green glyphs listed in `tests/benchmark.json`
+`scripts/benchmark.py` hides the green glyphs listed in `tests/benchmark.toml`
 in a copy of the sources, then scores a redrawn copy against the green
 drawings. Use it to compare two drafting methods or two models on the same
 cases. A method that reads `sources/` or the Git history has seen the

@@ -21,11 +21,11 @@ shell entrypoints. `make help` lists the maintained command interface.
 ## Design harness
 
 - `check_design.py`: checks glyphs against the stroke targets in
-  `documentation/design/system/contract.json`, checks composites against their
+  `sources/design.toml`, checks composites against their
   parts and anchor recipes, and ranks the glyphs that most composites wait on
   (`make check-design`, `make queue`). It needs the Runebender binary.
 - `benchmark.py`: scores a drafting pipeline on the held-out green glyphs in
-  `tests/benchmark.json` (`make benchmark RUN=...`).
+  `tests/benchmark.toml` (`make benchmark RUN=...`).
 - `status.py`: writes `STATUS.md` from the mark colors (`make status`).
 
 The loop that uses them is in

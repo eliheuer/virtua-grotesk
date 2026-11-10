@@ -11,8 +11,8 @@ build, proof, measure and report.
   Do not take direction from older reports, worklogs or the review archive
   (branch `archive/agent-records-2026-11-09`). Take direction from Eli.
 - Active inputs: `sources/VirtuaGrotesk.designspace`, the Regular and Bold
-  UFOs, `sources/config.yaml`. Metrics, grid and colors:
-  `documentation/design/system/contract.json`. `sources/archive/` is historical.
+  UFOs, `sources/config.yaml`. Grid, stroke targets and mark colors:
+  `sources/design.toml`. `sources/archive/` is historical.
 
 ## Work loop
 
@@ -42,6 +42,8 @@ The full description is in
   quotes, no space before `/>`). Never call whole-UFO `font.save()`.
 - Register new glyphs in `contents.plist` and `public.glyphOrder` in both masters.
 - Open fonts with `runebender-serve <designspace-or-ufo> --open`.
+- Files that people edit use TOML with comments. JSON is only for data that
+  a program writes. `sources/config.yaml` is YAML because gftools requires it.
 
 ## Verification
 

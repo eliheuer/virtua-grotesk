@@ -1,0 +1,80 @@
+# Virtua Grotesk design specification.
+#
+# Read by scripts/status.py and scripts/check_design.py.
+# The rules behind these values are in documentation/design/.
+# Font metrics are in the UFO fontinfo.plist files, and the weight axis is in
+# VirtuaGrotesk.designspace. They are not repeated here.
+
+
+# Point grid, in font units. See documentation/design/system/grid.md.
+[grid]
+source = 2         # every point is on the 2-unit grid
+machine_draft = 8  # new drafts use the 8-unit grid
+# A point on the 2-unit grid but off the 8-unit grid is an optical correction
+# by Eli. It stays.
+
+
+# Chamfer sizes, in font units. See documentation/design/constructions/chamfers.md.
+[chamfers]
+exposed = 16
+tight_junction = 8
+
+
+# Stroke thickness ranges, in font units.
+#
+# Set from the green glyphs with `check_design.py --observe`. A measured span
+# longer than stroke_limit is not a stroke. A script without a table has no
+# green glyphs to set a range from yet (Bold Arabic, Hebrew).
+#
+# vertical_stem      thickness of a vertical stroke, measured horizontally
+# horizontal_stroke  thickness of a horizontal stroke, measured vertically
+
+[targets.Regular.Latin]
+vertical_stem = [92, 108]
+horizontal_stroke = [78, 100]
+stroke_limit = 180
+
+[targets.Regular.Arabic]
+vertical_stem = [80, 112]
+horizontal_stroke = [88, 112]
+stroke_limit = 180
+
+[targets.Bold.Latin]
+vertical_stem = [176, 208]
+horizontal_stroke = [124, 170]
+stroke_limit = 300
+
+
+# Mark colors.
+#
+# rgba lists every value that the sources use for the color. The policy is
+# what an agent can do with a glyph that has the color.
+
+[colors.green]
+rgba = [[0, 1, 0, 1], [0.09, 0.72, 0.44, 1]]
+policy = """Approved. Eli approves contour glyphs. A composite is green when its \
+parts are green and check_design.py --ready lists it."""
+
+[colors.yellow]
+rgba = [[1, 1, 0, 1], [1, 0.86, 0.2, 1], [0.91, 0.79, 0.27, 1]]
+policy = "Edit without replacing the drawing. Not a reference."
+
+[colors.orange]
+rgba = [[1, 0.5, 0, 1], [1, 0.6, 0.06, 1], [0.97, 0.58, 0, 1]]
+policy = "Edit and keep useful construction. Replace only when Eli says so."
+
+[colors.red]
+rgba = [[1, 0, 0, 1], [1, 0.29, 0.24, 1], [1, 0.3, 0.3, 1]]
+policy = "Can be replaced when Eli names the glyph. Not a reference."
+
+[colors.purple]
+rgba = [[0.54, 0.44, 0.88, 1], [0.5, 0, 1, 1]]
+policy = "AI drawing that Eli has not reviewed. Not a reference."
+
+[colors.blue]
+rgba = [[0.27, 0.44, 1, 1]]
+policy = "Composite that needs diagnosis. Not a reference."
+
+[colors.pink]
+rgba = []  # no glyph uses pink now
+policy = "Composite that needs small edits. Not a reference."

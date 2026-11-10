@@ -12,6 +12,7 @@ import datetime
 import json
 import plistlib
 import sys
+import tomllib
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -19,7 +20,7 @@ ROOT = Path(__file__).resolve().parent.parent
 MASTERS = ['Regular', 'Bold']
 OUT = ROOT / 'STATUS.md'
 SCRIPTS = ['Arabic', 'Hebrew', 'Latin and other']
-COLORS = json.loads((ROOT / 'documentation/design/system/contract.json').read_text())['colors']
+COLORS = tomllib.loads((ROOT / 'sources/design.toml').read_text())['colors']
 
 
 def color_name(value):

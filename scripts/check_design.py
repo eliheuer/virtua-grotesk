@@ -2,7 +2,7 @@
 """Check glyphs against the measurable design specification.
 
 The specification is the `targets` section of
-documentation/design/system/contract.json. Runebender measures the glyphs
+sources/design.toml. Runebender measures the glyphs
 (`runebender agent call analyze_glyph`); this script holds the Virtua policy.
 It reads the sources and never writes them.
 
@@ -28,13 +28,14 @@ import os
 import shutil
 import subprocess
 import sys
+import tomllib
 import unicodedata
 from pathlib import Path
 
 import source_inventory as inventory
 
 ROOT = Path(__file__).resolve().parents[1]
-CONTRACT = ROOT / 'documentation/design/system/contract.json'
+CONTRACT = ROOT / 'sources/design.toml'
 CACHE = ROOT / 'out/check-design-cache'
 MASTERS = ['Regular', 'Bold']
 
@@ -214,7 +215,7 @@ def main():
     parser.add_argument('--json', action='store_true')
     args = parser.parse_args()
 
-    contract = json.loads(CONTRACT.read_text())
+    contract = tomllib.loads(CONTRACT.read_text())
     targets = contract.get('targets', {})
     data = {m: inventory.load_master(ROOT, m, contract) for m in MASTERS}
     if args.observe:
