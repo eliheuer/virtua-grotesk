@@ -16,11 +16,11 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Arabic, Hebrew, Latin, symbols | [Writing systems](writing-systems/README.md) |
 | Named glyph intent | [Glyph records](glyphs/README.md) |
 | Reference roles and Latin dimensions | [References](references/README.md), [Latin dimensions](references/latin-dimensions.md) |
-| Training data boundaries | [Learning](system/learning.md) |
+| Checks, benchmark and how corrections are recorded | [Learning loop](system/learning.md) |
 | Earlier design philosophy | [History](system/design-philosophy-history.md) |
 
-`design/system/contract.json` is the machine-readable contract for metrics, grid
-and mark colors. `make status` reads its color definitions.
+`system/contract.json` is the machine-readable contract for metrics, grid,
+stroke targets and mark colors. `make status` and `make check-design` read it.
 
 The review records, correction library and context retrieval tool that these
 documents once linked to are on branch `archive/agent-records-2026-11-09`.

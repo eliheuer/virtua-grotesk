@@ -9,7 +9,7 @@ It ties the existing tools together and emits ONE structured report:
   3. pointers to the diffenator2 gold-standard views (make review / review-rubik)
   4. an explicit review checklist an agent works down, and a FIX pointer
 
-Placement fixes are deterministic (build_anchors.py); optical/drawing calls are
+Placement fixes follow the anchors (`runebender compose`); optical/drawing calls are
 flagged for a human. Run: python scripts/qa_loop.py  (or: make qa-diacritics)
 """
 import subprocess, sys, os, re
@@ -57,8 +57,8 @@ lines += [
     "- [ ] Flag mark DRAWING issues for the designer (flat tilde, tall circumflex,",
     "      off-8 mark y-coords) — placement is separate from shape.",
     "",
-    "**Fix (placement):** `python scripts/build_anchors.py` re-centers every composite",
-    "from the anchors; rerun it after any base-glyph edit. Optical/drawing = designer.",
+    "**Fix (placement):** `runebender compose <ufo>` reports composites that differ",
+    "from their anchor recipe; run it after any base-glyph edit. Optical/drawing = designer.",
 ]
 
 report = "\n".join(lines)

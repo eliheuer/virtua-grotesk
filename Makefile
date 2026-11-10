@@ -6,12 +6,15 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender qa qa-full qa-package test reports lint-grid preflight status skeleton clean
+.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender qa qa-full qa-package test reports lint-grid preflight status check-design queue benchmark skeleton clean
 
 help:
 	@printf '%s\n' \
 		'Virtua Grotesk workflow:' \
 		'  make status        Rewrite STATUS.md from mark colors (release target: all green)' \
+		'  make queue          Rank the glyphs that most composites wait on' \
+		'  make check-design GLYPHS="n a"  Check glyphs against the design targets' \
+		'  make benchmark RUN=dir  Score redrawn held-out glyphs against the green drawings' \
 		'  make setup          Create .venv and install requirements' \
 		'  make build          Build variable and static TTFs into fonts/' \
 		'  make proof          Build the main PDF proof' \
@@ -71,7 +74,7 @@ review-rubik:
 	@echo ">>> open out/review-rubik/diff3proof.html"
 
 # Diacritic/spacing QA loop harness: audit + Rubik render + review checklist.
-# The agent (person, or Gemma once wired) drives this; fix with build_anchors.py.
+# The agent (person, or Gemma once wired) drives this; fix the anchors in the source.
 qa-diacritics: build
 	$(PYTHON) scripts/qa_loop.py
 
@@ -103,6 +106,18 @@ reports:
 
 status:
 	$(PYTHON) scripts/status.py
+
+# Check glyphs against the design targets. Usage: make check-design GLYPHS="n seen-ar"
+# Without GLYPHS it reports on every glyph that is not green.
+check-design:
+	$(PYTHON) scripts/check_design.py $(if $(GLYPHS),$(GLYPHS),--not-green)
+
+queue:
+	$(PYTHON) scripts/check_design.py --queue
+
+# Usage: make benchmark RUN=out/benchmark/run-1   (prepare it first; see scripts/benchmark.py)
+benchmark:
+	$(PYTHON) scripts/benchmark.py score "$(RUN)"
 
 grid-qa:
 	$(PYTHON) scripts/grid_qa.py
@@ -141,13 +156,6 @@ preflight: build proof reports
 
 clean:
 	rm -rf build build.ninja .ninja_log dist fonts sources/build.ninja sources/.ninja_log sources/instance_ufos
-
-.PHONY: arabic-sync
-arabic-sync:  ## Re-snap Arabic dots to their anchors, then re-sync Bold
-	./.venv/bin/python scripts/arabic_anchors.py
-	./.venv/bin/python scripts/embolden.py --dx 36 --dy 27
-	./.venv/bin/python scripts/arabic_anchors.py
-	./.venv/bin/python scripts/glif_lint.py
 
 .PHONY: qa-hebrew
 qa-hebrew: build

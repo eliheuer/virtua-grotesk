@@ -13,7 +13,7 @@ Reserved human edits also remain protected regardless of color.
 Color meanings and known variants live in `contract.json`. Red permits replacement
 within an authorized task. Orange/yellow preserve useful drawing. Blue/pink identify
 composite work; purple identifies unreviewed AI drawing. Unknown/conflicting colors
-need classification. Never assign green. New AI drawings use Eli's purple convention.
+need classification. Eli approves contour glyphs; a composite follows `check_design.py --ready`. New AI drawings use purple.
 
 Before writing, save an exact baseline of each file you will change.
 Preserve concurrent editor saves, metrics, anchors, features and unrelated files.

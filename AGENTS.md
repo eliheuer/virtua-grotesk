@@ -2,7 +2,8 @@
 
 Virtua Grotesk is an OFL variable font (wght 400 to 700) for Latin, Arabic
 and Hebrew, intended for Google Fonts. The release target is every glyph
-green in both masters. Eli draws. Agents build, proof, measure and report.
+green in both masters. Eli draws and approves. Agents draft named glyphs,
+build, proof, measure and report.
 
 ## State
 
@@ -13,20 +14,29 @@ green in both masters. Eli draws. Agents build, proof, measure and report.
   UFOs, `sources/config.yaml`. Metrics, grid and colors:
   `documentation/design/system/contract.json`. `sources/archive/` is historical.
 
-## Evaluation
+## Work loop
 
-1. Render the same text in Virtua Grotesk and the reference fonts in
-   `reference-fonts/`, at one em size and weight, at reading and display
-   sizes. Use Runebender or `make proof-web`.
-2. Run the grid checks (`make lint-grid`, `make grid-qa`) as a mechanical
-   filter. The 8-unit grid is the default; 2-unit points are human optical
-   corrections and stay. The checks do not measure quality.
-3. Eli gives the verdict. Agents do not write verdicts or approvals.
+The full description is in
+[documentation/design/system/learning.md](documentation/design/system/learning.md).
+
+1. `make queue` ranks the glyphs that most composites wait on. Eli names the
+   glyphs to work on.
+2. Draft, then run `make check-design GLYPHS="..."` and correct the findings.
+   The checks are a filter. They do not measure quality.
+3. Render the same text in Virtua Grotesk and the fonts in `reference-fonts/`
+   at one em size and weight. Use Runebender or `make proof-web`.
+4. Eli reviews and corrects. Commit the draft before the correction, so that
+   the Git history holds both.
+5. Record a correction only as that document describes: an exception, a
+   benchmark case or a change to the specification. Do not add worklogs,
+   reports, receipts or handoff files to the repository.
 
 ## Source rules
 
 - Draw or redraw only glyphs Eli names, in the masters Eli names.
-- Green is frozen. Never assign green. Mark new AI drawing purple.
+- Green contour glyphs are frozen. Eli approves contour glyphs. Mark new AI
+  drawing purple.
+- A composite that `scripts/check_design.py --ready` lists can be marked green.
 - Keep contour, point and component structure compatible in both masters.
 - Edit GLIF XML and plists surgically in the existing style (tabs, double
   quotes, no space before `/>`). Never call whole-UFO `font.save()`.

@@ -162,7 +162,7 @@ An older proof or passing check is not evidence for subsequently edited sources.
 4. Inspect actual PNGs, show selected comparisons inline in chat, and describe
    visible changes and unresolved limitations. Use an absolute Markdown image
    path in Codex. Separate technical validation, agent visual inspection, and
-   Eli's drawing approval. Keep drafts unapproved; never assign green; new AI drawings use purple under Eli’s convention.
+   Eli's drawing approval. Keep drafts unapproved. Eli approves contour glyphs. New AI drawings use purple.
 5. Run compatibility, curve and compiled-shaping checks appropriate to the edit.
    Apply only the authorized files after checking the active source hashes still
    match the baseline. Preserve backups. Rebuild active sources, compare with the

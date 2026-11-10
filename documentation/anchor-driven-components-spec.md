@@ -85,7 +85,7 @@ Anchors: underscore anchors are drawn **hollow**.
 
 **Commands worth having:** `Set Anchors` (Cmd-U) and `Reset Anchors`
 (Cmd-Opt-U) add/redo default anchors on a selection — this repo currently
-does that offline in `scripts/arabic_anchors.py` and
+did that offline with scripts that are now in the Git history (`arabic_anchors.py`) and
 `scripts/latin_marks.py`. Also `Make Component Glyph` (Cmd-Opt-Shift-C).
 
 **Mark cloud:** selecting an anchor shows a grey preview of every mark
@@ -166,7 +166,7 @@ separated from `topDots`/`bottomDots` (Rubik's split). The editor work is
 to recompute `base.slot − mark._slot` on anchor drag and offer a detach
 that falls back to a stored freeform offset.
 
-Until then, `make arabic-sync` does the same job offline.
+`runebender compose` now derives composites from anchors.
 
 ## Sources
 

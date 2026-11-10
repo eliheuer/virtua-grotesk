@@ -1,6 +1,6 @@
 # Symbols and image-derived construction
 
-Choose the method from the geometry. Use calibrated anchor sheets and symbol_gen.py
+Choose the method from the geometry. Use construction from green symbols
 for line-grammar symbols; use the existing img2bez masters workflow for organic
 image tracing. A chosen reference image supplies the authorized form; green Virtua
 sources supply construction, scale and weight unless the user specifies otherwise.

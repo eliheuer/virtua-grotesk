@@ -18,25 +18,26 @@ shell entrypoints. `make help` lists the maintained command interface.
 - `audit_diacritics.py`, `latin_diacritics_audit.py`, `compare_diacritics.py`,
   `shape_sheet.py`, `qa_loop.py`: focused diacritic and shaping review.
 
-## Drawing and source-writing utilities
+## Design harness
 
-`anchor_sheet.py` and `symbol_gen.py` measure reference sheets and write
-candidate GLIFs under `out/`.
+- `check_design.py`: checks glyphs against the stroke targets in
+  `documentation/design/system/contract.json`, checks composites against their
+  parts and anchor recipes, and ranks the glyphs that most composites wait on
+  (`make check-design`, `make queue`). It needs the Runebender binary.
+- `benchmark.py`: scores a drafting pipeline on the held-out green glyphs in
+  `tests/benchmark.json` (`make benchmark RUN=...`).
+- `status.py`: writes `STATUS.md` from the mark colors (`make status`).
 
-The `arabic_*`, `latin_*`, `build_anchors.py`, `propagate_anchors.py`,
-`realign_components.py`, `fix_accent_offsets.py`, `embolden.py`,
-`bold_copy_from_regular.py`, `normalize_winding.py`, `dot_variants.py`, and
-`lam_alef_variants.py` tools include source construction, measurement, and
-repair experiments. Read the individual script before running it. Their
-presence is not permission to apply an entire batch to live UFOs. Use a scratch
-copy for exploratory changes and preserve protected colors.
+The loop that uses them is in
+[documentation/design/system/learning.md](../documentation/design/system/learning.md).
 
-`find_should_be_components.py` and `rubik_weight_deltas.py` are analysis aids.
-`refresh-ui-font.sh` is a local editor-development utility, not a font release
-step.
+`find_should_be_components.py` is an analysis aid. `refresh-ui-font.sh` is a
+local editor-development utility, not a font release step.
 
-The retired report/packaging script collection is available in Git history.
-Do not restore it wholesale; extend the maintained commands only when needed.
+The generator scripts that wrote whole glyph sets into the UFOs (`arabic_*`,
+`latin_accents.py`, `embolden.py`, `build_anchors.py` and others) are in the
+Git history before 2026-11-10. Do not restore them. Draw named glyphs through
+Runebender proposals.
 
 ## Source compatibility
 
