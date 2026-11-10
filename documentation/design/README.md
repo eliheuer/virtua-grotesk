@@ -15,7 +15,7 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Chamfers, turns, curves, bowls, dots | [Constructions](constructions/README.md) |
 | Arabic, Hebrew, Latin, symbols | [Writing systems](writing-systems/README.md) |
 | Named glyph intent | [Glyph records](glyphs/README.md) |
-| Reference roles and Latin dimensions | [References](references/README.md), [Latin dimensions](references/latin-dimensions.md) |
+| Reference roles and reference fonts | [References](references/README.md) |
 | Checks, benchmark and how corrections are recorded | [Learning loop](system/learning.md) |
 | Editing UFO, designspace and kerning files | [Source editing](system/source-editing.md) |
 
@@ -23,4 +23,4 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 stroke targets and mark colors. `make status` and `make check-design` read it.
 
 The review records, correction library and context retrieval tool that these
-documents once linked to are on branch `archive/agent-records-2026-11-09`.
+documents once linked to are in the Git history before commit 1db2dfc7.

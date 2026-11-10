@@ -16,4 +16,4 @@ to investigate faults. Numerical improvement never establishes human approval.
 
 Measured Zayin, Gimel, Final Tsadi and hamza corrections are scoped examples.
 Their radii, handles and shelves are not universal formulas. The correction
-records and counterexamples are on branch `archive/agent-records-2026-11-09`.
+records and counterexamples are in the Git history before commit 1db2dfc7.

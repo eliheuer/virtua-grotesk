@@ -2,7 +2,7 @@
 
 Use this procedure for curved outlines and for weight transfers. It comes
 from Eli's corrections of Bold `hamzaabove-ar` and of the `at` sign in
-October 2026. Their records are on branch `archive/agent-records-2026-11-09`.
+October 2026. Their records are in the Git history before commit 1db2dfc7.
 
 ## Procedure
 
@@ -59,6 +59,27 @@ its plan file. Neither gives a pass threshold. The filled proof decides.
   for kinks did not find it.
 - Eli's outer shoulder keeps a curvature mismatch at one join. Keep it. The
   preferred shape is not the one with the most G2 joins.
+
+## Rule entries
+
+### On-curve points at extrema
+
+Every crest, trough and side extreme of a curve has an on-curve point with a
+horizontal or vertical tangent.
+Seen in: asciitilde (56f4b437), section (22ccd03a), b d (dec6b4b3).
+
+### Smooth flags
+
+A line that continues into a collinear handle is a smooth point. A corner is
+only a deliberate kink.
+Seen in: Eli's instruction (372bb48e).
+
+### Handle lengths
+
+Compensated handle pairs keep the form. Handles within one segment stay of
+similar length, and the lengths follow the proportions of the glyph.
+Seen in: Eli's instruction in `design/reviews/latin-worklog.md`, in the Git
+history before commit 1db2dfc7.
 
 ## Reading
 

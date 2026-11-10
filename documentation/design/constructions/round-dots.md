@@ -9,8 +9,8 @@ the 8-unit machine grid. Preserve green human optical coordinates on the 2-grid.
 Circular dots have no sharp corners to chamfer. This specifies letter-dot shape;
 it is not an instruction to make every Arabic vowel mark circular.
 
-The ARB-005 dot correction (`design/reviews/arabic-005/round-dots/` on
-branch `archive/agent-records-2026-11-09`) records the first trial: Bold diameter 224, radius 112 and handles 64, all on 8.
+The ARB-005 dot correction (`design/reviews/arabic-005/round-dots/`, in the
+Git history before commit 1db2dfc7) records the first trial: Bold diameter 224, radius 112 and handles 64, all on 8.
 Those dimensions are a local candidate, not a mandated size for every dot or
 weight. Measure radial deviation and inspect at text size; a circle-like box
 alone does not establish circular curvature. Existing approved Regular dots

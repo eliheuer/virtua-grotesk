@@ -19,5 +19,5 @@ Material for the Google Fonts page and for publicity:
 Run image scripts from the repository root after `make build`. Rendered
 images are ignored by Git. Commit a final image explicitly, with its license.
 
-Review records, worklogs and handoffs from before 2026-11-09 are on branch
-`archive/agent-records-2026-11-09`. They are history, not instructions.
+Review records, worklogs and handoffs from before 2026-11-09 are in the Git
+history before commit 1db2dfc7. They are history, not instructions.

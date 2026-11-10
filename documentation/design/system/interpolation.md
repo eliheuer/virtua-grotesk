@@ -24,3 +24,23 @@ Bold master starts red and gets lane-2 transferred from Eli's bold
 reference image like any glyph; (3) one `<sub>` line in the designspace.
 Both glyphs must each stay master-compatible with themselves — the
 compat gate handles this with no special cases.
+
+## Rule entries
+
+### No overlapping contours in sources
+
+Union overlapping parts into one contour. Sources never contain overlaps.
+Seen in: dollar (7f8be952), one.tf (dbe60148).
+
+### A weight transfer keeps edge directions
+
+A Bold edge has the same direction as the Regular edge it comes from.
+Seen in: Bold seven nine (70c6a082).
+
+### Contour start point
+
+The start point is on the side where the writing direction starts: the
+leftmost point for Latin, the rightmost point for Arabic and Hebrew. If two
+points tie, the lowest one is the start point. This replaces the
+leftmost-then-lowest rule of 56f4b437 for right-to-left scripts.
+Seen in: asciitilde (56f4b437), Eli's instruction (2026-11-10).

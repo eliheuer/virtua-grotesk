@@ -17,3 +17,13 @@ A tangent join is not a sharp corner. Preserve small deliberate cuts and straigh
 landings where documented. Read the actual green donor run before adding, removing,
 or rounding a cut. Hebrew marks share the letter construction; Arabic letter dots
 have their own circular-shape rule.
+
+## Rule entries
+
+### Tips end on a flat, and cuts never shrink
+
+An arm tip or a terminal ends on a 16-unit flat before the bevel. No curve
+meets an edge in a point. In a Bold transfer, a cut can get larger but never
+smaller.
+Seen in: less greater (cb7a5084), asciitilde (0faf5dbe), section (22ccd03a),
+Bold two three five six (c5042963), v w x y V W X (9a2e884d).

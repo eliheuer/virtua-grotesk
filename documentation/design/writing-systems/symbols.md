@@ -14,3 +14,9 @@ The historical symbol generator now emits standalone purple GLIFs only under an
 explicit fresh out/ directory. Its old measured recipes retain their original
 coordinates, so generation does not imply draft-grid compliance. Inspect/refit and
 register into a scratch font before building; no active installation is performed.
+
+## Glyph decisions
+
+- dollar uses the uppercase S as its body (7f8be952).
+- section needs chamfer terminals; it is orange because the trace is light
+  (22ccd03a).

@@ -10,5 +10,19 @@ Check base/mark and mark-to-mark attachment with actual compiled shaping at mult
 weights. Coverage alone does not establish drawing or attachment quality. The
 Hebrew-to-Latin optical weight relationship remains provisional.
 
-The complete historical sequence is in `design/reviews/hebrew-001/` through
-`design/reviews/hebrew-010/` on branch `archive/agent-records-2026-11-09`.
+The review sequence `design/reviews/hebrew-001/` to `hebrew-010/` is in the
+Git history before commit 1db2dfc7.
+
+## Rule entries
+
+### Rubik is the structural reference
+
+When a Hebrew letter looks wrong, compare its skeleton with Rubik. Use Rubik
+for the structure only, and draw it with Virtua's chamfers, grid and own
+forms. Do not copy Rubik. Simplify rather than add.
+Seen in: zayin shin finaltsadi samekh (4e900dd0, df38c4a2), gimel (3814ca96).
+
+### Geometric does not mean rectangular
+
+Keep oval bowls and counters. Remove only organic irregularity.
+Seen in: samekh v4, rejected by Eli (df38c4a2).

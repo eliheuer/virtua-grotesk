@@ -16,3 +16,15 @@ Do not copy Hebrew mark shapes into Arabic letter dots.
 
 Progress is in `STATUS.md`. Kaf and final Yeh have glyph intent records in
 `design/glyphs/`; read them before treating reference differences as defects.
+
+## Rule entries
+
+### Finish base forms before marks
+
+Draw and correct the base letters before their marks.
+Seen in: ARB-004 (211c3b8d).
+
+### Isolated boats and cups have even terminals
+
+The two terminals of an isolated boat or cup have the same thickness.
+Seen in: behDotless-ar, terminal 432 reduced to 288 (67f4d301).
