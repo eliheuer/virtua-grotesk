@@ -12,7 +12,7 @@ build, proof, measure and report.
   (branch `archive/agent-records-2026-11-09`). Take direction from Eli.
 - Active inputs: `sources/VirtuaGrotesk.designspace`, the Regular and Bold
   UFOs, `sources/config.yaml`. Grid, stroke targets and mark colors:
-  `sources/design.toml`. `sources/archive/` is historical.
+  `sources/design.toml`.
 
 ## Work loop
 

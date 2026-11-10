@@ -16,6 +16,5 @@ scripts read.
 `config.yaml` is a local build recipe for tools that support that format. It is
 not a replacement for the designspace/UFO sources.
 
-Older source material lives in `archive/` for reference only. It is not part of
-the active source set and should not be used for normal builds unless a
-maintainer explicitly promotes it back into the active source tree.
+Older Virtua Grotesk and Kinderhugel Grotesk sources are in the Git history,
+in the folder `sources/archive/`, which was removed on 2026-11-10.

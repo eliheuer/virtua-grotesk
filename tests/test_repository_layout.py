@@ -49,8 +49,6 @@ RECORD_ALLOWED = {'STATUS.md'}
 MAX_DOCUMENT_LINES = 200
 
 PENDING = {
-    # Section 1: historical sources.
-    'sources/archive/**',
     # Section 2: the experimental repair model.
     'models/**',
     # Section 7: agent documents outside a skill directory.

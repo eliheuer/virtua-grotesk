@@ -117,8 +117,6 @@ def main():
         if path in by_file:
             master, name = by_file[path]
             changed[master].add(name)
-        elif path.startswith('sources/archive/'):
-            errors.append(f'{path}: archive changed')
         elif not args.allow_other:
             errors.append(f'{path}: source file other than a glyph changed (use --allow-other)')
         else:
