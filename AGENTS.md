@@ -31,6 +31,21 @@ The full description is in
    benchmark case or a change to the specification. Do not add worklogs,
    reports, receipts or handoff files to the repository.
 
+## What belongs in the repository
+
+The repository holds sources, tools, tests and maintained documents. It does
+not hold records of work.
+
+- Do not add worklogs, handoffs, receipts, reports, plans, audits or dated
+  documents. The Git history and commit messages are the record of work.
+- Generated output goes to `out/`, which Git ignores.
+- Before you add a document, extend the existing one on the same subject.
+  A maintained document has at most 200 lines.
+- `tests/test_repository_layout.py` enforces these rules in CI. To add a new
+  kind of file, change its LAYOUT list in the same commit and give the reason
+  in the commit message. Its PENDING list holds old files under review; it can
+  only get shorter.
+
 ## Source rules
 
 - Draw or redraw only glyphs Eli names, in the masters Eli names.

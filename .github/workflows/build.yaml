@@ -25,6 +25,8 @@ jobs:
           sudo apt-get install -y libcairo2-dev pkg-config python3-dev
       - name: Install Python dependencies
         run: make setup
+      - name: Check repository layout
+        run: .venv/bin/python -m unittest tests.test_repository_layout -v
       - name: Test proof tools
         run: |
           .venv/bin/python -m unittest discover -s scripts/proof-web/app -p 'test_*.py' -v
