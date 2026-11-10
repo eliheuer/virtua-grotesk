@@ -65,6 +65,11 @@ point edits, review them in Runebender's Agent Proof view, and take turns editin
 with the agent.
 
 **Start here:** [Helper model workflow guide](documentation/native-model-workflow.md).
+Use the [red-pencil review loop](documentation/native-model-workflow.md#red-pencil-review-loop)
+to mark corrections or sketch another form directly in native Agent Proof. Agents
+receive the annotated PNG through MCP, interpret your intent, and prepare a scratch
+candidate. The model takes geometry and a point mask; it does not read the sketch.
+
 It covers Linux setup, model inference, the required MCP connection, scratch
 comparisons, and handing control between you and the agent.
 

@@ -24,12 +24,15 @@ def clean_wide(record,cohort):
     return vr.make_example(record,mask,{},'clean-wide',cohort)
 
 
-def run(snapshot,out):
+def run(snapshot,out,manifest_sha256=old.MANIFEST,max_steps=1800,max_seconds=180,extended_run=False):
+    step_limit,second_limit=(2000000,7200) if extended_run else (100000,1800)
+    if not 1 <= max_steps <= step_limit or not 1 <= max_seconds <= second_limit:
+        raise ValueError(f"Run limits:1–{step_limit} steps and1–{second_limit} seconds")
     out=Path(out)
     if out.exists():raise ValueError('Never overwrite a pilot')
     root=Path(__file__).resolve().parents[1];guards=old.snapshot_files(root)
-    train=[r for r in load_split(snapshot,old.MANIFEST,'train') if r['master']=='Regular' and '-ar' in r['glyph']]
-    held=[r for r in load_split(snapshot,old.MANIFEST,'validation') if r['master']=='Regular' and r['glyph'] in old.HAH_RECIPES]
+    train=[r for r in load_split(snapshot,manifest_sha256,'train') if r['master']=='Regular' and '-ar' in r['glyph']]
+    held=[r for r in load_split(snapshot,manifest_sha256,'validation') if r['master']=='Regular' and r['glyph'] in old.HAH_RECIPES]
     if {r['group'] for r in train}&{r['group'] for r in held}:raise ValueError('Group leakage')
     rng=random.Random(731);training=[]
     for r in train:
@@ -57,15 +60,15 @@ def run(snapshot,out):
             else:raise ValueError('Could not make a novel evaluation draw')
             e['mode']=f'new-draw-{i+1}';evaluation.append(e)
     out.mkdir(parents=True)
-    config={'schema':vr.SCHEMA,'seed':83,'data_seed':731,'evaluation_seed':919,'max_steps':1800,'max_seconds':180,
-            'batch_size':24,'lr':.001,'clean_loss_weight':2,'normalization':'fixed1024 units; no corpus-dependent variance scaling',
+    config={'schema':vr.SCHEMA,'seed':83,'data_seed':731,'evaluation_seed':919,'max_steps':max_steps,'max_seconds':max_seconds,
+            'extended_run':extended_run,'batch_size':24,'lr':.001,'clean_loss_weight':2,'normalization':'fixed1024 units; no corpus-dependent variance scaling',
             'parameters':None,'train_drawings':len(train),'train_families':len({r['group'] for r in train}),
             'train_examples':len(training),'heldout_drawings':len(held),'heldout_families':len({r['group'] for r in held}),
             'train_points':sorted({len(mr.flatten(r)) for r in train}),'heldout_points':[len(mr.flatten(r)) for r in held],
             'torch':str(torch.__version__),'output':'tanh*32, hard mask, nearest2; no confidence filter or hidden fallback'}
     torch.set_num_threads(1);torch.manual_seed(83);torch.use_deterministic_algorithms(True)
     model=vr.VariableRepair();config['parameters']=sum(p.numel() for p in model.parameters())
-    protocol={'config':config,'manifest_sha256':old.MANIFEST,'source_guards':guards,
+    protocol={'config':config,'manifest_sha256':manifest_sha256,'source_guards':guards,
               'evaluation_policy':'last checkpoint only; no validation selection, no test split, no tuning after results',
               'model_script_sha256':old.digest(vr.__file__),'runner_sha256':old.digest(__file__)}
     for name,data in [('protocol',protocol),('training',training),('evaluation',evaluation)]:
@@ -89,6 +92,11 @@ def run(snapshot,out):
         if step%100==0 or step==1:
             row={'step':step,'seconds':time.monotonic()-start,'training_batch_loss':float(loss.detach())}
             history.append(row);print(json.dumps(row),flush=True)
+        if extended_run and step%10000==0:
+            temporary=out/'latest.tmp'
+            torch.save({'state_dict':model.state_dict(),'config':config,'step':step},temporary)
+            temporary.replace(out/'latest.pt')
+            (out/'progress.json').write_text(json.dumps({'step':step,'seconds':time.monotonic()-start,'training_batch_loss':float(loss.detach())})+'\n')
         if time.monotonic()-start>=config['max_seconds']:break
     training_seconds=time.monotonic()-start
     torch.save({'state_dict':model.state_dict(),'config':config},out/'checkpoint.pt')
@@ -116,7 +124,7 @@ def run(snapshot,out):
             'mean_case_input_mae':sum(r['unchanged_input_masked_mae'] for r in rows)/len(rows)}
     assert old.snapshot_files(root)==guards,'Font/source changed'
     report={'evaluation_only':True,'model_kind':vr.SCHEMA,'checkpoint_path':str((out/'checkpoint.pt').resolve()),
-            'checkpoint_sha256':old.digest(out/'checkpoint.pt'),'manifest_sha256':old.MANIFEST,'config':config,
+            'checkpoint_sha256':old.digest(out/'checkpoint.pt'),'manifest_sha256':manifest_sha256,'config':config,
             'steps':step,'training_seconds':training_seconds,'history':history,'metrics':metrics,'aggregates':aggregates,
             'protocol_sha256':old.digest(out/'protocol.json'),'training_sha256':old.digest(out/'training.json'),
             'evaluation_sha256':old.digest(out/'evaluation.json'),'font_source_files_unchanged':len(guards),
@@ -128,4 +136,6 @@ def run(snapshot,out):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--snapshot',required=True);p.add_argument('--out',required=True)
-    a=p.parse_args();run(a.snapshot,a.out)
+    p.add_argument('--manifest-sha256',default=old.MANIFEST);p.add_argument('--max-steps',type=int,default=1800);p.add_argument('--max-seconds',type=int,default=180)
+    p.add_argument('--extended-run',action='store_true',help='Explicit longer experiment, capped at two hours; periodic latest checkpoint')
+    a=p.parse_args();run(a.snapshot,a.out,a.manifest_sha256,a.max_steps,a.max_seconds,a.extended_run)

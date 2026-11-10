@@ -18,8 +18,8 @@ python scripts/propose_arabic_repair.py --out out/arabic-repair-demo
 
 PyTorch is the large dependency; the bundled model is only148KiB. No GPU, model
 service, training corpus, or font-garden-lab checkout is required for inference.
-The tested macOS runtime was PyTorch2.13.0. Linux execution has not yet been
-verified; compare proposal.json to models/arabic-repair-hour-v1/expected-sample.json
+The tested macOS runtime was PyTorch2.13.0. Eli reported a Linux trial working somewhat well; this runner has not received
+an automated Linux reproducibility check. On the target machine, compare proposal.json to models/arabic-repair-hour-v1/expected-sample.json
 for the bundled sample. Different runtimes may differ near rounding thresholds;
 report differences rather than silently accepting them. No training starts here.
 The runner refuses existing output directories and writes only beneath out/.
@@ -105,6 +105,66 @@ python -c "import json; from pathlib import Path; assert json.loads(Path('out/ar
    contextual/shaping proof remains a separate verification requirement.
 6. Stop for human review. Model output is experimental, not green. Do not save,
    install a real-font proposal, or change grading without named authorization.
+
+## Red-pencil review loop
+
+Use **Red pencil** inside Agent Proof's Compare or Toggle view. Circle a problem,
+sketch a preferred boundary, or draw an alternate form. **Undo ink**, **Clear ink**,
+and the Undo shortcut affect ink while the pencil is active. The edit toolbar
+keeps its existing sketch brush. Annotations are session-only; capture them before
+quitting. They are tied to document/source/glyph, drawing geometry, and card
+(Before, Working or a reference), and scale with the drawing.
+
+1. Eli chooses one glyph/master and adds marks plus a short intent: **repair this
+   region**, **follow this replacement curve**, or **explore this alternate form**.
+   A circle identifies a region; it is not a replacement outline. A sketch is a
+   design instruction, not necessarily the exact final contour.
+2. Read editor_context, read_glyph and design_context. Call review_proof with the
+   same source, glyph, document epoch and document revision. The MCP result is an
+   **annotated PNG by default**, plus annotations (card index, drawing key,
+   font-unit points and stroke width). Inspect the image. Repeat with
+   include_annotations=false for a clean comparison. Keep both and the live
+   source read in ignored out/. Do not substitute the older web proof.
+3. Explain the interpreted intent and name the editable region. Use the green
+   construction references and both sides of each stroke. Check whether this is
+   a small compatible repair or a form/topology change. Obtain named permission
+   before real-font edits; a sketch alone is not application approval.
+4. For a model repair trial, translate the marked **region** into an explicit
+   point mask. Review the point selection in native Runebender before inference.
+   The bundled model consumes geometry and a binary mask; **it does not consume
+   PNGs, red strokes, text instructions, or a target sketch**. Do not claim it is
+   following a sketched form. Do not feed red ink into positive training targets.
+   Retain optical corrections and reject unsupported coordinates rather than
+   snapping the whole glyph.
+5. On scratch copies, compare the same input/checkpoint with the earlier mask
+   and the pencil-guided mask. Keep unmasked points fixed. Record whole-glyph
+   differences, reading-size proof, shape/weight, and whether the change followed
+   Eli's intent. Evaluate a clean/no-edit control too. Better overlap or a smaller
+   point mask alone is not visual improvement. Eli's verdict decides.
+6. For a new Kaf-like form or major redraw, the agent can use the annotated raster
+   as guidance, but the current residual model cannot add contours or change
+   topology. Prepare a separate scratch design proposal; do not force it through
+   the repair model or silently apply it. Image tracing follows the repository's
+   drawing harness when that route is requested.
+7. Capture the accepted human correction separately from the red sketch. Keep a
+   small record of input hash, checkpoint hash, mask, annotation capture hash,
+   proposed result and Eli's verdict. Only approved final geometry is eligible
+   for a future training snapshot; retain rejected outcomes as negative evidence.
+
+The pencil-enabled native build currently contains additional local Runebender
+changes beyond b1ad474. Verify that review_proof advertises include_annotations
+and that its result includes annotations; a build with only b1ad474 lacks the
+pencil. The feature must be committed/pushed separately before another machine
+can pull it. No new training is required for this supervised workflow.
+
+Copy-ready trial request:
+
+> Read the red-pencil review loop in documentation/native-model-workflow.md.
+> Capture my current annotated proof and a clean proof, inspect them, and explain
+> the change I marked. Use the bundled model only if the request fits a bounded
+> Regular coordinate repair. Show the proposed point mask, then compare the
+> original and pencil-guided model masks in a scratch native Agent Proof. Keep
+> the actual font unchanged, do not retrain, and wait for my visual verdict.
 
 ## Human/agent handoff
 

@@ -115,7 +115,7 @@ select.addEventListener('change',show);show();</script>'''
         summary += '<p>Columns show input → actual model prediction (rounded to 2 units) → green target. Hard mask preserves other points; it does not guarantee a good curve. 224px and 48px isolated forms. Active sources and built fonts unchanged.</p>'
         if variable:
             a=report['aggregates'];h=a['hah-probes'];c=a['hah-clean-wide'];t=a['train-clean-wide'];new=a['new-corruption-draw']
-            summary=f'<p>{report["steps"]} steps on 33 green Regular Arabic drawings / 9 family groups. Hah stayed out of training; Seen/test unused. All three Hah forms fit without truncation. Last checkpoint evaluated once; no overnight run.</p>'
+            summary=f'<p>{report["steps"]} steps on {report["config"]["train_drawings"]} green Regular Arabic drawings / {report["config"]["train_families"]} family groups. Hah stayed out of training; Seen/test unused. All three Hah forms fit without truncation. Last checkpoint evaluated once; no overnight run.</p>'
             summary+=f'<p>Clean drawings preserved: TRAIN {t["exact"]}/{t["count"]}, held-out Hah {c["exact"]}/{c["count"]}. Hah probes: {h["improved"]} improved, {h["worse"]} worse, {h["tied"]} tied. New corruption draws: {new["improved"]}/{new["count"]} improved.</p>'
             summary+='<p>Input → raw model proposal rounded to 2 units → frozen green target. No confidence filter or hidden fallback. Synthetic recovery is not design approval. 224px/48px isolated forms. Font sources and active binaries unchanged.</p>'
         page = page[:start]+summary+page[end:]
