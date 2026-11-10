@@ -2,7 +2,10 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
-from train_variable_pilot import run
+try:
+    from train_variable_pilot import run
+except ImportError:  # The helper model workflow installs torch separately.
+    raise unittest.SkipTest('torch is not installed; see documentation/native-model-workflow.md')
 
 class PilotLimits(unittest.TestCase):
     def test_rejects_unbounded_runs_before_io(self):

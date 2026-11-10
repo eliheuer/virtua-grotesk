@@ -1,29 +1,39 @@
-# Experimental Regular Arabic repair model
+# arabic-repair-hour-v1
 
-151,285-byte PyTorch checkpoint; 36,578 parameters. Ordinary Git is sufficient.
-This is a local proposal helper, not a general drawing model or an approved
-cleanup tool. It predicts bounded coordinate residuals for explicitly masked
-points, preserves topology, and quantizes output to2 units. It cannot add contours,
-repair topology, generate arbitrary glyphs, or infer Bold drawings. The2-unit
-quantization preserves the experiment's optical-resolution protocol; it does not
-replace the font's8-unit machine-draft construction rules.
+Status: experimental. It does not pass its held-out test. Do not use it to
+change real glyphs.
 
-Training:36 green Regular Arabic drawings in10 families, synthetic perturbations
-and clean controls;1,285,746 steps in one hour. Hah was excluded from training but
-repeatedly inspected as a development holdout; it is not a fresh blind benchmark.
-Seen test data was not used in this run. See manifest.json and the maintained
-[training plan](../training/seen-pilot/PLAN.md).
+| Item | Value |
+| --- | --- |
+| Task | Move the masked points of one Regular Arabic glyph toward the font's construction. The topology stays the same. Output is on the 2-unit grid. |
+| Size | 36,578 parameters, 151,285 bytes (`checkpoint.pt`, SHA-256 in `manifest.json`) |
+| Runtime | CPU, PyTorch 2.6 or later (tested with 2.13.0). `scripts/propose_arabic_repair.py` |
+| Training data | 36 green Regular Arabic drawings in 10 construction families, with synthetic point displacements and clean copies. |
+| Training | 1,285,746 steps in one hour, 2026-10-30. `scripts/train_variable_pilot.py` |
+| Held out | The Hah family (validation; inspected repeatedly during development). |
 
-Final results:36/36 clean TRAIN drawings preserved;0/3 clean Hah drawings
-preserved;9/21 corrupted Hah examples improved and12 worsened versus unchanged
-input. All24 Hah cases scored better than the earlier100k model, which does not
-make them good drawings. Human visual review is required. No automatic acceptance.
+## Results
 
-checkpoint.pt is the exact final checkpoint, hash-checked by the runner and loaded
-with weights_only=True on CPU. sample.json is one clean held-out initial Hah with
-an explicit mask; expected-sample.json records its actual output, including its
-undesired changes. Do not turn that output into a positive training target.
-These small sample records are retained for reproducibility; bulk training runs,
-logs, snapshots and generated UFOs stay under ignored out/.
+| Test | Cases | Result |
+| --- | ---: | --- |
+| Clean training drawings left unchanged | 36 | 36 |
+| Clean held-out Hah drawings left unchanged | 3 | 0 (all three changed) |
+| Displaced held-out Hah drawings | 21 | 9 improved, 12 worse |
+| New displacements of training drawings | 18 | 18 improved |
 
-See [native interactive workflow](../../documentation/native-model-workflow.md).
+The model reproduces the families it has seen and does not generalize to an
+unseen family. A useful model must first leave clean held-out drawings
+unchanged.
+
+## Files
+
+- `checkpoint.pt`: the weights. The runner checks the hash before loading.
+- `manifest.json`: hashes and the full evaluation numbers.
+- `sample.json`: one clean held-out initial Hah with a point mask.
+- `expected-sample.json`: the model output for `sample.json`, to check that a
+  new machine gives the same result. The output contains unwanted changes; do
+  not use it as a training target.
+
+Usage is in [documentation/native-model-workflow.md](../../documentation/native-model-workflow.md).
+The training records of this run are in the Git history, in the folder
+`models/training/seen-pilot/`, removed on 2026-11-10.

@@ -92,7 +92,9 @@ Glyph colors are editing and reference permissions, not just progress indicators
 The same meanings apply to people and AI tools.
 
 For AI edits, these meanings apply only inside a scope that Eli names: the
-glyphs and the masters. Eli gives the verdict, and only Eli assigns green.
+glyphs and the masters. Eli gives the verdict and approves contour glyphs. A
+composite can be marked green when its parts are green and
+`scripts/check_design.py --ready` lists it.
 Purple identifies AI-drawn or substantially redrawn glyphs that wait for human
 review. Purple gives no approval, reference or protection status.
 
