@@ -1,8 +1,16 @@
 # Reference roles
 
-Virtua Grotesk is Eli's own design. External fonts are for comparison only.
-Do not copy their outlines, proportions or details. A difference from a
-reference font is not a defect.
+Virtua Grotesk is Eli's own design. The reference fonts do not dictate its
+shapes, and a small difference in form from a reference font is not a defect.
+A large difference is information: if a Virtua glyph is very different from
+all the reference fonts, find out why before you continue.
+
+Use the reference fonts mainly to compare these properties:
+
+- visual weight, inside one script and between scripts;
+- spacing and the texture of words;
+- outline consistency, for example even stroke weight and curve quality;
+- the structure that readers of the script expect.
 
 A green Virtua source is a construction reference; read the exact GLIF and a filled
 render, recording the donor master. Check its current mark color in both masters
@@ -24,4 +32,4 @@ glyph records and constructions select additional donors.
 | Arabic | Rubik, Noto Sans Arabic, IBM Plex Sans Arabic, Readex Pro |
 | Hebrew | Rubik, Noto Sans Hebrew |
 
-Rubik is the quality target for drawing quality, not a shape to copy.
+Rubik is the quality target for weight, spacing and outline quality.

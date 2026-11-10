@@ -59,8 +59,9 @@ not hold records of work.
 - Draw or redraw only glyphs Eli names, in the masters Eli names.
 - A request to clean up a glyph, or to make it "more X", is the smallest
   change to the current drawing, usually handle edits. It is not a new design.
-- The reference fonts are for comparison. Do not copy them. A difference from
-  a reference font is not a defect.
+- The reference fonts do not dictate the design. Use them to compare visual
+  weight, spacing and outline consistency. If a glyph is very different from
+  all of them, find out why. A small difference in form is not a defect.
 - Before you show a candidate, compare the filled glyph with the reference
   fonts and the green donors. Do not show a candidate that this comparison
   shows as faulty.

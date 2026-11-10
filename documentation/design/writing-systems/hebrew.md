@@ -17,9 +17,9 @@ Git history before commit 1db2dfc7.
 
 ### Rubik is the structural reference
 
-When a Hebrew letter looks wrong, compare its skeleton with Rubik. Use Rubik
-for the structure only, and draw it with Virtua's chamfers, grid and own
-forms. Do not copy Rubik. Simplify rather than add.
+When a Hebrew letter looks wrong, compare its skeleton with Rubik. If the
+structure is very different, follow Rubik's structure and draw it with
+Virtua's chamfers, grid and own forms. Simplify rather than add.
 Seen in: zayin shin finaltsadi samekh (4e900dd0, df38c4a2), gimel (3814ca96).
 
 ### Geometric does not mean rectangular
