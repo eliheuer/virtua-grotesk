@@ -14,10 +14,10 @@ REQUIRED_FILES = [
     "fonts/ttf/VirtuaGrotesk-Medium.ttf",
     "fonts/ttf/VirtuaGrotesk-SemiBold.ttf",
     "fonts/ttf/VirtuaGrotesk-Bold.ttf",
-    "documentation/proofs/proof.pdf",
-    "documentation/source/source-ufo-metadata.md",
-    "documentation/source/master-compatibility.md",
-    "documentation/source/generated-font-metadata.md",
+    "out/proof.pdf",
+    "out/reports/source-ufo-metadata.md",
+    "out/reports/master-compatibility.md",
+    "out/reports/generated-font-metadata.md",
 ]
 
 

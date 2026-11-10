@@ -1,28 +1,23 @@
 # Documentation
 
-## Working documents
+| Document | Content |
+| --- | --- |
+| [Design rules](design/README.md) | Construction, grid, weight, spacing, scripts, source editing and the learning loop. |
+| [Build and QA](qa.md) | Setup, commands and the checks after a source edit. |
+| [Google Fonts release](google-fonts.md) | Release scope, open decisions and links to the official guide. |
+| [Helper model workflow](native-model-workflow.md) | The experimental Arabic repair model in Runebender. |
+| [Live web proof](../scripts/proof-web/app/README.md) | The comparison of the current build with `reference-fonts/`. |
 
-- [Design rules](design/README.md): construction, grid, weight, spacing and script rules.
-- [Live web proof](../scripts/proof-web/app/README.md): the comparison with `reference-fonts/`.
-- [Build and QA](qa.md): setup, commands, proofs and checks.
-- [Google Fonts onboarding](google-fonts/README.md): release scope and blockers.
-- [Helper model workflow](native-model-workflow.md): the local Arabic repair model with native Runebender.
-- [Source guides](source-guides/): UFO, designspace and kerning editing.
-- [Source reports](source/): generated metadata and compatibility reports,
-  plus Arabic design records. Check their dates before you use a measurement.
+Material for the Google Fonts page and for publicity:
 
-## Artwork and plans
+- `article/`: the Google Fonts About text and its image
+  (`scripts/article_specimen.py` renders the image).
+- `readme-images/`: the DesignBot script for the README image.
+- `social-assets/`: DesignBot scripts for social media. See its
+  [README](social-assets/README.md).
 
-- [Article draft](article/ARTICLE.en_us.html): the Google Fonts About text.
-- [Proof specification](proofs/PROOF_SPEC.md): current proof and specimen plans.
-- [Artwork and licensing](artwork.md).
-- [README image scripts](readme-images/) and [social artwork](social-assets/).
-- [Hebrew plan](hebrew-support-plan.md) and [Italic proposal](goal-google-fonts-launch.md).
+Run image scripts from the repository root after `make build`. Rendered
+images are ignored by Git. Commit a final image explicitly, with its license.
 
-Run image scripts from the repository root so that font paths resolve. Build
-the fonts first. Rendered files are ignored by Git. Release artwork must be
-added explicitly, with its license, before packaging.
-
-Review records, worklogs and handoffs are on branch
-`archive/agent-records-2026-11-09`. Current scripts are described in
-[the script index](../scripts/README.md).
+Review records, worklogs and handoffs from before 2026-11-09 are on branch
+`archive/agent-records-2026-11-09`. They are history, not instructions.

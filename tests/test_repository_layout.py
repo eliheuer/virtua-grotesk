@@ -9,7 +9,6 @@ PENDING lists the files that existed before this test and do not fit. They are
 under review. The list can only get shorter: when a file is removed or moved,
 remove its entry.
 """
-import fnmatch
 import re
 import subprocess
 import unittest
@@ -33,10 +32,11 @@ LAYOUT = [
     # Tools and their tests.
     'scripts/README.md', 'scripts/*.py', 'scripts/*.sh', 'scripts/proof-web/**',
     'tests/test_*.py', 'tests/benchmark.toml', 'tests/fixtures/**',
-    # Documentation: the design rules, the Google Fonts article, and guides.
-    'documentation/README.md', 'documentation/*.md',
-    'documentation/design/**/*.md', 'documentation/article/**',
-    'documentation/source-guides/*.md',
+    # Documentation: the design rules, the Google Fonts article, and the
+    # DesignBot scripts for the README image and social media.
+    'documentation/*.md', 'documentation/design/**/*.md', 'documentation/article/**',
+    'documentation/readme-images/*.rs',
+    'documentation/social-assets/README.md', 'documentation/social-assets/*/*.rs',
 ]
 
 # Document names that mark a record of work rather than a maintained document.
@@ -53,16 +53,6 @@ PENDING = {
     'sources/archive/**',
     # Section 2: the experimental repair model.
     'models/**',
-    # Section 3: documentation under review.
-    'documentation/google-fonts/README.md',
-    'documentation/google-fonts/audit-2026-09-09.md',
-    'documentation/qa.md',
-    'documentation/proofs/**',
-    'documentation/readme-images/**',
-    'documentation/social-assets/**',
-    'documentation/source/**',
-    'documentation/design/system/design-philosophy-history.md',
-    'documentation/hebrew-support-plan.md',
     # Section 7: agent documents outside a skill directory.
     '.agents/*.md',
 }

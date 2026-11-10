@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics specimen runebender qa qa-full qa-package test reports lint-grid preflight status check-design queue check-changes benchmark skeleton clean
+.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics runebender qa qa-full qa-package test reports lint-grid preflight status check-design queue check-changes benchmark skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -21,7 +21,6 @@ help:
 		'  make proof          Build the main PDF proof' \
 		'  make proof-web      Build, then compare the fonts with reference-fonts/ in a browser' \
 		'  make review         Build a Diffenator3 QA browser proof' \
-		'  make specimen       (not implemented yet — marketing specimen is future work)' \
 		'  make runebender     Open the designspace in the Runebender web editor' \
 		'  make test-tools     Run the Python and JavaScript tool tests' \
 		'  make qa             Development Fontspector checks (documented exclusions)' \
@@ -50,9 +49,9 @@ build-fontc:  ## Build with fontc (Rust) instead of fontmake
 
 # The built-in designbot print proof: introspects the variable font (axes,
 # instances, charset, metrics, features) and emits a color-managed multi-page
-# PDF. No per-repo script to maintain — see documentation/proofs/PROOF_SPEC.md.
+# PDF.
 proof: build
-	designbot proof "$(VARIABLE_FONT)" --output documentation/proofs/proof.pdf
+	designbot proof "$(VARIABLE_FONT)" --output out/proof.pdf
 
 # Live comparison of the current build with reference-fonts/. To serve a
 # prepared Before/Working snapshot instead, run
@@ -78,12 +77,6 @@ review-rubik:
 # The agent (person, or Gemma once wired) drives this; fix the anchors in the source.
 qa-diacritics: build
 	$(PYTHON) scripts/qa_loop.py
-
-# The marketing specimen (on-brand showcase) is not built yet — it will be a
-# `designbot specimen` built-in or a per-repo on-brand script. Until then this
-# target is a no-op stub so `make specimen` fails loudly instead of silently.
-specimen:
-	@echo "specimen: not implemented yet — see documentation/proofs/PROOF_SPEC.md (marketing specimen is future work)"; exit 1
 
 # Serves the editor at localhost:8765 with the designspace open. Edits to
 # the sources reload in the browser, and Cmd+S saves back to disk.
@@ -144,7 +137,7 @@ lint-curves:
 	$(PYTHON) scripts/curve_lint.py Bold --all
 
 # Normalized metric comparison of Virtua glyphs against reference fonts
-# (Inter, Geist). See documentation/normalized-metrics-workflow.md.
+# (Inter, Geist). See the description in scripts/normalize_metrics.py.
 metrics:
 	$(PYTHON) scripts/normalize_metrics.py
 

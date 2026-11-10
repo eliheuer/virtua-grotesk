@@ -33,6 +33,7 @@ reel with `~/Desktop/add-sound.sh` (designbot renders silent video).
 | `reels/bounce.rs` | bouncing-glyphs physics reel (30s, 9:16) |
 | `reels/runebender-dvd.rs` | Runebender screenshot bouncing DVD-logo style over a Capital-cover "runebender.org" grid (24s, 9:16) |
 | `loops/weight-morph.rs` | `Aa` breathing the wght axis (Regular ⇄ Bold) |
+| `posts/font-garden.rs` | 2048 × 2048 square with seven “Font.Garden” rows (run with `--raw`) |
 
-See `../README.md` for the overall documentation-image system, the DrawBot-style
-editing model, and the color / safe-zone conventions.
+Reels keep readable content inside the safe zone described in `bounce.rs`.
+Loops use eased or ping-pong motion so that the last frame meets the first.

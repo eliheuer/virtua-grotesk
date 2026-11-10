@@ -2,7 +2,7 @@
 
 Use the current [Google Fonts guide](https://googlefonts.github.io/gf-guide/)
 and issue template. This file holds reusable procedure; project status belongs
-in [the onboarding checklist](../documentation/google-fonts/README.md).
+in [the onboarding checklist](../documentation/google-fonts.md).
 Do not create parallel readiness reports for the same decision.
 
 ## Repository values

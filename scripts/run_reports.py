@@ -24,13 +24,14 @@ def py(*args: str) -> list[str]:
 
 def report_commands() -> list[list[str]]:
     return [
-        py("scripts/report_source_metadata.py", "sources/VirtuaGrotesk-Regular.ufo", "sources/VirtuaGrotesk-Bold.ufo", "documentation/source/source-ufo-metadata.md"),
-        py("scripts/report_master_compatibility.py", "sources/VirtuaGrotesk-Regular.ufo", "sources/VirtuaGrotesk-Bold.ufo", "documentation/source/master-compatibility.md"),
-        py("scripts/report_generated_font_metadata.py", VARIABLE_FONT, *STATIC_FONTS, "documentation/source/generated-font-metadata.md"),
+        py("scripts/report_source_metadata.py", "sources/VirtuaGrotesk-Regular.ufo", "sources/VirtuaGrotesk-Bold.ufo", "out/reports/source-ufo-metadata.md"),
+        py("scripts/report_master_compatibility.py", "sources/VirtuaGrotesk-Regular.ufo", "sources/VirtuaGrotesk-Bold.ufo", "out/reports/master-compatibility.md"),
+        py("scripts/report_generated_font_metadata.py", VARIABLE_FONT, *STATIC_FONTS, "out/reports/generated-font-metadata.md"),
     ]
 
 
 def main() -> int:
+    (ROOT / 'out/reports').mkdir(parents=True, exist_ok=True)
     for args in report_commands():
         print("+ " + " ".join(args), flush=True)
         result = subprocess.run(args, cwd=ROOT, check=False)

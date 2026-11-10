@@ -17,7 +17,7 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Named glyph intent | [Glyph records](glyphs/README.md) |
 | Reference roles and Latin dimensions | [References](references/README.md), [Latin dimensions](references/latin-dimensions.md) |
 | Checks, benchmark and how corrections are recorded | [Learning loop](system/learning.md) |
-| Earlier design philosophy | [History](system/design-philosophy-history.md) |
+| Editing UFO, designspace and kerning files | [Source editing](system/source-editing.md) |
 
 `sources/design.toml` holds the values that scripts read: grid, chamfers,
 stroke targets and mark colors. `make status` and `make check-design` read it.

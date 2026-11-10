@@ -8,8 +8,8 @@ Regular (400) to Bold (700), with Medium and SemiBold instances.
 
 The font is in development. Latin, Arabic, and Hebrew are planned for the first
 Google Fonts release; drawings and script behavior still need review. Italic
-is a separate future proposal. See the [onboarding checklist](documentation/google-fonts/README.md)
-for measured blockers and remaining decisions.
+is a separate future proposal. See [the release notes](documentation/google-fonts.md)
+for the scope, the open decisions and the Google Fonts links.
 
 [Design background: Grid Systems as Datasets](https://elih.net/blog/virtua-grotesk)
 

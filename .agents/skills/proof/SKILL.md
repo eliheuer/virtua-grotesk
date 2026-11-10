@@ -7,7 +7,7 @@ description: Generate and review the multi-page PDF proof for Virtua Grotesk.
 
 Run `make proof` from the repository root. It builds the fonts and runs
 `designbot proof` on `fonts/variable/VirtuaGrotesk[wght].ttf`, writing
-`documentation/proofs/proof.pdf`.
+`out/proof.pdf`.
 
 For an explicitly supplied font, use:
 

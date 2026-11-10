@@ -71,6 +71,7 @@ not hold records of work.
 
 Use `.venv/bin/python`. Build with `make build`, check with `make qa` and
 [documentation/qa.md](documentation/qa.md), and look at the rendered output.
-Command success is not visual review. Release scope is in
-[documentation/google-fonts/README.md](documentation/google-fonts/README.md).
+Command success is not visual review. Release scope and the
+official Google Fonts links are in
+[documentation/google-fonts.md](documentation/google-fonts.md).
 Commit messages are plain, with no agent credit or trailers.

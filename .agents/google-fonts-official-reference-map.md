@@ -22,4 +22,4 @@ a submission; the guide and issue template can change independently of this repo
 Use [the QA guide](../documentation/qa.md) for repository commands. Preflight
 checks local artifact presence; it does not establish source freshness, full
 QA success, human acceptance, or package readiness. Keep those conclusions
-separate in [the onboarding checklist](../documentation/google-fonts/README.md).
+separate in [the onboarding checklist](../documentation/google-fonts.md).

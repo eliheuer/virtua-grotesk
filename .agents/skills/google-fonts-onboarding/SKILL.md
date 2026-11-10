@@ -6,7 +6,7 @@ description: Audit Google Fonts readiness and coordinate repository preparation,
 # Google Fonts onboarding
 
 Read `.agents/google-fonts-onboarding-checklists.md` and the project checklist
-at `documentation/google-fonts/README.md`. Refresh relevant official pages and
+at `documentation/google-fonts.md`. Refresh relevant official pages and
 the [Add Font template](https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md).
 Do not treat old audits or copied checklist boxes as current evidence.
 

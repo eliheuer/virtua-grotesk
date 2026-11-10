@@ -10,8 +10,8 @@ Virtua ratio to Inter's tells you whether Virtua is heavier, tighter, more
 open, etc. — independent of scale.
 
 This is the reusable version of the ad-hoc measurement done during the n/o
-design pass. See documentation/normalized-metrics-workflow.md for the how and
-why, and for how to read the tables.
+design pass. Ratios near the reference values mean similar weight, spacing
+or proportion. The ratios describe; they do not grade.
 
 Usage:
     python3 scripts/normalize_metrics.py                 # H O n o vs Inter, Geist
