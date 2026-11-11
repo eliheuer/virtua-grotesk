@@ -37,7 +37,7 @@ The full description is in
 Task contracts are in `.agents/tasks/`: goal, acceptance, constraints and the
 report. Run a contract in a separate checkout, on its own branch. After any
 agent edits glyphs, run `make check-changes`. It fails when a green glyph
-changed or a changed contour glyph is not purple.
+changed, or when the contours of a glyph changed and it is not purple.
 
 ## What belongs in the repository
 

@@ -137,9 +137,6 @@ class BuiltFontEngineeringTests(unittest.TestCase):
                         glyphs[name].draw(pen)
                         self.assertIsNotNone(pen.bounds)
 
-    # Known failure: Hebrew cantillation and meteg positions need anchor work
-    # in the sources. Remove the decorator when the test passes.
-    @unittest.expectedFailure
     def test_cantillation_clears_points_on_correct_side(self):
         marks = (*range(0x0591, 0x05B0), 0x05C4, 0x05C5, 0xFB1E)
         for path, font in self.fonts():
@@ -177,9 +174,6 @@ class BuiltFontEngineeringTests(unittest.TestCase):
                         gap = accent[0] - vowel[1] if on_right else vowel[0] - accent[1]
                         self.assertGreaterEqual(gap, 30)
 
-    # Known failure: Hebrew cantillation and meteg positions need anchor work
-    # in the sources. Remove the decorator when the test passes.
-    @unittest.expectedFailure
     def test_hebrew_meteg_clearance_and_nun_dot(self):
         for path, font in self.fonts():
             cmap = font.getBestCmap()

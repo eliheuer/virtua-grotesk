@@ -32,7 +32,7 @@ The loop that uses these scripts is in
 | Script | Use |
 | --- | --- |
 | `check_design.py` | Checks glyphs against the grid and stroke targets in `sources/design.toml`, checks composites against their parts and anchor recipes, and ranks the glyphs that most composites wait on (`make check-design`, `make queue`). It needs the Runebender binary. |
-| `check_changes.py` | Compares the sources with a base revision: no green glyph changed, and changed contour glyphs are purple. It can draw before and after proofs (`make check-changes`). |
+| `check_changes.py` | Compares the sources with a base revision: no green glyph changed, and glyphs with changed contours are purple. It can draw before and after proofs (`make check-changes`). |
 | `benchmark.py` | Scores a drafting method on the held-out green glyphs in `tests/benchmark.toml` (`make benchmark RUN=...`). |
 | `lessons.py` | Counts the `Correction:` lines of commit messages by topic (`make lessons`). |
 | `status.py` | Writes `STATUS.md` from the mark colors (`make status`). |

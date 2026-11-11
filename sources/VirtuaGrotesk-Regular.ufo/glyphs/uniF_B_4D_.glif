@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB4D" format="2">
 	<unicode hex="FB4D"/>
-	<advance width="460"/>
+	<advance width="480"/>
 	<outline>
 		<component base="kaf-hb"/>
-		<component base="uni05BF" xOffset="221" yOffset="672"/>
+		<component base="uni05BF" xOffset="224" yOffset="672"/>
 	</outline>
-	<anchor name="hbRafe" x="221" y="816"/>
-	<anchor name="hbMeteg" x="220" y="0"/>
+	<anchor name="hbRafe" x="224" y="816"/>
+	<anchor name="hbMeteg" x="224" y="0"/>
 	<anchor name="hbCantAbove" x="224" y="720"/>
 	<anchor name="hbCantAboveLeft" x="16" y="720"/>
 	<anchor name="hbCantAboveRight" x="432" y="720"/>
-	<anchor name="hbCantBelow" x="220" y="0"/>
-	<anchor name="hbCantBelowRight" x="220" y="0"/>
-	<anchor name="hbBottom" x="220" y="0"/>
-	<anchor name="hbCenter" x="196" y="300"/>
-	<anchor name="hbHolam" x="14" y="576"/>
+	<anchor name="hbCantBelow" x="224" y="0"/>
+	<anchor name="hbCantBelowRight" x="224" y="0"/>
+	<anchor name="hbBottom" x="224" y="0"/>
+	<anchor name="hbCenter" x="200" y="300"/>
+	<anchor name="hbHolam" x="16" y="576"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

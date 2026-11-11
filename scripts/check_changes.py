@@ -14,7 +14,8 @@ and reads nothing else.
 It fails (exit status 1) when:
 
 - a glyph that is green at the base revision changed;
-- a changed contour glyph is not purple;
+- the contours of a glyph changed and it is not purple (a change of anchors,
+  advance or components only does not need purple);
 - a changed composite is green but `check_design.py --ready` does not list it;
 - a glyph outside --glyphs changed;
 - a source file other than a glyph file changed, unless --allow-other;
@@ -28,6 +29,7 @@ from __future__ import annotations
 
 import argparse
 import plistlib
+import re
 import subprocess
 import sys
 import tempfile
@@ -71,6 +73,15 @@ def base_colors(base, contract):
                 lib['public.markColor'] = value.split('<string>', 1)[1].split('</string>', 1)[0]
             out[master][name] = inventory.color_state(lib, contract)['name']
     return out
+
+
+def contours_at(base, path):
+    """The contour elements of a GLIF file at a base revision, as text."""
+    try:
+        text = git('show', f'{base}:{path}')
+    except subprocess.CalledProcessError:
+        return None
+    return re.findall(r'<contour>.*?</contour>', text, re.S)
 
 
 def draw_proofs(base, glyphs, directory):
@@ -133,8 +144,9 @@ def main():
                 errors.append(f'{label}: was green at {args.base} and changed')
             if scope and name not in scope:
                 errors.append(f'{label}: outside --glyphs')
-            if record['contours'] and color != 'purple':
-                errors.append(f'{label}: changed contour glyph is {color}, not purple')
+            drawn = re.findall(r'<contour>.*?</contour>', (ROOT / record['path']).read_text(), re.S)
+            if drawn and drawn != contours_at(args.base, record['path']) and color != 'purple':
+                errors.append(f'{label}: contours changed and the glyph is {color}, not purple')
             if not record['contours'] and color == 'green' and was != 'green':
                 if ready is None:
                     ready = set(subprocess.run(
