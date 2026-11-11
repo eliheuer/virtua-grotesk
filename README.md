@@ -23,9 +23,6 @@ make setup
 make build
 ```
 
-On Linux, setup also needs the Cairo development headers, `pkg-config` and
-the Python development headers. On macOS, install Cairo and `pkg-config`.
-
 The build writes `fonts/variable/VirtuaGrotesk[wght].ttf` and four static
 fonts in `fonts/ttf/`. Git ignores `fonts/`. The editable sources are the two
 UFO masters and the designspace in `sources/`.
