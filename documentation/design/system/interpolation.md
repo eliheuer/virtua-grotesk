@@ -17,13 +17,16 @@ to `rclt` FeatureVariations in the variable font; fontmake bakes the
 swap into static instances at or above the switch point (600 unless a
 glyph demands otherwise).
 
-Workflow per bracket glyph: (1) Eli designs the alternate structure in
-the REGULAR master (e.g. `a.bold` drawn at regular weight — it anchors
-interpolation and is never shown below the switch); (2) the copy in the
-Bold master starts red and gets lane-2 transferred from Eli's bold
-reference image like any glyph; (3) one `<sub>` line in the designspace.
-Both glyphs must each stay master-compatible with themselves — the
-compat gate handles this with no special cases.
+Steps for each bracket glyph:
+
+1. Eli draws the alternate structure in the Regular master, for example
+   `a.bold` at Regular weight. It is the start of the interpolation and is
+   not shown below the switch point.
+2. The copy in the Bold master starts red and is drawn like any other glyph.
+3. Add one `<sub>` line to the designspace.
+
+Each of the two glyphs must be compatible between the masters, like every
+other glyph.
 
 ## Rule entries
 
