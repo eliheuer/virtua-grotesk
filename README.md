@@ -65,10 +65,6 @@ both masters.
 
 AI tools help with code, documentation and draft glyphs. Eli draws, reviews
 and approves the glyphs. The rules for agents are in [AGENTS.md](AGENTS.md).
-An experimental model for Arabic point repair is in
-[models/](models/README.md), and
-[documentation/native-model-workflow.md](documentation/native-model-workflow.md)
-describes how to use it with Runebender.
 
 ## License
 

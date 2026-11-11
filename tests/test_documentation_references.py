@@ -17,7 +17,7 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TOP = ('scripts/', 'documentation/', 'sources/', 'tests/', 'models/', '.agents/', '.github/')
+TOP = ('scripts/', 'documentation/', 'sources/', 'tests/', '.agents/', '.github/')
 LINK = re.compile(r'\]\(([^)#\s]+)(?:#[^)]*)?\)')
 CODE = re.compile(r'`([^`\s]+)`')
 MAKE = re.compile(r'`make ([a-z][a-z0-9-]*)')

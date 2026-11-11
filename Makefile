@@ -5,7 +5,7 @@ PYTHON ?= ./.venv/bin/python
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes benchmark lint-curves clean
+.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes benchmark lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -20,7 +20,6 @@ help:
 		'Build and proofs:' \
 		'  make setup          Create .venv and install the requirements' \
 		'  make build          Build the variable and static TTFs into fonts/' \
-		'  make build-fontc    Build with fontc instead of fontmake' \
 		'  make proof-web      Build, then compare with reference-fonts/ in a browser' \
 		'  make proof          DesignBot PDF proof in out/proof.pdf' \
 		'  make review         Diffenator3 browser proof in out/review/' \
@@ -42,9 +41,6 @@ setup:
 
 build:
 	./scripts/build.sh
-
-build-fontc:
-	./scripts/build-fontc.sh
 
 # The built-in designbot print proof: introspects the variable font (axes,
 # instances, charset, metrics, features) and emits a color-managed multi-page

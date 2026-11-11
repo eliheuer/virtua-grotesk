@@ -10,7 +10,6 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Metrics, 8/2 grid, popcount | [Grid](system/grid.md), [design.toml](../../sources/design.toml) |
 | Weight and spacing | [Weight](system/weight.md), [Spacing](system/spacing.md) |
 | Interpolation and source topology | [Interpolation](system/interpolation.md) |
-| Source protection | [Source safety](system/source-safety.md) |
 | Verification of a change | [Verification](system/verification.md) |
 | Chamfers, turns, curves, bowls, dots | [Constructions](constructions/README.md) |
 | Arabic, Hebrew, Latin, symbols | [Writing systems](writing-systems/README.md) |

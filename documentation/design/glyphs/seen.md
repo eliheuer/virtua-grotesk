@@ -1,14 +1,15 @@
-# Seen: preserve articulated construction
+# Seen
 
-Scope: seen-ar and its initial/medial/final construction relatives and inherited
-sheen-ar/seenSixdots-ar forms. Eli's current direction is upright teeth, individual
-rounded lobes, deliberate small junctions and the established overall silhouette.
+Scope: seen-ar, its initial, medial and final forms, and sheen-ar and
+seenSixdots-ar, which use the same construction.
 
-Read green Regular seen-ar.init and seen-ar.medi source runs and filled renders.
-Measure their tangent directions, lobe extents and small landings/cuts. Adapt the
-local mass and crowding in the target without flattening the articulated underside
-into a shallow continuous wave or replacing the bowl junction with a diagonal sweep.
-
-Seen v4 is a rejected stylistic regression despite passing engineering checks.
-Active isolated Seen remains v3, also unresolved for optical quality. Do not apply
-v4 or treat it as positive training data. Draw Seen again only when Eli names it.
+- Keep upright teeth, separate rounded lobes, small deliberate junctions and
+  the current overall shape.
+- Do not flatten the underside into a shallow continuous wave. Do not replace
+  the bowl junction with a diagonal sweep.
+- Start from the green Regular seen-ar.init and seen-ar.medi. Measure their
+  tangent directions, lobe extents and small cuts, then adjust the weight and
+  spacing of the target.
+- Eli rejected version 4 of the isolated Seen as a stylistic regression,
+  although it passed the checks. The source holds version 3, which is also
+  not approved. Draw Seen again only when Eli names it.

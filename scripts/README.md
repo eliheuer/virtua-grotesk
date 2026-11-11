@@ -1,17 +1,15 @@
 # Scripts
 
 Run the Python scripts from the repository root with `.venv/bin/python`.
-`make help` lists the commands that use them. The code of the Arabic repair
-model is in [models/arabic-repair-hour-v1/](../models/arabic-repair-hour-v1/README.md).
+`make help` lists the commands that use them.
 
 ## Build
 
 | Script | Use |
 | --- | --- |
 | `build.sh` | The release build (`make build`). |
-| `build-fontc.sh` | The build with fontc (`make build-fontc`). |
 | `build_source_snapshot.py` | Copies the sources to a temporary folder for the build, so the glyph order of the editor stays unchanged. |
-| `fix_gf_metadata.py` | Corrects the metadata of the compiled fonts. Both build scripts call it. |
+| `fix_gf_metadata.py` | Corrects the metadata of the compiled fonts. `build.sh` calls it. |
 | `install_fontspector.py` | Installs Fontspector into `.venv` (`make setup`). |
 
 ## QA and reports

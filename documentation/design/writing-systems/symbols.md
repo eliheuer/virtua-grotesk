@@ -7,8 +7,7 @@ sources supply construction, scale and weight unless the user specifies otherwis
 
 Measured values from older symbol corrections are specific to their revision.
 Confirm the current axis, strokes, spacing and donor grades.
-For @ retain the smaller italic a and double spiral; the applied candidate is still
-visually rejected and awaits human correction.
+For @ read [the at record](../glyphs/at.md).
 
 ## Glyph decisions
 

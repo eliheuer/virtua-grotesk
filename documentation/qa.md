@@ -19,7 +19,7 @@ design checks need the Runebender binary; set `RUNEBENDER` if it is not at
 `make build` copies the sources to a temporary directory, builds one variable
 TTF and four static TTFs with gftools, and applies the metadata fixes in
 `scripts/fix_gf_metadata.py`. The static fonts are instances of the variable
-font. `make build-fontc` is an alternative compiler, not the release build.
+font.
 
 ## Commands
 

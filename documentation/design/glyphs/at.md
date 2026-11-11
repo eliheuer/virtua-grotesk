@@ -1,9 +1,8 @@
-# At: smaller italic a and double spiral
+# At
 
-Preserve the smaller central italic a and continuous double-spiral route. Eli
-rejected lumpy stroke mass, broad curves and later revisions despite improving
-local width/continuity metrics. The latest recorded candidate was applied for hand
-editing by explicit instruction; it remains purple and visually unsatisfactory.
-
-Inspect the whole filled spiral before optimizing local curves. Retain rejected
-examples and source pairs. Do not use the applied state as positive training approval.
+- Keep the small italic a in the center and the continuous double spiral.
+- Eli rejected earlier revisions for lumpy stroke weight and broad curves,
+  although they had better local measurements. Look at the whole filled
+  spiral before you change a local curve.
+- The current drawing is purple. Eli has not approved it, so it is not
+  training data.

@@ -29,8 +29,6 @@ LAYOUT = [
     'sources/README.md', 'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
     'sources/design.toml',
     'sources/VirtuaGrotesk-Regular.ufo/**', 'sources/VirtuaGrotesk-Bold.ufo/**',
-    # Small models: a model card, the checkpoint and small runner files.
-    'models/README.md', 'models/*/README.md', 'models/*/checkpoint.*', 'models/*/*.json', 'models/*/*.py',
     # Tools and their tests.
     'scripts/README.md', 'scripts/*.py', 'scripts/*.sh', 'scripts/proof-web/**',
     'tests/test_*.py', 'tests/benchmark.toml', 'tests/fixtures/**',
@@ -49,9 +47,6 @@ RECORD_ALLOWED = {'STATUS.md'}
 
 # Maintained documents stay short enough to read in one sitting.
 MAX_DOCUMENT_LINES = 200
-
-# Model checkpoints in Git stay small.
-MAX_CHECKPOINT_BYTES = 5 * 1024 * 1024
 
 PENDING = set()  # empty since 2026-11-11; keep it empty
 
@@ -80,12 +75,8 @@ def problems(path):
         lines = (ROOT / path).read_text(errors='ignore').count('\n')
         if lines > MAX_DOCUMENT_LINES:
             found.append(f'{lines} lines, more than {MAX_DOCUMENT_LINES}')
-    if path.endswith('.json') and not path.startswith(('scripts/proof-web/', 'models/')):
+    if path.endswith('.json') and not path.startswith('scripts/proof-web/'):
         found.append('JSON in a file that people edit; use TOML')
-    if path.startswith('models/') and '/checkpoint.' in path and (ROOT / path).exists():
-        size = (ROOT / path).stat().st_size
-        if size > MAX_CHECKPOINT_BYTES:
-            found.append(f'{size} bytes; a checkpoint over 5 MB goes to a release or Hugging Face')
     return found
 
 

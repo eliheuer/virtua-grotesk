@@ -69,6 +69,8 @@ not hold records of work.
   shows as faulty.
 - Green contour glyphs are frozen. Eli approves contour glyphs. Mark new AI
   drawing purple.
+- A change to a component donor also changes every glyph that uses it. Do not
+  change a donor that a green glyph uses.
 - A composite that `scripts/check_design.py --ready` lists can be marked green.
 - Keep contour, point and component structure compatible in both masters.
 - Edit GLIF XML and plists surgically in the existing style (tabs, double

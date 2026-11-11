@@ -31,15 +31,12 @@ glyphs that are not green stay Eli's work.
   passes `./scripts/check_gf_fonts.sh package <directory>` with no FAIL.
 - The report contains the text of the Add Font issue, from the template at
   https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md.
-- `make test-tools` passes. The two Hebrew tests marked as expected failures
-  pass, and their decorators are removed.
+- `make test-tools` passes.
 
 ## Baseline
 
 On 2026-11-10 the full profile gave 1 FAIL (`dirname_matches_nameid_1`) and
-36 WARN. `make test-tools` passes with 2 expected failures (Hebrew
-cantillation and meteg positions in `tests/test_built_font_engineering.py`)
-and 3 skipped tests that need `torch`.
+36 WARN. On 2026-11-11 all 70 tests passed.
 
 ## Constraints
 

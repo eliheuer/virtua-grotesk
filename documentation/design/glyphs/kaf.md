@@ -1,9 +1,9 @@
-# Kaf: retain S-like intent
+# Kaf
 
-Eli prefers rounded, playful, old-style S-like Kaf. Preserve openings and rounded
-turns while matching Virtua weight and connection edges. Angular reference fonts
-do not override this choice. Green Regular initial Kaf stays protected.
-
-The exact Bold initial candidate was approved and applied on 2026-10-29. This is
-not approval of the earlier medial candidate or a general authorization for Kaf
-variants. For joining repairs compare both connection edges to actual neighbors.
+- Eli prefers a rounded Kaf with an old-style S shape. Keep its openings and
+  rounded turns. The angular Kaf of some reference fonts does not override
+  this.
+- Match the Virtua stroke weight and the connection edges. For a joining
+  change, compare both connection edges with the actual neighbor letters.
+- The Regular initial Kaf is green. Eli approved the Bold initial Kaf. These
+  approvals do not apply to the other Kaf forms.
