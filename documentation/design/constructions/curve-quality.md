@@ -45,22 +45,25 @@ October 2026. Their records are in the Git history before commit 1db2dfc7.
 
 ```sh
 .venv/bin/python scripts/curve_lint.py Bold hamzaabove-ar --joins
-.venv/bin/python scripts/curve_profile.py before.glif after.glif --svg out/comb.svg
-.venv/bin/python scripts/paired_stroke_report.py glyph.glif pairs.json --output out/widths.json
 ```
 
-`curve_profile.py` writes the signed curvature of two GLIFs on one scale.
-`paired_stroke_report.py` measures the width between the edge pairs named in
-its plan file. Neither gives a pass threshold. The filled proof decides.
-
-## Evidence from the hamza correction
-
-- The agent's lower-left turn reversed its curvature; Eli's did not. A check
-  for kinks did not find it.
-- Eli's outer shoulder keeps a curvature mismatch at one join. Keep it. The
-  preferred shape is not the one with the most G2 joins.
+`curve_lint.py` reports off-center crests, tension breaks, inflections and,
+with `--joins`, the continuity of every join. A report is a prompt to look at
+the filled glyph. An S spine has an inflection by design.
 
 ## Rule entries
+
+### Turns keep one direction of curvature
+
+A turn in a bowl or a shoulder does not reverse its curvature. A check for
+kinks does not find this fault; read the inflections from `curve_lint.py`.
+Seen in: hamzaabove-ar Bold (d23f1bed).
+
+### G2 is not the target
+
+A join can keep a curvature change when the shape needs it. The preferred
+shape is not the one with the most G2 joins.
+Seen in: hamzaabove-ar Bold (d23f1bed).
 
 ### On-curve points at extrema
 

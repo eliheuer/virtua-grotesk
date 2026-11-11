@@ -1,24 +1,24 @@
-# Verify the proposed change
+# Verify a change
 
-Use a bounded source scope and preserve exact before/candidate files. First inspect
-filled silhouettes against relevant green Virtua construction. Check new geometry
-on 8, preserve inherited human exceptions, and verify master correspondence.
-For curves, use `scripts/curve_lint.py <Master> <glyphs> --joins` and the signed
-`curve_profile.py` comparison; pair opposing edges when apparent weight is at issue.
+Do these checks after a glyph edit and before you show the result to Eli.
 
-Build the candidate with the repository build pipeline. Check compiled shaping,
-advances and affected components; inspect endpoints 400/700 and intermediate weights.
-Use `make proof-web` to compare the current build with `reference-fonts/`. For a
-Before/Candidate comparison, prepare a snapshot with `scripts/proof-web/app/prepare.py`
-and serve it with `scripts/proof-web/serve.py --snapshot`. The proof renders actual
-verified fonts. `make review` is a separate Diffenator
-report, and `make proof` is the print PDF.
+1. Look at the filled glyph next to the green Virtua glyphs of the same
+   construction.
+2. Make sure that new points are on the grid of 8, and that both masters
+   have the same contours, points and components.
+3. Run `scripts/curve_lint.py <Master> <glyphs> --joins` and look at each
+   reported curve.
+4. Build with `make build`. Look at the glyph at 400, 700 and an
+   intermediate weight, and in each composite that uses it.
+5. Compare the build with `reference-fonts/` in `make proof-web`.
 
-For Arabic batches retain and inspect fixed 400/700 details with the recorded
-references using `scripts/proof-web/app/render-detail.py`. Show the focused comparison
-promptly; broader reports can follow an accepted group or an explicit QA request.
-Follow `documentation/qa.md` for required build and release checks.
+To compare a before and an after build, prepare a snapshot with
+`scripts/proof-web/app/prepare.py` and serve it with
+`scripts/proof-web/serve.py --snapshot`. For a close view of Arabic details at
+400 and 700, use `scripts/proof-web/app/render-detail.py`.
 
-Describe observed shape faults honestly. A candidate with a visible swollen join,
-wrong construction, accidental notch or pinched counter stays unresolved even when
-numerical checks pass. Human grading remains Eli's decision.
+A passing check does not make a glyph correct. Report each visible fault, for
+example a swollen join, a notch or a pinched counter, even when the checks
+pass. Eli decides the grade.
+
+The build and release checks are in [qa.md](../../qa.md).

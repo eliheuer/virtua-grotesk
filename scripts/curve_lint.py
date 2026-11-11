@@ -7,11 +7,13 @@
 2. TENSION BREAKS: at every smooth on-curve point, the incoming and
    outgoing curvature magnitudes should be comparable; big ratios read
    as lumps even when everything is on-grid.
+3. INFLECTIONS: a curve segment whose curvature changes sign. This is
+   correct in an S spine and a fault in a bowl.
 
     ./.venv/bin/python scripts/curve_lint.py Bold b d o
     ./.venv/bin/python scripts/curve_lint.py Regular --all
 """
-import argparse, math, re, os
+import argparse, math, plistlib, re
 
 TOL_CREST = 6
 TENSION_RATIO = 2.6
@@ -40,6 +42,22 @@ def curvature(p0,p1,p2,p3,t):
         6*mt*(p2[1]-2*p1[1]+p0[1])+6*t*(p3[1]-2*p2[1]+p1[1]))
     num=abs(d1[0]*d2[1]-d1[1]*d2[0]); den=(d1[0]**2+d1[1]**2)**1.5
     return num/den if den>1e-9 else 0.0
+
+def signed_curvature(p0,p1,p2,p3,t):
+    """Signed curvature at t, or None where the tangent is undefined."""
+    mt=1-t
+    d1=(3*mt*mt*(p1[0]-p0[0])+6*mt*t*(p2[0]-p1[0])+3*t*t*(p3[0]-p2[0]),
+        3*mt*mt*(p1[1]-p0[1])+6*mt*t*(p2[1]-p1[1])+3*t*t*(p3[1]-p2[1]))
+    d2=(6*mt*(p2[0]-2*p1[0]+p0[0])+6*t*(p3[0]-2*p2[0]+p1[0]),
+        6*mt*(p2[1]-2*p1[1]+p0[1])+6*t*(p3[1]-2*p2[1]+p1[1]))
+    speed=math.hypot(*d1)
+    return (d1[0]*d2[1]-d1[1]*d2[0])/speed**3 if speed>1e-9 else None
+
+def inflections(p0,p1,p2,p3,samples=96):
+    """Number of curvature sign changes in a cubic segment."""
+    ks=[signed_curvature(p0,p1,p2,p3,i/samples) for i in range(samples+1)]
+    signs=[k>0 for k in ks if k is not None and abs(k)>1e-10]
+    return sum(a!=b for a,b in zip(signs,signs[1:]))
 
 def segments(cont):
     n=len(cont); ons=[i for i,p in enumerate(cont) if p['on']]
@@ -90,6 +108,10 @@ def lint_glyph(path, name):
             if lo>1e-6 and hi/lo>TENSION_RATIO:
                 issues.append(f'contour {ci}: tension break at '
                               f'({a[3]["x"]:g},{a[3]["y"]:g}) ratio {hi/lo:.1f}')
+        for s in all_segments(cont):
+            if not s[4] and inflections(*s[:4]):
+                issues.append(f'contour {ci}: inflection in the curve from '
+                              f'({s[0][0]:g},{s[0][1]:g}) to ({s[3][0]:g},{s[3][1]:g})')
     return issues
 
 # ---- geometric continuity (G0/G1/G2), adapted from Runebender ----
@@ -201,15 +223,14 @@ def main():
     ap.add_argument('--joins',action='store_true',help='Audit all curve joins, including unmarked corners; human intent still requires review')
     a=ap.parse_args()
     gdir=f'sources/VirtuaGrotesk-{a.master}.ufo/glyphs'
-    names=a.glyphs
-    if a.all:
-        import plistlib
-        names=sorted(plistlib.load(open(f'{gdir}/contents.plist','rb')))
+    files=plistlib.load(open(f'{gdir}/contents.plist','rb'))
+    names=sorted(files) if a.all else a.glyphs
+    unknown=[g for g in names if g not in files]
+    if unknown:
+        ap.error('not in the source: '+' '.join(unknown))
     bad=0
     for g in names:
-        fn=g if g.islower() or len(g)>1 else g+'_'
-        path=f'{gdir}/{fn}.glif'
-        if not os.path.exists(path): continue
+        path=f'{gdir}/{files[g]}'
         issues=lint_glyph(path,g)
         if a.joins:
             for row in join_audit(parse(open(path).read())):
@@ -225,7 +246,7 @@ def main():
             bad+=1
             print(f'{a.master} {g}:')
             for i in issues: print('  '+i)
-    print(f'{bad} glyphs flagged' if bad else 'no crest/tension/kink flags (not a curve-quality verdict)')
+    print(f'{bad} glyphs flagged')
 
 if __name__=='__main__':
     main()
