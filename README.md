@@ -1,17 +1,18 @@
 # Virtua Grotesk
 
-Virtua Grotesk is a geometric sans serif by Eli Heuer, built on a power-of-two
-grid with 16-unit chamfered corners. The upright family has a weight axis from
-Regular (400) to Bold (700), with Medium and SemiBold instances.
+Virtua Grotesk is a geometric sans serif by Eli Heuer for Latin, Arabic and
+Hebrew. It is drawn on a power-of-two grid with 16-unit chamfered corners. The
+variable font has a weight axis from Regular (400) to Bold (700), with Medium
+and SemiBold instances.
 
 ![Virtua Grotesk construction sheet showing the word Grid](https://elih.net/og/virtua-grotesk.png)
 
-The font is in development. Latin, Arabic, and Hebrew are planned for the first
-Google Fonts release; drawings and script behavior still need review. Italic
-is a separate future proposal. See [the release notes](documentation/google-fonts.md)
-for the scope, the open decisions and the Google Fonts links.
-
-[Design background: Grid Systems as Datasets](https://elih.net/blog/virtua-grotesk)
+The font is in development and is intended for Google Fonts. The progress of
+each script is in [STATUS.md](STATUS.md). The release scope, open decisions
+and links to the Google Fonts guide are in
+[documentation/google-fonts.md](documentation/google-fonts.md). The design
+background is in the article
+[Grid Systems as Datasets](https://elih.net/blog/virtua-grotesk).
 
 ## Build
 
@@ -22,101 +23,59 @@ make setup
 make build
 ```
 
-On Linux, the Python dependencies also need Cairo development headers,
-`pkg-config`, and Python development headers. On macOS, install Cairo and
-`pkg-config` before setup if they are not already available.
+On Linux, setup also needs the Cairo development headers, `pkg-config` and
+the Python development headers. On macOS, install Cairo and `pkg-config`.
 
-`scripts/build.sh` uses the pinned Python requirements and `sources/config.yaml`, then
-applies the repository's compiled-font metadata fixes. Outputs are:
+The build writes `fonts/variable/VirtuaGrotesk[wght].ttf` and four static
+fonts in `fonts/ttf/`. Git ignores `fonts/`. The editable sources are the two
+UFO masters and the designspace in `sources/`.
 
-- `fonts/variable/VirtuaGrotesk[wght].ttf`
-- `fonts/ttf/VirtuaGrotesk-{Regular,Medium,SemiBold,Bold}.ttf`
+## Work on the font
 
-Builds replace generated files under `fonts/` and `build/`; the UFO sources are
-the editable originals. Binaries are ignored in Git. CI uploads build artifacts;
-a public release for onboarding is still pending.
+| Command | Use |
+| --- | --- |
+| `make runebender` | Open the sources in the Runebender web editor. |
+| `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
+| `make check-design GLYPHS="n a"` | Check glyphs against the grid and stroke targets. |
+| `make status` | Write `STATUS.md` from the mark colors. |
+| `make qa` | Google Fonts checks with Fontspector. |
+| `make help` | All commands. |
 
-## Review and contribute
+The commands and checks are described in
+[documentation/qa.md](documentation/qa.md). The design rules are in
+[documentation/design/](documentation/design/README.md).
 
-Read [AGENTS.md](AGENTS.md) before you edit sources with an agent. The design
-rules are in [documentation/design/README.md](documentation/design/README.md). Progress is in
-[STATUS.md](STATUS.md).
+## Mark colors
 
-- `make status`: write STATUS.md from the mark colors in both masters.
-- `make proof-web`: build, then compare the fonts with `reference-fonts/` in a browser.
-- `make check-design GLYPHS="..."`: check glyphs against the grid and stroke targets.
-- `make test`: development Fontspector checks, with documented exclusions.
-- `make qa-full`: all configured Google Fonts profile checks, without exclusions.
-- `make review`: a separate Diffenator3 QA browser proof.
-- `make proof`: the main PDF. This target needs the designbot CLI.
-- `make help`: all other commands.
+Each glyph has a mark color in each master. The color tells people and agents
+what they can do with the glyph. The full policies are in
+[sources/design.toml](sources/design.toml).
 
-See [QA and tool setup](documentation/qa.md) and the
-[documentation index](documentation/README.md). Report problems or propose
-changes in [GitHub issues](https://github.com/eliheuer/virtua-grotesk/issues).
+| Color | Meaning |
+| --- | --- |
+| Green | Approved by Eli. A reference for other glyphs. Frozen. |
+| Yellow | Good drawing that needs more work. |
+| Orange | Poor drawing with useful construction to keep. |
+| Red | Can be replaced. |
+| Purple | AI drawing that Eli has not reviewed. |
+| Blue | Composite that needs diagnosis. |
+| Pink | Composite that needs small edits. |
 
-AI tools have assisted with code, documentation, and candidate glyph generation.
-Source colors describe drawing quality, composite status, and what may be changed.
+Only green glyphs are references. The release target is every glyph green in
+both masters.
 
-## Helper model workflow
+## AI tools
 
-Use the local helper model with a coding agent and **native Runebender** to propose
-point edits, review them in Runebender's Agent Proof view, and take turns editing
-with the agent.
-
-**Start here:** [Helper model workflow guide](documentation/native-model-workflow.md).
-Use the [red-pencil review loop](documentation/native-model-workflow.md#red-pencil-review-loop)
-to mark corrections or sketch another form directly in native Agent Proof. Agents
-receive the annotated PNG through MCP, interpret your intent, and prepare a scratch
-candidate. The model takes geometry and a point mask; it does not read the sketch.
-
-It covers Linux setup, model inference, the required MCP connection, scratch
-comparisons, and handing control between you and the agent.
-
-Give your agent this instruction:
-
-> Read AGENTS.md and the Helper model workflow section of README.md, then follow
-> documentation/native-model-workflow.md. Start with the bundled sample in a
-> scratch font in native Runebender. Keep Virtua's actual font unchanged and pause
-> for my review before further edits.
-
-The [Regular Arabic helper model](models/arabic-repair-hour-v1/README.md) is included
-in this repository (148 KiB, 36,578 parameters) and runs locally on CPU. It remains
-experimental: it changes clean held-out drawings and is not approved for automatic
-cleanup. Pull and build the required Runebender version as well as this repository;
-Pi needs an MCP bridge to control the editor.
-
-## Semantic colors
-
-Glyph colors are editing and reference permissions, not just progress indicators.
-The same meanings apply to people and AI tools.
-
-For AI edits, these meanings apply only inside a scope that Eli names: the
-glyphs and the masters. Eli gives the verdict and approves contour glyphs. A
-composite can be marked green when its parts are green and
-`scripts/check_design.py --ready` lists it.
-Purple identifies AI-drawn or substantially redrawn glyphs that wait for human
-review. Purple gives no approval, reference or protection status.
-
-| Color | Meaning | Editing and reference use |
-| --- | --- | --- |
-| Red | Bad, replaceable, or no drawing. | OK to overwrite or replace. Do not use as reference material. |
-| Orange | Bad drawing, but contains useful information worth preserving. | Edits are welcome; do not overwrite the drawing. Do not use as reference material. |
-| Yellow | Better drawing, but still needs work. | Edit without overwriting. Not good enough to use as reference material. |
-| Green | Approved glyph, whether an outline or composite; frozen by default. | Use as reference material. Changes require Eli's explicit approval naming the glyph and master. |
-| Blue | Composite drawing with a problem that needs attention and judgment to resolve. | Inspect the composite and fix the problem. It is not an approved reference. |
-| Purple | AI-drawn or substantially redrawn; not yet reviewed or edited by a human. | Editable within authorized scope; not an approved reference. Human review replaces purple with the appropriate grade. Git/proof records retain provenance. |
-| Pink | Composite drawing needing a small amount of work, less than blue. | Edits are welcome. Do not use as reference material. |
-
-Blue describes a composite needing attention; it does not mean “AI-generated.”
-Only red explicitly permits replacement or overwriting.
-When editing a composite, preserve any green component glyphs it uses.
-Uncolored or unfamiliar labels do not grant automatic editing or reference permission; clarify their meaning first.
-Human grading determines approval; AI tools must not change review colors automatically.
-Leave new candidates ungraded unless Eli specifies a review color.
+AI tools help with code, documentation and draft glyphs. Eli draws, reviews
+and approves the glyphs. The rules for agents are in [AGENTS.md](AGENTS.md).
+An experimental model for Arabic point repair is in
+[models/](models/README.md), and
+[documentation/native-model-workflow.md](documentation/native-model-workflow.md)
+describes how to use it with Runebender.
 
 ## License
 
 The font is licensed under the [SIL Open Font License, Version 1.1](OFL.txt).
-Copyright holders are listed in [AUTHORS.txt](AUTHORS.txt); other contributors
-are listed in [CONTRIBUTORS.txt](CONTRIBUTORS.txt).
+The copyright holders are in [AUTHORS.txt](AUTHORS.txt) and the contributors
+in [CONTRIBUTORS.txt](CONTRIBUTORS.txt). Report problems in
+[GitHub issues](https://github.com/eliheuer/virtua-grotesk/issues).
