@@ -11,8 +11,8 @@ import torch
 import masked_repair as mr
 import variable_repair as vr
 
-ROOT = Path(__file__).resolve().parents[1]
-MODEL = ROOT / 'models/arabic-repair-hour-v1'
+ROOT = Path(__file__).resolve().parents[2]
+MODEL = Path(__file__).resolve().parent
 
 
 def propose(sample):

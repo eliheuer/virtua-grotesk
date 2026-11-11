@@ -30,7 +30,7 @@ def run(snapshot,out,manifest_sha256=old.MANIFEST,max_steps=1800,max_seconds=180
         raise ValueError(f"Run limits:1–{step_limit} steps and1–{second_limit} seconds")
     out=Path(out)
     if out.exists():raise ValueError('Never overwrite a pilot')
-    root=Path(__file__).resolve().parents[1];guards=old.snapshot_files(root)
+    root=Path(__file__).resolve().parents[2];guards=old.snapshot_files(root)
     train=[r for r in load_split(snapshot,manifest_sha256,'train') if r['master']=='Regular' and '-ar' in r['glyph']]
     held=[r for r in load_split(snapshot,manifest_sha256,'validation') if r['master']=='Regular' and r['glyph'] in old.HAH_RECIPES]
     if {r['group'] for r in train}&{r['group'] for r in held}:raise ValueError('Group leakage')

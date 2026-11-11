@@ -6,7 +6,7 @@ try:
     import torch  # The helper model workflow installs torch separately.
 except ModuleNotFoundError:
     raise unittest.SkipTest('torch is not installed; see documentation/native-model-workflow.md')
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'models/arabic-repair-hour-v1'))
 import variable_repair as vr
 
 class VariableRepairTests(unittest.TestCase):

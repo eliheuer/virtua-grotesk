@@ -10,8 +10,9 @@ Each model has one directory with these files only:
 - the checkpoint, at most 5 MB. A larger checkpoint goes to a GitHub release
   or Hugging Face, with its SHA-256 and link in the model card.
 - small JSON files that the runner needs, for example a manifest or a sample.
+- the Python files that run and train the model.
 
-Training code is in `scripts/`. Training logs, receipts and data snapshots
+Training logs, receipts and data snapshots
 go to `out/`, which Git ignores. Train only on green glyphs, and keep a held
 out family that the model never sees in training.
 

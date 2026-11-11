@@ -1,50 +1,56 @@
-# Script index
+# Scripts
 
-Run scripts from the repository root with `.venv/bin/python`, unless they are
-shell entrypoints. `make help` lists the maintained command interface.
+Run the Python scripts from the repository root with `.venv/bin/python`.
+`make help` lists the commands that use them. The code of the Arabic repair
+model is in [models/arabic-repair-hour-v1/](../models/arabic-repair-hour-v1/README.md).
 
-## Build and validation
+## Build
 
-- `build.sh`: the release build (`make build`). `build-fontc.sh`: the fontc build (`make build-fontc`).
-- `proof-web/`: the live comparison proof (`make proof-web`). See [proof-web/README.md](proof-web/README.md).
-- `fix_gf_metadata.py`: postprocesses compiled fonts; called by both build scripts.
-- `check_gf_fonts.sh`: development, full-font, and downstream-package QA.
-- `run_reports.py` and `report_*.py`: source, compatibility, and binary reports.
-- `preflight.py`: checks required local artifact paths.
-- `glif_lint.py`, `grid_lint.py`, `curve_lint.py`, `curve_continuity.py`:
-  outline checks; inspect each CLI before choosing a scope.
-- `grid_qa.py`, `scoreboard.py`, `normalize_metrics.py`: design measurements
-  and review summaries. Generated scores do not approve glyphs.
-- `audit_diacritics.py`, `latin_diacritics_audit.py`, `compare_diacritics.py`,
-  `shape_sheet.py`, `qa_loop.py`: focused diacritic and shaping review.
+| Script | Use |
+| --- | --- |
+| `build.sh` | The release build (`make build`). |
+| `build-fontc.sh` | The build with fontc (`make build-fontc`). |
+| `build_source_snapshot.py` | Copies the sources to a temporary folder for the build, so the glyph order of the editor stays unchanged. |
+| `fix_gf_metadata.py` | Corrects the metadata of the compiled fonts. Both build scripts call it. |
+| `install_fontspector.py` | Installs Fontspector into `.venv` (`make setup`). |
 
-## Design harness
+## QA and reports
 
-- `check_design.py`: checks glyphs against the stroke targets in
-  `sources/design.toml`, checks composites against their
-  parts and anchor recipes, and ranks the glyphs that most composites wait on
-  (`make check-design`, `make queue`). It needs the Runebender binary.
-- `benchmark.py`: scores a drafting pipeline on the held-out green glyphs in
-  `tests/benchmark.toml` (`make benchmark RUN=...`).
-- `status.py`: writes `STATUS.md` from the mark colors (`make status`).
-- `lessons.py`: counts the `Correction:` lines of commit messages by topic
-  (`make lessons`).
-- `check_changes.py`: checks source changes against a base revision: no green
-  glyph changed, changed contour glyphs are purple, and optional before and
-  after proof sheets (`make check-changes`).
+| Script | Use |
+| --- | --- |
+| `check_gf_fonts.sh` | Fontspector checks: development, full and package (`make qa`, `make qa-full`, `make qa-package`). |
+| `check_hebrew.py` | Hebrew coverage and mark attachment in the compiled font (`make qa-hebrew`). |
+| `run_reports.py` | Runs the three `report_*.py` scripts and writes to `out/reports/` (`make reports`). |
+| `report_master_compatibility.py` | Compatibility of the two masters. `--check` fails on a blocking difference. |
+| `report_source_metadata.py`, `report_generated_font_metadata.py` | Metadata of the UFOs and of the compiled fonts. |
+| `preflight.py` | Makes sure that the build, proof and report files exist (`make preflight`). |
 
-The loop that uses them is in
+## Design checks
+
+The loop that uses these scripts is in
 [documentation/design/system/learning.md](../documentation/design/system/learning.md).
 
-`find_should_be_components.py` is an analysis aid. `refresh-ui-font.sh` is a
-local editor-development utility, not a font release step.
+| Script | Use |
+| --- | --- |
+| `check_design.py` | Checks glyphs against the grid and stroke targets in `sources/design.toml`, checks composites against their parts and anchor recipes, and ranks the glyphs that most composites wait on (`make check-design`, `make queue`). It needs the Runebender binary. |
+| `check_changes.py` | Compares the sources with a base revision: no green glyph changed, and changed contour glyphs are purple. It can draw before and after proofs (`make check-changes`). |
+| `benchmark.py` | Scores a drafting method on the held-out green glyphs in `tests/benchmark.toml` (`make benchmark RUN=...`). |
+| `lessons.py` | Counts the `Correction:` lines of commit messages by topic (`make lessons`). |
+| `status.py` | Writes `STATUS.md` from the mark colors (`make status`). |
+| `source_inventory.py` | Reads glyph records and mark colors. Other scripts import it. |
+| `glif_lint.py` | Finds structural faults in GLIF files. |
+| `curve_lint.py` | Curve fairness checks (`make lint-curves`). |
+| `curve_profile.py` | Signed curvature of two GLIF files on one scale, as a report and an SVG comb. |
+| `paired_stroke_report.py` | Width between named pairs of edges. |
 
-The generator scripts that wrote whole glyph sets into the UFOs (`arabic_*`,
-`latin_accents.py`, `embolden.py`, `build_anchors.py` and others) are in the
-Git history before 2026-11-10. Do not restore them. Draw named glyphs through
+## Proofs
+
+| Script | Use |
+| --- | --- |
+| `proof-web/` | The live comparison with `reference-fonts/` (`make proof-web`). See [proof-web/README.md](proof-web/README.md). |
+| `proof_reference.py` | Renders shaped text beside the reference fonts at one em size. It uses `proof_compare.py` and `specimen_layout.py`. |
+| `article_specimen.py` | Renders the image for the Google Fonts About text. |
+
+Do not add scripts that write whole glyph sets into the UFOs. The old
+generators are in the Git history before 2026-11-10. Draw named glyphs through
 Runebender proposals.
-
-## Source compatibility
-
-`report_master_compatibility.py --check` makes blocking source differences fail;
-without --check its historical report-only interface is preserved.

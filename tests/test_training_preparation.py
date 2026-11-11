@@ -1,6 +1,6 @@
 import contextlib,importlib.util,io,json,math,os,sys,tempfile,unittest
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'models/arabic-repair-hour-v1'))
 import prepare_green_dataset as prep
 import frozen_green_dataset as frozen
 import hashlib

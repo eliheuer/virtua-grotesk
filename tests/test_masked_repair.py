@@ -1,7 +1,7 @@
 import copy,json,sys,unittest,tempfile
 from unittest.mock import patch
 from pathlib import Path
-ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'scripts'))
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'models/arabic-repair-hour-v1'))
 import masked_repair as mr
 
 class MaskedRepairTests(unittest.TestCase):

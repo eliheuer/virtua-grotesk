@@ -13,7 +13,7 @@ From this repository, on Linux or macOS with Python3.11+:
 python3 -m venv .venv-repair
 . .venv-repair/bin/activate
 python -m pip install 'torch>=2.6,<3'
-python scripts/propose_arabic_repair.py --out out/arabic-repair-demo
+python models/arabic-repair-hour-v1/propose_arabic_repair.py --out out/arabic-repair-demo
 ```
 
 PyTorch is the large dependency; the bundled model is only148KiB. No GPU, model

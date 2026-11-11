@@ -30,7 +30,7 @@ LAYOUT = [
     'sources/design.toml',
     'sources/VirtuaGrotesk-Regular.ufo/**', 'sources/VirtuaGrotesk-Bold.ufo/**',
     # Small models: a model card, the checkpoint and small runner files.
-    'models/README.md', 'models/*/README.md', 'models/*/checkpoint.*', 'models/*/*.json',
+    'models/README.md', 'models/*/README.md', 'models/*/checkpoint.*', 'models/*/*.json', 'models/*/*.py',
     # Tools and their tests.
     'scripts/README.md', 'scripts/*.py', 'scripts/*.sh', 'scripts/proof-web/**',
     'tests/test_*.py', 'tests/benchmark.toml', 'tests/fixtures/**',

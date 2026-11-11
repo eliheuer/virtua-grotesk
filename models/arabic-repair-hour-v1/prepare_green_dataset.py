@@ -4,8 +4,9 @@ import argparse, collections, hashlib, json, shutil, unicodedata
 import tomllib
 from pathlib import Path
 import xml.etree.ElementTree as ET
+import sys
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'scripts'))
 import source_inventory as dc
-ROOT=Path(__file__).resolve().parents[1]
 
 def build(root, out):
     if out.exists(): raise ValueError('Output already exists; choose a new snapshot')

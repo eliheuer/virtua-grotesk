@@ -7,9 +7,9 @@ change real glyphs.
 | --- | --- |
 | Task | Move the masked points of one Regular Arabic glyph toward the font's construction. The topology stays the same. Output is on the 2-unit grid. |
 | Size | 36,578 parameters, 151,285 bytes (`checkpoint.pt`, SHA-256 in `manifest.json`) |
-| Runtime | CPU, PyTorch 2.6 or later (tested with 2.13.0). `scripts/propose_arabic_repair.py` |
+| Runtime | CPU, PyTorch 2.6 or later (tested with 2.13.0). `propose_arabic_repair.py` |
 | Training data | 36 green Regular Arabic drawings in 10 construction families, with synthetic point displacements and clean copies. |
-| Training | 1,285,746 steps in one hour, 2026-10-30. `scripts/train_variable_pilot.py` |
+| Training | 1,285,746 steps in one hour, 2026-10-30. `train_variable_pilot.py` |
 | Held out | The Hah family (validation; inspected repeatedly during development). |
 
 ## Results

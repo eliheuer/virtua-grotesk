@@ -71,7 +71,7 @@ def run(snapshot, checkpoint_path, out):
         raise ValueError('Refusing to overwrite fixed evaluation')
     if digest(checkpoint_path)!=CHECKPOINT:
         raise ValueError('Unreviewed checkpoint')
-    root=Path(__file__).resolve().parents[1]
+    root=Path(__file__).resolve().parents[2]
     guards=snapshot_files(root)
     train={r['glyph']:r for r in load_split(snapshot,MANIFEST,'train') if r['master']=='Regular'}
     val={r['glyph']:r for r in load_split(snapshot,MANIFEST,'validation') if r['master']=='Regular'}

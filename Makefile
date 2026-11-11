@@ -6,7 +6,7 @@ VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review review-rubik qa-diacritics runebender qa qa-full qa-package test reports lint-grid preflight status check-design queue lessons check-changes benchmark skeleton clean
+.PHONY: help setup build build-fontc proof proof-web review review-rubik runebender qa qa-full qa-package test reports preflight status check-design queue lessons check-changes benchmark skeleton clean
 
 help:
 	@printf '%s\n' \
@@ -29,10 +29,6 @@ help:
 		'  make qa-full        Full Fontspector profile; no exclusions' \
 		'  make qa-package PACKAGE=path  Full downstream-package QA' \
 		'  make reports        Regenerate source/build metadata reports' \
-		'  make grid-qa        Per-glyph design-system conformance report (grades + popcounts)' \
-		'  make dashboard GLYPH=a  Live one-glyph design dashboard (re-renders on save)' \
-		'  make lint-grid      Check source outlines against the power-of-two grid' \
-		'  make metrics        Normalized metric comparison vs Inter/Geist (weight, spacing, proportion)' \
 		'  make skeleton       End-to-end loop: build + qa + reports + status (qa may fail while debt exists)' \
 		'  make preflight      Build, proof, reports, then check artifacts' \
 		'  make clean          Remove generated build outputs'
@@ -73,11 +69,6 @@ review-rubik:
 	@mkdir -p out
 	$(DIFFPROOF) "$(RUBIK_FONT)" --output out/review-rubik
 	@echo ">>> open out/review-rubik/diff3proof.html"
-
-# Diacritic/spacing QA loop harness: audit + Rubik render + review checklist.
-# The agent (person, or Gemma once wired) drives this; fix the anchors in the source.
-qa-diacritics: build
-	$(PYTHON) scripts/qa_loop.py
 
 # Serves the editor at localhost:8765 with the designspace open. Edits to
 # the sources reload in the browser, and Cmd+S saves back to disk.
@@ -123,35 +114,15 @@ check-changes:
 benchmark:
 	$(PYTHON) scripts/benchmark.py score "$(RUN)"
 
-grid-qa:
-	$(PYTHON) scripts/grid_qa.py
-
-# Live design dashboard for one glyph, for a second monitor while editing:
-# re-renders on every save. GLYPH accepts a glyph name, character, or U+XXXX.
-# Usage: make dashboard GLYPH=a
-GLYPH ?= $(G)
-dashboard:
-	@test -n "$(GLYPH)" || { echo "usage: make dashboard GLYPH=<name|char|U+XXXX>"; exit 1; }
-	$(PYTHON) scripts/grid_qa.py --focus "$(GLYPH)" --watch
-
-lint-grid:
-	$(PYTHON) scripts/grid_lint.py
-
 lint-curves:
 	$(PYTHON) scripts/curve_lint.py Regular --all
 	$(PYTHON) scripts/curve_lint.py Bold --all
-
-# Normalized metric comparison of Virtua glyphs against reference fonts
-# (Inter, Geist). See the description in scripts/normalize_metrics.py.
-metrics:
-	$(PYTHON) scripts/normalize_metrics.py
 
 # The end-to-end skeleton: prove the whole pipeline runs TODAY, debt and
 # all. qa failures are expected while debt exists (the leading "-" keeps
 # make going); STATUS.md is the progress metric.
 skeleton: build
 	-./scripts/check_gf_fonts.sh
-	-$(PYTHON) scripts/grid_lint.py --quiet
 	$(PYTHON) scripts/run_reports.py
 	$(PYTHON) scripts/status.py
 

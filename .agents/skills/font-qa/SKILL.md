@@ -15,8 +15,8 @@ make reports
 ```
 
 Inspect metrics, glyph-set parity, contour/point/component correspondence, anchors
-and kerning groups/pairs in both masters. For machine drafts run draft_grid_check
-on the named scratch UFOs/glyphs; preserve inherited optical exceptions. For curves
+and kerning groups/pairs in both masters. For machine drafts run
+`make check-design GLYPHS="..."`; preserve inherited optical exceptions. For curves
 run curve_lint with --joins and inspect signed profiles/large renders. Source
 compatibility does not prove compiled shaping or visual quality: build and inspect
 affected forms at endpoint/intermediate weights. Use google-fonts-qa for binary QA.

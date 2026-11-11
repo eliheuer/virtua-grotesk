@@ -1,7 +1,7 @@
 import sys
 import unittest
 from pathlib import Path
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'models/arabic-repair-hour-v1'))
 try:
     from train_variable_pilot import run
 except ImportError:  # The helper model workflow installs torch separately.
