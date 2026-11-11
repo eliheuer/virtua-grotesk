@@ -50,20 +50,34 @@ class CurveProfileTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'unsupported'):
                 read_contours(p)
 
-    def test_saved_correction_exposes_actual_failure(self):
-        case=Path(__file__).resolve().parent/'fixtures/hamza-bold-correction'
-        ai=profile(case/'ai.glif'); human=profile(case/'human.glif')
-        self.assertEqual(sum(c['sampled_sign_changes'] for c in ai['curves']),1)
-        self.assertEqual(sum(c['sampled_sign_changes'] for c in human['curves']),0)
-        a=next(j for j in ai['joins'] if j['point']==(88,952))
-        h=next(j for j in human['joins'] if j['point']==(88,944))
-        self.assertEqual(a['classification'],'G1')
-        self.assertEqual(h['classification'],'G2')
-        # Do not turn the preferred human drawing into an artificial all-G2 target.
-        outer=next(j for j in human['joins'] if j['point']==(16,960))
-        self.assertEqual(outer['classification'],'G1')
-        self.assertIn('Same outline scale',svg([ai,human]))
-
+    def test_profile_of_a_glif_file(self):
+        # A circle of four arcs: no inflection, and curvature-continuous (G2)
+        # joins. Shorter handles on the right side of the first arc keep the
+        # joins tangent but change the curvature (G1). A control point pulled
+        # inside the circle makes the first arc inflect.
+        def glif(right_handle=276, pull=0):
+            c = 276
+            points = [
+                (500, 0, 'curve'), (500 + right_handle, 0, None), (1000, 500 - c, None),
+                (1000, 500, 'curve'), (1000, 500 + c, None), (500 + c, 1000, None),
+                (500, 1000, 'curve'), (500 - c, 1000, None), (0, 500 + c, None),
+                (0, 500, 'curve'), (0, 500 - c, None), (500 - c + pull, pull, None),
+            ]
+            rows = ''.join(f'<point x="{x}" y="{y}"' + (f' type="{k}" smooth="yes"' if k else '') + '/>' for x, y, k in points)
+            return f'<glyph><outline><contour>{rows}</contour></outline></glyph>'
+        with tempfile.TemporaryDirectory() as folder:
+            p = Path(folder) / 'test.glif'
+            p.write_text(glif())
+            circle = profile(p)
+            p.write_text(glif(right_handle=200))
+            uneven = profile(p)
+            p.write_text(glif(pull=300))
+            dented = profile(p)
+        self.assertEqual(sum(c['sampled_sign_changes'] for c in circle['curves']), 0)
+        self.assertEqual({j['classification'] for j in circle['joins']}, {'G2'})
+        self.assertEqual(next(j for j in uneven['joins'] if j['point'] == (500, 0))['classification'], 'G1')
+        self.assertGreater(sum(c['sampled_sign_changes'] for c in dented['curves']), 0)
+        self.assertIn('Same outline scale', svg([circle, dented]))
 
 if __name__=='__main__':
     unittest.main()
