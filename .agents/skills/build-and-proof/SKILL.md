@@ -1,0 +1,41 @@
+---
+name: build-and-proof
+description: Build the Virtua Grotesk fonts and render proofs of them. Use when asked to build, compile or regenerate the fonts, or to make or look at a proof, specimen or comparison with the reference fonts.
+---
+
+# Build and proof
+
+Run every command from the repository root.
+
+## Build
+
+`make build` builds the variable font and four static fonts into `fonts/`
+with `gftools builder sources/config.yaml`. If the build fails, read the error
+output. Common causes are incompatible masters, a missing glyph and invalid
+GLIF XML.
+
+## Proofs
+
+| Command | Output |
+| --- | --- |
+| `make proof-web` | Serves the current build beside the fonts in `reference-fonts/` at one em size and weight. See `scripts/proof-web/app/README.md`. |
+| `make proof` | DesignBot PDF proof in `out/proof.pdf`, generated from the font. |
+| `make review` | Diffenator3 browser proof in `out/review/`. |
+| `make check-changes GLYPHS="..."` with `--proof <dir>` | Runebender proof sheets of changed glyphs, before and after. |
+
+For a Before and Candidate comparison in the web proof, prepare a snapshot
+from fixed font files with `scripts/proof-web/app/prepare.py`, then run
+`.venv/bin/python scripts/proof-web/serve.py --snapshot <directory>`. If the
+Before or Candidate font is missing, stop. Do not use the current build in
+its place.
+
+Specimen and publicity images are DesignBot scripts (`.rs`) in
+`documentation/`, next to their output. Run them with
+`designbot <script>.rs --output <file>` after `make build`.
+
+## Report
+
+Look at the rendered output before you describe it: font loading, shaping,
+marks, right-to-left text and coverage. A reference font without a glyph must
+show as missing, not as a system fallback. Give the output paths and the
+visible findings. A rendered proof is not approval. Eli gives the verdict.

@@ -27,7 +27,7 @@ glyphs that are not green stay Eli's work.
   the reason. Outline warnings (`outline_*`, `contour_count`,
   `overlapping_path_segments`, `interpolation_issues`) are listed with the
   glyph names for Eli, not corrected.
-- A local package built as the `google-fonts-packaging` skill describes
+- A local package built as the `google-fonts-release` skill describes
   passes `./scripts/check_gf_fonts.sh package <directory>` with no FAIL.
 - The report contains the text of the Add Font issue, from the template at
   https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md.

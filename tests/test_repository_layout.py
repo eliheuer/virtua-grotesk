@@ -23,7 +23,7 @@ LAYOUT = [
     'OFL.txt', 'README.md', 'STATUS.md', 'requirements.in', 'requirements.txt',
     '.github/workflows/*.yaml',
     # Agent files: skills, task contracts, and the OMP rules link to AGENTS.md.
-    '.agents/README.md', '.agents/skills/*/SKILL.md', '.agents/skills/*/agents/openai.yaml',
+    '.agents/README.md', '.agents/skills/*/SKILL.md',
     '.agents/tasks/*.md', '.omp/RULES.md',
     # Sources.
     'sources/README.md', 'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
@@ -53,10 +53,7 @@ MAX_DOCUMENT_LINES = 200
 # Model checkpoints in Git stay small.
 MAX_CHECKPOINT_BYTES = 5 * 1024 * 1024
 
-PENDING = {
-    # Section 7: agent documents outside a skill directory.
-    '.agents/*.md',
-}
+PENDING = set()  # empty since 2026-11-11; keep it empty
 
 
 def tracked():

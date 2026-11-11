@@ -5,7 +5,7 @@ Code and OMP read it.
 
 | Directory | Content |
 | --- | --- |
-| `skills/` | Procedures that an agent loads by name, for example `build-font`. Codex, Claude Code and OMP find them here. |
+| `skills/` | Procedures that an agent loads by name, `build-and-proof`, `font-qa` and `google-fonts-release`. Codex, Claude Code and OMP find them here. |
 | `tasks/` | Task contracts for long or unattended runs: goal, acceptance, constraints, and the report to give at the end. |
 
 `.omp/RULES.md` is a link to `AGENTS.md`. OMP gives rules to its subagents,

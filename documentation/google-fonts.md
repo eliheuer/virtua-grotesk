@@ -51,6 +51,8 @@ For an agent, the full procedure is the task contract
 | QA and Fontspector | https://googlefonts.github.io/gf-guide/qa.html |
 | METADATA file | https://googlefonts.github.io/gf-guide/metadata.html |
 | Article | https://googlefonts.github.io/gf-guide/article.html |
+| Packaging | https://googlefonts.github.io/gf-guide/package.html |
+| Making a pull request | https://googlefonts.github.io/gf-guide/making-pr.html |
 | Project template | https://github.com/googlefonts/googlefonts-project-template |
 | Add Font issue template | https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md |
 | Google Fonts repository | https://github.com/google/fonts |

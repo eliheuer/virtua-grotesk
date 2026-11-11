@@ -40,7 +40,7 @@ of the green glyphs, and is ready for Eli to review.
 - Work on a new branch `omp/<short-description>` from `main`. Do not push,
   merge or tag.
 - Change only the named glyphs. Do not edit scripts, documentation, features,
-  kerning, fontinfo or the archive.
+  kerning or fontinfo.
 - Do not add files to the repository. Write output under `out/`.
 - Edit GLIF files surgically. Never call whole-UFO `font.save()`.
 

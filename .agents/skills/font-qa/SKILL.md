@@ -1,22 +1,21 @@
 ---
 name: font-qa
-description: "Run quality assurance checks on the font sources: metrics consistency, master compatibility, and kerning sanity. Use before handoff or when verifying source health."
+description: Check the UFO sources after an edit, without building. Master compatibility, grid, stroke targets, curves, kerning and anchors. Use before a review or when asked whether the sources are healthy. For compiled fonts use google-fonts-release.
 ---
 
-# Check source health
-
-Use [design verification](../../../documentation/design/system/verification.md) for the named
-source operation and documentation/qa.md for the complete QA workflow. These checks
-are not human grading or Google Fonts release readiness.
+# Check the sources
 
 ```sh
 .venv/bin/python scripts/report_master_compatibility.py --check
-make reports
+make check-design GLYPHS="..."      # grid, stroke targets, composites
+make check-changes                  # what changed since main
+.venv/bin/python scripts/curve_lint.py Regular <glyph> --joins
 ```
 
-Inspect metrics, glyph-set parity, contour/point/component correspondence, anchors
-and kerning groups/pairs in both masters. For machine drafts run
-`make check-design GLYPHS="..."`; preserve inherited optical exceptions. For curves
-run curve_lint with --joins and inspect signed profiles/large renders. Source
-compatibility does not prove compiled shaping or visual quality: build and inspect
-affected forms at endpoint/intermediate weights. Use google-fonts-qa for binary QA.
+Also look at metrics, glyph sets, anchors, kerning groups and pairs in both
+masters. `documentation/design/system/verification.md` describes the checks for
+each kind of source edit.
+
+The checks find faults. They do not measure design quality, and a pass is not
+approval. Source compatibility does not prove shaping: build and look at the
+changed glyphs at 400, 550 and 700 (see the `build-and-proof` skill).
