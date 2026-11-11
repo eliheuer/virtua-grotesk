@@ -1,66 +1,45 @@
-# Built fonts - keep out of version control
+# Build output
 fonts/
 dist/
 build/
-.glyph-ai-runs/
-documentation/google-fonts/gftools-qa/
 build.ninja
 .ninja_log
 sources/build.ninja
 sources/.ninja_log
 instance_ufo/
-sources/instance_ufos/
 master_ufo/
+sources/instance_ufos/
+
+# Generated reports, proofs and caches
+out/
+
+# Python
 .venv/
-local.mk
+.venv-repair/
 __pycache__/
 *.py[cod]
 
+# Local files
 .DS_Store
-
-# Image files
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.svg
-*.ico
-*.webp
-*.tiff
-*.tif
-!documentation/
-!documentation/assets/
-!documentation/assets/readme/
-!documentation/assets/readme/*.png
-!documentation/article/weight-specimen.svg
-
-# rendered social video (scripts are the source of truth)
-documentation/assets/social/video/
-documentation/assets/social/carousel/
-out/
+local.mk
+/reference-fonts/
 
 # Claude Code files are local. Shared instructions are AGENTS.md and .agents/.
 /CLAUDE.md
 /.claude/
 
-# social promo: commit the .rs scripts, ignore the rendered media (until v1.0)
-# (recursive so the reels/ loops/ posts/ carousels/ subfolders are covered)
-documentation/social-assets/**/*.png
-documentation/social-assets/**/*.gif
-documentation/social-assets/**/*.mp4
+# Rendered images and video. The DesignBot scripts (.rs) beside them are the
+# source. Commit a final image explicitly with `git add -f`.
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.mp4
+*.svg
+!documentation/article/weight-specimen.svg
 
-# rendered specimen/social images at the documentation root: the .rs scripts
-# beside them are the source of truth (regenerable; force-add finals at v1.0)
-documentation/*.png
-documentation/*.gif
-documentation/*.mp4
-
-# Rust build artifacts
-target/
-
-# Local proof references, shared by the live review and Runebender.
-/reference-fonts/
-
-# Isolated runtime for the portable experimental model.
-.venv-repair/
+# Old local output from before 2026-11-10. Delete these folders when they are
+# no longer needed.
+.glyph-ai-runs/
+documentation/assets/

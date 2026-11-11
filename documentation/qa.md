@@ -73,8 +73,6 @@ script is correct. Eli gives the verdict on drawings.
   current sources. Build a known revision in a separate checkout.
 - `out/` is ignored by Git. Its files do not exist in a new clone.
 
-`scripts/proof_compare.py` (before and after, with a difference panel) and
-`scripts/proof_reference.py` (Virtua beside reference fonts) render shaped
-PNG comparisons for a diagnostic that the browser proof does not give. Each
-needs a `--samples` file: a JSON list of objects with `label`, `text` and an
-optional `size`. Write it under `out/`.
+For a before and after comparison of glyphs, run
+`make check-changes` with `--proof`, which draws Runebender proof sheets. Every
+other rendered image is a DesignBot script (`.rs`) next to its output.

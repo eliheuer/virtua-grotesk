@@ -44,11 +44,12 @@ The loop that uses these scripts is in
 
 ## Proofs
 
+Specimen and publicity images are DesignBot scripts in `documentation/`, next to
+their output. `make proof` uses DesignBot for the PDF proof.
+
 | Script | Use |
 | --- | --- |
 | `proof-web/` | The live comparison with `reference-fonts/` (`make proof-web`). See [proof-web/README.md](proof-web/README.md). |
-| `proof_reference.py` | Renders shaped text beside the reference fonts at one em size. It uses `proof_compare.py` and `specimen_layout.py`. |
-| `article_specimen.py` | Renders the image for the Google Fonts About text. |
 
 Do not add scripts that write whole glyph sets into the UFOs. The old
 generators are in the Git history before 2026-11-10. Draw named glyphs through

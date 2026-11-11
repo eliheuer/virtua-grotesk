@@ -11,7 +11,7 @@
 Material for the Google Fonts page and for publicity:
 
 - `article/`: the Google Fonts About text and its image
-  (`scripts/article_specimen.py` renders the image).
+  (`weight-specimen.rs` renders the image with DesignBot).
 - `readme-images/`: the DesignBot script for the README image.
 - `social-assets/`: DesignBot scripts for social media. See its
   [README](social-assets/README.md).
