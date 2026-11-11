@@ -13,8 +13,7 @@ write generated fonts and intermediate files outside the source tree.
 `design.toml` holds the grid values, stroke targets and mark colors that the
 scripts read.
 
-`config.yaml` is a local build recipe for tools that support that format. It is
-not a replacement for the designspace/UFO sources.
+`config.yaml` is the gftools builder recipe that `make build` uses.
 
-Older Virtua Grotesk and Kinderhugel Grotesk sources are in the Git history,
-in the folder `sources/archive/`, which was removed on 2026-11-10.
+Older Virtua Grotesk and Kinderhugel Grotesk sources were removed on
+2026-11-10. They are in the Git history, in the folder sources/archive/.

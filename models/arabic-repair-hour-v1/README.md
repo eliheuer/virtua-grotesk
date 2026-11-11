@@ -35,5 +35,5 @@ unchanged.
   not use it as a training target.
 
 Usage is in [documentation/native-model-workflow.md](../../documentation/native-model-workflow.md).
-The training records of this run are in the Git history, in the folder
-`models/training/seen-pilot/`, removed on 2026-11-10.
+The training records of this run were removed on 2026-11-10. They are in the
+Git history, in the folder models/training/seen-pilot/.

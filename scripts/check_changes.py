@@ -20,7 +20,9 @@ It fails (exit status 1) when:
 - a glyph outside --glyphs changed;
 - a source file other than a glyph file changed, unless --allow-other;
 - a changed glyph has points off the 2-unit grid, or a different structure in
-  the two masters.
+  the two masters;
+- `glif_lint.py` finds a structural fault in a changed glyph, for example a
+  missing component base or a curve without two off-curve points.
 
 It also prints the other design check findings (stroke ranges, kinks) for each
 changed glyph. Those are for review and do not fail the check.
@@ -51,7 +53,7 @@ def git(*args):
 def changed_files(base):
     tracked = git('diff', '--name-only', base, '--', 'sources').splitlines()
     new = git('ls-files', '--others', '--exclude-standard', '--', 'sources').splitlines()
-    return sorted(set(tracked + new))
+    return sorted(p for p in set(tracked + new) if not p.endswith('.md'))
 
 
 def base_contents(base, master):
@@ -164,6 +166,13 @@ def main():
                     else check_design.check_contour(name, current, contract.get('targets', {})))
         for finding in findings:
             (errors if any(h in finding for h in HARD) else notes).append(f'{name}: {finding}')
+
+    if names:
+        lint = subprocess.run([sys.executable, str(ROOT / 'scripts/glif_lint.py'), *names],
+                              capture_output=True, text=True)
+        if lint.returncode:
+            errors += [f'glif_lint: {line.strip()}' for line in lint.stdout.splitlines()
+                       if line.startswith('  ')]
 
     print(f"Changed glyphs since {args.base}: Regular {len(changed['Regular'])}, "
           f"Bold {len(changed['Bold'])}")

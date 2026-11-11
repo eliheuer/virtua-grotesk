@@ -53,6 +53,9 @@ not hold records of work.
   kind of file, change its LAYOUT list in the same commit and give the reason
   in the commit message. Its PENDING list holds old files under review; it can
   only get shorter.
+- `tests/test_documentation_references.py` fails when a document links to a
+  file, path or `make` target that does not exist. When you remove a file or
+  a command, update the documents that name it in the same commit.
 
 ## Source rules
 

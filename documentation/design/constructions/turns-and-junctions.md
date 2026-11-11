@@ -9,5 +9,5 @@ stroke uneven. Whole-silhouette articulation and apparent mass govern the repair
 Do not remove Seen's lobes to obtain a smooth band or stretch a turn to an arbitrary
 intersection. Do not impose equal handles on all curved marks.
 
-Use the saved Zayin, Gimel, Final Tsadi and hamza examples selected by the context
-command. Their evidence includes counterexamples and exact master scope.
+The Zayin, Gimel, Final Tsadi and hamza corrections are examples for one glyph
+and master each. They are not general formulas.

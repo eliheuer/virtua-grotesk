@@ -11,5 +11,4 @@ into a shallow continuous wave or replacing the bowl junction with a diagonal sw
 
 Seen v4 is a rejected stylistic regression despite passing engineering checks.
 Active isolated Seen remains v3, also unresolved for optical quality. Do not apply
-v4 or treat it as positive training data. Further drawing was paused for review of
-the green construction; a context lookup does not restart it.
+v4 or treat it as positive training data. Draw Seen again only when Eli names it.

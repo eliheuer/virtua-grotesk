@@ -37,7 +37,7 @@ The loop that uses these scripts is in
 | `lessons.py` | Counts the `Correction:` lines of commit messages by topic (`make lessons`). |
 | `status.py` | Writes `STATUS.md` from the mark colors (`make status`). |
 | `source_inventory.py` | Reads glyph records and mark colors. Other scripts import it. |
-| `glif_lint.py` | Finds structural faults in GLIF files. |
+| `glif_lint.py` | Finds structural faults in GLIF files, for example a missing component base. `check_changes.py` runs it on the changed glyphs. |
 | `curve_lint.py` | Curve fairness checks (`make lint-curves`). |
 | `curve_profile.py` | Signed curvature of two GLIF files on one scale, as a report and an SVG comb. |
 | `paired_stroke_report.py` | Width between named pairs of edges. |
