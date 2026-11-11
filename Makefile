@@ -3,35 +3,38 @@
 PYTHON ?= ./.venv/bin/python
 
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
-REGULAR_FONT = fonts/ttf/VirtuaGrotesk-Regular.ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review review-rubik runebender qa qa-full qa-package test reports preflight status check-design queue lessons check-changes benchmark skeleton clean
+.PHONY: help setup build build-fontc proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes lessons benchmark lint-curves clean
 
 help:
 	@printf '%s\n' \
-		'Virtua Grotesk workflow:' \
-		'  make status        Rewrite STATUS.md from mark colors (release target: all green)' \
+		'Design work:' \
+		'  make status         Rewrite STATUS.md from the mark colors' \
 		'  make queue          Rank the glyphs that most composites wait on' \
-		'  make lessons        Count the corrections in the Git history by topic' \
+		'  make check-design GLYPHS="n a"  Check glyphs against sources/design.toml' \
 		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
-		'  make check-design GLYPHS="n a"  Check glyphs against the design targets' \
+		'  make lessons        Count the corrections in the Git history by topic' \
 		'  make benchmark RUN=dir  Score redrawn held-out glyphs against the green drawings' \
-		'  make setup          Create .venv and install requirements' \
-		'  make build          Build variable and static TTFs into fonts/' \
-		'  make proof          Build the main PDF proof' \
-		'  make proof-web      Build, then compare the fonts with reference-fonts/ in a browser' \
-		'  make review         Build a Diffenator3 QA browser proof' \
+		'  make lint-curves    Curve fairness checks of both masters' \
+		'' \
+		'Build and proofs:' \
+		'  make setup          Create .venv and install the requirements' \
+		'  make build          Build the variable and static TTFs into fonts/' \
+		'  make build-fontc    Build with fontc instead of fontmake' \
+		'  make proof-web      Build, then compare with reference-fonts/ in a browser' \
+		'  make proof          DesignBot PDF proof in out/proof.pdf' \
+		'  make review         Diffenator3 browser proof in out/review/' \
 		'  make runebender     Open the designspace in the Runebender web editor' \
-		'  make test-tools     Run the Python and JavaScript tool tests' \
-		'  make qa             Development Fontspector checks (documented exclusions)' \
-		'  make qa-hebrew      Check Hebrew coverage/attachment and render three weights' \
-		'  make qa-full        Full Fontspector profile; no exclusions' \
-		'  make qa-package PACKAGE=path  Full downstream-package QA' \
-		'  make reports        Regenerate source/build metadata reports' \
-		'  make skeleton       End-to-end loop: build + qa + reports + status (qa may fail while debt exists)' \
-		'  make preflight      Build, proof, reports, then check artifacts' \
-		'  make clean          Remove generated build outputs'
+		'' \
+		'QA:' \
+		'  make qa             Development Fontspector checks (make test is the same)' \
+		'  make qa-full        Full Fontspector profile, no exclusions' \
+		'  make qa-package PACKAGE=path  Full profile on a google/fonts package' \
+		'  make qa-hebrew      Hebrew coverage and mark attachment' \
+		'  make reports        Source and build metadata reports in out/reports/' \
+		'  make test-tools     Tests of the Python and JavaScript tools' \
+		'  make clean          Remove the build output'
 
 setup:
 	python3 -m venv .venv
@@ -41,7 +44,7 @@ setup:
 build:
 	./scripts/build.sh
 
-build-fontc:  ## Build with fontc (Rust) instead of fontmake
+build-fontc:
 	./scripts/build-fontc.sh
 
 # The built-in designbot print proof: introspects the variable font (axes,
@@ -58,17 +61,11 @@ proof-web: build
 
 # Current Google Fonts browser proof renderer, distributed with Diffenator3.
 DIFFPROOF = ./.venv/bin/diff3proof
-RUBIK_FONT ?= $(HOME)/GH/repos/google-fonts/ofl/rubik/Rubik[wght].ttf
 
 review: build
 	@mkdir -p out
 	$(DIFFPROOF) "$(VARIABLE_FONT)" --output out/review
 	@echo ">>> open out/review/diff3proof.html"
-
-review-rubik:
-	@mkdir -p out
-	$(DIFFPROOF) "$(RUBIK_FONT)" --output out/review-rubik
-	@echo ">>> open out/review-rubik/diff3proof.html"
 
 # Serves the editor at localhost:8765 with the designspace open. Edits to
 # the sources reload in the browser, and Cmd+S saves back to disk.
@@ -118,25 +115,12 @@ lint-curves:
 	$(PYTHON) scripts/curve_lint.py Regular --all
 	$(PYTHON) scripts/curve_lint.py Bold --all
 
-# The end-to-end skeleton: prove the whole pipeline runs TODAY, debt and
-# all. qa failures are expected while debt exists (the leading "-" keeps
-# make going); STATUS.md is the progress metric.
-skeleton: build
-	-./scripts/check_gf_fonts.sh
-	$(PYTHON) scripts/run_reports.py
-	$(PYTHON) scripts/status.py
-
-preflight: build proof reports
-	$(PYTHON) scripts/preflight.py
-
 clean:
 	rm -rf build build.ninja .ninja_log dist fonts sources/build.ninja sources/.ninja_log sources/instance_ufos
 
-.PHONY: qa-hebrew
 qa-hebrew: build
 	$(PYTHON) scripts/check_hebrew.py "$(VARIABLE_FONT)" --json out/hebrew/qa.json --proof-dir out/hebrew/proofs
 
-.PHONY: test-tools
 test-tools:
 	$(PYTHON) -m unittest discover -s tests
 	$(PYTHON) -m unittest discover -s scripts/proof-web/app -p 'test_*.py'

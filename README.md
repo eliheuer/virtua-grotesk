@@ -44,7 +44,7 @@ rules are in [documentation/design/README.md](documentation/design/README.md). P
 
 - `make status`: write STATUS.md from the mark colors in both masters.
 - `make proof-web`: build, then compare the fonts with `reference-fonts/` in a browser.
-- `make lint-grid` and `make grid-qa`: check outlines against the 8-unit grid.
+- `make check-design GLYPHS="..."`: check glyphs against the grid and stroke targets.
 - `make test`: development Fontspector checks, with documented exclusions.
 - `make qa-full`: all configured Google Fonts profile checks, without exclusions.
 - `make review`: a separate Diffenator3 QA browser proof.

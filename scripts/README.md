@@ -23,7 +23,6 @@ model is in [models/arabic-repair-hour-v1/](../models/arabic-repair-hour-v1/READ
 | `run_reports.py` | Runs the three `report_*.py` scripts and writes to `out/reports/` (`make reports`). |
 | `report_master_compatibility.py` | Compatibility of the two masters. `--check` fails on a blocking difference. |
 | `report_source_metadata.py`, `report_generated_font_metadata.py` | Metadata of the UFOs and of the compiled fonts. |
-| `preflight.py` | Makes sure that the build, proof and report files exist (`make preflight`). |
 
 ## Design checks
 

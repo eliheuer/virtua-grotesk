@@ -17,7 +17,7 @@ report, and `make proof` is the print PDF.
 For Arabic batches retain and inspect fixed 400/700 details with the recorded
 references using `scripts/proof-web/app/render-detail.py`. Show the focused comparison
 promptly; broader reports can follow an accepted group or an explicit QA request.
-Follow `documentation/qa.md` for required build/preflight and release checks.
+Follow `documentation/qa.md` for required build and release checks.
 
 Describe observed shape faults honestly. A candidate with a visible swollen join,
 wrong construction, accidental notch or pinched counter stays unresolved even when

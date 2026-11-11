@@ -34,7 +34,7 @@ font. `make build-fontc` is an alternative compiler, not the release build.
 | `make status` | Rewrite `STATUS.md` from the mark colors. |
 | `make check-design GLYPHS="..."` | Compare glyphs with the targets in `sources/design.toml`. |
 | `make check-changes` | Check source changes since `main`: green glyphs unchanged, drafts purple. |
-| `make lint-grid`, `make grid-qa`, `make lint-curves` | Grid and curve checks of the sources. |
+| `make lint-curves` | Curve fairness checks of the sources. Grid checks are in `make check-design`. |
 | `make proof-web` | Compare the current build with `reference-fonts/` in a browser. |
 | `make review` | Diffenator3 HTML proof in `out/review/`. |
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`. |
