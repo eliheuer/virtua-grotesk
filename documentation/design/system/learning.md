@@ -17,8 +17,7 @@ each event.
 4. **Review.** Eli compares the glyph with the reference fonts in Runebender
    or `make proof-web`, then corrects it or marks it green. The correction is
    committed.
-5. **Interpret.** Record the correction and count repeats, as the next
-   sections describe.
+5. **Learn.** Turn repeated corrections into rules, as described below.
 
 ## The trace is the Git history
 
@@ -29,29 +28,17 @@ not copy drafts, corrections, hashes or receipts into files. To read a trace:
 git log --follow -p -- sources/VirtuaGrotesk-Regular.ufo/glyphs/<file>.glif
 ```
 
-## Record a correction in the commit message
-
-A commit that corrects a drawing has one line for each correction:
-
-```
-Correction: <topic>: <what was wrong, in one sentence>
-```
-
-For example, `Correction: curves: the lower-left turn reversed its curvature`.
-The topics are in the `[lessons]` table of `sources/design.toml`. Each topic
-names one rule document. When Eli corrects a draft, the agent that commits
-the correction asks Eli what was wrong if the reason is not clear, then
-writes the line. No file is written.
-
 ## Turn repeated corrections into rules
 
-`make lessons` counts the correction lines by topic. A correction is
-recorded when its commit hash appears in the rule document of its topic.
+A correction is the difference between an agent's purple draft and Eli's next
+edit of the same glyph. The Git history holds both, so no record is written
+when a correction is made.
 
-- One correction is not a rule. Leave it in the commit message.
-- When a topic has two or more unrecorded corrections of the same kind, the
-  agent proposes one rule entry in the rule document of that topic. Eli
-  approves it before it is committed.
+When Eli asks, an agent reads the recent draft and correction pairs: the
+diffs, renders before and after, and Eli's commit messages. It proposes rule
+entries for mistakes that repeat. Eli approves or rejects each entry.
+
+- One correction is not a rule.
 - When the same mistake occurs again, add the glyph and commit to the
   existing entry. Do not write a second entry.
 

@@ -27,10 +27,9 @@ The full description is in
    at one em size and weight. Use Runebender or `make proof-web`.
 4. Eli reviews and corrects. Commit the draft before the correction, so that
    the Git history holds both.
-5. In a commit that corrects a drawing, add one line for each correction:
-   `Correction: <topic>: <what was wrong>`. `make lessons` counts them. When a
-   mistake repeats, propose one rule entry in the rule document of its topic.
-   Do not add worklogs, reports, receipts or handoff files.
+5. When Eli asks, read the recent drafts and Eli's corrections in the Git
+   history and propose rule entries for mistakes that repeat. Do not add
+   worklogs, reports, receipts or handoff files.
 
 ## Long and unattended tasks
 

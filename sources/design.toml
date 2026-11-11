@@ -79,24 +79,3 @@ policy = "Composite that needs diagnosis. Not a reference."
 rgba = []  # no glyph uses pink now
 policy = "Composite that needs small edits. Not a reference."
 
-
-# Correction topics.
-#
-# A correction commit has a line `Correction: <topic>: <what was wrong>`.
-# Each topic names the one rule document where its lessons are written.
-# `make lessons` counts the corrections by topic. See
-# documentation/design/system/learning.md.
-[lessons]
-grid = "documentation/design/system/grid.md"
-weight = "documentation/design/system/weight.md"
-spacing = "documentation/design/system/spacing.md"
-interpolation = "documentation/design/system/interpolation.md"
-chamfers = "documentation/design/constructions/chamfers.md"
-curves = "documentation/design/constructions/curve-quality.md"
-bowls = "documentation/design/constructions/bowls.md"
-turns = "documentation/design/constructions/turns-and-junctions.md"
-dots = "documentation/design/constructions/round-dots.md"
-arabic = "documentation/design/writing-systems/arabic.md"
-hebrew = "documentation/design/writing-systems/hebrew.md"
-latin = "documentation/design/writing-systems/latin.md"
-symbols = "documentation/design/writing-systems/symbols.md"

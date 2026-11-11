@@ -6,7 +6,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
 import benchmark
 import check_design
-import lessons
 
 SQUARE = [(0, 0), (100, 0), (100, 100), (0, 100)]
 
@@ -61,26 +60,6 @@ class CheckDesign(unittest.TestCase):
                   'broken': {'components': [{'base': 'missing'}], 'contours': 0}}
         self.assertEqual(check_design.leaves('Aacute', glyphs), ['A', 'acute'])
         self.assertIsNone(check_design.leaves('broken', glyphs))
-
-
-class Lessons(unittest.TestCase):
-    LOG = ('\x1eaaaaaaaa11\x1f2026-11-10\x1fCorrect the hamza turn\n\n'
-           'Correction: curves: lower-left turn reversed its curvature\n'
-           'Correction: weight: base too heavy\n\x1d\n'
-           'sources/VirtuaGrotesk-Bold.ufo/glyphs/hamzaabove-ar.glif\n'
-           'documentation/qa.md\n'
-           '\x1ebbbbbbbb22\x1f2026-11-09\x1fUpdate the README\n\x1d\nREADME.md\n')
-
-    def test_correction_lines_are_read_with_their_glyphs(self):
-        found = lessons.parse(self.LOG, {('Bold', 'hamzaabove-ar'): 'hamzaabove-ar'})
-        self.assertEqual([(i['topic'], i['commit']) for i in found],
-                         [('curves', 'aaaaaaaa'), ('weight', 'aaaaaaaa')])
-        self.assertEqual(found[0]['glyphs'], ['hamzaabove-ar Bold'])
-        self.assertEqual(found[0]['text'], 'lower-left turn reversed its curvature')
-
-    def test_every_topic_has_a_rule_document(self):
-        for topic, path in lessons.topics().items():
-            self.assertTrue((lessons.ROOT / path).exists(), topic)
 
 
 if __name__ == '__main__':

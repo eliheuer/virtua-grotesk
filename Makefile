@@ -5,7 +5,7 @@ PYTHON ?= ./.venv/bin/python
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build build-fontc proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes lessons benchmark lint-curves clean
+.PHONY: help setup build build-fontc proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes benchmark lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -14,7 +14,6 @@ help:
 		'  make queue          Rank the glyphs that most composites wait on' \
 		'  make check-design GLYPHS="n a"  Check glyphs against sources/design.toml' \
 		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
-		'  make lessons        Count the corrections in the Git history by topic' \
 		'  make benchmark RUN=dir  Score redrawn held-out glyphs against the green drawings' \
 		'  make lint-curves    Curve fairness checks of both masters' \
 		'' \
@@ -97,10 +96,6 @@ check-design:
 
 queue:
 	$(PYTHON) scripts/check_design.py --queue
-
-# Count the `Correction:` lines in the Git history by topic. Usage: make lessons [TOPIC=curves]
-lessons:
-	$(PYTHON) scripts/lessons.py $(TOPIC)
 
 # Check source changes since BASE (default main). Usage: make check-changes BASE=main GLYPHS="a e"
 BASE ?= main
