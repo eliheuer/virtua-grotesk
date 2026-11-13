@@ -1,9 +1,10 @@
 # Top-level Python packages for the local Google Fonts build, report, and
 # package-review workflow. Keep this list small; requirements.txt is the
 # pinned install snapshot generated from the active local .venv.
-# Proofs and specimen images use DesignBot (installed separately). Pillow is
-# for the raster comparison in scripts/evaluate_drafting.py. fontspectorapi runs
-# the Font.Garden profile in scripts/fontspector_fontgarden.py.
+# Proofs and specimen images use DesignBot (installed separately).
+# fontspectorapi runs the Font.Garden profile in
+# scripts/fontspector_fontgarden.py. fontgarden-tools is the shared source
+# tooling of Font.Garden projects, pinned to a commit.
 fontmake
 fonttools
 gftools
@@ -17,5 +18,5 @@ GitPython
 glyphsets
 PyYAML
 uharfbuzz
-Pillow
+fontgarden-tools @ git+https://github.com/fontgarden/fontgarden-tools@446ec1bf55bee8d0b297a6b7cb9ed64c2b3005cc
 fontspectorapi

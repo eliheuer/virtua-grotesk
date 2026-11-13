@@ -76,23 +76,23 @@ document is full, merge entries or move checkable values into scripts.
 
 ## Checks and their limits
 
-`scripts/check_design.py` uses Runebender for measurement and holds the
+`fontgarden check-design` uses Runebender for measurement and holds the
 Virtua policy. On 2026-11-10 the checks passed 50 of the 72 glyphs that are
 green in both masters. The other 22 are approved drawings that the checks
 flag: 5 icon glyphs with corners that the analyzer reports as kinks, and 17
 letters and figures, most with a stroke that crosses a junction or a
 diagonal. Thus a finding is a prompt to look, not an error.
 
-Run `check_design.py --green` after a change to the targets or the checks.
+Run `fontgarden check-design --green` after a change to the targets or the checks.
 If fewer green glyphs pass, the change made the checks worse.
 
 Stroke targets exist only where green glyphs exist: Regular Latin, Regular
 Arabic and Bold Latin. Add targets for Bold Arabic and Hebrew with
-`check_design.py --observe` when those scripts have green glyphs.
+`fontgarden check-design --observe` when those scripts have green glyphs.
 
 ## Drafting evaluation
 
-`scripts/evaluate_drafting.py` tests a drafting method (an agent, a model or
+`fontgarden evaluate-drafting` tests a drafting method (an agent, a model or
 a script) on green glyphs that it has not seen. The glyphs are in
 `sources/held-out-glyphs.toml`, in four tasks:
 
@@ -119,7 +119,7 @@ only if it scores better than these.
 ## Grades
 
 Eli approves contour glyphs. A composite is green when its parts are green
-and `check_design.py --ready` lists it. An agent can mark such a composite
+and `fontgarden check-design --ready` lists it. An agent can mark such a composite
 green. Model scores and evaluation scores do not approve a glyph.
 
 Training data comes from green glyphs only. Keep the glyphs of one

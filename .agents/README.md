@@ -24,4 +24,4 @@ omp -p --wait-async --max-time 60m \
 ```
 
 Then review the branch, the report and the proof sheets in `out/review/`.
-`scripts/check_changes.py` checks the source changes of any run.
+`make check-changes` checks the source changes of any run.

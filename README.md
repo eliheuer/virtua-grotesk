@@ -61,7 +61,15 @@ what they can do with the glyph. The full policies are in
 Only green glyphs are references. The release target is every glyph green in
 both masters.
 
-## AI tools
+## Tools
+
+The source tools are shared by all Font.Garden fonts and are in [fontgarden-tools](https://github.com/fontgarden/fontgarden-tools):
+status, design checks, change checks, curve checks, the build, the drafting
+evaluation and the list of corrections. `make setup` installs them, pinned to
+a commit in `requirements.txt`, and the `make` targets run them. The
+Font.Garden QA profile is in
+[fontspector-fontgarden](https://github.com/fontgarden/fontspector-fontgarden).
+`scripts/` holds only the tools that are specific to Virtua Grotesk.
 
 AI tools help with code, documentation and draft glyphs. Eli draws, reviews
 and approves the glyphs. The rules for agents are in [AGENTS.md](AGENTS.md).

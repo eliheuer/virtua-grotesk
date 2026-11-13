@@ -1,6 +1,8 @@
 -include local.mk
 
 PYTHON ?= ./.venv/bin/python
+# The shared Font.Garden source tools: https://github.com/fontgarden/fontgarden-tools
+FONTGARDEN ?= ./.venv/bin/fontgarden
 
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
@@ -86,40 +88,40 @@ reports:
 	$(PYTHON) scripts/run_reports.py
 
 status:
-	$(PYTHON) scripts/status.py
+	$(FONTGARDEN) status
 
 # Check glyphs against the design targets. Usage: make check-design GLYPHS="n seen-ar"
 # Without GLYPHS it reports on every glyph that is not green.
 check-design:
-	$(PYTHON) scripts/check_design.py $(if $(GLYPHS),$(GLYPHS),--not-green)
+	$(FONTGARDEN) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
 
 queue:
-	$(PYTHON) scripts/check_design.py --queue
+	$(FONTGARDEN) queue
 
 # Check source changes since BASE (default main). Usage: make check-changes BASE=main GLYPHS="a e"
 BASE ?= main
 check-changes:
-	$(PYTHON) scripts/check_changes.py --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
+	$(FONTGARDEN) check-changes --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
 
 # Drafting evaluation. TASK is redraw, bold, repair or relatives.
-# See scripts/evaluate_drafting.py.
+# See `fontgarden evaluate-drafting --help`.
 prepare-drafting:
-	$(PYTHON) scripts/evaluate_drafting.py prepare "$(TASK)" "$(RUN)"
+	$(FONTGARDEN) evaluate-drafting prepare "$(TASK)" "$(RUN)"
 
 score-drafting:
-	$(PYTHON) scripts/evaluate_drafting.py score "$(RUN)"
+	$(FONTGARDEN) evaluate-drafting score "$(RUN)"
 
 compare-drafting:
-	$(PYTHON) scripts/evaluate_drafting.py compare "$(A)" "$(B)"
+	$(FONTGARDEN) evaluate-drafting compare "$(A)" "$(B)"
 
 # Eli's reviews of purple drafts. ALL=1 lists every review, not only the open
-# corrections. See scripts/list_corrections.py.
+# corrections. See `fontgarden corrections --help`.
 corrections:
-	$(PYTHON) scripts/list_corrections.py $(if $(ALL),--all,)
+	$(FONTGARDEN) corrections $(if $(ALL),--all,)
 
 lint-curves:
-	$(PYTHON) scripts/curve_lint.py Regular --all
-	$(PYTHON) scripts/curve_lint.py Bold --all
+	$(FONTGARDEN) lint-curves Regular --all
+	$(FONTGARDEN) lint-curves Bold --all
 
 clean:
 	rm -rf build build.ninja .ninja_log dist fonts sources/build.ninja sources/.ninja_log sources/instance_ufos

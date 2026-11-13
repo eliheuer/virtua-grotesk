@@ -25,6 +25,7 @@ ffmpeg-python==0.2.0
 filelock==3.29.0
 fontbakery==1.1.0
 fontFeatures==1.9.0
+fontgarden-tools @ git+https://github.com/fontgarden/fontgarden-tools@446ec1bf55bee8d0b297a6b7cb9ed64c2b3005cc
 fontmake==3.12.2
 fontMath==0.10.0
 fontspectorapi==1.7.0

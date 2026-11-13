@@ -9,7 +9,7 @@ description: Check the UFO sources after an edit, without building. Master compa
 .venv/bin/python scripts/report_master_compatibility.py --check
 make check-design GLYPHS="..."      # grid, stroke targets, composites
 make check-changes                  # what changed since main
-.venv/bin/python scripts/curve_lint.py Regular <glyph> --joins
+.venv/bin/fontgarden lint-curves Regular <glyph> --joins
 ```
 
 Also look at metrics, glyph sets, anchors, kerning groups and pairs in both

@@ -1,5 +1,13 @@
 # Scripts
 
+This folder holds only the tools that are specific to Virtua Grotesk. The
+general source tools are in
+[fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), which
+`make setup` installs: status, queue, design checks, change checks, GLIF and
+curve checks, the build, the drafting evaluation and the corrections. Run them
+with `make` or `.venv/bin/fontgarden <command>`. Change a general tool in
+fontgarden-tools, not here.
+
 Run the Python scripts from the repository root with `.venv/bin/python`.
 `make help` lists the commands that use them.
 
@@ -7,8 +15,7 @@ Run the Python scripts from the repository root with `.venv/bin/python`.
 
 | Script | Use |
 | --- | --- |
-| `build.sh` | The release build (`make build`). |
-| `build_source_snapshot.py` | Copies the sources to a temporary folder for the build, so the glyph order of the editor stays unchanged. |
+| `build.sh` | The release build (`make build`): `fontgarden build`, then `fix_gf_metadata.py`. |
 | `fix_gf_metadata.py` | Corrects the metadata of the compiled fonts. `build.sh` calls it. |
 | `install_fontspector.py` | Installs Fontspector into `.venv` (`make setup`). |
 
@@ -22,22 +29,11 @@ Run the Python scripts from the repository root with `.venv/bin/python`.
 | `report_master_compatibility.py` | Compatibility of the two masters. `--check` fails on a blocking difference. |
 | `report_source_metadata.py`, `report_generated_font_metadata.py` | Metadata of the UFOs and of the compiled fonts. |
 
-## Design checks
-
-The loop that uses these scripts is in
-[documentation/design/system/learning.md](../documentation/design/system/learning.md).
+## QA profile
 
 | Script | Use |
 | --- | --- |
-| `check_design.py` | Checks glyphs against the grid and stroke targets in `sources/design.toml`, checks composites against their parts and anchor recipes, and ranks the glyphs that most composites wait on (`make check-design`, `make queue`). It needs the Runebender binary. |
-| `check_changes.py` | Compares the sources with a base revision: no green glyph changed, and glyphs with changed contours are purple. It can draw before and after proofs (`make check-changes`). |
-| `fontspector_fontgarden.py` | Fontspector plugin with the Font.Garden profile: the Google Fonts profile plus the em size, grid, vendor ID and license checks (`make qa`). |
-| `list_corrections.py` | Lists Eli's reviews of purple drafts from the Git history, the corrections that no rule or case cites, and a summary by month (`make corrections`). |
-| `evaluate_drafting.py` | Tests a drafting method on the held-out green glyphs in `sources/held-out-glyphs.toml` (`make prepare-drafting`, `make score-drafting`, `make compare-drafting`). |
-| `status.py` | Writes `STATUS.md` from the mark colors (`make status`). |
-| `source_inventory.py` | Reads glyph records and mark colors. Other scripts import it. |
-| `glif_lint.py` | Finds structural faults in GLIF files, for example a missing component base. `check_changes.py` runs it on the changed glyphs. |
-| `curve_lint.py` | Crest centering, tension breaks, inflections and join continuity (`make lint-curves`). |
+| `fontspector_fontgarden.py` | Fontspector plugin with the Font.Garden profile: the Google Fonts profile plus the em size, grid, vendor ID and license checks (`make qa`). It will be replaced by [fontspector-fontgarden](https://github.com/fontgarden/fontspector-fontgarden). |
 
 ## Proofs
 

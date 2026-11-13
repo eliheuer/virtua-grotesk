@@ -6,7 +6,7 @@ Do these checks after a glyph edit and before you show the result to Eli.
    construction.
 2. Make sure that new points are on the grid of 8, and that both masters
    have the same contours, points and components.
-3. Run `scripts/curve_lint.py <Master> <glyphs> --joins` and look at each
+3. Run `fontgarden lint-curves <Master> <glyphs> --joins` and look at each
    reported curve.
 4. Build with `make build`. Look at the glyph at 400, 700 and an
    intermediate weight, and in each composite that uses it.
