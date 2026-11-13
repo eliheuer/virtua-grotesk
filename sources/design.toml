@@ -84,3 +84,12 @@ policy = "Composite that needs small edits. Not a reference."
 # reviews predate the grades.
 [corrections]
 start = "2026-11-13"
+
+# Known development debt, not release exceptions. `fgtools qa` leaves these
+# checks out; `fgtools qa --full` runs them. Do not add a check to hide a new
+# failure.
+[qa.exclude]
+"googlefonts/repo/dirname_matches_nameid_1" = "Needs the google/fonts package directory."
+"googlefonts/glyphsets/shape_languages" = "Needs language and shaping work."
+"googlefonts/metadata/unreachable_subsetting" = "Needs subset work."
+"fontgarden/grid" = "section, uniE000, germandbls and three Arabic advances are off the 2-unit grid; Eli corrects them."

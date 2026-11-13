@@ -81,14 +81,14 @@ runebender:
 	runebender-serve "$(RUNEBENDER_SOURCE)" --open
 
 qa: build
-	./scripts/check_gf_fonts.sh development
+	$(FGTOOLS) qa
 
 qa-full: build
-	./scripts/check_gf_fonts.sh full
+	$(FGTOOLS) qa --full
 
 qa-package:
 	@test -n "$(PACKAGE)" || { echo "Set PACKAGE=/path/to/ofl/virtuagrotesk" >&2; exit 2; }
-	./scripts/check_gf_fonts.sh package "$(PACKAGE)"
+	$(FGTOOLS) qa --package "$(PACKAGE)"
 
 test: qa
 

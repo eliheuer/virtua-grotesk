@@ -70,10 +70,8 @@ build, build comparisons, the drafting evaluation and the list of
 corrections. `make setup` installs them, pinned to a commit in
 `requirements.txt`, with the pinned fontc and Fontspector binaries. The
 `make` targets run them. The fonts are built with fontc, and `make diff`
-compares builds with diffenator3. The
-Font.Garden QA profile is `scripts/fontspector_fontgarden.py`; its Rust
-version, which will replace it, is
-[fontspector-fontgarden](https://github.com/fontgarden/fontspector-fontgarden).
+compares builds with diffenator3. `make qa`
+runs Fontspector with the Font.Garden profile (`fgtools qa`).
 `scripts/` holds only the tools that are specific to Virtua Grotesk.
 
 AI tools help with code, documentation and draft glyphs. Eli draws, reviews

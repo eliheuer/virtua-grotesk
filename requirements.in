@@ -2,9 +2,8 @@
 # package-review workflow. Keep this list small; requirements.txt is the
 # pinned install snapshot generated from the active local .venv.
 # Proofs and specimen images use DesignBot (installed separately).
-# fontspectorapi runs the Font.Garden profile in
-# scripts/fontspector_fontgarden.py. fontgarden-tools is the shared source
-# tooling of Font.Garden projects, pinned to a commit.
+# fontgarden-tools is the shared tooling of Font.Garden projects, pinned to a
+# commit.
 fontmake
 fonttools
 gftools
@@ -18,5 +17,4 @@ GitPython
 glyphsets
 PyYAML
 uharfbuzz
-fontgarden-tools @ git+https://github.com/fontgarden/fontgarden-tools@884232afb19b4d456a304d1f572bc3bcfcdd7b42
-fontspectorapi
+fontgarden-tools @ git+https://github.com/fontgarden/fontgarden-tools@f97bfd57ed975237a129c8db3c233d3477e62890

@@ -20,7 +20,7 @@ glyphs that are not green stay Eli's work.
   - https://googlefonts.github.io/gf-guide/diacritics.html
 - `README.md` has a short description, the build instructions and an image
   that is committed under `documentation/`.
-- `make build` succeeds, and `./scripts/check_gf_fonts.sh full` reports no
+- `make build` succeeds, and `make qa-full` reports no
   FAIL, except `googlefonts/repo/dirname_matches_nameid_1`, which applies
   to the google/fonts package directory and not to this repository.
 - Each WARN of the full profile is corrected, or listed in the report with
@@ -28,7 +28,7 @@ glyphs that are not green stay Eli's work.
   `overlapping_path_segments`, `interpolation_issues`) are listed with the
   glyph names for Eli, not corrected.
 - A local package built as the `google-fonts-release` skill describes
-  passes `./scripts/check_gf_fonts.sh package <directory>` with no FAIL.
+  passes `make qa-package PACKAGE=<directory>` with no FAIL.
 - The report contains the text of the Add Font issue, from the template at
   https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md.
 - `make test-tools` passes.
