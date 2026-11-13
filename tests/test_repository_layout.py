@@ -1,7 +1,7 @@
 """Keep the repository small: every tracked file must have an allowed place.
 
 This test fails when a commit adds a file that the layout does not allow, for
-example a worklog, a report, a receipt, a plan or a dated document. To add a
+example a worklog, a handoff, a report, a receipt or a dated document. To add a
 new kind of file, change LAYOUT in the same commit and say why in the commit
 message. AGENTS.md describes the layout for people and agents.
 
