@@ -5,9 +5,8 @@ example a worklog, a report, a receipt, a plan or a dated document. To add a
 new kind of file, change LAYOUT in the same commit and say why in the commit
 message. AGENTS.md describes the layout for people and agents.
 
-PENDING lists the files that existed before this test and do not fit. They are
-under review. The list can only get shorter: when a file is removed or moved,
-remove its entry.
+Every LAYOUT pattern must match at least one tracked file. When you remove the
+last file of a kind, remove its pattern in the same commit.
 """
 import re
 import subprocess
@@ -33,10 +32,9 @@ LAYOUT = [
     'scripts/README.md', 'scripts/*.py', 'scripts/*.sh', 'scripts/proof-web/**',
     'tests/test_*.py',
     # Documentation: the design rules, the Google Fonts article, and the
-    # DesignBot scripts for the README image and social media.
+    # DesignBot script for the README image.
     'documentation/*.md', 'documentation/design/**/*.md', 'documentation/article/**',
     'documentation/readme-images/*.rs',
-    'documentation/social-assets/README.md', 'documentation/social-assets/*/*.rs',
 ]
 
 # Document names that mark a record of work rather than a maintained document.
@@ -47,8 +45,6 @@ RECORD_ALLOWED = {'STATUS.md'}
 
 # Maintained documents stay short enough to read in one sitting.
 MAX_DOCUMENT_LINES = 200
-
-PENDING = set()  # empty since 2026-11-11; keep it empty
 
 
 def tracked():
@@ -84,17 +80,15 @@ class RepositoryLayout(unittest.TestCase):
     def test_every_file_has_an_allowed_place(self):
         failures = []
         for path in tracked():
-            if any(matches(path, pattern) for pattern in PENDING):
-                continue
             for problem in problems(path):
                 failures.append(f'{path}: {problem}')
         self.assertFalse(failures, '\n' + '\n'.join(failures) +
                          '\nSee tests/test_repository_layout.py and AGENTS.md.')
 
-    def test_pending_entries_still_exist(self):
+    def test_every_pattern_matches_a_file(self):
         files = tracked()
-        stale = [p for p in PENDING if not any(matches(f, p) for f in files)]
-        self.assertFalse(stale, f'Remove these entries from PENDING: {stale}')
+        unused = [p for p in LAYOUT if not any(matches(f, p) for f in files)]
+        self.assertFalse(unused, f'Remove these patterns from LAYOUT: {unused}')
 
 
 if __name__ == '__main__':

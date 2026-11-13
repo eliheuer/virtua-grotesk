@@ -19,7 +19,7 @@ of the green glyphs, and is ready for Eli to review.
 - A glyph drawn in both masters has the same contours, points and components
   in both.
 - `make build` succeeds.
-- `.venv/bin/python -m unittest tests.test_repository_layout tests.test_design_harness`
+- `.venv/bin/python -m unittest tests.test_repository_layout tests.test_evaluate_drafting tests.test_check_design`
   passes.
 - No green glyph changed, and no file outside the named glyph files changed.
 

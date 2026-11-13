@@ -15,7 +15,6 @@ out/
 
 # Python
 .venv/
-.venv-repair/
 __pycache__/
 *.py[cod]
 
@@ -38,8 +37,3 @@ local.mk
 *.mp4
 *.svg
 !documentation/article/weight-specimen.svg
-
-# Old local output from before 2026-11-10. Delete these folders when they are
-# no longer needed.
-.glyph-ai-runs/
-documentation/assets/

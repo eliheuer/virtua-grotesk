@@ -50,8 +50,8 @@ not hold records of work.
   A maintained document has at most 200 lines.
 - `tests/test_repository_layout.py` enforces these rules in CI. To add a new
   kind of file, change its LAYOUT list in the same commit and give the reason
-  in the commit message. Its PENDING list holds old files under review; it can
-  only get shorter.
+  in the commit message. When you remove the last file of a kind, remove its
+  pattern.
 - `tests/test_documentation_references.py` fails when a document links to a
   file, path or `make` target that does not exist. When you remove a file or
   a command, update the documents that name it in the same commit.

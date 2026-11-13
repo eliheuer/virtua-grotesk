@@ -1,3 +1,4 @@
+"""Tests of the scores and the task preparation in scripts/evaluate_drafting.py."""
 import contextlib
 import io
 import sys
@@ -7,7 +8,6 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
-import check_design
 import evaluate_drafting as evaluation
 
 SQUARE = [(0, 0), (100, 0), (100, 100), (0, 100)]
@@ -70,26 +70,6 @@ class DraftingEvaluation(unittest.TestCase):
                             self.assertEqual(
                                 evaluation.read(evaluation.glif_path(run / 'sources', master, donor)),
                                 evaluation.read(evaluation.glif_path(sources, master, donor)))
-
-
-class CheckDesign(unittest.TestCase):
-    def test_strokes_split_by_direction_and_ignore_long_spans(self):
-        analysis = {'spans': [
-            {'axis': 'horizontal', 'ink': True, 'length': 96},
-            {'axis': 'vertical', 'ink': True, 'length': 84},
-            {'axis': 'vertical', 'ink': True, 'length': 576},
-            {'axis': 'horizontal', 'ink': False, 'length': 90}]}
-        self.assertEqual(check_design.strokes(analysis, 180),
-                         {'vertical_stem': [96], 'horizontal_stroke': [84]})
-
-    def test_leaves_resolve_nested_components(self):
-        glyphs = {'A': {'components': [], 'contours': 1},
-                  'acute': {'components': [], 'contours': 1},
-                  'acutecomb': {'components': [{'base': 'acute'}], 'contours': 0},
-                  'Aacute': {'components': [{'base': 'A'}, {'base': 'acutecomb'}], 'contours': 0},
-                  'broken': {'components': [{'base': 'missing'}], 'contours': 0}}
-        self.assertEqual(check_design.leaves('Aacute', glyphs), ['A', 'acute'])
-        self.assertIsNone(check_design.leaves('broken', glyphs))
 
 
 if __name__ == '__main__':
