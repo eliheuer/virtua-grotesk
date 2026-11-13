@@ -9,7 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
 import list_corrections as corrections
 
-PURPLE, GREEN, ORANGE = '0.54,0.44,0.88,1', '0,1,0,1', '1,0.5,0,1'
+PURPLE, GREEN, YELLOW, ORANGE = '0.54,0.44,0.88,1', '0,1,0,1', '1,1,0,1', '1,0.5,0,1'
 
 
 def glif(mark, right=100, advance=200):
@@ -35,29 +35,28 @@ def glif(mark, right=100, advance=200):
 
 
 class Review(unittest.TestCase):
-    def test_green_with_the_same_outline_is_accepted(self):
-        result = corrections.review(glif(PURPLE), glif(GREEN))
-        self.assertEqual((result['result'], result['iou']), ('accepted', 1.0))
-
-    def test_green_with_another_outline_is_corrected(self):
-        result = corrections.review(glif(PURPLE), glif(GREEN, right=150))
-        self.assertEqual(result['result'], 'corrected')
-        self.assertLess(result['iou'], 1.0)
-
-    def test_green_with_another_advance_is_corrected(self):
-        result = corrections.review(glif(PURPLE), glif(GREEN, advance=220))
-        self.assertEqual(result['result'], 'corrected')
-
-    def test_another_mark_is_a_grade(self):
-        self.assertEqual(corrections.review(glif(PURPLE), glif(ORANGE))['result'], 'orange')
+    def test_the_new_mark_of_a_purple_draft_is_the_grade(self):
+        self.assertEqual(corrections.grade(glif(PURPLE), glif(ORANGE)), 'orange')
+        self.assertEqual(corrections.grade(glif(PURPLE), glif(GREEN)), 'green')
 
     def test_a_change_that_keeps_or_never_had_purple_is_not_a_review(self):
-        self.assertIsNone(corrections.review(glif(PURPLE), glif(PURPLE, right=150)))
-        self.assertIsNone(corrections.review(glif(ORANGE), glif(GREEN)))
+        self.assertIsNone(corrections.grade(glif(PURPLE), glif(PURPLE, right=150)))
+        self.assertIsNone(corrections.grade(glif(ORANGE), glif(GREEN)))
+
+    def test_the_same_outline_is_accepted(self):
+        row = corrections.outcome(glif(PURPLE), glif(GREEN))
+        self.assertEqual((row['result'], row['iou']), ('accepted', 1.0))
+
+    def test_another_outline_or_advance_is_corrected(self):
+        row = corrections.outcome(glif(PURPLE), glif(GREEN, right=150))
+        self.assertEqual(row['result'], 'corrected')
+        self.assertLess(row['iou'], 1.0)
+        self.assertEqual(corrections.outcome(glif(PURPLE), glif(GREEN, advance=220))['result'],
+                         'corrected')
 
 
 class History(unittest.TestCase):
-    def test_a_correction_is_open_until_a_commit_cites_it(self):
+    def test_a_yellow_draft_is_compared_with_its_later_green_version_and_cited(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             path = root / 'sources/VirtuaGrotesk-Regular.ufo/glyphs/square.glif'
@@ -74,10 +73,17 @@ class History(unittest.TestCase):
 
             subprocess.run(['git', 'init', '-q'], cwd=root, check=True)
             commit('Draft', glif(PURPLE))
-            correction = commit('Correct', glif(GREEN, right=150))
+            correction = commit('Grade yellow', glif(YELLOW, right=120))
             [row] = corrections.reviews(root)
-            self.assertEqual((row['commit'], row['glyph'], row['result']),
-                             (correction, 'square', 'corrected'))
+            self.assertEqual((row['grade'], row['against'], row['result']),
+                             ('yellow', 'yellow', 'corrected'))
+            commit('Redraft', glif(PURPLE, right=100))
+            commit('Approve', glif(GREEN, right=150))
+            first, second = corrections.reviews(root)
+            self.assertEqual((first['commit'], first['glyph'], first['against']),
+                             (correction, 'square', 'green'))
+            self.assertAlmostEqual(first['iou'], 2 / 3, delta=0.03)
+            self.assertEqual((second['grade'], second['against']), ('green', 'green'))
             self.assertNotIn(correction[:7], corrections.citations(root))
             commit(f'Add a rule entry from {correction[:8]}')
             self.assertIn(correction[:7], corrections.citations(root))

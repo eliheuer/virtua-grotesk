@@ -52,20 +52,20 @@ stroke_limit = 300
 
 [colors.green]
 rgba = [[0, 1, 0, 1], [0.09, 0.72, 0.44, 1]]
-policy = """Approved. Eli approves contour glyphs. A composite is green when its \
+policy = """Locked in as close to final. Eli approves contour glyphs. A composite is green when its \
 parts are green and check_design.py --ready lists it."""
 
 [colors.yellow]
 rgba = [[1, 1, 0, 1], [1, 0.86, 0.2, 1], [0.91, 0.79, 0.27, 1]]
-policy = "Edit without replacing the drawing. Not a reference."
+policy = "Close. Edit without replacing the drawing. Not a reference."
 
 [colors.orange]
 rgba = [[1, 0.5, 0, 1], [1, 0.6, 0.06, 1], [0.97, 0.58, 0, 1]]
-policy = "Edit and keep useful construction. Replace only when Eli says so."
+policy = "Better, not good enough. Edit and keep useful construction. Replace only when Eli says so."
 
 [colors.red]
 rgba = [[1, 0, 0, 1], [1, 0.29, 0.24, 1], [1, 0.3, 0.3, 1]]
-policy = "Can be replaced when Eli names the glyph. Not a reference."
+policy = "Broken. Can be replaced when Eli names the glyph. Not a reference."
 
 [colors.purple]
 rgba = [[0.54, 0.44, 0.88, 1], [0.5, 0, 1, 1]]

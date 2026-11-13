@@ -15,8 +15,10 @@ each event.
    targets in [design.toml](../../../sources/design.toml). Correct the findings before
    review. A pass is a filter, not approval.
 4. **Review.** Eli compares the glyph with the reference fonts in Runebender
-   or `make proof-web`, then corrects it or marks it green. The commit that
-   corrects the draft also changes the purple mark.
+   or `make proof-web`, then grades it. The review commit changes the purple
+   mark to red (broken), orange (better, not good enough), yellow (close) or
+   green (locked in as close to final), with or without a correction. A
+   glyph can stay yellow for a long time.
 5. **Learn.** `make corrections` lists the open corrections. Each one becomes
    a change to the system, as described below.
 
@@ -31,9 +33,13 @@ git log --follow -p -- sources/VirtuaGrotesk-Regular.ufo/glyphs/<file>.glif
 
 ## How a correction changes the system
 
-`make corrections` reads the Git history. A correction is a commit that
-changes a purple draft and marks it green. A correction is open until a
-tracked file or a later commit message cites its commit hash. When Eli asks,
+`make corrections` reads the Git history. It finds each review of a purple
+draft and compares the draft with the first green version of the glyph. Until
+the glyph is green, it compares the draft with the latest version that is not
+purple, for example a yellow one. If that version differs from the draft, the
+review is a correction. A
+correction is open until a tracked file or a later commit message cites the
+hash of its review commit. When Eli asks,
 an agent reads each open correction (the diff, renders before and after, and
 Eli's commit message) and proposes one of these changes:
 
@@ -47,10 +53,11 @@ Eli's commit message) and proposes one of these changes:
 Eli approves or rejects each change. One correction is not a rule. When the
 same mistake occurs again, add the glyph and commit to the existing entry.
 
-The summary of `make corrections` gives, for each month, the drafts that Eli
-accepted without change, the drafts that Eli corrected, and the mean overlap
-of the drafts with his result. If the system improves, more drafts are
-accepted and the overlap increases. The drafting evaluation measures the same
+The summary of `make corrections` gives, for each month, the grades, the
+drafts that reached green without change, the drafts that Eli corrected, and
+the mean overlap of the drafts with Eli's version. If the system
+improves, the grades rise, more drafts are accepted and the overlap
+increases. The drafting evaluation measures the same
 methods on fixed cases, so its scores can also be compared over time.
 
 A rule entry has this form:
