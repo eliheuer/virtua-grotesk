@@ -62,11 +62,10 @@ diff:
 proof: build
 	designbot proof "$(VARIABLE_FONT)" --output out/proof.pdf
 
-# Live comparison of the current build with reference-fonts/. To serve a
-# prepared Before/Working snapshot instead, run
-# $(PYTHON) scripts/proof-web/serve.py --snapshot <prepared-directory>.
+# Live comparison of the current build with reference-fonts/ in a browser.
+# See `fgtools proof-web --help` for a Before and Candidate snapshot.
 proof-web: build
-	$(PYTHON) scripts/proof-web/serve.py --current
+	$(FGTOOLS) proof-web --current
 
 # Current Google Fonts browser proof renderer, distributed with Diffenator3.
 DIFFPROOF = ./.venv/bin/diff3proof
@@ -135,5 +134,3 @@ clean:
 
 test-tools:
 	$(PYTHON) -m unittest discover -s tests
-	$(PYTHON) -m unittest discover -s scripts/proof-web/app -p 'test_*.py'
-	node --test scripts/proof-web/app/test-reference-selection.cjs

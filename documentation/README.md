@@ -5,7 +5,6 @@
 | [Design rules](design/README.md) | Construction, grid, weight, spacing, scripts, source editing and the learning loop. |
 | [Build and QA](qa.md) | Setup, commands and the checks after a source edit. |
 | [Google Fonts release](google-fonts.md) | Release scope, open decisions and links to the official guide. |
-| [Live web proof](../scripts/proof-web/app/README.md) | The comparison of the current build with `reference-fonts/`. |
 
 Material for the Google Fonts page and for publicity:
 

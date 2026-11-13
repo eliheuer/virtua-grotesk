@@ -30,7 +30,7 @@ LAYOUT = [
     'sources/design.toml', 'sources/held-out-glyphs.toml',
     'sources/VirtuaGrotesk-Regular.ufo/**', 'sources/VirtuaGrotesk-Bold.ufo/**',
     # Tools and their tests.
-    'scripts/README.md', 'scripts/*.py', 'scripts/*.sh', 'scripts/proof-web/**',
+    'scripts/README.md', 'scripts/*.py', 'scripts/*.sh',
     'tests/test_*.py',
     # Documentation: the design rules, the Google Fonts article, and the
     # DesignBot script for the README image.

@@ -4,7 +4,8 @@ This folder holds only the tools that are specific to Virtua Grotesk. The
 general source tools are in
 [fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), which
 `make setup` installs: status, queue, design checks, change checks, GLIF and
-curve checks, the build, the drafting evaluation and the corrections. Run them
+curve checks, the build, build comparisons, the web proof, the drafting
+evaluation and the corrections. Run them
 with `make` or `.venv/bin/fgtools <command>`. Change a general tool in
 fontgarden-tools, not here.
 
@@ -33,11 +34,8 @@ Run the Python scripts from the repository root with `.venv/bin/python`.
 ## Proofs
 
 Specimen and publicity images are DesignBot scripts in `documentation/`, next to
-their output. `make proof` uses DesignBot for the PDF proof.
-
-| Script | Use |
-| --- | --- |
-| `proof-web/` | The live comparison with `reference-fonts/` (`make proof-web`). See [proof-web/README.md](proof-web/README.md). |
+their output. `make proof` uses DesignBot for the PDF proof. `make proof-web`
+runs `fgtools proof-web`, the comparison with `reference-fonts/` in a browser.
 
 Do not add scripts that write whole glyph sets into the UFOs. The old
 generators are in the Git history before 2026-11-10. Draw named glyphs through

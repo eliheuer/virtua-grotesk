@@ -13,9 +13,9 @@ Do these checks after a glyph edit and before you show the result to Eli.
 5. Compare the build with `reference-fonts/` in `make proof-web`.
 
 To compare a before and an after build, prepare a snapshot with
-`scripts/proof-web/app/prepare.py` and serve it with
-`scripts/proof-web/serve.py --snapshot`. For a close view of Arabic details at
-400 and 700, use `scripts/proof-web/app/render-detail.py`.
+`fgtools proof-web prepare` and serve it with `fgtools proof-web --snapshot`.
+For a close view of Arabic details at 400 and 700, use
+`fgtools proof-web render-detail`.
 
 A passing check does not make a glyph correct. Report each visible fault, for
 example a swollen join, a notch or a pinched counter, even when the checks
