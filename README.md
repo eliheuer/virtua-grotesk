@@ -67,7 +67,8 @@ The source tools are shared by all Font.Garden fonts and are in [fontgarden-tool
 status, design checks, change checks, curve checks, the build, the drafting
 evaluation and the list of corrections. `make setup` installs them, pinned to
 a commit in `requirements.txt`, and the `make` targets run them. The
-Font.Garden QA profile is in
+Font.Garden QA profile is `scripts/fontspector_fontgarden.py`; its Rust
+version, which will replace it, is
 [fontspector-fontgarden](https://github.com/fontgarden/fontspector-fontgarden).
 `scripts/` holds only the tools that are specific to Virtua Grotesk.
 

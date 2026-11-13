@@ -7,7 +7,7 @@ FONTGARDEN ?= ./.venv/bin/fontgarden
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
+.PHONY: help venv setup build proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -36,6 +36,9 @@ help:
 		'  make qa-package PACKAGE=path  Full profile on a google/fonts package' \
 		'  make test-tools     Tests of the Python and JavaScript tools' \
 		'  make clean          Remove the build output'
+
+# gftools packager --their-venv runs `make venv`.
+venv: setup
 
 setup:
 	python3 -m venv .venv
