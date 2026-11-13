@@ -15,32 +15,43 @@ each event.
    targets in [design.toml](../../../sources/design.toml). Correct the findings before
    review. A pass is a filter, not approval.
 4. **Review.** Eli compares the glyph with the reference fonts in Runebender
-   or `make proof-web`, then corrects it or marks it green. The correction is
-   committed.
-5. **Learn.** Turn repeated corrections into rules, as described below.
+   or `make proof-web`, then corrects it or marks it green. The commit that
+   corrects the draft also changes the purple mark.
+5. **Learn.** `make corrections` lists the open corrections. Each one becomes
+   a change to the system, as described below.
 
 ## The trace is the Git history
 
 The draft commit and the correction commit are the record of a decision. Do
-not copy drafts, corrections, hashes or receipts into files. To read a trace:
+not copy drafts or corrections into files. To read a trace:
 
 ```sh
 git log --follow -p -- sources/VirtuaGrotesk-Regular.ufo/glyphs/<file>.glif
 ```
 
-## Turn repeated corrections into rules
+## How a correction changes the system
 
-A correction is the difference between an agent's purple draft and Eli's next
-edit of the same glyph. The Git history holds both, so no record is written
-when a correction is made.
+`make corrections` reads the Git history. A correction is a commit that
+changes a purple draft and marks it green. A correction is open until a
+tracked file or a later commit message cites its commit hash. When Eli asks,
+an agent reads each open correction (the diff, renders before and after, and
+Eli's commit message) and proposes one of these changes:
 
-When Eli asks, an agent reads the recent draft and correction pairs: the
-diffs, renders before and after, and Eli's commit messages. It proposes rule
-entries for mistakes that repeat. Eli approves or rejects each entry.
+| The correction shows | Change | The citation |
+| --- | --- | --- |
+| a mistake that a script can find | a value in `sources/design.toml` or a check in `scripts/` | the commit message |
+| a mistake that repeats | a rule entry | "Seen in" in the entry |
+| a decision that a drafting method has to learn | a case in `sources/held-out-glyphs.toml` | a comment on the case |
+| a fault of one glyph only | one line in its record in [glyphs/](../glyphs/README.md) | the line |
 
-- One correction is not a rule.
-- When the same mistake occurs again, add the glyph and commit to the
-  existing entry. Do not write a second entry.
+Eli approves or rejects each change. One correction is not a rule. When the
+same mistake occurs again, add the glyph and commit to the existing entry.
+
+The summary of `make corrections` gives, for each month, the drafts that Eli
+accepted without change, the drafts that Eli corrected, and the mean overlap
+of the drafts with his result. If the system improves, more drafts are
+accepted and the overlap increases. The drafting evaluation measures the same
+methods on fixed cases, so its scores can also be compared over time.
 
 A rule entry has this form:
 
@@ -51,12 +62,7 @@ A convex turn must not reverse its curvature. Read the comb before review.
 Seen in: hamzaabove-ar Bold (a1b2c3d4), at Regular (e5f6a7b8).
 ```
 
-If a script can test the rule (a number, a range, a grid), put the value in
-`sources/design.toml` or the check in `scripts/check_design.py`, and keep only
-the reason in the rule document. If a correction shows a decision that a
-drafting method has to learn, add the glyph to `sources/held-out-glyphs.toml`
-when it is green. If a correction applies to one glyph only and a later agent would
-repeat the error, add one line to its record in [glyphs/](../glyphs/README.md).
+When a script can test a rule, keep only the reason in the rule document.
 
 A rule document has at most 200 lines; the layout test enforces this. When a
 document is full, merge entries or move checkable values into scripts.

@@ -26,10 +26,11 @@ The full description is in
 3. Render the same text in Virtua Grotesk and the fonts in `reference-fonts/`
    at one em size and weight. Use Runebender or `make proof-web`.
 4. Eli reviews and corrects. Commit the draft before the correction, so that
-   the Git history holds both.
-5. When Eli asks, read the recent drafts and Eli's corrections in the Git
-   history and propose rule entries for mistakes that repeat. Do not add
-   worklogs, reports, receipts or handoff files.
+   the Git history holds both. The correction commit changes the purple mark.
+5. When Eli asks, run `make corrections` and propose a change for each open
+   correction: a rule entry, a check, a held-out case or a glyph record. The
+   change cites the correction commit. Do not add worklogs, reports, receipts
+   or handoff files.
 
 ## Long and unattended tasks
 

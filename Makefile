@@ -5,7 +5,7 @@ PYTHON ?= ./.venv/bin/python
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting lint-curves clean
+.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -17,6 +17,7 @@ help:
 		'  make prepare-drafting TASK=bold RUN=dir  Copy the sources for a drafting evaluation' \
 		'  make score-drafting RUN=dir  Score the drafts against the green drawings' \
 		'  make compare-drafting A=dir B=dir  Compare the scores of two runs' \
+		'  make corrections    List the corrections of purple drafts that no rule cites' \
 		'  make lint-curves    Curve fairness checks of both masters' \
 		'' \
 		'Build and proofs:' \
@@ -110,6 +111,11 @@ score-drafting:
 
 compare-drafting:
 	$(PYTHON) scripts/evaluate_drafting.py compare "$(A)" "$(B)"
+
+# Eli's reviews of purple drafts. ALL=1 lists every review, not only the open
+# corrections. See scripts/list_corrections.py.
+corrections:
+	$(PYTHON) scripts/list_corrections.py $(if $(ALL),--all,)
 
 lint-curves:
 	$(PYTHON) scripts/curve_lint.py Regular --all

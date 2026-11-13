@@ -71,6 +71,9 @@ class Polygons(BasePen):
         super().__init__(None)
         self.contours = []
 
+    def addComponent(self, name, transform):
+        pass
+
     def _moveTo(self, pt):
         self.contours.append([pt])
 
@@ -91,9 +94,12 @@ class Glyph:
 
 
 def read(path):
+    return parse(path.read_text())
+
+
+def parse(text):
     """Advance, flattened contours and source points of a GLIF. Components are ignored."""
     glyph, pen = Glyph(), Polygons()
-    text = path.read_text()
     readGlyphFromString(text, glyph, PointToSegmentPen(pen))
     structure, points = [], []
     for contour in re.findall(r'<contour>(.*?)</contour>', text, re.S):
