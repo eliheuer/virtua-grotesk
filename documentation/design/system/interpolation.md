@@ -3,7 +3,7 @@
 Both masters must have **identical contour count, point count, point types,
 and point order** for every glyph — only coordinates and advance widths may
 differ. This is a hard requirement of the variable build, checked by
-`out/reports/master-compatibility.md` (`make reports`).
+`.venv/bin/fontgarden lint-glifs`.
 
 
 ## Bracket alternates (structure switches along the weight axis)

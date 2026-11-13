@@ -6,7 +6,7 @@ description: Check the UFO sources after an edit, without building. Master compa
 # Check the sources
 
 ```sh
-.venv/bin/python scripts/report_master_compatibility.py --check
+.venv/bin/fontgarden lint-glifs       # master compatibility, structural faults
 make check-design GLYPHS="..."      # grid, stroke targets, composites
 make check-changes                  # what changed since main
 .venv/bin/fontgarden lint-curves Regular <glyph> --joins

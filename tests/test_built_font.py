@@ -35,6 +35,10 @@ KNOWN_COMPOSITE_DIFFERENCES = {
     0xFB1F,  # Hebrew yod yod patah
 }
 DOTTED_CIRCLE = '\u25CC'
+# Modern Hebrew: the letters, the vowel points, maqaf, the shin and sin dots,
+# qamats qatan, geresh, gershayim and the new sheqel sign.
+MODERN_HEBREW = {*range(0x05D0, 0x05EB), *range(0x05B0, 0x05BD),
+                 0x05BE, 0x05C1, 0x05C2, 0x05C7, 0x05F3, 0x05F4, 0x20AA}
 
 
 class Instance:
@@ -127,6 +131,11 @@ class BuiltFontTests(unittest.TestCase):
                     continue
                 with self.subTest(font=i.name, character=f'U+{cp:04X}'):
                     self.assertIsNotNone(i.bounds(name))
+
+    def test_modern_hebrew_is_covered(self):
+        for i in self.instances:
+            with self.subTest(font=i.name):
+                self.assertFalse(sorted(f'U+{cp:04X}' for cp in MODERN_HEBREW - set(i.cmap)))
 
     def test_spaces_and_invisible_characters_have_no_ink(self):
         for i in self.instances:

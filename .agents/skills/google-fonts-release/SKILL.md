@@ -17,7 +17,6 @@ copied checklists as evidence.
 | `make qa` | Development profile, offline, with the exclusions listed in `scripts/check_gf_fonts.sh`. The CI gate. |
 | `make qa-full` | Full profile with network checks and no exclusions. |
 | `make qa-package PACKAGE=<dir>` | Full profile on a package with `METADATA.pb`, `OFL.txt` and the article. |
-| `make qa-hebrew` | Hebrew coverage and mark attachment. |
 
 Read the JSON report in `out/qa/<mode>/`, not only the terminal output. Count
 unique findings, not one finding repeated for each font. Put each finding in

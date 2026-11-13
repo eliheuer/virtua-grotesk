@@ -7,7 +7,7 @@ FONTGARDEN ?= ./.venv/bin/fontgarden
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
+.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -34,8 +34,6 @@ help:
 		'  make qa             Development Fontspector checks (make test is the same)' \
 		'  make qa-full        Full Fontspector profile, no exclusions' \
 		'  make qa-package PACKAGE=path  Full profile on a google/fonts package' \
-		'  make qa-hebrew      Hebrew coverage and mark attachment' \
-		'  make reports        Source and build metadata reports in out/reports/' \
 		'  make test-tools     Tests of the Python and JavaScript tools' \
 		'  make clean          Remove the build output'
 
@@ -84,8 +82,6 @@ qa-package:
 
 test: qa
 
-reports:
-	$(PYTHON) scripts/run_reports.py
 
 status:
 	$(FONTGARDEN) status
@@ -126,8 +122,6 @@ lint-curves:
 clean:
 	rm -rf build build.ninja .ninja_log dist fonts sources/build.ninja sources/.ninja_log sources/instance_ufos
 
-qa-hebrew: build
-	$(PYTHON) scripts/check_hebrew.py "$(VARIABLE_FONT)" --json out/hebrew/qa.json --proof-dir out/hebrew/proofs
 
 test-tools:
 	$(PYTHON) -m unittest discover -s tests

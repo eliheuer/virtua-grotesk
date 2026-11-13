@@ -29,7 +29,6 @@ font.
 | `make test` | Development Fontspector checks, offline, with documented exclusions. |
 | `make qa-full` | Full Font.Garden profile with network checks and no exclusions. |
 | `make qa-package PACKAGE=<directory>` | Full profile on an assembled google/fonts package. |
-| `make qa-hebrew` | Hebrew coverage and mark attachment, with proofs in `out/hebrew/`. |
 | `make test-tools` | Tests of the Python and JavaScript tools. |
 | `make status` | Rewrite `STATUS.md` from the mark colors. |
 | `make check-design GLYPHS="..."` | Compare glyphs with the targets in `sources/design.toml`. |
@@ -38,7 +37,6 @@ font.
 | `make proof-web` | Compare the current build with `reference-fonts/` in a browser. |
 | `make review` | Diffenator3 HTML proof in `out/review/`. |
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`. |
-| `make reports` | Source, compatibility and binary metadata reports in `out/reports/`. |
 
 Fontspector runs the Font.Garden profile in
 `scripts/fontspector_fontgarden.py`. It includes the Google Fonts profile and

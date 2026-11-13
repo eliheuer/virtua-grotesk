@@ -19,15 +19,11 @@ Run the Python scripts from the repository root with `.venv/bin/python`.
 | `fix_gf_metadata.py` | Corrects the metadata of the compiled fonts. `build.sh` calls it. |
 | `install_fontspector.py` | Installs Fontspector into `.venv` (`make setup`). |
 
-## QA and reports
+## QA
 
 | Script | Use |
 | --- | --- |
 | `check_gf_fonts.sh` | Fontspector checks: development, full and package (`make qa`, `make qa-full`, `make qa-package`). |
-| `check_hebrew.py` | Hebrew coverage and mark attachment in the compiled font (`make qa-hebrew`). |
-| `run_reports.py` | Runs the three `report_*.py` scripts and writes to `out/reports/` (`make reports`). |
-| `report_master_compatibility.py` | Compatibility of the two masters. `--check` fails on a blocking difference. |
-| `report_source_metadata.py`, `report_generated_font_metadata.py` | Metadata of the UFOs and of the compiled fonts. |
 
 ## QA profile
 
