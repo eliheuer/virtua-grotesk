@@ -57,13 +57,13 @@ the filled glyph. An S spine has an inflection by design.
 
 A turn in a bowl or a shoulder does not reverse its curvature. A check for
 kinks does not find this fault; read the inflections from `curve_lint.py`.
-Seen in: hamzaabove-ar Bold (d23f1bed).
+Seen in: hamzaabove-ar Bold (ce3a7669).
 
 ### G2 is not the target
 
 A join can keep a curvature change when the shape needs it. The preferred
 shape is not the one with the most G2 joins.
-Seen in: hamzaabove-ar Bold (d23f1bed).
+Seen in: hamzaabove-ar Bold (ce3a7669).
 
 ### On-curve points at extrema
 
