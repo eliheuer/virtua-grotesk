@@ -31,12 +31,12 @@ jobs:
         run: make build
       - name: Run tests
         run: .venv/bin/python -m unittest discover -s tests -v
-      - name: Check development Google Fonts profile
+      - name: Check development Font.Garden profile
         run: ./scripts/check_gf_fonts.sh development
       # The full profile reports release debt, for example the directory name
       # check that applies only to the google/fonts package. It does not fail
       # the build. Its report is in the uploaded artifact.
-      - name: Check full Google Fonts profile
+      - name: Check full Font.Garden profile
         continue-on-error: true
         run: ./scripts/check_gf_fonts.sh full
       - name: Upload fonts and QA evidence
