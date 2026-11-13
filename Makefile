@@ -5,7 +5,7 @@ PYTHON ?= ./.venv/bin/python
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes benchmark lint-curves clean
+.PHONY: help setup build proof proof-web review runebender qa test qa-full qa-package qa-hebrew reports test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -14,7 +14,9 @@ help:
 		'  make queue          Rank the glyphs that most composites wait on' \
 		'  make check-design GLYPHS="n a"  Check glyphs against sources/design.toml' \
 		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
-		'  make benchmark RUN=dir  Score redrawn held-out glyphs against the green drawings' \
+		'  make prepare-drafting TASK=bold RUN=dir  Copy the sources for a drafting evaluation' \
+		'  make score-drafting RUN=dir  Score the drafts against the green drawings' \
+		'  make compare-drafting A=dir B=dir  Compare the scores of two runs' \
 		'  make lint-curves    Curve fairness checks of both masters' \
 		'' \
 		'Build and proofs:' \
@@ -98,9 +100,16 @@ BASE ?= main
 check-changes:
 	$(PYTHON) scripts/check_changes.py --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
 
-# Usage: make benchmark RUN=out/benchmark/run-1   (prepare it first; see scripts/benchmark.py)
-benchmark:
-	$(PYTHON) scripts/benchmark.py score "$(RUN)"
+# Drafting evaluation. TASK is redraw, bold, repair or relatives.
+# See scripts/evaluate_drafting.py.
+prepare-drafting:
+	$(PYTHON) scripts/evaluate_drafting.py prepare "$(TASK)" "$(RUN)"
+
+score-drafting:
+	$(PYTHON) scripts/evaluate_drafting.py score "$(RUN)"
+
+compare-drafting:
+	$(PYTHON) scripts/evaluate_drafting.py compare "$(A)" "$(B)"
 
 lint-curves:
 	$(PYTHON) scripts/curve_lint.py Regular --all

@@ -1,0 +1,39 @@
+# Held-out glyphs for scripts/evaluate_drafting.py.
+#
+# Each task tests one kind of drafting work. The reference is Eli's green
+# drawing in sources/. A glyph is scored only in the masters where it is
+# green. Add a glyph when a correction shows a decision that a drafting
+# method has to learn (see documentation/design/system/learning.md).
+
+# Draw the glyph from nothing. It is hidden in both masters.
+[redraw]
+glyphs = [
+    "n", "a", "e", "s", "g", "R", "S", "two",
+    "ain-ar.medi", "hah-ar.init", "heh-ar", "meem-ar", "kaf-ar.init",
+    "waw-ar", "lam_alef-ar",
+]
+
+# Draw the Bold from the green Regular. The Bold is hidden.
+[bold]
+glyphs = ["n", "e", "o", "g", "k", "C", "R", "S", "two", "five"]
+
+# Move the points back. The task moves some points of the glyph by 16 to 32
+# units, with their handles.
+[repair]
+glyphs = ["n", "e", "o", "g", "R", "S", "two", "heh-ar", "meem-ar", "hah-ar.init"]
+
+# Draw the glyph from green glyphs of the same construction. The glyph is
+# hidden in both masters; the glyphs in `from` stay.
+[relatives]
+cases = [
+    { glyph = "h", from = ["n"] },
+    { glyph = "m", from = ["n"] },
+    { glyph = "u", from = ["n"] },
+    { glyph = "d", from = ["b"] },
+    { glyph = "p", from = ["b"] },
+    { glyph = "P", from = ["R", "B"] },
+    { glyph = "E", from = ["F"] },
+    { glyph = "behDotless-ar.init", from = ["behDotless-ar.medi"] },
+    { glyph = "heh-ar.init", from = ["heh-ar.medi"] },
+    { glyph = "meem-ar.fina", from = ["meem-ar"] },
+]

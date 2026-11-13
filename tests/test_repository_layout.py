@@ -27,11 +27,11 @@ LAYOUT = [
     '.agents/tasks/*.md', '.omp/RULES.md',
     # Sources.
     'sources/README.md', 'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
-    'sources/design.toml',
+    'sources/design.toml', 'sources/held-out-glyphs.toml',
     'sources/VirtuaGrotesk-Regular.ufo/**', 'sources/VirtuaGrotesk-Bold.ufo/**',
     # Tools and their tests.
     'scripts/README.md', 'scripts/*.py', 'scripts/*.sh', 'scripts/proof-web/**',
-    'tests/test_*.py', 'tests/benchmark.toml',
+    'tests/test_*.py',
     # Documentation: the design rules, the Google Fonts article, and the
     # DesignBot scripts for the README image and social media.
     'documentation/*.md', 'documentation/design/**/*.md', 'documentation/article/**',

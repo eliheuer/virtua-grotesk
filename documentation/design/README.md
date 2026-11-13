@@ -15,7 +15,7 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Arabic, Hebrew, Latin, symbols | [Writing systems](writing-systems/README.md) |
 | Named glyph intent | [Glyph records](glyphs/README.md) |
 | Reference roles and reference fonts | [References](references/README.md) |
-| Checks, benchmark and how corrections are recorded | [Learning loop](system/learning.md) |
+| Checks, drafting evaluation and how corrections are recorded | [Learning loop](system/learning.md) |
 | Editing UFO, designspace and kerning files | [Source editing](system/source-editing.md) |
 
 `sources/design.toml` holds the values that scripts read: grid, chamfers,

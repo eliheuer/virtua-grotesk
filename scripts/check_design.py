@@ -40,13 +40,18 @@ CACHE = ROOT / 'out/check-design-cache'
 MASTERS = ['Regular', 'Bold']
 
 
-def runebender():
+def find_runebender():
+    """The path of the Runebender binary, or None."""
     for candidate in (os.environ.get('RUNEBENDER'),
                       Path.home() / 'GH/repos/runebender/target/release/runebender',
                       shutil.which('runebender')):
         if candidate and Path(candidate).exists():
             return str(candidate)
-    sys.exit('Runebender binary not found. Set RUNEBENDER to its path.')
+    return None
+
+
+def runebender():
+    return find_runebender() or sys.exit('Runebender binary not found. Set RUNEBENDER to its path.')
 
 
 def script_of(name, record=None):
@@ -61,14 +66,14 @@ def script_of(name, record=None):
     return 'Symbol'
 
 
-def analyze(master, record):
+def analyze(master, record, root=ROOT):
     """Runebender's measurement of one glyph, cached by the GLIF digest."""
     cached = CACHE / f"{record['sha256']}.json"
     if cached.exists():
         return json.loads(cached.read_text())
     run = subprocess.run(
         [runebender(), 'agent', 'call', 'analyze_glyph', '--font',
-         str(ROOT / f'sources/VirtuaGrotesk-{master}.ufo'),
+         str(root / f'sources/VirtuaGrotesk-{master}.ufo'),
          '--args', json.dumps({'glyph': record['glyph']})],
         capture_output=True, text=True)
     result = json.loads(run.stdout)['result']
@@ -115,11 +120,11 @@ def leaves(name, glyphs, seen=()):
     return out
 
 
-def check_contour(name, data, targets):
+def check_contour(name, data, targets, root=ROOT, masters=MASTERS):
     findings = []
-    for master in MASTERS:
+    for master in masters:
         record = data[master][name]
-        analysis = analyze(master, record)
+        analysis = analyze(master, record, root)
         if record['off_2_points']:
             findings.append(f"{master}: {record['off_2_points']} points off the 2-unit grid")
         for issue in analysis['nodes']['issues']:

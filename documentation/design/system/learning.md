@@ -54,8 +54,8 @@ Seen in: hamzaabove-ar Bold (a1b2c3d4), at Regular (e5f6a7b8).
 If a script can test the rule (a number, a range, a grid), put the value in
 `sources/design.toml` or the check in `scripts/check_design.py`, and keep only
 the reason in the rule document. If a correction shows a decision that a
-drafting method has to learn, add the glyph to `tests/benchmark.toml` when it
-is green. If a correction applies to one glyph only and a later agent would
+drafting method has to learn, add the glyph to `sources/held-out-glyphs.toml`
+when it is green. If a correction applies to one glyph only and a later agent would
 repeat the error, add one line to its record in [glyphs/](../glyphs/README.md).
 
 A rule document has at most 200 lines; the layout test enforces this. When a
@@ -77,23 +77,37 @@ Stroke targets exist only where green glyphs exist: Regular Latin, Regular
 Arabic and Bold Latin. Add targets for Bold Arabic and Hebrew with
 `check_design.py --observe` when those scripts have green glyphs.
 
-## Benchmark
+## Drafting evaluation
 
-`scripts/benchmark.py` hides the green glyphs listed in `tests/benchmark.toml`
-in a copy of the sources, then scores a redrawn copy against the green
-drawings. Use it to compare two drafting methods or two models on the same
-cases. A method that reads `sources/` or the Git history has seen the
-references, so its score is not valid.
+`scripts/evaluate_drafting.py` tests a drafting method (an agent, a model or
+a script) on green glyphs that it has not seen. The glyphs are in
+`sources/held-out-glyphs.toml`, in four tasks:
 
-Baseline on 2026-11-10, where each held-out glyph is replaced by the same
-glyph from the other master: mean overlap 0.546, mean outline distance 34.2
-units. A drafting method is useful only if it scores better than this.
+| Task | The method gets | It must |
+| --- | --- | --- |
+| redraw | the sources without the glyph | draw the glyph in both masters |
+| bold | the green Regular, without the Bold | draw the Bold |
+| repair | the glyph with some points moved | move the points back |
+| relatives | green glyphs of the same construction | draw the glyph from them |
+
+1. `make prepare-drafting TASK=bold RUN=out/drafting/bold-1` copies the
+   sources to `RUN/sources` and sets the task.
+2. The method edits only `RUN/sources`. A method that reads `sources/` or the
+   Git history has seen the references, so its score is not valid.
+3. `make score-drafting RUN=...` scores the overlap and distance from Eli's
+   drawing, the master compatibility, the grid and the project checks.
+4. `make compare-drafting A=... B=...` compares two runs of the same task.
+
+Baselines on 2026-11-12: for bold, the Regular copied into the Bold scores a
+mean overlap of 0.585 and a mean distance of 32.6 units. For repair, the
+moved glyphs without a repair score 0.962 and 2.3 units. A method is useful
+only if it scores better than these.
 
 ## Grades
 
 Eli approves contour glyphs. A composite is green when its parts are green
 and `check_design.py --ready` lists it. An agent can mark such a composite
-green. Model scores and benchmark scores do not approve a glyph.
+green. Model scores and evaluation scores do not approve a glyph.
 
 Training data comes from green glyphs only. Keep the glyphs of one
 construction family, and the two masters of one glyph, on the same side of a

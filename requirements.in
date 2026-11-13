@@ -2,7 +2,7 @@
 # package-review workflow. Keep this list small; requirements.txt is the
 # pinned install snapshot generated from the active local .venv.
 # Proofs and specimen images use DesignBot (installed separately). Pillow is
-# for the raster comparison in scripts/benchmark.py.
+# for the raster comparison in scripts/evaluate_drafting.py.
 fontmake
 fonttools
 gftools
