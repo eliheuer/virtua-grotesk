@@ -2,7 +2,8 @@
 # package-review workflow. Keep this list small; requirements.txt is the
 # pinned install snapshot generated from the active local .venv.
 # Proofs and specimen images use DesignBot (installed separately). Pillow is
-# for the raster comparison in scripts/evaluate_drafting.py.
+# for the raster comparison in scripts/evaluate_drafting.py. fontspectorapi runs
+# the Font.Garden profile in scripts/fontspector_fontgarden.py.
 fontmake
 fonttools
 gftools
@@ -17,3 +18,4 @@ glyphsets
 PyYAML
 uharfbuzz
 Pillow
+fontspectorapi

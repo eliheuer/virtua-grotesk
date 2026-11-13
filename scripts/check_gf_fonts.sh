@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Run Fontspector with the Google Fonts profile.
+# Run Fontspector with the Font.Garden profile, which includes the Google
+# Fonts profile. The profile is in scripts/fontspector_fontgarden.py.
 #
 #   check_gf_fonts.sh development        the built fonts, offline, with the
 #                                        exclusions below
@@ -13,7 +14,10 @@ cd "$(dirname "$0")/.."
 MODE=${1:-development}
 FONTSPECTOR=${FONTSPECTOR:-$(command -v .venv/bin/fontspector || command -v fontspector || true)}
 [ -n "$FONTSPECTOR" ] || { echo 'Fontspector is missing. Run make setup.' >&2; exit 1; }
-ARGS=(-p googlefonts --error-code-on fail --loglevel warn --succinct)
+# The plugin runs with the Python of .venv, which has fontspectorapi.
+export PATH="$PWD/.venv/bin:$PATH"
+ARGS=(--plugin scripts/fontspector_fontgarden.py -p fontgarden
+      --error-code-on fail --loglevel warn --succinct)
 
 case "$MODE" in
     development|full)
@@ -30,11 +34,14 @@ esac
 
 if [ "$MODE" = development ]; then
     # Known development debt, not release exceptions. The directory name
-    # check needs the google/fonts package; the other two need language and
-    # subset work. Do not add an exclusion to hide a new failure.
+    # check needs the google/fonts package; the two after it need language
+    # and subset work; the grid check waits for Eli to put section, uniE000,
+    # germandbls and three Arabic advances on the grid. Do not add an
+    # exclusion to hide a new failure.
     for check in googlefonts/repo/dirname_matches_nameid_1 \
                  googlefonts/glyphsets/shape_languages \
-                 googlefonts/metadata/unreachable_subsetting; do
+                 googlefonts/metadata/unreachable_subsetting \
+                 fontgarden/grid; do
         ARGS+=(--exclude-checkid "$check")
     done
     ARGS+=(--skip-network)

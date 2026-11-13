@@ -27,6 +27,7 @@ fontbakery==1.1.0
 fontFeatures==1.9.0
 fontmake==3.12.2
 fontMath==0.10.0
+fontspectorapi==1.7.0
 fonttools==4.67.0
 freetype-py==2.3.0
 future==1.0.0
@@ -105,8 +106,8 @@ stringbrewer==0.0.1
 tabulate==0.10.0
 toml==0.10.2
 tqdm==4.67.3
-trio==0.33.0
 trio-websocket==0.12.2
+trio==0.33.0
 ttfautohint-py==0.6.0
 typing_extensions==4.15.0
 ufo2ft==3.9.1

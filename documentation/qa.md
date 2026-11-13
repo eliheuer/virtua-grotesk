@@ -27,7 +27,7 @@ font.
 | --- | --- |
 | `make build` | Build the fonts into `fonts/`. |
 | `make test` | Development Fontspector checks, offline, with documented exclusions. |
-| `make qa-full` | Full Google Fonts profile with network checks and no exclusions. |
+| `make qa-full` | Full Font.Garden profile with network checks and no exclusions. |
 | `make qa-package PACKAGE=<directory>` | Full profile on an assembled google/fonts package. |
 | `make qa-hebrew` | Hebrew coverage and mark attachment, with proofs in `out/hebrew/`. |
 | `make test-tools` | Tests of the Python and JavaScript tools. |
@@ -39,6 +39,11 @@ font.
 | `make review` | Diffenator3 HTML proof in `out/review/`. |
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`. |
 | `make reports` | Source, compatibility and binary metadata reports in `out/reports/`. |
+
+Fontspector runs the Font.Garden profile in
+`scripts/fontspector_fontgarden.py`. It includes the Google Fonts profile and
+adds the Font.Garden requirements: a 1024-unit em, masters on the 2-unit grid,
+the vendor ID FTGD and the OFL 1.1. Add a requirement as a check in that file.
 
 QA writes JSON and Markdown reports to `out/qa/<mode>/`. A FAIL returns a
 failing exit status. A WARN needs review. No warning is waived automatically. The
