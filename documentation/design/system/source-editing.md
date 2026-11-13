@@ -31,7 +31,7 @@ A glyph has the same structure in both masters: the same contours, the same
 number of points in each contour, the same point types in the same order, and
 the same components. Only coordinates, advances and anchor positions differ.
 If you add or remove a point or contour, do it in both masters.
-`.venv/bin/fontgarden lint-glifs` checks this.
+`.venv/bin/fgtools lint-glifs` checks this.
 
 ## Kerning
 

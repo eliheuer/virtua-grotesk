@@ -4,11 +4,11 @@ Run the commands from the repository root. Use `.venv/bin/python` for scripts.
 
 ## Setup
 
-`make setup` creates `.venv`, installs the pinned `requirements.txt` and
-installs Fontspector into `.venv/bin`. `requirements.in` lists the direct
-dependencies; keep the two files in sync when you update the tools. On a
-platform that the installer does not support, install the same Fontspector
-version and set `FONTSPECTOR=/path/to/fontspector`.
+`make setup` creates `.venv`, installs the pinned `requirements.txt`, and
+runs `fgtools install-tools`, which installs the pinned fontc and Fontspector
+binaries into `.venv/bin`. `requirements.in` lists the direct dependencies;
+keep the two files in sync when you update the tools. On a platform that the
+installer does not support, install the same versions into `.venv/bin`.
 
 `make proof` needs [DesignBot](https://github.com/eliheuer/designbot). The
 design checks need the Runebender binary; set `RUNEBENDER` if it is not at
@@ -16,16 +16,21 @@ design checks need the Runebender binary; set `RUNEBENDER` if it is not at
 
 ## Build
 
-`make build` copies the sources to a temporary directory, builds one variable
-TTF and four static TTFs with gftools, and applies the metadata fixes in
+`make build` runs `fgtools build`: it copies the sources to a temporary
+directory and builds one variable TTF and four static TTFs with
+`gftools builder` and fontc. Then it applies the three metadata fixes in
 `scripts/fix_gf_metadata.py`. The static fonts are instances of the variable
-font.
+font. A plain `gftools builder sources/config.yaml`, as the Google Fonts
+packager runs it, builds the same fonts with fontmake, without those three
+fixes. `fgtools diff --fontmake` checks that fontc and fontmake give the same
+glyph and word images.
 
 ## Commands
 
 | Command | Purpose |
 | --- | --- |
 | `make build` | Build the fonts into `fonts/`. |
+| `make diff` | Build main and the working tree and compare them with diffenator3. `BASE=<revision>` compares with another revision. |
 | `make test` | Development Fontspector checks, offline, with documented exclusions. |
 | `make qa-full` | Full Font.Garden profile with network checks and no exclusions. |
 | `make qa-package PACKAGE=<directory>` | Full profile on an assembled google/fonts package. |
@@ -57,11 +62,10 @@ explains the severities.
    400, 550 and 700, beside the reference fonts (`make proof-web` or
    Runebender). Include the marks, joining forms and composites that use the
    edited glyphs.
-4. For a regression comparison between two builds:
-
-   ```sh
-   .venv/bin/diffenator3 OLD.ttf NEW.ttf --html --instance '*' --output out/diff
-   ```
+4. Run `make diff`. It builds main and the working tree with fontc and
+   compares them with diffenator3: glyph and word images at every instance,
+   kerning, tables and language support. Every difference must be one that
+   the edit explains. The HTML reports are in `out/diff/`.
 
 Command success is not visual review. Numeric coverage does not show that a
 script is correct. Eli gives the verdict on drawings.

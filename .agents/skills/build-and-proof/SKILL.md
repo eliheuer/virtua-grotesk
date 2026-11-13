@@ -10,7 +10,8 @@ Run every command from the repository root.
 ## Build
 
 `make build` builds the variable font and four static fonts into `fonts/`
-with `gftools builder sources/config.yaml`. If the build fails, read the error
+with `gftools builder` and fontc (`fgtools build`), then applies
+`scripts/fix_gf_metadata.py`. If the build fails, read the error
 output. Common causes are incompatible masters, a missing glyph and invalid
 GLIF XML.
 
@@ -20,7 +21,8 @@ GLIF XML.
 | --- | --- |
 | `make proof-web` | Serves the current build beside the fonts in `reference-fonts/` at one em size and weight. See `scripts/proof-web/app/README.md`. |
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`, generated from the font. |
-| `make review` | Diffenator3 browser proof in `out/review/`. |
+| `make diff` | diffenator3 comparison of main and the working tree in `out/diff/`. Run it after every source edit. |
+| `make review` | diff3proof browser proof of the current build in `out/review/`. |
 | `make check-changes GLYPHS="..."` with `--proof <dir>` | Runebender proof sheets of changed glyphs, before and after. |
 
 For a Before and Candidate comparison in the web proof, prepare a snapshot

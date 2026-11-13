@@ -7,10 +7,14 @@ build, proof, measure and report.
 
 ## Tools
 
-The source tools are in [fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), a shared package
-that `make setup` installs; run them with `make` or `.venv/bin/fontgarden`.
-Change a general tool there, not here. `scripts/` holds only the tools that
-are specific to this font.
+The source tools are in
+[fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), a shared
+package that `make setup` installs with its command `fgtools`. Run them with
+`make` or `.venv/bin/fgtools <command>`. Change a general tool there, not
+here. `scripts/` holds only the tools that are specific to this font.
+
+The fonts are built with fontc, the Rust compiler of Google Fonts. Build
+regressions are found with diffenator3 (`make diff`).
 
 ## State
 
@@ -30,12 +34,15 @@ The full description is in
    glyphs to work on.
 2. Draft, then run `make check-design GLYPHS="..."` and correct the findings.
    The checks are a filter. They do not measure quality.
-3. Render the same text in Virtua Grotesk and the fonts in `reference-fonts/`
+3. Run `make diff`. It builds main and the working tree and compares them
+   with diffenator3. Every changed glyph, word, table or language result must
+   be one that the edit explains. Report the others before review.
+4. Render the same text in Virtua Grotesk and the fonts in `reference-fonts/`
    at one em size and weight. Use Runebender or `make proof-web`.
-4. Eli reviews and corrects. Commit the draft before the correction, so that
+5. Eli reviews and corrects. Commit the draft before the correction, so that
    the Git history holds both. The review commit changes the purple mark to
    a grade: red (broken), orange (better), yellow (close) or green.
-5. When Eli asks, run `make corrections` and propose a change for each open
+6. When Eli asks, run `make corrections` and propose a change for each open
    correction: a rule entry, a check, a held-out case or a glyph record. The
    change cites the correction commit. Do not add worklogs, reports, receipts
    or handoff files.
@@ -81,7 +88,7 @@ not hold records of work.
   drawing purple.
 - A change to a component donor also changes every glyph that uses it. Do not
   change a donor that a green glyph uses.
-- A composite that `fontgarden check-design --ready` lists can be marked green.
+- A composite that `fgtools check-design --ready` lists can be marked green.
 - Keep contour, point and component structure compatible in both masters.
 - Edit GLIF XML and plists surgically in the existing style (tabs, double
   quotes, no space before `/>`). Never call whole-UFO `font.save()`.

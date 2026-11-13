@@ -5,7 +5,7 @@ general source tools are in
 [fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), which
 `make setup` installs: status, queue, design checks, change checks, GLIF and
 curve checks, the build, the drafting evaluation and the corrections. Run them
-with `make` or `.venv/bin/fontgarden <command>`. Change a general tool in
+with `make` or `.venv/bin/fgtools <command>`. Change a general tool in
 fontgarden-tools, not here.
 
 Run the Python scripts from the repository root with `.venv/bin/python`.
@@ -15,9 +15,8 @@ Run the Python scripts from the repository root with `.venv/bin/python`.
 
 | Script | Use |
 | --- | --- |
-| `build.sh` | The release build (`make build`): `fontgarden build`, then `fix_gf_metadata.py`. |
+| `build.sh` | The release build (`make build`): `fgtools build` with fontc, then `fix_gf_metadata.py`. |
 | `fix_gf_metadata.py` | Corrects the metadata of the compiled fonts. `build.sh` calls it. |
-| `install_fontspector.py` | Installs Fontspector into `.venv` (`make setup`). |
 
 ## QA
 

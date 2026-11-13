@@ -2,12 +2,14 @@
 
 PYTHON ?= ./.venv/bin/python
 # The shared Font.Garden source tools: https://github.com/fontgarden/fontgarden-tools
-FONTGARDEN ?= ./.venv/bin/fontgarden
+FGTOOLS ?= ./.venv/bin/fgtools
+# The revision that make diff and make check-changes compare with.
+BASE ?= main
 
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help venv setup build proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
+.PHONY: help venv setup build diff proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -21,6 +23,7 @@ help:
 		'  make compare-drafting A=dir B=dir  Compare the scores of two runs' \
 		'  make corrections    List the corrections of purple drafts that no rule cites' \
 		'  make lint-curves    Curve fairness checks of both masters' \
+		'  make diff           Compare builds of main and the working tree (diffenator3)' \
 		'' \
 		'Build and proofs:' \
 		'  make setup          Create .venv and install the requirements' \
@@ -43,7 +46,7 @@ venv: setup
 setup:
 	python3 -m venv .venv
 	$(PYTHON) -m pip install -r requirements.txt
-	$(PYTHON) scripts/install_fontspector.py
+	$(FGTOOLS) install-tools
 
 build:
 	./scripts/build.sh
@@ -51,6 +54,11 @@ build:
 # The built-in designbot print proof: introspects the variable font (axes,
 # instances, charset, metrics, features) and emits a color-managed multi-page
 # PDF.
+# Build main and the working tree with fontc and compare them with diffenator3.
+# BASE=<revision> compares with another revision. HTML reports go to out/diff/.
+diff:
+	$(FGTOOLS) diff --base "$(BASE)"
+
 proof: build
 	designbot proof "$(VARIABLE_FONT)" --output out/proof.pdf
 
@@ -87,40 +95,39 @@ test: qa
 
 
 status:
-	$(FONTGARDEN) status
+	$(FGTOOLS) status
 
 # Check glyphs against the design targets. Usage: make check-design GLYPHS="n seen-ar"
 # Without GLYPHS it reports on every glyph that is not green.
 check-design:
-	$(FONTGARDEN) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
+	$(FGTOOLS) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
 
 queue:
-	$(FONTGARDEN) queue
+	$(FGTOOLS) queue
 
 # Check source changes since BASE (default main). Usage: make check-changes BASE=main GLYPHS="a e"
-BASE ?= main
 check-changes:
-	$(FONTGARDEN) check-changes --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
+	$(FGTOOLS) check-changes --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
 
 # Drafting evaluation. TASK is redraw, bold, repair or relatives.
-# See `fontgarden evaluate-drafting --help`.
+# See `fgtools evaluate-drafting --help`.
 prepare-drafting:
-	$(FONTGARDEN) evaluate-drafting prepare "$(TASK)" "$(RUN)"
+	$(FGTOOLS) evaluate-drafting prepare "$(TASK)" "$(RUN)"
 
 score-drafting:
-	$(FONTGARDEN) evaluate-drafting score "$(RUN)"
+	$(FGTOOLS) evaluate-drafting score "$(RUN)"
 
 compare-drafting:
-	$(FONTGARDEN) evaluate-drafting compare "$(A)" "$(B)"
+	$(FGTOOLS) evaluate-drafting compare "$(A)" "$(B)"
 
 # Eli's reviews of purple drafts. ALL=1 lists every review, not only the open
-# corrections. See `fontgarden corrections --help`.
+# corrections. See `fgtools corrections --help`.
 corrections:
-	$(FONTGARDEN) corrections $(if $(ALL),--all,)
+	$(FGTOOLS) corrections $(if $(ALL),--all,)
 
 lint-curves:
-	$(FONTGARDEN) lint-curves Regular --all
-	$(FONTGARDEN) lint-curves Bold --all
+	$(FGTOOLS) lint-curves Regular --all
+	$(FGTOOLS) lint-curves Bold --all
 
 clean:
 	rm -rf build build.ninja .ninja_log dist fonts sources/build.ninja sources/.ninja_log sources/instance_ufos

@@ -63,10 +63,14 @@ both masters.
 
 ## Tools
 
-The source tools are shared by all Font.Garden fonts and are in [fontgarden-tools](https://github.com/fontgarden/fontgarden-tools):
-status, design checks, change checks, curve checks, the build, the drafting
-evaluation and the list of corrections. `make setup` installs them, pinned to
-a commit in `requirements.txt`, and the `make` targets run them. The
+The source tools are shared by all Font.Garden fonts and are in
+[fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), with the
+command `fgtools`: status, design checks, change checks, curve checks, the
+build, build comparisons, the drafting evaluation and the list of
+corrections. `make setup` installs them, pinned to a commit in
+`requirements.txt`, with the pinned fontc and Fontspector binaries. The
+`make` targets run them. The fonts are built with fontc, and `make diff`
+compares builds with diffenator3. The
 Font.Garden QA profile is `scripts/fontspector_fontgarden.py`; its Rust
 version, which will replace it, is
 [fontspector-fontgarden](https://github.com/fontgarden/fontspector-fontgarden).

@@ -12,13 +12,15 @@ of the green glyphs, and is ready for Eli to review.
 ## Acceptance
 
 - Each named glyph is changed in the named masters and marked purple.
-- `.venv/bin/fontgarden check-changes --glyphs "<names>" --proof out/review/<branch>`
+- `.venv/bin/fgtools check-changes --glyphs "<names>" --proof out/review/<branch>`
   prints PASS. Its proof sheets exist.
 - For each glyph, the stroke findings of `make check-design GLYPHS="<names>"`
   are corrected, or the report gives the reason the glyph differs.
 - A glyph drawn in both masters has the same contours, points and components
   in both.
 - `make build` succeeds.
+- `make diff` shows glyph and word image differences only in the named
+  glyphs and the glyphs that use them as components. The report lists them.
 - `.venv/bin/python -m unittest tests.test_repository_layout`
   passes.
 - No green glyph changed, and no file outside the named glyph files changed.

@@ -23,7 +23,7 @@ tight_junction = 8
 
 # Stroke thickness ranges, in font units.
 #
-# Set from the green glyphs with `fontgarden check-design --observe`. A measured span
+# Set from the green glyphs with `fgtools check-design --observe`. A measured span
 # longer than stroke_limit is not a stroke. A script without a table has no
 # green glyphs to set a range from yet (Bold Arabic, Hebrew).
 #
@@ -54,7 +54,7 @@ stroke_limit = 300
 [colors.green]
 rgba = [[0, 1, 0, 1], [0.09, 0.72, 0.44, 1]]
 policy = """Locked in as close to final. Eli approves contour glyphs. A composite is green when its \
-parts are green and `fontgarden check-design --ready` lists it."""
+parts are green and `fgtools check-design --ready` lists it."""
 
 [colors.yellow]
 rgba = [[1, 1, 0, 1], [1, 0.86, 0.2, 1], [0.91, 0.79, 0.27, 1]]
@@ -80,7 +80,7 @@ policy = "Composite that needs diagnosis. Not a reference."
 rgba = []  # no glyph uses pink now
 policy = "Composite that needs small edits. Not a reference."
 
-# `fontgarden corrections` lists the reviews from this date. The earlier
+# `fgtools corrections` lists the reviews from this date. The earlier
 # reviews predate the grades.
 [corrections]
 start = "2026-11-13"

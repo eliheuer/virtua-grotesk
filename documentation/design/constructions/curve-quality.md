@@ -44,10 +44,10 @@ October 2026. Their records are in the Git history before commit 1db2dfc7.
 ## Headless checks
 
 ```sh
-.venv/bin/fontgarden lint-curves Bold hamzaabove-ar --joins
+.venv/bin/fgtools lint-curves Bold hamzaabove-ar --joins
 ```
 
-`fontgarden lint-curves` reports off-center crests, tension breaks, inflections and,
+`fgtools lint-curves` reports off-center crests, tension breaks, inflections and,
 with `--joins`, the continuity of every join. A report is a prompt to look at
 the filled glyph. An S spine has an inflection by design.
 
@@ -56,7 +56,7 @@ the filled glyph. An S spine has an inflection by design.
 ### Turns keep one direction of curvature
 
 A turn in a bowl or a shoulder does not reverse its curvature. A check for
-kinks does not find this fault; read the inflections from `fontgarden lint-curves`.
+kinks does not find this fault; read the inflections from `fgtools lint-curves`.
 Seen in: hamzaabove-ar Bold (ce3a7669).
 
 ### G2 is not the target

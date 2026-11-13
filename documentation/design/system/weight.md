@@ -6,7 +6,7 @@ glyph before transferring weight. Counter reduction is an established Latin
 construction pattern; do not assume every Arabic/Hebrew outer contour is fixed.
 
 Use live green O/H/n/o and same-script donors, checking source grades at lookup.
-Measure the current sources with `fontgarden check-design --observe`; the
+Measure the current sources with `fgtools check-design --observe`; the
 stroke ranges are in `sources/design.toml`. Script-wide weight remains subject
 to cross-script visual review.
 
