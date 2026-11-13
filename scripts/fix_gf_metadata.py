@@ -1,138 +1,65 @@
 #!/usr/bin/env python3
-"""Patch generated TTF metadata that is not preserved by instance generation."""
+"""Fix the metadata of the built fonts that the sources cannot set.
 
-from pathlib import Path
+The sources set everything else: fsType, the meta table, the WWS bit of the
+variable font and the glyphs that are not exported. These three fixes have
+no source or gftools builder setting:
+
+- The variable font gets an identity avar table. varLib does not write an
+  avar table for an identity axis map. Fontspector: mandatory_avar_table.
+- The static fonts get fsSelection bit 8 (WWS). The family varies only by
+  weight and has WWS names. gftools clears the bit when it makes the static
+  fonts. Fontspector: opentype/fsselection_wws.
+- The Regular static font loses a.bold. The variable font switches a to
+  a.bold from weight 500, so no character reaches a.bold at 400.
+  Fontspector: unreachable_glyphs.
+
+    fix_gf_metadata.py FONT.ttf ...
+"""
 import sys
 
 from fontTools import subset
-from fontTools.otlLib.builder import buildStatTable
 from fontTools.ttLib import TTFont, newTable
 
-
-ROOT = Path(__file__).resolve().parents[1]
-COPYRIGHT = (ROOT / "OFL.txt").read_text().splitlines()[0]
-SCRIPT_TAGS = "Arab, Hebr, Latn"
-SOURCE_ONLY_ARABIC_HELPERS = {
-    "dotabovear",
-    "dotbelowar",
-    "dotcenterar",
-    "doublestrokear",
-    "gafsarkashabovear",
-    "gafsarkashcenterar",
-    "miniKehehar",
-    "threedotsdownabovear",
-    "threedotsdownbelowar",
-    "threedotsdowncenterar",
-    "threedotsupabovear",
-    "threedotsupbelowar",
-    "twodotshorizontalabovear",
-    "twodotshorizontalbelowar",
-    "twodotsverticalabovear",
-    "twodotsverticalbelowar",
-    "waslaar",
-}
-
-
-def set_name(font, name_id, value):
-    # Windows, Unicode BMP, en-US. This is the platform GF QA tools check.
-    font["name"].setName(value, name_id, 3, 1, 0x409)
-    # Macintosh Roman, English. Keep legacy apps from showing blanks.
-    font["name"].setName(value, name_id, 1, 0, 0)
+WWS = 1 << 8
 
 
 def add_identity_avar(font):
-    if "fvar" not in font or "avar" in font:
-        return
-    avar = newTable("avar")
-    avar.majorVersion = 1
-    avar.minorVersion = 0
-    avar.segments = {
-        axis.axisTag: {-1.0: -1.0, 0.0: 0.0, 1.0: 1.0}
-        for axis in font["fvar"].axes
-    }
-    font["avar"] = avar
+    avar = newTable('avar')
+    avar.majorVersion, avar.minorVersion = 1, 0
+    avar.segments = {axis.axisTag: {-1.0: -1.0, 0.0: 0.0, 1.0: 1.0} for axis in font['fvar'].axes}
+    font['avar'] = avar
 
 
-def add_static_stat(font):
-    """Describe each static's weight with the same axis ordering as the VF."""
-    if "fvar" in font or "STAT" in font:
-        return
-    weight = font["OS/2"].usWeightClass
-    style = {400: "Regular", 500: "Medium", 600: "SemiBold", 700: "Bold"}[weight]
-    value = {"value": weight, "name": style, "flags": 2 if weight == 400 else 0}
-    if weight == 400:
-        value["linkedValue"] = 700
-    buildStatTable(font, [
-        {"tag": "wght", "name": "Weight", "values": [value]},
-        {"tag": "ital", "name": "Italic", "values": [
-            {"value": 0, "name": "Roman", "flags": 2, "linkedValue": 1}
-        ]},
-    ])
-
-
-def remove_unreachable_source_glyphs(font):
-    glyph_order = font.getGlyphOrder()
-    helpers = SOURCE_ONLY_ARABIC_HELPERS.intersection(glyph_order)
-    # The designspace's alternate a is needed by the VF and heavier instances.
-    # In Regular it is unused. Subset closure retains it wherever a component
-    # or layout lookup actually needs it; never remove it from the sources.
-    if "fvar" not in font:
-        helpers |= {"a.bold"}.intersection(glyph_order)
-    if not helpers or "glyf" not in font:
-        return
-
-    glyf = font["glyf"]
-    for glyph_name in glyph_order:
-        if glyph_name in helpers:
-            continue
-        glyph = glyf[glyph_name]
-        if glyph.isComposite() and any(component.glyphName in helpers for component in glyph.components):
-            glyph.expand(glyf)
-
+def remove_glyph(font, name):
     options = subset.Options()
-    options.name_IDs = ["*"]
-    options.name_legacy = True
-    options.name_languages = ["*"]
-    options.layout_features = ["*"]
-    options.notdef_glyph = True
-    options.notdef_outline = True
-    options.recommended_glyphs = True
-    options.passthrough_tables = True
-    options.glyph_names = True
-    options.legacy_cmap = True
-
+    for option in ('name_legacy', 'notdef_glyph', 'notdef_outline', 'recommended_glyphs',
+                   'passthrough_tables', 'glyph_names', 'legacy_cmap'):
+        setattr(options, option, True)
+    options.name_IDs = options.name_languages = options.layout_features = ['*']
     subsetter = subset.Subsetter(options=options)
-    subsetter.populate(glyphs=[glyph_name for glyph_name in glyph_order if glyph_name not in helpers])
+    subsetter.populate(glyphs=[g for g in font.getGlyphOrder() if g != name])
     subsetter.subset(font)
 
 
-def patch_font(path):
+def fix(path):
     font = TTFont(path)
-    font["OS/2"].fsType = 0
-    # This family varies only by weight and uses WWS-conformant names.
-    # OpenType OS/2 v4 bit 8 avoids redundant WWS name records (IDs 21/22).
-    if font["OS/2"].version >= 4:
-        font["OS/2"].fsSelection |= 1 << 8
-    set_name(font, 0, COPYRIGHT)
-    add_identity_avar(font)
-    add_static_stat(font)
-    meta = font["meta"] if "meta" in font else newTable("meta")
-    meta.data = dict(getattr(meta, "data", {}))
-    meta.data["dlng"] = SCRIPT_TAGS
-    meta.data["slng"] = SCRIPT_TAGS
-    font["meta"] = meta
-    remove_unreachable_source_glyphs(font)
+    if 'fvar' in font:
+        if 'avar' not in font:
+            add_identity_avar(font)
+    else:
+        font['OS/2'].fsSelection |= WWS
+        if font['OS/2'].usWeightClass == 400 and 'a.bold' in font.getGlyphOrder():
+            remove_glyph(font, 'a.bold')
     font.save(path)
 
 
 def main(paths):
     if not paths:
-        raise SystemExit("usage: fix_gf_metadata.py FONT.ttf [FONT.ttf ...]")
-    for raw_path in paths:
-        path = Path(raw_path)
-        if path.suffix.lower() == ".ttf":
-            patch_font(path)
+        sys.exit('usage: fix_gf_metadata.py FONT.ttf ...')
+    for path in paths:
+        fix(path)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main(sys.argv[1:])

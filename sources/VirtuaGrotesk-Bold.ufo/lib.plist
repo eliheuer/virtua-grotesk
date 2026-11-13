@@ -69,6 +69,7 @@
 		<string>Z</string>
 		<string>a</string>
 		<string>a.bold</string>
+		<string>aacute</string>
 		<string>b</string>
 		<string>c</string>
 		<string>d</string>
@@ -242,6 +243,38 @@
 		<string>lam_alefMadda-ar.fina</string>
 		<string>lam_alefWasla-ar</string>
 		<string>lam_alefWasla-ar.fina</string>
+		<string>decimalseparator-ar</string>
+		<string>thousandseparator-ar</string>
+		<string>zero-ar</string>
+		<string>one-ar</string>
+		<string>two-ar</string>
+		<string>three-ar</string>
+		<string>four-ar</string>
+		<string>five-ar</string>
+		<string>six-ar</string>
+		<string>seven-ar</string>
+		<string>eight-ar</string>
+		<string>nine-ar</string>
+		<string>zero</string>
+		<string>one</string>
+		<string>two</string>
+		<string>three</string>
+		<string>four</string>
+		<string>five</string>
+		<string>six</string>
+		<string>seven</string>
+		<string>eight</string>
+		<string>nine</string>
+		<string>zero.tf</string>
+		<string>one.tf</string>
+		<string>two.tf</string>
+		<string>three.tf</string>
+		<string>four.tf</string>
+		<string>five.tf</string>
+		<string>six.tf</string>
+		<string>seven.tf</string>
+		<string>eight.tf</string>
+		<string>nine.tf</string>
 		<string>space</string>
 		<string>comma-ar</string>
 		<string>semicolon-ar</string>
@@ -249,7 +282,41 @@
 		<string>asterisk-ar</string>
 		<string>parenleft-ar</string>
 		<string>parenright-ar</string>
+		<string>period</string>
+		<string>comma</string>
+		<string>colon</string>
+		<string>semicolon</string>
+		<string>ellipsis</string>
+		<string>exclam</string>
+		<string>exclamdown</string>
+		<string>question</string>
+		<string>questiondown</string>
+		<string>periodcentered</string>
+		<string>periodcentered.loclCAT.case</string>
+		<string>periodcentered.loclCAT</string>
+		<string>bullet</string>
+		<string>asterisk</string>
+		<string>numbersign</string>
+		<string>slash</string>
+		<string>backslash</string>
+		<string>hyphen</string>
+		<string>endash</string>
+		<string>emdash</string>
+		<string>underscore</string>
+		<string>parenleft</string>
+		<string>parenright</string>
+		<string>quotesinglbase</string>
+		<string>quotedblleft</string>
+		<string>quotedblright</string>
+		<string>quoteleft</string>
+		<string>quoteright</string>
+		<string>quotedbl</string>
+		<string>quotesingle</string>
 		<string>percent-ar</string>
+		<string>ampersand</string>
+		<string>dollar</string>
+		<string>minus</string>
+		<string>percent</string>
 		<string>dotabove-ar</string>
 		<string>dotbelow-ar</string>
 		<string>dotcenter-ar</string>
@@ -294,73 +361,6 @@
 		<string>shaddaAlefabove-ar</string>
 		<string>sukun-ar</string>
 		<string>madda-ar</string>
-		<string>zero-ar</string>
-		<string>one-ar</string>
-		<string>two-ar</string>
-		<string>three-ar</string>
-		<string>four-ar</string>
-		<string>five-ar</string>
-		<string>six-ar</string>
-		<string>seven-ar</string>
-		<string>eight-ar</string>
-		<string>nine-ar</string>
-		<string>decimalseparator-ar</string>
-		<string>thousandseparator-ar</string>
-		<string>aacute</string>
-		<string>zero</string>
-		<string>one</string>
-		<string>two</string>
-		<string>three</string>
-		<string>four</string>
-		<string>five</string>
-		<string>six</string>
-		<string>seven</string>
-		<string>eight</string>
-		<string>nine</string>
-		<string>zero.tf</string>
-		<string>one.tf</string>
-		<string>two.tf</string>
-		<string>three.tf</string>
-		<string>four.tf</string>
-		<string>five.tf</string>
-		<string>six.tf</string>
-		<string>seven.tf</string>
-		<string>eight.tf</string>
-		<string>nine.tf</string>
-		<string>period</string>
-		<string>comma</string>
-		<string>colon</string>
-		<string>semicolon</string>
-		<string>ellipsis</string>
-		<string>exclam</string>
-		<string>exclamdown</string>
-		<string>question</string>
-		<string>questiondown</string>
-		<string>periodcentered</string>
-		<string>periodcentered.loclCAT.case</string>
-		<string>periodcentered.loclCAT</string>
-		<string>bullet</string>
-		<string>asterisk</string>
-		<string>numbersign</string>
-		<string>slash</string>
-		<string>backslash</string>
-		<string>hyphen</string>
-		<string>endash</string>
-		<string>emdash</string>
-		<string>underscore</string>
-		<string>parenleft</string>
-		<string>parenright</string>
-		<string>quotesinglbase</string>
-		<string>quotedblleft</string>
-		<string>quotedblright</string>
-		<string>quoteleft</string>
-		<string>quoteright</string>
-		<string>quotedbl</string>
-		<string>quotesingle</string>
-		<string>ampersand</string>
-		<string>dollar</string>
-		<string>minus</string>
-		<string>percent</string>
 		<string>acutecomb</string>
 		<string>acute</string>
 		<string>apostrophemod</string>
@@ -477,6 +477,21 @@
 		<string>eightsuperior</string>
 		<string>mu</string>
 	</array>
+	<key>public.openTypeMeta</key>
+	<dict>
+		<key>dlng</key>
+		<array>
+			<string>Arab</string>
+			<string>Hebr</string>
+			<string>Latn</string>
+		</array>
+		<key>slng</key>
+		<array>
+			<string>Arab</string>
+			<string>Hebr</string>
+			<string>Latn</string>
+		</array>
+	</dict>
 	<key>public.openTypeCategories</key>
 	<dict>
 		<key>A</key>
@@ -2383,23 +2398,11 @@
 	</dict>
 	<key>public.skipExportGlyphs</key>
 	<array>
-		<string>dotabove-ar</string>
-		<string>dotbelow-ar</string>
 		<string>dotcenter-ar</string>
 		<string>doublestroke-ar</string>
-		<string>gafsarkashabove-ar</string>
 		<string>gafsarkashcenter-ar</string>
 		<string>miniKeheh-ar</string>
-		<string>threedotsdownabove-ar</string>
-		<string>threedotsdownbelow-ar</string>
-		<string>threedotsdowncenter-ar</string>
-		<string>threedotsupabove-ar</string>
 		<string>threedotsupbelow-ar</string>
-		<string>twodotshorizontalabove-ar</string>
-		<string>twodotshorizontalbelow-ar</string>
-		<string>twodotsverticalabove-ar</string>
-		<string>twodotsverticalbelow-ar</string>
-		<string>wasla-ar</string>
 	</array>
 </dict>
 </plist>

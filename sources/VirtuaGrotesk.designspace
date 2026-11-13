@@ -45,4 +45,16 @@
       <sub name="a" with="a.bold"/>
     </rule>
   </rules>
+  <lib>
+    <dict>
+      <key>public.skipExportGlyphs</key>
+      <array>
+        <string>dotcenter-ar</string>
+        <string>doublestroke-ar</string>
+        <string>gafsarkashcenter-ar</string>
+        <string>miniKeheh-ar</string>
+        <string>threedotsupbelow-ar</string>
+      </array>
+    </dict>
+  </lib>
 </designspace>

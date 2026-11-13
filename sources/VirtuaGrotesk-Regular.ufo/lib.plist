@@ -450,6 +450,21 @@
 		<string>eightsuperior</string>
 		<string>mu</string>
 	</array>
+	<key>public.openTypeMeta</key>
+	<dict>
+		<key>dlng</key>
+		<array>
+			<string>Arab</string>
+			<string>Hebr</string>
+			<string>Latn</string>
+		</array>
+		<key>slng</key>
+		<array>
+			<string>Arab</string>
+			<string>Hebr</string>
+			<string>Latn</string>
+		</array>
+	</dict>
 	<key>public.openTypeCategories</key>
 	<dict>
 		<key>A</key>
@@ -2402,23 +2417,11 @@
 	</dict>
 	<key>public.skipExportGlyphs</key>
 	<array>
-		<string>dotabove-ar</string>
-		<string>dotbelow-ar</string>
 		<string>dotcenter-ar</string>
 		<string>doublestroke-ar</string>
-		<string>gafsarkashabove-ar</string>
 		<string>gafsarkashcenter-ar</string>
 		<string>miniKeheh-ar</string>
-		<string>threedotsdownabove-ar</string>
-		<string>threedotsdownbelow-ar</string>
-		<string>threedotsdowncenter-ar</string>
-		<string>threedotsupabove-ar</string>
 		<string>threedotsupbelow-ar</string>
-		<string>twodotshorizontalabove-ar</string>
-		<string>twodotshorizontalbelow-ar</string>
-		<string>twodotsverticalabove-ar</string>
-		<string>twodotsverticalbelow-ar</string>
-		<string>wasla-ar</string>
 	</array>
 </dict>
 </plist>
