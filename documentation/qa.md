@@ -40,9 +40,8 @@ font.
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`. |
 | `make reports` | Source, compatibility and binary metadata reports in `out/reports/`. |
 
-QA writes JSON, Markdown and tool versions under `out/qa/`. Set
-`QA_REPORT_DIR` for a separate run. A FAIL returns a failing exit status. A
-WARN needs review. No warning is waived automatically. The
+QA writes JSON and Markdown reports to `out/qa/<mode>/`. A FAIL returns a
+failing exit status. A WARN needs review. No warning is waived automatically. The
 [Google Fonts QA guide](https://googlefonts.github.io/gf-guide/qa.html)
 explains the severities.
 
