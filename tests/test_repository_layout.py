@@ -46,6 +46,10 @@ RECORD_NAME = re.compile(r'worklog|handoff|report|receipt|\d{4}-\d{2}-\d{2}', re
 MAX_DOCUMENT_LINES = 200
 GENERATED = {'STATUS.md'}
 
+# Large files make every clone of the history larger, also after they are
+# removed. Rendered output goes to out/.
+MAX_FILE_BYTES = 500_000
+
 
 def tracked():
     out = subprocess.run(['git', 'ls-files'], cwd=ROOT, capture_output=True,
@@ -61,6 +65,9 @@ def problems(path):
     found = []
     if not any(allowed(path, pattern) for pattern in LAYOUT):
         found.append('no allowed place in LAYOUT')
+    size = (ROOT / path).stat().st_size
+    if size > MAX_FILE_BYTES:
+        found.append(f'{size} bytes, more than {MAX_FILE_BYTES}')
     if path in GENERATED:
         return found
     name = PurePosixPath(path).name

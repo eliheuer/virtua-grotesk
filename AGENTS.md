@@ -47,7 +47,8 @@ not hold records of work.
 
 - Do not add worklogs, handoffs, receipts, reports, plans, audits or dated
   documents. The Git history and commit messages are the record of work.
-- Generated output goes to `out/`, which Git ignores.
+- Generated output goes to `out/`, which Git ignores. A tracked file has at most
+  500 KB, because a file stays in every clone of the history.
 - Before you add a document, extend the existing one on the same subject.
   A maintained document has at most 200 lines.
 - `tests/test_repository_layout.py` enforces these rules in CI. To add a new

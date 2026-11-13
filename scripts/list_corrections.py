@@ -26,6 +26,8 @@ commit that changes a check. The summary shows whether the drafts improve:
 the grades rise, more drafts are accepted, and the overlap with Eli's version
 increases. Edits of a glyph that stays purple are not visible, so Eli
 changes the mark in the commit that grades or corrects the draft.
+
+Reviews before START are not listed. They predate the grades.
 """
 from __future__ import annotations
 
@@ -43,6 +45,7 @@ GLYPHS = 'sources/VirtuaGrotesk-*.ufo/glyphs/*.glif'
 COLORS = tomllib.loads((ROOT / 'sources/design.toml').read_text())['colors']
 MARK = re.compile(r'<key>public.markColor</key>\s*<string>([^<]*)</string>')
 HASH = re.compile(r'\b[0-9a-f]{7,40}\b')
+START = '2026-11-13'
 
 
 def git(*args, root=ROOT, check=True):
@@ -154,6 +157,8 @@ def main():
     print(f"{'date':10}  {'commit':8}  {'master':7}  {'glyph':24}  {'grade':6}  {'against':7}  {'result':9}  "
           f"{'iou':>5}  {'dist':>5}  cited")
     for row in reviews():
+        if row['date'] < START:
+            continue
         row['cited'] = row['commit'][:7] in cited
         months.setdefault(row['date'][:7], []).append(row)
         if args.all or (row['result'] == 'corrected' and not row['cited']):
