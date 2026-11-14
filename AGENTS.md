@@ -23,7 +23,7 @@ source is https://github.com/fontgarden/fontgarden.github.io
 (`src/content/docs/`). When you change a command, a `make` target, a mark
 color, the layout or a workflow here, update the chapter of the guide in the
 same session. The README of that repository lists the chapter for each kind
-of change, and its `scripts/check_guide.py` finds the differences.
+of change, and its script `check_guide.py` finds the differences.
 
 ## State
 
