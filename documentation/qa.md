@@ -37,6 +37,7 @@ glyph and word images.
 | `make test-tools` | Tests of the Python and JavaScript tools. |
 | `make status` | Rewrite `STATUS.md` from the mark colors. |
 | `make check-design GLYPHS="..."` | Compare glyphs with the targets in `sources/design.toml`. |
+| `make check-accents` | List the accented letters whose mark is not where the other accented letters predict, or not where the anchors of its parts are. |
 | `make check-changes` | Check source changes since `main`: green glyphs unchanged, drafts purple. |
 | `make lint-curves` | Curve fairness checks of the sources. Grid checks are in `make check-design`. |
 | `make proof-web` | Compare the current build with `reference-fonts/` in a browser. |
