@@ -9,7 +9,7 @@ BASE ?= main
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help venv setup build diff proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-accents check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
+.PHONY: help venv setup build diff proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-accents accent-proofs check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -18,6 +18,7 @@ help:
 		'  make queue          Rank the glyphs that most composites wait on' \
 		'  make check-design GLYPHS="n a"  Check glyphs against sources/design.toml' \
 		'  make check-accents  List the accented letters whose mark is not where the others predict' \
+		'  make accent-proofs  Draw each accented letter beside the reference fonts, with measurements' \
 		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
 		'  make prepare-drafting TASK=bold RUN=dir  Copy the sources for a drafting evaluation' \
 		'  make score-drafting RUN=dir  Score the drafts against the green drawings' \
@@ -109,6 +110,11 @@ queue:
 # letters predict, or not where the anchors of its parts are.
 check-accents:
 	$(FGTOOLS) check-accents
+
+# Sheets and review.json in out/accent-proofs/. The reference fonts are the
+# shared collection of FONTGARDEN_REFERENCE_FONTS.
+accent-proofs:
+	$(FGTOOLS) render-accent-proofs
 
 # Check source changes since BASE (default main). Usage: make check-changes BASE=main GLYPHS="a e"
 check-changes:
