@@ -17,13 +17,13 @@
 		</contour>
 		<contour>
 			<point x="456" y="104" type="line"/>
-			<point x="448" y="96" type="line"/>
-			<point x="152" y="96" type="line"/>
+			<point x="448" y="88" type="line"/>
+			<point x="152" y="88" type="line"/>
 			<point x="144" y="104" type="line"/>
 			<point x="144" y="472" type="line"/>
-			<point x="152" y="480" type="line"/>
-			<point x="328" y="480" type="line" smooth="yes"/>
-			<point x="392" y="480"/>
+			<point x="152" y="488" type="line"/>
+			<point x="328" y="488" type="line" smooth="yes"/>
+			<point x="392" y="488"/>
 			<point x="456" y="448"/>
 			<point x="456" y="320" type="curve" smooth="yes"/>
 		</contour>
@@ -41,9 +41,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

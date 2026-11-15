@@ -23,9 +23,9 @@
 			<point x="128" y="576" type="line"/>
 			<point x="32" y="576" type="line"/>
 			<point x="16" y="560" type="line"/>
-			<point x="368" y="96" type="line"/>
-			<point x="64" y="96" type="line"/>
-			<point x="48" y="80" type="line"/>
+			<point x="368" y="88" type="line"/>
+			<point x="64" y="88" type="line"/>
+			<point x="48" y="72" type="line"/>
 			<point x="48" y="16" type="line"/>
 			<point x="64" y="0" type="line"/>
 		</contour>
@@ -43,9 +43,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -9,15 +9,15 @@
 			<point x="504" y="0" type="line"/>
 			<point x="520" y="16" type="line"/>
 			<point x="520" y="352" type="line" smooth="yes"/>
-			<point x="520" y="480"/>
+			<point x="520" y="488"/>
 			<point x="456" y="576"/>
 			<point x="328" y="576" type="curve" smooth="yes"/>
 			<point x="72" y="576" type="line"/>
 			<point x="56" y="560" type="line"/>
-			<point x="56" y="496" type="line"/>
-			<point x="72" y="480" type="line"/>
-			<point x="296" y="480" type="line" smooth="yes"/>
-			<point x="360" y="480"/>
+			<point x="56" y="504" type="line"/>
+			<point x="72" y="488" type="line"/>
+			<point x="296" y="488" type="line" smooth="yes"/>
+			<point x="360" y="488"/>
 			<point x="424" y="448"/>
 			<point x="424" y="320" type="curve" smooth="yes"/>
 		</contour>
@@ -45,9 +45,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>
