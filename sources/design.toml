@@ -25,7 +25,7 @@ tight_junction = 8
 #
 # Set from the green glyphs with `fgtools check-design --observe`. A measured span
 # longer than stroke_limit is not a stroke. A script without a table has no
-# green glyphs to set a range from yet (Bold Arabic, Hebrew).
+# green glyphs to set a range from yet (Bold Arabic, Bold Hebrew).
 #
 # vertical_stem      thickness of a vertical stroke, measured horizontally
 # horizontal_stroke  thickness of a horizontal stroke, measured vertically
@@ -38,6 +38,14 @@ stroke_limit = 180
 [targets.Regular.Arabic]
 vertical_stem = [80, 112]
 horizontal_stroke = [88, 112]
+stroke_limit = 180
+
+# Hebrew verticals are the lowercase stem, 96 = 64 + 32. Hebrew horizontals
+# are 88 = 64 + 16 + 8, the Latin crossbar: 0.92 of the stem, between monoline
+# and the 0.79 to 0.88 of the Hebrew reference fonts.
+[targets.Regular.Hebrew]
+vertical_stem = [92, 100]
+horizontal_stroke = [84, 92]
 stroke_limit = 180
 
 [targets.Bold.Latin]

@@ -22,6 +22,15 @@ each event.
 5. **Learn.** `make corrections` lists the open corrections. Each one becomes
    a change to the system, as described below.
 
+## A review pass
+
+A pass in which Eli redraws or grades glyphs that are not purple, for example
+the orange Hebrew, uses the same record. Commit the sources before the pass.
+Commit each glyph after Eli saves it, with his reason in the commit message.
+`make corrections SINCE=<commit>` then lists each glyph that changed after
+that commit: the version at the commit is the draft, and the mark at HEAD is
+the grade.
+
 ## The trace is the Git history
 
 The draft commit and the correction commit are the record of a decision. Do
