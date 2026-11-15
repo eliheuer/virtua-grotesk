@@ -30,7 +30,7 @@ TATWEEL = '\u0640'
 # composite and its anchors agree; the test fails until it is removed.
 KNOWN_COMPOSITE_DIFFERENCES = {
     0x00E0, 0x00E1, 0x00E2, 0x00E3, 0x00E4, 0x00E5, 0x0101, 0x0103, 0x01CE,  # a with marks
-    0x013A, 0x01E9,  # lacute, kcaron
+    0x013A,  # lacute
     0x0622, 0x0623, 0x0624, 0x0625, 0x0626, 0x06C2,  # Arabic hamza and madda letters
     0xFB1F,  # Hebrew yod yod patah
 }
