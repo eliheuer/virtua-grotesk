@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="shindageshsindot-hb" format="2">
 	<unicode hex="FB2D"/>
-	<advance width="672"/>
+	<advance width="704"/>
 	<outline>
 		<component base="shin-hb"/>
-		<component base="dagesh-hb" xOffset="394" yOffset="-92"/>
+		<component base="dagesh-hb" xOffset="418" yOffset="-92"/>
 		<component base="sindot-hb" xOffset="12"/>
 	</outline>
-	<anchor name="hbBottom" x="336" y="-32"/>
-	<anchor name="hbCenter" x="464" y="240"/>
-	<anchor name="hbHolam" x="16" y="576"/>
-	<anchor name="hbShin" x="592" y="576"/>
-	<anchor name="hbSin" x="80" y="576"/>
-	<anchor name="hbRafe" x="336" y="672"/>
-	<anchor name="hbMeteg" x="336" y="-32"/>
-	<anchor name="hbCantAbove" x="336" y="576"/>
-	<anchor name="hbCantAboveLeft" x="16" y="576"/>
-	<anchor name="hbCantAboveRight" x="640" y="576"/>
-	<anchor name="hbCantBelow" x="336" y="-32"/>
-	<anchor name="hbCantBelowRight" x="336" y="-32"/>
+	<anchor name="hbBottom" x="352" y="-32"/>
+	<anchor name="hbCenter" x="488" y="272"/>
+	<anchor name="hbHolam" x="16" y="640"/>
+	<anchor name="hbShin" x="624" y="640"/>
+	<anchor name="hbSin" x="80" y="640"/>
+	<anchor name="hbRafe" x="352" y="736"/>
+	<anchor name="hbMeteg" x="352" y="-32"/>
+	<anchor name="hbCantAbove" x="352" y="640"/>
+	<anchor name="hbCantAboveLeft" x="16" y="640"/>
+	<anchor name="hbCantAboveRight" x="672" y="640"/>
+	<anchor name="hbCantBelow" x="352" y="-32"/>
+	<anchor name="hbCantBelowRight" x="352" y="-32"/>
 	<anchor name="hbCantAfterHolam" x="118" y="576"/>
 	<anchor name="hbCantBeforeHolam" x="44" y="576"/>
 	<lib>

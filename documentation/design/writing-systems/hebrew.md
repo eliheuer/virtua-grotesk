@@ -26,10 +26,11 @@ are at 0.81 to 0.82 of the cap height; 28 Google Fonts designs are at 0.75
 to 0.92, median 0.86. The lamed ascender reaches the height of Latin `l`,
 as in all five reference fonts. Decided by Eli on 2026-11-15.
 
-The drawings are still 576 high. Each letter is redrawn to 640 as a drawing,
-not by moving points: a script that moved the points above a split height
-bent diagonals, thickened the tongue of pe, broke curves and left he, het
-and kaf too narrow. That script is reverted.
+The Regular letters are drafted at 640; the Bold is still 576. Each letter
+was redrawn as a drawing, not by moving points: a script that moved the
+points above a split height bent diagonals, thickened the tongue of pe,
+broke curves and left letters too narrow. At 640 the width of each letter
+is judged again against the reference fonts at the same height.
 
 ### Stroke weights
 
