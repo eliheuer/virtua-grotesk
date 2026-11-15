@@ -12,11 +12,11 @@ each script is in [STATUS.md](STATUS.md). The release scope, open decisions
 and links to the Google Fonts guide are in
 [documentation/google-fonts.md](documentation/google-fonts.md). The design
 background is in the article
-[Grid Systems as Datasets](https://elih.net/blog/virtua-grotesk).
+[Virtua Grotesk: Grid Systems for Dataset Engineering](https://elih.net/blog/virtua-grotesk).
 
 ## Build
 
-Install Python 3.11 or later, then run from the repository root:
+Install Python 3.13 or later, then run from the repository root:
 
 ```sh
 make setup
@@ -32,6 +32,7 @@ UFO masters and the designspace in `sources/`.
 | Command | Use |
 | --- | --- |
 | `make runebender` | Open the sources in the Runebender web editor. |
+| `make reference-fonts` | Get the reference fonts that `sources/design.toml` lists into `reference-fonts/`. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
 | `make check-design GLYPHS="n a"` | Check glyphs against the grid and stroke targets. |
 | `make status` | Write `STATUS.md` from the mark colors. |
@@ -65,9 +66,9 @@ both masters.
 
 The source tools are shared by all Font.Garden fonts and are in
 [fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), with the
-command `fgtools`: status, design checks, change checks, curve checks, the
-build, build comparisons, the drafting evaluation and the list of
-corrections. `make setup` installs them, pinned to a commit in
+command `fgtools`: status, design and grid checks, change checks, curve
+checks, accent placement, the build, build comparisons, the drafting
+evaluation, the list of corrections and the reference fonts. `make setup` installs them, pinned to a commit in
 `requirements.txt`, with the pinned fontc and Fontspector binaries. The
 `make` targets run them. The fonts are built with fontc, and `make diff`
 compares builds with diffenator3. `make qa`

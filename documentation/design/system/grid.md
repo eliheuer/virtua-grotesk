@@ -1,6 +1,6 @@
 # Grid and metrics
 
-`sources/design.toml` holds the grid values and the mark colors that scripts read.
+`sources/design.toml` holds the grid values and the mark colors that `fgtools` reads.
 The em is 1024; ascender/caps 768, x-height 576, descender -256.
 Source drawing metrics are distinct from font line-box and clipping metrics.
 Read current fontinfo when changing engineering metrics.

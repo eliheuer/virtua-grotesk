@@ -10,8 +10,8 @@ These files are the canonical designspace/UFO source set for Virtua Grotesk.
 Build systems should consume the designspace and UFO masters directly, then
 write generated fonts and intermediate files outside the source tree.
 
-`design.toml` holds the grid values, stroke targets and mark colors that the
-scripts read.
+`design.toml` holds the grid values, stroke targets, mark colors and the list
+of reference fonts. `fgtools` reads it.
 
 `config.yaml` is the gftools builder recipe that `make build` uses.
 

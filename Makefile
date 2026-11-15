@@ -54,14 +54,13 @@ setup:
 build:
 	./scripts/build.sh
 
-# The built-in designbot print proof: introspects the variable font (axes,
-# instances, charset, metrics, features) and emits a color-managed multi-page
-# PDF.
 # Build main and the working tree with fontc and compare them with diffenator3.
 # BASE=<revision> compares with another revision. HTML reports go to out/diff/.
 diff:
 	$(FGTOOLS) diff --base "$(BASE)"
 
+# The DesignBot print proof: reads the variable font (axes, instances,
+# character set, metrics, features) and writes a multi-page PDF.
 proof: build
 	designbot proof "$(VARIABLE_FONT)" --output out/proof.pdf
 

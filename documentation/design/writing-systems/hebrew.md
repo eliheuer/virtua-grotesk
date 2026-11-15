@@ -1,7 +1,8 @@
 # Hebrew context
 
-Use approved Virtua construction and Hebrew-specific distinctions. Rubik and Noto
-provide script/reading comparisons; their skeletons do not override the project's
+Use approved Virtua construction and Hebrew-specific distinctions. The Hebrew
+reference fonts (Rubik, Noto Sans Hebrew, Heebo, IBM Plex Sans Hebrew and
+Assistant) provide script/reading comparisons; their skeletons do not override the project's
 terminals, turns or deliberate shelves. Preserve saved Zayin, Gimel and Final Tsadi
 corrections and any green component donors.
 

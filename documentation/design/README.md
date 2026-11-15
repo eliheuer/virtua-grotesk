@@ -18,8 +18,8 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Checks, drafting evaluation and how corrections are recorded | [Learning loop](system/learning.md) |
 | Editing UFO, designspace and kerning files | [Source editing](system/source-editing.md) |
 
-`sources/design.toml` holds the values that scripts read: grid, chamfers,
-stroke targets and mark colors. `make status` and `make check-design` read it.
+`sources/design.toml` holds the values that `fgtools` reads: grid, chamfers,
+stroke targets, mark colors and the reference fonts. `make status` and `make check-design` read it.
 
 The review records, correction library and context retrieval tool that these
 documents once linked to are in the Git history before commit 1db2dfc7.

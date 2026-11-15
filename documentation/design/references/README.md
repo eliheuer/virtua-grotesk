@@ -17,8 +17,11 @@ render, recording the donor master. Check its current mark color in both masters
 and its component dependencies. A non-green donor is not an approved reference
 even if an old note called it one.
 
-External font families explain script structure and reading texture. Local binaries
-remain in project-root `reference-fonts/`; the proof discovers them there. A
+External font families explain script structure and reading texture. The list
+is `[reference_fonts.families]` in `sources/design.toml`, with the reason for
+each family. `make reference-fonts` copies them into `reference-fonts/`, which
+Git ignores. `make proof-web` and the proof view of Runebender read that
+folder; Runebender shows the families that cover the glyph. A
 supplied sketch/image records shape intent; calibrate it before using it as
 dimensional evidence. Rejected candidates are counterexamples.
 
@@ -30,6 +33,7 @@ glyph records and constructions select additional donors.
 | Script | Fonts |
 | --- | --- |
 | Arabic | Rubik, Noto Sans Arabic, IBM Plex Sans Arabic, Readex Pro |
-| Hebrew | Rubik, Noto Sans Hebrew |
+| Hebrew | Rubik, Noto Sans Hebrew, Heebo, IBM Plex Sans Hebrew, Assistant |
+| Latin accents | The shared collection of fontgarden-tools (`make accent-proofs`) |
 
 Rubik is the quality target for weight, spacing and outline quality.
