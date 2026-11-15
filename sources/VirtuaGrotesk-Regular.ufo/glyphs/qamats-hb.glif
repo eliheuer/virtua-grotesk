@@ -3,34 +3,34 @@
 	<unicode hex="05B8"/>
 	<outline>
 		<contour>
-			<point x="120" y="-160" type="line"/>
-			<point x="136" y="-144" type="line"/>
-			<point x="136" y="-120" type="line"/>
-			<point x="144" y="-112" type="line"/>
-			<point x="168" y="-112" type="line"/>
-			<point x="184" y="-96" type="line"/>
-			<point x="184" y="-80" type="line"/>
-			<point x="168" y="-64" type="line"/>
-			<point x="48" y="-64" type="line"/>
-			<point x="32" y="-80" type="line"/>
-			<point x="32" y="-96" type="line"/>
-			<point x="48" y="-112" type="line"/>
-			<point x="72" y="-112" type="line"/>
-			<point x="80" y="-120" type="line"/>
-			<point x="80" y="-144" type="line"/>
-			<point x="96" y="-160" type="line"/>
+			<point x="128" y="-224" type="line"/>
+			<point x="152" y="-200" type="line"/>
+			<point x="152" y="-160" type="line"/>
+			<point x="160" y="-152" type="line"/>
+			<point x="200" y="-152" type="line"/>
+			<point x="224" y="-128" type="line"/>
+			<point x="224" y="-88" type="line"/>
+			<point x="200" y="-64" type="line"/>
+			<point x="16" y="-64" type="line"/>
+			<point x="-8" y="-88" type="line"/>
+			<point x="-8" y="-128" type="line"/>
+			<point x="16" y="-152" type="line"/>
+			<point x="56" y="-152" type="line"/>
+			<point x="64" y="-160" type="line"/>
+			<point x="64" y="-200" type="line"/>
+			<point x="88" y="-224" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="_hbBottom" x="108" y="0"/>
-	<anchor name="hbMeteg" x="-28" y="0"/>
-	<anchor name="hbCantLeftVowel" x="32" y="0"/>
-	<anchor name="hbCantRightVowel" x="186" y="0"/>
+	<anchor name="hbMeteg" x="-92" y="0"/>
+	<anchor name="hbCantLeftVowel" x="-8" y="0"/>
+	<anchor name="hbCantRightVowel" x="226" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>
