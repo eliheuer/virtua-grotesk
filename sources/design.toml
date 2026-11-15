@@ -85,6 +85,26 @@ policy = "Composite that needs small edits. Not a reference."
 [corrections]
 start = "2026-11-13"
 
+
+# Reference fonts.
+#
+# The fonts that the proofs and Runebender show beside this font. They are
+# for comparison of weight, spacing and structure. They are not a source of
+# outlines. Each key is a directory name of https://github.com/google/fonts
+# under ofl/, and each value is the reason that the family is a reference.
+# `make reference-fonts` copies the families into reference-fonts/, which Git
+# ignores.
+[reference_fonts.families]
+rubik = "The structural reference of the Hebrew. It also has Arabic and Latin."
+notosanshebrew = "A Hebrew sans with full coverage of the marks."
+heebo = "A Hebrew extension of Roboto: a plain sans for text."
+ibmplexsanshebrew = "A Hebrew grotesque from a professional foundry."
+assistant = "A Hebrew sans for text, drawn to work with Source Sans."
+notosansarabic = "An Arabic sans with full coverage and even joining."
+ibmplexsansarabic = "An Arabic grotesque from a professional foundry."
+readexpro = "A geometric Arabic and Latin sans."
+
+
 # Known development debt, not release exceptions. `fgtools qa` leaves these
 # checks out; `fgtools qa --full` runs them. Do not add a check to hide a new
 # failure.

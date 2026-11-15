@@ -9,7 +9,7 @@ BASE ?= main
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help venv setup build diff proof proof-web review runebender qa test qa-full qa-package test-tools status queue check-design check-accents accent-proofs check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
+.PHONY: help venv setup build diff proof proof-web reference-fonts review runebender qa test qa-full qa-package test-tools status queue check-design check-accents accent-proofs check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -31,6 +31,7 @@ help:
 		'  make setup          Create .venv and install the requirements' \
 		'  make build          Build the variable and static TTFs into fonts/' \
 		'  make proof-web      Build, then compare with reference-fonts/ in a browser' \
+		'  make reference-fonts  Get the reference fonts that sources/design.toml lists' \
 		'  make proof          DesignBot PDF proof in out/proof.pdf' \
 		'  make review         Diffenator3 browser proof in out/review/' \
 		'  make runebender     Open the designspace in the Runebender web editor' \
@@ -68,6 +69,11 @@ proof: build
 # See `fgtools proof-web --help` for a Before and Candidate snapshot.
 proof-web: build
 	$(FGTOOLS) proof-web --current
+
+# Copies the families of [reference_fonts.families] in sources/design.toml into
+# reference-fonts/, which Git ignores. See `fgtools fetch-reference-fonts --help`.
+reference-fonts:
+	$(FGTOOLS) fetch-reference-fonts --project
 
 # Current Google Fonts browser proof renderer, distributed with Diffenator3.
 DIFFPROOF = ./.venv/bin/diff3proof

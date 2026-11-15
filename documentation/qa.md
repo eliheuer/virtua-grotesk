@@ -41,6 +41,7 @@ glyph and word images.
 | `make accent-proofs` | Draw each accented letter beside the reference fonts and measure it against them. Sheets and `review.json` go to `out/accent-proofs/`. |
 | `make check-changes` | Check source changes since `main`: green glyphs unchanged, drafts purple. |
 | `make lint-curves` | Curve fairness checks of the sources. Grid checks are in `make check-design`. |
+| `make reference-fonts` | Copy the families of `[reference_fonts.families]` in `sources/design.toml` into `reference-fonts/`. The folder is not in Git. |
 | `make proof-web` | Compare the current build with `reference-fonts/` in a browser. |
 | `make review` | Diffenator3 HTML proof in `out/review/`. |
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`. |
