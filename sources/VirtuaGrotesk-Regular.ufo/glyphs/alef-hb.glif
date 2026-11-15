@@ -10,18 +10,18 @@
 			<point x="480" y="272"/>
 			<point x="544" y="352"/>
 			<point x="544" y="448" type="curve" smooth="yes"/>
-			<point x="544" y="560" type="line"/>
-			<point x="528" y="576" type="line"/>
-			<point x="464" y="576" type="line"/>
-			<point x="448" y="560" type="line"/>
+			<point x="544" y="624" type="line"/>
+			<point x="528" y="640" type="line"/>
+			<point x="464" y="640" type="line"/>
+			<point x="448" y="624" type="line"/>
 			<point x="448" y="448" type="line" smooth="yes"/>
 			<point x="448" y="384"/>
 			<point x="416" y="336"/>
 			<point x="384" y="288" type="curve"/>
-			<point x="176" y="560" type="line"/>
-			<point x="160" y="576" type="line"/>
-			<point x="64" y="576" type="line"/>
-			<point x="48" y="560" type="line"/>
+			<point x="176" y="624" type="line"/>
+			<point x="160" y="640" type="line"/>
+			<point x="64" y="640" type="line"/>
+			<point x="48" y="624" type="line"/>
 			<point x="184" y="384" type="line"/>
 			<point x="128" y="368"/>
 			<point x="96" y="320"/>
@@ -40,21 +40,21 @@
 		</contour>
 	</outline>
 	<anchor name="hbBottom" x="312" y="0"/>
-	<anchor name="hbCenter" x="312" y="56"/>
-	<anchor name="hbHolam" x="16" y="576"/>
-	<anchor name="hbRafe" x="312" y="672"/>
+	<anchor name="hbCenter" x="312" y="88"/>
+	<anchor name="hbHolam" x="16" y="640"/>
+	<anchor name="hbRafe" x="312" y="736"/>
 	<anchor name="hbMeteg" x="312" y="0"/>
-	<anchor name="hbCantAbove" x="312" y="576"/>
-	<anchor name="hbCantAboveLeft" x="16" y="576"/>
-	<anchor name="hbCantAboveRight" x="592" y="576"/>
+	<anchor name="hbCantAbove" x="312" y="640"/>
+	<anchor name="hbCantAboveLeft" x="16" y="640"/>
+	<anchor name="hbCantAboveRight" x="592" y="640"/>
 	<anchor name="hbCantBelow" x="312" y="0"/>
 	<anchor name="hbCantBelowRight" x="312" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

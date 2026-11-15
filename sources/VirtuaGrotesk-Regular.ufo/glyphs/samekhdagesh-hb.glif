@@ -7,13 +7,13 @@
 		<component base="dagesh-hb" xOffset="250" yOffset="-44"/>
 	</outline>
 	<anchor name="hbBottom" x="320" y="-32"/>
-	<anchor name="hbCenter" x="320" y="288"/>
-	<anchor name="hbHolam" x="16" y="576"/>
-	<anchor name="hbRafe" x="320" y="672"/>
+	<anchor name="hbCenter" x="320" y="320"/>
+	<anchor name="hbHolam" x="16" y="640"/>
+	<anchor name="hbRafe" x="320" y="736"/>
 	<anchor name="hbMeteg" x="320" y="-32"/>
-	<anchor name="hbCantAbove" x="320" y="576"/>
-	<anchor name="hbCantAboveLeft" x="16" y="576"/>
-	<anchor name="hbCantAboveRight" x="592" y="576"/>
+	<anchor name="hbCantAbove" x="320" y="640"/>
+	<anchor name="hbCantAboveLeft" x="16" y="640"/>
+	<anchor name="hbCantAboveRight" x="592" y="640"/>
 	<anchor name="hbCantBelow" x="320" y="-32"/>
 	<anchor name="hbCantBelowRight" x="320" y="-32"/>
 	<lib>
