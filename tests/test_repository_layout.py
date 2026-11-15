@@ -27,7 +27,7 @@ LAYOUT = [
     '.agents/tasks/*.md', '.omp/RULES.md',
     # Sources.
     'sources/README.md', 'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
-    'sources/design.toml', 'sources/held-out-glyphs.toml',
+    'sources/design.toml', 'sources/held-out-glyphs.toml', 'sources/proof-samples.toml',
     'sources/VirtuaGrotesk-Regular.ufo/**', 'sources/VirtuaGrotesk-Bold.ufo/**',
     # Tools and their tests.
     'scripts/README.md', 'scripts/*.py', 'scripts/*.sh',

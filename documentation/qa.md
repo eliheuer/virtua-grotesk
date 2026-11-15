@@ -44,7 +44,7 @@ glyph and word images.
 | `make lint-curves` | Curve fairness checks of the sources. Grid checks are in `make check-design`. |
 | `make reference-fonts` | Copy the families of `[reference_fonts.families]` in `sources/design.toml` into `reference-fonts/`. The folder is not in Git. |
 | `make runebender` | Open the sources in Runebender. It needs the `runebender` command: `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
-| `make proof-web` | Compare the current build with `reference-fonts/` in a browser. |
+| `make proof-web` | Compare the current build with `reference-fonts/` in a browser. The text samples are the defaults of fgtools and those of `sources/proof-samples.toml`, which the Runebender proof view also reads. |
 | `make review` | Diffenator3 HTML proof in `out/review/`. |
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`. |
 

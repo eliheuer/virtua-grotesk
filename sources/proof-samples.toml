@@ -1,0 +1,95 @@
+# Proof samples of Virtua Grotesk.
+#
+# `make proof-web` and the proof view of Runebender read this file. These
+# samples are added to the default samples of fontgarden-tools; a sample with
+# the key of a default sample replaces it. The format is in the README of
+# fontgarden-tools (https://github.com/fontgarden/fontgarden-tools).
+#
+# The Hebrew samples are the Hanukkah blessings and the prayer Hanerot
+# Halalu, each with vowel points and without them. The text without points
+# is the same text with the points removed.
+
+defaults = true
+
+[sample.hanukkah-candles-pointed]
+label = "Candles · points"
+scripts = ["Hebrew"]
+text = "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל חֲנֻכָּה."
+
+[sample.hanukkah-candles]
+label = "Candles"
+scripts = ["Hebrew"]
+text = "ברוך אתה יי אלהינו מלך העולם, אשר קדשנו במצותיו, וצונו להדליק נר של חנכה."
+
+[sample.hanukkah-miracles-pointed]
+label = "Miracles · points"
+scripts = ["Hebrew"]
+text = "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ, בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה."
+
+[sample.hanukkah-miracles]
+label = "Miracles"
+scripts = ["Hebrew"]
+text = "ברוך אתה יי אלהינו מלך העולם, שעשה נסים לאבותינו, בימים ההם בזמן הזה."
+
+[sample.hanukkah-shehecheyanu-pointed]
+label = "Shehecheyanu · points"
+scripts = ["Hebrew"]
+text = "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה."
+
+[sample.hanukkah-shehecheyanu]
+label = "Shehecheyanu"
+scripts = ["Hebrew"]
+text = "ברוך אתה יי אלהינו מלך העולם, שהחינו וקימנו והגיענו לזמן הזה."
+
+[sample.hanukkah-hanerot-halalu-pointed]
+label = "Hanerot Halalu · points"
+scripts = ["Hebrew"]
+text = "הַנֵּרוֹת הַלָּלוּ אָנוּ מַדְלִיקִין עַל הַנִּסִּים וְעַל הַנִּפְלָאוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת, שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה, עַל יְדֵי כֹּהֲנֶיךָ הַקְּדוֹשִׁים."
+
+[sample.hanukkah-hanerot-halalu]
+label = "Hanerot Halalu"
+scripts = ["Hebrew"]
+text = "הנרות הללו אנו מדליקין על הנסים ועל הנפלאות ועל התשועות ועל המלחמות, שעשית לאבותינו בימים ההם בזמן הזה, על ידי כהניך הקדושים."
+
+# The Hebrew height beside the Latin x-height and capitals.
+[sample.hebrew-latin-height]
+label = "Hebrew and Latin height"
+scripts = ["Latin", "Hebrew"]
+text = "Virtua שלום Grotesk עולם xHx"
+
+# All Hanukkah texts as one text page, with and without vowel points.
+[text.hanukkah]
+label = "Hanukkah blessings and prayer"
+scripts = ["Hebrew"]
+
+[[text.hanukkah.paragraphs]]
+label = "The blessing over the candles, with vowel points"
+text = "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו, וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל חֲנֻכָּה."
+
+[[text.hanukkah.paragraphs]]
+label = "The blessing over the candles, without vowel points"
+text = "ברוך אתה יי אלהינו מלך העולם, אשר קדשנו במצותיו, וצונו להדליק נר של חנכה."
+
+[[text.hanukkah.paragraphs]]
+label = "The blessing for the miracles, with vowel points"
+text = "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ, בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה."
+
+[[text.hanukkah.paragraphs]]
+label = "The blessing for the miracles, without vowel points"
+text = "ברוך אתה יי אלהינו מלך העולם, שעשה נסים לאבותינו, בימים ההם בזמן הזה."
+
+[[text.hanukkah.paragraphs]]
+label = "Shehecheyanu, the blessing of the first night, with vowel points"
+text = "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה."
+
+[[text.hanukkah.paragraphs]]
+label = "Shehecheyanu, the blessing of the first night, without vowel points"
+text = "ברוך אתה יי אלהינו מלך העולם, שהחינו וקימנו והגיענו לזמן הזה."
+
+[[text.hanukkah.paragraphs]]
+label = "Hanerot Halalu, the prayer after the lighting, with vowel points"
+text = "הַנֵּרוֹת הַלָּלוּ אָנוּ מַדְלִיקִין עַל הַנִּסִּים וְעַל הַנִּפְלָאוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת, שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה, עַל יְדֵי כֹּהֲנֶיךָ הַקְּדוֹשִׁים."
+
+[[text.hanukkah.paragraphs]]
+label = "Hanerot Halalu, the prayer after the lighting, without vowel points"
+text = "הנרות הללו אנו מדליקין על הנסים ועל הנפלאות ועל התשועות ועל המלחמות, שעשית לאבותינו בימים ההם בזמן הזה, על ידי כהניך הקדושים."
