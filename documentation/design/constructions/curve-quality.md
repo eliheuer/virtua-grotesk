@@ -51,38 +51,9 @@ October 2026. Their records are in the Git history before commit 1db2dfc7.
 with `--joins`, the continuity of every join. A report is a prompt to look at
 the filled glyph. An S spine has an inflection by design.
 
-## Rule entries
+## Rules
 
-### Turns keep one direction of curvature
-
-A turn in a bowl or a shoulder does not reverse its curvature. A check for
-kinks does not find this fault; read the inflections from `fgtools lint-curves`.
-Seen in: hamzaabove-ar Bold (ce3a7669).
-
-### G2 is not the target
-
-A join can keep a curvature change when the shape needs it. The preferred
-shape is not the one with the most G2 joins.
-Seen in: hamzaabove-ar Bold (ce3a7669).
-
-### On-curve points at extrema
-
-Every crest, trough and side extreme of a curve has an on-curve point with a
-horizontal or vertical tangent.
-Seen in: asciitilde (56f4b437), section (22ccd03a), b d (dec6b4b3).
-
-### Smooth flags
-
-A line that continues into a collinear handle is a smooth point. A corner is
-only a deliberate kink.
-Seen in: Eli's instruction (372bb48e).
-
-### Handle lengths
-
-Compensated handle pairs keep the form. Handles within one segment stay of
-similar length, and the lengths follow the proportions of the glyph.
-Seen in: Eli's instruction in `design/reviews/latin-worklog.md`, in the Git
-history before commit 1db2dfc7.
+The rules of this subject are numbered in `context.md`.
 
 ## Reading
 

@@ -52,7 +52,7 @@ The full description is in
    the Git history holds both. The review commit changes the purple mark to
    a grade: red (broken), orange (better), yellow (close) or green.
 6. When Eli asks, run `make corrections` and propose a change for each open
-   correction: a rule entry, a check, a held-out case or a glyph record. The
+   correction: a rule in `context.md`, a check, a held-out case or a glyph record. The
    change cites the correction commit. Do not add worklogs, reports, receipts
    or handoff files.
 
@@ -83,6 +83,11 @@ not hold records of work.
   a command, update the documents that name it in the same commit.
 
 ## Source rules
+
+The design rules are in [context.md](context.md),
+numbered. Read all of them before you draw or change a glyph. Review every
+draft against each rule by number, then look at the whole glyph. Runebender
+gives the same file to its agents.
 
 - Draw or redraw only glyphs Eli names, in the masters Eli names.
 - A request to clean up a glyph, or to make it "more X", is the smallest

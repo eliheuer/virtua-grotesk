@@ -46,12 +46,12 @@ Eli's commit message) and proposes one of these changes:
 | The correction shows | Change | The citation |
 | --- | --- | --- |
 | a mistake that a script can find | a value in `sources/design.toml` or a check in `scripts/` | the commit message |
-| a mistake that repeats | a rule entry | "Seen in" in the entry |
+| a principle of the design | a rule in `context.md` | "Seen in" in the rule |
 | a decision that a drafting method has to learn | a case in `sources/held-out-glyphs.toml` | a comment on the case |
 | a fault of one glyph only | one line in its record in [glyphs/](../glyphs/README.md) | the line |
 
 Eli approves or rejects each change. One correction is not a rule. When the
-same mistake occurs again, add the glyph and commit to the existing entry.
+same mistake occurs again, add the glyph and commit to the existing rule.
 
 The summary of `make corrections` gives, for each month, the grades, the
 drafts that reached green without change, the drafts that Eli corrected, and
@@ -60,19 +60,18 @@ improves, the grades rise, more drafts are accepted and the overlap
 increases. The drafting evaluation measures the same
 methods on fixed cases, so its scores can also be compared over time.
 
-A rule entry has this form:
+A rule in `context.md` is one or two checkable sentences with
+a number, and "Seen in" with the commits that show it:
 
 ```markdown
-### Turns keep one direction of curvature
-
-A convex turn must not reverse its curvature. Read the comb before review.
-Seen in: hamzaabove-ar Bold (a1b2c3d4), at Regular (e5f6a7b8).
+R17. A turn in a bowl or a shoulder keeps one direction of curvature; it
+does not reverse.
+Seen in: hamzaabove-ar Bold (ce3a7669).
 ```
 
-When a script can test a rule, keep only the reason in the rule document.
-
-A rule document has at most 200 lines; the layout test enforces this. When a
-document is full, merge entries or move checkable values into scripts.
+Every draft and every review uses all the rules, so a new rule applies from
+the next draft on. Keep each rule short; the documents in this folder hold
+the explanation.
 
 ## Checks and their limits
 

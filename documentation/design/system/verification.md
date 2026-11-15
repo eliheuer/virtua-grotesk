@@ -2,8 +2,9 @@
 
 Do these checks after a glyph edit and before you show the result to Eli.
 
-1. Look at the filled glyph next to the green Virtua glyphs of the same
-   construction.
+1. Check the glyph against every rule of `context.md`, by
+   number. Then look at the filled glyph next to the green Virtua glyphs of
+   the same construction, for faults that no rule names.
 2. Make sure that new points are on the grid of 8, and that both masters
    have the same contours, points and components.
 3. Run `fgtools lint-curves <Master> <glyphs> --joins` and look at each

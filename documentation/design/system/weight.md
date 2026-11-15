@@ -15,10 +15,6 @@ translating every turn with a thicker bar. Inspect opposing-edge weight, full
 silhouette and shaped words. Zayin Bold's compact turn and hamza's unequal handles
 show why one universal handle ratio is insufficient.
 
-## Rule entries
+## Rules
 
-### Open a Bold counter with width, not a thinner stem
-
-Bold lowercase stems stay 192. When a Bold counter closes up, make the advance
-wider.
-Seen in: Bold n b d (9fb03696).
+The rules of this subject are numbered in `context.md`.

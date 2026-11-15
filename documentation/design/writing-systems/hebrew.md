@@ -42,14 +42,4 @@ in `sources/design.toml` holds the ranges that `make check-design` uses.
 Decided by Eli on 2026-11-15, from a measurement of the five Hebrew
 reference fonts.
 
-### Rubik is the structural reference
-
-When a Hebrew letter looks wrong, compare its skeleton with Rubik. If the
-structure is very different, follow Rubik's structure and draw it with
-Virtua's chamfers, grid and own forms. Simplify rather than add.
-Seen in: zayin shin finaltsadi samekh (4e900dd0, df38c4a2), gimel (3814ca96).
-
-### Geometric does not mean rectangular
-
-Keep oval bowls and counters. Remove only organic irregularity.
-Seen in: samekh v4, rejected by Eli (df38c4a2).
+The rules of the Hebrew are numbered in `context.md` (R32 to R35).

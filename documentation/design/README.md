@@ -1,5 +1,9 @@
 # Virtua design rules
 
+The rules themselves are numbered in
+[context.md](../../context.md). These documents
+explain them and give the procedures.
+
 These documents describe how Virtua Grotesk is drawn. They are reference
 material for people and agents. They do not grant permission to edit a glyph;
 see [AGENTS.md](../../AGENTS.md) for the source rules.

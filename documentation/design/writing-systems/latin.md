@@ -7,9 +7,6 @@ exceptions. Preserve open design decisions and deliberate optical coordinates.
 The measured worklog `design/reviews/latin-worklog.md` is in the Git history
 before commit 1db2dfc7. Font QA success does not approve new drawing.
 
-## Rule entries
+## Rules
 
-### When n changes, rebuild h and m from it
-
-h and m take their stems, shoulder and arch from the current n.
-Seen in: m h (cbb174ea).
+The rules of this subject are numbered in `context.md`.
