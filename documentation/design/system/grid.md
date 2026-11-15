@@ -2,7 +2,7 @@
 
 `sources/design.toml` holds the grid values and the mark colors that `fgtools` reads.
 The em is 1024; ascender/caps 768, x-height 576, descender -256.
-Hebrew letters are 640 high, and Hebrew final forms descend to -192.
+The target height of the Hebrew letters is 640; see the Hebrew rules.
 Source drawing metrics are distinct from font line-box and clipping metrics.
 Read current fontinfo when changing engineering metrics.
 

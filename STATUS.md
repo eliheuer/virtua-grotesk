@@ -35,8 +35,8 @@ Total: 212 of 1826 master glyphs are green.
 
 ### Regular, Hebrew, contour
 
-- orange (11): `hatafpatah-hb`, `hatafqamats-hb`, `hatafsegol-hb`, `hiriq-hb`, `patah-hb`, `qamats-hb`, `qamatsqatan-hb`, `qubuts-hb`, `segol-hb`, `sheva-hb`, `tsere-hb`
-- purple (36): `alef-hb`, `ayin-hb`, `bet-hb`, `dagesh-hb`, `dalet-hb`, `finalkaf-hb`, `finalmem-hb`, `finalnun-hb`, `finalpe-hb`, `finaltsadi-hb`, `geresh-hb`, `gershayim-hb`, `gimel-hb`, `he-hb`, `het-hb`, `holam-hb`, `holamhaser-hb`, `kaf-hb`, `lamed-hb`, `maqaf-hb`, `mem-hb`, `nun-hb`, `pe-hb`, `qof-hb`, `resh-hb`, `samekh-hb`, `shin-hb`, `shindot-hb`, `sindot-hb`, `tav-hb`, `tet-hb`, `tsadi-hb`, `vav-hb`, `yod-hb`, `yodyod-hb`, `zayin-hb`
+- orange (23): `alef-hb`, `dagesh-hb`, `finaltsadi-hb`, `geresh-hb`, `gershayim-hb`, `hatafpatah-hb`, `hatafqamats-hb`, `hatafsegol-hb`, `hiriq-hb`, `holam-hb`, `holamhaser-hb`, `patah-hb`, `qamats-hb`, `qamatsqatan-hb`, `qubuts-hb`, `segol-hb`, `sheva-hb`, `shindot-hb`, `sindot-hb`, `tsere-hb`, `vav-hb`, `yod-hb`, `yodyod-hb`
+- purple (24): `ayin-hb`, `bet-hb`, `dalet-hb`, `finalkaf-hb`, `finalmem-hb`, `finalnun-hb`, `finalpe-hb`, `gimel-hb`, `he-hb`, `het-hb`, `kaf-hb`, `lamed-hb`, `maqaf-hb`, `mem-hb`, `nun-hb`, `pe-hb`, `qof-hb`, `resh-hb`, `samekh-hb`, `shin-hb`, `tav-hb`, `tet-hb`, `tsadi-hb`, `zayin-hb`
 
 ### Regular, Hebrew, composite or empty
 
@@ -68,8 +68,7 @@ Total: 212 of 1826 master glyphs are green.
 
 ### Bold, Hebrew, contour
 
-- purple (36): `alef-hb`, `ayin-hb`, `bet-hb`, `dagesh-hb`, `dalet-hb`, `finalkaf-hb`, `finalmem-hb`, `finalnun-hb`, `finalpe-hb`, `finaltsadi-hb`, `geresh-hb`, `gershayim-hb`, `gimel-hb`, `he-hb`, `het-hb`, `holam-hb`, `holamhaser-hb`, `kaf-hb`, `lamed-hb`, `maqaf-hb`, `mem-hb`, `nun-hb`, `pe-hb`, `qof-hb`, `resh-hb`, `samekh-hb`, `shin-hb`, `shindot-hb`, `sindot-hb`, `tav-hb`, `tet-hb`, `tsadi-hb`, `vav-hb`, `yod-hb`, `yodyod-hb`, `zayin-hb`
-- red (11): `hatafpatah-hb`, `hatafqamats-hb`, `hatafsegol-hb`, `hiriq-hb`, `patah-hb`, `qamats-hb`, `qamatsqatan-hb`, `qubuts-hb`, `segol-hb`, `sheva-hb`, `tsere-hb`
+- red (47): `alef-hb`, `ayin-hb`, `bet-hb`, `dagesh-hb`, `dalet-hb`, `finalkaf-hb`, `finalmem-hb`, `finalnun-hb`, `finalpe-hb`, `finaltsadi-hb`, `geresh-hb`, `gershayim-hb`, `gimel-hb`, `hatafpatah-hb`, `hatafqamats-hb`, `hatafsegol-hb`, `he-hb`, `het-hb`, `hiriq-hb`, `holam-hb`, `holamhaser-hb`, `kaf-hb`, `lamed-hb`, `maqaf-hb`, `mem-hb`, `nun-hb`, `patah-hb`, `pe-hb`, `qamats-hb`, `qamatsqatan-hb`, `qof-hb`, `qubuts-hb`, `resh-hb`, `samekh-hb`, `segol-hb`, `sheva-hb`, `shin-hb`, `shindot-hb`, `sindot-hb`, `tav-hb`, `tet-hb`, `tsadi-hb`, `tsere-hb`, `vav-hb`, `yod-hb`, `yodyod-hb`, `zayin-hb`
 
 ### Bold, Hebrew, composite or empty
 

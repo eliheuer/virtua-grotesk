@@ -18,15 +18,18 @@ Git history before commit 1db2dfc7.
 
 ### Letter height
 
-The Hebrew letters are 640 units high (512 + 128): 1.11 of the x-height and
-0.83 of the cap height. Hebrew has almost no ascenders and no capitals, so
-at the x-height it looks smaller than the Latin beside it. Rubik, Heebo and
-Noto Sans Hebrew, which have the same x-height as Virtua, are at 0.81 to 0.82
-of the cap height; 28 Google Fonts designs are at 0.75 to 0.92, median 0.86.
-The lamed ascender stays at 768, the height of Latin `l`, as in all five
-reference fonts. The final forms descend to -192. Marks above the letters
-are 64 units higher, and the dagesh is 32 units higher, in the middle.
-Decided by Eli on 2026-11-15.
+The target height of the Hebrew letters is 640 units (512 + 128): 1.11 of
+the x-height and 0.83 of the cap height. Hebrew has almost no ascenders and
+no capitals, so at the x-height it looks smaller than the Latin beside it.
+Rubik, Heebo and Noto Sans Hebrew, which have the same x-height as Virtua,
+are at 0.81 to 0.82 of the cap height; 28 Google Fonts designs are at 0.75
+to 0.92, median 0.86. The lamed ascender reaches the height of Latin `l`,
+as in all five reference fonts. Decided by Eli on 2026-11-15.
+
+The drawings are still 576 high. Each letter is redrawn to 640 as a drawing,
+not by moving points: a script that moved the points above a split height
+bent diagonals, thickened the tongue of pe, broke curves and left he, het
+and kaf too narrow. That script is reverted.
 
 ### Stroke weights
 
