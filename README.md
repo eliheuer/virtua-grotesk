@@ -31,7 +31,7 @@ UFO masters and the designspace in `sources/`.
 
 | Command | Use |
 | --- | --- |
-| `make runebender` | Open the sources in the Runebender web editor. |
+| `make runebender` | Open the sources in Runebender. |
 | `make reference-fonts` | Get the reference fonts that `sources/design.toml` lists into `reference-fonts/`. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
 | `make check-design GLYPHS="n a"` | Check glyphs against the grid and stroke targets. |

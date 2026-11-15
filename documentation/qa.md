@@ -11,8 +11,9 @@ keep the two files in sync when you update the tools. On a platform that the
 installer does not support, install the same versions into `.venv/bin`.
 
 `make proof` needs [DesignBot](https://github.com/eliheuer/designbot). The
-design checks need the Runebender binary; set `RUNEBENDER` if it is not at
-`~/GH/repos/runebender/target/release/runebender` or on `PATH`.
+design checks need the `runebender` command on `PATH`
+(`cargo install --locked --git https://github.com/fontgarden/runebender runebender`),
+or `RUNEBENDER` set to the path of the binary.
 
 ## Build
 
@@ -42,6 +43,7 @@ glyph and word images.
 | `make check-changes` | Check source changes since `main`: green glyphs unchanged, drafts purple. |
 | `make lint-curves` | Curve fairness checks of the sources. Grid checks are in `make check-design`. |
 | `make reference-fonts` | Copy the families of `[reference_fonts.families]` in `sources/design.toml` into `reference-fonts/`. The folder is not in Git. |
+| `make runebender` | Open the sources in Runebender. It needs the `runebender` command: `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
 | `make proof-web` | Compare the current build with `reference-fonts/` in a browser. |
 | `make review` | Diffenator3 HTML proof in `out/review/`. |
 | `make proof` | DesignBot PDF proof in `out/proof.pdf`. |

@@ -102,7 +102,7 @@ not hold records of work.
 - Edit GLIF XML and plists surgically in the existing style (tabs, double
   quotes, no space before `/>`). Never call whole-UFO `font.save()`.
 - Register new glyphs in `contents.plist` and `public.glyphOrder` in both masters.
-- Open fonts with `runebender-serve <designspace-or-ufo> --open`.
+- Open fonts with `make runebender`, or `runebender <designspace-or-ufo>`.
 - Files that people edit use TOML with comments. JSON is only for data that
   a program writes. `sources/config.yaml` is YAML because gftools requires it.
 

@@ -34,7 +34,7 @@ help:
 		'  make reference-fonts  Get the reference fonts that sources/design.toml lists' \
 		'  make proof          DesignBot PDF proof in out/proof.pdf' \
 		'  make review         Diffenator3 browser proof in out/review/' \
-		'  make runebender     Open the designspace in the Runebender web editor' \
+		'  make runebender     Open the designspace in Runebender' \
 		'' \
 		'QA:' \
 		'  make qa             Development Fontspector checks (make test is the same)' \
@@ -82,10 +82,10 @@ review: build
 	$(DIFFPROOF) "$(VARIABLE_FONT)" --output out/review
 	@echo ">>> open out/review/diff3proof.html"
 
-# Serves the editor at localhost:8765 with the designspace open. Edits to
-# the sources reload in the browser, and Cmd+S saves back to disk.
+# Opens the sources in Runebender. Install it with
+# cargo install --locked --git https://github.com/fontgarden/runebender runebender
 runebender:
-	runebender-serve "$(RUNEBENDER_SOURCE)" --open
+	runebender "$(RUNEBENDER_SOURCE)" &
 
 qa: build
 	$(FGTOOLS) qa
