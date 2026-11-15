@@ -139,7 +139,7 @@ compare-drafting:
 # Eli's reviews of purple drafts. ALL=1 lists every review, not only the open
 # corrections. See `fgtools corrections --help`.
 corrections:
-	$(FGTOOLS) corrections $(if $(ALL),--all,) $(if $(SINCE),--since "$(SINCE)",)
+	$(FGTOOLS) corrections $(if $(ALL),--all,)
 
 lint-curves:
 	$(FGTOOLS) lint-curves Regular --all
