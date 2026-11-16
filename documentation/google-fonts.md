@@ -13,8 +13,8 @@ current official page.
 | Scripts in the first release | Latin, Arabic, Hebrew |
 | Styles | Upright only. Weight axis `wght` 400 to 700. Instances Regular, Medium, SemiBold, Bold. |
 | License | SIL Open Font License 1.1 (`OFL.txt`) |
-| Build | `make build` (`scripts/build.sh` with `sources/config.yaml`) |
-| QA | `make qa-full` (full Fontspector profile), `make qa-package PACKAGE=<directory>` |
+| Build | `make build` (`fgtools build` with `sources/config.yaml`, then `scripts/fix_gf_metadata.py`) |
+| QA | `fgtools qa --full` (full Fontspector profile), `fgtools qa --package <directory>` |
 | About text | `documentation/article/ARTICLE.en_us.html` |
 | AI use | Disclosed in the README and the article. Eli draws and approves the glyphs. |
 
@@ -27,15 +27,65 @@ current official page.
   external URL.
 - Release tag: none yet.
 
+## Build
+
+`make build` runs `fgtools build`, which builds one variable TTF and four
+static TTFs with `gftools builder` and fontc. Then
+`scripts/fix_gf_metadata.py` applies three fixes that have no source setting.
+A plain `gftools builder sources/config.yaml`, as the Google Fonts packager
+runs it, builds the same fonts with fontmake, without those fixes.
+`fgtools diff --fontmake` checks that fontc and fontmake give the same glyph
+and word images.
+
+## QA
+
+| Command | Use |
+| --- | --- |
+| `make qa` | Development profile, offline, without the checks in `[qa.exclude]` of `CONTEXT.md`. The CI gate. |
+| `fgtools qa --full` | Full profile with network checks and no exclusions. |
+| `fgtools qa --package <directory>` | Full profile on a package with `METADATA.pb`, `OFL.txt` and the article. |
+
+The profile is the Google Fonts profile plus the Font.Garden requirements: a
+1024-unit em, masters on the 2-unit grid, the vendor ID FTGD and the OFL 1.1.
+The reports are in `out/qa/<mode>/`. Read the JSON report, and count unique
+findings, not one finding for each font. A FAIL needs a fix or an exception
+that Eli approves. A WARN needs a decision by Eli. Outline warnings are
+listed for Eli by glyph name and are not corrected. Do not add exclusions,
+remove cmap entries or reduce the script scope to get a cleaner result.
+
+Coverage and table presence do not prove shaping. Look at mark attachment,
+joining, right-to-left and mixed text, spacing and the intermediate weights
+in a rendered proof.
+
+## Package
+
+1. Work in a directory under `out/`. Copy the reviewed TTFs and `OFL.txt`
+   into `ofl/virtuagrotesk/` and run `gftools add-font` on it.
+2. Copy `documentation/article/ARTICLE.en_us.html` and its image to
+   `article/`. `weight-specimen.rs` renders the image with DesignBot.
+3. Check the generated metadata: names, designer, category, axes, subsets,
+   primary script, date and source. Keep the Arabic and Hebrew subsets even
+   if the subset detection leaves one out.
+4. Run `fgtools qa --package <directory>`.
+
+Read `gftools packager --help` before you use it. Some of its modes commit,
+push or open a pull request. Use only a local preview unless Eli authorizes
+publication.
+
 ## Before the Add Font issue
 
 1. Every glyph is green in both masters (`make status`).
-2. `make qa-full` reports no FAIL that applies to this repository.
+2. `fgtools qa --full` reports no FAIL, except
+   `googlefonts/repo/dirname_matches_nameid_1`, which applies to the
+   google/fonts package directory and not to this repository.
 3. The copyright holders have signed the Google CLA.
-4. Search the existing issues, then open the Add Font issue from its template.
+4. Search the existing issues, then draft the Add Font issue from its
+   template. Leave the copyright, CLA and image-license attestations
+   unchecked: only Eli can confirm them. The issue comes before a pull
+   request.
 
-For an agent, the full procedure is the task contract
-[`.agents/tasks/google-fonts-release.md`](../.agents/tasks/google-fonts-release.md).
+Do not post, push, tag or publish without Eli's authorization. Report what
+is local, drafted, submitted and published as separate states.
 
 ## Official sources
 

@@ -4,7 +4,7 @@
 # drawing in sources/. A glyph is scored only in the masters where it is
 # green. Add a glyph when a correction shows a decision that a drafting
 # method has to learn, with a comment that cites the correction commit, for
-# example `"n",  # a1b2c3d`. See documentation/design/system/learning.md.
+# example `"n",  # a1b2c3d`. See AGENTS.md.
 
 # Draw the glyph from nothing. It is hidden in both masters.
 [redraw]

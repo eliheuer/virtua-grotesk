@@ -12,7 +12,7 @@ of the green glyphs, and is ready for Eli to review.
 ## Acceptance
 
 - Each named glyph is changed in the named masters and marked purple.
-- A review of each glyph against every rule of `context.md`,
+- A review of each glyph against every rule of `CONTEXT.md`,
   by number, finds no failure, or the report names the rule and the reason.
 - `.venv/bin/fgtools check-changes --glyphs "<names>" --proof out/review/<branch>`
   prints PASS. Its proof sheets exist.
@@ -29,7 +29,7 @@ of the green glyphs, and is ready for Eli to review.
 
 ## Method
 
-1. Read `AGENTS.md` and all of `context.md`.
+1. Read `AGENTS.md` and all of `CONTEXT.md`.
 2. For each glyph, find the green glyphs that share its construction: the same
    stroke, bowl, turn, terminal, mark or joining form. Use them as donors.
    Copy their geometry where the construction is the same. Do not invent a

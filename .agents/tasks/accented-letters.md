@@ -15,7 +15,7 @@ list of the letters to look at.
 
 - `.venv/bin/fgtools build-accented-letters` lists 0 accented letters to
   add. The letters that it does not build are in the report with the reason.
-- `make accent-proofs` ran after the last change, with the reference fonts.
+- `.venv/bin/fgtools render-accent-proofs` ran after the last change, with the reference fonts.
 - `out/accent-proofs/verdicts.json` has one verdict for each accented letter
   of each master: `correct`, `fault` or `designer`, with a reason for the
   last two.
@@ -30,13 +30,13 @@ list of the letters to look at.
    glyphs; list those in the report.
 2. Run `.venv/bin/fgtools build-accented-letters`, read the list, then run
    it with `--write`.
-3. Run `make accent-proofs`. Read `out/accent-proofs/review.json` and look
+3. Run `.venv/bin/fgtools render-accent-proofs`. Read `out/accent-proofs/review.json` and look
    at every sheet. The letters with findings are on the first sheets.
 4. Review each letter with the `accent-review` skill. If the harness has
    subagents, a different agent does the review. Give it the sheets and
    `review.json`, and not the notes of the build.
 5. Correct a purple letter that has the verdict `fault`: change the offset of
-   its mark component, on the grid of `context.md`, the same way in
+   its mark component, on the grid of `CONTEXT.md`, the same way in
    every master. Then do steps 3 and 4 again for the changed letters
    (`.venv/bin/fgtools render-accent-proofs --glyphs "<names>" --out out/accent-proofs/again`).
    Stop after three rounds for one letter and give it the verdict `designer`.

@@ -32,22 +32,19 @@ UFO masters and the designspace in `sources/`.
 | Command | Use |
 | --- | --- |
 | `make runebender` | Open the sources in Runebender. |
-| `make reference-fonts` | Get the reference fonts that `context.md` lists into `reference-fonts/`. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
-| `make check-design GLYPHS="n a"` | Check glyphs against the grid and stroke targets. |
-| `make status` | Write `STATUS.md` from the mark colors. |
-| `make qa` | Google Fonts checks with Fontspector. |
+| `make test` | Build, then run the tests and the Google Fonts checks with Fontspector. |
 | `make help` | All commands. |
 
-The commands and checks are described in
-[documentation/qa.md](documentation/qa.md). The design rules are in
-[documentation/design/](documentation/design/README.md).
+The design rules, with the values that the tools check, are in
+[CONTEXT.md](CONTEXT.md). The rules for work on the sources are in
+[AGENTS.md](AGENTS.md).
 
 ## Mark colors
 
 Each glyph has a mark color in each master. The color tells people and agents
 what they can do with the glyph. The full policies are in
-[context.md](context.md).
+[CONTEXT.md](CONTEXT.md).
 
 | Color | Meaning |
 | --- | --- |
@@ -66,17 +63,11 @@ both masters.
 
 The source tools are shared by all Font.Garden fonts and are in
 [fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), with the
-command `fgtools`: status, design and grid checks, change checks, curve
-checks, accent placement, the build, build comparisons, the drafting
-evaluation, the list of corrections and the reference fonts. `make setup` installs them, pinned to a commit in
-`requirements.txt`, with the pinned fontc and Fontspector binaries. The
-`make` targets run them. The fonts are built with fontc, and `make diff`
-compares builds with diffenator3. `make qa`
-runs Fontspector with the Font.Garden profile (`fgtools qa`).
-`scripts/` holds only the tools that are specific to Virtua Grotesk.
+command `fgtools`. `make setup` installs them. The fonts are built with
+fontc and checked with Fontspector. The guide is at https://font.garden/docs.
 
 AI tools help with code, documentation and draft glyphs. Eli draws, reviews
-and approves the glyphs. The rules for agents are in [AGENTS.md](AGENTS.md).
+and approves the glyphs.
 
 ## License
 

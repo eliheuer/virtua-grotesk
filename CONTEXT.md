@@ -29,11 +29,17 @@ counters. The character is clean, neo-modernist and machined.
 R2. The reference fonts do not dictate the design. Compare visual weight,
 spacing, outline consistency and the structure readers expect. A small
 difference of form is not a fault; a glyph very different from all of them
-needs a reason.
+needs a reason. Rubik is the target for weight, spacing and outline quality.
 
 R3. Draw from green Virtua glyphs of the same construction (the donors): read
 their points and their filled shape. A glyph that is not green is not a
 donor.
+
+R45. The core donors are O, H, n and o, with green forms of the same script.
+Before you use a donor, check its mark color in both masters and the
+components it depends on. A sketch or image from Eli gives the intended shape:
+calibrate its scale before you measure from it. A rejected candidate is a
+counterexample.
 
 R4. A local correction of one glyph (Zayin, Gimel, Final Tsadi, hamza) is an
 example for that glyph and master, not a formula for others.
@@ -41,7 +47,9 @@ example for that glyph and master, not a formula for others.
 ## Grid and metrics
 
 R5. The em is 1024. Ascender and cap height 768, x-height 576, descender
--256. The Hebrew letter height is 640.
+-256. The Hebrew letter height is 640 = 512 + 128, which is 1.11 of the
+x-height and 0.83 of the cap height: Hebrew has almost no ascenders and no
+capitals, so at the x-height it looks smaller than the Latin beside it.
 
 R6. Every point is on the 2-unit grid. New structural points, handles,
 advances, sidebearings and kerning use the 8-unit grid. A point on 2 and off
@@ -61,11 +69,19 @@ R8. Stroke weights are optical values. Stems, round sides and crowns can be
 off the 8-unit grid; do not round Eli's stroke values.
 Seen in: o side 98 and crown 84 (324e6a15), cap stems 100 (cbb174ea).
 
+R46. The grid describes positions. The binary decomposition of a measurement
+(32, 48 = 32 + 16, 96 = 64 + 32) describes it, and many terms are not a fault:
+do not round a measurement, or give up the construction of a curve, to get a
+tidier number. Interpolated positions and the quadratic curves of the compiled
+font need not be on the grid. Never use them as a reason to snap a source.
+
 ## Corners, tips and joins
 
 R9. Every corner where two straight segments meet has a 45 degree bevel of
 16 units per side in Regular. Tight junctions use 8. The bevel is a straight
-segment, never a curve, and keeps its absolute size in both masters.
+segment, never a curve, and keeps its absolute size in both masters, so it is relatively smaller in the
+Bold. It applies where a stem meets the baseline or the cap height, at the
+ends of crossbars, at apexes and at open terminals.
 
 ```toml
 [chamfers]
@@ -88,6 +104,10 @@ Seen in: Bold two three five six (c5042963).
 
 R13. A tangent join is not a corner and gets no bevel. Keep the small
 deliberate cuts and straight landings of the donors.
+
+R47. Before you fit handles, name each connection: tangent continuation,
+straight landing, deliberate cut, shelf or intended inflection. Choose where
+the straight runs end and how far each turn extends.
 
 ## Strokes and curves
 
@@ -139,6 +159,20 @@ R21. Look at the whole filled shape before local curves: a smooth, even
 stroke can still follow a poor path. Change one node at a time and check its
 neighbors again.
 
+R48. Check a curve in this order: the whole filled shape, the signed curvature
+of each turn (the curvature comb of Runebender, at the same scale before and
+after), the joins, the two opposing edges together, and then all of it again
+after rounding. Rounding two edges separately can change the stroke weight
+even when every point is on the grid. Then check both masters, the
+intermediate weights and the glyph in words.
+
+R49. Harmonize, Balance, Optimize and Simplify in Runebender change handles by
+a formula and can remove intended unequal handles. Use them on a copy, then
+check the neighbors and the grid again. `fgtools lint-curves <Master> <glyph>
+--joins` reports off-center crests, tension breaks, inflections and the
+continuity of every join. A report is a reason to look at the filled glyph,
+and an S spine has an inflection by design.
+
 ## Bowls and rounds
 
 R22. A lowercase Latin bowl (b d p q g) is the round half of the o, copied
@@ -147,12 +181,30 @@ about 0.95 of the o counter; the inner extreme passes the stem edge by about
 4 units. b, p and q derive from an approved d by mirror or rotation.
 Seen in: d (88b4aa2).
 
+R50. The round side of a bowl letter keeps the sidebearing of the o, and the
+stem side gets 64 in Regular. Draw the junction of bowl and stem: its handles
+move in x and y for an even tangent. The top and the bottom of a bowl can
+differ by a few units. A mirror reverses the contour direction, so reverse
+each contour after a mirror. After a vertical mirror, put the bottom of the
+descender terminal on the descender line. Do not shift or scale an older bowl
+until its counter matches, and do not flatten its wall to one thickness.
+Seen in: d (88b4aa2).
+
+R51. The single-storey g is not a mirror of the d. Its bowl is shorter and
+higher than the o, to make space for the ear and the tail, and its outer round
+side is slightly flatter. The top left is fuller than the bottom left, where
+the bowl meets the tail. The ear, the spine and the tail are drawn by eye. The
+tail depth is -216.
+Seen in: g, Eli's correction of an agent draft.
+
 R23. Geometric does not mean rectangular: keep oval bowls and counters,
 remove only organic irregularity.
 Seen in: samekh v4, rejected (df38c4a2).
 
 R24. Arabic letter dots are near-perfect circles: four symmetric cubic
-quarters with equal radii. Hebrew marks are not copied into Arabic dots.
+quarters with equal radii. Hebrew marks are not copied into Arabic dots. A dot
+has no corner to bevel. Measure the radial deviation, not only the bounding
+box. This rule is for letter dots, not for every Arabic vowel mark.
 
 ## Weight and Bold
 
@@ -164,7 +216,13 @@ R26. Open a Bold counter with width, not a thinner stem. Bold lowercase
 stems stay 192.
 Seen in: Bold n b d (9fb03696).
 
-R44. More weights are drafted from two masters by `make draft-weights`, one
+R52. Before a weight transfer, decide which edges, alignments and counters of
+the glyph are fixed. Counter reduction is the Latin pattern; do not assume
+that the outer contour of every Arabic or Hebrew letter is fixed. No single
+handle ratio serves every transfer.
+Seen in: Bold zayin-hb, Bold hamzaabove-ar (ce3a7669).
+
+R44. More weights are drafted from two masters by `fgtools draft-weights --build`, one
 table for each weight. `wght` is the position on the weight axis, and
 `between` names the two masters. `vertical_stem` and `horizontal_stroke`
 give the stem and the bar of H in each master and the target of the weight.
@@ -188,7 +246,8 @@ horizontal_stroke = { Regular = 88, Bold = 168, target = 204 }
 ## Structure of the sources
 
 R27. Both masters have the same contours, points, point types, point order
-and components. A point added in one master is added in the other.
+and components. A point added in one master is added in the other. Do not
+reorder points or contours: the order controls interpolation.
 
 R28. No overlapping contours: union overlapping parts into one contour.
 Seen in: dollar (7f8be952), one.tf (dbe60148).
@@ -198,11 +257,23 @@ the leftmost point for Latin, the rightmost for Arabic and Hebrew; the lowest
 of two that tie.
 Seen in: asciitilde (56f4b437), Eli's instruction (2026-11-10).
 
+R53. A glyph that changes its structure along the weight axis has an alternate
+glyph without a code point and a substitution rule in the designspace. The a
+becomes `a.bold` from weight 500. Eli draws the alternate in the Regular
+master, and its Bold copy starts red. Each of the two glyphs is compatible
+between the masters, as every other glyph.
+
+R54. Both masters have the same kerning groups, and a glyph is in at most one
+group of each side. A pair that is added to one master is added to the other;
+its value can be 0. Kerning values are multiples of 8.
+
 ## Spacing
 
 R30. Round forms fit tighter than flat-sided forms; symmetric letters have
 balanced sidebearings. Spacing values use the 8-unit grid and recurring
-intervals (32, 48, 64, 96). Judge spacing in words at 400, 550 and 700.
+intervals (32, 48, 64, 96). Judge spacing in words at 400, 550 and 700. Measure the
+real ink sidebearings, with the components, and keep approved widths that
+are off the 8-unit grid.
 
 ## Latin
 
@@ -236,6 +307,10 @@ Seen in: zayin shin finaltsadi samekh (4e900dd0, df38c4a2), gimel (3814ca96).
 R35. Hebrew vowel dots are 96 square with 24-unit bevels and the vowel bars
 are 104 thick, as the letters' horizontals. Bold: dots 128, bars 136, bevels 32.
 
+R55. Check the attachment of a mark to a letter, and of a mark to a mark, in
+the compiled font at several weights. Coverage does not show that the marks
+are drawn or attached well.
+
 ## Arabic
 
 ```toml
@@ -253,23 +328,38 @@ Seen in: behDotless-ar (67f4d301).
 
 R38. Check joining forms through shaping (three repetitions and an isolated
 letter) at 400, 550 and 700, and measure both edges of a join against the
-real neighbor forms.
+real neighbor forms. A right-joining letter needs only the forms that its
+joining has. The anchors of letter dots and the anchors of vowel marks have
+separate roles.
 
 ## Glyph decisions
 
 R39. Kaf (Arabic) is rounded with an old-style S shape; keep its openings
-and rounded turns.
+and rounded turns. The angular Kaf of some reference fonts does not override
+this. The Regular initial Kaf is green and Eli approved the Bold initial Kaf;
+that approval is for those two forms only.
 
-R40. The raised return of yeh-ar.fina is intentional.
+R40. The raised return of yeh-ar.fina is intentional, in both masters. Do
+not replace it with the descending form of the reference fonts. The decision
+is for yeh-ar.fina only.
 
 R41. Seen keeps upright teeth, separate rounded lobes and small deliberate
-junctions; do not flatten its underside into a wave.
+junctions; do not flatten its underside into a wave, and do not replace the bowl
+junction with a diagonal sweep. This is for seen-ar and its forms, sheen-ar
+and seenSixdots-ar. Start from the green Regular seen-ar.init and
+seen-ar.medi. Eli rejected version 4 of the isolated Seen as a regression of
+style, although it passed the checks.
 
 R42. The at sign keeps the small italic a in the center and the continuous
-double spiral.
+double spiral. Eli rejected revisions with a lumpy stroke weight although
+their local measurements were better: look at the whole filled spiral.
 
 R43. dollar uses the uppercase S as its body (7f8be952). section has bevelled
 terminals (22ccd03a).
+
+R56. A symbol that is made of lines is constructed from green symbols. An
+organic symbol is traced from an image with img2bez. The image gives the form,
+and green Virtua glyphs give the construction, the scale and the weight.
 
 ## Project settings
 

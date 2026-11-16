@@ -2,47 +2,30 @@
 
 PYTHON ?= ./.venv/bin/python
 # The shared Font.Garden source tools: https://github.com/fontgarden/fontgarden-tools
+# `fgtools --help` lists every command. The targets here are the daily ones.
 FGTOOLS ?= ./.venv/bin/fgtools
 # The revision that make diff and make check-changes compare with.
 BASE ?= main
 
-VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
-RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
-
-.PHONY: help venv setup build diff proof proof-web reference-fonts review runebender qa test qa-full qa-package test-tools status queue check-design check-accents accent-proofs check-changes draft-weights prepare-drafting score-drafting compare-drafting corrections lint-curves clean
+.PHONY: help venv setup build test qa status queue check-design check-changes diff proof-web reference-fonts runebender clean
 
 help:
 	@printf '%s\n' \
-		'Design work:' \
-		'  make status         Rewrite STATUS.md from the mark colors' \
-		'  make queue          Rank the glyphs that most composites wait on' \
-		'  make check-design GLYPHS="n a"  Check glyphs against context.md' \
-		'  make check-accents  List the accented letters whose mark is not where the others predict' \
-		'  make accent-proofs  Draw each accented letter beside the reference fonts, with measurements' \
-		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
-		'  make prepare-drafting TASK=bold RUN=dir  Copy the sources for a drafting evaluation' \
-		'  make score-drafting RUN=dir  Score the drafts against the green drawings' \
-		'  make compare-drafting A=dir B=dir  Compare the scores of two runs' \
-		'  make corrections    List the corrections of purple drafts that no rule cites' \
-		'  make lint-curves    Curve fairness checks of both masters' \
-		'  make draft-weights  Draft the Thin and Black masters into out/weights/, with a variable font' \
-		'  make diff           Compare builds of main and the working tree (diffenator3)' \
-		'' \
-		'Build and proofs:' \
 		'  make setup          Create .venv and install the requirements' \
 		'  make build          Build the variable and static TTFs into fonts/' \
+		'  make test           Build, then run the tests and the Fontspector checks' \
+		'  make qa             Build, then run the Fontspector checks only' \
+		'  make status         Rewrite STATUS.md from the mark colors' \
+		'  make queue          Rank the glyphs that most composites wait on' \
+		'  make check-design GLYPHS="n a"  Check glyphs against CONTEXT.md' \
+		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
+		'  make diff           Compare builds of main and the working tree (diffenator3)' \
 		'  make proof-web      Build, then compare with reference-fonts/ in a browser' \
-		'  make reference-fonts  Get the reference fonts that context.md lists' \
-		'  make proof          DesignBot PDF proof in out/proof.pdf' \
-		'  make review         Diffenator3 browser proof in out/review/' \
+		'  make reference-fonts  Get the reference fonts that CONTEXT.md lists' \
 		'  make runebender     Open the designspace in Runebender' \
+		'  make clean          Remove the build output' \
 		'' \
-		'QA:' \
-		'  make qa             Development Fontspector checks (make test is the same)' \
-		'  make qa-full        Full Fontspector profile, no exclusions' \
-		'  make qa-package PACKAGE=path  Full profile on a google/fonts package' \
-		'  make test-tools     Tests of the Python and JavaScript tools' \
-		'  make clean          Remove the build output'
+		'Every other tool is a command of fgtools: .venv/bin/fgtools --help'
 
 # gftools packager --their-venv runs `make venv`.
 venv: setup
@@ -52,107 +35,46 @@ setup:
 	$(PYTHON) -m pip install -r requirements.txt
 	$(FGTOOLS) install-tools
 
+# The shared build, then the three metadata fixes that only this font needs.
 build:
-	./scripts/build.sh
+	rm -rf build build.ninja .ninja_log
+	$(FGTOOLS) build
+	$(PYTHON) scripts/fix_gf_metadata.py fonts/variable/*.ttf fonts/ttf/*.ttf
 
-# Build main and the working tree with fontc and compare them with diffenator3.
-# BASE=<revision> compares with another revision. HTML reports go to out/diff/.
-diff:
-	$(FGTOOLS) diff --base "$(BASE)"
-
-# The DesignBot print proof: reads the variable font (axes, instances,
-# character set, metrics, features) and writes a multi-page PDF.
-proof: build
-	designbot proof "$(VARIABLE_FONT)" --output out/proof.pdf
-
-# Live comparison of the current build with reference-fonts/ in a browser.
-# See `fgtools proof-web --help` for a Before and Candidate snapshot.
-proof-web: build
-	$(FGTOOLS) proof-web --current
-
-# Copies the families of [reference_fonts.families] in context.md into
-# reference-fonts/, which Git ignores. See `fgtools fetch-reference-fonts --help`.
-reference-fonts:
-	$(FGTOOLS) fetch-reference-fonts --project
-
-# Current Google Fonts browser proof renderer, distributed with Diffenator3.
-DIFFPROOF = ./.venv/bin/diff3proof
-
-review: build
-	@mkdir -p out
-	$(DIFFPROOF) "$(VARIABLE_FONT)" --output out/review
-	@echo ">>> open out/review/diff3proof.html"
-
-# Opens the sources in Runebender. Install it with
-# cargo install --locked --git https://github.com/fontgarden/runebender runebender
-runebender:
-	runebender "$(RUNEBENDER_SOURCE)" &
+test: build
+	$(PYTHON) -m unittest discover -s tests
+	$(FGTOOLS) qa
 
 qa: build
 	$(FGTOOLS) qa
 
-qa-full: build
-	$(FGTOOLS) qa --full
-
-qa-package:
-	@test -n "$(PACKAGE)" || { echo "Set PACKAGE=/path/to/ofl/virtuagrotesk" >&2; exit 2; }
-	$(FGTOOLS) qa --package "$(PACKAGE)"
-
-test: qa
-
-
 status:
 	$(FGTOOLS) status
-
-# Check glyphs against the design targets. Usage: make check-design GLYPHS="n seen-ar"
-# Without GLYPHS it reports on every glyph that is not green.
-check-design:
-	$(FGTOOLS) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
 
 queue:
 	$(FGTOOLS) queue
 
-# Lists the accented letters whose mark is not where the other accented
-# letters predict, or not where the anchors of its parts are.
-check-accents:
-	$(FGTOOLS) check-accents
+# Without GLYPHS it reports on every glyph that is not green.
+check-design:
+	$(FGTOOLS) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
 
-# Sheets and review.json in out/accent-proofs/. The reference fonts are the
-# shared collection of FONTGARDEN_REFERENCE_FONTS.
-accent-proofs:
-	$(FGTOOLS) render-accent-proofs
-
-# Check source changes since BASE (default main). Usage: make check-changes BASE=main GLYPHS="a e"
+# Usage: make check-changes BASE=main GLYPHS="a e"
 check-changes:
 	$(FGTOOLS) check-changes --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
 
-# Drafting evaluation. TASK is redraw, bold, repair or relatives.
-# See `fgtools evaluate-drafting --help`.
-prepare-drafting:
-	$(FGTOOLS) evaluate-drafting prepare "$(TASK)" "$(RUN)"
+# Builds BASE and the working tree with fontc. HTML reports go to out/diff/.
+diff:
+	$(FGTOOLS) diff --base "$(BASE)"
 
-score-drafting:
-	$(FGTOOLS) evaluate-drafting score "$(RUN)"
+proof-web: build
+	$(FGTOOLS) proof-web --current
 
-compare-drafting:
-	$(FGTOOLS) evaluate-drafting compare "$(A)" "$(B)"
+reference-fonts:
+	$(FGTOOLS) fetch-reference-fonts --project
 
-# Eli's reviews of purple drafts. ALL=1 lists every review, not only the open
-# corrections. See `fgtools corrections --help`.
-corrections:
-	$(FGTOOLS) corrections $(if $(ALL),--all,)
-
-# The weights are the [weights.<name>] tables of context.md.
-draft-weights:
-	$(FGTOOLS) draft-weights --build
-
-lint-curves:
-	$(FGTOOLS) lint-curves Regular --all
-	$(FGTOOLS) lint-curves Bold --all
+# Install: cargo install --locked --git https://github.com/fontgarden/runebender runebender
+runebender:
+	runebender sources/VirtuaGrotesk.designspace &
 
 clean:
 	rm -rf build build.ninja .ninja_log dist fonts sources/build.ninja sources/.ninja_log sources/instance_ufos
-
-
-test-tools:
-	$(PYTHON) -m unittest discover -s tests

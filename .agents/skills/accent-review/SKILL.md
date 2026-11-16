@@ -6,11 +6,11 @@ description: Review where the marks of the accented letters sit, from the accent
 # Review the accented letters
 
 ```sh
-make accent-proofs      # sheets and review.json in out/accent-proofs/
-make check-accents      # the same project findings as text
+.venv/bin/fgtools render-accent-proofs  # sheets and review.json in out/accent-proofs/
+.venv/bin/fgtools check-accents         # the same project findings as text
 ```
 
-`make accent-proofs` needs the shared reference fonts
+`render-accent-proofs` needs the shared reference fonts
 (`FONTGARDEN_REFERENCE_FONTS`, see `fgtools fetch-reference-fonts`).
 
 ## Read the evidence

@@ -23,18 +23,18 @@ LAYOUT = [
     'OFL.txt', 'README.md', 'STATUS.md', 'requirements.in', 'requirements.txt',
     '.github/workflows/*.yaml',
     # Agent files: skills, task contracts, and the OMP rules link to AGENTS.md.
-    '.agents/README.md', '.agents/skills/*/SKILL.md',
+    '.agents/skills/*/SKILL.md',
     '.agents/tasks/*.md', '.omp/RULES.md',
     # Sources.
-    'sources/README.md', 'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
-    'sources/held-out-glyphs.toml', 'sources/proof-samples.toml', 'context.md',
+    'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
+    'sources/held-out-glyphs.toml', 'sources/proof-samples.toml', 'CONTEXT.md',
     'sources/VirtuaGrotesk-Regular.ufo/**', 'sources/VirtuaGrotesk-Bold.ufo/**',
     # Tools and their tests.
-    'scripts/README.md', 'scripts/*.py', 'scripts/*.sh',
+    'scripts/*.py',
     'tests/test_*.py',
-    # Documentation: the design rules, the Google Fonts article, and the
+    # Documentation: the release document, the Google Fonts article, and the
     # DesignBot script for the README image.
-    'documentation/*.md', 'documentation/design/**/*.md', 'documentation/article/**',
+    'documentation/*.md', 'documentation/article/**',
     'documentation/readme-images/*.rs',
 ]
 
