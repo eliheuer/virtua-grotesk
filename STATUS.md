@@ -67,8 +67,7 @@ Total: 212 of 1826 master glyphs are green.
 
 ### Bold, Hebrew, contour
 
-- purple (28): `alef-hb`, `ayin-hb`, `bet-hb`, `dalet-hb`, `finalkaf-hb`, `finalmem-hb`, `finalnun-hb`, `finalpe-hb`, `finaltsadi-hb`, `gimel-hb`, `he-hb`, `het-hb`, `kaf-hb`, `lamed-hb`, `mem-hb`, `nun-hb`, `pe-hb`, `qof-hb`, `resh-hb`, `samekh-hb`, `shin-hb`, `tav-hb`, `tet-hb`, `tsadi-hb`, `vav-hb`, `yod-hb`, `yodyod-hb`, `zayin-hb`
-- red (19): `dagesh-hb`, `geresh-hb`, `gershayim-hb`, `hatafpatah-hb`, `hatafqamats-hb`, `hatafsegol-hb`, `hiriq-hb`, `holam-hb`, `holamhaser-hb`, `maqaf-hb`, `patah-hb`, `qamats-hb`, `qamatsqatan-hb`, `qubuts-hb`, `segol-hb`, `sheva-hb`, `shindot-hb`, `sindot-hb`, `tsere-hb`
+- purple (47): `alef-hb`, `ayin-hb`, `bet-hb`, `dagesh-hb`, `dalet-hb`, `finalkaf-hb`, `finalmem-hb`, `finalnun-hb`, `finalpe-hb`, `finaltsadi-hb`, `geresh-hb`, `gershayim-hb`, `gimel-hb`, `hatafpatah-hb`, `hatafqamats-hb`, `hatafsegol-hb`, `he-hb`, `het-hb`, `hiriq-hb`, `holam-hb`, `holamhaser-hb`, `kaf-hb`, `lamed-hb`, `maqaf-hb`, `mem-hb`, `nun-hb`, `patah-hb`, `pe-hb`, `qamats-hb`, `qamatsqatan-hb`, `qof-hb`, `qubuts-hb`, `resh-hb`, `samekh-hb`, `segol-hb`, `sheva-hb`, `shin-hb`, `shindot-hb`, `sindot-hb`, `tav-hb`, `tet-hb`, `tsadi-hb`, `tsere-hb`, `vav-hb`, `yod-hb`, `yodyod-hb`, `zayin-hb`
 
 ### Bold, Hebrew, composite or empty
 

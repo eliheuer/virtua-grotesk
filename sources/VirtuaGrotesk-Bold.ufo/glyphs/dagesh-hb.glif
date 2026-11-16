@@ -3,23 +3,23 @@
 	<unicode hex="05BC"/>
 	<outline>
 		<contour>
-			<point x="88" y="288" type="line"/>
-			<point x="104" y="304" type="line"/>
-			<point x="104" y="352" type="line"/>
-			<point x="88" y="368" type="line"/>
-			<point x="40" y="368" type="line"/>
-			<point x="24" y="352" type="line"/>
-			<point x="24" y="304" type="line"/>
-			<point x="40" y="288" type="line"/>
+			<point x="104" y="264" type="line"/>
+			<point x="136" y="296" type="line"/>
+			<point x="136" y="360" type="line"/>
+			<point x="104" y="392" type="line"/>
+			<point x="40" y="392" type="line"/>
+			<point x="8" y="360" type="line"/>
+			<point x="8" y="296" type="line"/>
+			<point x="40" y="264" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="_hbCenter" x="70" y="332"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

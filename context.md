@@ -168,8 +168,8 @@ the structure differs much, follow Rubik's structure drawn with Virtua's
 chamfers, grid and forms. Simplify rather than add.
 Seen in: zayin shin finaltsadi samekh (4e900dd0, df38c4a2), gimel (3814ca96).
 
-R35. Hebrew vowel dots are 96 square with 24-unit bevels; the bars of the
-vowels are 88 thick. The marks share the letters' construction.
+R35. Hebrew vowel dots are 96 square with 24-unit bevels and the vowel bars
+are 104 thick, as the letters' horizontals. Bold: dots 128, bars 136, bevels 32.
 
 ## Arabic
 
