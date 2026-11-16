@@ -46,21 +46,32 @@ repository lists the chapter for each kind of change.
 1. **Choose.** `make queue` ranks the glyphs that most composites wait on.
    Eli names the glyphs to work on.
 2. **Draft.** Read all of `CONTEXT.md`. Draw the glyph as a Runebender
-   proposal, or in the source with a purple mark. Commit the draft before
-   Eli edits it, so that the Git history holds the draft and the correction.
-3. **Check.** Review the draft against each rule of `CONTEXT.md` by number,
-   then look at the whole filled glyph beside the green glyphs of the same
-   construction and the fonts in `reference-fonts/`. Run
-   `make check-design GLYPHS="..."` and `make check-changes`, and correct the
-   findings. Do not show a candidate that this comparison shows as faulty.
-4. **Build and compare.** Run `make build`, then `make diff`. It builds main
+   proposal, or in the source with a purple mark. Where an edit is a
+   calculation, use `fgtools edit` and do not type the coordinates: it moves
+   an edge, sets the sidebearings or makes a mirrored copy, and a second run
+   changes nothing. Commit the draft before Eli edits it, so that the Git
+   history holds the draft and the correction.
+3. **Look and check.** Run `.venv/bin/fgtools render "<glyphs>"` before and
+   after every edit, and read the picture: the change, the filled glyph, its
+   points, the green glyphs of the same construction (`--beside`) and the
+   reference fonts. Review the draft against each rule of `CONTEXT.md` by
+   number. Run `make check-design GLYPHS="..."` and `make check-changes`,
+   and correct the findings.
+4. **Second review.** Before a draft goes to Eli, a second agent reviews
+   it. It gets the picture of `fgtools render`, `CONTEXT.md` and the glyph
+   names, and not the notes of the agent that drew. It gives each glyph in
+   each master the verdict `pass`, or `fault` with the rule number and the
+   place. The first agent corrects each fault and asks again, at most three
+   times. A fault that remains goes into the report. A harness without
+   subagents does the review in a new session.
+5. **Build and compare.** Run `make build`, then `make diff`. It builds main
    and the working tree and compares them with diffenator3. Every changed
    glyph, word, table or language result must be one that the edit explains.
    Look at the glyph in words at 400, 550 and 700, with the marks, joining
    forms and composites that use it (`make proof-web` or Runebender).
-5. **Review.** Eli grades the glyph. The review commit changes the purple
+6. **Review.** Eli grades the glyph. The review commit changes the purple
    mark to red (broken), orange (better), yellow (close) or green.
-6. **Learn.** When Eli asks, run `.venv/bin/fgtools corrections`. It lists
+7. **Learn.** When Eli asks, run `.venv/bin/fgtools corrections`. It lists
    the reviews in which Eli changed a purple draft and that no file or commit
    message cites yet. Propose one change for each, and cite the review
    commit:

@@ -12,8 +12,10 @@ of the green glyphs, and is ready for Eli to review.
 ## Acceptance
 
 - Each named glyph is changed in the named masters and marked purple.
-- A review of each glyph against every rule of `CONTEXT.md`,
-  by number, finds no failure, or the report names the rule and the reason.
+- A second agent, which has only the picture of `fgtools render`,
+  `CONTEXT.md` and the glyph names, gives each glyph in each master the
+  verdict `pass`. A `fault` that remains after three rounds is in the report,
+  with the rule number and the place.
 - `.venv/bin/fgtools check-changes --glyphs "<names>" --proof output/review/<branch>`
   prints PASS. Its proof sheets exist.
 - For each glyph, the stroke findings of `make check-design GLYPHS="<names>"`
