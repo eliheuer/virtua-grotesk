@@ -9,7 +9,7 @@ BASE ?= main
 VARIABLE_FONT = fonts/variable/VirtuaGrotesk[wght].ttf
 RUNEBENDER_SOURCE = sources/VirtuaGrotesk.designspace
 
-.PHONY: help venv setup build diff proof proof-web reference-fonts review runebender qa test qa-full qa-package test-tools status queue check-design check-accents accent-proofs check-changes prepare-drafting score-drafting compare-drafting corrections lint-curves clean
+.PHONY: help venv setup build diff proof proof-web reference-fonts review runebender qa test qa-full qa-package test-tools status queue check-design check-accents accent-proofs check-changes draft-weights prepare-drafting score-drafting compare-drafting corrections lint-curves clean
 
 help:
 	@printf '%s\n' \
@@ -25,6 +25,7 @@ help:
 		'  make compare-drafting A=dir B=dir  Compare the scores of two runs' \
 		'  make corrections    List the corrections of purple drafts that no rule cites' \
 		'  make lint-curves    Curve fairness checks of both masters' \
+		'  make draft-weights  Draft the Thin and Black masters into out/weights/, with a variable font' \
 		'  make diff           Compare builds of main and the working tree (diffenator3)' \
 		'' \
 		'Build and proofs:' \
@@ -140,6 +141,10 @@ compare-drafting:
 # corrections. See `fgtools corrections --help`.
 corrections:
 	$(FGTOOLS) corrections $(if $(ALL),--all,)
+
+# The weights are the [weights.<name>] tables of sources/design.toml.
+draft-weights:
+	$(FGTOOLS) draft-weights --build
 
 lint-curves:
 	$(FGTOOLS) lint-curves Regular --all

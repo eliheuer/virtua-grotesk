@@ -54,6 +54,29 @@ horizontal_stroke = [124, 170]
 stroke_limit = 300
 
 
+# Weights that `fgtools draft-weights` drafts from two masters.
+#
+# wght               the position of the weight on the weight axis
+# between            the two masters that the draft is calculated from
+# vertical_stem      the stem of H in each master, and the target of the weight
+# horizontal_stroke  the bar of H in each master, and the target of the weight
+#
+# The drafts go to out/weights/. They become masters of the designspace only
+# after Regular and Bold are approved.
+
+[weights.Thin]
+wght = 100
+between = ["Regular", "Bold"]
+vertical_stem = { Regular = 100, Bold = 192, target = 28 }
+horizontal_stroke = { Regular = 88, Bold = 168, target = 26 }
+
+[weights.Black]
+wght = 900
+between = ["Regular", "Bold"]
+vertical_stem = { Regular = 100, Bold = 192, target = 256 }
+horizontal_stroke = { Regular = 88, Bold = 168, target = 204 }
+
+
 # Mark colors.
 #
 # rgba lists every value that the sources use for the color. The policy is
