@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="finalnun-hb" format="2">
 	<unicode hex="05DF"/>
-	<advance width="312"/>
+	<advance width="384"/>
 	<outline>
 		<contour>
-			<point x="88" y="-128" type="line"/>
-			<point x="224" y="-128" type="line"/>
-			<point x="240" y="-112" type="line"/>
-			<point x="240" y="624" type="line"/>
-			<point x="224" y="640" type="line"/>
-			<point x="88" y="640" type="line"/>
-			<point x="72" y="624" type="line"/>
-			<point x="72" y="-112" type="line"/>
+			<point x="312" y="-176" type="line"/>
+			<point x="312" y="624" type="line"/>
+			<point x="296" y="640" type="line"/>
+			<point x="64" y="640" type="line"/>
+			<point x="48" y="624" type="line"/>
+			<point x="48" y="480" type="line"/>
+			<point x="64" y="464" type="line"/>
+			<point x="136" y="464" type="line"/>
+			<point x="144" y="456" type="line"/>
+			<point x="144" y="-176" type="line"/>
+			<point x="160" y="-192" type="line"/>
+			<point x="296" y="-192" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="156" y="-128"/>
+	<anchor name="hbBottom" x="228" y="-192"/>
 	<anchor name="hbCenter" x="0" y="352"/>
-	<anchor name="hbHolam" x="72" y="640"/>
-	<anchor name="hbRafe" x="156" y="736"/>
-	<anchor name="hbMeteg" x="156" y="-128"/>
-	<anchor name="hbCantAbove" x="156" y="640"/>
-	<anchor name="hbCantAboveLeft" x="72" y="640"/>
-	<anchor name="hbCantAboveRight" x="240" y="640"/>
-	<anchor name="hbCantBelow" x="156" y="-128"/>
-	<anchor name="hbCantBelowRight" x="156" y="-128"/>
+	<anchor name="hbHolam" x="48" y="640"/>
+	<anchor name="hbRafe" x="180" y="736"/>
+	<anchor name="hbMeteg" x="228" y="-192"/>
+	<anchor name="hbCantAbove" x="180" y="640"/>
+	<anchor name="hbCantAboveLeft" x="48" y="640"/>
+	<anchor name="hbCantAboveRight" x="312" y="640"/>
+	<anchor name="hbCantBelow" x="228" y="-192"/>
+	<anchor name="hbCantBelowRight" x="228" y="-192"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
