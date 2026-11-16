@@ -1,20 +1,14 @@
-# Top-level Python packages for the local Google Fonts build, report, and
-# package-review workflow. Keep this list small; requirements.txt is the
-# pinned install snapshot generated from the active local .venv.
-# Proofs and specimen images use DesignBot (installed separately).
-# fgtools is the shared tooling of Font.Garden projects, pinned to a
-# commit.
-fontmake
+# The direct Python dependencies. requirements.txt pins every package of the
+# environment. To write it again, use a new environment, so that it holds
+# only what these lines require:
+#
+#   python3 -m venv /tmp/pins
+#   /tmp/pins/bin/pip install -r requirements.in
+#   /tmp/pins/bin/pip freeze > requirements.txt
+#
+# fgtools is the shared tooling of Font.Garden projects, pinned to a commit.
+# It brings gftools, fontc and Fontspector support with it.
+fgtools @ git+https://github.com/fontgarden/fgtools@0f7217c523fec92fcdf420f705bdda722d17098c
+# scripts/fix_gf_metadata.py and the tests import these.
 fonttools
-gftools
-diffenator3
-ufo2ft
-gflanguages
-gfsubsets
-axisregistry
-opentype-sanitizer
-GitPython
-glyphsets
-PyYAML
 uharfbuzz
-fgtools @ git+https://github.com/fontgarden/fgtools@98f9db3bfb71b6465e15969f11532c3ae185e938
