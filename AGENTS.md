@@ -121,12 +121,14 @@ checkout, on its own branch, for example with OMP:
 ```sh
 git worktree add ../virtua-grotesk-omp main
 cd ../virtua-grotesk-omp
+mkdir .omp && ln -s ../AGENTS.md .omp/RULES.md
 omp -p --wait-async --max-time 60m \
   "Do the task in .agents/tasks/glyph-drafts.md for: acute caron circumflex, Regular."
 ```
 
-`.omp/RULES.md` is a link to this file, because OMP gives its subagents only
-that file. After any agent edits glyphs, run `make check-changes`. It fails
+The link gives the subagents of OMP these rules: OMP gives them
+`.omp/RULES.md` and not this file. Git ignores `.omp/`, as it ignores the
+files of every single agent tool. After any agent edits glyphs, run `make check-changes`. It fails
 when a green glyph changed, or when the contours of a glyph changed and it is
 not purple.
 

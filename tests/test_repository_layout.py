@@ -22,8 +22,8 @@ LAYOUT = [
     '.gitignore', 'AGENTS.md', 'AUTHORS.txt', 'CONTRIBUTORS.txt', 'Makefile',
     'OFL.txt', 'README.md', 'STATUS.md', 'requirements.in', 'requirements.txt',
     '.github/workflows/*.yaml',
-    # Agent files: task contracts, and the OMP rules link to AGENTS.md.
-    '.agents/tasks/*.md', '.omp/RULES.md',
+    # Task contracts for unattended runs.
+    '.agents/tasks/*.md',
     # Sources.
     'sources/VirtuaGrotesk.designspace', 'sources/config.yaml',
     'sources/held-out-glyphs.toml', 'sources/proof-samples.toml', 'CONTEXT.md',

@@ -23,9 +23,11 @@ __pycache__/
 local.mk
 /reference-fonts/
 
-# Claude Code files are local. Shared instructions are AGENTS.md and .agents/.
+# The files of one agent tool are local. The shared instructions are
+# AGENTS.md and .agents/.
 /CLAUDE.md
 /.claude/
+/.omp/
 
 # Rendered images and video. The DesignBot scripts (.rs) beside them are the
 # source. Commit a final image explicitly with `git add -f`.
