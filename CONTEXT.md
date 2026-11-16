@@ -470,5 +470,6 @@ new failure.
 "googlefonts/repo/dirname_matches_nameid_1" = "Needs the google/fonts package directory."
 "googlefonts/glyphsets/shape_languages" = "Needs language and shaping work."
 "googlefonts/metadata/unreachable_subsetting" = "Needs subset work."
+"fontgarden/precomposed_match" = "17 composites place their mark differently from the mark anchors: a with marks, lacute, the Arabic hamza and madda letters, and yod yod patah; Eli corrects them."
 "fontgarden/grid" = "section, uniE000, germandbls and three Arabic advances are off the 2-unit grid; Eli corrects them."
 ```

@@ -23,8 +23,7 @@ of the green glyphs, and is ready for Eli to review.
 - `make build` succeeds.
 - `make diff` shows glyph and word image differences only in the named
   glyphs and the glyphs that use them as components. The report lists them.
-- `.venv/bin/python -m unittest tests.test_repository_layout`
-  passes.
+- `.venv/bin/fgtools check-repository` passes.
 - No green glyph changed, and no file outside the named glyph files changed.
 
 ## Method

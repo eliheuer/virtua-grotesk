@@ -33,7 +33,7 @@ UFO masters and the designspace in `sources/`.
 | --- | --- |
 | `make runebender` | Open the sources in Runebender. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
-| `make test` | Build, then run the tests and the Google Fonts checks with Fontspector. |
+| `make test` | Build, then check the repository and check the fonts with Fontspector. |
 | `make help` | All commands. |
 
 The design rules, with the values that the tools check, are in
