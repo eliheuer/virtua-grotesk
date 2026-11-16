@@ -13,8 +13,7 @@ build, proof, measure and report.
 | [CONTEXT.md](CONTEXT.md) | The design: numbered rules, with the values that the tools check in `toml` blocks. Runebender gives it to its agents. |
 | [STATUS.md](STATUS.md) | Progress, written by `make status` from the mark colors. |
 | `Makefile` | The daily commands. `make help` lists them. |
-| `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). |
-| `scripts/` | Only what is specific to this font: `scripts/fix_gf_metadata.py` (three metadata fixes that `make build` applies) and `scripts/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
+| `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). Two Python files hold what only this font needs: `sources/fix_gf_metadata.py` (three metadata fixes that `make build` applies) and `sources/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
 | [documentation/google-fonts.md](documentation/google-fonts.md) | The release: facts, QA, package and the Add Font issue. |
 | `.agents/tasks/` | Contracts for unattended runs: glyph drafts and accented letters. |
 

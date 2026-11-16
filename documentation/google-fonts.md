@@ -13,7 +13,7 @@ current official page.
 | Scripts in the first release | Latin, Arabic, Hebrew |
 | Styles | Upright only. Weight axis `wght` 400 to 700. Instances Regular, Medium, SemiBold, Bold. |
 | License | SIL Open Font License 1.1 (`OFL.txt`) |
-| Build | `make build` (`fgtools build` with `sources/config.yaml`, then `scripts/fix_gf_metadata.py`) |
+| Build | `make build` (`fgtools build` with `sources/config.yaml`, then `sources/fix_gf_metadata.py`) |
 | QA | `fgtools qa --full` (full Fontspector profile), `fgtools qa --package <directory>` |
 | About text | `documentation/article/ARTICLE.en_us.html` |
 | AI use | Disclosed in the README and the article. Eli draws and approves the glyphs. |
@@ -31,7 +31,7 @@ current official page.
 
 `make build` runs `fgtools build`, which builds one variable TTF and four
 static TTFs with `gftools builder` and fontc. Then
-`scripts/fix_gf_metadata.py` applies three fixes that have no source setting.
+`sources/fix_gf_metadata.py` applies three fixes that have no source setting.
 A plain `gftools builder sources/config.yaml`, as the Google Fonts packager
 runs it, builds the same fonts with fontmake, without those fixes.
 `fgtools diff --fontmake` checks that fontc and fontmake give the same glyph

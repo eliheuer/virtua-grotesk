@@ -19,7 +19,7 @@ venv: setup
 
 build: ## Build the variable and static TTFs into fonts/
 	$(FGTOOLS) build
-	$(PYTHON) scripts/fix_gf_metadata.py fonts/variable/*.ttf fonts/ttf/*.ttf
+	$(PYTHON) sources/fix_gf_metadata.py fonts/variable/*.ttf fonts/ttf/*.ttf
 
 test: build ## Build, then check the repository and run the Fontspector checks
 	$(FGTOOLS) check-repository
