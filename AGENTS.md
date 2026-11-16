@@ -16,7 +16,7 @@ build, proof, measure and report.
 | `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). |
 | `scripts/fix_gf_metadata.py` | Three metadata fixes of the built fonts. `make build` runs it. |
 | [documentation/google-fonts.md](documentation/google-fonts.md) | The release: facts, QA, package and the Add Font issue. |
-| `.agents/` | `tasks/` holds contracts for unattended runs. `skills/` holds the accent review. |
+| `.agents/tasks/` | Contracts for unattended runs: glyph drafts and accented letters. |
 
 `CONTEXT.md` is the one design file. Do not state a design value or a design
 rule in another file. Take direction from Eli, not from older reports or

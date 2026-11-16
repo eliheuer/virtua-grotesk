@@ -5,16 +5,13 @@ on:
   pull_request:
   push:
     branches: [main]
-    tags: ['*']
 
-# No permissions by default. Each job asks for what it needs.
-permissions: {}
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-24.04
-    permissions:
-      contents: read
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -23,33 +20,15 @@ jobs:
         with:
           python-version: '3.13'
           cache: pip
-      - name: Install Python dependencies
-        run: make setup
-      - name: Check repository layout
-        run: .venv/bin/python -m unittest tests.test_repository_layout -v
-      - name: Build fonts
-        run: make build
-      - name: Run tests
-        run: .venv/bin/python -m unittest discover -s tests -v
-      - name: Check development Font.Garden profile
-        run: .venv/bin/fgtools qa
-      # The full profile reports release debt, for example the directory name
-      # check that applies only to the google/fonts package. It does not fail
-      # the build. Its report is in the uploaded artifact.
-      - name: Check full Font.Garden profile
+      - run: make setup
+      - run: make test
+      - name: Full QA profile (report only)
         continue-on-error: true
         run: .venv/bin/fgtools qa --full
-      - name: Upload fonts and QA reports
-        if: ${{ always() }}
-        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
         with:
           name: virtuagrotesk-fonts-and-qa
-          if-no-files-found: error
           path: |
             fonts/
             out/qa/
-            OFL.txt
-            documentation/article/ARTICLE.en_us.html
-
-# A successful build is not human design approval. Releases are prepared and
-# published separately after the onboarding checklist and package review.

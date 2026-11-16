@@ -280,6 +280,31 @@ are off the 8-unit grid.
 R31. h and m take their stems, shoulder and arch from the current n.
 Seen in: m h (cbb174ea).
 
+### Accented letters
+
+R57. A mark has one height over all letters of one height. Over an ascender
+(h, k, l, b, d) and over a capital letter, the mark is above the letter: a
+mark at the x-height that cuts into an ascender is a fault. The i and the j
+have no dot under a top mark.
+
+R58. A symmetric mark (dieresis, macron, circumflex, caron, breve, ring,
+tilde, dot) is on the optical center of the letter. On a symmetric letter
+that is the center of its width. An acute or a grave points at the center
+with its lower end, so its bounding box is to the right (acute) or to the
+left (grave) of the center. On a letter that is not symmetric (L, h, k, r, t,
+f, J), the mark is over the stem or over the width: this is a decision of
+the design, and all letters of the font follow one decision.
+
+R59. A cedilla joins the bottom of the bowl of C and S at its center. An
+ogonek joins the letter at the bottom right (A, a, E, e, U, u) or at the stem
+(I, i), without a gap. A comma accent is under the center with a clear gap.
+The caron of d, t, l and L is an apostrophe form at the right of the letter.
+The comma accent of g is a turned comma over the letter.
+
+R60. A mark does not touch a part of the letter that it is not designed to
+join, and the letter does not cut it. The masters have the same components
+and the same relative position of the mark.
+
 ## Hebrew
 
 R32. Hebrew has the contrast of the Arabic, not of the Latin: horizontals
