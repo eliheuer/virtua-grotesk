@@ -258,7 +258,7 @@ feature ccmp {
 	lookup ccmp_soft_dotted_context_1 {
 		# UseMarkFilteringSet makes the lookup skip below-marks (comma/cedilla/
 		# ogonek) so i/j still lose their dot when an above-mark follows a
-		# below-mark, e.g. i + commaaccentcomb + acutecomb. Fixes fontbakery
+		# below-mark, e.g. i + commaaccentcomb + acutecomb. Fixes the Fontspector
 		# soft_dotted WARN for the "other cases" (below+above stacks).
 		lookupflag UseMarkFilteringSet @SOFT_DOTTED_ABOVE_MARKS;
 		sub iogonek' @SOFT_DOTTED_ABOVE_MARKS by dotlessiogonek;
