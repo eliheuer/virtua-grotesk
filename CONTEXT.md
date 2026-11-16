@@ -454,6 +454,9 @@ assistant = "A Hebrew sans for text, drawn to work with Source Sans."
 notosansarabic = "An Arabic sans with full coverage and even joining."
 ibmplexsansarabic = "An Arabic grotesque from a professional foundry."
 readexpro = "A geometric Arabic and Latin sans."
+inter = "A neutral Latin sans for text and interfaces, with weights 100 to 900 and an italic."
+bricolagegrotesque = "A Latin grotesque with weight, width and optical size axes."
+geist = "A geometric Latin sans for interfaces, with weights 100 to 900 and an italic."
 ```
 
 ### Known QA debt
