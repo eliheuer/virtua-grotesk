@@ -2,7 +2,7 @@
 # package-review workflow. Keep this list small; requirements.txt is the
 # pinned install snapshot generated from the active local .venv.
 # Proofs and specimen images use DesignBot (installed separately).
-# fontgarden-tools is the shared tooling of Font.Garden projects, pinned to a
+# fgtools is the shared tooling of Font.Garden projects, pinned to a
 # commit.
 fontmake
 fonttools
@@ -17,4 +17,4 @@ GitPython
 glyphsets
 PyYAML
 uharfbuzz
-fontgarden-tools @ git+https://github.com/fontgarden/fontgarden-tools@9a951b434ef70d089e9d5425f59d742c5dbbf861
+fgtools @ git+https://github.com/fontgarden/fgtools@009d8c375c59e96a05d71527e988aed44fc6bd1d

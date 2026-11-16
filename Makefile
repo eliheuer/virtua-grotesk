@@ -1,80 +1,58 @@
--include local.mk
+# Run `make` or `make help` for the list. Every other tool is a command of
+# fgtools (https://github.com/fontgarden/fgtools): .venv/bin/fgtools --help
 
-PYTHON ?= ./.venv/bin/python
-# The shared Font.Garden source tools: https://github.com/fontgarden/fontgarden-tools
-# `fgtools --help` lists every command. The targets here are the daily ones.
-FGTOOLS ?= ./.venv/bin/fgtools
-# The revision that make diff and make check-changes compare with.
-BASE ?= main
-
-.PHONY: help venv setup build test qa status queue check-design check-changes diff proof-web reference-fonts runebender clean
+PYTHON = .venv/bin/python
+FGTOOLS = .venv/bin/fgtools
+# The revision that diff and check-changes compare with: make diff BASE=<revision>
+BASE = main
 
 help:
-	@printf '%s\n' \
-		'  make setup          Create .venv and install the requirements' \
-		'  make build          Build the variable and static TTFs into fonts/' \
-		'  make test           Build, then run the tests and the Fontspector checks' \
-		'  make qa             Build, then run the Fontspector checks only' \
-		'  make status         Rewrite STATUS.md from the mark colors' \
-		'  make queue          Rank the glyphs that most composites wait on' \
-		'  make check-design GLYPHS="n a"  Check glyphs against CONTEXT.md' \
-		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
-		'  make diff           Compare builds of main and the working tree (diffenator3)' \
-		'  make proof-web      Build, then compare with reference-fonts/ in a browser' \
-		'  make reference-fonts  Get the reference fonts that CONTEXT.md lists' \
-		'  make runebender     Open the designspace in Runebender' \
-		'  make clean          Remove fonts/ and output/' \
-		'' \
-		'Every other tool is a command of fgtools: .venv/bin/fgtools --help'
+	@awk -F ':.*## ' '/^[a-z-]+:.*## / {printf "  make %-16s %s\n", $$1, $$2}' Makefile
 
-# gftools packager --their-venv runs `make venv`.
-venv: setup
-
-setup:
+setup: ## Create .venv and install the requirements and the pinned tools
 	python3 -m venv .venv
 	$(PYTHON) -m pip install -r requirements.txt
 	$(FGTOOLS) install-tools
 
-# The shared build, then the three metadata fixes that only this font needs.
-build:
-	rm -rf build build.ninja .ninja_log
+# gftools packager --their-venv runs `make venv`.
+venv: setup
+
+build: ## Build the variable and static TTFs into fonts/
 	$(FGTOOLS) build
 	$(PYTHON) scripts/fix_gf_metadata.py fonts/variable/*.ttf fonts/ttf/*.ttf
 
-test: build
+test: build ## Build, then run the tests and the Fontspector checks
 	$(PYTHON) -m unittest discover -s tests
 	$(FGTOOLS) qa
 
-qa: build
+qa: build ## Build, then run the Fontspector checks only
 	$(FGTOOLS) qa
 
-status:
+status: ## Rewrite STATUS.md from the mark colors
 	$(FGTOOLS) status
 
-queue:
+queue: ## Rank the glyphs that most composites wait on
 	$(FGTOOLS) queue
 
-# Without GLYPHS it reports on every glyph that is not green.
-check-design:
+check-design: ## Check glyphs against CONTEXT.md: make check-design GLYPHS="n a"
 	$(FGTOOLS) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
 
-# Usage: make check-changes BASE=main GLYPHS="a e"
-check-changes:
+check-changes: ## Check source changes since BASE: green unchanged, drafts purple
 	$(FGTOOLS) check-changes --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
 
-# Builds BASE and the working tree with fontc. HTML reports go to output/diff/.
-diff:
+diff: ## Compare builds of BASE and the working tree, reports in output/diff/
 	$(FGTOOLS) diff --base "$(BASE)"
 
-proof-web: build
+proof-web: build ## Build, then compare with reference-fonts/ in a browser
 	$(FGTOOLS) proof-web --current
 
-reference-fonts:
+reference-fonts: ## Get the reference fonts that CONTEXT.md lists
 	$(FGTOOLS) fetch-reference-fonts --project
 
-# Install: cargo install --locked --git https://github.com/fontgarden/runebender runebender
-runebender:
+runebender: ## Open the designspace in Runebender
 	runebender sources/VirtuaGrotesk.designspace &
 
-clean:
-	rm -rf build build.ninja .ninja_log dist fonts output sources/build.ninja sources/.ninja_log sources/instance_ufos
+clean: ## Remove fonts/ and output/
+	rm -rf fonts output build
+
+.PHONY: help setup venv build test qa status queue check-design check-changes diff proof-web reference-fonts runebender clean

@@ -25,7 +25,7 @@ records in the Git history.
 ## Tools
 
 The source tools are in
-[fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), a shared
+[fgtools](https://github.com/fontgarden/fgtools), a shared
 package with the command `fgtools`. `make setup` installs it, pinned to a
 commit in `requirements.in` and `requirements.txt`, with the pinned fontc and
 Fontspector binaries. `.venv/bin/fgtools --help` lists every command. Change
@@ -68,7 +68,7 @@ repository lists the chapter for each kind of change.
 
 | The correction shows | Change |
 | --- | --- |
-| a mistake that a script can find | a value in a `toml` block of `CONTEXT.md`, or a check in fontgarden-tools |
+| a mistake that a script can find | a value in a `toml` block of `CONTEXT.md`, or a check in fgtools |
 | a principle of the design, or a decision about one glyph | a rule in `CONTEXT.md`, with "Seen in" and the commit |
 | a decision that a drafting method has to learn | a case in `sources/held-out-glyphs.toml`, with a comment |
 

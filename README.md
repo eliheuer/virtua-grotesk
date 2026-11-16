@@ -62,7 +62,7 @@ both masters.
 ## Tools
 
 The source tools are shared by all Font.Garden fonts and are in
-[fontgarden-tools](https://github.com/fontgarden/fontgarden-tools), with the
+[fgtools](https://github.com/fontgarden/fgtools), with the
 command `fgtools`. `make setup` installs them. The fonts are built with
 fontc and checked with Fontspector. The guide is at https://font.garden/docs.
 
