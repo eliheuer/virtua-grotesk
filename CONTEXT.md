@@ -226,7 +226,7 @@ R44. More weights are drafted from two masters by `fgtools draft-weights --build
 table for each weight. `wght` is the position on the weight axis, and
 `between` names the two masters. `vertical_stem` and `horizontal_stroke`
 give the stem and the bar of H in each master and the target of the weight.
-The drafts go to `out/weights/`. They become masters of the designspace only
+The drafts go to `output/weights/`. They become masters of the designspace only
 after Eli approves Regular and Bold.
 
 ```toml

@@ -141,7 +141,7 @@ does not hold records of work.
   documents. The Git history and commit messages are the record of work.
 - Do not add a document. Extend the one in the table that covers the subject.
   A fact is stated in one file only.
-- Generated output goes to `out/`, which Git ignores. A tracked file has at
+- Generated output goes to `output/`, which Git ignores. A tracked file has at
   most 500 KB, because a file stays in every clone of the history.
 - `tests/test_repository_layout.py` fails when a tracked file has no place in
   its LAYOUT list. `tests/test_documentation_references.py` fails when a

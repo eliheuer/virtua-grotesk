@@ -16,7 +16,7 @@ list of the letters to look at.
 - `.venv/bin/fgtools build-accented-letters` lists 0 accented letters to
   add. The letters that it does not build are in the report with the reason.
 - `.venv/bin/fgtools render-accent-proofs` ran after the last change, with the reference fonts.
-- `out/accent-proofs/verdicts.json` has one verdict for each accented letter
+- `output/accent-proofs/verdicts.json` has one verdict for each accented letter
   of each master: `correct`, `fault` or `designer`, with a reason for the
   last two.
 - No purple accented letter has the verdict `fault`.
@@ -30,7 +30,7 @@ list of the letters to look at.
    glyphs; list those in the report.
 2. Run `.venv/bin/fgtools build-accented-letters`, read the list, then run
    it with `--write`.
-3. Run `.venv/bin/fgtools render-accent-proofs`. Read `out/accent-proofs/review.json` and look
+3. Run `.venv/bin/fgtools render-accent-proofs`. Read `output/accent-proofs/review.json` and look
    at every sheet. The letters with findings are on the first sheets.
 4. Review each letter and write a verdict (see "Review" below). If the
    harness has subagents, a different agent does the review. Give it the
@@ -38,7 +38,7 @@ list of the letters to look at.
 5. Correct a purple letter that has the verdict `fault`: change the offset of
    its mark component, on the grid of `CONTEXT.md`, the same way in
    every master. Then do steps 3 and 4 again for the changed letters
-   (`.venv/bin/fgtools render-accent-proofs --glyphs "<names>" --out out/accent-proofs/again`).
+   (`.venv/bin/fgtools render-accent-proofs --glyphs "<names>" --out output/accent-proofs/again`).
    Stop after three rounds for one letter and give it the verdict `designer`.
 
 ## Review
@@ -56,7 +56,7 @@ of the project that have the same mark, then with the reference fonts, and
 check it against rules 57 to 60 of `CONTEXT.md`. The build command does not
 build the caron of d, t, l and L or the comma accent of g.
 
-Write `out/accent-proofs/verdicts.json`:
+Write `output/accent-proofs/verdicts.json`:
 
 ```json
 {"Regular": {"kcaron": {"verdict": "fault", "reason": "The caron is at the x-height and cuts into the ascender."}}}
@@ -83,7 +83,7 @@ green.
 - Do not change a base letter, a mark, or an anchor that is in the sources.
 - The reference fonts are for comparison. A position that differs from them
   is a finding to judge. It is not a fault by that fact alone.
-- Do not add files to the repository. Write output under `out/`.
+- Do not add files to the repository. Write output under `output/`.
 
 ## Done
 
