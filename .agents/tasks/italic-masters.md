@@ -23,7 +23,7 @@ for Eli to review.
 ## Acceptance
 
 - fontgarden-tools has the command `fgtools draft-italic`, with tests, and
-  its settings are an `[italic]` table of `sources/design.toml`.
+  its settings are an `[italic]` table of `context.md`.
 - Each italic master has the glyphs, points and components of its upright
   master, so that the two can be compared point by point.
 - A vertical stem has the same thickness, measured at a right angle to the

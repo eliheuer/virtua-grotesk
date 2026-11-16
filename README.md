@@ -32,7 +32,7 @@ UFO masters and the designspace in `sources/`.
 | Command | Use |
 | --- | --- |
 | `make runebender` | Open the sources in Runebender. |
-| `make reference-fonts` | Get the reference fonts that `sources/design.toml` lists into `reference-fonts/`. |
+| `make reference-fonts` | Get the reference fonts that `context.md` lists into `reference-fonts/`. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
 | `make check-design GLYPHS="n a"` | Check glyphs against the grid and stroke targets. |
 | `make status` | Write `STATUS.md` from the mark colors. |
@@ -47,7 +47,7 @@ The commands and checks are described in
 
 Each glyph has a mark color in each master. The color tells people and agents
 what they can do with the glyph. The full policies are in
-[sources/design.toml](sources/design.toml).
+[context.md](context.md).
 
 | Color | Meaning |
 | --- | --- |

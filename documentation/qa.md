@@ -37,12 +37,12 @@ glyph and word images.
 | `make qa-package PACKAGE=<directory>` | Full profile on an assembled google/fonts package. |
 | `make test-tools` | Tests of the Python and JavaScript tools. |
 | `make status` | Rewrite `STATUS.md` from the mark colors. |
-| `make check-design GLYPHS="..."` | Compare glyphs with the targets in `sources/design.toml`. |
+| `make check-design GLYPHS="..."` | Compare glyphs with the targets in `context.md`. |
 | `make check-accents` | List the accented letters whose mark is not where the other accented letters predict, or not where the anchors of its parts are. |
 | `make accent-proofs` | Draw each accented letter beside the reference fonts and measure it against them. Sheets and `review.json` go to `out/accent-proofs/`. |
 | `make check-changes` | Check source changes since `main`: green glyphs unchanged, drafts purple. |
 | `make lint-curves` | Curve fairness checks of the sources. Grid checks are in `make check-design`. |
-| `make reference-fonts` | Copy the families of `[reference_fonts.families]` in `sources/design.toml` into `reference-fonts/`. The folder is not in Git. |
+| `make reference-fonts` | Copy the families of `[reference_fonts.families]` in `context.md` into `reference-fonts/`. The folder is not in Git. |
 | `make runebender` | Open the sources in Runebender. It needs the `runebender` command: `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
 | `make proof-web` | Compare the current build with `reference-fonts/` in a browser. The text samples are the defaults of fgtools and those of `sources/proof-samples.toml`, which the Runebender proof view also reads. |
 | `make review` | Diffenator3 HTML proof in `out/review/`. |
@@ -52,7 +52,7 @@ glyph and word images.
 fontgarden-tools. It includes the Google Fonts profile and adds the
 Font.Garden requirements: a 1024-unit em, masters on the 2-unit grid, the
 vendor ID FTGD and the OFL 1.1. `make qa` leaves out the checks listed with
-their reasons in `[qa.exclude]` of `sources/design.toml`.
+their reasons in `[qa.exclude]` of `context.md`.
 
 QA writes JSON and Markdown reports to `out/qa/<mode>/`. A FAIL returns a
 failing exit status. A WARN needs review. No warning is waived automatically. The

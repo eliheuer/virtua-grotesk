@@ -7,7 +7,7 @@ construction pattern; do not assume every Arabic/Hebrew outer contour is fixed.
 
 Use live green O/H/n/o and same-script donors, checking source grades at lookup.
 Measure the current sources with `fgtools check-design --observe`; the
-stroke ranges are in `sources/design.toml`. Script-wide weight remains subject
+stroke ranges are in `context.md`. Script-wide weight remains subject
 to cross-script visual review.
 
 Transfer construction relationships rather than scaling all coordinates or
@@ -20,7 +20,7 @@ show why one universal handle ratio is insufficient.
 The family is planned from Thin (100) to Black (900). `make draft-weights`
 calculates the Thin and Black masters from Regular and Bold and writes them
 to `out/weights/`, with a variable font of all four masters. The targets of
-each weight are the `[weights.<name>]` tables of `sources/design.toml`. The
+each weight are the `[weights.<name>]` tables of `context.md`. The
 drafts become masters of the designspace only after Regular and Bold are
 approved, because the calculation makes every difference between the two
 masters larger. The work is described in `.agents/tasks/weight-masters.md`

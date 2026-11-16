@@ -20,7 +20,7 @@ How to edit the UFO and designspace files directly. The source rules in
 - A point without a `type` attribute is an off-curve point. A `curve` point
   follows two off-curve points.
 - Coordinates are integers on the 2-unit grid. New structural points use the
-  8-unit grid (`sources/design.toml`).
+  8-unit grid (`context.md`).
 - To change the left sidebearing, move every point and component by the same
   amount. To change the right sidebearing, change the advance only.
 - Do not reorder points or contours. The order controls interpolation.

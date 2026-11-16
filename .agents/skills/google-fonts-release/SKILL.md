@@ -14,7 +14,7 @@ copied checklists as evidence.
 
 | Command | Use |
 | --- | --- |
-| `make qa` | Development profile, offline, with the exclusions listed in `[qa.exclude]` of `sources/design.toml`. The CI gate. |
+| `make qa` | Development profile, offline, with the exclusions listed in `[qa.exclude]` of `context.md`. The CI gate. |
 | `make qa-full` | Full profile with network checks and no exclusions. |
 | `make qa-package PACKAGE=<dir>` | Full profile on a package with `METADATA.pb`, `OFL.txt` and the article. |
 

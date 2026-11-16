@@ -11,7 +11,7 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Topic | Documents |
 | --- | --- |
 | Character and construction | [Identity](system/identity.md) |
-| Metrics, 8/2 grid, popcount | [Grid](system/grid.md), [design.toml](../../sources/design.toml) |
+| Metrics, 8/2 grid, popcount | [Grid](system/grid.md), [context.md](../../context.md) |
 | Weight and spacing | [Weight](system/weight.md), [Spacing](system/spacing.md) |
 | Interpolation and source topology | [Interpolation](system/interpolation.md) |
 | Verification of a change | [Verification](system/verification.md) |
@@ -22,8 +22,8 @@ see [AGENTS.md](../../AGENTS.md) for the source rules.
 | Checks, drafting evaluation and how corrections are recorded | [Learning loop](system/learning.md) |
 | Editing UFO, designspace and kerning files | [Source editing](system/source-editing.md) |
 
-`sources/design.toml` holds the values that `fgtools` reads: grid, chamfers,
-stroke targets, mark colors and the reference fonts. `make status` and `make check-design` read it.
+The `toml` blocks of `context.md` hold the values that `fgtools` reads: grid, chamfers,
+stroke targets, mark colors and the reference fonts. `make status` and `make check-design` read them.
 
 The review records, correction library and context retrieval tool that these
 documents once linked to are in the Git history before commit 1db2dfc7.

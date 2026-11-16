@@ -16,7 +16,7 @@ help:
 		'Design work:' \
 		'  make status         Rewrite STATUS.md from the mark colors' \
 		'  make queue          Rank the glyphs that most composites wait on' \
-		'  make check-design GLYPHS="n a"  Check glyphs against sources/design.toml' \
+		'  make check-design GLYPHS="n a"  Check glyphs against context.md' \
 		'  make check-accents  List the accented letters whose mark is not where the others predict' \
 		'  make accent-proofs  Draw each accented letter beside the reference fonts, with measurements' \
 		'  make check-changes  Check source changes since main (green unchanged, drafts purple)' \
@@ -32,7 +32,7 @@ help:
 		'  make setup          Create .venv and install the requirements' \
 		'  make build          Build the variable and static TTFs into fonts/' \
 		'  make proof-web      Build, then compare with reference-fonts/ in a browser' \
-		'  make reference-fonts  Get the reference fonts that sources/design.toml lists' \
+		'  make reference-fonts  Get the reference fonts that context.md lists' \
 		'  make proof          DesignBot PDF proof in out/proof.pdf' \
 		'  make review         Diffenator3 browser proof in out/review/' \
 		'  make runebender     Open the designspace in Runebender' \
@@ -70,7 +70,7 @@ proof: build
 proof-web: build
 	$(FGTOOLS) proof-web --current
 
-# Copies the families of [reference_fonts.families] in sources/design.toml into
+# Copies the families of [reference_fonts.families] in context.md into
 # reference-fonts/, which Git ignores. See `fgtools fetch-reference-fonts --help`.
 reference-fonts:
 	$(FGTOOLS) fetch-reference-fonts --project
@@ -142,7 +142,7 @@ compare-drafting:
 corrections:
 	$(FGTOOLS) corrections $(if $(ALL),--all,)
 
-# The weights are the [weights.<name>] tables of sources/design.toml.
+# The weights are the [weights.<name>] tables of context.md.
 draft-weights:
 	$(FGTOOLS) draft-weights --build
 

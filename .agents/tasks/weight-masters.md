@@ -17,8 +17,8 @@ corrected, with every glyph ready for Eli to review.
 - `sources/config.yaml` has the nine instances Thin, ExtraLight, Light,
   Regular, Medium, SemiBold, Bold, ExtraBold and Black.
 - The stem and the bar of H in each new master are the targets of
-  `[weights.<name>]` in `sources/design.toml`.
-- `sources/design.toml` has `[targets.Thin.<script>]` and
+  `[weights.<name>]` in `context.md`.
+- `context.md` has `[targets.Thin.<script>]` and
   `[targets.Black.<script>]`, and `make check-design` reports no stroke
   finding that the report does not explain.
 - Every glyph has the same contours, points and components in all four masters.
@@ -33,7 +33,7 @@ corrected, with every glyph ready for Eli to review.
    glyph that the report lists as not compatible. Each one is a difference
    between the two masters that also harms the interpolation of today.
 2. Look at `out/weights/` at each of the nine weights, in all three scripts.
-   Set the targets in `sources/design.toml` again until H, O, n and o have
+   Set the targets in `context.md` again until H, O, n and o have
    the right weight. Change the targets, not the drafts.
 3. Copy the two UFOs into `sources/`, and add the sources, the axis range and
    the instances. The designspace in `out/weights/` shows the form.

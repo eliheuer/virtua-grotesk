@@ -1,10 +1,14 @@
 # Virtua Grotesk design rules
 
-The rules of this font for every drawing, draft and review. Runebender gives
-this file to its agents (`design_context`), and the task contracts and the
-review in `.agents/` require it. The values are in `sources/design.toml`.
-The documents in `documentation/design/` explain the rules; where a document
-and this file disagree, this file is right.
+The rules of this font for every drawing, draft and review, and the values
+that the tools check. This is the one design file of the project. Runebender
+gives it to its agents (`design_context`), and the task contracts and the
+review in `.agents/` require it.
+
+A `toml` code block holds the values of the rule above it. `fgtools` reads
+only these blocks, as one TOML document. Font metrics are in the
+`fontinfo.plist` files and the weight axis is in the designspace; they are
+not repeated here.
 
 How to use it:
 
@@ -43,6 +47,12 @@ R6. Every point is on the 2-unit grid. New structural points, handles,
 advances, sidebearings and kerning use the 8-unit grid. A point on 2 and off
 8 is an optical correction by Eli: keep it, never snap it.
 
+```toml
+[grid]
+source = 2         # every point is on the 2-unit grid
+machine_draft = 8  # new drafts use the 8-unit grid
+```
+
 R7. An intersection or a cut end point snaps to the 8-unit grid when it is
 within 3 units of it, else to the 2-unit grid.
 Seen in: v w x y V W X (9a2e884d).
@@ -56,6 +66,12 @@ Seen in: o side 98 and crown 84 (324e6a15), cap stems 100 (cbb174ea).
 R9. Every corner where two straight segments meet has a 45 degree bevel of
 16 units per side in Regular. Tight junctions use 8. The bevel is a straight
 segment, never a curve, and keeps its absolute size in both masters.
+
+```toml
+[chamfers]
+exposed = 16
+tight_junction = 8
+```
 
 R10. A tip or a terminal ends on a flat after its bevel; there is no acute
 point. Where a bevel would leave an acute angle (the end of a diagonal),
@@ -78,6 +94,25 @@ deliberate cuts and straight landings of the donors.
 R14. Apparent weight is monolinear. Measure across the stroke, on straight
 strokes, diagonals and curves, and check the two opposing edges together: a
 swelling or a pinch is a fault even when every check passes.
+
+The stroke ranges that `make check-design` uses are set from the green glyphs
+with `fgtools check-design --observe`. `vertical_stem` is the thickness of a
+vertical stroke, measured horizontally. `horizontal_stroke` is the thickness
+of a horizontal stroke, measured vertically. A measured span longer than
+`stroke_limit` is not a stroke. A master and script without a table has no
+green glyphs to set a range from yet (Bold Arabic, Bold Hebrew).
+
+```toml
+[targets.Regular.Latin]
+vertical_stem = [92, 108]
+horizontal_stroke = [78, 100]
+stroke_limit = 180
+
+[targets.Bold.Latin]
+vertical_stem = [176, 208]
+horizontal_stroke = [124, 170]
+stroke_limit = 300
+```
 
 R15. Diagonals are straight, with parallel edges, through every join.
 
@@ -129,6 +164,27 @@ R26. Open a Bold counter with width, not a thinner stem. Bold lowercase
 stems stay 192.
 Seen in: Bold n b d (9fb03696).
 
+R44. More weights are drafted from two masters by `make draft-weights`, one
+table for each weight. `wght` is the position on the weight axis, and
+`between` names the two masters. `vertical_stem` and `horizontal_stroke`
+give the stem and the bar of H in each master and the target of the weight.
+The drafts go to `out/weights/`. They become masters of the designspace only
+after Eli approves Regular and Bold.
+
+```toml
+[weights.Thin]
+wght = 100
+between = ["Regular", "Bold"]
+vertical_stem = { Regular = 100, Bold = 192, target = 28 }
+horizontal_stroke = { Regular = 88, Bold = 168, target = 26 }
+
+[weights.Black]
+wght = 900
+between = ["Regular", "Bold"]
+vertical_stem = { Regular = 100, Bold = 192, target = 256 }
+horizontal_stroke = { Regular = 88, Bold = 168, target = 204 }
+```
+
 ## Structure of the sources
 
 R27. Both masters have the same contours, points, point types, point order
@@ -156,9 +212,18 @@ Seen in: m h (cbb174ea).
 ## Hebrew
 
 R32. Hebrew has the contrast of the Arabic, not of the Latin: horizontals
-104 and verticals 88 in Regular, and a curve goes evenly between them. A
+104 = 64 + 32 + 8 and verticals 88 = 64 + 16 + 8 in Regular, a ratio of 1.18,
+and a curve goes evenly between them. Most Hebrew sans fonts have the Latin
+direction (0.79 to 0.92); the designer chose the traditional one. A
 diagonal that falls to the bottom right is thick (about 100: alef, tsadi);
 a tail that falls to the bottom left is thin (88 to 96: qof, lamed).
+
+```toml
+[targets.Regular.Hebrew]
+vertical_stem = [84, 92]
+horizontal_stroke = [100, 108]
+stroke_limit = 180
+```
 
 R33. The lamed ascender reaches 768, the height of Latin l. Final forms
 descend to -192.
@@ -172,6 +237,13 @@ R35. Hebrew vowel dots are 96 square with 24-unit bevels and the vowel bars
 are 104 thick, as the letters' horizontals. Bold: dots 128, bars 136, bevels 32.
 
 ## Arabic
+
+```toml
+[targets.Regular.Arabic]
+vertical_stem = [80, 112]
+horizontal_stroke = [88, 112]
+stroke_limit = 180
+```
 
 R36. Draw and correct the base letters before their marks.
 Seen in: ARB-004 (211c3b8d).
@@ -198,3 +270,87 @@ double spiral.
 
 R43. dollar uses the uppercase S as its body (7f8be952). section has bevelled
 terminals (22ccd03a).
+
+## Project settings
+
+These tables are settings of the tools, not design rules.
+
+### Mark colors
+
+The mark color of a glyph is its review state. `rgba` lists every value that
+the sources use for the color. The policy is what an agent can do with a
+glyph that has the color.
+
+```toml
+[colors.green]
+rgba = [[0, 1, 0, 1], [0.09, 0.72, 0.44, 1]]
+policy = """Locked in as close to final. Eli approves contour glyphs. A composite is green when its \
+parts are green and `fgtools check-design --ready` lists it."""
+
+[colors.yellow]
+rgba = [[1, 1, 0, 1], [1, 0.86, 0.2, 1], [0.91, 0.79, 0.27, 1]]
+policy = "Close. Edit without replacing the drawing. Not a reference."
+
+[colors.orange]
+rgba = [[1, 0.5, 0, 1], [1, 0.6, 0.06, 1], [0.97, 0.58, 0, 1]]
+policy = "Better, not good enough. Edit and keep useful construction. Replace only when Eli says so."
+
+[colors.red]
+rgba = [[1, 0, 0, 1], [1, 0.29, 0.24, 1], [1, 0.3, 0.3, 1]]
+policy = "Broken. Can be replaced when Eli names the glyph. Not a reference."
+
+[colors.purple]
+rgba = [[0.54, 0.44, 0.88, 1], [0.5, 0, 1, 1]]
+policy = "AI drawing that Eli has not reviewed. Not a reference."
+
+[colors.blue]
+rgba = [[0.27, 0.44, 1, 1]]
+policy = "Composite that needs diagnosis. Not a reference."
+
+[colors.pink]
+rgba = []  # no glyph uses pink now
+policy = "Composite that needs small edits. Not a reference."
+```
+
+`fgtools corrections` lists the reviews from this date. The earlier reviews
+predate the grades.
+
+```toml
+[corrections]
+start = "2026-11-13"
+```
+
+### Reference fonts
+
+The fonts that the proofs and Runebender show beside this font. They are for
+comparison of weight, spacing and structure. They are not a source of
+outlines. Each key is a directory name of https://github.com/google/fonts
+under `ofl/`, and each value is the reason that the family is a reference.
+`make reference-fonts` copies the families into `reference-fonts/`, which Git
+ignores.
+
+```toml
+[reference_fonts.families]
+rubik = "The structural reference of the Hebrew. It also has Arabic and Latin."
+notosanshebrew = "A Hebrew sans with full coverage of the marks."
+heebo = "A Hebrew extension of Roboto: a plain sans for text."
+ibmplexsanshebrew = "A Hebrew grotesque from a professional foundry."
+assistant = "A Hebrew sans for text, drawn to work with Source Sans."
+notosansarabic = "An Arabic sans with full coverage and even joining."
+ibmplexsansarabic = "An Arabic grotesque from a professional foundry."
+readexpro = "A geometric Arabic and Latin sans."
+```
+
+### Known QA debt
+
+Known development debt, not release exceptions. `fgtools qa` leaves these
+checks out, and `fgtools qa --full` runs them. Do not add a check to hide a
+new failure.
+
+```toml
+[qa.exclude]
+"googlefonts/repo/dirname_matches_nameid_1" = "Needs the google/fonts package directory."
+"googlefonts/glyphsets/shape_languages" = "Needs language and shaping work."
+"googlefonts/metadata/unreachable_subsetting" = "Needs subset work."
+"fontgarden/grid" = "section, uniE000, germandbls and three Arabic advances are off the 2-unit grid; Eli corrects them."
+```

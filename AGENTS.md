@@ -31,8 +31,8 @@ of change, and its script `check_guide.py` finds the differences.
   Do not take direction from older reports, worklogs or review records in the
   Git history. Take direction from Eli.
 - Active inputs: `sources/VirtuaGrotesk.designspace`, the Regular and Bold
-  UFOs, `sources/config.yaml`. Grid, stroke targets and mark colors:
-  `sources/design.toml`.
+  UFOs, `sources/config.yaml`. The design rules and the values that the
+  tools check (grid, stroke targets, mark colors): `context.md`.
 
 ## Work loop
 
@@ -73,7 +73,6 @@ not hold records of work.
 - Generated output goes to `out/`, which Git ignores. A tracked file has at most
   500 KB, because a file stays in every clone of the history.
 - Before you add a document, extend the existing one on the same subject.
-  A maintained document has at most 200 lines.
 - `tests/test_repository_layout.py` enforces these rules in CI. To add a new
   kind of file, change its LAYOUT list in the same commit and give the reason
   in the commit message. When you remove the last file of a kind, remove its
@@ -84,8 +83,10 @@ not hold records of work.
 
 ## Source rules
 
-The design rules are in [context.md](context.md),
-numbered. Read all of them before you draw or change a glyph. Review every
+The design rules are in [context.md](context.md), numbered, with the values
+that the tools check in `toml` blocks. It is the one design file: do not
+state a design value in another file. Read all of it before you draw or
+change a glyph. Review every
 draft against each rule by number, then look at the whole glyph. Runebender
 gives the same file to its agents.
 

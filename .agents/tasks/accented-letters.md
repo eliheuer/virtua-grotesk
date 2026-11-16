@@ -36,7 +36,7 @@ list of the letters to look at.
    subagents, a different agent does the review. Give it the sheets and
    `review.json`, and not the notes of the build.
 5. Correct a purple letter that has the verdict `fault`: change the offset of
-   its mark component, on the grid of `sources/design.toml`, the same way in
+   its mark component, on the grid of `context.md`, the same way in
    every master. Then do steps 3 and 4 again for the changed letters
    (`.venv/bin/fgtools render-accent-proofs --glyphs "<names>" --out out/accent-proofs/again`).
    Stop after three rounds for one letter and give it the verdict `designer`.

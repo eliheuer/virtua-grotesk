@@ -12,7 +12,7 @@ each event.
    or in the source with a purple mark. The draft is committed before Eli
    edits it.
 3. **Measure.** `make check-design GLYPHS="..."` compares the draft with the
-   targets in [design.toml](../../../sources/design.toml). Correct the findings before
+   targets in [context.md](../../../context.md). Correct the findings before
    review. A pass is a filter, not approval.
 4. **Review.** Eli compares the glyph with the reference fonts in Runebender
    or `make proof-web`, then grades it. The review commit changes the purple
@@ -45,7 +45,7 @@ Eli's commit message) and proposes one of these changes:
 
 | The correction shows | Change | The citation |
 | --- | --- | --- |
-| a mistake that a script can find | a value in `sources/design.toml` or a check in `scripts/` | the commit message |
+| a mistake that a script can find | a value in `context.md` or a check in `scripts/` | the commit message |
 | a principle of the design | a rule in `context.md` | "Seen in" in the rule |
 | a decision that a drafting method has to learn | a case in `sources/held-out-glyphs.toml` | a comment on the case |
 | a fault of one glyph only | one line in its record in [glyphs/](../glyphs/README.md) | the line |

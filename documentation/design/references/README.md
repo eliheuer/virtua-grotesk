@@ -18,7 +18,7 @@ and its component dependencies. A non-green donor is not an approved reference
 even if an old note called it one.
 
 External font families explain script structure and reading texture. The list
-is `[reference_fonts.families]` in `sources/design.toml`, with the reason for
+is `[reference_fonts.families]` in `context.md`, with the reason for
 each family. `make reference-fonts` copies them into `reference-fonts/`, which
 Git ignores. `make proof-web` and the proof view of Runebender read that
 folder; Runebender shows the families that cover the glyph. A
