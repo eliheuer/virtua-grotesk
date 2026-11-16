@@ -4,8 +4,8 @@
 	<advance width="568"/>
 	<outline>
 		<contour>
-			<point x="408" y="16" type="line"/>
-			<point x="424" y="0" type="line"/>
+			<point x="416" y="16" type="line"/>
+			<point x="432" y="0" type="line"/>
 			<point x="488" y="0" type="line"/>
 			<point x="504" y="16" type="line"/>
 			<point x="504" y="416" type="line" smooth="yes"/>
@@ -14,12 +14,12 @@
 			<point x="312" y="640" type="curve" smooth="yes"/>
 			<point x="80" y="640" type="line"/>
 			<point x="64" y="624" type="line"/>
-			<point x="64" y="568" type="line"/>
-			<point x="80" y="552" type="line"/>
-			<point x="280" y="552" type="line" smooth="yes"/>
-			<point x="344" y="552"/>
-			<point x="408" y="512"/>
-			<point x="408" y="384" type="curve" smooth="yes"/>
+			<point x="64" y="552" type="line"/>
+			<point x="80" y="536" type="line"/>
+			<point x="312" y="536" type="line" smooth="yes"/>
+			<point x="384" y="536"/>
+			<point x="416" y="496"/>
+			<point x="416" y="416" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
 	<anchor name="hbBottom" x="284" y="0"/>

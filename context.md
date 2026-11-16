@@ -155,7 +155,10 @@ Seen in: m h (cbb174ea).
 
 ## Hebrew
 
-R32. Hebrew verticals are 96 and horizontals 88 in Regular.
+R32. Hebrew has the contrast of the Arabic, not of the Latin: horizontals
+104 and verticals 88 in Regular, and a curve goes evenly between them. A
+diagonal that falls to the bottom right is thick (about 100: alef, tsadi);
+a tail that falls to the bottom left is thin (88 to 96: qof, lamed).
 
 R33. The lamed ascender reaches 768, the height of Latin l. Final forms
 descend to -192.

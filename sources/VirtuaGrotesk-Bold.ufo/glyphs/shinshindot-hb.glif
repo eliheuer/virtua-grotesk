@@ -4,7 +4,7 @@
 	<advance width="848"/>
 	<outline>
 		<component base="shin-hb"/>
-		<component base="shindot-hb" xOffset="652"/>
+		<component base="shindot-hb" xOffset="652" yOffset="64"/>
 	</outline>
 	<anchor name="hbBottom" x="424" y="-32"/>
 	<anchor name="hbCenter" x="568" y="352"/>

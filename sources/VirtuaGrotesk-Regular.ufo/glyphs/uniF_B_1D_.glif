@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB1D" format="2">
 	<unicode hex="FB1D"/>
-	<advance width="240"/>
+	<advance width="232"/>
 	<outline>
 		<component base="yod-hb"/>
-		<component base="hiriq-hb" xOffset="52"/>
+		<component base="hiriq-hb" xOffset="48"/>
 	</outline>
 	<anchor name="hbRafe" x="120" y="736"/>
 	<anchor name="hbMeteg" x="120" y="0"/>

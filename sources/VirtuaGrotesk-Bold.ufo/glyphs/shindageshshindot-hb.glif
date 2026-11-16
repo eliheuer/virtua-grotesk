@@ -4,8 +4,8 @@
 	<advance width="848"/>
 	<outline>
 		<component base="shin-hb"/>
-		<component base="dagesh-hb" xOffset="498" yOffset="20"/>
-		<component base="shindot-hb" xOffset="652"/>
+		<component base="dagesh-hb" xOffset="498" yOffset="52"/>
+		<component base="shindot-hb" xOffset="652" yOffset="64"/>
 	</outline>
 	<anchor name="hbBottom" x="424" y="-32"/>
 	<anchor name="hbCenter" x="568" y="352"/>

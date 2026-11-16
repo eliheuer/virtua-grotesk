@@ -40,12 +40,12 @@ vertical_stem = [80, 112]
 horizontal_stroke = [88, 112]
 stroke_limit = 180
 
-# Hebrew verticals are the lowercase stem, 96 = 64 + 32. Hebrew horizontals
-# are 88 = 64 + 16 + 8, the Latin crossbar: 0.92 of the stem, between monoline
-# and the 0.79 to 0.88 of the Hebrew reference fonts.
+# Hebrew has the contrast of the Arabic: verticals 88 = 64 + 16 + 8 and
+# horizontals 104 = 64 + 32 + 8, a ratio of 1.18. Most Hebrew sans fonts have
+# the Latin direction (0.79 to 0.92); the designer chose the traditional one.
 [targets.Regular.Hebrew]
-vertical_stem = [92, 100]
-horizontal_stroke = [84, 92]
+vertical_stem = [84, 92]
+horizontal_stroke = [100, 108]
 stroke_limit = 180
 
 [targets.Bold.Latin]
