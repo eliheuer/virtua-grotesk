@@ -45,7 +45,7 @@ diff: ## Compare builds of BASE and the working tree, reports in output/diff/
 
 proof: build ## Build, then write the print proof to output/proof/proof.pdf
 	mkdir -p output/proof
-	designbot proof fonts/variable/*.ttf --output output/proof/proof.pdf
+	designbot proof "$(firstword $(wildcard fonts/variable/*.ttf) $(wildcard fonts/ttf/*.ttf))" --output output/proof/proof.pdf
 
 media: build ## Build, then render the marketing media into output/media/
 	$(FGTOOLS) media
