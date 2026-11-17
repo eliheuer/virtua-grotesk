@@ -11,5 +11,7 @@ tagline = "A grid-based neo-grotesk for Latin, Arabic and Hebrew"
 designer = "Eli Heuer"
 url = "elih.net"
 words = ["Grid", "Virtua", "Systems"]
+# Characters that no chosen word has: glyphs that are not finished.
+avoid = ["ظ"]
 # The glyphs of the glyph pictures.
 glyphs = ["a", "G", "R", "g", "&", "?"]
