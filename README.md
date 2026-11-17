@@ -36,7 +36,8 @@ UFO masters and the designspace in `sources/`.
 | Command | Use |
 | --- | --- |
 | `make runebender` | Open the sources in Runebender. Install it with `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
-| `make proof` | Build, then write the print proof, a PDF, to `output/proof/proof.pdf`. Needs the `designbot` command. |
+| `make formats` | List the formats, the canvases and the pages of the proof. `make proof PAGE="spacing kerning"`, `make specimen PAGE=words` and `make media FORMAT=videos` or `make media FORMAT=weight-axis CANVAS=landscape` make a part only. |
+| `make proof` | Build, then write the print proof, a PDF of A4 pages, to `output/proof/proof.pdf`: the character set, the sizes, reading text, spacing, kerning, diacritics, the weight axis and the tables of the Arabic script. Needs the `designbot` command. |
 | `make media` | Build, then render the marketing media (images, carousels and video for Instagram, LinkedIn and X) into `output/media/`. Needs the `designbot` command, and `ffmpeg` for video. |
 | `make specimen` | Build, then write the print specimen, a PDF of A4 pages, to `output/specimen/`. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
