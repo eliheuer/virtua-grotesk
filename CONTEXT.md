@@ -56,6 +56,8 @@ designspace. They are not repeated here.
 - [Hebrew](#hebrew): Rules for Hebrew.
 - [Arabic](#arabic): Rules for Arabic.
 - [Glyph decisions](#glyph-decisions): Decisions about single glyphs.
+- [Proofs and media](#proofs-and-media): The layout of every proof, specimen
+  and picture of the font, on the powers of two of the typeface.
 - [Project settings](#project-settings): Settings of the tools: mark colors,
   reference fonts and known QA debt.
 
@@ -525,6 +527,47 @@ terminals (22ccd03a).
 R56. A symbol that is made of lines is constructed from green symbols. An
 organic symbol is traced from an image with img2bez. The image gives the form,
 and green Virtua glyphs give the construction, the scale and the weight.
+
+## Proofs and media
+
+R61. Every proof, specimen, technical image, marketing picture and video of
+the font is laid out on the same powers of two as the typeface. The layout is
+a part of the design: a picture of Virtua shows the grid of Virtua. This rule
+has no exception for a format, a canvas or a platform.
+
+R62. The module of a layout is 64 pixels, the 64-unit step of the design
+grid, and the base unit is 8 pixels. Every position and every length of a
+layout is a multiple of 8 pixels. A canvas has a live area of a whole number
+of modules, and the margin is what remains. A glyph that is drawn at an em of
+1024 pixels has 1 pixel for 1 font unit, so the grid lines of the picture are
+the grid lines of the drawing. In print the module is 32 points and the base
+unit is 4 points.
+
+R63. Type sizes double: 32, 64, 128, 256, 512 and 1024 pixels, with 24 for
+labels. The cap height is three quarters of the em and the x-height is nine
+sixteenths, so only these sizes put the cap height and the x-height on whole
+pixels and on the module lines. A size outside this list is a fault. A
+picture has at most three sizes and two weights.
+
+R64. The top of the capitals stands on a module line, and the left edge of a
+text stands on a column line. Text is flush left and ragged right. It is not
+centered and not justified. Leading is a multiple of 16 pixels.
+
+R65. Motion uses the same numbers: durations of 8, 16 or 32 frames at 30
+frames in a second, loops of 128 or 256 frames, and moves by whole modules.
+
+```toml
+[layout]
+unit = 8                                  # pixels: every position is a multiple
+module = 64                               # pixels, and font units of the design grid
+sizes = [32, 64, 128, 256, 512, 1024]     # type sizes in pixels
+label_size = 24
+print_unit = 4                            # points
+print_module = 32                         # points
+frames_per_second = 30
+durations = [8, 16, 32]                   # frames
+loops = [128, 256]                        # frames
+```
 
 ## Project settings
 

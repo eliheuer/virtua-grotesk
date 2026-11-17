@@ -138,6 +138,9 @@ or a pinched counter, even when every check passes.
   proof sheets of changed glyphs, before and after.
 - A picture for review has a dark gray background and light gray ink, never
   pure black and white.
+- A layout of a proof, a specimen or a picture of the font uses the powers of
+  two of the typeface: rules R61 to R65 of `CONTEXT.md`. Read them before you
+  make or change a layout.
 
 ## Unattended tasks
 
