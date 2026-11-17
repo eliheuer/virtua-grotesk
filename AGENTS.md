@@ -121,6 +121,8 @@ or a pinched counter, even when every check passes.
   separate checkout.
 - `fgtools check-changes --glyphs "..." --proof <directory>` draws Runebender
   proof sheets of changed glyphs, before and after.
+- A picture for review has a dark gray background and light gray ink, never
+  pure black and white.
 
 ## Unattended tasks
 
@@ -157,3 +159,18 @@ does not hold records of work.
   no place in the layout of Font.Garden projects, or when a document names a
   file or a `make` target that does not exist.
 - Commit messages are plain, with no agent credit or trailers.
+
+## How to work with Eli
+
+- Report finished work in a few short lines: what changed, and what needs a
+  decision. Give details only when Eli asks.
+- Write documents, comments and commit messages in simple technical English:
+  short sentences, one word for one thing, no em dashes, no slogans. Choose
+  the names that an engineer would write in a specification.
+- Do not add a mechanism (an option, a tag, a file, a convention) for a fact
+  that an existing mechanism records. A workflow that Eli has to remember is
+  not used.
+- A repository file names only a command that can be installed, with its
+  install line. It never names a path or a link on one machine.
+- Use `~/Temp/` for temporary files.
+- Commit and push only when Eli asks.

@@ -7,19 +7,23 @@ possible points. A small local AI model, the Runebender font editor, large
 cloud models and this file are then used together to draw and work on the
 typeface.
 
-The font supports Latin, Arabic and Hebrew. It is free and open source under
-the SIL Open Font License 1.1.
+The font supports Latin, Arabic and Hebrew all as one cohesive design
+developed together by one designer. It is free and open source under the
+SIL Open Font License 1.1.
 
 This file is the description of the design. It has three readers:
 
 - A person reads it to understand the typeface: the idea, the construction
-  and the decisions. Text about the design in the README, a specimen or an
-  article comes from this file.
-- An agent reads all of it before it draws or reviews a glyph. Runebender
-  gives it to its agents (`design_context`).
-- `fgtools` reads the values in the `toml` code blocks. A block holds the
-  values of the rule above it, and the tools read all blocks as one TOML
-  document.
+  and the decisions.
+- An agent reads all of it whenever it works on the sources of the font.
+  Runebender gives it to its agents.
+- `fgtools` and Runebender read the values in the `toml` code blocks. A
+  block holds the values of the rule above it, and the tools read all blocks
+  as one TOML document.
+
+This file is a specification: it states the design and the system that the
+project is built towards. Where a tool or a glyph does not yet do what this
+file says, the file is correct and the tool or the glyph is not finished.
 
 A design value or a design rule is stated here and in no other file. Font
 metrics are in the `fontinfo.plist` files and the weight axis is in the
