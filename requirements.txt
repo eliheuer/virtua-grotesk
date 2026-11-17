@@ -14,7 +14,7 @@ cryptography==50.0.2
 defcon==0.12.2
 diffenator3==1.1.4
 ffmpeg-python==0.2.0
-fgtools @ git+https://github.com/fontgarden/fgtools@c690c9db59b29b852e8698d0ee320db54d71228a
+fgtools @ git+https://github.com/fontgarden/fgtools@01cf285b58cd71dcc602f726de343f5ad4544b69
 filelock==4.2.10
 fontFeatures==1.9.0
 fontmake==3.12.2

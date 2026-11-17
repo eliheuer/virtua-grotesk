@@ -36,12 +36,9 @@ command on `PATH`:
 cargo install --locked --git https://github.com/fontgarden/runebender runebender
 ```
 
-The print proof and the marketing media need the `designbot` command on `PATH`,
-and video needs `ffmpeg`:
-
-```sh
-cargo install --git https://github.com/eliheuer/designbot designbot-cli
-```
+The print proof and the marketing media need DesignBot. `make setup` compiles
+it from the commit that fgtools pins, with the `cargo` command. Video also
+needs `ffmpeg`.
 
 The guide of the Font.Garden system is at https://font.garden/docs. Its
 source is https://github.com/fontgarden/fontgarden.github.io. When you change

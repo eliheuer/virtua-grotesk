@@ -18,8 +18,11 @@ help:
 
 ##@ Setup
 
-# Installs the pinned versions: fgtools from requirements.txt, and the fontc
-# and Fontspector binaries. Run it again after a change of requirements.txt.
+# Installs the pinned versions: fgtools from requirements.txt, the fontc and
+# Fontspector binaries, and DesignBot, which Cargo compiles from the commit
+# that fgtools pins. The first compile takes about two minutes, and it needs
+# the `cargo` command (https://rustup.rs). Setup names ffmpeg and Runebender
+# if they are missing. Run it again after a change of requirements.txt.
 setup: ## Create .venv and install the requirements and the pinned tools
 	python3 -m venv .venv
 	$(PYTHON) -m pip install -r requirements.txt
@@ -86,9 +89,8 @@ runebender: ## Open the designspace in Runebender
 
 # These three targets use one layout system: the lattice of the typeface,
 # rules R61 to R67 of CONTEXT.md. A checker verifies each layout, and DesignBot
-# draws it. They need the `designbot` command on PATH, and a video needs
-# `ffmpeg`:
-#   cargo install --git https://github.com/eliheuer/designbot designbot-cli
+# draws it. `make setup` installs DesignBot.
+# A video needs `ffmpeg`.
 # The output is in output/, which Git ignores. CI runs the three targets on
 # each push to main and publishes the result on GitHub Pages.
 

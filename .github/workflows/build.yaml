@@ -20,6 +20,15 @@ jobs:
         with:
           python-version: '3.13'
           cache: pip
+      - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            .venv/bin/designbot
+            .venv/.crates.toml
+            .venv/.crates2.json
+          key: designbot-build-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+      - name: Install the fontconfig headers that DesignBot needs to compile
+        run: sudo apt-get update && sudo apt-get install -y libfontconfig1-dev pkg-config
       - run: make setup
       - run: make test
       - name: Full QA profile (report only)
@@ -56,16 +65,19 @@ jobs:
           cache: pip
       - uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
+          # make setup installs DesignBot into .venv. The pin of fgtools in
+          # requirements.txt sets its commit, so a new pin compiles it again.
           path: |
-            ~/.cargo/bin/designbot
+            .venv/bin/designbot
+            .venv/.crates.toml
+            .venv/.crates2.json
             ~/.designbot/cache
-          key: designbot-${{ runner.os }}-1
-      - name: Install DesignBot and ffmpeg
+          key: designbot-${{ runner.os }}-${{ hashFiles('requirements.txt') }}
+      - name: Install ffmpeg and the fontconfig headers
         run: |
           # DesignBot needs the fontconfig headers to compile, and it compiles each script.
           sudo apt-get update
           sudo apt-get install -y libfontconfig1-dev pkg-config ffmpeg
-          command -v designbot || cargo install --git https://github.com/eliheuer/designbot designbot-cli
       - run: make setup
       - run: make site
       - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
