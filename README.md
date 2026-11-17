@@ -1,9 +1,13 @@
 # Virtua Grotesk
 
-Virtua Grotesk is a geometric sans serif by Eli Heuer for Latin, Arabic and
-Hebrew. It is drawn on a power-of-two grid with 16-unit chamfered corners. The
-variable font has a weight axis from Regular (400) to Bold (700), with Medium
-and SemiBold instances.
+Virtua Grotesk is a typeface designed by Eli Heuer for Latin, Arabic and
+Hebrew. It is a grid-based neo-grotesk drawn on a dyadic self-labeling grid
+system: nested grids built on powers of two. The grid records drawing intent
+and limits the number of possible points. The variable font has a weight axis
+from Regular (400) to Bold (700), with Medium and SemiBold instances.
+
+The description of the design, with its idea, its precedents and its rules,
+is in [CONTEXT.md](CONTEXT.md).
 
 ![Virtua Grotesk construction sheet showing the word Grid](https://elih.net/og/virtua-grotesk.png)
 
@@ -36,8 +40,8 @@ UFO masters and the designspace in `sources/`.
 | `make test` | Build, then check the repository and check the fonts with Fontspector. |
 | `make help` | All commands. |
 
-The design rules, with the values that the tools check, are in
-[CONTEXT.md](CONTEXT.md). The rules for work on the sources are in
+The design rules, with the values that the tools check, are also in
+`CONTEXT.md`. The rules for work on the sources are in
 [AGENTS.md](AGENTS.md).
 
 ## Mark colors
