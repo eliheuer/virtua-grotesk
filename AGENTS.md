@@ -54,8 +54,10 @@ repository lists the chapter for each kind of change.
 3. **Look and check.** Run `.venv/bin/fgtools render "<glyphs>"` before and
    after every edit, and read the picture: the change, the filled glyph, its
    points, the green glyphs of the same construction (`--beside`) and the
-   reference fonts. Review the draft against each rule of `CONTEXT.md` by
-   number. Run `make check-design GLYPHS="..."` and `make check-changes`,
+   reference fonts. Under the glyph is the glyph in a line of text, sharp and
+   blurred, with its color as a number: in the blurred line a glyph that is
+   too heavy is a dark spot, and a glyph that is too light is a hole. Review
+   the draft against each rule of `CONTEXT.md` by number. Run `make check-design GLYPHS="..."` and `make check-changes`,
    and correct the findings.
 4. **Second review.** Before a draft goes to Eli, a second agent reviews
    it. It gets the picture of `fgtools render`, `CONTEXT.md` and the glyph
