@@ -36,6 +36,7 @@ UFO masters and the designspace in `sources/`.
 | Command | Use |
 | --- | --- |
 | `make runebender` | Open the sources in Runebender. Install it with `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
+| `make proof` | Build, then write the print proof, a PDF, to `output/proof/proof.pdf`. Needs the `designbot` command. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
 | `make test` | Build, then check the repository and check the fonts with Fontspector. |
 | `make help` | All commands. |

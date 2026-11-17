@@ -43,6 +43,10 @@ check-changes: ## Check source changes since BASE: green unchanged, drafts purpl
 diff: ## Compare builds of BASE and the working tree, reports in output/diff/
 	$(FGTOOLS) diff --base "$(BASE)"
 
+proof: build ## Build, then write the print proof to output/proof/proof.pdf
+	mkdir -p output/proof
+	designbot proof fonts/variable/*.ttf --output output/proof/proof.pdf
+
 proof-web: build ## Build, then compare with reference-fonts/ in a browser
 	$(FGTOOLS) proof-web --current
 
@@ -55,4 +59,4 @@ runebender: ## Open the designspace in Runebender
 clean: ## Remove fonts/ and output/
 	rm -rf fonts output
 
-.PHONY: help setup venv build test qa status queue check-design check-changes diff proof-web reference-fonts runebender clean
+.PHONY: help setup venv build test qa status queue check-design check-changes diff proof proof-web reference-fonts runebender clean

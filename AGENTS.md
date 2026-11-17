@@ -35,6 +35,12 @@ command on `PATH`:
 cargo install --locked --git https://github.com/fontgarden/runebender runebender
 ```
 
+The print proof needs the `designbot` command on `PATH`:
+
+```sh
+cargo install --git https://github.com/eliheuer/designbot designbot-cli
+```
+
 The guide of the Font.Garden system is at https://font.garden/docs. Its
 source is https://github.com/fontgarden/fontgarden.github.io. When you change
 a command, a `make` target, a mark color, the layout or a workflow here,
