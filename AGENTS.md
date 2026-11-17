@@ -45,8 +45,12 @@ repository lists the chapter for each kind of change.
 
 1. **Choose.** `make queue` ranks the glyphs that most composites wait on.
    Eli names the glyphs to work on.
-2. **Draft.** Read all of `CONTEXT.md`. Draw the glyph as a Runebender
-   proposal, or in the source with a purple mark. Where an edit is a
+2. **Draft.** Read all of `CONTEXT.md`. When Eli gives a picture of
+   another font as an example, first run `.venv/bin/fgtools measure-picture`
+   on it, and report the sizes and strokes of the glyph as ratios of the
+   related letter of the same picture. Draw to these ratios: a number from
+   the example is stronger evidence than an impression of it. Draw the
+   glyph as a Runebender proposal, or in the source with a purple mark. Where an edit is a
    calculation, use `fgtools edit` and do not type the coordinates: it moves
    an edge, sets the sidebearings or makes a mirrored copy, and a second run
    changes nothing. Commit the draft before Eli edits it, so that the Git
@@ -54,10 +58,11 @@ repository lists the chapter for each kind of change.
 3. **Look and check.** Run `.venv/bin/fgtools render "<glyphs>"` before and
    after every edit, and read the picture: the change, the filled glyph, its
    points, the green glyphs of the same construction (`--beside`) and the
-   reference fonts. Under the glyph is the glyph in a line of text, sharp and
-   blurred, with its color as a number: in the blurred line a glyph that is
-   too heavy is a dark spot, and a glyph that is too light is a hole. Review
-   the draft against each rule of `CONTEXT.md` by number. Run `make check-design GLYPHS="..."` and `make check-changes`,
+   reference fonts. Under the glyph is the glyph in a block of text, sharp
+   and blurred, beside the same block in a reference font, with its color as
+   a number: in the blurred block a glyph that is too heavy is a dark spot,
+   and a glyph that is too light is a hole. Review the draft against each
+   rule of `CONTEXT.md` by number. Run `make check-design GLYPHS="..."` and `make check-changes`,
    and correct the findings.
 4. **Second review.** Before a draft goes to Eli, a second agent reviews
    it. It gets the picture of `fgtools render`, `CONTEXT.md` and the glyph
