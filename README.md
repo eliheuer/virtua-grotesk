@@ -36,10 +36,12 @@ UFO masters and the designspace in `sources/`.
 | Command | Use |
 | --- | --- |
 | `make runebender` | Open the sources in Runebender. Install it with `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
-| `make formats` | List the formats, the canvases and the pages of the proof. `make proof PAGE="spacing kerning"`, `make specimen PAGE=words` and `make media FORMAT=videos` or `make media FORMAT=weight-axis CANVAS=landscape` make a part only. |
+| `make formats` | List the formats, the canvases and the pages of the proof. `make proof PAGE="spacing kerning"`, `make specimen PAGE=words` and `make media FORMAT=videos` or `make media FORMAT=weight-axis CANVAS=landscape` make a part only. `make copy-format FORMAT=words` copies a default format into the project, to change it for this font. |
 | `make proof` | Build, then write the print proof, a PDF of A4 pages, to `output/proof/proof.pdf`: the character set, the sizes, reading text, spacing, kerning, diacritics, the weight axis and the tables of the Arabic script. Needs the `designbot` command. |
 | `make media` | Build, then render the marketing media (images, carousels and video for Instagram, LinkedIn and X) into `output/media/`. Needs the `designbot` command, and `ffmpeg` for video. |
 | `make specimen` | Build, then write the print specimen, a PDF of A4 pages, to `output/specimen/`. |
+| `make site` | Build, then make the proof, the specimen and the media, and collect them into `output/site/`. CI publishes this folder. |
+| `make render GLYPHS="a n"` | Draw glyphs large for review, with the change since `main`. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
 | `make test` | Build, then check the repository and check the fonts with Fontspector. |
 | `make help` | All commands. |
