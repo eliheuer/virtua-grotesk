@@ -41,7 +41,7 @@ of the green glyphs, and is ready for Eli to review.
 
 ## Constraints
 
-- Work on a new branch `omp/<short-description>` from `main`. Do not push,
+- Work on a new branch `draft/<short-description>` from `main`. Do not push,
   merge or tag.
 - Change only the named glyphs. Do not edit scripts, documentation, features,
   kerning or fontinfo.

@@ -53,6 +53,6 @@ runebender: ## Open the designspace in Runebender
 	runebender sources/VirtuaGrotesk.designspace &
 
 clean: ## Remove fonts/ and output/
-	rm -rf fonts output build
+	rm -rf fonts output
 
 .PHONY: help setup venv build test qa status queue check-design check-changes diff proof-web reference-fonts runebender clean
