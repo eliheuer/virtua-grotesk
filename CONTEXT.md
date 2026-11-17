@@ -1,9 +1,14 @@
 # Virtua Grotesk
 
-Virtua Grotesk is a geometric sans serif by Eli Heuer for Latin, Arabic and
-Hebrew. It is drawn on a dyadic grid: nested grids built on powers of two.
-The font is free under the SIL Open Font License 1.1 and is intended for
-Google Fonts.
+Virtua Grotesk is a typeface designed by Eli Heuer. It is a grid-based
+neo-grotesk drawn on a dyadic self-labeling grid system: nested grids built
+on powers of two. The grid records drawing intent and limits the number of
+possible points. A small local AI model, the Runebender font editor, large
+cloud models and this file are then used together to draw and work on the
+typeface.
+
+The font supports Latin, Arabic and Hebrew. It is free and open source under
+the SIL Open Font License 1.1.
 
 This file is the description of the design. It has three readers:
 
@@ -22,60 +27,121 @@ designspace. They are not repeated here.
 
 ## Contents
 
-`make test` fails when this table and the chapters differ.
+`make test` fails when this list and the chapters differ.
 
-| Chapter | Content |
-| --- | --- |
-| [The idea](#the-idea) | Why the font is drawn on a grid, and what came before it. |
-| [How to use the rules](#how-to-use-the-rules) | How an agent draws and reviews with the numbered rules. |
-| [Character](#character) | The look of the typeface, and the role of the reference fonts and the donors. |
-| [Grid and metrics](#grid-and-metrics) | The em, the vertical metrics and the 8-unit and 2-unit grids. |
-| [Corners, tips and joins](#corners-tips-and-joins) | Chamfers, stroke ends and the places where strokes meet. |
-| [Strokes and curves](#strokes-and-curves) | Stroke weights, handles and the construction of curves. |
-| [Bowls and rounds](#bowls-and-rounds) | Round letters and the bowls that join a stem. |
-| [Weight and Bold](#weight-and-bold) | How a shape changes from Regular to Bold, and the planned weights. |
-| [Structure of the sources](#structure-of-the-sources) | Contours, components and compatibility of the masters. |
-| [Spacing](#spacing) | Sidebearings and kerning. |
-| [Latin](#latin) | Rules for Latin, with the accented letters. |
-| [Hebrew](#hebrew) | Rules for Hebrew. |
-| [Arabic](#arabic) | Rules for Arabic. |
-| [Glyph decisions](#glyph-decisions) | Decisions about single glyphs. |
-| [Project settings](#project-settings) | Settings of the tools: mark colors, reference fonts and known QA debt. |
+- [The idea](#the-idea): Why the font is drawn on a grid, and what came
+  before it.
+- [How to use the rules](#how-to-use-the-rules): How an agent draws and
+  reviews with the numbered rules.
+- [Character](#character): The look of the typeface, and the role of the
+  reference fonts and the donors.
+- [Grid and metrics](#grid-and-metrics): The em, the vertical metrics and
+  the 8-unit and 2-unit grids.
+- [Corners, tips and joins](#corners-tips-and-joins): Chamfers, stroke ends
+  and the places where strokes meet.
+- [Strokes and curves](#strokes-and-curves): Stroke weights, handles and the
+  construction of curves.
+- [Bowls and rounds](#bowls-and-rounds): Round letters and the bowls that
+  join a stem.
+- [Weight and Bold](#weight-and-bold): How a shape changes from Regular to
+  Bold, and the planned weights.
+- [Structure of the sources](#structure-of-the-sources): Contours,
+  components and compatibility of the masters.
+- [Spacing](#spacing): Sidebearings and kerning.
+- [Latin](#latin): Rules for Latin, with the accented letters.
+- [Hebrew](#hebrew): Rules for Hebrew.
+- [Arabic](#arabic): Rules for Arabic.
+- [Glyph decisions](#glyph-decisions): Decisions about single glyphs.
+- [Project settings](#project-settings): Settings of the tools: mark colors,
+  reference fonts and known QA debt.
 
 ## The idea
 
-Virtua Grotesk is designed as a system, not as a set of separate drawings.
-Karl Gerstner argued for this approach in *Designing Programmes* (1964). In
-practice, strict rules made type stiff, because a rule cannot make the
-optical corrections that the eye needs. Virtua keeps the system and keeps
-the corrections, and its grid records which is which.
+### A system, not a set of drawings
 
-The nearest precedent is LL Replica (Norm, Lineto, 2008). Norm made the
-drawing grid of the font editor ten times coarser and cut each corner one
-grid unit wide, so the grid is visible in the letters. Virtua does the same
-with powers of two. The em is 1024 units. Structural points are on an 8-unit
-grid, and an optical correction by the designer is on a 2-unit grid. Corners
-are cut with a 16-unit chamfer.
+A typeface is many drawings that work as one system. To design the system
+and not the single object is an old modernist aim. Karl Gerstner argued for
+it in *Designing Programmes* (1964). In practice it had limits: strict rules
+made type stiff, because a rule cannot make the optical corrections that the
+eye needs.
 
-A second system describes measurements. Each stem, handle and span is a sum
-of powers of two: the Regular stem is 96 = 64 + 32. A pure power is a
-default value, and each added term records a finer adjustment.
+Virtua Grotesk keeps the system and keeps the corrections. Its grid records
+which point is a default of the system and which point is a correction by
+the designer.
 
-The two systems make the source files a record of the drawing decisions. A
-point on the 8-unit grid is a default, and a point off it is a decision.
-Tools can check the defaults, and the decisions of the designer stay visible
-for review. For the same reason the sources are labeled training data: AI
-agents draft glyphs from the approved drawings. Eli Heuer draws and approves
-every glyph.
+### The precedent: LL Replica
 
-The three scripts share one construction: the same grid, the same chamfer
-and the same stroke logic, so that Latin, Arabic and Hebrew text set
-together has one color. The variable font has a weight axis from Regular
-(400) to Bold (700). More weights and an italic are planned.
+The nearest precedent is LL Replica by Norm (Dimitri Bruni and Manuel Krebs),
+released by Lineto in 2008. Three of its decisions matter here.
 
-The article
-[Virtua Grotesk: Grid Systems for Dataset Engineering](https://elih.net/blog/virtua-grotesk)
-gives the full background.
+- **A coarse grid.** FontLab gives 700 units to the cap height. Norm used
+  70, a step of 10 units, and every point and handle had to be on a step.
+  Norm did not accept that a finer grid gives more freedom: fewer options
+  made each decision larger and the design more its own.
+- **A visible grid.** The corners are cut one grid step wide, with the same
+  bevel on inside and outside joints. The constraint made the look, and the
+  look shows the constraint.
+- **Cut diagonals.** The ends of diagonal strokes are cut, so A, K and R
+  have no pointed apex and the letters can be set tight.
+
+From a distance Replica looks like a familiar grotesque. The differences
+show at large sizes. Virtua has the same two scales: at 16 pixels its
+16-unit chamfer is a quarter of a pixel, and at display sizes it is the
+character of the face.
+
+### What Virtua changes
+
+Virtua uses powers of two where Replica uses tens, and two grids where
+Replica uses one.
+
+- The em is 1024 units, which is 2 to the power 10.
+- Structural points are on the 8-unit grid. This is the default.
+- An optical correction by the designer is on the 2-unit grid. Every point
+  is on this grid.
+- Corners are cut with a 16-unit chamfer, and a tip ends on a flat, never
+  on an acute point.
+
+A second system labels measurements. Every measurement is a sum of powers
+of two, and the number of terms describes it. A 64-unit stem is too light
+and a 128-unit stem is too heavy, so the Regular stem is 96 = 64 + 32.
+Where 96 is too light, the font uses 112 = 64 + 32 + 16. More terms often
+mark an optical adjustment. They are not a fault.
+
+Spacing follows the same rule. Sidebearings and kerning use the 8-unit grid
+by default, which gives the text a small set of recurring intervals.
+
+### Sources as data
+
+Most fonts were not made as training data: their points are where the
+designer put them, and each font has its own habits. In Virtua the two
+systems turn the drawing conventions into data, without extra labels.
+
+- **Consistency.** The same stroke logic, chamfer sizes and start points
+  recur in the whole glyph set. A model or an agent learns one design.
+- **Measurable output.** A script can check the grids and the stroke
+  values. The checks do not decide quality, but they give a draft an
+  objective first test.
+- **Clean interpolation.** The Regular stem is 96 and the Bold stem is 192.
+  The weight between them has a 144-unit stem, also on the grid.
+
+For this reason AI agents draft glyphs from the approved drawings, and a
+small language model, Virtua-12M, is trained on the sources. A draft is not
+a finished glyph. Eli Heuer draws, corrects and approves every glyph.
+
+### Scripts and weights
+
+Latin, Arabic and Hebrew use the same grid, the same chamfer and the same
+stroke logic. The variable font has a weight axis from Regular (400) to
+Bold (700). More weights and an italic are planned.
+
+### Sources
+
+The main source of this chapter is the article
+[Virtua Grotesk: Grid Systems for Dataset Engineering](https://elih.net/blog/virtua-grotesk).
+The facts about Replica are from that article, from
+[Fonts In Use](https://www.fontsinuse.com/typefaces/7436/ll-replica) and
+from the Eye article
+[Buying into the Norm cosmos](https://eyemagazine.com/feature/article/buying-into-the-norm-cosmos).
 
 ## How to use the rules
 
