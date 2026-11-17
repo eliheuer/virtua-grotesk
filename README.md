@@ -35,7 +35,7 @@ UFO masters and the designspace in `sources/`.
 
 | Command | Use |
 | --- | --- |
-| `make runebender` | Open the sources in Runebender. |
+| `make runebender` | Open the sources in Runebender. Install it with `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
 | `make proof-web` | Build, then compare the font with the fonts in `reference-fonts/` in a browser. |
 | `make test` | Build, then check the repository and check the fonts with Fontspector. |
 | `make help` | All commands. |
@@ -53,9 +53,9 @@ what they can do with the glyph. The full policies are in
 | Color | Meaning |
 | --- | --- |
 | Green | Approved by Eli. A reference for other glyphs. Frozen. |
-| Yellow | Good drawing that needs more work. |
-| Orange | Poor drawing with useful construction to keep. |
-| Red | Can be replaced. |
+| Yellow | Close. Needs small edits. |
+| Orange | Better, not good enough. Keep the useful construction. |
+| Red | Broken. Can be replaced. |
 | Purple | AI drawing that Eli has not reviewed. |
 | Blue | Composite that needs diagnosis. |
 | Pink | Composite that needs small edits. |
