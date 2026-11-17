@@ -1,42 +1,33 @@
-# The formats of the marketing media of Virtua Grotesk. One table is one format: the
-# sizes it is made in (canvases), its words, its caption and its alternative
-# text. The script of a format has the same name and is in images/, carousels/
-# or videos/: the folder says what the format makes. `fgtools media --list`
-# lists the canvases, and `fgtools media --safe-areas` draws their safe areas.
+# The formats of Virtua Grotesk: the caption, the alternative text and the words
+# of each. The layouts are the default scripts of fgtools. `fgtools media
+# --list` lists the formats and the canvases. To change a layout, run
+# `fgtools media --copy <format>` and edit the copy in this folder.
 
 [specimen-poster]
-canvases = ["portrait", "square", "landscape"]
 caption = "Virtua Grotesk, a grid-based neo-grotesk. Free and open source under the SIL Open Font License."
 alt = "The words Grid, Virtua and Systems set large in Virtua Grotesk, from Regular to Bold, light gray on dark gray."
 
 [weight-axis]
-needs_weight_axis = true
-canvases = ["vertical", "portrait", "landscape"]
 caption = "The weight axis of Virtua Grotesk, from Regular to Bold."
 alt = "The word Grid changes from the Regular weight to the Bold weight and back."
 
 [character-set]
-canvases = ["portrait"]
 caption = "The Latin character set of Virtua Grotesk."
 alt = "Pages with the capital letters, the small letters, the figures and the punctuation of Virtua Grotesk."
 
 [link-card]
-canvases = ["card"]
 alt = "The name Virtua Grotesk set in the typeface, with the line: a grid-based neo-grotesk for Latin, Arabic and Hebrew."
 
 [glyph-detail]
-canvases = ["portrait", "square"]
 words = ["a", "G", "R", "g", "&", "?"]
 caption = "Glyphs of Virtua Grotesk on the 64-unit grid, Regular in front of Bold."
 alt = "One large glyph on each page, on a square grid, with lines for the ascender, the cap height, the x-height, the baseline and the descender."
 
 [scripts]
-canvases = ["portrait", "landscape"]
 words = ["Grid Systems", "أنظمة الشبكة", "מערכות רשת"]
 caption = "Virtua Grotesk supports Latin, Arabic and Hebrew."
 alt = "The words Grid Systems in English, Arabic and Hebrew, each in the Regular and the Bold weight."
 
 [release]
-canvases = ["portrait", "square", "landscape", "vertical"]
 caption = "Virtua Grotesk is free and open source under the SIL Open Font License."
 alt = "The name Virtua Grotesk in the Bold weight, with the version, the weight range and the number of glyphs."

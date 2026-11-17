@@ -15,7 +15,7 @@ build, proof, measure and report.
 | `Makefile` | The daily commands. `make help` lists them. |
 | `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). Two Python files hold what only this font needs: `sources/fix_gf_metadata.py` (three metadata fixes that `make build` applies) and `sources/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
 | [documentation/google-fonts.md](documentation/google-fonts.md) | The release: facts, QA, package and the Add Font issue. |
-| `documentation/media/` | The marketing media. `brand.toml` has the colors and the texts. `formats.toml` has one table for each format: its canvases, words, caption and alternative text. The DesignBot script of a format is in `images/`, `carousels/` or `videos/`: the folder says what the format makes. `make media` renders them into `output/media/`. Change these files for the style of the font. The canvases and the runner are in fgtools. |
+| `documentation/media/` | The marketing media of this font. `brand.toml` has the colors and the texts. `formats.toml` (optional) gives a format a caption, an alternative text, other words or other canvases. The layouts are the default formats of fgtools; `fgtools media --copy <format>` copies one into `images/`, `carousels/` or `videos/` here, to change it for this font. `make media` renders into `output/media/`. |
 | `.agents/tasks/` | Contracts for unattended runs: glyph drafts and accented letters. |
 
 `CONTEXT.md` is the one design file. Do not state a design value or a design
