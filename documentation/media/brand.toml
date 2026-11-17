@@ -2,8 +2,8 @@
 # `make media` renders the formats into output/media/.
 
 [colors]
-ground = "#282828"
-ink = "#bebebe"
+ground = "#202020"
+ink = "#e0e0e0"
 accent = "#e8c547"
 
 [text]
@@ -11,3 +11,5 @@ tagline = "A grid-based neo-grotesk for Latin, Arabic and Hebrew"
 designer = "Eli Heuer"
 url = "elih.net"
 words = ["Grid", "Virtua", "Systems"]
+# The glyphs of the glyph pictures.
+glyphs = ["a", "G", "R", "g", "&", "?"]

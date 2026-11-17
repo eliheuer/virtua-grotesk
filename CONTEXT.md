@@ -547,14 +547,27 @@ R63. Type sizes double: 32, 64, 128, 256, 512 and 1024 pixels, with 24 for
 labels. The cap height is three quarters of the em and the x-height is nine
 sixteenths, so only these sizes put the cap height and the x-height on whole
 pixels and on the module lines. A size outside this list is a fault. A
-picture has at most three sizes and two weights.
+picture has at most three sizes and two weights. A picture whose subject is
+the weight axis can show more weights.
 
-R64. The top of the capitals stands on a module line, and the left edge of a
-text stands on a column line. Text is flush left and ragged right. It is not
-centered and not justified. Leading is a multiple of 16 pixels.
+R64. The top of the capitals stands on a module line, and the start of a
+text stands on a column line: the left edge for Latin, the right edge for
+Arabic and Hebrew. Text is flush at its start and ragged at its end. It is
+not centered and not justified. Leading is a multiple of 16 pixels. A large
+line has its ink, not its origin, on the column line.
 
-R65. Motion uses the same numbers: durations of 8, 16 or 32 frames at 30
-frames in a second, loops of 128 or 256 frames, and moves by whole modules.
+R65. Motion uses the same numbers: 30 frames in a second, loops of 128 or
+256 frames, and durations that are multiples of 8 frames. An element that
+moves, moves a whole number of units in each frame. One value moves in a
+picture, and a line with a mark shows it.
+
+R66. A text is chosen to fit its measure. The size never changes to make a
+text fit. A large word fills its measure from the first column line to the
+last, and a word that does not fill it is replaced by another word.
+
+R67. A picture has one label size, one line weight, two inks and one accent.
+Each setting has a label that states its size and its weight. The tools
+check R62 to R64, and a layout with a fault is not written.
 
 ```toml
 [layout]
@@ -565,7 +578,7 @@ label_size = 24
 print_unit = 4                            # points
 print_module = 32                         # points
 frames_per_second = 30
-durations = [8, 16, 32]                   # frames
+frame_unit = 8                            # frames: every duration is a multiple
 loops = [128, 256]                        # frames
 ```
 

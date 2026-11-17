@@ -50,6 +50,9 @@ proof: build ## Build, then write the print proof to output/proof/proof.pdf
 media: build ## Build, then render the marketing media into output/media/
 	$(FGTOOLS) media
 
+specimen: build ## Build, then write the print specimen to output/specimen/
+	$(FGTOOLS) media --specimen
+
 proof-web: build ## Build, then compare with reference-fonts/ in a browser
 	$(FGTOOLS) proof-web --current
 
@@ -62,4 +65,4 @@ runebender: ## Open the designspace in Runebender
 clean: ## Remove fonts/ and output/
 	rm -rf fonts output
 
-.PHONY: help setup venv build test qa status queue check-design check-changes diff proof media proof-web reference-fonts runebender clean
+.PHONY: help setup venv build test qa status queue check-design check-changes diff proof media specimen proof-web reference-fonts runebender clean

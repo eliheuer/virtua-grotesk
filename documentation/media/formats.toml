@@ -1,33 +1,39 @@
-# The formats of Virtua Grotesk: the caption, the alternative text and the words
-# of each. The layouts are the default scripts of fgtools. `fgtools media
-# --list` lists the formats and the canvases. To change a layout, run
+# The formats of Virtua Grotesk: the caption and the alternative text of each.
+# The layouts are the default scripts of fgtools. `fgtools media --list` lists
+# the formats and the canvases. To change a layout, run
 # `fgtools media --copy <format>` and edit the copy in this folder.
 
-[specimen-poster]
-caption = "Virtua Grotesk, a grid-based neo-grotesk. Free and open source under the SIL Open Font License."
-alt = "The words Grid, Virtua and Systems set large in Virtua Grotesk, from Regular to Bold, light gray on dark gray."
+[words]
+caption = "Virtua Grotesk from Regular to Bold. Each word fills the measure at one size."
+alt = "Large words set in Virtua Grotesk, one for each weight from 400 to 700, each as wide as the column."
 
-[weight-axis]
-caption = "The weight axis of Virtua Grotesk, from Regular to Bold."
-alt = "The word Grid changes from the Regular weight to the Bold weight and back."
+[weights]
+caption = "The weight axis of Virtua Grotesk, from 400 to 700."
+alt = "The same words in seven weights of Virtua Grotesk, from 400 at the top to 700 at the bottom."
 
-[character-set]
-caption = "The Latin character set of Virtua Grotesk."
-alt = "Pages with the capital letters, the small letters, the figures and the punctuation of Virtua Grotesk."
+[text]
+caption = "Virtua Grotesk at text sizes."
+alt = "A heading in Virtua Grotesk Bold at 64 pixels, and a paragraph about the typeface in Regular at 32 pixels."
+
+[scripts]
+caption = "Virtua Grotesk supports Latin, Arabic and Hebrew."
+alt = "One word in each script of Virtua Grotesk: Latin, Arabic and Hebrew, each as wide as the column."
+
+[release]
+caption = "Virtua Grotesk is free and open source under the SIL Open Font License."
+alt = "The name Virtua Grotesk in the Bold weight, with a table: weights, glyphs, characters, scripts and license."
 
 [link-card]
 alt = "The name Virtua Grotesk set in the typeface, with the line: a grid-based neo-grotesk for Latin, Arabic and Hebrew."
 
-[glyph-detail]
-words = ["a", "G", "R", "g", "&", "?"]
-caption = "Glyphs of Virtua Grotesk on the 64-unit grid, Regular in front of Bold."
-alt = "One large glyph on each page, on a square grid, with lines for the ascender, the cap height, the x-height, the baseline and the descender."
+[glyph]
+caption = "Glyphs of Virtua Grotesk on the 64-unit grid of the design, with the points of the drawing."
+alt = "One large glyph on each page, on a square grid, with its points, its handles, and lines for the cap height, the x-height, the baseline and the descender."
 
-[scripts]
-words = ["Grid Systems", "أنظمة الشبكة", "מערכות רשת"]
-caption = "Virtua Grotesk supports Latin, Arabic and Hebrew."
-alt = "The words Grid Systems in English, Arabic and Hebrew, each in the Regular and the Bold weight."
+[characters]
+caption = "The characters of Virtua Grotesk."
+alt = "Pages with the capital letters, the small letters, the figures, the punctuation, the Arabic letters and the Hebrew letters of Virtua Grotesk."
 
-[release]
-caption = "Virtua Grotesk is free and open source under the SIL Open Font License."
-alt = "The name Virtua Grotesk in the Bold weight, with the version, the weight range and the number of glyphs."
+[weight-axis]
+caption = "The weight axis of Virtua Grotesk, from Regular to Bold."
+alt = "Words in Virtua Grotesk change from weight 400 to weight 700 and back, with a square that moves on a line to show the weight."

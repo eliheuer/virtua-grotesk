@@ -15,7 +15,7 @@ build, proof, measure and report.
 | `Makefile` | The daily commands. `make help` lists them. |
 | `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). Two Python files hold what only this font needs: `sources/fix_gf_metadata.py` (three metadata fixes that `make build` applies) and `sources/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
 | [documentation/google-fonts.md](documentation/google-fonts.md) | The release: facts, QA, package and the Add Font issue. |
-| `documentation/media/` | The marketing media of this font. `brand.toml` has the colors and the texts. `formats.toml` (optional) gives a format a caption, an alternative text, other words or other canvases. The layouts are the default formats of fgtools; `fgtools media --copy <format>` copies one into `images/`, `carousels/` or `videos/` here, to change it for this font. `make media` renders into `output/media/`. |
+| `documentation/media/` | The specimens and the marketing media of this font. `brand.toml` has the colors and the texts. `formats.toml` (optional) gives a format a caption, an alternative text or other canvases. The layouts are the default formats of fgtools, on the lattice of the typeface; `fgtools media --copy <format>` copies one into `images/`, `carousels/` or `videos/` here, to change it for this font. `make media` renders into `output/media/`, and `make specimen` writes the print specimen to `output/specimen/`. |
 | `.agents/tasks/` | Contracts for unattended runs: glyph drafts and accented letters. |
 
 `CONTEXT.md` is the one design file. Do not state a design value or a design
@@ -139,7 +139,7 @@ or a pinched counter, even when every check passes.
 - A picture for review has a dark gray background and light gray ink, never
   pure black and white.
 - A layout of a proof, a specimen or a picture of the font uses the powers of
-  two of the typeface: rules R61 to R65 of `CONTEXT.md`. Read them before you
+  two of the typeface: rules R61 to R67 of `CONTEXT.md`. Read them before you
   make or change a layout.
 
 ## Unattended tasks
