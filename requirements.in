@@ -8,7 +8,7 @@
 #
 # fgtools is the shared tooling of Font.Garden projects, pinned to a commit.
 # It brings gftools, fontc and Fontspector support with it.
-fgtools @ git+https://github.com/fontgarden/fgtools@c7673951ddc725ccd2df90f1b724de80fedd1231
+fgtools @ git+https://github.com/fontgarden/fgtools@eb07bf2a3c7dbb15b2d44e0062485af093efd4b9
 # The Python files in sources/ import these.
 fonttools
 uharfbuzz

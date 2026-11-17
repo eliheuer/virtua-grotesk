@@ -1,24 +1,94 @@
-# Virtua Grotesk design rules
+# Virtua Grotesk
 
-The rules of this font for every drawing, draft and review, and the values
-that the tools check. This is the one design file of the project. Runebender
-gives it to its agents (`design_context`), and the task contracts and the
-review in `.agents/` require it.
+Virtua Grotesk is a geometric sans serif by Eli Heuer for Latin, Arabic and
+Hebrew. It is drawn on a dyadic grid: nested grids built on powers of two.
+The font is free under the SIL Open Font License 1.1 and is intended for
+Google Fonts.
 
-A `toml` code block holds the values of the rule above it. `fgtools` reads
-only these blocks, as one TOML document. Font metrics are in the
-`fontinfo.plist` files and the weight axis is in the designspace; they are
-not repeated here.
+This file is the description of the design. It has three readers:
 
-How to use it:
+- A person reads it to understand the typeface: the idea, the construction
+  and the decisions. Text about the design in the README, a specimen or an
+  article comes from this file.
+- An agent reads all of it before it draws or reviews a glyph. Runebender
+  gives it to its agents (`design_context`).
+- `fgtools` reads the values in the `toml` code blocks. A block holds the
+  values of the rule above it, and the tools read all blocks as one TOML
+  document.
 
-- Before you draw or change a glyph, read every rule here, not only the
-  section of its script.
+A design value or a design rule is stated here and in no other file. Font
+metrics are in the `fontinfo.plist` files and the weight axis is in the
+designspace. They are not repeated here.
+
+## Contents
+
+`make test` fails when this table and the chapters differ.
+
+| Chapter | Content |
+| --- | --- |
+| [The idea](#the-idea) | Why the font is drawn on a grid, and what came before it. |
+| [How to use the rules](#how-to-use-the-rules) | How an agent draws and reviews with the numbered rules. |
+| [Character](#character) | The look of the typeface, and the role of the reference fonts and the donors. |
+| [Grid and metrics](#grid-and-metrics) | The em, the vertical metrics and the 8-unit and 2-unit grids. |
+| [Corners, tips and joins](#corners-tips-and-joins) | Chamfers, stroke ends and the places where strokes meet. |
+| [Strokes and curves](#strokes-and-curves) | Stroke weights, handles and the construction of curves. |
+| [Bowls and rounds](#bowls-and-rounds) | Round letters and the bowls that join a stem. |
+| [Weight and Bold](#weight-and-bold) | How a shape changes from Regular to Bold, and the planned weights. |
+| [Structure of the sources](#structure-of-the-sources) | Contours, components and compatibility of the masters. |
+| [Spacing](#spacing) | Sidebearings and kerning. |
+| [Latin](#latin) | Rules for Latin, with the accented letters. |
+| [Hebrew](#hebrew) | Rules for Hebrew. |
+| [Arabic](#arabic) | Rules for Arabic. |
+| [Glyph decisions](#glyph-decisions) | Decisions about single glyphs. |
+| [Project settings](#project-settings) | Settings of the tools: mark colors, reference fonts and known QA debt. |
+
+## The idea
+
+Virtua Grotesk is designed as a system, not as a set of separate drawings.
+Karl Gerstner argued for this approach in *Designing Programmes* (1964). In
+practice, strict rules made type stiff, because a rule cannot make the
+optical corrections that the eye needs. Virtua keeps the system and keeps
+the corrections, and its grid records which is which.
+
+The nearest precedent is LL Replica (Norm, Lineto, 2008). Norm made the
+drawing grid of the font editor ten times coarser and cut each corner one
+grid unit wide, so the grid is visible in the letters. Virtua does the same
+with powers of two. The em is 1024 units. Structural points are on an 8-unit
+grid, and an optical correction by the designer is on a 2-unit grid. Corners
+are cut with a 16-unit chamfer.
+
+A second system describes measurements. Each stem, handle and span is a sum
+of powers of two: the Regular stem is 96 = 64 + 32. A pure power is a
+default value, and each added term records a finer adjustment.
+
+The two systems make the source files a record of the drawing decisions. A
+point on the 8-unit grid is a default, and a point off it is a decision.
+Tools can check the defaults, and the decisions of the designer stay visible
+for review. For the same reason the sources are labeled training data: AI
+agents draft glyphs from the approved drawings. Eli Heuer draws and approves
+every glyph.
+
+The three scripts share one construction: the same grid, the same chamfer
+and the same stroke logic, so that Latin, Arabic and Hebrew text set
+together has one color. The variable font has a weight axis from Regular
+(400) to Bold (700). More weights and an italic are planned.
+
+The article
+[Virtua Grotesk: Grid Systems for Dataset Engineering](https://elih.net/blog/virtua-grotesk)
+gives the full background.
+
+## How to use the rules
+
+The rules have numbers (R1, R2 and so on). A number never changes, so the
+numbers are not in order in every chapter.
+
+- Before you draw or change a glyph, read every rule, not only the chapter
+  of its script.
 - When you review a glyph, check it against every rule that applies, by
   number: "R12: passes" or "R12: fails at (64,624), the tip has no flat".
   Then look at the whole glyph for faults that no rule names.
-- When Eli corrects a glyph and the reason is a principle, add a rule here
-  with "Seen in" and the commit, or add the commit to the rule that covers it.
+- When Eli corrects a glyph and the reason is a principle, add a rule with
+  "Seen in" and the commit, or add the commit to the rule that covers it.
 
 ## Character
 

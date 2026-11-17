@@ -10,7 +10,7 @@ build, proof, measure and report.
 | File | Content |
 | --- | --- |
 | `AGENTS.md` | How to work. This file. |
-| [CONTEXT.md](CONTEXT.md) | The design: numbered rules, with the values that the tools check in `toml` blocks. Runebender gives it to its agents. |
+| [CONTEXT.md](CONTEXT.md) | The design: the description of the font, the idea and the numbered rules, with the values that the tools check in `toml` blocks. Runebender gives it to its agents. |
 | [STATUS.md](STATUS.md) | Progress, written by `make status` from the mark colors. |
 | `Makefile` | The daily commands. `make help` lists them. |
 | `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). Two Python files hold what only this font needs: `sources/fix_gf_metadata.py` (three metadata fixes that `make build` applies) and `sources/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
