@@ -15,6 +15,7 @@ build, proof, measure and report.
 | `Makefile` | The daily commands. `make help` lists them. |
 | `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). Two Python files hold what only this font needs: `sources/fix_gf_metadata.py` (three metadata fixes that `make build` applies) and `sources/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
 | [documentation/google-fonts.md](documentation/google-fonts.md) | The release: facts, QA, package and the Add Font issue. |
+| `documentation/media/` | The marketing media: `brand.toml` (colors, texts, and the canvases of each format) and one DesignBot script for each format. `make media` renders them into `output/media/`. Change these files for the style of the font. The canvases and the runner are in fgtools. |
 | `.agents/tasks/` | Contracts for unattended runs: glyph drafts and accented letters. |
 
 `CONTEXT.md` is the one design file. Do not state a design value or a design
@@ -35,7 +36,8 @@ command on `PATH`:
 cargo install --locked --git https://github.com/fontgarden/runebender runebender
 ```
 
-The print proof needs the `designbot` command on `PATH`:
+The print proof and the marketing media need the `designbot` command on `PATH`,
+and video needs `ffmpeg`:
 
 ```sh
 cargo install --git https://github.com/eliheuer/designbot designbot-cli

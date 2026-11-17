@@ -1,0 +1,39 @@
+# The marketing media of Virtua Grotesk. `make media` renders each format on
+# each of its canvases into output/media/. A format is the DesignBot script
+# with the same name in this folder. Change the colors, the texts and the
+# scripts for the style of this font. `fgtools media --list` lists the canvases.
+
+[colors]
+ground = "#282828"
+ink = "#bebebe"
+accent = "#e8c547"
+
+[text]
+tagline = "A grid-based neo-grotesk for Latin, Arabic and Hebrew"
+designer = "Eli Heuer"
+url = "elih.net"
+words = ["Grid", "Virtua", "Systems"]
+
+[format.specimen-poster]
+kind = "image"
+canvases = ["portrait", "square", "landscape"]
+caption = "Virtua Grotesk, a grid-based neo-grotesk. Free and open source under the SIL Open Font License."
+alt = "The words Grid, Virtua and Systems set large in Virtua Grotesk, from Regular to Bold, light gray on dark gray."
+
+[format.weight-axis]
+needs_weight_axis = true
+kind = "video"
+canvases = ["vertical", "portrait", "landscape"]
+caption = "The weight axis of Virtua Grotesk, from Regular to Bold."
+alt = "The word Grid changes from the Regular weight to the Bold weight and back."
+
+[format.character-set]
+kind = "carousel"
+canvases = ["portrait"]
+caption = "The Latin character set of Virtua Grotesk."
+alt = "Pages with the capital letters, the small letters, the figures and the punctuation of Virtua Grotesk."
+
+[format.link-card]
+kind = "image"
+canvases = ["card"]
+alt = "The name Virtua Grotesk set in the typeface, with the line: a grid-based neo-grotesk for Latin, Arabic and Hebrew."
