@@ -476,6 +476,8 @@
 		<string>sevensuperior</string>
 		<string>eightsuperior</string>
 		<string>mu</string>
+		<string>farsiYeh-ar.init.beforeYeh</string>
+		<string>farsiYeh-ar.medi.afterYeh</string>
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
@@ -979,7 +981,11 @@
 		<string>base</string>
 		<key>farsiYeh-ar.init</key>
 		<string>base</string>
+		<key>farsiYeh-ar.init.beforeYeh</key>
+		<string>base</string>
 		<key>farsiYeh-ar.medi</key>
+		<string>base</string>
+		<key>farsiYeh-ar.medi.afterYeh</key>
 		<string>base</string>
 		<key>fatha-ar</key>
 		<string>mark</string>
