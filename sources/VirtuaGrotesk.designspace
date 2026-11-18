@@ -37,18 +37,11 @@
       </location>
     </instance>
   </instances>
-  <rules processing="last">
-    <rule name="a bold">
-      <conditionset>
-        <condition name="Weight" minimum="500" maximum="700"/>
-      </conditionset>
-      <sub name="a" with="a.bold"/>
-    </rule>
-  </rules>
   <lib>
     <dict>
       <key>public.skipExportGlyphs</key>
       <array>
+        <string>a.bold</string>
         <string>dotcenter-ar</string>
         <string>doublestroke-ar</string>
         <string>gafsarkashcenter-ar</string>

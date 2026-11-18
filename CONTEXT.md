@@ -399,11 +399,10 @@ the leftmost point for Latin, the rightmost for Arabic and Hebrew; the lowest
 of two that tie.
 Seen in: asciitilde (56f4b437), Eli's instruction (2026-11-10).
 
-R53. A glyph that changes its structure along the weight axis has an alternate
-glyph without a code point and a substitution rule in the designspace. The a
-becomes `a.bold` from weight 500. Eli draws the alternate in the Regular
-master, and its Bold copy starts red. Each of the two glyphs is compatible
-between the masters, as every other glyph.
+R53. The lowercase a keeps the same contour structure across the weight
+axis. Its foot turns outward in Regular and draws back toward the stem in
+Bold. Accented forms use the same base. A glyph that needs a change in
+contour structure can use an unencoded alternate and a designspace rule.
 
 R54. Both masters have the same kerning groups, and a glyph is in at most one
 group of each side. A pair that is added to one master is added to the other;

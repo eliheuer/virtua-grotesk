@@ -29,7 +29,8 @@ current official page.
 
 `make build` runs `fgtools build`, which builds one variable TTF and four
 static TTFs with `gftools builder` and fontc. Then
-`sources/fix_gf_metadata.py` applies three fixes that have no source setting.
+`sources/fix_gf_metadata.py` adds the identity axis map to the variable font
+and sets the WWS flag in the static fonts.
 A plain `gftools builder sources/config.yaml`, as the Google Fonts packager
 runs it, builds the same fonts with fontmake, without those fixes.
 `fgtools diff --fontmake` checks that fontc and fontmake give the same glyph

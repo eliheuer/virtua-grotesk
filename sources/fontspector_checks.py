@@ -5,8 +5,9 @@ section "This font". A check that every Font.Garden font needs belongs in
 fgtools, not here.
 """
 from pathlib import Path
+from unicodedata import normalize
 
-from fontspectorapi import FAIL, PASS, SKIP, CheckContext, CheckStatuses, Message, check
+from fontspectorapi import FAIL, PASS, CheckContext, CheckStatuses, Message, check
 from fontTools.ttLib import TTFont
 import uharfbuzz as hb
 
@@ -27,25 +28,36 @@ def modern_hebrew(font_path: Path, context: CheckContext) -> CheckStatuses:
         yield PASS, Message('ok', 'Modern Hebrew is covered.')
 
 
-@check(id='virtua/a_bold', title='The a switches to its bold form at weight 500',
-       rationale='The designspace has a rule that replaces a with a.bold from weight 500. '
-                 'The variable font must make the same switch.')
-def a_bold(font_path: Path, context: CheckContext) -> CheckStatuses:
-    if 'fvar' not in TTFont(font_path):
-        yield SKIP, Message('static', 'The switch is checked in the variable font.')
+@check(id='virtua/a_continuous', title='The a uses one glyph at every weight',
+       rationale='The lowercase a and its accented forms interpolate without a glyph switch.')
+def a_continuous(font_path: Path, context: CheckContext) -> CheckStatuses:
+    with TTFont(font_path) as ttfont:
+        glyphs = ttfont.getGlyphOrder()
+        variable = 'fvar' in ttfont
+    if 'a.bold' in glyphs:
+        yield FAIL, Message('retired-alternate', 'The retired a.bold glyph is still exported.')
         return
-    font = hb.Font(hb.Face(Path(font_path).read_bytes()))
-    wrong = []
-    for weight, expected in ((400, 'a'), (499, 'a'), (500, 'a.bold'), (700, 'a.bold')):
-        font.set_variations({'wght': weight})
+    font = hb.Font(hb.Face(font_path.read_bytes()))
+
+    def shape(text):
         buffer = hb.Buffer()
-        buffer.add_str('a')
+        buffer.add_str(text)
         buffer.guess_segment_properties()
         hb.shape(font, buffer)
-        found = font.glyph_to_string(buffer.glyph_infos[0].codepoint)
-        if found != expected:
-            wrong.append(f'at {weight}: {found}, not {expected}')
+        return [(glyphs[info.codepoint], pos.x_advance, pos.x_offset, pos.y_offset)
+                for info, pos in zip(buffer.glyph_infos, buffer.glyph_positions)]
+
+    wrong = []
+    for weight in (400, 499, 500, 550, 700) if variable else (None,):
+        if weight is not None:
+            font.set_variations({'wght': weight})
+        location = f'at weight {weight}' if weight is not None else 'in the static font'
+        if [row[0] for row in shape('a')] != ['a']:
+            wrong.append(f'The a uses another glyph {location}.')
+        for letter in 'àáâãäåāăąǎ':
+            if shape(letter) != shape(normalize('NFD', letter)):
+                wrong.append(f'{letter} shapes differently when decomposed {location}.')
     if wrong:
-        yield FAIL, Message('wrong-form', '; '.join(wrong))
+        yield FAIL, Message('wrong-form', ' '.join(wrong))
     else:
-        yield PASS, Message('ok', 'The a switches at 500.')
+        yield PASS, Message('ok', 'The a uses one glyph and its accents shape consistently.')

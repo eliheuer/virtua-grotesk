@@ -57,7 +57,7 @@ venv: setup
 
 # make build
 # Builds the fonts with the recipe in sources/config.yaml. Then
-# sources/fix_gf_metadata.py applies three metadata fixes that only this font needs.
+# sources/fix_gf_metadata.py applies two metadata fixes that only this font needs.
 build: ## Build the variable font and the static fonts into fonts/ with fontc
 	$(FGTOOLS) build
 	$(PYTHON) sources/fix_gf_metadata.py fonts/variable/*.ttf fonts/ttf/*.ttf
