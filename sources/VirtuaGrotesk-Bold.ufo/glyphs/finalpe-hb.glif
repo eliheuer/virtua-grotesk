@@ -4,10 +4,10 @@
 	<advance width="800"/>
 	<outline>
 		<contour>
-			<point x="576" y="-168" type="line"/>
-			<point x="592" y="-184" type="line"/>
-			<point x="728" y="-184" type="line"/>
-			<point x="744" y="-168" type="line"/>
+			<point x="576" y="-176" type="line"/>
+			<point x="592" y="-192" type="line"/>
+			<point x="728" y="-192" type="line"/>
+			<point x="744" y="-176" type="line"/>
 			<point x="744" y="320" type="line" smooth="yes"/>
 			<point x="744" y="512"/>
 			<point x="640" y="640"/>
@@ -30,16 +30,16 @@
 			<point x="576" y="312" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="400" y="-184"/>
+	<anchor name="hbBottom" x="400" y="-192"/>
 	<anchor name="hbCenter" x="480" y="320"/>
 	<anchor name="hbHolam" x="48" y="640"/>
 	<anchor name="hbRafe" x="400" y="736"/>
-	<anchor name="hbMeteg" x="400" y="-184"/>
+	<anchor name="hbMeteg" x="400" y="-192"/>
 	<anchor name="hbCantAbove" x="400" y="640"/>
 	<anchor name="hbCantAboveLeft" x="48" y="640"/>
 	<anchor name="hbCantAboveRight" x="744" y="640"/>
-	<anchor name="hbCantBelow" x="400" y="-184"/>
-	<anchor name="hbCantBelowRight" x="400" y="-184"/>
+	<anchor name="hbCantBelow" x="400" y="-192"/>
+	<anchor name="hbCantBelowRight" x="400" y="-192"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
