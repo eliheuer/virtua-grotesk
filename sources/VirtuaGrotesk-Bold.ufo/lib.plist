@@ -477,21 +477,6 @@
 		<string>eightsuperior</string>
 		<string>mu</string>
 	</array>
-	<key>public.openTypeMeta</key>
-	<dict>
-		<key>dlng</key>
-		<array>
-			<string>Arab</string>
-			<string>Hebr</string>
-			<string>Latn</string>
-		</array>
-		<key>slng</key>
-		<array>
-			<string>Arab</string>
-			<string>Hebr</string>
-			<string>Latn</string>
-		</array>
-	</dict>
 	<key>public.openTypeCategories</key>
 	<dict>
 		<key>A</key>
@@ -1972,6 +1957,21 @@
 		<string>base</string>
 		<key>zerosuperior</key>
 		<string>base</string>
+	</dict>
+	<key>public.openTypeMeta</key>
+	<dict>
+		<key>dlng</key>
+		<array>
+			<string>Arab</string>
+			<string>Hebr</string>
+			<string>Latn</string>
+		</array>
+		<key>slng</key>
+		<array>
+			<string>Arab</string>
+			<string>Hebr</string>
+			<string>Latn</string>
+		</array>
 	</dict>
 	<key>public.postscriptNames</key>
 	<dict>

@@ -47,10 +47,12 @@
 	<anchor name="top" x="376" y="768"/>
 	<lib>
 		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-b.png</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>0,1,0,1</string>
 		</dict>
 	</lib>
 </glyph>
