@@ -1,46 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="semicolon-ar" format="2">
 	<unicode hex="061B"/>
-	<advance width="312"/>
+	<advance width="320"/>
 	<outline>
-		<contour>
-			<point x="204" y="-128" type="line"/>
-			<point x="204" y="-100" type="line"/>
-			<point x="172" y="-20" type="line"/>
-			<point x="146" y="-10" type="line"/>
-			<point x="148" y="0" type="line"/>
-			<point x="186" y="0" type="line"/>
-			<point x="220" y="8" type="line"/>
-			<point x="220" y="120" type="line"/>
-			<point x="178" y="182" type="line"/>
-			<point x="54" y="156" type="line"/>
-			<point x="20" y="140" type="line"/>
-			<point x="20" y="0" type="line"/>
-			<point x="90" y="-146" type="line"/>
-			<point x="126" y="-164" type="line"/>
-			<point x="170" y="-164" type="line"/>
-		</contour>
-		<contour>
-			<point x="220" y="456" type="line"/>
-			<point x="220" y="568" type="line"/>
-			<point x="186" y="604" type="line"/>
-			<point x="54" y="604" type="line"/>
-			<point x="20" y="568" type="line"/>
-			<point x="20" y="456" type="line"/>
-			<point x="54" y="420" type="line"/>
-			<point x="186" y="420" type="line"/>
-		</contour>
+		<component base="comma" xScale="-1" yScale="-1" xOffset="304" yOffset="504"/>
+		<component base="period" xOffset="8"/>
 	</outline>
-	<anchor name="bottom" x="120" y="-164"/>
-	<anchor name="top" x="120" y="604"/>
-	<anchor name="bottomDots" x="120" y="-164"/>
-	<anchor name="topDots" x="120" y="604"/>
+	<anchor name="bottom" x="160" y="0"/>
+	<anchor name="top" x="160" y="640"/>
+	<anchor name="bottomDots" x="160" y="0"/>
+	<anchor name="topDots" x="160" y="640"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
