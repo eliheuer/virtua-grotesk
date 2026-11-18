@@ -4,14 +4,21 @@
 	<advance width="328"/>
 	<outline>
 		<contour>
-			<point x="78" y="0" type="line"/>
-			<point x="178" y="0" type="line"/>
-			<point x="212" y="8" type="line"/>
-			<point x="212" y="120" type="line"/>
-			<point x="170" y="182" type="line"/>
-			<point x="86" y="182" type="line"/>
-			<point x="44" y="120" type="line"/>
-			<point x="44" y="8" type="line"/>
+			<point x="248" y="0" type="line"/>
+			<point x="248" y="160" type="line"/>
+			<point x="232" y="176" type="line"/>
+			<point x="88" y="176" type="line"/>
+			<point x="72" y="160" type="line"/>
+			<point x="72" y="16" type="line"/>
+			<point x="88" y="0" type="line"/>
+			<point x="128" y="0" type="line"/>
+			<point x="136" y="-8" type="line"/>
+			<point x="136" y="-24" type="line"/>
+			<point x="96" y="-104" type="line"/>
+			<point x="96" y="-120" type="line"/>
+			<point x="112" y="-136" type="line"/>
+			<point x="128" y="-136" type="line"/>
+			<point x="144" y="-128" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="bottom" x="128" y="0"/>
@@ -21,9 +28,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
