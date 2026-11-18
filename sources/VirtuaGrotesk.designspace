@@ -1,39 +1,112 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.0' encoding='utf-8'?>
 <designspace format="5">
   <axes>
-    <axis name="Weight" tag="wght" default="400" minimum="400" maximum="700"/>
+    <axis name="Weight" tag="wght" default="400" minimum="100" maximum="900"/>
+    <axis name="Optical Size" tag="opsz" default="14" minimum="14" maximum="144"/>
   </axes>
   <sources>
     <source familyname="Virtua Grotesk" stylename="Regular" name="Virtua Grotesk Regular" filename="VirtuaGrotesk-Regular.ufo">
       <location>
         <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical Size" xvalue="14"/>
       </location>
     </source>
     <source familyname="Virtua Grotesk" stylename="Bold" name="Virtua Grotesk Bold" filename="VirtuaGrotesk-Bold.ufo">
       <location>
         <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </source>
+    <source familyname="Virtua Grotesk" stylename="Regular 144pt" name="Virtua Grotesk Regular 144pt" filename="VirtuaGrotesk-Regular144.ufo">
+      <location>
+        <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical Size" xvalue="144"/>
+      </location>
+    </source>
+    <source familyname="Virtua Grotesk" stylename="Bold 144pt" name="Virtua Grotesk Bold 144pt" filename="VirtuaGrotesk-Bold144.ufo">
+      <location>
+        <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical Size" xvalue="144"/>
+      </location>
+    </source>
+    <source familyname="Virtua Grotesk" stylename="Thin" name="Virtua Grotesk Thin" filename="VirtuaGrotesk-Thin.ufo">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </source>
+    <source familyname="Virtua Grotesk" stylename="Black" name="Virtua Grotesk Black" filename="VirtuaGrotesk-Black.ufo">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </source>
+    <source familyname="Virtua Grotesk" stylename="Thin 144pt" name="Virtua Grotesk Thin 144pt" filename="VirtuaGrotesk-Thin144.ufo">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+        <dimension name="Optical Size" xvalue="144"/>
+      </location>
+    </source>
+    <source familyname="Virtua Grotesk" stylename="Black 144pt" name="Virtua Grotesk Black 144pt" filename="VirtuaGrotesk-Black144.ufo">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Optical Size" xvalue="144"/>
       </location>
     </source>
   </sources>
   <instances>
+    <instance familyname="Virtua Grotesk" stylename="Thin" name="Virtua Grotesk Thin" filename="instance_ufo/VirtuaGrotesk-Thin.ufo" stylemapfamilyname="Virtua Grotesk Thin" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="100"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </instance>
+    <instance familyname="Virtua Grotesk" stylename="ExtraLight" name="Virtua Grotesk ExtraLight" filename="instance_ufo/VirtuaGrotesk-ExtraLight.ufo" stylemapfamilyname="Virtua Grotesk ExtraLight" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="200"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </instance>
+    <instance familyname="Virtua Grotesk" stylename="Light" name="Virtua Grotesk Light" filename="instance_ufo/VirtuaGrotesk-Light.ufo" stylemapfamilyname="Virtua Grotesk Light" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="300"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </instance>
     <instance familyname="Virtua Grotesk" stylename="Regular" name="Virtua Grotesk Regular" filename="instance_ufo/VirtuaGrotesk-Regular.ufo" stylemapfamilyname="Virtua Grotesk" stylemapstylename="regular">
       <location>
         <dimension name="Weight" xvalue="400"/>
+        <dimension name="Optical Size" xvalue="14"/>
       </location>
     </instance>
     <instance familyname="Virtua Grotesk" stylename="Medium" name="Virtua Grotesk Medium" filename="instance_ufo/VirtuaGrotesk-Medium.ufo" stylemapfamilyname="Virtua Grotesk Medium" stylemapstylename="regular">
       <location>
         <dimension name="Weight" xvalue="500"/>
+        <dimension name="Optical Size" xvalue="14"/>
       </location>
     </instance>
     <instance familyname="Virtua Grotesk" stylename="SemiBold" name="Virtua Grotesk SemiBold" filename="instance_ufo/VirtuaGrotesk-SemiBold.ufo" stylemapfamilyname="Virtua Grotesk SemiBold" stylemapstylename="regular">
       <location>
         <dimension name="Weight" xvalue="600"/>
+        <dimension name="Optical Size" xvalue="14"/>
       </location>
     </instance>
     <instance familyname="Virtua Grotesk" stylename="Bold" name="Virtua Grotesk Bold" filename="instance_ufo/VirtuaGrotesk-Bold.ufo" stylemapfamilyname="Virtua Grotesk" stylemapstylename="bold">
       <location>
         <dimension name="Weight" xvalue="700"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </instance>
+    <instance familyname="Virtua Grotesk" stylename="ExtraBold" name="Virtua Grotesk ExtraBold" filename="instance_ufo/VirtuaGrotesk-ExtraBold.ufo" stylemapfamilyname="Virtua Grotesk ExtraBold" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="800"/>
+        <dimension name="Optical Size" xvalue="14"/>
+      </location>
+    </instance>
+    <instance familyname="Virtua Grotesk" stylename="Black" name="Virtua Grotesk Black" filename="instance_ufo/VirtuaGrotesk-Black.ufo" stylemapfamilyname="Virtua Grotesk Black" stylemapstylename="regular">
+      <location>
+        <dimension name="Weight" xvalue="900"/>
+        <dimension name="Optical Size" xvalue="14"/>
       </location>
     </instance>
   </instances>

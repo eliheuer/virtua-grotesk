@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="oslash" format="2">
+	<unicode hex="00F8"/>
+	<advance width="640"/>
+	<outline>
+		<contour>
+			<point x="48" y="288" type="curve" smooth="yes"/>
+			<point x="48" y="192"/>
+			<point x="80" y="116"/>
+			<point x="130" y="64" type="curve"/>
+			<point x="76" y="-16" type="line"/>
+			<point x="84" y="-32" type="line"/>
+			<point x="132" y="-32" type="line"/>
+			<point x="140" y="-24" type="line"/>
+			<point x="174" y="26" type="line"/>
+			<point x="218" y="-2"/>
+			<point x="268" y="-16"/>
+			<point x="320" y="-16" type="curve" smooth="yes"/>
+			<point x="464" y="-16"/>
+			<point x="592" y="96"/>
+			<point x="592" y="288" type="curve" smooth="yes"/>
+			<point x="592" y="384"/>
+			<point x="560" y="460"/>
+			<point x="510" y="512" type="curve"/>
+			<point x="568" y="596" type="line"/>
+			<point x="560" y="608" type="line"/>
+			<point x="512" y="608" type="line"/>
+			<point x="504" y="600" type="line"/>
+			<point x="468" y="548" type="line"/>
+			<point x="424" y="576"/>
+			<point x="374" y="592"/>
+			<point x="320" y="592" type="curve" smooth="yes"/>
+			<point x="176" y="592"/>
+			<point x="48" y="480"/>
+		</contour>
+		<contour>
+			<point x="146" y="288" type="curve" smooth="yes"/>
+			<point x="146" y="416"/>
+			<point x="224" y="508"/>
+			<point x="320" y="508" type="curve" smooth="yes"/>
+			<point x="356" y="508"/>
+			<point x="388" y="496"/>
+			<point x="416" y="474" type="curve"/>
+			<point x="186" y="144" type="line"/>
+			<point x="162" y="182"/>
+			<point x="146" y="232"/>
+		</contour>
+		<contour>
+			<point x="226" y="102" type="curve"/>
+			<point x="454" y="430" type="line"/>
+			<point x="478" y="394"/>
+			<point x="494" y="344"/>
+			<point x="494" y="288" type="curve" smooth="yes"/>
+			<point x="494" y="160"/>
+			<point x="416" y="68"/>
+			<point x="320" y="68" type="curve" smooth="yes"/>
+			<point x="286" y="68"/>
+			<point x="254" y="80"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="320" y="576"/>
+	<anchor name="bottom" x="320" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

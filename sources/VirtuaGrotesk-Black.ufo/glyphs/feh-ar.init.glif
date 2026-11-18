@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="feh-ar.init" format="2">
+	<advance width="592"/>
+	<outline>
+		<component base="fehDotless-ar.init"/>
+		<component base="dotabove-ar" xOffset="154" yOffset="140"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,14 +1,21 @@
 """Serve the Virtua Grotesk review index after running make proof."""
 
 from argparse import ArgumentParser
+from functools import partial
 from html import escape
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+from importlib import import_module
 from pathlib import Path
 from urllib.parse import quote, unquote, urlsplit
 from zipfile import ZipFile
 from subprocess import run
 from tempfile import TemporaryDirectory
 from threading import Lock
+from unittest.mock import patch
+
+from fgtools import media, media_layout, project
+from fgtools.proof_web import samples as proof_samples
+from fontTools.ttLib import TTFont
 
 OUTPUT = Path(__file__).resolve().parent.parent / 'output'
 REV = OUTPUT / 'onboarding-review'
@@ -16,15 +23,7 @@ SHEETS = REV / 'Review-sheets'
 ZIP = REV / 'Reference-proofs.zip'
 
 PROOF = OUTPUT / 'proof' / 'proof.pdf'
-READING_PAGES = {
-    11: ('Latin', 400),
-    12: ('Latin', 700),
-    13: ('Arabic', 400),
-    14: ('Arabic', 700),
-    15: ('Hebrew', 400),
-    16: ('Hebrew', 700),
-}
-CORE_PAGES = (1, *READING_PAGES)
+SCRIPTS = ('Latin', 'Arabic', 'Hebrew')
 PROOF_NAMES = {'print-proof.pdf': 'Print Proof', 'full-proof.pdf': 'Full Proof'}
 GRID_PROOF = 'print-proof-grid.pdf'
 PLOTTER = OUTPUT / 'media' / '.build' / 'plotter.rs'
@@ -48,13 +47,10 @@ def proof_rule(y, left=69, right=773):
     return f'line\t{left}\t{y}\t{right}\t{y}\t1.03125\t0\t0\t0\t255'
 
 
-def cover(original, reading):
-    values = [row.split('\t')[-1] for row in original if row.startswith('text\t')]
-    version = values[1]
-    stamp = next(row.split('\t')[-1].split()[-1] for row in reading if '\tVersion ' in row)
+def cover(font, facts, weights, stamp):
     left, middle, right = COLUMNS
     yield proof_text(left, 501.5, 12, 400, 'Virtua Grotesk')
-    yield proof_text(middle, 501.5, 12, 400, f'{version} · {stamp}')
+    yield proof_text(middle, 501.5, 12, 400, stamp)
     yield proof_text(right, 501.5, 12, 400, 'github.com/eliheuer/virtua-grotesk')
     title_top = 489.5
     yield proof_rule(title_top)
@@ -66,13 +62,13 @@ def cover(original, reading):
 
     bands = [
         ('Design Space', [
-            ('Weight axis', '400–700'),
-            ('Masters', 'Regular, Bold'),
-            ('Static weights', '400, 500, 600, 700'),
+            ('Weight axis', f'{font.low:g}–{font.high:g}'),
+            ('Optical size', '14–144 pt'),
+            ('Named weights', str(len(weights))),
         ]),
         ('Character Set', [
-            ('Glyphs', values[8]),
-            ('Encoded characters', values[10]),
+            ('Glyphs', str(facts['glyphs'])),
+            ('Encoded characters', str(facts['characters'])),
             ('Scripts', 'Latin, Arabic, Hebrew'),
         ]),
         ('Construction', [
@@ -100,70 +96,89 @@ def cover(original, reading):
         top -= height
 
 
-def reading_page(original, script, weight):
+def reading_page(font, script, style, weight, text):
     left, middle, right = COLUMNS
     rtl = script in ('Arabic', 'Hebrew')
-    style = {400: 'Regular', 700: 'Bold'}[weight]
     leading = {8: 10, 16: 20}
     sizes = (16, 8) if rtl else (8, 16)
     settings = ' · '.join(f'{size}/{leading[size]} pt' for size in sizes)
     yield proof_text(left, 501.5, 12, 400, 'Virtua Grotesk')
-    yield proof_text(middle, 501.5, 12, 400, f'{script} · {style} {weight}')
+    yield proof_text(middle, 501.5, 12, 400, f'{script} · {style} {weight:g}')
     yield proof_text(right, 501.5, 12, 400, settings)
     yield proof_rule(489.5)
 
-    baseline = {8: 469.5, 16: 465.5}
-    # Retain fgtools' line breaks and RTL alignment. Its wide RTL block
-    # ends at 517 pt. Move it to the right edge of our middle column.
-    offsets = {8: 0, 16: middle + COLUMN_WIDTH - 517 if rtl else middle - 325}
-    for row in original:
-        fields = row.split('\t')
-        if fields[0] != 'text' or fields[3] not in ('8', '16'):
-            continue
-        size = int(fields[3])
-        if baseline[size] >= 81.5:
-            fields[1] = f'{float(fields[1]) + offsets[size]:g}'
-            fields[2] = str(baseline[size])
-            yield '\t'.join(fields)
-            baseline[size] -= leading[size]
+    columns = [(8, 469.5, right + COLUMN_WIDTH if rtl else left, COLUMN_WIDTH),
+               (16, 465.5, middle + COLUMN_WIDTH if rtl else middle, 2 * COLUMN_WIDTH)]
+    for size, baseline, start, measure in columns:
+        lines = font.lines(text, measure, size, weight)
+        room = int((baseline - 81.5) // leading[size]) + 1
+        for i, line in enumerate(lines[:room]):
+            x = start
+            if rtl:
+                x -= font.measure(line, weight)[2] * size
+            yield proof_text(f'{x:g}', baseline - i * leading[size], size, f'{weight:g}', line)
 
 
-def draw_print_proof(folder, name, show_grid=False):
-    canvas, font, _, *lines = PLOT.read_text().splitlines()
-    pages = []
-    page_starts = []
-    ink_columns = {'text': 5, 'line': 6, 'rect': 5, 'oval': 5, 'path': 2}
+def grid_lines():
+    for x in COLUMNS:
+        yield f'rect\t{x}\t73.5\t{COLUMN_WIDTH}\t448\t255\t247\t247\t255'
+    # Match the centered 704 × 448 pt live area of the landscape proof.
+    for x in range(69, 774, 8):
+        width = 0.5 if (x - 69) % 32 == 0 else 0.15
+        yield f'line\t{x}\t73.5\t{x}\t521.5\t{width}\t244\t191\t191\t255'
+    for offset in range(0, 449, 8):
+        y = 73.5 + offset
+        width = 0.5 if offset % 32 == 0 else 0.15
+        yield f'line\t69\t{y}\t773\t{y}\t{width}\t244\t191\t191\t255'
+
+
+def proof_content():
+    canvas, font_row, _, *lines = PLOT.read_text().splitlines()
+    layout = project.load(OUTPUT.parent)
+    font, facts = media.font_type(layout)
+    if Path(font_row.split('\t')[1]) != font.path:
+        raise ValueError('Run make proof to update the detail pages for the current font.')
+    with TTFont(font.path, lazy=True) as built:
+        optical_default = next((axis.defaultValue for axis in built['fvar'].axes if axis.axisTag == 'opsz'), None)
+        weights = sorted(
+            (instance.coordinates['wght'], built['name'].getDebugName(instance.subfamilyNameID))
+            for instance in built['fvar'].instances
+            if instance.coordinates.get('opsz', optical_default) == optical_default
+        )
+    print_pages = []
+    replaced = {1}
+    stamp = f'Version {facts["version"]}'
+    reading_headings = {f'Reading, {script}' for script in SCRIPTS}
+    page_number = 0
     for row in lines:
-        fields = row.split('\t')
-        kind = fields[0]
-        if kind == 'page':
-            pages.append(['page\t0\t255\t255\t255'])
-            if show_grid:
-                if len(pages) in CORE_PAGES:
-                    for x in COLUMNS:
-                        pages[-1].append(f'rect\t{x}\t73.5\t{COLUMN_WIDTH}\t448\t255\t247\t247\t255')
-                # Match the centered 704 × 448 pt live area of the landscape proof.
-                for x in range(69, 774, 8):
-                    width = 0.5 if (x - 69) % 32 == 0 else 0.15
-                    pages[-1].append(f'line\t{x}\t73.5\t{x}\t521.5\t{width}\t244\t191\t191\t255')
-                for offset in range(0, 449, 8):
-                    y = 73.5 + offset
-                    width = 0.5 if offset % 32 == 0 else 0.15
-                    pages[-1].append(f'line\t69\t{y}\t773\t{y}\t{width}\t244\t191\t191\t255')
-            page_starts.append(len(pages[-1]))
-        else:
-            start = ink_columns[kind]
-            fields[start:start + 4] = ['0', '0', '0', '255']
-            pages[-1].append('\t'.join(fields))
-    first_reading = page_starts[10]
-    pages[0][page_starts[0]:] = cover(pages[0][page_starts[0]:], pages[10][first_reading:])
-    for number, (script, weight) in READING_PAGES.items():
-        page = pages[number - 1]
-        start = page_starts[number - 1]
-        page[start:] = reading_page(page[start:], script, weight)
+        if row.startswith('page\t'):
+            page_number += 1
+        elif row.startswith('text\t'):
+            label = row.rsplit('\t', 1)[-1]
+            if label in reading_headings:
+                replaced.add(page_number)
+            elif page_number in replaced and label.startswith('Version '):
+                version, *revision = label.split(maxsplit=2)[1:]
+                stamp = ' · '.join([f'Version {version}', *revision])
+
+    print_pages.append(tuple(cover(font, facts, weights, stamp)))
+    samples, _ = proof_samples.read(layout.sources)
+    for script in SCRIPTS:
+        paragraphs = samples['text'][script.lower()]['paragraphs']
+        text = ' '.join(paragraph['text'] for paragraph in paragraphs)
+        if not font.covers(text.replace(' ', '')):
+            raise ValueError(f'The built font cannot set the {script} reading sample.')
+        text = ' '.join([text] * 4)
+        for weight, style in weights:
+            print_pages.append(tuple(reading_page(font, script, style, weight, text)))
+    return canvas, font_row, print_pages, replaced
+
+
+def draw_print_proof(folder, name, canvas, font, pages, show_grid=False):
     result = folder / name
     plot = result.with_suffix('.plot')
-    core = [line for n in CORE_PAGES for line in pages[n - 1]]
+    page_start = ['page\t0\t255\t255\t255', *(grid_lines() if show_grid else ())]
+    core = [line for page in pages for line in (*page_start, *page)]
     plot.write_text('\n'.join([canvas, font, f'output\t{result}', *core]) + '\n')
     run([str(DESIGNBOT), str(PLOTTER), '--', f'plot={plot}'], check=True)
     return result
@@ -178,16 +193,71 @@ def prepare_proofs():
             return
         with TemporaryDirectory(dir=PROOF.parent) as work:
             folder = Path(work)
+            canvas, font, print_pages, replaced = proof_content()
             run(['pdfseparate', str(PROOF), str(folder / 'page-%d.pdf')], check=True)
             pages = sorted(folder.glob('page-*.pdf'), key=lambda p: int(p.stem.split('-')[1]))
-            detail = [page for n, page in enumerate(pages, 1) if n not in CORE_PAGES]
-            regular = draw_print_proof(folder, 'print-proof.pdf')
-            grid = draw_print_proof(folder, GRID_PROOF, show_grid=True)
+            detail = [page for n, page in enumerate(pages, 1) if n not in replaced]
+            regular = draw_print_proof(folder, 'print-proof.pdf', canvas, font, print_pages)
+            grid = draw_print_proof(folder, GRID_PROOF, canvas, font, print_pages, show_grid=True)
             full = folder / 'full-proof.pdf'
             run(['pdfunite', str(regular), *map(str, detail), str(full)], check=True)
             for result in (regular, full, grid):
                 result.replace(PROOF.with_name(result.name))
         proof_revision = revision
+
+
+class ProofSheet(media_layout.Sheet):
+    def paragraph(self, text, col, row, cols, size, leading, weight=None, limit=None, color='ink', drop=0):
+        if self.name != 'reading' or not self.type.right_to_left(text):
+            return super().paragraph(text, col, row, cols, size, leading, weight, limit, color, drop)
+        if not self.type.covers(text.replace(' ', '')):
+            return 0
+
+        module = self.grid['module']
+        # Leave one grid unit for ink that extends beyond the shaped advance.
+        measure = cols * module - self.grid['unit']
+        lines = self.type.lines(text, measure, size, weight)[:limit]
+        for index, line in enumerate(lines):
+            self.text(line, col + cols, row, size, weight, color, optical=True,
+                      flush='right', drop=drop + index * leading)
+        return -(-(drop + (len(lines) - 1) * leading + size) // module) if lines else 0
+
+
+def draw_arabic_marks(sheet, job):
+    default = import_module('fgtools.media_formats.proofs.arabic-marks')
+    font = job.type
+    marks = [(name, mark) for name, mark in default.MARKS if font.covers(mark)]
+    bases = [base for base in default.BASES if font.covers(base)]
+    if not marks or not bases:
+        return 'the font has no Arabic marks yet'
+    size, col_width = default.SIZE, default.CELL
+    row_height = 3
+    rows_per_page = (sheet.rows - 2) // row_height
+    for weight in sorted({font.low, font.high}):
+        for start in range(0, len(bases), rows_per_page):
+            lines = bases[start:start + rows_per_page]
+            sheet.page()
+            sheet.header(job.family, 'Arabic marks', f'Wght {weight:g}', sheet.size(size), job.stamp)
+            for place, (name, mark) in enumerate(marks):
+                col = place * col_width
+                sheet.label(name, col, 1, drop=0)
+                for line, base in enumerate(lines):
+                    sheet.text(base + mark, col, 3 + line * row_height, size, weight, optical=True)
+            for line in range(len(lines) + 1):
+                sheet.rule(2 + line * row_height)
+
+
+def compose_proof(compose, table, job, canvas, units, colors, name):
+    # fgtools supplies the other detail formats and writes the checked book.
+    if name not in ('reading', 'arabic-marks'):
+        return compose(table, job, canvas, units, colors, name)
+    sheet = ProofSheet(media_layout.lattice(canvas, units), job.type, colors, name)
+    draw = draw_arabic_marks if name == 'arabic-marks' else import_module('fgtools.media_formats.proofs.reading').draw
+    reason = draw(sheet, job)
+    if reason or not sheet.pages:
+        return None, reason or 'the format drew nothing'
+    sheet.check()
+    return sheet, None
 
 
 def link(p, title=None, thumb=False):
@@ -202,14 +272,15 @@ def index():
         for name, title in PROOF_NAMES.items():
             parts.append('<span class="primary">'+link(PROOF.with_name(name),title)+'</span>')
         parts.append('<p>'+link(PROOF.with_name(GRID_PROOF),'Print Proof with red grid (temporary)')+'</p>')
-        parts.append('<p>The Print Proof is a cover and six reading pages. The Full Proof opens with the same seven pages. '
+        parts.append('<p>The Print Proof includes a cover and reading pages for every named weight in Latin, Arabic and Hebrew. '
+                     'The Full Proof begins with the Print Proof. '
                      'The remaining pages cover character sets, size tests, interpolation, kerning, marks and joining in detail.</p>')
     reports = sorted((OUTPUT / 'diff').glob('*/diffenator.html'))
     if reports:
         parts.append('<h2>Diffenator comparisons</h2><ul>')
         for report in reports:
             style = report.parent.name.removeprefix('VirtuaGrotesk-')
-            if style == 'VirtuaGrotesk[wght]':
+            if style.startswith('VirtuaGrotesk[') and style.endswith(']'):
                 style = 'Variable font'
             parts.append('<li>'+link(report,style)+'</li>')
         parts.append('</ul>')
@@ -260,7 +331,13 @@ class Proofs(SimpleHTTPRequestHandler):
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
     parser.add_argument('--regular-title', action='store_true', help='Try the cover title at weight 400.')
-    if parser.parse_args().regular_title:
+    parser.add_argument('--build-proof', nargs='*', help='Build the source proof or the named pages.')
+    args = parser.parse_args()
+    if args.build_proof is not None:
+        with patch.object(media, 'compose', partial(compose_proof, media.compose)):
+            media.main(['--proof', *args.build_proof])
+        raise SystemExit
+    if args.regular_title:
         TITLE_SIZE = 103.76
         TITLE_WEIGHT = 400
         TITLE_LEFT_BEARING = 24 / 1024

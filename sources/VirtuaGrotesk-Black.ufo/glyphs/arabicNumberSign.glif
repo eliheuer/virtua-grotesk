@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arabicNumberSign" format="2">
+	<unicode hex="0600"/>
+	<outline>
+		<contour>
+			<point x="-242" y="596" type="line"/>
+			<point x="-142" y="500" type="line"/>
+			<point x="142" y="500" type="line"/>
+			<point x="242" y="596" type="line"/>
+			<point x="142" y="692" type="line"/>
+			<point x="-142" y="692" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

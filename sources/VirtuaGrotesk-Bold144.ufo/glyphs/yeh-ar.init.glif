@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="yeh-ar.init" format="2">
+	<advance width="288"/>
+	<outline>
+		<component base="behDotless-ar.init"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="-28" yOffset="-10"/>
+	</outline>
+	<anchor name="bottom" x="0" y="-300"/>
+	<anchor name="top" x="0" y="460"/>
+	<anchor name="bottomDots" x="0" y="-300"/>
+	<anchor name="topDots" x="0" y="460"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
+</glyph>

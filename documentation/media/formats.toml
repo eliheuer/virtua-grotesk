@@ -4,12 +4,12 @@
 # `fgtools media --copy <format>` and edit the copy in this folder.
 
 [words]
-caption = "Virtua Grotesk from Regular to Bold. Each word fills the measure at one size."
-alt = "Large words set in Virtua Grotesk, one for each weight from 400 to 700, each as wide as the column."
+caption = "Virtua Grotesk from Thin to Black. Each word fills the measure at one size."
+alt = "Large words set in Virtua Grotesk, one for each weight from 100 to 900, each as wide as the column."
 
 [weights]
-caption = "The weight axis of Virtua Grotesk, from 400 to 700."
-alt = "The same words in seven weights of Virtua Grotesk, from 400 at the top to 700 at the bottom."
+caption = "The weight axis of Virtua Grotesk, from 100 to 900."
+alt = "The same words in seven weights of Virtua Grotesk, from 100 at the top to 900 at the bottom."
 
 [text]
 caption = "Virtua Grotesk at text sizes."
@@ -35,5 +35,5 @@ caption = "The characters of Virtua Grotesk."
 alt = "Pages with the capital letters, the small letters, the figures, the punctuation, the Arabic letters and the Hebrew letters of Virtua Grotesk."
 
 [weight-axis]
-caption = "The weight axis of Virtua Grotesk, from Regular to Bold."
-alt = "Words in Virtua Grotesk change from weight 400 to weight 700 and back, with a square that moves on a line to show the weight."
+caption = "The weight axis of Virtua Grotesk, from Thin to Black."
+alt = "Words in Virtua Grotesk change from weight 100 to weight 900 and back, with a square that moves on a line to show the weight."

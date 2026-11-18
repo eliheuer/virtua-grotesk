@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="percent-ar" format="2">
+	<unicode hex="066A"/>
+	<advance width="656"/>
+	<outline>
+		<component base="slash" xOffset="64"/>
+		<component base="period" yOffset="546"/>
+		<component base="period" xOffset="328"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

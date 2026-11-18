@@ -19,7 +19,7 @@ fn main() {
 
     let mut ctx = Canvas::new(w, h);
     let mut r = Renderer::new(w as u32, h as u32);
-    r.load_font(find_up("fonts/variable/VirtuaGrotesk[wght].ttf")).expect("Virtua Grotesk VF");
+    r.load_font(find_up("fonts/variable/VirtuaGrotesk[opsz,wght].ttf")).expect("Virtua Grotesk VF");
     ctx.background(ground);
 
     let line = |ctx: &mut Canvas, text: &str, x: f64, y: f64, size: f64, wght: f32, color: Color| {

@@ -11,7 +11,7 @@ current official page.
 | Family name | Virtua Grotesk |
 | Upstream repository | https://github.com/eliheuer/virtua-grotesk |
 | Scripts in the first release | Latin, Arabic, Hebrew |
-| Styles | Upright only. Weight axis `wght` 400 to 700. Instances Regular, Medium, SemiBold, Bold. |
+| Styles | Upright only. Weight axis `wght` 100 to 900. Optical size axis `opsz` 14 to 144 pt. Nine static weights at 14 pt. |
 | License | SIL Open Font License 1.1 (`OFL.txt`) |
 | Build | `make build` (`fgtools build` with `sources/config.yaml`, then `sources/fix_gf_metadata.py`) |
 | QA | `make test` (every check except `[qa.exclude]` of `CONTEXT.md`), `fgtools qa --package <directory>` |
@@ -27,10 +27,10 @@ current official page.
 
 ## Build
 
-`make build` runs `fgtools build`, which builds one variable TTF and four
+`make build` runs `fgtools build`, which builds one variable TTF and nine
 static TTFs with `gftools builder` and fontc. Then
-`sources/fix_gf_metadata.py` adds the identity axis map to the variable font
-and sets the WWS flag in the static fonts.
+`sources/fix_gf_metadata.py` adds the identity axis map to the variable font,
+sets the WWS flag in the static fonts and keeps optical sizes visible in STAT.
 A plain `gftools builder sources/config.yaml`, as the Google Fonts packager
 runs it, builds the same fonts with fontmake, without those fixes.
 `fgtools diff --fontmake` checks that fontc and fontmake give the same glyph
@@ -71,7 +71,7 @@ in a rendered proof.
 For a tagged release, set `source.archive_url` to the reviewed release ZIP
 and `source.branch` to the matching tag. Preserve the binary from
 `make build` in the archive. In `source.files`, map
-`fonts/variable/VirtuaGrotesk[wght].ttf` to `VirtuaGrotesk[wght].ttf`,
+`fonts/variable/VirtuaGrotesk[opsz,wght].ttf` to `VirtuaGrotesk[opsz,wght].ttf`,
 `OFL.txt` to `OFL.txt`, `documentation/article/ARTICLE.en_us.html` to
 `article/ARTICLE.en_us.html`, and `documentation/article/weight-specimen.svg`
 to `article/weight-specimen.svg`. Run the packager with the completed
@@ -84,7 +84,7 @@ publication.
 
 ## Before the Add Font issue
 
-1. Every glyph is green in both masters (`make status`).
+1. Every glyph is green in every master (`make status`).
 2. `make test` passes, and `[qa.exclude]` of `CONTEXT.md` has only
    `googlefonts/repo/dirname_matches_nameid_1`, which applies to the
    google/fonts package directory and not to this repository.

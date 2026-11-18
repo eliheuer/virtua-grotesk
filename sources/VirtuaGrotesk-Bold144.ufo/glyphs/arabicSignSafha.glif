@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arabicSignSafha" format="2">
+	<unicode hex="0603"/>
+	<outline>
+		<contour>
+			<point x="-202" y="658" type="line"/>
+			<point x="-118" y="500" type="line"/>
+			<point x="0" y="556" type="line"/>
+			<point x="118" y="500" type="line"/>
+			<point x="202" y="658" type="line"/>
+			<point x="0" y="730" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
+</glyph>

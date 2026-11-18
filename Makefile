@@ -158,7 +158,7 @@ formats: ## List the names that FORMAT, CANVAS and PAGE take
 # script. The short lines of sources/proof-samples.toml are in it.
 # Some pages only: make proof PAGE="spacing kerning"
 proof: $(BUILD) ## Build, then write the print proof to output/proof/proof.pdf, or its pages PAGE=...
-	$(FGTOOLS) media --proof $(PAGE)
+	$(PYTHON) sources/proof_review.py --build-proof $(PAGE)
 
 # make specimen
 # Builds, then writes the print specimen to output/specimen/. It is for a

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dateSeparator-ar" format="2">
+	<unicode hex="060D"/>
+	<advance width="224"/>
+	<outline>
+		<contour>
+			<point x="110" y="0" type="line"/>
+			<point x="146" y="0" type="line"/>
+			<point x="146" y="0" type="line"/>
+			<point x="146" y="628" type="line"/>
+			<point x="146" y="628" type="line"/>
+			<point x="110" y="616" type="line"/>
+			<point x="110" y="616" type="line"/>
+			<point x="110" y="0" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="128" y="0"/>
+	<anchor name="top" x="128" y="640"/>
+	<anchor name="bottomDots" x="128" y="0"/>
+	<anchor name="topDots" x="128" y="640"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

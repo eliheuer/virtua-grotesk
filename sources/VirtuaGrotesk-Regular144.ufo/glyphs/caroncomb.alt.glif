@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="caroncomb.alt" format="2">
+	<advance width="260"/>
+	<outline>
+		<contour>
+			<point x="112" y="608" type="line"/>
+			<point x="144" y="608" type="line"/>
+			<point x="160" y="624" type="line"/>
+			<point x="192" y="752" type="line"/>
+			<point x="176" y="768" type="line"/>
+			<point x="144" y="768" type="line"/>
+			<point x="128" y="752" type="line"/>
+			<point x="96" y="624" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

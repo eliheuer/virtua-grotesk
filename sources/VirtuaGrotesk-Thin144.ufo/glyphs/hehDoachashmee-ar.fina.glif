@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hehDoachashmee-ar.fina" format="2">
+	<advance width="528"/>
+	<outline>
+		<component base="hehDoachashmee-ar.medi" xOffset="48"/>
+	</outline>
+	<anchor name="bottom" x="280" y="-296"/>
+	<anchor name="top" x="280" y="448"/>
+	<anchor name="bottomDots" x="280" y="-296"/>
+	<anchor name="topDots" x="280" y="448"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

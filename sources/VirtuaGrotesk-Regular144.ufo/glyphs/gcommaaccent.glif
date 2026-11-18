@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="gcommaaccent" format="2">
+	<unicode hex="0123"/>
+	<advance width="640"/>
+	<outline>
+		<component base="g"/>
+		<component base="commaaccent" xScale="-1" yScale="-1" xOffset="448" yOffset="576"/>
+	</outline>
+	<anchor name="top" x="312" y="800"/>
+	<anchor name="bottom" x="312" y="-216"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

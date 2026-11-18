@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="noon-ar.fina" format="2">
+	<advance width="784"/>
+	<outline>
+		<component base="noonghunna-ar.fina"/>
+		<component base="dotabove-ar" xOffset="192" yOffset="-288"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>red</string>
+			<key>public.markColor</key>
+			<string>1,0,0,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dottedCircle" format="2">
+	<unicode hex="25CC"/>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="266" y="628" type="line"/>
+			<point x="334" y="628" type="line"/>
+			<point x="334" y="692" type="line"/>
+			<point x="266" y="692" type="line"/>
+		</contour>
+		<contour>
+			<point x="414" y="572" type="line"/>
+			<point x="482" y="572" type="line"/>
+			<point x="482" y="636" type="line"/>
+			<point x="414" y="636" type="line"/>
+		</contour>
+		<contour>
+			<point x="486" y="424" type="line"/>
+			<point x="554" y="424" type="line"/>
+			<point x="554" y="488" type="line"/>
+			<point x="486" y="488" type="line"/>
+		</contour>
+		<contour>
+			<point x="450" y="260" type="line"/>
+			<point x="518" y="260" type="line"/>
+			<point x="518" y="324" type="line"/>
+			<point x="450" y="324" type="line"/>
+		</contour>
+		<contour>
+			<point x="310" y="172" type="line"/>
+			<point x="378" y="172" type="line"/>
+			<point x="378" y="236" type="line"/>
+			<point x="310" y="236" type="line"/>
+		</contour>
+		<contour>
+			<point x="150" y="204" type="line"/>
+			<point x="218" y="204" type="line"/>
+			<point x="218" y="268" type="line"/>
+			<point x="150" y="268" type="line"/>
+		</contour>
+		<contour>
+			<point x="46" y="332" type="line"/>
+			<point x="114" y="332" type="line"/>
+			<point x="114" y="396" type="line"/>
+			<point x="46" y="396" type="line"/>
+		</contour>
+		<contour>
+			<point x="74" y="500" type="line"/>
+			<point x="142" y="500" type="line"/>
+			<point x="142" y="564" type="line"/>
+			<point x="74" y="564" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="300" y="172"/>
+	<anchor name="hbCenter" x="300" y="432"/>
+	<anchor name="hbHolam" x="300" y="692"/>
+	<anchor name="hbShin" x="506" y="692"/>
+	<anchor name="hbSin" x="94" y="692"/>
+	<anchor name="hbRafe" x="300" y="788"/>
+	<anchor name="hbMeteg" x="300" y="172"/>
+	<anchor name="hbCantAbove" x="304" y="692"/>
+	<anchor name="hbCantAboveLeft" x="36" y="692"/>
+	<anchor name="hbCantAboveRight" x="544" y="692"/>
+	<anchor name="hbCantBelow" x="300" y="172"/>
+	<anchor name="hbCantBelowRight" x="300" y="172"/>
+	<anchor name="top" x="300" y="692"/>
+	<anchor name="bottom" x="300" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

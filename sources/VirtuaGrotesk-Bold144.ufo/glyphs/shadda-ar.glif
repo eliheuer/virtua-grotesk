@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="shadda-ar" format="2">
+	<unicode hex="0651"/>
+	<outline>
+		<contour>
+			<point x="-64" y="660" type="line"/>
+			<point x="288" y="660" type="line"/>
+			<point x="288" y="876" type="line"/>
+			<point x="216" y="876" type="line"/>
+			<point x="216" y="756" type="line"/>
+			<point x="152" y="756" type="line"/>
+			<point x="152" y="876" type="line"/>
+			<point x="72" y="876" type="line"/>
+			<point x="72" y="756" type="line"/>
+			<point x="8" y="756" type="line"/>
+			<point x="8" y="876" type="line"/>
+			<point x="-64" y="876" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="112" y="660"/>
+	<anchor name="bottomDots" x="112" y="660"/>
+	<anchor name="topDots" x="112" y="876"/>
+	<anchor name="top" x="112" y="924"/>
+	<anchor name="_top" x="112" y="548"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

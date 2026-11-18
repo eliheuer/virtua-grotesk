@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hah-ar" format="2">
+	<unicode hex="062D"/>
+	<advance width="840"/>
+	<outline>
+		<contour>
+			<point x="668" y="-352" type="line"/>
+			<point x="684" y="-336" type="line"/>
+			<point x="684" y="-156" type="line"/>
+			<point x="668" y="-140" type="line"/>
+			<point x="500" y="-140" type="line" smooth="yes"/>
+			<point x="328" y="-140"/>
+			<point x="246" y="-122"/>
+			<point x="246" y="-40" type="curve" smooth="yes"/>
+			<point x="246" y="104"/>
+			<point x="482" y="212"/>
+			<point x="700" y="212" type="curve"/>
+			<point x="792" y="212" type="line"/>
+			<point x="808" y="228" type="line"/>
+			<point x="808" y="384" type="line"/>
+			<point x="792" y="400" type="line"/>
+			<point x="700" y="400" type="line" smooth="yes"/>
+			<point x="494" y="400"/>
+			<point x="390" y="516"/>
+			<point x="262" y="516" type="curve" smooth="yes"/>
+			<point x="120" y="516"/>
+			<point x="32" y="452"/>
+			<point x="32" y="318" type="curve" smooth="yes"/>
+			<point x="32" y="302" type="line"/>
+			<point x="48" y="286" type="line"/>
+			<point x="226" y="286" type="line"/>
+			<point x="242" y="302" type="line"/>
+			<point x="242" y="334"/>
+			<point x="306" y="346"/>
+			<point x="344" y="346" type="curve" smooth="yes"/>
+			<point x="422" y="346"/>
+			<point x="526" y="298"/>
+			<point x="638" y="310" type="curve"/>
+			<point x="638" y="302" type="line"/>
+			<point x="262" y="258"/>
+			<point x="36" y="112"/>
+			<point x="36" y="-64" type="curve" smooth="yes"/>
+			<point x="36" y="-256"/>
+			<point x="238" y="-352"/>
+			<point x="500" y="-352" type="curve" smooth="yes"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="530" y="646"/>
+	<anchor name="topDots" x="532" y="628"/>
+	<anchor name="bottom" x="416" y="-368"/>
+	<anchor name="bottomDots" x="416" y="68"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

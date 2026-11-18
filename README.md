@@ -4,7 +4,7 @@ Virtua Grotesk is a typeface designed by Eli Heuer for Latin, Arabic and
 Hebrew. It is a grid-based neo-grotesk drawn on a dyadic self-labeling grid
 system: nested grids built on powers of two. The grid records drawing intent
 and limits the number of possible points. The variable font has a weight axis
-from Regular (400) to Bold (700), with Medium and SemiBold instances.
+from Thin (100) to Black (900) and an optical size axis from 14 to 144 pt.
 
 The description of the design, with its idea, its precedents and its rules,
 is in [CONTEXT.md](CONTEXT.md).
@@ -27,7 +27,7 @@ make setup
 make build
 ```
 
-The build writes `fonts/variable/VirtuaGrotesk[wght].ttf` and four static
+The build writes `fonts/variable/VirtuaGrotesk[opsz,wght].ttf` and nine static
 fonts in `fonts/ttf/`. Git ignores `fonts/`. The editable sources are the two
 UFO masters and the designspace in `sources/`.
 
@@ -67,7 +67,7 @@ what they can do with the glyph. The full policies are in
 | Pink | Composite that needs small edits. |
 
 Only green glyphs are references. The release target is every glyph green in
-both masters.
+every master.
 
 ## Tools
 

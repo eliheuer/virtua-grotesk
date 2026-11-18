@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="memdagesh-hb" format="2">
+	<unicode hex="FB3E"/>
+	<advance width="800"/>
+	<outline>
+		<component base="mem-hb"/>
+		<component base="dagesh-hb" xOffset="320" yOffset="2"/>
+	</outline>
+	<anchor name="hbBottom" x="390" y="0"/>
+	<anchor name="hbCenter" x="390" y="274"/>
+	<anchor name="hbHolam" x="48" y="564"/>
+	<anchor name="hbRafe" x="390" y="660"/>
+	<anchor name="hbMeteg" x="390" y="0"/>
+	<anchor name="hbCantAbove" x="390" y="564"/>
+	<anchor name="hbCantAboveLeft" x="48" y="564"/>
+	<anchor name="hbCantAboveRight" x="700" y="564"/>
+	<anchor name="hbCantBelow" x="390" y="0"/>
+	<anchor name="hbCantBelowRight" x="390" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

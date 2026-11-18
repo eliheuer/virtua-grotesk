@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="seven" format="2">
+	<unicode hex="0037"/>
+	<advance width="672"/>
+	<outline>
+		<contour>
+			<point x="176" y="0" type="line"/>
+			<point x="398" y="0" type="line"/>
+			<point x="414" y="16" type="line"/>
+			<point x="420" y="234"/>
+			<point x="480" y="474"/>
+			<point x="638" y="604" type="curve"/>
+			<point x="638" y="752" type="line"/>
+			<point x="622" y="768" type="line"/>
+			<point x="62" y="768" type="line"/>
+			<point x="46" y="752" type="line"/>
+			<point x="46" y="604" type="line"/>
+			<point x="62" y="588" type="line"/>
+			<point x="398" y="588" type="line"/>
+			<point x="398" y="580" type="line"/>
+			<point x="284" y="478"/>
+			<point x="160" y="264"/>
+			<point x="160" y="16" type="curve"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-seven.png</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

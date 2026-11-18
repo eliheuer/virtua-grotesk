@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniFB1F" format="2">
+	<unicode hex="FB1F"/>
+	<advance width="416"/>
+	<outline>
+		<component base="yodyod-hb"/>
+		<component base="patah-hb" xOffset="96"/>
+	</outline>
+	<anchor name="hbBottom" x="208" y="0"/>
+	<anchor name="hbRafe" x="208" y="736"/>
+	<anchor name="hbMeteg" x="8" y="0"/>
+	<anchor name="hbCantAbove" x="208" y="640"/>
+	<anchor name="hbCantAboveLeft" x="72" y="640"/>
+	<anchor name="hbCantAboveRight" x="344" y="640"/>
+	<anchor name="hbCantBelow" x="208" y="0"/>
+	<anchor name="hbCantBelowRight" x="208" y="0"/>
+	<anchor name="hbCantLeftVowel" x="88" y="0"/>
+	<anchor name="hbCantRightVowel" x="328" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

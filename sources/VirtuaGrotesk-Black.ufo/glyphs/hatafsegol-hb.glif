@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hatafsegol-hb" format="2">
+	<unicode hex="05B1"/>
+	<outline>
+		<contour>
+			<point x="30" y="-158" type="line"/>
+			<point x="68" y="-122" type="line"/>
+			<point x="68" y="-52" type="line"/>
+			<point x="30" y="-16" type="line"/>
+			<point x="-46" y="-16" type="line"/>
+			<point x="-84" y="-52" type="line"/>
+			<point x="-84" y="-122" type="line"/>
+			<point x="-46" y="-158" type="line"/>
+		</contour>
+		<contour>
+			<point x="118" y="-314" type="line"/>
+			<point x="156" y="-278" type="line"/>
+			<point x="156" y="-208" type="line"/>
+			<point x="118" y="-172" type="line"/>
+			<point x="42" y="-172" type="line"/>
+			<point x="4" y="-208" type="line"/>
+			<point x="4" y="-278" type="line"/>
+			<point x="42" y="-314" type="line"/>
+		</contour>
+		<contour>
+			<point x="206" y="-158" type="line"/>
+			<point x="244" y="-122" type="line"/>
+			<point x="244" y="-52" type="line"/>
+			<point x="206" y="-16" type="line"/>
+			<point x="130" y="-16" type="line"/>
+			<point x="92" y="-52" type="line"/>
+			<point x="92" y="-122" type="line"/>
+			<point x="130" y="-158" type="line"/>
+		</contour>
+		<contour>
+			<point x="366" y="-314" type="line"/>
+			<point x="404" y="-278" type="line"/>
+			<point x="404" y="-208" type="line"/>
+			<point x="366" y="-172" type="line"/>
+			<point x="290" y="-172" type="line"/>
+			<point x="252" y="-208" type="line"/>
+			<point x="252" y="-278" type="line"/>
+			<point x="290" y="-314" type="line"/>
+		</contour>
+		<contour>
+			<point x="366" y="-158" type="line"/>
+			<point x="404" y="-122" type="line"/>
+			<point x="404" y="-52" type="line"/>
+			<point x="366" y="-16" type="line"/>
+			<point x="290" y="-16" type="line"/>
+			<point x="252" y="-52" type="line"/>
+			<point x="252" y="-122" type="line"/>
+			<point x="290" y="-158" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbBottom" x="156" y="0"/>
+	<anchor name="hbMeteg" x="-160" y="0"/>
+	<anchor name="hbCantLeftVowel" x="-78" y="0"/>
+	<anchor name="hbCantRightVowel" x="392" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

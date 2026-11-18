@@ -137,8 +137,10 @@ a finished glyph. Eli Heuer draws, corrects and approves every glyph.
 ### Scripts and weights
 
 Latin, Arabic and Hebrew use the same grid, the same chamfer and the same
-stroke logic. The variable font has a weight axis from Regular (400) to
-Bold (700). More weights and an italic are planned.
+stroke logic. The upright variable font has weight masters at Thin (100), Regular (400),
+Bold (700) and Black (900). Each weight has masters at 14 and 144 pt.
+The 144 pt masters start with the drawing and spacing of the 14 pt masters.
+An italic is planned.
 
 ### Sources
 
@@ -364,19 +366,17 @@ that the outer contour of every Arabic or Hebrew letter is fixed. No single
 handle ratio serves every transfer.
 Seen in: Bold zayin-hb, Bold hamzaabove-ar (ce3a7669).
 
-R44. More weights are drafted from two masters by `fgtools draft-weights --build`, one
-table for each weight. `wght` is the position on the weight axis, and
-`between` names the two masters. `vertical_stem` and `horizontal_stroke`
-give the stem and the bar of H in each master and the target of the weight.
-The drafts go to `output/weights/`. They become masters of the designspace only
-after Eli approves Regular and Bold.
+R44. Thin and Black use Regular and Bold as donors. Each table records
+the weight coordinate, the two donors and the target vertical stem and
+horizontal bar of H. The target for Thin follows the supplied light
+reference. Black is heavier than the supplied dark reference.
 
 ```toml
 [weights.Thin]
 wght = 100
 between = ["Regular", "Bold"]
-vertical_stem = { Regular = 100, Bold = 192, target = 28 }
-horizontal_stroke = { Regular = 88, Bold = 168, target = 26 }
+vertical_stem = { Regular = 100, Bold = 192, target = 62 }
+horizontal_stroke = { Regular = 88, Bold = 168, target = 52 }
 
 [weights.Black]
 wght = 900
@@ -387,7 +387,7 @@ horizontal_stroke = { Regular = 88, Bold = 168, target = 204 }
 
 ## Structure of the sources
 
-R27. Both masters have the same contours, points, point types, point order
+R27. All masters have the same contours, points, point types, point order
 and components. A point added in one master is added in the other. Do not
 reorder points or contours: the order controls interpolation.
 
@@ -404,7 +404,7 @@ axis. Its foot turns outward in Regular and draws back toward the stem in
 Bold. Accented forms use the same base. A glyph that needs a change in
 contour structure can use an unencoded alternate and a designspace rule.
 
-R54. Both masters have the same kerning groups, and a glyph is in at most one
+R54. All masters have the same kerning groups, and a glyph is in at most one
 group of each side. A pair that is added to one master is added to the other;
 its value can be 0. Kerning values are multiples of 8.
 

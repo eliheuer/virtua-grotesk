@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arabicFootnoteMarker" format="2">
+	<unicode hex="0602"/>
+	<outline>
+		<contour>
+			<point x="-242" y="620" type="line"/>
+			<point x="-66" y="452" type="line"/>
+			<point x="24" y="508" type="line"/>
+			<point x="114" y="452" type="line"/>
+			<point x="242" y="572" type="line"/>
+			<point x="66" y="740" type="line"/>
+			<point x="-24" y="684" type="line"/>
+			<point x="-114" y="740" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

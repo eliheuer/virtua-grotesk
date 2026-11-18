@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="one" format="2">
+	<unicode hex="0031"/>
+	<advance width="520"/>
+	<outline>
+		<contour>
+			<point x="212" y="0" type="line"/>
+			<point x="416" y="0" type="line"/>
+			<point x="432" y="16" type="line"/>
+			<point x="432" y="752" type="line"/>
+			<point x="416" y="768" type="line"/>
+			<point x="256" y="768" type="line"/>
+			<point x="240" y="752" type="line"/>
+			<point x="220" y="656"/>
+			<point x="126" y="620"/>
+			<point x="56" y="620" type="curve"/>
+			<point x="40" y="604" type="line"/>
+			<point x="40" y="484" type="line"/>
+			<point x="56" y="468" type="line"/>
+			<point x="188" y="468" type="line"/>
+			<point x="196" y="460" type="line"/>
+			<point x="196" y="16" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-one.png</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,8 +1,8 @@
 # Agent guidance
 
-Virtua Grotesk is an OFL variable font (wght 400 to 700) for Latin, Arabic
+Virtua Grotesk is an OFL variable font (wght 100 to 900, opsz 14 to 144) for Latin, Arabic
 and Hebrew, intended for Google Fonts. The release target is every glyph
-green in both masters. Eli draws and approves. Agents draft named glyphs,
+green in every master. Eli draws and approves. Agents draft named glyphs,
 build, proof, measure and report.
 
 ## The files
@@ -13,7 +13,7 @@ build, proof, measure and report.
 | [CONTEXT.md](CONTEXT.md) | The design: the description of the font, the idea and the numbered rules, with the values that the tools check in `toml` blocks. Runebender gives it to its agents. |
 | [STATUS.md](STATUS.md) | Progress, written by `make status` from the mark colors. |
 | `Makefile` | The daily commands. `make help` lists them. |
-| `sources/` | The designspace, the Regular and Bold UFOs, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). Two Python files hold what only this font needs: `sources/fix_gf_metadata.py` (two metadata fixes that `make build` applies) and `sources/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
+| `sources/` | The designspace, the eight upright UFO masters, `sources/config.yaml` (the gftools builder recipe), `sources/held-out-glyphs.toml` (cases of the drafting evaluation) and `sources/proof-samples.toml` (proof texts). Two Python files hold what only this font needs: `sources/fix_gf_metadata.py` (the metadata fixes that `make build` applies) and `sources/fontspector_checks.py` (the Fontspector checks of this font, which `make test` runs with the Font.Garden profile). |
 | [documentation/google-fonts.md](documentation/google-fonts.md) | The release: facts, QA, package and the Add Font issue. |
 | `documentation/media/` | The specimens and the marketing media of this font. `brand.toml` has the colors and the texts. `formats.toml` (optional) gives a format a caption, an alternative text or other canvases. The layouts are the default formats of fgtools, on the lattice of the typeface; `fgtools media --copy <format>` copies one into `images/`, `carousels/` or `videos/` here, to change it for this font. `make media` renders into `output/media/`, and `make specimen` writes the print specimen to `output/specimen/`. |
 | `.agents/tasks/` | Contracts for unattended runs: glyph drafts and accented letters. |

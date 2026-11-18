@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="V" format="2">
+	<unicode hex="0056"/>
+	<advance width="704"/>
+	<outline>
+		<contour>
+			<point x="282" y="16" type="line"/>
+			<point x="298" y="0" type="line"/>
+			<point x="406" y="0" type="line"/>
+			<point x="422" y="16" type="line"/>
+			<point x="680" y="704" type="line"/>
+			<point x="680" y="752" type="line"/>
+			<point x="664" y="768" type="line"/>
+			<point x="612" y="768" type="line"/>
+			<point x="596" y="752" type="line"/>
+			<point x="356" y="112" type="line"/>
+			<point x="348" y="112" type="line"/>
+			<point x="108" y="752" type="line"/>
+			<point x="92" y="768" type="line"/>
+			<point x="40" y="768" type="line"/>
+			<point x="24" y="752" type="line"/>
+			<point x="24" y="704" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="352" y="0"/>
+	<anchor name="top" x="352" y="768"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>green</string>
+			<key>public.markColor</key>
+			<string>0,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

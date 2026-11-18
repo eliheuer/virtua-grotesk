@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ghain-ar.fina" format="2">
+	<advance width="832"/>
+	<outline>
+		<component base="ain-ar.fina"/>
+		<component base="dotabove-ar" xOffset="398" yOffset="-46"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>orange</string>
+			<key>public.markColor</key>
+			<string>1,0.5,0,1</string>
+		</dict>
+	</lib>
+</glyph>

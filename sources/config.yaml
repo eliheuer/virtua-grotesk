@@ -11,18 +11,47 @@ decomposeTransformedComponents: false
 # Keep static layout and outline interpolation consistent with the variable font.
 instances:
   - familyName: "Virtua Grotesk"
+    styleName: "Thin"
+    coordinates:
+      wght: 100
+      opsz: 14
+  - familyName: "Virtua Grotesk"
+    styleName: "ExtraLight"
+    coordinates:
+      wght: 200
+      opsz: 14
+  - familyName: "Virtua Grotesk"
+    styleName: "Light"
+    coordinates:
+      wght: 300
+      opsz: 14
+  - familyName: "Virtua Grotesk"
     styleName: "Regular"
     coordinates:
       wght: 400
+      opsz: 14
   - familyName: "Virtua Grotesk"
     styleName: "Medium"
     coordinates:
       wght: 500
+      opsz: 14
   - familyName: "Virtua Grotesk"
     styleName: "SemiBold"
     coordinates:
       wght: 600
+      opsz: 14
   - familyName: "Virtua Grotesk"
     styleName: "Bold"
     coordinates:
       wght: 700
+      opsz: 14
+  - familyName: "Virtua Grotesk"
+    styleName: "ExtraBold"
+    coordinates:
+      wght: 800
+      opsz: 14
+  - familyName: "Virtua Grotesk"
+    styleName: "Black"
+    coordinates:
+      wght: 900
+      opsz: 14

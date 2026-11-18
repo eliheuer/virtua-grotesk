@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fehDotless-ar.medi" format="2">
+	<advance width="568"/>
+	<outline>
+		<contour>
+			<point x="568" y="0" type="line"/>
+			<point x="568" y="176" type="line"/>
+			<point x="384" y="176" type="line"/>
+			<point x="376" y="184" type="line"/>
+			<point x="408" y="184"/>
+			<point x="504" y="224"/>
+			<point x="504" y="352" type="curve" smooth="yes"/>
+			<point x="504" y="480"/>
+			<point x="400" y="584"/>
+			<point x="272" y="584" type="curve" smooth="yes"/>
+			<point x="144" y="584"/>
+			<point x="40" y="480"/>
+			<point x="40" y="352" type="curve" smooth="yes"/>
+			<point x="40" y="224"/>
+			<point x="136" y="184"/>
+			<point x="168" y="184" type="curve"/>
+			<point x="160" y="176" type="line"/>
+			<point x="0" y="176" type="line"/>
+			<point x="-16" y="160" type="line"/>
+			<point x="-16" y="16" type="line"/>
+			<point x="0" y="0" type="line"/>
+		</contour>
+		<contour>
+			<point x="272" y="248" type="curve" smooth="yes"/>
+			<point x="232" y="248"/>
+			<point x="200" y="312"/>
+			<point x="200" y="352" type="curve" smooth="yes"/>
+			<point x="200" y="392"/>
+			<point x="232" y="424"/>
+			<point x="272" y="424" type="curve" smooth="yes"/>
+			<point x="312" y="424"/>
+			<point x="344" y="392"/>
+			<point x="344" y="352" type="curve" smooth="yes"/>
+			<point x="344" y="312"/>
+			<point x="312" y="248"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="306" y="0"/>
+	<anchor name="bottomDots" x="306" y="24"/>
+	<anchor name="top" x="304" y="576"/>
+	<anchor name="topDots" x="304" y="432"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

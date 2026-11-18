@@ -2,14 +2,15 @@
 """Fix the metadata of the built fonts that the sources cannot set.
 
 The sources set everything else: fsType, the meta table, the WWS bit of the
-variable font and the glyphs that are not exported. These two fixes have
-no source or gftools builder setting:
+variable font and the glyphs that are not exported. Apply these fixes after the build:
 
 - The variable font gets an identity avar table. varLib does not write an
   avar table for an identity axis map. Fontspector: mandatory_avar_table.
-- The static fonts get fsSelection bit 8 (WWS). The family varies only by
-  weight and has WWS names. gftools clears the bit when it makes the static
+- The static fonts get fsSelection bit 8 (WWS). The static styles at 14 pt vary only by
+  weight and have WWS names. gftools clears the bit when it makes the static
   fonts. Fontspector: opentype/fsselection_wws.
+
+- Keep optical size labels visible in STAT.
 
     fix_gf_metadata.py FONT.ttf ...
 """
@@ -29,6 +30,12 @@ def add_identity_avar(font):
 
 def fix(path):
     font = TTFont(path)
+    # Keep point sizes visible in style names, including the default 14pt.
+    stat = font['STAT'].table
+    axes = stat.DesignAxisRecord.Axis
+    for value in stat.AxisValueArray.AxisValue:
+        if value.Format in (1, 2, 3) and axes[value.AxisIndex].AxisTag == 'opsz':
+            value.Flags &= ~0x2
     if 'fvar' in font:
         if 'avar' not in font:
             add_identity_avar(font)
