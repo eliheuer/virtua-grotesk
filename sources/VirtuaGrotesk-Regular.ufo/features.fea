@@ -112,6 +112,21 @@ lookup LATIN_OGONEK_DECOMPOSE {
 	sub etilde by e tildecomb;
 } LATIN_OGONEK_DECOMPOSE;
 
+# Restore canonical carriers before combining hamza with vowel marks.
+lookup ccmp_arab_above_carriers {
+	lookupflag UseMarkFilteringSet [madda-ar hamzaabove-ar smallHighTah-ar smallHighZain-ar invertedDamma-ar noonGhunna-ar smallHighThreeDots-ar];
+	sub alef-ar madda-ar by alefMadda-ar;
+	sub alef-ar hamzaabove-ar by alefHamzaabove-ar;
+	sub waw-ar hamzaabove-ar by wawHamzaabove-ar;
+	sub hehGoal-ar hamzaabove-ar by hehGoalHamzaabove-ar;
+	sub yeh-ar hamzaabove-ar by yehHamzaabove-ar;
+} ccmp_arab_above_carriers;
+
+lookup ccmp_arab_below_carrier {
+	lookupflag UseMarkFilteringSet [hamzabelow-ar alefbelow-ar];
+	sub alef-ar hamzabelow-ar by alefHamzabelow-ar;
+} ccmp_arab_below_carrier;
+
 feature ccmp {
 # automatic
 	lookup ccmp_ogonek_normalize {
@@ -316,6 +331,8 @@ lookup ccmp_latin_tilde;
 lookup ccmp_latin_extended;
 lookup ccmp_hcaron;
 script arab;
+lookup ccmp_arab_above_carriers;
+lookup ccmp_arab_below_carrier;
 lookup ccmp_arab_2;
 } ccmp;
 
