@@ -957,5 +957,9 @@ feature kern {
 		pos [alef-ar alef-ar.fina alefMadda-ar alefMadda-ar.fina alefHamzaabove-ar alefHamzaabove-ar.fina alefHamzabelow-ar alefHamzabelow-ar.fina alefWasla-ar alefWasla-ar.fina] [teh-ar.init theh-ar.init]' <0 0 96 0>;
 		pos wawHamzaabove-ar [teh-ar.init theh-ar.init]' <0 0 (wght=400:0 wght=700:144) 0>;
 		pos wawHamzaabove-ar.fina [teh-ar.init theh-ar.init]' <0 0 (wght=400:0 wght=700:64) 0>;
+		pos [waw-ar wawHamzaabove-ar] yeh-ar.init' <0 0 (wght=400:64 wght=700:0) 0>;
+		pos [waw-ar.fina wawHamzaabove-ar.fina] yeh-ar.init' <0 0 (wght=400:32 wght=700:0) 0>;
+		pos alefHamzabelow-ar.fina yeh-ar.init.ctr' <0 0 (wght=400:48 wght=700:0) 0>;
+		pos alefMadda-ar gaf-ar.init' <0 0 (wght=400:0 wght=700:24) 0>;
 	} ARABIC_CLEAR_INITIAL_DOTS;
 } kern;
