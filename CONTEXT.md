@@ -657,9 +657,9 @@ geist = "A geometric Latin sans for interfaces, with weights 100 to 900 and an i
 
 ### Known QA debt
 
-Known development debt, not release exceptions. `fgtools qa` leaves these
-checks out, and `fgtools qa --full` runs them. Do not add a check to hide a
-new failure.
+Known faults of the fonts, not release exceptions. `make test` leaves these
+checks out, so that a FAIL there is a new fault. The fonts are ready for
+release when this list is empty. Do not add a check to hide a new fault.
 
 ```toml
 [qa.exclude]

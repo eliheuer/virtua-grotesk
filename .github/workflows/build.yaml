@@ -31,9 +31,6 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y libfontconfig1-dev pkg-config
       - run: make setup
       - run: make test
-      - name: Full QA profile (report only)
-        continue-on-error: true
-        run: make qa-full
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:

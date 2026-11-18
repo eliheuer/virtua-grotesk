@@ -1,148 +1,210 @@
-# The daily commands of this project. Run `make` or `make help` for the list.
+# The core commands for this project. Run `make` or `make help` for the list.
 #
-# Each target runs one command of fgtools (https://github.com/fontgarden/fgtools),
+# Most targets run one command for fgtools (https://github.com/fontgarden/fgtools),
 # the shared tools of Font.Garden projects. `.venv/bin/fgtools --help` lists
 # every command, and `.venv/bin/fgtools <command> --help` lists its options.
 # A target has no logic of its own: to change what a target does, change fgtools.
 #
-# A line `##@ Title` starts a section of `make help`, and the text after `##`
-# on the line of a target is its description there.
+# Each target has a comment above it: the first line is the command, and the
+# lines after it say what it does. A line `##@ Title` starts a section of
+# `make help`, and the text after `##` on the line of a target is its
+# description there.
 
 PYTHON = .venv/bin/python
 FGTOOLS = .venv/bin/fgtools
-# The revision that diff and check-changes compare with: make diff BASE=<revision>
+# The revision that diff, check-changes and render compare with:
+# make diff BASE=<revision>
 BASE = main
+# A target that says "Build, then" builds the fonts first. NO_BUILD=1 skips
+# the build and uses the fonts that are in fonts/: make test NO_BUILD=1
+BUILD = $(if $(NO_BUILD),,build)
 
-help:
-	@awk -F ':.*## ' '/^##@ / {printf "\n%s\n", substr($$0, 5)} /^[a-z-]+:.*## / {printf "  make %-16s %s\n", $$1, $$2}' Makefile
+##@ Help
+
+# make help
+# Prints each target that has a `## description`, under the `##@` section
+# titles, then the note on NO_BUILD. It is the first target, so `make` alone
+# runs it.
+help: ## Print this list
+	@awk -F ':.*## ' '/^##@ / {printf "\n%s\n", substr($$0, 5)} /^[a-z-]+:.*## / {printf "  make %-18s %s\n", $$1, $$2}' Makefile
+	@echo
+	@echo 'A target that says "Build, then" skips the build with NO_BUILD=1, for example: make test NO_BUILD=1'
 
 ##@ Setup
 
-# Installs the pinned versions: fgtools from requirements.txt, the fontc and
-# Fontspector binaries, and DesignBot, which Cargo compiles from the commit
-# that fgtools pins. The first compile takes about two minutes, and it needs
-# the `cargo` command (https://rustup.rs). Setup names ffmpeg and Runebender
-# if they are missing. Run it again after a change of requirements.txt.
-setup: ## Create .venv and install the requirements and the pinned tools
+# make setup
+# Installs every tool of the project, Python and Rust, at its pinned version
+# into .venv/. Nothing is installed outside the project, so each project can
+# use other versions.
+#   Python: fgtools and gftools, from requirements.txt
+#   Rust:   fontc and Fontspector, downloaded release binaries in .venv/bin/
+#           DesignBot, which Cargo compiles from the commit that fgtools pins
+#           into .venv/bin/. The first compile takes about two minutes and
+#           needs the `cargo` command (https://rustup.rs).
+# Setup names ffmpeg and Runebender if they are missing; they are installed
+# once for the computer. Run it again after a change of requirements.txt.
+setup: ## Install the pinned Python and Rust tools of the project into .venv/
 	python3 -m venv .venv
 	$(PYTHON) -m pip install -r requirements.txt
 	$(FGTOOLS) install-tools
 
-# gftools packager --their-venv runs `make venv`.
+# make venv
+# Another name for `make setup`. The Google Fonts packager runs `make venv`
+# when it builds the fonts with the environment of this project (--their-venv).
 venv: setup
 
 ##@ Build and test
 
-# The recipe of the build is sources/config.yaml.
+# make build
+# Builds the fonts with the recipe in sources/config.yaml. Then
 # sources/fix_gf_metadata.py applies three metadata fixes that only this font needs.
-build: ## Build the variable and static TTFs into fonts/
+build: ## Build the variable font and the static fonts into fonts/ with fontc
 	$(FGTOOLS) build
 	$(PYTHON) sources/fix_gf_metadata.py fonts/variable/*.ttf fonts/ttf/*.ttf
 
-test: build ## Build, then check the repository and run the Fontspector checks
+# make test
+# Builds, then runs every check. CI runs it on each push. Run it before a commit.
+#   1. The repository: each file is in the folder where Font.Garden projects
+#      keep it, and each file and `make` target that a document names exists.
+#   2. The fonts, with Fontspector: the Google Fonts checks, the Font.Garden
+#      checks and the checks of this font in sources/fontspector_checks.py.
+# It skips only the known faults in [qa.exclude] of CONTEXT.md, each with
+# its reason, so that a FAIL is a new fault. The font is ready for release
+# when that list is empty. Some Google Fonts checks need the internet.
+# The reports are in output/qa/.
+test: $(BUILD) ## Build, then run every check, except the known faults in CONTEXT.md
 	$(FGTOOLS) check-repository
 	$(FGTOOLS) qa
 
-qa: build ## Build, then run the Fontspector checks only
-	$(FGTOOLS) qa
+# make test-google-fonts
+# The Google Fonts checks of `make test` only.
+test-google-fonts: $(BUILD) ## Build, then run only the Google Fonts checks
+	$(FGTOOLS) qa --checks google-fonts
 
-# Every check of the Google Fonts profile, with the checks that need the
-# network. CI runs it and reports the result, but it does not fail the run.
-qa-full: build ## Build, then run every Fontspector check, with network checks
-	$(FGTOOLS) qa --full
+# make test-fontgarden
+# The Font.Garden checks and the checks of this font, of `make test` only.
+test-fontgarden: $(BUILD) ## Build, then run only the Font.Garden checks and the checks of this font
+	$(FGTOOLS) qa --checks fontgarden
 
 ##@ Design work
 
-# The mark color of a glyph is its state. STATUS.md counts the colors.
-status: ## Rewrite STATUS.md from the mark colors
+# make status
+# Counts the mark colors of the glyphs, which are their states, and writes
+# the counts to STATUS.md.
+status: ## Count the glyphs of each mark color into STATUS.md
 	$(FGTOOLS) status
 
-queue: ## Rank the glyphs that most composites wait on
+# make queue
+# Lists the glyphs that are not green, with the glyphs that most composites
+# wait on first.
+queue: ## List the glyphs that are not green, the ones that most composites use first
 	$(FGTOOLS) queue
 
-# The rules and the values are in CONTEXT.md. Without GLYPHS, every glyph that
-# is not green is checked.
-check-design: ## Check glyphs against CONTEXT.md: make check-design GLYPHS="n a"
+# make check-design GLYPHS="n a"
+# Checks glyphs against the rules and the values in CONTEXT.md. Without
+# GLYPHS, it checks every glyph that is not green.
+check-design: ## Check glyphs against the rules of CONTEXT.md: make check-design GLYPHS="n a"
 	$(FGTOOLS) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
 
-# Run it after an agent edits glyphs. It fails when a green glyph changed, or
-# when the contours of a glyph changed and it is not purple.
-check-changes: ## Check source changes since BASE: green unchanged, drafts purple
+# make check-changes
+# Compares the sources with BASE. Run it after an agent edits glyphs. It fails
+# when a green glyph changed, or when the contours of a glyph changed and the
+# glyph is not purple. GLYPHS="n a" limits it to some glyphs.
+check-changes: ## Check the source changes since main, or BASE=...: green glyphs unchanged, changed glyphs purple
 	$(FGTOOLS) check-changes --base "$(BASE)" $(if $(GLYPHS),--glyphs "$(GLYPHS)",)
 
-# A large picture of glyphs for review: the change since BASE, the filled
-# glyph, its points, the reference fonts and the glyph in a block of text.
-render: ## Draw glyphs large for review: make render GLYPHS="a n"
+# make render GLYPHS="a n"
+# Draws glyphs large in one picture for review: the change since BASE, the
+# filled glyph, its points, the reference fonts and the glyph in a block of text.
+render: ## Draw glyphs large for review into output/render/: make render GLYPHS="a n"
 	@test -n "$(GLYPHS)" || { echo 'Name the glyphs: make render GLYPHS="a n"' >&2; exit 2; }
 	$(FGTOOLS) render "$(GLYPHS)" --base "$(BASE)"
 
-diff: ## Compare builds of BASE and the working tree, reports in output/diff/
+# make diff
+# Builds BASE and the working tree, and compares the fonts with diffenator3.
+# The reports are in output/diff/.
+diff: ## Build main, or BASE=..., and the working tree, and compare them with diffenator3 into output/diff/
 	$(FGTOOLS) diff --base "$(BASE)"
 
-reference-fonts: ## Get the reference fonts that CONTEXT.md lists
+# make reference-fonts
+# Downloads the reference fonts that CONTEXT.md lists into reference-fonts/,
+# which Git ignores. Runebender and `make proof-web` show them beside this font.
+reference-fonts: ## Download the reference fonts that CONTEXT.md lists into reference-fonts/
 	$(FGTOOLS) fetch-reference-fonts --project
 
+# make runebender
+# Opens the designspace in the Runebender font editor.
 runebender: ## Open the designspace in Runebender
 	runebender sources/VirtuaGrotesk.designspace &
 
 ##@ Proofs, specimen and media
 
-# These three targets use one layout system: the lattice of the typeface,
-# rules R61 to R67 of CONTEXT.md. A checker verifies each layout, and DesignBot
-# draws it. `make setup` installs DesignBot.
-# A video needs `ffmpeg`.
-# The output is in output/, which Git ignores. CI runs the three targets on
-# each push to main and publishes the result on GitHub Pages.
+# The proof, the specimen and the media use one layout system: the lattice of
+# the typeface, rules R61 to R67 of CONTEXT.md. A checker verifies each
+# layout, and DesignBot draws it. A video also needs `ffmpeg`. The output is
+# in output/, which Git ignores. The last line of each target is `Open:` and
+# the file to look at.
 
-# Each of the three targets can make a part only:
-#   make proof PAGE="spacing kerning"       some pages of the proof
-#   make specimen PAGE=words                some pages of the specimen
-#   make media FORMAT=videos                one kind: images, carousels or videos
-#   make media FORMAT="words glyph"         some formats
-#   make media FORMAT=weight-axis CANVAS=landscape    one format on one canvas
-#   make media LATTICE=1                    draw the lattice on each picture
-# `make formats` lists the names. The format `glyph` is the technical image.
-# The last line of each target is `Open:` and the file to look at.
-
-formats: ## List the formats, the canvases and the pages of the proof
+# make formats
+# Lists the names that the targets below take: the formats of the media, the
+# canvases, and the pages of the proof and of the specimen.
+formats: ## List the names that FORMAT, CANVAS and PAGE take
 	$(FGTOOLS) media --list
 
-# For the designer, to find faults: the character set, the sizes, reading
-# text, spacing, kerning, diacritics, the weight axis, and the tables of the
-# Arabic script. The short lines of sources/proof-samples.toml are in it.
-proof: build ## Build, then write the print proof to output/proof/proof.pdf, or its pages PAGE=...
+# make proof
+# Builds, then writes the print proof to output/proof/proof.pdf. It is for the
+# designer, to find faults: the character set, the sizes, reading text,
+# spacing, kerning, diacritics, the weight axis and the tables of the Arabic
+# script. The short lines of sources/proof-samples.toml are in it.
+# Some pages only: make proof PAGE="spacing kerning"
+proof: $(BUILD) ## Build, then write the print proof to output/proof/proof.pdf, or its pages PAGE=...
 	$(FGTOOLS) media --proof $(PAGE)
 
-# For a reader: the formats of the marketing media on A4 pages.
-specimen: build ## Build, then write the print specimen to output/specimen/, or its pages PAGE=...
+# make specimen
+# Builds, then writes the print specimen to output/specimen/. It is for a
+# reader: the formats of the marketing media on A4 pages.
+# Some pages only: make specimen PAGE=words
+specimen: $(BUILD) ## Build, then write the print specimen to output/specimen/, or its pages PAGE=...
 	$(FGTOOLS) media --specimen $(PAGE)
 
-# The images, carousels and videos for the social platforms. The brand of this
-# font is documentation/media/brand.toml. One format: .venv/bin/fgtools media words
-# The review page is output/media/index.html. With LATTICE=1, each picture is
-# also written with the lattice and the text area drawn on it, with the
-# suffix _lattice in its name.
-media: build ## Build, then render the media into output/media/, or only FORMAT=... CANVAS=...
+# make media
+# Builds, then renders the images, carousels and videos for the social
+# platforms into output/media/. The review page is output/media/index.html.
+# The brand of this font is documentation/media/brand.toml.
+# A part only:
+#   make media FORMAT=videos                one kind: images, carousels or videos
+#   make media FORMAT="words glyph"         some formats; `glyph` is the technical image
+#   make media FORMAT=weight-axis CANVAS=landscape    one format on one canvas
+#   make media LATTICE=1                    also each picture with the lattice drawn on it
+media: $(BUILD) ## Build, then render the images, carousels and videos into output/media/, or FORMAT=... CANVAS=...
 	$(FGTOOLS) media $(FORMAT) $(if $(CANVAS),--canvas $(CANVAS),) $(if $(LATTICE),--lattice,)
 
-# A default format of fgtools reaches every font. To change a format for this
-# font only, copy it into documentation/media/ and edit the copy there.
-copy-format: ## Copy a default format into this project to change it: make copy-format FORMAT=words
+# make copy-format FORMAT=words
+# Copies a default format of fgtools into documentation/media/, to change it
+# for this font only. A default format that is not copied gets each
+# improvement of fgtools.
+copy-format: ## Copy a default format into documentation/media/ to change it: make copy-format FORMAT=words
 	@test -n "$(FORMAT)" || { echo 'Name the format: make copy-format FORMAT=words' >&2; exit 2; }
 	$(FGTOOLS) media --copy $(FORMAT)
 
-# Everything that CI publishes: the proof, the specimen and the media,
-# collected into output/site/ with an index page. CI runs this target.
-site: proof specimen media ## Build and render everything, then collect it into output/site/
+# make site
+# Builds, then makes the proof, the specimen and the media, and collects them
+# into output/site/ with an index page. CI runs it on each push to main and
+# publishes output/site/ on GitHub Pages.
+site: proof specimen media ## Build, then make the proof, the specimen and the media, and collect them into output/site/
 	$(FGTOOLS) site
 
-# The interactive proof: this font beside the fonts of reference-fonts/.
-proof-web: build ## Build, then compare with reference-fonts/ in a browser
+# make proof-web
+# Builds, then serves this font beside the fonts of reference-fonts/ in a
+# browser, at one size and weight.
+proof-web: $(BUILD) ## Build, then serve the font beside the fonts of reference-fonts/ in a browser
 	$(FGTOOLS) proof-web --current
 
 ##@ Housekeeping
 
+# make clean
+# Removes fonts/ and output/. `make build` makes them again.
 clean: ## Remove fonts/ and output/
 	rm -rf fonts output
 
-.PHONY: help setup venv build test qa qa-full status queue check-design check-changes render diff reference-fonts runebender formats proof specimen media copy-format site proof-web clean
+.PHONY: help setup venv build test test-google-fonts test-fontgarden status queue check-design check-changes render diff reference-fonts runebender formats proof specimen media copy-format site proof-web clean
