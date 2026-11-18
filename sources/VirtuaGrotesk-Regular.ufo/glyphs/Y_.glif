@@ -8,20 +8,20 @@
 			<point x="270" y="0" type="line"/>
 			<point x="338" y="0" type="line"/>
 			<point x="354" y="16" type="line"/>
-			<point x="354" y="312" type="line"/>
-			<point x="584" y="704" type="line"/>
-			<point x="584" y="752" type="line"/>
-			<point x="568" y="768" type="line"/>
-			<point x="524" y="768" type="line"/>
-			<point x="508" y="752" type="line"/>
-			<point x="312" y="394" type="line"/>
-			<point x="304" y="394" type="line"/>
-			<point x="100" y="752" type="line"/>
-			<point x="84" y="768" type="line"/>
-			<point x="40" y="768" type="line"/>
-			<point x="24" y="752" type="line"/>
-			<point x="24" y="704" type="line"/>
-			<point x="254" y="312" type="line"/>
+			<point x="354" y="324" type="line"/>
+			<point x="582" y="704" type="line"/>
+			<point x="582" y="752" type="line"/>
+			<point x="566" y="768" type="line"/>
+			<point x="516" y="768" type="line"/>
+			<point x="500" y="752" type="line"/>
+			<point x="308" y="432" type="line"/>
+			<point x="300" y="432" type="line"/>
+			<point x="108" y="752" type="line"/>
+			<point x="92" y="768" type="line"/>
+			<point x="42" y="768" type="line"/>
+			<point x="26" y="752" type="line"/>
+			<point x="26" y="704" type="line"/>
+			<point x="254" y="324" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="top" x="256" y="768"/>
@@ -29,9 +29,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>green</string>
+			<string>yellow</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>1,1,0,1</string>
 		</dict>
 	</lib>
 </glyph>

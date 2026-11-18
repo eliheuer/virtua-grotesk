@@ -4,30 +4,30 @@
 	<advance width="620"/>
 	<outline>
 		<contour>
-			<point x="32" y="16" type="line"/>
-			<point x="48" y="0" type="line"/>
-			<point x="108" y="0" type="line"/>
-			<point x="304" y="312" type="line"/>
-			<point x="312" y="312" type="line"/>
-			<point x="508" y="0" type="line"/>
-			<point x="572" y="0" type="line"/>
-			<point x="588" y="16" type="line"/>
-			<point x="588" y="64" type="line"/>
-			<point x="372" y="388" type="line"/>
-			<point x="372" y="396" type="line"/>
-			<point x="580" y="704" type="line"/>
+			<point x="40" y="16" type="line"/>
+			<point x="56" y="0" type="line"/>
+			<point x="106" y="0" type="line"/>
+			<point x="306" y="300" type="line"/>
+			<point x="314" y="300" type="line"/>
+			<point x="514" y="0" type="line"/>
+			<point x="564" y="0" type="line"/>
+			<point x="580" y="16" type="line"/>
+			<point x="580" y="66" type="line"/>
+			<point x="372" y="378" type="line"/>
+			<point x="372" y="390" type="line"/>
+			<point x="580" y="702" type="line"/>
 			<point x="580" y="752" type="line"/>
 			<point x="564" y="768" type="line"/>
-			<point x="508" y="768" type="line"/>
-			<point x="320" y="472" type="line"/>
-			<point x="312" y="472" type="line"/>
-			<point x="128" y="768" type="line"/>
-			<point x="64" y="768" type="line"/>
-			<point x="48" y="752" type="line"/>
-			<point x="48" y="704" type="line"/>
-			<point x="252" y="396" type="line"/>
-			<point x="252" y="388" type="line"/>
-			<point x="32" y="64" type="line"/>
+			<point x="514" y="768" type="line"/>
+			<point x="314" y="468" type="line"/>
+			<point x="306" y="468" type="line"/>
+			<point x="106" y="768" type="line"/>
+			<point x="56" y="768" type="line"/>
+			<point x="40" y="752" type="line"/>
+			<point x="40" y="702" type="line"/>
+			<point x="248" y="390" type="line"/>
+			<point x="248" y="378" type="line"/>
+			<point x="40" y="66" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="bottom" x="308" y="0"/>
@@ -35,9 +35,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>green</string>
+			<string>yellow</string>
 			<key>public.markColor</key>
-			<string>0.09,0.72,0.44,1</string>
+			<string>1,1,0,1</string>
 		</dict>
 	</lib>
 </glyph>
