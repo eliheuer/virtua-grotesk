@@ -6,13 +6,13 @@
 	</outline>
 	<anchor name="_hbNunDot" x="120" y="544"/>
 	<anchor name="_top" x="120" y="576"/>
-	<anchor name="top" x="120" y="752"/>
+	<anchor name="top" x="120" y="800"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
