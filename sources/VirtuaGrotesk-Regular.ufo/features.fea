@@ -933,3 +933,13 @@ feature mark {
         pos base vav-hb <anchor (wght=400:100 wght=700:132) 640> mark @HEBREW_HOLAM_HASER;
     } HEBREW_HOLAM_HASER_ON_VAV;
 } mark;
+
+# Keep a left meteg clear of the next narrow letter's below vowel.
+feature kern {
+    # Automatic Code
+    script hebr;
+    lookup HEBREW_METEG_BEFORE_NARROW_VOWEL {
+        lookupflag UseMarkFilteringSet [patah-hb qamats-hb uni05BD sheva-hb hiriq-hb];
+        pos [vav-hb yod-hb] [patah-hb qamats-hb] uni05BD [vav-hb yod-hb]' <0 0 (wght=400:88 wght=700:32) 0> [sheva-hb hiriq-hb];
+    } HEBREW_METEG_BEFORE_NARROW_VOWEL;
+} kern;
