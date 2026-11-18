@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="parenleft-ar" format="2">
 	<unicode hex="FD3E"/>
-	<advance width="294"/>
+	<advance width="360"/>
 	<outline>
-		<component base="parenright"/>
+		<contour>
+			<point x="312" y="-96" type="line"/>
+			<point x="312" y="-80" type="line"/>
+			<point x="256" y="16"/>
+			<point x="200" y="128"/>
+			<point x="184" y="240" type="curve"/>
+			<point x="192" y="248" type="line"/>
+			<point x="240" y="280" type="line"/>
+			<point x="256" y="296" type="line"/>
+			<point x="256" y="432" type="line"/>
+			<point x="240" y="448" type="line"/>
+			<point x="192" y="480" type="line"/>
+			<point x="184" y="488" type="line"/>
+			<point x="200" y="600"/>
+			<point x="256" y="712"/>
+			<point x="312" y="808" type="curve"/>
+			<point x="312" y="816" type="line"/>
+			<point x="296" y="832" type="line"/>
+			<point x="184" y="832" type="line"/>
+			<point x="168" y="816" type="line"/>
+			<point x="104" y="720"/>
+			<point x="56" y="600"/>
+			<point x="48" y="480" type="curve"/>
+			<point x="24" y="456" type="line"/>
+			<point x="16" y="440" type="line"/>
+			<point x="16" y="288" type="line"/>
+			<point x="24" y="272" type="line"/>
+			<point x="48" y="248" type="line"/>
+			<point x="56" y="128"/>
+			<point x="104" y="16"/>
+			<point x="168" y="-96" type="curve"/>
+			<point x="184" y="-112" type="line"/>
+			<point x="296" y="-112" type="line"/>
+		</contour>
+		<contour>
+			<point x="184" y="328" type="line"/>
+			<point x="168" y="312" type="line"/>
+			<point x="96" y="312" type="line"/>
+			<point x="80" y="328" type="line"/>
+			<point x="80" y="400" type="line"/>
+			<point x="96" y="416" type="line"/>
+			<point x="168" y="416" type="line"/>
+			<point x="184" y="400" type="line"/>
+		</contour>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

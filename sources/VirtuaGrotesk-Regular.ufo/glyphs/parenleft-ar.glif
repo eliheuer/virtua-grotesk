@@ -1,16 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="parenleft-ar" format="2">
 	<unicode hex="FD3E"/>
-	<advance width="294"/>
+	<advance width="328"/>
 	<outline>
-		<component base="parenright"/>
+		<contour>
+			<point x="280" y="-96" type="line"/>
+			<point x="280" y="-80" type="line"/>
+			<point x="224" y="16"/>
+			<point x="176" y="128"/>
+			<point x="160" y="248" type="curve"/>
+			<point x="168" y="256" type="line"/>
+			<point x="208" y="296" type="line"/>
+			<point x="224" y="312" type="line"/>
+			<point x="224" y="416" type="line"/>
+			<point x="208" y="432" type="line"/>
+			<point x="168" y="472" type="line"/>
+			<point x="160" y="480" type="line"/>
+			<point x="176" y="600"/>
+			<point x="224" y="712"/>
+			<point x="280" y="808" type="curve"/>
+			<point x="280" y="816" type="line"/>
+			<point x="264" y="832" type="line"/>
+			<point x="192" y="832" type="line"/>
+			<point x="176" y="816" type="line"/>
+			<point x="112" y="720"/>
+			<point x="64" y="600"/>
+			<point x="56" y="472" type="curve"/>
+			<point x="24" y="440" type="line"/>
+			<point x="16" y="424" type="line"/>
+			<point x="16" y="304" type="line"/>
+			<point x="24" y="288" type="line"/>
+			<point x="56" y="256" type="line"/>
+			<point x="64" y="128"/>
+			<point x="112" y="16"/>
+			<point x="176" y="-96" type="curve"/>
+			<point x="192" y="-112" type="line"/>
+			<point x="264" y="-112" type="line"/>
+		</contour>
+		<contour>
+			<point x="168" y="328" type="line"/>
+			<point x="152" y="312" type="line"/>
+			<point x="88" y="312" type="line"/>
+			<point x="72" y="328" type="line"/>
+			<point x="72" y="400" type="line"/>
+			<point x="88" y="416" type="line"/>
+			<point x="152" y="416" type="line"/>
+			<point x="168" y="400" type="line"/>
+		</contour>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
