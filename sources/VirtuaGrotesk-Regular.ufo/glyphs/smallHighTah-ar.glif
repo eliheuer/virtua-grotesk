@@ -3,20 +3,32 @@
 	<unicode hex="0615"/>
 	<outline>
 		<contour>
-			<point x="96" y="688" type="line"/>
-			<point x="192" y="688" type="line"/>
-			<point x="192" y="848" type="line"/>
-			<point x="96" y="848" type="line"/>
+			<point x="24" y="688" type="line"/>
+			<point x="200" y="688" type="line"/>
+			<point x="248" y="688"/>
+			<point x="264" y="712"/>
+			<point x="264" y="754" type="curve"/>
+			<point x="264" y="796"/>
+			<point x="240" y="820"/>
+			<point x="200" y="820" type="curve"/>
+			<point x="96" y="820" type="line"/>
+			<point x="96" y="904" type="line"/>
+			<point x="88" y="912" type="line"/>
+			<point x="56" y="912" type="line"/>
+			<point x="48" y="904" type="line"/>
+			<point x="48" y="728" type="line"/>
+			<point x="24" y="728" type="line"/>
 		</contour>
 		<contour>
-			<point x="48" y="848" type="line"/>
-			<point x="240" y="848" type="line"/>
-			<point x="240" y="848" type="line"/>
-			<point x="240" y="912" type="line"/>
-			<point x="240" y="912" type="line"/>
-			<point x="48" y="912" type="line"/>
-			<point x="48" y="912" type="line"/>
-			<point x="48" y="848" type="line"/>
+			<point x="96" y="728" type="line"/>
+			<point x="96" y="780" type="line"/>
+			<point x="192" y="780" type="line"/>
+			<point x="212" y="780"/>
+			<point x="216" y="762"/>
+			<point x="216" y="754" type="curve"/>
+			<point x="216" y="736"/>
+			<point x="212" y="728"/>
+			<point x="192" y="728" type="curve"/>
 		</contour>
 	</outline>
 	<anchor name="bottom" x="144" y="688"/>
@@ -27,9 +39,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
