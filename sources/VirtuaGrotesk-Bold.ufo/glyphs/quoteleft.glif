@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="quoteleft" format="2">
 	<unicode hex="2018"/>
-	<advance width="600"/>
+	<advance width="256"/>
 	<outline>
-		<contour>
-			<point x="332" y="760" type="line"/>
-			<point x="260" y="760" type="line"/>
-			<point x="300" y="572" type="line"/>
-			<point x="372" y="572" type="line"/>
-		</contour>
+		<component base="comma" xScale="-1" yScale="-1" xOffset="248" yOffset="696"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
