@@ -67,6 +67,16 @@ in a rendered proof.
    if the subset detection leaves one out.
 4. Run `fgtools qa --package <directory>`.
 
+For a tagged release, set `source.archive_url` to the reviewed release ZIP
+and `source.branch` to the matching tag. Preserve the binary from
+`make build` in the archive. In `source.files`, map
+`fonts/variable/VirtuaGrotesk[wght].ttf` to `VirtuaGrotesk[wght].ttf`,
+`OFL.txt` to `OFL.txt`, `documentation/article/ARTICLE.en_us.html` to
+`article/ARTICLE.en_us.html`, and `documentation/article/weight-specimen.svg`
+to `article/weight-specimen.svg`. Run the packager with the completed
+`METADATA.pb` and the path to a local `google/fonts` checkout. Omit
+`--build-from-source` so the packager copies the reviewed binary.
+
 Read `gftools packager --help` before you use it. Some of its modes commit,
 push or open a pull request. Use only a local preview unless Eli authorizes
 publication.
