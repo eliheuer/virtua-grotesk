@@ -1,15 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Hbar" format="2">
 	<unicode hex="0126"/>
-	<advance width="704"/>
+	<advance width="816"/>
 	<outline>
-		<component base="H"/>
-		<component base="hyphen" xOffset="64" yOffset="348"/>
+		<contour>
+			<point x="24" y="600" type="line"/>
+			<point x="40" y="584" type="line"/>
+			<point x="72" y="584" type="line"/>
+			<point x="80" y="576" type="line"/>
+			<point x="80" y="16" type="line"/>
+			<point x="96" y="0" type="line"/>
+			<point x="256" y="0" type="line"/>
+			<point x="272" y="16" type="line"/>
+			<point x="272" y="304" type="line"/>
+			<point x="280" y="312" type="line"/>
+			<point x="536" y="312" type="line"/>
+			<point x="544" y="304" type="line"/>
+			<point x="544" y="16" type="line"/>
+			<point x="560" y="0" type="line"/>
+			<point x="720" y="0" type="line"/>
+			<point x="736" y="16" type="line"/>
+			<point x="736" y="576" type="line"/>
+			<point x="744" y="584" type="line"/>
+			<point x="776" y="584" type="line"/>
+			<point x="792" y="600" type="line"/>
+			<point x="792" y="664" type="line"/>
+			<point x="776" y="680" type="line"/>
+			<point x="744" y="680" type="line"/>
+			<point x="736" y="688" type="line"/>
+			<point x="736" y="752" type="line"/>
+			<point x="720" y="768" type="line"/>
+			<point x="560" y="768" type="line"/>
+			<point x="544" y="752" type="line"/>
+			<point x="544" y="688" type="line"/>
+			<point x="536" y="680" type="line"/>
+			<point x="280" y="680" type="line"/>
+			<point x="272" y="688" type="line"/>
+			<point x="272" y="752" type="line"/>
+			<point x="256" y="768" type="line"/>
+			<point x="96" y="768" type="line"/>
+			<point x="80" y="752" type="line"/>
+			<point x="80" y="688" type="line"/>
+			<point x="72" y="680" type="line"/>
+			<point x="40" y="680" type="line"/>
+			<point x="24" y="664" type="line"/>
+		</contour>
+		<contour>
+			<point x="272" y="488" type="line"/>
+			<point x="272" y="576" type="line"/>
+			<point x="280" y="584" type="line"/>
+			<point x="536" y="584" type="line"/>
+			<point x="544" y="576" type="line"/>
+			<point x="544" y="488" type="line"/>
+			<point x="536" y="480" type="line"/>
+			<point x="280" y="480" type="line"/>
+		</contour>
 	</outline>
+	<anchor name="bottom" x="408" y="0"/>
+	<anchor name="top" x="408" y="768"/>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
