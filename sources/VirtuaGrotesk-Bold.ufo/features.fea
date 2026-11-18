@@ -889,3 +889,20 @@ feature mark {
 		pos base greaterequal <anchor 304 368> mark @MATH_LONG_SOLIDUS;
 	} MATH_LONG_SOLIDUS_BASES;
 } mark;
+
+# The shuruq needs room for its dot on the left.
+feature ccmp {
+    script hebr;
+    sub vav-hb dagesh-hb by vavdagesh-hb;
+} ccmp;
+
+# Keep the wide hataf segol clear of descending stems.
+markClass hatafsegol-hb <anchor 156 0> @HEBREW_HATAF_SEGOL;
+feature mark {
+    script hebr;
+    lookup HEBREW_HATAF_SEGOL_BASES {
+        lookupflag UseMarkFilteringSet [hatafsegol-hb];
+        pos base finalkaf-hb <anchor 160 240> mark @HEBREW_HATAF_SEGOL;
+        pos base qof-hb <anchor (wght=400:368 wght=700:464) -32> mark @HEBREW_HATAF_SEGOL;
+    } HEBREW_HATAF_SEGOL_BASES;
+} mark;

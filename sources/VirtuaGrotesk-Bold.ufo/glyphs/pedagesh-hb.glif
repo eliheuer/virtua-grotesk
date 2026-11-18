@@ -4,7 +4,7 @@
 	<advance width="792"/>
 	<outline>
 		<component base="pe-hb"/>
-		<component base="dagesh-hb" xOffset="274" yOffset="76"/>
+		<component base="dagesh-hb" xOffset="410" yOffset="-12"/>
 	</outline>
 	<anchor name="hbBottom" x="400" y="0"/>
 	<anchor name="hbCenter" x="344" y="376"/>
@@ -19,9 +19,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>
