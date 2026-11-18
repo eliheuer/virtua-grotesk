@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yehHamzaabove-ar.medi" format="2">
 	<advance width="416"/>
+	<anchor name="bottom" x="208" y="-8"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
 		<component base="hamzaabove-ar" xOffset="96" yOffset="-272"/>
@@ -8,9 +9,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
