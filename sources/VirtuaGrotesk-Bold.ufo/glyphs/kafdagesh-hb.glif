@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kafdagesh-hb" format="2">
 	<unicode hex="FB3B"/>
-	<advance width="576"/>
+	<advance width="608"/>
 	<outline>
 		<component base="kaf-hb"/>
 		<component base="dagesh-hb" xOffset="178" yOffset="4"/>
@@ -19,9 +19,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

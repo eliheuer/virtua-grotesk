@@ -923,3 +923,13 @@ feature mark {
         pos base qof-hb <anchor (wght=400:368 wght=700:464) -32> mark @HEBREW_HATAF_SEGOL;
     } HEBREW_HATAF_SEGOL_BASES;
 } mark;
+
+# Distinguish holam haser for vav by moving only its dot to the left.
+markClass holamhaser-hb <anchor 68 (wght=400:640 wght=700:576)> @HEBREW_HOLAM_HASER;
+feature mark {
+    script hebr;
+    lookup HEBREW_HOLAM_HASER_ON_VAV {
+        lookupflag UseMarkFilteringSet [holamhaser-hb];
+        pos base vav-hb <anchor (wght=400:100 wght=700:132) 640> mark @HEBREW_HOLAM_HASER;
+    } HEBREW_HOLAM_HASER_ON_VAV;
+} mark;

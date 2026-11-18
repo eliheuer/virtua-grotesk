@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="shinsindot-hb" format="2">
 	<unicode hex="FB2B"/>
-	<advance width="848"/>
+	<advance width="880"/>
 	<outline>
 		<component base="shin-hb"/>
 		<component base="sindot-hb" xOffset="60" yOffset="64"/>
@@ -23,9 +23,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>
