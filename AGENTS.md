@@ -37,10 +37,9 @@ cargo install --locked --git https://github.com/fontgarden/runebender runebender
 ```
 
 `.mcp.json` starts `runebender mcp --live` for the agent tools that read it,
-for example OMP. With it, an agent connects to the font that is open in
-Runebender (`editor_sessions`, `editor_connect`), reads glyphs and sends a
-draft with `propose_edits`. Eli sees the proposal in the editor and applies or
-discards it there. A proposal is a `com.runebender.proposal.*` layer;
+for example OMP and Claude Code. It gives an agent the tools of the open
+Runebender editor, so that Eli watches the drawing on the canvas (step 2 of
+the work loop). A Runebender proposal is a `com.runebender.proposal.*` layer;
 `make check-changes` lists it and does not fail on it.
 
 The print proof and the marketing media need DesignBot. `make setup` compiles
@@ -61,15 +60,31 @@ repository lists the chapter for each kind of change.
    another font as an example, first run `.venv/bin/fgtools measure-picture`
    on it, and report the sizes and strokes of the glyph as ratios of the
    related letter of the same picture. Draw to these ratios: a number from
-   the example is stronger evidence than an impression of it. Draw the
-   glyph as a Runebender proposal, or in the source with a purple mark. Where an edit is a
-   calculation, use `fgtools edit` and do not type the coordinates: it moves
-   an edge, sets the sidebearings or makes a mirrored copy, and a second run
-   changes nothing. Commit the draft before Eli edits it, so that the Git
-   history holds the draft and the correction.
+   the example is stronger evidence than an impression of it.
+   Draw where Eli can watch:
+   - If Runebender has this project open (the MCP tool `editor_sessions`
+     lists a session), draw in the editor. Connect with `editor_connect`,
+     show the glyph with `editor_open_glyph`, and make each edit with
+     `agent_apply`, with `authorization: user-approved` because Eli named
+     the glyph. Make one step in each call, for example one stroke or one
+     curve, so that each step shows on the canvas and is one undo step. Do
+     not save: Eli saves the font or undoes the steps. After the save,
+     mark the glyph purple and commit it.
+   - If Runebender is not open, edit the GLIF files, mark the glyph purple,
+     and commit the draft before Eli edits it, so that the Git history
+     holds the draft and the correction.
+   - If Eli asks for a proposal, send it with `propose_edits`. Never
+     write a `com.runebender.proposal.*` layer by hand: the editor cannot
+     apply it.
+   Where an edit is a calculation, use `fgtools edit` and do not type the
+   coordinates: it moves an edge, sets the sidebearings or makes a mirrored
+   copy, and a second run changes nothing. It writes the files, so use it
+   only when the editor has no unsaved changes.
 3. **Look and check.** Run `.venv/bin/fgtools render "<glyphs>"` before and
-   after every edit, and read the picture: the change, the filled glyph, its
-   points, the green glyphs of the same construction (`--beside`) and the
+   after every edit, and read the picture. It reads the files, so for unsaved
+   edits in the editor use the MCP tool `review_proof`, which draws the live
+   glyph beside the reference fonts. The picture of `fgtools render` shows
+   the change, the filled glyph, its points, the green glyphs of the same construction (`--beside`) and the
    reference fonts. Under the glyph is the glyph in a block of text, sharp
    and blurred, beside the same block in a reference font, with its color as
    a number: in the blurred block a glyph that is too heavy is a dark spot,
