@@ -92,11 +92,14 @@
 		<string>teh-ar</string>
 		<string>teh-ar.fina</string>
 		<string>teh-ar.medi</string>
+		<string>teh-ar.medi.afterDots</string>
 		<string>teh-ar.init</string>
 		<string>theh-ar</string>
 		<string>theh-ar.fina</string>
 		<string>theh-ar.medi</string>
+		<string>theh-ar.medi.afterDots</string>
 		<string>theh-ar.init</string>
+		<string>theh-ar.init.beforeDots</string>
 		<string>jeem-ar</string>
 		<string>jeem-ar.fina</string>
 		<string>jeem-ar.medi</string>
@@ -1626,6 +1629,8 @@
 		<string>base</string>
 		<key>teh-ar.medi</key>
 		<string>base</string>
+		<key>teh-ar.medi.afterDots</key>
+		<string>base</string>
 		<key>tehMarbuta-ar</key>
 		<string>base</string>
 		<key>tehMarbuta-ar.fina</key>
@@ -1664,7 +1669,11 @@
 		<string>base</string>
 		<key>theh-ar.init</key>
 		<string>base</string>
+		<key>theh-ar.init.beforeDots</key>
+		<string>base</string>
 		<key>theh-ar.medi</key>
+		<string>base</string>
+		<key>theh-ar.medi.afterDots</key>
 		<string>base</string>
 		<key>thorn</key>
 		<string>base</string>

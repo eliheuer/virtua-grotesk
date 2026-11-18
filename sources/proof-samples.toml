@@ -51,6 +51,24 @@ label = "Hanerot Halalu"
 scripts = ["Hebrew"]
 text = "הנרות הללו אנו מדליקין על הנסים ועל הנפלאות ועל התשועות ועל המלחמות, שעשית לאבותינו בימים ההם בזמן הזה, על ידי כהניך הקדושים."
 
+# Joined forms with neighboring dot groups and descending strokes.
+[sample.arabic-joining-dots]
+label = "Arabic joining dots"
+scripts = ["Arabic"]
+text = "مقاييس تقييم بيانات انتظار انتقال تتم تثبيت"
+
+[sample.persian-joining-dots]
+label = "Persian joining dots"
+scripts = ["Arabic"]
+lang = "fa"
+text = "پایین آیین مدیر بیش ویژگی گریز"
+
+[sample.urdu-joining-dots]
+label = "Urdu joining dots"
+scripts = ["Arabic"]
+lang = "ur"
+text = "ہیں نہیں یہیں کہیں ہڈی کبڈی"
+
 # The Hebrew height beside the Latin x-height and capitals.
 [sample.hebrew-latin-height]
 label = "Hebrew and Latin height"

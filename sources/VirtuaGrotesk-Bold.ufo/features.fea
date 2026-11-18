@@ -592,7 +592,15 @@ lookup calt_joining_dots {
 	sub [yeh-ar.init yeh-ar.init.ctr farsiYeh-ar.init]' beh-ar.medi by farsiYeh-ar.init.beforeYeh;
 	sub [yeh-ar.init.ctr farsiYeh-ar.init]' [reh-ar.fina zain-ar.fina jeh-ar.fina lam-ar.fina waw-ar.fina noon-ar.fina qaf-ar.fina khah-ar.fina heh-ar.medi] by farsiYeh-ar.init.beforeYeh;
 	sub yeh-ar.init' heh-ar.medi by farsiYeh-ar.init.beforeYeh;
+	sub [hehGoal-ar.init hehGoal-ar.medi] farsiYeh-ar.medi' by farsiYeh-ar.medi.afterYeh;
 } calt_joining_dots;
+# Extend the connecting stroke where the dots of adjacent letters touch.
+lookup calt_arabic_above_dots {
+	lookupflag IgnoreMarks;
+	sub [noon-ar.init feh-ar.init qaf-ar.init yehHamzaabove-ar.init teh-ar.init teh-ar.medi teh-ar.medi.afterDots] teh-ar.medi' by teh-ar.medi.afterDots;
+	sub [teh-ar.init teh-ar.medi teh-ar.medi.afterDots] theh-ar.medi' by theh-ar.medi.afterDots;
+	sub theh-ar.init' [tehMarbuta-ar.fina qaf-ar.medi] by theh-ar.init.beforeDots;
+} calt_arabic_above_dots;
 } calt;
 
 # Latin standard ligatures; intervening marks prevent replacement.
