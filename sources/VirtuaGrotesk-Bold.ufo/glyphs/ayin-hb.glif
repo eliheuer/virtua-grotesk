@@ -16,7 +16,8 @@
 			<point x="496" y="352" type="line" smooth="yes"/>
 			<point x="496" y="288"/>
 			<point x="456" y="240"/>
-			<point x="432" y="224" type="curve"/>
+			<point x="444" y="232" type="curve"/>
+			<point x="424" y="240" type="line"/>
 			<point x="248" y="624" type="line"/>
 			<point x="232" y="640" type="line"/>
 			<point x="64" y="640" type="line"/>
@@ -45,7 +46,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.5,0,1,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
