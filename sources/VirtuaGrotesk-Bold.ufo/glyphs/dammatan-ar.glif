@@ -2,18 +2,18 @@
 <glyph name="dammatan-ar" format="2">
 	<unicode hex="064C"/>
 	<outline>
-		<component base="damma-ar" yOffset="84"/>
-		<component base="damma-ar" yOffset="-1080"/>
+		<component base="damma-ar" xScale="0.5" yScale="0.5" yOffset="320"/>
+		<component base="damma-ar" xScale="0.5" yScale="0.5" xOffset="224" yOffset="320"/>
 	</outline>
-	<anchor name="bottom" x="230" y="-438"/>
-	<anchor name="top" x="230" y="1094"/>
+	<anchor name="top" x="230" y="873"/>
+	<anchor name="bottom" x="230" y="641"/>
 	<anchor name="_top" x="230" y="530"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
