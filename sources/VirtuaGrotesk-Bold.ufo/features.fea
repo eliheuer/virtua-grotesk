@@ -238,6 +238,7 @@ feature ccmp {
 		sub n cedillacomb by ncommaaccent;
 		sub R cedillacomb by Rcedilla;
 		sub r cedillacomb by rcedilla;
+		sub t cedillacomb by tcedilla;
 		sub A ogonekcomb by Aogonek;
 		sub a ogonekcomb by aogonek;
 		sub E ogonekcomb by Eogonek;
