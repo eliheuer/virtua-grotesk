@@ -339,6 +339,7 @@ lookup ccmp_arab_2;
 feature init {
 # automatic
 sub behDotless-ar by behDotless-ar.init;
+sub noonghunna-ar by behDotless-ar.init;
 sub beh-ar by beh-ar.init;
 sub peh-ar by peh-ar.init;
 sub tteheh-ar by tteheh-ar.init;
@@ -364,6 +365,7 @@ sub ghain-ar by ghain-ar.init;
 sub feh-ar by feh-ar.init;
 sub veh-ar by veh-ar.init;
 sub fehDotless-ar by fehDotless-ar.init;
+sub qafDotless-ar by fehDotless-ar.init;
 sub fehDotmovedbelow-ar by fehDotmovedbelow-ar.init;
 sub fehThreedotsbelow-ar by fehThreedotsbelow-ar.init;
 sub qaf-ar by qaf-ar.init;
@@ -389,6 +391,7 @@ sub yehHamzaabove-ar by yehHamzaabove-ar.init;
 feature medi {
 # automatic
 sub behDotless-ar by behDotless-ar.medi;
+sub noonghunna-ar by behDotless-ar.medi;
 sub beh-ar by beh-ar.medi;
 sub peh-ar by peh-ar.medi;
 sub tteheh-ar by tteheh-ar.medi;
@@ -414,6 +417,7 @@ sub ghain-ar by ghain-ar.medi;
 sub feh-ar by feh-ar.medi;
 sub veh-ar by veh-ar.medi;
 sub fehDotless-ar by fehDotless-ar.medi;
+sub qafDotless-ar by fehDotless-ar.medi;
 sub fehDotmovedbelow-ar by fehDotmovedbelow-ar.medi;
 sub fehThreedotsbelow-ar by fehThreedotsbelow-ar.medi;
 sub qaf-ar by qaf-ar.medi;
@@ -571,6 +575,7 @@ lookup calt_arab_dots {
 	# narrower than beh's rather than the same one.
 	sub yeh-ar.init' @AR_CLEAR_BELOW_NEXT by yeh-ar.init.ctr;
 	sub @AR_TAIL_BELOW_PREV yeh-ar.init' by yeh-ar.init.ctr;
+	sub [alefHamzabelow-ar alefHamzabelow-ar.fina] yeh-ar.init' by yeh-ar.init.ctr;
 } calt_arab_dots;
 } calt;
 
@@ -942,4 +947,15 @@ feature kern {
         lookupflag UseMarkFilteringSet [patah-hb qamats-hb uni05BD sheva-hb hiriq-hb];
         pos [vav-hb yod-hb] [patah-hb qamats-hb] uni05BD [vav-hb yod-hb]' <0 0 (wght=400:88 wght=700:32) 0> [sheva-hb hiriq-hb];
     } HEBREW_METEG_BEFORE_NARROW_VOWEL;
+} kern;
+
+# Keep wide initial dots clear of a preceding alef stem or hamza on waw.
+feature kern {
+	script arab;
+	lookup ARABIC_CLEAR_INITIAL_DOTS {
+		lookupflag IgnoreMarks;
+		pos [alef-ar alef-ar.fina alefMadda-ar alefMadda-ar.fina alefHamzaabove-ar alefHamzaabove-ar.fina alefHamzabelow-ar alefHamzabelow-ar.fina alefWasla-ar alefWasla-ar.fina] [teh-ar.init theh-ar.init]' <0 0 96 0>;
+		pos wawHamzaabove-ar [teh-ar.init theh-ar.init]' <0 0 (wght=400:0 wght=700:144) 0>;
+		pos wawHamzaabove-ar.fina [teh-ar.init theh-ar.init]' <0 0 (wght=400:0 wght=700:64) 0>;
+	} ARABIC_CLEAR_INITIAL_DOTS;
 } kern;
