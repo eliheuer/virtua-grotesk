@@ -9,7 +9,7 @@ from Regular (400) to Bold (700), with Medium and SemiBold instances.
 The description of the design, with its idea, its precedents and its rules,
 is in [CONTEXT.md](CONTEXT.md).
 
-![Virtua Grotesk construction sheet showing the word Grid](https://elih.net/og/virtua-grotesk.png)
+![Virtua Grotesk letters and numerals at four weights](documentation/article/weight-specimen.svg)
 
 The font is in development and is intended for Google Fonts. The progress of
 each script is in [STATUS.md](STATUS.md). The release scope, open decisions

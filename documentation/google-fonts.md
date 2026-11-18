@@ -23,8 +23,6 @@ current official page.
 - Cyrillic: requested on 2026-10-21 for Rubik-level coverage. It is not in
   the current scope.
 - Italic: not in the first release, unless Eli decides otherwise.
-- README image: commit an image under `documentation/` in place of the
-  external URL.
 - Release tag: none yet.
 
 ## Build
