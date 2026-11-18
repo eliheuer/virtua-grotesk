@@ -584,6 +584,15 @@ lookup calt_yeh_dots {
 	sub [yeh-ar.init yeh-ar.init.ctr farsiYeh-ar.init]' [yeh-ar.medi farsiYeh-ar.medi] by farsiYeh-ar.init.beforeYeh;
 	sub [farsiYeh-ar.init.beforeYeh yeh-ar.medi farsiYeh-ar.medi farsiYeh-ar.medi.afterYeh] [yeh-ar.medi farsiYeh-ar.medi]' by farsiYeh-ar.medi.afterYeh;
 } calt_yeh_dots;
+# Keep the single beh dot and the yeh pair distinct at their join.
+# Some following letters also extend below the baseline into the centered pair.
+lookup calt_joining_dots {
+	lookupflag IgnoreMarks;
+	sub beh-ar.init [yeh-ar.medi farsiYeh-ar.medi]' by farsiYeh-ar.medi.afterYeh;
+	sub [yeh-ar.init yeh-ar.init.ctr farsiYeh-ar.init]' beh-ar.medi by farsiYeh-ar.init.beforeYeh;
+	sub [yeh-ar.init.ctr farsiYeh-ar.init]' [reh-ar.fina zain-ar.fina jeh-ar.fina lam-ar.fina waw-ar.fina noon-ar.fina qaf-ar.fina khah-ar.fina heh-ar.medi] by farsiYeh-ar.init.beforeYeh;
+	sub yeh-ar.init' heh-ar.medi by farsiYeh-ar.init.beforeYeh;
+} calt_joining_dots;
 } calt;
 
 # Latin standard ligatures; intervening marks prevent replacement.
