@@ -16,7 +16,15 @@ SHEETS = REV / 'Review-sheets'
 ZIP = REV / 'Reference-proofs.zip'
 
 PROOF = OUTPUT / 'proof' / 'proof.pdf'
-CORE_PAGES = (1, 11, 12, 13, 14, 15, 16, 24, 19)
+READING_PAGES = {
+    11: ('Latin', 400),
+    12: ('Latin', 700),
+    13: ('Arabic', 400),
+    14: ('Arabic', 700),
+    15: ('Hebrew', 400),
+    16: ('Hebrew', 700),
+}
+CORE_PAGES = (1, *READING_PAGES)
 PROOF_NAMES = {'print-proof.pdf': 'Print Proof', 'full-proof.pdf': 'Full Proof'}
 GRID_PROOF = 'print-proof-grid.pdf'
 PLOTTER = OUTPUT / 'media' / '.build' / 'plotter.rs'
@@ -36,7 +44,8 @@ def proof_text(x, y, size, weight, text):
 
 
 def proof_rule(y, left=69, right=773):
-    return f'line\t{left}\t{y}\t{right}\t{y}\t0.5\t0\t0\t0\t255'
+    # Regular H has an 88-unit crossbar at 1024 UPM, or 1.03125 pt at 12 pt.
+    return f'line\t{left}\t{y}\t{right}\t{y}\t1.03125\t0\t0\t0\t255'
 
 
 def cover(original, reading):
@@ -44,7 +53,6 @@ def cover(original, reading):
     version = values[1]
     stamp = next(row.split('\t')[-1].split()[-1] for row in reading if '\tVersion ' in row)
     left, middle, right = COLUMNS
-    yield proof_rule(521.5)
     yield proof_text(left, 501.5, 12, 400, 'Virtua Grotesk')
     yield proof_text(middle, 501.5, 12, 400, f'{version} · {stamp}')
     yield proof_text(right, 501.5, 12, 400, 'github.com/eliheuer/virtua-grotesk')
@@ -57,12 +65,12 @@ def cover(original, reading):
     yield proof_text(left - TITLE_SIZE * TITLE_LEFT_BEARING, baseline, TITLE_SIZE, TITLE_WEIGHT, 'Virtua Grotesk')
 
     bands = [
-        ('Design space', [
+        ('Design Space', [
             ('Weight axis', '400–700'),
             ('Masters', 'Regular, Bold'),
             ('Static weights', '400, 500, 600, 700'),
         ]),
-        ('Character set', [
+        ('Character Set', [
             ('Glyphs', values[8]),
             ('Encoded characters', values[10]),
             ('Scripts', 'Latin, Arabic, Hebrew'),
@@ -90,28 +98,34 @@ def cover(original, reading):
             yield proof_text(middle, y, 12, 400, label)
             yield proof_text(right, y, 12, 400, value)
         top -= height
-    yield proof_rule(73.5)
 
 
-def first_reading(original):
-    yield proof_rule(521.5)
-    yield proof_text(69, 505.5, 12, 400, 'Virtua Grotesk')
-    yield proof_text(309, 505.5, 12, 400, 'Reading · Latin')
-    yield proof_text(549, 505.5, 12, 400, 'Regular · 400')
+def reading_page(original, script, weight):
+    left, middle, right = COLUMNS
+    rtl = script in ('Arabic', 'Hebrew')
+    style = {400: 'Regular', 700: 'Bold'}[weight]
+    leading = {8: 10, 16: 20}
+    sizes = (16, 8) if rtl else (8, 16)
+    settings = ' · '.join(f'{size}/{leading[size]} pt' for size in sizes)
+    yield proof_text(left, 501.5, 12, 400, 'Virtua Grotesk')
+    yield proof_text(middle, 501.5, 12, 400, f'{script} · {style} {weight}')
+    yield proof_text(right, 501.5, 12, 400, settings)
     yield proof_rule(489.5)
-    yield proof_text(69, 473.5, 12, 400, '8/12 pt')
-    yield proof_text(309, 473.5, 12, 400, '16/24 pt')
-    baseline = {'8': 453.5, '16': 449.5}
-    leading = {'8': 12, '16': 24}
+
+    baseline = {8: 469.5, 16: 465.5}
+    # Retain fgtools' line breaks and RTL alignment. Its wide RTL block
+    # ends at 517 pt. Move it to the right edge of our middle column.
+    offsets = {8: 0, 16: middle + COLUMN_WIDTH - 517 if rtl else middle - 325}
     for row in original:
         fields = row.split('\t')
-        if fields[0] == 'text' and fields[3] in baseline:
-            size = fields[3]
-            if baseline[size] >= 81.5:
-                fields[1] = str(COLUMNS[0 if size == '8' else 1])
-                fields[2] = str(baseline[size])
-                yield '\t'.join(fields)
-                baseline[size] -= leading[size]
+        if fields[0] != 'text' or fields[3] not in ('8', '16'):
+            continue
+        size = int(fields[3])
+        if baseline[size] >= 81.5:
+            fields[1] = f'{float(fields[1]) + offsets[size]:g}'
+            fields[2] = str(baseline[size])
+            yield '\t'.join(fields)
+            baseline[size] -= leading[size]
 
 
 def draw_print_proof(folder, name, show_grid=False):
@@ -125,7 +139,7 @@ def draw_print_proof(folder, name, show_grid=False):
         if kind == 'page':
             pages.append(['page\t0\t255\t255\t255'])
             if show_grid:
-                if len(pages) in (1, 11):
+                if len(pages) in CORE_PAGES:
                     for x in COLUMNS:
                         pages[-1].append(f'rect\t{x}\t73.5\t{COLUMN_WIDTH}\t448\t255\t247\t247\t255')
                 # Match the centered 704 × 448 pt live area of the landscape proof.
@@ -141,10 +155,12 @@ def draw_print_proof(folder, name, show_grid=False):
             start = ink_columns[kind]
             fields[start:start + 4] = ['0', '0', '0', '255']
             pages[-1].append('\t'.join(fields))
-    cover_rows = list(cover(pages[0][page_starts[0]:], pages[10][page_starts[10]:]))
-    reading_rows = list(first_reading(pages[10][page_starts[10]:]))
-    pages[0][page_starts[0]:] = cover_rows
-    pages[10][page_starts[10]:] = reading_rows
+    first_reading = page_starts[10]
+    pages[0][page_starts[0]:] = cover(pages[0][page_starts[0]:], pages[10][first_reading:])
+    for number, (script, weight) in READING_PAGES.items():
+        page = pages[number - 1]
+        start = page_starts[number - 1]
+        page[start:] = reading_page(page[start:], script, weight)
     result = folder / name
     plot = result.with_suffix('.plot')
     core = [line for n in CORE_PAGES for line in pages[n - 1]]
@@ -186,8 +202,8 @@ def index():
         for name, title in PROOF_NAMES.items():
             parts.append('<span class="primary">'+link(PROOF.with_name(name),title)+'</span>')
         parts.append('<p>'+link(PROOF.with_name(GRID_PROOF),'Print Proof with red grid (temporary)')+'</p>')
-        parts.append('<p>The first nine pages of the Full Proof are the Print Proof. '
-                     'The remaining pages cover character sets, size tests, spacing, marks and joining in detail.</p>')
+        parts.append('<p>The Print Proof is a cover and six reading pages. The Full Proof opens with the same seven pages. '
+                     'The remaining pages cover character sets, size tests, interpolation, kerning, marks and joining in detail.</p>')
     reports = sorted((OUTPUT / 'diff').glob('*/diffenator.html'))
     if reports:
         parts.append('<h2>Diffenator comparisons</h2><ul>')
