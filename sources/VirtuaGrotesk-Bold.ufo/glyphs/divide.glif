@@ -4,28 +4,22 @@
 	<advance width="600"/>
 	<outline>
 		<contour>
-			<point x="96" y="332" type="line"/>
-			<point x="504" y="332" type="line"/>
-			<point x="504" y="448" type="line"/>
-			<point x="96" y="448" type="line"/>
+			<point x="48" y="302" type="line"/>
+			<point x="64" y="286" type="line"/>
+			<point x="536" y="286" type="line"/>
+			<point x="552" y="302" type="line"/>
+			<point x="552" y="402" type="line"/>
+			<point x="536" y="418" type="line"/>
+			<point x="64" y="418" type="line"/>
+			<point x="48" y="402" type="line"/>
 		</contour>
-		<contour>
-			<point x="264" y="524" type="line"/>
-			<point x="336" y="524" type="line"/>
-			<point x="336" y="596" type="line"/>
-			<point x="264" y="596" type="line"/>
-		</contour>
-		<contour>
-			<point x="264" y="164" type="line"/>
-			<point x="336" y="164" type="line"/>
-			<point x="336" y="236" type="line"/>
-			<point x="264" y="236" type="line"/>
-		</contour>
+		<component base="period" xOffset="148" yOffset="482"/>
+		<component base="period" xOffset="148" yOffset="46"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>
