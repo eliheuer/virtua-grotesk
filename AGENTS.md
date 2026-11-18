@@ -36,6 +36,13 @@ command on `PATH`:
 cargo install --locked --git https://github.com/fontgarden/runebender runebender
 ```
 
+`.mcp.json` starts `runebender mcp --live` for the agent tools that read it,
+for example OMP. With it, an agent connects to the font that is open in
+Runebender (`editor_sessions`, `editor_connect`), reads glyphs and sends a
+draft with `propose_edits`. Eli sees the proposal in the editor and applies or
+discards it there. A proposal is a `com.runebender.proposal.*` layer;
+`make check-changes` lists it and does not fail on it.
+
 The print proof and the marketing media need DesignBot. `make setup` compiles
 it from the commit that fgtools pins, with the `cargo` command. Video also
 needs `ffmpeg`.
