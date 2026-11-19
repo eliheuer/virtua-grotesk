@@ -34,9 +34,9 @@ proof_lock = Lock()
 proof_revision = None
 COLUMNS = (69, 309, 549)
 COLUMN_WIDTH = 224
-TITLE_SIZE = 92.47
-TITLE_WEIGHT = 700
-TITLE_LEFT_BEARING = 0.03125
+TITLE_SIZE = 103.76
+TITLE_WEIGHT = 400
+TITLE_LEFT_BEARING = 24 / 1024
 
 
 def proof_text(x, y, size, weight, text):
@@ -56,7 +56,7 @@ def cover(font, facts, weights, stamp):
     yield proof_text(right, 501.5, 12, 400, 'github.com/eliheuer/virtua-grotesk')
     title_top = 489.5
     yield proof_rule(title_top)
-    # Current Bold title ink spans about 0.78 em, including overshoots.
+    # The title ink spans about 0.78 em, including overshoots.
     title_height = 8 * round((TITLE_SIZE * 0.78 + 24) / 8)
     title_center = title_top - title_height / 2
     baseline = 73.5 + 4 * round((title_center - TITLE_SIZE * 0.375 - 73.5) / 4)
@@ -319,7 +319,7 @@ def index():
     if PROOF.is_file():
         for name, title in PROOF_NAMES.items():
             parts.append('<span class="primary">'+link(PROOF.with_name(name),title)+'</span>')
-        parts.append('<p>'+link(PROOF.with_name(GRID_PROOF),'Print Proof with red grid (temporary)')+'</p>')
+        parts.append('<p>'+link(PROOF.with_name(GRID_PROOF),'Print Proof with red grid')+'</p>')
         parts.append('<p>The Print Proof includes a cover and reading pages for every named weight in Latin, Arabic and Hebrew. '
                      'The Full Proof begins with the Print Proof. '
                      'The remaining pages cover character sets, size tests, interpolation, kerning, marks and joining in detail.</p>')
@@ -378,16 +378,11 @@ class Proofs(SimpleHTTPRequestHandler):
 
 if __name__ == '__main__':
     parser = ArgumentParser(description=__doc__)
-    parser.add_argument('--regular-title', action='store_true', help='Try the cover title at weight 400.')
     parser.add_argument('--build-proof', nargs='*', help='Build the source proof or the named pages.')
     args = parser.parse_args()
     if args.build_proof is not None:
         with patch.object(media, 'compose', partial(compose_proof, media.compose)):
             media.main(['--proof', *args.build_proof])
         raise SystemExit
-    if args.regular_title:
-        TITLE_SIZE = 103.76
-        TITLE_WEIGHT = 400
-        TITLE_LEFT_BEARING = 24 / 1024
     ThreadingHTTPServer(('127.0.0.1', 8770), Proofs).serve_forever()
 

@@ -51,7 +51,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 
 ## Repository
 
-- The repository holds the sources, this file, `CONTEXT.md`, `WORKLOG.md`, `README.md`, `Makefile`, `documentation/` and `.agents/tasks/`.
+- The repository holds the sources, this file, `CONTEXT.md`, `WORKLOG.md`, `README.md`, `Makefile` and `documentation/`.
 - `WORKLOG.md` is the only record of work. Do not add a plan, a report or an audit.
 - Generated output goes to `output/`. Temporary files go to `~/Temp/`. A tracked file has at most 500 KB.
 - A file names only a command that can be installed. It never names a path on one machine.
