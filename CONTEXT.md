@@ -401,7 +401,23 @@ Seen in: asciitilde (56f4b437), Eli's instruction (2026-11-10).
 
 R53. The lowercase a keeps the same contour structure across the weight
 axis. Its foot turns outward in Regular and draws back toward the stem in
-Bold. Accented forms use the same base. A glyph that needs a change in
+Bold. The two edges of the waist land on horizontal shelves before
+the 8-unit cuts into the stem. The foot lands flat on the baseline before its
+outer bevel. Compare the Regular outline at 14 pt to the green drawing in
+9e009aad when changing the weight transition. Check the shelves and foot in
+the exported font at the master weights and between them.
+Seen in: the continuous a redraw (3c25f669).
+
+Each triple gives the left end, right end and height of a Regular landing.
+
+```toml
+[a_geometry]
+regular_upper_waist = [328, 424, 352]
+regular_lower_waist = [360, 424, 280]
+regular_foot = [512, 560, 0]
+```
+
+Accented forms use the same base. A glyph that needs a change in
 contour structure can use an unencoded alternate and a designspace rule.
 
 R54. All masters have the same kerning groups, and a glyph is in at most one
