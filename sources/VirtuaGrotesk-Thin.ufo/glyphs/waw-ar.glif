@@ -4,22 +4,22 @@
 	<advance width="512"/>
 	<outline>
 		<contour>
-			<point x="194" y="70"/>
-			<point x="124" y="120"/>
+			<point x="168" y="70"/>
+			<point x="124" y="92"/>
 			<point x="124" y="184" type="curve" smooth="yes"/>
-			<point x="124" y="240"/>
-			<point x="182" y="298"/>
+			<point x="124" y="266"/>
+			<point x="156" y="298"/>
 			<point x="238" y="298" type="curve" smooth="yes"/>
-			<point x="310" y="298"/>
-			<point x="386" y="212"/>
+			<point x="340" y="298"/>
+			<point x="386" y="230"/>
 			<point x="386" y="128" type="curve" smooth="yes"/>
 			<point x="384" y="90" type="line"/>
 			<point x="366" y="72" type="line"/>
 			<point x="294" y="70" type="line" smooth="yes"/>
 		</contour>
 		<contour>
-			<point x="142" y="-162"/>
-			<point x="60" y="-112"/>
+			<point x="98" y="-162"/>
+			<point x="60" y="-132"/>
 			<point x="60" y="-32" type="curve" smooth="yes"/>
 			<point x="62" y="-22" type="line"/>
 			<point x="56" y="-16" type="line"/>
@@ -57,9 +57,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

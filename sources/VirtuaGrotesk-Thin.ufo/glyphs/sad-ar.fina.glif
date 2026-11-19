@@ -3,13 +3,13 @@
 	<advance width="1328"/>
 	<outline>
 		<contour>
-			<point x="82" y="-72" type="line" smooth="yes"/>
-			<point x="82" y="-184"/>
-			<point x="80" y="-238"/>
+			<point x="82" y="-24" type="line" smooth="yes"/>
+			<point x="82" y="-138"/>
+			<point x="168" y="-238"/>
 			<point x="264" y="-238" type="curve" smooth="yes"/>
 			<point x="384" y="-238" type="line" smooth="yes"/>
-			<point x="576" y="-238"/>
-			<point x="622" y="-208"/>
+			<point x="546" y="-238"/>
+			<point x="622" y="-96"/>
 			<point x="622" y="-16" type="curve" smooth="yes"/>
 			<point x="622" y="-2" type="line"/>
 			<point x="640" y="16" type="line"/>
@@ -79,9 +79,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
