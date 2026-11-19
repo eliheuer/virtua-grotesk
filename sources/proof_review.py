@@ -137,12 +137,6 @@ def reading_page(font, script, style, weight, text):
     yield proof_text(right, 501.5, 12, 400, settings)
     yield proof_rule(489.5)
     band_height = 208
-    yield proof_rule(489.5 - band_height)
-    labels = {'Latin': ('Without accents', 'With accents'),
-              'Arabic': ('Without vowel marks', 'With vowel marks'),
-              'Hebrew': ('Without vowel points', 'With vowel points')}
-    for band, label in enumerate(labels[script]):
-        yield proof_text(left, 473.5 - band * band_height, 12, 400, label)
 
     columns = [(8, 457.5, right + COLUMN_WIDTH if rtl else left, COLUMN_WIDTH),
                (16, 453.5, middle + COLUMN_WIDTH if rtl else middle, 2 * COLUMN_WIDTH)]

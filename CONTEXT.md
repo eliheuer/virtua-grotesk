@@ -166,9 +166,20 @@ numbers are not in order in every chapter.
 
 ## Character
 
-R1. Virtua is a geometric grotesque on a dyadic grid: straight chamfered
-corners, monolinear apparent weight, smooth deliberate cubic curves and open
-counters. The character is clean, neo-modernist and machined.
+R1. Virtua is a neo-grotesque with a machined finish. For Latin, use
+Helvetica and Neue Haas Grotesk as guides to the silhouette, proportions
+and distribution of black and white. LL Replica is a reference for how
+the grid can show in the outline. At reading size the letter should feel
+like a familiar neo-grotesque. At display size its flats, chamfers and
+deliberate cubic curves should look precise enough to have been cut by a
+CNC machine.
+
+Keep the optical corrections that make the strokes look even and the
+counters stay open. A bowl can be fuller on one side, and a stroke can
+thin as it enters a join. Follow the approved donor for those decisions.
+When refining a curve, preserve the flats it lands on. Avoid adding a
+pen-like flare for smoothness or forcing a bowl into a perfect circle
+for symmetry.
 
 R2. The reference fonts do not dictate the design. Compare visual weight,
 spacing, outline consistency and the structure readers expect. A small
@@ -258,6 +269,20 @@ the straight runs end and how far each turn extends.
 R14. Apparent weight is monolinear. Measure across the stroke, on straight
 strokes, diagonals and curves, and check the two opposing edges together: a
 swelling or a pinch is a fault even when every check passes.
+
+Use the **thickness heatmap** (RuneBender → Curves → Thickness) to review strokes
+in every script, including numerals, marks and punctuation. Establish the
+intended weight at each end of a turn from the glyph’s construction.
+Follow the transition on the heatmap. Its colors are relative to the
+glyph’s own median. Use design units when comparing different glyphs.
+
+Where a simple stroke appears to swell or pinch, measure from one edge
+to the opposite edge along the normal at the quarter, half and
+three-quarter points of the curve. Bisect again around an abrupt change.
+Adjust the opposing handles together, preserve deliberate flats and
+tangents, and repeat the measurements after grid rounding. At a branch,
+the heatmap includes the ink where strokes meet. Inspect the incoming
+strokes separately and judge the filled join in context at reading size.
 
 The stroke ranges that `make check-design` uses are set from the green glyphs
 with `fgtools check-design --observe`. `vertical_stem` is the thickness of a
@@ -504,6 +529,9 @@ stroke_limit = 180
 
 R36. Draw and correct the base letters before their marks.
 Seen in: ARB-004 (211c3b8d).
+
+In Arabic the horizontal is usually a little heavier than the upright.
+Use R14 to check the transition through the turn.
 
 R37. The two terminals of an isolated boat or cup have the same thickness.
 Seen in: behDotless-ar (67f4d301).
