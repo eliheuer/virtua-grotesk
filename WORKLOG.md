@@ -2,6 +2,13 @@
 
 Newest first. `AGENTS.md` gives the form of an entry.
 
+## 2026-11-19, Codex
+
+- Two baseline runs of `make masters` produced identical source hashes. A scratch Regular eth advance edit propagated and a Thin 144 pt eth correction survived byte-for-byte.
+- Fixed in fgtools de5c8f2: display grade masters use the grade-zero advance. The Thin 144 pt eth correction stays at 598 units across the grade axis.
+- The weight drafts fall back on medial meem and lam–alef after contour inversion. The Black Arabic display proof shows a bump at the baseline join in الصباح.
+- The drafting evaluator has zero green references. Review Regular o, n and isolated beh first. Review their derived forms before deciding whether calculated masters can inherit approval.
+
 ## 2026-11-19, Claude Code
 
 - Decided by Eli: the optical size includes spacing. Each side loses 24 units at 144 pt, and the change is complete at 72 pt. Arabic joins get shorter, and free sides inside Arabic words change as in Latin (R68).
