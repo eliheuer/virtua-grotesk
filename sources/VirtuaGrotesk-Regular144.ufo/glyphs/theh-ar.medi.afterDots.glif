@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="theh-ar.medi.afterDots" format="2">
-	<advance width="456"/>
+	<advance width="408"/>
 	<outline>
 		<contour>
-			<point x="64" y="0" type="line" smooth="yes"/>
-			<point x="128" y="0"/>
-			<point x="176" y="0"/>
-			<point x="208" y="64" type="curve"/>
-			<point x="216" y="64" type="line"/>
-			<point x="248" y="0"/>
-			<point x="280" y="0"/>
-			<point x="344" y="0" type="curve" smooth="yes"/>
-			<point x="456" y="0" type="line"/>
-			<point x="456" y="96" type="line"/>
-			<point x="344" y="96" type="line" smooth="yes"/>
-			<point x="280" y="96"/>
-			<point x="248" y="128"/>
-			<point x="248" y="192" type="curve" smooth="yes"/>
-			<point x="248" y="320" type="line"/>
-			<point x="232" y="336" type="line"/>
-			<point x="176" y="336" type="line"/>
-			<point x="160" y="320" type="line"/>
-			<point x="160" y="192" type="line" smooth="yes"/>
-			<point x="160" y="128"/>
-			<point x="128" y="96"/>
-			<point x="64" y="96" type="curve" smooth="yes"/>
+			<point x="40" y="0" type="line" smooth="yes"/>
+			<point x="104" y="0"/>
+			<point x="152" y="0"/>
+			<point x="184" y="64" type="curve"/>
+			<point x="192" y="64" type="line"/>
+			<point x="224" y="0"/>
+			<point x="256" y="0"/>
+			<point x="320" y="0" type="curve" smooth="yes"/>
+			<point x="408" y="0" type="line"/>
+			<point x="408" y="96" type="line"/>
+			<point x="320" y="96" type="line" smooth="yes"/>
+			<point x="256" y="96"/>
+			<point x="224" y="128"/>
+			<point x="224" y="192" type="curve" smooth="yes"/>
+			<point x="224" y="320" type="line"/>
+			<point x="208" y="336" type="line"/>
+			<point x="152" y="336" type="line"/>
+			<point x="136" y="320" type="line"/>
+			<point x="136" y="192" type="line" smooth="yes"/>
+			<point x="136" y="128"/>
+			<point x="104" y="96"/>
+			<point x="40" y="96" type="curve" smooth="yes"/>
 			<point x="0" y="96" type="line"/>
 			<point x="-16" y="80" type="line"/>
 			<point x="-16" y="16" type="line"/>
@@ -32,16 +32,16 @@
 		</contour>
 		<component base="threedotsupabove-ar" xOffset="-28" yOffset="-256"/>
 	</outline>
-	<anchor name="bottomDots" x="204" y="8"/>
-	<anchor name="top" x="204" y="768"/>
-	<anchor name="topDots" x="204" y="320"/>
-	<anchor name="bottom" x="216" y="-8"/>
+	<anchor name="bottomDots" x="180" y="8"/>
+	<anchor name="top" x="180" y="768"/>
+	<anchor name="topDots" x="180" y="320"/>
+	<anchor name="bottom" x="192" y="-8"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

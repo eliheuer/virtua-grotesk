@@ -1,65 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="waw-ar" format="2">
 	<unicode hex="0648"/>
-	<advance width="768"/>
+	<advance width="720"/>
 	<outline>
 		<contour>
-			<point x="444" y="180"/>
-			<point x="432" y="192"/>
-			<point x="432" y="214" type="curve" smooth="yes"/>
-			<point x="432" y="250"/>
-			<point x="450" y="270"/>
-			<point x="482" y="270" type="curve" smooth="yes"/>
-			<point x="510" y="270"/>
-			<point x="520" y="258"/>
-			<point x="520" y="230" type="curve" smooth="yes"/>
-			<point x="520" y="188" type="line"/>
-			<point x="512" y="180" type="line"/>
-			<point x="460" y="180" type="line" smooth="yes"/>
+			<point x="420" y="180"/>
+			<point x="408" y="192"/>
+			<point x="408" y="214" type="curve" smooth="yes"/>
+			<point x="408" y="250"/>
+			<point x="426" y="270"/>
+			<point x="458" y="270" type="curve" smooth="yes"/>
+			<point x="486" y="270"/>
+			<point x="496" y="258"/>
+			<point x="496" y="230" type="curve" smooth="yes"/>
+			<point x="496" y="188" type="line"/>
+			<point x="488" y="180" type="line"/>
+			<point x="436" y="180" type="line" smooth="yes"/>
 		</contour>
 		<contour>
-			<point x="296" y="-84"/>
-			<point x="232" y="-72"/>
-			<point x="232" y="-32" type="curve" smooth="yes"/>
-			<point x="232" y="-16" type="line"/>
-			<point x="216" y="0" type="line"/>
-			<point x="58" y="0" type="line"/>
-			<point x="42" y="-16" type="line"/>
-			<point x="42" y="-48" type="line" smooth="yes"/>
-			<point x="42" y="-176"/>
-			<point x="158" y="-260"/>
-			<point x="372" y="-260" type="curve" smooth="yes"/>
-			<point x="580" y="-260"/>
-			<point x="710" y="-164"/>
-			<point x="710" y="0" type="curve" smooth="yes"/>
-			<point x="710" y="138" type="line" smooth="yes"/>
-			<point x="710" y="330"/>
-			<point x="612" y="448"/>
-			<point x="482" y="448" type="curve" smooth="yes"/>
-			<point x="348" y="448"/>
-			<point x="242" y="366"/>
-			<point x="242" y="234" type="curve" smooth="yes"/>
-			<point x="242" y="104"/>
-			<point x="344" y="0"/>
-			<point x="462" y="0" type="curve" smooth="yes"/>
-			<point x="512" y="0" type="line"/>
-			<point x="520" y="-8" type="line"/>
-			<point x="520" y="-24" type="line" smooth="yes"/>
-			<point x="520" y="-54"/>
-			<point x="468" y="-84"/>
-			<point x="372" y="-84" type="curve" smooth="yes"/>
+			<point x="272" y="-84"/>
+			<point x="208" y="-72"/>
+			<point x="208" y="-32" type="curve" smooth="yes"/>
+			<point x="208" y="-16" type="line"/>
+			<point x="192" y="0" type="line"/>
+			<point x="34" y="0" type="line"/>
+			<point x="18" y="-16" type="line"/>
+			<point x="18" y="-48" type="line" smooth="yes"/>
+			<point x="18" y="-176"/>
+			<point x="134" y="-260"/>
+			<point x="348" y="-260" type="curve" smooth="yes"/>
+			<point x="556" y="-260"/>
+			<point x="686" y="-164"/>
+			<point x="686" y="0" type="curve" smooth="yes"/>
+			<point x="686" y="138" type="line" smooth="yes"/>
+			<point x="686" y="330"/>
+			<point x="588" y="448"/>
+			<point x="458" y="448" type="curve" smooth="yes"/>
+			<point x="324" y="448"/>
+			<point x="218" y="366"/>
+			<point x="218" y="234" type="curve" smooth="yes"/>
+			<point x="218" y="104"/>
+			<point x="320" y="0"/>
+			<point x="438" y="0" type="curve" smooth="yes"/>
+			<point x="488" y="0" type="line"/>
+			<point x="496" y="-8" type="line"/>
+			<point x="496" y="-24" type="line" smooth="yes"/>
+			<point x="496" y="-54"/>
+			<point x="444" y="-84"/>
+			<point x="348" y="-84" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="244" y="-272"/>
-	<anchor name="top" x="244" y="408"/>
-	<anchor name="bottomDots" x="244" y="-272"/>
-	<anchor name="topDots" x="244" y="408"/>
+	<anchor name="bottom" x="220" y="-272"/>
+	<anchor name="top" x="220" y="408"/>
+	<anchor name="bottomDots" x="220" y="-272"/>
+	<anchor name="topDots" x="220" y="408"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

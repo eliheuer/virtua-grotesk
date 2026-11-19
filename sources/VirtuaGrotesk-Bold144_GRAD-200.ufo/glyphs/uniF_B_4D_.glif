@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniFB4D" format="2">
+	<unicode hex="FB4D"/>
+	<advance width="560"/>
+	<outline>
+		<component base="kaf-hb"/>
+		<component base="uni05BF" xOffset="258" yOffset="736"/>
+	</outline>
+	<anchor name="hbRafe" x="258" y="768"/>
+	<anchor name="hbMeteg" x="258" y="0"/>
+	<anchor name="hbCantAbove" x="258" y="672"/>
+	<anchor name="hbCantAboveLeft" x="24" y="672"/>
+	<anchor name="hbCantAboveRight" x="494" y="672"/>
+	<anchor name="hbCantBelow" x="258" y="0"/>
+	<anchor name="hbCantBelowRight" x="258" y="0"/>
+	<anchor name="hbBottom" x="258" y="0"/>
+	<anchor name="hbCenter" x="230" y="324"/>
+	<anchor name="hbHolam" x="24" y="618"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

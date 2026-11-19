@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="finalnun-hb" format="2">
+	<unicode hex="05DF"/>
+	<advance width="416"/>
+	<outline>
+		<contour>
+			<point x="366" y="-176" type="line"/>
+			<point x="366" y="624" type="line"/>
+			<point x="350" y="640" type="line"/>
+			<point x="40" y="640" type="line"/>
+			<point x="24" y="624" type="line"/>
+			<point x="24" y="448" type="line"/>
+			<point x="40" y="432" type="line"/>
+			<point x="134" y="432" type="line"/>
+			<point x="142" y="424" type="line"/>
+			<point x="142" y="-176" type="line"/>
+			<point x="158" y="-192" type="line"/>
+			<point x="350" y="-192" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="254" y="-192"/>
+	<anchor name="hbCenter" x="-24" y="352"/>
+	<anchor name="hbHolam" x="24" y="640"/>
+	<anchor name="hbRafe" x="194" y="736"/>
+	<anchor name="hbMeteg" x="254" y="-192"/>
+	<anchor name="hbCantAbove" x="194" y="640"/>
+	<anchor name="hbCantAboveLeft" x="24" y="640"/>
+	<anchor name="hbCantAboveRight" x="366" y="640"/>
+	<anchor name="hbCantBelow" x="254" y="-192"/>
+	<anchor name="hbCantBelowRight" x="254" y="-192"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="endash" format="2">
 	<unicode hex="2013"/>
-	<advance width="600"/>
+	<advance width="552"/>
 	<outline>
 		<contour>
-			<point x="96" y="238" type="line"/>
-			<point x="112" y="222" type="line"/>
-			<point x="488" y="222" type="line"/>
-			<point x="504" y="238" type="line"/>
-			<point x="504" y="340" type="line"/>
-			<point x="488" y="356" type="line"/>
-			<point x="112" y="356" type="line"/>
-			<point x="96" y="340" type="line"/>
+			<point x="72" y="238" type="line"/>
+			<point x="88" y="222" type="line"/>
+			<point x="464" y="222" type="line"/>
+			<point x="480" y="238" type="line"/>
+			<point x="480" y="340" type="line"/>
+			<point x="464" y="356" type="line"/>
+			<point x="88" y="356" type="line"/>
+			<point x="72" y="340" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -19,7 +19,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

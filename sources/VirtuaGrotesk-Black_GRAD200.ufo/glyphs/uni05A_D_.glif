@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni05AD" format="2">
+	<unicode hex="05AD"/>
+	<outline>
+		<contour>
+			<point x="-80" y="0" type="line"/>
+			<point x="-80" y="-88"/>
+			<point x="-8" y="-160"/>
+			<point x="80" y="-160" type="curve"/>
+			<point x="80" y="-88" type="line"/>
+			<point x="30" y="-88"/>
+			<point x="-4" y="-52"/>
+			<point x="-4" y="0" type="curve"/>
+		</contour>
+	</outline>
+	<anchor name="_hbCantBelowRight" x="0" y="64"/>
+	<anchor name="_hbCantRightVowel" x="-112" y="64"/>
+	<anchor name="hbCantRightVowel" x="80" y="64"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.54,0.44,0.88,1</string>
+		</dict>
+	</lib>
+</glyph>

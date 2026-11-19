@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="peh-ar.medi" format="2">
+	<advance width="464"/>
+	<outline>
+		<contour>
+			<point x="110" y="18" type="line"/>
+			<point x="172" y="34"/>
+			<point x="216" y="28"/>
+			<point x="246" y="80" type="curve"/>
+			<point x="282" y="80" type="line"/>
+			<point x="312" y="28"/>
+			<point x="350" y="34"/>
+			<point x="402" y="18" type="curve"/>
+			<point x="464" y="16" type="line"/>
+			<point x="464" y="80" type="line"/>
+			<point x="400" y="86" type="line" smooth="yes"/>
+			<point x="336" y="86"/>
+			<point x="286" y="136"/>
+			<point x="286" y="200" type="curve" smooth="yes"/>
+			<point x="286" y="410" type="line"/>
+			<point x="280" y="416" type="line"/>
+			<point x="232" y="416" type="line"/>
+			<point x="226" y="410" type="line"/>
+			<point x="226" y="200" type="line" smooth="yes"/>
+			<point x="226" y="136"/>
+			<point x="176" y="86"/>
+			<point x="112" y="86" type="curve" smooth="yes"/>
+			<point x="0" y="80" type="line"/>
+			<point x="-16" y="74" type="line"/>
+			<point x="-16" y="26" type="line"/>
+			<point x="0" y="16" type="line"/>
+		</contour>
+		<component base="threedotsdownbelow-ar" xOffset="16" yOffset="-44"/>
+	</outline>
+	<anchor name="bottom" x="248" y="-528"/>
+	<anchor name="top" x="248" y="432"/>
+	<anchor name="bottomDots" x="248" y="0"/>
+	<anchor name="topDots" x="248" y="432"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="rreh-ar.fina" format="2">
+	<advance width="448"/>
+	<outline>
+		<component base="reh-ar.fina"/>
+		<component base="smallHighTah-ar" xOffset="106" yOffset="-150"/>
+	</outline>
+	<anchor name="bottom" x="222" y="-258"/>
+	<anchor name="top" x="250" y="828"/>
+	<anchor name="bottomDots" x="222" y="-258"/>
+	<anchor name="topDots" x="250" y="780"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

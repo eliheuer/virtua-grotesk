@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="finalkafdagesh-hb" format="2">
 	<unicode hex="FB3A"/>
-	<advance width="544"/>
+	<advance width="496"/>
 	<outline>
 		<component base="finalkaf-hb"/>
-		<component base="dagesh-hb" xOffset="146" yOffset="4"/>
+		<component base="dagesh-hb" xOffset="122" yOffset="4"/>
 	</outline>
-	<anchor name="hbBottom" x="208" y="240"/>
-	<anchor name="hbCenter" x="216" y="368"/>
-	<anchor name="hbHolam" x="16" y="640"/>
-	<anchor name="hbRafe" x="248" y="736"/>
-	<anchor name="hbMeteg" x="208" y="240"/>
-	<anchor name="hbCantAbove" x="248" y="640"/>
-	<anchor name="hbCantAboveLeft" x="16" y="640"/>
-	<anchor name="hbCantAboveRight" x="480" y="640"/>
-	<anchor name="hbCantBelow" x="208" y="240"/>
-	<anchor name="hbCantBelowRight" x="208" y="240"/>
+	<anchor name="hbBottom" x="184" y="240"/>
+	<anchor name="hbCenter" x="192" y="368"/>
+	<anchor name="hbHolam" x="-8" y="640"/>
+	<anchor name="hbRafe" x="224" y="736"/>
+	<anchor name="hbMeteg" x="184" y="240"/>
+	<anchor name="hbCantAbove" x="224" y="640"/>
+	<anchor name="hbCantAboveLeft" x="-8" y="640"/>
+	<anchor name="hbCantAboveRight" x="456" y="640"/>
+	<anchor name="hbCantBelow" x="184" y="240"/>
+	<anchor name="hbCantBelowRight" x="184" y="240"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

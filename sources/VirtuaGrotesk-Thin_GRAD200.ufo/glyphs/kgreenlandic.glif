@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kgreenlandic" format="2">
+	<unicode hex="0138"/>
+	<advance width="576"/>
+	<outline>
+		<contour>
+			<point x="64" y="16" type="line"/>
+			<point x="80" y="0" type="line"/>
+			<point x="130" y="0" type="line"/>
+			<point x="146" y="16" type="line"/>
+			<point x="146" y="208" type="line"/>
+			<point x="266" y="292" type="line"/>
+			<point x="274" y="292" type="line"/>
+			<point x="510" y="0" type="line"/>
+			<point x="544" y="0" type="line"/>
+			<point x="560" y="16" type="line"/>
+			<point x="560" y="66" type="line"/>
+			<point x="330" y="348" type="line"/>
+			<point x="330" y="356" type="line"/>
+			<point x="526" y="510" type="line"/>
+			<point x="526" y="560" type="line"/>
+			<point x="510" y="576" type="line"/>
+			<point x="484" y="576" type="line"/>
+			<point x="154" y="320" type="line"/>
+			<point x="146" y="320" type="line"/>
+			<point x="146" y="560" type="line"/>
+			<point x="130" y="576" type="line"/>
+			<point x="80" y="576" type="line"/>
+			<point x="64" y="560" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="296" y="576"/>
+	<anchor name="bottom" x="296" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

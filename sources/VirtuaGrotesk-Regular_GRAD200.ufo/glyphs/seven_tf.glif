@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="seven.tf" format="2">
+	<advance width="664"/>
+	<outline>
+		<contour>
+			<point x="196" y="0" type="line"/>
+			<point x="326" y="0" type="line"/>
+			<point x="342" y="16" type="line"/>
+			<point x="350" y="256"/>
+			<point x="428" y="512"/>
+			<point x="608" y="652" type="curve"/>
+			<point x="608" y="752" type="line"/>
+			<point x="592" y="768" type="line"/>
+			<point x="90" y="768" type="line"/>
+			<point x="74" y="752" type="line"/>
+			<point x="74" y="654" type="line"/>
+			<point x="90" y="638" type="line"/>
+			<point x="438" y="638" type="line"/>
+			<point x="438" y="630" type="line"/>
+			<point x="312" y="520"/>
+			<point x="180" y="276"/>
+			<point x="180" y="16" type="curve"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

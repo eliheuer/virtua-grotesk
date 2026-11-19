@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="gaf-ar.medi" format="2">
+	<advance width="784"/>
+	<outline>
+		<component base="keheh-ar.medi"/>
+		<component base="gafsarkashabove-ar" xOffset="320"/>
+	</outline>
+	<anchor name="bottom" x="296" y="0"/>
+	<anchor name="bottomDots" x="288" y="854"/>
+	<anchor name="top" x="288" y="1142"/>
+	<anchor name="topDots" x="288" y="1094"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

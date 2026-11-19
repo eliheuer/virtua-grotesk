@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="yehBarree-ar.fina" format="2">
+	<advance width="656"/>
+	<outline>
+		<contour>
+			<point x="656" y="6" type="line"/>
+			<point x="656" y="96" type="line"/>
+			<point x="328" y="98" type="line" smooth="yes"/>
+			<point x="136" y="98"/>
+			<point x="46" y="48"/>
+			<point x="46" y="-64" type="curve" smooth="yes"/>
+			<point x="46" y="-176"/>
+			<point x="136" y="-218"/>
+			<point x="328" y="-218" type="curve" smooth="yes"/>
+			<point x="598" y="-218" type="line"/>
+			<point x="610" y="-206" type="line"/>
+			<point x="610" y="-138" type="line"/>
+			<point x="598" y="-126" type="line"/>
+			<point x="328" y="-126" type="line" smooth="yes"/>
+			<point x="188" y="-126"/>
+			<point x="130" y="-110"/>
+			<point x="130" y="-64" type="curve" smooth="yes"/>
+			<point x="130" y="-14"/>
+			<point x="194" y="6"/>
+			<point x="328" y="6" type="curve" smooth="yes"/>
+		</contour>
+	</outline>
+	<anchor name="bottomDots" x="448" y="-180"/>
+	<anchor name="topDots" x="448" y="304"/>
+	<anchor name="top" x="784" y="342"/>
+	<anchor name="bottom" x="396" y="-196"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

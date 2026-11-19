@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="five-ar" format="2">
+	<unicode hex="0665"/>
+	<advance width="712"/>
+	<outline>
+		<contour>
+			<point x="628" y="232" type="curve" smooth="yes"/>
+			<point x="628" y="384"/>
+			<point x="524" y="520"/>
+			<point x="356" y="520" type="curve" smooth="yes"/>
+			<point x="188" y="520"/>
+			<point x="84" y="384"/>
+			<point x="84" y="232" type="curve" smooth="yes"/>
+			<point x="84" y="64"/>
+			<point x="188" y="-8"/>
+			<point x="356" y="-8" type="curve" smooth="yes"/>
+			<point x="524" y="-8"/>
+			<point x="628" y="64"/>
+		</contour>
+		<contour>
+			<point x="460" y="232" type="curve" smooth="yes"/>
+			<point x="460" y="160"/>
+			<point x="420" y="128"/>
+			<point x="356" y="128" type="curve" smooth="yes"/>
+			<point x="292" y="128"/>
+			<point x="252" y="160"/>
+			<point x="252" y="232" type="curve" smooth="yes"/>
+			<point x="252" y="312"/>
+			<point x="300" y="376"/>
+			<point x="356" y="376" type="curve" smooth="yes"/>
+			<point x="412" y="376"/>
+			<point x="460" y="312"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="356" y="-8"/>
+	<anchor name="top" x="356" y="520"/>
+	<anchor name="bottomDots" x="356" y="-8"/>
+	<anchor name="topDots" x="356" y="520"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

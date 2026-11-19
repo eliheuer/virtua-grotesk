@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="X" format="2">
+	<unicode hex="0058"/>
+	<advance width="792"/>
+	<outline>
+		<contour>
+			<point x="-34" y="16" type="line"/>
+			<point x="-18" y="0" type="line"/>
+			<point x="266" y="0" type="line"/>
+			<point x="378" y="178" type="line"/>
+			<point x="386" y="178" type="line"/>
+			<point x="492" y="0" type="line"/>
+			<point x="810" y="0" type="line"/>
+			<point x="826" y="16" type="line"/>
+			<point x="826" y="92" type="line"/>
+			<point x="604" y="422" type="line"/>
+			<point x="604" y="428" type="line"/>
+			<point x="812" y="716" type="line"/>
+			<point x="812" y="752" type="line"/>
+			<point x="796" y="768" type="line"/>
+			<point x="478" y="768" type="line"/>
+			<point x="414" y="642" type="line"/>
+			<point x="406" y="642" type="line"/>
+			<point x="342" y="768" type="line"/>
+			<point x="30" y="768" type="line"/>
+			<point x="14" y="752" type="line"/>
+			<point x="14" y="670" type="line"/>
+			<point x="188" y="404" type="line"/>
+			<point x="188" y="398" type="line"/>
+			<point x="-34" y="64" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="398" y="0"/>
+	<anchor name="top" x="398" y="768"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-X.png</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="seenSixdots-ar.fina" format="2">
+	<advance width="1316"/>
+	<outline>
+		<contour>
+			<point x="840" y="544" type="curve" smooth="yes"/>
+			<point x="810" y="544"/>
+			<point x="790" y="522"/>
+			<point x="790" y="494" type="curve" smooth="yes"/>
+			<point x="790" y="464"/>
+			<point x="810" y="442"/>
+			<point x="840" y="442" type="curve" smooth="yes"/>
+			<point x="870" y="442"/>
+			<point x="890" y="464"/>
+			<point x="890" y="494" type="curve" smooth="yes"/>
+			<point x="890" y="522"/>
+			<point x="870" y="544"/>
+		</contour>
+		<contour>
+			<point x="974" y="544" type="curve" smooth="yes"/>
+			<point x="944" y="544"/>
+			<point x="922" y="522"/>
+			<point x="922" y="494" type="curve" smooth="yes"/>
+			<point x="922" y="464"/>
+			<point x="944" y="442"/>
+			<point x="974" y="442" type="curve" smooth="yes"/>
+			<point x="1002" y="442"/>
+			<point x="1024" y="464"/>
+			<point x="1024" y="494" type="curve" smooth="yes"/>
+			<point x="1024" y="522"/>
+			<point x="1002" y="544"/>
+		</contour>
+		<contour>
+			<point x="906" y="656" type="curve" smooth="yes"/>
+			<point x="878" y="656"/>
+			<point x="856" y="634"/>
+			<point x="856" y="606" type="curve" smooth="yes"/>
+			<point x="856" y="576"/>
+			<point x="878" y="554"/>
+			<point x="906" y="554" type="curve" smooth="yes"/>
+			<point x="936" y="554"/>
+			<point x="958" y="576"/>
+			<point x="958" y="606" type="curve" smooth="yes"/>
+			<point x="958" y="634"/>
+			<point x="936" y="656"/>
+		</contour>
+		<contour>
+			<point x="840" y="-80" type="curve" smooth="yes"/>
+			<point x="810" y="-80"/>
+			<point x="790" y="-102"/>
+			<point x="790" y="-130" type="curve" smooth="yes"/>
+			<point x="790" y="-160"/>
+			<point x="810" y="-182"/>
+			<point x="840" y="-182" type="curve" smooth="yes"/>
+			<point x="870" y="-182"/>
+			<point x="890" y="-160"/>
+			<point x="890" y="-130" type="curve" smooth="yes"/>
+			<point x="890" y="-102"/>
+			<point x="870" y="-80"/>
+		</contour>
+		<contour>
+			<point x="974" y="-80" type="curve" smooth="yes"/>
+			<point x="944" y="-80"/>
+			<point x="922" y="-102"/>
+			<point x="922" y="-130" type="curve" smooth="yes"/>
+			<point x="922" y="-160"/>
+			<point x="944" y="-182"/>
+			<point x="974" y="-182" type="curve" smooth="yes"/>
+			<point x="1002" y="-182"/>
+			<point x="1024" y="-160"/>
+			<point x="1024" y="-130" type="curve" smooth="yes"/>
+			<point x="1024" y="-102"/>
+			<point x="1002" y="-80"/>
+		</contour>
+		<contour>
+			<point x="906" y="-192" type="curve" smooth="yes"/>
+			<point x="878" y="-192"/>
+			<point x="856" y="-214"/>
+			<point x="856" y="-242" type="curve" smooth="yes"/>
+			<point x="856" y="-272"/>
+			<point x="878" y="-294"/>
+			<point x="906" y="-294" type="curve" smooth="yes"/>
+			<point x="936" y="-294"/>
+			<point x="958" y="-272"/>
+			<point x="958" y="-242" type="curve" smooth="yes"/>
+			<point x="958" y="-214"/>
+			<point x="936" y="-192"/>
+		</contour>
+		<component base="seen-ar.fina"/>
+	</outline>
+	<anchor name="bottomDots" x="500" y="-272"/>
+	<anchor name="top" x="906" y="720"/>
+	<anchor name="topDots" x="828" y="432"/>
+	<anchor name="bottom" x="906" y="-358"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

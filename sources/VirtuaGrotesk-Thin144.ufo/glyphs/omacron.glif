@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="omacron" format="2">
 	<unicode hex="014D"/>
-	<advance width="616"/>
+	<advance width="568"/>
 	<outline>
 		<component base="o"/>
 		<component base="macron" xOffset="128"/>
@@ -11,7 +11,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

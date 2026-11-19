@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="shaddaFathatan-ar" format="2">
+	<outline>
+		<component base="shadda-ar"/>
+		<component base="fatha-ar" xScale="0.5" yScale="0.5" xOffset="56" yOffset="528"/>
+		<component base="fatha-ar" xScale="0.5" yScale="0.5" xOffset="56" yOffset="608"/>
+	</outline>
+	<anchor name="top" x="112" y="1076"/>
+	<anchor name="bottom" x="112" y="688"/>
+	<anchor name="_top" x="112" y="576"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

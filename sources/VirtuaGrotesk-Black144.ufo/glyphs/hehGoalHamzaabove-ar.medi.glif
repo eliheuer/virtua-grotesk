@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hehGoalHamzaabove-ar.medi" format="2">
-	<advance width="528"/>
-	<anchor name="bottom" x="262" y="-336"/>
+	<advance width="504"/>
+	<anchor name="bottom" x="238" y="-336"/>
 	<outline>
 		<component base="hehGoal-ar.medi"/>
-		<component base="hamzaabove-ar" xOffset="150" yOffset="-280"/>
+		<component base="hamzaabove-ar" xOffset="126" yOffset="-280"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

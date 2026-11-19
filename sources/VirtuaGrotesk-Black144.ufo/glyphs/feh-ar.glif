@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="feh-ar" format="2">
 	<unicode hex="0641"/>
-	<advance width="1072"/>
+	<advance width="1024"/>
 	<outline>
 		<component base="fehDotless-ar"/>
 		<component base="dotabove-ar" xOffset="726" yOffset="132"/>
@@ -9,9 +9,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

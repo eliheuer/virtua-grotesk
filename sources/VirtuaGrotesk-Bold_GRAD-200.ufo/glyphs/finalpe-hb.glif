@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="finalpe-hb" format="2">
+	<unicode hex="05E3"/>
+	<advance width="800"/>
+	<outline>
+		<contour>
+			<point x="566" y="-176" type="line"/>
+			<point x="582" y="-192" type="line"/>
+			<point x="664" y="-192" type="line"/>
+			<point x="680" y="-176" type="line"/>
+			<point x="680" y="320" type="line" smooth="yes"/>
+			<point x="680" y="522"/>
+			<point x="582" y="640"/>
+			<point x="440" y="640" type="curve" smooth="yes"/>
+			<point x="128" y="640" type="line"/>
+			<point x="112" y="624" type="line"/>
+			<point x="112" y="270" type="line"/>
+			<point x="128" y="254" type="line"/>
+			<point x="368" y="254" type="line"/>
+			<point x="384" y="270" type="line"/>
+			<point x="384" y="346" type="line"/>
+			<point x="368" y="362" type="line"/>
+			<point x="242" y="362" type="line"/>
+			<point x="226" y="370" type="line"/>
+			<point x="226" y="502" type="line"/>
+			<point x="234" y="512" type="line"/>
+			<point x="440" y="512" type="line" smooth="yes"/>
+			<point x="512" y="512"/>
+			<point x="566" y="460"/>
+			<point x="566" y="318" type="curve" smooth="yes"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="394" y="-192"/>
+	<anchor name="hbCenter" x="464" y="410"/>
+	<anchor name="hbHolam" x="112" y="640"/>
+	<anchor name="hbRafe" x="394" y="736"/>
+	<anchor name="hbMeteg" x="394" y="-192"/>
+	<anchor name="hbCantAbove" x="394" y="640"/>
+	<anchor name="hbCantAboveLeft" x="112" y="640"/>
+	<anchor name="hbCantAboveRight" x="680" y="640"/>
+	<anchor name="hbCantBelow" x="394" y="-192"/>
+	<anchor name="hbCantBelowRight" x="394" y="-192"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

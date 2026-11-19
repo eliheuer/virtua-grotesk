@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Zdotaccent" format="2">
 	<unicode hex="017B"/>
-	<advance width="704"/>
+	<advance width="656"/>
 	<outline>
 		<component base="Z"/>
 		<component base="dotaccent" xOffset="220" yOffset="192"/>
@@ -9,7 +9,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

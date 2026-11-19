@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fullStop-ar" format="2">
+	<unicode hex="06D4"/>
+	<advance width="320"/>
+	<outline>
+		<contour>
+			<point x="4" y="16" type="line"/>
+			<point x="20" y="0" type="line"/>
+			<point x="304" y="0" type="line"/>
+			<point x="320" y="16" type="line"/>
+			<point x="320" y="130" type="line"/>
+			<point x="304" y="146" type="line"/>
+			<point x="20" y="146" type="line"/>
+			<point x="4" y="130" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

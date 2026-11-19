@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kaf-ar.medi" format="2">
-	<advance width="808"/>
+	<advance width="784"/>
 	<outline>
 		<contour>
 			<point x="48" y="18" type="curve" smooth="yes"/>
@@ -12,8 +12,8 @@
 			<point x="658" y="10"/>
 			<point x="688" y="18"/>
 			<point x="744" y="18" type="curve" smooth="yes"/>
-			<point x="808" y="16" type="line"/>
-			<point x="808" y="80" type="line"/>
+			<point x="784" y="16" type="line"/>
+			<point x="784" y="80" type="line"/>
 			<point x="744" y="86" type="line" smooth="yes"/>
 			<point x="680" y="86"/>
 			<point x="630" y="136"/>
@@ -82,9 +82,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

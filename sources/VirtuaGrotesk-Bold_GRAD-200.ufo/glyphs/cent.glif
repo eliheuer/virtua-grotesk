@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="cent" format="2">
+	<unicode hex="00A2"/>
+	<advance width="640"/>
+	<outline>
+		<contour>
+			<point x="56" y="288" type="curve" smooth="yes"/>
+			<point x="56" y="116"/>
+			<point x="166" y="4"/>
+			<point x="290" y="-14" type="curve"/>
+			<point x="298" y="-14" type="line"/>
+			<point x="298" y="-88" type="line"/>
+			<point x="306" y="-96" type="line"/>
+			<point x="364" y="-96" type="line"/>
+			<point x="372" y="-88" type="line"/>
+			<point x="372" y="-14" type="line"/>
+			<point x="380" y="-14" type="line"/>
+			<point x="476" y="-2"/>
+			<point x="570" y="58"/>
+			<point x="592" y="176" type="curve"/>
+			<point x="592" y="194" type="line"/>
+			<point x="574" y="210" type="line"/>
+			<point x="488" y="210" type="line"/>
+			<point x="472" y="194" type="line"/>
+			<point x="458" y="128"/>
+			<point x="400" y="86"/>
+			<point x="336" y="86" type="curve" smooth="yes"/>
+			<point x="252" y="86"/>
+			<point x="186" y="170"/>
+			<point x="186" y="288" type="curve" smooth="yes"/>
+			<point x="186" y="400"/>
+			<point x="248" y="490"/>
+			<point x="336" y="490" type="curve" smooth="yes"/>
+			<point x="396" y="490"/>
+			<point x="452" y="450"/>
+			<point x="468" y="390" type="curve"/>
+			<point x="484" y="374" type="line"/>
+			<point x="574" y="374" type="line"/>
+			<point x="592" y="390" type="line"/>
+			<point x="592" y="408" type="line"/>
+			<point x="562" y="522"/>
+			<point x="468" y="578"/>
+			<point x="380" y="590" type="curve"/>
+			<point x="372" y="590" type="line"/>
+			<point x="372" y="664" type="line"/>
+			<point x="364" y="672" type="line"/>
+			<point x="306" y="672" type="line"/>
+			<point x="298" y="664" type="line"/>
+			<point x="298" y="590" type="line"/>
+			<point x="290" y="590" type="line"/>
+			<point x="166" y="572"/>
+			<point x="56" y="460"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

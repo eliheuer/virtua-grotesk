@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="L" format="2">
+	<unicode hex="004C"/>
+	<advance width="544"/>
+	<outline>
+		<contour>
+			<point x="52" y="16" type="line"/>
+			<point x="68" y="0" type="line"/>
+			<point x="536" y="0" type="line"/>
+			<point x="552" y="16" type="line"/>
+			<point x="552" y="70" type="line"/>
+			<point x="536" y="86" type="line"/>
+			<point x="148" y="86" type="line"/>
+			<point x="140" y="94" type="line"/>
+			<point x="140" y="752" type="line"/>
+			<point x="124" y="768" type="line"/>
+			<point x="68" y="768" type="line"/>
+			<point x="52" y="752" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="302" y="768"/>
+	<anchor name="bottom" x="304" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

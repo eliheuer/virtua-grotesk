@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="O" format="2">
 	<unicode hex="004F"/>
-	<advance width="912"/>
+	<advance width="864"/>
 	<outline>
 		<contour>
-			<point x="236" y="-16"/>
-			<point x="454" y="-16" type="curve" smooth="yes"/>
-			<point x="674" y="-16"/>
-			<point x="852" y="128"/>
-			<point x="852" y="384" type="curve" smooth="yes"/>
-			<point x="852" y="640"/>
-			<point x="674" y="784"/>
-			<point x="454" y="784" type="curve" smooth="yes"/>
-			<point x="236" y="784"/>
-			<point x="56" y="640"/>
-			<point x="56" y="384" type="curve" smooth="yes"/>
-			<point x="56" y="128"/>
+			<point x="212" y="-16"/>
+			<point x="430" y="-16" type="curve" smooth="yes"/>
+			<point x="650" y="-16"/>
+			<point x="828" y="128"/>
+			<point x="828" y="384" type="curve" smooth="yes"/>
+			<point x="828" y="640"/>
+			<point x="650" y="784"/>
+			<point x="430" y="784" type="curve" smooth="yes"/>
+			<point x="212" y="784"/>
+			<point x="32" y="640"/>
+			<point x="32" y="384" type="curve" smooth="yes"/>
+			<point x="32" y="128"/>
 		</contour>
 		<contour>
-			<point x="568" y="156"/>
-			<point x="454" y="156" type="curve" smooth="yes"/>
-			<point x="340" y="156"/>
-			<point x="330" y="284"/>
-			<point x="330" y="384" type="curve" smooth="yes"/>
-			<point x="330" y="484"/>
-			<point x="340" y="612"/>
-			<point x="454" y="612" type="curve" smooth="yes"/>
-			<point x="568" y="612"/>
-			<point x="578" y="484"/>
-			<point x="578" y="384" type="curve" smooth="yes"/>
-			<point x="578" y="284"/>
+			<point x="544" y="156"/>
+			<point x="430" y="156" type="curve" smooth="yes"/>
+			<point x="316" y="156"/>
+			<point x="306" y="284"/>
+			<point x="306" y="384" type="curve" smooth="yes"/>
+			<point x="306" y="484"/>
+			<point x="316" y="612"/>
+			<point x="430" y="612" type="curve" smooth="yes"/>
+			<point x="544" y="612"/>
+			<point x="554" y="484"/>
+			<point x="554" y="384" type="curve" smooth="yes"/>
+			<point x="554" y="284"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="454" y="768"/>
-	<anchor name="bottom" x="454" y="0"/>
+	<anchor name="top" x="430" y="768"/>
+	<anchor name="bottom" x="430" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
@@ -41,7 +41,7 @@
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-O.png</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

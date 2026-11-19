@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="gershayim-hb" format="2">
+	<unicode hex="05F4"/>
+	<advance width="368"/>
+	<outline>
+		<contour>
+			<point x="44" y="496" type="line"/>
+			<point x="94" y="496" type="line"/>
+			<point x="110" y="512" type="line"/>
+			<point x="158" y="656" type="line"/>
+			<point x="142" y="672" type="line"/>
+			<point x="92" y="672" type="line"/>
+			<point x="76" y="656" type="line"/>
+			<point x="28" y="512" type="line"/>
+		</contour>
+		<contour>
+			<point x="222" y="496" type="line"/>
+			<point x="274" y="496" type="line"/>
+			<point x="290" y="512" type="line"/>
+			<point x="338" y="656" type="line"/>
+			<point x="322" y="672" type="line"/>
+			<point x="270" y="672" type="line"/>
+			<point x="254" y="656" type="line"/>
+			<point x="206" y="512" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

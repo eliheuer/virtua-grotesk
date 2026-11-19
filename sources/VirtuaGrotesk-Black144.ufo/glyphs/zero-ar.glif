@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zero-ar" format="2">
 	<unicode hex="0660"/>
-	<advance width="440"/>
+	<advance width="392"/>
 	<outline>
 		<contour>
-			<point x="114" y="184" type="line"/>
-			<point x="206" y="184" type="line"/>
-			<point x="270" y="244" type="line"/>
-			<point x="270" y="300" type="line"/>
-			<point x="206" y="360" type="line"/>
-			<point x="114" y="360" type="line"/>
-			<point x="50" y="300" type="line"/>
-			<point x="50" y="244" type="line"/>
+			<point x="90" y="184" type="line"/>
+			<point x="182" y="184" type="line"/>
+			<point x="246" y="244" type="line"/>
+			<point x="246" y="300" type="line"/>
+			<point x="182" y="360" type="line"/>
+			<point x="90" y="360" type="line"/>
+			<point x="26" y="300" type="line"/>
+			<point x="26" y="244" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="160" y="184"/>
-	<anchor name="top" x="160" y="360"/>
-	<anchor name="bottomDots" x="160" y="184"/>
-	<anchor name="topDots" x="160" y="360"/>
+	<anchor name="bottom" x="136" y="184"/>
+	<anchor name="top" x="136" y="360"/>
+	<anchor name="bottomDots" x="136" y="184"/>
+	<anchor name="topDots" x="136" y="360"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

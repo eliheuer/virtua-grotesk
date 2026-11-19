@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="qamatsqatan-hb" format="2">
+	<unicode hex="05C7"/>
+	<outline>
+		<contour>
+			<point x="166" y="-334" type="line"/>
+			<point x="204" y="-298" type="line"/>
+			<point x="196" y="-206" type="line"/>
+			<point x="204" y="-198" type="line"/>
+			<point x="246" y="-198" type="line"/>
+			<point x="284" y="-162" type="line"/>
+			<point x="284" y="-84" type="line"/>
+			<point x="246" y="-48" type="line"/>
+			<point x="18" y="-48" type="line"/>
+			<point x="-20" y="-84" type="line"/>
+			<point x="-20" y="-162" type="line"/>
+			<point x="18" y="-198" type="line"/>
+			<point x="52" y="-198" type="line"/>
+			<point x="60" y="-206" type="line"/>
+			<point x="60" y="-298" type="line"/>
+			<point x="98" y="-334" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbBottom" x="132" y="0"/>
+	<anchor name="hbMeteg" x="-104" y="0"/>
+	<anchor name="hbCantLeftVowel" x="-20" y="0"/>
+	<anchor name="hbCantRightVowel" x="286" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

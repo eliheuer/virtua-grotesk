@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="shindageshshindot-hb" format="2">
+	<unicode hex="FB2C"/>
+	<advance width="832"/>
+	<outline>
+		<component base="shin-hb"/>
+		<component base="dagesh-hb" xOffset="474" yOffset="52"/>
+		<component base="shindot-hb" xOffset="628" yOffset="64"/>
+	</outline>
+	<anchor name="hbBottom" x="400" y="-32"/>
+	<anchor name="hbCenter" x="544" y="352"/>
+	<anchor name="hbHolam" x="-8" y="576"/>
+	<anchor name="hbShin" x="696" y="576"/>
+	<anchor name="hbSin" x="104" y="576"/>
+	<anchor name="hbRafe" x="400" y="672"/>
+	<anchor name="hbMeteg" x="400" y="-32"/>
+	<anchor name="hbCantAbove" x="400" y="576"/>
+	<anchor name="hbCantAboveLeft" x="-8" y="576"/>
+	<anchor name="hbCantAboveRight" x="792" y="576"/>
+	<anchor name="hbCantBelow" x="400" y="-32"/>
+	<anchor name="hbCantBelowRight" x="400" y="-32"/>
+	<anchor name="hbCantAfterHolam" x="734" y="576"/>
+	<anchor name="hbCantBeforeHolam" x="660" y="576"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

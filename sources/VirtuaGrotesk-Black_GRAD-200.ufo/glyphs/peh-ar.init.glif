@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="peh-ar.init" format="2">
+	<advance width="592"/>
+	<outline>
+		<contour>
+			<point x="0" y="0" type="line"/>
+			<point x="246" y="0" type="line"/>
+			<point x="400" y="0"/>
+			<point x="474" y="72"/>
+			<point x="474" y="200" type="curve" smooth="yes"/>
+			<point x="474" y="424" type="line"/>
+			<point x="440" y="460" type="line"/>
+			<point x="340" y="460" type="line"/>
+			<point x="306" y="424" type="line"/>
+			<point x="306" y="200" type="line" smooth="yes"/>
+			<point x="316" y="156"/>
+			<point x="310" y="176"/>
+			<point x="246" y="176" type="curve"/>
+			<point x="0" y="176" type="line"/>
+			<point x="-16" y="160" type="line"/>
+			<point x="-16" y="16" type="line"/>
+		</contour>
+		<component base="threedotsdownbelow-ar" xOffset="116" yOffset="-46"/>
+	</outline>
+	<anchor name="bottom" x="352" y="-532"/>
+	<anchor name="top" x="352" y="460"/>
+	<anchor name="bottomDots" x="352" y="0"/>
+	<anchor name="topDots" x="352" y="460"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

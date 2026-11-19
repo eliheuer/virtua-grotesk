@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="peh-ar.init" format="2">
-	<advance width="548"/>
+	<advance width="524"/>
 	<outline>
 		<contour>
 			<point x="0" y="0" type="line"/>
@@ -20,7 +20,7 @@
 			<point x="-16" y="160" type="line"/>
 			<point x="-16" y="16" type="line"/>
 		</contour>
-		<component base="threedotsdownbelow-ar" xOffset="98" yOffset="-46"/>
+		<component base="threedotsdownbelow-ar" xOffset="122" yOffset="-46"/>
 	</outline>
 	<anchor name="bottom" x="330" y="-532"/>
 	<anchor name="top" x="330" y="460"/>
@@ -29,9 +29,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

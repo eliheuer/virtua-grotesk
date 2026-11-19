@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ecircumflex" format="2">
 	<unicode hex="00EA"/>
-	<advance width="656"/>
+	<advance width="608"/>
 	<outline>
 		<component base="e"/>
 		<component base="circumflex" xOffset="116"/>
@@ -9,7 +9,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>1,0.29,0.24,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

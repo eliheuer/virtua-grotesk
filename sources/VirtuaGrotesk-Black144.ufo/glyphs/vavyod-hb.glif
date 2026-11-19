@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="vavyod-hb" format="2">
 	<unicode hex="05F1"/>
-	<advance width="736"/>
+	<advance width="688"/>
 	<outline>
 		<component base="yod-hb"/>
 		<component base="vav-hb" xOffset="368"/>
 	</outline>
-	<anchor name="hbRafe" x="390" y="644"/>
-	<anchor name="hbMeteg" x="390" y="0"/>
-	<anchor name="hbCantAbove" x="390" y="548"/>
-	<anchor name="hbCantAboveLeft" x="48" y="548"/>
-	<anchor name="hbCantAboveRight" x="730" y="548"/>
-	<anchor name="hbCantBelow" x="390" y="0"/>
-	<anchor name="hbCantBelowRight" x="390" y="0"/>
+	<anchor name="hbRafe" x="366" y="644"/>
+	<anchor name="hbMeteg" x="366" y="0"/>
+	<anchor name="hbCantAbove" x="366" y="548"/>
+	<anchor name="hbCantAboveLeft" x="24" y="548"/>
+	<anchor name="hbCantAboveRight" x="706" y="548"/>
+	<anchor name="hbCantBelow" x="366" y="0"/>
+	<anchor name="hbCantBelowRight" x="366" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

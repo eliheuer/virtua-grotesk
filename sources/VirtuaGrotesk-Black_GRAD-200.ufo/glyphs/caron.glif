@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="caron" format="2">
+	<unicode hex="02C7"/>
+	<advance width="416"/>
+	<outline>
+		<contour>
+			<point x="46" y="816" type="line"/>
+			<point x="46" y="736" type="line"/>
+			<point x="62" y="720" type="line"/>
+			<point x="158" y="656" type="line"/>
+			<point x="174" y="640" type="line"/>
+			<point x="238" y="640" type="line"/>
+			<point x="254" y="656" type="line"/>
+			<point x="350" y="720" type="line"/>
+			<point x="366" y="736" type="line"/>
+			<point x="366" y="816" type="line"/>
+			<point x="350" y="832" type="line"/>
+			<point x="238" y="768" type="line"/>
+			<point x="222" y="760" type="line"/>
+			<point x="190" y="760" type="line"/>
+			<point x="174" y="768" type="line"/>
+			<point x="62" y="832" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_top" x="210" y="576"/>
+	<anchor name="top" x="210" y="864"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

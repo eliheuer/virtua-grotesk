@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB4C" format="2">
 	<unicode hex="FB4C"/>
-	<advance width="736"/>
+	<advance width="688"/>
 	<outline>
 		<component base="bet-hb"/>
-		<component base="uni05BF" xOffset="334" yOffset="736"/>
+		<component base="uni05BF" xOffset="310" yOffset="736"/>
 	</outline>
-	<anchor name="hbRafe" x="334" y="876"/>
-	<anchor name="hbMeteg" x="334" y="0"/>
-	<anchor name="hbCantAbove" x="334" y="780"/>
-	<anchor name="hbCantAboveLeft" x="16" y="780"/>
-	<anchor name="hbCantAboveRight" x="660" y="780"/>
-	<anchor name="hbCantBelow" x="334" y="0"/>
-	<anchor name="hbCantBelowRight" x="334" y="0"/>
-	<anchor name="hbBottom" x="334" y="0"/>
-	<anchor name="hbCenter" x="270" y="316"/>
-	<anchor name="hbHolam" x="16" y="548"/>
+	<anchor name="hbRafe" x="310" y="876"/>
+	<anchor name="hbMeteg" x="310" y="0"/>
+	<anchor name="hbCantAbove" x="310" y="780"/>
+	<anchor name="hbCantAboveLeft" x="-8" y="780"/>
+	<anchor name="hbCantAboveRight" x="636" y="780"/>
+	<anchor name="hbCantBelow" x="310" y="0"/>
+	<anchor name="hbCantBelowRight" x="310" y="0"/>
+	<anchor name="hbBottom" x="310" y="0"/>
+	<anchor name="hbCenter" x="246" y="316"/>
+	<anchor name="hbHolam" x="-8" y="548"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

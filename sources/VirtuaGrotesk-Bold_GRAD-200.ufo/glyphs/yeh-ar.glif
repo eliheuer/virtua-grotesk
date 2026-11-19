@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="yeh-ar" format="2">
+	<unicode hex="064A"/>
+	<advance width="976"/>
+	<outline>
+		<component base="alefMaksura-ar"/>
+		<component base="twodotshorizontalbelow-ar" xOffset="304" yOffset="-28"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

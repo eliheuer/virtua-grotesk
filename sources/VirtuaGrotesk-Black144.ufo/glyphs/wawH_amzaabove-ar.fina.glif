@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="wawHamzaabove-ar.fina" format="2">
-	<advance width="864"/>
-	<anchor name="bottom" x="86" y="-304"/>
+	<advance width="840"/>
+	<anchor name="bottom" x="62" y="-304"/>
 	<outline>
 		<component base="waw-ar.fina"/>
-		<component base="hamzaabove-ar" xOffset="-26" yOffset="-336"/>
+		<component base="hamzaabove-ar" xOffset="-50" yOffset="-336"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

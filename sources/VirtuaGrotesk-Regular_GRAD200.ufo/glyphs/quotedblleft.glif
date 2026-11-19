@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="quotedblleft" format="2">
+	<unicode hex="201C"/>
+	<advance width="400"/>
+	<outline>
+		<component base="comma" xScale="-1" yScale="-1" xOffset="246" yOffset="674"/>
+		<component base="comma" xScale="-1" yScale="-1" xOffset="454" yOffset="674"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

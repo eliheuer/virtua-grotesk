@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="currency" format="2">
 	<unicode hex="00A4"/>
-	<advance width="608"/>
+	<advance width="560"/>
 	<outline>
 		<contour>
-			<point x="304" y="144" type="curve" smooth="yes"/>
-			<point x="416" y="144"/>
-			<point x="512" y="240"/>
-			<point x="512" y="352" type="curve" smooth="yes"/>
-			<point x="512" y="464"/>
-			<point x="416" y="560"/>
-			<point x="304" y="560" type="curve" smooth="yes"/>
-			<point x="192" y="560"/>
-			<point x="96" y="464"/>
-			<point x="96" y="352" type="curve" smooth="yes"/>
-			<point x="96" y="240"/>
-			<point x="192" y="144"/>
+			<point x="280" y="144" type="curve" smooth="yes"/>
+			<point x="392" y="144"/>
+			<point x="488" y="240"/>
+			<point x="488" y="352" type="curve" smooth="yes"/>
+			<point x="488" y="464"/>
+			<point x="392" y="560"/>
+			<point x="280" y="560" type="curve" smooth="yes"/>
+			<point x="168" y="560"/>
+			<point x="72" y="464"/>
+			<point x="72" y="352" type="curve" smooth="yes"/>
+			<point x="72" y="240"/>
+			<point x="168" y="144"/>
 		</contour>
 		<contour>
-			<point x="304" y="448" type="curve" smooth="yes"/>
-			<point x="360" y="448"/>
-			<point x="400" y="408"/>
-			<point x="400" y="352" type="curve" smooth="yes"/>
-			<point x="400" y="296"/>
-			<point x="360" y="256"/>
-			<point x="304" y="256" type="curve" smooth="yes"/>
-			<point x="248" y="256"/>
-			<point x="208" y="296"/>
-			<point x="208" y="352" type="curve" smooth="yes"/>
-			<point x="208" y="408"/>
-			<point x="248" y="448"/>
+			<point x="280" y="448" type="curve" smooth="yes"/>
+			<point x="336" y="448"/>
+			<point x="376" y="408"/>
+			<point x="376" y="352" type="curve" smooth="yes"/>
+			<point x="376" y="296"/>
+			<point x="336" y="256"/>
+			<point x="280" y="256" type="curve" smooth="yes"/>
+			<point x="224" y="256"/>
+			<point x="184" y="296"/>
+			<point x="184" y="352" type="curve" smooth="yes"/>
+			<point x="184" y="408"/>
+			<point x="224" y="448"/>
 		</contour>
 		<contour>
-			<point x="464" y="448" type="line"/>
-			<point x="480" y="448" type="line"/>
-			<point x="560" y="528" type="line"/>
-			<point x="560" y="544" type="line"/>
-			<point x="496" y="608" type="line"/>
-			<point x="480" y="608" type="line"/>
-			<point x="400" y="528" type="line"/>
-			<point x="400" y="512" type="line"/>
+			<point x="440" y="448" type="line"/>
+			<point x="456" y="448" type="line"/>
+			<point x="536" y="528" type="line"/>
+			<point x="536" y="544" type="line"/>
+			<point x="472" y="608" type="line"/>
+			<point x="456" y="608" type="line"/>
+			<point x="376" y="528" type="line"/>
+			<point x="376" y="512" type="line"/>
 		</contour>
 		<contour>
-			<point x="208" y="512" type="line"/>
-			<point x="208" y="528" type="line"/>
-			<point x="128" y="608" type="line"/>
-			<point x="112" y="608" type="line"/>
-			<point x="48" y="544" type="line"/>
-			<point x="48" y="528" type="line"/>
-			<point x="128" y="448" type="line"/>
-			<point x="144" y="448" type="line"/>
+			<point x="184" y="512" type="line"/>
+			<point x="184" y="528" type="line"/>
+			<point x="104" y="608" type="line"/>
+			<point x="88" y="608" type="line"/>
+			<point x="24" y="544" type="line"/>
+			<point x="24" y="528" type="line"/>
+			<point x="104" y="448" type="line"/>
+			<point x="120" y="448" type="line"/>
 		</contour>
 		<contour>
-			<point x="144" y="256" type="line"/>
-			<point x="128" y="256" type="line"/>
-			<point x="48" y="176" type="line"/>
-			<point x="48" y="160" type="line"/>
-			<point x="112" y="96" type="line"/>
-			<point x="128" y="96" type="line"/>
-			<point x="208" y="176" type="line"/>
-			<point x="208" y="192" type="line"/>
+			<point x="120" y="256" type="line"/>
+			<point x="104" y="256" type="line"/>
+			<point x="24" y="176" type="line"/>
+			<point x="24" y="160" type="line"/>
+			<point x="88" y="96" type="line"/>
+			<point x="104" y="96" type="line"/>
+			<point x="184" y="176" type="line"/>
+			<point x="184" y="192" type="line"/>
 		</contour>
 		<contour>
-			<point x="400" y="192" type="line"/>
-			<point x="400" y="176" type="line"/>
-			<point x="480" y="96" type="line"/>
-			<point x="496" y="96" type="line"/>
-			<point x="560" y="160" type="line"/>
-			<point x="560" y="176" type="line"/>
-			<point x="480" y="256" type="line"/>
-			<point x="464" y="256" type="line"/>
+			<point x="376" y="192" type="line"/>
+			<point x="376" y="176" type="line"/>
+			<point x="456" y="96" type="line"/>
+			<point x="472" y="96" type="line"/>
+			<point x="536" y="160" type="line"/>
+			<point x="536" y="176" type="line"/>
+			<point x="456" y="256" type="line"/>
+			<point x="440" y="256" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -77,7 +77,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

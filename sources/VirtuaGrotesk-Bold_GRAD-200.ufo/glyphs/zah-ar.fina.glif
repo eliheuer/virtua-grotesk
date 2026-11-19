@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="zah-ar.fina" format="2">
+	<advance width="1040"/>
+	<outline>
+		<component base="tah-ar.fina"/>
+		<component base="dotabove-ar" xOffset="486" yOffset="-120"/>
+	</outline>
+	<anchor name="bottom" x="662" y="0"/>
+	<anchor name="top" x="662" y="802"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

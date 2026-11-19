@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ogonek" format="2">
 	<unicode hex="02DB"/>
-	<advance width="256"/>
+	<advance width="208"/>
 	<outline>
 		<contour>
-			<point x="74" y="0" type="line"/>
-			<point x="58" y="-16" type="line" smooth="yes"/>
-			<point x="40" y="-36"/>
-			<point x="36" y="-80"/>
-			<point x="36" y="-112" type="curve" smooth="yes"/>
-			<point x="36" y="-180"/>
-			<point x="90" y="-232"/>
-			<point x="160" y="-232" type="curve" smooth="yes"/>
-			<point x="208" y="-232" type="line"/>
-			<point x="224" y="-216" type="line"/>
-			<point x="224" y="-176" type="line"/>
-			<point x="208" y="-160" type="line"/>
-			<point x="160" y="-160" type="line" smooth="yes"/>
-			<point x="128" y="-160"/>
-			<point x="112" y="-144"/>
-			<point x="112" y="-112" type="curve" smooth="yes"/>
-			<point x="112" y="-80"/>
-			<point x="128" y="-64"/>
-			<point x="144" y="-48" type="curve" smooth="yes"/>
-			<point x="192" y="0" type="line"/>
+			<point x="50" y="0" type="line"/>
+			<point x="34" y="-16" type="line" smooth="yes"/>
+			<point x="16" y="-36"/>
+			<point x="12" y="-80"/>
+			<point x="12" y="-112" type="curve" smooth="yes"/>
+			<point x="12" y="-180"/>
+			<point x="66" y="-232"/>
+			<point x="136" y="-232" type="curve" smooth="yes"/>
+			<point x="184" y="-232" type="line"/>
+			<point x="200" y="-216" type="line"/>
+			<point x="200" y="-176" type="line"/>
+			<point x="184" y="-160" type="line"/>
+			<point x="136" y="-160" type="line" smooth="yes"/>
+			<point x="104" y="-160"/>
+			<point x="88" y="-144"/>
+			<point x="88" y="-112" type="curve" smooth="yes"/>
+			<point x="88" y="-80"/>
+			<point x="104" y="-64"/>
+			<point x="120" y="-48" type="curve" smooth="yes"/>
+			<point x="168" y="0" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_bottom" x="120" y="0"/>
-	<anchor name="bottom" x="120" y="-264"/>
+	<anchor name="_bottom" x="96" y="0"/>
+	<anchor name="bottom" x="96" y="-264"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

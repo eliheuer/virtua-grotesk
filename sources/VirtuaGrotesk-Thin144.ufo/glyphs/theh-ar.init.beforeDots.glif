@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="theh-ar.init.beforeDots" format="2">
-	<advance width="424"/>
+	<advance width="400"/>
 	<outline>
 		<contour>
 			<point x="-16" y="22" type="line"/>
@@ -20,7 +20,7 @@
 			<point x="8" y="80" type="line"/>
 			<point x="-16" y="74" type="line"/>
 		</contour>
-		<component base="threedotsupabove-ar" xOffset="20" yOffset="-136" identifier="170480d0-003d-43a9-85a2-3a2da422e164"/>
+		<component base="threedotsupabove-ar" xOffset="44" yOffset="-136" identifier="170480d0-003d-43a9-85a2-3a2da422e164"/>
 	</outline>
 	<anchor name="top" x="252" y="888"/>
 	<anchor name="bottom" x="112" y="8"/>
@@ -31,7 +31,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

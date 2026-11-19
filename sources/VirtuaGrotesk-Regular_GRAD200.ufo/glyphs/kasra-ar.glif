@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kasra-ar" format="2">
+	<unicode hex="0650"/>
+	<outline>
+		<contour>
+			<point x="-24" y="-266" type="line"/>
+			<point x="248" y="-188" type="line"/>
+			<point x="248" y="-78" type="line"/>
+			<point x="-24" y="-156" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="112" y="-78"/>
+	<anchor name="bottomDots" x="112" y="-266"/>
+	<anchor name="topDots" x="112" y="-78"/>
+	<anchor name="bottom" x="112" y="-314"/>
+	<anchor name="_bottom" x="112" y="34"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

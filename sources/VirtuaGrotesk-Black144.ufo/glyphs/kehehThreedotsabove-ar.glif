@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kehehThreedotsabove-ar" format="2">
 	<unicode hex="0763"/>
-	<advance width="960"/>
+	<advance width="912"/>
 	<outline>
 		<component base="keheh-ar"/>
 		<component base="threedotsupabove-ar" xOffset="216" yOffset="30"/>
 	</outline>
-	<anchor name="top" x="448" y="1010"/>
+	<anchor name="top" x="424" y="1010"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

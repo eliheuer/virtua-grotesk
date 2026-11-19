@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="parenleft-ar" format="2">
+	<unicode hex="FD3E"/>
+	<advance width="312"/>
+	<outline>
+		<contour>
+			<point x="278" y="-96" type="line"/>
+			<point x="278" y="-80" type="line"/>
+			<point x="222" y="16"/>
+			<point x="172" y="128"/>
+			<point x="156" y="246" type="curve"/>
+			<point x="164" y="254" type="line"/>
+			<point x="206" y="290" type="line"/>
+			<point x="222" y="306" type="line"/>
+			<point x="222" y="422" type="line"/>
+			<point x="206" y="438" type="line"/>
+			<point x="164" y="474" type="line"/>
+			<point x="156" y="482" type="line"/>
+			<point x="172" y="600"/>
+			<point x="222" y="712"/>
+			<point x="278" y="808" type="curve"/>
+			<point x="278" y="816" type="line"/>
+			<point x="262" y="832" type="line"/>
+			<point x="178" y="832" type="line"/>
+			<point x="162" y="816" type="line"/>
+			<point x="98" y="720"/>
+			<point x="50" y="600"/>
+			<point x="42" y="474" type="curve"/>
+			<point x="12" y="446" type="line"/>
+			<point x="4" y="430" type="line"/>
+			<point x="4" y="298" type="line"/>
+			<point x="12" y="282" type="line"/>
+			<point x="42" y="254" type="line"/>
+			<point x="50" y="128"/>
+			<point x="98" y="16"/>
+			<point x="162" y="-96" type="curve"/>
+			<point x="178" y="-112" type="line"/>
+			<point x="262" y="-112" type="line"/>
+		</contour>
+		<contour>
+			<point x="162" y="328" type="line"/>
+			<point x="146" y="312" type="line"/>
+			<point x="78" y="312" type="line"/>
+			<point x="62" y="328" type="line"/>
+			<point x="62" y="400" type="line"/>
+			<point x="78" y="416" type="line"/>
+			<point x="146" y="416" type="line"/>
+			<point x="162" y="400" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

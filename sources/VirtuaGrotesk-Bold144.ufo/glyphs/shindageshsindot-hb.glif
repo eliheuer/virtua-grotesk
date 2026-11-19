@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="shindageshsindot-hb" format="2">
 	<unicode hex="FB2D"/>
-	<advance width="880"/>
+	<advance width="832"/>
 	<outline>
 		<component base="shin-hb"/>
-		<component base="dagesh-hb" xOffset="498" yOffset="52"/>
-		<component base="sindot-hb" xOffset="60" yOffset="64"/>
+		<component base="dagesh-hb" xOffset="474" yOffset="52"/>
+		<component base="sindot-hb" xOffset="36" yOffset="64"/>
 	</outline>
-	<anchor name="hbBottom" x="424" y="-32"/>
-	<anchor name="hbCenter" x="568" y="352"/>
-	<anchor name="hbHolam" x="16" y="576"/>
-	<anchor name="hbShin" x="720" y="576"/>
-	<anchor name="hbSin" x="128" y="576"/>
-	<anchor name="hbRafe" x="424" y="672"/>
-	<anchor name="hbMeteg" x="424" y="-32"/>
-	<anchor name="hbCantAbove" x="424" y="576"/>
-	<anchor name="hbCantAboveLeft" x="16" y="576"/>
-	<anchor name="hbCantAboveRight" x="816" y="576"/>
-	<anchor name="hbCantBelow" x="424" y="-32"/>
-	<anchor name="hbCantBelowRight" x="424" y="-32"/>
-	<anchor name="hbCantAfterHolam" x="166" y="576"/>
-	<anchor name="hbCantBeforeHolam" x="92" y="576"/>
+	<anchor name="hbBottom" x="400" y="-32"/>
+	<anchor name="hbCenter" x="544" y="352"/>
+	<anchor name="hbHolam" x="-8" y="576"/>
+	<anchor name="hbShin" x="696" y="576"/>
+	<anchor name="hbSin" x="104" y="576"/>
+	<anchor name="hbRafe" x="400" y="672"/>
+	<anchor name="hbMeteg" x="400" y="-32"/>
+	<anchor name="hbCantAbove" x="400" y="576"/>
+	<anchor name="hbCantAboveLeft" x="-8" y="576"/>
+	<anchor name="hbCantAboveRight" x="792" y="576"/>
+	<anchor name="hbCantBelow" x="400" y="-32"/>
+	<anchor name="hbCantBelowRight" x="400" y="-32"/>
+	<anchor name="hbCantAfterHolam" x="142" y="576"/>
+	<anchor name="hbCantBeforeHolam" x="68" y="576"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

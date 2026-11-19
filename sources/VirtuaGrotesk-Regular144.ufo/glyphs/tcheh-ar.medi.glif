@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tcheh-ar.medi" format="2">
-	<advance width="704"/>
+	<advance width="688"/>
 	<outline>
 		<component base="hah-ar.medi"/>
-		<component base="threedotsdowncenter-ar" xOffset="96" yOffset="-504"/>
+		<component base="threedotsdowncenter-ar" xOffset="120" yOffset="-504"/>
 	</outline>
 	<anchor name="bottom" x="328" y="-144"/>
 	<anchor name="top" x="324" y="574"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ain-ar.medi" format="2">
+	<advance width="608"/>
+	<outline>
+		<contour>
+			<point x="608" y="10" type="line"/>
+			<point x="608" y="86" type="line"/>
+			<point x="426" y="86" type="line"/>
+			<point x="412" y="100" type="line"/>
+			<point x="412" y="116" type="line"/>
+			<point x="486" y="230" type="line" smooth="yes"/>
+			<point x="506" y="256"/>
+			<point x="516" y="280"/>
+			<point x="516" y="312" type="curve" smooth="yes"/>
+			<point x="516" y="384"/>
+			<point x="468" y="412"/>
+			<point x="384" y="412" type="curve" smooth="yes"/>
+			<point x="224" y="412" type="line" smooth="yes"/>
+			<point x="144" y="412"/>
+			<point x="92" y="384"/>
+			<point x="92" y="312" type="curve" smooth="yes"/>
+			<point x="92" y="280"/>
+			<point x="102" y="262"/>
+			<point x="122" y="230" type="curve" smooth="yes"/>
+			<point x="196" y="116" type="line"/>
+			<point x="196" y="100" type="line"/>
+			<point x="182" y="86" type="line"/>
+			<point x="0" y="86" type="line"/>
+			<point x="-16" y="74" type="line"/>
+			<point x="-16" y="22" type="line"/>
+			<point x="0" y="10" type="line"/>
+		</contour>
+		<contour>
+			<point x="318" y="94" type="line"/>
+			<point x="318" y="94" type="line"/>
+			<point x="290" y="94" type="line"/>
+			<point x="206" y="234" type="line" smooth="yes"/>
+			<point x="186" y="264"/>
+			<point x="180" y="284"/>
+			<point x="180" y="296" type="curve" smooth="yes"/>
+			<point x="180" y="314"/>
+			<point x="200" y="340"/>
+			<point x="224" y="340" type="curve" smooth="yes"/>
+			<point x="384" y="340" type="line" smooth="yes"/>
+			<point x="408" y="340"/>
+			<point x="428" y="312"/>
+			<point x="428" y="296" type="curve" smooth="yes"/>
+			<point x="428" y="284"/>
+			<point x="422" y="266"/>
+			<point x="402" y="234" type="curve" smooth="yes"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="296" y="0"/>
+	<anchor name="top" x="304" y="400"/>
+	<anchor name="bottomDots" x="296" y="0"/>
+	<anchor name="topDots" x="304" y="424"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

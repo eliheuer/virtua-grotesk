@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="quotedbl" format="2">
+	<unicode hex="0022"/>
+	<advance width="552"/>
+	<outline>
+		<contour>
+			<point x="148" y="464" type="line"/>
+			<point x="188" y="464" type="line"/>
+			<point x="204" y="480" type="line"/>
+			<point x="240" y="640" type="line"/>
+			<point x="240" y="752" type="line"/>
+			<point x="224" y="768" type="line"/>
+			<point x="112" y="768" type="line"/>
+			<point x="96" y="752" type="line"/>
+			<point x="96" y="640" type="line"/>
+			<point x="132" y="480" type="line"/>
+		</contour>
+		<contour>
+			<point x="364" y="464" type="line"/>
+			<point x="404" y="464" type="line"/>
+			<point x="420" y="480" type="line"/>
+			<point x="456" y="640" type="line"/>
+			<point x="456" y="752" type="line"/>
+			<point x="440" y="768" type="line"/>
+			<point x="328" y="768" type="line"/>
+			<point x="312" y="752" type="line"/>
+			<point x="312" y="640" type="line"/>
+			<point x="348" y="480" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

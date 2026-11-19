@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tbar" format="2">
+	<unicode hex="0167"/>
+	<advance width="376"/>
+	<outline>
+		<contour>
+			<point x="30" y="262" type="line"/>
+			<point x="348" y="262" type="line"/>
+			<point x="364" y="278" type="line"/>
+			<point x="364" y="330" type="line"/>
+			<point x="348" y="346" type="line"/>
+			<point x="30" y="346" type="line"/>
+			<point x="14" y="330" type="line"/>
+			<point x="14" y="278" type="line"/>
+		</contour>
+		<component base="t" xOffset="4"/>
+	</outline>
+	<anchor name="top" x="178" y="722"/>
+	<anchor name="bottom" x="178" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

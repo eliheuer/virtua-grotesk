@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="four" format="2">
+	<unicode hex="0034"/>
+	<advance width="664"/>
+	<outline>
+		<contour>
+			<point x="358" y="0" type="line"/>
+			<point x="554" y="0" type="line"/>
+			<point x="570" y="16" type="line"/>
+			<point x="570" y="150" type="line"/>
+			<point x="578" y="158" type="line"/>
+			<point x="646" y="158" type="line"/>
+			<point x="662" y="174" type="line"/>
+			<point x="662" y="306" type="line"/>
+			<point x="646" y="322" type="line"/>
+			<point x="578" y="322" type="line"/>
+			<point x="570" y="330" type="line"/>
+			<point x="570" y="752" type="line"/>
+			<point x="554" y="768" type="line"/>
+			<point x="300" y="768" type="line"/>
+			<point x="0" y="338" type="line"/>
+			<point x="0" y="174" type="line"/>
+			<point x="16" y="158" type="line"/>
+			<point x="334" y="158" type="line"/>
+			<point x="342" y="150" type="line"/>
+			<point x="342" y="16" type="line"/>
+		</contour>
+		<contour>
+			<point x="168" y="316" type="line"/>
+			<point x="168" y="324" type="line"/>
+			<point x="334" y="572" type="line"/>
+			<point x="342" y="572" type="line"/>
+			<point x="342" y="324" type="line"/>
+			<point x="334" y="316" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- image ref-four-src.png</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

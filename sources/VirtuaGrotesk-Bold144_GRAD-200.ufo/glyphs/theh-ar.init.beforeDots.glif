@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="theh-ar.init.beforeDots" format="2">
+	<advance width="408"/>
+	<outline>
+		<contour>
+			<point x="-16" y="16" type="line"/>
+			<point x="0" y="0" type="line"/>
+			<point x="90" y="0" type="line"/>
+			<point x="226" y="0"/>
+			<point x="290" y="72"/>
+			<point x="290" y="208" type="curve" smooth="yes"/>
+			<point x="290" y="416" type="line"/>
+			<point x="274" y="432" type="line"/>
+			<point x="190" y="432" type="line"/>
+			<point x="174" y="416" type="line"/>
+			<point x="174" y="214" type="line" smooth="yes"/>
+			<point x="174" y="158"/>
+			<point x="146" y="122"/>
+			<point x="90" y="122" type="curve"/>
+			<point x="0" y="122" type="line"/>
+			<point x="-16" y="106" type="line"/>
+		</contour>
+		<component base="threedotsupabove-ar" xOffset="14" yOffset="-134" identifier="170480d0-003d-43a9-85a2-3a2da422e164"/>
+	</outline>
+	<anchor name="top" x="246" y="902"/>
+	<anchor name="bottom" x="90" y="10"/>
+	<anchor name="topDots" x="230" y="442"/>
+	<anchor name="bottomDots" x="214" y="6"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

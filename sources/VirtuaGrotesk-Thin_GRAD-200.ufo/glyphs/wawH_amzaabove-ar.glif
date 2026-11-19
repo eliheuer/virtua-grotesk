@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="wawHamzaabove-ar" format="2">
+	<unicode hex="0624"/>
+	<advance width="568"/>
+	<anchor name="bottom" x="244" y="-272"/>
+	<outline>
+		<component base="waw-ar"/>
+		<component base="hamzaabove-ar" xOffset="132" yOffset="-360"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="veh-ar" format="2">
 	<unicode hex="06A4"/>
-	<advance width="1072"/>
+	<advance width="1024"/>
 	<outline>
 		<component base="fehDotless-ar"/>
 		<component base="threedotsupabove-ar" xOffset="260" yOffset="160"/>
 	</outline>
-	<anchor name="top" x="492" y="1140"/>
+	<anchor name="top" x="468" y="1140"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

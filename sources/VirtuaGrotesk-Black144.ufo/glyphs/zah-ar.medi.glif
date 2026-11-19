@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zah-ar.medi" format="2">
-	<advance width="1040"/>
+	<advance width="992"/>
 	<outline>
 		<component base="tah-ar.medi"/>
 		<component base="dotabove-ar" xOffset="536" yOffset="-64"/>
 	</outline>
-	<anchor name="bottom" x="688" y="0"/>
-	<anchor name="top" x="688" y="894"/>
+	<anchor name="bottom" x="664" y="0"/>
+	<anchor name="top" x="664" y="894"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

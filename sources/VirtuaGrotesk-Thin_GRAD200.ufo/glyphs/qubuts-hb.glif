@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="qubuts-hb" format="2">
+	<unicode hex="05BB"/>
+	<outline>
+		<contour>
+			<point x="38" y="-108" type="line"/>
+			<point x="62" y="-84" type="line"/>
+			<point x="62" y="-38" type="line"/>
+			<point x="38" y="-16" type="line"/>
+			<point x="-6" y="-16" type="line"/>
+			<point x="-30" y="-38" type="line"/>
+			<point x="-30" y="-84" type="line"/>
+			<point x="-6" y="-108" type="line"/>
+		</contour>
+		<contour>
+			<point x="150" y="-188" type="line"/>
+			<point x="174" y="-164" type="line"/>
+			<point x="174" y="-118" type="line"/>
+			<point x="150" y="-96" type="line"/>
+			<point x="106" y="-96" type="line"/>
+			<point x="82" y="-118" type="line"/>
+			<point x="82" y="-164" type="line"/>
+			<point x="106" y="-188" type="line"/>
+		</contour>
+		<contour>
+			<point x="262" y="-268" type="line"/>
+			<point x="286" y="-244" type="line"/>
+			<point x="286" y="-198" type="line"/>
+			<point x="262" y="-176" type="line"/>
+			<point x="218" y="-176" type="line"/>
+			<point x="194" y="-198" type="line"/>
+			<point x="194" y="-244" type="line"/>
+			<point x="218" y="-268" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbBottom" x="128" y="0"/>
+	<anchor name="hbMeteg" x="-122" y="0"/>
+	<anchor name="hbCantLeftVowel" x="-34" y="0"/>
+	<anchor name="hbCantRightVowel" x="296" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

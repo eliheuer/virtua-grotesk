@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qaf-ar.medi" format="2">
-	<advance width="568"/>
+	<advance width="520"/>
 	<outline>
 		<component base="fehDotless-ar.medi"/>
 		<component base="twodotshorizontalabove-ar" xOffset="120" yOffset="-24"/>
 	</outline>
-	<anchor name="bottom" x="306" y="-136"/>
+	<anchor name="bottom" x="282" y="-136"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

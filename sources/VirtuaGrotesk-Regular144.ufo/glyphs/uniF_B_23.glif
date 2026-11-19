@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB23" format="2">
 	<unicode hex="FB23"/>
-	<advance width="800"/>
+	<advance width="752"/>
 	<outline>
 		<contour>
-			<point x="656" y="16" type="line"/>
-			<point x="672" y="0" type="line"/>
-			<point x="728" y="0" type="line"/>
-			<point x="744" y="16" type="line"/>
-			<point x="744" y="416" type="line" smooth="yes"/>
-			<point x="744" y="552"/>
-			<point x="680" y="640"/>
-			<point x="552" y="640" type="curve" smooth="yes"/>
-			<point x="72" y="640" type="line"/>
-			<point x="56" y="624" type="line"/>
-			<point x="56" y="552" type="line"/>
-			<point x="72" y="536" type="line"/>
-			<point x="552" y="536" type="line" smooth="yes"/>
-			<point x="624" y="536"/>
-			<point x="656" y="496"/>
-			<point x="656" y="416" type="curve" smooth="yes"/>
+			<point x="632" y="16" type="line"/>
+			<point x="648" y="0" type="line"/>
+			<point x="704" y="0" type="line"/>
+			<point x="720" y="16" type="line"/>
+			<point x="720" y="416" type="line" smooth="yes"/>
+			<point x="720" y="552"/>
+			<point x="656" y="640"/>
+			<point x="528" y="640" type="curve" smooth="yes"/>
+			<point x="48" y="640" type="line"/>
+			<point x="32" y="624" type="line"/>
+			<point x="32" y="552" type="line"/>
+			<point x="48" y="536" type="line"/>
+			<point x="528" y="536" type="line" smooth="yes"/>
+			<point x="600" y="536"/>
+			<point x="632" y="496"/>
+			<point x="632" y="416" type="curve" smooth="yes"/>
 		</contour>
 		<contour>
-			<point x="64" y="16" type="line"/>
-			<point x="80" y="0" type="line"/>
-			<point x="136" y="0" type="line"/>
-			<point x="152" y="16" type="line"/>
-			<point x="152" y="400" type="line"/>
-			<point x="136" y="416" type="line"/>
-			<point x="80" y="416" type="line"/>
-			<point x="64" y="400" type="line"/>
+			<point x="40" y="16" type="line"/>
+			<point x="56" y="0" type="line"/>
+			<point x="112" y="0" type="line"/>
+			<point x="128" y="16" type="line"/>
+			<point x="128" y="400" type="line"/>
+			<point x="112" y="416" type="line"/>
+			<point x="56" y="416" type="line"/>
+			<point x="40" y="400" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="400" y="0"/>
-	<anchor name="hbCenter" x="400" y="368"/>
-	<anchor name="hbHolam" x="56" y="640"/>
-	<anchor name="hbRafe" x="400" y="736"/>
-	<anchor name="hbMeteg" x="400" y="0"/>
-	<anchor name="hbCantAbove" x="400" y="640"/>
-	<anchor name="hbCantAboveLeft" x="56" y="640"/>
-	<anchor name="hbCantAboveRight" x="744" y="640"/>
-	<anchor name="hbCantBelow" x="400" y="0"/>
-	<anchor name="hbCantBelowRight" x="400" y="0"/>
+	<anchor name="hbBottom" x="376" y="0"/>
+	<anchor name="hbCenter" x="376" y="368"/>
+	<anchor name="hbHolam" x="32" y="640"/>
+	<anchor name="hbRafe" x="376" y="736"/>
+	<anchor name="hbMeteg" x="376" y="0"/>
+	<anchor name="hbCantAbove" x="376" y="640"/>
+	<anchor name="hbCantAboveLeft" x="32" y="640"/>
+	<anchor name="hbCantAboveRight" x="720" y="640"/>
+	<anchor name="hbCantBelow" x="376" y="0"/>
+	<anchor name="hbCantBelowRight" x="376" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

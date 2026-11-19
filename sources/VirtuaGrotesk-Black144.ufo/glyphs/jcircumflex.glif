@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="jcircumflex" format="2">
 	<unicode hex="0135"/>
-	<advance width="368"/>
+	<advance width="320"/>
 	<outline>
 		<component base="jdotless"/>
 		<component base="circumflex" xOffset="-26" yOffset="24"/>
 	</outline>
-	<anchor name="top" x="182" y="888"/>
-	<anchor name="bottom" x="182" y="0"/>
+	<anchor name="top" x="158" y="888"/>
+	<anchor name="bottom" x="158" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

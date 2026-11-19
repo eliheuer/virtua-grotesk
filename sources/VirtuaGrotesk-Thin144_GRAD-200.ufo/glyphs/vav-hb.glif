@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="vav-hb" format="2">
+	<unicode hex="05D5"/>
+	<advance width="152"/>
+	<outline>
+		<contour>
+			<point x="64" y="0" type="line"/>
+			<point x="86" y="0" type="line"/>
+			<point x="102" y="16" type="line"/>
+			<point x="102" y="624" type="line"/>
+			<point x="86" y="640" type="line"/>
+			<point x="64" y="640" type="line"/>
+			<point x="48" y="624" type="line"/>
+			<point x="48" y="16" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="92" y="0"/>
+	<anchor name="hbCenter" x="-24" y="352"/>
+	<anchor name="hbHolam" x="92" y="640"/>
+	<anchor name="hbRafe" x="92" y="736"/>
+	<anchor name="hbMeteg" x="92" y="0"/>
+	<anchor name="hbCantAbove" x="92" y="640"/>
+	<anchor name="hbCantAboveLeft" x="48" y="640"/>
+	<anchor name="hbCantAboveRight" x="136" y="640"/>
+	<anchor name="hbCantBelow" x="92" y="0"/>
+	<anchor name="hbCantBelowRight" x="92" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

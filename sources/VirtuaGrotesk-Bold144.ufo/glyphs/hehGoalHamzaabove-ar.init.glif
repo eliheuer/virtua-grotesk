@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hehGoalHamzaabove-ar.init" format="2">
-	<advance width="464"/>
+	<advance width="440"/>
 	<anchor name="bottom" x="248" y="-312"/>
 	<outline>
 		<component base="hehGoal-ar.init"/>
@@ -9,9 +9,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

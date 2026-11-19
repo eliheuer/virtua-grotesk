@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="samekhdagesh-hb" format="2">
 	<unicode hex="FB41"/>
-	<advance width="784"/>
+	<advance width="736"/>
 	<outline>
 		<component base="samekh-hb"/>
-		<component base="dagesh-hb" xOffset="294" yOffset="2"/>
+		<component base="dagesh-hb" xOffset="270" yOffset="2"/>
 	</outline>
-	<anchor name="hbBottom" x="364" y="-32"/>
-	<anchor name="hbCenter" x="364" y="274"/>
-	<anchor name="hbHolam" x="16" y="548"/>
-	<anchor name="hbRafe" x="364" y="644"/>
-	<anchor name="hbMeteg" x="364" y="-32"/>
-	<anchor name="hbCantAbove" x="364" y="548"/>
-	<anchor name="hbCantAboveLeft" x="16" y="548"/>
-	<anchor name="hbCantAboveRight" x="692" y="548"/>
-	<anchor name="hbCantBelow" x="364" y="-32"/>
-	<anchor name="hbCantBelowRight" x="364" y="-32"/>
+	<anchor name="hbBottom" x="340" y="-32"/>
+	<anchor name="hbCenter" x="340" y="274"/>
+	<anchor name="hbHolam" x="-8" y="548"/>
+	<anchor name="hbRafe" x="340" y="644"/>
+	<anchor name="hbMeteg" x="340" y="-32"/>
+	<anchor name="hbCantAbove" x="340" y="548"/>
+	<anchor name="hbCantAboveLeft" x="-8" y="548"/>
+	<anchor name="hbCantAboveRight" x="668" y="548"/>
+	<anchor name="hbCantBelow" x="340" y="-32"/>
+	<anchor name="hbCantBelowRight" x="340" y="-32"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

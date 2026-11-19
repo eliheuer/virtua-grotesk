@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fatha-ar" format="2">
+	<unicode hex="064E"/>
+	<outline>
+		<contour>
+			<point x="-12" y="690" type="line"/>
+			<point x="236" y="768" type="line"/>
+			<point x="236" y="854" type="line"/>
+			<point x="-12" y="782" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="112" y="690"/>
+	<anchor name="bottomDots" x="112" y="690"/>
+	<anchor name="topDots" x="112" y="854"/>
+	<anchor name="top" x="112" y="902"/>
+	<anchor name="_top" x="112" y="578"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

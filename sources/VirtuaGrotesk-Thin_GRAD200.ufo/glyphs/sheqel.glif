@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="sheqel" format="2">
+	<unicode hex="20AA"/>
+	<advance width="704"/>
+	<outline>
+		<contour>
+			<point x="36" y="16" type="line"/>
+			<point x="52" y="0" type="line"/>
+			<point x="100" y="0" type="line"/>
+			<point x="116" y="16" type="line"/>
+			<point x="116" y="496" type="line"/>
+			<point x="124" y="504" type="line"/>
+			<point x="276" y="504" type="line"/>
+			<point x="356" y="504"/>
+			<point x="400" y="454"/>
+			<point x="400" y="362" type="curve" smooth="yes"/>
+			<point x="400" y="214" type="line"/>
+			<point x="416" y="198" type="line"/>
+			<point x="464" y="198" type="line"/>
+			<point x="480" y="214" type="line"/>
+			<point x="480" y="352" type="line"/>
+			<point x="480" y="488"/>
+			<point x="422" y="576"/>
+			<point x="312" y="576" type="curve" smooth="yes"/>
+			<point x="52" y="576" type="line"/>
+			<point x="36" y="560" type="line"/>
+		</contour>
+		<contour>
+			<point x="220" y="224" type="line"/>
+			<point x="220" y="88"/>
+			<point x="278" y="0"/>
+			<point x="388" y="0" type="curve" smooth="yes"/>
+			<point x="648" y="0" type="line"/>
+			<point x="664" y="16" type="line"/>
+			<point x="664" y="560" type="line"/>
+			<point x="648" y="576" type="line"/>
+			<point x="600" y="576" type="line"/>
+			<point x="584" y="560" type="line"/>
+			<point x="584" y="80" type="line"/>
+			<point x="576" y="72" type="line"/>
+			<point x="424" y="72" type="line"/>
+			<point x="344" y="72"/>
+			<point x="300" y="122"/>
+			<point x="300" y="214" type="curve" smooth="yes"/>
+			<point x="300" y="362" type="line"/>
+			<point x="284" y="378" type="line"/>
+			<point x="236" y="378" type="line"/>
+			<point x="220" y="362" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

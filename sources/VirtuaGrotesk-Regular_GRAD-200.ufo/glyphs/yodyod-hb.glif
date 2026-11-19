@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="yodyod-hb" format="2">
+	<unicode hex="05F2"/>
+	<advance width="416"/>
+	<outline>
+		<contour>
+			<point x="108" y="264" type="line"/>
+			<point x="142" y="264" type="line"/>
+			<point x="158" y="280" type="line"/>
+			<point x="158" y="624" type="line"/>
+			<point x="142" y="640" type="line"/>
+			<point x="108" y="640" type="line"/>
+			<point x="92" y="624" type="line"/>
+			<point x="92" y="280" type="line"/>
+		</contour>
+		<contour>
+			<point x="270" y="264" type="line"/>
+			<point x="304" y="264" type="line"/>
+			<point x="320" y="280" type="line"/>
+			<point x="320" y="624" type="line"/>
+			<point x="304" y="640" type="line"/>
+			<point x="270" y="640" type="line"/>
+			<point x="254" y="624" type="line"/>
+			<point x="254" y="280" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="228" y="0"/>
+	<anchor name="hbRafe" x="228" y="736"/>
+	<anchor name="hbMeteg" x="228" y="0"/>
+	<anchor name="hbCantAbove" x="228" y="640"/>
+	<anchor name="hbCantAboveLeft" x="92" y="640"/>
+	<anchor name="hbCantAboveRight" x="364" y="640"/>
+	<anchor name="hbCantBelow" x="228" y="0"/>
+	<anchor name="hbCantBelowRight" x="228" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

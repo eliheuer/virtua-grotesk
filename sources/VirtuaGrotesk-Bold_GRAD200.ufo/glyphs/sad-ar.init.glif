@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="sad-ar.init" format="2">
+	<advance width="1024"/>
+	<outline>
+		<contour>
+			<point x="312" y="212" type="line"/>
+			<point x="234" y="212" type="line"/>
+			<point x="226" y="220" type="line"/>
+			<point x="226" y="372" type="line"/>
+			<point x="210" y="388" type="line"/>
+			<point x="32" y="388" type="line"/>
+			<point x="16" y="372" type="line"/>
+			<point x="16" y="220" type="line"/>
+			<point x="8" y="212" type="line"/>
+			<point x="0" y="212" type="line"/>
+			<point x="-16" y="196" type="line"/>
+			<point x="-16" y="16" type="line"/>
+			<point x="0" y="0" type="line"/>
+			<point x="764" y="0" type="line" smooth="yes"/>
+			<point x="918" y="0"/>
+			<point x="1016" y="72"/>
+			<point x="1016" y="238" type="curve" smooth="yes"/>
+			<point x="1016" y="404"/>
+			<point x="918" y="480"/>
+			<point x="764" y="480" type="curve" smooth="yes"/>
+			<point x="572" y="480" type="line" smooth="yes"/>
+			<point x="416" y="480"/>
+			<point x="320" y="400"/>
+			<point x="320" y="234" type="curve" smooth="yes"/>
+			<point x="320" y="220" type="line"/>
+		</contour>
+		<contour>
+			<point x="530" y="196" type="line"/>
+			<point x="530" y="234" type="line" smooth="yes"/>
+			<point x="530" y="268"/>
+			<point x="542" y="288"/>
+			<point x="572" y="288" type="curve" smooth="yes"/>
+			<point x="764" y="288" type="line" smooth="yes"/>
+			<point x="792" y="288"/>
+			<point x="806" y="272"/>
+			<point x="806" y="238" type="curve" smooth="yes"/>
+			<point x="806" y="206"/>
+			<point x="792" y="188"/>
+			<point x="764" y="188" type="curve" smooth="yes"/>
+			<point x="538" y="188" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottomDots" x="366" y="0"/>
+	<anchor name="top" x="512" y="424"/>
+	<anchor name="topDots" x="464" y="464"/>
+	<anchor name="bottom" x="480" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

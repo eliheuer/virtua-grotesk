@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni05A7" format="2">
+	<unicode hex="05A7"/>
+	<outline>
+		<contour>
+			<point x="-118" y="-232" type="line"/>
+			<point x="-112" y="-270" type="line"/>
+			<point x="-104" y="-278" type="line"/>
+			<point x="122" y="-238" type="line"/>
+			<point x="122" y="-230" type="line"/>
+			<point x="-6" y="-82" type="line"/>
+			<point x="-6" y="-74" type="line"/>
+			<point x="78" y="-54" type="line"/>
+			<point x="86" y="-46" type="line"/>
+			<point x="70" y="-8" type="line"/>
+			<point x="62" y="0" type="line"/>
+			<point x="-112" y="-42" type="line"/>
+			<point x="-112" y="-50" type="line"/>
+			<point x="16" y="-192" type="line"/>
+			<point x="16" y="-200" type="line"/>
+			<point x="-110" y="-224" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbCantBelow" x="0" y="64"/>
+	<anchor name="_hbCantLeftVowel" x="154" y="64"/>
+	<anchor name="hbCantLeftVowel" x="-118" y="64"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

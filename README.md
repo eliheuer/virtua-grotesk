@@ -18,6 +18,96 @@ and links to the Google Fonts guide are in
 background is in the article
 [Virtua Grotesk: Grid Systems for Dataset Engineering](https://elih.net/blog/virtua-grotesk).
 
+## The idea
+
+### A system, not a set of drawings
+
+A typeface is many drawings that work as one system. To design the system
+and not the single object is an old modernist aim. Karl Gerstner argued for
+it in *Designing Programmes* (1964). In practice it had limits: strict rules
+made type stiff, because a rule cannot make the optical corrections that the
+eye needs.
+
+Virtua Grotesk keeps the system and keeps the corrections. Its grid records
+which point is a default of the system and which point is a correction by
+the designer.
+
+### The precedent: LL Replica
+
+The nearest precedent is LL Replica by Norm (Dimitri Bruni and Manuel Krebs),
+released by Lineto in 2008. Three of its decisions matter here.
+
+- **A coarse grid.** FontLab gives 700 units to the cap height. Norm used
+  70, a step of 10 units, and every point and handle had to be on a step.
+  Norm did not accept that a finer grid gives more freedom: fewer options
+  made each decision larger and the design more its own.
+- **A visible grid.** The corners are cut one grid step wide, with the same
+  bevel on inside and outside joints. The constraint made the look, and the
+  look shows the constraint.
+- **Cut diagonals.** The ends of diagonal strokes are cut, so A, K and R
+  have no pointed apex and the letters can be set tight.
+
+From a distance Replica looks like a familiar grotesque. The differences
+show at large sizes. Virtua has the same two scales: at 16 pixels its
+16-unit chamfer is a quarter of a pixel, and at display sizes it is the
+character of the face.
+
+### What Virtua changes
+
+Virtua uses powers of two where Replica uses tens, and two grids where
+Replica uses one.
+
+- The em is 1024 units, which is 2 to the power 10.
+- Structural points are on the 8-unit grid. This is the default.
+- An optical correction by the designer is on the 2-unit grid. Every point
+  is on this grid.
+- Corners are cut with a 16-unit chamfer, and a tip ends on a flat, never
+  on an acute point.
+
+A second system labels measurements. Every measurement is a sum of powers
+of two, and the number of terms describes it. A 64-unit stem is too light
+and a 128-unit stem is too heavy, so the Regular stem is 96 = 64 + 32.
+Where 96 is too light, the font uses 112 = 64 + 32 + 16. More terms often
+mark an optical adjustment. They are not a fault.
+
+Spacing follows the same rule. Sidebearings and kerning use the 8-unit grid
+by default, which gives the text a small set of recurring intervals.
+
+### Sources as data
+
+Most fonts were not made as training data: their points are where the
+designer put them, and each font has its own habits. In Virtua the two
+systems turn the drawing conventions into data, without extra labels.
+
+- **Consistency.** The same stroke logic, chamfer sizes and start points
+  recur in the whole glyph set. A model or an agent learns one design.
+- **Measurable output.** A script can check the grids and the stroke
+  values. The checks do not decide quality, but they give a draft an
+  objective first test.
+- **Clean interpolation.** The Regular stem is 96 and the Bold stem is 192.
+  The weight between them has a 144-unit stem, also on the grid.
+
+For this reason AI agents draft glyphs from the approved drawings, and a
+small language model, Virtua-12M, is trained on the sources. A draft is not
+a finished glyph. Eli Heuer draws, corrects and approves every glyph.
+
+### Scripts and weights
+
+Latin, Arabic and Hebrew use the same grid, the same chamfer and the same
+stroke logic. The upright variable font has weight masters at Thin (100), Regular (400),
+Bold (700) and Black (900). Each weight has masters at 14 and 144 pt.
+The 144 pt masters start with the drawing and spacing of the 14 pt masters.
+An italic is planned.
+
+### Sources
+
+The main source of this chapter is the article
+[Virtua Grotesk: Grid Systems for Dataset Engineering](https://elih.net/blog/virtua-grotesk).
+The facts about Replica are from that article, from
+[Fonts In Use](https://www.fontsinuse.com/typefaces/7436/ll-replica) and
+from the Eye article
+[Buying into the Norm cosmos](https://eyemagazine.com/feature/article/buying-into-the-norm-cosmos).
+
 ## Build
 
 Install Python 3.13 or later, then run from the repository root:

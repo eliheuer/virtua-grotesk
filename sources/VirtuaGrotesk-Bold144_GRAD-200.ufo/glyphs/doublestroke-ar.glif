@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="doublestroke-ar" format="2">
+	<advance width="344"/>
+	<outline>
+		<contour>
+			<point x="36" y="494" type="line"/>
+			<point x="124" y="502" type="line"/>
+			<point x="124" y="502" type="line"/>
+			<point x="124" y="768" type="line"/>
+			<point x="124" y="768" type="line"/>
+			<point x="36" y="768" type="line"/>
+			<point x="36" y="768" type="line"/>
+			<point x="36" y="494" type="line"/>
+		</contour>
+		<contour>
+			<point x="196" y="494" type="line"/>
+			<point x="284" y="502" type="line"/>
+			<point x="284" y="502" type="line"/>
+			<point x="284" y="768" type="line"/>
+			<point x="284" y="768" type="line"/>
+			<point x="196" y="768" type="line"/>
+			<point x="196" y="768" type="line"/>
+			<point x="196" y="494" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="160" y="494"/>
+	<anchor name="top" x="160" y="768"/>
+	<anchor name="bottomDots" x="160" y="494"/>
+	<anchor name="topDots" x="160" y="768"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

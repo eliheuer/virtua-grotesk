@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hehDoachashmee-ar.medi" format="2">
-	<advance width="704"/>
+	<advance width="680"/>
 	<outline>
 		<contour>
 			<point x="368" y="-192" type="curve" smooth="yes"/>
@@ -39,8 +39,8 @@
 			<point x="608" y="-32"/>
 			<point x="584" y="-8" type="curve"/>
 			<point x="584" y="0" type="line"/>
-			<point x="704" y="0" type="line"/>
-			<point x="704" y="176" type="line"/>
+			<point x="680" y="0" type="line"/>
+			<point x="680" y="176" type="line"/>
 			<point x="512" y="176" type="line"/>
 			<point x="512" y="184" type="line"/>
 			<point x="552" y="184"/>
@@ -72,9 +72,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

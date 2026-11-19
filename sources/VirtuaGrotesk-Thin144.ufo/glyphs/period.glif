@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="period" format="2">
 	<unicode hex="002E"/>
-	<advance width="240"/>
+	<advance width="192"/>
 	<outline>
 		<contour>
-			<point x="64" y="16" type="line"/>
-			<point x="80" y="0" type="line"/>
-			<point x="156" y="0" type="line"/>
-			<point x="172" y="16" type="line"/>
-			<point x="172" y="90" type="line"/>
-			<point x="156" y="106" type="line"/>
-			<point x="80" y="106" type="line"/>
-			<point x="64" y="90" type="line"/>
+			<point x="40" y="16" type="line"/>
+			<point x="56" y="0" type="line"/>
+			<point x="132" y="0" type="line"/>
+			<point x="148" y="16" type="line"/>
+			<point x="148" y="90" type="line"/>
+			<point x="132" y="106" type="line"/>
+			<point x="56" y="106" type="line"/>
+			<point x="40" y="90" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -19,7 +19,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

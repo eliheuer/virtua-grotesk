@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ddal-ar" format="2">
+	<unicode hex="0688"/>
+	<advance width="680"/>
+	<outline>
+		<component base="dal-ar"/>
+		<component base="smallHighTah-ar" xOffset="134" yOffset="-94"/>
+	</outline>
+	<anchor name="bottom" x="278" y="0"/>
+	<anchor name="top" x="278" y="906"/>
+	<anchor name="bottomDots" x="278" y="0"/>
+	<anchor name="topDots" x="278" y="858"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

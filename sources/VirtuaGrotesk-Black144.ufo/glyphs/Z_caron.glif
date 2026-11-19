@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Zcaron" format="2">
 	<unicode hex="017D"/>
-	<advance width="736"/>
+	<advance width="688"/>
 	<outline>
 		<component base="Z"/>
 		<component base="caron" xOffset="148" yOffset="192"/>
@@ -9,7 +9,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

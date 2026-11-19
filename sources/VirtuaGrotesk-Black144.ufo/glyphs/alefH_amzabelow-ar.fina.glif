@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alefHamzabelow-ar.fina" format="2">
-	<advance width="392"/>
-	<anchor name="top" x="190" y="768"/>
+	<advance width="344"/>
+	<anchor name="top" x="166" y="768"/>
 	<outline>
 		<component base="alef-ar.fina"/>
-		<component base="hamzabelow-ar" xOffset="4"/>
+		<component base="hamzabelow-ar" xOffset="-20"/>
 	</outline>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

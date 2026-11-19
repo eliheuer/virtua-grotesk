@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="grave" format="2">
 	<unicode hex="0060"/>
-	<advance width="352"/>
+	<advance width="304"/>
 	<outline>
 		<contour>
-			<point x="336" y="656" type="line"/>
-			<point x="336" y="672" type="line"/>
-			<point x="210" y="816" type="line"/>
-			<point x="194" y="832" type="line"/>
-			<point x="62" y="832" type="line"/>
-			<point x="46" y="816" type="line"/>
-			<point x="46" y="800" type="line"/>
-			<point x="144" y="656" type="line"/>
-			<point x="160" y="640" type="line"/>
-			<point x="320" y="640" type="line"/>
+			<point x="312" y="656" type="line"/>
+			<point x="312" y="672" type="line"/>
+			<point x="186" y="816" type="line"/>
+			<point x="170" y="832" type="line"/>
+			<point x="38" y="832" type="line"/>
+			<point x="22" y="816" type="line"/>
+			<point x="22" y="800" type="line"/>
+			<point x="120" y="656" type="line"/>
+			<point x="136" y="640" type="line"/>
+			<point x="296" y="640" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="164" y="576"/>
-	<anchor name="top" x="164" y="864"/>
+	<anchor name="_top" x="140" y="576"/>
+	<anchor name="top" x="140" y="864"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

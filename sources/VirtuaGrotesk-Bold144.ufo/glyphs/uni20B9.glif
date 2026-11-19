@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni20B9" format="2">
 	<unicode hex="20B9"/>
-	<advance width="704"/>
+	<advance width="656"/>
 	<outline>
 		<contour>
-			<point x="48" y="472" type="line"/>
-			<point x="64" y="456" type="line"/>
-			<point x="400" y="456" type="line"/>
-			<point x="378" y="412"/>
-			<point x="350" y="384"/>
-			<point x="304" y="384" type="curve"/>
-			<point x="72" y="384" type="line"/>
-			<point x="56" y="368" type="line"/>
-			<point x="56" y="280" type="line"/>
-			<point x="336" y="0" type="line"/>
-			<point x="584" y="0" type="line"/>
-			<point x="600" y="16" type="line"/>
-			<point x="376" y="240" type="line"/>
-			<point x="392" y="240" type="line"/>
-			<point x="496" y="240"/>
-			<point x="550" y="328"/>
-			<point x="560" y="456" type="curve"/>
-			<point x="608" y="456" type="line"/>
-			<point x="624" y="472" type="line"/>
-			<point x="624" y="568" type="line"/>
-			<point x="608" y="584" type="line"/>
-			<point x="560" y="584" type="line"/>
-			<point x="546" y="606"/>
-			<point x="524" y="626"/>
-			<point x="496" y="640" type="curve"/>
-			<point x="640" y="640" type="line"/>
-			<point x="656" y="656" type="line"/>
-			<point x="656" y="752" type="line"/>
-			<point x="640" y="768" type="line"/>
-			<point x="64" y="768" type="line"/>
-			<point x="48" y="752" type="line"/>
-			<point x="48" y="656" type="line"/>
-			<point x="64" y="640" type="line"/>
-			<point x="304" y="640" type="line"/>
-			<point x="352" y="640"/>
-			<point x="376" y="620"/>
-			<point x="400" y="584" type="curve"/>
-			<point x="64" y="584" type="line"/>
-			<point x="48" y="568" type="line"/>
+			<point x="24" y="472" type="line"/>
+			<point x="40" y="456" type="line"/>
+			<point x="376" y="456" type="line"/>
+			<point x="354" y="412"/>
+			<point x="326" y="384"/>
+			<point x="280" y="384" type="curve"/>
+			<point x="48" y="384" type="line"/>
+			<point x="32" y="368" type="line"/>
+			<point x="32" y="280" type="line"/>
+			<point x="312" y="0" type="line"/>
+			<point x="560" y="0" type="line"/>
+			<point x="576" y="16" type="line"/>
+			<point x="352" y="240" type="line"/>
+			<point x="368" y="240" type="line"/>
+			<point x="472" y="240"/>
+			<point x="526" y="328"/>
+			<point x="536" y="456" type="curve"/>
+			<point x="584" y="456" type="line"/>
+			<point x="600" y="472" type="line"/>
+			<point x="600" y="568" type="line"/>
+			<point x="584" y="584" type="line"/>
+			<point x="536" y="584" type="line"/>
+			<point x="522" y="606"/>
+			<point x="500" y="626"/>
+			<point x="472" y="640" type="curve"/>
+			<point x="616" y="640" type="line"/>
+			<point x="632" y="656" type="line"/>
+			<point x="632" y="752" type="line"/>
+			<point x="616" y="768" type="line"/>
+			<point x="40" y="768" type="line"/>
+			<point x="24" y="752" type="line"/>
+			<point x="24" y="656" type="line"/>
+			<point x="40" y="640" type="line"/>
+			<point x="280" y="640" type="line"/>
+			<point x="328" y="640"/>
+			<point x="352" y="620"/>
+			<point x="376" y="584" type="curve"/>
+			<point x="40" y="584" type="line"/>
+			<point x="24" y="568" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -50,7 +50,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

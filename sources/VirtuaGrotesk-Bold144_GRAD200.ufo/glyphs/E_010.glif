@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="E010" format="2">
+	<unicode hex="E010"/>
+	<advance width="524"/>
+	<outline>
+		<contour>
+			<point x="294" y="0" type="curve" smooth="yes"/>
+			<point x="310" y="0"/>
+			<point x="324" y="0"/>
+			<point x="338" y="0" type="curve"/>
+			<point x="420" y="46" type="line"/>
+			<point x="438" y="54"/>
+			<point x="462" y="72"/>
+			<point x="462" y="90" type="curve" smooth="yes"/>
+			<point x="462" y="104"/>
+			<point x="442" y="132"/>
+			<point x="432" y="148" type="curve" smooth="yes"/>
+			<point x="360" y="266" type="line" smooth="yes"/>
+			<point x="352" y="280"/>
+			<point x="344" y="288"/>
+			<point x="344" y="300" type="curve" smooth="yes"/>
+			<point x="344" y="312"/>
+			<point x="334" y="308"/>
+			<point x="354" y="308" type="curve" smooth="yes"/>
+			<point x="468" y="308" type="line" smooth="yes"/>
+			<point x="494" y="308"/>
+			<point x="524" y="330"/>
+			<point x="524" y="348" type="curve" smooth="yes"/>
+			<point x="524" y="364"/>
+			<point x="506" y="390"/>
+			<point x="486" y="408" type="curve" smooth="yes"/>
+			<point x="156" y="714" type="line" smooth="yes"/>
+			<point x="122" y="748"/>
+			<point x="86" y="768"/>
+			<point x="62" y="768" type="curve" smooth="yes"/>
+			<point x="44" y="768"/>
+			<point x="12" y="738"/>
+			<point x="12" y="708" type="curve" smooth="yes"/>
+			<point x="12" y="200" type="line"/>
+			<point x="14" y="176"/>
+			<point x="38" y="154"/>
+			<point x="56" y="154" type="curve" smooth="yes"/>
+			<point x="74" y="154"/>
+			<point x="102" y="168"/>
+			<point x="118" y="184" type="curve" smooth="yes"/>
+			<point x="172" y="236" type="line" smooth="yes"/>
+			<point x="182" y="246"/>
+			<point x="176" y="246"/>
+			<point x="190" y="246" type="curve" smooth="yes"/>
+			<point x="202" y="246"/>
+			<point x="188" y="248"/>
+			<point x="194" y="228" type="curve" smooth="yes"/>
+			<point x="248" y="42" type="line" smooth="yes"/>
+			<point x="256" y="16"/>
+			<point x="280" y="0"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

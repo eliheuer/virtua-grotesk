@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="shinsindot-hb" format="2">
+	<unicode hex="FB2B"/>
+	<advance width="656"/>
+	<outline>
+		<component base="shin-hb"/>
+		<component base="sindot-hb" xOffset="-12"/>
+	</outline>
+	<anchor name="hbBottom" x="328" y="-32"/>
+	<anchor name="hbCenter" x="464" y="272"/>
+	<anchor name="hbHolam" x="-8" y="640"/>
+	<anchor name="hbShin" x="600" y="640"/>
+	<anchor name="hbSin" x="56" y="640"/>
+	<anchor name="hbRafe" x="328" y="736"/>
+	<anchor name="hbMeteg" x="328" y="-32"/>
+	<anchor name="hbCantAbove" x="328" y="640"/>
+	<anchor name="hbCantAboveLeft" x="-8" y="640"/>
+	<anchor name="hbCantAboveRight" x="648" y="640"/>
+	<anchor name="hbCantBelow" x="328" y="-32"/>
+	<anchor name="hbCantBelowRight" x="328" y="-32"/>
+	<anchor name="hbCantAfterHolam" x="94" y="576"/>
+	<anchor name="hbCantBeforeHolam" x="20" y="576"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

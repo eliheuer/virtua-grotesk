@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="finalpedagesh-hb" format="2">
+	<unicode hex="FB43"/>
+	<advance width="560"/>
+	<outline>
+		<component base="finalpe-hb"/>
+		<component base="dagesh-hb" xOffset="282" yOffset="22"/>
+	</outline>
+	<anchor name="hbBottom" x="278" y="-192"/>
+	<anchor name="hbCenter" x="262" y="402"/>
+	<anchor name="hbHolam" x="-40" y="598"/>
+	<anchor name="hbRafe" x="278" y="694"/>
+	<anchor name="hbMeteg" x="278" y="-192"/>
+	<anchor name="hbCantAbove" x="278" y="598"/>
+	<anchor name="hbCantAboveLeft" x="-40" y="598"/>
+	<anchor name="hbCantAboveRight" x="592" y="598"/>
+	<anchor name="hbCantBelow" x="278" y="-192"/>
+	<anchor name="hbCantBelowRight" x="278" y="-192"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

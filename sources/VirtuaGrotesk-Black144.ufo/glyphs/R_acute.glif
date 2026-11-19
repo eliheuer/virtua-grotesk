@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Racute" format="2">
 	<unicode hex="0154"/>
-	<advance width="864"/>
+	<advance width="816"/>
 	<outline>
 		<component base="R"/>
 		<component base="acute" xOffset="282" yOffset="192"/>
@@ -9,7 +9,7 @@
 	<lib>
 		<dict>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dalet-hb" format="2">
+	<unicode hex="05D3"/>
+	<advance width="584"/>
+	<outline>
+		<contour>
+			<point x="326" y="16" type="line"/>
+			<point x="342" y="0" type="line"/>
+			<point x="424" y="0" type="line"/>
+			<point x="440" y="16" type="line"/>
+			<point x="440" y="490" type="line"/>
+			<point x="456" y="512" type="line"/>
+			<point x="520" y="512" type="line"/>
+			<point x="536" y="528" type="line"/>
+			<point x="536" y="624" type="line"/>
+			<point x="520" y="640" type="line"/>
+			<point x="64" y="640" type="line"/>
+			<point x="48" y="624" type="line"/>
+			<point x="48" y="528" type="line"/>
+			<point x="64" y="512" type="line"/>
+			<point x="318" y="512" type="line"/>
+			<point x="326" y="498" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="282" y="0"/>
+	<anchor name="hbCenter" x="170" y="364"/>
+	<anchor name="hbHolam" x="48" y="640"/>
+	<anchor name="hbRafe" x="282" y="736"/>
+	<anchor name="hbMeteg" x="282" y="0"/>
+	<anchor name="hbCantAbove" x="280" y="640"/>
+	<anchor name="hbCantAboveLeft" x="48" y="640"/>
+	<anchor name="hbCantAboveRight" x="514" y="640"/>
+	<anchor name="hbCantBelow" x="282" y="0"/>
+	<anchor name="hbCantBelowRight" x="282" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

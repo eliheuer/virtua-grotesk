@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="alefbelow-ar" format="2">
+	<unicode hex="0656"/>
+	<outline>
+		<contour>
+			<point x="26" y="-344" type="line"/>
+			<point x="198" y="-344" type="line"/>
+			<point x="198" y="-72" type="line"/>
+			<point x="26" y="-72" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="112" y="-72"/>
+	<anchor name="bottomDots" x="112" y="-344"/>
+	<anchor name="topDots" x="112" y="-72"/>
+	<anchor name="bottom" x="112" y="-392"/>
+	<anchor name="_bottom" x="112" y="40"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

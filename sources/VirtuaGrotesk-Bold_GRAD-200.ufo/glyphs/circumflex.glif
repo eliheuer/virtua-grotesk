@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="circumflex" format="2">
+	<unicode hex="02C6"/>
+	<advance width="420"/>
+	<outline>
+		<contour>
+			<point x="64" y="722" type="line"/>
+			<point x="64" y="654" type="line"/>
+			<point x="80" y="638" type="line"/>
+			<point x="176" y="722" type="line"/>
+			<point x="192" y="730" type="line"/>
+			<point x="230" y="730" type="line"/>
+			<point x="246" y="722" type="line"/>
+			<point x="342" y="638" type="line"/>
+			<point x="358" y="654" type="line"/>
+			<point x="358" y="722" type="line"/>
+			<point x="342" y="742" type="line"/>
+			<point x="240" y="816" type="line"/>
+			<point x="224" y="832" type="line"/>
+			<point x="198" y="832" type="line"/>
+			<point x="182" y="816" type="line"/>
+			<point x="80" y="742" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_top" x="212" y="576"/>
+	<anchor name="top" x="212" y="864"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

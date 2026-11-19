@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="ring" format="2">
+	<unicode hex="02DA"/>
+	<advance width="300"/>
+	<outline>
+		<contour>
+			<point x="152" y="640" type="curve" smooth="yes"/>
+			<point x="206" y="640"/>
+			<point x="246" y="680"/>
+			<point x="246" y="734" type="curve" smooth="yes"/>
+			<point x="246" y="786"/>
+			<point x="206" y="826"/>
+			<point x="152" y="826" type="curve" smooth="yes"/>
+			<point x="98" y="826"/>
+			<point x="58" y="786"/>
+			<point x="58" y="734" type="curve" smooth="yes"/>
+			<point x="58" y="680"/>
+			<point x="98" y="640"/>
+		</contour>
+		<contour>
+			<point x="152" y="682" type="curve" smooth="yes"/>
+			<point x="126" y="682"/>
+			<point x="102" y="706"/>
+			<point x="102" y="734" type="curve" smooth="yes"/>
+			<point x="102" y="760"/>
+			<point x="126" y="784"/>
+			<point x="152" y="784" type="curve" smooth="yes"/>
+			<point x="178" y="784"/>
+			<point x="202" y="760"/>
+			<point x="202" y="734" type="curve" smooth="yes"/>
+			<point x="202" y="706"/>
+			<point x="178" y="682"/>
+		</contour>
+	</outline>
+	<anchor name="_top" x="150" y="576"/>
+	<anchor name="top" x="150" y="858"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

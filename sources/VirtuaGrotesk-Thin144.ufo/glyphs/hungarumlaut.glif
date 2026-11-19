@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hungarumlaut" format="2">
 	<unicode hex="02DD"/>
-	<advance width="432"/>
+	<advance width="384"/>
 	<outline>
 		<contour>
+			<point x="62" y="638" type="line"/>
 			<point x="86" y="638" type="line"/>
-			<point x="110" y="638" type="line"/>
-			<point x="126" y="654" type="line"/>
-			<point x="218" y="800" type="line"/>
-			<point x="218" y="816" type="line"/>
-			<point x="202" y="832" type="line"/>
-			<point x="138" y="832" type="line"/>
-			<point x="122" y="816" type="line"/>
-			<point x="70" y="670" type="line"/>
-			<point x="70" y="654" type="line"/>
+			<point x="102" y="654" type="line"/>
+			<point x="194" y="800" type="line"/>
+			<point x="194" y="816" type="line"/>
+			<point x="178" y="832" type="line"/>
+			<point x="114" y="832" type="line"/>
+			<point x="98" y="816" type="line"/>
+			<point x="46" y="670" type="line"/>
+			<point x="46" y="654" type="line"/>
 		</contour>
 		<contour>
+			<point x="230" y="638" type="line"/>
 			<point x="254" y="638" type="line"/>
-			<point x="278" y="638" type="line"/>
-			<point x="294" y="654" type="line"/>
-			<point x="386" y="800" type="line"/>
-			<point x="386" y="816" type="line"/>
-			<point x="370" y="832" type="line"/>
-			<point x="306" y="832" type="line"/>
-			<point x="290" y="816" type="line"/>
-			<point x="238" y="670" type="line"/>
-			<point x="238" y="654" type="line"/>
+			<point x="270" y="654" type="line"/>
+			<point x="362" y="800" type="line"/>
+			<point x="362" y="816" type="line"/>
+			<point x="346" y="832" type="line"/>
+			<point x="282" y="832" type="line"/>
+			<point x="266" y="816" type="line"/>
+			<point x="214" y="670" type="line"/>
+			<point x="214" y="654" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="228" y="576"/>
-	<anchor name="top" x="228" y="864"/>
+	<anchor name="_top" x="204" y="576"/>
+	<anchor name="top" x="204" y="864"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

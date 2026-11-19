@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="guillemetright" format="2">
+	<unicode hex="00BB"/>
+	<advance width="504"/>
+	<outline>
+		<contour>
+			<point x="258" y="64" type="line"/>
+			<point x="274" y="48" type="line"/>
+			<point x="290" y="48" type="line"/>
+			<point x="482" y="240" type="line"/>
+			<point x="498" y="256" type="line"/>
+			<point x="498" y="320" type="line"/>
+			<point x="482" y="336" type="line"/>
+			<point x="290" y="528" type="line"/>
+			<point x="274" y="528" type="line"/>
+			<point x="258" y="512" type="line"/>
+			<point x="258" y="352" type="line"/>
+			<point x="274" y="336" type="line"/>
+			<point x="300" y="292" type="line"/>
+			<point x="300" y="284" type="line"/>
+			<point x="274" y="240" type="line"/>
+			<point x="258" y="224" type="line"/>
+		</contour>
+		<contour>
+			<point x="8" y="64" type="line"/>
+			<point x="24" y="48" type="line"/>
+			<point x="40" y="48" type="line"/>
+			<point x="232" y="240" type="line"/>
+			<point x="248" y="256" type="line"/>
+			<point x="248" y="320" type="line"/>
+			<point x="232" y="336" type="line"/>
+			<point x="40" y="528" type="line"/>
+			<point x="24" y="528" type="line"/>
+			<point x="8" y="512" type="line"/>
+			<point x="8" y="352" type="line"/>
+			<point x="24" y="336" type="line"/>
+			<point x="50" y="292" type="line"/>
+			<point x="50" y="284" type="line"/>
+			<point x="24" y="240" type="line"/>
+			<point x="8" y="224" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

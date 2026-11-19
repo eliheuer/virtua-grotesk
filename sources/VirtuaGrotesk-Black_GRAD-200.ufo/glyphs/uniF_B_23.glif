@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uniFB23" format="2">
+	<unicode hex="FB23"/>
+	<advance width="960"/>
+	<outline>
+		<contour>
+			<point x="704" y="16" type="line"/>
+			<point x="720" y="0" type="line"/>
+			<point x="856" y="0" type="line"/>
+			<point x="872" y="16" type="line"/>
+			<point x="872" y="424" type="line" smooth="yes"/>
+			<point x="872" y="552"/>
+			<point x="792" y="640"/>
+			<point x="664" y="640" type="curve" smooth="yes"/>
+			<point x="104" y="640" type="line"/>
+			<point x="88" y="624" type="line"/>
+			<point x="88" y="480" type="line"/>
+			<point x="104" y="464" type="line"/>
+			<point x="672" y="464" type="line" smooth="yes"/>
+			<point x="700" y="464"/>
+			<point x="704" y="442"/>
+			<point x="704" y="424" type="curve" smooth="yes"/>
+		</contour>
+		<contour>
+			<point x="96" y="16" type="line"/>
+			<point x="112" y="0" type="line"/>
+			<point x="248" y="0" type="line"/>
+			<point x="264" y="16" type="line"/>
+			<point x="264" y="336" type="line"/>
+			<point x="248" y="352" type="line"/>
+			<point x="112" y="352" type="line"/>
+			<point x="96" y="336" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="464" y="0"/>
+	<anchor name="hbCenter" x="464" y="368"/>
+	<anchor name="hbHolam" x="88" y="640"/>
+	<anchor name="hbRafe" x="464" y="736"/>
+	<anchor name="hbMeteg" x="464" y="0"/>
+	<anchor name="hbCantAbove" x="464" y="640"/>
+	<anchor name="hbCantAboveLeft" x="88" y="640"/>
+	<anchor name="hbCantAboveRight" x="840" y="640"/>
+	<anchor name="hbCantBelow" x="464" y="0"/>
+	<anchor name="hbCantBelowRight" x="464" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

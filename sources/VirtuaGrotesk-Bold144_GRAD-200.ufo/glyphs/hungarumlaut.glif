@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hungarumlaut" format="2">
+	<unicode hex="02DD"/>
+	<advance width="408"/>
+	<outline>
+		<contour>
+			<point x="42" y="638" type="line"/>
+			<point x="102" y="638" type="line"/>
+			<point x="118" y="654" type="line"/>
+			<point x="210" y="800" type="line"/>
+			<point x="210" y="816" type="line"/>
+			<point x="194" y="832" type="line"/>
+			<point x="94" y="832" type="line"/>
+			<point x="78" y="816" type="line"/>
+			<point x="26" y="670" type="line"/>
+			<point x="26" y="654" type="line"/>
+		</contour>
+		<contour>
+			<point x="222" y="638" type="line"/>
+			<point x="282" y="638" type="line"/>
+			<point x="298" y="654" type="line"/>
+			<point x="390" y="800" type="line"/>
+			<point x="390" y="816" type="line"/>
+			<point x="374" y="832" type="line"/>
+			<point x="274" y="832" type="line"/>
+			<point x="258" y="816" type="line"/>
+			<point x="206" y="670" type="line"/>
+			<point x="206" y="654" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_top" x="208" y="576"/>
+	<anchor name="top" x="208" y="864"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

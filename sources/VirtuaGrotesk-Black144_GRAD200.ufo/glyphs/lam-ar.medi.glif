@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="lam-ar.medi" format="2">
+	<advance width="424"/>
+	<outline>
+		<contour>
+			<point x="0" y="0" type="line"/>
+			<point x="40" y="0" type="line" smooth="yes"/>
+			<point x="104" y="0"/>
+			<point x="172" y="0"/>
+			<point x="204" y="18" type="curve"/>
+			<point x="220" y="18" type="line"/>
+			<point x="252" y="0"/>
+			<point x="318" y="0"/>
+			<point x="382" y="0" type="curve" smooth="yes"/>
+			<point x="424" y="0" type="line"/>
+			<point x="438" y="16" type="line"/>
+			<point x="438" y="196" type="line"/>
+			<point x="424" y="212" type="line"/>
+			<point x="382" y="212" type="line" smooth="yes"/>
+			<point x="346" y="212"/>
+			<point x="314" y="244"/>
+			<point x="314" y="284" type="curve" smooth="yes"/>
+			<point x="314" y="752" type="line"/>
+			<point x="298" y="768" type="line"/>
+			<point x="124" y="768" type="line"/>
+			<point x="108" y="752" type="line"/>
+			<point x="108" y="284" type="line" smooth="yes"/>
+			<point x="108" y="244"/>
+			<point x="76" y="212"/>
+			<point x="40" y="212" type="curve" smooth="yes"/>
+			<point x="0" y="212" type="line"/>
+			<point x="-16" y="196" type="line"/>
+			<point x="-16" y="16" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="214" y="-34"/>
+	<anchor name="top" x="214" y="768"/>
+	<anchor name="bottomDots" x="214" y="-34"/>
+	<anchor name="topDots" x="214" y="768"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

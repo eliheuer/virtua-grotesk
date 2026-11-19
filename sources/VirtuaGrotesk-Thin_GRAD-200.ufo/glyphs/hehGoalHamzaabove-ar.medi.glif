@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="hehGoalHamzaabove-ar.medi" format="2">
+	<advance width="480"/>
+	<anchor name="bottom" x="232" y="-296"/>
+	<outline>
+		<component base="hehGoal-ar.medi"/>
+		<component base="hamzaabove-ar" xOffset="120" yOffset="-320"/>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

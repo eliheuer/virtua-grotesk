@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tet-hb" format="2">
+	<unicode hex="05D8"/>
+	<advance width="576"/>
+	<outline>
+		<contour>
+			<point x="294" y="-16" type="curve" smooth="yes"/>
+			<point x="506" y="-16"/>
+			<point x="610" y="78"/>
+			<point x="610" y="256" type="curve" smooth="yes"/>
+			<point x="610" y="416" type="line" smooth="yes"/>
+			<point x="610" y="576"/>
+			<point x="578" y="656"/>
+			<point x="410" y="656" type="curve" smooth="yes"/>
+			<point x="362" y="656"/>
+			<point x="300" y="648"/>
+			<point x="268" y="624" type="curve"/>
+			<point x="268" y="486" type="line"/>
+			<point x="284" y="470" type="line"/>
+			<point x="300" y="494"/>
+			<point x="316" y="504"/>
+			<point x="332" y="504" type="curve" smooth="yes"/>
+			<point x="414" y="504" type="line" smooth="yes"/>
+			<point x="446" y="504"/>
+			<point x="468" y="478"/>
+			<point x="468" y="426" type="curve" smooth="yes"/>
+			<point x="468" y="242" type="line" smooth="yes"/>
+			<point x="468" y="174"/>
+			<point x="422" y="136"/>
+			<point x="294" y="136" type="curve" smooth="yes"/>
+			<point x="202" y="136"/>
+			<point x="122" y="162"/>
+			<point x="122" y="210" type="curve" smooth="yes"/>
+			<point x="122" y="624" type="line"/>
+			<point x="106" y="640" type="line"/>
+			<point x="-4" y="640" type="line"/>
+			<point x="-20" y="624" type="line"/>
+			<point x="-20" y="208" type="line" smooth="yes"/>
+			<point x="-20" y="64"/>
+			<point x="110" y="-16"/>
+		</contour>
+	</outline>
+	<anchor name="hbBottom" x="276" y="-32"/>
+	<anchor name="hbCenter" x="278" y="362"/>
+	<anchor name="hbHolam" x="-12" y="656"/>
+	<anchor name="hbRafe" x="276" y="752"/>
+	<anchor name="hbMeteg" x="276" y="-32"/>
+	<anchor name="hbCantAbove" x="276" y="656"/>
+	<anchor name="hbCantAboveLeft" x="-12" y="656"/>
+	<anchor name="hbCantAboveRight" x="588" y="656"/>
+	<anchor name="hbCantBelow" x="276" y="-32"/>
+	<anchor name="hbCantBelowRight" x="276" y="-32"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

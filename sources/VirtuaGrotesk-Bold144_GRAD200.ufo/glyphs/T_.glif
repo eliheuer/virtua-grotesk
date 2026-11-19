@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="T" format="2">
+	<unicode hex="0054"/>
+	<advance width="600"/>
+	<outline>
+		<contour>
+			<point x="162" y="16" type="line"/>
+			<point x="178" y="0" type="line"/>
+			<point x="402" y="0" type="line"/>
+			<point x="418" y="16" type="line"/>
+			<point x="418" y="572" type="line"/>
+			<point x="426" y="580" type="line"/>
+			<point x="602" y="580" type="line"/>
+			<point x="618" y="596" type="line"/>
+			<point x="618" y="752" type="line"/>
+			<point x="602" y="768" type="line"/>
+			<point x="-8" y="768" type="line"/>
+			<point x="-24" y="752" type="line"/>
+			<point x="-24" y="596" type="line"/>
+			<point x="-8" y="580" type="line"/>
+			<point x="154" y="580" type="line"/>
+			<point x="162" y="572" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="top" x="336" y="768"/>
+	<anchor name="bottom" x="336" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>org.fontgarden.transfer</key>
+			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-T.png</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="arabicSignSanah" format="2">
+	<unicode hex="0601"/>
+	<outline>
+		<contour>
+			<point x="-180" y="516" type="line"/>
+			<point x="-80" y="590" type="line"/>
+			<point x="80" y="590" type="line"/>
+			<point x="180" y="516" type="line"/>
+			<point x="104" y="666" type="line"/>
+			<point x="-104" y="666" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

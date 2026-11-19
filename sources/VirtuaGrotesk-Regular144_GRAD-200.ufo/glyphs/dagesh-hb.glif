@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dagesh-hb" format="2">
+	<unicode hex="05BC"/>
+	<outline>
+		<contour>
+			<point x="94" y="326" type="line"/>
+			<point x="116" y="348" type="line"/>
+			<point x="116" y="390" type="line"/>
+			<point x="94" y="414" type="line"/>
+			<point x="50" y="414" type="line"/>
+			<point x="28" y="390" type="line"/>
+			<point x="28" y="348" type="line"/>
+			<point x="50" y="326" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbCenter" x="70" y="364"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

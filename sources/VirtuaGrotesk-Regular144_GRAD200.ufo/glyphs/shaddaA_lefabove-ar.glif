@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="shaddaAlefabove-ar" format="2">
+	<outline>
+		<component base="shadda-ar"/>
+		<component base="alefabove-ar" yOffset="230"/>
+	</outline>
+	<anchor name="top" x="112" y="1176"/>
+	<anchor name="topDots" x="112" y="1128"/>
+	<anchor name="bottom" x="112" y="670"/>
+	<anchor name="bottomDots" x="112" y="670"/>
+	<anchor name="_top" x="112" y="558"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

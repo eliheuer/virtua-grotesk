@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Thorn" format="2">
+	<unicode hex="00DE"/>
+	<advance width="580"/>
+	<outline>
+		<contour>
+			<point x="152" y="282" type="line"/>
+			<point x="152" y="530" type="line"/>
+			<point x="160" y="538" type="line"/>
+			<point x="346" y="538" type="line" smooth="yes"/>
+			<point x="424" y="538"/>
+			<point x="484" y="478"/>
+			<point x="484" y="406" type="curve" smooth="yes"/>
+			<point x="484" y="332"/>
+			<point x="424" y="274"/>
+			<point x="346" y="274" type="curve" smooth="yes"/>
+			<point x="160" y="274" type="line"/>
+		</contour>
+		<contour>
+			<point x="64" y="16" type="line"/>
+			<point x="80" y="0" type="line"/>
+			<point x="136" y="0" type="line"/>
+			<point x="152" y="16" type="line"/>
+			<point x="152" y="186" type="line"/>
+			<point x="160" y="194" type="line"/>
+			<point x="352" y="194" type="line" smooth="yes"/>
+			<point x="480" y="194"/>
+			<point x="572" y="284"/>
+			<point x="572" y="406" type="curve" smooth="yes"/>
+			<point x="572" y="528"/>
+			<point x="476" y="624"/>
+			<point x="352" y="624" type="curve" smooth="yes"/>
+			<point x="160" y="624" type="line"/>
+			<point x="152" y="632" type="line"/>
+			<point x="152" y="752" type="line"/>
+			<point x="136" y="768" type="line"/>
+			<point x="80" y="768" type="line"/>
+			<point x="64" y="752" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="326" y="0"/>
+	<anchor name="top" x="326" y="768"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

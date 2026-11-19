@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="seen-ar" format="2">
+	<unicode hex="0633"/>
+	<advance width="1480"/>
+	<outline>
+		<contour>
+			<point x="820" y="-136"/>
+			<point x="820" y="32" type="curve"/>
+			<point x="828" y="32" type="line"/>
+			<point x="854" y="0"/>
+			<point x="888" y="-16"/>
+			<point x="920" y="-16" type="curve" smooth="yes"/>
+			<point x="986" y="-16"/>
+			<point x="1036" y="8"/>
+			<point x="1068" y="64" type="curve"/>
+			<point x="1068" y="64" type="line"/>
+			<point x="1100" y="8"/>
+			<point x="1154" y="-16"/>
+			<point x="1208" y="-16" type="curve" smooth="yes"/>
+			<point x="1334" y="-16"/>
+			<point x="1396" y="52"/>
+			<point x="1396" y="178" type="curve" smooth="yes"/>
+			<point x="1396" y="424" type="line"/>
+			<point x="1380" y="440" type="line"/>
+			<point x="1326" y="440" type="line"/>
+			<point x="1310" y="424" type="line"/>
+			<point x="1310" y="178" type="line" smooth="yes"/>
+			<point x="1310" y="120"/>
+			<point x="1268" y="78"/>
+			<point x="1208" y="78" type="curve" smooth="yes"/>
+			<point x="1150" y="78"/>
+			<point x="1108" y="120"/>
+			<point x="1108" y="178" type="curve" smooth="yes"/>
+			<point x="1108" y="424" type="line"/>
+			<point x="1092" y="440" type="line"/>
+			<point x="1038" y="440" type="line"/>
+			<point x="1022" y="424" type="line"/>
+			<point x="1022" y="178" type="line" smooth="yes"/>
+			<point x="1022" y="120"/>
+			<point x="980" y="78"/>
+			<point x="920" y="78" type="curve" smooth="yes"/>
+			<point x="862" y="78"/>
+			<point x="820" y="120"/>
+			<point x="820" y="178" type="curve" smooth="yes"/>
+			<point x="820" y="424" type="line"/>
+			<point x="804" y="440" type="line"/>
+			<point x="750" y="440" type="line"/>
+			<point x="734" y="424" type="line"/>
+			<point x="734" y="32" type="line" smooth="yes"/>
+			<point x="734" y="-84"/>
+			<point x="600" y="-176"/>
+			<point x="434" y="-176" type="curve" smooth="yes"/>
+			<point x="268" y="-176"/>
+			<point x="136" y="-84"/>
+			<point x="136" y="32" type="curve" smooth="yes"/>
+			<point x="136" y="114" type="line"/>
+			<point x="120" y="130" type="line"/>
+			<point x="64" y="130" type="line"/>
+			<point x="48" y="114" type="line"/>
+			<point x="48" y="32" type="line" smooth="yes"/>
+			<point x="48" y="-136"/>
+			<point x="218" y="-272"/>
+			<point x="434" y="-272" type="curve" smooth="yes"/>
+			<point x="652" y="-272"/>
+		</contour>
+	</outline>
+	<anchor name="bottomDots" x="720" y="-272"/>
+	<anchor name="top" x="1056" y="400"/>
+	<anchor name="topDots" x="1056" y="432"/>
+	<anchor name="bottom" x="912" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

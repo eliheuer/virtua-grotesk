@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lameddagesh-hb" format="2">
 	<unicode hex="FB3C"/>
-	<advance width="688"/>
+	<advance width="640"/>
 	<outline>
 		<component base="lamed-hb"/>
-		<component base="dagesh-hb" xOffset="118" yOffset="50"/>
+		<component base="dagesh-hb" xOffset="94" yOffset="50"/>
 	</outline>
-	<anchor name="hbBottom" x="318" y="0"/>
-	<anchor name="hbCenter" x="188" y="322"/>
-	<anchor name="hbHolam" x="32" y="768"/>
-	<anchor name="hbRafe" x="318" y="864"/>
-	<anchor name="hbMeteg" x="318" y="0"/>
-	<anchor name="hbCantAbove" x="318" y="768"/>
-	<anchor name="hbCantAboveLeft" x="32" y="768"/>
-	<anchor name="hbCantAboveRight" x="604" y="768"/>
-	<anchor name="hbCantBelow" x="318" y="0"/>
-	<anchor name="hbCantBelowRight" x="318" y="0"/>
+	<anchor name="hbBottom" x="294" y="0"/>
+	<anchor name="hbCenter" x="164" y="322"/>
+	<anchor name="hbHolam" x="8" y="768"/>
+	<anchor name="hbRafe" x="294" y="864"/>
+	<anchor name="hbMeteg" x="294" y="0"/>
+	<anchor name="hbCantAbove" x="294" y="768"/>
+	<anchor name="hbCantAboveLeft" x="8" y="768"/>
+	<anchor name="hbCantAboveRight" x="580" y="768"/>
+	<anchor name="hbCantBelow" x="294" y="0"/>
+	<anchor name="hbCantBelowRight" x="294" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

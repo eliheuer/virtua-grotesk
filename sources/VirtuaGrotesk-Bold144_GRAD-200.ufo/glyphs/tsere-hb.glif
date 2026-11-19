@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tsere-hb" format="2">
+	<unicode hex="05B5"/>
+	<outline>
+		<contour>
+			<point x="74" y="-202" type="line"/>
+			<point x="102" y="-176" type="line"/>
+			<point x="102" y="-122" type="line"/>
+			<point x="74" y="-96" type="line"/>
+			<point x="22" y="-96" type="line"/>
+			<point x="-6" y="-122" type="line"/>
+			<point x="-6" y="-176" type="line"/>
+			<point x="22" y="-202" type="line"/>
+		</contour>
+		<contour>
+			<point x="226" y="-202" type="line"/>
+			<point x="254" y="-176" type="line"/>
+			<point x="254" y="-122" type="line"/>
+			<point x="226" y="-96" type="line"/>
+			<point x="174" y="-96" type="line"/>
+			<point x="146" y="-122" type="line"/>
+			<point x="146" y="-176" type="line"/>
+			<point x="174" y="-202" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbBottom" x="124" y="0"/>
+	<anchor name="hbMeteg" x="-102" y="0"/>
+	<anchor name="hbCantLeftVowel" x="-14" y="0"/>
+	<anchor name="hbCantRightVowel" x="262" y="0"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

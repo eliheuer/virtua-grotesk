@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="theh-ar.medi.afterDots" format="2">
+	<advance width="528"/>
+	<outline>
+		<contour>
+			<point x="88" y="0" type="line" smooth="yes"/>
+			<point x="152" y="0"/>
+			<point x="198" y="0"/>
+			<point x="230" y="64" type="curve"/>
+			<point x="238" y="64" type="line"/>
+			<point x="270" y="0"/>
+			<point x="304" y="0"/>
+			<point x="368" y="0" type="curve" smooth="yes"/>
+			<point x="528" y="0" type="line"/>
+			<point x="528" y="122" type="line"/>
+			<point x="368" y="122" type="line" smooth="yes"/>
+			<point x="312" y="122"/>
+			<point x="286" y="150"/>
+			<point x="286" y="206" type="curve" smooth="yes"/>
+			<point x="286" y="320" type="line"/>
+			<point x="270" y="336" type="line"/>
+			<point x="186" y="336" type="line"/>
+			<point x="170" y="320" type="line"/>
+			<point x="170" y="206" type="line" smooth="yes"/>
+			<point x="170" y="150"/>
+			<point x="144" y="122"/>
+			<point x="88" y="122" type="curve" smooth="yes"/>
+			<point x="0" y="122" type="line"/>
+			<point x="-16" y="106" type="line"/>
+			<point x="-16" y="16" type="line"/>
+			<point x="0" y="0" type="line"/>
+		</contour>
+		<component base="threedotsupabove-ar" xOffset="-16" yOffset="-218"/>
+	</outline>
+	<anchor name="bottomDots" x="240" y="14"/>
+	<anchor name="top" x="240" y="816"/>
+	<anchor name="topDots" x="240" y="358"/>
+	<anchor name="bottom" x="238" y="-8"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

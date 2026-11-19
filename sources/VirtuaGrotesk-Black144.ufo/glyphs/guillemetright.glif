@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="guillemetright" format="2">
 	<unicode hex="00BB"/>
-	<advance width="584"/>
+	<advance width="536"/>
 	<outline>
 		<contour>
-			<point x="298" y="64" type="line"/>
-			<point x="314" y="48" type="line"/>
-			<point x="330" y="48" type="line"/>
-			<point x="522" y="240" type="line"/>
-			<point x="538" y="256" type="line"/>
-			<point x="538" y="320" type="line"/>
-			<point x="522" y="336" type="line"/>
-			<point x="330" y="528" type="line"/>
-			<point x="314" y="528" type="line"/>
-			<point x="298" y="512" type="line"/>
-			<point x="298" y="352" type="line"/>
-			<point x="314" y="336" type="line"/>
-			<point x="340" y="292" type="line"/>
-			<point x="340" y="284" type="line"/>
-			<point x="314" y="240" type="line"/>
-			<point x="298" y="224" type="line"/>
+			<point x="274" y="64" type="line"/>
+			<point x="290" y="48" type="line"/>
+			<point x="306" y="48" type="line"/>
+			<point x="498" y="240" type="line"/>
+			<point x="514" y="256" type="line"/>
+			<point x="514" y="320" type="line"/>
+			<point x="498" y="336" type="line"/>
+			<point x="306" y="528" type="line"/>
+			<point x="290" y="528" type="line"/>
+			<point x="274" y="512" type="line"/>
+			<point x="274" y="352" type="line"/>
+			<point x="290" y="336" type="line"/>
+			<point x="316" y="292" type="line"/>
+			<point x="316" y="284" type="line"/>
+			<point x="290" y="240" type="line"/>
+			<point x="274" y="224" type="line"/>
 		</contour>
 		<contour>
-			<point x="48" y="64" type="line"/>
-			<point x="64" y="48" type="line"/>
-			<point x="80" y="48" type="line"/>
-			<point x="272" y="240" type="line"/>
-			<point x="288" y="256" type="line"/>
-			<point x="288" y="320" type="line"/>
-			<point x="272" y="336" type="line"/>
-			<point x="80" y="528" type="line"/>
-			<point x="64" y="528" type="line"/>
-			<point x="48" y="512" type="line"/>
-			<point x="48" y="352" type="line"/>
-			<point x="64" y="336" type="line"/>
-			<point x="90" y="292" type="line"/>
-			<point x="90" y="284" type="line"/>
-			<point x="64" y="240" type="line"/>
-			<point x="48" y="224" type="line"/>
+			<point x="24" y="64" type="line"/>
+			<point x="40" y="48" type="line"/>
+			<point x="56" y="48" type="line"/>
+			<point x="248" y="240" type="line"/>
+			<point x="264" y="256" type="line"/>
+			<point x="264" y="320" type="line"/>
+			<point x="248" y="336" type="line"/>
+			<point x="56" y="528" type="line"/>
+			<point x="40" y="528" type="line"/>
+			<point x="24" y="512" type="line"/>
+			<point x="24" y="352" type="line"/>
+			<point x="40" y="336" type="line"/>
+			<point x="66" y="292" type="line"/>
+			<point x="66" y="284" type="line"/>
+			<point x="40" y="240" type="line"/>
+			<point x="24" y="224" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -45,7 +45,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

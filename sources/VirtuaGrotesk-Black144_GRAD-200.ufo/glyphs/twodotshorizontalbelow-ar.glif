@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="twodotshorizontalbelow-ar" format="2">
+	<advance width="320"/>
+	<outline>
+		<contour>
+			<point x="-4" y="-300" type="curve" smooth="yes"/>
+			<point x="66" y="-292"/>
+			<point x="112" y="-236"/>
+			<point x="112" y="-192" type="curve" smooth="yes"/>
+			<point x="102" y="-128"/>
+			<point x="40" y="-84"/>
+			<point x="-4" y="-84" type="curve" smooth="yes"/>
+			<point x="-74" y="-92"/>
+			<point x="-120" y="-148"/>
+			<point x="-120" y="-192" type="curve" smooth="yes"/>
+			<point x="-110" y="-256"/>
+			<point x="-48" y="-300"/>
+		</contour>
+		<contour>
+			<point x="252" y="-300" type="curve" smooth="yes"/>
+			<point x="322" y="-292"/>
+			<point x="368" y="-236"/>
+			<point x="368" y="-192" type="curve" smooth="yes"/>
+			<point x="358" y="-128"/>
+			<point x="296" y="-84"/>
+			<point x="252" y="-84" type="curve" smooth="yes"/>
+			<point x="182" y="-92"/>
+			<point x="136" y="-148"/>
+			<point x="136" y="-192" type="curve" smooth="yes"/>
+			<point x="146" y="-256"/>
+			<point x="208" y="-300"/>
+		</contour>
+	</outline>
+	<anchor name="_bottomDots" x="124" y="28"/>
+	<anchor name="bottom" x="124" y="-348"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

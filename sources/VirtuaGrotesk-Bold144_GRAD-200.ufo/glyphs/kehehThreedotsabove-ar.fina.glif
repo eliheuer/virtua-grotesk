@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="kehehThreedotsabove-ar.fina" format="2">
+	<advance width="936"/>
+	<outline>
+		<component base="keheh-ar.fina"/>
+		<component base="threedotsupabove-ar" xOffset="216" yOffset="192"/>
+	</outline>
+	<anchor name="bottom" x="424" y="-4"/>
+	<anchor name="top" x="424" y="1138"/>
+	<anchor name="bottomDots" x="424" y="-4"/>
+	<anchor name="topDots" x="424" y="768"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

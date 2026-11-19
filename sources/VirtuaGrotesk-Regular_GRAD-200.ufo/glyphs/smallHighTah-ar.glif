@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="smallHighTah-ar" format="2">
+	<unicode hex="0615"/>
+	<outline>
+		<contour>
+			<point x="30" y="696" type="line"/>
+			<point x="194" y="696" type="line"/>
+			<point x="242" y="696"/>
+			<point x="258" y="720"/>
+			<point x="258" y="758" type="curve"/>
+			<point x="258" y="796"/>
+			<point x="234" y="820"/>
+			<point x="194" y="820" type="curve"/>
+			<point x="96" y="820" type="line"/>
+			<point x="96" y="896" type="line"/>
+			<point x="88" y="904" type="line"/>
+			<point x="62" y="904" type="line"/>
+			<point x="54" y="896" type="line"/>
+			<point x="54" y="730" type="line"/>
+			<point x="30" y="730" type="line"/>
+		</contour>
+		<contour>
+			<point x="96" y="730" type="line"/>
+			<point x="96" y="786" type="line"/>
+			<point x="188" y="786" type="line"/>
+			<point x="210" y="786"/>
+			<point x="214" y="766"/>
+			<point x="214" y="758" type="curve"/>
+			<point x="214" y="738"/>
+			<point x="210" y="730"/>
+			<point x="188" y="730" type="curve"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="144" y="688"/>
+	<anchor name="bottomDots" x="144" y="688"/>
+	<anchor name="topDots" x="144" y="912"/>
+	<anchor name="top" x="144" y="960"/>
+	<anchor name="_top" x="144" y="576"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

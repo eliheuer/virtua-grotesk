@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="exclamdown" format="2">
+	<unicode hex="00A1"/>
+	<advance width="288"/>
+	<outline>
+		<contour>
+			<point x="214" y="640" type="line"/>
+			<point x="198" y="656" type="line"/>
+			<point x="92" y="656" type="line"/>
+			<point x="76" y="640" type="line"/>
+			<point x="76" y="534" type="line"/>
+			<point x="92" y="518" type="line"/>
+			<point x="198" y="518" type="line"/>
+			<point x="214" y="534" type="line"/>
+		</contour>
+		<contour>
+			<point x="180" y="442" type="line"/>
+			<point x="164" y="458" type="line"/>
+			<point x="126" y="458" type="line"/>
+			<point x="110" y="442" type="line"/>
+			<point x="76" y="176" type="line"/>
+			<point x="76" y="-96" type="line"/>
+			<point x="92" y="-112" type="line"/>
+			<point x="198" y="-112" type="line"/>
+			<point x="214" y="-96" type="line"/>
+			<point x="214" y="176" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

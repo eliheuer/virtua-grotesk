@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="threedotsupbelow-ar" format="2">
-	<advance width="416"/>
+	<advance width="368"/>
 	<outline>
 		<contour>
-			<point x="64" y="-412" type="curve" smooth="yes"/>
-			<point x="96" y="-412"/>
-			<point x="122" y="-388"/>
-			<point x="122" y="-356" type="curve" smooth="yes"/>
-			<point x="122" y="-324"/>
-			<point x="96" y="-300"/>
-			<point x="64" y="-300" type="curve" smooth="yes"/>
-			<point x="34" y="-300"/>
-			<point x="8" y="-324"/>
-			<point x="8" y="-356" type="curve" smooth="yes"/>
-			<point x="8" y="-388"/>
-			<point x="34" y="-412"/>
+			<point x="40" y="-412" type="curve" smooth="yes"/>
+			<point x="72" y="-412"/>
+			<point x="98" y="-388"/>
+			<point x="98" y="-356" type="curve" smooth="yes"/>
+			<point x="98" y="-324"/>
+			<point x="72" y="-300"/>
+			<point x="40" y="-300" type="curve" smooth="yes"/>
+			<point x="10" y="-300"/>
+			<point x="-16" y="-324"/>
+			<point x="-16" y="-356" type="curve" smooth="yes"/>
+			<point x="-16" y="-388"/>
+			<point x="10" y="-412"/>
 		</contour>
 		<contour>
-			<point x="352" y="-412" type="curve" smooth="yes"/>
-			<point x="384" y="-412"/>
-			<point x="410" y="-388"/>
-			<point x="410" y="-356" type="curve" smooth="yes"/>
-			<point x="410" y="-324"/>
-			<point x="384" y="-300"/>
-			<point x="352" y="-300" type="curve" smooth="yes"/>
-			<point x="322" y="-300"/>
-			<point x="296" y="-324"/>
-			<point x="296" y="-356" type="curve" smooth="yes"/>
-			<point x="296" y="-388"/>
-			<point x="322" y="-412"/>
+			<point x="328" y="-412" type="curve" smooth="yes"/>
+			<point x="360" y="-412"/>
+			<point x="386" y="-388"/>
+			<point x="386" y="-356" type="curve" smooth="yes"/>
+			<point x="386" y="-324"/>
+			<point x="360" y="-300"/>
+			<point x="328" y="-300" type="curve" smooth="yes"/>
+			<point x="298" y="-300"/>
+			<point x="272" y="-324"/>
+			<point x="272" y="-356" type="curve" smooth="yes"/>
+			<point x="272" y="-388"/>
+			<point x="298" y="-412"/>
 		</contour>
 		<contour>
-			<point x="208" y="-204" type="curve" smooth="yes"/>
-			<point x="240" y="-204"/>
-			<point x="266" y="-180"/>
-			<point x="266" y="-148" type="curve" smooth="yes"/>
-			<point x="266" y="-116"/>
-			<point x="240" y="-92"/>
-			<point x="208" y="-92" type="curve" smooth="yes"/>
-			<point x="178" y="-92"/>
-			<point x="152" y="-116"/>
-			<point x="152" y="-148" type="curve" smooth="yes"/>
-			<point x="152" y="-180"/>
-			<point x="178" y="-204"/>
+			<point x="184" y="-204" type="curve" smooth="yes"/>
+			<point x="216" y="-204"/>
+			<point x="242" y="-180"/>
+			<point x="242" y="-148" type="curve" smooth="yes"/>
+			<point x="242" y="-116"/>
+			<point x="216" y="-92"/>
+			<point x="184" y="-92" type="curve" smooth="yes"/>
+			<point x="154" y="-92"/>
+			<point x="128" y="-116"/>
+			<point x="128" y="-148" type="curve" smooth="yes"/>
+			<point x="128" y="-180"/>
+			<point x="154" y="-204"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="232" y="-68"/>
-	<anchor name="bottomDots" x="232" y="-436"/>
-	<anchor name="topDots" x="232" y="-68"/>
-	<anchor name="bottom" x="232" y="-484"/>
-	<anchor name="_bottomDots" x="232" y="44"/>
+	<anchor name="top" x="208" y="-68"/>
+	<anchor name="bottomDots" x="208" y="-436"/>
+	<anchor name="topDots" x="208" y="-68"/>
+	<anchor name="bottom" x="208" y="-484"/>
+	<anchor name="_bottomDots" x="208" y="44"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="qafThreedotsabove-ar" format="2">
+	<unicode hex="06A8"/>
+	<advance width="992"/>
+	<outline>
+		<component base="qafDotless-ar"/>
+		<component base="threedotsupabove-ar" xOffset="406" yOffset="102"/>
+	</outline>
+	<anchor name="top" x="638" y="1082"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>

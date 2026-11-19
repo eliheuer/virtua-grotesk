@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="divide" format="2">
 	<unicode hex="00F7"/>
-	<advance width="600"/>
+	<advance width="552"/>
 	<outline>
 		<contour>
-			<point x="48" y="332" type="line"/>
-			<point x="64" y="316" type="line"/>
-			<point x="536" y="316" type="line"/>
-			<point x="552" y="332" type="line"/>
-			<point x="552" y="372" type="line"/>
-			<point x="536" y="388" type="line"/>
-			<point x="64" y="388" type="line"/>
-			<point x="48" y="372" type="line"/>
+			<point x="24" y="332" type="line"/>
+			<point x="40" y="316" type="line"/>
+			<point x="512" y="316" type="line"/>
+			<point x="528" y="332" type="line"/>
+			<point x="528" y="372" type="line"/>
+			<point x="512" y="388" type="line"/>
+			<point x="40" y="388" type="line"/>
+			<point x="24" y="372" type="line"/>
 		</contour>
 		<component base="period" xOffset="172" yOffset="460"/>
 		<component base="period" xOffset="172" yOffset="116"/>

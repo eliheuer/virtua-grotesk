@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="brokenbar" format="2">
 	<unicode hex="00A6"/>
-	<advance width="320"/>
+	<advance width="272"/>
 	<outline>
 		<contour>
-			<point x="126" y="-112" type="line"/>
-			<point x="142" y="-128" type="line"/>
-			<point x="178" y="-128" type="line"/>
-			<point x="194" y="-112" type="line"/>
-			<point x="194" y="240" type="line"/>
-			<point x="178" y="256" type="line"/>
-			<point x="142" y="256" type="line"/>
-			<point x="126" y="240" type="line"/>
+			<point x="102" y="-112" type="line"/>
+			<point x="118" y="-128" type="line"/>
+			<point x="154" y="-128" type="line"/>
+			<point x="170" y="-112" type="line"/>
+			<point x="170" y="240" type="line"/>
+			<point x="154" y="256" type="line"/>
+			<point x="118" y="256" type="line"/>
+			<point x="102" y="240" type="line"/>
 		</contour>
 		<contour>
-			<point x="126" y="464" type="line"/>
-			<point x="142" y="448" type="line"/>
-			<point x="178" y="448" type="line"/>
-			<point x="194" y="464" type="line"/>
-			<point x="194" y="832" type="line"/>
-			<point x="178" y="848" type="line"/>
-			<point x="142" y="848" type="line"/>
-			<point x="126" y="832" type="line"/>
+			<point x="102" y="464" type="line"/>
+			<point x="118" y="448" type="line"/>
+			<point x="154" y="448" type="line"/>
+			<point x="170" y="464" type="line"/>
+			<point x="170" y="832" type="line"/>
+			<point x="154" y="848" type="line"/>
+			<point x="118" y="848" type="line"/>
+			<point x="102" y="832" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -29,7 +29,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="circumflex" format="2">
 	<unicode hex="02C6"/>
-	<advance width="420"/>
+	<advance width="372"/>
 	<outline>
 		<contour>
-			<point x="82" y="704" type="line"/>
-			<point x="82" y="654" type="line"/>
-			<point x="98" y="638" type="line"/>
-			<point x="176" y="744" type="line"/>
-			<point x="192" y="752" type="line"/>
-			<point x="236" y="752" type="line"/>
-			<point x="252" y="744" type="line"/>
-			<point x="330" y="638" type="line"/>
-			<point x="346" y="654" type="line"/>
-			<point x="346" y="704" type="line"/>
-			<point x="330" y="732" type="line"/>
-			<point x="222" y="816" type="line"/>
-			<point x="206" y="832" type="line"/>
-			<point x="222" y="832" type="line"/>
-			<point x="206" y="816" type="line"/>
-			<point x="98" y="732" type="line"/>
+			<point x="58" y="704" type="line"/>
+			<point x="58" y="654" type="line"/>
+			<point x="74" y="638" type="line"/>
+			<point x="152" y="744" type="line"/>
+			<point x="168" y="752" type="line"/>
+			<point x="212" y="752" type="line"/>
+			<point x="228" y="744" type="line"/>
+			<point x="306" y="638" type="line"/>
+			<point x="322" y="654" type="line"/>
+			<point x="322" y="704" type="line"/>
+			<point x="306" y="732" type="line"/>
+			<point x="198" y="816" type="line"/>
+			<point x="182" y="832" type="line"/>
+			<point x="198" y="832" type="line"/>
+			<point x="182" y="816" type="line"/>
+			<point x="74" y="732" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="212" y="576"/>
-	<anchor name="top" x="212" y="864"/>
+	<anchor name="_top" x="188" y="576"/>
+	<anchor name="top" x="188" y="864"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

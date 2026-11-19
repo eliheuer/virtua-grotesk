@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="beh-ar" format="2">
 	<unicode hex="0628"/>
-	<advance width="944"/>
+	<advance width="896"/>
 	<outline>
 		<component base="behDotless-ar"/>
 		<component base="dotbelow-ar" xOffset="348" yOffset="18"/>
@@ -9,9 +9,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

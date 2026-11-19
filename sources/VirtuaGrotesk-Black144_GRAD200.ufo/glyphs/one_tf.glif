@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="one.tf" format="2">
+	<advance width="696"/>
+	<outline>
+		<contour>
+			<point x="120" y="16" type="line"/>
+			<point x="136" y="0" type="line"/>
+			<point x="562" y="0" type="line"/>
+			<point x="578" y="16" type="line"/>
+			<point x="578" y="168" type="line"/>
+			<point x="562" y="184" type="line"/>
+			<point x="474" y="184" type="line"/>
+			<point x="466" y="192" type="line"/>
+			<point x="466" y="752" type="line"/>
+			<point x="450" y="768" type="line"/>
+			<point x="290" y="768" type="line"/>
+			<point x="274" y="752" type="line"/>
+			<point x="254" y="656"/>
+			<point x="166" y="620"/>
+			<point x="90" y="620" type="curve"/>
+			<point x="74" y="604" type="line"/>
+			<point x="74" y="484" type="line"/>
+			<point x="90" y="468" type="line"/>
+			<point x="222" y="468" type="line"/>
+			<point x="230" y="460" type="line"/>
+			<point x="230" y="192" type="line"/>
+			<point x="222" y="184" type="line"/>
+			<point x="136" y="184" type="line"/>
+			<point x="120" y="168" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

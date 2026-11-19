@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uni05C3" format="2">
 	<unicode hex="05C3"/>
-	<advance width="224"/>
+	<advance width="176"/>
 	<outline>
 		<contour>
-			<point x="64" y="16" type="line"/>
-			<point x="80" y="0" type="line"/>
-			<point x="146" y="0" type="line"/>
-			<point x="162" y="16" type="line"/>
-			<point x="162" y="82" type="line"/>
-			<point x="146" y="98" type="line"/>
-			<point x="80" y="98" type="line"/>
-			<point x="64" y="82" type="line"/>
+			<point x="40" y="16" type="line"/>
+			<point x="56" y="0" type="line"/>
+			<point x="122" y="0" type="line"/>
+			<point x="138" y="16" type="line"/>
+			<point x="138" y="82" type="line"/>
+			<point x="122" y="98" type="line"/>
+			<point x="56" y="98" type="line"/>
+			<point x="40" y="82" type="line"/>
 		</contour>
 		<contour>
-			<point x="64" y="494" type="line"/>
-			<point x="80" y="478" type="line"/>
-			<point x="146" y="478" type="line"/>
-			<point x="162" y="494" type="line"/>
-			<point x="162" y="560" type="line"/>
-			<point x="146" y="576" type="line"/>
-			<point x="80" y="576" type="line"/>
-			<point x="64" y="560" type="line"/>
+			<point x="40" y="494" type="line"/>
+			<point x="56" y="478" type="line"/>
+			<point x="122" y="478" type="line"/>
+			<point x="138" y="494" type="line"/>
+			<point x="138" y="560" type="line"/>
+			<point x="122" y="576" type="line"/>
+			<point x="56" y="576" type="line"/>
+			<point x="40" y="560" type="line"/>
 		</contour>
 	</outline>
 	<lib>
@@ -29,7 +29,7 @@
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

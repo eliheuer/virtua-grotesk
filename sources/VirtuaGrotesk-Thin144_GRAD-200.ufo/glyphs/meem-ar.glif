@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="meem-ar" format="2">
+	<unicode hex="0645"/>
+	<advance width="512"/>
+	<outline>
+		<contour>
+			<point x="-24" y="-234" type="line"/>
+			<point x="-18" y="-240" type="line"/>
+			<point x="24" y="-240" type="line"/>
+			<point x="30" y="-234" type="line"/>
+			<point x="28" y="-48" type="line" smooth="yes"/>
+			<point x="28" y="10"/>
+			<point x="36" y="18"/>
+			<point x="94" y="18" type="curve" smooth="yes"/>
+			<point x="302" y="18" type="line" smooth="yes"/>
+			<point x="430" y="18"/>
+			<point x="468" y="96"/>
+			<point x="468" y="192" type="curve" smooth="yes"/>
+			<point x="468" y="288"/>
+			<point x="430" y="366"/>
+			<point x="302" y="366" type="curve" smooth="yes"/>
+			<point x="174" y="366"/>
+			<point x="138" y="288"/>
+			<point x="138" y="192" type="curve" smooth="yes"/>
+			<point x="136" y="98" type="line"/>
+			<point x="118" y="80" type="line"/>
+			<point x="94" y="78" type="line" smooth="yes"/>
+			<point x="-2" y="78"/>
+			<point x="-22" y="48"/>
+			<point x="-22" y="-48" type="curve" smooth="yes"/>
+		</contour>
+		<contour>
+			<point x="302" y="306" type="curve" smooth="yes"/>
+			<point x="386" y="306"/>
+			<point x="418" y="274"/>
+			<point x="418" y="192" type="curve" smooth="yes"/>
+			<point x="418" y="110"/>
+			<point x="386" y="78"/>
+			<point x="302" y="78" type="curve" smooth="yes"/>
+			<point x="208" y="80" type="line"/>
+			<point x="190" y="98" type="line"/>
+			<point x="188" y="192" type="line" smooth="yes"/>
+			<point x="188" y="274"/>
+			<point x="218" y="306"/>
+		</contour>
+	</outline>
+	<anchor name="bottomDots" x="240" y="-256"/>
+	<anchor name="topDots" x="240" y="432"/>
+	<anchor name="top" x="136" y="384"/>
+	<anchor name="bottom" x="-22.972653171224906" y="-256.79779109919235"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="tah-ar.init" format="2">
+	<advance width="888"/>
+	<outline>
+		<contour>
+			<point x="0" y="10" type="line"/>
+			<point x="604" y="10" type="line" smooth="yes"/>
+			<point x="722" y="10"/>
+			<point x="818" y="102"/>
+			<point x="818" y="224" type="curve" smooth="yes"/>
+			<point x="818" y="354"/>
+			<point x="730" y="432"/>
+			<point x="602" y="432" type="curve" smooth="yes"/>
+			<point x="546" y="432" type="line" smooth="yes"/>
+			<point x="424" y="432"/>
+			<point x="348" y="382"/>
+			<point x="282" y="290" type="curve" smooth="yes"/>
+			<point x="226" y="212" type="line" smooth="yes"/>
+			<point x="210" y="192"/>
+			<point x="202" y="176"/>
+			<point x="194" y="160" type="curve" smooth="yes"/>
+			<point x="190" y="152"/>
+			<point x="186" y="154"/>
+			<point x="186" y="164" type="curve" smooth="yes"/>
+			<point x="186" y="176" type="line"/>
+			<point x="186" y="742" type="line"/>
+			<point x="170" y="758" type="line"/>
+			<point x="130" y="758" type="line"/>
+			<point x="114" y="742" type="line"/>
+			<point x="114" y="190" type="line" smooth="yes"/>
+			<point x="114" y="126"/>
+			<point x="68" y="86"/>
+			<point x="0" y="86" type="curve"/>
+			<point x="-16" y="74" type="line"/>
+			<point x="-16" y="22" type="line"/>
+		</contour>
+		<contour>
+			<point x="250" y="130" type="curve" smooth="yes"/>
+			<point x="342" y="256" type="line" smooth="yes"/>
+			<point x="392" y="326"/>
+			<point x="466" y="358"/>
+			<point x="546" y="358" type="curve" smooth="yes"/>
+			<point x="602" y="358" type="line" smooth="yes"/>
+			<point x="686" y="358"/>
+			<point x="742" y="306"/>
+			<point x="742" y="224" type="curve" smooth="yes"/>
+			<point x="742" y="214" type="line" smooth="yes"/>
+			<point x="742" y="140"/>
+			<point x="686" y="86"/>
+			<point x="604" y="86" type="curve" smooth="yes"/>
+			<point x="250" y="86" type="line" smooth="yes"/>
+			<point x="222" y="86"/>
+			<point x="232" y="106"/>
+		</contour>
+	</outline>
+	<anchor name="bottomDots" x="558" y="10"/>
+	<anchor name="topDots" x="558" y="432"/>
+	<anchor name="top" x="558" y="448"/>
+	<anchor name="bottom" x="558" y="10"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

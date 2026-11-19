@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="thal-ar.fina" format="2">
-	<advance width="528"/>
+	<advance width="496"/>
 	<outline>
 		<component base="dal-ar.fina"/>
 		<component base="dotabove-ar" xOffset="72" yOffset="-176" identifier="7de18169-fd32-4762-ab93-b7c735a7ab74"/>
@@ -8,9 +8,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

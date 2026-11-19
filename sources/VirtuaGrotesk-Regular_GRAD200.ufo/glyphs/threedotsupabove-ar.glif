@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="threedotsupabove-ar" format="2">
+	<advance width="464"/>
+	<outline>
+		<contour>
+			<point x="64" y="634" type="curve" smooth="yes"/>
+			<point x="122" y="634"/>
+			<point x="166" y="678"/>
+			<point x="166" y="736" type="curve" smooth="yes"/>
+			<point x="166" y="794"/>
+			<point x="122" y="838"/>
+			<point x="64" y="838" type="curve" smooth="yes"/>
+			<point x="6" y="838"/>
+			<point x="-38" y="794"/>
+			<point x="-38" y="736" type="curve" smooth="yes"/>
+			<point x="-38" y="678"/>
+			<point x="6" y="634"/>
+		</contour>
+		<contour>
+			<point x="352" y="634" type="curve" smooth="yes"/>
+			<point x="410" y="634"/>
+			<point x="454" y="678"/>
+			<point x="454" y="736" type="curve" smooth="yes"/>
+			<point x="454" y="794"/>
+			<point x="410" y="838"/>
+			<point x="352" y="838" type="curve" smooth="yes"/>
+			<point x="294" y="838"/>
+			<point x="250" y="794"/>
+			<point x="250" y="736" type="curve" smooth="yes"/>
+			<point x="250" y="678"/>
+			<point x="294" y="634"/>
+		</contour>
+		<contour>
+			<point x="208" y="842" type="curve" smooth="yes"/>
+			<point x="266" y="842"/>
+			<point x="310" y="886"/>
+			<point x="310" y="944" type="curve" smooth="yes"/>
+			<point x="310" y="1002"/>
+			<point x="266" y="1046"/>
+			<point x="208" y="1046" type="curve" smooth="yes"/>
+			<point x="150" y="1046"/>
+			<point x="106" y="1002"/>
+			<point x="106" y="944" type="curve" smooth="yes"/>
+			<point x="106" y="886"/>
+			<point x="150" y="842"/>
+		</contour>
+	</outline>
+	<anchor name="_topDots" x="208" y="576"/>
+	<anchor name="top" x="208" y="924"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

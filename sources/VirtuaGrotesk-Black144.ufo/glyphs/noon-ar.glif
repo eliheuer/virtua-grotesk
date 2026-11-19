@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noon-ar" format="2">
 	<unicode hex="0646"/>
-	<advance width="800"/>
+	<advance width="752"/>
 	<outline>
 		<component base="noonghunna-ar"/>
 		<component base="dotabove-ar" xOffset="188" yOffset="-288"/>
@@ -9,9 +9,9 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

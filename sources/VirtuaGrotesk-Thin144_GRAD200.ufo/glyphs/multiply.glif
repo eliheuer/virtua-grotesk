@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="multiply" format="2">
+	<unicode hex="00D7"/>
+	<advance width="552"/>
+	<outline>
+		<contour>
+			<point x="48" y="148" type="line"/>
+			<point x="72" y="124" type="line"/>
+			<point x="94" y="124" type="line"/>
+			<point x="270" y="302" type="line"/>
+			<point x="282" y="302" type="line"/>
+			<point x="458" y="124" type="line"/>
+			<point x="480" y="124" type="line"/>
+			<point x="504" y="148" type="line"/>
+			<point x="504" y="170" type="line"/>
+			<point x="326" y="346" type="line"/>
+			<point x="326" y="358" type="line"/>
+			<point x="504" y="534" type="line"/>
+			<point x="504" y="556" type="line"/>
+			<point x="480" y="580" type="line"/>
+			<point x="458" y="580" type="line"/>
+			<point x="282" y="402" type="line"/>
+			<point x="270" y="402" type="line"/>
+			<point x="94" y="580" type="line"/>
+			<point x="72" y="580" type="line"/>
+			<point x="48" y="556" type="line"/>
+			<point x="48" y="534" type="line"/>
+			<point x="226" y="358" type="line"/>
+			<point x="226" y="346" type="line"/>
+			<point x="48" y="170" type="line"/>
+		</contour>
+	</outline>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

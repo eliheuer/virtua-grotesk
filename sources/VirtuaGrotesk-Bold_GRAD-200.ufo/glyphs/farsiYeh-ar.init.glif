@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="farsiYeh-ar.init" format="2">
+	<advance width="328"/>
+	<outline>
+		<contour>
+			<point x="0" y="0" type="line"/>
+			<point x="160" y="0"/>
+			<point x="228" y="72"/>
+			<point x="228" y="200" type="curve" smooth="yes"/>
+			<point x="228" y="418" type="line"/>
+			<point x="206" y="442" type="line"/>
+			<point x="130" y="442" type="line"/>
+			<point x="108" y="418" type="line"/>
+			<point x="108" y="200" type="line" smooth="yes"/>
+			<point x="112" y="150"/>
+			<point x="80" y="128"/>
+			<point x="0" y="128" type="curve"/>
+			<point x="-16" y="112" type="line"/>
+			<point x="-16" y="16" type="line"/>
+		</contour>
+		<contour>
+			<point x="-128" y="-282" type="curve" smooth="yes"/>
+			<point x="-76" y="-278"/>
+			<point x="-36" y="-236"/>
+			<point x="-36" y="-192" type="curve" smooth="yes"/>
+			<point x="-40" y="-142"/>
+			<point x="-84" y="-102"/>
+			<point x="-128" y="-102" type="curve" smooth="yes"/>
+			<point x="-180" y="-106"/>
+			<point x="-220" y="-148"/>
+			<point x="-220" y="-192" type="curve" smooth="yes"/>
+			<point x="-216" y="-242"/>
+			<point x="-172" y="-282"/>
+		</contour>
+		<contour>
+			<point x="152" y="-282" type="curve" smooth="yes"/>
+			<point x="204" y="-278"/>
+			<point x="244" y="-236"/>
+			<point x="244" y="-192" type="curve" smooth="yes"/>
+			<point x="240" y="-142"/>
+			<point x="196" y="-102"/>
+			<point x="152" y="-102" type="curve" smooth="yes"/>
+			<point x="100" y="-106"/>
+			<point x="60" y="-148"/>
+			<point x="60" y="-192" type="curve" smooth="yes"/>
+			<point x="64" y="-242"/>
+			<point x="108" y="-282"/>
+		</contour>
+	</outline>
+	<anchor name="bottom" x="0" y="-282"/>
+	<anchor name="top" x="0" y="442"/>
+	<anchor name="bottomDots" x="0" y="-282"/>
+	<anchor name="topDots" x="0" y="442"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

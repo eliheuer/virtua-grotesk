@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="daletdagesh-hb" format="2">
 	<unicode hex="FB33"/>
-	<advance width="632"/>
+	<advance width="584"/>
 	<outline>
 		<component base="dalet-hb"/>
-		<component base="dagesh-hb" xOffset="106" yOffset="32"/>
+		<component base="dagesh-hb" xOffset="82" yOffset="32"/>
 	</outline>
-	<anchor name="hbBottom" x="284" y="0"/>
-	<anchor name="hbCenter" x="176" y="332"/>
-	<anchor name="hbHolam" x="64" y="576"/>
-	<anchor name="hbRafe" x="283" y="672"/>
-	<anchor name="hbMeteg" x="284" y="0"/>
-	<anchor name="hbCantAbove" x="280" y="576"/>
-	<anchor name="hbCantAboveLeft" x="64" y="576"/>
-	<anchor name="hbCantAboveRight" x="504" y="576"/>
-	<anchor name="hbCantBelow" x="284" y="0"/>
-	<anchor name="hbCantBelowRight" x="284" y="0"/>
+	<anchor name="hbBottom" x="260" y="0"/>
+	<anchor name="hbCenter" x="152" y="332"/>
+	<anchor name="hbHolam" x="40" y="576"/>
+	<anchor name="hbRafe" x="259" y="672"/>
+	<anchor name="hbMeteg" x="260" y="0"/>
+	<anchor name="hbCantAbove" x="256" y="576"/>
+	<anchor name="hbCantAboveLeft" x="40" y="576"/>
+	<anchor name="hbCantAboveRight" x="480" y="576"/>
+	<anchor name="hbCantBelow" x="260" y="0"/>
+	<anchor name="hbCantBelowRight" x="260" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

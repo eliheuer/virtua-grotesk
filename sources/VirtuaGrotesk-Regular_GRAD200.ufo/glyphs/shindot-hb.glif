@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="shindot-hb" format="2">
+	<unicode hex="05C1"/>
+	<outline>
+		<contour>
+			<point x="102" y="710" type="line"/>
+			<point x="130" y="738" type="line"/>
+			<point x="130" y="798" type="line"/>
+			<point x="102" y="826" type="line"/>
+			<point x="42" y="826" type="line"/>
+			<point x="14" y="798" type="line"/>
+			<point x="14" y="738" type="line"/>
+			<point x="42" y="710" type="line"/>
+		</contour>
+	</outline>
+	<anchor name="_hbShin" x="68" y="598"/>
+	<anchor name="hbCantAfterHolam" x="132" y="598"/>
+	<anchor name="hbCantBeforeHolam" x="6" y="598"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>purple</string>
+			<key>public.markColor</key>
+			<string>0.5,0,1,1</string>
+		</dict>
+	</lib>
+</glyph>

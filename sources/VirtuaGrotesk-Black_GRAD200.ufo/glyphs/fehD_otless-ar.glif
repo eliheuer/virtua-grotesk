@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="fehDotless-ar" format="2">
+	<unicode hex="06A1"/>
+	<advance width="1072"/>
+	<outline>
+		<contour>
+			<point x="696" y="470"/>
+			<point x="674" y="500"/>
+			<point x="674" y="524" type="curve" smooth="yes"/>
+			<point x="674" y="554"/>
+			<point x="712" y="570"/>
+			<point x="736" y="570" type="curve" smooth="yes"/>
+			<point x="748" y="570"/>
+			<point x="784" y="566"/>
+			<point x="784" y="552" type="curve" smooth="yes"/>
+			<point x="784" y="478" type="line"/>
+			<point x="776" y="470" type="line"/>
+			<point x="708" y="470" type="line" smooth="yes"/>
+		</contour>
+		<contour>
+			<point x="730" y="0" type="line" smooth="yes"/>
+			<point x="896" y="0"/>
+			<point x="988" y="114"/>
+			<point x="988" y="274" type="curve" smooth="yes"/>
+			<point x="988" y="552" type="line" smooth="yes"/>
+			<point x="988" y="666"/>
+			<point x="890" y="754"/>
+			<point x="736" y="754" type="curve" smooth="yes"/>
+			<point x="574" y="754"/>
+			<point x="468" y="654"/>
+			<point x="468" y="524" type="curve" smooth="yes"/>
+			<point x="468" y="396"/>
+			<point x="560" y="282"/>
+			<point x="708" y="282" type="curve" smooth="yes"/>
+			<point x="776" y="282" type="line"/>
+			<point x="784" y="274" type="line"/>
+			<point x="784" y="268" type="line" smooth="yes"/>
+			<point x="784" y="232"/>
+			<point x="764" y="208"/>
+			<point x="720" y="208" type="curve" smooth="yes"/>
+			<point x="288" y="208" type="line" smooth="yes"/>
+			<point x="240" y="208"/>
+			<point x="214" y="236"/>
+			<point x="214" y="284" type="curve" smooth="yes"/>
+			<point x="214" y="340" type="line"/>
+			<point x="198" y="356" type="line"/>
+			<point x="26" y="356" type="line"/>
+			<point x="10" y="340" type="line"/>
+			<point x="10" y="284" type="line" smooth="yes"/>
+			<point x="10" y="138"/>
+			<point x="100" y="0"/>
+			<point x="288" y="0" type="curve" smooth="yes"/>
+		</contour>
+	</outline>
+	<anchor name="bottomDots" x="492" y="0"/>
+	<anchor name="topDots" x="492" y="632"/>
+	<anchor name="top" x="546" y="670"/>
+	<anchor name="bottom" x="608" y="-24"/>
+	<lib>
+		<dict>
+			<key>com.runebender.markLabel</key>
+			<string>yellow</string>
+			<key>public.markColor</key>
+			<string>1,1,0,1</string>
+		</dict>
+	</lib>
+</glyph>
