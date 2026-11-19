@@ -142,3 +142,37 @@ def a_flats(font_path: Path, context: CheckContext) -> CheckStatuses:
         yield FAIL, Message('missing-flats', f'{count} location(s) with missing or changed flats. {examples}')
     else:
         yield PASS, Message('ok', 'The a keeps both waist shelves and the foot flat.')
+
+
+def arabic_counter_size(font, name):
+    """Measure the enclosed counter of a TrueType feh or feh–yeh."""
+    glyf = font['glyf']
+    coords, ends, _ = glyf[name].getCoordinates(glyf)
+    start = 0
+    counters = []
+    for end in ends:
+        points = list(coords[start:end + 1])
+        start = end + 1
+        area = sum(x * v - y * u for (x, y), (u, v)
+                   in zip(points, points[1:] + points[:1]))
+        if area > 0:
+            xs, ys = zip(*points)
+            counters.append((max(xs) - min(xs), max(ys) - min(ys)))
+    return counters
+
+
+@check(id='virtua/feh_yeh_counter', title='The stacked feh keeps the donor counter',
+       rationale='A compressed counter makes the ligature look heavier than neighboring feh.')
+def feh_yeh_counter(font_path: Path, context: CheckContext) -> CheckStatuses:
+    with TTFont(font_path) as font:
+        pair = ('uni0641.init', 'feh_yehar')
+        if any(name not in font.getGlyphOrder() for name in pair):
+            yield FAIL, Message('missing-form', 'Missing initial feh or its yeh ligature.')
+            return
+        donor, ligature = (arabic_counter_size(font, name) for name in pair)
+        # Translating an interpolated contour can change integer rounding by one unit.
+        if (len(donor) != 1 or len(ligature) != 1
+                or any(abs(a - b) > 1 for a, b in zip(donor[0], ligature[0]))):
+            yield FAIL, Message('counter-size', f'Initial feh {donor}, feh–yeh {ligature}.')
+        else:
+            yield PASS, Message('ok', f'Initial feh {donor}, feh–yeh {ligature}.')

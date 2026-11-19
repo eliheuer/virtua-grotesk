@@ -520,6 +520,7 @@ feature rlig {
 script arab;
 lookup rlig_arab_0 {
 	lookupflag IgnoreMarks;
+	sub feh-ar.init yeh-ar.fina by feh_yeh-ar;
 	sub lam-ar.init alef-ar.fina by lam_alef-ar;
 	sub lam-ar.medi alef-ar.fina by lam_alef-ar.fina;
 	sub lam-ar.init alefHamzaabove-ar.fina by lam_alefHamzaabove-ar;

@@ -3,7 +3,7 @@
 Virtua Grotesk is a typeface designed by Eli Heuer. It is a grid-based
 neo-grotesk drawn on a dyadic self-labeling grid system: nested grids built
 on powers of two. The grid records drawing intent and limits the number of
-possible points. A small local AI model, the Runebender font editor, large
+possible points. A small local AI model, the Runebender font editor, SOTA
 cloud models and this file are then used together to draw and work on the
 typeface.
 
@@ -541,6 +541,30 @@ letter) at 400, 550 and 700, and measure both edges of a join against the
 real neighbor forms. A right-joining letter needs only the forms that its
 joining has. The anchors of letter dots and the anchors of vowel marks have
 separate roles.
+
+For a proposed Arabic ligature, check how the reference shapes the actual
+text. Inspect its source substitution and attachment rules when available.
+For في, IBM Plex Sans Arabic uses initial feh plus final yeh in `rlig`.
+Keep the middle shelf visible as a short reverse turn between the feh bowl
+and the yeh return. Raise the bowl to give both turns room. Center the
+shelf optically over the lower bowl and check its silhouette in words.
+Check both في and فِي, including attachment to each ligature component,
+and verify that فيه and لفي still use their appropriate joining forms.
+
+Take the stacking and proportions of the ligature from the reference. Take
+stroke weight and curve construction from Virtua. For في, measure the crown
+and walls of initial feh and the floor and terminal of final yeh in the
+same master. Use these as targets before setting the width. Give the
+counter, return and dots room as the weight increases. For the stacked في,
+reuse the initial feh counter and crown at their native scale in each
+master. Translate the two contours together before fitting the return.
+Compare the counter width and height with the donor in the exported font. Draw the inside
+and outside of each turn together. Use the R14 measurements on both
+turns, and inspect the branch where the bowl meets the return for a lump
+or a pinch. Set the sidebearings in words beside round and straight
+neighbors. Check Thin, Regular, Bold and Black at reading size, with and
+without vowel marks. Keep the proof layout generic and use the existing
+reading text for the final review.
 
 ## Glyph decisions
 

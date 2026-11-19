@@ -206,14 +206,23 @@ def proof_content():
     return canvas, font_row, print_pages, replaced
 
 
-def draw_print_proof(folder, name, canvas, font, pages, show_grid=False):
+def draw_proof(folder, name, canvas, font, rows):
     result = folder / name
     plot = result.with_suffix('.plot')
-    page_start = ['page\t0\t255\t255\t255', *(grid_lines() if show_grid else ())]
-    core = [line for page in pages for line in (*page_start, *page)]
-    plot.write_text('\n'.join([canvas, font, f'output\t{result}', *core]) + '\n')
+    plot.write_text('\n'.join([canvas, font, f'output\t{result}', *rows]) + '\n')
     run([str(DESIGNBOT), str(PLOTTER), '--', f'plot={plot}'], check=True)
     return result
+
+
+def screen_rows(rows):
+    for row in rows:
+        fields = row.split('\t')
+        command = fields[0]
+        color = {'page': 2, 'text': 5, 'line': 6}.get(command)
+        if color is None:
+            raise ValueError(f'Unsupported Full Proof drawing command: {command}')
+        fields[color:color + 3] = ['0' if command == 'page' else '255'] * 3
+        yield '\t'.join(fields)
 
 
 def prepare_proofs():
@@ -226,13 +235,20 @@ def prepare_proofs():
         with TemporaryDirectory(dir=PROOF.parent) as work:
             folder = Path(work)
             canvas, font, print_pages, replaced = proof_content()
-            run(['pdfseparate', str(PROOF), str(folder / 'page-%d.pdf')], check=True)
-            pages = sorted(folder.glob('page-*.pdf'), key=lambda p: int(p.stem.split('-')[1]))
-            detail = [page for n, page in enumerate(pages, 1) if n not in replaced]
-            regular = draw_print_proof(folder, 'print-proof.pdf', canvas, font, print_pages)
-            grid = draw_print_proof(folder, GRID_PROOF, canvas, font, print_pages, show_grid=True)
-            full = folder / 'full-proof.pdf'
-            run(['pdfunite', str(regular), *map(str, detail), str(full)], check=True)
+            page_start = 'page\t0\t255\t255\t255'
+            core = [row for page in print_pages for row in (page_start, *page)]
+            detail = []
+            page_number = 0
+            for row in PLOT.read_text().splitlines()[3:]:
+                if row.startswith('page\t'):
+                    page_number += 1
+                if page_number and page_number not in replaced:
+                    detail.append(row)
+            regular = draw_proof(folder, 'print-proof.pdf', canvas, font, core)
+            grid = draw_proof(folder, GRID_PROOF, canvas, font, (
+                row for page in print_pages for row in (page_start, *grid_lines(), *page)
+            ))
+            full = draw_proof(folder, 'full-proof.pdf', canvas, font, screen_rows((*core, *detail)))
             for result in (regular, full, grid):
                 result.replace(PROOF.with_name(result.name))
         proof_revision = revision
