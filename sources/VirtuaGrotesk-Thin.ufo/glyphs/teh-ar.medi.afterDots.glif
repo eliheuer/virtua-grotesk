@@ -11,8 +11,8 @@
 			<point x="264" y="8"/>
 			<point x="280" y="18"/>
 			<point x="344" y="18" type="curve" smooth="yes"/>
-			<point x="410" y="12" type="line"/>
-			<point x="410" y="84" type="line"/>
+			<point x="424" y="16" type="line"/>
+			<point x="424" y="80" type="line"/>
 			<point x="344" y="78" type="line" smooth="yes"/>
 			<point x="280" y="78"/>
 			<point x="230" y="128"/>
@@ -25,10 +25,10 @@
 			<point x="178" y="128"/>
 			<point x="128" y="78"/>
 			<point x="64" y="78" type="curve" smooth="yes"/>
-			<point x="8" y="80" type="line"/>
-			<point x="2" y="74" type="line"/>
-			<point x="2" y="22" type="line"/>
-			<point x="8" y="16" type="line"/>
+			<point x="0" y="80" type="line"/>
+			<point x="-16" y="70" type="line"/>
+			<point x="-16" y="26" type="line"/>
+			<point x="0" y="16" type="line"/>
 		</contour>
 		<component base="twodotshorizontalabove-ar" xOffset="-4" yOffset="-256" identifier="44e08086-8e4b-442f-9df7-4a033cb452bf"/>
 	</outline>

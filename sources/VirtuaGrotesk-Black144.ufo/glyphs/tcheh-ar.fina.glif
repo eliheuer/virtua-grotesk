@@ -3,7 +3,7 @@
 	<advance width="920"/>
 	<outline>
 		<component base="hah-ar.fina"/>
-		<component base="threedotsdowncenter-ar" xOffset="184" yOffset="-356"/>
+		<component base="threedotsdowncenter-ar" xScale="0.75" yScale="0.75" xOffset="250" yOffset="-256"/>
 	</outline>
 	<anchor name="top" x="230" y="574"/>
 	<lib>

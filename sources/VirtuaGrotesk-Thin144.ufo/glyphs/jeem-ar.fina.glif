@@ -3,8 +3,9 @@
 	<advance width="704"/>
 	<outline>
 		<component base="hah-ar.fina"/>
-		<component base="dotbelow-ar" xOffset="48" yOffset="68"/>
+		<component base="dotbelow-ar" xOffset="172" yOffset="88"/>
 	</outline>
+	<anchor name="bottom" x="160" y="-204"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

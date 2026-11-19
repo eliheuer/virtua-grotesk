@@ -5,6 +5,8 @@
 		<component base="seen-ar.fina"/>
 		<component base="threedotsupabove-ar" xOffset="660" yOffset="-144"/>
 	</outline>
+	<anchor name="bottom" x="608" y="-112"/>
+	<anchor name="top" x="892" y="836"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

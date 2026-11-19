@@ -3,8 +3,10 @@
 	<advance width="856"/>
 	<outline>
 		<component base="tah-ar.medi"/>
-		<component base="dotabove-ar" xOffset="310" yOffset="-272"/>
+		<component base="dotabove-ar" xOffset="318" yOffset="-160"/>
 	</outline>
+	<anchor name="bottom" x="744" y="-200"/>
+	<anchor name="top" x="470" y="796"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

@@ -11,6 +11,32 @@
 
 defaults = true
 
+# The print proof sets each passage twice at the same measure and weight.
+# English loanwords here have established spellings with and without accents.
+[text.latin-reading-marks]
+label = "Reading with accents"
+scripts = ["Latin"]
+lang = "en"
+
+[[text.latin-reading-marks.paragraphs]]
+text = "The café on the corner opens early. From the window you can see its pale façade and the people waiting outside. The menu is written by hand. Today the first entrée is a small bowl of soup made with a purée of green peas. At the next table a young woman opens a folder and takes out her résumé. She has come straight from a morning rehearsal. Her fiancé arrives a few minutes later, orders two crêpes and asks how the day went. They talk until the last customers leave and the lights go out across the street."
+
+[text.arabic-reading-marks]
+label = "Reading with vowel marks"
+scripts = ["Arabic"]
+lang = "ar"
+
+[[text.arabic-reading-marks.paragraphs]]
+text = "فِي الصَّبَاحِ فَتَحْتُ النَّافِذَةَ عَلَى الشَّارِعِ، وَدَخَلَ الضَّوْءُ إِلَى الْغُرْفَةِ. عَلَى الطَّاوِلَةِ كِتَابٌ مَفْتُوحٌ وَدَفْتَرٌ صَغِيرٌ وَقَلَمٌ. فِي السَّاحَةِ الْقَرِيبَةِ تَحَدَّثَ الْجِيرَانُ، وَفِي الْمَحَطَّةِ انْتَظَرَ النَّاسُ الْقِطَارَ فِي طَرِيقِهِمْ إِلَى الْعَمَلِ. كَانَتْ إِحْدَى الْمُسَافِرَاتِ تَحْمِلُ مَظْرُوفًا فِيهِ صُوَرٌ قَدِيمَةٌ، فَنَظَرَتْ إِلَيْهَا بِبُطْءٍ وَبَحَثَتْ عَنِ الْبَيْتِ الَّذِي تَذْكُرُهُ وَعَنِ الشَّجَرَةِ الَّتِي كَانَتْ بِجَانِبِ الْبَابِ."
+
+[text.hebrew-reading-marks]
+label = "Reading with vowel points"
+scripts = ["Hebrew"]
+lang = "he"
+
+[[text.hebrew-reading-marks.paragraphs]]
+text = "בַּבֹּקֶר נִפְתַּח חַלּוֹן הַבַּיִת אֶל הָרְחוֹב. הָאוֹר נָח עַל הַשֻּׁלְחָן, עַל הַמַּחְבֶּרֶת וְעַל הַסֵּפֶר הַפָּתוּחַ. בֶּחָצֵר נִשְׁמְעוּ שִׂיחוֹת שֶׁל שְׁכֵנִים, וּבְתַחֲנַת הָרַכֶּבֶת חִכּוּ אֲנָשִׁים בְּדַרְכָּם לָעֲבוֹדָה. אַחַת הַנּוֹסְעוֹת הֶחֱזִיקָה מַעֲטָפָה וּבָהּ תְּמוּנוֹת יְשָׁנוֹת. הִיא הִתְבּוֹנְנָה בָּהֶן לְאַט וְחִפְּשָׂה אֶת הַבַּיִת שֶׁזָּכְרָה וְאֶת הָעֵץ שֶׁעָמַד לְיַד הַדֶּלֶת."
+
 [sample.hanukkah-candles-pointed]
 label = "Candles · points"
 scripts = ["Hebrew"]

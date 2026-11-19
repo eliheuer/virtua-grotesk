@@ -11,6 +11,7 @@ from zipfile import ZipFile
 from subprocess import run
 from tempfile import TemporaryDirectory
 from threading import Lock
+from unicodedata import category, normalize
 from unittest.mock import patch
 
 from fgtools import media, media_layout, project
@@ -96,27 +97,64 @@ def cover(font, facts, weights, stamp):
         top -= height
 
 
+def without_reading_marks(text, script):
+    if script == 'Arabic':
+        # Keep the hamza on إ and أ. Only tashkil are optional in this passage.
+        return ''.join(c for c in text if not '\u064b' <= c <= '\u0652')
+    return ''.join(c for c in normalize('NFD', text) if category(c) != 'Mn')
+
+
+def paired_lines(font, script, text, measure, size, weight, limit):
+    # Break on the same word in both settings, even when accents extend the ink.
+    marked = ''
+    for word in text.split():
+        trial = f'{marked} {word}'.strip()
+        pair = (without_reading_marks(trial, script), trial)
+        widths = (font.measure(line, weight) for line in pair)
+        if marked and any((max(advance, right) - min(0, left)) * size > measure
+                          for advance, left, right in widths):
+            yield without_reading_marks(marked, script), marked
+            if limit is not None:
+                limit -= 1
+                if not limit:
+                    return
+            marked = word
+        else:
+            marked = trial
+    if marked:
+        yield without_reading_marks(marked, script), marked
+
+
 def reading_page(font, script, style, weight, text):
     left, middle, right = COLUMNS
     rtl = script in ('Arabic', 'Hebrew')
-    leading = {8: 10, 16: 20}
+    # Stacked Arabic marks in Black span 2.19 em from highest to lowest ink.
+    leading = {8: 18, 16: 36} if script == 'Arabic' else {8: 10, 16: 20}
     sizes = (16, 8) if rtl else (8, 16)
     settings = ' · '.join(f'{size}/{leading[size]} pt' for size in sizes)
     yield proof_text(left, 501.5, 12, 400, 'Virtua Grotesk')
     yield proof_text(middle, 501.5, 12, 400, f'{script} · {style} {weight:g}')
     yield proof_text(right, 501.5, 12, 400, settings)
     yield proof_rule(489.5)
+    band_height = 208
+    yield proof_rule(489.5 - band_height)
+    labels = {'Latin': ('Without accents', 'With accents'),
+              'Arabic': ('Without vowel marks', 'With vowel marks'),
+              'Hebrew': ('Without vowel points', 'With vowel points')}
+    for band, label in enumerate(labels[script]):
+        yield proof_text(left, 473.5 - band * band_height, 12, 400, label)
 
-    columns = [(8, 469.5, right + COLUMN_WIDTH if rtl else left, COLUMN_WIDTH),
-               (16, 465.5, middle + COLUMN_WIDTH if rtl else middle, 2 * COLUMN_WIDTH)]
+    columns = [(8, 457.5, right + COLUMN_WIDTH if rtl else left, COLUMN_WIDTH),
+               (16, 453.5, middle + COLUMN_WIDTH if rtl else middle, 2 * COLUMN_WIDTH)]
     for size, baseline, start, measure in columns:
-        lines = font.lines(text, measure, size, weight)
-        room = int((baseline - 81.5) // leading[size]) + 1
-        for i, line in enumerate(lines[:room]):
-            x = start
-            if rtl:
-                x -= font.measure(line, weight)[2] * size
-            yield proof_text(f'{x:g}', baseline - i * leading[size], size, f'{weight:g}', line)
+        if script == 'Arabic':
+            baseline -= size / 2
+        room = int((baseline - 293.5) // leading[size]) + 1
+        for i, pair in enumerate(paired_lines(font, script, text, measure, size, weight, room)):
+            for band, line in enumerate(pair):
+                x = start - font.measure(line, weight)[2] * size if rtl else start
+                y = baseline - i * leading[size] - band * band_height
+                yield proof_text(f'{x:g}', y, size, f'{weight:g}', line)
 
 
 def grid_lines():
@@ -164,9 +202,9 @@ def proof_content():
     print_pages.append(tuple(cover(font, facts, weights, stamp)))
     samples, _ = proof_samples.read(layout.sources)
     for script in SCRIPTS:
-        paragraphs = samples['text'][script.lower()]['paragraphs']
+        paragraphs = samples['text'][f'{script.lower()}-reading-marks']['paragraphs']
         text = ' '.join(paragraph['text'] for paragraph in paragraphs)
-        if not font.covers(text.replace(' ', '')):
+        if not all(font.covers(t.replace(' ', '')) for t in (text, without_reading_marks(text, script))):
             raise ValueError(f'The built font cannot set the {script} reading sample.')
         text = ' '.join([text] * 4)
         for weight, style in weights:
@@ -208,15 +246,14 @@ def prepare_proofs():
 
 class ProofSheet(media_layout.Sheet):
     def paragraph(self, text, col, row, cols, size, leading, weight=None, limit=None, color='ink', drop=0):
-        if self.name != 'reading' or not self.type.right_to_left(text):
+        if not self.type.right_to_left(text):
             return super().paragraph(text, col, row, cols, size, leading, weight, limit, color, drop)
         if not self.type.covers(text.replace(' ', '')):
             return 0
 
         module = self.grid['module']
-        # Leave one grid unit for ink that extends beyond the shaped advance.
-        measure = cols * module - self.grid['unit']
-        lines = self.type.lines(text, measure, size, weight)[:limit]
+        script = 'Arabic' if any('\u0600' <= c <= '\u06ff' for c in text) else 'Hebrew'
+        lines = [line for _, line in paired_lines(self.type, script, text, cols * module, size, weight, limit)]
         for index, line in enumerate(lines):
             self.text(line, col + cols, row, size, weight, color, optical=True,
                       flush='right', drop=drop + index * leading)
@@ -249,10 +286,10 @@ def draw_arabic_marks(sheet, job):
 
 def compose_proof(compose, table, job, canvas, units, colors, name):
     # fgtools supplies the other detail formats and writes the checked book.
-    if name not in ('reading', 'arabic-marks'):
+    if name not in ('reading', 'lines', 'arabic-marks'):
         return compose(table, job, canvas, units, colors, name)
     sheet = ProofSheet(media_layout.lattice(canvas, units), job.type, colors, name)
-    draw = draw_arabic_marks if name == 'arabic-marks' else import_module('fgtools.media_formats.proofs.reading').draw
+    draw = draw_arabic_marks if name == 'arabic-marks' else import_module(f'fgtools.media_formats.proofs.{name}').draw
     reason = draw(sheet, job)
     if reason or not sheet.pages:
         return None, reason or 'the format drew nothing'

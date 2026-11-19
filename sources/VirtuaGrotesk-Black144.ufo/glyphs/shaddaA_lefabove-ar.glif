@@ -2,8 +2,13 @@
 <glyph name="shaddaAlefabove-ar" format="2">
 	<outline>
 		<component base="shadda-ar"/>
-		<component base="alefabove-ar" yOffset="184"/>
+		<component base="alefabove-ar" yOffset="272"/>
 	</outline>
+	<anchor name="top" x="112" y="1240"/>
+	<anchor name="topDots" x="112" y="1192"/>
+	<anchor name="bottom" x="112" y="648"/>
+	<anchor name="bottomDots" x="112" y="648"/>
+	<anchor name="_top" x="112" y="536"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
