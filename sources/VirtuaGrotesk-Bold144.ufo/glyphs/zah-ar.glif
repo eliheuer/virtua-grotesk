@@ -4,14 +4,16 @@
 	<advance width="1064"/>
 	<outline>
 		<component base="tah-ar"/>
-		<component base="dotabove-ar" xOffset="448" yOffset="-128"/>
+		<component base="dotabove-ar" xOffset="512" yOffset="-128"/>
 	</outline>
+	<anchor name="top" x="664" y="816"/>
+	<anchor name="bottom" x="664" y="0"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

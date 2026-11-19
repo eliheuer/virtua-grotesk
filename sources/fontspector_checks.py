@@ -176,3 +176,43 @@ def feh_yeh_counter(font_path: Path, context: CheckContext) -> CheckStatuses:
             yield FAIL, Message('counter-size', f'Initial feh {donor}, feh–yeh {ligature}.')
         else:
             yield PASS, Message('ok', f'Initial feh {donor}, feh–yeh {ligature}.')
+
+
+@check(id='virtua/arabic_vowel_clearance', title='Arabic vowels clear distinguishing signs',
+       rationale='Joined extended Arabic letters need vowel attachment above or below their letter signs.')
+def arabic_vowel_clearance(font_path: Path, context: CheckContext) -> CheckStatuses:
+    import pathops
+    from fontTools.pens.recordingPen import DecomposingRecordingPen
+
+    shaper = hb.Font(hb.Face(font_path.read_bytes()))
+    failures = []
+    with TTFont(font_path) as font:
+        cmap = font.getBestCmap()
+        glyphs = font.getGlyphSet()
+        for word, vowel in [('ٹُب', 'ُ'), ('بټِب', 'ِ'), ('بݣُ', 'ُ'), ('ڤّب', 'ّ'), ('ڑٍ', 'ٍ')]:
+            buffer = hb.Buffer()
+            buffer.add_str(word)
+            buffer.guess_segment_properties()
+            hb.shape(shaper, buffer)
+            bases = []
+            mark = None
+            x = 0
+            for info, pos in zip(buffer.glyph_infos, buffer.glyph_positions):
+                name = font.getGlyphName(info.codepoint)
+                pen = DecomposingRecordingPen(glyphs)
+                glyphs[name].draw(pen)
+                path = pathops.Path()
+                pen.replay(path.getPen())
+                placed = path.transform(1, 0, 0, 1, x + pos.x_offset, pos.y_offset)
+                if name == cmap.get(ord(vowel)):
+                    mark = placed
+                elif pos.x_advance:
+                    bases.append(placed)
+                x += pos.x_advance
+            if mark is None or any(pathops.op(mark, base, pathops.PathOp.INTERSECTION).area > 4
+                                   for base in bases):
+                failures.append(word)
+    if failures:
+        yield FAIL, Message('vowel-clearance', 'Missing or overlapping vowel in ' + ', '.join(failures))
+    else:
+        yield PASS, Message('ok', 'The vowels clear the tested Arabic letter signs.')

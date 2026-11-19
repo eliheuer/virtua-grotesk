@@ -5,6 +5,7 @@
 		<component base="behDotless-ar.init"/>
 		<component base="ring-ar" xOffset="32" yOffset="-100"/>
 	</outline>
+	<anchor name="bottom" x="0" y="16"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
