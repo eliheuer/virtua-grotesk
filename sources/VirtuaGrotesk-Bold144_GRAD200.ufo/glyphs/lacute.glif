@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lacute" format="2">
 	<unicode hex="013A"/>
-	<advance width="224"/>
+	<advance width="248"/>
 	<outline>
 		<component base="l" xOffset="4"/>
-		<component base="acute" xOffset="48" yOffset="192"/>
+		<component base="acute" xOffset="24" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>909ad42bb7b6451706ec995a4958d59d84d6f711</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

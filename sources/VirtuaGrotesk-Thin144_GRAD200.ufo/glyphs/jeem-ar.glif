@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="jeem-ar" format="2">
 	<unicode hex="062C"/>
-	<advance width="816"/>
+	<advance width="840"/>
 	<outline>
 		<component base="hah-ar"/>
-		<component base="dotbelow-ar" xOffset="304" yOffset="68"/>
+		<component base="dotbelow-ar" xOffset="312" yOffset="68"/>
 	</outline>
-	<anchor name="bottom" x="392" y="-262"/>
+	<anchor name="bottom" x="408" y="-262"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c7fd48d5defb7f95a76deea37de41a15e0d33149</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

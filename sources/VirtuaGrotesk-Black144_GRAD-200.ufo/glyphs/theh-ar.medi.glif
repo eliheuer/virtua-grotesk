@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="theh-ar.medi" format="2">
-	<advance width="376"/>
+	<advance width="374"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="threedotsupabove-ar" xOffset="-4" yOffset="-144"/>
+		<component base="threedotsupabove-ar" xOffset="-28" yOffset="-144"/>
 	</outline>
 	<anchor name="top" x="220" y="912"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>3a2f37bfef9e0099b261d7433188da517cf40ada</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

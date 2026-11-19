@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alefqamats-hb" format="2">
 	<unicode hex="FB2F"/>
-	<advance width="784"/>
+	<advance width="786"/>
 	<outline>
 		<component base="alef-hb"/>
 		<component base="qamats-hb" xOffset="286"/>
@@ -20,10 +20,12 @@
 	<anchor name="hbCantRightVowel" x="472" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>14d3d4062c01457e1f090c404c3610b40a5e7449</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

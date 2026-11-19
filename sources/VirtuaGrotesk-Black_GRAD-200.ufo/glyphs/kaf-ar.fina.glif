@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kaf-ar.fina" format="2">
-	<advance width="920"/>
+	<advance width="918"/>
 	<outline>
 		<contour>
-			<point x="920" y="0" type="curve"/>
-			<point x="920" y="176" type="line"/>
+			<point x="918" y="0" type="curve"/>
+			<point x="918" y="176" type="line"/>
 			<point x="852" y="176"/>
 			<point x="812" y="200"/>
 			<point x="812" y="240" type="curve" smooth="yes"/>
@@ -81,6 +81,8 @@
 	<anchor name="topDots" x="460" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>676625cadc3c4abe6d4724061b2d9c65a5aec2b0</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

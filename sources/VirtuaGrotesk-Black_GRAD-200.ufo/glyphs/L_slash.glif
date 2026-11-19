@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Lslash" format="2">
 	<unicode hex="0141"/>
-	<advance width="664"/>
+	<advance width="662"/>
 	<outline>
 		<contour>
 			<point x="20" y="288" type="line"/>
@@ -38,6 +38,8 @@
 	<anchor name="bottom" x="360" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>29937148bacb9e37a2996da2c433f39a2c58cc4a</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

@@ -4,18 +4,20 @@
 	<advance width="356"/>
 	<outline>
 		<contour>
-			<point x="-76" y="0" type="line"/>
-			<point x="368" y="0" type="line"/>
-			<point x="368" y="208" type="line"/>
-			<point x="-76" y="208" type="line"/>
+			<point x="-74" y="0" type="line"/>
+			<point x="370" y="0" type="line"/>
+			<point x="370" y="208" type="line"/>
+			<point x="-74" y="208" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="146" y="0"/>
-	<anchor name="top" x="146" y="208"/>
-	<anchor name="bottomDots" x="146" y="0"/>
-	<anchor name="topDots" x="146" y="208"/>
+	<anchor name="bottom" x="148" y="0"/>
+	<anchor name="top" x="148" y="208"/>
+	<anchor name="bottomDots" x="148" y="0"/>
+	<anchor name="topDots" x="148" y="208"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b5c27b35f01196e4b0c7948db83970bef5aa7d7a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

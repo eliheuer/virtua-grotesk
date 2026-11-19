@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB1F" format="2">
 	<unicode hex="FB1F"/>
-	<advance width="528"/>
+	<advance width="560"/>
 	<outline>
 		<component base="yodyod-hb"/>
-		<component base="patah-hb" xOffset="152"/>
+		<component base="patah-hb" xOffset="168"/>
 	</outline>
-	<anchor name="hbBottom" x="264" y="0"/>
-	<anchor name="hbRafe" x="264" y="736"/>
-	<anchor name="hbMeteg" x="48" y="0"/>
-	<anchor name="hbCantAbove" x="264" y="640"/>
-	<anchor name="hbCantAboveLeft" x="48" y="640"/>
-	<anchor name="hbCantAboveRight" x="480" y="640"/>
-	<anchor name="hbCantBelow" x="264" y="0"/>
-	<anchor name="hbCantBelowRight" x="264" y="0"/>
-	<anchor name="hbCantLeftVowel" x="128" y="0"/>
-	<anchor name="hbCantRightVowel" x="400" y="0"/>
+	<anchor name="hbBottom" x="280" y="0"/>
+	<anchor name="hbRafe" x="280" y="736"/>
+	<anchor name="hbMeteg" x="64" y="0"/>
+	<anchor name="hbCantAbove" x="280" y="640"/>
+	<anchor name="hbCantAboveLeft" x="64" y="640"/>
+	<anchor name="hbCantAboveRight" x="496" y="640"/>
+	<anchor name="hbCantBelow" x="280" y="0"/>
+	<anchor name="hbCantBelowRight" x="280" y="0"/>
+	<anchor name="hbCantLeftVowel" x="144" y="0"/>
+	<anchor name="hbCantRightVowel" x="416" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ec7623259fce4d168386dd4044bf93cd53807770</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

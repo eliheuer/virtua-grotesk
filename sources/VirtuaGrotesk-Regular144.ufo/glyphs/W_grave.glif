@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Wgrave" format="2">
 	<unicode hex="1E80"/>
-	<advance width="968"/>
+	<advance width="1016"/>
 	<outline>
 		<component base="W"/>
-		<component base="grave" xOffset="344" yOffset="192"/>
+		<component base="grave" xOffset="360" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>826a8ef85d0d80c3c4b65a5127d70dc765c618d2</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

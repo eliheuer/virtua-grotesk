@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Rcedilla" format="2">
 	<unicode hex="0156"/>
-	<advance width="736"/>
+	<advance width="752"/>
 	<outline>
 		<component base="R"/>
 		<component base="commaaccent" xOffset="264"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>43c630f4f5e595bec03a5ba36e84285ff99ab02e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

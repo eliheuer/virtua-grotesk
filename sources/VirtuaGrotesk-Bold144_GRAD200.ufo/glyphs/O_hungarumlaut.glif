@@ -4,10 +4,12 @@
 	<advance width="816"/>
 	<outline>
 		<component base="O"/>
-		<component base="hungarumlaut" xOffset="214" yOffset="192"/>
+		<component base="hungarumlaut" xOffset="190" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>feb4be1d7ac79cd7989289a63e8de7f582e95445</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

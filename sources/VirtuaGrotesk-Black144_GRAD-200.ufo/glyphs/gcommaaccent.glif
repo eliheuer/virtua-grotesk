@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gcommaaccent" format="2">
 	<unicode hex="0123"/>
-	<advance width="744"/>
+	<advance width="742"/>
 	<outline>
 		<component base="g"/>
 		<component base="commaaccent" xScale="-1" yScale="-1" xOffset="522" yOffset="576"/>
@@ -10,6 +10,8 @@
 	<anchor name="bottom" x="360" y="-240"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>67e37ec8f0474c00664bb2ae802ce0cbe1bb443d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

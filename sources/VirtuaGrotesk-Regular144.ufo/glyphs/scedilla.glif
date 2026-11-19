@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="scedilla" format="2">
 	<unicode hex="015F"/>
-	<advance width="512"/>
+	<advance width="528"/>
 	<outline>
 		<component base="s"/>
-		<component base="cedilla" xOffset="146"/>
+		<component base="cedilla" xOffset="154"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>60bcf0b5ea1c8e5f7563c71703ee887f0cc78e3e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

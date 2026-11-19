@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ampersand" format="2">
 	<unicode hex="0026"/>
-	<advance width="624"/>
+	<advance width="640"/>
 	<outline>
 		<contour>
 			<point x="112" y="-16"/>
@@ -79,6 +79,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>257b8ab98c3912426aacbdbf2f00d0cc15849528</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

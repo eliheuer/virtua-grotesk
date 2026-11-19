@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="exclamdown" format="2">
 	<unicode hex="00A1"/>
-	<advance width="240"/>
+	<advance width="242"/>
 	<outline>
 		<contour>
 			<point x="178" y="640" type="line"/>
@@ -28,8 +28,10 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>236140fb609f078b983a4ea9040398562f5d6d4c</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

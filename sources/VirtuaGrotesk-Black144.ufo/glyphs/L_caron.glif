@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Lcaron" format="2">
 	<unicode hex="013D"/>
-	<advance width="616"/>
+	<advance width="622"/>
 	<outline>
 		<component base="L"/>
 		<component base="caroncomb.alt" xOffset="318"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8bb154334d7dacf4aa6aeee428ae4ddb9f5873d6</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="v" format="2">
 	<unicode hex="0076"/>
-	<advance width="592"/>
+	<advance width="606"/>
 	<outline>
 		<contour>
-			<point x="212" y="0" type="line"/>
-			<point x="380" y="0" type="line"/>
-			<point x="396" y="16" type="line"/>
-			<point x="576" y="504" type="line"/>
-			<point x="576" y="560" type="line"/>
-			<point x="560" y="576" type="line"/>
-			<point x="428" y="576" type="line"/>
-			<point x="412" y="560" type="line"/>
+			<point x="220" y="0" type="line"/>
+			<point x="388" y="0" type="line"/>
+			<point x="404" y="16" type="line"/>
+			<point x="584" y="504" type="line"/>
+			<point x="584" y="560" type="line"/>
+			<point x="568" y="576" type="line"/>
+			<point x="436" y="576" type="line"/>
+			<point x="420" y="560" type="line"/>
+			<point x="308" y="248" type="line"/>
 			<point x="300" y="248" type="line"/>
-			<point x="292" y="248" type="line"/>
-			<point x="180" y="560" type="line"/>
-			<point x="164" y="576" type="line"/>
-			<point x="32" y="576" type="line"/>
-			<point x="16" y="560" type="line"/>
-			<point x="16" y="504" type="line"/>
-			<point x="196" y="16" type="line"/>
+			<point x="188" y="560" type="line"/>
+			<point x="172" y="576" type="line"/>
+			<point x="40" y="576" type="line"/>
+			<point x="24" y="560" type="line"/>
+			<point x="24" y="504" type="line"/>
+			<point x="204" y="16" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="296" y="0"/>
-	<anchor name="top" x="296" y="576"/>
+	<anchor name="bottom" x="304" y="0"/>
+	<anchor name="top" x="304" y="576"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>71159e8377f5376aea388c0fb3e9fcc5b10fd727</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>

@@ -4,10 +4,12 @@
 	<advance width="920"/>
 	<outline>
 		<component base="I" xOffset="24"/>
-		<component base="J" xOffset="310"/>
+		<component base="J" xOffset="286"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8d8e55758ae2252fa581bb92d9e68dbf89886c4b</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

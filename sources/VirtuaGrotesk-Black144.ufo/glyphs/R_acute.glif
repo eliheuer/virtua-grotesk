@@ -4,10 +4,12 @@
 	<advance width="816"/>
 	<outline>
 		<component base="R"/>
-		<component base="acute" xOffset="282" yOffset="192"/>
+		<component base="acute" xOffset="274" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>730c0b57aa17591fe08f0ad17c1b43bb76c3eb66</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

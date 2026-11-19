@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Odieresis" format="2">
 	<unicode hex="00D6"/>
-	<advance width="728"/>
+	<advance width="726"/>
 	<outline>
 		<component base="O"/>
-		<component base="dieresis" xOffset="208" yOffset="192"/>
+		<component base="dieresis" xOffset="206" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>528c52da93c4b488527dbad0e23a540ed9dd6a31</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qofdagesh-hb" format="2">
 	<unicode hex="FB47"/>
-	<advance width="720"/>
+	<advance width="722"/>
 	<outline>
 		<component base="qof-hb" xOffset="24"/>
 		<component base="dagesh-hb" xOffset="266" yOffset="52"/>
@@ -18,6 +18,8 @@
 	<anchor name="hbCantBelowRight" x="448" y="-32"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>9f71e548fd147e92375529228bbd50b5c5e845cc</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

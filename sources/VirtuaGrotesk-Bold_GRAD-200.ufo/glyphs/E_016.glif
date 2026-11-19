@@ -64,10 +64,12 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>3f82ca324925d90a570e5563b70f7a34dbf0ae43</string>
 			<key>com.runebender.markLabel</key>
-			<string>green</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

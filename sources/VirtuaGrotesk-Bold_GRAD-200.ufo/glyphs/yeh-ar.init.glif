@@ -11,10 +11,12 @@
 	<anchor name="topDots" x="0" y="460"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>07d5a921b4090e61b33a322ebe2dbcbcb46a6c92</string>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

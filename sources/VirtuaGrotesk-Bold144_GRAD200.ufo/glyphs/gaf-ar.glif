@@ -13,14 +13,16 @@
 			<point x="424" y="670" type="line"/>
 			<point x="424" y="608" type="line"/>
 		</contour>
-		<component base="keheh-ar"/>
+		<component base="keheh-ar" xOffset="-24"/>
 	</outline>
-	<anchor name="bottom" x="424" y="-16"/>
+	<anchor name="bottom" x="424" y="-18"/>
 	<anchor name="bottomDots" x="424" y="772"/>
 	<anchor name="top" x="424" y="1142"/>
 	<anchor name="topDots" x="424" y="1094"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>83f28f3683413f8c88253773fb72ed3dd35be958</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

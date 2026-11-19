@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zacute" format="2">
 	<unicode hex="017A"/>
-	<advance width="516"/>
+	<advance width="532"/>
 	<outline>
 		<component base="z"/>
-		<component base="acute" xOffset="110"/>
+		<component base="acute" xOffset="118"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>d24bea5d1574fb2aba5600b39275c2c86802af19</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

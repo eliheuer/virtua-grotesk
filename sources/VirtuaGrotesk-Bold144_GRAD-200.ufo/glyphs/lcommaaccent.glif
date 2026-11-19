@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lcommaaccent" format="2">
 	<unicode hex="013C"/>
-	<advance width="224"/>
+	<advance width="248"/>
 	<outline>
 		<component base="l"/>
 		<component base="commaaccent" xOffset="30"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>4ca21dea1d98c7809c97a3f5cd90dacdbf008c34</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

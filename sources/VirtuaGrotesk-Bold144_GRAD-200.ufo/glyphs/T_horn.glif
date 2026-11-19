@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Thorn" format="2">
 	<unicode hex="00DE"/>
-	<advance width="696"/>
+	<advance width="720"/>
 	<outline>
 		<contour>
 			<point x="226" y="278" type="line"/>
@@ -42,6 +42,8 @@
 	<anchor name="top" x="376" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>cefccf3baaa915d4b9ae16831584cf13be13e0af</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

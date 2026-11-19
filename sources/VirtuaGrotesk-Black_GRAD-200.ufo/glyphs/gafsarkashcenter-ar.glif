@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gafsarkashcenter-ar" format="2">
-	<advance width="424"/>
+	<advance width="426"/>
 	<outline>
 		<contour>
 			<point x="50" y="196" type="line"/>
@@ -48,6 +48,8 @@
 	<anchor name="_topDots" x="161" y="84"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>cb2b35a8bd65fdda0fb715da7094c1c336e74955</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

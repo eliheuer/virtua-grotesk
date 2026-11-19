@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="acute" format="2">
 	<unicode hex="00B4"/>
-	<advance width="252"/>
+	<advance width="300"/>
 	<outline>
 		<contour>
-			<point x="62" y="638" type="line"/>
-			<point x="128" y="638" type="line"/>
-			<point x="144" y="654" type="line"/>
-			<point x="238" y="800" type="line"/>
-			<point x="238" y="816" type="line"/>
-			<point x="222" y="832" type="line"/>
-			<point x="128" y="832" type="line"/>
-			<point x="112" y="816" type="line"/>
-			<point x="46" y="670" type="line"/>
-			<point x="46" y="654" type="line"/>
+			<point x="86" y="638" type="line"/>
+			<point x="152" y="638" type="line"/>
+			<point x="168" y="654" type="line"/>
+			<point x="262" y="800" type="line"/>
+			<point x="262" y="816" type="line"/>
+			<point x="246" y="832" type="line"/>
+			<point x="152" y="832" type="line"/>
+			<point x="136" y="816" type="line"/>
+			<point x="70" y="670" type="line"/>
+			<point x="70" y="654" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="140" y="576"/>
-	<anchor name="top" x="140" y="864"/>
+	<anchor name="_top" x="164" y="576"/>
+	<anchor name="top" x="164" y="864"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>01f5f3c58aee05626a6ec371e23f1b6bb9d331fa</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

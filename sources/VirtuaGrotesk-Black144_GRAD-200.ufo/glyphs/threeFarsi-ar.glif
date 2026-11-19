@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="threeFarsi-ar" format="2">
 	<unicode hex="06F3"/>
-	<advance width="936"/>
+	<advance width="934"/>
 	<outline>
 		<component base="three-ar"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b863e08aabe88417fba9bd49a38a3c851a05ece7</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

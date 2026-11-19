@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="fehDotmovedbelow-ar.fina" format="2">
-	<advance width="928"/>
+	<advance width="952"/>
 	<outline>
 		<component base="fehDotless-ar.fina"/>
 		<component base="dotbelow-ar" xOffset="592"/>
 	</outline>
-	<anchor name="bottomDots" x="468" y="-6"/>
-	<anchor name="topDots" x="468" y="426"/>
-	<anchor name="top" x="658" y="606"/>
-	<anchor name="bottom" x="658" y="-352"/>
+	<anchor name="bottomDots" x="492" y="-6"/>
+	<anchor name="topDots" x="492" y="426"/>
+	<anchor name="top" x="682" y="606"/>
+	<anchor name="bottom" x="682" y="-352"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>51a0735bb79007dd8ad760f0089f7f30c0591e6d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

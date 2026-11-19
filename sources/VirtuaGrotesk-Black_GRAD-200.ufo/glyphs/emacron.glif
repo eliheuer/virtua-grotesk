@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="emacron" format="2">
 	<unicode hex="0113"/>
-	<advance width="680"/>
+	<advance width="678"/>
 	<outline>
 		<component base="e" xOffset="4"/>
 		<component base="macron" xOffset="160"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>07bbcb73b7bf5530696802ff8603e97d73647d99</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

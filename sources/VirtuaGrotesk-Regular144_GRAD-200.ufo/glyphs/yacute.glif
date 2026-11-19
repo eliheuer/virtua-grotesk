@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yacute" format="2">
 	<unicode hex="00FD"/>
-	<advance width="568"/>
+	<advance width="592"/>
 	<outline>
 		<component base="y"/>
-		<component base="acute" xOffset="114"/>
+		<component base="acute" xOffset="122"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0717109baa7bf9bccd599425a468ac79edbcd7bb</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

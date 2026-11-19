@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hehDoachashmee-ar.init" format="2">
-	<advance width="1096"/>
+	<advance width="1104"/>
 	<outline>
 		<component base="heh-ar.init"/>
 	</outline>
@@ -10,6 +10,8 @@
 	<anchor name="bottom" x="524" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a46aa454b523777c2feb278d380e01967710985d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

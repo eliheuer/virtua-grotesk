@@ -1,41 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="A" format="2">
 	<unicode hex="0041"/>
-	<advance width="668"/>
+	<advance width="716"/>
 	<outline>
 		<contour>
-			<point x="24" y="0" type="line"/>
-			<point x="58" y="0" type="line"/>
-			<point x="74" y="16" type="line"/>
-			<point x="168" y="254" type="line"/>
-			<point x="176" y="262" type="line"/>
-			<point x="492" y="262" type="line"/>
-			<point x="500" y="254" type="line"/>
-			<point x="592" y="16" type="line"/>
-			<point x="608" y="0" type="line"/>
-			<point x="648" y="0" type="line"/>
-			<point x="664" y="16" type="line"/>
-			<point x="664" y="64" type="line"/>
-			<point x="402" y="752" type="line"/>
-			<point x="386" y="768" type="line"/>
-			<point x="286" y="768" type="line"/>
-			<point x="270" y="752" type="line"/>
-			<point x="8" y="64" type="line"/>
-			<point x="8" y="16" type="line"/>
+			<point x="48" y="0" type="line"/>
+			<point x="82" y="0" type="line"/>
+			<point x="98" y="16" type="line"/>
+			<point x="192" y="254" type="line"/>
+			<point x="200" y="262" type="line"/>
+			<point x="516" y="262" type="line"/>
+			<point x="524" y="254" type="line"/>
+			<point x="616" y="16" type="line"/>
+			<point x="632" y="0" type="line"/>
+			<point x="672" y="0" type="line"/>
+			<point x="688" y="16" type="line"/>
+			<point x="688" y="64" type="line"/>
+			<point x="426" y="752" type="line"/>
+			<point x="410" y="768" type="line"/>
+			<point x="310" y="768" type="line"/>
+			<point x="294" y="752" type="line"/>
+			<point x="32" y="64" type="line"/>
+			<point x="32" y="16" type="line"/>
 		</contour>
 		<contour>
-			<point x="200" y="334" type="line"/>
-			<point x="192" y="342" type="line"/>
-			<point x="324" y="710" type="line"/>
-			<point x="344" y="710" type="line"/>
-			<point x="470" y="342" type="line"/>
-			<point x="462" y="334" type="line"/>
+			<point x="224" y="334" type="line"/>
+			<point x="216" y="342" type="line"/>
+			<point x="348" y="710" type="line"/>
+			<point x="368" y="710" type="line"/>
+			<point x="494" y="342" type="line"/>
+			<point x="486" y="334" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="336" y="768"/>
-	<anchor name="bottom" x="346" y="0"/>
+	<anchor name="top" x="360" y="768"/>
+	<anchor name="bottom" x="370" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>18b6024e72262f29ce79cefcf4f129b9f7a41dd8</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

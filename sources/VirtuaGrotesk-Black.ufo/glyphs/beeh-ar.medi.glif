@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="beeh-ar.medi" format="2">
-	<advance width="424"/>
+	<advance width="422"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
 		<component base="twodotsverticalbelow-ar" xOffset="146" yOffset="10"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>f22643adaa275241da9878f722bf19cf91722c1a</string>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kafdagesh-hb" format="2">
 	<unicode hex="FB3B"/>
-	<advance width="624"/>
+	<advance width="642"/>
 	<outline>
 		<component base="kaf-hb"/>
-		<component base="dagesh-hb" xOffset="186" yOffset="4"/>
+		<component base="dagesh-hb" xOffset="202" yOffset="4"/>
 	</outline>
-	<anchor name="hbBottom" x="280" y="0"/>
-	<anchor name="hbCenter" x="256" y="304"/>
-	<anchor name="hbHolam" x="24" y="576"/>
-	<anchor name="hbRafe" x="280" y="672"/>
-	<anchor name="hbMeteg" x="280" y="0"/>
-	<anchor name="hbCantAbove" x="280" y="576"/>
-	<anchor name="hbCantAboveLeft" x="24" y="576"/>
-	<anchor name="hbCantAboveRight" x="536" y="576"/>
-	<anchor name="hbCantBelow" x="280" y="0"/>
-	<anchor name="hbCantBelowRight" x="280" y="0"/>
+	<anchor name="hbBottom" x="296" y="0"/>
+	<anchor name="hbCenter" x="272" y="304"/>
+	<anchor name="hbHolam" x="40" y="576"/>
+	<anchor name="hbRafe" x="296" y="672"/>
+	<anchor name="hbMeteg" x="296" y="0"/>
+	<anchor name="hbCantAbove" x="296" y="576"/>
+	<anchor name="hbCantAboveLeft" x="40" y="576"/>
+	<anchor name="hbCantAboveRight" x="552" y="576"/>
+	<anchor name="hbCantBelow" x="296" y="0"/>
+	<anchor name="hbCantBelowRight" x="296" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>3a91a4098119cb4a2d91e58edca26619a77807d1</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

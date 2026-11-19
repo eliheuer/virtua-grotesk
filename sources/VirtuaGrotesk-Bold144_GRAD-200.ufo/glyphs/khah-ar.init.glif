@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="khah-ar.init" format="2">
-	<advance width="736"/>
+	<advance width="760"/>
 	<outline>
 		<component base="hah-ar.init"/>
-		<component base="dotabove-ar" xOffset="202" yOffset="-148" identifier="84cc64f7-af5c-490f-8d8c-401a1ae9cc57"/>
+		<component base="dotabove-ar" xOffset="178" yOffset="-148" identifier="84cc64f7-af5c-490f-8d8c-401a1ae9cc57"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>65eee202b07641a09c521fb81e69252837cb7c2e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gafsarkashabove-ar" format="2">
-	<advance width="400"/>
+	<advance width="448"/>
 	<outline>
 		<contour>
-			<point x="-8" y="592" type="line"/>
-			<point x="408" y="832" type="line"/>
-			<point x="424" y="848" type="line"/>
-			<point x="424" y="854" type="line"/>
-			<point x="408" y="870" type="line"/>
-			<point x="-8" y="630" type="line"/>
-			<point x="-24" y="614" type="line"/>
-			<point x="-24" y="608" type="line"/>
+			<point x="16" y="592" type="line"/>
+			<point x="432" y="832" type="line"/>
+			<point x="448" y="848" type="line"/>
+			<point x="448" y="854" type="line"/>
+			<point x="432" y="870" type="line"/>
+			<point x="16" y="630" type="line"/>
+			<point x="0" y="614" type="line"/>
+			<point x="0" y="608" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="112" y="600"/>
-	<anchor name="bottomDots" x="112" y="600"/>
-	<anchor name="topDots" x="112" y="840"/>
-	<anchor name="top" x="112" y="888"/>
-	<anchor name="_topDots" x="112" y="488"/>
+	<anchor name="bottom" x="136" y="600"/>
+	<anchor name="bottomDots" x="136" y="600"/>
+	<anchor name="topDots" x="136" y="840"/>
+	<anchor name="top" x="136" y="888"/>
+	<anchor name="_topDots" x="136" y="488"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b0dbd8734c3ce8b43a688d727597861c6b75609e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

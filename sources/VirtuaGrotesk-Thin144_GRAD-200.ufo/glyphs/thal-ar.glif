@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="thal-ar" format="2">
 	<unicode hex="0630"/>
-	<advance width="480"/>
+	<advance width="504"/>
 	<outline>
 		<component base="dal-ar"/>
 		<component base="dotabove-ar" xOffset="120" yOffset="-176"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b85c0ca75c9c689ba31bf717dbf84688f11481a9</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Acircumflex" format="2">
 	<unicode hex="00C2"/>
-	<advance width="744"/>
+	<advance width="760"/>
 	<outline>
 		<component base="A"/>
-		<component base="circumflex" xOffset="182" yOffset="192"/>
+		<component base="circumflex" xOffset="190" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e0a08b45c621fa80bc90e7eaf32a40a2adc35da3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

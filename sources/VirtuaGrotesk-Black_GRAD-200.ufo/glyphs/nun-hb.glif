@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="nun-hb" format="2">
 	<unicode hex="05E0"/>
-	<advance width="512"/>
+	<advance width="514"/>
 	<outline>
 		<contour>
 			<point x="64" y="0" type="line"/>
@@ -38,6 +38,8 @@
 	<anchor name="hbCantBelowRight" x="224" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>83f5554705c60e1e3705caf3cfb742e5097f85d5</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

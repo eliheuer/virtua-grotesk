@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dotabove-ar" format="2">
-	<advance width="224"/>
+	<advance width="226"/>
 	<outline>
 		<contour>
 			<point x="128" y="702" type="curve" smooth="yes"/>
@@ -21,6 +21,8 @@
 	<anchor name="top" x="128" y="812"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>03bb1b25d62e0fb7891285b2d8ddf4dca02bfe18</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

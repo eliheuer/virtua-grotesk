@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Kcaron" format="2">
 	<unicode hex="01E8"/>
-	<advance width="684"/>
+	<advance width="708"/>
 	<outline>
 		<component base="K"/>
 		<component base="caron" xOffset="170" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>9581ceef72c89900934857b018e1fa91fddce9fd</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

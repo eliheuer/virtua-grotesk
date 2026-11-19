@@ -34,10 +34,12 @@
 	<anchor name="bottomDots" x="340" y="-176"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ad12f9c58e79d92c40ed10fc21dc329f09ddf22a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

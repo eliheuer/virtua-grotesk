@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="fullStop-ar" format="2">
 	<unicode hex="06D4"/>
-	<advance width="280"/>
+	<advance width="296"/>
 	<outline>
 		<contour>
-			<point x="4" y="16" type="line"/>
-			<point x="20" y="0" type="line"/>
-			<point x="262" y="0" type="line"/>
-			<point x="278" y="16" type="line"/>
-			<point x="278" y="98" type="line"/>
-			<point x="262" y="114" type="line"/>
-			<point x="20" y="114" type="line"/>
-			<point x="4" y="98" type="line"/>
+			<point x="12" y="16" type="line"/>
+			<point x="28" y="0" type="line"/>
+			<point x="270" y="0" type="line"/>
+			<point x="286" y="16" type="line"/>
+			<point x="286" y="98" type="line"/>
+			<point x="270" y="114" type="line"/>
+			<point x="28" y="114" type="line"/>
+			<point x="12" y="98" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>60c56a18fdb45f2deeb38da92974e6e20c8c753e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

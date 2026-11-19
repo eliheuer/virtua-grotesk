@@ -46,10 +46,12 @@
 	<anchor name="hbCantAboveRight" x="0" y="256"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>99a6c6aee520f41f11e50716f1ebac5da5c10d94</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

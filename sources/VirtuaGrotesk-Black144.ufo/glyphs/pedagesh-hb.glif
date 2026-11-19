@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="pedagesh-hb" format="2">
 	<unicode hex="FB44"/>
-	<advance width="880"/>
+	<advance width="878"/>
 	<outline>
 		<component base="pe-hb"/>
 		<component base="dagesh-hb" xOffset="470" yOffset="-58"/>
@@ -18,6 +18,8 @@
 	<anchor name="hbCantBelowRight" x="448" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ec71e237beb83d4f63c261f8cea25b79e91f5456</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

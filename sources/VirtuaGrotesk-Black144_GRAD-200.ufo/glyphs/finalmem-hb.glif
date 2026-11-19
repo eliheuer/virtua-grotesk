@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="finalmem-hb" format="2">
 	<unicode hex="05DD"/>
-	<advance width="760"/>
+	<advance width="762"/>
 	<outline>
 		<contour>
 			<point x="72" y="0" type="line"/>
@@ -40,6 +40,8 @@
 	<anchor name="hbCantBelowRight" x="360" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>bcbe756b2e5ff87a1b45afb39a9d1ca919386834</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

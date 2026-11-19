@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="seven-ar" format="2">
 	<unicode hex="0667"/>
-	<advance width="528"/>
+	<advance width="560"/>
 	<outline>
 		<contour>
-			<point x="534" y="608" type="line"/>
-			<point x="534" y="624" type="line"/>
-			<point x="518" y="640" type="line"/>
-			<point x="464" y="640" type="line"/>
-			<point x="448" y="624" type="line"/>
-			<point x="270" y="128" type="line"/>
-			<point x="262" y="128" type="line"/>
-			<point x="82" y="624" type="line"/>
-			<point x="66" y="640" type="line"/>
-			<point x="12" y="640" type="line"/>
-			<point x="-4" y="624" type="line"/>
-			<point x="-4" y="608" type="line"/>
-			<point x="202" y="16" type="line"/>
-			<point x="218" y="0" type="line"/>
-			<point x="312" y="0" type="line"/>
-			<point x="328" y="16" type="line"/>
+			<point x="550" y="608" type="line"/>
+			<point x="550" y="624" type="line"/>
+			<point x="534" y="640" type="line"/>
+			<point x="480" y="640" type="line"/>
+			<point x="464" y="624" type="line"/>
+			<point x="286" y="128" type="line"/>
+			<point x="278" y="128" type="line"/>
+			<point x="98" y="624" type="line"/>
+			<point x="82" y="640" type="line"/>
+			<point x="28" y="640" type="line"/>
+			<point x="12" y="624" type="line"/>
+			<point x="12" y="608" type="line"/>
+			<point x="218" y="16" type="line"/>
+			<point x="234" y="0" type="line"/>
+			<point x="328" y="0" type="line"/>
+			<point x="344" y="16" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="268" y="0"/>
-	<anchor name="top" x="268" y="640"/>
-	<anchor name="bottomDots" x="268" y="0"/>
-	<anchor name="topDots" x="268" y="640"/>
+	<anchor name="bottom" x="284" y="0"/>
+	<anchor name="top" x="284" y="640"/>
+	<anchor name="bottomDots" x="284" y="0"/>
+	<anchor name="topDots" x="284" y="640"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>36a50f63b9e86cd21d2d5bd9568e11c040b72c29</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

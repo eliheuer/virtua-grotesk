@@ -4,10 +4,12 @@
 	<advance width="816"/>
 	<outline>
 		<component base="Oslash"/>
-		<component base="acute" xOffset="266" yOffset="192"/>
+		<component base="acute" xOffset="242" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>290d7ecc7fd01ca5d44c932934a4751c4da2f53c</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

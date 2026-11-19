@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hcaron" format="2">
 	<unicode hex="021F"/>
-	<advance width="736"/>
+	<advance width="734"/>
 	<outline>
 		<component base="h"/>
 		<component base="caron" xOffset="-14" yOffset="192"/>
@@ -10,6 +10,8 @@
 	<anchor name="bottom" x="368" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>37be306b753f26ee129df56cf47e6c9b37a3b5a3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

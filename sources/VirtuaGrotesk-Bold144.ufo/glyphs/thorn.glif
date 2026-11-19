@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="thorn" format="2">
 	<unicode hex="00FE"/>
-	<advance width="672"/>
+	<advance width="696"/>
 	<outline>
 		<contour>
 			<point x="48" y="-184" type="line"/>
@@ -47,6 +47,8 @@
 	<anchor name="top" x="352" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>6513be199c42ba8685e76e3505494249718f24b7</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

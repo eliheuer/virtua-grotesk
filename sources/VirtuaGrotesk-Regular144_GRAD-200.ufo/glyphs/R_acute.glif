@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Racute" format="2">
 	<unicode hex="0154"/>
-	<advance width="620"/>
+	<advance width="636"/>
 	<outline>
 		<component base="R"/>
-		<component base="acute" xOffset="176" yOffset="192"/>
+		<component base="acute" xOffset="174" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>7c569258e4e19aa6d744bbfa4b73ed98606d9c80</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

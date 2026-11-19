@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="fehDotless-ar.init" format="2">
-	<advance width="544"/>
+	<advance width="552"/>
 	<outline>
 		<contour>
 			<point x="232" y="416"/>
@@ -49,6 +49,8 @@
 	<anchor name="topDots" x="224" y="576"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>d7544bb17dd0cbebdac8d00018db8c7c9c34bd3a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

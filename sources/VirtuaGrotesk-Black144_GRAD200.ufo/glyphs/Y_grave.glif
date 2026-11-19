@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Ygrave" format="2">
 	<unicode hex="1EF2"/>
-	<advance width="856"/>
+	<advance width="890"/>
 	<outline>
 		<component base="Y"/>
-		<component base="grave" xOffset="268" yOffset="192"/>
+		<component base="grave" xOffset="284" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>cd5bb1d8379ac862d4d7d49207267e85a8d92bd0</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

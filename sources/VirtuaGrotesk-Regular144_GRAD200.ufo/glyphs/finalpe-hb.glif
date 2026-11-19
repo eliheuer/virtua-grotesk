@@ -1,47 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="finalpe-hb" format="2">
 	<unicode hex="05E3"/>
-	<advance width="560"/>
+	<advance width="608"/>
 	<outline>
 		<contour>
-			<point x="450" y="-176" type="line"/>
-			<point x="466" y="-192" type="line"/>
-			<point x="576" y="-192" type="line"/>
-			<point x="592" y="-176" type="line"/>
-			<point x="592" y="320" type="line" smooth="yes"/>
-			<point x="592" y="518"/>
-			<point x="490" y="640"/>
-			<point x="336" y="640" type="curve" smooth="yes"/>
-			<point x="-24" y="640" type="line"/>
-			<point x="-40" y="624" type="line"/>
-			<point x="-40" y="258" type="line"/>
-			<point x="-24" y="242" type="line"/>
-			<point x="248" y="242" type="line"/>
-			<point x="264" y="258" type="line"/>
-			<point x="264" y="342" type="line"/>
-			<point x="248" y="358" type="line"/>
-			<point x="126" y="358" type="line"/>
-			<point x="102" y="366" type="line"/>
-			<point x="102" y="474" type="line"/>
-			<point x="110" y="488" type="line"/>
-			<point x="336" y="488" type="line" smooth="yes"/>
-			<point x="406" y="488"/>
-			<point x="450" y="440"/>
-			<point x="450" y="314" type="curve" smooth="yes"/>
+			<point x="474" y="-176" type="line"/>
+			<point x="490" y="-192" type="line"/>
+			<point x="600" y="-192" type="line"/>
+			<point x="616" y="-176" type="line"/>
+			<point x="616" y="320" type="line" smooth="yes"/>
+			<point x="616" y="518"/>
+			<point x="514" y="640"/>
+			<point x="360" y="640" type="curve" smooth="yes"/>
+			<point x="0" y="640" type="line"/>
+			<point x="-16" y="624" type="line"/>
+			<point x="-16" y="258" type="line"/>
+			<point x="0" y="242" type="line"/>
+			<point x="272" y="242" type="line"/>
+			<point x="288" y="258" type="line"/>
+			<point x="288" y="342" type="line"/>
+			<point x="272" y="358" type="line"/>
+			<point x="150" y="358" type="line"/>
+			<point x="126" y="366" type="line"/>
+			<point x="126" y="474" type="line"/>
+			<point x="134" y="488" type="line"/>
+			<point x="360" y="488" type="line" smooth="yes"/>
+			<point x="430" y="488"/>
+			<point x="474" y="440"/>
+			<point x="474" y="314" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="278" y="-192"/>
-	<anchor name="hbCenter" x="352" y="366"/>
-	<anchor name="hbHolam" x="-40" y="640"/>
-	<anchor name="hbRafe" x="278" y="736"/>
-	<anchor name="hbMeteg" x="278" y="-192"/>
-	<anchor name="hbCantAbove" x="278" y="640"/>
-	<anchor name="hbCantAboveLeft" x="-40" y="640"/>
-	<anchor name="hbCantAboveRight" x="592" y="640"/>
-	<anchor name="hbCantBelow" x="278" y="-192"/>
-	<anchor name="hbCantBelowRight" x="278" y="-192"/>
+	<anchor name="hbBottom" x="302" y="-192"/>
+	<anchor name="hbCenter" x="376" y="366"/>
+	<anchor name="hbHolam" x="-16" y="640"/>
+	<anchor name="hbRafe" x="302" y="736"/>
+	<anchor name="hbMeteg" x="302" y="-192"/>
+	<anchor name="hbCantAbove" x="302" y="640"/>
+	<anchor name="hbCantAboveLeft" x="-16" y="640"/>
+	<anchor name="hbCantAboveRight" x="616" y="640"/>
+	<anchor name="hbCantBelow" x="302" y="-192"/>
+	<anchor name="hbCantBelowRight" x="302" y="-192"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>3ad91afbb0a1f5e32a9b51795522000747e2e025</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

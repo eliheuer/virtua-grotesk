@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kgreenlandic" format="2">
 	<unicode hex="0138"/>
-	<advance width="664"/>
+	<advance width="672"/>
 	<outline>
 		<contour>
 			<point x="72" y="16" type="line"/>
@@ -33,6 +33,8 @@
 	<anchor name="bottom" x="344" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>f30d9d3f3e13eab48f7b7d4d317c9c4fe3fe974e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

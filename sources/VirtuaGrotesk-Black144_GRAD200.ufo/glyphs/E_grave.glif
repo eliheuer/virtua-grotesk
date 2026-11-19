@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Egrave" format="2">
 	<unicode hex="00C8"/>
-	<advance width="680"/>
+	<advance width="678"/>
 	<outline>
 		<component base="E"/>
 		<component base="grave" xOffset="224" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>5da5e4e2e6e76fd39c9147cd10f58ddb60556204</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

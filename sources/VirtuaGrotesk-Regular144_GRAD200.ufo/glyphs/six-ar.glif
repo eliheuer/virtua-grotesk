@@ -1,29 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="six-ar" format="2">
 	<unicode hex="0666"/>
-	<advance width="432"/>
+	<advance width="448"/>
 	<outline>
 		<contour>
-			<point x="426" y="16" type="line"/>
-			<point x="426" y="624" type="line"/>
-			<point x="410" y="640" type="line"/>
-			<point x="16" y="640" type="line"/>
-			<point x="0" y="624" type="line"/>
-			<point x="0" y="522" type="line"/>
-			<point x="16" y="506" type="line"/>
-			<point x="274" y="506" type="line"/>
-			<point x="282" y="498" type="line"/>
-			<point x="282" y="16" type="line"/>
-			<point x="298" y="0" type="line"/>
-			<point x="410" y="0" type="line"/>
+			<point x="434" y="16" type="line"/>
+			<point x="434" y="624" type="line"/>
+			<point x="418" y="640" type="line"/>
+			<point x="24" y="640" type="line"/>
+			<point x="8" y="624" type="line"/>
+			<point x="8" y="522" type="line"/>
+			<point x="24" y="506" type="line"/>
+			<point x="282" y="506" type="line"/>
+			<point x="290" y="498" type="line"/>
+			<point x="290" y="16" type="line"/>
+			<point x="306" y="0" type="line"/>
+			<point x="418" y="0" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="214" y="0"/>
-	<anchor name="top" x="214" y="640"/>
-	<anchor name="bottomDots" x="214" y="0"/>
-	<anchor name="topDots" x="214" y="640"/>
+	<anchor name="bottom" x="222" y="0"/>
+	<anchor name="top" x="222" y="640"/>
+	<anchor name="bottomDots" x="222" y="0"/>
+	<anchor name="topDots" x="222" y="640"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>533b271b2a61c49296a0dd21c89e407028c3f460</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

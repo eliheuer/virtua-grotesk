@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="degree" format="2">
 	<unicode hex="00B0"/>
-	<advance width="384"/>
+	<advance width="386"/>
 	<outline>
 		<contour>
 			<point x="36" y="610" type="curve" smooth="yes"/>
@@ -34,6 +34,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2a3a078e0f57497105e17157705aaca66caf7a4a</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

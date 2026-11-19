@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noonghunna-ar" format="2">
 	<unicode hex="06BA"/>
-	<advance width="800"/>
+	<advance width="802"/>
 	<outline>
 		<contour>
 			<point x="56" y="144" type="line" smooth="yes"/>
@@ -34,6 +34,8 @@
 	<anchor name="bottomDots" x="364" y="-176"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8f7d5a3dde12862787016b248afe48826f1ee98f</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

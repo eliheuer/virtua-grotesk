@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tet-hb" format="2">
 	<unicode hex="05D8"/>
-	<advance width="840"/>
+	<advance width="842"/>
 	<outline>
 		<contour>
 			<point x="428" y="-16" type="curve" smooth="yes"/>
@@ -52,6 +52,8 @@
 	<anchor name="hbCantBelowRight" x="404" y="-32"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>31b4e091ce030135801cb29899eeb20d55b877c7</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

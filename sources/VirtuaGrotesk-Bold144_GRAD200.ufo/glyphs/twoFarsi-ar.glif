@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="twoFarsi-ar" format="2">
 	<unicode hex="06F2"/>
-	<advance width="520"/>
+	<advance width="568"/>
 	<outline>
 		<component base="two-ar"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>92d5bb1219a71180080ca9a9af97dd749dec8259</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

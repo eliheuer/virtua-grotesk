@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="farsiYeh-ar.init.beforeYeh" format="2">
-	<advance width="376"/>
+	<advance width="400"/>
 	<outline>
 		<contour>
 			<point x="0" y="0" type="line"/>
@@ -55,6 +55,8 @@
 	<anchor name="topDots" x="176" y="432"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>186f156fb7331c7f41e06d253f346d9654235c37</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

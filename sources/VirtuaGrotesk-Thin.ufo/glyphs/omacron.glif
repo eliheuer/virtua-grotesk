@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="omacron" format="2">
 	<unicode hex="014D"/>
-	<advance width="616"/>
+	<advance width="614"/>
 	<outline>
 		<component base="o"/>
-		<component base="macron" xOffset="128"/>
+		<component base="macron" xOffset="126"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>daba3ebe9ece7b9eb51410031be45fbc5f51e8ae</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

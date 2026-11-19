@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kashida-ar" format="2">
 	<unicode hex="0640"/>
-	<advance width="272"/>
+	<advance width="320"/>
 	<outline>
 		<contour>
-			<point x="-24" y="16" type="line"/>
-			<point x="296" y="16" type="line"/>
-			<point x="296" y="80" type="line"/>
-			<point x="-24" y="80" type="line"/>
+			<point x="0" y="16" type="line"/>
+			<point x="320" y="16" type="line"/>
+			<point x="320" y="80" type="line"/>
+			<point x="0" y="80" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="136" y="16"/>
-	<anchor name="top" x="136" y="80"/>
-	<anchor name="bottomDots" x="136" y="16"/>
-	<anchor name="topDots" x="136" y="80"/>
+	<anchor name="bottom" x="160" y="16"/>
+	<anchor name="top" x="160" y="80"/>
+	<anchor name="bottomDots" x="160" y="16"/>
+	<anchor name="topDots" x="160" y="80"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2b3e0e23c59e701fff28cb291b03dc49d6f2deb5</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

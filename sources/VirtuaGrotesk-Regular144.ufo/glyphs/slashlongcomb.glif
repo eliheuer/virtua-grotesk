@@ -16,10 +16,12 @@
 	<anchor name="_overlay" x="0" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>1f8184401d5a0fc769f0117318d95bc661672cde</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

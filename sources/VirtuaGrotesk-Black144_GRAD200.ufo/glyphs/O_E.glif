@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="OE" format="2">
 	<unicode hex="0152"/>
-	<advance width="1104"/>
+	<advance width="1106"/>
 	<outline>
 		<contour>
 			<point x="32" y="384" type="curve" smooth="yes"/>
@@ -50,6 +50,8 @@
 	<anchor name="bottom" x="556" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>201aca73120624f2797f915712c6c6e1b2b4cfb3</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

@@ -4,10 +4,12 @@
 	<advance width="744"/>
 	<outline>
 		<component base="U"/>
-		<component base="dieresis" xOffset="276" yOffset="192"/>
+		<component base="dieresis" xOffset="252" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>54958e21cf1b070d98dcdcb90ee560dfd3f5dfe1</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

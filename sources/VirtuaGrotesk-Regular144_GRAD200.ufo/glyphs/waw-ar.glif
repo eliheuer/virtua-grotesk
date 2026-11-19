@@ -1,61 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="waw-ar" format="2">
 	<unicode hex="0648"/>
-	<advance width="496"/>
+	<advance width="544"/>
 	<outline>
 		<contour>
-			<point x="246" y="136"/>
-			<point x="212" y="158"/>
-			<point x="212" y="200" type="curve" smooth="yes"/>
-			<point x="212" y="246"/>
-			<point x="242" y="274"/>
-			<point x="286" y="274" type="curve" smooth="yes"/>
-			<point x="338" y="274"/>
-			<point x="372" y="236"/>
-			<point x="372" y="182" type="curve" smooth="yes"/>
-			<point x="372" y="144" type="line"/>
-			<point x="364" y="136" type="line"/>
-			<point x="306" y="136" type="line" smooth="yes"/>
+			<point x="270" y="136"/>
+			<point x="236" y="158"/>
+			<point x="236" y="200" type="curve" smooth="yes"/>
+			<point x="236" y="246"/>
+			<point x="266" y="274"/>
+			<point x="310" y="274" type="curve" smooth="yes"/>
+			<point x="362" y="274"/>
+			<point x="396" y="236"/>
+			<point x="396" y="182" type="curve" smooth="yes"/>
+			<point x="396" y="144" type="line"/>
+			<point x="388" y="136" type="line"/>
+			<point x="330" y="136" type="line" smooth="yes"/>
 		</contour>
 		<contour>
-			<point x="148" y="-112"/>
-			<point x="84" y="-90"/>
-			<point x="84" y="-32" type="curve" smooth="yes"/>
-			<point x="84" y="-16" type="line"/>
-			<point x="68" y="0" type="line"/>
-			<point x="-36" y="0" type="line"/>
-			<point x="-52" y="-16" type="line"/>
-			<point x="-52" y="-48" type="line" smooth="yes"/>
-			<point x="-52" y="-176"/>
-			<point x="56" y="-250"/>
-			<point x="230" y="-250" type="curve" smooth="yes"/>
-			<point x="410" y="-250"/>
-			<point x="508" y="-154"/>
-			<point x="508" y="0" type="curve" smooth="yes"/>
-			<point x="508" y="114" type="line" smooth="yes"/>
-			<point x="508" y="306"/>
-			<point x="414" y="414"/>
-			<point x="286" y="414" type="curve" smooth="yes"/>
-			<point x="164" y="414"/>
-			<point x="76" y="334"/>
-			<point x="76" y="210" type="curve" smooth="yes"/>
-			<point x="76" y="86"/>
-			<point x="166" y="0"/>
-			<point x="302" y="0" type="curve" smooth="yes"/>
-			<point x="364" y="0" type="line"/>
-			<point x="372" y="-8" type="line"/>
-			<point x="372" y="-24" type="line" smooth="yes"/>
-			<point x="372" y="-76"/>
-			<point x="328" y="-112"/>
-			<point x="230" y="-112" type="curve" smooth="yes"/>
+			<point x="172" y="-112"/>
+			<point x="108" y="-90"/>
+			<point x="108" y="-32" type="curve" smooth="yes"/>
+			<point x="108" y="-16" type="line"/>
+			<point x="92" y="0" type="line"/>
+			<point x="-12" y="0" type="line"/>
+			<point x="-28" y="-16" type="line"/>
+			<point x="-28" y="-48" type="line" smooth="yes"/>
+			<point x="-28" y="-176"/>
+			<point x="80" y="-250"/>
+			<point x="254" y="-250" type="curve" smooth="yes"/>
+			<point x="434" y="-250"/>
+			<point x="532" y="-154"/>
+			<point x="532" y="0" type="curve" smooth="yes"/>
+			<point x="532" y="114" type="line" smooth="yes"/>
+			<point x="532" y="306"/>
+			<point x="438" y="414"/>
+			<point x="310" y="414" type="curve" smooth="yes"/>
+			<point x="188" y="414"/>
+			<point x="100" y="334"/>
+			<point x="100" y="210" type="curve" smooth="yes"/>
+			<point x="100" y="86"/>
+			<point x="190" y="0"/>
+			<point x="326" y="0" type="curve" smooth="yes"/>
+			<point x="388" y="0" type="line"/>
+			<point x="396" y="-8" type="line"/>
+			<point x="396" y="-24" type="line" smooth="yes"/>
+			<point x="396" y="-76"/>
+			<point x="352" y="-112"/>
+			<point x="254" y="-112" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="168" y="-272"/>
-	<anchor name="top" x="168" y="408"/>
-	<anchor name="bottomDots" x="168" y="-272"/>
-	<anchor name="topDots" x="168" y="408"/>
+	<anchor name="bottom" x="192" y="-272"/>
+	<anchor name="top" x="192" y="408"/>
+	<anchor name="bottomDots" x="192" y="-272"/>
+	<anchor name="topDots" x="192" y="408"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c66eb1c8ecca03ceaf34bd42aba176517a85266b</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

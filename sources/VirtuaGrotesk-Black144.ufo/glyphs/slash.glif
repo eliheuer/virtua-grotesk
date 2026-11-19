@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="slash" format="2">
 	<unicode hex="002F"/>
-	<advance width="504"/>
+	<advance width="510"/>
 	<outline>
 		<contour>
-			<point x="2" y="16" type="line"/>
-			<point x="18" y="0" type="line"/>
-			<point x="208" y="0" type="line"/>
-			<point x="224" y="16" type="line"/>
-			<point x="488" y="736" type="line"/>
-			<point x="488" y="752" type="line"/>
-			<point x="472" y="768" type="line"/>
-			<point x="282" y="768" type="line"/>
-			<point x="266" y="752" type="line"/>
-			<point x="2" y="32" type="line"/>
+			<point x="10" y="16" type="line"/>
+			<point x="26" y="0" type="line"/>
+			<point x="216" y="0" type="line"/>
+			<point x="232" y="16" type="line"/>
+			<point x="496" y="736" type="line"/>
+			<point x="496" y="752" type="line"/>
+			<point x="480" y="768" type="line"/>
+			<point x="290" y="768" type="line"/>
+			<point x="274" y="752" type="line"/>
+			<point x="10" y="32" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>56d9c46a0a6172c84b1f2e34826220152ff15147</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Idotaccent" format="2">
 	<unicode hex="0130"/>
-	<advance width="112"/>
+	<advance width="120"/>
 	<outline>
 		<component base="I"/>
 		<component base="dotaccent" xOffset="-34" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e48a3aa104450fe865b670781a6b68e131717b22</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

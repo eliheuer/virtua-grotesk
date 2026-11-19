@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Agrave" format="2">
 	<unicode hex="00C0"/>
-	<advance width="744"/>
+	<advance width="760"/>
 	<outline>
 		<component base="A"/>
-		<component base="grave" xOffset="256" yOffset="192"/>
+		<component base="grave" xOffset="248" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>892369e616e3ef8b3c765805be9d795b25227664</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

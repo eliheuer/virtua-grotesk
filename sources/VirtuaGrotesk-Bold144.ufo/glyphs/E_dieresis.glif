@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Edieresis" format="2">
 	<unicode hex="00CB"/>
-	<advance width="656"/>
+	<advance width="672"/>
 	<outline>
 		<component base="E"/>
-		<component base="dieresis" xOffset="196" yOffset="192"/>
+		<component base="dieresis" xOffset="172" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>95d97c489d0b583e27633f56b1e8b9706bf61db1</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

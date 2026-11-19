@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB4E" format="2">
 	<unicode hex="FB4E"/>
-	<advance width="880"/>
+	<advance width="878"/>
 	<outline>
 		<component base="pe-hb"/>
 		<component base="uni05BF" xOffset="444" yOffset="736"/>
@@ -18,6 +18,8 @@
 	<anchor name="hbHolam" x="92" y="576"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>fd66d54da11a5a5c0cc5668c93624caed754c50b</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

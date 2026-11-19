@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tcheh-ar.fina" format="2">
-	<advance width="784"/>
+	<advance width="808"/>
 	<outline>
 		<component base="hah-ar.fina"/>
-		<component base="threedotsdowncenter-ar" xScale="0.9375" yScale="0.9375" xOffset="182" yOffset="-328"/>
+		<component base="threedotsdowncenter-ar" xScale="0.9375" yScale="0.9375" xOffset="206" yOffset="-328"/>
 	</outline>
-	<anchor name="top" x="206" y="574"/>
+	<anchor name="top" x="230" y="574"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ba0dc4807ebc3ad3130a9ee3dc10f7085345f971</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

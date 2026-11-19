@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="four.tf" format="2">
-	<advance width="696"/>
+	<advance width="698"/>
 	<outline>
 		<contour>
 			<point x="372" y="0" type="line"/>
@@ -35,6 +35,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>f3118bcb9cbcd7e49b5e14c3095cbcd7f670b387</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ntilde" format="2">
 	<unicode hex="00F1"/>
-	<advance width="544"/>
+	<advance width="560"/>
 	<outline>
 		<component base="n"/>
-		<component base="tilde" xOffset="54"/>
+		<component base="tilde" xOffset="62"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a9aa654e9083d034c38b8dde1c77ee9382c47306</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

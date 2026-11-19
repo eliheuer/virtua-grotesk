@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Ydieresis" format="2">
 	<unicode hex="0178"/>
-	<advance width="560"/>
+	<advance width="608"/>
 	<outline>
 		<component base="Y"/>
 		<component base="dieresis" xOffset="86" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ec9b17fb54eef9c9c2d2c620bd0b2a94d943b3ee</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

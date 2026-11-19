@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dateSeparator-ar" format="2">
 	<unicode hex="060D"/>
-	<advance width="328"/>
+	<advance width="330"/>
 	<outline>
 		<contour>
 			<point x="60" y="0" type="line"/>
@@ -20,6 +20,8 @@
 	<anchor name="topDots" x="128" y="694"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ac7bedc0f217a28e4837c66ab2a33afd4c8aeda3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

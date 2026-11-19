@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="fehThreedotsbelow-ar.init" format="2">
-	<advance width="496"/>
+	<advance width="520"/>
 	<outline>
 		<component base="fehDotless-ar.init"/>
 		<component base="threedotsdowncenter-ar" xOffset="14" yOffset="-510"/>
@@ -11,6 +11,8 @@
 	<anchor name="topDots" x="220" y="576"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>bc3009dee041f5e48188a40a77a18e894a90f1ff</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

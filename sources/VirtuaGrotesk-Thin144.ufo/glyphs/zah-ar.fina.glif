@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zah-ar.fina" format="2">
-	<advance width="880"/>
+	<advance width="896"/>
 	<outline>
 		<component base="tah-ar.fina"/>
-		<component base="dotabove-ar" xOffset="448" yOffset="-128"/>
+		<component base="dotabove-ar" xOffset="464" yOffset="-128"/>
 	</outline>
-	<anchor name="bottom" x="576" y="16"/>
-	<anchor name="top" x="576" y="770"/>
+	<anchor name="bottom" x="592" y="16"/>
+	<anchor name="top" x="592" y="770"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>55b2a2ee99a484fc53c0eda5839698ea882e713d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

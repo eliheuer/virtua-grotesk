@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Ohungarumlaut" format="2">
 	<unicode hex="0150"/>
-	<advance width="728"/>
+	<advance width="726"/>
 	<outline>
 		<component base="O"/>
-		<component base="hungarumlaut" xOffset="160" yOffset="192"/>
+		<component base="hungarumlaut" xOffset="158" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b417d4b8791e8a6089f47a2c1ea7620bd415ce9d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

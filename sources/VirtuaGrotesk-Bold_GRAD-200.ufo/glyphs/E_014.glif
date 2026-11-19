@@ -113,10 +113,12 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>cc889b1d3a82177e49d16291997654d20c8d25cb</string>
 			<key>com.runebender.markLabel</key>
-			<string>green</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

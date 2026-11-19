@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hah-ar.fina" format="2">
-	<advance width="920"/>
+	<advance width="922"/>
 	<outline>
 		<contour>
 			<point x="620" y="-352" type="line"/>
@@ -18,8 +18,8 @@
 			<point x="540" y="48"/>
 			<point x="684" y="0"/>
 			<point x="844" y="0" type="curve" smooth="yes"/>
-			<point x="920" y="0" type="line"/>
-			<point x="920" y="176" type="line"/>
+			<point x="922" y="0" type="line"/>
+			<point x="922" y="176" type="line"/>
 			<point x="844" y="176" type="line" smooth="yes"/>
 			<point x="748" y="176"/>
 			<point x="692" y="176"/>
@@ -61,6 +61,8 @@
 	<anchor name="bottomDots" x="204" y="68"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>5292b829f910e23b2d0e8f1c8be97668745e3f1d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

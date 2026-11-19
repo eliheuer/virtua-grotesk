@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hah-ar.init" format="2">
-	<advance width="656"/>
+	<advance width="680"/>
 	<outline>
 		<contour>
 			<point x="112" y="0" type="line" smooth="yes"/>
@@ -44,6 +44,8 @@
 	<anchor name="bottom" x="300" y="32"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>77d40cb76f80e64ba20aa726a3bb2e52d43001a3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="exclam" format="2">
 	<unicode hex="0021"/>
-	<advance width="264"/>
+	<advance width="262"/>
 	<outline>
 		<contour>
 			<point x="52" y="16" type="line"/>
@@ -28,6 +28,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>83e34f1fe86f939c8376445836c685a8839727e8</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="acute" format="2">
 	<unicode hex="00B4"/>
-	<advance width="252"/>
+	<advance width="260"/>
 	<outline>
 		<contour>
 			<point x="72" y="638" type="line"/>
@@ -20,6 +20,8 @@
 	<anchor name="top" x="140" y="864"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8fb7c35eb031fd731e1bc7d29b73fa3bbd1c4cdf</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

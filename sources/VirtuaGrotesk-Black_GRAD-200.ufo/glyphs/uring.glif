@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uring" format="2">
 	<unicode hex="016F"/>
-	<advance width="808"/>
+	<advance width="810"/>
 	<outline>
 		<component base="u"/>
 		<component base="ring" xOffset="252"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>9f90d4dda1a807bb0ea3b7259090316dec06b93d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

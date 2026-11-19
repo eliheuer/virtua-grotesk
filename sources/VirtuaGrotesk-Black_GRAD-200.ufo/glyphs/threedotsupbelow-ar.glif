@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="threedotsupbelow-ar" format="2">
-	<advance width="480"/>
+	<advance width="478"/>
 	<outline>
 		<contour>
 			<point x="92" y="-438" type="curve" smooth="yes"/>
@@ -52,6 +52,8 @@
 	<anchor name="_bottomDots" x="236" y="46"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b60cfd55c723d611620537d5ec484fd1ba69d5bd</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

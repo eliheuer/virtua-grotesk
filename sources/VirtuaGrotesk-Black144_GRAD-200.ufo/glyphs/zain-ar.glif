@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zain-ar" format="2">
 	<unicode hex="0632"/>
-	<advance width="672"/>
+	<advance width="674"/>
 	<outline>
 		<component base="reh-ar"/>
-		<component base="dotabove-ar" xOffset="116" yOffset="-116"/>
+		<component base="dotabove-ar" xOffset="100" yOffset="-116"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>00e69a05ff3f12231cb56eafcc409853c094e7cc</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

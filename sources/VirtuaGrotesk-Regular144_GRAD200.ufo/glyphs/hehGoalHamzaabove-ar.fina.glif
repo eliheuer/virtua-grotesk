@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hehGoalHamzaabove-ar.fina" format="2">
-	<advance width="480"/>
-	<anchor name="bottom" x="246" y="-10"/>
+	<advance width="504"/>
+	<anchor name="bottom" x="270" y="-10"/>
 	<outline>
 		<component base="hehGoal-ar.fina"/>
-		<component base="hamzaabove-ar" xOffset="134" yOffset="-338"/>
+		<component base="hamzaabove-ar" xOffset="158" yOffset="-338"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>6c39ce4dc1e367582abe55d1ae83fd12d872a50e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

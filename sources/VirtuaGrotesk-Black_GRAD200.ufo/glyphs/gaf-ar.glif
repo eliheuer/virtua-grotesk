@@ -15,16 +15,18 @@
 		</contour>
 		<component base="keheh-ar"/>
 	</outline>
-	<anchor name="bottom" x="448" y="-16"/>
+	<anchor name="bottom" x="448" y="-18"/>
 	<anchor name="bottomDots" x="448" y="772"/>
 	<anchor name="top" x="448" y="1142"/>
 	<anchor name="topDots" x="448" y="1094"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>475a67af7ab1281927bba17f716ae12fc6f93bc0</string>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

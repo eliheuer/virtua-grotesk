@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zcaron" format="2">
 	<unicode hex="017E"/>
-	<advance width="576"/>
+	<advance width="578"/>
 	<outline>
 		<component base="z"/>
 		<component base="caron" xOffset="116"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>4f8ff4a9b83c10e80d41653cec49fb4df51542ce</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

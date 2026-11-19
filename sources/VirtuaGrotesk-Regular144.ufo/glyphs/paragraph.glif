@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="paragraph" format="2">
 	<unicode hex="00B6"/>
-	<advance width="568"/>
+	<advance width="600"/>
 	<outline>
 		<contour>
-			<point x="24" y="544" type="curve" smooth="yes"/>
-			<point x="24" y="420"/>
-			<point x="136" y="320"/>
-			<point x="272" y="320" type="curve"/>
-			<point x="280" y="312" type="line"/>
-			<point x="280" y="-80" type="line"/>
-			<point x="296" y="-96" type="line"/>
-			<point x="344" y="-96" type="line"/>
-			<point x="360" y="-80" type="line"/>
-			<point x="360" y="672" type="line"/>
-			<point x="368" y="680" type="line"/>
-			<point x="440" y="680" type="line"/>
-			<point x="448" y="672" type="line"/>
-			<point x="448" y="-80" type="line"/>
-			<point x="464" y="-96" type="line"/>
-			<point x="512" y="-96" type="line"/>
-			<point x="528" y="-80" type="line"/>
-			<point x="528" y="752" type="line"/>
-			<point x="512" y="768" type="line"/>
-			<point x="280" y="768" type="line"/>
-			<point x="128" y="768"/>
-			<point x="24" y="672"/>
+			<point x="48" y="544" type="curve" smooth="yes"/>
+			<point x="48" y="420"/>
+			<point x="160" y="320"/>
+			<point x="296" y="320" type="curve"/>
+			<point x="304" y="312" type="line"/>
+			<point x="304" y="-80" type="line"/>
+			<point x="320" y="-96" type="line"/>
+			<point x="368" y="-96" type="line"/>
+			<point x="384" y="-80" type="line"/>
+			<point x="384" y="672" type="line"/>
+			<point x="392" y="680" type="line"/>
+			<point x="464" y="680" type="line"/>
+			<point x="472" y="672" type="line"/>
+			<point x="472" y="-80" type="line"/>
+			<point x="488" y="-96" type="line"/>
+			<point x="536" y="-96" type="line"/>
+			<point x="552" y="-80" type="line"/>
+			<point x="552" y="752" type="line"/>
+			<point x="536" y="768" type="line"/>
+			<point x="304" y="768" type="line"/>
+			<point x="152" y="768"/>
+			<point x="48" y="672"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e872ef164fe9f22a3cd88552a6e4ff81a2057f40</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

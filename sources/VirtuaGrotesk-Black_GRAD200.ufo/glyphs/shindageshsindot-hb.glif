@@ -23,10 +23,12 @@
 	<anchor name="hbCantBeforeHolam" x="126" y="576"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e0b387a4c2c6a1b22996f87ad17268657dd82809</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

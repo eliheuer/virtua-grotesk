@@ -37,8 +37,8 @@ correct. `README.md` has the idea of the design and its history.
 
 - R1. A neo-grotesque with a machined finish. Silhouette and proportions: Helvetica and Neue Haas Grotesk. The grid in the outline: LL Replica. At reading size it is a familiar neo-grotesque. At display size the flats, chamfers and curves look cut by a CNC machine. Keep the optical corrections of the donors: a bowl can be fuller on one side, a stroke can thin into a join. Keep the flats that a curve lands on. No pen-like flare, no perfect circle for symmetry.
 - R2. The reference fonts do not dictate the design. Compare weight, spacing, outline consistency and expected structure. Rubik is the target for weight, spacing and outline quality.
-- R3. Draw from green Virtua glyphs of the same construction (the donors): read their points and their filled shape. A glyph that is not green is not a donor.
-- R45. The core donors are O, H, n and o, with green forms of the same script. Check the mark color of a donor in every master. A sketch from Eli gives the shape: calibrate its scale first. A rejected candidate is a counterexample.
+- R3. Draw from green Virtua glyphs of the same construction (the donors): read their points and their filled shape. Where no green glyph has the construction, a yellow glyph is a donor. A glyph of another color is not a donor.
+- R45. The core donors are O, H, n and o, with green or yellow forms of the same script. Check the mark color of a donor in every master. A sketch from Eli gives the shape: calibrate its scale first. A rejected candidate is a counterexample.
 - R4. A local correction of one glyph (Zayin, Gimel, Final Tsadi, hamza) is for that glyph and master only.
 
 ## Grid and metrics
@@ -74,7 +74,7 @@ tight_junction = 8
 
 ## Strokes and curves
 
-- R14. Apparent weight is monolinear. Measure across the stroke and check the two opposing edges together. A swelling or a pinch is a fault even when every check passes. Use the thickness heatmap of Runebender (Curves, Thickness); its colors are relative to the median of the glyph. Measure a suspect turn at the quarter, half and three-quarter points, adjust the opposing handles together, and measure again after rounding. `make check-design` uses these ranges, set from the green glyphs with `fgtools check-design --observe`:
+- R14. Apparent weight is monolinear. Measure across the stroke and check the two opposing edges together. A swelling or a pinch is a fault even when every check passes. Use the thickness heatmap of Runebender (Curves, Thickness); its colors are relative to the median of the glyph. Measure a suspect turn at the quarter, half and three-quarter points, adjust the opposing handles together, and measure again after rounding. `make check-design` uses these ranges, set from the green and yellow glyphs with `fgtools check-design --observe`:
 
 ```toml
 [targets.Regular.Latin]
@@ -247,7 +247,7 @@ parts are green and `fgtools check-design --ready` lists it."""
 
 [colors.yellow]
 rgba = [[1, 1, 0, 1], [1, 0.86, 0.2, 1], [0.91, 0.79, 0.27, 1]]
-policy = "Close. Edit without replacing the drawing. Not a reference."
+policy = "Close to green. Small edits only, without replacing the drawing. A reference where no green glyph has the construction."
 
 [colors.orange]
 rgba = [[1, 0.5, 0, 1], [1, 0.6, 0.06, 1], [0.97, 0.58, 0, 1]]

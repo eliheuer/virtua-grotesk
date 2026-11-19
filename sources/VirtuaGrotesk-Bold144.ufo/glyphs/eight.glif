@@ -1,67 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="eight" format="2">
 	<unicode hex="0038"/>
-	<advance width="656"/>
+	<advance width="680"/>
 	<outline>
 		<contour>
-			<point x="136" y="-16"/>
-			<point x="328" y="-16" type="curve" smooth="yes"/>
-			<point x="520" y="-16"/>
-			<point x="640" y="92"/>
-			<point x="640" y="228" type="curve" smooth="yes"/>
-			<point x="640" y="324"/>
-			<point x="580" y="406"/>
-			<point x="512" y="424" type="curve"/>
-			<point x="512" y="432" type="line"/>
-			<point x="550" y="444"/>
-			<point x="612" y="500"/>
-			<point x="612" y="588" type="curve" smooth="yes"/>
-			<point x="612" y="700"/>
-			<point x="520" y="784"/>
-			<point x="328" y="784" type="curve" smooth="yes"/>
-			<point x="136" y="784"/>
-			<point x="52" y="700"/>
-			<point x="52" y="588" type="curve" smooth="yes"/>
-			<point x="52" y="492"/>
-			<point x="106" y="434"/>
-			<point x="144" y="420" type="curve"/>
-			<point x="144" y="412" type="line"/>
-			<point x="92" y="398"/>
-			<point x="16" y="328"/>
-			<point x="16" y="232" type="curve" smooth="yes"/>
-			<point x="16" y="96"/>
+			<point x="144" y="-16"/>
+			<point x="336" y="-16" type="curve" smooth="yes"/>
+			<point x="528" y="-16"/>
+			<point x="648" y="92"/>
+			<point x="648" y="228" type="curve" smooth="yes"/>
+			<point x="648" y="324"/>
+			<point x="588" y="406"/>
+			<point x="520" y="424" type="curve"/>
+			<point x="520" y="432" type="line"/>
+			<point x="558" y="444"/>
+			<point x="620" y="500"/>
+			<point x="620" y="588" type="curve" smooth="yes"/>
+			<point x="620" y="700"/>
+			<point x="528" y="784"/>
+			<point x="336" y="784" type="curve" smooth="yes"/>
+			<point x="144" y="784"/>
+			<point x="60" y="700"/>
+			<point x="60" y="588" type="curve" smooth="yes"/>
+			<point x="60" y="492"/>
+			<point x="114" y="434"/>
+			<point x="152" y="420" type="curve"/>
+			<point x="152" y="412" type="line"/>
+			<point x="100" y="398"/>
+			<point x="24" y="328"/>
+			<point x="24" y="232" type="curve" smooth="yes"/>
+			<point x="24" y="96"/>
 		</contour>
 		<contour>
-			<point x="328" y="472" type="curve" smooth="yes"/>
-			<point x="248" y="472"/>
-			<point x="216" y="532"/>
-			<point x="216" y="564" type="curve" smooth="yes"/>
-			<point x="216" y="612"/>
-			<point x="264" y="656"/>
-			<point x="328" y="656" type="curve" smooth="yes"/>
-			<point x="392" y="656"/>
-			<point x="440" y="612"/>
-			<point x="440" y="564" type="curve" smooth="yes"/>
-			<point x="440" y="532"/>
-			<point x="408" y="472"/>
+			<point x="336" y="472" type="curve" smooth="yes"/>
+			<point x="256" y="472"/>
+			<point x="224" y="532"/>
+			<point x="224" y="564" type="curve" smooth="yes"/>
+			<point x="224" y="612"/>
+			<point x="272" y="656"/>
+			<point x="336" y="656" type="curve" smooth="yes"/>
+			<point x="400" y="656"/>
+			<point x="448" y="612"/>
+			<point x="448" y="564" type="curve" smooth="yes"/>
+			<point x="448" y="532"/>
+			<point x="416" y="472"/>
 		</contour>
 		<contour>
-			<point x="400" y="120"/>
-			<point x="328" y="120" type="curve" smooth="yes"/>
-			<point x="256" y="120"/>
-			<point x="200" y="176"/>
-			<point x="200" y="240" type="curve" smooth="yes"/>
-			<point x="200" y="304"/>
-			<point x="256" y="352"/>
-			<point x="328" y="352" type="curve" smooth="yes"/>
-			<point x="400" y="352"/>
-			<point x="456" y="304"/>
-			<point x="456" y="240" type="curve" smooth="yes"/>
-			<point x="456" y="176"/>
+			<point x="408" y="120"/>
+			<point x="336" y="120" type="curve" smooth="yes"/>
+			<point x="264" y="120"/>
+			<point x="208" y="176"/>
+			<point x="208" y="240" type="curve" smooth="yes"/>
+			<point x="208" y="304"/>
+			<point x="264" y="352"/>
+			<point x="336" y="352" type="curve" smooth="yes"/>
+			<point x="408" y="352"/>
+			<point x="464" y="304"/>
+			<point x="464" y="240" type="curve" smooth="yes"/>
+			<point x="464" y="176"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b97f8ca444fc9324f6596539a50da858ed06678d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>

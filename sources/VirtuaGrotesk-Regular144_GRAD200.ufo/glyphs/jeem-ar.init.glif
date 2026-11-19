@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="jeem-ar.init" format="2">
-	<advance width="620"/>
+	<advance width="644"/>
 	<outline>
 		<component base="hah-ar.init" xOffset="-12"/>
-		<component base="dotbelow-ar" xOffset="202"/>
+		<component base="dotbelow-ar" xOffset="178"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>1ab6912eec9ad39568a479f0ed80aa5dc1afc05a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

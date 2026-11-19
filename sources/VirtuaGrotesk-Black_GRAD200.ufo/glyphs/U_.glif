@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="U" format="2">
 	<unicode hex="0055"/>
-	<advance width="824"/>
+	<advance width="826"/>
 	<outline>
 		<contour>
 			<point x="216" y="-16"/>
@@ -32,12 +32,14 @@
 	<anchor name="bottom" x="412" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2db12d4edd18e9b12e634f027dfd0904a0856722</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-U.png</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

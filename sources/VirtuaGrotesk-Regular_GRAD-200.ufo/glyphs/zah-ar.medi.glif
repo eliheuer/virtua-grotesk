@@ -3,12 +3,14 @@
 	<advance width="912"/>
 	<outline>
 		<component base="tah-ar.medi"/>
-		<component base="dotabove-ar" xOffset="402" yOffset="-128"/>
+		<component base="dotabove-ar" xOffset="404" yOffset="-128"/>
 	</outline>
 	<anchor name="top" x="566" y="774"/>
 	<anchor name="bottom" x="566" y="10"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>42b4f18f8619cc547754c8bbe733c9e0b684b13a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Ccircumflex" format="2">
 	<unicode hex="0108"/>
-	<advance width="720"/>
+	<advance width="728"/>
 	<outline>
 		<component base="C"/>
 		<component base="circumflex" xOffset="186" yOffset="192"/>
@@ -10,6 +10,8 @@
 	<anchor name="bottom" x="380" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>4aaf0bc95d85b2b6c4e8d5d775ddf3e6fe9d2138</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

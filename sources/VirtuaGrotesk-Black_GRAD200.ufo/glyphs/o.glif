@@ -36,12 +36,14 @@
 	<anchor name="bottom" x="374" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e5ab18b84f5683e7381d0dc17e0657779d7ee826</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-o.png</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

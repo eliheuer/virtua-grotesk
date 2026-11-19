@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="wawHamzaabove-ar.fina" format="2">
-	<advance width="592"/>
-	<anchor name="bottom" x="280" y="-304"/>
+	<advance width="616"/>
+	<anchor name="bottom" x="304" y="-304"/>
 	<outline>
 		<component base="waw-ar.fina"/>
-		<component base="hamzaabove-ar" xOffset="168" yOffset="-336"/>
+		<component base="hamzaabove-ar" xOffset="192" yOffset="-336"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0076ad6fa2abcff98a56e13a3d9d9b80f522cacc</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

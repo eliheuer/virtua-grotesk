@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Hbar" format="2">
 	<unicode hex="0126"/>
-	<advance width="864"/>
+	<advance width="866"/>
 	<outline>
 		<contour>
 			<point x="48" y="576" type="line"/>
@@ -60,6 +60,8 @@
 	<anchor name="top" x="432" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2bbec55a08a4b88978e8ee7e453120cc440e7c40</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

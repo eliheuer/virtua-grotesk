@@ -4,11 +4,13 @@
 	<advance width="896"/>
 	<outline>
 		<component base="behDotless-ar"/>
-		<component base="ring-ar" xOffset="360" yOffset="-288"/>
+		<component base="ring-ar" xOffset="352" yOffset="-288"/>
 	</outline>
 	<anchor name="bottom" x="448" y="-8"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b2a4e236cfe3a0f3f002af27f329a34f0bb20784</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

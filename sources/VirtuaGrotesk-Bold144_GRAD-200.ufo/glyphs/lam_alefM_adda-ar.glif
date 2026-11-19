@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alefMadda-ar" format="2">
-	<advance width="536"/>
+	<advance width="552"/>
 	<outline>
 		<component base="lam_alef-ar"/>
-		<component base="madda-ar" xOffset="252" yOffset="178" identifier="la9525148365"/>
+		<component base="madda-ar" xOffset="268" yOffset="178" identifier="la9525148365"/>
 	</outline>
-	<anchor name="top_1" x="28" y="768"/>
-	<anchor name="bottom_1" x="404" y="0"/>
-	<anchor name="top_2" x="396" y="1010"/>
-	<anchor name="bottom_2" x="106" y="0"/>
+	<anchor name="top_1" x="44" y="768"/>
+	<anchor name="bottom_1" x="420" y="0"/>
+	<anchor name="top_2" x="412" y="1010"/>
+	<anchor name="bottom_2" x="122" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>5672ae055d9f1396cdb4f857953d690da1d1654a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

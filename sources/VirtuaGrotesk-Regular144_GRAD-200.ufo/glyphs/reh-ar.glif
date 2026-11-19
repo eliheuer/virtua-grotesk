@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="reh-ar" format="2">
 	<unicode hex="0631"/>
-	<advance width="552"/>
+	<advance width="576"/>
 	<outline>
 		<contour>
-			<point x="482" y="0" type="curve" smooth="yes"/>
-			<point x="482" y="416" type="line"/>
-			<point x="466" y="432" type="line"/>
-			<point x="422" y="432" type="line"/>
-			<point x="406" y="416" type="line"/>
-			<point x="406" y="22" type="line" smooth="yes"/>
-			<point x="406" y="-138"/>
-			<point x="384" y="-170"/>
-			<point x="220" y="-170" type="curve" smooth="yes"/>
-			<point x="36" y="-170" type="line"/>
-			<point x="20" y="-186" type="line"/>
-			<point x="20" y="-240" type="line"/>
-			<point x="36" y="-256" type="line"/>
-			<point x="236" y="-256" type="line" smooth="yes"/>
-			<point x="426" y="-256"/>
-			<point x="482" y="-198"/>
+			<point x="506" y="0" type="curve" smooth="yes"/>
+			<point x="506" y="416" type="line"/>
+			<point x="490" y="432" type="line"/>
+			<point x="446" y="432" type="line"/>
+			<point x="430" y="416" type="line"/>
+			<point x="430" y="22" type="line" smooth="yes"/>
+			<point x="430" y="-138"/>
+			<point x="408" y="-170"/>
+			<point x="244" y="-170" type="curve" smooth="yes"/>
+			<point x="60" y="-170" type="line"/>
+			<point x="44" y="-186" type="line"/>
+			<point x="44" y="-240" type="line"/>
+			<point x="60" y="-256" type="line"/>
+			<point x="260" y="-256" type="line" smooth="yes"/>
+			<point x="450" y="-256"/>
+			<point x="506" y="-198"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="256" y="-256"/>
-	<anchor name="top" x="256" y="432"/>
-	<anchor name="bottomDots" x="256" y="-256"/>
-	<anchor name="topDots" x="256" y="432"/>
+	<anchor name="bottom" x="280" y="-256"/>
+	<anchor name="top" x="280" y="432"/>
+	<anchor name="bottomDots" x="280" y="-256"/>
+	<anchor name="topDots" x="280" y="432"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8052b8195a3f7388031ac5cf2690dfd17ee2dcfd</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.kern1</key>

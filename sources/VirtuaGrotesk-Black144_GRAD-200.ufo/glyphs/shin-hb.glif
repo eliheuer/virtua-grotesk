@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="shin-hb" format="2">
 	<unicode hex="05E9"/>
-	<advance width="952"/>
+	<advance width="954"/>
 	<outline>
 		<contour>
 			<point x="324" y="-16" type="curve" smooth="yes"/>
@@ -60,6 +60,8 @@
 	<anchor name="hbCantBelowRight" x="460" y="-32"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0ca240dc2db51caaa5028fe464af7c169b7f70d9</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

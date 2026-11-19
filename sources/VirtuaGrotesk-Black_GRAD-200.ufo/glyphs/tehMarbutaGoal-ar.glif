@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tehMarbutaGoal-ar" format="2">
 	<unicode hex="06C3"/>
-	<advance width="664"/>
+	<advance width="666"/>
 	<outline>
 		<component base="hehGoal-ar" xOffset="8"/>
 		<component base="twodotshorizontalabove-ar" xOffset="128" yOffset="-138"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>273efaff7a70bd14afb7748a68e1be895ee38570</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

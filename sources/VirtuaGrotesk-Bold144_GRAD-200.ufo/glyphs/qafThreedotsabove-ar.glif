@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qafThreedotsabove-ar" format="2">
 	<unicode hex="06A8"/>
-	<advance width="896"/>
+	<advance width="920"/>
 	<outline>
 		<component base="qafDotless-ar" xOffset="8"/>
 		<component base="threedotsupabove-ar" xOffset="374" yOffset="-72"/>
 	</outline>
-	<anchor name="top" x="606" y="868"/>
+	<anchor name="top" x="630" y="868"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0fe687d1cc597e762fdae6da8af50a30b71e22cc</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

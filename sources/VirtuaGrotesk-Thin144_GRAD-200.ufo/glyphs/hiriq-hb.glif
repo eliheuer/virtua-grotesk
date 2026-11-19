@@ -19,10 +19,12 @@
 	<anchor name="hbCantRightVowel" x="122" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>7b4c1755023492b8ee05a8278116b59ecf16e5da</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

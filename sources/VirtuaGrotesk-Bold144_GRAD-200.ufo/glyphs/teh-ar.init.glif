@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="teh-ar.init" format="2">
-	<advance width="320"/>
+	<advance width="328"/>
 	<outline>
 		<contour>
 			<point x="92" y="0" type="line"/>
@@ -20,7 +20,7 @@
 			<point x="-16" y="16" type="line"/>
 			<point x="0" y="0" type="line"/>
 		</contour>
-		<component base="twodotshorizontalabove-ar" xOffset="82" yOffset="-128" identifier="e4e033ca-3b91-4a54-bd3d-048f7c1925d9"/>
+		<component base="twodotshorizontalabove-ar" xOffset="58" yOffset="-128" identifier="e4e033ca-3b91-4a54-bd3d-048f7c1925d9"/>
 	</outline>
 	<anchor name="top" x="240" y="730"/>
 	<anchor name="bottom" x="96" y="16"/>
@@ -28,6 +28,8 @@
 	<anchor name="bottomDots" x="96" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>1163f724a636fd9ba3e81285c1435c7cb93080ac</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

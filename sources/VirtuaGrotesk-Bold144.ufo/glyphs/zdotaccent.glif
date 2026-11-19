@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zdotaccent" format="2">
 	<unicode hex="017C"/>
-	<advance width="552"/>
+	<advance width="568"/>
 	<outline>
 		<component base="z"/>
-		<component base="dotaccent" xOffset="180"/>
+		<component base="dotaccent" xOffset="188"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>d6fed8587ca2d06fb4a6b247713054f404823506</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="finalnun-hb" format="2">
 	<unicode hex="05DF"/>
-	<advance width="336"/>
+	<advance width="360"/>
 	<outline>
 		<contour>
-			<point x="326" y="-176" type="line"/>
-			<point x="326" y="624" type="line"/>
-			<point x="310" y="640" type="line"/>
-			<point x="0" y="640" type="line"/>
-			<point x="-16" y="624" type="line"/>
-			<point x="-16" y="448" type="line"/>
-			<point x="0" y="432" type="line"/>
-			<point x="94" y="432" type="line"/>
-			<point x="102" y="424" type="line"/>
-			<point x="102" y="-176" type="line"/>
-			<point x="118" y="-192" type="line"/>
-			<point x="310" y="-192" type="line"/>
+			<point x="350" y="-176" type="line"/>
+			<point x="350" y="624" type="line"/>
+			<point x="334" y="640" type="line"/>
+			<point x="24" y="640" type="line"/>
+			<point x="8" y="624" type="line"/>
+			<point x="8" y="448" type="line"/>
+			<point x="24" y="432" type="line"/>
+			<point x="118" y="432" type="line"/>
+			<point x="126" y="424" type="line"/>
+			<point x="126" y="-176" type="line"/>
+			<point x="142" y="-192" type="line"/>
+			<point x="334" y="-192" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="214" y="-192"/>
-	<anchor name="hbCenter" x="-64" y="352"/>
-	<anchor name="hbHolam" x="-16" y="640"/>
-	<anchor name="hbRafe" x="154" y="736"/>
-	<anchor name="hbMeteg" x="214" y="-192"/>
-	<anchor name="hbCantAbove" x="154" y="640"/>
-	<anchor name="hbCantAboveLeft" x="-16" y="640"/>
-	<anchor name="hbCantAboveRight" x="326" y="640"/>
-	<anchor name="hbCantBelow" x="214" y="-192"/>
-	<anchor name="hbCantBelowRight" x="214" y="-192"/>
+	<anchor name="hbBottom" x="238" y="-192"/>
+	<anchor name="hbCenter" x="-40" y="352"/>
+	<anchor name="hbHolam" x="8" y="640"/>
+	<anchor name="hbRafe" x="178" y="736"/>
+	<anchor name="hbMeteg" x="238" y="-192"/>
+	<anchor name="hbCantAbove" x="178" y="640"/>
+	<anchor name="hbCantAboveLeft" x="8" y="640"/>
+	<anchor name="hbCantAboveRight" x="350" y="640"/>
+	<anchor name="hbCantBelow" x="238" y="-192"/>
+	<anchor name="hbCantBelowRight" x="238" y="-192"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b028b575e327f2e8a6d48e04a057116f52bef676</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

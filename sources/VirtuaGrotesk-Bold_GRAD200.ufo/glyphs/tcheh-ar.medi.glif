@@ -5,10 +5,12 @@
 		<component base="hah-ar.medi"/>
 		<component base="threedotsdowncenter-ar" xOffset="90" yOffset="-528"/>
 	</outline>
-	<anchor name="bottom" x="406" y="-176"/>
+	<anchor name="bottom" x="406" y="-178"/>
 	<anchor name="top" x="280" y="574"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>3f0da612260b0d1a3b7d730b573e0d2d66bc6881</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

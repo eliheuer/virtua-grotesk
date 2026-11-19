@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="emacron" format="2">
 	<unicode hex="0113"/>
-	<advance width="608"/>
+	<advance width="616"/>
 	<outline>
 		<component base="e"/>
-		<component base="macron" xOffset="150"/>
+		<component base="macron" xOffset="142"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>d564eee4bc10c8ba8405901d52b032b8e493e38d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

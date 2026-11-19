@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dieresis" format="2">
 	<unicode hex="00A8"/>
-	<advance width="312"/>
+	<advance width="360"/>
 	<outline>
 		<contour>
-			<point x="-12" y="666" type="line"/>
-			<point x="4" y="650" type="line"/>
-			<point x="100" y="650" type="line"/>
-			<point x="116" y="666" type="line"/>
-			<point x="116" y="752" type="line"/>
-			<point x="100" y="768" type="line"/>
-			<point x="4" y="768" type="line"/>
-			<point x="-12" y="752" type="line"/>
+			<point x="12" y="666" type="line"/>
+			<point x="28" y="650" type="line"/>
+			<point x="124" y="650" type="line"/>
+			<point x="140" y="666" type="line"/>
+			<point x="140" y="752" type="line"/>
+			<point x="124" y="768" type="line"/>
+			<point x="28" y="768" type="line"/>
+			<point x="12" y="752" type="line"/>
 		</contour>
 		<contour>
-			<point x="196" y="666" type="line"/>
-			<point x="212" y="650" type="line"/>
-			<point x="308" y="650" type="line"/>
-			<point x="324" y="666" type="line"/>
-			<point x="324" y="752" type="line"/>
-			<point x="308" y="768" type="line"/>
-			<point x="212" y="768" type="line"/>
-			<point x="196" y="752" type="line"/>
+			<point x="220" y="666" type="line"/>
+			<point x="236" y="650" type="line"/>
+			<point x="332" y="650" type="line"/>
+			<point x="348" y="666" type="line"/>
+			<point x="348" y="752" type="line"/>
+			<point x="332" y="768" type="line"/>
+			<point x="236" y="768" type="line"/>
+			<point x="220" y="752" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="156" y="576"/>
-	<anchor name="top" x="156" y="800"/>
+	<anchor name="_top" x="180" y="576"/>
+	<anchor name="top" x="180" y="800"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>1742b99de1d25266658f0d602cd6f39b43c1cd7c</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gershayim-hb" format="2">
 	<unicode hex="05F4"/>
-	<advance width="320"/>
+	<advance width="368"/>
 	<outline>
 		<contour>
-			<point x="-24" y="496" type="line"/>
-			<point x="72" y="496" type="line"/>
-			<point x="88" y="512" type="line"/>
-			<point x="136" y="656" type="line"/>
-			<point x="120" y="672" type="line"/>
-			<point x="24" y="672" type="line"/>
-			<point x="8" y="656" type="line"/>
-			<point x="-40" y="512" type="line"/>
+			<point x="0" y="496" type="line"/>
+			<point x="96" y="496" type="line"/>
+			<point x="112" y="512" type="line"/>
+			<point x="160" y="656" type="line"/>
+			<point x="144" y="672" type="line"/>
+			<point x="48" y="672" type="line"/>
+			<point x="32" y="656" type="line"/>
+			<point x="-16" y="512" type="line"/>
 		</contour>
 		<contour>
-			<point x="200" y="496" type="line"/>
-			<point x="296" y="496" type="line"/>
-			<point x="312" y="512" type="line"/>
-			<point x="360" y="656" type="line"/>
-			<point x="344" y="672" type="line"/>
-			<point x="248" y="672" type="line"/>
-			<point x="232" y="656" type="line"/>
-			<point x="184" y="512" type="line"/>
+			<point x="224" y="496" type="line"/>
+			<point x="320" y="496" type="line"/>
+			<point x="336" y="512" type="line"/>
+			<point x="384" y="656" type="line"/>
+			<point x="368" y="672" type="line"/>
+			<point x="272" y="672" type="line"/>
+			<point x="256" y="656" type="line"/>
+			<point x="208" y="512" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>3c39c12725f83dfb571a204d0e47d53ce5c072e0</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

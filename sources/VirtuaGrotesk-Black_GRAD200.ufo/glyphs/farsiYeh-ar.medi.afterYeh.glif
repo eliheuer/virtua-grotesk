@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="farsiYeh-ar.medi.afterYeh" format="2">
-	<advance width="552"/>
+	<advance width="550"/>
 	<outline>
 		<contour>
 			<point x="64" y="0" type="line" smooth="yes"/>
@@ -11,8 +11,8 @@
 			<point x="234" y="0"/>
 			<point x="280" y="0"/>
 			<point x="344" y="0" type="curve" smooth="yes"/>
-			<point x="552" y="0" type="line"/>
-			<point x="552" y="212" type="line"/>
+			<point x="550" y="0" type="line"/>
+			<point x="550" y="212" type="line"/>
 			<point x="344" y="212" type="line" smooth="yes"/>
 			<point x="320" y="212"/>
 			<point x="316" y="220"/>
@@ -38,10 +38,12 @@
 	<anchor name="bottom" x="266" y="-370"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8fda4781b0b1b6f62c4c51bb9385d75ff8a02277</string>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

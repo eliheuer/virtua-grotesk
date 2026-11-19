@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="uniFB27" format="2">
 	<unicode hex="FB27"/>
-	<advance width="872"/>
+	<advance width="870"/>
 	<outline>
 		<contour>
 			<point x="620" y="16" type="line"/>
@@ -34,6 +34,8 @@
 	<anchor name="hbCantBelowRight" x="428" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>66a16eb8be86688192417876661ad930ab509361</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

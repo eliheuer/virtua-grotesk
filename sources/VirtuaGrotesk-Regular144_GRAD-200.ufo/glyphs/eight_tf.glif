@@ -1,66 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="eight.tf" format="2">
-	<advance width="616"/>
+	<advance width="632"/>
 	<outline>
 		<contour>
-			<point x="306" y="-16" type="curve" smooth="yes"/>
-			<point x="496" y="-16"/>
-			<point x="586" y="78"/>
-			<point x="586" y="228" type="curve" smooth="yes"/>
-			<point x="586" y="334"/>
-			<point x="508" y="408"/>
-			<point x="436" y="424" type="curve"/>
-			<point x="436" y="432" type="line"/>
-			<point x="474" y="446"/>
-			<point x="548" y="486"/>
-			<point x="548" y="578" type="curve" smooth="yes"/>
-			<point x="548" y="690"/>
-			<point x="476" y="782"/>
-			<point x="306" y="784" type="curve" smooth="yes"/>
-			<point x="136" y="786"/>
-			<point x="60" y="690"/>
-			<point x="60" y="578" type="curve" smooth="yes"/>
-			<point x="60" y="486"/>
-			<point x="134" y="450"/>
-			<point x="174" y="436" type="curve"/>
-			<point x="174" y="428" type="line"/>
-			<point x="114" y="410"/>
-			<point x="24" y="334"/>
-			<point x="24" y="228" type="curve" smooth="yes"/>
-			<point x="24" y="78"/>
-			<point x="114" y="-16"/>
+			<point x="314" y="-16" type="curve" smooth="yes"/>
+			<point x="504" y="-16"/>
+			<point x="594" y="78"/>
+			<point x="594" y="228" type="curve" smooth="yes"/>
+			<point x="594" y="334"/>
+			<point x="516" y="408"/>
+			<point x="444" y="424" type="curve"/>
+			<point x="444" y="432" type="line"/>
+			<point x="482" y="446"/>
+			<point x="556" y="486"/>
+			<point x="556" y="578" type="curve" smooth="yes"/>
+			<point x="556" y="690"/>
+			<point x="484" y="782"/>
+			<point x="314" y="784" type="curve" smooth="yes"/>
+			<point x="144" y="786"/>
+			<point x="68" y="690"/>
+			<point x="68" y="578" type="curve" smooth="yes"/>
+			<point x="68" y="486"/>
+			<point x="142" y="450"/>
+			<point x="182" y="436" type="curve"/>
+			<point x="182" y="428" type="line"/>
+			<point x="122" y="410"/>
+			<point x="32" y="334"/>
+			<point x="32" y="228" type="curve" smooth="yes"/>
+			<point x="32" y="78"/>
+			<point x="122" y="-16"/>
 		</contour>
 		<contour>
-			<point x="306" y="472" type="curve" smooth="yes"/>
-			<point x="206" y="474"/>
-			<point x="142" y="510"/>
-			<point x="142" y="586" type="curve" smooth="yes"/>
-			<point x="142" y="662"/>
-			<point x="200" y="708"/>
-			<point x="306" y="708" type="curve" smooth="yes"/>
-			<point x="410" y="708"/>
-			<point x="468" y="662"/>
-			<point x="468" y="586" type="curve" smooth="yes"/>
-			<point x="468" y="510"/>
-			<point x="406" y="470"/>
+			<point x="314" y="472" type="curve" smooth="yes"/>
+			<point x="214" y="474"/>
+			<point x="150" y="510"/>
+			<point x="150" y="586" type="curve" smooth="yes"/>
+			<point x="150" y="662"/>
+			<point x="208" y="708"/>
+			<point x="314" y="708" type="curve" smooth="yes"/>
+			<point x="418" y="708"/>
+			<point x="476" y="662"/>
+			<point x="476" y="586" type="curve" smooth="yes"/>
+			<point x="476" y="510"/>
+			<point x="414" y="470"/>
 		</contour>
 		<contour>
-			<point x="306" y="58" type="curve" smooth="yes"/>
-			<point x="188" y="58"/>
-			<point x="102" y="122"/>
-			<point x="102" y="226" type="curve" smooth="yes"/>
-			<point x="102" y="340"/>
-			<point x="188" y="394"/>
-			<point x="306" y="394" type="curve" smooth="yes"/>
-			<point x="422" y="394"/>
-			<point x="510" y="340"/>
-			<point x="510" y="226" type="curve" smooth="yes"/>
-			<point x="510" y="122"/>
-			<point x="422" y="58"/>
+			<point x="314" y="58" type="curve" smooth="yes"/>
+			<point x="196" y="58"/>
+			<point x="110" y="122"/>
+			<point x="110" y="226" type="curve" smooth="yes"/>
+			<point x="110" y="340"/>
+			<point x="196" y="394"/>
+			<point x="314" y="394" type="curve" smooth="yes"/>
+			<point x="430" y="394"/>
+			<point x="518" y="340"/>
+			<point x="518" y="226" type="curve" smooth="yes"/>
+			<point x="518" y="122"/>
+			<point x="430" y="58"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>6296f969b4c2244cc5920b4491d8540690f80d6b</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qaf-ar.init" format="2">
-	<advance width="496"/>
+	<advance width="520"/>
 	<outline>
 		<component base="fehDotless-ar.init"/>
-		<component base="twodotshorizontalabove-ar" xOffset="120" yOffset="96"/>
+		<component base="twodotshorizontalabove-ar" xOffset="96" yOffset="96"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a2822dca18a96cca963471e88d972fad7f1724ea</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

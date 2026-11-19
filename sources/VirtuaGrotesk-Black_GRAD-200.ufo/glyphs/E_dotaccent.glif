@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Edotaccent" format="2">
 	<unicode hex="0116"/>
-	<advance width="728"/>
+	<advance width="726"/>
 	<outline>
 		<component base="E"/>
 		<component base="dotaccent" xOffset="268" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0c931e7672ae9d35987400c9a5824514264e843b</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

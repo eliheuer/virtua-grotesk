@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="florin" format="2">
 	<unicode hex="0192"/>
-	<advance width="440"/>
+	<advance width="442"/>
 	<outline>
 		<contour>
 			<point x="80" y="-86" type="line" smooth="yes"/>
@@ -50,6 +50,8 @@
 	<anchor name="top" x="340" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>4569b13be36134d407fc0e4d2703c4e503d9a270</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

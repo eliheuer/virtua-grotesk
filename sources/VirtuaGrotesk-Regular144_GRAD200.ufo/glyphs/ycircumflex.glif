@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ycircumflex" format="2">
 	<unicode hex="0177"/>
-	<advance width="568"/>
+	<advance width="592"/>
 	<outline>
 		<component base="y"/>
-		<component base="circumflex" xOffset="82"/>
+		<component base="circumflex" xOffset="90"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>796fe92c690ce882f080728e6ff992de800aeea0</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

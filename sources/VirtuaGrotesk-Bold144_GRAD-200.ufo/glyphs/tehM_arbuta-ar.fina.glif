@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tehMarbuta-ar.fina" format="2">
-	<advance width="568"/>
+	<advance width="592"/>
 	<outline>
 		<component base="heh-ar.fina"/>
 		<component base="twodotshorizontalabove-ar" xOffset="156" yOffset="-132"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a38d34c69c046e290d18c7f4973cac41cf052cad</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

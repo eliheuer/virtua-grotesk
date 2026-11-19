@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tehThreedotsdown-ar.medi" format="2">
-	<advance width="376"/>
+	<advance width="374"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="threedotsdownabove-ar" xOffset="-12" yOffset="-84"/>
+		<component base="threedotsdownabove-ar" xOffset="-36" yOffset="-84"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0f274b72666d5f33a1e27e34eaec39b3c7a3f8d5</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

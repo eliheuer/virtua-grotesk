@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dotlessiogonek" format="2">
-	<advance width="264"/>
+	<advance width="280"/>
 	<outline>
 		<component base="idotless"/>
-		<component base="ogonek" xOffset="40"/>
+		<component base="ogonek" xOffset="48"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>82e7beafa9925c8fbe5ce87a5f1f60618dca63f8</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

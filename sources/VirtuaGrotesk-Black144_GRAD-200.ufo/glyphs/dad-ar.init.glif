@@ -3,10 +3,12 @@
 	<advance width="1088"/>
 	<outline>
 		<component base="sad-ar.init"/>
-		<component base="dotabove-ar" xOffset="520" yOffset="-128"/>
+		<component base="dotabove-ar" xOffset="504" yOffset="-128"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e85df92e94059f2e5c1cbd2bbf005700b2e2aef1</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

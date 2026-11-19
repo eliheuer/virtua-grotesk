@@ -92,7 +92,7 @@
 			<point x="388" y="-208"/>
 			<point x="450" y="-252"/>
 		</contour>
-		<component base="dotabove-ar" xOffset="456" yOffset="96"/>
+		<component base="dotabove-ar" xOffset="440" yOffset="96"/>
 	</outline>
 	<anchor name="top_1" x="608" y="908"/>
 	<anchor name="bottom_1" x="748" y="-64"/>
@@ -100,6 +100,8 @@
 	<anchor name="bottom_2" x="360" y="-300"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>f545950519a973a14be30c2f1c1c5928c2e7b370</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

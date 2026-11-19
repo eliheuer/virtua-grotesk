@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Y" format="2">
 	<unicode hex="0059"/>
-	<advance width="856"/>
+	<advance width="890"/>
 	<outline>
 		<contour>
-			<point x="336" y="16" type="line"/>
-			<point x="352" y="0" type="line"/>
-			<point x="504" y="0" type="line"/>
-			<point x="520" y="16" type="line"/>
-			<point x="520" y="316" type="line"/>
-			<point x="796" y="704" type="line"/>
-			<point x="796" y="752" type="line"/>
-			<point x="780" y="768" type="line"/>
-			<point x="636" y="768" type="line"/>
-			<point x="620" y="752" type="line"/>
-			<point x="436" y="504" type="line"/>
-			<point x="428" y="504" type="line"/>
-			<point x="244" y="752" type="line"/>
-			<point x="228" y="768" type="line"/>
-			<point x="76" y="768" type="line"/>
-			<point x="60" y="752" type="line"/>
-			<point x="60" y="704" type="line"/>
-			<point x="336" y="316" type="line"/>
+			<point x="352" y="16" type="line"/>
+			<point x="368" y="0" type="line"/>
+			<point x="520" y="0" type="line"/>
+			<point x="536" y="16" type="line"/>
+			<point x="536" y="316" type="line"/>
+			<point x="812" y="704" type="line"/>
+			<point x="812" y="752" type="line"/>
+			<point x="796" y="768" type="line"/>
+			<point x="652" y="768" type="line"/>
+			<point x="636" y="752" type="line"/>
+			<point x="452" y="504" type="line"/>
+			<point x="444" y="504" type="line"/>
+			<point x="260" y="752" type="line"/>
+			<point x="244" y="768" type="line"/>
+			<point x="92" y="768" type="line"/>
+			<point x="76" y="752" type="line"/>
+			<point x="76" y="704" type="line"/>
+			<point x="352" y="316" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="396" y="768"/>
-	<anchor name="bottom" x="396" y="0"/>
+	<anchor name="top" x="412" y="768"/>
+	<anchor name="bottom" x="412" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>79a9200d9c064d1ab7622e6992f9fc08b20064d7</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>

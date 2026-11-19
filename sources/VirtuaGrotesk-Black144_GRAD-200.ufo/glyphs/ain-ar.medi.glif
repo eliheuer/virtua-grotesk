@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ain-ar.medi" format="2">
-	<advance width="720"/>
+	<advance width="722"/>
 	<outline>
 		<contour>
-			<point x="720" y="0" type="line"/>
-			<point x="720" y="176" type="line"/>
+			<point x="722" y="0" type="line"/>
+			<point x="722" y="176" type="line"/>
 			<point x="552" y="176" type="line"/>
 			<point x="544" y="184" type="line"/>
 			<point x="544" y="192" type="line"/>
@@ -56,6 +56,8 @@
 	<anchor name="topDots" x="160" y="576"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c87ff00fe5bb16d6d41300e0a7fbfdf1cc483c50</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

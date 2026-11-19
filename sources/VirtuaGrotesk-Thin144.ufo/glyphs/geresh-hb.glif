@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="geresh-hb" format="2">
 	<unicode hex="05F3"/>
-	<advance width="112"/>
+	<advance width="160"/>
 	<outline>
 		<contour>
-			<point x="8" y="496" type="line"/>
-			<point x="52" y="496" type="line"/>
-			<point x="68" y="512" type="line"/>
-			<point x="116" y="656" type="line"/>
-			<point x="100" y="672" type="line"/>
-			<point x="56" y="672" type="line"/>
-			<point x="40" y="656" type="line"/>
-			<point x="-8" y="512" type="line"/>
+			<point x="32" y="496" type="line"/>
+			<point x="76" y="496" type="line"/>
+			<point x="92" y="512" type="line"/>
+			<point x="140" y="656" type="line"/>
+			<point x="124" y="672" type="line"/>
+			<point x="80" y="672" type="line"/>
+			<point x="64" y="656" type="line"/>
+			<point x="16" y="512" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>861e49aae1c13e2738e438f92c5f1d34e4048322</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

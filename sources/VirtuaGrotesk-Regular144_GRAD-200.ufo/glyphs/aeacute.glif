@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="aeacute" format="2">
 	<unicode hex="01FD"/>
-	<advance width="968"/>
+	<advance width="984"/>
 	<outline>
 		<component base="ae"/>
 		<component base="acute" xOffset="348"/>
@@ -10,6 +10,8 @@
 	<anchor name="bottom" x="488" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>fe6bf944e47e084f27c5cd6a7d036fe07ef746c3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -26,10 +26,12 @@
 	<anchor name="top" x="286" y="576"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>99add82706d5318da69dca6570bc760bd5417be4</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -74,6 +74,8 @@
 	<anchor name="topDots" x="400" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>82bc6564a5120fc289aecb08727df6dd91cf6d51</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.kern1</key>
@@ -81,7 +83,7 @@
 			<key>public.kern2</key>
 			<string>public.kern2.kaf-ar</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

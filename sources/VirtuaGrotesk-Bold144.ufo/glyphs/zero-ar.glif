@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zero-ar" format="2">
 	<unicode hex="0660"/>
-	<advance width="344"/>
+	<advance width="352"/>
 	<outline>
 		<contour>
-			<point x="102" y="196" type="line"/>
-			<point x="170" y="196" type="line"/>
-			<point x="220" y="248" type="line"/>
-			<point x="220" y="296" type="line"/>
-			<point x="170" y="348" type="line"/>
-			<point x="102" y="348" type="line"/>
-			<point x="52" y="296" type="line"/>
-			<point x="52" y="248" type="line"/>
+			<point x="110" y="196" type="line"/>
+			<point x="178" y="196" type="line"/>
+			<point x="228" y="248" type="line"/>
+			<point x="228" y="296" type="line"/>
+			<point x="178" y="348" type="line"/>
+			<point x="110" y="348" type="line"/>
+			<point x="60" y="296" type="line"/>
+			<point x="60" y="248" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="136" y="196"/>
-	<anchor name="top" x="136" y="348"/>
-	<anchor name="bottomDots" x="136" y="196"/>
-	<anchor name="topDots" x="136" y="348"/>
+	<anchor name="bottom" x="144" y="196"/>
+	<anchor name="top" x="144" y="348"/>
+	<anchor name="bottomDots" x="144" y="196"/>
+	<anchor name="topDots" x="144" y="348"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>63ea20fcc3b28a50a28612e7ff42090f57259049</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

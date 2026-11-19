@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="seenSixdots-ar.init" format="2">
-	<advance width="960"/>
+	<advance width="958"/>
 	<outline>
 		<contour>
 			<point x="424" y="576" type="curve" smooth="yes"/>
@@ -94,6 +94,8 @@
 	<anchor name="topDots" x="464" y="368"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ae2acb8f194d9fe953ec28dc53f27edd53df127e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

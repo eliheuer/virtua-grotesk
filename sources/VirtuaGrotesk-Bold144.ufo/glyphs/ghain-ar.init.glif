@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ghain-ar.init" format="2">
-	<advance width="536"/>
+	<advance width="560"/>
 	<outline>
 		<component base="ain-ar.init"/>
-		<component base="dotabove-ar" xOffset="144" yOffset="-64"/>
+		<component base="dotabove-ar" xOffset="120" yOffset="-64"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b4fcbc6563958334c359e3e2725b790e531ade8f</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

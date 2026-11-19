@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="macron" format="2">
 	<unicode hex="00AF"/>
-	<advance width="312"/>
+	<advance width="344"/>
 	<outline>
 		<contour>
-			<point x="24" y="656" type="line"/>
-			<point x="288" y="656" type="line"/>
-			<point x="304" y="672" type="line"/>
-			<point x="304" y="736" type="line"/>
-			<point x="288" y="752" type="line"/>
-			<point x="24" y="752" type="line"/>
-			<point x="8" y="736" type="line"/>
-			<point x="8" y="672" type="line"/>
+			<point x="40" y="656" type="line"/>
+			<point x="304" y="656" type="line"/>
+			<point x="320" y="672" type="line"/>
+			<point x="320" y="736" type="line"/>
+			<point x="304" y="752" type="line"/>
+			<point x="40" y="752" type="line"/>
+			<point x="24" y="736" type="line"/>
+			<point x="24" y="672" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="156" y="576"/>
-	<anchor name="top" x="156" y="756"/>
+	<anchor name="_top" x="172" y="576"/>
+	<anchor name="top" x="172" y="756"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2c571f8b8bf720c90bfb4dd7b125b0b1f9775717</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

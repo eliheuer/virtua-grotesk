@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gbreve" format="2">
 	<unicode hex="011F"/>
-	<advance width="792"/>
+	<advance width="790"/>
 	<outline>
 		<component base="g"/>
 		<component base="breve" xOffset="196"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>685c7425b6864b053f25137d3c86fefe70ba6f2c</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

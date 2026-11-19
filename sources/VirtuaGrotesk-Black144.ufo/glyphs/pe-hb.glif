@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="pe-hb" format="2">
 	<unicode hex="05E4"/>
-	<advance width="880"/>
+	<advance width="878"/>
 	<outline>
 		<contour>
 			<point x="548" y="0" type="line" smooth="yes"/>
@@ -48,6 +48,8 @@
 	<anchor name="hbCantBelowRight" x="448" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>56c16199798f8087f302934be870bdee4904242a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

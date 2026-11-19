@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="atilde" format="2">
 	<unicode hex="00E3"/>
-	<advance width="560"/>
+	<advance width="568"/>
 	<outline>
 		<component base="a"/>
 		<component base="tilde" xOffset="66" yOffset="24"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>263df9e20193d3be74a1975d0969f665b9678801</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

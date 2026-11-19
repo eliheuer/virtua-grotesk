@@ -126,6 +126,16 @@ render: ## Draw glyphs large for review into output/render/: make render GLYPHS=
 diff: ## Build main, or BASE=..., and the working tree, and compare them with diffenator3 into output/diff/
 	$(FGTOOLS) diff --base "$(BASE)"
 
+# make masters
+# Calculates every master that is not drawn, after a change of Regular or Bold:
+# Thin and Black, then the grade masters, then the 144 pt masters. A glyph that
+# was corrected by hand in one of these masters stays. The rules and the
+# values are R44, R68 and R69 of CONTEXT.md.
+masters: ## Calculate Thin, Black, the grade masters and the 144 pt masters from Regular and Bold
+	$(FGTOOLS) draft-weights --write
+	$(FGTOOLS) draft-grade
+	$(FGTOOLS) draft-optical-size --write
+
 # make reference-fonts
 # Downloads the reference fonts that CONTEXT.md lists into reference-fonts/,
 # which Git ignores. Runebender and `make proof-web` show them beside this font.
@@ -207,4 +217,4 @@ proof-web: $(BUILD) ## Build, then serve the font beside the fonts of reference-
 clean: ## Remove fonts/ and output/
 	rm -rf fonts output
 
-.PHONY: help setup venv build test test-google-fonts test-fontgarden status queue check-design check-changes render diff reference-fonts runebender formats proof specimen media copy-format site proof-web clean
+.PHONY: help setup venv build test masters test-google-fonts test-fontgarden status queue check-design check-changes render diff reference-fonts runebender formats proof specimen media copy-format site proof-web clean

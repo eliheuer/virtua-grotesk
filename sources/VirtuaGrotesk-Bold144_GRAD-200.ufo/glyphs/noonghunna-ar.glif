@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noonghunna-ar" format="2">
 	<unicode hex="06BA"/>
-	<advance width="704"/>
+	<advance width="728"/>
 	<outline>
 		<contour>
-			<point x="54" y="144" type="line" smooth="yes"/>
-			<point x="54" y="-56"/>
-			<point x="146" y="-170"/>
-			<point x="342" y="-170" type="curve" smooth="yes"/>
-			<point x="536" y="-170"/>
-			<point x="630" y="-56"/>
-			<point x="630" y="144" type="curve" smooth="yes"/>
-			<point x="630" y="282" type="line"/>
-			<point x="614" y="298" type="line"/>
-			<point x="526" y="298" type="line"/>
-			<point x="510" y="282" type="line"/>
-			<point x="510" y="144" type="line" smooth="yes"/>
-			<point x="510" y="8"/>
-			<point x="430" y="-48"/>
-			<point x="342" y="-48" type="curve" smooth="yes"/>
-			<point x="254" y="-48"/>
-			<point x="174" y="8"/>
-			<point x="174" y="144" type="curve" smooth="yes"/>
-			<point x="174" y="282" type="line"/>
-			<point x="158" y="298" type="line"/>
-			<point x="70" y="298" type="line"/>
-			<point x="54" y="282" type="line"/>
+			<point x="78" y="144" type="line" smooth="yes"/>
+			<point x="78" y="-56"/>
+			<point x="170" y="-170"/>
+			<point x="366" y="-170" type="curve" smooth="yes"/>
+			<point x="560" y="-170"/>
+			<point x="654" y="-56"/>
+			<point x="654" y="144" type="curve" smooth="yes"/>
+			<point x="654" y="282" type="line"/>
+			<point x="638" y="298" type="line"/>
+			<point x="550" y="298" type="line"/>
+			<point x="534" y="282" type="line"/>
+			<point x="534" y="144" type="line" smooth="yes"/>
+			<point x="534" y="8"/>
+			<point x="454" y="-48"/>
+			<point x="366" y="-48" type="curve" smooth="yes"/>
+			<point x="278" y="-48"/>
+			<point x="198" y="8"/>
+			<point x="198" y="144" type="curve" smooth="yes"/>
+			<point x="198" y="282" type="line"/>
+			<point x="182" y="298" type="line"/>
+			<point x="94" y="298" type="line"/>
+			<point x="78" y="282" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="top" x="340" y="272"/>
-	<anchor name="topDots" x="340" y="288"/>
-	<anchor name="bottom" x="340" y="-176"/>
-	<anchor name="bottomDots" x="340" y="-176"/>
+	<anchor name="top" x="364" y="272"/>
+	<anchor name="topDots" x="364" y="288"/>
+	<anchor name="bottom" x="364" y="-176"/>
+	<anchor name="bottomDots" x="364" y="-176"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>55ca5117d090d9cf6565e224f09c4c73ade3ff35</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alefHamzabelow-ar" format="2">
-	<advance width="600"/>
+	<advance width="608"/>
 	<outline>
 		<component base="lam_alef-ar" xOffset="28"/>
-		<component base="hamzabelow-ar" identifier="la6103295244" xOffset="8"/>
+		<component base="hamzabelow-ar" identifier="la6103295244" xOffset="16"/>
 	</outline>
-	<anchor name="top_1" x="56" y="768"/>
-	<anchor name="bottom_1" x="432" y="0"/>
-	<anchor name="top_2" x="456" y="768"/>
-	<anchor name="bottom_2" x="120" y="-318"/>
+	<anchor name="top_1" x="64" y="768"/>
+	<anchor name="bottom_1" x="440" y="0"/>
+	<anchor name="top_2" x="464" y="768"/>
+	<anchor name="bottom_2" x="128" y="-318"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>13b94e1b9a40c6c25d874cde41ee99e3b44ed917</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

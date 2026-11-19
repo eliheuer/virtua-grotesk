@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="quoteright" format="2">
 	<unicode hex="2019"/>
-	<advance width="248"/>
+	<advance width="246"/>
 	<outline>
 		<component base="comma" xOffset="20" yOffset="664"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e6d650980863a7eaab04f4a266c9fced135debbc</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

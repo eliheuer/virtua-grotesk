@@ -1,34 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="doublestroke-ar" format="2">
-	<advance width="344"/>
+	<advance width="368"/>
 	<outline>
 		<contour>
-			<point x="-34" y="448" type="line"/>
-			<point x="122" y="478" type="line"/>
-			<point x="122" y="478" type="line"/>
-			<point x="122" y="768" type="line"/>
-			<point x="122" y="768" type="line"/>
-			<point x="-34" y="768" type="line"/>
-			<point x="-34" y="768" type="line"/>
-			<point x="-34" y="448" type="line"/>
+			<point x="-10" y="448" type="line"/>
+			<point x="146" y="478" type="line"/>
+			<point x="146" y="478" type="line"/>
+			<point x="146" y="768" type="line"/>
+			<point x="146" y="768" type="line"/>
+			<point x="-10" y="768" type="line"/>
+			<point x="-10" y="768" type="line"/>
+			<point x="-10" y="448" type="line"/>
 		</contour>
 		<contour>
-			<point x="126" y="448" type="line"/>
-			<point x="282" y="478" type="line"/>
-			<point x="282" y="478" type="line"/>
-			<point x="282" y="768" type="line"/>
-			<point x="282" y="768" type="line"/>
-			<point x="126" y="768" type="line"/>
-			<point x="126" y="768" type="line"/>
-			<point x="126" y="448" type="line"/>
+			<point x="150" y="448" type="line"/>
+			<point x="306" y="478" type="line"/>
+			<point x="306" y="478" type="line"/>
+			<point x="306" y="768" type="line"/>
+			<point x="306" y="768" type="line"/>
+			<point x="150" y="768" type="line"/>
+			<point x="150" y="768" type="line"/>
+			<point x="150" y="448" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="124" y="448"/>
-	<anchor name="top" x="124" y="768"/>
-	<anchor name="bottomDots" x="124" y="448"/>
-	<anchor name="topDots" x="124" y="768"/>
+	<anchor name="bottom" x="148" y="448"/>
+	<anchor name="top" x="148" y="768"/>
+	<anchor name="bottomDots" x="148" y="448"/>
+	<anchor name="topDots" x="148" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>37482ac1638946a86722ca296681bd9b3b26e4f6</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

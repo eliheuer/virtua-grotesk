@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="grave" format="2">
 	<unicode hex="0060"/>
-	<advance width="252"/>
+	<advance width="260"/>
 	<outline>
 		<contour>
-			<point x="154" y="654" type="line"/>
-			<point x="154" y="670" type="line"/>
-			<point x="114" y="816" type="line"/>
-			<point x="98" y="832" type="line"/>
-			<point x="22" y="832" type="line"/>
-			<point x="6" y="816" type="line"/>
-			<point x="6" y="800" type="line"/>
-			<point x="98" y="654" type="line"/>
-			<point x="114" y="638" type="line"/>
-			<point x="138" y="638" type="line"/>
+			<point x="162" y="654" type="line"/>
+			<point x="162" y="670" type="line"/>
+			<point x="122" y="816" type="line"/>
+			<point x="106" y="832" type="line"/>
+			<point x="30" y="832" type="line"/>
+			<point x="14" y="816" type="line"/>
+			<point x="14" y="800" type="line"/>
+			<point x="106" y="654" type="line"/>
+			<point x="122" y="638" type="line"/>
+			<point x="146" y="638" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="140" y="576"/>
-	<anchor name="top" x="140" y="864"/>
+	<anchor name="_top" x="148" y="576"/>
+	<anchor name="top" x="148" y="864"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>111b6e8ead0ad3ae3bee7bcbcc8b5239bbd2aeb2</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

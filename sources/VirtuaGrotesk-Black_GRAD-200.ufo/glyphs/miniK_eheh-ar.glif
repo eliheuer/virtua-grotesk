@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="miniKeheh-ar" format="2">
-	<advance width="424"/>
+	<advance width="426"/>
 	<outline>
 		<contour>
 			<point x="50" y="572" type="line"/>
@@ -48,6 +48,8 @@
 	<anchor name="_topDots" x="161" y="460"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8b1443ef9a30973659f5c58c4c41fcd4edf5e714</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

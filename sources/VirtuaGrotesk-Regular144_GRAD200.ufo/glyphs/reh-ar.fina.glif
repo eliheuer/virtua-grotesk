@@ -1,38 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="reh-ar.fina" format="2">
-	<advance width="448"/>
+	<advance width="472"/>
 	<outline>
 		<contour>
-			<point x="448" y="0" type="line"/>
-			<point x="448" y="150" type="line"/>
-			<point x="426" y="150" type="line"/>
-			<point x="410" y="166" type="line"/>
-			<point x="410" y="318" type="line"/>
-			<point x="394" y="334" type="line"/>
-			<point x="286" y="334" type="line"/>
-			<point x="270" y="318" type="line"/>
-			<point x="270" y="30" type="line" smooth="yes"/>
-			<point x="270" y="-78"/>
-			<point x="232" y="-118"/>
-			<point x="126" y="-118" type="curve" smooth="yes"/>
-			<point x="-24" y="-118" type="line"/>
-			<point x="-40" y="-134" type="line"/>
-			<point x="-40" y="-240" type="line"/>
-			<point x="-24" y="-256" type="line"/>
-			<point x="146" y="-256" type="line" smooth="yes"/>
-			<point x="334" y="-256"/>
-			<point x="410" y="-150"/>
-			<point x="410" y="-16" type="curve"/>
-			<point x="410" y="-10" type="line"/>
-			<point x="422" y="0" type="line"/>
+			<point x="472" y="0" type="line"/>
+			<point x="472" y="150" type="line"/>
+			<point x="450" y="150" type="line"/>
+			<point x="434" y="166" type="line"/>
+			<point x="434" y="318" type="line"/>
+			<point x="418" y="334" type="line"/>
+			<point x="310" y="334" type="line"/>
+			<point x="294" y="318" type="line"/>
+			<point x="294" y="30" type="line" smooth="yes"/>
+			<point x="294" y="-78"/>
+			<point x="256" y="-118"/>
+			<point x="150" y="-118" type="curve" smooth="yes"/>
+			<point x="0" y="-118" type="line"/>
+			<point x="-16" y="-134" type="line"/>
+			<point x="-16" y="-240" type="line"/>
+			<point x="0" y="-256" type="line"/>
+			<point x="170" y="-256" type="line" smooth="yes"/>
+			<point x="358" y="-256"/>
+			<point x="434" y="-150"/>
+			<point x="434" y="-16" type="curve"/>
+			<point x="434" y="-10" type="line"/>
+			<point x="446" y="0" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="222" y="-258"/>
-	<anchor name="top" x="250" y="434"/>
-	<anchor name="bottomDots" x="222" y="-258"/>
-	<anchor name="topDots" x="250" y="404"/>
+	<anchor name="bottom" x="246" y="-258"/>
+	<anchor name="top" x="274" y="434"/>
+	<anchor name="bottomDots" x="246" y="-258"/>
+	<anchor name="topDots" x="274" y="404"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c8da076c62a6963ab3f9272fc31530d05df0926a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

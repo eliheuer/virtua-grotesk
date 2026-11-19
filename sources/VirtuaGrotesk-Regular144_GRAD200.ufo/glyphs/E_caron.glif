@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Ecaron" format="2">
 	<unicode hex="011A"/>
-	<advance width="624"/>
+	<advance width="640"/>
 	<outline>
 		<component base="E"/>
 		<component base="caron" xOffset="146" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>08f36f9bd9c78831cad062f914e89d93d2a20287</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

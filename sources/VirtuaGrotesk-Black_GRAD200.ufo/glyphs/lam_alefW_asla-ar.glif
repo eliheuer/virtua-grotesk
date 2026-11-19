@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alefWasla-ar" format="2">
-	<advance width="648"/>
+	<advance width="646"/>
 	<outline>
 		<component base="lam_alef-ar"/>
 		<component base="wasla-ar" xOffset="296" yOffset="222" identifier="la7967875689"/>
@@ -11,10 +11,12 @@
 	<anchor name="bottom_2" x="74" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>6f4d3486eafde6a7af2d8206b84cd4ac21b93176</string>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 			<key>public.objectLibs</key>
 			<dict>
 				<key>la7967875689</key>

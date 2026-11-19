@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Eogonek" format="2">
 	<unicode hex="0118"/>
-	<advance width="624"/>
+	<advance width="640"/>
 	<outline>
 		<component base="E"/>
 		<component base="ogonek" xOffset="432"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2de503b38d86ec31ea000086cbd09a2717bbc400</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

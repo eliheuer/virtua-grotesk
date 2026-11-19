@@ -20,7 +20,7 @@
 			<point x="-16" y="136" type="line"/>
 			<point x="-16" y="16" type="line"/>
 		</contour>
-		<component base="threedotsdownbelow-ar" xOffset="42" yOffset="-46"/>
+		<component base="threedotsdownbelow-ar" xOffset="18" yOffset="-46"/>
 	</outline>
 	<anchor name="bottom" x="246" y="-530"/>
 	<anchor name="top" x="246" y="450"/>
@@ -28,6 +28,8 @@
 	<anchor name="topDots" x="246" y="450"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>6e6b23914fb8f3d23f1801f2412c6fd3af39439f</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

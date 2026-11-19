@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alef-hb" format="2">
 	<unicode hex="05D0"/>
-	<advance width="784"/>
+	<advance width="786"/>
 	<outline>
 		<contour>
 			<point x="720" y="16" type="line"/>
@@ -61,6 +61,8 @@
 	<anchor name="hbCantBelowRight" x="392" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>1f13cf725d5ccaddc034a9bc1e3ac87e0d38eed0</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

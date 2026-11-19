@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Sacute" format="2">
 	<unicode hex="015A"/>
-	<advance width="656"/>
+	<advance width="672"/>
 	<outline>
 		<component base="S"/>
-		<component base="acute" xOffset="188" yOffset="192"/>
+		<component base="acute" xOffset="196" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c4030dcab5a619e0e1deff81f0330a69f76abae6</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

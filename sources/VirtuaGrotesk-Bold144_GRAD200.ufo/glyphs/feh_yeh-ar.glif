@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="feh_yeh-ar" format="2">
-	<advance width="816"/>
+	<advance width="824"/>
 	<outline>
 		<contour>
 			<point x="232" y="0" type="curve" smooth="yes"/>
@@ -92,7 +92,7 @@
 			<point x="364" y="-212"/>
 			<point x="434" y="-258"/>
 		</contour>
-		<component base="dotabove-ar" xOffset="506" yOffset="140"/>
+		<component base="dotabove-ar" xOffset="482" yOffset="140"/>
 	</outline>
 	<anchor name="top_1" x="610" y="952"/>
 	<anchor name="bottom_1" x="750" y="-64"/>
@@ -100,6 +100,8 @@
 	<anchor name="bottom_2" x="344" y="-314"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>9ba6e3954df92205fc48cad8b240a0a69507f268</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

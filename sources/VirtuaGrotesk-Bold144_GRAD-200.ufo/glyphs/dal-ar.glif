@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dal-ar" format="2">
 	<unicode hex="062F"/>
-	<advance width="568"/>
+	<advance width="592"/>
 	<outline>
 		<contour>
 			<point x="322" y="0" type="line" smooth="yes"/>
@@ -36,6 +36,8 @@
 	<anchor name="topDots" x="276" y="410"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>6086a8b8fd9ef26a217ca6aee9ab49c8a9727bb9</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

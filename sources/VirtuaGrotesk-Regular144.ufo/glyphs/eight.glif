@@ -1,67 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="eight" format="2">
 	<unicode hex="0038"/>
-	<advance width="608"/>
+	<advance width="624"/>
 	<outline>
 		<contour>
-			<point x="112" y="-16"/>
-			<point x="304" y="-16" type="curve" smooth="yes"/>
-			<point x="496" y="-16"/>
-			<point x="592" y="84"/>
-			<point x="592" y="228" type="curve" smooth="yes"/>
-			<point x="592" y="332"/>
-			<point x="518" y="408"/>
-			<point x="448" y="424" type="curve"/>
-			<point x="448" y="432" type="line"/>
-			<point x="484" y="446"/>
-			<point x="556" y="484"/>
-			<point x="556" y="580" type="curve" smooth="yes"/>
-			<point x="556" y="708"/>
-			<point x="464" y="784"/>
-			<point x="304" y="784" type="curve" smooth="yes"/>
-			<point x="160" y="784"/>
-			<point x="52" y="708"/>
-			<point x="52" y="580" type="curve" smooth="yes"/>
-			<point x="52" y="484"/>
-			<point x="122" y="446"/>
-			<point x="160" y="432" type="curve"/>
-			<point x="160" y="424" type="line"/>
-			<point x="104" y="408"/>
-			<point x="16" y="332"/>
-			<point x="16" y="228" type="curve" smooth="yes"/>
-			<point x="16" y="84"/>
+			<point x="120" y="-16"/>
+			<point x="312" y="-16" type="curve" smooth="yes"/>
+			<point x="504" y="-16"/>
+			<point x="600" y="84"/>
+			<point x="600" y="228" type="curve" smooth="yes"/>
+			<point x="600" y="332"/>
+			<point x="526" y="408"/>
+			<point x="456" y="424" type="curve"/>
+			<point x="456" y="432" type="line"/>
+			<point x="492" y="446"/>
+			<point x="564" y="484"/>
+			<point x="564" y="580" type="curve" smooth="yes"/>
+			<point x="564" y="708"/>
+			<point x="472" y="784"/>
+			<point x="312" y="784" type="curve" smooth="yes"/>
+			<point x="168" y="784"/>
+			<point x="60" y="708"/>
+			<point x="60" y="580" type="curve" smooth="yes"/>
+			<point x="60" y="484"/>
+			<point x="130" y="446"/>
+			<point x="168" y="432" type="curve"/>
+			<point x="168" y="424" type="line"/>
+			<point x="112" y="408"/>
+			<point x="24" y="332"/>
+			<point x="24" y="228" type="curve" smooth="yes"/>
+			<point x="24" y="84"/>
 		</contour>
 		<contour>
-			<point x="304" y="472" type="curve" smooth="yes"/>
-			<point x="208" y="472"/>
-			<point x="152" y="516"/>
-			<point x="152" y="580" type="curve" smooth="yes"/>
-			<point x="152" y="652"/>
-			<point x="208" y="696"/>
-			<point x="304" y="696" type="curve" smooth="yes"/>
-			<point x="400" y="696"/>
-			<point x="456" y="652"/>
-			<point x="456" y="580" type="curve" smooth="yes"/>
-			<point x="456" y="516"/>
-			<point x="400" y="472"/>
+			<point x="312" y="472" type="curve" smooth="yes"/>
+			<point x="216" y="472"/>
+			<point x="160" y="516"/>
+			<point x="160" y="580" type="curve" smooth="yes"/>
+			<point x="160" y="652"/>
+			<point x="216" y="696"/>
+			<point x="312" y="696" type="curve" smooth="yes"/>
+			<point x="408" y="696"/>
+			<point x="464" y="652"/>
+			<point x="464" y="580" type="curve" smooth="yes"/>
+			<point x="464" y="516"/>
+			<point x="408" y="472"/>
 		</contour>
 		<contour>
-			<point x="408" y="72"/>
-			<point x="304" y="72" type="curve" smooth="yes"/>
-			<point x="200" y="72"/>
-			<point x="116" y="132"/>
-			<point x="116" y="228" type="curve" smooth="yes"/>
-			<point x="116" y="332"/>
-			<point x="200" y="384"/>
-			<point x="304" y="384" type="curve" smooth="yes"/>
-			<point x="408" y="384"/>
-			<point x="492" y="332"/>
-			<point x="492" y="228" type="curve" smooth="yes"/>
-			<point x="492" y="132"/>
+			<point x="416" y="72"/>
+			<point x="312" y="72" type="curve" smooth="yes"/>
+			<point x="208" y="72"/>
+			<point x="124" y="132"/>
+			<point x="124" y="228" type="curve" smooth="yes"/>
+			<point x="124" y="332"/>
+			<point x="208" y="384"/>
+			<point x="312" y="384" type="curve" smooth="yes"/>
+			<point x="416" y="384"/>
+			<point x="500" y="332"/>
+			<point x="500" y="228" type="curve" smooth="yes"/>
+			<point x="500" y="132"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>e2725a8f0679cf9776aa1907a0e5e09baf130235</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

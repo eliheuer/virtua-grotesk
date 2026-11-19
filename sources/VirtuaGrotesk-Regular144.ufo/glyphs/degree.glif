@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="degree" format="2">
 	<unicode hex="00B0"/>
-	<advance width="352"/>
+	<advance width="368"/>
 	<outline>
 		<contour>
-			<point x="16" y="608" type="curve" smooth="yes"/>
-			<point x="16" y="520"/>
-			<point x="88" y="448"/>
-			<point x="176" y="448" type="curve" smooth="yes"/>
-			<point x="264" y="448"/>
-			<point x="336" y="520"/>
-			<point x="336" y="608" type="curve" smooth="yes"/>
-			<point x="336" y="696"/>
-			<point x="264" y="768"/>
-			<point x="176" y="768" type="curve" smooth="yes"/>
-			<point x="88" y="768"/>
-			<point x="16" y="696"/>
+			<point x="24" y="608" type="curve" smooth="yes"/>
+			<point x="24" y="520"/>
+			<point x="96" y="448"/>
+			<point x="184" y="448" type="curve" smooth="yes"/>
+			<point x="272" y="448"/>
+			<point x="344" y="520"/>
+			<point x="344" y="608" type="curve" smooth="yes"/>
+			<point x="344" y="696"/>
+			<point x="272" y="768"/>
+			<point x="184" y="768" type="curve" smooth="yes"/>
+			<point x="96" y="768"/>
+			<point x="24" y="696"/>
 		</contour>
 		<contour>
-			<point x="72" y="608" type="curve" smooth="yes"/>
-			<point x="72" y="664"/>
-			<point x="120" y="712"/>
-			<point x="176" y="712" type="curve" smooth="yes"/>
-			<point x="232" y="712"/>
-			<point x="280" y="664"/>
-			<point x="280" y="608" type="curve" smooth="yes"/>
-			<point x="280" y="552"/>
-			<point x="232" y="504"/>
-			<point x="176" y="504" type="curve" smooth="yes"/>
-			<point x="120" y="504"/>
-			<point x="72" y="552"/>
+			<point x="80" y="608" type="curve" smooth="yes"/>
+			<point x="80" y="664"/>
+			<point x="128" y="712"/>
+			<point x="184" y="712" type="curve" smooth="yes"/>
+			<point x="240" y="712"/>
+			<point x="288" y="664"/>
+			<point x="288" y="608" type="curve" smooth="yes"/>
+			<point x="288" y="552"/>
+			<point x="240" y="504"/>
+			<point x="184" y="504" type="curve" smooth="yes"/>
+			<point x="128" y="504"/>
+			<point x="80" y="552"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>f8068cda5f5be4b821ba3fdd89b98ef80d269378</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Jcircumflex" format="2">
 	<unicode hex="0134"/>
-	<advance width="568"/>
+	<advance width="592"/>
 	<outline>
 		<component base="J"/>
-		<component base="circumflex" xOffset="240" yOffset="192"/>
+		<component base="circumflex" xOffset="264" yOffset="192"/>
 	</outline>
-	<anchor name="top" x="424" y="1056"/>
-	<anchor name="bottom" x="256" y="0"/>
+	<anchor name="top" x="448" y="1056"/>
+	<anchor name="bottom" x="280" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>bbb4ce83a0ae49993dc861c4634cca3904c81525</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

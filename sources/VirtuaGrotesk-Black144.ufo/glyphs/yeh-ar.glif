@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yeh-ar" format="2">
 	<unicode hex="064A"/>
-	<advance width="952"/>
+	<advance width="976"/>
 	<outline>
 		<component base="alefMaksura-ar"/>
 		<component base="twodotshorizontalbelow-ar" xOffset="438" yOffset="-40"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>503f7dd3dd8e2119947cda00b835c6dd49e6c906</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

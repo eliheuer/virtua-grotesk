@@ -3,11 +3,13 @@
 	<advance width="664"/>
 	<outline>
 		<component base="hah-ar.fina"/>
-		<component base="dotbelow-ar" xOffset="190" yOffset="104"/>
+		<component base="dotbelow-ar" xOffset="182" yOffset="104"/>
 	</outline>
 	<anchor name="bottom" x="136" y="-242"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>cb18d3dbe36b465bfce5bb792d07002daac9dbf3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

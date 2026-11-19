@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kaf-ar.init" format="2">
-	<advance width="688"/>
+	<advance width="712"/>
 	<outline>
 		<contour>
 			<point x="0" y="0" type="line"/>
@@ -47,6 +47,8 @@
 	<anchor name="bottom" x="272" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>38bfb39eb90518cd26e40fdbd9cd978402b0827b</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

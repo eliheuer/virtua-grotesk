@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="wasla-ar" format="2">
-	<advance width="344"/>
+	<advance width="346"/>
 	<outline>
 		<contour>
 			<point x="288" y="732" type="curve" smooth="yes"/>
@@ -41,6 +41,8 @@
 	<anchor name="_top" x="136" y="532"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a681b945aa7e681ad11333c1a6958e8417d38cd2</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

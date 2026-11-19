@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Cdotaccent" format="2">
 	<unicode hex="010A"/>
-	<advance width="752"/>
+	<advance width="760"/>
 	<outline>
 		<component base="C"/>
 		<component base="dotaccent" xOffset="298" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2d07b2e5ab077bab804050e93f88eed9aae219d7</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

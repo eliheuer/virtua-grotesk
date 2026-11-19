@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="alefpatah-hb" format="2">
 	<unicode hex="FB2E"/>
-	<advance width="672"/>
+	<advance width="720"/>
 	<outline>
 		<component base="alef-hb"/>
-		<component base="patah-hb" xOffset="226"/>
+		<component base="patah-hb" xOffset="250"/>
 	</outline>
-	<anchor name="hbBottom" x="338" y="0"/>
-	<anchor name="hbCenter" x="338" y="42"/>
-	<anchor name="hbHolam" x="-40" y="548"/>
-	<anchor name="hbRafe" x="338" y="644"/>
-	<anchor name="hbMeteg" x="94" y="0"/>
-	<anchor name="hbCantAbove" x="338" y="548"/>
-	<anchor name="hbCantAboveLeft" x="-40" y="548"/>
-	<anchor name="hbCantAboveRight" x="698" y="548"/>
-	<anchor name="hbCantBelow" x="338" y="0"/>
-	<anchor name="hbCantBelowRight" x="338" y="0"/>
-	<anchor name="hbCantLeftVowel" x="258" y="0"/>
-	<anchor name="hbCantRightVowel" x="418" y="0"/>
+	<anchor name="hbBottom" x="362" y="0"/>
+	<anchor name="hbCenter" x="362" y="42"/>
+	<anchor name="hbHolam" x="-16" y="548"/>
+	<anchor name="hbRafe" x="362" y="644"/>
+	<anchor name="hbMeteg" x="118" y="0"/>
+	<anchor name="hbCantAbove" x="362" y="548"/>
+	<anchor name="hbCantAboveLeft" x="-16" y="548"/>
+	<anchor name="hbCantAboveRight" x="722" y="548"/>
+	<anchor name="hbCantBelow" x="362" y="0"/>
+	<anchor name="hbCantBelowRight" x="362" y="0"/>
+	<anchor name="hbCantLeftVowel" x="282" y="0"/>
+	<anchor name="hbCantRightVowel" x="442" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ee294b974ffb5735de33b8de8f7e5057576c321b</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

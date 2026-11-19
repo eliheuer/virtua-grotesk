@@ -40,7 +40,8 @@ TITLE_LEFT_BEARING = 0.03125
 
 
 def proof_text(x, y, size, weight, text):
-    return f'text\t{x}\t{y}\t{size}\t{weight}\t0\t0\t0\t255\t\t{text}'
+    # Each text has the optical size of its type size.
+    return f'text\t{x}\t{y}\t{size}\t{weight},opsz={size}\t0\t0\t0\t255\t\t{text}'
 
 
 def proof_rule(y, left=69, right=773):
@@ -110,7 +111,7 @@ def paired_lines(font, script, text, measure, size, weight, limit):
     for word in text.split():
         trial = f'{marked} {word}'.strip()
         pair = (without_reading_marks(trial, script), trial)
-        widths = (font.measure(line, weight) for line in pair)
+        widths = (font.measure(line, weight, size=size) for line in pair)
         if marked and any((max(advance, right) - min(0, left)) * size > measure
                           for advance, left, right in widths):
             yield without_reading_marks(marked, script), marked
@@ -146,7 +147,7 @@ def reading_page(font, script, style, weight, text):
         room = int((baseline - 293.5) // leading[size]) + 1
         for i, pair in enumerate(paired_lines(font, script, text, measure, size, weight, room)):
             for band, line in enumerate(pair):
-                x = start - font.measure(line, weight)[2] * size if rtl else start
+                x = start - font.measure(line, weight, size=size)[2] * size if rtl else start
                 y = baseline - i * leading[size] - band * band_height
                 yield proof_text(f'{x:g}', y, size, f'{weight:g}', line)
 

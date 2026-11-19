@@ -30,6 +30,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 - For a calculated edit, use `.venv/bin/fgtools edit`. Do not type the coordinates.
 - Left sidebearing: move every point and component. Right sidebearing: change the advance only.
 - Register a new glyph in `contents.plist` and `public.glyphOrder` of every master.
+- Regular and Bold at 14 pt are drawn. After a change of one of them, run `make masters`: it calculates the other masters and keeps hand corrections.
 
 ## Checks
 

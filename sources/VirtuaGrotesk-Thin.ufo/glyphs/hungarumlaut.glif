@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hungarumlaut" format="2">
 	<unicode hex="02DD"/>
-	<advance width="432"/>
+	<advance width="434"/>
 	<outline>
 		<contour>
 			<point x="86" y="638" type="line"/>
@@ -32,10 +32,12 @@
 	<anchor name="top" x="228" y="864"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>607429f772e3aa6bd4fa5e12e48077604788d576</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

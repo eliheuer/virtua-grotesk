@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zero" format="2">
 	<unicode hex="0030"/>
-	<advance width="712"/>
+	<advance width="728"/>
 	<outline>
 		<contour>
-			<point x="224" y="-16"/>
-			<point x="356" y="-16" type="curve" smooth="yes"/>
-			<point x="488" y="-16"/>
-			<point x="680" y="52"/>
-			<point x="680" y="372" type="curve" smooth="yes"/>
-			<point x="680" y="692"/>
-			<point x="488" y="760"/>
-			<point x="356" y="760" type="curve" smooth="yes"/>
-			<point x="224" y="760"/>
-			<point x="32" y="692"/>
-			<point x="32" y="372" type="curve" smooth="yes"/>
-			<point x="32" y="52"/>
+			<point x="232" y="-16"/>
+			<point x="364" y="-16" type="curve" smooth="yes"/>
+			<point x="496" y="-16"/>
+			<point x="688" y="52"/>
+			<point x="688" y="372" type="curve" smooth="yes"/>
+			<point x="688" y="692"/>
+			<point x="496" y="760"/>
+			<point x="364" y="760" type="curve" smooth="yes"/>
+			<point x="232" y="760"/>
+			<point x="40" y="692"/>
+			<point x="40" y="372" type="curve" smooth="yes"/>
+			<point x="40" y="52"/>
 		</contour>
 		<contour>
-			<point x="436" y="128"/>
-			<point x="356" y="128" type="curve" smooth="yes"/>
-			<point x="276" y="128"/>
-			<point x="212" y="212"/>
-			<point x="212" y="372" type="curve" smooth="yes"/>
-			<point x="212" y="532"/>
-			<point x="276" y="616"/>
-			<point x="356" y="616" type="curve" smooth="yes"/>
-			<point x="436" y="616"/>
-			<point x="500" y="532"/>
-			<point x="500" y="372" type="curve" smooth="yes"/>
-			<point x="500" y="212"/>
+			<point x="444" y="128"/>
+			<point x="364" y="128" type="curve" smooth="yes"/>
+			<point x="284" y="128"/>
+			<point x="220" y="212"/>
+			<point x="220" y="372" type="curve" smooth="yes"/>
+			<point x="220" y="532"/>
+			<point x="284" y="616"/>
+			<point x="364" y="616" type="curve" smooth="yes"/>
+			<point x="444" y="616"/>
+			<point x="508" y="532"/>
+			<point x="508" y="372" type="curve" smooth="yes"/>
+			<point x="508" y="212"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a722f0af780b4f046f5435951d63b483fadad035</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="theh-ar.medi" format="2">
-	<advance width="424"/>
+	<advance width="422"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
 		<component base="threedotsupabove-ar" xOffset="-4" yOffset="-144"/>
@@ -8,6 +8,8 @@
 	<anchor name="top" x="244" y="912"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2724a118d25ea466a5da956194467ddeddfb5d78</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

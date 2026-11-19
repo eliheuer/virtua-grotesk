@@ -1,37 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hungarumlaut" format="2">
 	<unicode hex="02DD"/>
-	<advance width="432"/>
+	<advance width="464"/>
 	<outline>
 		<contour>
-			<point x="28" y="640" type="line"/>
-			<point x="120" y="640" type="line"/>
-			<point x="136" y="656" type="line"/>
-			<point x="228" y="800" type="line"/>
-			<point x="228" y="816" type="line"/>
-			<point x="212" y="832" type="line"/>
-			<point x="80" y="832" type="line"/>
-			<point x="64" y="816" type="line"/>
-			<point x="12" y="672" type="line"/>
-			<point x="12" y="656" type="line"/>
+			<point x="44" y="640" type="line"/>
+			<point x="136" y="640" type="line"/>
+			<point x="152" y="656" type="line"/>
+			<point x="244" y="800" type="line"/>
+			<point x="244" y="816" type="line"/>
+			<point x="228" y="832" type="line"/>
+			<point x="96" y="832" type="line"/>
+			<point x="80" y="816" type="line"/>
+			<point x="28" y="672" type="line"/>
+			<point x="28" y="656" type="line"/>
 		</contour>
 		<contour>
-			<point x="220" y="640" type="line"/>
-			<point x="312" y="640" type="line"/>
-			<point x="328" y="656" type="line"/>
-			<point x="420" y="800" type="line"/>
-			<point x="420" y="816" type="line"/>
-			<point x="404" y="832" type="line"/>
-			<point x="272" y="832" type="line"/>
-			<point x="256" y="816" type="line"/>
-			<point x="204" y="672" type="line"/>
-			<point x="204" y="656" type="line"/>
+			<point x="236" y="640" type="line"/>
+			<point x="328" y="640" type="line"/>
+			<point x="344" y="656" type="line"/>
+			<point x="436" y="800" type="line"/>
+			<point x="436" y="816" type="line"/>
+			<point x="420" y="832" type="line"/>
+			<point x="288" y="832" type="line"/>
+			<point x="272" y="816" type="line"/>
+			<point x="220" y="672" type="line"/>
+			<point x="220" y="656" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="_top" x="216" y="576"/>
-	<anchor name="top" x="216" y="864"/>
+	<anchor name="_top" x="232" y="576"/>
+	<anchor name="top" x="232" y="864"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>5417df7627a8a737c5f05439b8863386981f9c68</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gimel-hb" format="2">
 	<unicode hex="05D2"/>
-	<advance width="568"/>
+	<advance width="570"/>
 	<outline>
 		<contour>
 			<point x="32" y="0" type="line"/>
@@ -48,10 +48,12 @@
 	<anchor name="hbCantBelowRight" x="268" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>382abad356c6bda66231fceac47c68284cd78a61</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

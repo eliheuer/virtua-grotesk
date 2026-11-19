@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tteh-ar.medi" format="2">
-	<advance width="424"/>
+	<advance width="422"/>
 	<outline>
 		<contour>
 			<point x="92" y="408" type="line"/>
@@ -40,6 +40,8 @@
 	<anchor name="bottom" x="212" y="-8"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b0e75c05c5c7374c27a0e6d0589b46d67b447e2f</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="hehGoal-ar.init" format="2">
-	<advance width="476"/>
+	<advance width="500"/>
 	<outline>
 		<contour>
 			<point x="282" y="-332" type="curve" smooth="yes"/>
@@ -66,6 +66,8 @@
 	<anchor name="bottom" x="242" y="-312"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>695ec34c362d1611a9be45ec0faa89b6243e60b2</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

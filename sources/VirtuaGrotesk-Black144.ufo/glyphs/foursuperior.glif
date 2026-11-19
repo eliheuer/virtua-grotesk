@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="foursuperior" format="2">
 	<unicode hex="2074"/>
-	<advance width="360"/>
+	<advance width="358"/>
 	<outline>
 		<contour>
 			<point x="200" y="384" type="line"/>
@@ -36,6 +36,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>726045f308daa29d078accf0cc55a08d67a29c5d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

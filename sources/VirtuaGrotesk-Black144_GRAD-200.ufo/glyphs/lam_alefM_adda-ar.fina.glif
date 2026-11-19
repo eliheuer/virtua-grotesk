@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam_alefMadda-ar.fina" format="2">
-	<advance width="680"/>
+	<advance width="678"/>
 	<outline>
 		<component base="lam-ar.medi" xOffset="256"/>
 		<component base="alef-ar.fina" xOffset="-16"/>
@@ -12,6 +12,8 @@
 	<anchor name="bottom_2" x="148" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>eda9a0f41d9b2cafbe882115d4c2773af695be67</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

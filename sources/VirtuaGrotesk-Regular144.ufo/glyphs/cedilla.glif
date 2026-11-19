@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="cedilla" format="2">
 	<unicode hex="00B8"/>
-	<advance width="212"/>
+	<advance width="220"/>
 	<outline>
 		<contour>
 			<point x="56" y="-224" type="line"/>
@@ -35,6 +35,8 @@
 	<anchor name="bottom" x="110" y="-256"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>d4e0d6148262e4255ac606c5a2121beb8a11707c</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,65 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Hbar" format="2">
 	<unicode hex="0126"/>
-	<advance width="696"/>
+	<advance width="744"/>
 	<outline>
 		<contour>
-			<point x="0" y="584" type="line"/>
-			<point x="16" y="568" type="line"/>
-			<point x="48" y="568" type="line"/>
-			<point x="56" y="560" type="line"/>
-			<point x="56" y="16" type="line"/>
-			<point x="72" y="0" type="line"/>
-			<point x="140" y="0" type="line"/>
-			<point x="156" y="16" type="line"/>
-			<point x="156" y="360" type="line"/>
-			<point x="164" y="368" type="line"/>
-			<point x="532" y="368" type="line"/>
-			<point x="540" y="360" type="line"/>
-			<point x="540" y="16" type="line"/>
-			<point x="556" y="0" type="line"/>
-			<point x="624" y="0" type="line"/>
-			<point x="640" y="16" type="line"/>
-			<point x="640" y="560" type="line"/>
-			<point x="648" y="568" type="line"/>
-			<point x="680" y="568" type="line"/>
-			<point x="696" y="584" type="line"/>
-			<point x="696" y="640" type="line"/>
-			<point x="680" y="656" type="line"/>
-			<point x="648" y="656" type="line"/>
-			<point x="640" y="664" type="line"/>
-			<point x="640" y="752" type="line"/>
-			<point x="624" y="768" type="line"/>
-			<point x="556" y="768" type="line"/>
-			<point x="540" y="752" type="line"/>
-			<point x="540" y="664" type="line"/>
-			<point x="532" y="656" type="line"/>
-			<point x="164" y="656" type="line"/>
-			<point x="156" y="664" type="line"/>
-			<point x="156" y="752" type="line"/>
-			<point x="140" y="768" type="line"/>
-			<point x="72" y="768" type="line"/>
-			<point x="56" y="752" type="line"/>
-			<point x="56" y="664" type="line"/>
-			<point x="48" y="656" type="line"/>
-			<point x="16" y="656" type="line"/>
-			<point x="0" y="640" type="line"/>
+			<point x="24" y="584" type="line"/>
+			<point x="40" y="568" type="line"/>
+			<point x="72" y="568" type="line"/>
+			<point x="80" y="560" type="line"/>
+			<point x="80" y="16" type="line"/>
+			<point x="96" y="0" type="line"/>
+			<point x="164" y="0" type="line"/>
+			<point x="180" y="16" type="line"/>
+			<point x="180" y="360" type="line"/>
+			<point x="188" y="368" type="line"/>
+			<point x="556" y="368" type="line"/>
+			<point x="564" y="360" type="line"/>
+			<point x="564" y="16" type="line"/>
+			<point x="580" y="0" type="line"/>
+			<point x="648" y="0" type="line"/>
+			<point x="664" y="16" type="line"/>
+			<point x="664" y="560" type="line"/>
+			<point x="672" y="568" type="line"/>
+			<point x="704" y="568" type="line"/>
+			<point x="720" y="584" type="line"/>
+			<point x="720" y="640" type="line"/>
+			<point x="704" y="656" type="line"/>
+			<point x="672" y="656" type="line"/>
+			<point x="664" y="664" type="line"/>
+			<point x="664" y="752" type="line"/>
+			<point x="648" y="768" type="line"/>
+			<point x="580" y="768" type="line"/>
+			<point x="564" y="752" type="line"/>
+			<point x="564" y="664" type="line"/>
+			<point x="556" y="656" type="line"/>
+			<point x="188" y="656" type="line"/>
+			<point x="180" y="664" type="line"/>
+			<point x="180" y="752" type="line"/>
+			<point x="164" y="768" type="line"/>
+			<point x="96" y="768" type="line"/>
+			<point x="80" y="752" type="line"/>
+			<point x="80" y="664" type="line"/>
+			<point x="72" y="656" type="line"/>
+			<point x="40" y="656" type="line"/>
+			<point x="24" y="640" type="line"/>
 		</contour>
 		<contour>
-			<point x="156" y="464" type="line"/>
-			<point x="156" y="560" type="line"/>
-			<point x="164" y="568" type="line"/>
-			<point x="532" y="568" type="line"/>
-			<point x="540" y="560" type="line"/>
-			<point x="540" y="464" type="line"/>
-			<point x="532" y="456" type="line"/>
-			<point x="164" y="456" type="line"/>
+			<point x="180" y="464" type="line"/>
+			<point x="180" y="560" type="line"/>
+			<point x="188" y="568" type="line"/>
+			<point x="556" y="568" type="line"/>
+			<point x="564" y="560" type="line"/>
+			<point x="564" y="464" type="line"/>
+			<point x="556" y="456" type="line"/>
+			<point x="188" y="456" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="348" y="0"/>
-	<anchor name="top" x="348" y="768"/>
+	<anchor name="bottom" x="372" y="0"/>
+	<anchor name="top" x="372" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a133760586dd4790c9fd09a89dc4795bf5c23d1a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

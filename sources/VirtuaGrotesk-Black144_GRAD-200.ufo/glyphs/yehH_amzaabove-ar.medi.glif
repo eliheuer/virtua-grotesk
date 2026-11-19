@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yehHamzaabove-ar.medi" format="2">
-	<advance width="376"/>
+	<advance width="374"/>
 	<anchor name="bottom" x="188" y="-8"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
@@ -8,6 +8,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a56fa275780319b87aef87055c7872df9ff1fb34</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

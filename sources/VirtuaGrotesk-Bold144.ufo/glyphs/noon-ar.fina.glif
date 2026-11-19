@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="noon-ar.fina" format="2">
-	<advance width="736"/>
+	<advance width="760"/>
 	<outline>
 		<component base="noonghunna-ar.fina"/>
 		<component base="dotabove-ar" xOffset="192" yOffset="-288"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>99b9724e9f0420dfcfe16a50d4ccb46af959ad3f</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

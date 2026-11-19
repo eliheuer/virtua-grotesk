@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="six.tf" format="2">
-	<advance width="616"/>
+	<advance width="624"/>
 	<outline>
 		<contour>
 			<point x="308" y="-16" type="curve" smooth="yes"/>
@@ -50,6 +50,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>520af7796ff75fa29575f7ce30fe7ce862d9ea7e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

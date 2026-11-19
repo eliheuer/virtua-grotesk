@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="veh-ar.init" format="2">
-	<advance width="432"/>
+	<advance width="456"/>
 	<outline>
 		<component base="fehDotless-ar.init"/>
-		<component base="threedotsupabove-ar" xOffset="-8"/>
+		<component base="threedotsupabove-ar" xOffset="-32"/>
 	</outline>
 	<anchor name="top" x="200" y="924"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8d9ed90bac7450b6584d4b67047a19ffc0422240</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

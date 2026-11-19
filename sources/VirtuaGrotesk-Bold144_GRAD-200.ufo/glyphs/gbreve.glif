@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="gbreve" format="2">
 	<unicode hex="011F"/>
-	<advance width="680"/>
+	<advance width="704"/>
 	<outline>
 		<component base="g"/>
 		<component base="breve" xOffset="170"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>8eb338c1b925906fdc322e3bbc67a435037d1409</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

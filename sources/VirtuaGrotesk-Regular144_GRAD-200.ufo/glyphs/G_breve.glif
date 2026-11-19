@@ -3,11 +3,13 @@
 	<unicode hex="011E"/>
 	<advance width="776"/>
 	<outline>
-		<component base="G"/>
-		<component base="breve" xOffset="234" yOffset="192"/>
+		<component base="G" xOffset="-2"/>
+		<component base="breve" xOffset="216" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>5249a39750ea2a6606908627f488aa35aa65875a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

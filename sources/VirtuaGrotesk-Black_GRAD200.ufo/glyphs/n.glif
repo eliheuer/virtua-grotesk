@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="n" format="2">
 	<unicode hex="006E"/>
-	<advance width="808"/>
+	<advance width="810"/>
 	<outline>
 		<contour>
 			<point x="72" y="16" type="line"/>
@@ -37,12 +37,14 @@
 	<anchor name="bottom" x="404" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c2b3812dafb147bd2188f5f6fcfc50fc987872e2</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-n.png</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

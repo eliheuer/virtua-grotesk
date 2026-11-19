@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="kehehThreedotsabove-ar" format="2">
 	<unicode hex="0763"/>
-	<advance width="912"/>
+	<advance width="936"/>
 	<outline>
 		<component base="keheh-ar"/>
 		<component base="threedotsupabove-ar" xOffset="216" yOffset="52"/>
 	</outline>
-	<anchor name="top" x="424" y="1008"/>
+	<anchor name="top" x="448" y="1008"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>5b01a69bf14cdd15a2e36edc41fe303d45c1ce4e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

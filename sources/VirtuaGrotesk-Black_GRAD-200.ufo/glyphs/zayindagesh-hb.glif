@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="zayindagesh-hb" format="2">
 	<unicode hex="FB36"/>
-	<advance width="552"/>
+	<advance width="554"/>
 	<outline>
 		<component base="zayin-hb" xOffset="-4"/>
 		<component base="dagesh-hb" xOffset="22" yOffset="-12"/>
@@ -18,6 +18,8 @@
 	<anchor name="hbCantBelowRight" x="276" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>9f935ef51120c72c3ff017775a0b6026cb7b4374</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

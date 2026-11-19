@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ring-ar" format="2">
-	<advance width="344"/>
+	<advance width="346"/>
 	<outline>
 		<contour>
 			<point x="136" y="876" type="curve" smooth="yes"/>
@@ -38,6 +38,8 @@
 	<anchor name="_topDots" x="136" y="548"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>90e18d6c5826dafe83f0314bf5b10b7273693100</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

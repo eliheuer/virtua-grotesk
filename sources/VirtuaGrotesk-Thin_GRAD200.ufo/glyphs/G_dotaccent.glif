@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Gdotaccent" format="2">
 	<unicode hex="0120"/>
-	<advance width="816"/>
+	<advance width="818"/>
 	<outline>
-		<component base="G"/>
-		<component base="dotaccent" xOffset="286" yOffset="192"/>
+		<component base="G" xOffset="2"/>
+		<component base="dotaccent" xOffset="288" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>bde175e3fd74d714f852c5e4ccae62272d9f7fd8</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

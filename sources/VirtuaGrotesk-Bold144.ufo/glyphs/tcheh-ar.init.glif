@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tcheh-ar.init" format="2">
-	<advance width="736"/>
+	<advance width="760"/>
 	<outline>
 		<component base="hah-ar.init"/>
 		<component base="threedotsdowncenter-ar" xOffset="104" yOffset="-520"/>
@@ -11,6 +11,8 @@
 	<anchor name="topDots" x="312" y="532"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>248ab535cc7112ef8014971514bf5dc57c442ad6</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

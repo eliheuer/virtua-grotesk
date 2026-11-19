@@ -17,10 +17,12 @@
 	<anchor name="_hbMeteg" x="0" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>54d101c84304a507ec594cb68792d85664be7e1f</string>
 			<key>com.runebender.markLabel</key>
-			<string>red</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

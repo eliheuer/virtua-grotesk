@@ -3,11 +3,13 @@
 	<advance width="864"/>
 	<outline>
 		<component base="seen-ar.init"/>
-		<component base="threedotsupabove-ar" xOffset="212" yOffset="-186" identifier="b63db8f2-dff8-45cf-b060-bffcabd690f5"/>
+		<component base="threedotsupabove-ar" xOffset="188" yOffset="-186" identifier="b63db8f2-dff8-45cf-b060-bffcabd690f5"/>
 	</outline>
 	<anchor name="top" x="444" y="754"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>f9bfb5f7a419259769de3ec712fdbdd04ade5426</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

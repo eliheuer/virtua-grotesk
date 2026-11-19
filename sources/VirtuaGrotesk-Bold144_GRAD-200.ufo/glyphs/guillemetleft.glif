@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="guillemetleft" format="2">
 	<unicode hex="00AB"/>
-	<advance width="504"/>
+	<advance width="512"/>
 	<outline>
 		<contour>
 			<point x="40" y="256" type="line"/>
@@ -42,6 +42,8 @@
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>960742ac3edb25a80b8f7f2384d74da4793c0073</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

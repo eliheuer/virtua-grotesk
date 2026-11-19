@@ -3,11 +3,13 @@
 	<advance width="720"/>
 	<outline>
 		<component base="qafDotless-ar.fina"/>
-		<component base="threedotsupabove-ar" xOffset="112" yOffset="-128"/>
+		<component base="threedotsupabove-ar" xOffset="88" yOffset="-128"/>
 	</outline>
 	<anchor name="top" x="336" y="844"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c322560ac78ca146301651f7ebb1083bbcbb31f3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="quotedblleft" format="2">
 	<unicode hex="201C"/>
-	<advance width="560"/>
+	<advance width="562"/>
 	<outline>
 		<component base="comma" xScale="-1" yScale="-1" xOffset="308" yOffset="724"/>
 		<component base="comma" xScale="-1" yScale="-1" xOffset="566" yOffset="724"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>105864925af7cd4b6fd43b026fb5cf624ac4ed5e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

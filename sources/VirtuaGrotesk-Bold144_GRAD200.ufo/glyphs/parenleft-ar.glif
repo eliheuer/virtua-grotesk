@@ -1,55 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="parenleft-ar" format="2">
 	<unicode hex="FD3E"/>
-	<advance width="312"/>
+	<advance width="336"/>
 	<outline>
 		<contour>
-			<point x="298" y="-96" type="line"/>
-			<point x="298" y="-80" type="line"/>
-			<point x="242" y="16"/>
-			<point x="180" y="128"/>
-			<point x="164" y="236" type="curve"/>
-			<point x="172" y="244" type="line"/>
-			<point x="226" y="272" type="line"/>
-			<point x="242" y="288" type="line"/>
-			<point x="242" y="440" type="line"/>
-			<point x="226" y="456" type="line"/>
-			<point x="172" y="484" type="line"/>
-			<point x="164" y="492" type="line"/>
-			<point x="180" y="600"/>
-			<point x="242" y="712"/>
-			<point x="298" y="808" type="curve"/>
-			<point x="298" y="816" type="line"/>
-			<point x="282" y="832" type="line"/>
-			<point x="142" y="832" type="line"/>
-			<point x="126" y="816" type="line"/>
-			<point x="62" y="720"/>
-			<point x="14" y="600"/>
-			<point x="6" y="484" type="curve"/>
-			<point x="-12" y="464" type="line"/>
-			<point x="-20" y="448" type="line"/>
-			<point x="-20" y="280" type="line"/>
-			<point x="-12" y="264" type="line"/>
-			<point x="6" y="244" type="line"/>
-			<point x="14" y="128"/>
-			<point x="62" y="16"/>
-			<point x="126" y="-96" type="curve"/>
-			<point x="142" y="-112" type="line"/>
-			<point x="282" y="-112" type="line"/>
+			<point x="322" y="-96" type="line"/>
+			<point x="322" y="-80" type="line"/>
+			<point x="266" y="16"/>
+			<point x="204" y="128"/>
+			<point x="188" y="236" type="curve"/>
+			<point x="196" y="244" type="line"/>
+			<point x="250" y="272" type="line"/>
+			<point x="266" y="288" type="line"/>
+			<point x="266" y="440" type="line"/>
+			<point x="250" y="456" type="line"/>
+			<point x="196" y="484" type="line"/>
+			<point x="188" y="492" type="line"/>
+			<point x="204" y="600"/>
+			<point x="266" y="712"/>
+			<point x="322" y="808" type="curve"/>
+			<point x="322" y="816" type="line"/>
+			<point x="306" y="832" type="line"/>
+			<point x="166" y="832" type="line"/>
+			<point x="150" y="816" type="line"/>
+			<point x="86" y="720"/>
+			<point x="38" y="600"/>
+			<point x="30" y="484" type="curve"/>
+			<point x="12" y="464" type="line"/>
+			<point x="4" y="448" type="line"/>
+			<point x="4" y="280" type="line"/>
+			<point x="12" y="264" type="line"/>
+			<point x="30" y="244" type="line"/>
+			<point x="38" y="128"/>
+			<point x="86" y="16"/>
+			<point x="150" y="-96" type="curve"/>
+			<point x="166" y="-112" type="line"/>
+			<point x="306" y="-112" type="line"/>
 		</contour>
 		<contour>
-			<point x="160" y="328" type="line"/>
-			<point x="144" y="312" type="line"/>
-			<point x="66" y="312" type="line"/>
-			<point x="50" y="328" type="line"/>
-			<point x="50" y="400" type="line"/>
-			<point x="66" y="416" type="line"/>
-			<point x="144" y="416" type="line"/>
-			<point x="160" y="400" type="line"/>
+			<point x="184" y="328" type="line"/>
+			<point x="168" y="312" type="line"/>
+			<point x="90" y="312" type="line"/>
+			<point x="74" y="328" type="line"/>
+			<point x="74" y="400" type="line"/>
+			<point x="90" y="416" type="line"/>
+			<point x="168" y="416" type="line"/>
+			<point x="184" y="400" type="line"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>85adcf256f3819796653696a7cd0e53a9c1b7e7d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

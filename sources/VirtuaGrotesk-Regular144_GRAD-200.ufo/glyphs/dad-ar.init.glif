@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="dad-ar.init" format="2">
-	<advance width="840"/>
+	<advance width="864"/>
 	<outline>
 		<component base="sad-ar.init"/>
-		<component base="dotabove-ar" xOffset="392" yOffset="-112"/>
+		<component base="dotabove-ar" xOffset="384" yOffset="-112"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>526b0fb788e6ffd0169b7b2f25eab82932b1dd0d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

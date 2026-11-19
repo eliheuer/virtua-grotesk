@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="sheen-ar.fina" format="2">
-	<advance width="1300"/>
+	<advance width="1324"/>
 	<outline>
 		<component base="seen-ar.fina"/>
 		<component base="threedotsupabove-ar" xOffset="660" yOffset="-144"/>
 	</outline>
-	<anchor name="top" x="868" y="780"/>
-	<anchor name="bottom" x="584" y="-104"/>
+	<anchor name="top" x="892" y="780"/>
+	<anchor name="bottom" x="608" y="-104"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>265ab20b6055a02914d65b0267a84ab7e6344eff</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

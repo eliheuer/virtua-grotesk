@@ -4,10 +4,12 @@
 	<advance width="488"/>
 	<outline>
 		<component base="u"/>
-		<component base="hungarumlaut" xOffset="42"/>
+		<component base="hungarumlaut" xOffset="40"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0eeb8d3c84561f272fbb8e5db1e32099495d68ac</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

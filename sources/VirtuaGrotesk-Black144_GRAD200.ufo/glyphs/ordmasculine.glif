@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ordmasculine" format="2">
 	<unicode hex="00BA"/>
-	<advance width="584"/>
+	<advance width="616"/>
 	<outline>
 		<contour>
-			<point x="116" y="256"/>
-			<point x="290" y="256" type="curve" smooth="yes"/>
-			<point x="464" y="256"/>
-			<point x="588" y="374"/>
-			<point x="588" y="520" type="curve" smooth="yes"/>
-			<point x="588" y="668"/>
-			<point x="464" y="784"/>
-			<point x="290" y="784" type="curve" smooth="yes"/>
-			<point x="116" y="784"/>
-			<point x="-8" y="668"/>
-			<point x="-8" y="520" type="curve" smooth="yes"/>
-			<point x="-8" y="374"/>
+			<point x="132" y="256"/>
+			<point x="306" y="256" type="curve" smooth="yes"/>
+			<point x="480" y="256"/>
+			<point x="604" y="374"/>
+			<point x="604" y="520" type="curve" smooth="yes"/>
+			<point x="604" y="668"/>
+			<point x="480" y="784"/>
+			<point x="306" y="784" type="curve" smooth="yes"/>
+			<point x="132" y="784"/>
+			<point x="8" y="668"/>
+			<point x="8" y="520" type="curve" smooth="yes"/>
+			<point x="8" y="374"/>
 		</contour>
 		<contour>
-			<point x="326" y="400"/>
-			<point x="290" y="400" type="curve" smooth="yes"/>
-			<point x="254" y="400"/>
-			<point x="226" y="448"/>
-			<point x="226" y="520" type="curve" smooth="yes"/>
-			<point x="226" y="592"/>
-			<point x="254" y="642"/>
-			<point x="290" y="642" type="curve" smooth="yes"/>
-			<point x="326" y="642"/>
-			<point x="354" y="592"/>
-			<point x="354" y="520" type="curve" smooth="yes"/>
-			<point x="354" y="448"/>
+			<point x="342" y="400"/>
+			<point x="306" y="400" type="curve" smooth="yes"/>
+			<point x="270" y="400"/>
+			<point x="242" y="448"/>
+			<point x="242" y="520" type="curve" smooth="yes"/>
+			<point x="242" y="592"/>
+			<point x="270" y="642"/>
+			<point x="306" y="642" type="curve" smooth="yes"/>
+			<point x="342" y="642"/>
+			<point x="370" y="592"/>
+			<point x="370" y="520" type="curve" smooth="yes"/>
+			<point x="370" y="448"/>
 		</contour>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b844ae2127306826f636e23b72d22fba7479a571</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -3,14 +3,14 @@
 	<unicode hex="05BF"/>
 	<outline>
 		<contour>
-			<point x="-144" y="6" type="line"/>
-			<point x="-140" y="0" type="line"/>
-			<point x="140" y="0" type="line"/>
-			<point x="144" y="6" type="line"/>
-			<point x="144" y="54" type="line"/>
-			<point x="140" y="58" type="line"/>
-			<point x="-140" y="58" type="line"/>
-			<point x="-144" y="54" type="line"/>
+			<point x="-144" y="4" type="line"/>
+			<point x="-142" y="0" type="line"/>
+			<point x="142" y="0" type="line"/>
+			<point x="144" y="4" type="line"/>
+			<point x="144" y="52" type="line"/>
+			<point x="142" y="56" type="line"/>
+			<point x="-142" y="56" type="line"/>
+			<point x="-144" y="52" type="line"/>
 		</contour>
 	</outline>
 	<anchor name="hbCantAfterHolam" x="144" y="0"/>
@@ -18,6 +18,8 @@
 	<anchor name="_hbRafe" x="0" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>7cf21eda103564607abd0da08d9ae14ee9f15866</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

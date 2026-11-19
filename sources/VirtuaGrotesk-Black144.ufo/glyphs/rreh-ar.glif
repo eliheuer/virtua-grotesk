@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="rreh-ar" format="2">
 	<unicode hex="0691"/>
-	<advance width="672"/>
+	<advance width="674"/>
 	<outline>
 		<component base="reh-ar"/>
 		<component base="smallHighTah-ar" xOffset="100" yOffset="-62"/>
@@ -9,6 +9,8 @@
 	<anchor name="bottom" x="244" y="-296"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>9cea9d81b4f2e2919161b7f32c6ca78718b0f0ac</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

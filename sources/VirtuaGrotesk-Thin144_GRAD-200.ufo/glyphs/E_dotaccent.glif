@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Edotaccent" format="2">
 	<unicode hex="0116"/>
-	<advance width="608"/>
+	<advance width="618"/>
 	<outline>
 		<component base="E"/>
-		<component base="dotaccent" xOffset="232" yOffset="192"/>
+		<component base="dotaccent" xOffset="234" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>30201e78da71c18773a718107b6f76db095537b2</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

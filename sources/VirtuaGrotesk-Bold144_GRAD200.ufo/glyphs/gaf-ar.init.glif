@@ -3,7 +3,7 @@
 	<advance width="680"/>
 	<outline>
 		<component base="keheh-ar.init"/>
-		<component base="gafsarkashabove-ar" xOffset="216"/>
+		<component base="gafsarkashabove-ar" xOffset="192"/>
 	</outline>
 	<anchor name="bottom" x="200" y="0"/>
 	<anchor name="bottomDots" x="230" y="772"/>
@@ -11,6 +11,8 @@
 	<anchor name="topDots" x="230" y="1094"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>008e795edba889c65326e1c7729ecdfe7a17fd33</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

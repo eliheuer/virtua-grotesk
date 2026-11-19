@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="feh-ar" format="2">
 	<unicode hex="0641"/>
-	<advance width="912"/>
+	<advance width="928"/>
 	<outline>
 		<component base="fehDotless-ar"/>
-		<component base="dotabove-ar" xOffset="496" yOffset="70"/>
+		<component base="dotabove-ar" xOffset="504" yOffset="70"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>b71fbb353341eab41667bbdcd90ee34e35e1785d</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

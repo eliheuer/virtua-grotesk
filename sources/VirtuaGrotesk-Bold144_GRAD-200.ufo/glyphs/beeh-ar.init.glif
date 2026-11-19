@@ -3,10 +3,12 @@
 	<advance width="264"/>
 	<outline>
 		<component base="behDotless-ar.init"/>
-		<component base="twodotsverticalbelow-ar" xOffset="-6" yOffset="-12"/>
+		<component base="twodotsverticalbelow-ar" xOffset="-14" yOffset="-12"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>6198724d0842a5d345dfb800a4fcc9c17885ab5e</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

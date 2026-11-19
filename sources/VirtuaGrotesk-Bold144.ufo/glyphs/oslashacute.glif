@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="oslashacute" format="2">
 	<unicode hex="01FF"/>
-	<advance width="656"/>
+	<advance width="680"/>
 	<outline>
 		<component base="oslash"/>
-		<component base="acute" xOffset="188"/>
+		<component base="acute" xOffset="172"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>1a2fbaec5ed03736a2684d6e61f9834735330ff3</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

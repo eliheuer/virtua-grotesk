@@ -22,10 +22,12 @@
 	<anchor name="hbCantRightVowel" x="64" y="64"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>89dc17853c0a9243c5518c7581c9b2dc15c7310e</string>
 			<key>com.runebender.markLabel</key>
-			<string>orange</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,0.5,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

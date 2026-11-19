@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="rreh-ar" format="2">
 	<unicode hex="0691"/>
-	<advance width="552"/>
+	<advance width="576"/>
 	<outline>
 		<component base="reh-ar"/>
-		<component base="smallHighTah-ar" xOffset="100" yOffset="-144"/>
+		<component base="smallHighTah-ar" xOffset="124" yOffset="-144"/>
 	</outline>
-	<anchor name="bottom" x="244" y="-256"/>
+	<anchor name="bottom" x="268" y="-256"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>a3f560b05a54b9b64152ab63fa5547077f7da413</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

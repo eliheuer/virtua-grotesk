@@ -1,45 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="finalmem-hb" format="2">
 	<unicode hex="05DD"/>
-	<advance width="600"/>
+	<advance width="632"/>
 	<outline>
 		<contour>
-			<point x="40" y="0" type="line"/>
-			<point x="560" y="0" type="line"/>
-			<point x="576" y="16" type="line"/>
-			<point x="576" y="416" type="line" smooth="yes"/>
-			<point x="576" y="544"/>
-			<point x="504" y="640"/>
-			<point x="360" y="640" type="curve" smooth="yes"/>
-			<point x="40" y="640" type="line"/>
-			<point x="24" y="624" type="line"/>
-			<point x="24" y="16" type="line"/>
+			<point x="56" y="0" type="line"/>
+			<point x="576" y="0" type="line"/>
+			<point x="592" y="16" type="line"/>
+			<point x="592" y="416" type="line" smooth="yes"/>
+			<point x="592" y="544"/>
+			<point x="520" y="640"/>
+			<point x="376" y="640" type="curve" smooth="yes"/>
+			<point x="56" y="640" type="line"/>
+			<point x="40" y="624" type="line"/>
+			<point x="40" y="16" type="line"/>
 		</contour>
 		<contour>
-			<point x="488" y="120" type="line"/>
-			<point x="480" y="104" type="line"/>
-			<point x="120" y="104" type="line"/>
-			<point x="112" y="120" type="line"/>
-			<point x="112" y="520" type="line"/>
-			<point x="120" y="536" type="line"/>
-			<point x="360" y="536" type="line" smooth="yes"/>
-			<point x="448" y="536"/>
-			<point x="488" y="496"/>
-			<point x="488" y="416" type="curve" smooth="yes"/>
+			<point x="504" y="120" type="line"/>
+			<point x="496" y="104" type="line"/>
+			<point x="136" y="104" type="line"/>
+			<point x="128" y="120" type="line"/>
+			<point x="128" y="520" type="line"/>
+			<point x="136" y="536" type="line"/>
+			<point x="376" y="536" type="line" smooth="yes"/>
+			<point x="464" y="536"/>
+			<point x="504" y="496"/>
+			<point x="504" y="416" type="curve" smooth="yes"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="304" y="0"/>
-	<anchor name="hbCenter" x="304" y="320"/>
-	<anchor name="hbHolam" x="24" y="640"/>
-	<anchor name="hbRafe" x="304" y="736"/>
-	<anchor name="hbMeteg" x="304" y="0"/>
-	<anchor name="hbCantAbove" x="304" y="640"/>
-	<anchor name="hbCantAboveLeft" x="24" y="640"/>
-	<anchor name="hbCantAboveRight" x="576" y="640"/>
-	<anchor name="hbCantBelow" x="304" y="0"/>
-	<anchor name="hbCantBelowRight" x="304" y="0"/>
+	<anchor name="hbBottom" x="320" y="0"/>
+	<anchor name="hbCenter" x="320" y="320"/>
+	<anchor name="hbHolam" x="40" y="640"/>
+	<anchor name="hbRafe" x="320" y="736"/>
+	<anchor name="hbMeteg" x="320" y="0"/>
+	<anchor name="hbCantAbove" x="320" y="640"/>
+	<anchor name="hbCantAboveLeft" x="40" y="640"/>
+	<anchor name="hbCantAboveRight" x="592" y="640"/>
+	<anchor name="hbCantBelow" x="320" y="0"/>
+	<anchor name="hbCantBelowRight" x="320" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c75d0aa63f5ee8f64301ccfea1f9cfbbe542d2de</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ldot" format="2">
 	<unicode hex="0140"/>
-	<advance width="320"/>
+	<advance width="344"/>
 	<outline>
 		<component base="l"/>
 		<component base="periodcentered" xOffset="156"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>7e5252136da2aecc4abb0c966fddc6d0a2069bec</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

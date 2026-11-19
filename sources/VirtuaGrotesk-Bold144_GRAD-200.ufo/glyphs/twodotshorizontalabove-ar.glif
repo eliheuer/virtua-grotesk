@@ -1,40 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="twodotshorizontalabove-ar" format="2">
-	<advance width="328"/>
+	<advance width="376"/>
 	<outline>
 		<contour>
-			<point x="30" y="678" type="curve" smooth="yes"/>
-			<point x="82" y="678"/>
-			<point x="122" y="718"/>
-			<point x="122" y="768" type="curve" smooth="yes"/>
-			<point x="122" y="818"/>
-			<point x="82" y="858"/>
-			<point x="30" y="858" type="curve" smooth="yes"/>
-			<point x="-20" y="858"/>
-			<point x="-60" y="818"/>
-			<point x="-60" y="768" type="curve" smooth="yes"/>
-			<point x="-60" y="718"/>
-			<point x="-20" y="678"/>
+			<point x="54" y="678" type="curve" smooth="yes"/>
+			<point x="106" y="678"/>
+			<point x="146" y="718"/>
+			<point x="146" y="768" type="curve" smooth="yes"/>
+			<point x="146" y="818"/>
+			<point x="106" y="858"/>
+			<point x="54" y="858" type="curve" smooth="yes"/>
+			<point x="4" y="858"/>
+			<point x="-36" y="818"/>
+			<point x="-36" y="768" type="curve" smooth="yes"/>
+			<point x="-36" y="718"/>
+			<point x="4" y="678"/>
 		</contour>
 		<contour>
-			<point x="282" y="678" type="curve" smooth="yes"/>
-			<point x="332" y="678"/>
-			<point x="372" y="718"/>
-			<point x="372" y="768" type="curve" smooth="yes"/>
-			<point x="372" y="818"/>
-			<point x="332" y="858"/>
-			<point x="282" y="858" type="curve" smooth="yes"/>
-			<point x="230" y="858"/>
-			<point x="190" y="818"/>
-			<point x="190" y="768" type="curve" smooth="yes"/>
-			<point x="190" y="718"/>
-			<point x="230" y="678"/>
+			<point x="306" y="678" type="curve" smooth="yes"/>
+			<point x="356" y="678"/>
+			<point x="396" y="718"/>
+			<point x="396" y="768" type="curve" smooth="yes"/>
+			<point x="396" y="818"/>
+			<point x="356" y="858"/>
+			<point x="306" y="858" type="curve" smooth="yes"/>
+			<point x="254" y="858"/>
+			<point x="214" y="818"/>
+			<point x="214" y="768" type="curve" smooth="yes"/>
+			<point x="214" y="718"/>
+			<point x="254" y="678"/>
 		</contour>
 	</outline>
-	<anchor name="_topDots" x="154" y="576"/>
-	<anchor name="top" x="154" y="800"/>
+	<anchor name="_topDots" x="178" y="576"/>
+	<anchor name="top" x="178" y="800"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ef4ee44e429eb4ff349a18eccf80ed85627eb76c</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

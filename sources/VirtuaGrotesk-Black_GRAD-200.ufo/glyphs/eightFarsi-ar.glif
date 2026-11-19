@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="eightFarsi-ar" format="2">
 	<unicode hex="06F8"/>
-	<advance width="776"/>
+	<advance width="778"/>
 	<outline>
 		<component base="eight-ar"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>9879b9c355b72be23caf63df4c7b4bd224000fd8</string>
 			<key>com.runebender.markLabel</key>
-			<string>yellow</string>
+			<string>purple</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

@@ -1,27 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="asterisk-ar" format="2">
 	<unicode hex="066D"/>
-	<advance width="528"/>
+	<advance width="552"/>
 	<outline>
 		<contour>
-			<point x="212" y="190" type="line"/>
-			<point x="286" y="384" type="line"/>
-			<point x="476" y="394" type="line"/>
-			<point x="330" y="516" type="line"/>
-			<point x="382" y="710" type="line"/>
-			<point x="212" y="600" type="line"/>
-			<point x="42" y="710" type="line"/>
-			<point x="94" y="516" type="line"/>
-			<point x="-52" y="394" type="line"/>
-			<point x="138" y="384" type="line"/>
+			<point x="236" y="190" type="line"/>
+			<point x="310" y="384" type="line"/>
+			<point x="500" y="394" type="line"/>
+			<point x="354" y="516" type="line"/>
+			<point x="406" y="710" type="line"/>
+			<point x="236" y="600" type="line"/>
+			<point x="66" y="710" type="line"/>
+			<point x="118" y="516" type="line"/>
+			<point x="-28" y="394" type="line"/>
+			<point x="162" y="384" type="line"/>
 		</contour>
 	</outline>
-	<anchor name="bottom" x="212" y="190"/>
-	<anchor name="top" x="212" y="710"/>
-	<anchor name="bottomDots" x="212" y="190"/>
-	<anchor name="topDots" x="212" y="710"/>
+	<anchor name="bottom" x="236" y="190"/>
+	<anchor name="top" x="236" y="710"/>
+	<anchor name="bottomDots" x="236" y="190"/>
+	<anchor name="topDots" x="236" y="710"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>2beef815e8d7a0808452384baf002eb4ac825de0</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

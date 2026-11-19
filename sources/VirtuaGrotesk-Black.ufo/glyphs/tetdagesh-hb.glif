@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="tetdagesh-hb" format="2">
 	<unicode hex="FB38"/>
-	<advance width="840"/>
+	<advance width="842"/>
 	<outline>
 		<component base="tet-hb"/>
 		<component base="dagesh-hb" xOffset="318" yOffset="58"/>
@@ -18,10 +18,12 @@
 	<anchor name="hbCantBelowRight" x="394" y="-32"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>af5872f06ae1998f6d3b4017d8be292190d88b03</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

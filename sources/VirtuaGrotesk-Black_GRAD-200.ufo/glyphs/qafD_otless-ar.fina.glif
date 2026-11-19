@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qafDotless-ar.fina" format="2">
-	<advance width="768"/>
+	<advance width="766"/>
 	<outline>
 		<contour>
 			<point x="320" y="192"/>
@@ -32,8 +32,8 @@
 			<point x="600" y="-176"/>
 			<point x="600" y="-8" type="curve"/>
 			<point x="608" y="0" type="line"/>
-			<point x="768" y="0" type="line"/>
-			<point x="768" y="176" type="line"/>
+			<point x="766" y="0" type="line"/>
+			<point x="766" y="176" type="line"/>
 			<point x="608" y="176" type="line"/>
 			<point x="600" y="184" type="line"/>
 			<point x="600" y="384"/>
@@ -59,6 +59,8 @@
 	<anchor name="bottomDots" x="264" y="88"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>ac1f6bf2311b324022b0b59fea49e73f66aa3a6c</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

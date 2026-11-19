@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="lam-ar.init" format="2">
-	<advance width="272"/>
+	<advance width="280"/>
 	<outline>
 		<contour>
 			<point x="0" y="0" type="line"/>
@@ -25,6 +25,8 @@
 	<anchor name="topDots" x="82" y="768"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>cdea1d8da0d01ddf285ddd4a9b55a7e274a425d0</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

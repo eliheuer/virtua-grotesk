@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="Yacute" format="2">
 	<unicode hex="00DD"/>
-	<advance width="904"/>
+	<advance width="906"/>
 	<outline>
 		<component base="Y"/>
 		<component base="acute" xOffset="268" yOffset="192"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>af13a9df5118d927f82c27349d5d5dcfa2da2f9c</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

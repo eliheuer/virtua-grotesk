@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="sevenFarsi-ar" format="2">
 	<unicode hex="06F7"/>
-	<advance width="568"/>
+	<advance width="600"/>
 	<outline>
 		<component base="seven-ar"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>0275c3fc92e9b8a3c6ad38b5368a8faefb10a0db</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

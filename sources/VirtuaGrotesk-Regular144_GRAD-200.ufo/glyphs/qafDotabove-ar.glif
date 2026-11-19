@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="qafDotabove-ar" format="2">
 	<unicode hex="06A7"/>
-	<advance width="832"/>
+	<advance width="840"/>
 	<outline>
 		<component base="qafDotless-ar"/>
 		<component base="dotabove-ar" xOffset="452" yOffset="-124"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>c85a083ca7ce60330552b345c5b865f14445a738</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

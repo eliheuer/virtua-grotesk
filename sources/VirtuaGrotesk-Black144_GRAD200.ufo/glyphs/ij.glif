@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="ij" format="2">
 	<unicode hex="0133"/>
-	<advance width="736"/>
+	<advance width="738"/>
 	<outline>
 		<component base="i"/>
-		<component base="j" xOffset="402"/>
+		<component base="j" xOffset="378"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>757d401742b0caeee80a2aa78ead4273f1aa3a82</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

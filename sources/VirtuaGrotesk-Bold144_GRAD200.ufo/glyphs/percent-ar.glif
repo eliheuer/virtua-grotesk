@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="percent-ar" format="2">
 	<unicode hex="066A"/>
-	<advance width="560"/>
+	<advance width="608"/>
 	<outline>
 		<component base="slash" xOffset="72"/>
-		<component base="period" yOffset="546" xOffset="-8"/>
-		<component base="period" xOffset="320"/>
+		<component base="period" yOffset="546" xOffset="16"/>
+		<component base="period" xOffset="344"/>
 	</outline>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>66f0b6638a8209232015cffaae391009e34044ef</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>

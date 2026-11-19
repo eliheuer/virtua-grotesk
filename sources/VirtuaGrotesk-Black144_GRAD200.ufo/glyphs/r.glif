@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="r" format="2">
 	<unicode hex="0072"/>
-	<advance width="480"/>
+	<advance width="490"/>
 	<outline>
 		<contour>
 			<point x="64" y="0" type="line"/>
@@ -31,6 +31,8 @@
 	<anchor name="bottom" x="266" y="0"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>de6aed48add61a4f1f5996a4c84fbc6afd05332f</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>org.fontgarden.transfer</key>

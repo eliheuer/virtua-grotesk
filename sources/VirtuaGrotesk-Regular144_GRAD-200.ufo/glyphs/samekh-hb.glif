@@ -1,57 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="samekh-hb" format="2">
 	<unicode hex="05E1"/>
-	<advance width="624"/>
+	<advance width="664"/>
 	<outline>
 		<contour>
-			<point x="310" y="-16" type="curve" smooth="yes"/>
-			<point x="470" y="-16"/>
-			<point x="588" y="90"/>
-			<point x="588" y="320" type="curve" smooth="yes"/>
-			<point x="588" y="544"/>
-			<point x="470" y="640"/>
-			<point x="310" y="640" type="curve" smooth="yes"/>
-			<point x="16" y="640" type="line"/>
-			<point x="0" y="624" type="line"/>
-			<point x="0" y="574" type="line"/>
-			<point x="16" y="558" type="line"/>
-			<point x="68" y="558" type="line"/>
-			<point x="76" y="542" type="line"/>
-			<point x="50" y="490"/>
-			<point x="34" y="398"/>
-			<point x="34" y="320" type="curve" smooth="yes"/>
-			<point x="34" y="90"/>
-			<point x="152" y="-16"/>
+			<point x="334" y="-16" type="curve" smooth="yes"/>
+			<point x="494" y="-16"/>
+			<point x="612" y="90"/>
+			<point x="612" y="320" type="curve" smooth="yes"/>
+			<point x="612" y="544"/>
+			<point x="494" y="640"/>
+			<point x="334" y="640" type="curve" smooth="yes"/>
+			<point x="40" y="640" type="line"/>
+			<point x="24" y="624" type="line"/>
+			<point x="24" y="574" type="line"/>
+			<point x="40" y="558" type="line"/>
+			<point x="92" y="558" type="line"/>
+			<point x="100" y="542" type="line"/>
+			<point x="74" y="490"/>
+			<point x="58" y="398"/>
+			<point x="58" y="320" type="curve" smooth="yes"/>
+			<point x="58" y="90"/>
+			<point x="176" y="-16"/>
 		</contour>
 		<contour>
-			<point x="310" y="66" type="curve" smooth="yes"/>
-			<point x="158" y="66"/>
-			<point x="100" y="174"/>
-			<point x="100" y="320" type="curve" smooth="yes"/>
-			<point x="100" y="414"/>
-			<point x="124" y="526"/>
-			<point x="142" y="542" type="curve"/>
-			<point x="150" y="558" type="line"/>
-			<point x="310" y="558" type="line" smooth="yes"/>
-			<point x="474" y="558"/>
-			<point x="522" y="450"/>
-			<point x="522" y="320" type="curve" smooth="yes"/>
-			<point x="522" y="170"/>
-			<point x="462" y="66"/>
+			<point x="334" y="66" type="curve" smooth="yes"/>
+			<point x="182" y="66"/>
+			<point x="124" y="174"/>
+			<point x="124" y="320" type="curve" smooth="yes"/>
+			<point x="124" y="414"/>
+			<point x="148" y="526"/>
+			<point x="166" y="542" type="curve"/>
+			<point x="174" y="558" type="line"/>
+			<point x="334" y="558" type="line" smooth="yes"/>
+			<point x="498" y="558"/>
+			<point x="546" y="450"/>
+			<point x="546" y="320" type="curve" smooth="yes"/>
+			<point x="546" y="170"/>
+			<point x="486" y="66"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="320" y="-32"/>
-	<anchor name="hbCenter" x="320" y="320"/>
-	<anchor name="hbHolam" x="0" y="640"/>
-	<anchor name="hbRafe" x="320" y="736"/>
-	<anchor name="hbMeteg" x="320" y="-32"/>
-	<anchor name="hbCantAbove" x="320" y="640"/>
-	<anchor name="hbCantAboveLeft" x="0" y="640"/>
-	<anchor name="hbCantAboveRight" x="608" y="640"/>
-	<anchor name="hbCantBelow" x="320" y="-32"/>
-	<anchor name="hbCantBelowRight" x="320" y="-32"/>
+	<anchor name="hbBottom" x="344" y="-32"/>
+	<anchor name="hbCenter" x="344" y="320"/>
+	<anchor name="hbHolam" x="24" y="640"/>
+	<anchor name="hbRafe" x="344" y="736"/>
+	<anchor name="hbMeteg" x="344" y="-32"/>
+	<anchor name="hbCantAbove" x="344" y="640"/>
+	<anchor name="hbCantAboveLeft" x="24" y="640"/>
+	<anchor name="hbCantAboveRight" x="632" y="640"/>
+	<anchor name="hbCantBelow" x="344" y="-32"/>
+	<anchor name="hbCantBelowRight" x="344" y="-32"/>
 	<lib>
 		<dict>
+			<key>garden.font.calculated</key>
+			<string>81fd6e5fa4773ce1dad88aa8e0a2c09fb3753d6f</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
