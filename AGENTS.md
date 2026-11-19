@@ -127,6 +127,10 @@ or a pinched counter, even when every check passes.
 ## Source rules
 
 - Draw or redraw only glyphs Eli names, in the masters Eli names.
+- For the current Arabic pass, Eli has named the full Arabic set in every
+  master. Agents may redraw yellow Arabic glyphs and revise their spacing
+  and anchors without asking for each glyph. Mark new drawings purple for
+  review. The usual approval rules apply when Eli grades a glyph green again.
 - A request to clean up a glyph, or to make it "more X", is the smallest
   change to the current drawing, usually handle edits. It is not a new design.
 - Green contour glyphs are frozen. Eli approves contour glyphs. Mark new AI
