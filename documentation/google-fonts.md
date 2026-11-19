@@ -13,7 +13,7 @@ current official page.
 | Scripts in the first release | Latin, Arabic, Hebrew |
 | Styles | Upright only. Weight axis `wght` 100 to 900. Optical size axis `opsz` 14 to 144 pt. Nine static weights at 14 pt. |
 | License | SIL Open Font License 1.1 (`OFL.txt`) |
-| Build | `make build` (`fgtools build` with `sources/config.yaml`, then `sources/fix_gf_metadata.py`) |
+| Build | `make build` (`fgtools build` with `sources/config.yaml`) |
 | QA | `make test` (every check except `[qa.exclude]` of `CONTEXT.md`), `fgtools qa --package <directory>` |
 | About text | `documentation/article/ARTICLE.en_us.html` |
 | AI use | Disclosed in the README and the article. Eli draws and approves the glyphs. |
@@ -28,11 +28,10 @@ current official page.
 ## Build
 
 `make build` runs `fgtools build`, which builds one variable TTF and nine
-static TTFs with `gftools builder` and fontc. Then
-`sources/fix_gf_metadata.py` adds the identity axis map to the variable font,
-sets the WWS flag in the static fonts and keeps optical sizes visible in STAT.
-A plain `gftools builder sources/config.yaml`, as the Google Fonts packager
-runs it, builds the same fonts with fontmake, without those fixes.
+static TTFs with `gftools builder` and fontc. The `localMetadata.fgtools`
+settings in `sources/config.yaml` set the WWS flag in static fonts and keep
+optical-size labels visible in STAT. Direct `gftools builder` builds accept
+the config and leave these two preferences to `fgtools`.
 `fgtools diff --fontmake` checks that fontc and fontmake give the same glyph
 and word images.
 

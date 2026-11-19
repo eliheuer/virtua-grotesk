@@ -4,12 +4,6 @@ Virtua Grotesk is an OFL variable font for Latin, Arabic and Hebrew, for
 Google Fonts. Eli draws and approves. Agents draft, build, proof and report.
 Every agent tool reads this file. Keep it under 70 lines.
 
-## Start and stop
-
-- Read all of `CONTEXT.md` (the design) before you change a glyph.
-- Read the top five entries of `WORKLOG.md` when you start.
-- Add one entry to `WORKLOG.md` when you stop.
-
 ## Scope
 
 - Do what Eli asked, and nothing beside it. An idea is one line in the report.
@@ -22,6 +16,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 
 ## Glyphs
 
+- Read `CONTEXT.md` before editing glyphs.
 - The mark color is the state of a glyph. `CONTEXT.md` has the policy of each color.
 - Mark each AI drawing purple. Only Eli marks a contour glyph green. Never change a green contour glyph.
 - Every master has the same contours, points and components. `.venv/bin/fgtools lint-glifs` checks it.
@@ -36,7 +31,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 
 - Before and after an edit, run `.venv/bin/fgtools render "<glyphs>"` and read the picture.
 - After an edit, run `make check-design GLYPHS="..."` and `make check-changes`.
-- Before a report, run `make build` and `make diff`. Each difference must be one that the edit explains.
+- For changes that affect the exported font, run `make build` and `make diff`. Explain each difference.
 - A second agent reviews a draft before Eli sees it: `pass`, or `fault` with the rule number and the place.
 - A pass is not approval. Report each visible fault.
 
@@ -52,7 +47,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 ## Repository
 
 - The repository holds the sources, this file, `CONTEXT.md`, `WORKLOG.md`, `README.md`, `Makefile` and `documentation/`.
-- `WORKLOG.md` is the only record of work. Do not add a plan, a report or an audit.
+- Use Git history for completed work. Keep durable instructions in their owning files.
 - Generated output goes to `output/`. Temporary files go to `~/Temp/`. A tracked file has at most 500 KB.
 - A file names only a command that can be installed. It never names a path on one machine.
 - When a command, a `make` target or a workflow changes, update the guide at https://font.garden/docs in the same session.
@@ -61,8 +56,3 @@ Every agent tool reads this file. Keep it under 70 lines.
 
 - Report in a few short lines: what changed, and what needs a decision.
 - Write simple technical English: short sentences, one word for one thing, no em dashes.
-
-## Worklog entry
-
-Newest first, five lines at most: the date and the agent, what changed, what
-is open. When the file passes 150 lines, make the oldest entries one paragraph.

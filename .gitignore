@@ -29,3 +29,6 @@ __pycache__/
 *.mp4
 *.svg
 !documentation/article/weight-specimen.svg
+
+# Generated glyph grading report
+/STATUS.md

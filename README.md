@@ -11,9 +11,9 @@ is in [CONTEXT.md](CONTEXT.md).
 
 ![Virtua Grotesk letters and numerals at four weights](documentation/article/weight-specimen.svg)
 
-The font is in development and is intended for Google Fonts. The progress of
-each script is in [STATUS.md](STATUS.md). The release scope, open decisions
-and links to the Google Fonts guide are in
+The font is in development and is intended for Google Fonts. Run `make status` to generate
+the glyph grading report. The release scope, open decisions and links to
+the Google Fonts guide are in
 [documentation/google-fonts.md](documentation/google-fonts.md). The design
 background is in the article
 [Virtua Grotesk: Grid Systems for Dataset Engineering](https://elih.net/blog/virtua-grotesk).
@@ -156,8 +156,9 @@ what they can do with the glyph. The full policies are in
 | Blue | Composite that needs diagnosis. |
 | Pink | Composite that needs small edits. |
 
-Only green glyphs are references. The release target is every glyph green in
-every master.
+Use green glyphs as drawing references. Where no green glyph has the
+construction, use a yellow donor as described in [CONTEXT.md](CONTEXT.md).
+The release target is every glyph green in every master.
 
 ## Tools
 
