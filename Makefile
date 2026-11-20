@@ -102,9 +102,6 @@ queue: ## List the glyphs that are not green, the ones that most composites use 
 # Checks glyphs against the rules and the values in CONTEXT.md. Without
 # GLYPHS, it checks every glyph that is not green.
 check-design: ## Check glyphs against the rules of CONTEXT.md: make check-design GLYPHS="n a"
-ifneq ($(if $(strip $(GLYPHS)),$(filter heh-ar.medi,$(GLYPHS)),all),)
-	$(PYTHON) sources/drawing_pilot.py alignment sources/drawing-references/DrawingReference-Regular.ufo/glyphs/heh-ar.medi.glif sources/VirtuaGrotesk-Thin.ufo/glyphs/heh-ar.medi.glif
-endif
 	$(FGTOOLS) check-design $(if $(GLYPHS),$(GLYPHS),--not-green)
 
 # make check-changes
@@ -151,7 +148,7 @@ runebender: ## Open the designspace in Runebender
 ##@ Proofs, specimen and media
 
 # The proof, the specimen and the media use one layout system: the lattice of
-# the typeface, rules R61 to R67 of CONTEXT.md. A checker verifies each
+# the typeface, the “Proofs and media” section of CONTEXT.md. A checker verifies each
 # layout, and DesignBot draws it. A video also needs `ffmpeg`. The output is
 # in output/, which Git ignores. The last line of each target is `Open:` and
 # the file to look at.

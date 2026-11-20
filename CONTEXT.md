@@ -1,79 +1,58 @@
-# Virtua Grotesk
+# Virtua Grotesk Context File
 
-The design of the typeface, as rules and values. Agents read all of it before
-they change a glyph. `fgtools` and Runebender read the `toml` blocks as one
-TOML document. A design rule or a design value is in this file and in no
-other file. Where a tool or a glyph differs from this file, this file is
-correct. `README.md` has the idea of the design and its history.
+AI Agents: read this document before working on this project and keep it in your context. The fenced TOML is the design configuration shared by fgtools and Runebender.
 
-## Contents
+## Design Intent
 
-`make test` fails when this list and the chapters differ.
+Link: https://elih.net/blog/virtua-grotesk/
 
-- [How to use the rules](#how-to-use-the-rules): How an agent draws and reviews with the numbered rules.
-- [Character](#character): The look of the typeface, the reference fonts and the donors.
-- [Grid and metrics](#grid-and-metrics): The em, the vertical metrics and the two grids.
-- [Corners, tips and joins](#corners-tips-and-joins): Chamfers, stroke ends and the places where strokes meet.
-- [Strokes and curves](#strokes-and-curves): Stroke weights, handles and the construction of curves.
-- [Bowls and rounds](#bowls-and-rounds): Round letters and the bowls that join a stem.
-- [Weight and Bold](#weight-and-bold): The weights, the optical size and the grade.
-- [Structure of the sources](#structure-of-the-sources): Contours, components and compatibility of the masters.
-- [Spacing](#spacing): Sidebearings and kerning.
-- [Latin](#latin): Rules for Latin, with the accented letters.
-- [Hebrew](#hebrew): Rules for Hebrew.
-- [Arabic](#arabic): Rules for Arabic.
-- [Glyph decisions](#glyph-decisions): Decisions about single glyphs.
-- [Proofs and media](#proofs-and-media): The layout of every proof, specimen and picture.
-- [Project settings](#project-settings): Mark colors, reference fonts and known QA debt.
+Virtua Grotesk is a typeface drawn on a dyadic self-labeling grid system: nested grids built on powers of two. Point placement defaults to an 8-unit grid, with small optical corrections dropping to a 2-unit subgrid. The grids record most of the drawing intent automatically, so the source files are labeled training data without extra work. This system makes the project a machine-learning and data-engineering project as much as a design project.
 
-## How to use the rules
+Designing the system instead of the final object is an old modernist impulse. Karl Gerstner argued for it in his 1964 book Designing Programmes, a foundational text of systematic Swiss design. In practice, the idea ran into limits. Computers were procedural, and strict rules made type stiff. They missed the optical corrections the eye needs.
 
-- A rule number never changes, so the numbers are not in order.
-- Read every rule before you draw, not only the chapter of the script.
-- Review a glyph against each rule by number: "R12: passes" or "R12: fails at (64,624)". Then look at the whole glyph.
-- When Eli corrects a glyph for a reason of principle, add a rule with "Seen" and the commit, or add the commit to the rule that covers it.
+Neural networks might change that. A neural network is not a procedural program; it interpolates and tolerates nuance where a rule is brittle. It also answers a modernist ideal that the rigid version betrayed: technology people can live in harmony with, not technology that extinguishes human dignity. The old impulse is worth another look.
 
-## Character
+Most fonts were never built as training data. Their coordinates land wherever the designer put them. Their contours are as individual as handwriting. That is fine for a rasterizer, but it is a problem for data engineers working with font sources. Many font AI/ML projects train on exactly this accidental data: scraped fonts and Google Fonts, heterogeneous in every dimension that matters.
 
-- R1. A neo-grotesque with a machined finish. Silhouette and proportions: Helvetica and Neue Haas Grotesk. The grid in the outline: LL Replica. At reading size it is a familiar neo-grotesque. At display size the flats, chamfers and curves look cut by a CNC machine. Keep the optical corrections of the donors: a bowl can be fuller on one side, a stroke can thin into a join. Keep the flats that a curve lands on. No pen-like flare, no perfect circle for symmetry.
-- R2. The reference fonts do not dictate the design. Compare weight, spacing, outline consistency and expected structure. Rubik is the target for weight, spacing and outline quality.
-- R3. Draw from green Virtua glyphs of the same construction (the donors): read their points and their filled shape. Where no green glyph has the construction, a yellow glyph is a donor. A glyph of another color is not a donor.
-- R45. The core donors are O, H, n and o, with green or yellow forms of the same script. Check the mark color of a donor in every master. A sketch from Eli gives the shape: calibrate its scale first. A rejected candidate is a counterexample.
-- R4. A local correction of one glyph (Zayin, Gimel, Final Tsadi, hamza) is for that glyph and master only.
+A typeface is not a collection of characters drawn in isolation. It is many drawings that work as one system. Font datasets need the same discipline. A collection assembled without it is not training data capable of delivering useful models in 2026.
+
+Modernist design was born a little more than a century ago out of similar frustrations in a similar time of technological change. I think the way forward is not a return to the dogma and rigidity of modernist design (the culture of design that replaced modernism is equally if not more dogmatic and rigid, just in different ways), but a rediscovery, with fresh eyes and new technology, of the loftier goals of early modernism that were unachievable with the technology of the previous century.
+
+The clearest precedent for Virtua Grotesk is LL Replica (Norm: Dimitri Bruni and Manuel Krebs; Lineto, 2008). Norm took the drawing grid in their font editor and made it ten times coarser. FontLab’s standard cap height is 700 units. Instead of 700 positions across it they had 70, a step of 10 units, and every node and Bézier control point had to land on one.
+
+Two details make Replica more than a constraint exercise. First, the bevels: its corners are cut exactly one grid unit wide, so the grid is visible in the letterforms. Second, the cut diagonals: A, K, and R have no pointed apexes, so the letters can be set tight. The constraint produced the aesthetic, and the aesthetic advertises the constraint.
+
+Virtua Grotesk uses two related hierarchies. The grid hierarchy classifies point positions. The measurement hierarchy labels distances between points by popcount. Both use powers of two, but they record different parts of the drawing.
+
+The coordinate space of a font is called the em, and its size is given in units per em (UPM). Virtua Grotesk uses 1024 UPM, or 2¹⁰, rather than the industry’s usual 1000. This is less exotic than it sounds. TrueType commonly uses a power-of-two em: 2048 is standard, and Inter uses it.
+
+The first hierarchy is positional. Every point must land on the 2-unit grid. The 8-unit grid is the default for structural points. A point on the 2-unit grid but off the 8-unit grid records a fine optical correction. Large corrections can still land on the 8-unit grid, so grid membership records most, but not all, drawing intent.
+
+The second hierarchy describes measurements. Every integer has a unique binary decomposition: a sum of powers of two, each used once. The number of powers is its Hamming weight, or popcount. Virtua Grotesk uses popcount to label handle lengths and structural spans. A popcount of one is a pure power, such as 64, 128, or 256. Two is a short sum, such as 96 = 64 + 32. Three combines another increment, as in 104 = 64 + 32 + 8. Four or more uses a longer decomposition. The count is descriptive. A higher popcount often marks an optical adjustment or another fine detail. The value provides this label without additional annotation.
+
+Popcount adds information that grid membership cannot. Both 96 and 112 are multiples of 8, but their decompositions record different design decisions. A 64-unit stem is too light and a 128-unit stem too heavy, so the Regular stem is 96 = 64 + 32. Where 96 is too light, the font uses 112 = 64 + 32 + 16. The additional term records a finer adjustment. Both measurements are valid.
 
 
-**Drawing references.** The sources/drawing-references directory contains one sparse UFO
-per weight at 14 pt: Thin, Regular, Bold and Black. Each starts with exact
-glyph copies from its production master at `4fcab06bb`. Eli owns the
-reference drawings and edits them by hand. Treat copied drawings, including
-calculated extremes, as starting material until Eli approves them.
-Latin uses n, o, H and O. Arabic uses isolated beh, initial dotless beh,
-isolated sheen, isolated hah (ح) and medial heh (ـهـ), with their component bases. Hebrew
-uses alef, bet, gimel and kaf.
-Keep the snapshot fixed during trials. Refresh it when Eli requests an update.
-Use n for the shoulder, o for lowercase rounds, H for capital stems and
-crossbar, and O for capital rounds. Each reference UFO is outside the production designspace.
 
-Run `.venv/bin/python sources/drawing_pilot.py --weight Thin references` to review the
-drawings. Before drafting, show Eli the target and the donor packet printed by
-`.venv/bin/python sources/drawing_pilot.py --weight Thin brief`. Give a fresh tool-free
-session only the agreed task and packet. On the review side, render its
-returned GLIF with `.venv/bin/python sources/drawing_pilot.py --weight Thin proof output/candidate.glif`.
-Keep the target source, repository history and review proofs outside the drafting session.
+## Drawing References
 
-`make check-design` automatically compares Thin medial heh with the Regular
-reference when checking that glyph or running the full design check.
-For other weight transfers, compare the same glyph in the chosen donor and draft
-with `.venv/bin/python sources/drawing_pilot.py alignment DONOR.glif DRAFT.glif`.
-The diagnostic reports direction changes on corresponding straight edges in
-compatible contours. For medial heh, follow the vertical upper-counter wall
-and level joining stroke of Regular. Inspect the bowl-to-connector bend in
-the filled proof. A deliberate change in direction needs optical review.
+- Use Helvetica and Neue Haas Grotesk for neo-grotesk proportions.
+- Use LL Replica as a reference for the mathematical grid-based drawing style.
+- Use Inter, Geist, Rubik, Noto, IBM Plex, and Bricolage from reference-fonts.
+- Use the referance fonts as examples for weight, spacing, and quality.
+
+- First, use an Eli-approved drawing in `sources/drawing-references/` that shows the construction you need. Inspect both its points and its filled shape.
+- If the approved drawings lack that construction, use a production glyph with the same construction in the same script. Prefer green in that master, then yellow.
+- Eli maintains the reference UFOs at Thin, Regular, Bold and Black, all at 14 pt. A production copy needs explicit approval. Refresh only at Eli’s request.
+- Latin: use n for shoulders, o for lowercase rounds, H for capital stems and crossbars, and O for capital rounds.
+- Arabic: isolated beh, initial dotless beh, isolated sheen, isolated hah (ح), medial heh (ـهـ) and their component bases.
+- Hebrew: alef, bet, gimel and kaf.
+- Use Eli’s sketches for form and proportion. A hand correction applies to the named glyph and master.
 
 ## Grid and metrics
 
-- R5. Em 1024. Ascender and cap height 768, x-height 576, descender -256. Hebrew letter height 640.
-- R6. Every point is on the 2-unit grid. New structural points, handles, advances, sidebearings and kerning use the 8-unit grid. A point on 2 and off 8 is a correction by Eli: keep it, never snap it.
+- Em 1024. Ascender and cap height 768, x-height 576, descender -256. Hebrew letter height 640.
+- Keep points on-grid (2 units). Use 8 for new structure, handles, advances, sidebearings and kerning. Preserve Eli’s off-8 corrections.
 
 ```toml
 [grid]
@@ -81,13 +60,13 @@ source = 2         # every point is on the 2-unit grid
 machine_draft = 8  # new drafts use the 8-unit grid
 ```
 
-- R7. An intersection or a cut end point snaps to the 8-unit grid within 3 units of it, else to the 2-unit grid. Seen: v w x y V W X (9a2e884d).
-- R8. Stroke weights are optical values and can be off the 8-unit grid. Do not round Eli's stroke values. Seen: o side 98 and crown 84 (324e6a15), cap stems 100 (cbb174ea).
-- R46. Do not round a measurement, or give up the construction of a curve, for a tidier number. Interpolated positions and the compiled curves need not be on the grid.
+- Snap intersections and cut ends to 8 within 3 units, otherwise to 2. Seen: v w x y V W X (9a2e884d).
+- Preserve Eli’s optical stroke widths, including off-grid values. Seen: o side 98 and crown 84 (324e6a15), cap stems 100 (cbb174ea).
+- Preserve measured values and curve construction. Grid constraints apply to source drawings only.
 
 ## Corners, tips and joins
 
-- R9. A corner of two straight segments has a 45 degree bevel of 16 units per side. Tight junctions use 8. The bevel is a straight segment and keeps its absolute size in every master.
+- Bevel straight corners at 45°, 16 units per side (8 at tight junctions). Keep bevels straight and fixed across masters.
 
 ```toml
 [chamfers]
@@ -95,15 +74,23 @@ exposed = 16
 tight_junction = 8
 ```
 
-- R10. A tip ends on a flat after its bevel, never on an acute point. The end of a diagonal gets a 16-unit flat. Seen: less greater (cb7a5084), asciitilde (0faf5dbe), section (22ccd03a), v w x y V W X (9a2e884d), alef-hb (2026-11-15).
-- R11. No curve meets an edge in a point. A curved stroke lands on a short flat, 8 units at a junction. Seen: alef-hb (2026-11-15).
-- R12. In a weight transfer a cut can get larger, never smaller. Seen: Bold two three five six (c5042963).
-- R13. A tangent join is not a corner and gets no bevel. Keep the small cuts and straight landings of the donors.
-- R47. Before you fit handles, name each connection: tangent continuation, straight landing, deliberate cut, shelf or intended inflection.
+- A tip ends on a flat after its bevel, never on an acute point.
+  - The end of a diagonal gets a 16-unit flat.
+  - Seen: less greater (cb7a5084), asciitilde (0faf5dbe), section (22ccd03a), v w x y V W X (9a2e884d), alef-hb (2026-11-15).
+- No curve meets an edge in a point.
+  - A curved stroke lands on a short flat, 8 units at a junction.
+  - Seen: alef-hb (2026-11-15).
+- In a weight transfer a cut can get larger, never smaller. Seen: Bold two three five six (c5042963).
+- A tangent join is not a corner and gets no bevel. Keep the small cuts and straight landings of the donors.
+- Before you fit handles, name each connection: tangent continuation, straight landing, deliberate cut, shelf or intended inflection.
 
 ## Strokes and curves
 
-- R14. Apparent weight is monolinear. Measure across the stroke and check the two opposing edges together. A swelling or a pinch is a fault even when every check passes. Use the thickness heatmap of Runebender (Curves, Thickness); its colors are relative to the median of the glyph. Measure a suspect turn at the quarter, half and three-quarter points, adjust the opposing handles together, and measure again after rounding. `make check-design` uses these ranges, set from the green and yellow glyphs with `fgtools check-design --observe`:
+- Check apparent weight in Runebender’s thickness heatmap (Curves → Thickness).
+  - Compare both edges at ¼, ½ and ¾ of a suspect turn.
+  - Adjust paired handles and remeasure after rounding.
+  - Heatmap colors track the glyph median.
+  - Inspect visible faults even within target ranges.
 
 ```toml
 [targets.Regular.Latin]
@@ -117,30 +104,44 @@ horizontal_stroke = [124, 170]
 stroke_limit = 300
 ```
 
-- R15. Diagonals are straight, with parallel edges, through every join.
-- R16. Every crest, trough and side extreme of a curve has an on-curve point with a horizontal or vertical tangent. Seen: asciitilde (56f4b437), section (22ccd03a), b d (dec6b4b3).
-- R17. A turn in a bowl or a shoulder keeps one direction of curvature. Seen: hamzaabove-ar Bold (ce3a7669).
-- R18. G2 is not the target. A join can keep a curvature change when the shape needs it. Seen: hamzaabove-ar Bold (ce3a7669).
-- R19. A line that continues into a collinear handle is a smooth point. A corner is a deliberate kink only. Seen: 372bb48e.
-- R20. Handles within one segment have similar lengths, and the lengths follow the proportions of the glyph.
-- R21. Look at the whole filled shape before local curves. Change one node at a time and check its neighbors again.
-- R48. Check a curve in this order: the filled shape, the curvature of each turn, the joins, the two opposing edges, then all of it again after rounding. Then every master, the intermediate weights and the glyph in words.
-- R49. Harmonize, Balance, Optimize and Simplify in Runebender can remove intended unequal handles. Use them on a copy. `fgtools lint-curves <Master> <glyph> --joins` reports are a reason to look, not a verdict.
+- Diagonals are straight, with parallel edges, through every join.
+- Place an on-curve point with an axis-aligned tangent at every crest, trough and side extreme. Seen: asciitilde (56f4b437), section (22ccd03a), b d (dec6b4b3).
+- A turn in a bowl or a shoulder keeps one direction of curvature. Seen: hamzaabove-ar Bold (ce3a7669).
+- G2 is not the target. A join can keep a curvature change when the shape needs it. Seen: hamzaabove-ar Bold (ce3a7669).
+- A line that continues into a collinear handle is a smooth point. A corner is a deliberate kink only. Seen: 372bb48e.
+- Handles within one segment have similar lengths, and the lengths follow the proportions of the glyph.
+- Look at the whole filled shape before local curves. Change one node at a time and check its neighbors again.
+- Review fill, curvature, joins and opposing edges. Repeat after rounding. Check every master, intermediate weights and words.
+- Harmonize, Balance, Optimize and Simplify in Runebender can remove intended unequal handles.
+  - Use them on a copy.
+  - `fgtools lint-curves <Master> <glyph> --joins` reports are a reason to look, not a verdict.
 
 ## Bowls and rounds
 
-- R22. A lowercase Latin bowl (b d p q g) is the round half of the o, copied point for point, joined to a stem. The counter is about 0.95 of the o counter. b, p and q derive from an approved d. Seen: d (88b4aa2).
-- R50. The round side of a bowl letter keeps the sidebearing of the o, and the stem side gets 64 in Regular. Draw the junction of bowl and stem. Reverse each contour after a mirror. Do not scale an older bowl, and do not flatten its wall. Seen: d (88b4aa2).
-- R51. The single-storey g is not a mirror of the d. Its bowl is shorter and higher than the o, and the top left is fuller than the bottom left. The ear, the spine and the tail are drawn by eye. Tail depth -216.
-- R23. Geometric does not mean rectangular: keep oval bowls and counters. Seen: samekh v4, rejected (df38c4a2).
-- R24. Arabic letter dots are near-perfect circles: four symmetric cubic quarters. A dot has no bevel. This is for letter dots, not for every vowel mark.
+- Copy o’s round half point-for-point for b d p q g.
+  - Target 95% of o’s counter.
+  - Derive b p q from approved d.
+  - Seen: d (88b4aa2).
+- Use o’s round sidebearing and 64 on Regular’s stem side.
+  - Draw the junction.
+  - Reverse mirrored contours.
+  - Preserve bowl scale and wall curvature.
+  - Seen: d (88b4aa2).
+- Give g a shorter, higher bowl than o and a fuller upper left. Draw ear, spine and tail by eye. Tail depth −216.
+- Geometric does not mean rectangular: keep oval bowls and counters. Seen: samekh v4, rejected (df38c4a2).
+- Arabic letter dots are near-perfect circles: four symmetric cubic quarters.
+  - A dot has no bevel.
+  - This is for letter dots, not for every vowel mark.
 
 ## Weight and Bold
 
-- R25. Transfer construction relationships, not scaled coordinates. A Bold edge keeps the direction of the Regular edge. Seen: Bold seven nine (70c6a082).
-- R26. Open a Bold counter with width, not a thinner stem. Bold lowercase stems stay 192. Seen: Bold n b d (9fb03696).
-- R52. Before a weight transfer, decide which edges, alignments and counters are fixed. Do not assume the Latin pattern for Arabic or Hebrew. Seen: Bold zayin-hb, Bold hamzaabove-ar (ce3a7669).
-- R44. Masters: Thin 100, Regular 400, Bold 700, Black 900, each at 14 and 144 pt. Thin and Black use Regular and Bold as donors:
+- Transfer construction relationships, not scaled coordinates. A Bold edge keeps the direction of the Regular edge. Seen: Bold seven nine (70c6a082).
+- Open a Bold counter with width, not a thinner stem. Bold lowercase stems stay 192. Seen: Bold n b d (9fb03696).
+- Before a weight transfer, decide which edges, alignments and counters are fixed.
+  - Do not assume the Latin pattern for Arabic or Hebrew.
+  - Seen: Bold zayin-hb, Bold hamzaabove-ar (ce3a7669).
+- Masters: Thin 100, Regular 400, Bold 700, Black 900, each at 14 and 144 pt.
+  - Thin and Black use Regular and Bold as donors:
 
 ```toml
 [weights.Thin]
@@ -156,7 +157,11 @@ vertical_stem = { Regular = 100, Bold = 192, target = 256 }
 horizontal_stroke = { Regular = 88, Bold = 168, target = 204 }
 ```
 
-- R68. A 144 pt master starts as a calculation from the 14 pt master of the same weight. Each side of a glyph loses `side` units. A free side gets a smaller sidebearing. A joining side of an Arabic letter gets a shorter join. A free side inside an Arabic word, as in رب, changes as in Latin. A mark without an advance does not change. The change is complete at `complete` pt. A correction by Eli in a 144 pt master stays.
+- Derive 144 pt from the same weight at 14 pt.
+  - Reduce each free sidebearing by `side`, including free sides in رب.
+  - Shorten joining sides by the same amount.
+  - Reach full adjustment at `complete`.
+  - Preserve zero-advance marks and Eli’s display corrections.
 
 ```toml
 [optical_size]
@@ -166,7 +171,7 @@ side = 24       # units that each side of a glyph loses
 complete = 72   # pt: the size at which the change is complete
 ```
 
-- R69. The grade changes the weight and keeps every advance, in the units of the weight axis. A grade master has the outlines of `wght + grade` on the advances of `wght`. Past Thin and Black the grade has no effect. At 300 the letters of Regular collide.
+- Use outlines at clamped `wght + grade` with advances at `wght`. Clamp at Thin and Black. Grade +300 caused collisions in Regular.
 
 ```toml
 [grade]
@@ -176,10 +181,15 @@ maximum = 200
 
 ## Structure of the sources
 
-- R27. All masters have the same contours, points, point types, point order and components. Do not reorder points or contours.
-- R28. No overlapping contours. Seen: dollar (7f8be952), one.tf (dbe60148).
-- R29. A contour starts on the side where the writing starts: leftmost for Latin, rightmost for Arabic and Hebrew, the lowest of two that tie. Seen: asciitilde (56f4b437).
-- R53. The lowercase a keeps one contour structure across the weights. The two edges of the waist land on horizontal shelves before the 8-unit cuts into the stem, and the foot lands flat on the baseline. Compare with the drawing in 9e009aad. Seen: 3c25f669. Each triple is the left end, right end and height of a Regular landing:
+- All masters have the same contours, points, point types, point order and components. Do not reorder points or contours.
+- No overlapping contours. Seen: dollar (7f8be952), one.tf (dbe60148).
+- Start contours leftmost in Latin, rightmost in Arabic and Hebrew. Break ties at the lowest point. Seen: asciitilde (56f4b437).
+- Keep a compatible lowercase a.
+  - Both waist edges land on horizontal shelves before 8-unit stem cuts.
+  - Land the foot flat on the baseline.
+  - Compare 9e009aad.
+  - Regular triples give left x, right x and y.
+  - Seen: 3c25f669.
 
 ```toml
 [a_geometry]
@@ -188,23 +198,30 @@ regular_lower_waist = [360, 424, 280]
 regular_foot = [512, 560, 0]
 ```
 
-- R54. All masters have the same kerning groups and pairs. Kerning values are multiples of 8.
+- All masters have the same kerning groups and pairs. Kerning values are multiples of 8.
 
 ## Spacing
 
-- R30. Round forms fit tighter than flat-sided forms, and symmetric letters have balanced sidebearings. Values use the 8-unit grid and recurring intervals (32, 48, 64, 96). Judge spacing in words at 400, 550 and 700. Keep approved widths that are off the grid.
+- Round forms fit tighter than flat-sided forms, and symmetric letters have balanced sidebearings.
+  - Values use the 8-unit grid and recurring intervals (32, 48, 64, 96).
+  - Judge spacing in words at 400, 550 and 700.
+  - Keep approved widths that are off the grid.
 
 ## Latin
 
-- R31. h and m take their stems, shoulder and arch from the current n. Seen: m h (cbb174ea).
-- R57. A mark has one height over all letters of one height. Over an ascender or a capital, the mark is above the letter. The i and the j have no dot under a top mark.
-- R58. A symmetric mark is on the optical center of the letter. An acute or a grave points at the center with its lower end. On a letter that is not symmetric, all letters follow one decision.
-- R59. A cedilla joins C and S at the center of the bowl. An ogonek joins at the bottom right, or at the stem of I and i. A comma accent is under the center with a gap. The caron of d, t, l and L is an apostrophe form.
-- R60. A mark does not touch a part that it is not designed to join. The masters have the same components and relative mark positions.
+- h and m take their stems, shoulder and arch from the current n. Seen: m h (cbb174ea).
+- Align mark heights over equal-height letters. Clear ascenders and capitals. Remove i and j dots under top marks.
+- Optically center symmetric marks. Aim the lower end of acute and grave at center. Use consistent placement on asymmetric letters.
+- A cedilla joins C and S at the center of the bowl.
+  - An ogonek joins at the bottom right, or at the stem of I and i.
+  - A comma accent is under the center with a gap.
+  - The caron of d, t, l and L is an apostrophe form.
+- A mark does not touch a part that it is not designed to join.
+  - The masters have the same components and relative mark positions.
 
 ## Hebrew
 
-- R32. Hebrew has the contrast of the Arabic: horizontals 104 and verticals 88 in Regular. A diagonal that falls to the bottom right is thick (about 100), and a tail to the bottom left is thin (88 to 96).
+- Match Regular Arabic contrast in Hebrew. Horizontals 104, uprights 88, descending right diagonals about 100, descending left tails 88–96.
 
 ```toml
 [targets.Regular.Hebrew]
@@ -213,10 +230,12 @@ horizontal_stroke = [100, 108]
 stroke_limit = 180
 ```
 
-- R33. The lamed ascender reaches 768. Final forms descend to -192.
-- R34. When a Hebrew letter looks wrong, compare its skeleton with Rubik, and follow that structure with Virtua's chamfers and grid. Simplify, do not add. Seen: zayin shin finaltsadi samekh (4e900dd0, df38c4a2), gimel (3814ca96).
-- R35. Vowel dots are 96 square with 24-unit bevels, and vowel bars are 104 thick. Bold: dots 128, bars 136, bevels 32.
-- R55. Check mark attachment in the compiled font at several weights.
+- The lamed ascender reaches 768. Final forms descend to -192.
+- When a Hebrew letter looks wrong, compare its skeleton with Rubik, and follow that structure with Virtua's chamfers and grid.
+  - Simplify, do not add.
+  - Seen: zayin shin finaltsadi samekh (4e900dd0, df38c4a2), gimel (3814ca96).
+- Vowel dots are 96 square with 24-unit bevels, and vowel bars are 104 thick. Bold: dots 128, bars 136, bevels 32.
+- Check mark attachment in the compiled font at several weights.
 
 ## Arabic
 
@@ -227,28 +246,42 @@ horizontal_stroke = [88, 112]
 stroke_limit = 180
 ```
 
-- R36. Draw and correct the base letters before their marks. The horizontal is usually a little heavier than the upright. Seen: 211c3b8d.
-- R37. The two terminals of an isolated boat or cup have the same thickness. Seen: behDotless-ar (67f4d301).
-- R38. Check joining forms through shaping, at 400, 550 and 700, and measure both edges of a join against the real neighbors. For a ligature, take stacking and proportions from the reference and stroke weight and curves from Virtua. For في: keep the middle shelf visible, reuse the counter and crown of initial feh at their scale, and check في, فِي, فيه and لفي in every weight, with and without marks.
+- Draw and correct the base letters before their marks. The horizontal is usually a little heavier than the upright. Seen: 211c3b8d.
+- The two terminals of an isolated boat or cup have the same thickness. Seen: behDotless-ar (67f4d301).
+- Shape real neighbors at 400, 550 and 700.
+  - Measure both join edges.
+  - Take ligature stacking and proportions from the reference, curves and weight from Virtua.
+  - In في preserve the middle shelf and initial feh’s counter and crown at native scale.
+  - Proof في, فِي, فيه and لفي at every weight, with and without marks.
 
 ## Glyph decisions
 
-- R39. Arabic kaf is rounded with an old-style S shape. Keep its openings and rounded turns.
-- R40. The raised return of yeh-ar.fina is intentional in every master.
-- R41. Seen keeps upright teeth, separate rounded lobes and small junctions. Start from seen-ar.init and seen-ar.medi. Eli rejected version 4 although it passed the checks.
-- R42. The at sign keeps the small italic a and the continuous double spiral. Look at the whole filled spiral, not at local measurements.
-- R43. dollar uses the uppercase S as its body (7f8be952). section has bevelled terminals (22ccd03a).
-- R56. A symbol made of lines is constructed from green symbols. An organic symbol is traced from an image with img2bez, with Virtua's construction, scale and weight.
+- Thin medial heh (ـهـ) follows Regular’s vertical upper-counter wall and level joining stroke. Inspect the bowl-to-connector bend in the filled glyph.
+
+- Arabic kaf is rounded with an old-style S shape. Keep its openings and rounded turns.
+- The raised return of yeh-ar.fina is intentional in every master.
+- Seen keeps upright teeth, separate rounded lobes and small junctions.
+  - Start from seen-ar.init and seen-ar.medi.
+  - Eli rejected version 4 although it passed the checks.
+- The at sign keeps the small italic a and the continuous double spiral. Look at the whole filled spiral, not at local measurements.
+- dollar uses the uppercase S as its body (7f8be952). section has bevelled terminals (22ccd03a).
+- A symbol made of lines is constructed from green symbols.
+  - An organic symbol is traced from an image with img2bez, with Virtua's construction, scale and weight.
 
 ## Proofs and media
 
-- R61. Every proof, specimen, picture and video is laid out on the powers of two of the typeface. No format has an exception.
-- R62. The module is 64 pixels and the base unit is 8 pixels. Every position and length is a multiple of 8. In print the module is 32 points and the unit is 4 points.
-- R63. Type sizes double: 32, 64, 128, 256, 512 and 1024 pixels, with 24 for labels. A picture has at most three sizes and two weights.
-- R64. The top of the capitals stands on a module line, and the start of a text on a column line: left for Latin, right for Arabic and Hebrew. Text is flush at its start and ragged at its end. Leading is a multiple of 16 pixels.
-- R65. Motion: 30 frames in a second, loops of 128 or 256 frames, durations in multiples of 8 frames. One value moves in a picture.
-- R66. A text is chosen to fit its measure. The size never changes to make a text fit.
-- R67. A picture has one label size, one line weight, two inks and one accent. Each setting has a label with its size and weight.
+- Every proof, specimen, picture and video is laid out on the powers of two of the typeface. No format has an exception.
+- Align positions and lengths to 8 px within 64 px modules. In print, use 4 pt within 32 pt modules.
+- Type sizes double: 32, 64, 128, 256, 512 and 1024 pixels, with 24 for labels.
+  - A picture has at most three sizes and two weights.
+- Align cap tops to modules and text starts to columns.
+  - Set Latin flush left, Arabic and Hebrew flush right.
+  - Use 16 px leading increments.
+- Motion: 30 frames in a second, loops of 128 or 256 frames, durations in multiples of 8 frames.
+  - One value moves in a picture.
+- A text is chosen to fit its measure. The size never changes to make a text fit.
+- A picture has one label size, one line weight, two inks and one accent.
+  - Each setting has a label with its size and weight.
 
 ```toml
 [layout]

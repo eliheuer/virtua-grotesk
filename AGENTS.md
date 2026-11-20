@@ -16,7 +16,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 
 ## Glyphs
 
-- Read `CONTEXT.md` before editing glyphs.
+- Read `CONTEXT.md` before editing glyphs. Run `.venv/bin/python sources/drawing_harness.py --help` for reference selection, candidate proofs and edge comparison.
 - The mark color is the state of a glyph. `CONTEXT.md` has the policy of each color.
 - Mark each AI drawing purple. Only Eli marks a contour glyph green. Never change a green contour glyph.
 - Every master has the same contours, points and components. `.venv/bin/fgtools lint-glifs` checks it.
@@ -32,7 +32,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 - Before and after an edit, run `.venv/bin/fgtools render "<glyphs>"` and read the picture.
 - After an edit, run `make check-design GLYPHS="..."` and `make check-changes`.
 - For changes that affect the exported font, run `make build` and `make diff`. Explain each difference.
-- A second agent reviews a draft before Eli sees it: `pass`, or `fault` with the rule number and the place.
+- A second agent reviews a draft before Eli sees it: `pass`, or `fault` with the drawing fault and its location.
 - A pass is not approval. Report each visible fault.
 
 ## Proofs
@@ -42,7 +42,7 @@ Every agent tool reads this file. Keep it under 70 lines.
 - `.venv/bin/python sources/proof_review.py` serves the proofs at http://127.0.0.1:8770. Give Eli that address.
 - The Print Proof is generic. It gets no page for one problem.
 - A proof is valid only for the sources it was built from.
-- A layout follows R61 to R67 of `CONTEXT.md`.
+- A layout follows the “Proofs and media” section of `CONTEXT.md`.
 
 ## Repository
 

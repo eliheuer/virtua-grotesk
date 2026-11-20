@@ -1,4 +1,4 @@
-"""Show the selected drawing references and proof a returned glyph."""
+"""Prepare drawing references, proof candidates and compare aligned edges."""
 import argparse
 import hashlib
 import plistlib
@@ -12,25 +12,38 @@ from fontTools.pens.recordingPen import RecordingPointPen
 from fgtools.render_glyphs import render
 
 ROOT = Path(__file__).resolve().parents[1]
-WEIGHTS = ('Thin', 'Regular', 'Bold', 'Black')
-OUTPUT = ROOT / 'output/drawing-pilot'
+REFERENCE_DIR = ROOT / 'sources' / 'drawing-references'
+WEIGHTS = sorted(path.stem.removeprefix('DrawingReference-')
+                 for path in REFERENCE_DIR.glob('DrawingReference-*.ufo'))
+OUTPUT = ROOT / 'output/drawing-harness'
 
 
-def brief(weight):
-    reference = ROOT / 'sources' / 'drawing-references' / f'DrawingReference-{weight}.ufo'
+def brief(weight, approved):
+    reference = REFERENCE_DIR / f'DrawingReference-{weight}.ufo'
     donors = plistlib.loads((reference / 'glyphs/contents.plist').read_bytes())
-    print(f'{weight} drawing references:', ', '.join(donors))
-    rules = (ROOT / 'CONTEXT.md').read_text().splitlines()
-    for rule in (1, 5, 6, 13, 14, 16, 17, 18, 48):
-        print(next(line for line in rules if line.startswith(f'- R{rule}.')))
-    for name, filename in donors.items():
-        data = (reference / 'glyphs' / filename).read_bytes()
+    print(f'{weight} reference inventory (includes unreviewed copies):', ', '.join(donors))
+    print('Use only drawings Eli has approved. Copied production grades do not establish approval.')
+    print((ROOT / 'CONTEXT.md').read_text().rstrip())
+    if not approved:
+        print('No approved drawing selected. Pass approved glyph names after brief to include their outlines.')
+    pending = list(dict.fromkeys(approved))
+    included = set()
+    for name in pending:
+        if name in included:
+            continue
+        if name not in donors:
+            raise ValueError(f'{name} is absent from {reference.name}')
+        included.add(name)
+        data = (reference / 'glyphs' / donors[name]).read_bytes()
+        for component in ET.fromstring(data).findall('outline/component'):
+            pending.append(component.attrib['base'])
+        print('Selected reference' if name in approved else 'Required component')
         print(f'\n{weight} {name} SHA-256 {hashlib.sha256(data).hexdigest()}')
         print(data.decode())
 
 
 def proof(weight, data=None):
-    reference = ROOT / 'sources' / 'drawing-references' / f'DrawingReference-{weight}.ufo'
+    reference = REFERENCE_DIR / f'DrawingReference-{weight}.ufo'
     donors = plistlib.loads((reference / 'glyphs/contents.plist').read_bytes())
     names = list(donors)
     if data is not None:
@@ -73,7 +86,7 @@ def alignment(donor_path, draft_path):
         if [p.get('type') for p in points[0]] != [p.get('type') for p in points[1]]:
             raise ValueError(f'Point types differ in contour {index}')
         for j, point in enumerate(points[0]):
-            if point.get('type') != 'line' or (j == 0 and points[0][0].get('type') == 'move'):
+            if point.get('type') != 'line':
                 continue
             for axis, direction in (('x', 'vertical'), ('y', 'horizontal')):
                 previous = points[0][j - 1]
@@ -94,17 +107,17 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--weight', choices=WEIGHTS, default='Regular')
     commands = parser.add_subparsers(dest='command', required=True)
-    commands.add_parser('brief')
-    commands.add_parser('references')
-    commands.add_parser('proof').add_argument('candidate', type=Path)
-    compare = commands.add_parser('alignment')
+    commands.add_parser('brief', help='print design context and selected reference outlines').add_argument('approved', nargs='*', help='glyph names with confirmed approval in this reference master')
+    commands.add_parser('references', help='render the reference inventory')
+    commands.add_parser('proof', help='render a candidate in a temporary source copy').add_argument('candidate', type=Path)
+    compare = commands.add_parser('alignment', help='report drift on corresponding horizontal and vertical edges')
     compare.add_argument('donor', type=Path)
     compare.add_argument('draft', type=Path)
     args = parser.parse_args()
     if args.command == 'alignment':
         alignment(args.donor, args.draft)
     elif args.command == 'brief':
-        brief(args.weight)
+        brief(args.weight, args.approved)
     elif args.command == 'references':
         proof(args.weight)
     else:
