@@ -41,6 +41,35 @@ correct. `README.md` has the idea of the design and its history.
 - R45. The core donors are O, H, n and o, with green or yellow forms of the same script. Check the mark color of a donor in every master. A sketch from Eli gives the shape: calibrate its scale first. A rejected candidate is a counterexample.
 - R4. A local correction of one glyph (Zayin, Gimel, Final Tsadi, hamza) is for that glyph and master only.
 
+
+**Drawing references.** The sources/drawing-references directory contains one sparse UFO
+per weight at 14 pt: Thin, Regular, Bold and Black. Each starts with exact
+glyph copies from its production master at `4fcab06bb`. Eli owns the
+reference drawings and edits them by hand. Treat copied drawings, including
+calculated extremes, as starting material until Eli approves them.
+Latin uses n, o, H and O. Arabic uses isolated beh, initial dotless beh,
+isolated sheen, isolated hah (ح) and medial heh (ـهـ), with their component bases. Hebrew
+uses alef, bet, gimel and kaf.
+Keep the snapshot fixed during trials. Refresh it when Eli requests an update.
+Use n for the shoulder, o for lowercase rounds, H for capital stems and
+crossbar, and O for capital rounds. Each reference UFO is outside the production designspace.
+
+Run `.venv/bin/python sources/drawing_pilot.py --weight Thin references` to review the
+drawings. Before drafting, show Eli the target and the donor packet printed by
+`.venv/bin/python sources/drawing_pilot.py --weight Thin brief`. Give a fresh tool-free
+session only the agreed task and packet. On the review side, render its
+returned GLIF with `.venv/bin/python sources/drawing_pilot.py --weight Thin proof output/candidate.glif`.
+Keep the target source, repository history and review proofs outside the drafting session.
+
+`make check-design` automatically compares Thin medial heh with the Regular
+reference when checking that glyph or running the full design check.
+For other weight transfers, compare the same glyph in the chosen donor and draft
+with `.venv/bin/python sources/drawing_pilot.py alignment DONOR.glif DRAFT.glif`.
+The diagnostic reports direction changes on corresponding straight edges in
+compatible contours. For medial heh, follow the vertical upper-counter wall
+and level joining stroke of Regular. Inspect the bowl-to-connector bend in
+the filled proof. A deliberate change in direction needs optical review.
+
 ## Grid and metrics
 
 - R5. Em 1024. Ascender and cap height 768, x-height 576, descender -256. Hebrew letter height 640.
