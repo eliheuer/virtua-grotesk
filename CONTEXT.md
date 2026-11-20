@@ -6,9 +6,14 @@ AI Agents: read this document before working on this project and keep it in your
 
 Link: https://elih.net/blog/virtua-grotesk/
 
-Virtua Grotesk is a typeface drawn on a dyadic self-labeling grid system: nested grids built on powers of two. Point placement defaults to an 8-unit grid, with small optical corrections dropping to a 2-unit subgrid. The grids record most of the drawing intent automatically, so the source files are labeled training data without extra work. This system makes the project a machine-learning and data-engineering project as much as a design project.
+- Virtua Grotesk is a typeface drawn on a dyadic self-labeling grid system
+- A Dyadic self-labeling grid system is nested grids built on powers of two.
+- Point placement defaults to an 8-unit grid, with small optical corrections dropping to a 2-unit subgrid.
+- The grids record most of the drawing intent automatically, so the source files are labeled training data without extra work.
+- This system makes the project a machine-learning and data-engineering project as much as a design project.
 
-Designing the system instead of the final object is an old modernist impulse. Karl Gerstner argued for it in his 1964 book Designing Programmes, a foundational text of systematic Swiss design. In practice, the idea ran into limits. Computers were procedural, and strict rules made type stiff. They missed the optical corrections the eye needs.
+- Designing the system instead of the final object is an old modernist impulse.
+- Karl Gerstner argued for it in his 1964 book Designing Programmes, a foundational text of systematic Swiss design. In practice, the idea ran into limits. Computers were procedural, and strict rules made type stiff. They missed the optical corrections the eye needs.
 
 Neural networks might change that. A neural network is not a procedural program; it interpolates and tolerates nuance where a rule is brittle. It also answers a modernist ideal that the rigid version betrayed: technology people can live in harmony with, not technology that extinguishes human dignity. The old impulse is worth another look.
 
