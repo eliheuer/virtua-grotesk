@@ -1,8 +1,9 @@
-"""Serve the Virtua Grotesk review index after running make proof."""
+"""Serve the Virtua Grotesk review index after running make proofs."""
 
 from argparse import ArgumentParser
 from functools import partial
 from html import escape
+import json
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from importlib import import_module
 from pathlib import Path
@@ -19,6 +20,9 @@ from fgtools.proof_web import samples as proof_samples
 from fontTools.ttLib import TTFont
 
 OUTPUT = Path(__file__).resolve().parent.parent / 'output'
+README_IMAGES = [p for folder in ('article', 'readme-images')
+                 for p in (OUTPUT.parent / 'documentation' / folder).glob('*')
+                 if p.suffix in ('.svg', '.png')]
 REV = OUTPUT / 'onboarding-review'
 SHEETS = REV / 'Review-sheets'
 ZIP = REV / 'Reference-proofs.zip'
@@ -26,7 +30,8 @@ ZIP = REV / 'Reference-proofs.zip'
 PROOF = OUTPUT / 'proof' / 'proof.pdf'
 SCRIPTS = ('Latin', 'Arabic', 'Hebrew')
 PROOF_NAMES = {'print-proof.pdf': 'Print Proof', 'full-proof.pdf': 'Full Proof'}
-GRID_PROOF = 'print-proof-grid.pdf'
+GRID_PROOFS = {'print-proof-grid.pdf': 'Print Proof with red grid',
+               'full-proof-grid.pdf': 'Full Proof with red grid'}
 PLOTTER = OUTPUT / 'media' / '.build' / 'plotter.rs'
 PLOT = PLOTTER.with_name('proof.pdf.plot')
 DESIGNBOT = OUTPUT.parent / '.venv' / 'bin' / 'designbot'
@@ -34,14 +39,17 @@ proof_lock = Lock()
 proof_revision = None
 COLUMNS = (69, 309, 549)
 COLUMN_WIDTH = 224
-TITLE_SIZE = 103.76
-TITLE_WEIGHT = 400
-TITLE_LEFT_BEARING = 24 / 1024
+def right_label(font, y, text):
+    size = 12
+    end = COLUMNS[-1] + COLUMN_WIDTH
+    ink_right = font.measure(text, 400, size=size)[2]
+    return proof_text(end - size * ink_right, y, size, 400, text)
 
 
-def proof_text(x, y, size, weight, text):
-    # Each text has the optical size of its type size.
-    return f'text\t{x}\t{y}\t{size}\t{weight},opsz={size}\t0\t0\t0\t255\t\t{text}'
+def proof_text(x, y, size, weight, text, opsz=None):
+    if opsz is None:
+        opsz = size
+    return f'text\t{x}\t{y}\t{size}\t{weight},opsz={opsz}\t0\t0\t0\t255\t\t{text}'
 
 
 def proof_rule(y, left=69, right=773):
@@ -49,18 +57,28 @@ def proof_rule(y, left=69, right=773):
     return f'line\t{left}\t{y}\t{right}\t{y}\t1.03125\t0\t0\t0\t255'
 
 
+def cover_title(font, weight, title_top, unit):
+    title = font.family
+    _, ink_left, ink_right = font.measure(title, weight, size=144 / font.scale)
+    size = (COLUMNS[-1] + COLUMN_WIDTH - COLUMNS[0]) / (ink_right - ink_left)
+    # Align the cap height to the nearest grid line, with a unit on either side.
+    baseline = title_top - unit - unit * round(size * 0.75 / unit)
+    return baseline, proof_text(COLUMNS[0] - size * ink_left, baseline, size, weight, title, opsz=144)
+
+
 def cover(font, facts, weights, stamp):
     left, middle, right = COLUMNS
-    yield proof_text(left, 501.5, 12, 400, 'Virtua Grotesk')
-    yield proof_text(middle, 501.5, 12, 400, stamp)
-    yield proof_text(right, 501.5, 12, 400, 'github.com/eliheuer/virtua-grotesk')
-    title_top = 489.5
+    unit = 8
+    header_baseline = 521.5 - 2 * unit
+    yield proof_text(left, header_baseline, 12, 400, 'Virtua Grotesk')
+    yield proof_text(middle, header_baseline, 12, 400, stamp)
+    yield right_label(font, header_baseline, 'github.com/eliheuer/virtua-grotesk')
+    title_top = header_baseline - unit
     yield proof_rule(title_top)
-    # The title ink spans about 0.78 em, including overshoots.
-    title_height = 8 * round((TITLE_SIZE * 0.78 + 24) / 8)
-    title_center = title_top - title_height / 2
-    baseline = 73.5 + 4 * round((title_center - TITLE_SIZE * 0.375 - 73.5) / 4)
-    yield proof_text(left - TITLE_SIZE * TITLE_LEFT_BEARING, baseline, TITLE_SIZE, TITLE_WEIGHT, 'Virtua Grotesk')
+    baseline, title_row = cover_title(font, 400, title_top, unit)
+    yield title_row
+    baseline, title_row = cover_title(font, 700, baseline, unit)
+    yield title_row
 
     bands = [
         ('Design Space', [
@@ -84,18 +102,17 @@ def cover(font, facts, weights, stamp):
             ('License', 'SIL Open Font License 1.1'),
         ]),
     ]
-    top = title_top - title_height
-    for i, (heading, rows) in enumerate(bands):
+    top = baseline - unit
+    leading = 2 * unit
+    for heading, rows in bands:
         yield proof_rule(top)
-        height = top - 73.5 if i == len(bands) - 1 else 80
-        inset = 4 * round((height - 32) / 8)
-        first = top - inset
+        first = top - 2 * unit
         yield proof_text(left, first, 12, 400, heading)
         for row, (label, value) in enumerate(rows):
-            y = first - row * 20
+            y = first - row * leading
             yield proof_text(middle, y, 12, 400, label)
-            yield proof_text(right, y, 12, 400, value)
-        top -= height
+            yield right_label(font, y, value)
+        top = first - (len(rows) - 1) * leading - unit
 
 
 def without_reading_marks(text, script):
@@ -126,22 +143,25 @@ def paired_lines(font, script, text, measure, size, weight, limit):
         yield without_reading_marks(marked, script), marked
 
 
-def reading_page(font, script, style, weight, text):
+def reading_page(font, script, style, weight, text, guides):
     left, middle, right = COLUMNS
     rtl = script in ('Arabic', 'Hebrew')
     # Stacked Arabic marks in Black span 2.19 em from highest to lowest ink.
     leading = {8: 18, 16: 36} if script == 'Arabic' else {8: 10, 16: 20}
     sizes = (16, 8) if rtl else (8, 16)
     settings = ' · '.join(f'{size}/{leading[size]} pt' for size in sizes)
-    yield proof_text(left, 501.5, 12, 400, 'Virtua Grotesk')
-    yield proof_text(middle, 501.5, 12, 400, f'{script} · {style} {weight:g}')
-    yield proof_text(right, 501.5, 12, 400, settings)
+    yield proof_text(left, 497.5, 12, 400, 'Virtua Grotesk')
+    yield proof_text(middle, 497.5, 12, 400, f'{script} · {style} {weight:g}')
+    yield right_label(font, 497.5, settings)
     yield proof_rule(489.5)
     band_height = 208
 
-    columns = [(8, 457.5, right + COLUMN_WIDTH if rtl else left, COLUMN_WIDTH),
-               (16, 453.5, middle + COLUMN_WIDTH if rtl else middle, 2 * COLUMN_WIDTH)]
-    for size, baseline, start, measure in columns:
+    end = right + COLUMN_WIDTH
+    narrow = (right, end) if rtl else (left, left + COLUMN_WIDTH)
+    wide = (left, middle + COLUMN_WIDTH) if rtl else (middle, end)
+    for size, baseline, (x_min, x_max) in [(8, 457.5, narrow), (16, 453.5, wide)]:
+        measure = x_max - x_min
+        start = x_max if rtl else x_min
         if script == 'Arabic':
             baseline -= size / 2
         room = int((baseline - 293.5) // leading[size]) + 1
@@ -149,20 +169,38 @@ def reading_page(font, script, style, weight, text):
             for band, line in enumerate(pair):
                 x = start - font.measure(line, weight, size=size)[2] * size if rtl else start
                 y = baseline - i * leading[size] - band * band_height
+                guides.append((x_min, x_max, y))
                 yield proof_text(f'{x:g}', y, size, f'{weight:g}', line)
 
 
-def grid_lines():
-    for x in COLUMNS:
-        yield f'rect\t{x}\t73.5\t{COLUMN_WIDTH}\t448\t255\t247\t247\t255'
-    # Match the centered 704 × 448 pt live area of the landscape proof.
-    for x in range(69, 774, 8):
-        width = 0.5 if (x - 69) % 32 == 0 else 0.15
-        yield f'line\t{x}\t73.5\t{x}\t521.5\t{width}\t244\t191\t191\t255'
-    for offset in range(0, 449, 8):
-        y = 73.5 + offset
-        width = 0.5 if offset % 32 == 0 else 0.15
-        yield f'line\t69\t{y}\t773\t{y}\t{width}\t244\t191\t191\t255'
+def grid_lines(baselines, screen=False):
+    tint = '28\t8\t8' if screen else '255\t247\t247'
+    rule = '94\t37\t37' if screen else '244\t191\t191'
+    left, _, right = COLUMNS
+    end = right + COLUMN_WIDTH
+    bottom, top = 73.5, 521.5
+    if baselines is not None:
+        for x in COLUMNS:
+            yield f'rect\t{x}\t{bottom}\t{COLUMN_WIDTH}\t{top-bottom}\t{tint}\t255'
+        minor = '58\t25\t25' if screen else '249\t221\t221'
+        major = '88\t37\t37' if screen else '236\t185\t185'
+        baseline = '156\t65\t65' if screen else '201\t110\t110'
+        for offset in range(8, int(end - left), 8):
+            color, width = (major, 0.4) if offset % 32 == 0 else (minor, 0.25)
+            x = left + offset
+            yield f'line\t{x}\t{bottom}\t{x}\t{top}\t{width}\t{color}\t255'
+        for offset in range(8, int(top - bottom), 8):
+            color, width = (major, 0.4) if offset % 32 == 0 else (minor, 0.25)
+            y = bottom + offset
+            yield f'line\t{left}\t{y}\t{end}\t{y}\t{width}\t{color}\t255'
+        for x1, x2, y in baselines:
+            if (y - bottom) % 2:
+                raise ValueError(f'Proof baseline at {y} falls outside the 2 pt grid')
+            yield f'line\t{x1}\t{y}\t{x2}\t{y}\t0.45\t{baseline}\t255'
+    for x in (left, end):
+        yield f'line\t{x}\t{bottom}\t{x}\t{top}\t0.5\t{rule}\t255'
+    for y in (bottom, top):
+        yield f'line\t{left}\t{y}\t{end}\t{y}\t0.5\t{rule}\t255'
 
 
 def proof_content():
@@ -170,7 +208,7 @@ def proof_content():
     layout = project.load(OUTPUT.parent)
     font, facts = media.font_type(layout)
     if Path(font_row.split('\t')[1]) != font.path:
-        raise ValueError('Run make proof to update the detail pages for the current font.')
+        raise ValueError('Run make proofs to update the detail pages for the current font.')
     with TTFont(font.path, lazy=True) as built:
         optical_default = next((axis.defaultValue for axis in built['fvar'].axes if axis.axisTag == 'opsz'), None)
         weights = sorted(
@@ -195,6 +233,16 @@ def proof_content():
                 stamp = ' · '.join([f'Version {version}', *revision])
 
     print_pages.append(tuple(cover(font, facts, weights, stamp)))
+    # Cover text occupies one column, except for the full-width family name.
+    cover_guides = []
+    for row in print_pages[0]:
+        fields = row.split('\t')
+        if fields[0] == 'text':
+            x, y, size = map(float, fields[1:4])
+            left = COLUMNS[0] if size != 12 else max(col for col in COLUMNS if col <= x + 1)
+            end = COLUMNS[-1] + COLUMN_WIDTH if size != 12 else left + COLUMN_WIDTH
+            cover_guides.append((left, end, y))
+    page_guides = [cover_guides]
     samples, _ = proof_samples.read(layout.sources)
     for script in SCRIPTS:
         paragraphs = samples['text'][f'{script.lower()}-reading-marks']['paragraphs']
@@ -203,8 +251,10 @@ def proof_content():
             raise ValueError(f'The built font cannot set the {script} reading sample.')
         text = ' '.join([text] * 4)
         for weight, style in weights:
-            print_pages.append(tuple(reading_page(font, script, style, weight, text)))
-    return canvas, font_row, print_pages, replaced
+            guides = [(x, x + COLUMN_WIDTH, 497.5) for x in COLUMNS]
+            print_pages.append(tuple(reading_page(font, script, style, weight, text, guides)))
+            page_guides.append(guides)
+    return canvas, font_row, print_pages, page_guides, replaced
 
 
 def draw_proof(folder, name, canvas, font, rows):
@@ -230,27 +280,39 @@ def prepare_proofs():
     global proof_revision
     with proof_lock:
         revision = (PROOF.stat().st_mtime_ns, PLOT.stat().st_mtime_ns)
-        names = (*PROOF_NAMES, GRID_PROOF)
+        names = (*PROOF_NAMES, *GRID_PROOFS)
         if revision == proof_revision and all(PROOF.with_name(n).exists() for n in names):
             return
         with TemporaryDirectory(dir=PROOF.parent) as work:
             folder = Path(work)
-            canvas, font, print_pages, replaced = proof_content()
+            canvas, font, print_pages, page_guides, replaced = proof_content()
             page_start = 'page\t0\t255\t255\t255'
-            core = [row for page in print_pages for row in (page_start, *page)]
-            detail = []
+            # Both editions use this page sequence. Print stops after the reading pages.
+            pages = [(page_start, *page) for page in print_pages]
+            print_count = len(pages)
             page_number = 0
             for row in PLOT.read_text().splitlines()[3:]:
                 if row.startswith('page\t'):
                     page_number += 1
+                    if page_number not in replaced:
+                        pages.append([])
                 if page_number and page_number not in replaced:
-                    detail.append(row)
-            regular = draw_proof(folder, 'print-proof.pdf', canvas, font, core)
-            grid = draw_proof(folder, GRID_PROOF, canvas, font, (
-                row for page in print_pages for row in (page_start, *grid_lines(), *page)
-            ))
-            full = draw_proof(folder, 'full-proof.pdf', canvas, font, screen_rows((*core, *detail)))
-            for result in (regular, full, grid):
+                    pages[-1].append(row)
+
+            results = []
+            for filename in (*PROOF_NAMES, *GRID_PROOFS):
+                screen = filename.startswith('full-')
+                grid = filename in GRID_PROOFS
+                rows = []
+                for i, page in enumerate(pages if screen else pages[:print_count]):
+                    start, *content = screen_rows(page) if screen else page
+                    rows.append(start)
+                    if grid:
+                        guides = page_guides[i] if i < print_count else None
+                        rows.extend(grid_lines(guides, screen=screen))
+                    rows.extend(content)
+                results.append(draw_proof(folder, filename, canvas, font, rows))
+            for result in results:
                 result.replace(PROOF.with_name(result.name))
         proof_revision = revision
 
@@ -314,15 +376,78 @@ def link(p, title=None, thumb=False):
     picture = f'<img loading="lazy" src="{url}" alt="">' if thumb else ''
     return f'<a href="{url}">{picture}{name}</a>'
 
+def social_media_sections():
+    twitter = OUTPUT / 'twitter'
+    clips = []
+    for script in sorted((OUTPUT.parent / 'documentation/media/twitter/animations').glob('*.rs')):
+        title = script.stem.replace('-', ' ').title()
+        for suffix, label in [('', title + ' · Clean'), ('-grid', title + ' · Red Grid'), ('-crt', title + ' · CRT')]:
+            path = twitter / f'{script.stem}{suffix}.mp4'
+            if path.is_file():
+                clips.append((path, label))
+    if clips:
+        yield ('<details open><summary>Twitter Animations</summary><div class="grid posts">' +
+               ''.join(f'<article><video controls playsinline muted preload="metadata" src="/twitter/{path.name}"></video>'
+                       f'{link(path, title)}</article>' for path, title in clips) + '</div></details>')
+    groups = {
+        'Instagram Carousels': ('carousel', {'portrait', 'square'}),
+        'Instagram Animations': ('video', {'vertical', 'portrait', 'square'}),
+        'Twitter Images': ('image', {'landscape', 'card'}),
+        'Instagram Images': ('image', {'portrait', 'square', 'vertical'}),
+    }
+    records = [(path.parent, json.loads(path.read_text()))
+               for path in sorted((OUTPUT / 'media').glob('*/*/*.json'))]
+    for title, (kind, canvases) in groups.items():
+        items = []
+        for directory, record in records:
+            if record['kind'] != kind or record['canvas'] not in canvases:
+                continue
+            files = [directory / name for name in record['files']]
+            if not files or not all(path.is_file() for path in files):
+                continue
+            first = '/' + quote(files[0].relative_to(OUTPUT).as_posix())
+            label = escape(record['format'].replace('-', ' ').title())
+            if files[0].stem.endswith('_lattice'):
+                label += ' With Grid'
+            size = f"{record['width']} × {record['height']}"
+            alt = escape(record.get('alt', ''))
+            preview = (f'<video controls playsinline muted preload="metadata" aria-label="{alt}" src="{first}"></video>'
+                       if kind == 'video' else f'<a href="{first}"><img loading="lazy" alt="{alt}" src="{first}"></a>')
+            if kind == 'carousel':
+                assets = ' · '.join(link(path, 'PDF' if path.suffix == '.pdf' else str(i))
+                                    for i, path in enumerate(files, 1))
+            else:
+                assets = link(files[0], 'Open file')
+            items.append(f'<article>{preview}<strong>{label}</strong><small>{size}</small>'
+                         f'<div>{assets}</div><p>{escape(record.get("caption", ""))}</p></article>')
+        if items:
+            yield f'<details><summary>{title}</summary><div class="grid posts">{"".join(items)}</div></details>'
+
+
 def index():
-    parts = ['<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Virtua Grotesk proofs</title><style>body{max-width:960px;margin:48px auto;padding:0 24px;background:#f6f5f0;color:#222;font:16px/1.5 system-ui}h1{font-size:36px;letter-spacing:-.045em}a{color:#234836;text-underline-offset:3px}.primary{display:inline-block;font-size:22px;margin:0 24px 20px 0}details{border-top:1px solid #babdb4;padding:14px 0}summary{cursor:pointer;font-weight:600}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:20px;margin:16px 0}.grid img{display:block;width:100%;height:116px;object-fit:contain;background:#303030;margin-bottom:5px}li{margin:6px 0}</style><main><h1>Virtua Grotesk proofs</h1>']
-    if PROOF.is_file():
-        for name, title in PROOF_NAMES.items():
-            parts.append('<span class="primary">'+link(PROOF.with_name(name),title)+'</span>')
-        parts.append('<p>'+link(PROOF.with_name(GRID_PROOF),'Print Proof with red grid')+'</p>')
-        parts.append('<p>The Print Proof includes a cover and reading pages for every named weight in Latin, Arabic and Hebrew. '
-                     'The Full Proof begins with the Print Proof. '
-                     'The remaining pages cover character sets, size tests, interpolation, kerning, marks and joining in detail.</p>')
+    parts = ["""<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>Virtua Grotesk Proofs</title>
+<style>
+@font-face { font-family: Virtua; src: url('/virtua.ttf') format('truetype'); font-weight: 100 900; }
+:root { color-scheme: dark; background: #171717; color: #f4f4f4; }
+body { max-width: 960px; margin: 48px auto; padding: 0 24px; font: 18px/1.45 Virtua, sans-serif; }
+h1 { font-size: clamp(32px, 6vw, 56px); font-weight: 400; }
+a { color: inherit; text-underline-offset: .18em; }
+nav { display: grid; grid-template-columns: auto auto; justify-content: start; gap: 12px 32px; margin-bottom: 32px; }
+details { border-top: 1px solid #555; padding: 12px 0; }
+summary { cursor: pointer; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(180px,1fr)); gap: 16px; }
+.grid img { display: block; width: 100%; height: 116px; object-fit: contain; }
+.posts { margin: 16px 0; grid-template-columns: repeat(auto-fit,minmax(min(100%,230px),1fr)); }
+.posts img, .posts video { width: 100%; height: 180px; object-fit: contain; background: #111; }
+.posts strong, .posts small { display: block; }
+.posts small, .posts p { font-size: 15px; color: #ccc; }
+</style><main><h1>Virtua Grotesk Proofs</h1><nav aria-label="Proof PDFs">"""]
+    for name, title in PROOF_NAMES.items():
+        grid = name.replace('.pdf', '-grid.pdf')
+        parts.append(link(PROOF.with_name(name), title))
+        parts.append(link(PROOF.with_name(grid), title + ' With Grid'))
+    parts.append('</nav>')
     reports = sorted((OUTPUT / 'diff').glob('*/diffenator.html'))
     if reports:
         parts.append('<h2>Diffenator comparisons</h2><ul>')
@@ -332,14 +457,21 @@ def index():
                 style = 'Variable font'
             parts.append('<li>'+link(report,style)+'</li>')
         parts.append('</ul>')
-    parts.append('<h2>Marketing and README images</h2>')
-    media_index = OUTPUT / 'media' / 'index.html'
-    if media_index.is_file():
-        parts.append('<p>'+link(media_index,'Marketing gallery')+'</p>')
-    readme_images = sorted((OUTPUT / 'readme-images').glob('*'))
-    parts.append('<div class="grid">'+''.join(link(image,thumb=True) for image in readme_images)+'</div>')
+    parts.extend(social_media_sections())
+    readme = OUTPUT.parent / 'README.md'
+    for path in README_IMAGES:
+        if path.is_file() and str(path.relative_to(OUTPUT.parent)) in readme.read_text():
+            url = '/readme/' + quote(path.name)
+            parts.append(f'<p><a href="{url}">{escape(path.stem.replace("-", " ").title())} (README)</a></p>')
+    renders = sorted((OUTPUT / 'render').glob('*.png'))
+    if renders:
+        parts.append('<details><summary>Glyph Comparisons</summary><div class="grid">')
+        parts.extend(link(path, thumb=True) for path in renders)
+        parts.append('</div></details>')
     sheets = sorted(SHEETS.glob('*.png'))
     for title,prefixes in [('Latin',('Latin-',)),('Hebrew',('Hebrew-',)),('Arabic, Persian and numerals',('Arabic-','Persian-','Urdu-','Numerals-'))]:
+        if not any(p.name.startswith(prefixes) for p in sheets):
+            continue
         parts.append(f'<details><summary>{title} proof sheets</summary><div class="grid">')
         parts.extend(link(p,thumb=True) for p in sheets if p.name.startswith(prefixes))
         parts.append('</div></details>')
@@ -349,12 +481,7 @@ def index():
             for n in sorted(z.namelist()):
                 if n.endswith('.pdf'):parts.append(f'<li><a href="/reference/{quote(n)}">{escape(n[:-4].replace("-"," "))}</a></li>')
         parts.append('</ul></details>')
-    parts.append('<details><summary>Earlier proofs and other files</summary><ul>')
-    for p in sorted(REV.glob('*')):
-        if p.suffix in ('.png','.pdf'):parts.append('<li>'+link(p)+'</li>')
-    for directory in ('render','diff','media','qa','weight-pass','onboarding-review'):
-        parts.append(f'<li><a href="/{directory}/">{directory}/</a></li>')
-    return ''.join(parts)+'</ul></details></main></html>'
+    return ''.join(parts) + '</main></html>'
 
 class Proofs(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):
@@ -363,9 +490,18 @@ class Proofs(SimpleHTTPRequestHandler):
         path=unquote(urlsplit(self.path).path)
         if path=='/':
             data=index().encode();kind='text/html; charset=utf-8'
-        elif path in {f'/proof/{name}' for name in (*PROOF_NAMES, GRID_PROOF)}:
-            prepare_proofs()
-            return super().do_GET()
+        elif path.startswith('/readme/'):
+            image = next((p for p in README_IMAGES if path == '/readme/' + p.name), None)
+            if image is None:
+                return self.send_error(404)
+            data = image.read_bytes()
+            kind = self.guess_type(str(image))
+        elif path == '/virtua.ttf':
+            font = next((OUTPUT.parent / 'fonts' / 'variable').glob('VirtuaGrotesk*.ttf'), None)
+            if font is None:
+                return self.send_error(404)
+            data = font.read_bytes()
+            kind = 'font/ttf'
         elif path.startswith('/reference/'):
             with ZipFile(ZIP) as z:
                 n=path.removeprefix('/reference/')
@@ -383,6 +519,8 @@ if __name__ == '__main__':
     if args.build_proof is not None:
         with patch.object(media, 'compose', partial(compose_proof, media.compose)):
             media.main(['--proof', *args.build_proof])
+        prepare_proofs()
+        print("Review index: http://127.0.0.1:8770/")
         raise SystemExit
     ThreadingHTTPServer(('127.0.0.1', 8770), Proofs).serve_forever()
 

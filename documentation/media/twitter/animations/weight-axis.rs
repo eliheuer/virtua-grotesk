@@ -7,7 +7,9 @@ fn main() {
     let folder = find_up("output").join("twitter");
     std::fs::create_dir_all(&folder).unwrap();
 
-    for grid in [false, true] {
+    renderer.set_grain(0.0);
+    for variant in ["clean", "grid", "crt"] {
+        renderer.set_crt(variant == "crt");
         let mut page = Canvas::new(1920.0, 1080.0);
         for frame in 0..256 {
             if frame > 0 { page.new_page(); }
@@ -31,13 +33,17 @@ fn main() {
                     page.text_align(align).text(word, x, 975.0 - depth);
                 }
             }
-            if grid {
-                page.no_fill().stroke(Color::rgb(100, 80, 80)).stroke_width(1.0);
+            if variant == "grid" {
+                page.no_fill().stroke(Color::rgb(112, 36, 40)).stroke_width(1.0);
                 for x in (0..=1920).step_by(64) { page.line(x as f64, 0.0, x as f64, 1080.0); }
                 for y in (28..=1052).step_by(64) { page.line(0.0, y as f64, 1920.0, y as f64); }
             }
         }
-        let name = if grid { "weight-axis-grid.mp4" } else { "weight-axis.mp4" };
+        let name = match variant {
+            "grid" => "weight-axis-grid.mp4",
+            "crt" => "weight-axis-crt.mp4",
+            _ => "weight-axis.mp4",
+        };
         renderer.render_to_mp4(&page, folder.join(name).to_str().unwrap()).unwrap();
     }
 }
