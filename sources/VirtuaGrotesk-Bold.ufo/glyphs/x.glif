@@ -6,10 +6,10 @@
 		<contour>
 			<point x="38" y="14" type="line"/>
 			<point x="54" y="0" type="line"/>
-			<point x="206" y="0" type="line"/>
-			<point x="328" y="138" type="line"/>
-			<point x="340" y="138" type="line"/>
-			<point x="458" y="0" type="line"/>
+			<point x="194" y="0" type="line"/>
+			<point x="320" y="160" type="line"/>
+			<point x="336" y="160" type="line"/>
+			<point x="470" y="0" type="line"/>
 			<point x="622" y="0" type="line"/>
 			<point x="638" y="14" type="line"/>
 			<point x="638" y="64" type="line"/>
@@ -18,10 +18,10 @@
 			<point x="614" y="516" type="line"/>
 			<point x="614" y="562" type="line"/>
 			<point x="598" y="576" type="line"/>
-			<point x="458" y="576" type="line"/>
-			<point x="348" y="450" type="line"/>
-			<point x="340" y="450" type="line"/>
-			<point x="226" y="576" type="line"/>
+			<point x="470" y="576" type="line"/>
+			<point x="348" y="422" type="line"/>
+			<point x="332" y="422" type="line"/>
+			<point x="214" y="576" type="line"/>
 			<point x="78" y="576" type="line"/>
 			<point x="62" y="562" type="line"/>
 			<point x="62" y="512" type="line"/>
@@ -35,11 +35,11 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>green</string>
+			<string>purple</string>
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-x.png</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

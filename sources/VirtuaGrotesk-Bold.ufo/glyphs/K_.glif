@@ -12,9 +12,9 @@
 			<point x="330" y="320" type="line"/>
 			<point x="338" y="320" type="line"/>
 			<point x="588" y="0" type="line"/>
-			<point x="772" y="0" type="line"/>
-			<point x="788" y="16" type="line"/>
-			<point x="788" y="40" type="line"/>
+			<point x="784" y="0" type="line"/>
+			<point x="800" y="16" type="line"/>
+			<point x="800" y="24" type="line"/>
 			<point x="474" y="452" type="line"/>
 			<point x="474" y="460" type="line"/>
 			<point x="756" y="736" type="line"/>
@@ -34,11 +34,11 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>green</string>
+			<string>purple</string>
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-K.png</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>
