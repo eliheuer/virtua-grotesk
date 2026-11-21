@@ -37,11 +37,13 @@ Every agent tool reads this file. Keep it under 70 lines.
 
 ## Proofs
 
-- Show Eli work only in the proof system. Do not draw a picture with a script of your own.
-- One glyph before and after an edit: `fgtools render`. An unsaved edit: the MCP tool `review_proof`. Text and axes: `make proof`.
-- `.venv/bin/python sources/proof_review.py` serves the proofs at http://127.0.0.1:8770. Give Eli that address.
-- The Print Proof is generic. It gets no page for one problem.
-- A proof is valid only for the sources it was built from.
+- Use the existing proof system for review. Create another specimen, renderer or review page only if Eli asks for one.
+- Use `fgtools render` for glyph comparisons and MCP `review_proof` for unsaved edits.
+- Include this Proofs section in subagent assignments. Subagents return findings to the coordinating agent.
+- After the batch lands, the coordinating agent runs `make proofs` once to rebuild Print, Full and both grid PDFs from the current sources.
+- Start `.venv/bin/python sources/proof_review.py` if the index is offline. Verify the index and its four PDF links before handoff.
+- Give Eli the review index at http://127.0.0.1:8770/. Link individual files only when requested.
+- Keep the Print Proof generic.
 - A layout follows the “Proofs and media” section of `CONTEXT.md`.
 
 ## Repository
