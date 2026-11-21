@@ -11,36 +11,24 @@ fn main() {
         let mut page = Canvas::new(1920.0, 1080.0);
         for frame in 0..256 {
             if frame > 0 { page.new_page(); }
-            page.frame_duration(1.0 / 30.0).background(Color::rgb(32, 32, 32));
-            let ink = Color::rgb(224, 224, 224);
+            page.frame_duration(1.0 / 30.0).background(Color::rgb(0, 0, 0));
+            let ink = Color::rgb(196, 196, 196);
             page.no_stroke().fill(ink).font("Virtua Grotesk")
-                .font_size(80.0).font_variation("opsz", 144.0);
+                .font_size(76.0).font_variation("opsz", 144.0);
 
-            // Ink extents at 80 px, measured at the four weight masters.
-            for (word, align, x, count, ascents, descents) in [
-                ("Virtua Grotesk", TextAlign::Left, 16.0, 14, [61.,61.,62.,61.], [2.,2.,2.,2.]),
-                ("ڤيرتوا غروتسك", TextAlign::Center, 960.0, 9, [79.,80.,90.,95.], [20.,21.,24.,25.]),
-                ("וירטואה גרוטסק", TextAlign::Right, 1904.0, 13, [52.;4], [14.,15.,15.,15.]),
+            // At 80 px Arabic reaches 95 px above and 25 px below the baseline.
+            // Every second Arabic baseline meets every third outer baseline.
+            for (word, align, x, count, leading, offset) in [
+                ("Virtua Grotesk", TextAlign::Left, 32.0, 13, 78.0, 0.0),
+                ("ڤيرتوا غروتسك", TextAlign::Center, 960.0, 9, 117.0, 0.5),
+                ("וירטואה גרוטסק", TextAlign::Right, 1888.0, 13, 78.0, 0.0),
             ] {
-                let mut rows = Vec::with_capacity(count);
-                let mut total_ink = 0.0;
                 for row in 0..count {
-                    let phase = (frame as f64 / 256.0 - row as f64 / count as f64).rem_euclid(1.0);
+                    let depth = row as f64 * leading;
+                    let phase = (frame as f64 / 256.0 - depth / 1080.0 + offset).rem_euclid(1.0);
                     let weight = lerp(100.0, 900.0, ease_in_out_sine(1.0 - (2.0 * phase - 1.0).abs()));
-                    let masters = [100., 400., 700., 900.];
-                    let i = if weight <= 400. { 0 } else if weight <= 700. { 1 } else { 2 };
-                    let t = (weight - masters[i]) / (masters[i+1] - masters[i]);
-                    let ascent = lerp(ascents[i], ascents[i+1], t);
-                    let descent = lerp(descents[i], descents[i+1], t);
-                    total_ink += ascent + descent;
-                    rows.push((weight, ascent, descent));
-                }
-                let gap = (1080.0 - 32.0 - total_ink) / (count - 1) as f64;
-                let mut top = 1080.0 - 16.0;
-                for (weight, ascent, descent) in rows {
                     page.font_variation("wght", weight as f32);
-                    page.text_align(align).text(word, x, top - ascent);
-                    top -= ascent + descent + gap;
+                    page.text_align(align).text(word, x, 975.0 - depth);
                 }
             }
             if grid {
