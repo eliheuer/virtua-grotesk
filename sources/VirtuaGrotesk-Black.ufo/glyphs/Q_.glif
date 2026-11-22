@@ -43,7 +43,7 @@
 			<point x="582" y="318"/>
 			<point x="568" y="290" type="curve"/>
 			<point x="560" y="290" type="line"/>
-			<point x="562" y="304" type="line"/>
+			<point x="546" y="304" type="line"/>
 			<point x="490" y="304" type="line"/>
 			<point x="474" y="288" type="line"/>
 			<point x="474" y="206" type="line"/>
@@ -61,7 +61,7 @@
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-Q.png</string>
 			<key>public.markColor</key>
-			<string>0.54,0.44,0.88,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

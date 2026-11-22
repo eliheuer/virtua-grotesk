@@ -43,7 +43,7 @@
 			<point x="600" y="304"/>
 			<point x="584" y="272" type="curve"/>
 			<point x="576" y="272" type="line"/>
-			<point x="536" y="312" type="line"/>
+			<point x="544" y="312" type="line"/>
 			<point x="472" y="312" type="line"/>
 			<point x="456" y="296" type="line"/>
 			<point x="456" y="224" type="line"/>
@@ -57,11 +57,11 @@
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>
-			<string>green</string>
+			<string>purple</string>
 			<key>org.fontgarden.transfer</key>
 			<string>glyph-transfer v2 lambda 1.0 &lt;- image crop-Q.png</string>
 			<key>public.markColor</key>
-			<string>1,1,0,1</string>
+			<string>0.5,0,1,1</string>
 		</dict>
 	</lib>
 </glyph>

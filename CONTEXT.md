@@ -1,6 +1,8 @@
-# Virtua Grotesk Context File
+# Virtua Grotesk
 
-AI Agents: read this document before working on this project and keep it in your context. The fenced TOML is the design configuration shared by fgtools and Runebender.
+- Read this file before working on Virtua Grotesk.
+- Use it to guide drawing and review.
+- The TOML blocks contain the design settings.
 
 ## Design Intent
 
@@ -9,15 +11,17 @@ Link: https://elih.net/blog/virtua-grotesk/
 - Virtua Grotesk is a typeface drawn on a dyadic self-labeling grid system
 - A Dyadic self-labeling grid system is nested grids built on powers of two.
 - Point placement defaults to an 8-unit grid, with small optical corrections dropping to a 2-unit subgrid.
-- The grids record most of the drawing intent automatically, so the source files are labeled training data without extra work.
+- The grids record most of the drawing intent automatically, so the source files are labeled training data.
 - This system makes the project a machine-learning and data-engineering project as much as a design project.
 
 - Designing the system instead of the final object is an old modernist impulse.
-- Karl Gerstner argued for it in his 1964 book Designing Programmes, a foundational text of systematic Swiss design. In practice, the idea ran into limits. Computers were procedural, and strict rules made type stiff. They missed the optical corrections the eye needs.
+- Karl Gerstner argued for it in his 1964 book Designing Programmes, a foundational text of systematic Swiss design.
+- In practice, the idea ran into limits. Computers were procedural, and strict rules made type stiff.
+- Neural networks might change that.
+- A neural network is not a procedural program; it interpolates and tolerates nuance where a rule is brittle.
+- It also answers a modernist ideal that the rigid version betrayed: technology people can live in harmony with, not technology that extinguishes human dignity. The old impulse is worth another look.
 
-Neural networks might change that. A neural network is not a procedural program; it interpolates and tolerates nuance where a rule is brittle. It also answers a modernist ideal that the rigid version betrayed: technology people can live in harmony with, not technology that extinguishes human dignity. The old impulse is worth another look.
-
-Most fonts were never built as training data. Their coordinates land wherever the designer put them. Their contours are as individual as handwriting. That is fine for a rasterizer, but it is a problem for data engineers working with font sources. Many font AI/ML projects train on exactly this accidental data: scraped fonts and Google Fonts, heterogeneous in every dimension that matters.
+- Most fonts were never built for AI workflows. Their coordinates land wherever the designer put them. Their contours are as individual as handwriting. That is fine for a rasterizer, but it is a problem for data engineers working with font sources. Many font AI/ML projects train on exactly this accidental data: scraped fonts and Google Fonts, heterogeneous in every dimension that matters.
 
 A typeface is not a collection of characters drawn in isolation. It is many drawings that work as one system. Font datasets need the same discipline. A collection assembled without it is not training data capable of delivering useful models in 2026.
 
@@ -37,22 +41,13 @@ The second hierarchy describes measurements. Every integer has a unique binary d
 
 Popcount adds information that grid membership cannot. Both 96 and 112 are multiples of 8, but their decompositions record different design decisions. A 64-unit stem is too light and a 128-unit stem too heavy, so the Regular stem is 96 = 64 + 32. Where 96 is too light, the font uses 112 = 64 + 32 + 16. The additional term records a finer adjustment. Both measurements are valid.
 
-
-
 ## Drawing References
 
 - Use Helvetica and Neue Haas Grotesk for neo-grotesk proportions.
 - Use LL Replica as a reference for the mathematical grid-based drawing style.
 - Use Inter, Geist, Rubik, Noto, IBM Plex, and Bricolage from reference-fonts.
 - Use the referance fonts as examples for weight, spacing, and quality.
-
-- First, use an Eli-approved drawing in `sources/drawing-references/` that shows the construction you need. Inspect both its points and its filled shape.
-- If the approved drawings lack that construction, use a production glyph with the same construction in the same script. Prefer green in that master, then yellow.
-- Eli maintains the reference UFOs at Thin, Regular, Bold and Black, all at 14 pt. A production copy needs explicit approval. Refresh only at Eli’s request.
-- Latin: use n for shoulders, o for lowercase rounds, H for capital stems and crossbars, and O for capital rounds.
-- Arabic: isolated beh, initial dotless beh, isolated sheen, isolated hah (ح), medial heh (ـهـ) and their component bases.
-- Hebrew: alef, bet, gimel and kaf.
-- Use Eli’s sketches for form and proportion. A hand correction applies to the named glyph and master.
+- Use `sources/drawing-references/` that shows the construction and outline quality we want.
 
 ## Grid and metrics
 
@@ -217,7 +212,7 @@ regular_foot = [512, 560, 0]
 - h and m take their stems, shoulder and arch from the current n. Seen: m h (cbb174ea).
 - Align mark heights over equal-height letters. Clear ascenders and capitals. Remove i and j dots under top marks.
 - Optically center symmetric marks. Aim the lower end of acute and grave at center. Use consistent placement on asymmetric letters.
-- A cedilla joins C and S at the center of the bowl.
+- A c edilla joins C and S at the center of the bowl.
   - An ogonek joins at the bottom right, or at the stem of I and i.
   - A comma accent is under the center with a gap.
   - The caron of d, t, l and L is an apostrophe form.
@@ -274,6 +269,8 @@ stroke_limit = 180
   - An organic symbol is traced from an image with img2bez, with Virtua's construction, scale and weight.
 
 ## Proofs and media
+
+- Follow the [proof workflow in AGENTS.md](AGENTS.md#proofs). Subagents return findings. The coordinator runs `make proofs` once per batch and shares the [review index](http://127.0.0.1:8770/) after checking the Print, Full and grid links.
 
 - Every proof, specimen, picture and video is laid out on the powers of two of the typeface. No format has an exception.
 - Align positions and lengths to 8 px within 64 px modules. In print, use 4 pt within 32 pt modules.

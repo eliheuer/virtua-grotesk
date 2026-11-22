@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idieresis" format="2">
 	<unicode hex="00EF"/>
-	<advance width="248"/>
+	<advance width="272"/>
 	<outline>
-		<component base="idotless"/>
-		<component base="dieresis" xOffset="-56"/>
+		<component base="idotless" xOffset="26"/>
+		<component base="dieresis" xOffset="-44"/>
 	</outline>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>4e36efea700ec31100b265c1e309d5b9de7461ce</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
 			<key>public.markColor</key>
-			<string>0.5,0,1,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>

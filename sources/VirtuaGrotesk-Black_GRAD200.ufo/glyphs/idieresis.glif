@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="idieresis" format="2">
 	<unicode hex="00EF"/>
-	<advance width="360"/>
+	<advance width="520"/>
 	<outline>
-		<component base="idotless"/>
-		<component base="dieresis" xOffset="-2"/>
+		<component base="idotless" xOffset="82"/>
+		<component base="dieresis" xScale="0.8125" xOffset="66"/>
 	</outline>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>e6d71e80f722d1b79fa9f690d67fa12174489b45</string>
 			<key>public.markColor</key>
-			<string>0.5,0,1,1</string>
+			<string>0.54,0.44,0.88,1</string>
 		</dict>
 	</lib>
 </glyph>
