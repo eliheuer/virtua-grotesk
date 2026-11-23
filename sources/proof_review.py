@@ -377,22 +377,22 @@ def link(p, title=None, thumb=False):
     return f'<a href="{url}">{picture}{name}</a>'
 
 def social_media_sections():
-    twitter = OUTPUT / 'twitter'
+    clip_dir = OUTPUT / 'x'
     clips = []
-    for script in sorted((OUTPUT.parent / 'documentation/media/twitter/animations').glob('*.rs')):
+    for script in sorted((OUTPUT.parent / 'documentation/media/x/animations').glob('*.rs')):
         title = script.stem.replace('-', ' ').title()
         for suffix, label in [('', title + ' · Clean'), ('-grid', title + ' · Red Grid'), ('-crt', title + ' · CRT')]:
-            path = twitter / f'{script.stem}{suffix}.mp4'
+            path = clip_dir / f'{script.stem}{suffix}.mp4'
             if path.is_file():
                 clips.append((path, label))
     if clips:
-        yield ('<details open><summary>Twitter Animations</summary><div class="grid posts">' +
-               ''.join(f'<article><video controls playsinline muted preload="metadata" src="/twitter/{path.name}"></video>'
+        yield ('<details open id="x-animations"><summary>X Animations</summary><div class="grid posts">' +
+               ''.join(f'<article><video controls loop playsinline muted preload="metadata" src="/x/{path.name}"></video>'
                        f'{link(path, title)}</article>' for path, title in clips) + '</div></details>')
     groups = {
         'Instagram Carousels': ('carousel', {'portrait', 'square'}),
         'Instagram Animations': ('video', {'vertical', 'portrait', 'square'}),
-        'Twitter Images': ('image', {'landscape', 'card'}),
+        'X Images': ('image', {'landscape', 'card'}),
         'Instagram Images': ('image', {'portrait', 'square', 'vertical'}),
     }
     records = [(path.parent, json.loads(path.read_text()))

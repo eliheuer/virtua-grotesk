@@ -458,10 +458,6 @@
 	</array>
 	<key>public.openTypeCategories</key>
 	<dict>
-		<key>yeh-ar.init.ctr</key>
-		<string>base</string>
-		<key>tteh-ar.init</key>
-		<string>base</string>
 		<key>A</key>
 		<string>base</string>
 		<key>AE</key>
@@ -1004,6 +1000,8 @@
 		<string>base</string>
 		<key>fehThreedotsbelow-ar.medi</key>
 		<string>base</string>
+		<key>feh_yeh-ar</key>
+		<string>ligature</string>
 		<key>fi</key>
 		<string>ligature</string>
 		<key>finalkaf-hb</key>
@@ -1266,8 +1264,6 @@
 		<string>base</string>
 		<key>lam-ar.medi</key>
 		<string>base</string>
-		<key>feh_yeh-ar</key>
-		<string>ligature</string>
 		<key>lam_alef-ar</key>
 		<string>ligature</string>
 		<key>lam_alef-ar.fina</key>
@@ -1702,6 +1698,8 @@
 		<string>base</string>
 		<key>tteh-ar.fina</key>
 		<string>base</string>
+		<key>tteh-ar.init</key>
+		<string>base</string>
 		<key>tteh-ar.medi</key>
 		<string>base</string>
 		<key>tteheh-ar</key>
@@ -1899,6 +1897,8 @@
 		<key>yeh-ar.fina</key>
 		<string>base</string>
 		<key>yeh-ar.init</key>
+		<string>base</string>
+		<key>yeh-ar.init.ctr</key>
 		<string>base</string>
 		<key>yeh-ar.medi</key>
 		<string>base</string>

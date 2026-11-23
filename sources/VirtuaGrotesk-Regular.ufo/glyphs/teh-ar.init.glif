@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="teh-ar.init" format="2">
-	<advance width="308"/>
+	<advance width="304"/>
 	<outline>
 		<contour>
 			<point x="80" y="0" type="line"/>
@@ -20,7 +20,7 @@
 			<point x="-16" y="16" type="line"/>
 			<point x="0" y="0" type="line"/>
 		</contour>
-		<component base="twodotshorizontalabove-ar" xOffset="12" yOffset="-128" identifier="e4e033ca-3b91-4a54-bd3d-048f7c1925d9"/>
+		<component base="twodotshorizontalabove-ar" xOffset="-52" yOffset="-48" identifier="e4e033ca-3b91-4a54-bd3d-048f7c1925d9"/>
 	</outline>
 	<anchor name="top" x="228" y="720"/>
 	<anchor name="bottom" x="84" y="16"/>

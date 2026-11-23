@@ -128,7 +128,7 @@ UFO masters and the designspace in `sources/`.
 | `make runebender` | Open the sources in Runebender. Install it with `cargo install --locked --git https://github.com/fontgarden/runebender runebender`. |
 | `.venv/bin/fgtools media --list` | List the formats, the canvases and the pages of the proof. `make proofs PAGE="spacing kerning"` and `make media FORMAT=videos` make a part only. |
 | `make proofs` | Build the Print Proof and Full Proof in `output/proof/`. |
-| `make twitter-animation` | Render each script in `documentation/media/twitter/animations/`. Use one file per animation, such as `weight-axis.rs`. Each writes `output/twitter/<name>.mp4` and `<name>-grid.mp4` for the proof index. |
+| `make x-animation` | Render each script in `documentation/media/x/animations/`. Use one file per animation, such as `weight-axis.rs`. Each writes `output/x/<name>.mp4`, `<name>-grid.mp4`, and `<name>-crt.mp4` for the proof index. |
 | `make media-generic` | Render Font.Garden layouts with this font’s branding. |
 | `make media-custom` | Render layouts defined by this project. |
 | `make media` | Build, then render the marketing media (images, carousels and video for Instagram, LinkedIn and X) into `output/media/`. Needs DesignBot, and `ffmpeg` for video. |

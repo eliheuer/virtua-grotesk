@@ -3,14 +3,14 @@
 	<advance width="718"/>
 	<outline>
 		<component base="qafDotless-ar.fina"/>
-		<component base="twodotshorizontalabove-ar" xOffset="188" yOffset="-94"/>
+		<component base="twodotshorizontalabove-ar" xOffset="674" yOffset="138"/>
 	</outline>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>f73d778182e31e8fb1037c96deebd80800e4d033</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
+			<key>garden.font.calculated</key>
+			<string>f73d778182e31e8fb1037c96deebd80800e4d033</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

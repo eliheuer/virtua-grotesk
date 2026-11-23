@@ -126,11 +126,10 @@ diff: ## Build main, or BASE=..., and the working tree, and compare them with di
 
 # make masters
 # Run after edits to Regular or Bold at 14 pt. This runs the shared fgtools
-# commands in dependency order: weight extremes, grade, then optical size.
+# commands in dependency order: weight extremes, then optical size.
 # Each drafting command handles preservation of hand corrections.
-masters: ## Calculate Thin, Black, the grade masters and the 144 pt masters from Regular and Bold
+masters: ## Calculate Thin, Black and the 144 pt masters from Regular and Bold
 	$(FGTOOLS) draft-weights --write
-	$(FGTOOLS) draft-grade
 	$(FGTOOLS) draft-optical-size --write
 
 # make reference-fonts
@@ -163,14 +162,14 @@ proofs: $(BUILD) ## Build Print and Full Proofs with and without the grid
 # Render a subset:
 #   make media FORMAT=videos                one kind: images, carousels or videos
 #   make media FORMAT="words glyph"         some formats; `glyph` is the technical image
-#   make twitter-animation                clean, red-grid and CRT landscape animations
+#   make x-animation                clean, red-grid and CRT landscape animations
 #   make media LATTICE=1                    also each picture with the lattice drawn on it
-twitter-animation: $(BUILD) ## Render clean, red-grid and CRT Twitter animations
-	@set -e; for script in documentation/media/twitter/animations/*.rs; do .venv/bin/designbot "$$script"; done
+x-animation: $(BUILD) ## Render clean, red-grid and CRT X animations
+	@set -e; for script in documentation/media/x/animations/*.rs; do .venv/bin/designbot "$$script"; done
 
-media: $(if $(strip $(FORMAT)$(CANVAS)),,twitter-animation) $(BUILD) ## Render all marketing media
+media: $(if $(strip $(FORMAT)$(CANVAS)),,x-animation) $(BUILD) ## Render all marketing media
 media-generic: $(BUILD) ## Render Font.Garden layouts with this font’s branding
-media-custom: $(if $(strip $(FORMAT)$(CANVAS)),,twitter-animation) $(BUILD) ## Render marketing layouts defined by this project
+media-custom: $(if $(strip $(FORMAT)$(CANVAS)),,x-animation) $(BUILD) ## Render marketing layouts defined by this project
 media media-generic media-custom:
 	$(FGTOOLS) media $(if $(filter media-%,$@),--layouts $(patsubst media-%,%,$@)) $(FORMAT) $(if $(CANVAS),--canvas $(CANVAS),) $(if $(LATTICE),--lattice,)
 
@@ -186,5 +185,5 @@ clean: ## Remove built fonts and generated review files.
 .PHONY: setup venv
 .PHONY: build test test-google-fonts test-fontgarden
 .PHONY: status queue check-design check-changes render diff masters reference-fonts runebender
-.PHONY: proofs twitter-animation media media-generic media-custom
+.PHONY: proofs x-animation media media-generic media-custom
 .PHONY: clean

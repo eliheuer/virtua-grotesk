@@ -3,7 +3,7 @@
 	<advance width="672"/>
 	<outline>
 		<component base="reh-ar.fina"/>
-		<component base="smallHighTah-ar" xOffset="136" yOffset="-46"/>
+		<component base="smallHighTah-ar" xOffset="140" yOffset="-56"/>
 	</outline>
 	<anchor name="bottom" x="336" y="-278"/>
 	<anchor name="top" x="280" y="954"/>
@@ -11,10 +11,10 @@
 	<anchor name="topDots" x="280" y="906"/>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>da050c48df8c3a9e3738b819d1d0263a694f51bc</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
+			<key>garden.font.calculated</key>
+			<string>da050c48df8c3a9e3738b819d1d0263a694f51bc</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

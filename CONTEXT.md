@@ -171,13 +171,7 @@ side = 24       # units that each side of a glyph loses
 complete = 72   # pt: the size at which the change is complete
 ```
 
-- Use outlines at clamped `wght + grade` with advances at `wght`. Clamp at Thin and Black. Grade +300 caused collisions in Regular.
-
-```toml
-[grade]
-minimum = -200
-maximum = 200
-```
+- The active axes are weight and optical size.
 
 ## Structure of the sources
 

@@ -3,15 +3,15 @@
 	<advance width="520"/>
 	<outline>
 		<component base="fehDotless-ar.medi"/>
-		<component base="twodotshorizontalabove-ar" xOffset="96" yOffset="-24"/>
+		<component base="twodotshorizontalabove-ar" xOffset="128" yOffset="-144"/>
 	</outline>
 	<anchor name="bottom" x="282" y="-136"/>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>e36e2906179fd77afbc90bc6f29bd40bb026a3c0</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
+			<key>garden.font.calculated</key>
+			<string>e36e2906179fd77afbc90bc6f29bd40bb026a3c0</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>
