@@ -4,7 +4,7 @@
 	<advance width="232"/>
 	<outline>
 		<component base="vav-hb"/>
-		<component base="holam-hb" xOffset="48"/>
+		<component base="holam-hb" xOffset="48" yOffset="24"/>
 	</outline>
 	<anchor name="hbBottom" x="120" y="0"/>
 	<anchor name="hbCenter" x="0" y="352"/>

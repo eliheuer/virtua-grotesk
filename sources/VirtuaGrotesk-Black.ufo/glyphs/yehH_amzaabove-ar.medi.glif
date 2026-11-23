@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="yehHamzaabove-ar.medi" format="2">
 	<advance width="422"/>
-	<anchor name="bottom" x="202" y="-8"/>
 	<outline>
 		<component base="behDotless-ar.medi"/>
-		<component base="hamzaabove-ar" xOffset="98" yOffset="-238"/>
+		<component base="hamzaabove-ar" xOffset="154" yOffset="-348"/>
 	</outline>
+	<anchor name="bottom" x="202" y="-8"/>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>8722acbe70ca5e12744a26f224ed73b590e4d53a</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
+			<key>garden.font.calculated</key>
+			<string>8722acbe70ca5e12744a26f224ed73b590e4d53a</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

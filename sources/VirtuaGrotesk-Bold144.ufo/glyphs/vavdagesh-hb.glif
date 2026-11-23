@@ -4,7 +4,7 @@
 	<advance width="416"/>
 	<outline>
 		<component base="vav-hb" xOffset="152"/>
-		<component base="dagesh-hb" xOffset="16" yOffset="24"/>
+		<component base="dagesh-hb" xOffset="58" yOffset="20"/>
 	</outline>
 	<anchor name="hbBottom" x="296" y="0"/>
 	<anchor name="hbCenter" x="88" y="320"/>
@@ -18,10 +18,10 @@
 	<anchor name="hbCantBelowRight" x="296" y="0"/>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>31daf0e98357e617c2db4b489d9131270397b8fd</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
+			<key>garden.font.calculated</key>
+			<string>31daf0e98357e617c2db4b489d9131270397b8fd</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>

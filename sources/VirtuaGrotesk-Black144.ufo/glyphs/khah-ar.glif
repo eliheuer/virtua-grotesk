@@ -4,14 +4,14 @@
 	<advance width="792"/>
 	<outline>
 		<component base="hah-ar"/>
-		<component base="dotabove-ar" xOffset="136" yOffset="48"/>
+		<component base="dotabove-ar" xOffset="364" yOffset="52"/>
 	</outline>
 	<lib>
 		<dict>
-			<key>garden.font.calculated</key>
-			<string>0bb9328a14a7c0b8e6c49da9c4322e380b4956db</string>
 			<key>com.runebender.markLabel</key>
 			<string>purple</string>
+			<key>garden.font.calculated</key>
+			<string>0bb9328a14a7c0b8e6c49da9c4322e380b4956db</string>
 			<key>public.markColor</key>
 			<string>0.5,0,1,1</string>
 		</dict>
