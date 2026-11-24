@@ -45,7 +45,7 @@ Popcount adds information that grid membership cannot. Both 96 and 112 are multi
 
 - Use Helvetica and Neue Haas Grotesk for neo-grotesk proportions.
 - Use LL Replica as a reference for the mathematical grid-based drawing style.
-- Use Inter, Geist, Rubik, Noto, IBM Plex, and Bricolage from reference-fonts.
+- Use the families listed in the reference-font roster below.
 - Use the referance fonts as examples for weight, spacing, and quality.
 - Use `sources/drawing-references/` that shows the construction and outline quality we want.
 
@@ -349,6 +349,12 @@ ibmplexsansarabic = "An Arabic grotesque from a professional foundry."
 readexpro = "A geometric Arabic and Latin sans."
 inter = "A neutral Latin sans for text and interfaces, with weights 100 to 900 and an italic."
 bricolagegrotesque = "A Latin grotesque with weight, width and optical size axes."
+zalandosans = "Zalando Sans for proportions and spacing."
+commissioner = "Commissioner for stroke endings."
+tiktoksans = "TikTok Sans for text proportions."
+familjengrotesk = "Familjen Grotesk for bowls and joins."
+strichpunktsans = "Strichpunkt Sans for grotesque letterforms."
+ibmplexsans = "IBM Plex Sans for comparison with its Hebrew and Arabic companions."
 geist = "A geometric Latin sans for interfaces, with weights 100 to 900 and an italic."
 ```
 

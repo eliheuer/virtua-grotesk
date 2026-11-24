@@ -6,50 +6,46 @@
 		<contour>
 			<point x="320" y="-16" type="curve" smooth="yes"/>
 			<point x="488" y="-16"/>
-			<point x="592" y="72"/>
-			<point x="592" y="256" type="curve" smooth="yes"/>
-			<point x="592" y="440" type="line" smooth="yes"/>
-			<point x="592" y="600"/>
-			<point x="560" y="680"/>
-			<point x="408" y="680" type="curve" smooth="yes"/>
-			<point x="360" y="680"/>
-			<point x="320" y="672"/>
-			<point x="288" y="648" type="curve"/>
-			<point x="288" y="552" type="line"/>
-			<point x="304" y="536" type="line"/>
-			<point x="320" y="560"/>
-			<point x="336" y="576"/>
-			<point x="352" y="576" type="curve" smooth="yes"/>
-			<point x="424" y="576" type="line" smooth="yes"/>
-			<point x="472" y="576"/>
-			<point x="504" y="560"/>
-			<point x="504" y="472" type="curve" smooth="yes"/>
-			<point x="504" y="248" type="line" smooth="yes"/>
-			<point x="504" y="144"/>
-			<point x="448" y="88"/>
-			<point x="320" y="88" type="curve" smooth="yes"/>
-			<point x="216" y="88"/>
-			<point x="136" y="112"/>
-			<point x="136" y="200" type="curve" smooth="yes"/>
-			<point x="136" y="648" type="line"/>
-			<point x="120" y="664" type="line"/>
-			<point x="64" y="664" type="line"/>
-			<point x="48" y="648" type="line"/>
-			<point x="48" y="208" type="line" smooth="yes"/>
-			<point x="48" y="64"/>
+			<point x="592" y="64"/>
+			<point x="592" y="248" type="curve" smooth="yes"/>
+			<point x="592" y="472" type="line" smooth="yes"/>
+			<point x="592" y="568"/>
+			<point x="536" y="656"/>
+			<point x="408" y="656" type="curve" smooth="yes"/>
+			<point x="304" y="656" type="line"/>
+			<point x="288" y="640" type="line"/>
+			<point x="288" y="576" type="line"/>
+			<point x="304" y="560" type="line"/>
+			<point x="408" y="560" type="line" smooth="yes"/>
+			<point x="472" y="560"/>
+			<point x="504" y="528"/>
+			<point x="504" y="464" type="curve" smooth="yes"/>
+			<point x="504" y="264" type="line" smooth="yes"/>
+			<point x="504" y="152"/>
+			<point x="448" y="80"/>
+			<point x="320" y="80" type="curve" smooth="yes"/>
+			<point x="192" y="80"/>
+			<point x="136" y="168"/>
+			<point x="136" y="264" type="curve" smooth="yes"/>
+			<point x="136" y="640" type="line"/>
+			<point x="120" y="656" type="line"/>
+			<point x="64" y="656" type="line"/>
+			<point x="48" y="640" type="line"/>
+			<point x="48" y="248" type="line" smooth="yes"/>
+			<point x="48" y="104"/>
 			<point x="136" y="-16"/>
 		</contour>
 	</outline>
-	<anchor name="hbBottom" x="312" y="-32"/>
-	<anchor name="hbCenter" x="320" y="352"/>
-	<anchor name="hbHolam" x="56" y="680"/>
+	<anchor name="hbBottom" x="320" y="-32"/>
+	<anchor name="hbCenter" x="320" y="376"/>
+	<anchor name="hbHolam" x="48" y="664"/>
 	<anchor name="hbRafe" x="312" y="776"/>
-	<anchor name="hbMeteg" x="312" y="-32"/>
-	<anchor name="hbCantAbove" x="312" y="680"/>
-	<anchor name="hbCantAboveLeft" x="56" y="680"/>
+	<anchor name="hbMeteg" x="320" y="-48"/>
+	<anchor name="hbCantAbove" x="304" y="696"/>
+	<anchor name="hbCantAboveLeft" x="48" y="680"/>
 	<anchor name="hbCantAboveRight" x="592" y="680"/>
-	<anchor name="hbCantBelow" x="312" y="-32"/>
-	<anchor name="hbCantBelowRight" x="312" y="-32"/>
+	<anchor name="hbCantBelow" x="320" y="-40"/>
+	<anchor name="hbCantBelowRight" x="320" y="-56"/>
 	<lib>
 		<dict>
 			<key>com.runebender.markLabel</key>

@@ -4,7 +4,7 @@
 	<advance width="624"/>
 	<outline>
 		<component base="tet-hb"/>
-		<component base="dagesh-hb" xOffset="250" yOffset="-12"/>
+		<component base="dagesh-hb" xOffset="250" yOffset="12"/>
 	</outline>
 	<anchor name="hbBottom" x="312" y="-32"/>
 	<anchor name="hbCenter" x="320" y="352"/>
